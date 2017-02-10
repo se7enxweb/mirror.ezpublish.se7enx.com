@@ -1,0 +1,252 @@
+[05-19-2005 00:40:12] [#ezpublish] <kracker> grrr
+[05-19-2005 00:44:52] [#ezpublish] <kracker> Konechewa !?!
+[05-19-2005 00:45:43] [#ezpublish] <kracker> http://audio.kracker.org:8088/lab/lab_singles/Canibus%20With%20Biz%20Markie-Office%20Space-01%20-%20Shove%20This%20Jay-Oh-Bee.m4a
+[05-19-2005 01:27:18] [#ezpublish] <kracker> rofl, http://audio.kracker.org:8088/lab/lab_singles/Chris%20Rock--0%20-%20live%20show.mp3
+[05-19-2005 01:38:49] -!- ordna1 [~ordnas@p549DEED8.dip.t-dialin.net] has joined #ezpublish
+[05-19-2005 01:54:45] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-19-2005 02:00:28] [#ezpublish] <kracker> hey fh, is ez still doing 2.x support, i only ask as i have a problem with a 2.x client installation which apears to be storing another user's session's ezuser_user_id in the (order & wishlist) tables (which has been a nightmare to try to track down), i'm thinking about submiting a request for some support / testing of the site to find / ensure the breakdown is resolved ... :|
+[05-19-2005 02:01:03] [#ezpublish] <fh> I think we are still doing some 2.x support from time to time
+[05-19-2005 02:01:20] [#ezpublish] <kracker> alright, thank you :)
+[05-19-2005 02:24:48] -!- ordna1 [~ordnas@p549DEED8.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-19-2005 02:24:59] -!- ordna1 [~ordnas@p549DEED8.dip.t-dialin.net] has joined #ezpublish
+[05-19-2005 03:32:06] [#ezpublish] <kracker> i'm such a (insert your own adlib here kinda prick), i shout from my soap box, what's said rarely seems to stick
+[05-19-2005 03:33:26] -!- ordna1 [~ordnas@p549DEED8.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-19-2005 03:34:21] [#ezpublish] <kracker> every time i do that i think about how much i am the same kinda kid to the Gods lookin down from above, and that time show'd me a little backhand love, and all the cold shoulders back in the 2001
+[05-19-2005 03:35:00] [#ezpublish] <kracker> s/show'd/paulf show'd/
+[05-19-2005 03:35:13] [#ezpublish] <fh> :)
+[05-19-2005 03:35:29] [#ezpublish] <kracker> oh? so fh tell me i was wrong
+[05-19-2005 03:35:33] [#ezpublish] <kracker> please?
+[05-19-2005 03:35:45] [#ezpublish] <kracker> then i would know where i myself went wrong
+[05-19-2005 03:36:48] [#ezpublish] <kracker> cause from a certain 'perspective', i have the freedom to do what others simply can't do ... an the silence almost tells me too...
+[05-19-2005 03:37:14] [#ezpublish] <fh> I don't have any answers
+[05-19-2005 03:37:32] [#ezpublish] <kracker> being a company man is tuff :(
+[05-19-2005 03:37:48] [#ezpublish] <fh> tell me about it
+[05-19-2005 03:38:01] [#ezpublish] <kracker> but i respect the rank
+[05-19-2005 03:38:47] [#ezpublish] <kracker> what did they say in band of brothers, you salute the rank not the man (doesn't apply as much in this sudo context as I actualy do respect you and the rest of the ez crew)
+[05-19-2005 03:39:35] [#ezpublish] <kracker> still i've been shhhhhd by an employer before, so i can relate to  the score
+[05-19-2005 03:42:41] [#ezpublish] <fh> have you been shhhhd by us?
+[05-19-2005 03:42:51] [#ezpublish] <kracker> never that i can remember
+[05-19-2005 03:42:56] [#ezpublish] <kracker> i respect that too
+[05-19-2005 03:43:07] [#ezpublish] <fh> good, we should never do that
+[05-19-2005 03:43:10] [#ezpublish] <kracker> tho i'm willing to be corrected just say the word boss :)
+[05-19-2005 03:43:26] [#ezpublish] * kracker nods
+[05-19-2005 03:44:17] -!- fh changed the topic of #ezpublish to: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1| final thursday, May 26.
+[05-19-2005 03:44:49] [#ezpublish] <kracker> kewl
+[05-19-2005 03:45:17] [#ezpublish] <fh> yep, a few issues to iron out still
+[05-19-2005 03:45:23] [#ezpublish] <fh> but 3.6 looks solid
+[05-19-2005 03:46:22] [#ezpublish] <kracker> right on! will we see rc2 or slipstream into 3.6
+[05-19-2005 03:46:32] [#ezpublish] <fh> but you feel like you are not heard I gather..
+[05-19-2005 03:46:42] [#ezpublish] <fh> we'll go right to 3.6
+[05-19-2005 03:46:49] [#ezpublish] <kracker> nods, sometimes
+[05-19-2005 03:47:14] [#ezpublish] <fh> we've had very few bug reports on RC1.. that is why
+[05-19-2005 03:47:35] [#ezpublish] <kracker> i've been doing this 'like this' for so long that sometimes i question everything i've ever stood for, seriously i just need to network with others in the community
+[05-19-2005 03:47:48] [#ezpublish] <kracker> errum 'like this' (fairly isolated)
+[05-19-2005 03:48:16] [#ezpublish] <fh> what kind of support are you looking for
+[05-19-2005 03:48:25] [#ezpublish] <kracker> not sure what you mean
+[05-19-2005 03:49:13] [#ezpublish] <fh> What I mean is.. when do you feel you're not heard... and how can we improve on it... or support you
+[05-19-2005 03:50:00] [#ezpublish] <kracker> oh, in the comunity, i guess i would love to have a talk with people who see what i do to kinda say anything more critical than go kracker! cause it seems like i've already topp'd a number of others previous hurdles, but really i'm still a beginer compared to the crew, i have a long way to go
+[05-19-2005 03:50:51] [#ezpublish] <kracker> lots more to learn, processes to improve, working smarter instead of harder, these arn't really very good answeres to a really apreciated question (thnx:)
+[05-19-2005 03:51:53] [#ezpublish] <fh> you know.. when I got into open source software I sort of expected people to praise us programmers for all the hard work we put into stuff.. to get some recognition out of it
+[05-19-2005 03:51:59] [#ezpublish] <fh> but it just isn't they way it works
+[05-19-2005 03:52:09] [#ezpublish] <fh> 95% of all feedback I get is from angry people
+[05-19-2005 03:52:30] [#ezpublish] <fh> who tell me that something sucks or that you don't have this or that
+[05-19-2005 03:52:35] [#ezpublish] <fh> or even worse.. that I'm stupid
+[05-19-2005 03:52:36] [#ezpublish] <kracker> perhapse i need think about what i could use best, or perhapse i need to listen to myself a bit more, build some more quick hit list for beter forum answeres to obscurely worded questions, or just do more development to keep more fresh on the sea of issues i've never touched ...
+[05-19-2005 03:52:51] [#ezpublish] <kracker> eyah i get that a lot moonlighting here in the usa
+[05-19-2005 03:53:33] [#ezpublish] <fh> I've learned not to expect to much positive feedback and to ignore most of the negative.. (ignore the none constructive negative criticism)
+[05-19-2005 03:54:08] [#ezpublish] <kracker> the customers love to threaten you with a feature port to another product if they don't get a fix they prolly should pay for and or golden magic garentee that nothing bad can happen again... when it's usualy their own negligence that has propogated the core breakdown
+[05-19-2005 03:54:41] [#ezpublish] <fh> hehe
+[05-19-2005 03:54:45] [#ezpublish] <fh> that sounds familiar
+[05-19-2005 03:54:56] [#ezpublish] <fh> are you coming to the camp?
+[05-19-2005 03:55:14] [#ezpublish] <kracker> that's educating customers in sw dev / maint / etc i guess
+[05-19-2005 03:57:09] [#ezpublish] <kracker> i wish i could go back and not have gone on hiadus in march, and changed my plans, but i missed the deadline again (knowingly i'm afraid) cause .... cause of money that i misapropriated trying to relocate my life to friendly state (texas didn't blow up like i hoped, too hot)
+[05-19-2005 03:58:36] [#ezpublish] <kracker> so i'm still left in the middle of a move, and a lot of work to do. I can't say i'm proud of my descion (it really was the worse, just about as the conditions surounding it, when it's what i really needed all along, it's a battle)
+[05-19-2005 04:01:06] [#ezpublish] <kracker> all these years left saying ... next year i can afford it, each year that being more true with even less time to get away with the get away), i swear if things don't falldown with my most recent mexican standoff (venture capitalist...) i'm making him foot the bill (like, here expense it!
+[05-19-2005 04:01:46] -!- xbit [xbit@pppoecl77018.minlos.no] has joined #ezpublish
+[05-19-2005 04:01:59] [#ezpublish] <kracker> heeyyy
+[05-19-2005 04:02:28] [#ezpublish] <xbit> hodihi
+[05-19-2005 04:03:54] -!- ordna1 [~ordnas@p549DEED8.dip.t-dialin.net] has joined #ezpublish
+[05-19-2005 04:05:15] [#ezpublish] <kracker> wow, flashback
+[05-19-2005 04:05:51] [#ezpublish] <kracker> how many times have we had this conversation before <fh>, if memory serves me, this would be at least the 2nd.
+[05-19-2005 04:06:24] [#ezpublish] <kracker> your comments on customers feedback just reminded me :|
+[05-19-2005 04:06:30] [#ezpublish] <kracker> hey fyi all you #ezp
+[05-19-2005 04:06:39] -!- mode/#ezpublish [+o fh] by ChanServ
+[05-19-2005 04:07:31] [#ezpublish] <kracker> from personal experiance irc via your favorite shell irc client (bitchx) works great on a remote server using GNU Screen
+[05-19-2005 04:08:23] [#ezpublish] <kracker> especialy for all those people who get diconnected frequently, screen keeps you connected even if you loose your session / connection to the remote shell server
+[05-19-2005 04:08:51] [#ezpublish] <@fh> kracker: yep, I think you're right.. this is the second time
+[05-19-2005 04:09:47] [#ezpublish] <kracker> eeesh, gotta get a tattoo to make it stick this time ...
+[05-19-2005 04:10:02] [#ezpublish] <@fh> hehe, on your palm
+[05-19-2005 04:10:13] [#ezpublish] <kracker> you know
+[05-19-2005 04:19:08] [#ezpublish] <kracker> fh: you know... i think every time you drop that line, what more can we do to support you, (great line btw) i always choke cause you all have already done so much, now cause i started (what? bitchin), i'm going to get more?!? i mean that would be neat if i could figure out what would be apropriate without it being a burden or dumb, in the end it just really reminds me how much farscape i have to travel on my own to build up my skillsets before i can
+[05-19-2005 04:20:57] [#ezpublish] <kracker> (i question what i'm really saying or where i'm going with this ikea boy), i do apreciate you sayin it again though (it in part is like good'o smack on the back)
+[05-19-2005 04:21:06] [#ezpublish] <@fh> you are a customer you know.. I always try to do my best to support customers that are actually contributing to the community
+[05-19-2005 04:21:21] [#ezpublish] <@fh> not that many of you around...
+[05-19-2005 04:22:32] [#ezpublish] <kracker> thnx, but it's just never enough (or all to often it feels), perhapse i'm just too .... something. i look back at all i've done and i laugh as i snear at it smugly..)
+[05-19-2005 04:23:02] [#ezpublish] <@fh> true.. it is never enough
+[05-19-2005 04:23:15] [#ezpublish] <@fh> I can work 30 hours per day.. still people will not be satisfied
+[05-19-2005 04:23:20] [#ezpublish] <@fh> but this is just the way it is
+[05-19-2005 04:23:22] [#ezpublish] <kracker> i am so a customer ( and i do mean with negative context / subtext )
+[05-19-2005 04:24:05] [#ezpublish] <kracker> it is what i love to do, at some point break you gotta just let go
+[05-19-2005 04:24:16] [#ezpublish] * kracker chuckles
+[05-19-2005 04:25:21] [#ezpublish] <kracker> well fh, it was cool talkin to ya, i'm going to cut it short here so i don't regret anything more than i've already sed, an drop out into the blackout so i have a morning to wake up to ...
+[05-19-2005 04:25:55] [#ezpublish] <@fh> kracker: don't feel bad about it...
+[05-19-2005 04:26:18] [#ezpublish] <@fh> and thanks for the chat..
+[05-19-2005 04:26:53] [#ezpublish] <kracker> i'll let it go, then i'll forget i ever let it get to me and my family will think i'm still an insensitive clode ;) they'll never know if they can't see it already
+[05-19-2005 04:28:30] [#ezpublish] <kracker> ahh yeah almost forgot, it's hard working best on the other side of the world's timezone, not to mention the negative human features associated with it at times ...
+[05-19-2005 04:29:04] [#ezpublish] <kracker> hey eZ publish, i'm talking about you! Liz Phair : Why Can't I
+[05-19-2005 04:30:07] [#ezpublish] <kracker> for everyone else try to blow my 25GB bandwidth limit and have fun rockin out doing it: http://audio.kracker.org/
+[05-19-2005 04:38:42] [#ezpublish] <@fh> cool
+[05-19-2005 05:25:37] [#ezpublish] <kracker> still krackin... hey any else having trouble getting to : http://pubsvn.ez.no/ today/at the moment?
+[05-19-2005 05:32:17] [#ezpublish] <kracker> bet it's just me :) just thought i would mention it. cheers
+[05-19-2005 05:36:12] -!- ordna1 [~ordnas@p549DEED8.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-19-2005 05:59:05] -!- ordna1 [~ordnas@p549DEED8.dip.t-dialin.net] has joined #ezpublish
+[05-19-2005 06:13:38] -!- ordna1 [~ordnas@p549DEED8.dip.t-dialin.net] has left #ezpublish []
+[05-19-2005 07:12:23] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-19-2005 07:19:30] -!- SEAwolfx_ [~mike@6b0afff0afa5244f.session.tor] has joined #ezpublish
+[05-19-2005 07:27:29] -!- SEAwolfx [~mike@75f3b97207677633.session.tor] has quit [Ping timeout: 14400 seconds]
+[05-19-2005 08:03:39] -!- seasonfive_ [~Yannick@AGrenoble-152-1-35-182.w82-122.abo.wanadoo.fr] has quit [Remote closed the connection]
+[05-19-2005 08:43:05] -!- jota [~jota@fanzine.igalia.com] has joined #ezpublish
+[05-19-2005 10:00:14] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-19-2005 10:03:17] -!- fh [~fh@stalker.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[05-19-2005 10:45:04] [#ezpublish] <kracker> i had that eZ publish dream again ...
+[05-19-2005 11:34:28] -!- jota [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[05-19-2005 12:36:07] Disconnecting due to lack of a lag response (0.10596100 1116531307 != 0.16588000 1116531337)
+[05-19-2005 12:36:07] Diconnected. Sleeping for 10 second(s).
+[05-19-2005 12:36:17] >> Connecting to irc.kde.org:6667
+[05-19-2005 12:36:17] >> Connected to irc.kde.org:6667, registering...
+[05-19-2005 12:36:17] >> Attempting to join channels: #ezpublish
+[05-19-2005 12:37:02] >> Attempting to join channels: #ezpublish
+[05-19-2005 12:37:17] Disconnecting due to lack of a lag response (0.66142400 1116531377 != 0.05587200 1116531407)
+[05-19-2005 12:37:17] Diconnected. Sleeping for 10 second(s).
+[05-19-2005 12:37:27] >> Connecting to irc.kde.org:6667
+[05-19-2005 12:37:27] >> Connected to irc.kde.org:6667, registering...
+[05-19-2005 12:37:47] >> Attempting to join channels: #ezpublish
+[05-19-2005 12:38:01] >> Successfully registered. Nick is: ezlog
+[05-19-2005 12:38:01] -!- There are 11571 victims and 12224 hiding on 26 servers
+[05-19-2005 12:38:01] -!- 29 flagged staff members
+[05-19-2005 12:38:01] -!- 8442 channels formed
+[05-19-2005 12:38:01] -!- I have 4335 clients and 0 servers
+[05-19-2005 12:38:01] -!- Current local  users: 4335  Max: 4740
+[05-19-2005 12:38:01] -!- Current global users: 23795  Max: 24741
+[05-19-2005 12:38:01] -!- Highest connection count: 4741 (4740 clients) (597421 since server was (re)started)
+[05-19-2005 12:38:01] -!- ezlog [[U2FsdGVkX@64.30.116.29] has joined #ezpublish
+[05-19-2005 12:38:01] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1| final thursday, May 26.
+[05-19-2005 12:38:01] -!- Topic set by fh [@] [Thu, 19 May 2005 01:44:31 -0700]
+[05-19-2005 12:38:01] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-19-2005 12:38:01] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-19-2005 12:38:27] -!- SEAwolfx_ [~mike@6b0afff0afa5244f.session.tor] has quit [orwell.freenode.net irc.freenode.net]
+[05-19-2005 12:38:27] -!- xbit [xbit@pppoecl77018.minlos.no] has quit [orwell.freenode.net irc.freenode.net]
+[05-19-2005 12:41:19] -!- SEAwolfx_ [~mike@6b0afff0afa5244f.session.tor] has joined #ezpublish
+[05-19-2005 12:41:19] -!- xbit [xbit@pppoecl77018.minlos.no] has joined #ezpublish
+[05-19-2005 13:08:14] -!- SEAwolfx_ is now known as SEAwolfx
+[05-19-2005 13:13:45] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-19-2005 13:27:52] [#ezpublish] <kracker> hey luke, how goes the grind?
+[05-19-2005 13:40:29] -!- fh [~fh@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-19-2005 13:54:09] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-19-2005 14:56:43] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-19-2005 15:13:29] -!- fh [~fh@238.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-19-2005 15:33:07] [#ezpublish] <SEAwolfx> kracker: ;)
+[05-19-2005 15:33:37] [#ezpublish] <SEAwolfx> plz send me some of ur own tracks I cant start the radio-session here.
+[05-19-2005 16:11:25] [#ezpublish] <kracker> SEAwolfx: hey! i will, today should be my last day of dev on this current due project, then i can record a few :)
+[05-19-2005 16:11:47] [#ezpublish] <SEAwolfx> yeah, this would be nice ;)
+[05-19-2005 16:11:53] [#ezpublish] <kracker> SEAwolfx: it might be good if we agreed on at least a few topics we are going to cover first
+[05-19-2005 16:12:16] [#ezpublish] <SEAwolfx> what you want to cover?
+[05-19-2005 16:12:55] [#ezpublish] <kracker> SEAwolfx: not trying to cop out my brain is just bruised today... umm new features in 3.6 is an easy topic
+[05-19-2005 16:13:24] [#ezpublish] <SEAwolfx> ah ... u currently work on 3.6 beta?
+[05-19-2005 16:13:34] [#ezpublish] <SEAwolfx> better said "with".
+[05-19-2005 16:14:03] [#ezpublish] <SEAwolfx> btw .. is there an proper documentation to the collaboration-thing?
+[05-19-2005 16:14:20] [#ezpublish] <SEAwolfx> or are there any templates made for thisﬂ
+[05-19-2005 16:14:21] [#ezpublish] <kracker> i have not touched it just yet
+[05-19-2005 16:14:21] [#ezpublish] <SEAwolfx> ?
+[05-19-2005 16:14:37] [#ezpublish] <kracker> sry? collaboration-thing?
+[05-19-2005 16:15:23] [#ezpublish] <SEAwolfx> hmm .. the collaboration functionality
+[05-19-2005 16:16:31] [#ezpublish] <SEAwolfx> at least there are some templates.
+[05-19-2005 16:16:46] [#ezpublish] <SEAwolfx> like: design/standard/templates/collaboration/view/summary.tpl
+[05-19-2005 16:21:15] [#ezpublish] <SEAwolfx> hmm ... but where i can access these pages?!
+[05-19-2005 16:23:10] -!- fh [~fh@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-19-2005 16:23:17] [#ezpublish] <SEAwolfx> fh: hi
+[05-19-2005 16:23:47] [#ezpublish] <SEAwolfx> fh: is there a proper documentation on the collaboration-thing?
+[05-19-2005 16:24:23] [#ezpublish] <fh> nope
+[05-19-2005 16:24:25] [#ezpublish] <fh> sorry
+[05-19-2005 16:25:16] [#ezpublish] <SEAwolfx> fh: where can i access any view within the admin- oder the web- interface?
+[05-19-2005 16:26:36] [#ezpublish] <fh> what do you mean?
+[05-19-2005 16:26:51] [#ezpublish] <fh> you can access any view if you are the admin user (and unless you have set deny rules on any of the view)
+[05-19-2005 16:27:09] [#ezpublish] <SEAwolfx> hmm .. are in the admin-interface any functions on collaboration?
+[05-19-2005 16:28:09] [#ezpublish] <SEAwolfx> fh: i am totally new to this topic.
+[05-19-2005 16:28:12] [#ezpublish] <SEAwolfx> sorry.
+[05-19-2005 16:29:10] [#ezpublish] <fh> np..
+[05-19-2005 16:29:28] [#ezpublish] <fh> yes, there are a few function on collaboration if you go to "my page"
+[05-19-2005 16:29:44] [#ezpublish] <fh> the collaboration features are somewhat obscure..
+[05-19-2005 16:29:53] [#ezpublish] <fh> definately something we are going to clean up in 4.0
+[05-19-2005 16:30:24] [#ezpublish] <SEAwolfx> also in relation to the workflow-engine?
+[05-19-2005 16:30:55] [#ezpublish] <SEAwolfx> will the collaboration the basis of the workflow-engine?
+[05-19-2005 16:31:25] [#ezpublish] <SEAwolfx> where the workitems are stored for workflow-partipants?
+[05-19-2005 16:31:40] [#ezpublish] <SEAwolfx> +zi
+[05-19-2005 16:34:05] [#ezpublish] <fh> actually workflow and collaboration has nothing to do with each other
+[05-19-2005 16:34:37] [#ezpublish] <fh> workflow is the system we use to exten functionality with php code at some predifined places in ez publish
+[05-19-2005 16:35:15] [#ezpublish] <fh> collaboration is the system that deals with publishing approval
+[05-19-2005 16:35:26] [#ezpublish] <fh> collaboration is wrongly named.. it should be called workflow
+[05-19-2005 16:35:38] [#ezpublish] <fh> and the workflow system should be called something else
+[05-19-2005 16:36:19] [#ezpublish] <SEAwolfx> doh .. crazy
+[05-19-2005 16:36:53] [#ezpublish] <SEAwolfx> i would the current workflow-system consists of general actions and triggers.
+[05-19-2005 16:37:03] [#ezpublish] <SEAwolfx> -i would
+[05-19-2005 16:37:04] [#ezpublish] <SEAwolfx> ;)
+[05-19-2005 16:38:19] [#ezpublish] <fh> the workflow system in eZ publish just consists of hot spots in the code
+[05-19-2005 16:38:27] [#ezpublish] <fh> where you can plug in custom code
+[05-19-2005 16:38:34] [#ezpublish] <fh> quite simple actually
+[05-19-2005 16:39:10] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-19-2005 16:39:28] [#ezpublish] <SEAwolfx> this actually has nothing to do with a workflow-definition and a workflow-engine processing it.
+[05-19-2005 16:40:01] [#ezpublish] <fh> exactly
+[05-19-2005 16:40:12] [#ezpublish] <fh> which is why it is wrongly named
+[05-19-2005 16:40:16] [#ezpublish] <fh> if you ask me
+[05-19-2005 16:40:28] [#ezpublish] <SEAwolfx> yes, i would agree to you ;)
+[05-19-2005 16:40:46] [#ezpublish] <fh> I want to change it for 4.0
+[05-19-2005 16:41:03] [#ezpublish] <fh> but people know these terms now.. so I don't know..
+[05-19-2005 16:41:06] [#ezpublish] <SEAwolfx> i want to implement a workflow-engine?
+[05-19-2005 16:41:17] [#ezpublish] <fh> but it is definately confusing for many people
+[05-19-2005 16:41:19] [#ezpublish] <SEAwolfx> s/i/you/
+[05-19-2005 16:43:15] [#ezpublish] <SEAwolfx> I would change these expressions as they are already definied by the computer science.
+[05-19-2005 16:46:49] [#ezpublish] <SEAwolfx> hmm .. how can i create a new collaboration item?
+[05-19-2005 16:47:03] [#ezpublish] <SEAwolfx> how can i define groups ?
+[05-19-2005 16:48:22] [#ezpublish] <fh> can you ask again tomorrow?
+[05-19-2005 16:48:29] [#ezpublish] <fh> almost midnight here
+[05-19-2005 16:48:31] [#ezpublish] <SEAwolfx> ok ;)
+[05-19-2005 16:48:35] [#ezpublish] <fh> and I need some sleep
+[05-19-2005 16:48:37] [#ezpublish] <fh> :)
+[05-19-2005 16:48:38] [#ezpublish] <SEAwolfx> here the same ;)
+[05-19-2005 16:48:47] [#ezpublish] <SEAwolfx> good night.
+[05-19-2005 17:07:25] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-19-2005 17:40:24] [#ezpublish] <kracker> SEAwolfx: sry i got distracted with a client phone call
+[05-19-2005 19:01:27] Disconnecting due to lack of a lag response (0.14600500 1116554427 != 0.05600500 1116554457)
+[05-19-2005 19:01:27] Diconnected. Sleeping for 10 second(s).
+[05-19-2005 19:01:37] >> Connecting to irc.kde.org:6667
+[05-19-2005 19:01:37] >> Connected to irc.kde.org:6667, registering...
+[05-19-2005 19:01:47] >> Attempting to join channels: #ezpublish
+[05-19-2005 19:02:32] >> Attempting to join channels: #ezpublish
+[05-19-2005 19:02:37] Disconnecting due to lack of a lag response (0.39423900 1116554497 != 0.18599900 1116554527)
+[05-19-2005 19:02:37] Diconnected. Sleeping for 10 second(s).
+[05-19-2005 19:02:47] >> Connecting to irc.kde.org:6667
+[05-19-2005 19:02:47] >> Connected to irc.kde.org:6667, registering...
+[05-19-2005 19:03:17] >> Attempting to join channels: #ezpublish
+[05-19-2005 19:03:47] Disconnecting due to lack of a lag response (0.47843600 1116554567 != 0.07635000 1116554597)
+[05-19-2005 19:03:47] Diconnected. Sleeping for 10 second(s).
+[05-19-2005 19:03:57] >> Connecting to irc.kde.org:6667
+[05-19-2005 19:04:06] >> Connected to irc.kde.org:6667, registering...
+[05-19-2005 19:04:06] >> Attempting to join channels: #ezpublish
+[05-19-2005 19:04:51] >> Attempting to join channels: #ezpublish
+[05-19-2005 19:05:01] >> Successfully registered. Nick is: ezlog
+[05-19-2005 19:05:01] -!- There are 8757 victims and 9929 hiding on 24 servers
+[05-19-2005 19:05:01] -!- 28 flagged staff members
+[05-19-2005 19:05:01] -!- 8080 channels formed
+[05-19-2005 19:05:01] -!- I have 3860 clients and 0 servers
+[05-19-2005 19:05:01] -!- Current local  users: 3860  Max: 4740
+[05-19-2005 19:05:01] -!- Current global users: 18686  Max: 24741
+[05-19-2005 19:05:01] -!- Highest connection count: 4741 (4740 clients) (602143 since server was (re)started)
+[05-19-2005 19:05:01] -!- ezlog [[U2FsdGVkX@64.30.116.29] has joined #ezpublish
+[05-19-2005 19:05:01] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1| final thursday, May 26.
+[05-19-2005 19:05:01] -!- Topic set by fh [@] [Thu, 19 May 2005 01:44:31 -0700]
+[05-19-2005 19:05:02] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-19-2005 19:05:02] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-19-2005 19:05:34] -!- xbit [xbit@pppoecl77018.minlos.no] has joined #ezpublish
+[05-19-2005 21:07:04] -!- SEAwolfx [~mike@febe25b2cc5dae40.session.tor] has joined #ezpublish
+[05-19-2005 21:43:44] -!- Bedlored [~me@dsl-203-113-239-27.SA.netspace.net.au] has joined #ezpublish

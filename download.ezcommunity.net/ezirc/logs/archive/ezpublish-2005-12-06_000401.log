@@ -1,0 +1,284 @@
+[12-05-2005 00:08:38] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-05-2005 00:50:37] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[12-05-2005 01:20:03] -!- DiGiTa|_ [n=guillaum@84.4.69.133] has joined #ezpublish
+[12-05-2005 01:27:44] -!- nfrp [n=nfrp@popeye.ez.no] has joined #ezpublish
+[12-05-2005 01:45:19] -!- nfrp [n=nfrp@popeye.ez.no] has quit ["Leaving"]
+[12-05-2005 02:13:24] -!- ordnas [n=ordnas@p549DEC84.dip.t-dialin.net] has joined #ezpublish
+[12-05-2005 02:17:57] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-05-2005 03:04:12] [#ezpublish] <Proteque> hmmmm... how do I link directly to the referencepicture?
+[12-05-2005 03:04:36] [#ezpublish] <Proteque> $node.data_map.kart only gives me "Object".
+[12-05-2005 03:04:51] [#ezpublish] <Proteque> (that was just an examplepicture) ;)
+[12-05-2005 03:23:41] [#ezpublish] <DiGiTa|_> Proteque: use attribute view_gui
+[12-05-2005 03:23:53] [#ezpublish] <DiGiTa|_> and class_image="reference"
+[12-05-2005 03:24:13] [#ezpublish] <Proteque> as a direct link to the object (picture)?
+[12-05-2005 03:25:46] [#ezpublish] <Proteque> what I ment was: " <a href={attribute_view_gui attribute=$node.data_map.kart image_class="reference"}>something</a>
+[12-05-2005 03:25:55] [#ezpublish] <Proteque> that cant be done right?
+[12-05-2005 03:28:13] [#ezpublish] <DiGiTa|_> ah, as link
+[12-05-2005 03:28:18] [#ezpublish] <Proteque> yup
+[12-05-2005 03:28:29] [#ezpublish] <DiGiTa|_> that's an other story
+[12-05-2005 03:28:29] [#ezpublish] <DiGiTa|_> :)
+[12-05-2005 03:28:46] [#ezpublish] <Proteque> tried $node.data_map.kart.url_alias without any luck
+[12-05-2005 03:28:51] [#ezpublish] <Proteque> but I am mostly guessing
+[12-05-2005 03:29:03] [#ezpublish] <Proteque> having problems finding what I want on the documentationpage
+[12-05-2005 03:36:55] [#ezpublish] <Katana`> no, an attribute doesn't have an url alias
+[12-05-2005 03:37:09] [#ezpublish] <Katana`> only nodes do
+[12-05-2005 03:38:07] [#ezpublish] <Proteque> I did not mean like an attribute. I only wrote that up there to show him what I ment. (how attribute_view_gui could not be used)
+[12-05-2005 03:39:27] [#ezpublish] <Proteque> what I tried was <a href={$node.data_map.kart.url_alias}>
+[12-05-2005 03:41:33] [#ezpublish] <Katana`> well it could with proper templating
+[12-05-2005 03:41:45] [#ezpublish] <Katana`> and there is no url_alias attribute in any datatype
+[12-05-2005 03:45:22] [#ezpublish] <Proteque> so there really isnt a quick and dirty way to do this then?
+[12-05-2005 03:45:29] [#ezpublish] <Katana`> there is sure
+[12-05-2005 03:46:21] [#ezpublish] <Katana`> have a look at the default image template
+[12-05-2005 03:47:41] [#ezpublish] <Katana`> design\standard\templates\content\datatype\view\ezimage.tpl
+[12-05-2005 04:08:37] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-05-2005 04:14:01] [#ezpublish] <Proteque> thank you.
+[12-05-2005 04:14:17] [#ezpublish] <Proteque> but that example could not be used in my case sadly.
+[12-05-2005 04:15:37] [#ezpublish] <Proteque> because I have made my own class which has several fields in it. one of them are image. when showing the picture I use {attribute_view_gui attribute=$node.data_map.kart image_class="large"} wanted that picture to be a link to the reference-picture.
+[12-05-2005 04:16:46] [#ezpublish] <Katana`> well, the template shows you how to link directly to an image file
+[12-05-2005 04:16:52] [#ezpublish] <Katana`> whatever the class is
+[12-05-2005 04:29:34] [#ezpublish] <Proteque> I think I am blind today. better try this later or something. variables showing to variables showing to variabls. lost track :)
+[12-05-2005 04:31:31] [#ezpublish] <Katana`> :))
+[12-05-2005 04:33:47] [#ezpublish] <Proteque> guess I could make an overide of ezimage.tpl and turn on the href and link to image. ut then all images would be links to the original. not only in this template.
+[12-05-2005 04:45:57] [#ezpublish] <Proteque> the url I want is in the data_text :D now I just need to wash it the right way
+[12-05-2005 05:08:28] [#ezpublish] <zrg> it lives!
+[12-05-2005 05:08:44] [#ezpublish] <zrg> i need to fetch a node by attribute value in code - how could one do that?
+[12-05-2005 05:11:00] [#ezpublish] <Katana`> using subTree I guess
+[12-05-2005 05:11:10] [#ezpublish] <Katana`> subtre and attribute filter
+[12-05-2005 05:11:39] [#ezpublish] <zrg> there only seems to be fetch by id in php
+[12-05-2005 05:46:42] -!- kris10an [n=kh@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[12-05-2005 05:48:23] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[12-05-2005 05:51:19] -!- stai1 [n=stain@217.221.32.143] has joined #ezpublish
+[12-05-2005 05:52:22] [#ezpublish] <Sulfur> talking about trees ... is there a way to order a tree fetch by a nested priority of folders/contained objects  ? so far, it seems to me that all objects in a tree with same priority are put together regardless of the depth in which they are (i.e. objects with priority 2 and 3 in folder with priority 1 should come BEFORE object with priority 1 in folder with priority 2)
+[12-05-2005 05:53:45] [#ezpublish] <zrg> dont think there is.. made my own menu code and had to fetch level by level
+[12-05-2005 05:54:05] [#ezpublish] <Sulfur> ok...
+[12-05-2005 05:54:24] [#ezpublish] <Sulfur> yes I too had to do that except to try to write recursive behavior in a tpl :P
+[12-05-2005 05:54:43] [#ezpublish] <zrg> yes
+[12-05-2005 06:09:38] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-05-2005 06:09:54] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[12-05-2005 06:41:06] -!- DiGiTa|_ [n=guillaum@84.4.69.133] has quit [Read error: 110 (Connection timed out)]
+[12-05-2005 07:03:31] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-05-2005 07:03:58] -!- kris10an [n=kh@popeye.ez.no] has quit [Read error: 104 (Connection reset by peer)]
+[12-05-2005 07:09:04] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[12-05-2005 07:11:31] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 07:11:31] -!- stai1 [n=stain@217.221.32.143] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 07:11:31] -!- zrg [n=zurgutt@roop.pri.ee] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 07:11:31] -!- Proteque [n=gjorans@213.184.199.245] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 07:12:03] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-05-2005 07:12:03] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-05-2005 07:12:03] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-05-2005 07:12:45] [#ezpublish] <zrg> hm?
+[12-05-2005 07:19:11] -!- nfrp [n=nfrp@popeye.ez.no] has joined #ezpublish
+[12-05-2005 07:45:48] [#ezpublish] <_Rappy_> help?
+[12-05-2005 07:45:58] [#ezpublish] <_Rappy_> I got two include on a page
+[12-05-2005 07:46:16] [#ezpublish] <_Rappy_> {include uri='design:submenu.tpl'}
+[12-05-2005 07:46:17] [#ezpublish] <_Rappy_> {include uri='design:products.tpl'}
+[12-05-2005 07:46:45] [#ezpublish] <_Rappy_> and suddenly, without doing anything, i get this:
+[12-05-2005 07:46:46] [#ezpublish] <_Rappy_> Warning: eZTemplate  	Dec 05 2005 14:30:23
+[12-05-2005 07:46:46] [#ezpublish] <_Rappy_> No template could be loaded for "submenu.tpl" using resource "design"
+[12-05-2005 07:47:13] [#ezpublish] <_Rappy_> the code is correct, the submenu.tpl is where it has always been, and I can't seem to find the reason
+[12-05-2005 07:50:48] [#ezpublish] <nfrp> tried clearing all caches?
+[12-05-2005 07:54:39] [#ezpublish] <_Rappy_> did, it, + some chmod seemed to do the trick. although, now i got alot of new errors. :p Oh well, debugging here I come
+[12-05-2005 07:56:02] [#ezpublish] <nfrp> :)
+[12-05-2005 07:57:09] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-05-2005 07:57:15] [#ezpublish] <_Rappy_> don3 ;D
+[12-05-2005 07:58:01] -!- zrg [n=zurgutt@roop.pri.ee] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 07:58:01] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 07:58:01] -!- Proteque [n=gjorans@213.184.199.245] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 08:01:11] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-05-2005 08:01:11] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-05-2005 08:01:11] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-05-2005 08:01:59] -lilo:$*- [Global Notice] herbert Hi all. The server you're on, herbert.freenode.net, is experiencing routing problems. We'll need to shut it down. Please reconnect to irc.freenode.net .... thanks!
+[12-05-2005 08:10:46] -!- zrg [n=zurgutt@roop.pri.ee] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 08:10:46] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 08:10:46] -!- Proteque [n=gjorans@213.184.199.245] has quit [calvino.freenode.net irc.freenode.net]
+[12-05-2005 08:10:46] -!- Proteque_ [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-05-2005 08:11:18] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-05-2005 08:16:46] -lilo:$*- [Global Notice] (Oops, ignore previous message. :)
+[12-05-2005 08:26:35] [#ezpublish] <buz> is there a way to return a value from an template include ?
+[12-05-2005 08:26:46] [#ezpublish] <buz> (i'm abusing include to do recursive stuff)
+[12-05-2005 08:32:50] [#ezpublish] <Sulfur> hum ..... making it be _THE_ output of your tpl?
+[12-05-2005 08:42:28] [#ezpublish] <kris10an> {set-block}
+[12-05-2005 08:42:35] [#ezpublish] <buz> no no i need the return value in a variable
+[12-05-2005 08:43:01] [#ezpublish] <buz> mhh set-block with globalscope? thats kinda evil
+[12-05-2005 08:43:21] [#ezpublish] <Sulfur> operator?
+[12-05-2005 08:55:20] [#ezpublish] <buz> i'd rather use some included facility
+[12-05-2005 08:55:38] [#ezpublish] <buz> are variables passed by reference or by value (copied)?
+[12-05-2005 08:56:43] [#ezpublish] <buz> anyone up for a change of career? http://www.theregister.co.uk/2005/12/05/ebay_business_opportunity/
+[12-05-2005 08:58:39] [#ezpublish] <Sulfur> ow
+[12-05-2005 09:05:52] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-05-2005 09:06:02] [#ezpublish] <zrg> ping
+[12-05-2005 09:08:04] [#ezpublish] <buz> pong
+[12-05-2005 09:08:46] [#ezpublish] <Sulfur> bonk
+[12-05-2005 09:08:48] [#ezpublish] <zrg> fire torpedoes! :)
+[12-05-2005 09:12:13] -!- nfrp [n=nfrp@popeye.ez.no] has quit ["Leaving"]
+[12-05-2005 09:18:06] [#ezpublish] <kris10an> ducking
+[12-05-2005 09:19:17] [#ezpublish] <zrg> chickening?
+[12-05-2005 09:19:53] [#ezpublish] <kris10an> buz: templates are not really made to be functions. i'm not sure if they are pasted by reference...
+[12-05-2005 09:20:10] [#ezpublish] <kris10an> hmm.. that was two separate sentances btw... no connection
+[12-05-2005 09:20:11] [#ezpublish] <zrg> anyhow.. same problem since yesterday, i need to get a node by value of textline attribute, in code.
+[12-05-2005 09:20:55] [#ezpublish] <zrg> essentially its external id of object, for import and uptate from outside system
+[12-05-2005 09:21:22] [#ezpublish] <Sulfur> zrg ..... can cycling over a result set be acceptable ?
+[12-05-2005 09:21:46] [#ezpublish] <kris10an> zrg: how about fetching by the remote_id =
+[12-05-2005 09:21:49] [#ezpublish] <kris10an> ?
+[12-05-2005 09:22:06] [#ezpublish] <kris10an> and then generate remote_ids in your import...
+[12-05-2005 09:22:23] [#ezpublish] <zrg> the attribute should have unique values but this cant be guaranteed
+[12-05-2005 09:23:47] [#ezpublish] <zrg> i mean, input data can be guaranteed to be unique but not ez objects, obviously.. there seems to be remote id field but it seems to be created by ez at object initialization under the hood
+[12-05-2005 09:25:41] [#ezpublish] <zrg> so, i cant use it to determine if object already exists at next upload
+[12-05-2005 09:27:30] [#ezpublish] <zrg> hm.. shouldnt all template funtions also be available in php?
+[12-05-2005 09:33:46] [#ezpublish] <buz> they are
+[12-05-2005 09:33:48] [#ezpublish] <buz> somehow
+[12-05-2005 09:36:23] [#ezpublish] * zrg is not wiser from it, somehow ;)
+[12-05-2005 09:36:32] [#ezpublish] <Sulfur> in a very mys-teeeeeeeeee---rious way
+[12-05-2005 09:38:48] [#ezpublish] <zrg> maybe if i make a module that defines wrapper function to fetch by attribute value, and that function will make http queries to some special page on that ez setup, where result is get by using template function...
+[12-05-2005 09:40:19] [#ezpublish] * Sulfur is rather delirious due to an impending flu so he cannot be of much help 
+[12-05-2005 09:40:22] [#ezpublish] * zrg runs from men in white coats
+[12-05-2005 09:42:57] [#ezpublish] <zrg> near here a 600 year old flute was found in a archeological digout of middleages toilet.. archeologists said it was still in good tune too
+[12-05-2005 09:43:56] [#ezpublish] <zrg> now imagine this, there is this thing that has been laying in shit for 600 years and first thing they do is to put it in the mouth and see if its in tune :P
+[12-05-2005 09:44:03] [#ezpublish] <kracker> whew, what a morning *rubs eyes*
+[12-05-2005 09:51:09] [#ezpublish] * zrg jabs kracker with a cattle prod
+[12-05-2005 11:57:09] -!- zrg [n=zurgutt@roop.pri.ee] has left #ezpublish []
+[12-05-2005 12:05:12] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[12-05-2005 12:23:31] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-05-2005 13:42:48] [#ezpublish] <buz> mhh ez.no still down
+[12-05-2005 13:44:29] -!- ordnas [n=ordnas@p549DEC84.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-05-2005 13:57:04] -!- ordnas [n=ordnas@p549DC46B.dip.t-dialin.net] has joined #ezpublish
+[12-05-2005 14:25:17] [#ezpublish] <nnn0> hm i'm having trouble floating the toolbar-top left in IE
+[12-05-2005 14:29:29] [#ezpublish] <nnn0> k i got it :)
+[12-05-2005 14:41:24] [#ezpublish] <buz> how am i supposed to use the template language without docs?
+[12-05-2005 14:41:37] [#ezpublish] <buz> i should httrack ez.no/doc sometime
+[12-05-2005 14:42:01] [#ezpublish] <zrg> template language is pretty well documented
+[12-05-2005 14:42:08] [#ezpublish] <buz> outside ez?
+[12-05-2005 14:42:27] [#ezpublish] <buz> cause ez.no is still under maintenance
+[12-05-2005 14:42:37] [#ezpublish] <zrg> ah, i see :P
+[12-05-2005 14:42:49] [#ezpublish] <zrg> google cache? wayback machine?
+[12-05-2005 14:43:30] [#ezpublish] <buz> http://triligon.org/triligon/projects/advancedforum/advancedforum_meta_forum/welcome_to_the_forum
+[12-05-2005 14:43:37] [#ezpublish] <buz> still needs some caching work though
+[12-05-2005 14:44:55] [#ezpublish] <buz> google cache is my savior ;)
+[12-05-2005 14:53:50] [#ezpublish] <kracker> heh, yup thats still an outage :) kinda excited to see what the new face lift brings :)
+[12-05-2005 14:55:16] [#ezpublish] <kracker> buz, i'll httrack ez.no/doc as soon as it's backup and place the docs on ezcommunity.net and package the resulting cache directory on download.ezcommunity.net so others can just download the mirror (tar.gz)
+[12-05-2005 14:55:33] [#ezpublish] <buz> i could do that
+[12-05-2005 14:55:37] [#ezpublish] <buz> my pipe is plenty fast
+[12-05-2005 14:56:10] [#ezpublish] <kracker> ehh don't mind either way, i just happen to do a big of collecting, i think i had one a while back but it expired into the either ..
+[12-05-2005 14:56:23] [#ezpublish] <buz> mhh
+[12-05-2005 14:56:50] [#ezpublish] <buz> wtf does the key for my cacheblock not get evaluated at all once the page is cached?
+[12-05-2005 14:57:03] [#ezpublish] <zrg> oh, the noodly one :)
+[12-05-2005 14:57:47] [#ezpublish] <zrg> what makes the forum advanced?
+[12-05-2005 14:57:56] [#ezpublish] <buz> it can do nested display ala slashdot
+[12-05-2005 14:58:06] [#ezpublish] <buz> but due to cache block fuck ups it doesnt work
+[12-05-2005 14:58:52] [#ezpublish] <zrg> modding?
+[12-05-2005 14:59:27] [#ezpublish] <buz> no modding is not implemented right now
+[12-05-2005 14:59:58] [#ezpublish] <buz> but nested display ;)
+[12-05-2005 15:00:00] [#ezpublish] <buz> bit leap ;)
+[12-05-2005 15:00:17] [#ezpublish] <buz> and support for file uploads / images
+[12-05-2005 15:01:20] [#ezpublish] <zrg> oh? :)
+[12-05-2005 15:01:37] [#ezpublish] <buz> you know, real forums do stuff like that ;)
+[12-05-2005 15:02:36] [#ezpublish] <zrg> just a idea: i find left-indented nesting like this irritating, hard to read, it would be nicer if threads were on same level but background-color-coded instead
+[12-05-2005 15:02:50] [#ezpublish] <buz> i like it
+[12-05-2005 15:02:54] [#ezpublish] <buz> years of reading slashdot
+[12-05-2005 15:03:03] [#ezpublish] <buz> besides, its optional
+[12-05-2005 15:03:09] [#ezpublish] <buz> flat UBB style display is still the default
+[12-05-2005 15:03:28] [#ezpublish] <zrg> of course, just sayin'
+[12-05-2005 15:03:49] [#ezpublish] <buz> if you wanna say a nice way of doing it, try kur5hin.org 's dynamic trhreading
+[12-05-2005 15:03:54] [#ezpublish] <buz> likely one of the first ajax apps
+[12-05-2005 15:03:57] [#ezpublish] <buz> been around forever
+[12-05-2005 15:04:23] [#ezpublish] <buz> i'm even tempted to do some ajax, like in a proper usenet newsreade rwith threading and splitscreen etc
+[12-05-2005 15:04:51] [#ezpublish] <buz> think thunderbird
+[12-05-2005 15:05:07] [#ezpublish] <buz> only thing: how do you keep track of read and unread'
+[12-05-2005 15:05:37] [#ezpublish] <zrg> kuro5hin seems to be off the face of earth
+[12-05-2005 15:05:44] [#ezpublish] <buz> ?
+[12-05-2005 15:06:06] [#ezpublish] <zrg> well, connection refused
+[12-05-2005 15:06:10] [#ezpublish] <buz> oh indeed
+[12-05-2005 15:06:21] [#ezpublish] <zrg> bad day today or something
+[12-05-2005 15:07:27] [#ezpublish] <zrg> i have a rudimentary bugtracker built, would you want it?
+[12-05-2005 15:07:39] [#ezpublish] <buz> try http://forum.truthout.org/blog/story/2005/12/2/155535/127
+[12-05-2005 15:07:42] [#ezpublish] <buz> got a demo?
+[12-05-2005 15:07:49] [#ezpublish] <buz> chose dynamic threaded
+[12-05-2005 15:08:17] [#ezpublish] <zrg> no, cant show, sorry. its just 2 classes and few templates
+[12-05-2005 15:09:05] [#ezpublish] <buz> well set it up somewhere?
+[12-05-2005 15:09:11] [#ezpublish] <buz> or do me a content package?
+[12-05-2005 15:10:15] [#ezpublish] <buz> mhh feeding some high traffic usenet groups into ez would do for a nice stress test
+[12-05-2005 15:10:20] [#ezpublish] <zrg> ok i try, packaging doesnt work too well
+[12-05-2005 15:10:24] [#ezpublish] <buz> why?
+[12-05-2005 15:10:44] [#ezpublish] <zrg> it just doesnt, for content at least, classes works ok
+[12-05-2005 15:10:55] [#ezpublish] <zrg> very nice threading
+[12-05-2005 15:11:23] [#ezpublish] <buz> so i think
+[12-05-2005 15:16:08] [#ezpublish] <zrg> ok, i have to make package of classes and also attach related template files, override settings and css i think?
+[12-05-2005 15:16:33] [#ezpublish] <buz> yes
+[12-05-2005 15:16:44] [#ezpublish] <buz> not sure if it stores css?
+[12-05-2005 15:16:46] [#ezpublish] <buz> probably not
+[12-05-2005 15:17:00] [#ezpublish] <zrg> package only has classes
+[12-05-2005 15:17:07] [#ezpublish] <buz> no it stores templates
+[12-05-2005 15:17:09] [#ezpublish] <buz> asks you for it
+[12-05-2005 15:17:13] [#ezpublish] <zrg> nope
+[12-05-2005 15:17:52] [#ezpublish] <buz> does for me
+[12-05-2005 15:18:03] [#ezpublish] <buz> thats how the wiki package works
+[12-05-2005 15:18:50] [#ezpublish] <zrg> ok, how do you make it, choose content objects?
+[12-05-2005 15:19:53] [#ezpublish] <buz> yes
+[12-05-2005 15:20:02] [#ezpublish] <zrg> no, then it starts asking for onjects
+[12-05-2005 15:20:06] [#ezpublish] <zrg> objects
+[12-05-2005 15:20:12] [#ezpublish] <buz> you must select a subtree
+[12-05-2005 15:20:18] [#ezpublish] <buz> a generic one for best measure
+[12-05-2005 15:20:52] [#ezpublish] <zrg> ok.. ill try
+[12-05-2005 15:24:50] [#ezpublish] <zrg> class defs + templates ?
+[12-05-2005 15:24:55] [#ezpublish] <buz> yes
+[12-05-2005 15:25:48] [#ezpublish] <zrg> ok, cross fingers..
+[12-05-2005 15:36:58] [#ezpublish] <zrg> ok, no surprise, it fucked up again
+[12-05-2005 15:37:08] [#ezpublish] <buz> works for me
+[12-05-2005 15:37:31] [#ezpublish] <zrg> well maybe you can use it.. it put the templates under standard when i installed it
+[12-05-2005 15:39:48] [#ezpublish] <zrg> and i have apparently used numeric id's for some stuff :(
+[12-05-2005 15:39:56] [#ezpublish] <buz> ok THAT is a bad idea
+[12-05-2005 15:40:48] [#ezpublish] <zrg> yes, it was a while back, guess i did not know better
+[12-05-2005 15:41:35] [#ezpublish] <zrg> but, if templates were under plain at first site and i installed it into plain on other, how come templates go to standard?
+[12-05-2005 15:44:49] [#ezpublish] <buz> i think that is default behavior cause plain doesnt always exist not sure though
+[12-05-2005 15:46:18] [#ezpublish] <zrg> they were clone sites so pretty much everything is same on both.. well dunno
+[12-05-2005 15:54:51] [#ezpublish] <buz> u think the page is gonne be back up today
+[12-05-2005 15:55:24] [#ezpublish] <zrg> i doubt, 5 minutes left :P
+[12-05-2005 15:55:58] [#ezpublish] <buz> actually, in CET it's still 65min
+[12-05-2005 16:22:09] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-05-2005 16:22:16] -!- stecha [n=mstecha@mail.ncs.k12.mi.us] has joined #ezpublish
+[12-05-2005 16:22:29] [#ezpublish] <mstecha> hello
+[12-05-2005 16:26:24] [#ezpublish] <zrg> hi ho
+[12-05-2005 16:33:29] [#ezpublish] <mstecha> ok... all I wanna know
+[12-05-2005 16:33:49] [#ezpublish] <mstecha> how can I view images after embeding them
+[12-05-2005 16:45:13] [#ezpublish] <zrg> what do you mean
+[12-05-2005 16:52:53] [#ezpublish] <mstecha> if I upload and image and embed it, im not allowed to view it, it says "you do not have sufficient permissions to view this object"
+[12-05-2005 16:59:25] [#ezpublish] <nnn0> thru the interface ?
+[12-05-2005 16:59:35] [#ezpublish] <nnn0> the admin interface
+[12-05-2005 17:00:22] [#ezpublish] <nnn0> k you maybe have to add to the role of anonymous
+[12-05-2005 17:00:35] [#ezpublish] <nnn0> to view images
+[12-05-2005 17:03:18] [#ezpublish] <zrg> maybe he uploads to media files and that section does not have view images permissions?
+[12-05-2005 17:03:34] [#ezpublish] <zrg> anyhow you have to describe better for anyone to help you :P
+[12-05-2005 17:05:38] [#ezpublish] <zrg> ok, walk in the night, back in half a hour
+[12-05-2005 17:07:14] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-05-2005 17:53:50] -!- stecha [n=mstecha@mail.ncs.k12.mi.us] has quit []
+[12-05-2005 19:11:13] -!- ordnas [n=ordnas@p549DC46B.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-05-2005 19:31:48] Disconnecting due to lack of a lag response (0.06100500 1133832648 != 0.00446300 1133832678)
+[12-05-2005 19:31:48] Diconnected. Sleeping for 2 second(s).
+[12-05-2005 19:31:50] >> Connecting to irc.freenode.net:6667
+[12-05-2005 19:31:54] >> Connected to irc.freenode.net:6667, registering...
+[12-05-2005 19:31:54] >> Primary nickname in use, trying alternate.
+[12-05-2005 19:31:55] >> Successfully registered. Nick is: ezpublishlog
+[12-05-2005 19:31:55] -!- There are 11373 listed and 12756 unlisted users on 22 servers
+[12-05-2005 19:31:55] -!- 37 flagged staff members
+[12-05-2005 19:31:55] -!- 9876 channels formed
+[12-05-2005 19:31:55] -!- I have 4048 clients and 0 servers
+[12-05-2005 19:31:55] -!- Current local  users: 4048  Max: 5531
+[12-05-2005 19:31:55] -!- Current global users: 24129  Max: 27753
+[12-05-2005 19:31:55] -!- Highest connection count: 5533 (5531 clients) (750570 since server was (re)started)
+[12-05-2005 19:31:55] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[12-05-2005 19:31:55] [notice(freenode-connect)] VERSION IQ 0.9.3
+[12-05-2005 19:32:21] >> Attempting to join channels: #ezpublish
+[12-05-2005 19:32:21] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[12-05-2005 19:32:21] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/news/community_newsletter_02_12_2005 |   http://ez.no/community/articles/an_introduction_to_ez_components | http://ez.no/company/news/ez_conference_2006_call_for_papers
+[12-05-2005 19:32:21] -!- Topic set by buz [@] [Sat,  3 Dec 2005 13:17:44 -0600]
+[12-05-2005 19:32:21] (unmatched::raw477) :calvino.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#nicksetup
+[12-05-2005 19:34:55] (ezpublishlog) Attempting to gain back primary nickname
+[12-05-2005 19:34:55] -!- ezpublishlog is now known as ezlog
+[12-05-2005 19:34:55] My new nick is ezlog
+[12-05-2005 21:41:00] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[12-05-2005 21:41:38] [#ezpublish] <zrg> ez.no appears to be defaced :P
+[12-05-2005 23:02:22] [#ezpublish] <kracker> wheew, that the end of day sigh
+[12-05-2005 23:03:32] [#ezpublish] <kracker> sweet, all kinds of new fun things to click on :D
+[12-05-2005 23:05:53] [#ezpublish] <kracker> well that rubish
+[12-05-2005 23:07:00] [#ezpublish] <kracker> before the upgrade i had 930+ posts in the forum, now i it says i have 376, wtf?
+[12-05-2005 23:09:21] [#ezpublish] <kracker> :\

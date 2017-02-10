@@ -1,0 +1,593 @@
+[05-18-2006 00:15:26] -!- awormus [n=aaron@p54B112AE.dip0.t-ipconnect.de] has joined #ezpublish
+[05-18-2006 00:33:09] -!- DiGiTa|_ [n=pet2poul@84.4.125.100] has joined #ezpublish
+[05-18-2006 00:34:58] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-18-2006 00:40:29] -!- ordnas [n=ordnas@p549D5FEC.dip.t-dialin.net] has joined #ezpublish
+[05-18-2006 00:46:06] [#ezpublish] <awormus> moin
+[05-18-2006 01:24:54] [#ezpublish] <ordnas> moin
+[05-18-2006 01:25:00] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-18-2006 01:36:56] [#ezpublish] <Tidemann> moin
+[05-18-2006 01:38:09] -!- B-KiLLer` [n=me@bart.interact.lu] has quit []
+[05-18-2006 01:44:49] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[05-18-2006 01:51:18] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[05-18-2006 02:18:03] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-18-2006 02:49:56] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-18-2006 03:26:35] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit []
+[05-18-2006 03:44:17] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-18-2006 06:19:00] -!- Bedlore [n=me@59.167.164.46] has quit [Read error: 113 (No route to host)]
+[05-18-2006 07:26:40] -!- DiGiTa|_ [n=pet2poul@84.4.125.100] has quit []
+[05-18-2006 07:41:58] -!- SEAwolfx [n=mike@DSL01.212.114.251.99.NEFkom.net] has joined #ezpublish
+[05-18-2006 07:42:16] [#ezpublish] <SEAwolfx> hi @all
+[05-18-2006 07:48:32] [#ezpublish] <B-KiLLer`> hi @you
+[05-18-2006 07:55:18] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-18-2006 08:17:40] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[05-18-2006 08:31:36] -!- ons0on [n=hogne@212.33.152.198] has quit [Remote closed the connection]
+[05-18-2006 08:52:43] -!- awormus [n=aaron@p54B112AE.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-18-2006 09:07:03] Disconnecting due to lack of a lag response (0.08393500 1147961163 != 0.10499800 1147961193)
+[05-18-2006 09:07:03] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 09:07:05] >> Connecting to irc.freenode.net:6667
+[05-18-2006 09:07:19] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 09:07:19] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 09:07:29] >> Connecting to irc.freenode.net:6667
+[05-18-2006 09:07:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 09:07:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 09:07:49] >> Connecting to irc.freenode.net:6667
+[05-18-2006 09:07:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 09:07:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 09:08:09] >> Connecting to irc.freenode.net:6667
+[05-18-2006 09:08:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 09:08:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 09:08:33] >> Connecting to irc.freenode.net:6667
+[05-18-2006 09:08:43] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 09:08:43] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 09:08:53] >> Connecting to irc.freenode.net:6667
+[05-18-2006 09:08:53] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 09:08:53] >> Attempting to join channels: #ezpublish
+[05-18-2006 09:09:02] >> Successfully registered. Nick is: ezlog
+[05-18-2006 09:09:02] -!- There are 15221 listed and 14573 unlisted users on 17 servers
+[05-18-2006 09:09:02] -!- 43 flagged staff members
+[05-18-2006 09:09:02] -!- 11745 channels formed
+[05-18-2006 09:09:02] -!- I have 4589 clients and 0 servers
+[05-18-2006 09:09:02] -!- Current local  users: 4589  Max: 6290
+[05-18-2006 09:09:02] -!- Current global users: 29794  Max: 31376
+[05-18-2006 09:09:02] -!- Highest connection count: 6292 (6290 clients) (1246388 since server was (re)started)
+[05-18-2006 09:09:02] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-18-2006 09:09:02] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_12_05_2006
+[05-18-2006 09:09:02] -!- Topic set by buz [@] [Sat, 13 May 2006 08:44:13 -0500]
+[05-18-2006 09:09:21] -!- Tidemann [n=tidemann@ti132110a340-3091.bb.online.no] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- pire [n=kbot@phpugdo.de] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- elephantMan [n=elephant@119.205.103-84.rev.gaoland.net] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- tobyS [n=dotxp@hartes-php.de] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- zrg [n=zurgutt@roop.pri.ee] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- B-KiLLer` [n=me@bart.interact.lu] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- xbit [i=birger@ritchie.ping.uio.no] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- SEAwolfx [n=mike@DSL01.212.114.251.99.NEFkom.net] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- hovik [n=hovik@stalker.ez.no] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:09:21] -!- kris10an [n=kh@85.19.74.66] has quit [calvino.freenode.net irc.freenode.net]
+[05-18-2006 09:10:52] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[05-18-2006 09:10:52] -!- SEAwolfx [n=mike@DSL01.212.114.251.99.NEFkom.net] has joined #ezpublish
+[05-18-2006 09:10:52] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-18-2006 09:10:52] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-18-2006 09:10:52] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[05-18-2006 09:10:52] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[05-18-2006 09:10:52] -!- elephantMan [n=elephant@119.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-18-2006 09:10:52] -!- Tidemann [n=tidemann@ti132110a340-3091.bb.online.no] has joined #ezpublish
+[05-18-2006 09:10:52] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has joined #ezpublish
+[05-18-2006 09:10:52] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[05-18-2006 09:10:52] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[05-18-2006 09:10:52] -!- xbit [i=birger@ritchie.ping.uio.no] has joined #ezpublish
+[05-18-2006 09:10:52] -!- tobyS [n=dotxp@hartes-php.de] has joined #ezpublish
+[05-18-2006 09:11:42] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-18-2006 09:13:51] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-18-2006 09:13:51] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-18-2006 09:21:08] -!- awormus [n=aaron@p54B112AE.dip0.t-ipconnect.de] has joined #ezpublish
+[05-18-2006 10:08:39] -!- CleeK_ [n=CleeK@124.10.202.62.fix.bluewin.ch] has joined #ezpublish
+[05-18-2006 10:09:31] [#ezpublish] <CleeK_> lo
+[05-18-2006 10:33:13] -!- CleeK_ [n=CleeK@124.10.202.62.fix.bluewin.ch] has quit [Client Quit]
+[05-18-2006 10:45:15] -!- DiGiTa|_ [n=pet2poul@84.6.77.232] has joined #ezpublish
+[05-18-2006 11:37:08] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Remote closed the connection]
+[05-18-2006 11:37:51] -!- SEAwolfx [n=mike@DSL01.212.114.251.99.NEFkom.net] has quit ["Lost terminal"]
+[05-18-2006 11:40:28] -!- DiGiTa|_ [n=pet2poul@84.6.77.232] has quit [Read error: 110 (Connection timed out)]
+[05-18-2006 11:40:44] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-18-2006 12:23:56] -!- kracker [n=kracker@ip23.131.realtime.net] has joined #ezpublish
+[05-18-2006 12:36:15] [#ezpublish] <nnn0> faen ass
+[05-18-2006 12:36:32] [#ezpublish] <nnn0> i'm starting to get really pissed at this freaking 3.8
+[05-18-2006 12:37:00] [#ezpublish] <nnn0> i've like reinstalled five times
+[05-18-2006 12:37:52] [#ezpublish] <nnn0> why do i have "Contact us" in the user site, but not in the amin tree ???
+[05-18-2006 12:38:06] [#ezpublish] <nnn0> admin even
+[05-18-2006 12:38:15] [#ezpublish] <nnn0> and why don't you document !!!!!!!!!!!!!!!!!!!!!!11
+[05-18-2006 12:38:21] [#ezpublish] <nnn0> christ
+[05-18-2006 12:38:24] [#ezpublish] <nnn0> :)
+[05-18-2006 12:40:30] [#ezpublish] <nnn0> articles don't go in the tree anymore or what ?
+[05-18-2006 12:45:32] -!- DiGiTa|_ [n=pet2poul@84.6.72.79] has joined #ezpublish
+[05-18-2006 12:57:35] -!- ordna1 [n=ordnas@p549D5FEC.dip.t-dialin.net] has joined #ezpublish
+[05-18-2006 13:17:20] -!- ordnas [n=ordnas@p549D5FEC.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-18-2006 13:17:50] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-18-2006 13:22:13] [#ezpublish] <xbit> sÃ¥ sÃ¥ nnn0 :)
+[05-18-2006 13:22:15] [#ezpublish] <xbit> det ordner seg nok
+[05-18-2006 13:27:39] [#ezpublish] <nnn0> :)
+[05-18-2006 13:27:41] [#ezpublish] <nnn0> hhehe
+[05-18-2006 13:27:50] [#ezpublish] <nnn0> ja det begynner å gå seg til
+[05-18-2006 13:27:59] [#ezpublish] <nnn0> men det var mye som var forandret fra 3.7.5
+[05-18-2006 13:28:30] [#ezpublish] <xbit> ok, har ikke testet 3.8 enda, men drÃ¸yer det litt da tenker jeg :)
+[05-18-2006 13:28:59] [#ezpublish] <nnn0> ja du burde teste den først en plass det ikke er så nøye
+[05-18-2006 13:29:47] [#ezpublish] <nnn0> men alt blir vel helt nytt i v4 igjen uansett :D
+[05-18-2006 13:30:04] [#ezpublish] <xbit> mmh, tror 3.7.5 holder lenge enda
+[05-18-2006 13:30:18] [#ezpublish] <nnn0> skulle tro det
+[05-18-2006 13:40:00] [#ezpublish] <nnn0> bare jeg som ikke klarer å la være å oppgradere til det siste hele tiden :D
+[05-18-2006 13:51:11] [#ezpublish] <ls> privet
+[05-18-2006 13:55:43] [#ezpublish] <nnn0> sry
+[05-18-2006 13:56:14] [#ezpublish] <nnn0> just ranting about my problems with going from 3.7.5 to 3.8
+[05-18-2006 13:56:32] [#ezpublish] <nnn0> i've figured it out now it seems :)
+[05-18-2006 13:56:41] [#ezpublish] <ls> I did upgrade of my personal site yesrday, no errors so fare ;)
+[05-18-2006 13:56:47] [#ezpublish] <nnn0> :)
+[05-18-2006 13:57:27] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[05-18-2006 13:59:24] [#ezpublish] <xiglet> How can I import the classes from the installation wizard at a later point with version 3.8 ? (like "forum")
+[05-18-2006 14:01:14] [#ezpublish] <ls> from admin interface
+[05-18-2006 14:01:20] [#ezpublish] <ls> Setup->Packages
+[05-18-2006 14:01:49] [#ezpublish] <xiglet> well, tried it in 3.8?
+[05-18-2006 14:03:10] [#ezpublish] <ls> it should work, you can download packages from ez.no
+[05-18-2006 14:03:34] [#ezpublish] <ls> http://ez.no/community/forum/install_configuration/how_do_i_retrieve_all_packages_for_my_3_8_install
+[05-18-2006 14:04:03] [#ezpublish] <xiglet> tnx!
+[05-18-2006 14:04:18] [#ezpublish] <ls> np ;)
+[05-18-2006 14:05:11] [#ezpublish] <xiglet> I guess this should be downloaded directly in the admin interface... thats propably the plan
+[05-18-2006 14:06:14] [#ezpublish] <ls> I'm not sure if this was implemented in the admin, I guess not
+[05-18-2006 14:06:16] [#ezpublish] <nnn0> only the extension packages, not the site packages - those you have to implemente by hand
+[05-18-2006 14:07:55] [#ezpublish] <nnn0> the packages are here: http://ez.no/download/ez_publish/ez_publish_3_stable_releases/3_8/packages
+[05-18-2006 14:07:57] [#ezpublish] <xiglet> ok . .you can choose between "local" og "ez_systems" repository so i thought it went to ez.no to fetch dem diretcly
+[05-18-2006 14:08:04] [#ezpublish] <xiglet> yes, have found them :)
+[05-18-2006 14:09:37] [#ezpublish] <nnn0> so you can download and install thru admin interface content objects, but not the site styles i think
+[05-18-2006 14:10:14] [#ezpublish] <xiglet> great
+[05-18-2006 14:10:30] [#ezpublish] <nnn0> the Setup Wizard Sites i guess you use in the iinstall wizard
+[05-18-2006 14:10:55] [#ezpublish] <xiglet> i'm about to create an intranet site at work
+[05-18-2006 14:12:17] [#ezpublish] <xiglet> the "intranet" package is really great but I want to make it myself from scratch ... best way to learn :)
+[05-18-2006 14:12:33] [#ezpublish] <ls> ez_systems that repository is the directory under your ez publish var dir
+[05-18-2006 14:12:42] [#ezpublish] <xiglet> oh
+[05-18-2006 14:13:03] [#ezpublish] <ls> when you building package you can set vendor tag in the xml package source, then eZ publish will group packages per vendor
+[05-18-2006 14:13:36] [#ezpublish] <nnn0> i don't recommend using the plain template now - it renders without anything
+[05-18-2006 14:14:19] [#ezpublish] <nnn0> you're better off editing the intranet template
+[05-18-2006 14:15:28] [#ezpublish] <ls> nnn0: why, it is buggy or something?
+[05-18-2006 14:15:51] [#ezpublish] <xiglet> you mean the intranet template from the wizard, or the "intranet solution" that someone created under the gpl lisence
+[05-18-2006 14:16:17] [#ezpublish] <ls> someone, read ls ;)
+[05-18-2006 14:16:18] [#ezpublish] <xiglet> license
+[05-18-2006 14:16:18] [#ezpublish] <nnn0> hm donno - but before you got a site with a meny and stuff, but now it's different
+[05-18-2006 14:17:03] [#ezpublish] <xiglet> my plan was to make a pagelayout from scratch and all other templates ...
+[05-18-2006 14:17:32] [#ezpublish] <ls> pagelayout ok, but why rest
+[05-18-2006 14:17:37] [#ezpublish] <ls> most of them you can re-use
+[05-18-2006 14:17:42] [#ezpublish] <ls> override templates
+[05-18-2006 14:18:32] [#ezpublish] <nnn0> it like if you choose plain in the wizards it installs without any packages what so ever
+[05-18-2006 14:19:24] [#ezpublish] <xiglet> the packages is ok because I get the classes, but the stylesheets is terrable
+[05-18-2006 14:20:06] [#ezpublish] <xiglet> I guess I'll use table-less layout so the job is mostly redesigning the css-files
+[05-18-2006 14:20:13] [#ezpublish] <xiglet> and overrides
+[05-18-2006 14:22:09] [#ezpublish] <ls> professional way it to slice the PSD from designer, setup page layout + new site.css, rest templates needs less or more changes, but it is always faster to re-use then make all from scratch
+[05-18-2006 14:22:34] [#ezpublish] <xiglet> yeah, that's what I really ment ..
+[05-18-2006 14:22:52] [#ezpublish] <xiglet> i'm also the designer :)
+[05-18-2006 14:23:06] [#ezpublish] <ls> really? do you have online portfolio?
+[05-18-2006 14:23:29] [#ezpublish] <xiglet> let's say, i'm a "designer" .. not a good one ..
+[05-18-2006 14:23:50] [#ezpublish] <ls> ah, ok, designer because of must ;)
+[05-18-2006 14:24:00] [#ezpublish] <xiglet> I should have someone do the design but we are a small company and needs to keep costs low
+[05-18-2006 14:24:14] [#ezpublish] <ls> I see
+[05-18-2006 14:24:23] [#ezpublish] <xiglet> http://www.slettum.com/ my homepage, only a static html file :)
+[05-18-2006 14:24:23] [#ezpublish] <ls> are you a partner btw?
+[05-18-2006 14:24:48] [#ezpublish] <xiglet> http://www.slettum.com/film my first ezpublish site, pretty bad
+[05-18-2006 14:25:27] [#ezpublish] <xiglet> well, talked with Farstad about that ... Just have to make time to learn more about this wonderful system, then we'll become a partner
+[05-18-2006 14:25:49] [#ezpublish] <xiglet> i'm really a network consultant, mostly microsoft products
+[05-18-2006 14:26:49] [#ezpublish] <xiglet> www.nmsport.no -> made this from the intranet package
+[05-18-2006 14:27:06] [#ezpublish] <ls> I can't imagine to work with other software for building sites, it saves a lot of time when you know eZ publish, but it is a quite long way
+[05-18-2006 14:27:23] [#ezpublish] <xiglet> long way, no shit :)
+[05-18-2006 14:27:48] [#ezpublish] <ls> haha, you will love it
+[05-18-2006 14:27:56] [#ezpublish] <ls> nice to see that people find it useful
+[05-18-2006 14:28:01] [#ezpublish] <ls> intranet stuff
+[05-18-2006 14:28:18] [#ezpublish] <xiglet> i'm getting a hang of it now I think.. enough to know what to do .. my problem is that I have not enough experience with css
+[05-18-2006 14:28:44] [#ezpublish] <xiglet> when I finally make a design with CSS, I test it in IE and it's all broken :)
+[05-18-2006 14:28:59] [#ezpublish] <xiglet> the template system is also a bit trickey yet
+[05-18-2006 14:29:00] [#ezpublish] <nnn0> Ie sucks :D
+[05-18-2006 14:29:01] [#ezpublish] <ls> heh, It well known pain
+[05-18-2006 14:29:20] [#ezpublish] <nnn0> i usually makes an override just for IE and load it with conditional commants
+[05-18-2006 14:29:26] [#ezpublish] <xiglet> let's hope IE7 will make our day easier
+[05-18-2006 14:29:27] [#ezpublish] <nnn0> comments
+[05-18-2006 14:29:33] [#ezpublish] <nnn0> not likely :)
+[05-18-2006 14:29:36] [#ezpublish] <ls> comments are cool for IE
+[05-18-2006 14:29:42] [#ezpublish] <ls> makes life easuer
+[05-18-2006 14:29:46] [#ezpublish] <ls> easier*
+[05-18-2006 14:29:52] [#ezpublish] <nnn0> http://www.quirksmode.org/css/condcom.html
+[05-18-2006 14:32:01] [#ezpublish] <ls> these days is easier to learn eZ publish :)
+[05-18-2006 14:32:24] [#ezpublish] <xiglet> Looking forward to the day when ezpublish have a calendar functionality built-in
+[05-18-2006 14:32:40] [#ezpublish] <xiglet> is it ls? because of the documentation ? the new template language?
+[05-18-2006 14:33:06] [#ezpublish] <ls> new doc, new tpl syntax, book
+[05-18-2006 14:33:12] [#ezpublish] <ls> more resources
+[05-18-2006 14:33:50] [#ezpublish] <xiglet> hope someone makes more books
+[05-18-2006 14:34:00] [#ezpublish] <xiglet> I know "Allman" at ez systems is working on one
+[05-18-2006 14:34:29] [#ezpublish] <ls> yeah I heard something
+[05-18-2006 14:34:37] [#ezpublish] <xiglet> I really miss a really good documention over the template system ...
+[05-18-2006 14:35:01] [#ezpublish] <xiglet> the new documentation website is allright if you know where to look
+[05-18-2006 14:35:13] [#ezpublish] <ls> old doc is still useful
+[05-18-2006 14:35:30] [#ezpublish] <ls> quite a lot of nice information
+[05-18-2006 14:35:36] -!- ordna1 [n=ordnas@p549D5FEC.dip.t-dialin.net] has left #ezpublish []
+[05-18-2006 14:35:37] [#ezpublish] <xiglet> the "how to build an ez publish site" was the thing I learned most from at ez.no
+[05-18-2006 14:35:56] [#ezpublish] <ls> heh, I was learn from it as well
+[05-18-2006 14:36:03] [#ezpublish] <ls> the best tutorial for beginners
+[05-18-2006 14:36:19] [#ezpublish] <xiglet> hope they make more of things like that
+[05-18-2006 14:36:34] [#ezpublish] <xiglet> but if it's too easy to learn, how can they earn money? :)
+[05-18-2006 14:37:29] [#ezpublish] <ls> well this works on both sides, easy to learn means more people will use it and need support or other services
+[05-18-2006 14:37:35] [#ezpublish] <xiglet> is single sign on possible using the logged on user in windows xp/2k?
+[05-18-2006 14:37:47] [#ezpublish] <xiglet> agreed
+[05-18-2006 14:38:53] [#ezpublish] <ls> not sure if this is possible, perhpas with ActiveDirectory
+[05-18-2006 14:39:56] [#ezpublish] <ls> anyway sso in eZ publish is a gateway, all login stuff you need to handle by your script
+[05-18-2006 14:40:13] [#ezpublish] <xiglet> AD / ldap I hope works, but I don't know with single-sign-on
+[05-18-2006 14:40:56] [#ezpublish] <ls> http://ez.no/community/forum/developer/sso/re_sso
+[05-18-2006 14:41:08] [#ezpublish] <ls> you can find some examples in the cookieuser contrib
+[05-18-2006 14:41:48] [#ezpublish] <ls> we don't have nothing more then this and info about the feature
+[05-18-2006 14:44:17] [#ezpublish] <xiglet> "we"? you work at ez systems?
+[05-18-2006 14:44:42] [#ezpublish] <ls> yes
+[05-18-2006 14:45:24] [#ezpublish] <ls> check whois ;)
+[05-18-2006 14:45:52] [#ezpublish] <nnn0> :)
+[05-18-2006 14:46:29] [#ezpublish] <nnn0> hehe people aren't used to developers actuallly helping out on irc :D
+[05-18-2006 14:47:57] [#ezpublish] <xiglet> I have seen it here before :) They must really love their work :)
+[05-18-2006 14:48:04] [#ezpublish] <xiglet> nothing is better than that
+[05-18-2006 14:48:20] [#ezpublish] <nnn0> true
+[05-18-2006 14:48:23] [#ezpublish] <xiglet> do that myself, except I'm not a big microsoft-fan
+[05-18-2006 14:48:59] [#ezpublish] <xiglet> .. and that is what I do best ironically
+[05-18-2006 14:49:14] [#ezpublish] <nnn0> :D
+[05-18-2006 14:49:41] [#ezpublish] <xiglet> ls: I was on a 4 day course with Allman .. Really good guy, both socially and technically
+[05-18-2006 14:50:20] [#ezpublish] <ls> yes, Allman is good, that's true :)
+[05-18-2006 14:50:52] [#ezpublish] <xiglet> so that's what you look like :)
+[05-18-2006 14:51:26] [#ezpublish] <ls> hehe :)
+[05-18-2006 14:51:48] [#ezpublish] <xiglet> poland? Had a girlfriend from Poland
+[05-18-2006 14:52:02] [#ezpublish] <xiglet> never known a girl that horny since :)
+[05-18-2006 14:52:11] [#ezpublish] <ls> yes, I work from Poland
+[05-18-2006 14:52:36] [#ezpublish] <xiglet> So you work with "the community"
+[05-18-2006 14:53:18] [#ezpublish] <xiglet> what will you do to get more contributions from the community? I don't know why there is so little ..
+[05-18-2006 14:53:29] [#ezpublish] <ls> Yep, but not only
+[05-18-2006 14:53:57] [#ezpublish] <ls> We have more then 300 contributions now, I think it is quite a lot
+[05-18-2006 14:54:29] [#ezpublish] <ls> we will have also new Project section which will be much better for developers
+[05-18-2006 14:54:49] [#ezpublish] <xiglet> great .. what about competitoins?
+[05-18-2006 14:55:09] [#ezpublish] <xiglet> If I don't remember wrong there was something like that regarding site design
+[05-18-2006 14:55:10] [#ezpublish] <ls> well, first we need good tools for developers
+[05-18-2006 14:55:43] [#ezpublish] <xiglet> but mostly crappy contributions ... The only really great sitedesign able to download is the intranet solution .. but that is my opinion
+[05-18-2006 14:56:27] -!- awormus_ [n=aaron@p54B13AC6.dip0.t-ipconnect.de] has joined #ezpublish
+[05-18-2006 14:56:35] [#ezpublish] <ls> yep, there is a few nice sitedesign
+[05-18-2006 14:56:49] [#ezpublish] <ls> mostly from design competitions
+[05-18-2006 14:57:47] [#ezpublish] <xiglet> in one way, the first versions of ezp 3 had better templates. Ok it was based on tables but a great deal of sample code to "steel" :)
+[05-18-2006 14:58:02] [#ezpublish] <xiglet> now the only difference between styledesigns is colors :)
+[05-18-2006 14:58:27] [#ezpublish] <ls> in most of them yes
+[05-18-2006 14:58:38] [#ezpublish] <xiglet> but the case with packages is of course very flexible
+[05-18-2006 14:58:39] [#ezpublish] <ls> but CSS is much more powerful
+[05-18-2006 14:59:02] [#ezpublish] <xiglet> sure .. but does anyone at ez systems work on ny sitedesign that will be included in the install wizard?
+[05-18-2006 14:59:26] [#ezpublish] <xiglet> that could maybe be more appealing to new users as well
+[05-18-2006 14:59:51] [#ezpublish] <xiglet> the demo sites at ez.no scare people away . :)
+[05-18-2006 14:59:52] [#ezpublish] <ls> yep we have plans for this of course
+[05-18-2006 15:00:11] [#ezpublish] <ls> better examples with new designs, for blogs, intranet, corporate, etc
+[05-18-2006 15:00:28] [#ezpublish] <ls> bundled with extensions if need
+[05-18-2006 15:00:50] [#ezpublish] <xiglet> have any idea when?
+[05-18-2006 15:01:24] [#ezpublish] <ls> I think some of them should be after conference, can't give you sticky dates
+[05-18-2006 15:01:35] [#ezpublish] <xiglet> genious :)
+[05-18-2006 15:01:41] [#ezpublish] <xiglet> looking forward to that
+[05-18-2006 15:02:05] [#ezpublish] <xiglet> I really love ez publish and I am looking forward to be a partner
+[05-18-2006 15:02:23] [#ezpublish] <xiglet> But it's not a good idea before I learn the shit :)
+[05-18-2006 15:02:32] [#ezpublish] <ls> Do you come from old table base layouts school? ;)
+[05-18-2006 15:03:16] [#ezpublish] <xiglet> well, I don't come from anywhere :) I coded turbo pascal 7.0 back in the old days, after that I have not coded much
+[05-18-2006 15:03:27] [#ezpublish] <xiglet> more point-and-click on windows servers :)
+[05-18-2006 15:04:16] [#ezpublish] <ls> I see :)
+[05-18-2006 15:04:17] [#ezpublish] <xiglet> http://www.slettum.com/ski/index.php/ski another page I made based on the intranet package :)
+[05-18-2006 15:04:58] -!- awormus_ [n=aaron@p54B13AC6.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-18-2006 15:05:01] [#ezpublish] <ls> ok, I see that more good looking sitestyles are need for you ;)
+[05-18-2006 15:05:56] [#ezpublish] <xiglet> but when I get a hang of the template system and learn some more CSS, I can't see that any other system can make so powerfull dynamic webpages so fast as ez publish
+[05-18-2006 15:08:17] [#ezpublish] <xiglet> I talked to a plone-developer ... he was so angry at ez systems for blaming that you say you have open source cms with most users
+[05-18-2006 15:10:00] [#ezpublish] <ls> not sure what he meant exactyl
+[05-18-2006 15:12:15] -!- DiGiTa|_ [n=pet2poul@84.6.72.79] has quit []
+[05-18-2006 15:13:01] [#ezpublish] <xiglet> he ment that plone have more users than you
+[05-18-2006 15:13:21] [#ezpublish] <nnn0> :)
+[05-18-2006 15:13:33] [#ezpublish] <xiglet> i'm glad I choosed ezp over plone
+[05-18-2006 15:13:49] -!- awormus [n=aaron@p54B112AE.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-18-2006 15:14:04] [#ezpublish] <xiglet> plone is hard if you don't have a plugin that exactly fits your needs or you are a really creat l77t python-coder
+[05-18-2006 15:14:42] [#ezpublish] <nnn0> i know several which has gone from plone to ez - for instance www.klassekampen.no (a norwegian leftists newspaper) have tried both plone and zope, but chose ez publish
+[05-18-2006 15:14:56] [#ezpublish] <ls> perhaps plone has more users, but it is base on not popular platform
+[05-18-2006 15:15:07] [#ezpublish] <ls> escape from Zope/Plone is so difficult
+[05-18-2006 15:15:24] [#ezpublish] <ls> also support is not good enought, I was disapointed with Plone developers support
+[05-18-2006 15:15:26] [#ezpublish] <xiglet> also, skolelinux want to migrate from plone to ezp
+[05-18-2006 15:15:35] [#ezpublish] <nnn0> k
+[05-18-2006 15:15:39] [#ezpublish] <ls> I know Alex, spoke with hime last summer
+[05-18-2006 15:15:46] [#ezpublish] <ls> they will use eZ publish
+[05-18-2006 15:16:02] [#ezpublish] <xiglet> Alex?
+[05-18-2006 15:16:54] [#ezpublish] <ls> not sure abut last name, he was in charge with Plone and he was testing and learn more about eZ publish
+[05-18-2006 15:17:03] [#ezpublish] <ls> from solelinux
+[05-18-2006 15:17:07] [#ezpublish] <xiglet> ah
+[05-18-2006 15:17:30] [#ezpublish] <xiglet> I know Frode from skolelinux, and have talked a bit with a few other guys there
+[05-18-2006 15:17:49] [#ezpublish] <xiglet> haven't tried skolelinux since 2003 or something
+[05-18-2006 15:20:51] [#ezpublish] <ls> one of the main reason why FSFE.org switch ot eZ publish was performance and weak support from plone developers
+[05-18-2006 15:22:20] [#ezpublish] <xiglet> well, the performance in ez publish isn't the best in the world , is it? :)
+[05-18-2006 15:22:47] [#ezpublish] <xiglet> heard you have to to a lot of hacking with barnimagen.no to get a good performance
+[05-18-2006 15:23:12] [#ezpublish] <xiglet> good enough for me
+[05-18-2006 15:23:42] [#ezpublish] <ls> Performance depends on many things, eZ publish a hugh application, and like other softwares has some requirements
+[05-18-2006 15:24:05] [#ezpublish] <xiglet> sure
+[05-18-2006 15:25:06] [#ezpublish] <ls> You can get nice performance with eZ publish
+[05-18-2006 15:25:44] [#ezpublish] <ls> some counts you can see here
+[05-18-2006 15:25:45] [#ezpublish] <ls> http://ez.no/community/forum/install_configuration/ez_publish_performance
+[05-18-2006 15:25:46] [#ezpublish] <xiglet> do you stay in this channel a lot?
+[05-18-2006 15:26:14] [#ezpublish] <xiglet> you don't use linux? :-|
+[05-18-2006 15:26:34] [#ezpublish] <ls> I use, but it was in times when I had Windows platform
+[05-18-2006 15:27:07] [#ezpublish] <ls> I stay here quite a lot
+[05-18-2006 15:28:09] [#ezpublish] <ls> I have to OS installed
+[05-18-2006 15:28:27] [#ezpublish] <ls> to=two
+[05-18-2006 15:28:36] [#ezpublish] <ls> Linux is my primary of course
+[05-18-2006 15:28:55] [#ezpublish] <xiglet> :) I uses mostly linux at home ... just love knoppix
+[05-18-2006 15:29:07] [#ezpublish] <xiglet> no, kubuntu I mean
+[05-18-2006 15:29:15] [#ezpublish] <xiglet> christ
+[05-18-2006 15:30:23] [#ezpublish] <ls> suse is my favorite, installed 10.1 2 days ago
+[05-18-2006 15:31:20] [#ezpublish] <xiglet> tried to enable 3d hardware acceleration with the bundled video driver and the pc crashed
+[05-18-2006 15:31:26] [#ezpublish] <xiglet> (suse 10.1)
+[05-18-2006 15:31:43] [#ezpublish] <xiglet> suse looked good, but didn't support my onboard wireless network card
+[05-18-2006 15:31:46] [#ezpublish] <ls> I did not fire up as well
+[05-18-2006 15:31:59] [#ezpublish] <xiglet> I have a Thinkpad T42, worlds greatest laptop
+[05-18-2006 15:32:05] [#ezpublish] <xiglet> 1400x1050 screen
+[05-18-2006 15:32:06] [#ezpublish] <ls> heh
+[05-18-2006 15:32:10] [#ezpublish] <ls> same here but DELL
+[05-18-2006 15:32:18] [#ezpublish] <ls> also with 1400x1050
+[05-18-2006 15:32:27] [#ezpublish] <buz> mhh
+[05-18-2006 15:32:36] [#ezpublish] <buz> no problem running linux with 1400*1050 on my toshiba
+[05-18-2006 15:32:45] [#ezpublish] <buz> even xgl works
+[05-18-2006 15:33:15] [#ezpublish] <xiglet> xgl is cool, but I don't like gnome
+[05-18-2006 15:33:20] [#ezpublish] <buz> runs with kde no problem
+[05-18-2006 15:33:21] [#ezpublish] <xiglet> kde is much better for me :)
+[05-18-2006 15:33:34] [#ezpublish] <xiglet> looking forward to kde with hardware acceleration
+[05-18-2006 15:33:34] [#ezpublish] <buz> you just dont get kde window borders
+[05-18-2006 15:33:36] [#ezpublish] <buz> but that's it
+[05-18-2006 15:33:39] [#ezpublish] <ls> yeah, kde makes life easy
+[05-18-2006 15:33:53] [#ezpublish] <buz> i cant stand gnome either ;)
+[05-18-2006 15:34:01] [#ezpublish] <buz> otoh, xgl is neat but rather useless
+[05-18-2006 15:34:09] [#ezpublish] <xiglet> gnome gives me less functions than windows :)
+[05-18-2006 15:34:20] [#ezpublish] <buz> gnome is like the bad parts of os
+[05-18-2006 15:34:21] [#ezpublish] <buz> x
+[05-18-2006 15:34:24] [#ezpublish] <buz> and none of the good parts
+[05-18-2006 15:34:29] [#ezpublish] <xiglet> useless for now, I guess they find a nice use of it later
+[05-18-2006 15:34:39] [#ezpublish] <buz> well they have nice uses
+[05-18-2006 15:34:43] [#ezpublish] <buz> it just isnt really useful ;)
+[05-18-2006 15:34:54] [#ezpublish] <ls> :)
+[05-18-2006 15:34:57] [#ezpublish] <xiglet> gnome is clean and nice looking .. at least the icons  - but that's about it :)
+[05-18-2006 15:35:02] [#ezpublish] <buz> only thing that really sucks on linux is dual head
+[05-18-2006 15:35:11] [#ezpublish] <xiglet> why?
+[05-18-2006 15:35:26] [#ezpublish] <buz> for my life, i cant get it to work with screens of differing resolutions
+[05-18-2006 15:35:52] [#ezpublish] <xiglet> the different between dual head on my windows computer and linux computer is that on the windows machine, the same wallpaper stays on both screens :)
+[05-18-2006 15:35:59] [#ezpublish] <xiglet> ok
+[05-18-2006 15:36:09] [#ezpublish] <buz> it works fine with the same resolution
+[05-18-2006 15:36:15] [#ezpublish] <buz> but 1400*1050 sucks on 20"
+[05-18-2006 15:36:35] [#ezpublish] <xiglet> all resolutions not made for that lcd screen sucks :)
+[05-18-2006 15:36:50] [#ezpublish] <buz> yes, exactly
+[05-18-2006 15:37:03] [#ezpublish] <buz> the 20" is 1600*1200
+[05-18-2006 15:37:07] [#ezpublish] <xiglet> but I have tried 1280x1024 and 1024x768, worked fine
+[05-18-2006 15:37:23] [#ezpublish] <buz> what graphics card
+[05-18-2006 15:37:26] [#ezpublish] <xiglet> of course it will be an "empty space"
+[05-18-2006 15:37:30] [#ezpublish] <buz> ah well yes
+[05-18-2006 15:37:31] [#ezpublish] <buz> that sucks
+[05-18-2006 15:37:33] [#ezpublish] <xiglet> radeon I belive
+[05-18-2006 15:37:39] [#ezpublish] <buz> on win and osx it works without empty crap
+[05-18-2006 15:37:56] [#ezpublish] <xiglet> how do they manage that?
+[05-18-2006 15:38:04] [#ezpublish] <buz> not sure
+[05-18-2006 15:38:07] [#ezpublish] <buz> it cant be too hard
+[05-18-2006 15:38:20] [#ezpublish] <xiglet> it have to be a empty space
+[05-18-2006 15:38:30] [#ezpublish] <buz> i assume they have virtual screens that are of the same size but only maximize to the actual size of a screen
+[05-18-2006 15:38:32] [#ezpublish] <xiglet> below the screen with poorest resolution
+[05-18-2006 15:38:50] [#ezpublish] <buz> xgl isnt smart enough for that it seems
+[05-18-2006 15:38:56] [#ezpublish] <buz> sorry, xorg
+[05-18-2006 15:38:59] [#ezpublish] <xiglet> ok, never tried xgl with dual head
+[05-18-2006 15:39:03] [#ezpublish] <buz> xgl cant do dualhead for all i know
+[05-18-2006 15:39:08] [#ezpublish] <xiglet> ok
+[05-18-2006 15:39:18] [#ezpublish] <xiglet> kde even have a beagle frontend, that's cool
+[05-18-2006 15:39:25] [#ezpublish] <buz> beagle sucks badly
+[05-18-2006 15:39:36] [#ezpublish] <xiglet> should support more backend ..
+[05-18-2006 15:39:42] [#ezpublish] <buz> i did some tests with it, uses shitloads of cpu and doesnt find anything useful
+[05-18-2006 15:39:46] [#ezpublish] <xiglet> suck? why? mono?
+[05-18-2006 15:40:01] [#ezpublish] <buz> it searchs through my mail and finds my own emailaddress 10 times
+[05-18-2006 15:40:06] [#ezpublish] <buz> whereas i got about 50K mails
+[05-18-2006 15:40:18] [#ezpublish] <buz> totally useless
+[05-18-2006 15:40:35] [#ezpublish] <xiglet> ok, was abit isappointed about the search results myself
+[05-18-2006 15:40:40] [#ezpublish] <buz> in other news, we should send some blankets to the devil: http://www.theregister.co.uk/2006/05/18/dell_picks_amd/
+[05-18-2006 15:40:47] [#ezpublish] <xiglet> remember it's beta :)
+[05-18-2006 15:40:52] [#ezpublish] <buz> he must be feeling very cold
+[05-18-2006 15:42:39] [#ezpublish] <buz> oh and my laptop wont hibernate under linux when i use nvidia drivers
+[05-18-2006 15:42:46] [#ezpublish] <buz> with opensource drivers it works but those are slow
+[05-18-2006 15:43:15] [#ezpublish] <xiglet> hope ati and nvidia will open up the drivers some day
+[05-18-2006 15:43:20] [#ezpublish] <buz> not gonna happen
+[05-18-2006 15:43:55] [#ezpublish] <xiglet> maybe not as long as it's the gamers that drives the industry forward - and they all use Windows
+[05-18-2006 15:44:50] [#ezpublish] <xiglet> Intel cards are pretty well supported from opensource drivers, right? maybe they make some good 3d-cards in the future as well
+[05-18-2006 15:44:51] [#ezpublish] <buz> i dont think nvidia or ati even could
+[05-18-2006 15:44:55] [#ezpublish] <buz> they'd get sued right away
+[05-18-2006 15:45:14] [#ezpublish] <buz> i dont care for gaming really
+[05-18-2006 15:45:25] [#ezpublish] <xiglet> Yes, they say something like that on the webpages
+[05-18-2006 15:45:42] [#ezpublish] <xiglet> puzzle bobble is the only game you need :)
+[05-18-2006 15:46:00] [#ezpublish] <buz> not even that
+[05-18-2006 15:46:33] [#ezpublish] <xiglet> if you don't like games or xgl, why do you need another driver?
+[05-18-2006 15:46:45] [#ezpublish] <xiglet> isn't the bundled driver good enough viewing 2d?
+[05-18-2006 15:47:36] [#ezpublish] <buz> oh i do like xgl
+[05-18-2006 15:47:45] [#ezpublish] <xiglet> ok :)
+[05-18-2006 15:47:45] [#ezpublish] <buz> i just dont see what its use is
+[05-18-2006 15:47:53] [#ezpublish] <buz> i'm a sucker for all sorts of eye candy
+[05-18-2006 15:48:11] [#ezpublish] <xiglet> ok :) I have the most pretty desktop
+[05-18-2006 15:48:28] [#ezpublish] <buz> mhh i never see my desktop so theres not even an image there
+[05-18-2006 15:48:42] [#ezpublish] <xiglet> http://www.slettum.com/gallery/new_images.php?1=1&imgid=4672
+[05-18-2006 15:49:08] [#ezpublish] <xiglet> so you could use ION then
+[05-18-2006 15:50:34] [#ezpublish] <xiglet> fluxbox is a big huge train compared to ion :)
+[05-18-2006 15:54:00] [#ezpublish] <buz> no
+[05-18-2006 15:54:05] [#ezpublish] <buz> i need kwin ;)
+[05-18-2006 15:54:10] [#ezpublish] <buz> anyway i'll go to bed
+[05-18-2006 15:54:12] [#ezpublish] <buz> night
+[05-18-2006 15:54:21] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-18-2006 16:10:12] [#ezpublish] <xiglet> doesn't pdf export support images?
+[05-18-2006 16:16:11] [#ezpublish] <ls> it does
+[05-18-2006 16:22:23] Disconnecting due to lack of a lag response (0.10155700 1147987283 != 0.09032600 1147987313)
+[05-18-2006 16:22:23] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 16:22:25] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:22:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:22:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:22:49] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:22:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:22:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:23:09] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:23:09] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 16:23:09] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:23:10] >> Primary nickname in use, trying alternate.
+[05-18-2006 16:23:10] (unmatched::raw451) :calvino.freenode.net 451 * JOIN :Register first.
+[05-18-2006 16:23:10] >> Successfully registered. Nick is: ezpublishlog
+[05-18-2006 16:23:10] -!- There are 14715 listed and 14493 unlisted users on 17 servers
+[05-18-2006 16:23:10] -!- 46 flagged staff members
+[05-18-2006 16:23:10] -!- 10005 channels formed
+[05-18-2006 16:23:10] -!- I have 4221 clients and 0 servers
+[05-18-2006 16:23:10] -!- Current local  users: 4221  Max: 6290
+[05-18-2006 16:23:10] -!- Current global users: 29208  Max: 31376
+[05-18-2006 16:23:10] -!- Highest connection count: 6292 (6290 clients) (1251078 since server was (re)started)
+[05-18-2006 16:23:11] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-18-2006 16:23:11] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-18-2006 16:23:54] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:23:54] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-18-2006 16:23:54] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_12_05_2006
+[05-18-2006 16:23:54] -!- Topic set by buz [@] [Sat, 13 May 2006 08:44:13 -0500]
+[05-18-2006 16:26:10] (ezpublishlog) Attempting to gain back primary nickname
+[05-18-2006 16:26:39] Disconnecting due to lack of a lag response (0.14066800 1147987539 != 0.08492100 1147987569)
+[05-18-2006 16:26:39] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 16:26:41] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:26:55] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:26:55] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:27:05] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:27:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:27:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:27:25] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:27:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:27:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:27:45] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:27:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:27:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:28:09] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:28:19] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:28:19] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:28:29] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:28:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:28:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:28:49] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:28:57] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 16:28:57] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:29:10] (ezpublishlog) Attempting to gain back primary nickname
+[05-18-2006 16:29:22] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 16:29:24] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:29:34] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 16:29:42] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:30:27] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:30:34] Disconnecting due to lack of a lag response (0.52267800 1147987774 != 0.16556800 1147987804)
+[05-18-2006 16:30:34] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 16:30:36] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:30:50] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 16:31:00] >> Successfully registered. Nick is: ezlog
+[05-18-2006 16:31:00] -!- There are 2107 listed and 2181 unlisted users on 17 servers
+[05-18-2006 16:31:00] -!- 6 flagged staff members
+[05-18-2006 16:31:00] -!- 4395 channels formed
+[05-18-2006 16:31:00] -!- I have 4024 clients and 0 servers
+[05-18-2006 16:31:00] -!- Current local  users: 4024  Max: 6290
+[05-18-2006 16:31:00] -!- Current global users: 4288  Max: 31376
+[05-18-2006 16:31:00] -!- Highest connection count: 6292 (6290 clients) (1251229 since server was (re)started)
+[05-18-2006 16:31:12] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:31:12] (unmatched::raw487) :calvino.freenode.net 487 ezlog :Due to a network split, you can not obtain channel operator status in a new channel at this time
+[05-18-2006 16:31:12] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-18-2006 16:31:12] -!- mode/#ezpublish [+ns] by calvino.freenode.net
+[05-18-2006 16:32:20] Disconnecting due to lack of a lag response (0.07760100 1147987880 != 0.08948500 1147987910)
+[05-18-2006 16:32:20] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 16:32:22] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:32:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:32:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:32:46] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:32:50] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 16:32:50] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:33:35] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:33:50] Disconnecting due to lack of a lag response (0.56423200 1147987970 != 0.17352300 1147988000)
+[05-18-2006 16:33:50] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 16:33:52] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:34:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:34:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:34:16] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:34:26] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:34:26] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:34:36] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:34:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-18-2006 16:34:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-18-2006 16:34:56] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:35:10] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 16:35:10] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:35:42] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 16:35:44] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:35:53] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 16:35:53] >> Successfully registered. Nick is: ezlog
+[05-18-2006 16:35:53] -!- There are 2076 listed and 1788 unlisted users on 17 servers
+[05-18-2006 16:35:53] -!- 4 flagged staff members
+[05-18-2006 16:35:53] -!- 4049 channels formed
+[05-18-2006 16:35:53] -!- I have 3583 clients and 0 servers
+[05-18-2006 16:35:53] -!- Current local  users: 3583  Max: 6290
+[05-18-2006 16:35:53] -!- Current global users: 3864  Max: 31376
+[05-18-2006 16:35:54] -!- Highest connection count: 6292 (6290 clients) (1251585 since server was (re)started)
+[05-18-2006 16:35:55] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:35:55] (unmatched::raw487) :calvino.freenode.net 487 ezlog :Due to a network split, you can not obtain channel operator status in a new channel at this time
+[05-18-2006 16:35:55] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-18-2006 16:35:55] -!- mode/#ezpublish [+ns] by calvino.freenode.net
+[05-18-2006 16:36:13] -calvino.freenode.net:#ezpublish- *** Notice -- TS for #ezpublish changed from 1147990019 to 1126061662
+[05-18-2006 16:36:13] -!- mode/#ezpublish [-s] by irc.freenode.net
+[05-18-2006 16:36:13] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[05-18-2006 16:36:13] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-18-2006 16:36:13] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[05-18-2006 16:36:13] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[05-18-2006 16:36:13] -!- elephantMan [n=elephant@119.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-18-2006 16:36:13] -!- Tidemann [n=tidemann@ti132110a340-3091.bb.online.no] has joined #ezpublish
+[05-18-2006 16:36:13] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has joined #ezpublish
+[05-18-2006 16:36:13] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[05-18-2006 16:36:13] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[05-18-2006 16:36:13] -!- xbit [i=birger@ritchie.ping.uio.no] has joined #ezpublish
+[05-18-2006 16:36:13] -!- tobyS [n=dotxp@hartes-php.de] has joined #ezpublish
+[05-18-2006 16:36:13] -!- irc.freenode.net changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_12_05_2006
+[05-18-2006 16:38:13] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-18-2006 16:38:13] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-18-2006 16:54:23] Disconnecting due to lack of a lag response (0.11864900 1147989203 != 0.14975200 1147989233)
+[05-18-2006 16:54:23] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 16:54:25] >> Connecting to irc.freenode.net:6667
+[05-18-2006 16:54:29] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 16:54:30] >> Successfully registered. Nick is: ezlog
+[05-18-2006 16:54:30] -!- There are 14092 listed and 14246 unlisted users on 17 servers
+[05-18-2006 16:54:30] -!- 45 flagged staff members
+[05-18-2006 16:54:30] -!- 9997 channels formed
+[05-18-2006 16:54:30] -!- I have 3105 clients and 0 servers
+[05-18-2006 16:54:30] -!- Current local  users: 3105  Max: 6290
+[05-18-2006 16:54:30] -!- Current global users: 28338  Max: 31376
+[05-18-2006 16:54:30] -!- Highest connection count: 6292 (6290 clients) (1251946 since server was (re)started)
+[05-18-2006 16:54:40] >> Attempting to join channels: #ezpublish
+[05-18-2006 16:54:40] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-18-2006 16:54:40] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_12_05_2006
+[05-18-2006 16:54:40] -!- Topic set by buz [@] [Sat, 13 May 2006 08:44:13 -0500]
+[05-18-2006 16:56:47] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-18-2006 16:56:47] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-18-2006 17:01:02] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[05-18-2006 17:06:29] Disconnecting due to lack of a lag response (0.15534500 1147989929 != 0.19452200 1147989959)
+[05-18-2006 17:06:29] Diconnected. Sleeping for 2 second(s).
+[05-18-2006 17:06:31] >> Connecting to irc.freenode.net:6667
+[05-18-2006 17:06:35] >> Connected to irc.freenode.net:6667, registering...
+[05-18-2006 17:06:35] >> Primary nickname in use, trying alternate.
+[05-18-2006 17:06:35] >> Successfully registered. Nick is: ezpublishlog
+[05-18-2006 17:06:35] -!- There are 13892 listed and 14162 unlisted users on 17 servers
+[05-18-2006 17:06:35] -!- 45 flagged staff members
+[05-18-2006 17:06:35] -!- 9992 channels formed
+[05-18-2006 17:06:35] -!- I have 4966 clients and 0 servers
+[05-18-2006 17:06:35] -!- Current local  users: 4966  Max: 7436
+[05-18-2006 17:06:35] -!- Current global users: 28054  Max: 31377
+[05-18-2006 17:06:35] -!- Highest connection count: 7437 (7436 clients) (619225 since server was (re)started)
+[05-18-2006 17:06:36] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-18-2006 17:06:36] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-18-2006 17:06:40] >> Attempting to join channels: #ezpublish
+[05-18-2006 17:06:40] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-18-2006 17:06:40] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_12_05_2006
+[05-18-2006 17:06:40] -!- Topic set by buz [@] [Sat, 13 May 2006 08:44:13 -0500]
+[05-18-2006 17:06:40] (unmatched::raw477) :niven.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] please register your nickname...don't forget to auto-identify! http://freenode.net/faq.shtml#nicksetup
+[05-18-2006 17:06:56] -!- ezlog [n=IQ@209.144.224.222] has quit [Remote closed the connection]
+[05-18-2006 17:06:56] -!- ezpublishlog is now known as ezlog
+[05-18-2006 17:06:56] My new nick is ezlog
+[05-18-2006 17:11:26] [#ezpublish] <nnn0> hm
+[05-18-2006 17:12:21] [#ezpublish] <nnn0> in firefox the li.toolbar-item last makes a little gap on the far right when trying to position content right
+[05-18-2006 17:12:40] [#ezpublish] <nnn0> the horizontal scrollbar appears and it doesn't look nice :)
+[05-18-2006 17:12:53] [#ezpublish] <nnn0> or maybe it's just me :D
+[05-18-2006 18:14:19] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]

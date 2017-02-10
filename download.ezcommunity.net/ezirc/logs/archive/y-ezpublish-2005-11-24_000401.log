@@ -1,0 +1,422 @@
+[11-22-2005 00:48:02] -!- kracker [n=kracker@66.169.180.221] has joined #ezpublish
+[11-22-2005 00:48:27] [#ezpublish] <kracker> wheew, that was almost too close
+[11-22-2005 00:49:07] [#ezpublish] <kracker> though ... only time will truely tell if any of it makes a difference for others
+[11-22-2005 00:54:55] -!- _rappy_ is now known as _Rappy_
+[11-22-2005 01:18:25] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-22-2005 01:54:21] -!- ordnas [n=ordnas@p549DC5ED.dip.t-dialin.net] has joined #ezpublish
+[11-22-2005 02:02:28] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-22-2005 02:12:36] -!- DiGiTa|_ [n=guillaum@80.125.108.78] has joined #ezpublish
+[11-22-2005 02:25:41] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-22-2005 02:30:43] [#ezpublish] <Katana`> hi
+[11-22-2005 02:41:20] [#ezpublish] <buz> hi
+[11-22-2005 02:41:56] [#ezpublish] <_Rappy_> hi
+[11-22-2005 02:43:55] [#ezpublish] <Katana`> buz, did you finally try my ajax stuff ? :)
+[11-22-2005 02:45:06] [#ezpublish] <buz> you mean you did add a demo?
+[11-22-2005 02:46:36] [#ezpublish] <buz> is there any ajax control to build a calendar?
+[11-22-2005 02:50:21] [#ezpublish] <buz> http://www.kiko.com/app.htm?use_auth=119127656 that's neat
+[11-22-2005 02:50:55] [#ezpublish] <buz> aside of the issue that it doesnt seem to want to do events outside of hours
+[11-22-2005 02:51:11] [#ezpublish] <Katana`> buz: no, no demo yet :)
+[11-22-2005 02:51:20] [#ezpublish] <Katana`> i'll try to do that soon
+[11-22-2005 02:59:16] [#ezpublish] <Katana`> hmmm what permissions am i gonna set for that interface so that nobody breaks it :)
+[11-22-2005 02:59:47] [#ezpublish] <buz> http://webserver002.goowy.com that's gotta be the most crash prone flash app ever
+[11-22-2005 03:03:03] [#ezpublish] <buz> a kiko like, ical supporting ezpublish extension would ROCK
+[11-22-2005 03:03:24] [#ezpublish] <Katana`> go ahead, be our guest ;)
+[11-22-2005 03:03:36] [#ezpublish] <buz> if i had the time...
+[11-22-2005 03:03:45] [#ezpublish] <Katana`> hehe :)
+[11-22-2005 03:04:40] [#ezpublish] <buz> i honestly dont understand how some people can work 3 days a week while going to uni
+[11-22-2005 03:05:15] [#ezpublish] <Katana`> they don't work for real at uni ?
+[11-22-2005 03:05:45] [#ezpublish] <buz> well they still get acceptable grades
+[11-22-2005 03:42:11] [#ezpublish] <Katana`> fucking attribute filter
+[11-22-2005 03:48:25] [#ezpublish] <@kh[eZ]> i wouldt recomment fucking an attribute filter...
+[11-22-2005 03:48:34] [#ezpublish] <@kh[eZ]> recommend
+[11-22-2005 03:48:42] [#ezpublish] <@kh[eZ]> ;-)
+[11-22-2005 03:49:22] [#ezpublish] <_Rappy_> no, it would just get full of holes, and then it won't filter anything
+[11-22-2005 03:49:52] [#ezpublish] <@kh[eZ]> and nobody wants a fucked attribute filter...
+[11-22-2005 03:58:34] [#ezpublish] <buz> might even catch a std
+[11-22-2005 03:58:39] [#ezpublish] <buz> filtrosis or some thing like that
+[11-22-2005 04:05:00] [#ezpublish] <Katana`> thanks for your help kh[eZ] ;)
+[11-22-2005 04:05:03] [#ezpublish] <Katana`> i appreciate, really
+[11-22-2005 04:13:26] [#ezpublish] <kracker> Katana`,  hey i got to thinking after looking at your payment gateway you shared with me 'cetral'
+[11-22-2005 04:13:43] [#ezpublish] <Katana`> cetrel
+[11-22-2005 04:13:44] [#ezpublish] <Katana`> yes ?
+[11-22-2005 04:14:36] [#ezpublish] <kracker> Katana`, I was wondering why not share this with others by posting it on ez.no/community/contribs, even as a specific implimentation i think it has value as a guide for others ...
+[11-22-2005 04:14:55] [#ezpublish] <Katana`> well, i probably could but it doesn't belong to me ...
+[11-22-2005 04:15:06] [#ezpublish] <kracker> ahh, right
+[11-22-2005 04:15:13] [#ezpublish] <buz> kracker: you wanna redo ezcommunity in ez3?
+[11-22-2005 04:15:30] [#ezpublish] <Katana`> it's up to my company... and since i won't be with them much longer, well... i'm not really eager to make that kind of decisions :)
+[11-22-2005 04:16:01] [#ezpublish] <kracker> Katana`, ahh well many thanks again for sharing it really helped me see the light in my own payment gatway extention ezauthorize (authorize.net)
+[11-22-2005 04:16:13] [#ezpublish] <Katana`> yes ? that's cool then :)
+[11-22-2005 04:16:24] [#ezpublish] <kracker> buz, not sure I understand what your saying
+[11-22-2005 04:16:36] [#ezpublish] <buz> rip out ez2 and do it properly with ez3
+[11-22-2005 04:16:42] [#ezpublish] <Katana`> :)
+[11-22-2005 04:16:49] [#ezpublish] <buz> gotta go
+[11-22-2005 04:16:54] [#ezpublish] <buz> will be back in abuout 3h
+[11-22-2005 04:16:55] [#ezpublish] <buz>  ;)
+[11-22-2005 04:16:59] [#ezpublish] <Katana`> cya
+[11-22-2005 04:17:00] [#ezpublish] <kracker> ahh, part of me sure does, but i have to keep the content somehow
+[11-22-2005 04:17:02] [#ezpublish] <kracker> late
+[11-22-2005 04:18:53] [#ezpublish] <kracker> i'm not going to let go of my work with v2 anytime in the forseeable future
+[11-22-2005 04:20:23] [#ezpublish] <kracker> but i have been looking for a way to centralize, simplify and reduce the amount of troll'ing needed to get a simple top down view of the usefull information i have collected over the years and i'm know beter than to think i ever hit the mark or even close to it with my first implimentation (just to get it out there ...)
+[11-22-2005 04:20:39] [#ezpublish] <Katana`> wait for ez 4 ;)
+[11-22-2005 04:21:15] [#ezpublish] <kracker> yeah that's about what my subconsious has been saying for a long time as well
+[11-22-2005 04:22:01] [#ezpublish] <kracker> mcspectrum agrees and the rest who can't know for certain are just never going to be happy anyway :D
+[11-22-2005 04:25:35] [#ezpublish] <kracker> i may flip the site's focus around if I find the time to simply offer a better ui and content separation for my v2, v3, components / v4 information :\ but it would have to be a fairly strong wave of inspiration to get beyond breaking all the links by moving to v2.ezcommunity.net, v3.ezcommunity.net, v4.ezcommunity.net style of content separation
+[11-22-2005 04:26:01] [#ezpublish] <kracker> still i'd have to have a really strong plan to sell all that to bob.sims
+[11-22-2005 04:28:54] [#ezpublish] <Katana`> do you guys rather use dedicated methods / properties names in PHP code or the attribute method ?
+[11-22-2005 04:40:53] -!- FeZtBruS [n=st@popeye.ez.no] has joined #ezpublish
+[11-22-2005 04:40:55] [#ezpublish] <@kh[eZ]> i use attribute...
+[11-22-2005 04:41:05] [#ezpublish] <@kh[eZ]> but offcourse depends on what you want to do...
+[11-22-2005 04:41:06] [#ezpublish] <Katana`> why the "..." ? :)
+[11-22-2005 04:41:27] [#ezpublish] <Katana`> well, i like attribute better since it's much closer to template language, and it's documented ;)
+[11-22-2005 04:41:34] [#ezpublish] <Katana`> makes much more readable code imho
+[11-22-2005 04:41:49] [#ezpublish] <@kh[eZ]> if you want to specify some parameters then you have to use the functions offcourse...
+[11-22-2005 04:41:55] [#ezpublish] <Katana`> knowing that you use attribute as well makes me think it's probably not a bad thing
+[11-22-2005 04:41:57] [#ezpublish] <Katana`> yes, of course
+[11-22-2005 04:42:14] [#ezpublish] <Katana`> i use the functions sometimes, but for node id, name, url alias, etc etc i always use attribute now
+[11-22-2005 04:42:39] [#ezpublish] <Katana`> now how am I gonna resolve that node proximity question ...
+[11-22-2005 04:42:56] [#ezpublish] <@kh[eZ]> i find it much more readable if i use attribute... and more similar to the template system as you say...
+[11-22-2005 04:43:13] [#ezpublish] <Katana`> we agree then good
+[11-22-2005 04:43:48] [#ezpublish] <@kh[eZ]> i also used fetch functions in php, so i dont have to specify all the crazy parameteres.. and its less likely that they will change, even if the api does :-)
+[11-22-2005 04:44:12] [#ezpublish] <Katana`> HOW do you do that ? :)
+[11-22-2005 04:44:28] [#ezpublish] <@kh[eZ]> hmm.. now where was that file again....
+[11-22-2005 04:44:29] [#ezpublish] <Katana`> and by any chance... you wouldn't feel like telling me how / if i can call a template operator from PHP ?
+[11-22-2005 04:49:40] [#ezpublish] <@kh[eZ]> ok.. i dont remember where i did that.... i just did it the same way the fetchfunctions are called from whereever its called from...
+[11-22-2005 04:50:18] [#ezpublish] <@kh[eZ]> i'll tell you when i find it..
+[11-22-2005 04:50:51] [#ezpublish] <@kh[eZ]> i have never tried to call a template operator...
+[11-22-2005 04:51:05] [#ezpublish] <Katana`> damnit :)
+[11-22-2005 04:52:45] [#ezpublish] <DiGiTa|_> a template operator into php code ?
+[11-22-2005 04:53:50] [#ezpublish] <DiGiTa|_> did you remeber Katana` we seeling for that a couple of day ago
+[11-22-2005 04:53:55] [#ezpublish] <DiGiTa|_> seeking
+[11-22-2005 04:54:03] [#ezpublish] <Katana`> yep
+[11-22-2005 04:54:06] [#ezpublish] <Katana`> and we didn't find it :)
+[11-22-2005 04:54:06] [#ezpublish] <@kh[eZ]> ahh,. yes.. like this:
+[11-22-2005 04:54:07] [#ezpublish] <@kh[eZ]>  $reminder_list = eZFunctionHandler::execute('content','tree',
+[11-22-2005 04:54:07] [#ezpublish] <@kh[eZ]>                                                         array('parent_node_id' => $top_node_id,
+[11-22-2005 04:54:15] [#ezpublish] <Katana`> ah yes, execute, true
+[11-22-2005 04:54:22] [#ezpublish] <@kh[eZ]> +++
+[11-22-2005 04:55:25] [#ezpublish] <DiGiTa|_> yeah i say to you
+[11-22-2005 04:55:38] [#ezpublish] <@kh[eZ]> offcourse its abit slower.. but im willing to sacrifice that...
+[11-22-2005 04:55:52] [#ezpublish] <Katana`> same here
+[11-22-2005 04:55:56] [#ezpublish] <@kh[eZ]> would be nice to do a benchmark..
+[11-22-2005 04:57:14] [#ezpublish] <DiGiTa|_> eZOperationHandler::execute()
+[11-22-2005 04:58:00] [#ezpublish] <DiGiTa|_> works like ezFunctionHandler
+[11-22-2005 04:58:17] [#ezpublish] <Katana`> but it executes an operation :)
+[11-22-2005 04:58:21] [#ezpublish] <DiGiTa|_>     $operationResult = eZOperationHandler::execute( 'shop', 'addtobasket', array( 'basket_id'   => $basket->attribute( 'id' ),
+[11-22-2005 04:58:24] [#ezpublish] <DiGiTa|_>                                                                                   'object_id'   => $object_id,
+[11-22-2005 04:58:28] [#ezpublish] <DiGiTa|_>                                                                                   'option_list' => $optionList ) );
+[11-22-2005 04:58:35] [#ezpublish] <Katana`> and from what i've seen executing an operation that way HAS an overhead
+[11-22-2005 04:58:44] [#ezpublish] <Katana`> don't try publishing mutliple items that way from PHP code
+[11-22-2005 04:58:47] [#ezpublish] <Katana`> it takes lots of ressources ;)
+[11-22-2005 04:59:26] [#ezpublish] <DiGiTa|_> well i'm using it only for basket shop
+[11-22-2005 04:59:36] [#ezpublish] <DiGiTa|_> shop basket
+[11-22-2005 04:59:46] [#ezpublish] <Katana`> adding to basket is not as resource intensive as content publishing i think ;)
+[11-22-2005 04:59:57] [#ezpublish] <DiGiTa|_> yes
+[11-22-2005 05:00:03] [#ezpublish] <DiGiTa|_> tre
+[11-22-2005 05:00:07] [#ezpublish] <DiGiTa|_> true
+[11-22-2005 05:02:37] [#ezpublish] <@kh[eZ]> hurray for php5... finally its possible to specify visibility for functions... (public, private, protected)...
+[11-22-2005 05:02:44] [#ezpublish] <Katana`> :)
+[11-22-2005 05:02:45] [#ezpublish] <@kh[eZ]> methods
+[11-22-2005 05:02:52] [#ezpublish] <Katana`> but still no operators overloading :(
+[11-22-2005 05:02:55] [#ezpublish] <Katana`> that sucks
+[11-22-2005 05:03:21] [#ezpublish] <Katana`> hah, $tpl->processOperator
+[11-22-2005 05:03:42] [#ezpublish] <Katana`> but lots of parameters i don't know what to do with :)
+[11-22-2005 05:03:58] [#ezpublish] <@kh[eZ]> true.. but visibility is needed before overloading....
+[11-22-2005 05:04:16] [#ezpublish] <Katana`> yay
+[11-22-2005 05:04:18] [#ezpublish] <Katana`> totally
+[11-22-2005 05:05:00] [#ezpublish] <Katana`> hum I would just have to instanciate the operator and run it using modify i guess...
+[11-22-2005 05:05:25] [#ezpublish] <@kh[eZ]> theres is some good tips for overloading here... http://thc.org/root/phun/unmaintain.html
+[11-22-2005 05:06:30] [#ezpublish] <@kh[eZ]> "If you overload +, make sure you do it in a way that i = i + 5; has a totally different meaning from i += 5;"
+[11-22-2005 05:06:50] [#ezpublish] <Katana`> ??
+[11-22-2005 05:06:55] [#ezpublish] <Katana`> i would have said the opposite ;)
+[11-22-2005 05:07:31] [#ezpublish] <@kh[eZ]> "Overload the "new" operator - much more dangerous than overloading the +-/*. This can cause total havoc if overloaded to do something different from it's original function (but vital to the object's function so it's very difficult to change)."
+[11-22-2005 05:08:07] [#ezpublish] <@kh[eZ]> ;-)
+[11-22-2005 05:09:46] [#ezpublish] <@kh[eZ]> the tiltle of the page is "How To Write Unmaintainable Code" :-D
+[11-22-2005 05:10:45] [#ezpublish] <Katana`> okaaaay
+[11-22-2005 05:10:56] [#ezpublish] <Katana`> are you guys following that already ?
+[11-22-2005 05:10:59] [#ezpublish] <Katana`> it would explain stuff :)
+[11-22-2005 05:11:14] [#ezpublish] <@kh[eZ]> hehehe
+[11-22-2005 05:11:24] [#ezpublish] <Katana`> j/k
+[11-22-2005 05:11:32] [#ezpublish] <Katana`> (partially ^^)
+[11-22-2005 05:12:02] [#ezpublish] <@kh[eZ]> the new components are not really following these rules at all..
+[11-22-2005 05:12:14] [#ezpublish] <Katana`> yeah, i've had a look ;)
+[11-22-2005 05:12:30] [#ezpublish] <Katana`> actually i'm really kidding, most parts of eZP code are really clean
+[11-22-2005 05:12:39] [#ezpublish] <Katana`> but some less than others ...
+[11-22-2005 05:12:45] [#ezpublish] <Katana`> like the shop damnit
+[11-22-2005 05:12:57] [#ezpublish] <@kh[eZ]> maybe i should add it to the "codingstandards" for the components ;-)
+[11-22-2005 05:13:17] [#ezpublish] <Katana`> lol yeah
+[11-22-2005 05:13:19] [#ezpublish] <Katana`> probably :)
+[11-22-2005 05:13:43] [#ezpublish] <@kh[eZ]> maybe not.. then i would go insane myself.....
+[11-22-2005 05:15:48] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[11-22-2005 05:19:56] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-22-2005 05:34:04] [#ezpublish] <_Rappy_> ez has a standard poll system, right?
+[11-22-2005 05:34:26] [#ezpublish] <_Rappy_> can taht be used so that only loggedin person can vote, and vote only once?
+[11-22-2005 05:37:24] [#ezpublish] <_Rappy_> kh[eZ], you should know :p
+[11-22-2005 05:37:33] [#ezpublish] <_Rappy_> it's ment to be used in a municipality
+[11-22-2005 05:47:40] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[11-22-2005 05:51:08] -!- ordnas [n=ordnas@p549DC5ED.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-22-2005 06:41:02] [#ezpublish] <_Rappy_> hello?
+[11-22-2005 06:41:31] [#ezpublish] <_Rappy_> are anyone of you using a webanalyzing tool with ez? and if so, is that webalizer?
+[11-22-2005 06:51:05] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[11-22-2005 06:53:29] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-22-2005 06:54:05] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-22-2005 07:03:20] [#ezpublish] <nnn0> hm how do i implement überlink in the menu ?
+[11-22-2005 07:03:55] [#ezpublish] <nnn0> okey - it does so by default
+[11-22-2005 07:04:38] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-22-2005 07:05:06] [#ezpublish] <nnn0> ah there :) class="selected"
+[11-22-2005 07:08:34] -!- FeZtBruS [n=st@popeye.ez.no] has quit ["leaving"]
+[11-22-2005 07:25:25] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[11-22-2005 07:25:42] [#ezpublish] <Katana`> popeye ? stalker looked better :)
+[11-22-2005 07:26:16] [#ezpublish] <_Rappy_> *driks 5 hour old coffee*
+[11-22-2005 09:53:38] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-22-2005 10:11:03] [#ezpublish] <Katana`> err ViewCaching only caches the content module right ? :)
+[11-22-2005 10:14:08] [#ezpublish] <Katana`> well, it has to be implemented in a module at least
+[11-22-2005 10:14:13] [#ezpublish] <Katana`> am I wrong ?
+[11-22-2005 10:17:26] [#ezpublish] <Katana`> kh[eZ] ? fh[eZ] ? anyone ?
+[11-22-2005 11:12:46] -!- SEAwolfx [n=mike@DSL01.83.171.167.0.NEFkom.net] has joined #ezpublish
+[11-22-2005 11:22:33] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[11-22-2005 12:45:14] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-22-2005 12:45:52] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[11-22-2005 12:50:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-22-2005 12:57:48] [#ezpublish] <buz> http://www.rodneycarrington.com/dearpenis.php
+[11-22-2005 12:57:56] [#ezpublish] <buz> not necessarily work safe
+[11-22-2005 13:01:20] [#ezpublish] <buz> http://fun.drno.de/flash/smokekills.swf
+[11-22-2005 13:02:37] [#ezpublish] <buz> best flash flick ever
+[11-22-2005 13:30:06] -!- SEAwolfx [n=mike@DSL01.83.171.167.0.NEFkom.net] has quit ["Lost terminal"]
+[11-22-2005 13:55:28] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-22-2005 14:02:41] [#ezpublish] <buz> Katana`: have you used the layout stuff in qooxdoo
+[11-22-2005 14:03:22] [#ezpublish] <Katana`> not really no
+[11-22-2005 14:03:38] [#ezpublish] <Katana`> just standard stuff
+[11-22-2005 14:03:51] [#ezpublish] <buz> somehow those ajax toolkits all bog down my machine upon loading
+[11-22-2005 14:04:07] [#ezpublish] <buz> that clearly shouldnt happen on a 1.5gb machine
+[11-22-2005 14:05:30] [#ezpublish] <Katana`> i don't have such a computer so i'm a bit surprised :)
+[11-22-2005 14:05:39] [#ezpublish] <Katana`> and qooxdoo has nothing to do with ajax
+[11-22-2005 14:05:46] [#ezpublish] <Katana`> it's just JS frontend, i have used cpaint for JS
+[11-22-2005 14:05:59] [#ezpublish] <buz> well it's usually the rendering part
+[11-22-2005 14:06:03] [#ezpublish] <buz> which is much the same with or without ajax
+[11-22-2005 14:06:14] [#ezpublish] <buz> it takes a noticeable while to load the qooxdoo workbench for sure
+[11-22-2005 14:07:13] [#ezpublish] <Katana`> well, it sure does :)
+[11-22-2005 14:07:16] [#ezpublish] <Katana`> but on the other hand, you only load it once... :^
+[11-22-2005 14:07:23] [#ezpublish] <Katana`> this is a huge difference
+[11-22-2005 14:07:40] [#ezpublish] <Katana`> consider you're loading a desktop app, if it's big you don't expect it to load instantly
+[11-22-2005 14:07:40] [#ezpublish] <buz> and some of the other toolkits reliably crashed my firefox
+[11-22-2005 14:07:45] [#ezpublish] <Katana`> that's how i see it
+[11-22-2005 14:07:50] [#ezpublish] <buz> yeah *I* dont
+[11-22-2005 14:07:52] [#ezpublish] <buz> lusers do
+[11-22-2005 14:08:06] [#ezpublish] <buz> i can hear it now: "OMFG ur server is da suxor"
+[11-22-2005 14:08:15] [#ezpublish] <Katana`> well, i'm sure a progress bar could be added
+[11-22-2005 14:08:19] [#ezpublish] <Katana`> loading package X / Y / Z
+[11-22-2005 14:08:26] [#ezpublish] <buz> that would actually make some sense
+[11-22-2005 14:08:27] [#ezpublish] <Katana`> so that you know something's happening
+[11-22-2005 14:08:29] [#ezpublish] <buz> feedback is always good
+[11-22-2005 14:08:42] [#ezpublish] <Katana`> on the other hand, once loaded "OMFG ur server is teh roxor !"
+[11-22-2005 14:08:43] [#ezpublish] <buz> like with those flash thigns
+[11-22-2005 14:08:49] [#ezpublish] <Katana`> yep for instance
+[11-22-2005 14:09:06] [#ezpublish] <buz> gmail does it too, i think
+[11-22-2005 14:09:20] [#ezpublish] <Katana`> btw i'm not sure qooxdoo is the best widgets toolkit around but it sure is a very very serious one
+[11-22-2005 14:09:20] [#ezpublish] <Katana`> the guys are good :)
+[11-22-2005 14:09:29] [#ezpublish] <Katana`> their OO stuff is amazing
+[11-22-2005 14:09:35] [#ezpublish] <buz> dojotoolkit.org gets good press too
+[11-22-2005 14:09:48] [#ezpublish] <Katana`> extending existing classes, adding properties, overloading methods ...
+[11-22-2005 14:09:59] [#ezpublish] <Katana`> i already have custom classes for tree elements
+[11-22-2005 14:10:05] [#ezpublish] <Katana`> in JAVASCRIPT ;)
+[11-22-2005 14:10:15] [#ezpublish] <buz> http://ez.no/community/contribs/solutions/ez_intranet now what is that?
+[11-22-2005 14:10:27] [#ezpublish] <Katana`> yeah i heard about dojotoolkit as well
+[11-22-2005 14:10:31] [#ezpublish] <Katana`> lol :)
+[11-22-2005 14:10:54] [#ezpublish] <Katana`> hey nice ;)
+[11-22-2005 14:11:02] [#ezpublish] <buz> design looks sweet
+[11-22-2005 14:11:24] [#ezpublish] <buz> is this like a huge bundle of extensions?
+[11-22-2005 14:11:33] [#ezpublish] <buz> where's luke, we gotta ask him ;)
+[11-22-2005 14:13:47] [#ezpublish] <Katana`> if it has been done properly, it's an extension with custom design, content classes as package, etc etc
+[11-22-2005 14:14:03] [#ezpublish] <buz> yeah
+[11-22-2005 14:14:10] [#ezpublish] <buz> but i doubt it's just one extension
+[11-22-2005 14:14:15] [#ezpublish] <buz> would be insane to repackage oo import
+[11-22-2005 14:15:16] [#ezpublish] <Katana`> yeah indeed
+[11-22-2005 14:15:21] [#ezpublish] <buz> even changing the name of small extension is a major undertaking
+[11-22-2005 14:15:28] [#ezpublish] <Katana`> i have to write about that "site as an extension" stuff
+[11-22-2005 14:15:38] [#ezpublish] <Katana`> i can't work without it now
+[11-22-2005 14:15:44] [#ezpublish] <buz> ?
+[11-22-2005 14:15:57] [#ezpublish] <buz> you mean everything as an extension?
+[11-22-2005 14:16:01] [#ezpublish] <buz> sounds like a sensible approach
+[11-22-2005 14:16:05] [#ezpublish] <Katana`> all my sites are just one big extension
+[11-22-2005 14:16:06] [#ezpublish] <Katana`> with it's settings, design, etc etc
+[11-22-2005 14:16:20] [#ezpublish] <buz> you mean each site is ONE extension
+[11-22-2005 14:16:22] [#ezpublish] <Katana`> you just have settings/siteaccess/<yoursite>/site.ini.append
+[11-22-2005 14:16:25] [#ezpublish] <buz> or just ONE HUGE ONE
+[11-22-2005 14:16:45] [#ezpublish] <Katana`> well the site design & settings & maybe modules + functions are in one extension
+[11-22-2005 14:16:52] [#ezpublish] <buz> (in which case i declare you to be certifiedly insane)
+[11-22-2005 14:17:15] [#ezpublish] <Katana`> i'm not sure i see the difference ;)
+[11-22-2005 14:17:26] [#ezpublish] <buz> say you got domain1 and domain2
+[11-22-2005 14:17:28] [#ezpublish] <Katana`> but only stuff directly related to the site
+[11-22-2005 14:17:36] [#ezpublish] <Katana`> who are different sites ?
+[11-22-2005 14:17:43] [#ezpublish] <buz> now domain1 is extension1 and domain2 is extension2
+[11-22-2005 14:17:55] [#ezpublish] <buz> as opposed to domain1 + domain2=onefrigginextension
+[11-22-2005 14:18:03] [#ezpublish] <Katana`> if they're different yes
+[11-22-2005 14:18:19] [#ezpublish] <Katana`> if I have a multilingual site, they share the same extension
+[11-22-2005 14:18:19] [#ezpublish] <Katana`> with translation stuff in it and so on
+[11-22-2005 14:18:26] [#ezpublish] <Katana`> i never share an ez install for several sites... never :)
+[11-22-2005 14:19:35] [#ezpublish] <Katana`> it's very useful for multilingual sites actually
+[11-22-2005 14:19:55] [#ezpublish] <Katana`> since ini files except site.ini are shared by every siteaccess
+[11-22-2005 14:27:15] [#ezpublish] <buz> seems like a neat idea
+[11-22-2005 14:27:29] [#ezpublish] <buz> but you cant use the override template gui ?
+[11-22-2005 14:44:56] [#ezpublish] <buz> no single free implementation of ical for php
+[11-22-2005 14:45:12] [#ezpublish] <buz> there's phpicalendar but i'd like to avoid gpl (gpl ain't free by my standards)
+[11-22-2005 14:46:31] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-22-2005 14:47:02] [#ezpublish] <ls[eZ]> hi
+[11-22-2005 14:47:06] [#ezpublish] <buz> oh
+[11-22-2005 14:47:15] [#ezpublish] <buz> can you explain us what the ezintranet stuff is ?
+[11-22-2005 14:48:40] [#ezpublish] <ls[eZ]> intranet example made with eZ publish, with common features, front-end editing, etc, have you tried?
+[11-22-2005 14:48:46] [#ezpublish] <buz> not yet
+[11-22-2005 14:48:59] [#ezpublish] <buz> is it mostly a bundle of some common extensions?
+[11-22-2005 14:49:04] [#ezpublish] <buz> like oo3
+[11-22-2005 14:49:06] [#ezpublish] <buz> like oo2
+[11-22-2005 14:49:30] [#ezpublish] <buz> the screenshot looks neat
+[11-22-2005 14:50:04] [#ezpublish] <ls[eZ]> i contains OO. syntax higlighter automativ TOC opertor
+[11-22-2005 14:50:12] [#ezpublish] <ls[eZ]> Table Of Contents
+[11-22-2005 14:50:18] [#ezpublish] <ls[eZ]> base on headers
+[11-22-2005 14:50:21] [#ezpublish] <ls[eZ]> cool tool
+[11-22-2005 14:50:30] [#ezpublish] <buz> neat extension in any case
+[11-22-2005 14:50:41] [#ezpublish] <ls[eZ]> working on demo
+[11-22-2005 14:50:41] [#ezpublish] <buz> i'm probably not the exact target audience ;)
+[11-22-2005 14:50:46] [#ezpublish] <ls[eZ]> will be available soon
+[11-22-2005 14:50:55] [#ezpublish] <buz> demo is always good (pokes Katana` )
+[11-22-2005 14:51:04] [#ezpublish] <ls[eZ]> i know thar
+[11-22-2005 14:51:21] [#ezpublish] <DiGiTa|_> Katana`:  ?
+[11-22-2005 14:51:25] [#ezpublish] <DiGiTa|_> are you there ?
+[11-22-2005 14:51:29] [#ezpublish] <buz> more people alive
+[11-22-2005 14:51:42] [#ezpublish] <ls[eZ]> have to eat somethin
+[11-22-2005 14:57:17] [#ezpublish] <DiGiTa|_> hey someone know how to check if a post var is setted unless getting an error in writedebug ?
+[11-22-2005 14:57:32] [#ezpublish] <buz> hasPostVariable?
+[11-22-2005 14:57:56] [#ezpublish] <buz> i know that my wiki code does that often
+[11-22-2005 14:57:59] [#ezpublish] <DiGiTa|_> as template operator ?
+[11-22-2005 14:58:11] [#ezpublish] <buz> no that is php code
+[11-22-2005 14:58:16] [#ezpublish] <DiGiTa|_> ah well
+[11-22-2005 14:58:18] [#ezpublish] <buz> there's a corresponding feature in ezhttp i think
+[11-22-2005 14:58:35] [#ezpublish] <DiGiTa|_> i'm setting a var like that : {def $ville = first_set(ezhttp('ville'), $view_parameters.ville, 'all')}
+[11-22-2005 14:58:45] [#ezpublish] <buz> never did that
+[11-22-2005 14:58:54] [#ezpublish] <DiGiTa|_> but if ezhttp('ville') isn't set, it return an error
+[11-22-2005 14:59:06] [#ezpublish] <DiGiTa|_> it = the debug
+[11-22-2005 15:00:57] [#ezpublish] <ls[eZ]> that problem with ezhttp function, you can report this as bug
+[11-22-2005 15:01:16] [#ezpublish] <ls[eZ]> is does not have isset checking
+[11-22-2005 15:01:21] [#ezpublish] <DiGiTa|_> ah
+[11-22-2005 15:01:25] [#ezpublish] <DiGiTa|_> bad :/
+[11-22-2005 15:01:30] [#ezpublish] <ls[eZ]> your code is ok
+[11-22-2005 15:10:03] [#ezpublish] <DiGiTa|_> i didn't understand why this site is so long to load : http://www.coba-immobilier.com/
+[11-22-2005 15:10:29] [#ezpublish] <DiGiTa|_> viewcaching is enabled and all templatecache are enabled
+[11-22-2005 15:10:43] [#ezpublish] <buz> slow server likely
+[11-22-2005 15:10:48] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-22-2005 15:11:03] [#ezpublish] <DiGiTa|_> same server that this site : www.alternatstyle.com
+[11-22-2005 15:11:51] [#ezpublish] <DiGiTa|_> and alternatstyle load fster
+[11-22-2005 15:11:54] [#ezpublish] <DiGiTa|_> fastest
+[11-22-2005 15:19:32] [#ezpublish] <buz> mhh the ical parsing code in phpicalendar seems quite robust
+[11-22-2005 15:19:45] [#ezpublish] <buz> the rendering engine is ok too
+[11-22-2005 15:19:50] [#ezpublish] <DiGiTa|_> kool
+[11-22-2005 15:22:21] [#ezpublish] <DiGiTa|_> shit shit this
+[11-22-2005 15:27:45] [#ezpublish] <buz> ?
+[11-22-2005 15:28:25] [#ezpublish] <DiGiTa|_> i'm talking about my site :)
+[11-22-2005 15:28:42] [#ezpublish] <buz> is that on dedicateD?
+[11-22-2005 15:28:49] [#ezpublish] <DiGiTa|_> yup
+[11-22-2005 15:29:00] [#ezpublish] <buz> mhh eaccelerator isntalled?
+[11-22-2005 15:29:37] [#ezpublish] <DiGiTa|_> yes
+[11-22-2005 15:30:49] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-22-2005 15:37:27] [#ezpublish] <_Katana`> shall i commit my ajax interface to community...
+[11-22-2005 15:37:46] [#ezpublish] <_Katana`> opinion ?
+[11-22-2005 15:37:50] [#ezpublish] <DiGiTa|_> ?
+[11-22-2005 15:38:00] [#ezpublish] <DiGiTa|_> wtf are you talking about
+[11-22-2005 15:38:00] [#ezpublish] <DiGiTa|_> :)
+[11-22-2005 15:38:36] [#ezpublish] <_Katana`> http://www.katana-inc.com/files/code/ez_publish_ajax_admin_interface
+[11-22-2005 15:39:02] [#ezpublish] <_Katana`> that :)
+[11-22-2005 15:39:23] [#ezpublish] <DiGiTa|_> ajax part done with cpaint ?
+[11-22-2005 15:40:06] [#ezpublish] <_Katana`> yep
+[11-22-2005 15:43:41] [#ezpublish] <DiGiTa|_> i restart apache on server and now it's faster : http://www.coba-immobilier.com/
+[11-22-2005 15:44:12] [#ezpublish] <buz> much faster indeed
+[11-22-2005 15:44:13] [#ezpublish] <_Katana`> maybe you need bigger memory settings for your PHP accelerator
+[11-22-2005 15:44:20] [#ezpublish] <buz> yeah
+[11-22-2005 15:44:25] [#ezpublish] <buz> 64mb per site is about right
+[11-22-2005 15:44:29] [#ezpublish] <DiGiTa|_> i check my params
+[11-22-2005 15:45:01] [#ezpublish] <_Katana`> 64 is a minimum
+[11-22-2005 15:45:10] [#ezpublish] <_Katana`> 256 may help ;)
+[11-22-2005 15:45:16] [#ezpublish] <buz> per site=?
+[11-22-2005 15:45:36] [#ezpublish] <buz> but more is always better yes
+[11-22-2005 15:45:38] [#ezpublish] <_Katana`> yes :)
+[11-22-2005 15:47:20] [#ezpublish] <DiGiTa|_> memory_limit = 32M
+[11-22-2005 15:48:31] [#ezpublish] <DiGiTa|_> OMG
+[11-22-2005 15:48:35] [#ezpublish] <_Katana`> no, your PHP accelerator
+[11-22-2005 15:48:35] [#ezpublish] <_Katana`> and 32M is not enough, push it to 128M
+[11-22-2005 15:48:39] [#ezpublish] <DiGiTa|_> now it's very fast
+[11-22-2005 15:48:40] [#ezpublish] <DiGiTa|_> :p
+[11-22-2005 15:48:49] [#ezpublish] <buz> memory limit=128mb is more like it
+[11-22-2005 15:48:49] [#ezpublish] <_Katana`> what have you done ? :)
+[11-22-2005 15:48:53] [#ezpublish] <buz> 32mb isnt even enough
+[11-22-2005 15:49:00] [#ezpublish] <DiGiTa|_> it's what  do
+[11-22-2005 15:53:31] [#ezpublish] <DiGiTa|_> eaccelerator.shm_size = 0
+[11-22-2005 15:55:14] [#ezpublish] <buz> set it to say 128 to 256mb
+[11-22-2005 15:55:28] [#ezpublish] <DiGiTa|_> i set it to 128
+[11-22-2005 15:55:34] [#ezpublish] <DiGiTa|_> and restart apache
+[11-22-2005 15:58:24] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[11-22-2005 15:58:45] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-22-2005 15:58:46] [#ezpublish] <zrg> grr
+[11-22-2005 15:58:53] -!- _Katana` is now known as Katana`
+[11-22-2005 15:59:28] [#ezpublish] <zrg> has anybody converted a ez latin1 mysql base to utf8 ?
+[11-22-2005 16:05:53] [#ezpublish] <DiGiTa|_> no sorry
+[11-22-2005 16:08:24] [#ezpublish] <zrg> should be a way to tell mysql to convert-them-all
+[11-22-2005 16:08:50] [#ezpublish] <DiGiTa|_> with mysqldump
+[11-22-2005 16:08:55] [#ezpublish] <DiGiTa|_> perhaps
+[11-22-2005 16:09:09] [#ezpublish] <DiGiTa|_> export and rimport
+[11-22-2005 16:09:18] [#ezpublish] <buz> search the forum
+[11-22-2005 17:39:08] [#ezpublish] <kracker> DiGiTa|_, / zrg (agreed) <wince>
+[11-22-2005 18:05:42] [#ezpublish] <zrg> im doing full database export import - disk got full of some ibdata1 file
+[11-22-2005 18:14:13] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-22-2005 18:24:48] [#ezpublish] <DiGiTa|_> does someone know how to update the cache of a parent node when i add content into a childnode of this parent ?
+[11-22-2005 18:25:16] [#ezpublish] <DiGiTa|_> Shoul i use SmartCacheClear
+[11-22-2005 18:32:00] [#ezpublish] <zrg> think so
+[11-22-2005 18:55:52] [#ezpublish] <DiGiTa|_> well i don't get this thing working
+[11-22-2005 18:56:28] [#ezpublish] <DiGiTa|_> i have a page that show :
+[11-22-2005 18:56:47] [#ezpublish] <DiGiTa|_> folder
+[11-22-2005 18:56:55] [#ezpublish] <DiGiTa|_> -- links group
+[11-22-2005 18:56:58] [#ezpublish] <DiGiTa|_> ---link
+[11-22-2005 18:57:28] [#ezpublish] <DiGiTa|_> when i add a new link into a group, the folder isn't updated
+[11-22-2005 18:58:46] [#ezpublish] <DiGiTa|_> My rule :
+[11-22-2005 18:58:51] [#ezpublish] <DiGiTa|_> [lien]
+[11-22-2005 18:58:53] [#ezpublish] <DiGiTa|_> DependentClassIdentifier[]
+[11-22-2005 18:58:53] [#ezpublish] <DiGiTa|_> DependentClassIdentifier[]=folder
+[11-22-2005 18:58:53] [#ezpublish] <DiGiTa|_> ClearCacheMethod=clear_object_and_parent_nodes_caches
+[11-22-2005 18:58:53] [#ezpublish] <DiGiTa|_> ObjectFilter[]
+[11-22-2005 18:58:54] [#ezpublish] <DiGiTa|_> ObjectFilter[]=130
+[11-22-2005 18:59:06] [#ezpublish] <DiGiTa|_> 130 is the object id of the folder
+[11-22-2005 19:00:15] [#ezpublish] <DiGiTa|_> i nver get this thing working
+[11-22-2005 19:12:55] [#ezpublish] <zrg> sorry havent ever tried, in my case i set 5 minutes cache limit on problem page and that is good enough
+[11-22-2005 19:27:25] -!- DiGiTa|_ [n=guillaum@80.125.108.78] has quit [Read error: 110 (Connection timed out)]
+[11-22-2005 21:48:20] -!- zrg [n=zurgutt@roop.pri.ee] has quit [Read error: 110 (Connection timed out)]
+[11-22-2005 23:22:29] -!- Bedlore [n=me@ppp214-16.lns1.adl2.internode.on.net] has joined #ezpublish
+[11-22-2005 23:22:40] [#ezpublish] <Bedlore> hi ppl
+[11-22-2005 23:24:30] [#ezpublish] <kracker> evening all
+[11-22-2005 23:24:45] [#ezpublish] <Bedlore> even'n
+[11-22-2005 23:25:23] [#ezpublish] <Bedlore> anyone ever seen the following happen?
+[11-22-2005 23:26:14] [#ezpublish] <Bedlore> upgrade from 361 to 364, now when users register they seem to be missing the entire contentobject
+[11-22-2005 23:27:00] [#ezpublish] <Bedlore> i.e. {$current_user|attribute(show)} shows contentobject	NULL
+[11-22-2005 23:27:24] [#ezpublish] <Bedlore> where previously existing users are fine
+[11-22-2005 23:27:42] [#ezpublish] <Bedlore> can't seem to figure it out, any ideas would be appreciated
+[11-22-2005 23:30:12] -!- mode/#ezpublish [+o fh[eZ]] by ChanServ
+[11-22-2005 23:32:01] [#ezpublish] <kracker> hmm, that's lame
+[11-22-2005 23:32:19] [#ezpublish] <Bedlore> yes
+[11-22-2005 23:32:34] [#ezpublish] <Bedlore> driving me nuts and run out of ideas now
+[11-22-2005 23:32:40] [#ezpublish] <kracker> hehe, understatement to be sure
+[11-22-2005 23:33:57] [#ezpublish] <kracker> sry, i'm at a loss for suggestions myself :\
+[11-22-2005 23:34:03] [#ezpublish] <Bedlore> k
+[11-22-2005 23:34:16] [#ezpublish] <kracker> harry potter and the goblet of fire (was awsome :D)
+[11-22-2005 23:35:01] [#ezpublish] <kracker> Bedlore, hey B, you ever use authorize.net payment (cc) service in your travels :?
+[11-22-2005 23:35:22] [#ezpublish] <Bedlore> no, never tired them
+[11-22-2005 23:36:09] [#ezpublish] <kracker> no worries, just curious
+[11-22-2005 23:36:20] [#ezpublish] <Bedlore> *nod*
+[11-22-2005 23:36:32] [#ezpublish] * kracker thinking of payment gateway features
+[11-22-2005 23:37:05] [#ezpublish] <Bedlore> I'd better write a forum post asking for ideas, otherwise this thing will haunt me tomorrow too
+[11-22-2005 23:37:14] [#ezpublish] <kracker> hehh
+[11-22-2005 23:38:07] [#ezpublish] <kracker> i wonder if anyone has ever wished for a multi payment (ez payment gateway) so eZ publish user could select paypal, authorize.net / paynet, check, money order instead of only requiring one payment gateway like the default?
+[11-22-2005 23:38:34] [#ezpublish] <kracker> i mean i know the answere is a yes, just thinking outloud
+[11-22-2005 23:38:36] [#ezpublish] <Bedlore> I've never heard anyone mention it before
+[11-22-2005 23:40:20] [#ezpublish] <kracker> looking at a number of the existing contributed payment gatways / workflows seem fairly static in the way they seem to only allow 'one' option at checkout were as (in my experiace) many shops who can like to offer several payment options to their customers ...
+[11-22-2005 23:40:49] [#ezpublish] <Bedlore> could be nice
+[11-22-2005 23:42:15] [#ezpublish] <kracker> heh, it will be interesting to see just how far apart nice and eZ ... turn out to be in actual implimentation (/me jots a few notes down)
+[11-22-2005 23:49:41] [#ezpublish] <Bedlore> http://ez.no/community/forum/general/help_new_users_are_missing_current_user_contentobject
+[11-22-2005 23:49:56] [#ezpublish] <Bedlore> I'm off for awhile, any tips appreciated however.
+[11-22-2005 23:51:46] [#ezpublish] <Bedlore> especially from the sleeping [eZ] crew ;)

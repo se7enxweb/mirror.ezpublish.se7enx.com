@@ -1,0 +1,22 @@
+Only in html_org/kernel/common: eztreemenuoperator.php.org
+diff -rbc html_org/kernel/common/ezurloperator.php html_fixed/html/kernel/common/ezurloperator.php
+*** html_org/kernel/common/ezurloperator.php	2004-09-18 01:17:35.000000000 -0700
+--- html_fixed/html/kernel/common/ezurloperator.php	2005-05-23 03:03:46.000000000 -0700
+***************
+*** 206,212 ****
+                          $url = $this->Sys->indexDir() . $url;
+                          $url = preg_replace( "#(//)#", "/", $url );
+                          $url = preg_replace( "#^(.+)(/+)$#", '$1', $url );
+!                         $url = htmlspecialchars( $url );
+                      }
+                      $url = $this->applyQuotes( $url, $parameters[1] );
+  
+--- 206,212 ----
+                          $url = $this->Sys->indexDir() . $url;
+                          $url = preg_replace( "#(//)#", "/", $url );
+                          $url = preg_replace( "#^(.+)(/+)$#", '$1', $url );
+!                         $url = htmlspecialchars( $url ) . "/";
+                      }
+                      $url = $this->applyQuotes( $url, $parameters[1] );
+  
+Only in html_fixed/html/kernel/user: login.php3

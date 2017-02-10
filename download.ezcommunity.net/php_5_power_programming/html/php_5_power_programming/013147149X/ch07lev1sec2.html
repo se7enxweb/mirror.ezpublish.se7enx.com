@@ -1,0 +1,385 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 7.2.&nbsp; Types of Errors</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch07lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch07lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch07lev1sec2"></a><h3 class="docSection1Title">7.2. Types of Errors</h3>
+<a name="ch07lev2sec1"></a><h4 class="docSection2Title">7.2.1. Programming Errors</h4>
+<p class="docText">Sometimes errors occur due to errors in our code. In some ways, these are the easiest errors to deal with because they can be uncovered mostly by straightforward testing, simply by trying out all the operations your application provides. Handling them is just a matter of correcting the code.<a name="ch07index03"></a><a name="ch07index04"></a></p>
+<a name="ch07lev3sec1"></a><H5 class="docSection3Title">7.2.1.1 Syntax/Parse Errors</h5>
+<p class="docText">Syntax errors and other parse errors are caught when a file is compiled, before PHP starts executing it at all<a name="ch07index05"></a><a name="ch07index06"></a><a name="ch07index07"></a><a name="ch07index08"></a><a name="ch07index09"></a><a name="ch07index10"></a></P>
+<pre>
+&lt;?php
+
+    print "Hello!\n";
+    &lt;gobbledigook/&gt;
+
+    ?&gt;
+</pre><br>
+<p class="docText">This example contains an XML tag where PHP expects to find code. Running this results in an error:</P>
+<pre>
+Parse error: parse error in test.php on line 4
+</pre><br>
+<p class="docText">As you can see, the script did not even print <tt>Hello!</tt> before displaying an error message, because the syntax error was discovered during compilation, before PHP started executing the script.<a name="ch07index11"></a><a name="ch07index12"></a><a name="ch07index13"></a><a name="ch07index14"></a><a name="ch07index15"></a><a name="ch07index16"></a></p>
+<a name="ch07lev3sec2"></a><h5 class="docSection3Title">7.2.1.2 Eval</h5>
+<p class="docText">All syntax or parse errors are caught during compilation, except errors in code executed with <tt>eval()</tt>. In the case of <tt>eval</tt>, the code is compiled during the execution of the script. Here, we modify the previous example with <tt>eval</tt>:<a name="ch07index17"></a><a name="ch07index18"></a><a name="ch07index19"></a></P>
+<pre>
+&lt;?php
+
+    print "Hello!\n";
+    eval("&lt;gobbledigook/&gt;");
+
+    ?&gt;
+</pre><BR>This time, the output is different:<pre>
+Hello!
+
+    Parse error: parse error in /home/ssb/test.php(4) : eval()'d
+    code on line 1
+</pre><br>
+<p class="docText">As you can see, this time the error was displayed during execution. This is because code executed with <tt>eval()</tt> is not compiled until the <tt>eval()</tt> itself is executed.<a name="ch07index20"></a><a name="ch07index21"></a><a name="ch07index22"></a></p>
+<a name="ch07lev3sec3"></a><h5 class="docSection3Title">7.2.1.3 Include / Require</h5>
+<p class="docText">If your script includes another file that has a parse error, compilation will stop at the parse error. Code and declarations preceding the parse error are compiled, and those following the error are discarded. This means that you will get a half-compiled file if there is a parse error in it.<a name="ch07index23"></a><a name="ch07index24"></a><a name="ch07index25"></a></P>
+<p class="docText">The following example uses two files, <tt>error.php</tt> and <tt>test.php</tt>:</p>
+<pre>
+&lt;?php
+function foo() {
+print "foo\n";
+}
+R$* &lt; $+ :; &gt; $*    $@ $2 :; &lt;@&gt;
+function bar() {
+print "bar\n";
+}
+?&gt;
+<span class="docEmphStrong">error2.php</span>
+</pre><br>
+<p class="docText">(The line in the middle is not line noise; it is taken from the configuration file of sendmail, a UNIX mail server infamous for its unreadable configuration file format.)</P>
+<pre>
+&lt;?php
+
+require "error2.php";
+print "Hello!\n";
+foo();
+bar();
+
+?&gt;
+<span class="docEmphStrong">error3.php</span>
+</pre><br>
+<p class="docText">the output from executing <tt>error3.php</tt>.<a name="ch07index26"></a><a name="ch07index27"></a><a name="ch07index28"></a></P>
+<a name="ch07fig02"></a><p><center><h5 class="docFigureTitle">Figure 7.2. Output from executing <tt>error3.php</tt>.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/07fig02_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="336" SRC="images/013147149X/graphics/07fig02.gif;380137"></p></center></p><br>
+<p class="docText">What happens here? First, PHP compiles <tt>test.php</tt> and starts executing it. When it encounters the <tt>require</tt> statement, it starts compiling <tt>error.php</tt>, but aborts after the parse error on line 7 of <tt>error.php</tt>. However, the <tt>foo()</tt> function has already been defined because it was reached before the parse error. But, PHP never got around to defining the <tt>bar()</tt> function due to the parse error.</p>
+<p class="docText">Next, in execution of <tt>test.php</tt>, PHP prints <tt>Hello!</tt>, calls the <tt>foo()</tt> function that prints <tt>foo</tt>, but fails trying to call <tt>bar()</tt> because it has not been defined.<a name="ch07index29"></a><a name="ch07index30"></a><a name="ch07index31"></a></p>
+<a name="ch07lev2sec2"></a><h4 class="docSection2Title">7.2.2. Undefined Symbols</h4>
+<p class="docText">When PHP executes, it may encounter names of variables, functions, and so on that it does not know. Because PHP is a loosely typed interpreted language, it does not have complete knowledge about all symbol names, function names, and so on during compilation. This means that it may run into unknown symbols during execution. Although syntax errors are caught before the code is executed, errors regarding undefined symbols occur while the code runs.<a name="ch07index32"></a><a name="ch07index33"></a><a name="ch07index34"></a></p>
+<a name="ch07lev3sec4"></a><h5 class="docSection3Title">7.2.2.1 Variables and Constants</h5>
+<p class="docText">Variables and constants are not dramatic, and they go by with just a notice (see the section about PHP error levels later in this chapter):</p>
+<pre>
+&lt;?php
+var_dump($undefined_variable);
+var_dump(UNDEFINED_CONSTANT);
+print "Still alive\n";
+
+?&gt;
+</pre><br>The output is<pre>
+Notice: Undefined variable:  undefined_variable in test.php on line 3
+NULL
+
+Notice: Use of undefined constant UNDEFINED_CONSTANT - assumed
+'UNDEFINED_CONSTANT' in test.php on line 4
+string(18) "UNDEFINED_CONSTANT"
+Still alive!
+</pre><br>
+<p class="docText">As you can see, the undefined variable evaluates to <tt>NULL</tt>, while the undefined constant evaluates to a string with the name of the constant. The error messages displayed are just notices, which is the least significant type of PHP error messages.</P>
+<p class="docText">Using undefined variables in PHP is not an error, just sloppy coding practice. Read the section on <tt>register_global security XXX ADDREF</tt> for some examples of what this could lead to in the worst-case scenario.</P>
+<p class="docText">Technically, using undefined variables is okay, and if you disable notices it will not produce any error messages. However, because notices come in handy for other things (such as noticing undefined constants!), we recommend that you keep reporting them enabled and fix your undefined variables. As a last resort, you can silence the expressions that cause notices individually with the <tt>@</tt> statement.</p>
+<p class="docText">Undefined constants are bugs. A side effect of using an undefined constant is that it returns a string with the name of the constant, but never rely on this. Put your strings in quotes.<a name="ch07index35"></a><a name="ch07index36"></a><a name="ch07index37"></a><a name="ch07index38"></a><a name="ch07index39"></a></p>
+<a name="ch07lev3sec5"></a><H5 class="docSection3Title">7.2.2.2 Array Indexes</h5>
+<p class="docText">Consider this example:<a name="ch07index40"></a><a name="ch07index41"></a><a name="ch07index42"></a><a name="ch07index43"></a></p>
+<pre>
+&lt;?php
+
+if ($_GET["name"]) {
+print "Hello, $_GET[name]!&lt;br&gt;\n";
+}
+
+?&gt;
+</pre><br>
+<p class="docText">If the page serving this script is requested without any <tt>GET</tt> parameters, it displays a notice:</p>
+<pre>
+test.php(3) : Notice - Undefined index:  name
+</pre><br>
+<a name="ch07lev3sec6"></a><h5 class="docSection3Title">7.2.2.3 Functions and Classes</H5>
+<p class="docText">Although PHP keeps executing after running across an undefined variable or constant, it aborts whenever it encounters an undefined function or class:<a name="ch07index44"></a><a name="ch07index45"></a><a name="ch07index46"></a><a name="ch07index47"></a><a name="ch07index48"></a></p>
+<pre>
+&lt;?php
+
+print "Yoda says:\n";
+undefined_this_function_is();
+print "Do or do not, there is no try.\n";
+
+?&gt;
+</pre><BR>The output is<pre>
+Yoda says:
+
+Fatal error: Call to undefined function: undefined_this_function_is()
+     in test.php on line 4
+</pre><br>
+<p class="docText">The second print on line 5 was never executed because PHP exits with a fatal error when it tries to call the undefined function.</P>
+<p class="docText">The same thing happens with an undefined class:<a name="ch07index49"></a><a name="ch07index50"></a><a name="ch07index51"></a><a name="ch07index52"></a><a name="ch07index53"></a></p>
+<pre>
+&lt;?php
+
+print "Yoda says:\n";
+new undefined_class;
+print "Do or do not, there is no try.\n";
+
+?&gt;
+</pre><br>The output is<pre>
+Yoda says:
+
+Fatal error: Class 'undefined_class' not found in test.php on line 4
+</pre><br>
+<p class="docText">Classes have one exception. If there is a user-defined function called <tt>__autoload</tt>, it is called when PHP runs across an undefined class. If the class is defined after <tt>__autoload</tt> returns, the newly loaded class is used, and no fatal error occurs.<a name="ch07index54"></a><a name="ch07index55"></a><a name="ch07index56"></a><a name="ch07index57"></a><a name="ch07index58"></a><a name="ch07index59"></a><a name="ch07index60"></a></p>
+<a name="ch07lev3sec7"></a><H5 class="docSection3Title">7.2.2.4 Logical Errors</H5>
+<p class="docText">Discovering parse errors or undefined symbols is relatively easy. A more subtle type of programming error is a <span class="docEmphStrong">logical error</span>, errors that are in the structure and logic of the code rather than just the syntax.<a name="ch07index61"></a><a name="ch07index62"></a><a name="ch07index63"></a><a name="ch07index64"></a></p>
+<p class="docText">The best ways to find logical errors is testing combined with code reviews.</p>
+<a name="ch07lev2sec3"></a><h4 class="docSection2Title">7.2.3. Portability Errors</h4>
+<a name="ch07lev3sec8"></a><H5 class="docSection3Title">7.2.3.1 Operating System Differences</h5>
+<p class="docText">Although PHP itself runs on many different platforms, that does not automatically make all PHP code 100 percent platform-independent. There are always some OS-specific issues to consider. Here are some examples:<a name="ch07index65"></a><a name="ch07index66"></a><a name="ch07index67"></a></p>
+<UL><li><p class="docList">PHP functions that are available only on a specific platform</P></li><li><p class="docList">PHP functions that are <span class="docEmphasis">not</span> available on a specific platform</p></li><li><p class="docList">PHP functions that differ slightly on different platforms</p></li><li><p class="docList">Which character is used to separate path components in file names</p></li><li><p class="docList">External programs or services that are not available on all platforms</p></li></ul>
+<a name="ch07lev3sec9"></a><h5 class="docSection3Title">7.2.3.2 PHP Configuration Differences</h5>
+<p class="docText">With all the different options available in PHP's configuration file (<tt>php.ini</tt>), it is easy to get into trouble when making assumptions about these settings.<a name="ch07index68"></a><a name="ch07index69"></a><a name="ch07index70"></a></P>
+<p class="docText">One common example is the <tt>magic_quotes_gpc</tt> ini option. If this option is enabled, PHP adds slashes (like the <tt>addslashes()</tt> function) on all external data. If you write your code on a system with this option disabled, and then move it to a server with <tt>magic_quotes_gpc</tt> enabled, your user input will suffer from &quot;backslash pollution.&quot;</P>
+<p class="docText">The correct way to handle such variations is to check your PHP code and see whether an option is enabled with the <tt>ini_get()</tt> function, and make the appropriate adjustments.</p>
+<p class="docText">For example, in the <tt>magic_quotes_gpc</tt> case, you should do this:</p>
+<pre>
+&lt;?php
+$dbh = DB::connect("mysql://user:pw@localhost/test");
+if (ini_get("magic_quotes_gpc")) {
+stripslashes($_GET["email"]);
+}
+$dbh-&gt;query("INSERT INTO emails VALUES(?)", array($_GET["email"]));
+
+?&gt;
+</pre><BR>
+<a name="ch07lev4sec1"></a><h5 class="docSection4Title">register_globals</h5>
+<p class="docText">The <tt>register_globals</tt> setting determines whether PHP should import <tt>GET</tt>, <tt>POST</tt>, cookie, environment, or server variables as global variables. In re-usable code, avoid relying on <tt>register_globals</tt>; instead, use the superglobal variables provided for accessing them (<tt>$_GET</tt> and <tt>friends</tt>).<a name="ch07index71"></a></p>
+<a name="ch07lev4sec2"></a><h5 class="docSection4Title">register_argc_argv</h5>
+<p class="docText">This variable controls whether the global variables <tt>$argc</tt> and <tt>$argv</tt> should be set. In the CLI version of PHP, these are set by default and required for PHP to access command-line parameters.<a name="ch07index72"></a></p>
+<a name="ch07lev4sec3"></a><H5 class="docSection4Title">magic_quotes_gpc, magic_quotes_runtime</h5>
+<p class="docText"><span class="docEmphStrong">Magic quotes</span> is the name of a PHP feature that automatically quotes input data, by using the <tt>addslashes()</tt> function. Historically, this was used so that form data could be used directly in SQL queries without any security or quoting issues. Today, form data is used for much more, and magic quotes quickly get in the way. We recommend that you disable this feature, but portable code must be aware of these settings and deal with them appropriately by calling <tt>stripslashes()</tt> on GPS (<tt>GET</tt>, <tt>POST</tt>, and cookie) data.<a name="ch07index73"></a><a name="ch07index74"></a><a name="ch07index75"></a></P>
+<a name="ch07lev4sec4"></a><h5 class="docSection4Title">y2k_compliance</H5>
+<p class="docText">The <tt>y2k_compliance</tt> set to <tt>on</tt> causes PHP to display four-digit years instead of two-digit years. Oddly enough, the only value that is known to cause problems with some browsers is <tt>on</tt>, which is why it is <tt>off</tt> by default.<a name="ch07index76"></a></p>
+<a name="ch07lev4sec5"></a><h5 class="docSection4Title">unserialize_callback_func</h5>
+<p class="docText">This setting is a string with the name of the function used for de-serializing data when the <tt>unserialize()</tt> function is used.<a name="ch07index77"></a></p>
+<a name="ch07lev4sec6"></a><H5 class="docSection4Title">arg_separator.input</H5>
+<p class="docText">When receiving <tt>GET</tt> and <tt>POST</tt> form data, the ampersand character (&amp;) is used by default to separate key-value pairs. With this option, the separator character can be changed to something else, which could cause portability problems.<a name="ch07index78"></a></p>
+<a name="ch07lev4sec7"></a><h5 class="docSection4Title">allow_url_fopen</h5>
+<p class="docText">By default, PHP's file functions support reading and writing URLs. If this option is set to <tt>false</tt>, URL file operations are disabled. You may need to deal with this in portable code, either by having a userland implementation in reserve, or by checking whether this option is set upon startup and refuse to run if URL file operations are not allowed.<a name="ch07index79"></a></p>
+<a name="ch07lev3sec10"></a><H5 class="docSection3Title">7.2.3.3 SAPI Differences</h5>
+<p class="docText">PHP is not only available for many different operating systems, but it also offers native interfaces to a range of different Server APIs, or <span class="docEmphStrong">SAPIs</span> in PHP lingo. The most common PHP SAPI is the Apache 1.3 module; others are CGI, CLI, the IIS filter, the embeddable version of PHP, and so on.<a name="ch07index80"></a><a name="ch07index81"></a><a name="ch07index82"></a></p>
+<p class="docText">Some SAPIs offer PHP functions that are available only in that SAPI. For example, the Apache 1.3 SAPI offers a function called <tt>apache_note()</tt> to pass information to other Apache modules.</P>
+<p class="docText"><a class="docLink" href="#ch07table01">Table 7.1</a> shows some SAPI-specific functions.</p>
+<a name="ch07table01"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 7.1. SAPI-Specific Functions</h5></caption><colgroup><col width="275"><col width="275"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">SAPI</span> <span class="docEmphStrong">Layers that Define It</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>ApacheRequest (class)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">apache_hooks</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>apache_lookup_uri</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks, apache2filter</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>apache_request_headers</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks, apache2filter</P></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>apache_response_headers</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks, apache2filter</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>apache_note</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks, apache2filter</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>apache_setenv</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks, apache2filter</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>apache_getenv</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>apachelog</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>apache_child_terminate</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks</P></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>apache_exec_uri</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>getallheaders</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">aolserver, apache, apache_hooks, apache2filter</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>smfi_setflags</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">milter</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>smfi_settimeout</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">milter</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>smfi_getsymval</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">milter</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>smfi_setreply</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">milter</P></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>smfi_addheader</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Milter</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>smfi_chgheader</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">milter</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>smfi_addrcpt</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">milter</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>smfi_delrcpt</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">milter</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>smfi_replacebody</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">milter</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>virtual</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">apache, apache_hooks, apache2filter</P></td></TR></table></p><BR>
+<a name="ch07lev3sec11"></a><h5 class="docSection3Title">7.2.3.4 Dealing with Portability</h5>
+<p class="docText">Portability errors can be tricky to find because they require that you test your code thoroughly in different configurations on different systems. However, proper testing and code reviews are the best ways to find portability problems.<a name="ch07index83"></a><a name="ch07index84"></a><a name="ch07index85"></a></p>
+<p class="docText">Of course, if you write and deploy all of your code on the same platform with a homogenous configuration, you may never run into any portability problems. Awareness of portability issues is a good thing anyway; it enables you to write better, more re-useable, and more robust code.</p>
+<p class="docText">Fixing portability errors may be easy, such as checking the <tt>ini</tt> setting, as in the previous <tt>magic_quotes_gpc</tt> example. But it may be more difficult as well. You may need to parse the output of a command differently for different operating systems, or provide a fallback implementation written in PHP for something available only on some platforms.</P>
+<p class="docText">In some cases, what you do is not even possible to do in a portable way.</P>
+<p class="docText">In general, the best approach to portability problems is hiding the operating system or SAPI details in a code layer, abstracting away the problem. One example of such an abstraction is the <tt>System</tt> class from PEAR, which provides PHP implementations of some common UNIX commands and other common operations that are OS-specific.</p>
+<a name="ch07lev3sec12"></a><h5 class="docSection3Title">7.2.3.5 Portability Tools</h5>
+<p class="docText">PEAR class: <tt>System</tt></p>
+<p class="docText">The <tt>System</tt> PEAR class is available as part of the basic PEAR install:<a name="ch07index86"></a><a name="ch07index87"></a><a name="ch07index88"></a><a name="ch07index89"></a><a name="ch07index90"></a></P>
+<pre>
+&lt;?php
+
+require_once "System.php";
+
+$tmp_file = System::mktemp();
+copy("http://php.net/robots.txt", $tmp_file);
+$pear_command = System::which("pear");
+
+?&gt;
+</pre><br>
+<p class="docText">PEAR class: <tt>OS_Guess</tt></p>
+<p class="docText">The <tt>OS_Guess</tt> class uses the <tt>php_uname()</tt> function to determine on which operating system it is running. It also provides ways of generalizing and comparing OS signatures:</P>
+<pre>
+&lt;?php
+
+require_once "OS/Guess.php";
+
+$os = new OS_Guess;
+print "OS signature: " . $os-&gt;getSignature() . "\n";
+if ($os-&gt;matchSignature("linux-*-i386")) {
+print "Linux running on an Intel x86 CPU\n";
+}
+
+?&gt;
+</pre><br>Example output:<a name="ch07index91"></a><a name="ch07index92"></a><a name="ch07index93"></a><a name="ch07index94"></a><a name="ch07index95"></a><pre>
+OS signature: linux-2.4-i386-glibc2.1
+Linux running on an Intel x86 CPU
+</pre><BR>
+<a name="ch07lev2sec4"></a><h4 class="docSection2Title">7.2.4. Runtime Errors</h4>
+<p class="docText">Once code is up and running, non-fatal runtime errors are the most common type of error in PHP. <span class="docEmphStrong">Runtime</span> refers to errors that occur during execution of the code, which are not usually programming errors but caused factors outside PHP itself, such as disk or network operations or database calls.<a name="ch07index96"></a><a name="ch07index97"></a></p>
+<p class="docText">PHP has an error-reporting mechanism that is used for all errors triggered inside PHP itself, either during compilation of the script or when executing a built-in function. You can use this error-reporting mechanism from a script as well, although there are more powerful ways of reporting errors (such as exceptions).</p>
+<p class="docText">The rest of this chapter focuses on some forms of runtime errors. Even perfectly good code may produce runtime errors, so everyone has to deal with them in one way or another.</p>
+<p class="docText">Examples of runtime errors occur when <tt>fopen()</tt> fails because a file is missing, when <tt>mysql_connect()</tt> fails because you specified the wrong username, if <tt>fsockopen()</tt> fails because your system runs out of file descriptors, or if you tried inserting a row into a table without providing a required not-null column.<a name="ch07index98"></a><a name="ch07index99"></a></p>
+<a name="ch07lev2sec5"></a><h4 class="docSection2Title">7.2.5. PHP Errors</h4>
+<p class="docText">The error mechanism in PHP is used by all built-in PHP functions. By default, this simple mechanism prints an error message with file and line number and exits. In the previous section, we saw several examples of PHP errors.<a name="ch07index100"></a><a name="ch07index101"></a></p>
+<a name="ch07lev3sec13"></a><h5 class="docSection3Title">7.2.5.1 Error Levels</h5>
+<p class="docText">PHP errors are categorized by an error level ranging from notices to fatal errors. The error level tells you how serious the error is. Most errors may be caught with a custom error handler, but some are unrecoverable.<a name="ch07index102"></a><a name="ch07index103"></a><a name="ch07index104"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>E_ERROR</tt></span></p>
+<p class="docText">This is a fatal, unrecoverable error. Examples are out-of-memory errors, uncaught exceptions, or class redeclarations.<a name="ch07index105"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>E_WARNING</tt></span></p>
+<p class="docText">This is the most common type of error. It normally signals that something you tried doing went wrong. Typical examples are missing function parameters, a database you could not connect to, or division by zero.<a name="ch07index106"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>E_PARSE</tt></span></P>
+<p class="docText">Parse errors occur during compilation, and force PHP to abort before execution. This means that if a file fails with a parse error, none of it will be executed.<a name="ch07index107"></a></P>
+<p class="docText"><span class="docEmphStrong"><tt>E_STRICT</tt></span></p>
+<p class="docText">This error level is the only one not included in the <tt>E_ALL</tt> constant. The reason for this is to make transition from PHP 4 to PHP 5 easier; you can still run PHP 4 code in PHP 5.<a name="ch07index108"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>E_NOTICE</tt></span></P>
+<p class="docText">Notices are PHP's way to tell you that the code it runs <span class="docEmphasis">may</span> be doing something unintentional, such as reading that undefined variable. It is good practice to develop with notices enabled so that your code is &quot;notice-safe&quot; before pushing it live. On your production site, you should completely disable HTML errors.<a name="ch07index109"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>E_CORE_ERROR</tt></span></p>
+<p class="docText">This internal PHP error is caused by an extension that failed starting up, and it causes PHP to abort.<a name="ch07index110"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>E_COMPILE_ERROR</tt></span></p>
+<p class="docText">Compile errors occur during compilation, and are a variation of <tt>E_PARSE</tt>. This error causes PHP to abort.<a name="ch07index111"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>E_COMPILE_WARNING</tt></span></p>
+<p class="docText">This compile-time warning warns users about deprecated syntax.<a name="ch07index112"></a></P>
+<p class="docText"><span class="docEmphStrong"><tt>E_USER_ERROR</tt></span></p>
+<p class="docText">This user-defined error causes PHP to abort execution. User-defined errors (<tt>E_USER_*</tt>) are never caused by PHP itself, but are reserved for scripts.<a name="ch07index113"></a></P>
+<p class="docText"><span class="docEmphStrong"><tt>E_USER_WARNING</tt></span></p>
+<p class="docText">This user-defined error will <span class="docEmphasis">not</span> cause PHP to exit. Scripts may use it to signal a failure corresponding to one that PHP would signal with <tt>E_WARNING</tt>.<a name="ch07index114"></a></P>
+<p class="docText"><span class="docEmphStrong"><tt>E_USER_NOTICE</tt></span></p>
+<p class="docText">This user-defined notice may be used in scripts to signal possible errors (analogous to <tt>E_NOTICE</tt>).<a name="ch07index115"></a><a name="ch07index116"></a><a name="ch07index117"></a><a name="ch07index118"></a></p>
+<a name="ch07lev3sec14"></a><h5 class="docSection3Title">7.2.5.2 Error Reporting</h5>
+<p class="docText">Several <tt>php.ini</tt> configuration settings control which errors should be displayed and how.<a name="ch07index119"></a><a name="ch07index120"></a><a name="ch07index121"></a><a name="ch07index122"></a></P>
+<p class="docText"><span class="docEmphStrong"><tt>error_reporting</tt> (Integer)</span></P>
+<p class="docText">This setting is the default error reporting for every script. The parameter may be any of the constants listed here, <tt>E_ALL</tt> for everything or a logical expression such as <tt>E_ALL &amp; ~E_NOTICE</tt> (for everything <span class="docEmphasis">except</span> notices).<a name="ch07index123"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>display_errors</tt> (Boolean)</span></p>
+<p class="docText">This setting controls whether errors are displayed as part of PHP's output. It is set to <tt>On</tt> by default.<a name="ch07index124"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>display_startup_errors</tt> (Boolean)</span></p>
+<p class="docText">This setting controls whether errors are displayed during PHP startup. It is set to <tt>Off</tt> by default and is meant for debugging C extensions.<a name="ch07index125"></a></P>
+<p class="docText"><span class="docEmphStrong"><tt>error_prepend_string</tt> (String)</span></p>
+<p class="docText">This string is displayed immediately <span class="docEmphasis">before</span> the error message when displayed in the browser.<a name="ch07index126"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>error_append_string</tt> (String)</span></P>
+<p class="docText">This string is displayed immediately <span class="docEmphasis">after</span> the error message when displayed in the browser.<a name="ch07index127"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>TRack_errors</tt> (Boolean)</span></p>
+<p class="docText">When this setting is enabled, the variable <tt>$php_errormsg</tt> is defined in the scope PHP is in when an error occurs. The variable contains the error message.<a name="ch07index128"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>html_errors</tt> (Boolean)</span></p>
+<p class="docText">This setting controls whether HTML formatting is applied to the error message. The default behavior is to display HTML errors, except in the CLI version of PHP (see <a class="docLink" href="ch16.html#ch16">Chapter 16</a>, &quot;PHP Shell Scripting&quot;).<a name="ch07index129"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>xmlrpc_errors</tt> (Boolean)</span></p>
+<p class="docText">This setting controls whether errors should be displayed as XML-RPC faults.<a name="ch07index130"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>xmlrpc_error_number</tt> (Integer)</span></p>
+<p class="docText">This XML-RPC fault code is used when <tt>xmlrpc_errors</tt> is enabled.<a name="ch07index131"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>log_errors</tt> (Boolean)</span></p>
+<p class="docText">This setting controls whether errors should be logged. The log destination is determined by the <tt>error_log</tt> setting. By default, errors are logged to the web server's error log.<a name="ch07index132"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>log_errors_max_len</tt> (Integer)</span></p>
+<p class="docText">This is the maximum length of messages logged when <tt>log_errors</tt> is enabled. Messages exceeding this length are still logged, but are truncated.<a name="ch07index133"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>error_log</tt> (String)</span></p>
+<p class="docText">This setting determines where to place logged errors. By default, they are passed on to the web server's error-logging mechanism, but you may also specify a file name, or syslog to use the system logger. Syslog is supported for UNIX-style systems only.<a name="ch07index134"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>ignore_repeated_errors</tt> (Boolean)</span></p>
+<p class="docText">When enabled, this setting makes PHP not display the exact same message two or more times in a row.<a name="ch07index135"></a></p>
+<p class="docText"><span class="docEmphStrong"><tt>ignore_repeated_source</tt> (Boolean)</span></P>
+<p class="docText">When enabled, PHP will not display an error originating from the same line in the same file as the last displayed error. It has no effect if <tt>ignore_repeated_errors</tt> is not enabled.<a name="ch07index136"></a></P>
+<p class="docText">Here is a good set of <tt>php.ini</tt> error-handling settings for development servers:<a name="ch07index137"></a><a name="ch07index138"></a><a name="ch07index139"></a><a name="ch07index140"></a></p>
+<pre>
+error_reporting = E_ALL
+display_errors = on
+html_errors = on
+log_errors = off
+</pre><br>
+<p class="docText">Notices are enabled, which encourages you to write notice-safe code. You will quickly spot problems as you test with your browser. All errors are shown in the browser, so you spot them while developing.</P>
+<p class="docText">For production systems, you would want different settings:</p>
+<pre>
+error_reporting = E_ALL &amp; ~E_NOTICE
+display_errors = off
+log_errors = on
+html_errors = off
+error_log = "/var/log/httpd/my-php-error.log"
+ignore_repeated_errors = on
+ignore_repeated_source = on
+</pre><br>
+<p class="docText">Here, no error messages are displayed to the user; they are all logged to <tt>/var/log/httpd/my-php-error.log</tt>. HTML formatting is disabled, and repeating errors are logged only once. Check the error log periodically to look for problems you did not catch during testing.</p>
+<p class="docText">The important thing to keep in mind is that error messages printed by PHP are meant for developers, not for the users of the site. Never expose PHP error messages directly to the user, catch the error if possible, and present the user with a better explanation of what went wrong.<a name="ch07index141"></a><a name="ch07index142"></a><a name="ch07index143"></a><a name="ch07index144"></a></p>
+<a name="ch07lev3sec15"></a><h5 class="docSection3Title">7.2.5.3 Custom Error Handlers</h5>
+<p class="docText">Instead of having PHP print or log the error message, you can register a function that is called for each error. This way, you can log errors to a database or even send an email alert to a pager or to mobile phone.<a name="ch07index145"></a><a name="ch07index146"></a><a name="ch07index147"></a></P>
+<p class="docText">The following example logs all notices to <tt>/var/log/httpd/my-php-errors.log</tt> and converts other errors to PEAR errors:</p>
+<pre>
+&lt;?php
+
+function my_error_handler($errno, $errstr, $file, $line)
+{
+if ($errno == E_NOTICE || $errno == E_USER_NOTICE) {
+error_log("$file:$line $errtype: $errmsg\n", 3,
+"/var/log/httpd/my-php-errors.log");
+return;
+}
+PEAR::raiseError($errstr);
+}
+
+?&gt;
+</pre><BR>
+<a name="ch07lev3sec16"></a><h5 class="docSection3Title">7.2.5.4 Silencing Errors</H5>
+<p class="docText">Sometimes, you may wish to run your script with a high error level, but some things you do often produce a notice. Or, you may want to completely hide PHP's error messages from time to time, and would rather use <tt>$php_errormsg</tt> in another error-reporting mechanism, such as an exception or PEAR error.<a name="ch07index148"></a><a name="ch07index149"></a><a name="ch07index150"></a></p>
+<p class="docText">In this case, you can silence errors with the <tt>@</tt> statement prefix. When a statement or expression is executed with a <tt>@</tt> in front, the error level is reduced to 0 for that statement or expression only:</p>
+<pre>
+&lt;?php
+
+if (@$_GET['id']) {
+    $obj = new MyDataObject;
+    $name = $obj-&gt;get('id', $_GET['id']);
+    print "The name you are looking for is $name!&lt;br /&gt;\n";
+}
+
+?&gt;
+</pre><br>
+<p class="docText">When running this example with <tt>error_reporting</tt> set to <tt>E_ALL</tt>, a notice will be triggered if there is no <tt>'id'</tt> index in the <tt>$_GET</tt> array. However, because we prefix the expression with the silencing operator <tt>@</tt>, no error message is displayed.</p>
+<p class="docText">Custom error handlers will be called regardless of the silencing operator; only the built-in error displaying and logging mechanisms are affected. This is something you should be aware of if you define your own error handler, so your handler does not report silenced errors unintentionally. Because silenced errors have the <tt>error_reporting</tt> setting temporarily set to 0, we can use the following approach:<a name="ch07index151"></a><a name="ch07index152"></a><a name="ch07index153"></a></P>
+<pre>
+&lt;?php
+
+function my_error_handler($num, $str, $file, $line) {
+    if (error_reporting() == 0) {
+        // print "(silenced) ";
+        return;
+    }
+    switch ($num) {
+        case E_WARNING: case E_USER_WARNING:
+            $type = "Warning";
+            break;
+        case E_NOTICE: case E_USER_NOTICE:
+            $type = "Notice";
+            break;
+        default:
+            $type = "Error";
+            break;
+    }
+    $file = basename($file);
+    print "$type: $file:$line: $str\n";
+}
+
+
+set_error_handler("my_error_handler");
+
+trigger_error("not silenced error", E_USER_NOTICE);
+@trigger_error("silenced error", E_USER_NOTICE);
+
+?&gt;
+</pre><BR>
+<p class="docText">Here, we check the current <tt>error_reporting</tt> setting before displaying the error message. If the <tt>error_reporting</tt> is 0, the custom error handler aborts before printing anything. Thus, the silencing is effective even with our custom error handler.<a name="ch07index154"></a><a name="ch07index155"></a><a name="ch07index156"></a></p>
+<ul></ul></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch07lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch07lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

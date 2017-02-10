@@ -1,0 +1,560 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 8.7.&nbsp; Communicating with XML</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch08lev1sec7"></a><h3 class="docSection1Title">8.7. Communicating with XML</h3>
+<p class="docText">Applications currently communicate via the Internet in several ways, most of which you already know. TCP/IP and UDP/IP are used, but are only low-level transport protocols. Communication between systems is difficult because systems store data in memory using different methods. For example, Intel has a different order of data in memory (Little Endian) than PowerPCs (Big Endian). Another major point was that people just wanted a solid cross-platform technology communication system. One solution is RPC (Remote Procedure Calls), but it's not easy to use, and it's implemented differently by Windows than by most UNIX platforms. XML is often the best solution. XML was developed to &quot;promote&quot; interoperability between systems. It allows applications on different systems to communicate using a standard format. XML is ASCII data, so the differences between systems (such as Endianess) is minimized. Other differences, such as date representation, still exist. One platform might specify <tt>Wed Dec 25 16:58:40 CET 2002</tt>, another just <tt>Wed 2002-12-25</tt>. XML-RPC and SOAP are both XML-based protocols. SOAP is the broader protocol, designed specifically for communication, and is well-supported.<a name="ch08index150"></a><a name="ch08index151"></a><a name="ch08index152"></a><a name="ch08index153"></a></p>
+<a name="ch08lev2sec9"></a><h4 class="docSection2Title">8.7.1. XML-RPC</h4>
+<p class="docText">Let's start with the simplest way of communication: XML-RPC.</P>
+<a name="ch08lev3sec3"></a><h5 class="docSection3Title">8.7.1.1 Messages</H5>
+<p class="docText"><span class="docEmphStrong">XML-<span class="docEmphStrong">RPC</span></span> is a request-response protocol. For every request to a server, a response is returned. The response can be a valid result or an error. Both the request and response packets are encoded as XML. The values in the packets are encoded with different elements. The XML-RPC specification defines a number of scalar types to which the data that is going to be transported must be converted (see <a class="docLink" href="#ch08table01">Table 8.1</a>).<a name="ch08index154"></a><a name="ch08index155"></a></p>
+<a name="ch08table01"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 8.1. XML-RPC Data Types</h5></caption><colgroup><col width="165"><col width="165"><col width="220"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">XML-<span class="docEmphStrong">RPC</span> Type</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Example Value</span></P></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;i4 /&gt;</tt> or <tt>&lt;int /&gt;</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Four-byte signed integer</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-8123</tt></P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;boolean /&gt;</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">0 (false) or 1 (true)</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>1</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;string /&gt;</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">ASCII string</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>Hello world</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;double /&gt;</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Double-precision signed floating-point number</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>91.213</tt></p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;dateTime.iso8601 /&gt;</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Date/time</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>200404021T14:08:55</tt></p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;base64 /&gt;</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Base 64-encoded binary</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>eW91IGNhbid0IHJlYWQgdGhpcyE</tt></p></td></tr></table></p><br>
+<p class="docText">When a value is transported, it is wrapped inside a <tt>&lt;value /&gt;</tt> tag, like this:</p>
+<pre>
+&lt;value&gt;&lt;dateTime.iso8601 /&gt;20021221R14:12:81&lt;/dateTime.iso8601&gt; &lt;value&gt;
+</pre><br>
+<p class="docText">Two compound data types are available: <tt>&lt;array /&gt;</tt> for non-associative arrays, and <tt>&lt;struct /&gt;</tt> for associative arrays. Here is an example of an <tt>&lt;array /&gt;</tt>:</p>
+<pre>
+&lt;array&gt;
+ &lt;data&gt;
+  &lt;value&gt;&lt;int&gt;1&lt;/int&gt;&lt;/value&gt;
+  &lt;value&gt;&lt;string&gt;Hello!&lt;/string&lt;/value&gt;
+ &lt;/data&gt;
+&lt;/array&gt;
+</pre><br>
+<p class="docText">As you can see, the values <tt>1</tt> and <tt>Hello!</tt> are wrapped into the <tt>&lt;data /&gt;</tt> element, which is a child of the <tt>&lt;array /&gt;</tt> element. In addition, <tt>&lt;struct /&gt;</tt> elements have a key associated with a value, so the XML looks slightly more complicated:<a name="ch08index156"></a><a name="ch08index157"></a></p>
+<pre>
+&lt;struct&gt;
+ &lt;member&gt;
+  &lt;name&gt;key-een&lt;/name&gt;
+  &lt;value&gt;&lt;int&gt;1&lt;/int&gt;&lt;/value&gt;
+ &lt;/member&gt;
+ &lt;member&gt;
+  &lt;name&gt;key-zwei&lt;/name&gt;
+  &lt;value&gt;&lt;int&gt;2&lt;/int&gt;&lt;/value&gt;
+ &lt;/member&gt;
+&lt;/struct&gt;
+</pre><BR>
+<p class="docText">The values (both scalar and compound) are wrapped inside special tags in requests and responses, which you can see in the following sections.<a name="ch08index158"></a><a name="ch08index159"></a></P>
+<a name="ch08lev3sec4"></a><h5 class="docSection3Title">8.7.1.2 Request</h5>
+<p class="docText">Requests in XML-RPC are normal <tt>POST</tt> requests to an HTTP server with some special additions:<a name="ch08index160"></a><a name="ch08index161"></a></P>
+<pre>
+POST /chapter_14/xmlrpc_example.php HTTP/1.0
+User-Agent: PHP XMLRPC 1.0
+Host: localhost
+Content-Type: text/xml
+</pre><br>
+<p class="docText">The <tt>Content-Type</tt> is always <tt>text/xml</tt>.</p>
+<pre>
+Content-Length: 164
+
+&lt;?xml version="1.0"?&gt;
+</pre><br>
+<p class="docText">Next, an XML declaration appears. The body consists solely of an XML document, as follows:</p>
+<pre>
+&lt;methodCall&gt;
+ &lt;methodName&gt;hello&lt;/methodName&gt;
+ &lt;params&gt;
+  &lt;param&gt;
+   &lt;value&gt;&lt;string&gt;Derick&lt;/string&gt;&lt;/value&gt;
+  &lt;/param&gt;
+&lt;/params&gt;
+&lt;/methodCall&gt;
+</pre><br>
+<p class="docText">Every RPC request call consists of the <tt>&lt;methodCall /&gt;</tt> tag, followed by the <tt>&lt;methodName /&gt;</tt> tag that specifies the name of the remote function to call. Parameters can be passed. Each parameter is passed inside a <tt>&lt;param /&gt;</tt> element. The <tt>param</tt> elements are grouped and enclosed in the <tt>&lt;params /&gt;</tt> element, a child of the <tt>&lt;methodCall /&gt;</tt> element. The XML-RPC packet in the previous example code calls the remote <tt>"hello"</tt> function, passing the parameter <tt>Derick</tt>.<a name="ch08index162"></a><a name="ch08index163"></a></p>
+<a name="ch08lev3sec5"></a><H5 class="docSection3Title">8.7.1.3 Response</h5>
+<p class="docText">When the function call succeeds, an XML-RPC response is returned to the caller program, encoded in XML. There are basically two different responses possible to a request: a normal response (<tt>methodResponse</tt>), shown in the following example, or a fault.<a name="ch08index164"></a><a name="ch08index165"></a></P>
+<p class="docText">You can recognize a normal response by the <tt>&lt;params /&gt;</tt> child element of the <tt>&lt;methodReponse /&gt;</tt> tag. A successful <tt>methodResponse</tt> always has one <tt>&lt;params /&gt;</tt> child, which always has one <tt>&lt;param /&gt;</tt> child. You can't return more than one value from within a function, but you can return a <tt>&lt;struct /&gt;</tt> or an <tt>&lt;array /&gt;</tt> to mimic returning multiple values. The <tt>methodResponse</tt> shows the result of the request shown in the previous section:</p>
+<pre>
+&lt;?xml version="1.0"?&gt;
+&lt;methodResponse&gt;
+ &lt;params&gt;
+  &lt;param&gt;
+   &lt;value&gt;&lt;string&gt;Hi Derick!&lt;/string&gt;&lt;/value&gt;
+  &lt;/param&gt;
+ &lt;/params&gt;
+&lt;/methodResponse&gt;
+</pre><BR>
+<a name="ch08lev3sec6"></a><h5 class="docSection3Title">8.7.1.4 Fault</h5>
+<p class="docText">Not all requests return a normal response, and not everything works as expected (for example, if the PEBCAK). When something doesn't work as expected, a <tt>&lt;fault /&gt;</tt> element is returned, rather than a <tt>&lt;params /&gt;</tt> element. The <tt>&lt;fault /&gt;</tt> always contains a <tt>&lt;struct /&gt;</tt> with two members: the <tt>faultCode</tt> (with an integer value) and a <tt>faultString</tt> (a string). Because the <tt>faultCodes</tt> are not defined in the XML-RPC specification, they are implementation-independent.<a name="ch08index166"></a><a name="ch08index167"></a><a name="ch08index168"></a><a name="ch08index169"></a></p>
+<p class="docText">Here is an example of a <tt>&lt;fault /&gt;</tt> response:</p>
+<pre>
+&lt;?xml version="1.0"?&gt;
+&lt;methodResponse&gt;
+&lt;fault&gt;
+  &lt;value&gt;
+    &lt;struct&gt;
+      &lt;member&gt;
+        &lt;name&gt;faultCode&lt;/name&gt;
+        &lt;value&gt;&lt;int&gt;3&lt;/int&gt;&lt;/value&gt;
+      &lt;/member&gt;
+      &lt;member&gt;
+        &lt;name&gt;faultString&lt;/name&gt;
+        &lt;value&gt;&lt;string&gt;Incorrect parameters passed to method&lt;string&gt;&lt;/value&gt;
+      &lt;/member&gt;
+    &lt;/struct&gt;
+  &lt;/value&gt;
+&lt;/fault&gt;
+&lt;/methodResponse&gt;
+</pre><BR>
+<a name="ch08lev3sec7"></a><H5 class="docSection3Title">8.7.1.5 The Client</h5>
+<p class="docText">Now, it's time for a practical application. We'll start by writing a simple client to call XML-RPC functions on our local machine (a sample for the server follows in the next section). We will be using the PEAR class <tt>"XML_RPC"</tt>, which can be installed with <tt>pear install XML_RPC</tt>:<a name="ch08index170"></a><a name="ch08index171"></a></p>
+<pre>
+&lt;?php
+    require_once "XML/RPC.php";
+
+    $client = new XML_RPC_Client('/chap_14/xmlrpc_example.php',
+      'localhost');
+</pre><br>
+<p class="docText">The script starts by including the PEAR class and instantiating an <tt>XML_RPC_Client</tt> object, as shown. The first parameter in the constructor is the path to the XML-RPC server on the &quot;remote&quot; machine; the second one is the hostname of that machine. Next, we continue by writing a small utility method that calls the method through the <tt>XML_RPC_client</tt> object. The function checks whether a fault is returned and if so, prints the accompanying error message. If a fault is not returned, the value that was returned by the RPC function is printed.</p>
+<pre>
+function call_method (&amp;$client, &amp;$msg)
+{
+        /* Send the request */
+        $p = $client-&gt;send($msg);
+        /* Check for an error, and print out the error message if
+         * necessary */
+        if (PEAR::isError($p)) {
+              echo $p-&gt;getMessage();
+          }else {
+                /* Check if an XML RPC fault was returned, and display
+                 * the faultString */
+                if ($p-&gt;faultCode()) {
+                       print $p-&gt;faultString();
+                       return NULL;
+                } else {
+                     /* Return the value upon a valid response */
+                     $res = $p-&gt;value();
+                     return $res;
+                }
+        }
+}
+</pre><BR>
+<p class="docText">Next, we call the RPC functions via the function written. We can specify types for the parameters that we pass to the remote function either explicitly or implicitly. In this first example, we construct an <tt>XML_RPC_Message</tt> with one explicit parameter that has the value <tt>'Derick'</tt> and the type <tt>'string'</tt>. The function we call is <tt>'hello'</tt>, and won't do much more than return <tt>hi</tt> in response.<a name="ch08index172"></a><a name="ch08index173"></a></p>
+<pre>
+/* Construct the parameter array */
+$vals = array (
+      new XML_RPC_Value('Derick', 'string')
+);
+
+/* Construct the message with the functionname and
+ * the parameter array */
+$msg = new XML_RPC_Message('hello', $vals);
+
+/* Send the message and store the result in $res */
+$res = call_method($client, $msg);
+
+/* If the result is non-null, decode the XML_RPC_Value into a PHP
+ * variable and echo it (we assume here that it returns a
+ * string */
+if ($res !== NULL) {
+       echo XML_RPC_decode($res)."\n";
+}
+</pre><br>
+<p class="docText">Rather than instantiating an <tt>XML_RPC_Value</tt> object with an explicit value type, you can call <tt>XML_RPC_encode(&lt;value&gt;)</tt>, which examines the type of the PHP variable and encodes it as the best-fitting XML-RPC type. <a class="docLink" href="#ch08table02">Table 8.2</a> shows the type conversions.</P>
+<a name="ch08table02"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 8.2. PHP Type to XML RPC Type Mappings</h5></caption><colgroup><col width="275"><col width="275"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">PHP Type</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">XML</span> <span class="docEmphStrong">RPC</span> <span class="docEmphStrong">Type</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">NULL</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;string&gt;</tt> (empty)</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Boolean</p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;boolean&gt;</tt></p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText">String</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;string&gt;</tt></p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Integer</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;int&gt;</tt></p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Float</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;double&gt;</tt></P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Array <span class="docEmphasis">(non-associative)</span></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;struct&gt;</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Array <span class="docEmphasis">(associative)</span></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;struct&gt;</tt></p></td></tr></table></p><br>
+<p class="docText">Notice that XML-RPC doesn't have a NULL type and that all types of arrays are converted to a <tt>&lt;struct&gt;</tt> (because it is inefficient to determine if a PHP array has only numeric indices).</p>
+<p class="docText">The following example passes two <tt>&lt;double&gt;</tt>s to the <tt>'add'</tt> function, which adds the two numbers and returns the result:</P>
+<pre>
+/* Somewhat more example with explicit types and multiple
+ * parameters */
+$vals = array (
+      XML_RPC_encode(80.9),
+      XML_RPC_encode(-9.71)
+);
+$msg = new XML_RPC_Message('add', $vals);
+$res = call_method($client, $msg);
+echo XML_RPC_decode($res)."\n";
+</pre><BR>
+<p class="docText">The <tt>XML_RPC_decode()</tt> function does exactly the opposite of the <tt>XML_RPC_encode()</tt> function. Types convert from XML-RPC types to PHP types as shown in <a class="docLink" href="#ch08table03">Table 8.3</a>.<a name="ch08index174"></a><a name="ch08index175"></a><a name="ch08index176"></a><a name="ch08index177"></a></p>
+<a name="ch08table03"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 8.3. XML RPC Types to PHP Type Mappings</h5></caption><colgroup><col width="275"><col width="275"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">XML-<span class="docEmphStrong">RPC</span> Type</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">PHP Type</span></p></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;i4&gt; or &lt;int&gt;</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Integer</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;Boolean&gt;</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Boolean</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;string&gt;</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">String</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;double&gt;</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Float</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;dateTime.iso8601&gt;</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">String (20040416T18:16:18)</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;base64&gt;</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">String</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;array&gt;</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Array</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;struct&gt;</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Array</p></td></tr></table></P><br>
+<a name="ch08lev3sec8"></a><h5 class="docSection3Title">8.7.1.6 Retrospection</H5>
+<p class="docText">If you encountered an XML-RPC server somewhere on the Internet, you might want to know which functions it exports. XML-RPC provides support functions that help you to retrieve all the information necessary to call the functions on the server. This is called <span class="docEmphStrong">retrospection</span>. With the <tt>'system.listMethods'</tt> function, you can retrieve an array containing all exported functions:<a name="ch08index178"></a><a name="ch08index179"></a></p>
+<pre>
+/* Complex example which shows retrospection */
+$msg = new XML_RPC_Message('system.listMethods');
+$res = call_method($client, $msg);
+
+foreach (XML_RPC_decode($res) as $item) {
+</pre><BR>
+<p class="docText">By looping through the returned array, you can request additional information on each function: the description of the function (with the <tt>system.methodHelp</tt> function) and the signature of the function (with <tt>system.methodSignature</tt>). <tt>system.methodHelp</tt> returns a string containing the description. <tt>system.methodSignature</tt> returns an array of arrays containing the types of the parameters. The first element in the array is the return type; the remaining elements contain the types of the parameters to pass to the function. The following code first requests the description, and then the types of the return value and parameters for the function:<a name="ch08index180"></a><a name="ch08index181"></a></p>
+<pre>
+       $vals = array (XML_RPC_encode($item));
+       $msg = new XML_RPC_Message('system.methodHelp', $vals);
+       $desc = XML_RPC_decode(call_method($client, $msg));
+
+       $msg = new XML_RPC_Message('system.methodSignature', $vals);
+       $sigs = XML_RPC_decode(call_method($client, $msg));
+       $siginfo = '';
+       foreach ($sigs[0] as $sig) {
+           $siginfo .= $sig. " ";
+       }
+
+       echo "$item\n". wordwrap($desc). "\n\t$siginfo\n\n";
+    }
+
+?&gt;
+</pre><br>
+<p class="docText">This was the client side. Now, let's implement the server side of our two functions.<a name="ch08index182"></a><a name="ch08index183"></a></p>
+<a name="ch08lev3sec9"></a><h5 class="docSection3Title">8.7.1.7 The Server</h5>
+<p class="docText">Writing the server is not much harder than writing the client. Instead of including the XML/RPC.php file, we now include the file that implements the server functionality:<a name="ch08index184"></a><a name="ch08index185"></a></p>
+<pre>
+&lt;?php
+    require("XML/RPC/Server.php");
+</pre><br>
+<p class="docText">Next, we implement the functions themselves:</p>
+<pre>
+function hello ($args)
+{
+        /* The getValues() method returns an array with all
+         * parameters passed to the function, converted from
+         * XML RPC types to PHP types with the
+         * XML_RPC_decode() function */
+        $vals = $args-&gt;getValues();
+
+        /* We simply return an XML_RPC_Values containing the
+        * result with the 'string' type */return new XML_RPC_Response(
+             new XML_RPC_Value("Hi {$vals[0]}!", 'string')
+    );
+}
+
+function add ($args) {
+       $vals = $args-&gt;getValues();
+       return new XML_RPC_Response(
+             new XML_RPC_Value($vals[0] + $vals[1], 'double')
+    );
+}
+</pre><br>
+<p class="docText">To make the functions available to the outside, we need to define the methods by putting the function name, signature, and description string into an array containing an element for each function. The signature is formatted as how the <tt>system.methodSignature</tt> should return itan array with an array containing the types:<a name="ch08index186"></a><a name="ch08index187"></a></p>
+<pre>
+$methods = array(
+       'hello' =&gt; array (
+             'function'  =&gt; 'hello',
+             'signature' =&gt; array(
+                  array(
+                      $GLOBALS['XML_RPC_String'],
+                      $GLOBALS['XML_RPC_String']
+                  )
+             ),
+             'docstring' =&gt; 'Greets you.'
+       ),
+
+       'add' =&gt; array (
+             'function'  =&gt; 'add',
+             'signature' =&gt; array(
+                  array(
+                      $GLOBALS['XML_RPC_Double'],
+                      $GLOBALS['XML_RPC_Double'],
+                      $GLOBALS['XML_RPC_Double']
+                  )
+             ),
+             'docstring' =&gt; 'Adds two numbers'
+    )
+);
+</pre><br>
+<p class="docText">We make the defined methods available by instantiating the <tt>XML_RPC_Server</tt> class. The constructor of this class handles parsing the request and calling the functions. You need to do nothing on your own, unless you want more advanced features that fall outside of the scope of this chapter.<a name="ch08index188"></a><a name="ch08index189"></a></p>
+<pre>
+    $server = new XML_RPC_Server($methods);
+?&gt;
+</pre><br>
+<p class="docText">With this, we conclude XML-RPC.</p>
+<a name="ch08lev2sec10"></a><h4 class="docSection2Title">8.7.2. SOAP</h4>
+<p class="docText">This section guides you through using SOAP as a client for the Google Web API and implementing your own SOAP server. Because SOAP is even more complex than XML-RPC, we unfortunately can't include everything.<a name="ch08index190"></a></P>
+<a name="ch08lev3sec10"></a><H5 class="docSection3Title">8.7.2.1 PEAR::SOAP</h5>
+<p class="docText">Google is a nice, fast search engine. Wouldn't it be great to have your own command-line search engine written in PHP? This section tells you how.<a name="ch08index191"></a><a name="ch08index192"></a></p>
+<a name="ch08lev4sec1"></a><H5 class="docSection4Title">Google</h5>
+<p class="docText">To make use of the SOAP API that Google exports, you need an account, which you can create on <a class="docLink" target="_blank" href="http://www.google.com/apis/">http://www.google.com/apis/</a>. When you register, you receive a key via email that you use when you call the SOAP method. For the following example to work correctly, you need to install the PEAR SOAP class, with <tt>pear install SOAP</tt>. After SOAP is installed, we can start with the following simple script. First, include the <tt>PEAR::SOAP</tt> class:<a name="ch08index193"></a><a name="ch08index194"></a><a name="ch08index195"></a></p>
+<pre>
+#!/usr/local/bin/php
+&lt;?php
+     /* Include the class */
+     require_once 'SOAP/Client.php';
+</pre><br>
+<p class="docText">Next, we define the URL to the SOAP server and instantiate a <tt>SOAP_Client</tt> object, which we will use to execute our search:</p>
+<pre>
+/* Create the client object */
+$endpoint = 'http://api.google.com/search/beta2';
+$client = new SOAP_Client($endpoint);
+</pre><br>
+<p class="docText">The search string is passed on the command line. If no parameter was passed, we'll display a little usage message:</p>
+<pre>
+/* Read the search string from the command line */
+if ($argc != 2) {
+      echo "usage: ./google.php searchstring\n\n";
+      exit();
+}
+$query = $argv[1];
+</pre><BR>
+<p class="docText">Then, we set up the other parameters for the SOAP call. Note that we don't do anything to specify the type of the variables; we just let the class decide this for us:<a name="ch08index196"></a><a name="ch08index197"></a><a name="ch08index198"></a></p>
+<pre>
+/* Defining the 'license' key */
+$key = 'jx+PnvxQFHIrV1A2rnckQn8t91Pp/6Zg';
+
+/* Defining maximum number of results and starting index */
+$maxResults = 3;
+$start = 0;
+
+/* Setup the other parameters */
+$filter = FALSE;
+$restrict = '';
+$safeSearch = FALSE;
+$lr = '';
+$ie = '';
+$oe = '';
+</pre><BR>
+<p class="docText">Next, we make the call to Google. The <tt>call()</tt> method of the <tt>SOAP_Client</tt> object expects three parameters:<a name="ch08index199"></a><a name="ch08index200"></a></p>
+<UL><li><p class="docList">The name of the function to call</p></li><li><p class="docList">An array with parameters for the call</P></LI><li><p class="docList">The namespace for the call</p></li></ul>
+<pre>
+  /* Make the call */
+$params = array(
+    'key'          =&gt; $key,
+    'q'            =&gt; $query,
+    'start'        =&gt; $start,
+      'maxResults' =&gt; $maxResults,
+      'filter'     =&gt; $filter,
+      'restrict'   =&gt; $restrict,
+      'safeSearch' =&gt; $safeSearch,
+      'lr'         =&gt; $lr,
+      'ie'         =&gt; $ie,
+      'oe'         =&gt; $oe
+);
+$response = $client-&gt;call(
+    'doGoogleSearch',
+    $params,
+    array('namespace' =&gt; 'urn:GoogleSearch')
+);
+</pre><BR>
+<p class="docText">In this example, we assume that the search call returned something useful, although it might not always do so. The Google API returns the text with XML entities escaped and with some inserted <tt>&lt;br&gt;</tt> tags. We convert the entities to normal characters using <tt>html_entity_decode()</tt> and strip all tags with <tt>strip_tags()</tt>:<a name="ch08index201"></a><a name="ch08index202"></a><a name="ch08index203"></a></p>
+<pre>
+    /* Display results */
+    foreach ($response-&gt;resultElements as $result) {
+          echo html_entity_decode(
+                strip_tags("{$result-&gt;title}\n({$result-&gt;URL})\n\n")
+        ) ;
+          echo wordwrap(html_entity_decode(strip_tags($result -&gt;snippet)));
+          echo "\n\n----------------------------\n\n";
+    }
+?&gt;
+</pre><br>
+<p class="docText">Now, let's go to the next example where we implement a simple SOAP client and server using the same functions as in the XML-RPC examples.<a name="ch08index204"></a><a name="ch08index205"></a><a name="ch08index206"></a></P>
+<a name="ch08lev4sec2"></a><h5 class="docSection4Title">SOAP Server</H5>
+<p class="docText">Here is the server. First, we include the <tt>SOAP_Server</tt> PEAR Class. Next, we define a class (<tt>Example</tt>) with the two functions that we want to export through SOAP. In the <tt>hello()</tt> method, we use implicit conversion from PHP types to SOAP types; in the <tt>add()</tt> method, we explicitly define the SOAP type (<tt>float</tt>):<a name="ch08index207"></a><a name="ch08index208"></a><a name="ch08index209"></a></p>
+<pre>
+&lt;?php
+     require_once 'SOAP/Server.php';
+
+     class Example {
+           function hello ($arg)
+           {
+                return "Hi {$arg}!";
+           }
+
+          function add ($a, $b) {
+                return new SOAP_Value('ret', 'float', $a + $b);
+          }
+    }
+</pre><br>
+<p class="docText">To fire up the server and process the request data that is stored in <tt>HTTP_RAW_POST_DATA</tt>, we instantiate the <tt>SOAP_Server</tt> class, instantiate the class with our methods, associate the class with the <tt>SOAP_Server</tt>, and process the request by calling the <tt>service()</tt> method of the <tt>SOAP_Server</tt> object. The <tt>service</tt> method processes the data that was posted to the PHP script, extracts the function name and parameters out of the XML, and calls the function in our <tt>Example</tt> class:<a name="ch08index210"></a><a name="ch08index211"></a><a name="ch08index212"></a><a name="ch08index213"></a><a name="ch08index214"></a></p>
+<pre>
+    $server = new SOAP_Server;
+    $soapclass = new Example();
+    $server-&gt;addObjectMap($soapclass, 'urn:Example');
+    $server-&gt;service($HTTP_RAW_POST_DATA);
+?&gt;
+</pre><br>
+<a name="ch08lev4sec3"></a><h5 class="docSection4Title">SOAP Client</h5>
+<p class="docText">The client is much like the Google client, except that we used explicit typing for the parameters in the call to the <tt>add()</tt> method:<a name="ch08index215"></a><a name="ch08index216"></a><a name="ch08index217"></a></p>
+<pre>
+#!/usr/local/bin/php
+&lt;?php
+     /* Include the class */
+     require_once 'SOAP/Client.php';
+
+     /* Create the client object */
+     $endpoint = 'http://kossu/soap/server.php';
+     $client = new SOAP_Client($endpoint);
+
+     /* Make the call */
+     $response = $client-&gt;call(
+           'hello',
+           array('arg' =&gt; 'Derick'),
+           array('namespace' =&gt; 'urn:Example')
+     );
+     var_dump($response);
+
+     /* Make the call */
+     $a = new SOAP_Value('a', 'int', 212.3);
+     $b = new SOAP_Value('b', 'int', 312.3);
+     $response = $client-&gt;call(
+          'add',
+          array($a, $b),
+          array('namespace' =&gt; 'urn:Example')
+     );
+     var_dump($response);
+?&gt;
+</pre><br>
+<p class="docText">This is going over the wire (for the second call). You can see that there is much more XML magic than with XML-RPC:<a name="ch08index218"></a><a name="ch08index219"></a><a name="ch08index220"></a><a name="ch08index221"></a><a name="ch08index222"></a><a name="ch08index223"></a></p>
+<pre>
+POST /chap_xml/soap/server.php HTTP/1.0
+User-Agent: PEAR-SOAP 0.7.1
+Host: kossu
+Content-Type: text/xml; charset=UTF-8
+Content-Length: 528
+SOAPAction: ""
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:ns4="urn:Example"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+&lt;SOAP-ENV:Body&gt;
+
+&lt;ns4:add&gt;
+&lt;a xsi:type="xsd:int"&gt;212.3&lt;/a&gt;
+&lt;b xsi:type="xsd:int"&gt;312.3&lt;/b&gt;&lt;/ns4:add&gt;
+&lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+
+HTTP/1.1 200 OK
+Date: Tue, 31 Dec 2002 14:56:17 GMT
+Server: Apache/1.3.27 (Unix) PHP/4.4.0-dev
+X-Powered-By: PHP/4.4.0-dev
+Content-Length: 515
+Connection: close
+Content-Type: text/xml; charset=UTF-8
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:ns4="urn:Example"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+&lt;SOAP-ENV:Body&gt;
+
+&lt;ns4:addResponse&gt;
+&lt;ret xsi:type="xsd:float"&gt;524&lt;/ret&gt;&lt;/ns4:addResponse&gt;
+&lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+</pre><br>
+<a name="ch08lev3sec11"></a><h5 class="docSection3Title">8.7.2.2 PHP's SOAP Extension</h5>
+<p class="docText">PHP 5 also comes with a SOAP extension <tt>ext/soap</tt>, which has even more features than <tt>PEAR::SOAP</tt>, and is written in C instead of <tt>PEAR::SOAP</tt>, which is written in PHP. With this extension, we're going to implement the same examples as in the &quot;PEAR::SOAP&quot; section to show you the differences between the two packages. You need to enable the SOAP extension with the PHP configure option <tt>--enable-soap</tt> or just uncomment the correct line in your php.ini file in case you're using a Windows version of PHP.<a name="ch08index224"></a><a name="ch08index225"></a></p>
+<p class="docText">The SOAP extension also supports <span class="docEmphStrong">WSDL</span> (pronounced as &quot;wizdel&quot;), an XML vocabulary used to describe Web Services. With this WSDL file, the extension knows certain aspects such as the endpoint, procedures, and message types with which you can connect to an end point. Google's Web API SDK package (which you can download at <a class="docLink" target="_blank" href="http://www.google.com/apis/download.html">http://www.google.com/apis/download.html</a>) includes such a WSDL description file, but we cannot republish this WSDL file here, of course. What we can do is show you an example on how to use it:<a name="ch08index226"></a></p>
+<pre>
+#!/usr/local/bin/php
+&lt;?php
+    /* Read the search string from the command line */
+    if ($argc != 2) {
+        echo "usage: ./google.php searchstring\n\n";
+        exit();
+    }
+    $query = $argv[1];
+
+
+    /* Defining the 'license' key */
+    $key = 'b/Wq+3hQFHILurTSX6USaub3VeRGsdSg';
+
+
+    /* Defining maximum number of results and starting index */
+    $maxResults = 3; $start = 0;
+
+
+    /* Setup the other parameters */
+    $filter = FALSE; $restrict = ''; $safeSearch = FALSE;
+    $lr = ''; $ie = ''; $oe = '';
+
+
+    /* Make the call */
+    <span class="docEmphStrong">$client = new SoapClient('GoogleSearch.wsdl');</span>
+    <span class="docEmphStrong">$res = $client-&gt;doGoogleSearch(</span>
+        <span class="docEmphStrong">$key, $query, $start, $maxResults, $filter, $restrict,</span>
+        <span class="docEmphStrong">$safeSearch, $lr, $ie, $oe</span>
+    <span class="docEmphStrong">);</span>
+
+
+    /* Display results */
+    foreach ($res-&gt;resultElements as $result) {
+        echo html_entity_decode(
+            strip_tags("{$result-&gt;title}\n({$result-&gt;URL})\n\n")
+        );
+        echo wordwrap(html_entity_decode(strip_tags($result -&gt;snippet)));
+        echo "\n\n----------------------------\n\n";
+    }
+?&gt;
+</pre><br>
+<p class="docText">As you compare this script with the one we used for <tt>PEAR::SOAP</tt>, you see that calling a SOAP method with WSDL is much easierit's only two lines!<a name="ch08index227"></a><a name="ch08index228"></a></p>
+<a name="ch08lev4sec4"></a><H5 class="docSection4Title">SOAP Server</H5>
+<p class="docText">Developing a SOAP server and its accompanying WSDL file is not that hard, either; the largest problem is creating the WSDL description file. The WSDL file is not included here, but can be found in the examples archive belonging to this book. Here is the code for the server:<a name="ch08index229"></a><a name="ch08index230"></a><a name="ch08index231"></a></p>
+<pre>
+&lt;?php
+    class ExampleService {
+
+
+        function hello ($name) {
+            if (strlen($name)) {
+                return "Hi {$name}!";
+            } else {
+                <span class="docEmphStrong">throw new SoapFault("Server", "No name :(.");</span>
+            }
+        }
+    }
+</pre><br>
+<p class="docText">It's basically just a normal PHP class, the only difference being the <tt>SoapFault</tt> exception which is the SOAP way of returning errors. We'll see in the client code how to handle this:</P>
+<pre>
+    $server = new SoapServer("example.wsdl");
+    $server-&gt;setClass("ExampleService");
+    $server-&gt;handle();
+?&gt;
+</pre><br>
+<p class="docText">This connects the class that is providing the method with help of the WDSL file to the SOAP server. The <tt>handle()</tt> method takes care of processing the information when a client requests a method call.<a name="ch08index232"></a><a name="ch08index233"></a><a name="ch08index234"></a></p>
+<a name="ch08lev4sec5"></a><h5 class="docSection4Title">SOAP Client</h5>
+<p class="docText">The client looks like this:<a name="ch08index235"></a><a name="ch08index236"></a><a name="ch08index237"></a></p>
+<pre>
+&lt;?php
+    $s = new SoapClient('example.wsdl');
+
+
+    try {
+        echo $s-&gt;hello('Derick'), "\n";
+</pre><br>
+<p class="docText">This first call is correct, as we supply a parameter to the function:</P>
+<pre>
+echo $s-&gt;hello(), "\n";
+</pre><br>
+<p class="docText">This one will throw the SOAP fault exception because the name parameter will be empty:</P>
+<pre>
+    } catch (SoapFault $e) {
+        echo $e-&gt;faultcode, ' ', $e-&gt;faultstring, "\n";
+    }
+?&gt;
+</pre><br>
+<p class="docText">If we don't catch this exception, the script will die with a fatal error. Now, it will show this when executed:<a name="ch08index238"></a><a name="ch08index239"></a><a name="ch08index240"></a></P>
+<pre>
+Hi Derick!
+SOAP-ENV:Server No name :(.
+</pre><br>
+<ul></ul></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

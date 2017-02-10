@@ -1,0 +1,188 @@
+[05-19-2006 00:04:05] -!- DiGiTa|_ [n=pet2poul@84.6.72.79] has joined #ezpublish
+[05-19-2006 00:11:18] -!- ordnas [n=ordnas@p549D5162.dip.t-dialin.net] has joined #ezpublish
+[05-19-2006 00:27:47] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Connection timed out]
+[05-19-2006 01:06:12] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-19-2006 01:19:04] -!- ordnas [n=ordnas@p549D5162.dip.t-dialin.net] has left #ezpublish []
+[05-19-2006 01:26:40] [#ezpublish] <Tidemann> pssst?
+[05-19-2006 01:27:23] -!- ordnas [n=ordnas@p549D5162.dip.t-dialin.net] has joined #ezpublish
+[05-19-2006 01:27:34] [#ezpublish] <Tidemann> hello?
+[05-19-2006 01:28:01] [#ezpublish] <Tidemann> anyone... *sniff*
+[05-19-2006 01:42:17] -!- awormus [n=aaron@p54B12CB0.dip0.t-ipconnect.de] has joined #ezpublish
+[05-19-2006 01:45:40] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[05-19-2006 01:45:43] [#ezpublish] <philG> hi all
+[05-19-2006 02:00:40] [#ezpublish] <awormus> hey philG
+[05-19-2006 02:06:16] [#ezpublish] <xbit> good morning
+[05-19-2006 02:22:36] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-19-2006 02:24:24] -!- niooi [n=niooi@linagoraberri.pck.nerim.net] has joined #ezpublish
+[05-19-2006 02:24:27] [#ezpublish] <niooi> hello
+[05-19-2006 02:24:48] [#ezpublish] <niooi> I would like to know if eZ Pulbish can update a ldap password?
+[05-19-2006 02:26:02] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-19-2006 02:26:41] [#ezpublish] <kalooni> hello
+[05-19-2006 02:27:27] [#ezpublish] <DiGiTa|_> hi
+[05-19-2006 02:29:17] [#ezpublish] <niooi> I would like to know if eZ Pulbish can update a ldap password? PLEASE :)
+[05-19-2006 02:41:30] -!- xigletjobb [n=Miranda@62.92.35.139] has joined #ezpublish
+[05-19-2006 02:44:06] -!- hovik [n=hovik@stalker.ez.no] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-19-2006 02:51:09] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-19-2006 02:57:45] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[05-19-2006 03:06:43] -!- alvaro- [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[05-19-2006 03:09:16] [#ezpublish] <kalooni> how would you shorten a xml field ?
+[05-19-2006 03:09:30] [#ezpublish] <kalooni> and keep the tags, and close open tags properly ?
+[05-19-2006 03:28:45] -!- nfrp [n=nfrp@ATuileries-153-1-83-10.w83-202.abo.wanadoo.fr] has joined #ezpublish
+[05-19-2006 03:43:39] -!- niooi [n=niooi@linagoraberri.pck.nerim.net] has quit []
+[05-19-2006 04:01:58] -!- niooi [n=niooi@linagoraberri.pck.nerim.net] has joined #ezpublish
+[05-19-2006 04:02:04] [#ezpublish] <niooi> Hello again
+[05-19-2006 04:02:19] [#ezpublish] <niooi> Can anyone tell me what is needed to connect to a LDAP databsae
+[05-19-2006 04:05:42] [#ezpublish] <niooi> a name and password?
+[05-19-2006 04:21:14] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 104 (Connection reset by peer)]
+[05-19-2006 04:42:14] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[05-19-2006 04:52:09] -!- niooi [n=niooi@linagoraberri.pck.nerim.net] has quit []
+[05-19-2006 05:05:15] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-19-2006 05:48:15] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-19-2006 07:21:40] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has joined #ezpublish
+[05-19-2006 07:56:52] [#ezpublish] <nnn0> why do i get all those redirects after i change the Index Page node
+[05-19-2006 07:57:26] [#ezpublish] <nnn0> i get a redirect, sometimes two, after anything i do in the admin interface
+[05-19-2006 07:58:04] [#ezpublish] <buz> i think one of the reasons is to take care of people hitting reload
+[05-19-2006 07:58:33] [#ezpublish] <katana`> yep
+[05-19-2006 07:58:35] [#ezpublish] <katana`> and reposting data
+[05-19-2006 07:58:39] [#ezpublish] <katana`> which is a no no
+[05-19-2006 07:59:01] [#ezpublish] <katana`> and it's due to the software architecture, too, redirecting to a view that performs an operation is better than duplicating the code
+[05-19-2006 07:59:31] [#ezpublish] <buz> well that could be solved by simply calling that coe
+[05-19-2006 07:59:34] [#ezpublish] <buz> code
+[05-19-2006 08:00:50] [#ezpublish] <katana`> it's usually not that simple
+[05-19-2006 08:01:04] [#ezpublish] <nnn0> :)
+[05-19-2006 08:01:58] [#ezpublish] <nnn0> i had only set Index Page, not the Default Page - seems better now :)
+[05-19-2006 08:10:32] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has joined #ezpublish
+[05-19-2006 08:11:16] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has left #ezpublish []
+[05-19-2006 08:12:23] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has joined #ezpublish
+[05-19-2006 08:12:37] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has left #ezpublish []
+[05-19-2006 08:19:58] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 104 (Connection reset by peer)]
+[05-19-2006 08:27:16] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-19-2006 08:30:29] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has joined #ezpublish
+[05-19-2006 08:41:52] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[05-19-2006 09:19:19] -!- ordna1 [n=ordnas@p549D5162.dip.t-dialin.net] has joined #ezpublish
+[05-19-2006 09:19:51] [#ezpublish] <nnn0> hm there no longer is a empty line between the short description and description in folders and articles (by default)
+[05-19-2006 09:19:56] [#ezpublish] <nnn0> why is that ? :)
+[05-19-2006 09:20:23] [#ezpublish] <nnn0> hm i guess you get more control that way
+[05-19-2006 09:23:37] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 104 (Connection reset by peer)]
+[05-19-2006 09:31:02] [#ezpublish] <nnn0> hm actually in IE it does put a blank line between them :)
+[05-19-2006 09:31:13] [#ezpublish] <nnn0> but not in opera or firefox
+[05-19-2006 09:31:36] [#ezpublish] <nnn0> is this maybe a bug or something ?
+[05-19-2006 09:35:31] [#ezpublish] <xbit> sounds like a ie bug to me :)
+[05-19-2006 09:35:45] [#ezpublish] <xbit> not the first time
+[05-19-2006 09:36:44] -!- ordnas [n=ordnas@p549D5162.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-19-2006 09:55:24] -!- norbs999 [i=norbs999@Ed7cd.e.pppool.de] has joined #ezpublish
+[05-19-2006 09:55:33] [#ezpublish] <norbs999> hi there!
+[05-19-2006 09:56:06] [#ezpublish] <norbs999> anybody awake?
+[05-19-2006 09:56:28] [#ezpublish] <norbs999> I would have a question about showing objects
+[05-19-2006 10:00:57] [#ezpublish] <B-KiLLer`> zzZZzzZZ'
+[05-19-2006 10:01:10] [#ezpublish] <norbs999> Wake up!
+[05-19-2006 10:01:12] [#ezpublish] <norbs999> ;-)
+[05-19-2006 10:02:54] [#ezpublish] <B-KiLLer`> GrmBlblblBlblmmmm ? :)
+[05-19-2006 10:03:15] [#ezpublish] <norbs999> Good morning!
+[05-19-2006 10:04:10] [#ezpublish] <B-KiLLer`> hmm wait a minute, need to wash myself, clean my teeth, have my cup of coffee, dress up, ...
+[05-19-2006 10:04:15] [#ezpublish] <xbit> duuude
+[05-19-2006 10:04:16] [#ezpublish] <xbit> :o
+[05-19-2006 10:04:28] [#ezpublish] <norbs999> *g*
+[05-19-2006 10:04:29] [#ezpublish] <B-KiLLer`> hurley? :p
+[05-19-2006 10:05:51] [#ezpublish] <norbs999> Well, perhaps you're ready to explain what is the common way to change the appearance of an object that I've crated from a class that I've made by myself.
+[05-19-2006 10:09:48] [#ezpublish] <B-KiLLer`> "appearance" ?
+[05-19-2006 10:09:53] [#ezpublish] <B-KiLLer`> the icon in the tree ?
+[05-19-2006 10:12:31] [#ezpublish] <norbs999> ahmm - no I meant the appearance on the site. I guess I need to do override templates?
+[05-19-2006 10:12:48] [#ezpublish] <norbs999> but the icon would be interessting too.
+[05-19-2006 10:12:53] [#ezpublish] <B-KiLLer`> ;)
+[05-19-2006 10:12:58] [#ezpublish] <B-KiLLer`> for the icon, look into icon.ini
+[05-19-2006 10:13:04] [#ezpublish] <B-KiLLer`> (ez, huh?)
+[05-19-2006 10:13:18] [#ezpublish] <norbs999> ok. the icon.
+[05-19-2006 10:13:23] [#ezpublish] <B-KiLLer`> and yes, for the appearance, you can use the templates overriding system
+[05-19-2006 10:13:44] [#ezpublish] <B-KiLLer`> what can you use apart from this? I don't know in fact :)
+[05-19-2006 10:14:28] [#ezpublish] <norbs999> I've just made a class tha contains a simple line of text. Ther's a kind of default view used to show that line.
+[05-19-2006 10:14:50] [#ezpublish] <norbs999> But is it nessesary to write a new templatefile?
+[05-19-2006 10:15:10] [#ezpublish] <B-KiLLer`> the default template is used, and should never be overwritten
+[05-19-2006 10:15:17] [#ezpublish] <B-KiLLer`> so, what you can do, is:
+[05-19-2006 10:15:35] [#ezpublish] <norbs999> *listening*
+[05-19-2006 10:15:40] [#ezpublish] <B-KiLLer`> *typing*
+[05-19-2006 10:16:14] [#ezpublish] <norbs999> < ...funny messages *
+[05-19-2006 10:16:14] [#ezpublish] <B-KiLLer`> edit the override.ini file, create your own template, mention it in the ini file
+[05-19-2006 10:16:25] [#ezpublish] <norbs999> ok.
+[05-19-2006 10:16:33] [#ezpublish] <B-KiLLer`> that's all
+[05-19-2006 10:16:56] [#ezpublish] <norbs999> I that there was a quicker way.
+[05-19-2006 10:17:04] [#ezpublish] <norbs999> thout
+[05-19-2006 10:17:46] [#ezpublish] <norbs999> well, thx a lot. I'll see how to do that.
+[05-19-2006 10:18:03] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-19-2006 10:18:18] [#ezpublish] <B-KiLLer`> since it's the default view which is shown, it's the common template for every 'unknown' views
+[05-19-2006 10:18:24] [#ezpublish] <norbs999> @ B-Killer: you may go sleeping now.
+[05-19-2006 10:18:25] [#ezpublish] <B-KiLLer`> so there is no quicker way for doing this I think
+[05-19-2006 10:18:43] [#ezpublish] <ls> hi
+[05-19-2006 10:18:44] [#ezpublish] <B-KiLLer`> hmm once I'm up, I can't get down so easily :)
+[05-19-2006 10:19:05] [#ezpublish] <norbs999> hmm.
+[05-19-2006 10:19:39] [#ezpublish] <B-KiLLer`> moreover, it's only 6pm in fact ;)
+[05-19-2006 10:19:44] [#ezpublish] <B-KiLLer`> (nearly)
+[05-19-2006 10:20:21] -!- ls changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[05-19-2006 10:20:50] [#ezpublish] <norbs999> ok, another question for you, just to stay awake, what's your favorite eZ-book?
+[05-19-2006 10:22:01] [#ezpublish] <B-KiLLer`> I have no favorite, I have only one
+[05-19-2006 10:22:09] [#ezpublish] <B-KiLLer`> which I didn't read that much in fact
+[05-19-2006 10:22:11] [#ezpublish] <ls> :)
+[05-19-2006 10:22:22] [#ezpublish] <norbs999> It's called:
+[05-19-2006 10:22:26] [#ezpublish] <B-KiLLer`> it's Learning ez publish 3
+[05-19-2006 10:22:34] [#ezpublish] <B-KiLLer`> packt publishing
+[05-19-2006 10:23:10] [#ezpublish] <norbs999> yeah, it's a nice book, I guess the only printed one.
+[05-19-2006 10:23:17] [#ezpublish] <ls> norbs999: are you new to eZ publish?
+[05-19-2006 10:23:28] [#ezpublish] <norbs999> quiete new.
+[05-19-2006 10:23:35] [#ezpublish] <norbs999> about 3 weeks.
+[05-19-2006 10:26:58] [#ezpublish] <ls> nice, if you are php "code warrior" then book might be interestig for you ;)
+[05-19-2006 10:28:09] [#ezpublish] <norbs999> What about the ez_manual2.pdf (SDK) have you had a deeper look into it?
+[05-19-2006 10:29:29] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[05-19-2006 10:29:34] [#ezpublish] <ls> haven't see that file ...
+[05-19-2006 10:30:19] -!- norbs997 [i=norbs999@Ed7e7.e.pppool.de] has joined #ezpublish
+[05-19-2006 10:30:54] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-19-2006 10:31:17] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[05-19-2006 10:49:00] -!- ls is now known as luke
+[05-19-2006 10:50:20] -!- luke is now known as luke|away
+[05-19-2006 10:51:55] -!- norbs999 [i=norbs999@Ed7cd.e.pppool.de] has quit [Read error: 110 (Connection timed out)]
+[05-19-2006 10:55:30] -!- norbs997 [i=norbs999@Ed7e7.e.pppool.de] has quit [Read error: 110 (Connection timed out)]
+[05-19-2006 11:01:03] -!- B-KiLLer` [n=me@bart.interact.lu] has quit []
+[05-19-2006 11:05:53] -!- luke|away [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-19-2006 11:15:54] -!- nfrp [n=nfrp@ATuileries-153-1-83-10.w83-202.abo.wanadoo.fr] has quit ["Leaving"]
+[05-19-2006 11:47:53] [#ezpublish] <xiglet> How can i make a class when I want "unlimited" amount of files attached to the class? Like an article with an uncertain amount of files ...
+[05-19-2006 11:48:14] [#ezpublish] <xiglet> zip the files before uploading it? ;-)
+[05-19-2006 11:55:08] -!- xigletjobb [n=Miranda@62.92.35.139] has quit [Read error: 104 (Connection reset by peer)]
+[05-19-2006 12:22:54] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 104 (Connection reset by peer)]
+[05-19-2006 12:22:54] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[05-19-2006 12:33:48] -!- xiglet_ is now known as xiglet
+[05-19-2006 12:36:01] -!- awormus_ [n=aaron@p54B1383C.dip0.t-ipconnect.de] has joined #ezpublish
+[05-19-2006 12:36:27] -!- awormus_ [n=aaron@p54B1383C.dip0.t-ipconnect.de] has quit [Client Quit]
+[05-19-2006 12:43:46] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-19-2006 12:49:02] -!- ls is now known as luke
+[05-19-2006 12:53:44] -!- awormus [n=aaron@p54B12CB0.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-19-2006 12:57:41] -!- ordna1 [n=ordnas@p549D5162.dip.t-dialin.net] has left #ezpublish []
+[05-19-2006 13:44:33] -!- DiGiTa|_ [n=pet2poul@84.6.72.79] has quit []
+[05-19-2006 15:21:05] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 104 (Connection reset by peer)]
+[05-19-2006 15:21:12] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[05-19-2006 15:37:51] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has joined #ezpublish
+[05-19-2006 15:40:59] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has left #ezpublish []
+[05-19-2006 15:44:39] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-19-2006 15:47:42] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has joined #ezpublish
+[05-19-2006 15:48:57] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has left #ezpublish []
+[05-19-2006 15:49:51] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has joined #ezpublish
+[05-19-2006 15:51:16] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has left #ezpublish []
+[05-19-2006 16:24:05] Disconnecting due to lack of a lag response (0.16300500 1148073785 != 0.10167400 1148073815)
+[05-19-2006 16:24:05] Diconnected. Sleeping for 2 second(s).
+[05-19-2006 16:24:07] >> Connecting to irc.freenode.net:6667
+[05-19-2006 16:24:11] >> Connected to irc.freenode.net:6667, registering...
+[05-19-2006 16:24:14] >> Successfully registered. Nick is: ezlog
+[05-19-2006 16:24:14] -!- There are 14139 listed and 14466 unlisted users on 17 servers
+[05-19-2006 16:24:14] -!- 47 flagged staff members
+[05-19-2006 16:24:14] -!- 10306 channels formed
+[05-19-2006 16:24:14] -!- I have 4007 clients and 0 servers
+[05-19-2006 16:24:14] -!- Current local  users: 4007  Max: 6290
+[05-19-2006 16:24:14] -!- Current global users: 28605  Max: 31376
+[05-19-2006 16:24:14] -!- Highest connection count: 6292 (6290 clients) (1262375 since server was (re)started)
+[05-19-2006 16:24:14] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-19-2006 16:24:14] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-19-2006 16:24:40] >> Attempting to join channels: #ezpublish
+[05-19-2006 16:24:40] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-19-2006 16:24:40] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[05-19-2006 16:24:40] -!- Topic set by ls [@] [Fri, 19 May 2006 10:51:35 -0500]
+[05-19-2006 16:24:41] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] help freenode weed out clonebots, please register your IRC nick and auto-identify: http://freenode.net/faq.shtml#nicksetup
+[05-19-2006 17:11:27] -!- luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-19-2006 19:02:18] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]

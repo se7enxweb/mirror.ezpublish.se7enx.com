@@ -1,0 +1,25 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 13.9.&nbsp; Summary</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch13lev1sec9"></a><h3 class="docSection1Title">13.9. Summary</h3>
+<p class="docText">This chapter highlights some changes in PHP 5 that affect scripts written and working under PHP 4. A new object model and new OO features in PHP 5 mean that some OO scripts written for PHP 4 won't run correctly with PHP 5. If you cast an object to an int, the result is always 1, rather than 0 as in PHP 4. When you compare objects in PHP 5, true is returned only if the objects are the same, with the same object handle. The PHP 5 behavior for these three changes can be reverted to PHP 4 behavior by turning on Zend 1 compatibility mode in the <tt>php.ini</tt> file. However, two other changes cannot be reverted. In PHP 5, you can no longer assign an object to <tt>$this</tt> inside a class. In addition, the <tt>get_class()</tt> function in PHP 5 returns the class name with its upper- and lowercase characters preserved. As well as changes, some features are deprecated. A new error type<tt>E_STRICT</tt>warns you when you use deprecated features, as long as you specify <tt>E_STRICT</tt> errors in the <tt>php.ini</tt> file. Although PHP still allows the automatic creation of objects of class <tt>StdClass</tt> by assigning a value to a property, you get an <tt>E_STRICT</tt> error when you do this. Also, the <tt>var</tt> designation for properties is deprecated in favor of <tt>public</tt>. In addition, a new constructor<tt>construct()</tt>is introduced with PHP 5. PHP 5 throws an <tt>E_STRICT</tt> error when it encounters a function in an inherited class with a different signature than a function of the same name in the parent class.</p>
+<p class="docText">As well as OO changes, a few other changes break backward compatibility. When setting up PHP on Windows, the names and locations some of the files in the distribution have changed. For instance, the CGI binary is now called <tt>php-cgi.exe</tt> rather than <tt>php.exe</tt>. The parser changed the way it tokenizes comments. MySQL is no longer enabled by default and the client library is no longer bundled, so you need to use an external library. The <tt>array_merge()</tt> function no longer accepts a non-array parameter, and <tt>strrpos()</tt> and <tt>strripos()</tt> now use the full <tt>$needle</tt> to search for a substring in a string. There are many other changes, including additional features for functions and new functions, but most changes do not affect existing scripts that run with PHP 4.</p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

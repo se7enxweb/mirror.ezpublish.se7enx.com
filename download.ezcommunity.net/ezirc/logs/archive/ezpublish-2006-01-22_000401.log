@@ -1,0 +1,46 @@
+[01-21-2006 01:50:29] -!- SEAwolfx_ [n=mike@lostpackets.de] has joined #ezpublish
+[01-21-2006 01:51:17] -!- SEAwolfx [n=mike@tor/session/x-acf0f3cf777e2f86] has quit [Remote closed the connection]
+[01-21-2006 02:40:44] -!- technocrat [i=sniegeli@hst-250-241.splius.lt] has joined #ezpublish
+[01-21-2006 02:45:40] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-21-2006 03:03:49] -!- SEAwolfx [n=mike@tor/session/x-372a605bb690589c] has joined #ezpublish
+[01-21-2006 03:09:52] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[01-21-2006 03:50:41] -!- SEAwolfx1 [i=debian-t@tor/session/x-e8f86706a363904f] has joined #ezpublish
+[01-21-2006 03:55:43] -!- Jens [n=jens@trac.codes-concepts.de] has quit [Nick collision from services.]
+[01-21-2006 03:56:01] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-21-2006 03:56:44] -!- _Jens [n=jens@trac.codes-concepts.de] has joined #ezpublish
+[01-21-2006 04:52:35] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has joined #ezpublish
+[01-21-2006 05:18:24] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-21-2006 06:27:02] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has joined #ezpublish
+[01-21-2006 07:03:40] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-21-2006 07:15:35] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-21-2006 07:15:47] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has joined #ezpublish
+[01-21-2006 07:17:54] -!- SEAwolfx2 [n=mike@h213-50-70-70.vokby.se] has joined #ezpublish
+[01-21-2006 07:18:22] -!- SEAwolfx1 [i=debian-t@tor/session/x-e8f86706a363904f] has quit [Read error: 104 (Connection reset by peer)]
+[01-21-2006 07:35:45] -!- ordna1 [n=ordnas@p549D73CA.dip.t-dialin.net] has joined #ezpublish
+[01-21-2006 07:42:33] -!- SEAwolfx2 [n=mike@h213-50-70-70.vokby.se] has quit [Remote closed the connection]
+[01-21-2006 07:43:01] -!- SEAwolfx1 [n=mike@tor01.nycbug.org] has joined #ezpublish
+[01-21-2006 07:54:22] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-21-2006 08:01:26] -!- ordna1 [n=ordnas@p549D73CA.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-21-2006 08:24:06] -!- SEAwolfx1 [n=mike@tor01.nycbug.org] has quit [Remote closed the connection]
+[01-21-2006 08:59:57] -!- tobmaster [n=tobmaste@dslb-084-061-059-017.pools.arcor-ip.net] has joined #ezpublish
+[01-21-2006 09:40:04] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 104 (Connection reset by peer)]
+[01-21-2006 10:05:33] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[01-21-2006 10:12:41] -!- kracker changed the topic of #ezpublish to: eZ publish | cms |  Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community || News: http://ez.no/community/news/community_newsletter_20_01_2006 | http://ez.no/community/news/ez_components_1_0_release_candidate_1 | Articles: http://ez.no/community/articles/image_manipulation_with_ez_components | http://www.planetezpublish.org/
+[01-21-2006 10:13:27] -!- kracker changed the topic of #ezpublish to: eZ publish | cms |  Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community || News: http://ez.no/community/news/community_newsletter_20_01_2006 | http://ez.no/community/news/ez_components_1_0_release_candidate_1 | Articles: http://ez.no/community/articles/image_manipulation_with_ez_components | RSS: http://www.planetezpublish.org/
+[01-21-2006 11:03:55] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-21-2006 11:36:36] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has joined #ezpublish
+[01-21-2006 12:28:40] -!- SEAwolfx_ [n=mike@lostpackets.de] has quit [SendQ exceeded]
+[01-21-2006 12:29:58] [#ezpublish] <kracker> rolf, throwing tracks like molotov c0cktails .... D12 - D12 World - Track #13
+[01-21-2006 12:48:26] -!- technocrat [i=sniegeli@hst-250-241.splius.lt] has quit [Read error: 110 (Connection timed out)]
+[01-21-2006 12:58:34] -!- topaz [i=sniegeli@hst-250-241.splius.lt] has joined #ezpublish
+[01-21-2006 13:02:28] -!- SEAwolfx [n=mike@tor/session/x-372a605bb690589c] has quit [SendQ exceeded]
+[01-21-2006 13:36:47] -!- tobiS [n=tobmaste@dslb-084-061-028-159.pools.arcor-ip.net] has joined #ezpublish
+[01-21-2006 13:36:57] -!- tobmaster [n=tobmaste@dslb-084-061-059-017.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[01-21-2006 15:21:48] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has left #ezpublish []
+[01-21-2006 15:36:21] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Remote closed the connection]
+[01-21-2006 16:28:57] -!- topaz [i=sniegeli@hst-250-241.splius.lt] has quit ["dirbam tyliai"]
+[01-21-2006 16:30:00] -!- tobyS [n=dotxp@dslb-084-060-017-027.pools.arcor-ip.net] has joined #ezpublish
+[01-21-2006 17:05:35] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-21-2006 17:13:42] -!- _Jens is now known as Jens
+[01-21-2006 18:19:24] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-21-2006 20:27:05] -!- tobiS [n=tobmaste@dslb-084-061-028-159.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]

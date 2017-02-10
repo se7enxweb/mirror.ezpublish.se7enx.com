@@ -1,0 +1,786 @@
+[12-02-2005 01:33:24] -!- Bedlore [n=me@219-90-177-167.ip.adam.com.au] has joined #ezpublish
+[12-02-2005 01:33:24] -!- Bedlore [n=me@219-90-177-167.ip.adam.com.au] has quit [Client Quit]
+[12-02-2005 01:54:28] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-02-2005 02:00:32] -!- ordna1 [n=ordnas@p549DF759.dip.t-dialin.net] has joined #ezpublish
+[12-02-2005 02:09:55] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-02-2005 02:10:58] [#ezpublish] <Katana`> hi
+[12-02-2005 02:19:28] [#ezpublish] <nnn0> hi
+[12-02-2005 02:34:17] [#ezpublish] * Katana` is impressed by the quality of developer specs for components on ez.no
+[12-02-2005 02:37:39] [#ezpublish] <nnn0> :)
+[12-02-2005 02:37:45] [#ezpublish] <Katana`> haha
+[12-02-2005 02:37:51] [#ezpublish] <Katana`> lol my boss has sold an extranet for a website we've done (http://en.fondsdulogement.lu) and now he just said to a colleague of mine who didn't work on the project "okay, it has to be done for december 15th"
+[12-02-2005 02:37:51] -!- aya [n=yann@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[12-02-2005 02:37:55] [#ezpublish] <Katana`> using eZ of course
+[12-02-2005 02:38:13] [#ezpublish] <aya> hi all
+[12-02-2005 02:38:43] [#ezpublish] <Katana`> hi aya
+[12-02-2005 02:47:12] [#ezpublish] <kris10an> hi alll
+[12-02-2005 02:47:21] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[12-02-2005 02:47:22] [#ezpublish] <kris10an> any suggestions to make my brain wake up?
+[12-02-2005 02:47:30] [#ezpublish] <nnn0> play counter strike :D
+[12-02-2005 02:47:40] [#ezpublish] <fh[eZ]> that is too much
+[12-02-2005 02:47:53] [#ezpublish] <fh[eZ]> ever tried to play cs for a while and then start doing something useful?
+[12-02-2005 02:47:55] [#ezpublish] <fh[eZ]> not possible
+[12-02-2005 02:48:08] [#ezpublish] <fh[eZ]> I think some well placed physical pain is better
+[12-02-2005 02:48:09] [#ezpublish] <nnn0> meditate for an hour to gamelan music then  :D
+[12-02-2005 02:48:16] [#ezpublish] <nnn0> heheh
+[12-02-2005 02:48:23] [#ezpublish] <nnn0> like an icecold shower ?
+[12-02-2005 02:48:26] [#ezpublish] <kris10an> hehehe.. are you trying to make me go crazy or wake up?
+[12-02-2005 02:48:38] [#ezpublish] <nnn0> both
+[12-02-2005 02:48:39] [#ezpublish] <kris10an> there is no shower here
+[12-02-2005 02:48:40] [#ezpublish] <fh[eZ]> yeah or sliding on the ice outside
+[12-02-2005 02:48:40] [#ezpublish] <nnn0> ;)
+[12-02-2005 02:48:58] [#ezpublish] <kris10an> snowbathing is an option
+[12-02-2005 02:49:01] [#ezpublish] <kris10an> brb
+[12-02-2005 02:49:14] [#ezpublish] <nnn0> :D
+[12-02-2005 02:49:37] [#ezpublish] <fh[eZ]> haha
+[12-02-2005 02:49:40] [#ezpublish] <fh[eZ]> he really left his desk
+[12-02-2005 02:50:06] [#ezpublish] <nnn0> :)
+[12-02-2005 02:50:38] [#ezpublish] <nnn0> so you probably getting a snowball soon :D
+[12-02-2005 02:51:07] [#ezpublish] <nnn0> only question is how ? :D
+[12-02-2005 02:51:32] [#ezpublish] <kris10an> ahhh.. refreshing ice...
+[12-02-2005 02:52:12] [#ezpublish] <fh[eZ]> haha
+[12-02-2005 02:52:50] [#ezpublish] <kris10an> (glass of water with ice that is.... going outside, are you mad? its snow there)
+[12-02-2005 02:52:51] [#ezpublish] <Katana`> LOL
+[12-02-2005 02:52:55] [#ezpublish] <Katana`> hi eZ dudes :)
+[12-02-2005 02:53:04] [#ezpublish] <Katana`> snow owns
+[12-02-2005 02:53:16] [#ezpublish] <Katana`> man that was a good one
+[12-02-2005 02:53:18] [#ezpublish] <Katana`> i'm on fire today
+[12-02-2005 02:53:19] [#ezpublish] <fh[eZ]> yes kris10an ... raven mad!
+[12-02-2005 02:53:39] [#ezpublish] <fh[eZ]> Katana`: burn baby burn!
+[12-02-2005 02:53:51] [#ezpublish] <Katana`> send me some snow please :(
+[12-02-2005 02:54:12] [#ezpublish] <kris10an> fh[eZ]: REDIGATOR 3000 - It really kicks the ravens ass!
+[12-02-2005 02:54:25] [#ezpublish] <fh[eZ]> kris10an: hahaha
+[12-02-2005 02:54:28] [#ezpublish] <fh[eZ]> add it
+[12-02-2005 02:54:35] [#ezpublish] <kris10an> its already there
+[12-02-2005 02:55:08] [#ezpublish] <kris10an> (that was a bit internal)
+[12-02-2005 02:55:10] [#ezpublish] <fh[eZ]> I think I will start writing childrens books
+[12-02-2005 02:55:14] [#ezpublish] <Katana`> fh[eZ], i've read a few components specs yesterday evening, they kick ass :)
+[12-02-2005 02:55:24] [#ezpublish] <fh[eZ]> Jenny and the Return Of The Dead Raven
+[12-02-2005 02:55:44] [#ezpublish] <kris10an> "Jenny and the Raven of Fire"
+[12-02-2005 02:55:47] [#ezpublish] <fh[eZ]> Katana`: cool, there are still some cool ones to come
+[12-02-2005 02:55:51] [#ezpublish] <Katana`> nice :)
+[12-02-2005 02:55:56] [#ezpublish] <Katana`> templates was especially nice
+[12-02-2005 02:56:05] [#ezpublish] <Katana`> i have to finish reading about the user input one
+[12-02-2005 02:56:08] [#ezpublish] <fh[eZ]> yep.. amos is working hard on that one
+[12-02-2005 02:56:40] [#ezpublish] <Katana`> i'm looking forward for the form thing :)
+[12-02-2005 02:56:46] [#ezpublish] <Katana`> i've always been quite fond of that topic
+[12-02-2005 02:57:20] [#ezpublish] <kris10an> hehehe.. best movie title "Killer ravens from outer space"
+[12-02-2005 02:57:48] [#ezpublish] <fh[eZ]> I wonder how they get here
+[12-02-2005 02:57:56] [#ezpublish] <fh[eZ]> do they fly? or do they have a raven spaceship?
+[12-02-2005 02:58:08] [#ezpublish] <kris10an> that was fh[eZ]'s titlei'm not gonna take credit for that one...
+[12-02-2005 02:58:19] [#ezpublish] <fh[eZ]> much like this: http://community.epiar.net/view/o620ed418ebcae96c7126d734d577342a4.png
+[12-02-2005 02:58:57] [#ezpublish] <kris10an> offcourse all the little raven interceptors come from the raven mothership---
+[12-02-2005 02:59:11] [#ezpublish] <Katana`> you guys are insane
+[12-02-2005 02:59:23] [#ezpublish] <kris10an> raven mad as we like to call it
+[12-02-2005 02:59:29] [#ezpublish] <Katana`> :)
+[12-02-2005 03:00:21] [#ezpublish] <kris10an> ok.. that was enough dead ravens for a whole friday...
+[12-02-2005 03:00:29] [#ezpublish] <Katana`> i do think so too
+[12-02-2005 03:00:35] [#ezpublish] <kris10an> no?
+[12-02-2005 03:00:39] [#ezpublish] <Katana`> maybe you can have another one for lunch
+[12-02-2005 03:00:44] [#ezpublish] * buz suggest zombie ravens
+[12-02-2005 03:00:49] [#ezpublish] <buz> they gotta be dead, after all...
+[12-02-2005 03:00:52] [#ezpublish] <Katana`> if you're serious !
+[12-02-2005 03:01:01] [#ezpublish] <nnn0> :D
+[12-02-2005 03:01:07] [#ezpublish] <nnn0> zombie ravens ! :D
+[12-02-2005 03:01:13] [#ezpublish] <nnn0> that would be a movie
+[12-02-2005 03:01:23] [#ezpublish] <buz> something like the birds but with lots of splatter
+[12-02-2005 03:01:39] [#ezpublish] <nnn0> :D
+[12-02-2005 03:01:41] [#ezpublish] <nnn0> hehe
+[12-02-2005 03:01:51] [#ezpublish] <fh[eZ]> so it will be killer zombie ravens from outer space?
+[12-02-2005 03:01:53] [#ezpublish] * buz finds it slightly weird to have ezcomponents for 5.1 but no ezpublish to match it
+[12-02-2005 03:01:59] [#ezpublish] <nnn0> :)
+[12-02-2005 03:02:01] [#ezpublish] <Katana`> :))
+[12-02-2005 03:02:05] [#ezpublish] <fh[eZ]> buz: all in due time :)
+[12-02-2005 03:02:13] [#ezpublish] <Katana`> it's better han having eZ Publish for 5.1 and no components ;)
+[12-02-2005 03:02:31] [#ezpublish] <buz> what's the timeframe for a beta of ezpublish 4?
+[12-02-2005 03:02:44] [#ezpublish] <fh[eZ]> june/july currently
+[12-02-2005 03:02:52] [#ezpublish] <fh[eZ]> but I have a feeling it might be a bit later
+[12-02-2005 03:02:52] [#ezpublish] <buz> also, who do i need to bug to really get my parentowner patch into 3.8
+[12-02-2005 03:02:57] [#ezpublish] <fh[eZ]> amos
+[12-02-2005 03:03:12] [#ezpublish] <buz> mhh people on the list dont seem to respond at all
+[12-02-2005 03:04:17] [#ezpublish] <fh[eZ]> amos is ill lately, and we are way to busy getting components done.. sorry about that
+[12-02-2005 03:04:37] [#ezpublish] <fh[eZ]> we have been discussing it internally though, so it is not forgotten
+[12-02-2005 03:04:43] [#ezpublish] <buz> are there plans for a hackfest before 3.8?
+[12-02-2005 03:04:58] [#ezpublish] <fh[eZ]> we'll probably organize one after christmas
+[12-02-2005 03:05:07] [#ezpublish] <fh[eZ]> in january sometime
+[12-02-2005 03:05:14] [#ezpublish] <buz> can i suggest friday ;)
+[12-02-2005 03:05:44] [#ezpublish] <Katana`> damn I won't have an internet connection early in january
+[12-02-2005 03:05:57] [#ezpublish] <buz> how can anyone survive without?
+[12-02-2005 03:06:05] [#ezpublish] <Katana`> well, i'm moving
+[12-02-2005 03:06:11] [#ezpublish] <Katana`> i need to request it first ;)
+[12-02-2005 03:06:15] [#ezpublish] <Katana`> (i can't
+[12-02-2005 03:06:16] [#ezpublish] <Katana`> )
+[12-02-2005 03:06:26] [#ezpublish] <buz> knowing the isps around here, you'll be back online in march
+[12-02-2005 03:06:47] [#ezpublish] <Katana`> no :)
+[12-02-2005 03:09:26] [#ezpublish] <Katana`> or heads are gonna roll
+[12-02-2005 03:10:42] [#ezpublish] <Katana`> and we'll be walking in blood knee high
+[12-02-2005 03:10:52] [#ezpublish] <Katana`> or something :)
+[12-02-2005 03:13:09] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[12-02-2005 03:21:12] [#ezpublish] <kris10an> i'm wondering if listening to this crappy radio-music affects my code-quality...
+[12-02-2005 03:21:43] [#ezpublish] <Katana`> of course it does
+[12-02-2005 03:26:05] [#ezpublish] <kris10an> that was what i was afraid of...
+[12-02-2005 03:26:16] [#ezpublish] <kris10an> ok.. i need some antidote then...
+[12-02-2005 03:26:21] [#ezpublish] <kris10an> turbonegro
+[12-02-2005 03:46:28] [#ezpublish] <fh[eZ]> hehe
+[12-02-2005 03:46:37] [#ezpublish] * Katana` is listening to massive attack
+[12-02-2005 03:46:42] [#ezpublish] <fh[eZ]> I'm listening to garbage
+[12-02-2005 03:46:47] [#ezpublish] <fh[eZ]> can't be good for code quality either
+[12-02-2005 03:46:50] [#ezpublish] <Katana`> but it's time for more active music
+[12-02-2005 03:46:57] [#ezpublish] <Katana`> Soil sounds like a good choice to me
+[12-02-2005 03:47:09] [#ezpublish] <fh[eZ]> ooh, massive attack is nice
+[12-02-2005 03:47:11] [#ezpublish] <fh[eZ]> what album?
+[12-02-2005 03:47:19] [#ezpublish] <Katana`> it was blue lines
+[12-02-2005 03:47:39] [#ezpublish] <Katana`> i'm gonna upload to Soil track i'm listening to, you're gonna tell me what you think ^^
+[12-02-2005 03:47:50] [#ezpublish] <fh[eZ]> unfinished sympathy
+[12-02-2005 03:47:55] [#ezpublish] <fh[eZ]> excellent song
+[12-02-2005 03:48:03] [#ezpublish] <Katana`> there are LOTS of good massive attack titles
+[12-02-2005 03:48:14] [#ezpublish] <Katana`> old morcheeba albums are good to
+[12-02-2005 03:48:15] [#ezpublish] <Katana`> too
+[12-02-2005 03:48:17] [#ezpublish] <fh[eZ]> I also like One Love from that album
+[12-02-2005 03:48:20] [#ezpublish] <fh[eZ]> yep, the first two
+[12-02-2005 03:48:56] [#ezpublish] <Katana`> do you know Hooverphonic ?
+[12-02-2005 03:49:03] [#ezpublish] <fh[eZ]> of course
+[12-02-2005 03:49:13] [#ezpublish] <fh[eZ]> the first "hoover" album is brilliant
+[12-02-2005 03:49:17] [#ezpublish] <fh[eZ]> different from the others
+[12-02-2005 03:49:20] [#ezpublish] <Katana`> yep :)
+[12-02-2005 03:49:36] [#ezpublish] <fh[eZ]> also i've learned to like the jackie cane album
+[12-02-2005 03:49:41] [#ezpublish] <fh[eZ]> extremely dark
+[12-02-2005 03:50:08] [#ezpublish] <Katana`> very nice yes
+[12-02-2005 03:50:16] [#ezpublish] <Katana`> The Magnificent Tree right ?
+[12-02-2005 03:51:31] [#ezpublish] <fh[eZ]> no, "presents jackie cane"
+[12-02-2005 03:51:35] [#ezpublish] <fh[eZ]> damn.. there is a new album out
+[12-02-2005 03:51:35] [#ezpublish] <Katana`> ah
+[12-02-2005 03:51:44] [#ezpublish] <fh[eZ]> 2005 - No More Sweet Music (2CD)
+[12-02-2005 03:51:54] [#ezpublish] <Katana`> it's on The Magnificent Tree as well
+[12-02-2005 03:51:59] [#ezpublish] <Katana`> first hooverphonic album iirc
+[12-02-2005 03:52:17] [#ezpublish] <fh[eZ]> no, before that you had blue wonder power milk
+[12-02-2005 03:52:25] [#ezpublish] <fh[eZ]> and a new stereophonic sound spectacular
+[12-02-2005 03:52:39] [#ezpublish] <Katana`> aaaah yes
+[12-02-2005 03:52:46] [#ezpublish] <Katana`> i didn't remember correctly ;)
+[12-02-2005 03:52:56] [#ezpublish] <Katana`> my ex knew them back in 1999 when they were still unknown
+[12-02-2005 03:52:59] [#ezpublish] <fh[eZ]> do you have the new album?
+[12-02-2005 03:53:09] [#ezpublish] <Katana`> i don't think so. What is it called ?
+[12-02-2005 03:53:12] [#ezpublish] <fh[eZ]> I think I got introduced to them in 2000
+[12-02-2005 03:53:21] [#ezpublish] <fh[eZ]> no more sweet music
+[12-02-2005 03:53:25] [#ezpublish] <fh[eZ]> it is from 2005
+[12-02-2005 03:53:50] [#ezpublish] <Katana`> do you mind hard rock fh[eZ] ? :)
+[12-02-2005 03:54:07] [#ezpublish] <fh[eZ]> somestimes
+[12-02-2005 03:54:23] [#ezpublish] <Katana`> try that : http://katana.nuxit.net/Soil - Breaking Me Down.mp3
+[12-02-2005 03:54:42] [#ezpublish] <fh[eZ]> wait a sec.. fetching the new hooverphonic album
+[12-02-2005 03:56:24] [#ezpublish] <Katana`> :)
+[12-02-2005 03:56:28] [#ezpublish] <Katana`> pirate !
+[12-02-2005 03:56:34] [#ezpublish] <fh[eZ]> no, I pay
+[12-02-2005 03:56:45] [#ezpublish] <Katana`> oh
+[12-02-2005 03:56:46] [#ezpublish] <Katana`> sorry :)
+[12-02-2005 03:56:55] [#ezpublish] <Katana`> i don't ^^
+[12-02-2005 04:01:35] [#ezpublish] <kris10an> where can i get clipart with a matchstick-man ?
+[12-02-2005 04:01:48] [#ezpublish] <Katana`> google ? :)
+[12-02-2005 04:02:50] [#ezpublish] <kris10an> google has crappy clipart...
+[12-02-2005 04:03:09] [#ezpublish] <Katana`> well i guess that websites have crappy cliparts :)
+[12-02-2005 04:03:22] [#ezpublish] <kris10an> only guys with guitars... wtf?
+[12-02-2005 04:03:34] [#ezpublish] <Katana`> hell Soil is good...
+[12-02-2005 04:03:42] [#ezpublish] <Katana`> i can't help moving my head and singing
+[12-02-2005 04:04:05] [#ezpublish] <kris10an> http://www.top-photos.co.uk/gallery/people/matchstick.jpg
+[12-02-2005 04:04:21] [#ezpublish] <kris10an> this is not the kind of matchstick man im looking for....
+[12-02-2005 04:09:11] [#ezpublish] <Katana`> lol
+[12-02-2005 04:23:57] [#ezpublish] <kris10an> oh yeah.. listening to "Unreal ][ - Purple Motion"
+[12-02-2005 04:24:32] [#ezpublish] <Katana`> have you tried my link kris10an ?
+[12-02-2005 04:24:37] [#ezpublish] <Katana`> good music ^^
+[12-02-2005 04:25:17] [#ezpublish] <fh[eZ]> Katana`: not something I would listen to every day.. but quite ok
+[12-02-2005 04:25:26] [#ezpublish] <Katana`> :)
+[12-02-2005 04:25:33] [#ezpublish] <Katana`> makes you wanna move baby heh ? ^^
+[12-02-2005 04:25:49] [#ezpublish] <fh[eZ]> not my regular programming music no :)
+[12-02-2005 04:25:56] [#ezpublish] <fh[eZ]> maybe I should listen to ulrich schnauss
+[12-02-2005 04:26:02] [#ezpublish] <Katana`> i first heard it in a video clip of world of warcraft... with the top ranked PVP player on a server
+[12-02-2005 04:26:07] [#ezpublish] <Katana`> the video was HUGE :)
+[12-02-2005 04:28:47] [#ezpublish] <kris10an> Katana`: :-) works a as my codingmusic...
+[12-02-2005 04:28:59] [#ezpublish] <Katana`> hah
+[12-02-2005 04:29:11] [#ezpublish] <Katana`> high me 5 kracker ^^
+[12-02-2005 04:29:20] [#ezpublish] <Katana`> kris10an even
+[12-02-2005 04:29:22] [#ezpublish] <Katana`> grumpf
+[12-02-2005 04:29:30] [#ezpublish] <kris10an> high me?
+[12-02-2005 04:29:42] [#ezpublish] <Katana`> you know, hit my hand with yours and stuff :)
+[12-02-2005 04:29:48] [#ezpublish] <kris10an> ahh.. high 5...
+[12-02-2005 04:29:51] [#ezpublish] <Katana`> (when you start seeing nick completion mistakes on a channel, it's a sign it's growing)
+[12-02-2005 04:30:24] [#ezpublish] <fh[eZ]> I am not an atomic playboy!
+[12-02-2005 04:30:30] [#ezpublish] <Katana`> hu ?
+[12-02-2005 04:30:35] [#ezpublish] <Katana`> internal joke ? :)
+[12-02-2005 04:30:44] [#ezpublish] <kris10an> Katana`: Since you are going to work with nico, i might just introduce you to: "ActionMan: Le plus grand de tous les héros!"
+[12-02-2005 04:31:01] [#ezpublish] <Katana`> hmmm i get the phrase but "wtf" ?
+[12-02-2005 04:31:10] [#ezpublish] <Katana`> he's your actionman ?:)
+[12-02-2005 04:31:13] [#ezpublish] <kris10an> hehhee
+[12-02-2005 04:31:35] [#ezpublish] <fh[eZ]> Katana`: my quote is from the demo music kristian said he was listening to
+[12-02-2005 04:31:37] [#ezpublish] <kris10an> no... whenever something needs to be done, he always says: "actionman!"
+[12-02-2005 04:31:57] [#ezpublish] <Katana`> LOL
+[12-02-2005 04:32:08] [#ezpublish] <Katana`> i feel like the french office is gonna be a funny one
+[12-02-2005 04:33:47] [#ezpublish] <kris10an> fh[eZ]: ten seconds to transmition.. (2 secs later).. transmition...
+[12-02-2005 04:34:05] [#ezpublish] <fh[eZ]> kris10an: GET DOWN
+[12-02-2005 04:34:40] [#ezpublish] * Katana` tries to picture what's going on
+[12-02-2005 04:34:55] [#ezpublish] <kris10an> Katana`: Quotes from the demo "Second reality"
+[12-02-2005 04:35:22] [#ezpublish] <kris10an> Katana`: All you frencies are raven mad, so the office will probably be really funny ;-)
+[12-02-2005 04:35:51] [#ezpublish] <Katana`> well, the "all of us" is not gonna be like a huge crowd but i think we'll manage
+[12-02-2005 04:37:03] [#ezpublish] <_Rappy_> morning peeps
+[12-02-2005 04:37:20] [#ezpublish] <Katana`> morning rappy
+[12-02-2005 04:42:35] [#ezpublish] <Katana`> helpful :)
+[12-02-2005 04:42:35] [#ezpublish] <Katana`> Error: eZTemplate:foreach 	Dec 02 2005 11:42:23
+[12-02-2005 04:42:35] [#ezpublish] <Katana`> Missing/malformed array to iterate through.
+[12-02-2005 04:42:52] [#ezpublish] <fh[eZ]> report it
+[12-02-2005 04:43:08] [#ezpublish] <Katana`> what, the useless error message ?
+[12-02-2005 04:49:35] [#ezpublish] <fh[eZ]> yes
+[12-02-2005 04:49:46] [#ezpublish] <fh[eZ]> new hooverphonic album sounds great btw
+[12-02-2005 04:50:05] [#ezpublish] <fh[eZ]> just found out it is only released in belgium yet
+[12-02-2005 04:50:14] [#ezpublish] <fh[eZ]> with the rest of europe to come january 2006
+[12-02-2005 04:56:44] [#ezpublish] <kracker>  Katana` i was wondering what you would think of a credit line for eZ Authorize
+[12-02-2005 04:57:00] [#ezpublish] <kracker> This implimentation was based original in part on the
+[12-02-2005 04:57:00] [#ezpublish] <kracker>  cetrel payment gatway provided Katana
+[12-02-2005 04:57:41] [#ezpublish] <fh[eZ]> we are going to add a credits file as soon as we are done with components
+[12-02-2005 04:57:53] [#ezpublish] <fh[eZ]> just remind me when it's out and I'll definitely add you
+[12-02-2005 04:59:52] [#ezpublish] <kracker> fh[eZ], that's cool
+[12-02-2005 05:06:00] [#ezpublish] <Katana`> kracker: well, i would appreciate, but actually the implementation has been done by a colleague
+[12-02-2005 05:06:05] [#ezpublish] <Katana`> based on research and "consulting" from me
+[12-02-2005 05:06:07] [#ezpublish] <Katana`> so...
+[12-02-2005 05:06:14] [#ezpublish] <Katana`> i don't know :)
+[12-02-2005 05:07:34] -!- ordna1 [n=ordnas@p549DF759.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-02-2005 05:11:34] [#ezpublish] <kracker> oh, right, hmm alright, so who would you like me to credit, or should i just drop it and move on :?
+[12-02-2005 05:12:19] [#ezpublish] <Katana`> hmmm you can credit Bertrand Dunogier from Interact S.A.
+[12-02-2005 05:12:26] [#ezpublish] <Katana`> i think everything's okay that way
+[12-02-2005 05:16:05] [#ezpublish] <kracker> nods, still, many thanks all around
+[12-02-2005 05:24:15] -!- ordnas [n=ordnas@p549DD486.dip.t-dialin.net] has joined #ezpublish
+[12-02-2005 05:40:07] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-02-2005 05:41:31] [#ezpublish] <zrg> mumble curse mumble
+[12-02-2005 05:52:48] [#ezpublish] <kris10an> Realtime content management with flexible customer relation management is a heads up for the top down paradigm of many market leading off-the-shelf E-commerce Back-ends.
+[12-02-2005 05:53:38] [#ezpublish] * zrg handles kris a bar of soap
+[12-02-2005 05:53:41] [#ezpublish] <kris10an> who got bullshit bingo now?
+[12-02-2005 05:55:57] [#ezpublish] <zrg> wash your mouth :P
+[12-02-2005 05:56:42] [#ezpublish] <kris10an> http://www.bullshitbingo.net/cards/buzzword/
+[12-02-2005 05:56:52] [#ezpublish] <zrg> yes i know it :)
+[12-02-2005 05:58:15] [#ezpublish] <zrg> i want it as a program with voice recognition, then it could be made into standalone appliance and marketed as bullshit alarm.
+[12-02-2005 05:58:26] [#ezpublish] <zrg> attached to ceiling like fire alarm.
+[12-02-2005 05:59:01] [#ezpublish] <zrg> preventive measure could stay the same tho, some cold water will cut out bs nicely..
+[12-02-2005 05:59:16] [#ezpublish] <zrg> gotta add this to my crazy inventions blog :P
+[12-02-2005 06:00:37] [#ezpublish] <kris10an> hehe :-)
+[12-02-2005 06:05:09] -!- ordnas [n=ordnas@p549DD486.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-02-2005 06:29:51] [#ezpublish] <buz> zrg: is your krazy inventions blog online?
+[12-02-2005 06:32:41] [#ezpublish] <zrg> yeah.. im a bit shy tho, possibly not crazy enough :)
+[12-02-2005 06:36:11] [#ezpublish] <zrg> well not much there, http://zurgutt.blogspot.com/
+[12-02-2005 06:37:50] [#ezpublish] <buz> shame over you
+[12-02-2005 06:37:53] [#ezpublish] <buz> no ez blog ;=
+[12-02-2005 06:38:32] [#ezpublish] <buz> as for the silent bottle opener: just get bottles with different caps ;)
+[12-02-2005 06:38:47] [#ezpublish] <buz> or tetra pack wine for the ones with truly no taste
+[12-02-2005 06:39:16] [#ezpublish] <zrg> and alcoholfree beer, yes? :P:P
+[12-02-2005 06:39:31] [#ezpublish] <buz> there is no such thing as alcoholfree beer
+[12-02-2005 06:39:42] [#ezpublish] <buz> there's just some disgusting beer LIKE liquid sold under that name
+[12-02-2005 06:39:42] [#ezpublish] <zrg> and phone sex
+[12-02-2005 06:40:10] [#ezpublish] <zrg> and garlic pills, no odor or taste guaranteed
+[12-02-2005 06:40:23] [#ezpublish] <buz> those could mask the alcohol taste
+[12-02-2005 06:40:32] [#ezpublish] <buz> also kebab
+[12-02-2005 06:41:19] [#ezpublish] <zrg> Choose Life.
+[12-02-2005 06:41:47] [#ezpublish] <buz> Chose a fucking big television.
+[12-02-2005 06:42:30] [#ezpublish] <zrg> sorry, not had one, ever :)
+[12-02-2005 06:42:45] [#ezpublish] <buz> truly no loss
+[12-02-2005 06:55:08] [#ezpublish] <Katana`> http://www.invertedcastle.com/archives/2005/12/01/the-japanese-game-to-end-all-japanese-games/
+[12-02-2005 06:58:28] -!- cspectrum [n=darkspec@c-24-22-155-128.hsd1.wa.comcast.net] has left #ezpublish []
+[12-02-2005 07:06:28] -!- ordnas [n=ordnas@p549DD486.dip.t-dialin.net] has joined #ezpublish
+[12-02-2005 07:10:30] [#ezpublish] * Katana` pogo dances with kracker
+[12-02-2005 07:10:31] [#ezpublish] <Katana`> kris10an
+[12-02-2005 07:10:36] [#ezpublish] <Katana`> mumpf :)
+[12-02-2005 07:12:27] [#ezpublish] <zrg> er
+[12-02-2005 07:12:28] [#ezpublish] <zrg> errr
+[12-02-2005 07:12:40] [#ezpublish] <zrg> you did it katana
+[12-02-2005 07:13:00] [#ezpublish] <zrg> or the japs have done it :P
+[12-02-2005 07:13:13] [#ezpublish] <zrg> this world cant be real
+[12-02-2005 07:13:21] [#ezpublish] <zrg> we are all in a computer game!
+[12-02-2005 07:14:00] [#ezpublish] <Katana`> :))
+[12-02-2005 07:14:32] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[12-02-2005 07:17:50] [#ezpublish] <Katana`> hi kalooni
+[12-02-2005 07:21:04] -!- zrg is now known as pastafarian
+[12-02-2005 07:21:58] [#ezpublish] <kris10an> Katana`: you shouldn't be dancing like that with me, you have a GF ;-)
+[12-02-2005 07:22:05] [#ezpublish] <Katana`> pogo dancing
+[12-02-2005 07:22:10] [#ezpublish] <Katana`> i don't do that with my gf ;)
+[12-02-2005 07:22:22] [#ezpublish] <Katana`> and please, please you said we would NEVER talk about that in public !
+[12-02-2005 07:22:47] [#ezpublish] <kris10an> oh.. sorry.. i forgot that...
+[12-02-2005 07:22:54] [#ezpublish] <Katana`> i forgive you
+[12-02-2005 07:23:04] [#ezpublish] <Katana`> you owe me a beer
+[12-02-2005 07:23:15] [#ezpublish] <Katana`> ;)
+[12-02-2005 07:23:22] [#ezpublish] <kris10an> you are so kind Katana`.. i fell 3 tears now...
+[12-02-2005 07:23:26] [#ezpublish] <buz> OO2 IS SO FUUUUUCKING SLOW
+[12-02-2005 07:23:29] [#ezpublish] <Katana`> :))
+[12-02-2005 07:23:38] [#ezpublish] <Katana`> don't wet your keyboard
+[12-02-2005 07:23:38] [#ezpublish] <kris10an> i was so afraid of loosing you ;-)
+[12-02-2005 07:23:41] [#ezpublish] <kris10an> heheh
+[12-02-2005 07:23:49] [#ezpublish] <Katana`> hell yeah i bet you were :)
+[12-02-2005 07:23:55] [#ezpublish] <pastafarian> i heard that!
+[12-02-2005 07:24:00] [#ezpublish] <kris10an> never mention the pogodancing again OK?
+[12-02-2005 07:24:02] [#ezpublish] <pastafarian> shame on you katana :P
+[12-02-2005 07:24:05] [#ezpublish] <Katana`> :))
+[12-02-2005 07:24:18] [#ezpublish] <buz> so you too are responsible for http://bash.org/?1730
+[12-02-2005 07:24:34] [#ezpublish] <Katana`> lol
+[12-02-2005 07:24:39] [#ezpublish] <Katana`> this one is truly amazing :)
+[12-02-2005 07:24:49] [#ezpublish] <pastafarian> muhaha :)
+[12-02-2005 07:25:01] [#ezpublish] <kris10an> hehehe...
+[12-02-2005 07:29:23] [#ezpublish] * Katana` thinks kris10an will no longer talk to him :)
+[12-02-2005 07:32:21] [#ezpublish] <pastafarian> http://bash.org/?top
+[12-02-2005 07:32:21] [#ezpublish] <pastafarian> must.. breath..
+[12-02-2005 07:32:28] [#ezpublish] <Katana`> :))
+[12-02-2005 07:32:56] [#ezpublish] <Katana`> http://bash.org/?5300 <= in my top 3
+[12-02-2005 07:33:08] [#ezpublish] <pastafarian> #5273 +(19691)- [X]<erno> hm. I've lost a machine.. literally _lost_. it responds to ping, it works completely, I just can't figure out where in my apartment it is.
+[12-02-2005 07:33:29] [#ezpublish] <pastafarian> friend in norway told that he once found a lost mainframe
+[12-02-2005 07:35:20] [#ezpublish] <pastafarian> ive not laughed so hard in days
+[12-02-2005 07:38:26] [#ezpublish] <kris10an> LOL.. i have read that page many times before.. and i cant stop laughing....
+[12-02-2005 07:40:00] [#ezpublish] <buz> losing a machine would be something i could manage to do
+[12-02-2005 07:42:03] [#ezpublish] <buz> http://www.toilette-humor.com/computer-at-night.html
+[12-02-2005 07:46:51] -!- DiGiTa|_ [n=guillaum@84.4.125.6] has joined #ezpublish
+[12-02-2005 07:46:58] [#ezpublish] <DiGiTa|_> ho
+[12-02-2005 07:47:03] [#ezpublish] <DiGiTa|_> hi
+[12-02-2005 07:47:22] [#ezpublish] <DiGiTa|_> does someone know if it's possible to insert a direct link to file in oe ?
+[12-02-2005 07:47:38] [#ezpublish] <DiGiTa|_> unless a direct link to object
+[12-02-2005 07:51:33] [#ezpublish] <kalooni> hello everybody
+[12-02-2005 08:05:08] [#ezpublish] <DiGiTa|_> shit i don't find a solution for my problem
+[12-02-2005 08:19:31] [#ezpublish] <DiGiTa|_> http://ez.no/download/add_ons/online_editor/ez_publish_3_online_editor
+[12-02-2005 08:19:35] [#ezpublish] <DiGiTa|_> new update today
+[12-02-2005 08:25:56] [#ezpublish] <Katana`> kracker
+[12-02-2005 08:26:15] [#ezpublish] <pastafarian> you guys are evil
+[12-02-2005 08:26:16] [#ezpublish] <Katana`> ?
+[12-02-2005 08:26:26] [#ezpublish] <DiGiTa|_> no
+[12-02-2005 08:26:27] [#ezpublish] <DiGiTa|_> :)
+[12-02-2005 08:26:28] [#ezpublish] <pastafarian> now i have to read all the bash
+[12-02-2005 08:26:41] [#ezpublish] <Katana`> i'm looking for kracker :)
+[12-02-2005 08:40:01] [#ezpublish] <pastafarian> afk, roast meat from oven, the world can go and screw herself
+[12-02-2005 08:42:35] [#ezpublish] <kalooni> someone using eclipse to develop ?
+[12-02-2005 08:42:46] [#ezpublish] <Katana`> i don't
+[12-02-2005 08:56:56] [#ezpublish] <Katana`> hmm why aren't template overrides design related ...
+[12-02-2005 08:56:59] [#ezpublish] <Katana`> it sucks :)
+[12-02-2005 08:57:08] [#ezpublish] <Katana`> or not...
+[12-02-2005 08:58:50] [#ezpublish] <pastafarian> templating sucks, yes
+[12-02-2005 08:59:13] [#ezpublish] <Katana`> actually preview sucks ;)
+[12-02-2005 08:59:56] [#ezpublish] <pastafarian> namely the part of them being in text files and not attached to content tree instead
+[12-02-2005 09:00:10] [#ezpublish] <pastafarian> mistake i hope to fix when given chance..
+[12-02-2005 09:09:17] [#ezpublish] <_Rappy_> adio
+[12-02-2005 09:09:23] -!- _Rappy_ is now known as _rappy_
+[12-02-2005 09:09:31] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-02-2005 09:09:35] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-02-2005 09:09:51] -!- _Katana` is now known as Katana`
+[12-02-2005 09:19:41] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-02-2005 09:19:41] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[12-02-2005 09:20:07] -!- _Katana` is now known as Katana`
+[12-02-2005 09:27:07] [#ezpublish] <kris10an> Katana`: template overrides are design related... and content related....
+[12-02-2005 09:27:40] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [Remote closed the connection]
+[12-02-2005 09:28:45] [#ezpublish] <Katana`> yeah... i can't make myself clear
+[12-02-2005 09:28:48] [#ezpublish] <Katana`> but it's preview related
+[12-02-2005 09:30:41] [#ezpublish] <kris10an> you make as much sence as a dead raven in space now...
+[12-02-2005 09:31:17] [#ezpublish] <kris10an> (or maybe my brain has a bit of an overflow right now)
+[12-02-2005 09:32:16] [#ezpublish] <kracker> Katana`, !
+[12-02-2005 09:32:26] [#ezpublish] <kracker> Katana`, sry i was afk, arguing :\
+[12-02-2005 09:35:19] [#ezpublish] <Katana`> np
+[12-02-2005 09:35:25] [#ezpublish] <Katana`> i've sent you an email
+[12-02-2005 09:35:40] [#ezpublish] <kracker> ok
+[12-02-2005 09:35:42] [#ezpublish] <Katana`> kris10an: i have everything about my project (client site) in an extension
+[12-02-2005 09:35:58] [#ezpublish] <Katana`> then of course preview doesn't work, since it's only loaded for client siteaccess ;)
+[12-02-2005 09:36:03] [#ezpublish] <kracker> can you create an ezpackage of an extension for simple installation ?
+[12-02-2005 09:36:44] [#ezpublish] <buz> no
+[12-02-2005 09:36:50] [#ezpublish] <buz> ezpackages are for contentobjects/tempaltes
+[12-02-2005 09:38:11] [#ezpublish] <kris10an> Katana`: preview should work when the stuff is in an extension.. it works for me...
+[12-02-2005 09:38:13] [#ezpublish] <pastafarian> ezpackages only work for classes by my experience
+[12-02-2005 09:38:26] [#ezpublish] <kris10an> you just need to get the settings right..
+[12-02-2005 09:38:42] [#ezpublish] <kris10an> probably set your design right in content.ini
+[12-02-2005 09:40:40] [#ezpublish] <Katana`> yep maybe
+[12-02-2005 09:48:16] [#ezpublish] <buz> how does tune the rss cache to actually work
+[12-02-2005 09:48:27] [#ezpublish] <buz> so that rss exports actually get updated
+[12-02-2005 10:01:31] [#ezpublish] <Katana`> a partner requests from us the links to some registration pages we are going to implement
+[12-02-2005 10:01:39] [#ezpublish] <Katana`> and we don't wanna do it
+[12-02-2005 10:01:44] [#ezpublish] <Katana`> we've answered " we can't do it now, we have to upgrade our server to PHP 4.8. Only our sysadmin can't do it, and he's at Seattle until tuesday. And it's all because of a bloody non-zend-certified unicode issue"
+[12-02-2005 10:01:59] [#ezpublish] <buz> ?
+[12-02-2005 10:02:10] [#ezpublish] <Katana`> and he replied "okay okay when can you do it ?"
+[12-02-2005 10:02:12] [#ezpublish] <Katana`> ...
+[12-02-2005 10:02:17] [#ezpublish] <Katana`> rofl :)
+[12-02-2005 10:02:22] [#ezpublish] <buz> ah ok
+[12-02-2005 10:02:26] [#ezpublish] <buz> smart guy
+[12-02-2005 10:02:28] [#ezpublish] <Katana`> let's blame friday evening
+[12-02-2005 10:02:32] [#ezpublish] <Katana`> marketing guy...
+[12-02-2005 10:02:42] [#ezpublish] <Katana`> he works with google ads and stuff
+[12-02-2005 10:02:53] [#ezpublish] <buz> marketers are, just after lawyers, the scum of earth
+[12-02-2005 10:02:59] [#ezpublish] <Katana`> yep :))
+[12-02-2005 10:03:19] [#ezpublish] <kracker> Katana`, email replied to ...
+[12-02-2005 10:03:29] [#ezpublish] <buz> hows the ajax coming along
+[12-02-2005 10:03:47] [#ezpublish] <Katana`> slowly .-
+[12-02-2005 10:10:05] [#ezpublish] <kalooni> Does someone can tell me why I get a Fatal Error while editing the root node ?
+[12-02-2005 10:11:12] [#ezpublish] <kalooni> v 3.7.2 / PHP 4.4 / Apache 1.3
+[12-02-2005 10:21:03] [#ezpublish] <Katana`> shitty friday
+[12-02-2005 10:21:04] [#ezpublish] <Katana`> thanks kracker
+[12-02-2005 10:55:29] [#ezpublish] <nnn0> hm
+[12-02-2005 10:55:55] [#ezpublish] <nnn0> i can't set border for an image embedded in an article ?
+[12-02-2005 10:56:19] [#ezpublish] <nnn0> or i can set it, but it wouldn't show
+[12-02-2005 10:58:33] [#ezpublish] <pastafarian> using editor?
+[12-02-2005 10:58:46] [#ezpublish] <nnn0> no
+[12-02-2005 10:59:04] [#ezpublish] <nnn0> using the <embed> tag in xmltext
+[12-02-2005 11:03:01] [#ezpublish] <nnn0> and it doesn't seem to work with css either - when i try to nest it in a <div>
+[12-02-2005 11:07:23] -!- ordnas [n=ordnas@p549DD486.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-02-2005 11:16:39] -!- pastafarian [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-02-2005 11:27:42] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[12-02-2005 11:28:12] -!- stai1 [n=stain@217.221.32.143] has joined #ezpublish
+[12-02-2005 11:28:41] [#ezpublish] <stai1> try
+[12-02-2005 11:29:02] -!- stai1 [n=stain@217.221.32.143] has left #ezpublish []
+[12-02-2005 11:29:09] -!- stai1 [n=stain@217.221.32.143] has joined #ezpublish
+[12-02-2005 11:33:54] [#ezpublish] <kracker> Katana`, your welcome, let me know what you think (please) feedback :)
+[12-02-2005 11:34:22] [#ezpublish] <ls[eZ]> hi kracker
+[12-02-2005 11:34:42] [#ezpublish] <Katana`> asap kracker ;)
+[12-02-2005 11:42:05] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[12-02-2005 11:49:19] [#ezpublish] <kracker> hey lukas how's hit hangin :)
+[12-02-2005 11:52:37] -!- DiGiTa|_ [n=guillaum@84.4.125.6] has quit []
+[12-02-2005 11:52:42] -!- stai1 [n=stain@217.221.32.143] has left #ezpublish []
+[12-02-2005 12:29:05] [#ezpublish] <buz> nnn0: you cant use div in xmltext
+[12-02-2005 12:33:45] [#ezpublish] <nnn0> nono - i use the <div> in the .tpl - but still
+[12-02-2005 12:33:53] [#ezpublish] <buz> that should work
+[12-02-2005 12:34:20] [#ezpublish] <nnn0> well - no i'm doing the frame in photoshop :)
+[12-02-2005 12:34:24] [#ezpublish] <nnn0> now
+[12-02-2005 12:34:35] [#ezpublish] <buz> maybe ez image manipulation could even do it
+[12-02-2005 12:34:40] [#ezpublish] <nnn0> hm
+[12-02-2005 12:34:54] [#ezpublish] <nnn0> no i just save the images with border
+[12-02-2005 12:35:13] [#ezpublish] <nnn0> so now i'm into like png transparency for IE :D
+[12-02-2005 12:35:18] [#ezpublish] <nnn0> hehe
+[12-02-2005 12:35:58] [#ezpublish] <nnn0> to get a nice shadow :D
+[12-02-2005 12:36:18] [#ezpublish] <buz> you can do it
+[12-02-2005 12:36:21] [#ezpublish] <nnn0> maybe i have to use gif, but still it's n problem
+[12-02-2005 12:36:23] [#ezpublish] <buz> it needs a hack but its possible
+[12-02-2005 12:36:30] [#ezpublish] <ls[eZ]> http://www.azbar.org/WhoWeAre/menu.cfm
+[12-02-2005 12:36:34] [#ezpublish] <ls[eZ]> cool menu
+[12-02-2005 12:36:43] [#ezpublish] <nnn0> you i'm reading up on some javascript hacks right now
+[12-02-2005 12:36:49] [#ezpublish] <nnn0> you=yes
+[12-02-2005 12:36:53] -!- ls[eZ] is now known as luke`
+[12-02-2005 12:36:56] [#ezpublish] <buz> google for IE7
+[12-02-2005 12:37:10] [#ezpublish] <nnn0> yeah i'm been at dean edwards :)
+[12-02-2005 12:37:19] [#ezpublish] <nnn0> yes i've been....
+[12-02-2005 12:37:33] [#ezpublish] <nnn0> sry - i'm drunk - it's my fathers birthday :D
+[12-02-2005 12:37:40] [#ezpublish] <luke`> hehe
+[12-02-2005 12:37:41] [#ezpublish] <nnn0> and i'm doing javascript :DDDDDDDD
+[12-02-2005 12:37:48] [#ezpublish] <luke`> sey him 100 years
+[12-02-2005 12:38:02] [#ezpublish] <nnn0> 65
+[12-02-2005 12:38:05] [#ezpublish] <luke`> or  wish him ;)
+[12-02-2005 12:38:11] [#ezpublish] <nnn0>  heheh
+[12-02-2005 12:40:02] [#ezpublish] <luke`> all us websites looks the same ...
+[12-02-2005 12:41:49] [#ezpublish] <nnn0> all your websites belong to us
+[12-02-2005 12:42:08] [#ezpublish] <luke`> :)
+[12-02-2005 12:42:17] [#ezpublish] <nnn0> :D
+[12-02-2005 12:42:18] [#ezpublish] <luke`> ok, USA
+[12-02-2005 12:42:23] [#ezpublish] <luke`> haha
+[12-02-2005 12:42:23] [#ezpublish] <nnn0> ah okeeeey
+[12-02-2005 12:42:24] [#ezpublish] <nnn0> hehe
+[12-02-2005 12:42:54] [#ezpublish] <nnn0> yeah everyone is learning html thru the same homeparty :D
+[12-02-2005 12:43:44] [#ezpublish] <nnn0> and they get this template that they use
+[12-02-2005 12:44:04] [#ezpublish] <nnn0> and if you are like into this multilevel marketing scheme
+[12-02-2005 12:44:41] [#ezpublish] <nnn0> you probably have to force ten of your friends to use the template also :D
+[12-02-2005 12:44:42] [#ezpublish] <luke`> http://www.mbusa.com/microsite/slk/index.jsp
+[12-02-2005 12:44:53] [#ezpublish] <luke`> starting sayving money :)
+[12-02-2005 12:44:56] [#ezpublish] <nnn0> :)
+[12-02-2005 12:45:24] [#ezpublish] <luke`> no more beers and chips ;)
+[12-02-2005 12:45:38] [#ezpublish] <buz> paah
+[12-02-2005 12:45:46] [#ezpublish] <buz> if anything, i want the nissan 350s
+[12-02-2005 12:45:47] [#ezpublish] <buz> z
+[12-02-2005 12:45:55] [#ezpublish] <nnn0> chips i understand, but beer !
+[12-02-2005 12:45:58] [#ezpublish] <nnn0> :D
+[12-02-2005 12:46:00] [#ezpublish] <luke`> ok I will start saving tomorrow :)
+[12-02-2005 12:46:11] [#ezpublish] <luke`> i have 2 beers :)
+[12-02-2005 12:46:21] [#ezpublish] * nnn0 got gin and martini
+[12-02-2005 12:46:22] [#ezpublish] <buz> you could also just sell dead ravens around here
+[12-02-2005 12:46:24] [#ezpublish] <buz> plent of takes
+[12-02-2005 12:46:26] [#ezpublish] <buz> takers
+[12-02-2005 12:46:41] [#ezpublish] <luke`> nnn0: I want GT
+[12-02-2005 12:46:48] [#ezpublish] <nnn0> :)
+[12-02-2005 12:46:52] [#ezpublish] * buz drinks beer
+[12-02-2005 12:47:08] [#ezpublish] * luke` drinks beer too
+[12-02-2005 12:47:17] [#ezpublish] <buz> cheers
+[12-02-2005 12:47:21] [#ezpublish] * luke` say cheers
+[12-02-2005 12:47:37] [#ezpublish] * nnn0 gives luke an bombay sapphire with a tint of martini extra dry
+[12-02-2005 12:47:50] [#ezpublish] <nnn0> an=a
+[12-02-2005 12:47:51] [#ezpublish] <luke`> wth is this? :)
+[12-02-2005 12:47:56] [#ezpublish] <nnn0> gin
+[12-02-2005 12:48:07] [#ezpublish] <luke`> kinnda mixed?:)
+[12-02-2005 12:48:08] [#ezpublish] <nnn0> or "dry martini"
+[12-02-2005 12:48:17] [#ezpublish] <nnn0> but very dry ;)
+[12-02-2005 12:48:37] [#ezpublish] <nnn0> i'm out of olives
+[12-02-2005 12:48:38] [#ezpublish] <nnn0> :D
+[12-02-2005 12:48:44] [#ezpublish] <luke`> hehe ok , lets try we have part here
+[12-02-2005 12:48:50] [#ezpublish] <nnn0> hehe
+[12-02-2005 12:49:14] [#ezpublish] <buz> mhh isnt the martini with olives made of vodka?
+[12-02-2005 12:49:29] [#ezpublish] <buz> i'm told there's a difference between martini the drink and martini the liquor
+[12-02-2005 12:49:35] [#ezpublish] <nnn0> hm
+[12-02-2005 12:49:50] [#ezpublish] <nnn0> i thought "dry martini" was gin and vermouth
+[12-02-2005 12:50:08] [#ezpublish] <nnn0> like martini or cinzano
+[12-02-2005 12:50:34] [#ezpublish] <nnn0> usually served with a olive
+[12-02-2005 12:50:46] [#ezpublish] <nnn0> green as such
+[12-02-2005 12:50:57] [#ezpublish] * kracker drinks coca-cola (mmmm caffine)
+[12-02-2005 12:51:01] [#ezpublish] <nnn0> but you can use black olives or sitrus
+[12-02-2005 12:51:16] [#ezpublish] <buz> mhh why are the fonts on this notebook and kubuntu so friggin big
+[12-02-2005 12:51:16] [#ezpublish] <nnn0> or nothing like i am right now :)
+[12-02-2005 12:51:20] [#ezpublish] <luke`> kracker: you are adducted
+[12-02-2005 12:51:22] [#ezpublish] <luke`> :)
+[12-02-2005 12:51:28] [#ezpublish] <buz> so what
+[12-02-2005 12:51:33] [#ezpublish] <buz> we're addicted to beer, you know
+[12-02-2005 12:51:40] [#ezpublish] <luke`> hehe
+[12-02-2005 12:53:48] [#ezpublish] <luke`> I would like too meet you all of guys on conference and drink some in real ;)
+[12-02-2005 12:54:58] [#ezpublish] <buz> i'd come if it werent for my exams in the same week :(
+[12-02-2005 12:55:24] [#ezpublish] <luke`> yeah I know
+[12-02-2005 13:00:38] [#ezpublish] <luke`> today was xbox 360 premiere in europe, becouse of huge priracy they will not release it in poland, lol
+[12-02-2005 13:01:58] [#ezpublish] <luke`> buz: how much it cost in CH?
+[12-02-2005 13:02:10] [#ezpublish] <buz> 580 CHF
+[12-02-2005 13:02:38] [#ezpublish] <buz> 580 Swiss francs = 374.970519 Euros
+[12-02-2005 13:04:34] [#ezpublish] <luke`> which version? with HDD?
+[12-02-2005 13:06:09] [#ezpublish] <buz> i think so
+[12-02-2005 13:06:14] [#ezpublish] <buz> i dont care one bit though
+[12-02-2005 13:18:01] [#ezpublish] <buz> unless someone gets the thing to run linux
+[12-02-2005 13:18:04] [#ezpublish] <buz> then i might buy one
+[12-02-2005 13:19:53] [#ezpublish] <luke`> xbox 360 runninig linux :P
+[12-02-2005 13:21:01] -!- aya [n=yann@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[12-02-2005 13:31:00] [#ezpublish] <buz> "Microsoft is working on a new feature for Windows Vista, known as Restart Manager, which will update parts of the operating system or applications without having to reboot the entire machine. From the article: 'If a part of an application, or the operating system itself, needs to updated, the Installer will call the Restart Manager, which looks to see if it can clear that part of the system so that it can be updated. If it can do that, it do
+[12-02-2005 13:31:03] [#ezpublish] <buz> sure took them a while
+[12-02-2005 13:31:11] [#ezpublish] <buz> like some 20 years longer than unix
+[12-02-2005 13:46:30] [#ezpublish] <kracker> luke`, ?
+[12-02-2005 13:47:10] [#ezpublish] <kracker> luke`, ohh addicted or abbducted?
+[12-02-2005 13:48:48] [#ezpublish] <luke`> addicted ;)
+[12-02-2005 13:52:59] [#ezpublish] <kracker> heh, normally i'd be funny and say ... `totaly` but in truth i don't normaly touch the stuff, today was a first in like months (but now ... i'm prolly going to have a little more for dinner)
+[12-02-2005 13:53:07] [#ezpublish] <kracker> heh, they got me ... again!
+[12-02-2005 13:53:22] [#ezpublish] <buz> touch what stuff
+[12-02-2005 13:53:25] [#ezpublish] <buz> booze?
+[12-02-2005 13:53:31] [#ezpublish] <buz> cant live with it cant live without it
+[12-02-2005 13:54:28] [#ezpublish] <kracker> na dark soda, it's bad for you
+[12-02-2005 13:54:37] [#ezpublish] <kracker> now beer, that's good for ya
+[12-02-2005 13:54:44] [#ezpublish] <buz> spoken like a true man
+[12-02-2005 13:54:59] [#ezpublish] <buz> these days i only drink coffee and OEM redbull
+[12-02-2005 13:55:19] [#ezpublish] <kracker> ugg can't stand either of those ... ever
+[12-02-2005 13:55:20] [#ezpublish] <buz> no coke
+[12-02-2005 13:55:44] [#ezpublish] <buz> i've loved coffee even as a child (but was denied it) redbull is more of an acquired taste but definitely addictive too
+[12-02-2005 13:55:53] [#ezpublish] <buz> LOL
+[12-02-2005 13:56:10] [#ezpublish] <kracker> wierd
+[12-02-2005 13:56:20] [#ezpublish] <buz> but i hated beer as child
+[12-02-2005 13:56:23] [#ezpublish] <buz> now i love it
+[12-02-2005 13:57:20] [#ezpublish] <buz> i think i'm gonna use my wiki to organize my life
+[12-02-2005 13:57:24] [#ezpublish] <buz> cant hurt in any case
+[12-02-2005 13:57:40] [#ezpublish] <buz> now a wiki combined with a calendar would be a killer app
+[12-02-2005 14:01:31] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[12-02-2005 14:03:49] [#ezpublish] <buz> somehow it seems like the beer coming from the frigde isnt really cold
+[12-02-2005 14:10:30] [#ezpublish] <luke`> something wrong is with fridge
+[12-02-2005 14:11:23] [#ezpublish] <buz> seems like it
+[12-02-2005 14:11:25] [#ezpublish] <buz> but its pretty new
+[12-02-2005 14:11:29] [#ezpublish] <buz> 3 year old or so
+[12-02-2005 14:11:48] [#ezpublish] <buz> fridge is the most important part of the kitchen
+[12-02-2005 14:11:57] [#ezpublish] <buz> delivers cool beer after all
+[12-02-2005 14:14:34] [#ezpublish] <luke`> haha, true
+[12-02-2005 14:16:57] [#ezpublish] <buz> http://www.hwpr0n.se/ LOOOOOOOOOOOL
+[12-02-2005 14:17:42] [#ezpublish] <buz> i need to go to sweden
+[12-02-2005 14:22:53] [#ezpublish] <luke`> lol
+[12-02-2005 14:28:47] [#ezpublish] <kracker> riot
+[12-02-2005 14:32:35] [#ezpublish] <buz> why
+[12-02-2005 14:32:37] [#ezpublish] <buz> where
+[12-02-2005 14:36:47] [#ezpublish] <kracker> heh, flash mob
+[12-02-2005 14:37:00] [#ezpublish] <buz> because of the swedish haxorettes?
+[12-02-2005 14:44:34] [#ezpublish] <kracker> i was saying `riot` like : the sweedish unix chicks were a `riot` aka a laugh aka awsome aka xxx
+[12-02-2005 14:44:51] [#ezpublish] <buz> to update 3.6.1 to 3.6.4 i can simply extract the new tarball into the old dir yes?
+[12-02-2005 14:45:00] [#ezpublish] <kracker> httrack hwpr0n.se ....
+[12-02-2005 14:45:04] [#ezpublish] <buz> ROTFL
+[12-02-2005 14:45:41] [#ezpublish] <luke`> yes
+[12-02-2005 14:46:03] [#ezpublish] <luke`> unless you did not hack kernel what you usally do
+[12-02-2005 14:46:05] [#ezpublish] <luke`> :D
+[12-02-2005 14:46:14] [#ezpublish] <buz> actually on that site i did not
+[12-02-2005 14:46:23] [#ezpublish] <buz> i'm aware that i would have to look for kernel hackery myself ;)
+[12-02-2005 14:47:23] [#ezpublish] <buz> friend of mine just says that screwing some swedish haxorette in a server room would be something. i'm inclined to agree very much ;)
+[12-02-2005 14:47:26] [#ezpublish] <luke`> so you can seafly do upgrade
+[12-02-2005 14:49:20] [#ezpublish] <buz> mhh seems to have worke dout ok
+[12-02-2005 14:50:30] [#ezpublish] <buz> "wanne come see my mainframe?"
+[12-02-2005 14:53:53] [#ezpublish] <luke`> yeah
+[12-02-2005 14:54:01] [#ezpublish] <luke`> I have to open new beer
+[12-02-2005 14:54:13] [#ezpublish] <buz> how big are beet bottles in poland????
+[12-02-2005 14:54:18] [#ezpublish] <luke`> 0,5
+[12-02-2005 14:54:20] [#ezpublish] <luke`> l
+[12-02-2005 14:54:23] [#ezpublish] <buz> mhh
+[12-02-2005 14:54:26] [#ezpublish] <buz> sure lasts you long ;)
+[12-02-2005 14:54:34] [#ezpublish] <buz> i've switched to wine now
+[12-02-2005 14:54:34] [#ezpublish] <luke`> or 0,75
+[12-02-2005 14:54:38] [#ezpublish] <buz> fits pasta better
+[12-02-2005 14:54:46] [#ezpublish] <luke`> some but this is heineken
+[12-02-2005 14:54:52] [#ezpublish] <buz> iiiiiiieeew
+[12-02-2005 14:54:55] [#ezpublish] <buz> heineken is piss
+[12-02-2005 14:54:57] [#ezpublish] <luke`> usually normal beer has 0,5l
+[12-02-2005 14:54:59] [#ezpublish] <luke`> I know
+[12-02-2005 14:57:12] [#ezpublish] <buz> heineken is probably the worst mainstream beer ever
+[12-02-2005 14:57:16] [#ezpublish] <luke`> haha
+[12-02-2005 14:57:24] [#ezpublish] <buz> ok guiness is worse
+[12-02-2005 14:57:28] [#ezpublish] <luke`> heineken music
+[12-02-2005 14:57:32] [#ezpublish] <buz> but thats hardly mainstream in continental europe
+[12-02-2005 14:58:35] [#ezpublish] <buz> i wanna brew my own beer someday
+[12-02-2005 14:58:47] [#ezpublish] <luke`> buz: eZ publish base :D
+[12-02-2005 14:59:02] [#ezpublish] <buz> i dont get it
+[12-02-2005 14:59:09] [#ezpublish] <luke`> just kidding
+[12-02-2005 14:59:10] [#ezpublish] <buz> why base
+[12-02-2005 14:59:14] [#ezpublish] <luke`> eZ publish beer
+[12-02-2005 14:59:45] [#ezpublish] <buz> aaaaaah
+[12-02-2005 14:59:58] [#ezpublish] <buz> i was thinking more along the line of buz special brew
+[12-02-2005 15:00:03] [#ezpublish] <buz> maybe combined with caffeine
+[12-02-2005 15:00:24] [#ezpublish] <buz> is there something like chilli beer?
+[12-02-2005 15:00:54] [#ezpublish] <luke`> chilli beer, I know cheap beer ;)
+[12-02-2005 15:01:03] [#ezpublish] <buz> nono
+[12-02-2005 15:01:07] [#ezpublish] <buz> chilli as in spice
+[12-02-2005 15:01:28] [#ezpublish] <buz> maybe i'm too drunk for your jokes
+[12-02-2005 15:02:40] [#ezpublish] <luke`> beer should be not spicy, should be not to sweet and to bitter
+[12-02-2005 15:03:00] [#ezpublish] <buz> yes
+[12-02-2005 15:03:05] [#ezpublish] <buz> i'm totally against banana beer ;)
+[12-02-2005 15:03:12] [#ezpublish] <luke`> with nice smell of hop
+[12-02-2005 15:03:21] [#ezpublish] <luke`> yeah bannana beer sukx
+[12-02-2005 15:03:36] [#ezpublish] <buz> hops supposedly are good against cancer but i dont like hops very much
+[12-02-2005 15:03:40] [#ezpublish] <buz> makes beer bitter quickly
+[12-02-2005 15:04:40] [#ezpublish] <luke`> hehe I have beer for 0,8 USD love poland
+[12-02-2005 15:04:56] [#ezpublish] <buz> thats not very cheap
+[12-02-2005 15:05:06] [#ezpublish] <luke`> well it is good beer :)
+[12-02-2005 15:05:21] [#ezpublish] <luke`> high end I would say
+[12-02-2005 15:05:29] [#ezpublish] <luke`> we have chaper
+[12-02-2005 15:06:04] [#ezpublish] <buz> actually for heineken it would be cheap by swiss standards but heineken is ultra low end
+[12-02-2005 15:06:42] [#ezpublish] <luke`> this beers are everywhere like coca-cola
+[12-02-2005 15:06:52] [#ezpublish] <buz> otoh you earn much less than we do so it all balances out in the end
+[12-02-2005 15:08:18] [#ezpublish] <buz> no french around? wtf is going on over there: http://yro.slashdot.org/yro/05/12/02/2040237.shtml?tid=123&tid=185&tid=219&tid=106
+[12-02-2005 15:08:35] [#ezpublish] <buz> have you gone from crazy to entirely fucked up?
+[12-02-2005 15:08:54] [#ezpublish] <buz> (otoh, french must be genius, speaking french perfectly and all that ;)
+[12-02-2005 15:10:33] [#ezpublish] <luke`> imho, this is provocation :)
+[12-02-2005 15:12:20] [#ezpublish] <luke`> there is no FSF in poland
+[12-02-2005 15:12:25] [#ezpublish] <luke`> hmm
+[12-02-2005 15:12:32] [#ezpublish] <buz> the fsf is a bunch of shitheads
+[12-02-2005 15:12:39] [#ezpublish] <buz> if anything, the EFF is important
+[12-02-2005 15:12:58] [#ezpublish] <buz> i mean common, anyone who declares stallman to be their leader has to be completely nuts
+[12-02-2005 15:14:17] [#ezpublish] <nnn0> :)
+[12-02-2005 15:14:51] [#ezpublish] <nnn0> if it comes as a surprise that everyone is nuts - you are even more nuts :DDD
+[12-02-2005 15:15:06] [#ezpublish] <buz> i was aware of that, thanks ;)
+[12-02-2005 15:15:09] [#ezpublish] <nnn0> :D
+[12-02-2005 15:15:11] [#ezpublish] <buz> never claimed to be sane
+[12-02-2005 15:15:11] [#ezpublish] <luke`> :D
+[12-02-2005 15:15:25] [#ezpublish] <nnn0> when last did people do the _right_ thing ? heheh
+[12-02-2005 15:15:47] [#ezpublish] <nnn0> they never vote for the right man/woman :)
+[12-02-2005 15:16:22] [#ezpublish] <buz> actually, the swiss occasionally (much to my surprise) occasionally DO vote for the right thin
+[12-02-2005 15:16:24] [#ezpublish] <nnn0> this is the same problem sokrates pointed out - nothing has happened :D
+[12-02-2005 15:16:39] [#ezpublish] <nnn0> hm - i agree - i forgot the swiss
+[12-02-2005 15:16:42] [#ezpublish] <nnn0> :D
+[12-02-2005 15:16:57] [#ezpublish] <luke`> nnn0: where are you from?
+[12-02-2005 15:17:04] [#ezpublish] <nnn0> norway
+[12-02-2005 15:17:14] [#ezpublish] <nnn0> "the best country in the world" :DDDDDDDD
+[12-02-2005 15:17:18] [#ezpublish] <nnn0> ehehehhe
+[12-02-2005 15:17:27] [#ezpublish] <luke`> I have been there, boring :D
+[12-02-2005 15:17:38] [#ezpublish] <nnn0> yeah, but boring is positivw
+[12-02-2005 15:17:39] [#ezpublish] <luke`> city was empty at 18
+[12-02-2005 15:17:52] [#ezpublish] <luke`> no people on street :)
+[12-02-2005 15:18:20] [#ezpublish] <nnn0> heeh
+[12-02-2005 15:18:28] [#ezpublish] <nnn0> then we sleep after dinner
+[12-02-2005 15:18:29] [#ezpublish] <luke`> But views are imepressive, realy nice
+[12-02-2005 15:18:33] [#ezpublish] <nnn0> heheh
+[12-02-2005 15:18:34] [#ezpublish] <buz> wtf have you been
+[12-02-2005 15:18:42] [#ezpublish] <buz> in zurich there's people around most of the night
+[12-02-2005 15:18:56] [#ezpublish] <buz> (i wish i could say that about open shops)
+[12-02-2005 15:19:16] [#ezpublish] <buz> isnt norway supposed to be a democracy as well? in any case its the richest country of the world
+[12-02-2005 15:19:27] [#ezpublish] <luke`> why beers in norwegian pubs are so expensive :)
+[12-02-2005 15:19:28] [#ezpublish] <luke`> ?
+[12-02-2005 15:19:40] [#ezpublish] <nnn0> ehehehe - yeah well - some say norway is the last communist state in europa
+[12-02-2005 15:19:53] [#ezpublish] <nnn0> it's a mix of alots of things
+[12-02-2005 15:20:10] [#ezpublish] <nnn0> and - as you said - mixed with boredom
+[12-02-2005 15:20:19] [#ezpublish] <buz> whole of scandinavia is about as socialist as it comes
+[12-02-2005 15:20:27] [#ezpublish] <luke`> people are unhappy, I have been In pub, and I spoke with citizens, they all siad that it is so fucking expensive :)
+[12-02-2005 15:20:32] [#ezpublish] <nnn0> :)
+[12-02-2005 15:20:34] [#ezpublish] <luke`> but they bought us beer :)
+[12-02-2005 15:20:41] [#ezpublish] <luke`> co Noregians are cool
+[12-02-2005 15:20:55] [#ezpublish] <nnn0> yeah, but they need something to bitch about - we can afford it ;)
+[12-02-2005 15:21:13] [#ezpublish] <buz> much like around here
+[12-02-2005 15:21:32] [#ezpublish] <buz> only norway sits on 350billion EUR oil revenue
+[12-02-2005 15:21:43] [#ezpublish] <nnn0> it's not like someone is gonna die because the ale price is to stiff
+[12-02-2005 15:21:47] [#ezpublish] <luke`> and started gettin oil from Iraq
+[12-02-2005 15:21:49] [#ezpublish] <buz> how does one get norwegian citizenship?
+[12-02-2005 15:22:10] [#ezpublish] <nnn0> easy - just leave her a couple of years
+[12-02-2005 15:22:11] [#ezpublish] <buz> id like being citizen of the SOLE country with safe retirement funds
+[12-02-2005 15:22:13] [#ezpublish] <nnn0> live
+[12-02-2005 15:22:18] [#ezpublish] <buz> LOL
+[12-02-2005 15:22:22] [#ezpublish] <luke`> nnn0: are you sure?
+[12-02-2005 15:22:28] [#ezpublish] <nnn0> hm no :D
+[12-02-2005 15:22:28] [#ezpublish] <buz> i meant you were to say just LEAVE HER after couple of years ;)
+[12-02-2005 15:22:31] [#ezpublish] <luke`> LD
+[12-02-2005 15:22:33] [#ezpublish] <luke`> :D
+[12-02-2005 15:22:39] [#ezpublish] <buz> its kinda cooooold up there though
+[12-02-2005 15:22:45] [#ezpublish] <luke`> I will need special agreement or soemthing?
+[12-02-2005 15:22:46] [#ezpublish] <nnn0> i'm not sure hoow many years, but it's not like saudi arabia
+[12-02-2005 15:22:57] [#ezpublish] <buz> WTF wants to live in saudia arabia
+[12-02-2005 15:23:00] [#ezpublish] <buz> land of the illegal booze
+[12-02-2005 15:23:02] [#ezpublish] <luke`> haha
+[12-02-2005 15:23:09] [#ezpublish] <nnn0> ehehhe
+[12-02-2005 15:23:23] [#ezpublish] <buz> are girls in no as hot as in sweden?
+[12-02-2005 15:23:32] [#ezpublish] <luke`> girls are nice :)
+[12-02-2005 15:23:33] [#ezpublish] <nnn0> fuck that - norway is actually on the cutting edge in cannabis cultivation ;)
+[12-02-2005 15:23:47] [#ezpublish] <luke`> MTV generation
+[12-02-2005 15:23:48] [#ezpublish] <buz> mhh not sure if it's up to match switzerland though
+[12-02-2005 15:23:58] [#ezpublish] <nnn0> no - norwegian girls have short legs :DDD
+[12-02-2005 15:23:59] [#ezpublish] <buz> the swiss are second only to NL
+[12-02-2005 15:24:05] [#ezpublish] <buz> short legs are good
+[12-02-2005 15:24:09] [#ezpublish] <nnn0> lol
+[12-02-2005 15:24:11] [#ezpublish] <luke`> so if you know Backstreet boys, so can meet some nice :D
+[12-02-2005 15:24:16] [#ezpublish] <buz> (for blowjobs anyway)
+[12-02-2005 15:24:36] [#ezpublish] <luke`> nnn0: short legs?
+[12-02-2005 15:24:38] [#ezpublish] <nnn0> :D
+[12-02-2005 15:24:38] [#ezpublish] <luke`> lok
+[12-02-2005 15:24:40] [#ezpublish] <luke`> lol
+[12-02-2005 15:24:48] [#ezpublish] <luke`> maybe you are to tall
+[12-02-2005 15:24:49] [#ezpublish] <luke`> ?
+[12-02-2005 15:24:50] [#ezpublish] <nnn0> yeah well - at least in the northern part where i live
+[12-02-2005 15:24:57] [#ezpublish] <nnn0> they are too short here :D
+[12-02-2005 15:25:03] [#ezpublish] <luke`> haha :D
+[12-02-2005 15:25:06] [#ezpublish] <buz> probably start drinking too early
+[12-02-2005 15:25:22] [#ezpublish] <nnn0> it's to much of that native blood in them
+[12-02-2005 15:25:31] [#ezpublish] <buz> native?
+[12-02-2005 15:25:32] [#ezpublish] <nnn0> the sami people
+[12-02-2005 15:25:35] [#ezpublish] <buz> aaaaaah
+[12-02-2005 15:25:37] [#ezpublish] <buz> yes
+[12-02-2005 15:25:49] [#ezpublish] <buz> maybe go to the swedish border the n;)(
+[12-02-2005 15:26:00] [#ezpublish] <nnn0> :)
+[12-02-2005 15:26:18] [#ezpublish] <buz> do you live under the polar circle though?
+[12-02-2005 15:26:32] [#ezpublish] <nnn0> over you mean :)
+[12-02-2005 15:26:36] [#ezpublish] <luke`> I had insomnia when I have been there
+[12-02-2005 15:26:42] [#ezpublish] <buz> nono under
+[12-02-2005 15:26:44] [#ezpublish] <luke`> you have to lookng day during summer
+[12-02-2005 15:26:47] [#ezpublish] <buz> where the live is HALFWAY sane
+[12-02-2005 15:26:49] [#ezpublish] <luke`> long*
+[12-02-2005 15:27:04] [#ezpublish] <nnn0> i'm north of the polar circle - for about 500 km at east
+[12-02-2005 15:27:07] [#ezpublish] <nnn0> least even
+[12-02-2005 15:27:18] [#ezpublish] <buz> strictly judging by music, i should go to finnland
+[12-02-2005 15:27:27] [#ezpublish] <buz> but finnish is a totally weird language
+[12-02-2005 15:27:34] [#ezpublish] <luke`> normegian also
+[12-02-2005 15:27:44] [#ezpublish] <buz> less so for all i know
+[12-02-2005 15:27:49] [#ezpublish] <nnn0> it's light all day and night at summer - and now - it's almost pitch black all day long
+[12-02-2005 15:27:53] [#ezpublish] <luke`> it is impossible to cut the words :D
+[12-02-2005 15:28:04] [#ezpublish] <buz> i find the same about slavic languages ;)
+[12-02-2005 15:28:39] [#ezpublish] <buz> norwegian is still closer to german than finnish in any case
+[12-02-2005 15:28:42] [#ezpublish] <nnn0> the finnish are special - norwegians and swidish and danish can understand eachother perfectly - but the finnish ! god nows where they come from :D
+[12-02-2005 15:28:52] [#ezpublish] <luke`> haha
+[12-02-2005 15:29:00] [#ezpublish] <buz> actually, linguistically, they are asians
+[12-02-2005 15:29:05] [#ezpublish] <luke`> but they have nokia :D
+[12-02-2005 15:29:10] [#ezpublish] <nnn0> but they know their way about a computer
+[12-02-2005 15:29:21] [#ezpublish] <buz> cant remember the exact place but the only place with a remotely similar language is somewhere in asia
+[12-02-2005 15:29:31] [#ezpublish] <nnn0> most of all - they have Linus :D
+[12-02-2005 15:29:34] [#ezpublish] <buz> could even be polynesia now that i think of it
+[12-02-2005 15:29:46] [#ezpublish] <buz> personally i prefer matt dillon of dragonflybsd ;)
+[12-02-2005 15:30:09] [#ezpublish] <buz> you norwegians have dvd jon
+[12-02-2005 15:30:12] [#ezpublish] <buz> hes much more important
+[12-02-2005 15:30:19] [#ezpublish] <buz> or had, anyway
+[12-02-2005 15:30:29] [#ezpublish] <luke`> haha, talented crackers and hackers
+[12-02-2005 15:30:31] [#ezpublish] <buz> and the swedes have piratebyran
+[12-02-2005 15:30:38] [#ezpublish] <nnn0> ehehe
+[12-02-2005 15:30:42] [#ezpublish] <buz> swiss have had torrentreactor
+[12-02-2005 15:30:56] [#ezpublish] <luke`> buz, you comes from hacker underground
+[12-02-2005 15:30:56] [#ezpublish] <nnn0> dvd jon - he just made the interface - donno why the went after him :)
+[12-02-2005 15:31:07] [#ezpublish] <luke`> you kna all  scandinavian hackers
+[12-02-2005 15:31:13] [#ezpublish] <nnn0> :)
+[12-02-2005 15:31:14] [#ezpublish] <luke`> know*
+[12-02-2005 15:31:15] [#ezpublish] <buz> i think dvd jon is a front to a bigger group
+[12-02-2005 15:31:22] [#ezpublish] <buz> NFW he came up with that all by him self
+[12-02-2005 15:31:26] [#ezpublish] <nnn0> it's not a big group
+[12-02-2005 15:31:37] [#ezpublish] <luke`> only dvd jon :D
+[12-02-2005 15:31:41] [#ezpublish] <nnn0> but the _real_ hacker are from russia :D
+[12-02-2005 15:31:41] [#ezpublish] <luke`> haha
+[12-02-2005 15:31:44] [#ezpublish] <buz> maybe maybe not
+[12-02-2005 15:31:52] [#ezpublish] <nnn0> goddamn they are good ;)
+[12-02-2005 15:31:54] [#ezpublish] <buz> i dont believe he cracks everything by himself anyway
+[12-02-2005 15:32:11] [#ezpublish] <buz> he does has the advantage of living in a free country which makes him an ideal front
+[12-02-2005 15:32:26] [#ezpublish] <nnn0> he does bits and pieces
+[12-02-2005 15:32:36] [#ezpublish] <nnn0> just check his site
+[12-02-2005 16:11:46] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-02-2005 16:13:03] -!- luke` [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]

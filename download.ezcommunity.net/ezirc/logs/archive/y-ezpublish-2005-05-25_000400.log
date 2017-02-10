@@ -1,0 +1,62 @@
+[05-23-2005 00:18:54] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-23-2005 01:17:45] [#ezpublish] <SEAwolfx> remorning
+[05-23-2005 01:20:46] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-23-2005 01:20:46] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has joined #ezpublish
+[05-23-2005 01:27:02] -!- Uplink [~Uplink@200.199.53.239] has left #ezpublish []
+[05-23-2005 01:51:34] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-23-2005 01:52:56] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-23-2005 02:09:59] -!- jond is now known as kracker
+[05-23-2005 02:37:17] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has joined #ezpublish
+[05-23-2005 03:51:53] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-23-2005 05:03:36] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-23-2005 05:03:36] -!- fh [~fh@stalker.ez.no] has quit [Read error: 54 (Connection reset by peer)]
+[05-23-2005 06:19:36] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-23-2005 07:09:46] [#ezpublish] <seasonfive_> Hi ppl ! How to populate database for a new ezpublish site ?
+[05-23-2005 07:09:51] [#ezpublish] <seasonfive_> (without installer ...)
+[05-23-2005 07:27:04] -!- fh [~fh@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[05-23-2005 07:27:28] -!- CoderForLife [~mirc@nr17-66-161-248-129.fuse.net] has quit [Read error: 110 (Connection timed out)]
+[05-23-2005 07:28:13] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-23-2005 07:35:41] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-23-2005 07:40:48] -!- ringe [~ringe@dsl-253-122.monet.no] has joined #ezpublish
+[05-23-2005 07:41:14] [#ezpublish] <ringe> how can I watch mysql queries live as I create nodes with the admin interface?
+[05-23-2005 07:41:38] [#ezpublish] <fh> turn on debug output
+[05-23-2005 07:41:42] [#ezpublish] <fh> and then turn on sqldebug
+[05-23-2005 07:41:48] [#ezpublish] <fh> in site.ini
+[05-23-2005 07:53:48] [#ezpublish] <ringe> thanks
+[05-23-2005 07:54:15] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[05-23-2005 08:01:37] -!- ringe [~ringe@dsl-253-122.monet.no] has left #ezpublish []
+[05-23-2005 08:09:58] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit ["Fui embora"]
+[05-23-2005 08:23:01] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has joined #ezpublish
+[05-23-2005 09:30:20] -!- SEAwolfx [~mike@2951cba04c722c9c.session.tor] has quit [Remote closed the connection]
+[05-23-2005 09:36:25] -!- SEAwolfx [~mike@c024ebd50e934767.session.tor] has joined #ezpublish
+[05-23-2005 09:45:03] -!- SEAwolfx_ [~mike@65.214.56.42] has joined #ezpublish
+[05-23-2005 09:59:15] -!- SEAwolfx [~mike@c024ebd50e934767.session.tor] has quit [Remote closed the connection]
+[05-23-2005 10:24:27] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-23-2005 10:54:08] -!- SEAwolfx [~mike@65.214.56.42] has joined #ezpublish
+[05-23-2005 10:56:31] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has left #ezpublish []
+[05-23-2005 14:09:50] [#ezpublish] <kracker> or do you have a quiet channel i  can join to send it ?
+[05-23-2005 14:10:08] [#ezpublish] <kracker> ok
+[05-23-2005 14:11:15] [#ezpublish] <kracker> hmm, ok
+[05-23-2005 14:27:27] -!- lucasr [~lucasr@201.19.231.227] has joined #ezpublish
+[05-23-2005 14:34:36] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [Remote closed the connection]
+[05-23-2005 14:42:44] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-23-2005 14:48:04] -!- SEAwolfx_ [~mike@65.214.56.42] has quit [Ping timeout: 14400 seconds]
+[05-23-2005 14:55:49] [#ezpublish] * agentbob yawns
+[05-23-2005 16:12:43] -!- Teebs [Lucy_bi_19@host81-155-218-174.range81-155.btcentralplus.com] has joined #ezpublish
+[05-23-2005 16:12:47] [#ezpublish] <Teebs> hey?
+[05-23-2005 16:23:55] -!- Teebs [Lucy_bi_19@host81-155-218-174.range81-155.btcentralplus.com] has quit []
+[05-23-2005 16:27:46] -!- terceiro [~terceiro@200.180.179.19] has joined #ezpublish
+[05-23-2005 16:27:56] -!- terceiro [~terceiro@200.180.179.19] has left #ezpublish ["Leaving"]
+[05-23-2005 16:42:13] -!- lucasr [~lucasr@201.19.231.227] has quit ["Leaving"]
+[05-23-2005 16:43:00] [#ezpublish] <kracker> hey!
+[05-23-2005 16:43:07] [#ezpublish] <kracker> i got sleep!
+[05-23-2005 16:43:24] [#ezpublish] <kracker> a whole  6 hours, yahhh!
+[05-23-2005 17:09:21] -!- Teebus [Lucy_bi_19@host81-155-218-174.range81-155.btcentralplus.com] has joined #ezpublish
+[05-23-2005 17:09:25] [#ezpublish] <Teebus> help anyone?
+[05-23-2005 17:17:00] -!- Teebus [Lucy_bi_19@host81-155-218-174.range81-155.btcentralplus.com] has quit []
+[05-23-2005 18:11:15] [#ezpublish] <kracker> sorry
+[05-23-2005 18:11:22] [#ezpublish] <kracker> still there Teebus?
+[05-23-2005 20:04:31] [#ezpublish] <kracker> wow, no i have to watch out for havard too ...
+[05-23-2005 20:04:39] [#ezpublish] <kracker> errum, s/no/now/
+[05-23-2005 22:06:56] -!- Pillbug [~pillzbug@pool-151-197-111-237.phil.east.verizon.net] has joined #ezpublish
+[05-23-2005 22:07:01] -!- Pillbug [~pillzbug@pool-151-197-111-237.phil.east.verizon.net] has left #ezpublish []

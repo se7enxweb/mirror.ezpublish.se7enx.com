@@ -1,0 +1,195 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.6.&nbsp; Building Packages</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec6"></a><h3 class="docSection1Title">12.6. Building Packages</h3>
+<p class="docText">In this section, you explore the PEAR package system from the inside, learning how to build your own packages and how to make the most out of the installer. Following is an example package containing a PHP class, a command-line script, a regression test, and a package description file.</p>
+<a name="ch12lev2sec5"></a><h4 class="docSection2Title">12.6.1. PEAR Example: HelloWorld</h4>
+<p class="docText">This is the minimal example, a single PHP source file implementing a class called HelloWorld:<a name="ch12index72"></a><a name="ch12index73"></a><a name="ch12index74"></a></P>
+<pre>
+&lt;?php
+
+/**
+ * Hello World class.  The ubiquitous example.
+ * @package HelloWorld
+ */
+class HelloWorld
+{
+    function HelloWorld($html = true)
+    {
+        if ($html) {
+            print "Hello, World!&lt;br /&gt;\n";
+        } else {
+            print "Hello, World! \n";
+        }
+    }
+}
+
+HelloWorld.php
+</pre><br>
+<p class="docText">Here is a command-line script called &quot;hello&quot; for demonstration:</P>
+<pre>
+#!/bin/sh
+exec php -d output_buffering=1 $0 $@
+&lt;?php
+ob_end_clean();
+
+require_once "HelloWorld.php";
+
+$hello = new HelloWorld(false);
+
+hello
+</pre><br>
+<p class="docText">It is a good idea to write regression tests for your classes sooner rather than later. This example regression test verifies that the HelloWorld constructor's <tt>$html</tt> parameter works like intended:<a name="ch12index75"></a><a name="ch12index76"></a><a name="ch12index77"></a></P>
+<pre>
+--TEST--
+HelloWorld test
+--FILE--
+&lt;?php
+include dirname(__FILE__).'/../HelloWorld.php';
+new HelloWorld(false);
+new HelloWorld(true);
+?&gt;
+--EXPECT--
+Hello, World!
+Hello, World!&lt;br /&gt;
+
+HelloWorld.phpt
+</pre><br>
+<p class="docText">A .phpt file is split into sections that start with a single line containing <tt>--SECTION--</tt>. The following sections exist (see <a class="docLink" href="#ch12table02">Table 12.2</a>).<a name="ch12index78"></a><a name="ch12index79"></a><a name="ch12index80"></a></p>
+<a name="ch12table02"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 12.2. Test Section Headings</H5></caption><colgroup><col width="121"><col width="429"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Section</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">TEST*</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Short description of the test.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">FILE*</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Actual test code.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">EXPECT*</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The exact output that the test code should print.</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText">EXPECTF</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Expected output with some placeholders.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">EXPECTREGEX</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Regular expression matching expected output.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">GET</p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">HTTP <tt>GET</tt> variables (for example, <tt>a=foo&amp;b=bar</tt>).</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">POST</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">HTTP <tt>POST</tt> variables; same format as <tt>GET</tt>.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">SKIPIF</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">If this code snippet prints &quot;skip,&quot; the test is not executed but marked as skipped.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">ARGS</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Command-line parameters; space-separated.</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText">INI</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Php.ini directives; directive=value, one per line.</p></td></tr></table></p><br>
+<p class="docText">The sections marked with &quot;*&quot; are required; the rest are optional. The EXPECTF section uses these placeholders (see <a class="docLink" href="#ch12table03">Table 12.3</a>).</P>
+<a name="ch12table03"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 12.3. EXPECTF Placeholders</h5></caption><colgroup><col width="132"><col width="418"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Placeholder</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>%e</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Platform directory separator, typically &quot;/&quot; or &quot;\&quot;</p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%s</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Any string (not greedy)</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%i</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Any integer</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%d</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Any positive integer</P></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>%x</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Any hexadecimal positive integer</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%f</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Any floating-point number</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>%c</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Any single character</p></td></TR></table></p><br>
+<p class="docText">To package this class into a proper PEAR package, you need a package description file called <tt>package.xml</tt>:<a name="ch12index81"></a><a name="ch12index82"></a><a name="ch12index83"></a></P>
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0"&gt;
+&lt;package version="1.0"&gt;
+  &lt;name&gt;HelloWorld&lt;/name&gt;
+  &lt;summary&gt;Simple Hello World Package&lt;/summary&gt;
+  &lt;description&gt;
+    This package contains a class that simply prints "Hello, World!".
+  &lt;/description&gt;
+  &lt;license&gt;PHP License&lt;/license&gt;
+  &lt;maintainers&gt;
+    &lt;maintainer&gt;
+      &lt;user&gt;ssb&lt;/user&gt;
+      &lt;role&gt;lead&lt;/role&gt;
+      &lt;name&gt;Stig S. Bakken&lt;/name&gt;
+      &lt;email&gt;stig@php.net&lt;/email&gt;
+    &lt;/maintainer&gt;
+  &lt;/maintainers&gt;
+  &lt;release&gt;
+    &lt;version&gt;1.0&lt;/version&gt;
+    &lt;state&gt;stable&lt;/state&gt;
+    &lt;date&gt;2004-04-24&lt;/date&gt;
+    &lt;notes&gt;
+      First production release.
+    &lt;/notes&gt;
+    &lt;filelist&gt;
+      &lt;file role="php"    name="HelloWorld.php"/&gt;
+      &lt;file role="script" name="hello"/&gt;
+      &lt;file role="test"   name="01-HelloWorld.phpt"/&gt;
+    &lt;/filelist&gt;
+  &lt;/release&gt;
+&lt;/package&gt;
+</pre><br>
+<p class="docText">A comprehensive reference of all the XML elements of the package description format is found in &quot;<a class="docLink" href="ch12lev1sec7.html#ch12lev1sec7">The package.xml Format</a>&quot; section later in this chapter.<a name="ch12index84"></a><a name="ch12index85"></a><a name="ch12index86"></a></P>
+<a name="ch12lev2sec6"></a><h4 class="docSection2Title">12.6.2. Building the Tarball</h4>
+<p class="docText">With these two files (HelloWorld.php and package.xml), you can create a package tarball with the <tt>pear package</tt> command:<a name="ch12index87"></a><a name="ch12index88"></a><a name="ch12index89"></a><a name="ch12index90"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear package</span>
+Analyzing HelloWorld.php
+Package .../HelloWorld-1.0.tgz done
+Tag the released code with 'pear cvstag package.xml'
+(or set the CVS tag RELEASE_1_0 by hand)
+</pre><br>
+<p class="docText">The message about tagging the released code reminds package maintainers who work on the php.net CVS server to just ignore it for now.</p>
+<p class="docText">HelloWorld-1.0.tgz is your package tarball. This file may be installed with the <tt>pear install</tt> command on any machine that has a PEAR installer.</p>
+<p class="docText">If you do not have <tt>zlib</tt> support in your PHP build, the created package tarball will not be compressed, and the file name would be &quot;HelloWorld-1.0.tar.&quot; Compressing it with an external gzip program will work in this case.<a name="ch12index91"></a><a name="ch12index92"></a><a name="ch12index93"></a><a name="ch12index94"></a></p>
+<a name="ch12lev2sec7"></a><h4 class="docSection2Title">12.6.3. Verification</h4>
+<p class="docText">Use the <tt>pear package-validate</tt> (or <tt>pear pv</tt>) command to validate that your tarball is good:<a name="ch12index95"></a><a name="ch12index96"></a><a name="ch12index97"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear pv HelloWorld-1.0.tgz</span>
+Validation: 0 error(s), 0 warning(s)
+</pre><br>
+<p class="docText">Validation fails if</p>
+<ul><li><p class="docList">You have defined symbols that are outside your package's namespace.</p></li><LI><p class="docList">Required elements are missing in package.xml.</P></li><li><p class="docList">Dependencies are bad.</P></li><li><p class="docList">The file list is bad or missing.</p></li></ul>
+<p class="docText">Another way to verify that your package tarball works as you intend is to use the <tt>pear info</tt> and <tt>pear list</tt> commands:<a name="ch12index98"></a><a name="ch12index99"></a><a name="ch12index100"></a></p>
+<pre>
+<span class="docEmphStrong">$ pear info HelloWorld-1.0.tgz</span>
+ABOUT HELLOWORLD-1.0
+====================
+Provides        Classes:
+Package         HelloWorld
+Summary         Simple Hello World Package
+Description     This package contains a class that simply prints
+                "Hello, World!".
+Maintainers     Stig S. Bakken &lt;stig@php.net&gt; (lead)
+Version         1.0
+Release Date    2004-04-24
+Release License PHP License
+Release State   stable
+Release Notes   First production release.
+</pre><BR>
+<p class="docText">The <tt>info</tt> output quickly reveals if something went wrong with the tarball creation:</p>
+<pre>
+$ <span class="docEmphStrong">pear list HelloWorld-1.0.tgz</span>
+CONTENTS OF HELLOWORLD-1.0.TGZ
+==============================
+PACKAGE FILE             INSTALL PATH
+HelloWorld.php           /usr/local/lib/php/HelloWorld.php
+hello                    /usr/local/lib/php/hello
+tests/01-HelloWorld.phpt -- will not be installed --
+</pre><BR>
+<p class="docText">Check the install path of each file and make sure it is what you intended. If a file ended up in the wrong location, go back to your package.xml file and set the <tt>baseinstalldir</tt> attribute in the <tt>&lt;file&gt;</tt> element for that file.</p>
+<p class="docText">You should also install and uninstall it for a final verification and to ensure that the install/uninstall scripts are working. If your package uses the <tt>platform</tt> attribute in one or more <tt>&lt;file&gt;</tt> elements, you should repeat the same procedure for at least one platform that the &quot;platform&quot; rule matches, and for at least one that it does not match.<a name="ch12index101"></a><a name="ch12index102"></a><a name="ch12index103"></a></P>
+<a name="ch12lev2sec8"></a><h4 class="docSection2Title">12.6.4. Regression Tests</h4>
+<p class="docText">Testing involves two things:<a name="ch12index104"></a><a name="ch12index105"></a><a name="ch12index106"></a><a name="ch12index107"></a><a name="ch12index108"></a></p>
+<ul><LI><p class="docList">Installing and uninstalling the package to verify that the package scripts, if any, work and to finally test that the tarball is good</P></li><li><p class="docList">Running package regression tests with <tt>pear run-tests</tt></p></li></UL>
+<p class="docText">This means we need to make a regression test for our <tt>HelloWorld</tt> package. These tests use PHP's &quot;.phpt&quot; format; here is an example:</p>
+<pre>
+--TEST--
+HelloWorld test
+--FILE--
+&lt;?php
+include dirname(__FILE__).'/../HelloWorld.php';
+new HelloWorld(false);
+new HelloWorld(true);
+--EXPECT--
+Hello, World!
+Hello, World!&lt;br /&gt;
+</pre><br>
+<p class="docText">The <tt>--FOO--</tt> lines mark the start of different sections. The .phpt format defines these sections:</P>
+<ul><LI><p class="docText">
+<tt>TEST</tt>. 
+Title of the test.</p></li><li><p class="docText">
+<tt>SKIPIF</tt>. 
+PHP code (must start with <tt>&lt;?php</tt>) run to determine whether the test should be executed at all. The test is skipped if this code prints <tt>skip</tt>.</p></li><li><p class="docText">
+<tt>FILE</tt>. 
+PHP code that comprises the test itself.</p></li><li><p class="docText">
+<tt>EXPECT</tt>. 
+The expected output of the PHP code in the <tt>FILE</tt> section.</p></li><li><p class="docText">
+<tt>GET</tt>. 
+HTTP <tt>GET</tt> input variables (for example, <tt>foo=bar&amp;ya=da</tt>, which requires CGI binary).</p></li><li><p class="docText">
+<tt>POST</tt>. 
+Raw HTTP <tt>POST</tt> data (same format as <tt>GET</tt> data), which requires CGI binary.</p></LI></UL>
+<p class="docText">The <tt>pear run-tests</tt> command looks for files with the ending &quot;.phpt&quot; in the current directory, or subdirectories called &quot;tests.&quot;<a name="ch12index109"></a><a name="ch12index110"></a><a name="ch12index111"></a><a name="ch12index112"></a><a name="ch12index113"></a><a name="ch12index114"></a><a name="ch12index115"></a><a name="ch12index116"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

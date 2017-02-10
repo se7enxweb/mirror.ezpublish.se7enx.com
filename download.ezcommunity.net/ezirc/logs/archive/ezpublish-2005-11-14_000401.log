@@ -1,0 +1,39 @@
+[11-13-2005 00:43:17] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[11-13-2005 02:15:42] -!- SEAwolfx [n=mike@DSL01.83.171.162.146.NEFkom.net] has quit [Read error: 111 (Connection refused)]
+[11-13-2005 02:50:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-13-2005 05:17:35] -!- ordnas [n=ordnas@p549DE4E0.dip.t-dialin.net] has joined #ezpublish
+[11-13-2005 05:48:02] -!- ordnas [n=ordnas@p549DE4E0.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-13-2005 06:12:30] [#ezpublish] <buz> yeah kcontrol 3.5 is perfect for setting up samba
+[11-13-2005 06:12:36] [#ezpublish] <buz> no more cryptic smb.conf editing ;)
+[11-13-2005 06:19:42] [#ezpublish] <kracker> <smirk />
+[11-13-2005 06:31:44] -!- ordnas [n=ordnas@p549DE4E0.dip.t-dialin.net] has joined #ezpublish
+[11-13-2005 06:42:05] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-13-2005 06:45:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-13-2005 06:53:29] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-13-2005 06:57:39] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-13-2005 07:01:14] -!- ordnas [n=ordnas@p549DE4E0.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-13-2005 07:05:49] -!- ordnas [n=ordnas@p549DE4E0.dip.t-dialin.net] has joined #ezpublish
+[11-13-2005 07:30:12] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-13-2005 08:25:44] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-13-2005 08:45:09] -!- ordnas [n=ordnas@p549DE4E0.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-13-2005 10:26:33] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-13-2005 10:26:41] [#ezpublish] <zrg> yo!
+[11-13-2005 10:28:05] [#ezpublish] <zrg> folks, how do i get module name in template? need layout change for /shop/xxx pages, no way to override like that, is there?
+[11-13-2005 10:34:33] [#ezpublish] <buz> i think you can change EVERYTHING
+[11-13-2005 10:34:37] [#ezpublish] <buz> you just need to find the template ;)
+[11-13-2005 10:39:30] [#ezpublish] <zrg> muh?
+[11-13-2005 10:39:59] [#ezpublish] <buz> mad cow diseease?
+[11-13-2005 10:40:01] [#ezpublish] <zrg> in admin interface it uses some navigation_part variable which apparently is not set in user view
+[11-13-2005 10:40:23] [#ezpublish] <buz> could be
+[11-13-2005 10:41:18] [#ezpublish] <zrg> is not
+[11-13-2005 10:45:25] [#ezpublish] <zrg> so i need SOMETHING to check in pagelayout and display shopadmin menu if user is in shop module..
+[11-13-2005 10:50:32] -!- CoderForLife [n=CoderFor@EV-ESR1-66-42-131-228.fuse.net] has joined #ezpublish
+[11-13-2005 12:47:30] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-13-2005 13:51:04] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-13-2005 14:27:14] -!- CoderForLife [n=CoderFor@EV-ESR1-66-42-131-228.fuse.net] has left #ezpublish []
+[11-13-2005 15:26:36] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-13-2005 16:03:34] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-13-2005 21:36:49] -!- Bedlore [n=me@219-90-238-58.ip.adam.com.au] has joined #ezpublish
+[11-13-2005 23:10:55] -!- mode/#ezpublish [+o kh[eZ]] by ChanServ
+[11-13-2005 23:41:10] [#ezpublish] <Bedlore> what would be the easiest way to detect the url /user/register from within an extensions edit template, it doesn't seem so easy outside of module_result which only works in the pagelayout.tp
+[11-13-2005 23:50:49] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish

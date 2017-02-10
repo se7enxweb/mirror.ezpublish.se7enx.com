@@ -1,0 +1,185 @@
+[04-11-2006 00:33:59] -!- DiGiTa|_ [n=guillaum@84.5.136.20] has joined #ezpublish
+[04-11-2006 01:03:18] [#ezpublish] <zrg> *yawn*
+[04-11-2006 01:40:01] -!- zrg [n=zurgutt@migw2.gprs.emt.ee] has quit [Remote closed the connection]
+[04-11-2006 01:47:17] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[04-11-2006 01:56:15] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[04-11-2006 02:18:51] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-11-2006 02:26:47] -!- buz [n=buz@217.162.135.182] has joined #ezpublish
+[04-11-2006 02:57:23] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-11-2006 02:57:39] [#ezpublish] <kalooni> hello good morning all
+[04-11-2006 03:06:35] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-11-2006 03:09:04] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Client Quit]
+[04-11-2006 03:28:09] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-11-2006 03:58:23] -!- buz [n=buz@217.162.135.182] has quit ["Konversation terminated!"]
+[04-11-2006 04:02:39] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-11-2006 04:57:10] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[04-11-2006 05:30:21] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Remote closed the connection]
+[04-11-2006 05:31:04] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-11-2006 05:41:49] -!- buz [n=buz@dhcp-202-45-vpn.unizh.ch] has joined #ezpublish
+[04-11-2006 05:55:03] -!- buz [n=buz@dhcp-202-45-vpn.unizh.ch] has quit ["Konversation terminated!"]
+[04-11-2006 05:55:05] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 113 (No route to host)]
+[04-11-2006 06:22:28] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-11-2006 06:23:24] [#ezpublish] <katana`> hi
+[04-11-2006 06:23:53] [#ezpublish] <kalooni> hi
+[04-11-2006 06:24:10] [#ezpublish] <zrg> hi-hi
+[04-11-2006 07:34:32] [#ezpublish] <DiGiTa|_> i'm trying to create a new siteacess for an other lang and i get this error : http://en.luberon-strategie.com/
+[04-11-2006 07:35:46] [#ezpublish] <DiGiTa|_> someone know why ?
+[04-11-2006 07:37:21] [#ezpublish] <katana`> that's not good :)
+[04-11-2006 07:38:28] [#ezpublish] <DiGiTa|_> i'm going crazy with this problem
+[04-11-2006 07:40:41] [#ezpublish] <DiGiTa|_> please help
+[04-11-2006 07:42:45] [#ezpublish] <DiGiTa|_> it's only a copy of this siteacess with the same parameters : www.luberon-strategie.com
+[04-11-2006 07:43:46] [#ezpublish] <DiGiTa|_> pff
+[04-11-2006 07:43:59] [#ezpublish] <DiGiTa|_> forgot that : AvailableSiteAccessList[]=lubstrat_en
+[04-11-2006 07:44:00] [#ezpublish] <DiGiTa|_> :/
+[04-11-2006 07:44:19] [#ezpublish] <xbit> :)
+[04-11-2006 07:45:14] [#ezpublish] <katana`> :))
+[04-11-2006 07:46:11] [#ezpublish] <zrg> sounds kinky
+[04-11-2006 07:46:29] [#ezpublish] <DiGiTa|_> well it's not the problem
+[04-11-2006 07:46:35] [#ezpublish] <DiGiTa|_> http://en.luberon-strategie.com/
+[04-11-2006 07:46:38] [#ezpublish] <kalooni> does the variable $current_user exist ?
+[04-11-2006 07:46:40] [#ezpublish] <DiGiTa|_> always fucked
+[04-11-2006 07:47:27] [#ezpublish] <kalooni> forgot my question
+[04-11-2006 07:47:28] [#ezpublish] <kalooni> ;)
+[04-11-2006 07:50:11] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-11-2006 07:50:26] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-11-2006 08:10:43] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has joined #ezpublish
+[04-11-2006 08:10:49] [#ezpublish] <phretor> hi there
+[04-11-2006 08:11:37] [#ezpublish] <phretor> how about Cc receivers for collected information from feedback forms?
+[04-11-2006 08:11:45] [#ezpublish] <phretor> I didn't find anything about it..
+[04-11-2006 09:32:14] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[04-11-2006 09:53:52] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-11-2006 10:28:22] -!- hovik [n=hovik@79.84-48-105.nextgentel.com] has joined #ezpublish
+[04-11-2006 10:58:34] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 113 (No route to host)]
+[04-11-2006 10:58:48] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-11-2006 10:59:12] -!- buz [n=buz@217.162.135.182] has joined #ezpublish
+[04-11-2006 11:19:26] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has quit []
+[04-11-2006 11:21:30] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [calvino.freenode.net irc.freenode.net]
+[04-11-2006 11:21:41] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-11-2006 11:48:51] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[04-11-2006 11:55:47] -!- ordnas [n=ordnas@p549D6329.dip.t-dialin.net] has left #ezpublish []
+[04-11-2006 12:02:00] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[04-11-2006 13:04:37] -!- boisei [n=jouchida@bdsl.66.12.171.122.gte.net] has joined #ezpublish
+[04-11-2006 13:12:41] [#ezpublish] <boisei> l
+[04-11-2006 13:42:05] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-11-2006 13:46:12] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-11-2006 14:22:16] -!- tobmaster [n=tobmaste@dslb-084-061-027-115.pools.arcor-ip.net] has joined #ezpublish
+[04-11-2006 14:39:30] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[04-11-2006 14:45:09] -!- DiGiTa|_ [n=guillaum@84.5.136.20] has quit []
+[04-11-2006 14:58:50] -!- tobmaster [n=tobmaste@dslb-084-061-027-115.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[04-11-2006 16:37:23] -!- buz [n=buz@217.162.135.182] has quit ["Konversation terminated!"]
+[04-11-2006 16:53:07] [#ezpublish] <boisei> quit
+[04-11-2006 16:53:15] -!- boisei [n=jouchida@bdsl.66.12.171.122.gte.net] has quit []
+[04-11-2006 16:54:41] -!- boisei [n=jouchida@bdsl.66.12.171.122.gte.net] has joined #ezpublish
+[04-11-2006 16:55:13] -!- boisei [n=jouchida@bdsl.66.12.171.122.gte.net] has left #ezpublish []
+[04-11-2006 16:56:53] -!- boiseiloo [n=jouchida@bdsl.66.12.171.122.gte.net] has joined #ezpublish
+[04-11-2006 16:57:02] -!- boiseiloo [n=jouchida@bdsl.66.12.171.122.gte.net] has left #ezpublish []
+[04-11-2006 17:11:13] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[04-11-2006 18:05:40] -!- Bedlore [n=me@ppp136-38.lns2.adl2.internode.on.net] has joined #ezpublish
+[04-11-2006 18:06:45] [#ezpublish] <Bedlore> anyone here found ez2.2 mail stuff to be insecure? I think we are been used as a mail spam service via the mail to friend thing
+[04-11-2006 22:26:07] [#ezpublish] <Bedlore> how can I change this php line to search an array?
+[04-11-2006 22:26:19] [#ezpublish] <Bedlore> if ( !strstr( $HTTP_REFERER, $ini->read_var( "eZFormMain", "FromURL" ) ) )
+[04-11-2006 22:26:45] [#ezpublish] <Bedlore> I need it to be able to match multiple
+[04-11-2006 22:52:31] [#ezpublish] <kracker> hmm
+[04-11-2006 22:52:39] [#ezpublish] <kracker> interesting point
+[04-11-2006 22:52:55] [#ezpublish] <Bedlore> trying to create a spam trap for ez2.2 send mail to a friend
+[04-11-2006 22:53:29] [#ezpublish] <Bedlore> basic code for one url works well, i.e.
+[04-11-2006 22:53:30] [#ezpublish] <Bedlore> if ( !strstr( $HTTP_REFERER, $ini->read_var( "eZFormMain", "FromURL" ) ) )
+[04-11-2006 22:53:30] [#ezpublish] <Bedlore> {
+[04-11-2006 22:53:30] [#ezpublish] <Bedlore>     die( "eZ guestbook is not configured correctly. Please check your site.ini file" );
+[04-11-2006 22:53:30] [#ezpublish] <Bedlore> }
+[04-11-2006 22:54:01] [#ezpublish] <kracker> i used something around the lines like for my blog spam filter / forum ... using apache configs tho
+[04-11-2006 22:54:14] [#ezpublish] <Bedlore> however if the form failed because they forgot their email address etc, then the url becomes /form/form/process/1//
+[04-11-2006 22:54:24] [#ezpublish] <Bedlore> so then we need a FromURL2
+[04-11-2006 22:54:30] [#ezpublish] <kracker> ah
+[04-11-2006 22:54:45] [#ezpublish] <Bedlore> Jo Henrick wrote the code for his old ezguestbook
+[04-11-2006 22:54:52] [#ezpublish] <kracker> i remember
+[04-11-2006 22:54:56] [#ezpublish] <Bedlore> worked very effectivfely (for one submit url)  :)
+[04-11-2006 22:55:20] [#ezpublish] <Bedlore> I figure it could work for other ez2.2 weak areas as well
+[04-11-2006 22:55:22] [#ezpublish] <kracker> second or check in the if ?
+[04-11-2006 22:55:40] [#ezpublish] <Bedlore> but my knowledge of php is as good as my Russian, (non existent)  :P
+[04-11-2006 22:55:46] [#ezpublish] <kracker> right
+[04-11-2006 22:56:13] [#ezpublish] <Bedlore> I thought this was close;
+[04-11-2006 22:56:14] [#ezpublish] <Bedlore> if(strstr($HTTP_REFERER, $ini->read_var( "eZFormMain", "FromURL" )) || strstr($HTTP_REFERER, $ini->read_var( "eZFormMain", "FromURL2" )))
+[04-11-2006 22:56:32] [#ezpublish] <kracker> close
+[04-11-2006 22:56:35] [#ezpublish] <Bedlore> but it doesn't work
+[04-11-2006 22:56:37] [#ezpublish] <kracker> hey if someone was was to pay me a lot of money to do php dev, how much do you think i could get in us? i have an offer i'm just wondering ..
+[04-11-2006 22:56:39] [#ezpublish] <kracker> eyah
+[04-11-2006 22:57:15] [#ezpublish] <kracker> heh, i should be charging for irc support ;)
+[04-11-2006 22:57:27] [#ezpublish] <Bedlore> sheesh, dunno some programmers are asking US$200 p/h but thats way out of the league for little players like me
+[04-11-2006 22:58:39] [#ezpublish] <kracker> if( strstr($HTTP_REFERER, $ini->read_var( "eZFormMain", "FromURL" ) ) || strstr($HTTP_REFERER, $ini->read_var( "eZFormMain", "FromURL2" ))
+[04-11-2006 22:59:24] [#ezpublish] <Bedlore> hmm I missed a bracket did I
+[04-11-2006 22:59:25] [#ezpublish] <kracker> doh
+[04-11-2006 22:59:30] [#ezpublish] <kracker> no
+[04-11-2006 22:59:33] [#ezpublish] <kracker> my bad
+[04-11-2006 22:59:37] [#ezpublish] <Bedlore> nod
+[04-11-2006 23:00:05] [#ezpublish] <kracker> wow that's like $384 k yearly sallary
+[04-11-2006 23:00:18] [#ezpublish] <kracker> my offer was a little less than that
+[04-11-2006 23:00:40] [#ezpublish] <Bedlore> yeh, I guess for blue chip corporates looking for consulting etc and project work they find it acceptable
+[04-11-2006 23:00:52] [#ezpublish] <kracker> nods
+[04-11-2006 23:01:02] [#ezpublish] <Bedlore> full timers would never get anywhere near that I doubt
+[04-11-2006 23:01:02] [#ezpublish] <kracker> i dont' see missing brackets, what's the error
+[04-11-2006 23:01:13] [#ezpublish] <kracker> ahh, well how about fulltime sallary then
+[04-11-2006 23:01:42] [#ezpublish] <Bedlore> well if I set FromURL2=/blah/blah it still works
+[04-11-2006 23:01:57] [#ezpublish] <Bedlore> where can I post this fix too?
+[04-11-2006 23:02:05] [#ezpublish] <kracker> the forum would be great
+[04-11-2006 23:02:14] [#ezpublish] <Bedlore> ezp2.2 users really need to apply it or they'll end up spam serving
+[04-11-2006 23:02:26] [#ezpublish] <kracker> when i get a free moment i'd i'mport the code into the svn :)
+[04-11-2006 23:02:44] [#ezpublish] <Bedlore> does anyone read it, don't you have a 2.2 community site still?
+[04-11-2006 23:03:01] [#ezpublish] <kracker> i do, with a forum, hense my reference
+[04-11-2006 23:03:08] [#ezpublish] <Bedlore> right
+[04-11-2006 23:03:25] [#ezpublish] <kracker> oh and no ... no one does read the eZ 2.2 forum too hard to find, always being moved to a new url scheme (total bullshit fyi)
+[04-11-2006 23:03:28] [#ezpublish] <Bedlore> I probably should try and check forgot my password area too :\
+[04-11-2006 23:03:39] [#ezpublish] <Bedlore> agree
+[04-11-2006 23:03:45] [#ezpublish] <kracker> *shrugs*
+[04-11-2006 23:03:56] [#ezpublish] <kracker> i say days before an eZ meeting ..
+[04-11-2006 23:04:00] [#ezpublish] <Bedlore> is there a difference between strstr and !strstr
+[04-11-2006 23:04:06] [#ezpublish] <kracker> but it just urked the hell out of me
+[04-11-2006 23:04:10] [#ezpublish] <Bedlore> heh, are you going to that?
+[04-11-2006 23:04:27] [#ezpublish] <kracker> yes
+[04-11-2006 23:04:34] [#ezpublish] <Bedlore> cool, have a good time
+[04-11-2006 23:04:49] [#ezpublish] <kracker> wait a sec, i'm doing a skype call, not the conf
+[04-11-2006 23:05:01] [#ezpublish] <Bedlore> oh right
+[04-11-2006 23:05:27] [#ezpublish] <kracker> client's shift twice before i could commit, screwed my plans :\ i'm sure it's my fault
+[04-11-2006 23:05:49] [#ezpublish] <kracker> an, yes there is a difference beteween ! an without
+[04-11-2006 23:05:57] [#ezpublish] <Bedlore> Jo used !
+[04-11-2006 23:06:44] [#ezpublish] <Bedlore> hmm doesnt work at all with !
+[04-11-2006 23:06:59] [#ezpublish] <kracker> welll, http://us3.php.net/strstr
+[04-11-2006 23:07:17] [#ezpublish] <kracker> If needle is not found, returns FALSE.
+[04-11-2006 23:07:44] [#ezpublish] <kracker> so ... with ! it would say if not false
+[04-11-2006 23:08:01] [#ezpublish] <Bedlore> hmm interesting if (!stristr('Monday Tuesday Wednesday Thursday Friday Saturday Sunday',$i)) die();
+[04-11-2006 23:09:07] [#ezpublish] <kracker> word
+[04-11-2006 23:10:13] [#ezpublish] <kracker> i'd be printing the strings you'd be trying to compare for differences
+[04-11-2006 23:10:48] [#ezpublish] <kracker> i did add forum rss feed for ezcommunity.net
+[04-11-2006 23:11:01] [#ezpublish] <kracker> helps me, at least ;D
+[04-11-2006 23:11:34] [#ezpublish] <Bedlore> ok
+[04-11-2006 23:12:39] [#ezpublish] <kracker> i also wonder if it isn't worth trying to fix the part of the code which adds the extra / instead of all this effort to support bad alternates
+[04-11-2006 23:22:38] [#ezpublish] <Bedlore> gosh php isnt easy. If this was ez template code I could write it in 2 mins, switch case match etc.
+[04-11-2006 23:23:36] [#ezpublish] <Bedlore> printing doesn't help, it just shows me what I already know.  ie. The URL in my browser, and the URL I typed in site.ini
+[04-11-2006 23:24:01] [#ezpublish] <Bedlore> maybe I have to build an array or something and search for a match there :(
+[04-11-2006 23:30:58] [#ezpublish] <Bedlore> any php programmers awake?
+[04-11-2006 23:31:23] [#ezpublish] <kracker> hrm sounds too complicated what are you matching for
+[04-11-2006 23:31:49] [#ezpublish] <Bedlore> really, all I want to do is this.
+[04-11-2006 23:32:09] [#ezpublish] <kracker> $HTTP_REFERER can be null on first page view without referer fyi
+[04-11-2006 23:32:11] [#ezpublish] <Bedlore> If $HTTP_REFERER does not contain FromURL or FromURL2 then die
+[04-11-2006 23:32:31] [#ezpublish] <kracker> but on a form submit it should .. tho
+[04-11-2006 23:33:03] [#ezpublish] <Bedlore> Jo's code does it really well if there is only one variable, ie. FormURL and not FormURL2 as well
+[04-11-2006 23:33:37] [#ezpublish] <Bedlore> initally HETTP_REFERER will be /article/articleview/3/1/1/
+[04-11-2006 23:34:06] [#ezpublish] <Bedlore> if it has to reload beacuse of validation error $HTTP_REFERER then becomes /form/form/process/1//
+[04-11-2006 23:34:13] [#ezpublish] <Bedlore> so both URL's need to be checked again
+[04-11-2006 23:34:15] [#ezpublish] <Bedlore> against
+[04-11-2006 23:35:51] [#ezpublish] <Bedlore> I thought it was really basic php, but I'm in the dark
+[04-11-2006 23:36:35] [#ezpublish] <kracker> i'm hittin it
+[04-11-2006 23:37:23] [#ezpublish] * Bedlore gathers around and starts kicking it as well
+[04-11-2006 23:40:21] [#ezpublish] <kracker> tryingto pm you man
+[04-11-2006 23:40:32] [#ezpublish] <kracker> oh
+[04-11-2006 23:40:34] [#ezpublish] <kracker> right
+[04-11-2006 23:40:41] [#ezpublish] <kracker> you cant:?
+[04-11-2006 23:42:30] [#ezpublish] <Bedlore> cant you see my replies in pm
+[04-11-2006 23:42:36] [#ezpublish] <Bedlore> maybe I need to login
+[04-11-2006 23:42:55] [#ezpublish] <Bedlore> oops. Private messages from unregistered users are currently blocked due to spam problems, but you can always message a staffer.
+[04-11-2006 23:43:37] [#ezpublish] <kracker> word
+[04-11-2006 23:43:47] [#ezpublish] <kracker> i forget cause i paid at the office for my tag
+[04-11-2006 23:44:03] [#ezpublish] <kracker> you see my icqs
+[04-11-2006 23:44:18] [#ezpublish] <Bedlore> kracker is away: I'm busy, doing ... suff
+[04-11-2006 23:44:20] [#ezpublish] <kracker> i got it working shrugs
+[04-11-2006 23:44:27] [#ezpublish] <kracker> i love that one

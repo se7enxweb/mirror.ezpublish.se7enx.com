@@ -1,0 +1,45 @@
+[03-13-2006 07:02:39] -lilo:$*- [Global Notice] Hi, folks. We are currently getting little tiny bits of bandwidth and high packet loss from our missing servers and, if you can believe it, that's actually good news. Stay with us and we'll keep you posted.
+[03-13-2006 07:03:30] -lilo:$*- [Global Notice] For a bit more detailed information as available, please see wallops messages, which can be turned on via '/mode YOURNICK +w' on most clients
+[03-13-2006 07:20:49] -lilo:$*- [Global Notice] Hi all. All service has been restored to the network and, so far, everything appears stable. A sponsor power outage caused most of our problems.
+[03-13-2006 07:21:51] -lilo:$*- [Global Notice] Again, I want to take the opportunity to note that freenode could use additional large institutional sponsors, to help us provide more redundant services---if your organization is interested, please email me (levin@pdpc.us) with your particulars and we'll talk.
+[03-13-2006 07:22:29] -lilo:$*- [Global Notice] In the meantime, your client may not currently be identified to services; please identify or restart your client if that's more convenient. Thank you for your patience, and thank you for using freenode!
+[03-13-2006 07:25:33] [#ezpublish] <Sulfur> DiGiTa|_: that tag is outputted by a tpl of a datatype?
+[03-13-2006 07:47:55] [#ezpublish] <DiGiTa|_> it was an xhtml question
+[03-13-2006 07:47:59] [#ezpublish] <DiGiTa|_> not a ezp question :)
+[03-13-2006 07:50:13] [#ezpublish] <_kore> It si possible with Gecko - don't think it works with IEx - don't know about khtml (konquror/safari), and opera
+[03-13-2006 08:02:04] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit ["rebbot"]
+[03-13-2006 08:04:04] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-13-2006 08:18:28] [#ezpublish] <Sulfur> ahh :)
+[03-13-2006 08:55:09] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-13-2006 09:30:30] -!- kore_ [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-13-2006 09:32:37] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[03-13-2006 09:48:10] -!- hovik [n=hovik@stalker.ez.no] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-13-2006 09:48:35] -!- korE__ [n=bastard@pool-72-66-170-46.ronkva.east.verizon.net] has joined #ezpublish
+[03-13-2006 09:48:54] [#ezpublish] <korE__> there is a reason that nick is registered
+[03-13-2006 09:49:01] -!- kore_ [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Nick collision from services.]
+[03-13-2006 09:49:06] -!- korE__ is now known as korE_
+[03-13-2006 09:49:26] -!- kore__ [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-13-2006 09:49:28] [#ezpublish] <korE_> please tell him/her to stop using it.
+[03-13-2006 09:49:33] -!- korE_ [n=bastard@pool-72-66-170-46.ronkva.east.verizon.net] has left #ezpublish []
+[03-13-2006 10:27:57] -!- Sulfur [n=mbariola@85.20.2.139] has left #ezpublish []
+[03-13-2006 10:59:24] -!- ordnas [n=ordnas@p549D497A.dip.t-dialin.net] has left #ezpublish []
+[03-13-2006 11:11:11] -!- fh[eZ] [n=fh@85.19.74.66] has quit [Excess Flood]
+[03-13-2006 11:12:08] -!- fh[eZ] [n=fh@85.19.74.66] has joined #ezpublish
+[03-13-2006 11:42:13] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[03-13-2006 12:43:04] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-13-2006 14:57:46] -!- DiGiTa|_ [n=guillaum@84.5.143.135] has quit [Read error: 110 (Connection timed out)]
+[03-13-2006 15:01:16] -!- kore__ is now known as _kore
+[03-13-2006 16:22:52] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-13-2006 16:55:01] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[03-13-2006 18:10:55] -!- _tobyS [n=dotxp@dslb-084-061-130-192.pools.arcor-ip.net] has joined #ezpublish
+[03-13-2006 18:13:00] -!- tobyS_ [n=dotxp@dslb-084-061-135-108.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[03-13-2006 19:43:34] -!- nnn1 [n=therion@195.204.221.183] has joined #ezpublish
+[03-13-2006 19:43:43] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[03-13-2006 19:44:02] -!- nnn1 is now known as nnn0
+[03-13-2006 19:52:41] [#ezpublish] <kracker> heh nick biting
+[03-13-2006 20:03:28] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[03-13-2006 20:05:24] -!- Andr [i=andre@81-235-144-132-no33.tbcn.telia.com] has quit ["http://mobilkicker.se/tmpfiles/302836.jpg"]
+[03-13-2006 20:05:25] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[03-13-2006 20:53:36] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[03-13-2006 20:54:26] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[03-13-2006 23:11:29] -!- kracker [n=kracker@66-169-180-136.dhcp.ftwo.tx.charter.com] has quit ["Later ..."]

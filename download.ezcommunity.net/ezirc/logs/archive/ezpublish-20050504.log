@@ -1,0 +1,398 @@
+
+Session Start: Wed May 04 05:05:11 2005
+Session Ident: #ezpublish
+[05:05] * Now talking in #ezpublish
+[05:05] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[05:05] * Set by fh on Tue May 03 01:29:00
+[05:05] <kracker> ok
+[05:05] <kracker> i'll look into that
+[05:05] <kracker> any suggestions on what you (only) want to see instead of what you don't want to see?
+[05:08] <SEAwolfx_> ;)
+[05:09] <SEAwolfx_> in ez i want to see the urls linked ;)
+[05:10] <kracker> naturaly
+[05:11] <kracker> along with per user searching / display of #ezpublish conversations (connecting forums users to irc handles) and then conversations / messagses ... ?
+[05:12] <SEAwolfx_> yeah ;)
+[05:17] <kracker> oh yeah!
+[05:57] * kracker testing to see if i got kicked again ...
+[05:57] * Joins: seasonfive (~Yannick@AGrenoble-152-1-50-69.w82-122.abo.wanadoo.fr)
+[05:57] <seasonfive> Hi ppl :)
+[05:57] <seasonfive> I've got a little problem with unordered list inside article
+[05:57] * Quits: ordna1 (~ordnas@p549DFAA2.dip.t-dialin.net) (Read error: 110 (Connection timed out))
+[05:57] <seasonfive> i.e: <ul><li>test 1</li><li>test 2</li></ul>
+[05:57] <seasonfive> ezpublish render that:
+[05:57] <seasonfive> <ul><li><p>test 1</p></li><li><p>test 2</p></li></ul>
+[05:57] <seasonfive> and on the li.tpl there is no <p> tags ...
+[05:57] <seasonfive> i'm using 3.5.1
+[05:57] <SEAwolfx_> its seems that the object is rendering itself with a <p> tag?
+[05:57] <kracker> nods
+[05:58] <seasonfive> absolutely
+[05:58] <kracker> it's been covered several times in the forums 
+[05:58] <seasonfive> when i do <li><litteral>test</literal></li> there is no more this pb
+[05:58] <kracker> it's buit into the templates, you can override it / edit the template to prevent it ( i think ...)
+[05:59] <SEAwolfx_> not possible imho
+[05:59] <seasonfive> as the <p> tags are added by ezpublish itself and not by template ...
+[05:59] <SEAwolfx_> li.tpl is elementary
+[05:59] <seasonfive> absolutly, there is no <p> in li.tpl
+[06:00] <seasonfive> am i the only one to care about this pb (not so important for sure ...) ?
+[06:00] <seasonfive> because i don't see anything related to that ...
+[06:01] <SEAwolfx_> seasonfive: prolly you could use the strip template-operator to clean it?
+[06:01] <seasonfive> hmm what is ? (i'm going to search that on the doc ...)
+[06:01] <kracker> http://ez.no/community/bugs/paragraph_tags_included_in_unordered_list
+[06:02] <seasonfive> kracker: i dont understant the answer ... %-)
+[06:02] <seasonfive> " The li</li> tag works in similar as the (hidden) <i>section tag, this means that the tag consists of paragraphs, headers, tables etc."
+[06:03] * SEAwolfx_ thinks of the wash template-operator ..
+[06:03] <kracker> well what i mean is 
+[06:04] <kracker> that it's there for a lame reason
+[06:04] <seasonfive> i've got {attribute_view_gui attribute=$node.object.data_map.body} for render article
+[06:04] <kracker> it's to support multi paragraph list items which some people ( yeah we know you you are ..) apparently use
+[06:04] <seasonfive> i didn't succeed to do something like {attribute_view_gui attribute=$node.object.data_map.body|wash}
+[06:04] <kracker> no that won't do it for ya really 
+[06:05] <kracker> now i want to say your going to need to hack the gibson! errum the kernel
+[06:05] <seasonfive> so <p> in <li> is horrible at display ... :-/
+[06:05] <SEAwolfx_> isnt there a regexstrip operator?
+[06:05] <kracker> looking for a direction to send ya
+[06:05] <seasonfive> i didn't found where this <p> is added ...
+[06:06] <kracker> http://www.ez.no/community/forum/developer/p_tags_included_in_unordered_list
+[06:06] <seasonfive> (moreover it is not added when i add <literral> ! strange isn't it ?)
+[06:06] <kracker> seriuosly, a good 5min on google.com with the search keywords (without quotes) : "site:ez.no unordered list "
+[06:06] <SEAwolfx_> seasonfive: u could use the remove operator as a workaround
+[06:08] <seasonfive> something like <li>{$content|remove('<p>', '</p>')}</li> ?
+[06:08] <kracker> that last link has a css solution (which avoids the inclusion of the <p> tag via css properties)
+[06:09] <kracker> you can't do that inside eZ xml (GOD I WISH)
+[06:09] <SEAwolfx_> seasonfive: http://ez.no/ez_publish/documentation/reference/template_operators/strings/remove
+[06:09] <seasonfive> (thanks a LOT for your help guys ! :))
+[06:09] <kracker> not ezxml, that's ez template language
+[06:09] <kracker> there is a difference
+[06:10] <kracker> in where your trying to insert your custom solution
+[06:10] <seasonfive> is remove support negative offset ? :p
+[06:10] <SEAwolfx_> why negative?
+[06:10] <seasonfive> for </p>
+[06:11] <SEAwolfx_> just switch two remove operator in serial
+[06:11] <seasonfive> <p>test</p>|remove(0, 3)
+[06:11] <seasonfive> give test</p> isn't it ?
+[06:11] <SEAwolfx_> ahh
+[06:11] <SEAwolfx_> damn
+[06:12] <seasonfive> test</p>|remove(-3, 4)
+[06:12] <seasonfive> should return test
+[06:13] <SEAwolfx_> http://ez.no/ez_publish/documentation/reference/template_operators/strings/extract_left
+[06:13] <SEAwolfx_> ;)
+[06:13] <SEAwolfx_> and extract_right
+[06:13] <SEAwolfx_> damn neither
+[06:14] <seasonfive> yes its nice ! :)
+[06:14] <seasonfive> ah no
+[06:14] <seasonfive> lol
+[06:14] <SEAwolfx_> ;)))))))))9
+[06:14] <seasonfive> i just keep <p> and </p> lol
+[06:14] <SEAwolfx_> true
+[06:14] <seasonfive> perhaps combined with a "not" operator ... ;)
+[06:14] <SEAwolfx_> yeah
+[06:14] <SEAwolfx_> idk
+[06:15] <seasonfive> seems negative offset working ...
+[06:16] <seasonfive> yeah that's work !!
+[06:16] <seasonfive> <li>{$content|remove(0, 4)|remove(-5, 4)}</li>
+[06:16] <SEAwolfx_> yeah .. cool.
+[06:16] <seasonfive> yeah nice 100% pure hacking lol
+[06:16] <seasonfive> for remove something which should not be there ...
+[06:17] <SEAwolfx_> true
+[06:17] <seasonfive> i've got another pb :p
+[06:17] <SEAwolfx_> urghs
+[06:17] <kracker> you guys are weird ...
+[06:17] <seasonfive> string with ' aren't converted into &...
+[06:18] <seasonfive> and then my code isn't xhtml valid ... :(
+[06:19] * Parts: daffen (~bob@213.184.199.226)
+[06:20] <SEAwolfx_> this would be a bug.
+[06:20] <SEAwolfx_> so u have to hack into the xml-text parser.
+[06:21] <SEAwolfx_> much fun and luck *duck*
+[06:21] <seasonfive> same for accent ...
+[06:21] <seasonfive> they are render as they had writtent
+[06:21] <seasonfive> |wash(xhtml) ?
+[06:21] <seasonfive> seems another hack too ... :(
+[06:21] <SEAwolfx_> or try this ... this sounds good
+[06:22] <seasonfive> yeah but don't works ...
+[06:22] <seasonfive> {attribute_view_gui attribute=$node.object.data_map.body|wash(xhtml)} return absolutly nothing
+[06:22] <seasonfive> because body is an object ...
+[06:23] <seasonfive> i think ezpublish will make me crazy :p
+[06:23] <seasonfive> in fact i think its more a admin bug than a render bug
+[06:23] <SEAwolfx_> dont use attribute_view_gui then
+[06:24] <seasonfive> since i think data must be stored with &xxx equivalent in the db
+[06:24] <SEAwolfx_> so hack the code ;)
+[06:24] <seasonfive> otherwise will be problem with <tag> &lt;tag&gt;
+[06:24] <kracker> "what don't kill me will just make me crazier ..." 
+[06:25] <SEAwolfx_> ;)
+[06:26] <kracker> what don't kill me will just make crazier</bold>, i'm so filthy, sorry you had to see me like this, i sold you a lie that showed through my eyes and told you to cry in stained glass suicide ... i just wish i could forget how to read behind the cracks ..."
+[06:26] <kracker> Eyedea And Abilities : E And A : Glass
+[06:28] <seasonfive> in fact i'm suprised to see problem like this in a software like ezpublish in a v3 version ... ?
+[06:28] <seasonfive> it's why i thinked the problem come from me
+[06:29] <seasonfive> more over, in ezpublish web site " are well replaced by &quot;
+[06:30] <seasonfive> hmmm ... " are replaced but ' isn't ...
+[06:36] <kracker> remember v3 is an odd version number and no offence but eZ publish pre 3.5.2 was so unstable it was discusting 
+[06:37] * Joins: _luke (~Luke@ntwklan-62-233-244-90.devs.futuro.pl)
+[06:37] * Quits: _luke (~Luke@ntwklan-62-233-244-90.devs.futuro.pl) (Client Quit)
+[06:37] <kracker> in most software development shops these days a number of people say that odd version numbers are always unstable
+[06:38] <kracker> welll thats not really true but from a number of user perpectives life was really really hard pre 3.4.0
+[06:39] <kracker> but what your not hearing me and everyone else say "seasonfive" is that it's a negative feature which eZ systems likes and supports even if it has some negative side affects for others ..... they mean it to be this way
+[06:40] <kracker> course i'm still stuck on the whole ul/p tag thing and your several steps past it and into other issues ... so i'm prolly answering in delay 
+[06:42] <kracker> i'm such a bastard 
+[06:44] <seasonfive> hhmm sorry i'm french and in fact i don't understand everything ...
+[06:44] <seasonfive> is it something like "don't blame, ezpublish, you are using a devel version. If you're not happy, hack de code and contribute" ?
+[06:46] * Joins: ordna1 (~ordnas@p549DFAA2.dip.t-dialin.net)
+[06:47] <seasonfive> for finish with "critic" : i don't understand why template languages of ezpublish isn't using xml tags (something like phptal)
+[06:48] <xbit> why?!
+[06:48] <xbit> oh why... :0
+[06:48] <seasonfive> because this permis to works correctly into dreamweaver
+[06:48] <seasonfive> <img src="C:/windows/mypicture/imdesigner.gif"> in the designer post
+[06:48] <xbit> suckysucky
+[06:49] <fh> how to know what is XML and what is HTML?
+[06:49] <xbit> dreamweavers fault
+[06:49] <xbit> use a decent editor
+[06:49] <xbit> :)
+[06:49] <seasonfive> and <img src={imdesigner.gif|ezimage}> on the developper computer
+[06:49] <SEAwolfx_> u could config dreamweaver to check eztemplate
+[06:49] <xbit> why the hell can't dw cope with {} ?!
+[06:49] <xbit> sounds like a really stupid piece of sw if it doesn't...
+[06:49] <SEAwolfx_> it can
+[06:50] <SEAwolfx_> fh: is konqueror and webdav working properly for you?
+[06:50] <kracker> seasonfive: what i mean is that eZ publish has come a long way and still has a LOT of growning up left to do 
+[06:51] <kracker> Also not all solutions work for all people, so pacience and tempered responces are best 
+[06:51] <seasonfive> <title tal:content="title">place for the page title</title>
+[06:51] <kracker> as aposed to going off like a bomb (or like me on an off day ..)
+[06:51] <seasonfive> in dreaweaver the title is displayed correctly
+[06:51] <seasonfive> and on the developer computer there is no more to do search/replace
+[06:52] <seasonfive> hey, i'm really happy with ezpublish
+[06:52] <fh> SEAwolfx_: no idea.. can't test right now (I guess so, I tested it with 3.5.1 a couple of weeks back)
+[06:52] <seasonfive> it's really a good software
+[06:52] <SEAwolfx_> fh: some folders are treated like files that doesnt allow me to browse into
+[06:52] <kracker> but then you don't have to take my word for it :)
+[06:53] <seasonfive> in fact i'm only surprised how difficult things are done very well when other like XHTML conversion aren't done ...
+[06:53] <SEAwolfx_> fh: Could not access /web/Content/Projects/Tob%20Jona%20&%20DJ%20Pheromone/ (not WebDAV-enabled?)
+[06:53] <SEAwolfx_> with cadaver
+[06:53] <fh> SEAwolfx_: check your settings.. maybe you have setup these classes to be treated like files, not folders
+[06:53] <seasonfive> ezPublish learn me a lot about php/OO technics
+[06:53] <SEAwolfx_> fh: its simply a folder.
+[06:54] <fh> seasonfive: wait until publish 4
+[06:54] <fh> that will show you something about OO :)
+[06:54] <SEAwolfx_> juhuu php5
+[06:55] <seasonfive> i'm just sad about i'm cannot put a W3C XHTML 1.0 compliant logo on my website :p 
+[06:56] <seasonfive> btw, thanks a lot for your help !
+[06:59] <kracker> you can you just have to work for it, (watch me eat those words later ...)
+[07:11] * kracker lol, south park : butt out ...
+[07:11] * Quits: Katana` (~katana@217.31.64.170) (Read error: 104 (Connection reset by peer))
+[07:11] * Joins: Katana` (~katana@217.31.64.170)
+[07:19] <kracker> wow
+[07:19] <kracker> wow, the forums have been busy today!
+[07:21] <fh> very few comments about 3.6 yet though
+[07:25] <kracker> nod. save the one guy who posted the innod / mysql 4 table type bug :|
+[07:59] <kracker> .
+[08:00] * Disconnected
+[08:00] -irc.kde.org- *** Looking up your hostname...
+[08:00] -irc.kde.org- *** Checking ident
+[08:00] -irc.kde.org- *** Found your hostname
+[08:00] -irc.kde.org- *** No identd (auth) response
+[08:00] -niven.freenode.net- *** Your host is niven.freenode.net[niven.freenode.osuosl.org/6667], running version dancer-ircd-1.0.35
+[08:00] * Attempting to rejoin channel #ezpublish
+[08:00] * Rejoined channel #ezpublish
+[08:00] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[08:00] * Set by fh on Tue May 03 01:29:00
+[08:00] <kracker> weak
+[08:01] * kracker: you need to be a channel operator to do that
+[08:03] <kracker> anyone care to slap me around or tell me off ? http://www.ez.no/community/forum/suggestions/ez_publish_package_manager
+[08:03] * Joins: ordnas (~ordnas@p549DBC37.dip.t-dialin.net)
+[08:03] * Joins: Bedlore (~me@ppp249-157.lns2.adl2.internode.on.net)
+[08:04] <kracker> awww come on, you know you wanna, i left so many oportunities open for it ...
+[08:34] * /me: insufficient parameters
+[08:35] <kracker> .
+[08:47] <kracker> lol
+[08:47] <kracker>     "You are so far beyond being able to understand anything anyone here says that this is just converging on uselessness. The really sad part is that you really believe that you're winning. You are a shocking waste of natural resources - kindly re-integrate yourself into the food-chain...you mindless flatulent troll." 
+[08:48] <kracker> re: http://en.wikipedia.org/wiki/Internet_troll#Trolling_in_the_1990s
+[08:48] * Quits: danmiru (~chatzilla@80.94.225.138) ("Chatzilla 0.9.68a [Firefox 1.0.3/20050414]")
+[08:48] * Quits: SEAwolfx_ (~mike@1a756927b3b44724.node.tor) (Remote closed the connection)
+[09:38] <kracker> .
+[09:38] * Disconnected
+[09:38] -irc.kde.org- *** Looking up your hostname...
+[09:38] -irc.kde.org- *** Checking ident
+[09:38] -irc.kde.org- *** No identd (auth) response
+[09:38] -irc.kde.org- *** Found your hostname
+[09:38] -niven.freenode.net- *** Your host is niven.freenode.net[niven.freenode.osuosl.org/6667], running version dancer-ircd-1.0.35
+[09:38] * Attempting to rejoin channel #ezpublish
+[09:38] * Rejoined channel #ezpublish
+[09:38] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[09:38] * Set by fh on Tue May 03 01:29:00
+[09:48] <kracker> sage francis -sick of waiting tables -01 -iceland radio intro
+[09:53] <kracker> sage francis -sick of waiting tables -02 -drop bass
+[09:54] <kracker> Hey! Does anyone know who created the #ezpublish irc channel?
+[09:54] <kracker> seriously, curious minds want to know ... 
+[09:54] <kracker> what say ye?
+[11:54] * Disconnected
+[11:54] -irc.kde.org- *** Looking up your hostname...
+[11:54] -irc.kde.org- *** Checking ident
+[11:54] -irc.kde.org- *** No identd (auth) response
+[11:54] -irc.kde.org- *** Found your hostname
+[11:54] -tolkien.freenode.net- *** Your host is tolkien.freenode.net[thunder.stealer.net/6667], running version dancer-ircd-1.0.35
+[11:54] * Attempting to rejoin channel #ezpublish
+[11:54] * Rejoined channel #ezpublish
+[11:54] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[11:54] * Set by fh on Tue May 03 01:29:00
+[13:54] * Disconnected
+[13:54] -irc.kde.org- *** Looking up your hostname...
+[13:54] -irc.kde.org- *** Checking ident
+[13:54] -irc.kde.org- *** No identd (auth) response
+[13:54] -irc.kde.org- *** Found your hostname
+[13:54] -sterling.freenode.net- *** Your host is sterling.freenode.net[freebsd.widexs.nl/6667], running version dancer-ircd-1.0.35
+[13:54] * Attempting to rejoin channel #ezpublish
+[13:54] * Rejoined channel #ezpublish
+[13:54] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[13:54] * Set by fh on Tue May 03 01:29:00
+[15:54] * Disconnected
+[15:54] -irc.kde.org- *** Looking up your hostname...
+[15:54] -irc.kde.org- *** Checking ident
+[15:54] -irc.kde.org- *** Found your hostname
+[15:54] -irc.kde.org- *** No identd (auth) response
+[15:54] -zelazny.freenode.net- *** Your host is zelazny.freenode.net[zelazny.freenode.net/6667], running version dancer-ircd-1.0.35
+[15:54] * Attempting to rejoin channel #ezpublish
+[15:54] * Rejoined channel #ezpublish
+[15:54] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[15:54] * Set by fh on Tue May 03 01:29:00
+[15:57] * Quits: Allman (~allman@ti132110a080-0888.bb.online.no)
+[16:56] <kracker> dink
+[17:46] <kracker> well... that was a hulluva day, i don't think i've seen the forum that active in a very long time ...
+[19:12] <kracker> lol
+[19:12] <kracker> ugg
+[19:53] <kracker> i guess it might have been in part that it's the end of the first week of the month
+[19:54] <kracker> ya'd think people might be waking up again and trying harder around that time ...
+[19:54] <kracker> bone thugs : first of the month
+[19:54] * Joins: Tao-of-M1c (~Tao-of-Ma@ip68-4-22-78.oc.oc.cox.net)
+[19:54] * Parts: Tao-of-M1c (~Tao-of-Ma@ip68-4-22-78.oc.oc.cox.net)
+[19:55] <kracker> on the backside though it could just be random chance mixed with my crazy belief that i can see the world changing in front of me 
+[19:58] <kracker> teee, everyone is leeeping 
+[21:58] * Disconnected
+[21:58] -irc.kde.org- *** Looking up your hostname...
+[21:58] -irc.kde.org- *** Checking ident
+[21:58] -irc.kde.org- *** Found your hostname
+[21:58] -irc.kde.org- *** No identd (auth) response
+[21:58] -sterling.freenode.net- *** Your host is sterling.freenode.net[freebsd.widexs.nl/6667], running version dancer-ircd-1.0.35
+[21:58] * Attempting to rejoin channel #ezpublish
+[21:58] * Rejoined channel #ezpublish
+[21:58] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[21:58] * Set by fh on Tue May 03 01:29:00
+[21:58] <kracker> weak
+[21:58] <Bedlored> indeed
+[22:10] <kracker> Slug & Murs : Anneurysm
+[22:23] <kracker> hey
+[22:23] <kracker> someone was talking to me the other day about translated content
+[22:23] <SEAwolfx_> morning 7:23 AM
+[22:23] <kracker> who was it?
+[22:23] <kracker> night: 10:23p0m
+[22:23] <kracker> s/p0m/pm
+[22:24] <kracker> come on speak up ...
+[22:24] <kracker> well, suffice to say i was a little hasty to say that you couldn't automate the listing of per page translations
+[22:24] <kracker> by language
+[22:24] <kracker> here is what i should have shown  you  ... http://www.ez.no/community/forum/developer/get_available_translated_content_for_object_in_php/re_get_available_translated_content_for_object
+[22:25] <kracker> http://www.ez.no/community/forum/developer/get_available_translated_content_for_object_in_php
+[23:25] <kracker> hey
+[23:25] * Disconnected
+[23:25] -irc.kde.org- *** Looking up your hostname...
+[23:25] -irc.kde.org- *** Checking ident
+[23:25] -irc.kde.org- *** No identd (auth) response
+[23:25] -irc.kde.org- *** Found your hostname
+[23:25] -tolkien.freenode.net- *** Your host is tolkien.freenode.net[thunder.stealer.net/6667], running version dancer-ircd-1.0.35
+[23:25] * Attempting to rejoin channel #ezpublish
+[23:25] * Rejoined channel #ezpublish
+[23:25] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[23:25] * Set by fh on Tue May 03 01:29:00
+[23:25] <kracker> hey SEAwolfx!
+[23:26] <kracker> i replied
+[23:26] <kracker> i'm didn't really take the time to understand it all but i hope it helps
+[23:26] <SEAwolfx_> where u replied?
+[23:26] <SEAwolfx_> my rss-feed prob?
+[23:26] <kracker> http://www.ez.no/community/forum/setup_design/publish_article_to_multiple_nodes#msg74549
+[23:26] <SEAwolfx_> its already solved
+[23:26] <SEAwolfx_> ahhh
+[23:27] * Joins: jota (~jota@fanzine.igalia.com)
+[23:27] <SEAwolfx_> why are  you avatars are changing all the time, is this done automatically?
+[23:28] <kracker> cause i'm cool like that ... 
+[23:28] <kracker> zero:cool
+[23:29] <kracker> i'm a cooler
+[23:29] <kracker> kooler than you ... ;)
+[23:29] <SEAwolfx_> ok ;)
+[23:29] <kracker> i dunno, don't you think?
+[23:29] <SEAwolfx_> yes for sure, i believe this ;D
+[23:30] <kracker> people seem to like the change of pace / something new to look for on ez.no
+[23:30] <kracker> i am the answere, the question is what is kracker saying today / lately
+[23:30] <agentbob> kracker has his own tv show too, s'pretty cool
+[23:30] <kracker> any new cool songs, quotes, lyrics, ideas, pictures ...
+[23:31] <SEAwolfx_> tv show?
+[23:31] <kracker> the kracker show ...
+[23:31] <SEAwolfx_> yesterday, u talked about kermit the frog ;)
+[23:31] <agentbob> yeah he talks mostly about deconstructing realities... or was that fish...
+[23:31] <kracker> s/kracker/truman/
+[23:31] <SEAwolfx_> he takes part in this show?
+[23:31] <SEAwolfx_> hehe
+[23:31] <kracker> lol, my life is the show 
+[23:32] <kracker> yo!
+[23:32] * SEAwolfx_ is rolling a cigarette and smirks.
+[23:32] <agentbob> over 500 movies and nothing to watch :| packratting sucks
+[23:32] <SEAwolfx_> packratting?
+[23:32] <kracker> agreed
+[23:32] <kracker> been there 
+[23:32] <SEAwolfx_> whats that?
+[23:32] <agentbob> seawolf: expression for people who never throw stuff away == pack rate
+[23:33] <agentbob> rat, rather
+[23:33] <SEAwolfx_> kracker .. u know the film "american splendor"?
+[23:33] <kracker> we both have a large movie collection, and unfortunatly none of them interest me ...
+[23:33] <kracker> hrmm... cross checking
+[23:33] <SEAwolfx_> thx, agentbob ;)
+[23:33] <kracker> hey SEAwolfx, i like your icon on ez.no
+[23:34] <SEAwolfx_> well, thats me on the picture, no wonder.
+[23:34] <SEAwolfx_> *duck*
+[23:34] <agentbob> anyhow bedtime! 'night
+[23:34] <SEAwolfx_> n8 agentbob 
+[23:34] <kracker> late
+[23:34] <kracker> i haven't seen it ... yet
+[23:34] <kracker> i'll have to take a look 
+[23:34] <kracker> find me a copy
+[23:35] <kracker> of a copy of a copy of a copy , i know it's somewhere just outside the bounds of the time rift
+[23:35] <SEAwolfx_> http://www.ez.no/var/ezno/storage/images/users/guest_accounts/seawolfx/218597-5-eng-GB/seawolfx_small.gif
+[23:37] <kracker> yeah i collect everyone's icons
+[23:37] <SEAwolfx_> hihi
+[23:37] <kracker> thnx tho
+[23:37] <kracker> who is it in the picture?>
+[23:37] <SEAwolfx_> me, who else?
+[23:38] <kracker> oh ok, misunderstood
+[23:39] <SEAwolfx_> if u like comic, u shoudl see american splendor.
+[23:39] <kracker> great trailer preview from : http://www.americansplendormovie.com/trailer_lg.mov
+[23:39] * kracker kracker smirks ;)
+[23:40] <kracker> i can't wait!
+[23:40] <kracker> go go gadget netflix
+[23:43] <kracker> cool! http://it.slashdot.org/article.pl?sid=05/05/04/2257229&tid=185&tid=218
+[23:43] <kracker> ok i take it back, not-cool
+[23:43] <kracker> still, interesting
+[23:43] <kracker> reminds me of me working on ezpub.co.uk back in 5/2004
+[23:43] <SEAwolfx_> hehe
+[23:45] <SEAwolfx_> what is ezpub?
+[23:46] <SEAwolfx_> ezpub.co.uk
+[23:46] <SEAwolfx_> ur project?
+[23:46] <kracker> yeah
+[23:46] <kracker> the "eZ pub" was one of the first eZ publish (v3) community portals
+[23:46] <kracker> it lived and died a quick death from lack of community support
+[23:46] <SEAwolfx_> i could imagine
+[23:47] <kracker> it did some good work, and reminded me a lot of my eZ publish 3 learning back in 2002
+[23:47] <SEAwolfx_> a ez-wiki would also be nice.
+[23:47] <kracker> i've since moved on to other eZ projects for the community, i'll clean up the mess i left very shortly
+[23:48] <kracker> checkout http://snippets.ezpublishhosting.com/
+[23:49] <kracker> one day i'll find someone to fund me ;)
+[23:49] <kracker> errum s/fund/finance/
+[23:50] <SEAwolfx_> ;)
+[23:50] <kracker> i'm  planning to move the conent and solutions from ezpub into other beter branded applications with a lot more features, it's going to be cool
+[23:50] <kracker> s/conent/content/
+[23:52] <SEAwolfx_> cool, i am excited.
+[23:52] <SEAwolfx_> when it will be finished?
+[23:55] <kracker> eesh, hard to say when you have to run so hard to just pay for cost of living and doing nothing but eZ publish dev/doc/and more 
+[23:55] <SEAwolfx_> you are a freelancer?
+[23:57] <kracker> yes
+[23:57] <kracker> been doing eZ publish development since 1.0 (2001)
+[23:58] <SEAwolfx_> at what company?
+[23:58] <kracker> my own
+[23:58] <SEAwolfx_> website?
+[23:59] <kracker> http://www.brookinsconsulting.com/
+[23:59] <kracker> brb
+Session Close: Thu May 05 00:00:00 2005

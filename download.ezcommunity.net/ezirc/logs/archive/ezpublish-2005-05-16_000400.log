@@ -1,0 +1,204 @@
+[05-15-2005 00:35:54] Disconnecting due to lack of a lag response (0.06585900 1116142494 != 0.03590800 1116142524)
+[05-15-2005 00:35:54] Diconnected. Sleeping for 10 second(s).
+[05-15-2005 00:36:04] >> Connecting to irc.kde.org:6667
+[05-15-2005 00:36:04] >> Connected to irc.kde.org:6667, registering...
+[05-15-2005 00:36:04] >> Attempting to join channels: #ezpublish
+[05-15-2005 00:36:45] >> Successfully registered. Nick is: ezlog
+[05-15-2005 00:36:45] -!- There are 8866 victims and 10948 hiding on 26 servers
+[05-15-2005 00:36:45] -!- 31 flagged staff members
+[05-15-2005 00:36:45] -!- 8346 channels formed
+[05-15-2005 00:36:45] -!- I have 3658 clients and 0 servers
+[05-15-2005 00:36:45] -!- Current local  users: 3658  Max: 4625
+[05-15-2005 00:36:45] -!- Current global users: 19814  Max: 24741
+[05-15-2005 00:36:45] -!- Highest connection count: 4626 (4625 clients) (522530 since server was (re)started)
+[05-15-2005 00:36:45] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-15-2005 00:36:45] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-15-2005 00:36:45] -!- Topic set by Bedlore [@] [Thu, 12 May 2005 20:05:32 -0700]
+[05-15-2005 00:36:46] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-15-2005 00:36:46] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-15-2005 00:36:46] (unmatched::raw477) :orwell.freenode.net 477 ezlog #ezpublish :[freenode-info] please register your nickname...don't forget to auto-identify! http://freenode.net/faq.shtml#nicksetup
+[05-15-2005 02:17:37] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-15-2005 06:13:37] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-15-2005 06:45:37] -!- SEAwolfx_ [~mike@b5b49e18eaebdeec.session.tor] has joined #ezpublish
+[05-15-2005 06:56:24] -!- SEAwolfx [~mike@8063424b3e04f66a.session.tor] has quit [Client Quit]
+[05-15-2005 08:42:27] -!- SEAwolfx_ is now known as SEAwolfx
+[05-15-2005 08:45:04] Disconnecting due to lack of a lag response (0.06587000 1116171844 != 0.17586300 1116171874)
+[05-15-2005 08:45:04] Diconnected. Sleeping for 10 second(s).
+[05-15-2005 08:45:14] >> Connecting to irc.kde.org:6667
+[05-15-2005 08:45:14] >> Connected to irc.kde.org:6667, registering...
+[05-15-2005 08:45:20] >> Successfully registered. Nick is: ezlog
+[05-15-2005 08:45:20] -!- There are 10242 victims and 11490 hiding on 26 servers
+[05-15-2005 08:45:20] -!- 32 flagged staff members
+[05-15-2005 08:45:20] -!- 8548 channels formed
+[05-15-2005 08:45:20] -!- I have 4020 clients and 0 servers
+[05-15-2005 08:45:20] -!- Current local  users: 4020  Max: 4625
+[05-15-2005 08:45:20] -!- Current global users: 21732  Max: 24741
+[05-15-2005 08:45:20] -!- Highest connection count: 4626 (4625 clients) (526563 since server was (re)started)
+[05-15-2005 08:45:20] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-15-2005 08:45:20] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-15-2005 08:45:49] >> Attempting to join channels: #ezpublish
+[05-15-2005 08:45:49] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-15-2005 08:45:49] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-15-2005 08:45:49] -!- Topic set by Bedlore [@] [Thu, 12 May 2005 20:05:32 -0700]
+[05-15-2005 09:16:26] -!- awormus [~aaron@p54B10121.dip0.t-ipconnect.de] has joined #ezpublish
+[05-15-2005 09:17:42] [#ezpublish] <awormus> is it just my imagination, or is eZpublish 3.6 faster
+[05-15-2005 09:48:22] [#ezpublish] <SEAwolfx> dont know .. u could take a look on the debug output displaying the template processing time
+[05-15-2005 13:35:50] [#ezpublish] <buz> i thought it was, too
+[05-15-2005 14:02:11] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-15-2005 14:22:13] -!- SEAwolfx [~mike@b5b49e18eaebdeec.session.tor] has quit [Remote closed the connection]
+[05-15-2005 14:58:25] -!- SEAwolfx [~mike@DSL01.212.114.229.136.NEFkom.net] has joined #ezpublish
+[05-15-2005 14:58:28] -!- SEAwolfx [~mike@DSL01.212.114.229.136.NEFkom.net] has quit [Client Quit]
+[05-15-2005 14:58:40] -!- SEAwolfx [~mike@128.30.2.236] has joined #ezpublish
+[05-15-2005 15:25:56] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-15-2005 15:27:14] Disconnecting due to lack of a lag response (0.10587200 1116195974 != 0.17586600 1116196004)
+[05-15-2005 15:27:14] Diconnected. Sleeping for 10 second(s).
+[05-15-2005 15:27:24] >> Connecting to irc.kde.org:6667
+[05-15-2005 15:27:24] >> Connected to irc.kde.org:6667, registering...
+[05-15-2005 15:27:49] >> Attempting to join channels: #ezpublish
+[05-15-2005 15:28:06] >> Successfully registered. Nick is: ezlog
+[05-15-2005 15:28:06] -!- There are 11104 victims and 11904 hiding on 26 servers
+[05-15-2005 15:28:06] -!- 33 flagged staff members
+[05-15-2005 15:28:06] -!- 8666 channels formed
+[05-15-2005 15:28:06] -!- I have 4359 clients and 0 servers
+[05-15-2005 15:28:06] -!- Current local  users: 4359  Max: 4625
+[05-15-2005 15:28:06] -!- Current global users: 23008  Max: 24741
+[05-15-2005 15:28:06] -!- Highest connection count: 4626 (4625 clients) (531217 since server was (re)started)
+[05-15-2005 15:28:06] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-15-2005 15:28:06] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-15-2005 15:28:06] -!- Topic set by Bedlore [@] [Thu, 12 May 2005 20:05:32 -0700]
+[05-15-2005 15:28:06] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-15-2005 15:28:06] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-15-2005 15:37:48] -!- SEAwolfx [~mike@128.30.2.236] has quit [Remote closed the connection]
+[05-15-2005 15:37:58] -!- SEAwolfx [~mike@0585c0dc247c28a7.session.tor] has joined #ezpublish
+[05-15-2005 16:23:25] -!- awormus [~aaron@p54B10121.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-15-2005 16:41:29] [#ezpublish] <kracker> clear
+[05-15-2005 17:49:24] Disconnecting due to lack of a lag response (0.02586500 1116204504 != 0.07587200 1116204534)
+[05-15-2005 17:49:24] Diconnected. Sleeping for 10 second(s).
+[05-15-2005 17:49:34] >> Connecting to irc.kde.org:6667
+[05-15-2005 17:49:34] >> Connected to irc.kde.org:6667, registering...
+[05-15-2005 17:49:34] >> Attempting to join channels: #ezpublish
+[05-15-2005 17:49:41] >> Successfully registered. Nick is: ezlog
+[05-15-2005 17:49:41] -!- There are 10182 victims and 11531 hiding on 26 servers
+[05-15-2005 17:49:41] -!- 33 flagged staff members
+[05-15-2005 17:49:41] -!- 8550 channels formed
+[05-15-2005 17:49:41] -!- I have 4136 clients and 0 servers
+[05-15-2005 17:49:41] -!- Current local  users: 4136  Max: 4625
+[05-15-2005 17:49:41] -!- Current global users: 21713  Max: 24741
+[05-15-2005 17:49:41] -!- Highest connection count: 4626 (4625 clients) (532749 since server was (re)started)
+[05-15-2005 17:49:41] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-15-2005 17:49:41] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-15-2005 17:49:41] -!- Topic set by Bedlore [@] [Thu, 12 May 2005 20:05:32 -0700]
+[05-15-2005 17:49:42] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-15-2005 17:49:42] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-15-2005 17:51:21] [#ezpublish] <kracker> wow, i'm going to have to look at that
+[05-15-2005 17:51:35] [#ezpublish] <kracker> ezlog is geteting kicked far too often ... hrm
+[05-15-2005 17:52:04] [#ezpublish] <kracker> werrum not not kicked but dropped connection :)
+[05-15-2005 19:00:34] Disconnecting due to lack of a lag response (0.14587100 1116208774 != 0.18591100 1116208804)
+[05-15-2005 19:00:34] Diconnected. Sleeping for 10 second(s).
+[05-15-2005 19:00:44] >> Connecting to irc.kde.org:6667
+[05-15-2005 19:00:44] >> Connected to irc.kde.org:6667, registering...
+[05-15-2005 19:00:49] >> Attempting to join channels: #ezpublish
+[05-15-2005 19:01:34] >> Attempting to join channels: #ezpublish
+[05-15-2005 19:01:44] Disconnecting due to lack of a lag response (0.46857000 1116208844 != 0.06586800 1116208874)
+[05-15-2005 19:01:44] Diconnected. Sleeping for 10 second(s).
+[05-15-2005 19:01:54] >> Connecting to irc.kde.org:6667
+[05-15-2005 19:01:54] >> Connected to irc.kde.org:6667, registering...
+[05-15-2005 19:02:02] >> Successfully registered. Nick is: ezlog
+[05-15-2005 19:02:02] -!- There are 9708 victims and 11377 hiding on 26 servers
+[05-15-2005 19:02:02] -!- 32 flagged staff members
+[05-15-2005 19:02:02] -!- 8530 channels formed
+[05-15-2005 19:02:02] -!- I have 3995 clients and 0 servers
+[05-15-2005 19:02:02] -!- Current local  users: 3995  Max: 4625
+[05-15-2005 19:02:02] -!- Current global users: 21085  Max: 24741
+[05-15-2005 19:02:02] -!- Highest connection count: 4626 (4625 clients) (533355 since server was (re)started)
+[05-15-2005 19:02:03] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-15-2005 19:02:03] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-15-2005 19:02:19] >> Attempting to join channels: #ezpublish
+[05-15-2005 19:02:19] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-15-2005 19:02:19] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-15-2005 19:02:19] -!- Topic set by Bedlore [@] [Thu, 12 May 2005 20:05:32 -0700]
+[05-15-2005 19:02:20] (unmatched::raw477) :orwell.freenode.net 477 ezlog #ezpublish :[freenode-info] why register and identify?  your IRC nick is how people know you.  http://freenode.net/faq.shtml#nicksetup
+[05-15-2005 21:34:00] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 148 (No route to host)]
+[05-15-2005 21:57:02] -!- Bedlore [~me@ppp239-78.lns2.adl2.internode.on.net] has joined #ezpublish
+[05-15-2005 21:57:11] [#ezpublish] <Bedlore> hi guys
+[05-15-2005 22:16:48] [#ezpublish] <agentbob> hey bedlore
+[05-15-2005 22:16:53] [#ezpublish] <agentbob> how's it going
+[05-15-2005 22:26:42] [#ezpublish] <agentbob> question... can i get a user object like fetch('user','current_user') but by specified user_id rather than current user?
+[05-15-2005 22:51:40] [#ezpublish] <Bedlore> agentbob: sorry in and out at the moment.  Good question I have never found the need to find that out
+[05-15-2005 22:52:00] [#ezpublish] <Bedlore> what are you trying to achieve?
+[05-15-2005 22:52:52] [#ezpublish] <agentbob> need to find out which groups a certian user is part of
+[05-15-2005 22:53:19] [#ezpublish] <Bedlore> ah, yes I've done that before
+[05-15-2005 22:53:20] [#ezpublish] <agentbob> fetch('content','object',hash('object_id', user_id_here)); gives a different object than fetch('user','current_user');
+[05-15-2005 22:53:40] [#ezpublish] <agentbob> i need to do it for other users though... not just the current user
+[05-15-2005 22:53:54] [#ezpublish] <Bedlore> I did a look up on the groups for the user
+[05-15-2005 22:54:03] [#ezpublish] <Bedlore> why other users?
+[05-15-2005 22:55:25] [#ezpublish] <agentbob> i have a specific page they can view without logging in... kinda complicated but i need to be able to fetch the user without them being logged in :|
+[05-15-2005 22:56:15] [#ezpublish] <Bedlore> yup sounds very interesting
+[05-15-2005 22:56:26] [#ezpublish] <Bedlore> sorry I'm not of much use
+[05-15-2005 22:56:35] [#ezpublish] <Bedlore> but let me know how you go won't you
+[05-15-2005 22:56:44] [#ezpublish] <Bedlore> bbs
+[05-15-2005 22:57:33] [#ezpublish] <kracker> interesting...
+[05-15-2005 22:57:40] [#ezpublish] <agentbob> need to hack ezuser.php!
+[05-15-2005 22:57:48] [#ezpublish] <agentbob> actually.. just functioncollection.php
+[05-15-2005 22:58:38] [#ezpublish] <kracker> first off, i'm full of it, are you sure your not?
+[05-15-2005 22:58:45] [#ezpublish] <kracker> are you viewing or editing?
+[05-15-2005 22:58:50] [#ezpublish] <kracker> http://www.ez.no/ez_publish/documentation/configuration/troubleshooting/mixing_up_node_id_and_object_id
+[05-15-2005 22:59:47] [#ezpublish] <kracker> errum, i dunno, that one has hit me  before
+[05-15-2005 23:00:27] [#ezpublish] <agentbob> dude whatchu talkin' about willis
+[05-15-2005 23:00:36] [#ezpublish] * kracker smirks
+[05-15-2005 23:00:42] [#ezpublish] <agentbob> i duped &fetchCurrentUser()
+[05-15-2005 23:00:46] [#ezpublish] <kracker> nods
+[05-15-2005 23:00:47] [#ezpublish] <agentbob> into fetchOtherUser()
+[05-15-2005 23:01:01] [#ezpublish] <kracker> hey! whateva's cleva
+[05-15-2005 23:01:48] [#ezpublish] <kracker> with a meat cleaver and leva, like you know ... what eva
+[05-15-2005 23:01:50] [#ezpublish] <agentbob> and instead of calling ezUser::currentUser() it called ezUser::instance($id); booyah!
+[05-15-2005 23:02:02] [#ezpublish] <kracker> slickerthansnott
+[05-15-2005 23:02:37] [#ezpublish] <agentbob> like superfuckindepechemode!#)
+[05-15-2005 23:02:55] [#ezpublish] <agentbob> kinda made that up but sounds familiar... deja vu?
+[05-15-2005 23:02:56] [#ezpublish] <kracker> i don't know what everybody else is sayin, l33t people kernel hack
+[05-15-2005 23:03:18] [#ezpublish] <kracker> funny drop, orgazmo( unicorns )
+[05-15-2005 23:03:33] [#ezpublish] <agentbob> worked!! i rule
+[05-15-2005 23:03:55] [#ezpublish] <agentbob> i hacked the gibson
+[05-15-2005 23:03:56] [#ezpublish] * agentbob bows
+[05-15-2005 23:04:13] [#ezpublish] * kracker tips the o'le cap
+[05-15-2005 23:05:07] [#ezpublish] <agentbob> hey, seen sin city yet btw?
+[05-15-2005 23:05:25] [#ezpublish] <kracker> it's on a list
+[05-15-2005 23:05:38] [#ezpublish] <agentbob> gotta be on THE list :P
+[05-15-2005 23:05:49] [#ezpublish] <kracker> my boss used to quip back with 'of stuff that will prolly never happen ...'
+[05-15-2005 23:06:07] [#ezpublish] <agentbob> i've got one of those!
+[05-15-2005 23:06:16] [#ezpublish] <agentbob> 'Someday/Maybe List'
+[05-15-2005 23:06:18] [#ezpublish] <kracker> i knew before i knew
+[05-15-2005 23:06:21] [#ezpublish] <agentbob> all part of GTD'in
+[05-15-2005 23:06:40] [#ezpublish] <kracker> just look at his record, it was all just a mater of ...
+[05-15-2005 23:10:20] [#ezpublish] <agentbob> is there a way to do 'check here to stay logged in' when logging in? (ie cookie login?)
+[05-15-2005 23:16:29] [#ezpublish] <kracker> they discourage that, it's completely insecure
+[05-15-2005 23:16:44] [#ezpublish] <kracker> obscure but never secure
+[05-15-2005 23:16:47] [#ezpublish] <agentbob> yeah, but have a client who's a prick :|
+[05-15-2005 23:16:56] [#ezpublish] <kracker> ya know
+[05-15-2005 23:17:01] [#ezpublish] <kracker> i know the type
+[05-15-2005 23:17:08] [#ezpublish] <agentbob> so his problem not mine... but now my problem!
+[05-15-2005 23:17:56] [#ezpublish] <kracker> you can do it, i'd just make it sick as f*ck a string (wrapped in like 5 - 10 iterations of obfuscation)
+[05-15-2005 23:18:17] [#ezpublish] <kracker> then write an operator to do the dirty
+[05-15-2005 23:18:31] [#ezpublish] <kracker> sending clients cookies is simple, it's just http headers
+[05-15-2005 23:19:05] [#ezpublish] <kracker> erum, well that might not be exactly what you but but you get the idea
+[05-15-2005 23:19:11] [#ezpublish] <kracker> never seen it done here in the ezc tho
+[05-15-2005 23:20:46] [#ezpublish] <kracker> http://www.google.com/search?num=50&hl=en&lr=&safe=off&c2coff=1&q=sending+cookies%2C++php&btnG=Search
+[05-15-2005 23:20:59] [#ezpublish] <agentbob> yeah but have no idea where to start to make it stick with ez system...i think its ezUserLoginHandler::instance... ->loginUser(login,pass);...
+[05-15-2005 23:22:41] [#ezpublish] <kracker> basicly a good idea
+[05-15-2005 23:23:01] [#ezpublish] <kracker> with a hook in current user? to check (aka cookie login?)
+[05-15-2005 23:23:28] [#ezpublish] <kracker> i was thinking of if you added a setting to your user class (for your user edit screen aka checkbox)
+[05-15-2005 23:23:55] [#ezpublish] <kracker> you could give them an option (if you need to)
+[05-15-2005 23:24:06] [#ezpublish] <kracker> or just do it transparently ... eh
+[05-15-2005 23:24:18] [#ezpublish] <agentbob> still tricky.. cause ezpub does a buncha stuff in the bg when user is loggign in
+[05-15-2005 23:24:28] [#ezpublish] <kracker> H:\television\networks\nickelodeon\invader_zim\eppisodes_s3\Invader Zim - 2 - 12b - Vindicated!.avi
+[05-15-2005 23:25:31] [#ezpublish] <kracker> oh? (not like you have to justify yourself to me, buaat what?)
+[05-15-2005 23:32:26] [#ezpublish] <agentbob> holy shit the authentication code is huge :|
+[05-15-2005 23:33:07] [#ezpublish] * kracker eyes widen ....
+[05-15-2005 23:33:31] [#ezpublish] <kracker> wellll, i'm off to cut myself just to see how much it bleeds
+[05-15-2005 23:33:38] [#ezpublish] <agentbob> sounds like fun
+[05-15-2005 23:33:40] [#ezpublish] <kracker> It's like adrenaline, the pain is such a sudden rush for me
+[05-15-2005 23:36:15] [#ezpublish] <agentbob> imagine all the people
+[05-15-2005 23:48:08] [#ezpublish] <agentbob> i fucking fule
+[05-15-2005 23:48:12] [#ezpublish] <agentbob> rule too#%)!(
+[05-15-2005 23:48:15] [#ezpublish] * agentbob yawns
+[05-15-2005 23:56:03] [#ezpublish] * agentbob passes out

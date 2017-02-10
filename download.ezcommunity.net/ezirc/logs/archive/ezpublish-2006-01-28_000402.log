@@ -1,0 +1,176 @@
+[01-27-2006 01:20:18] -!- tobyS [n=dotxp@dslb-084-061-188-024.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-27-2006 01:25:33] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-27-2006 01:56:11] -!- tobyS [n=dotxp@217.194.224.41] has joined #ezpublish
+[01-27-2006 01:57:11] -!- elephantMan [n=elephant@252.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[01-27-2006 02:05:39] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-27-2006 02:13:08] -!- kore__ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-27-2006 02:52:01] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-27-2006 02:59:28] -!- nfrp [n=nfrp@AAnnecy-152-1-96-87.w86-197.abo.wanadoo.fr] has joined #ezpublish
+[01-27-2006 03:05:36] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-27-2006 03:23:26] -!- nfrp [n=nfrp@AAnnecy-152-1-96-87.w86-197.abo.wanadoo.fr] has quit ["Leaving"]
+[01-27-2006 03:37:25] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit ["hop!"]
+[01-27-2006 03:54:22] -!- kore__ [n=lordhong@217.194.224.41] has quit []
+[01-27-2006 04:56:19] [#ezpublish] <zrg> folks.. is it possible to force browser to return to same page after adding product to basket?
+[01-27-2006 04:56:30] [#ezpublish] <zrg> without intermediate basket page?
+[01-27-2006 05:55:36] -!- ordnas [n=ordnas@213.160.240.34] has joined #ezpublish
+[01-27-2006 06:08:34] [#ezpublish] <seasonfive> hi ppl
+[01-27-2006 06:08:42] [#ezpublish] <seasonfive> ezpublish 3.6 isn't compatible with PHP 5 ?
+[01-27-2006 06:09:09] [#ezpublish] <zrg> no version is
+[01-27-2006 06:09:28] [#ezpublish] <zrg> afaik
+[01-27-2006 06:09:47] [#ezpublish] <seasonfive> ! :'(
+[01-27-2006 06:10:02] [#ezpublish] <zrg> 3.6 for php 4.3, 3.7 for php 4.4
+[01-27-2006 06:10:07] [#ezpublish] <zrg> whats the problem
+[01-27-2006 06:10:33] [#ezpublish] <seasonfive> my host provide only php 5
+[01-27-2006 06:10:43] [#ezpublish] <zrg> you got shitty host :)
+[01-27-2006 06:14:03] [#ezpublish] <seasonfive> :'(
+[01-27-2006 06:15:08] [#ezpublish] <zrg> do you know about what i asked earlier?
+[01-27-2006 06:15:39] [#ezpublish] <seasonfive> zrg: i never used shop feature in ezpublish, sorry
+[01-27-2006 06:21:45] [#ezpublish] <seasonfive> trying ezp 3.7 with php 4.2 is useless ?
+[01-27-2006 06:23:30] [#ezpublish] <zrg> i'd think so
+[01-27-2006 06:23:38] [#ezpublish] <zrg> 3.6 is the same tho
+[01-27-2006 06:25:26] [#ezpublish] <seasonfive> i understand differencies between php 4 / php 5. But i don't with php 4.2 / 4.3 / 4.4 ...
+[01-27-2006 06:25:34] [#ezpublish] <seasonfive> since its a minor version change
+[01-27-2006 06:32:07] [#ezpublish] <zrg> theoretically
+[01-27-2006 06:32:50] [#ezpublish] <zrg> the fact is, in anything big enough, like ez, nyances from minor changes pop up
+[01-27-2006 06:33:35] [#ezpublish] <zrg> if you start from new install i recommend php 4.4 and ez 3.7
+[01-27-2006 06:37:42] [#ezpublish] <kracker> agreed
+[01-27-2006 06:39:59] [#ezpublish] <seasonfive> for me its not a ezpublish problem
+[01-27-2006 06:40:01] [#ezpublish] <seasonfive> its a PHP problem
+[01-27-2006 06:40:21] [#ezpublish] <seasonfive> php have to be compatible between minor revision
+[01-27-2006 06:46:20] -!- ordnas [n=ordnas@213.160.240.34] has quit [Read error: 110 (Connection timed out)]
+[01-27-2006 06:47:01] -!- _thomas [n=thomas@remote130-64.home.uni-freiburg.de] has joined #ezpublish
+[01-27-2006 06:52:20] [#ezpublish] <kracker> it can be trouble when your web app (eZ publish 3.x) is very, very tightly coupled (like per ez release) to a specific php release (possibly point release). With great power comes great responsiblity
+[01-27-2006 06:54:02] -!- kore__ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-27-2006 07:01:26] [#ezpublish] <seasonfive> is it hard to downgrade ezpublish 3.7 -> 3.6 ?
+[01-27-2006 07:06:21] [#ezpublish] <zrg> take content to older version you mean?
+[01-27-2006 07:06:47] [#ezpublish] <seasonfive> i have a ezpublish 3.7 and i want to migrate into ezpublish 3.6
+[01-27-2006 07:07:07] [#ezpublish] <zrg> complex site?
+[01-27-2006 07:07:17] [#ezpublish] <zrg> much content?
+[01-27-2006 07:07:34] [#ezpublish] <seasonfive> not really
+[01-27-2006 07:07:43] [#ezpublish] <zrg> userdefined classes?
+[01-27-2006 07:07:45] [#ezpublish] <seasonfive> i have modified article class, add one class
+[01-27-2006 07:07:50] [#ezpublish] <seasonfive> that the only things
+[01-27-2006 07:07:56] [#ezpublish] <seasonfive> others are only folder & article
+[01-27-2006 07:08:17] [#ezpublish] <zrg> i recommend install 3.6 from scratch, then add content through using package
+[01-27-2006 07:08:27] [#ezpublish] <seasonfive> package ?
+[01-27-2006 07:08:50] [#ezpublish] <zrg> you can make package of content, look under Setup
+[01-27-2006 07:09:08] [#ezpublish] <zrg> essentially zip it up and then put into other site
+[01-27-2006 07:09:15] -!- elephantMan [n=elephant@252.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-27-2006 07:09:44] [#ezpublish] <zrg> but beware, it has malfunctioned for me, leaving destination site in bad shape, so backups at all steps,
+[01-27-2006 07:10:09] [#ezpublish] <seasonfive> oh
+[01-27-2006 07:10:16] [#ezpublish] <seasonfive> not really a problem
+[01-27-2006 07:10:27] [#ezpublish] <seasonfive> i'll install new ezpublish 3.6
+[01-27-2006 07:10:31] [#ezpublish] <seasonfive> and do import by hand
+[01-27-2006 07:10:33] [#ezpublish] <zrg> mhmh
+[01-27-2006 07:10:37] [#ezpublish] <_thomas> why do you recommend using a package? shouldn't the database be the same?
+[01-27-2006 07:10:47] [#ezpublish] <zrg> im not sure
+[01-27-2006 07:10:55] [#ezpublish] <seasonfive> i'have great skills in ctrl+c / ctrl+v :)
+[01-27-2006 07:11:06] [#ezpublish] <seasonfive> _thomas: not there isn't
+[01-27-2006 07:11:26] [#ezpublish] <seasonfive> and since this site haven't got much content, i can do that ...
+[01-27-2006 07:11:41] [#ezpublish] <seasonfive> thks for your advice :)
+[01-27-2006 07:12:01] [#ezpublish] <_thomas> but 3.6. -> 3.7 is only the reference bug thing
+[01-27-2006 07:12:14] [#ezpublish] <_thomas> the database upgrade is only the version information
+[01-27-2006 07:12:21] [#ezpublish] <seasonfive> if i can do cp -r settings/ target/settings and same for templates, its ok for me
+[01-27-2006 07:12:36] [#ezpublish] <_thomas> ok
+[01-27-2006 07:12:37] [#ezpublish] <zrg> maybe you can but i wouldnt
+[01-27-2006 07:12:40] [#ezpublish] <seasonfive> _thomas: there is much things in the sql from 3.6 -> 3.7
+[01-27-2006 07:12:49] [#ezpublish] <zrg> if you do clean install you can be sure
+[01-27-2006 07:13:05] [#ezpublish] <seasonfive> like column addition
+[01-27-2006 07:13:27] [#ezpublish] <seasonfive> i'll do that, i don't want loose time to resolv problem when i can do without
+[01-27-2006 07:28:58] -!- elephantMan [n=elephant@252.205.103-84.rev.gaoland.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-27-2006 08:07:11] -!- SEAwolfx [n=mike@tor/session/x-11e19a70cc0e5c29] has joined #ezpublish
+[01-27-2006 08:10:43] [#ezpublish] <SEAwolfx> re
+[01-27-2006 08:11:17] [#ezpublish] <seasonfive> well not lucky ... other host provide only 6MB for Php memory : ezpublish failed :(
+[01-27-2006 08:11:39] [#ezpublish] <seasonfive> noone of you provide good host for ezpublish website ?
+[01-27-2006 08:11:43] [#ezpublish] <SEAwolfx> indeed
+[01-27-2006 08:11:55] [#ezpublish] <zrg> jee-zuz, man, get your own server :P
+[01-27-2006 08:12:05] [#ezpublish] <seasonfive> i have yet
+[01-27-2006 08:12:18] [#ezpublish] <seasonfive> but this site is political, and boss don't want this one hosted by our server
+[01-27-2006 08:12:51] [#ezpublish] <SEAwolfx> what political direction?
+[01-27-2006 08:13:12] [#ezpublish] <zrg> comedist?
+[01-27-2006 08:13:19] [#ezpublish] <seasonfive> About TOGO and its actual president
+[01-27-2006 08:13:21] [#ezpublish] <SEAwolfx> hehe
+[01-27-2006 08:13:42] [#ezpublish] <SEAwolfx> url?
+[01-27-2006 08:13:47] [#ezpublish] <seasonfive> its a french website :)
+[01-27-2006 08:13:53] [#ezpublish] <SEAwolfx> awww
+[01-27-2006 08:13:56] [#ezpublish] <seasonfive> ctr.itioweb.com
+[01-27-2006 08:13:58] [#ezpublish] <zrg> guess he has none since its not working :P
+[01-27-2006 08:15:23] [#ezpublish] <SEAwolfx> seasonfive: i migrated from togo?
+[01-27-2006 08:15:27] [#ezpublish] <SEAwolfx> s/i/you/
+[01-27-2006 08:15:46] [#ezpublish] <seasonfive> no, a guy host a previous version on its personnal computer
+[01-27-2006 08:17:23] [#ezpublish] <seasonfive> the fact is i'm really borred now, i just want put this site somewhere and forget it =]
+[01-27-2006 08:17:40] [#ezpublish] <seasonfive> i hate loose time with suck dumb things
+[01-27-2006 08:17:44] [#ezpublish] <seasonfive> such
+[01-27-2006 08:18:19] [#ezpublish] <zrg> willing to pay how much for hosting?
+[01-27-2006 08:18:40] [#ezpublish] <seasonfive> i'm not the guy which pay :)
+[01-27-2006 08:19:01] [#ezpublish] <seasonfive> but something like 25 euro / month should be ok
+[01-27-2006 08:21:56] [#ezpublish] <zrg> baker man?
+[01-27-2006 08:22:02] [#ezpublish] <zrg> wrong window :P
+[01-27-2006 08:22:28] [#ezpublish] <zrg> well if he just wants the site up and no shell or whatever i could host it.
+[01-27-2006 08:28:24] [#ezpublish] <seasonfive> site + db + ftp
+[01-27-2006 08:28:32] [#ezpublish] <seasonfive> argh no
+[01-27-2006 08:28:37] [#ezpublish] <seasonfive> he probably want mail too
+[01-27-2006 08:30:04] [#ezpublish] <zrg> well im really not set up with any control panel or such, so i guess its not worth the trouble in this case
+[01-27-2006 08:31:16] [#ezpublish] <seasonfive> i'll remind your proposition and propose to my boss. But since he's not here i can't give you answer
+[01-27-2006 08:31:32] [#ezpublish] <seasonfive> 25 euro / months its ok ?
+[01-27-2006 08:34:20] [#ezpublish] <zrg> got my private msg, s5 ?
+[01-27-2006 08:34:35] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-27-2006 08:34:37] [#ezpublish] <seasonfive> zrg: no
+[01-27-2006 08:34:45] [#ezpublish] <seasonfive> i'm not registered
+[01-27-2006 08:35:20] [#ezpublish] <zrg> ah, said i'd add 10 for mail and ftp
+[01-27-2006 08:36:22] [#ezpublish] <seasonfive> perfect :)
+[01-27-2006 08:36:31] [#ezpublish] <zrg> whatever does he need ftp for tho?
+[01-27-2006 08:36:50] [#ezpublish] <seasonfive> oh just one for change some site.ini or templates times to times
+[01-27-2006 08:37:13] [#ezpublish] <seasonfive> 1 is enought :)
+[01-27-2006 08:38:13] [#ezpublish] <seasonfive> Oh yes ! my ISP provide me some web space, and ezpublish 3.6 seems to work on it :)
+[01-27-2006 08:38:27] [#ezpublish] <seasonfive> but quite slow ...  :'(
+[01-27-2006 08:38:39] [#ezpublish] <seasonfive> er no, that don't work
+[01-27-2006 08:38:45] [#ezpublish] <seasonfive> Fatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 35 bytes) in /var/www/free.fr/e/b/seasonfive/lib/ezfile/classes/ezdir.php on line 489
+[01-27-2006 08:40:30] [#ezpublish] <zrg> anyhow, can mail me at kaarelAThiiumaa.ee
+[01-27-2006 08:43:13] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-27-2006 09:01:34] [#ezpublish] <SEAwolfx> zrg: could you please further help with my webdav problem?
+[01-27-2006 09:02:03] [#ezpublish] <zrg> how? im quite busy..
+[01-27-2006 09:02:47] [#ezpublish] <seasonfive> zrg: ok. Thanks !
+[01-27-2006 09:03:10] [#ezpublish] <zrg> mhmh, importing a huge site to ez
+[01-27-2006 09:05:10] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[01-27-2006 09:11:40] [#ezpublish] <SEAwolfx> zrg: just print out $site and $path in ezwebdavcontentserver.php before the preg_match function near at line 945 with $this->appendLogEntry( "site: '$site'  path: '$path'", '<-- SEAWOLF -->' ); and look in webdav.log. additionaly could you please give your preg_match command? ;)
+[01-27-2006 09:13:01] [#ezpublish] <zrg> you are trying to find out something 3.6 vs 3.7 with that info?
+[01-27-2006 09:13:33] [#ezpublish] <SEAwolfx> yes.
+[01-27-2006 09:14:17] [#ezpublish] <zrg> perhaps do something like:
+[01-27-2006 09:14:17] [#ezpublish] <zrg> do a diff v36dir v37dir | grep webdav
+[01-27-2006 09:15:12] [#ezpublish] <zrg> my dav has some small patches by me anyway so its not 100% stock
+[01-27-2006 09:15:30] [#ezpublish] <SEAwolfx> svndiff http://pubsvn..v36file v37file
+[01-27-2006 09:15:48] [#ezpublish] <zrg> whatever tools you like :)(
+[01-27-2006 09:16:01] [#ezpublish] <zrg> personally i like nice GUI tool called meld
+[01-27-2006 09:16:28] [#ezpublish] <zrg> fantastic for patching
+[01-27-2006 09:16:38] [#ezpublish] <SEAwolfx> just, try to print out the values. i will do the diff ;)
+[01-27-2006 09:17:02] [#ezpublish] <SEAwolfx> svnmerge ;) i love the shell ;)
+[01-27-2006 09:22:51] -!- elephantMan [n=elephant@252.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-27-2006 09:24:17] [#ezpublish] <SEAwolfx> well, there are differences
+[01-27-2006 09:24:27] [#ezpublish] <SEAwolfx> svn diff http://pubsvn.ez.no/nextgen/stable/3.6/kernel/classes/webdav/webdav.php http://pubsvn.ez.no/nextgen/stable/3.7/webdav.php
+[01-27-2006 09:25:00] [#ezpublish] <SEAwolfx> oops, sorry not in webdav.php
+[01-27-2006 09:25:04] [#ezpublish] <SEAwolfx> svn diff //pubsvn.ez.no/nextgen/stable/3.6/kernel/classes/webdav/ezwebdavcontentserver.php svn diff //pubsvn.ez.no/nextgen/stable/3.7/kernel/classes/webdav/ezwebdavcontentserver.php
+[01-27-2006 09:39:54] -!- _thomas [n=thomas@remote130-64.home.uni-freiburg.de] has quit [Read error: 113 (No route to host)]
+[01-27-2006 09:40:14] [#ezpublish] <SEAwolfx> zrg?
+[01-27-2006 09:42:59] -!- fh [n=fh@popeye.ez.no] has quit [Remote closed the connection]
+[01-27-2006 09:57:05] [#ezpublish] * zrg takes off his hat while the corpse of fh is carried out
+[01-27-2006 10:07:53] -!- _thomas [n=thomas@remote130-53.home.uni-freiburg.de] has joined #ezpublish
+[01-27-2006 10:17:00] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []
+[01-27-2006 10:17:20] -!- seasonfive is now known as season|away
+[01-27-2006 10:17:45] -!- kore__ [n=lordhong@217.194.224.41] has quit []
+[01-27-2006 10:21:41] -!- tobyS [n=dotxp@217.194.224.41] has quit ["Plant your channel to pearadise.net!"]
+[01-27-2006 10:22:31] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-27-2006 12:21:37] -!- _thomas [n=thomas@remote130-53.home.uni-freiburg.de] has quit [Remote closed the connection]
+[01-27-2006 12:50:12] -!- elephantMan [n=elephant@252.205.103-84.rev.gaoland.net] has quit [Remote closed the connection]
+[01-27-2006 13:24:17] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[01-27-2006 13:33:01] [#ezpublish] <ls> greetings all
+[01-27-2006 13:55:54] [#ezpublish] <ls> #suse
+[01-27-2006 14:11:50] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[01-27-2006 14:43:21] [#ezpublish] <SEAwolfx> well well well
+[01-27-2006 14:46:32] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community || RSS: http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_27_01_2006 | http://ez.no/community/contribs/applications/antivirus_clamav_integration
+[01-27-2006 15:08:30] -!- SEAwolfx [n=mike@tor/session/x-11e19a70cc0e5c29] has quit [calvino.freenode.net irc.freenode.net]
+[01-27-2006 15:08:49] -!- SEAwolfx [n=mike@tor/session/x-11e19a70cc0e5c29] has joined #ezpublish
+[01-27-2006 17:26:41] -!- tobyS [n=dotxp@dslb-084-061-172-052.pools.arcor-ip.net] has joined #ezpublish
+[01-27-2006 17:37:09] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[01-27-2006 19:01:26] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_27_01_2006
+[01-27-2006 22:50:18] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]

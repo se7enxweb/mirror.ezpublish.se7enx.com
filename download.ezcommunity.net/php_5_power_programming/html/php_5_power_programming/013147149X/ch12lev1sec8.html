@@ -1,0 +1,117 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.8.&nbsp; Dependencies</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec8"></a><h3 class="docSection1Title">12.8. Dependencies</h3>
+<p class="docText">An important benefit of using PEAR is code reuse. However, when you re-use code from a package system, there will be dependencies between packages. These dependencies need to be expressed in the package description to inform users about them.<a name="ch12index230"></a><a name="ch12index231"></a></p>
+<a name="ch12lev2sec11"></a><h4 class="docSection2Title">12.8.1. Element: <tt>&lt;deps&gt;</tt></h4><a name="ch12index232"></a><a name="ch12index233"></a><a name="ch12index234"></a><a name="ch12index235"></a>
+<P><table cellspacing="0" FRAME="void" RULES="none" cellpadding="5"><colgroup><col width="275"><col width="275"></colgroup><thead></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Element name:</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>deps</tt></p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText">Attributes:</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">none</p></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">May occur in:</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>release</tt> (optional)</p></td></tr></table></p><br>
+<p class="docText">This element is a container for the <tt>&lt;dep&gt;</tt> element.</p>
+<a name="ch12lev2sec12"></a><h4 class="docSection2Title">12.8.2. Element: <tt>&lt;dep&gt;</tt></h4><a name="ch12index236"></a><a name="ch12index237"></a><a name="ch12index238"></a><a name="ch12index239"></a>
+<p><table cellspacing="0" FRAME="void" RULES="all" cellpadding="4"><colgroup><col width="275"><col width="275"></colgroup><thead></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Element name:</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>dep</tt></p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Attributes:</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>name</tt> (required)</p>
+<p class="docText"><tt>type</tt> (required)</p>
+<p class="docText"><tt>rel</tt> (optional)</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">May occur in:</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>deps</tt> (required)</p></td></tr></table></P><BR>
+<p class="docText">The <tt>dep</tt> element describes a single dependency.</p>
+<a name="ch12lev3sec37"></a><h5 class="docSection3Title">12.8.2.1 <tt>name</tt> Attribute</h5>
+<p class="docText">This is the target of the dependency. For <tt>pkg</tt> dependencies, the <tt>name</tt> attribute contains the package name; for <tt>ext</tt> dependencies, it contains the extension name, and so on.<a name="ch12index240"></a><a name="ch12index241"></a></p>
+<a name="ch12lev3sec38"></a><H5 class="docSection3Title">12.8.2.2 <tt>type</tt> Attribute</h5>
+<p class="docText">Valid dependency types are<a name="ch12index242"></a><a name="ch12index243"></a></p>
+<UL><li><p class="docText">
+<tt>php</tt>. 
+PHP version dependency; <tt>name</tt> is ignored.</P></li><li><p class="docText">
+<tt>ext</tt>. 
+Extension dependency (extension must be installed).</p></li><li><p class="docText">
+<tt>pkg</tt>. 
+PEAR package dependency.</p></li><li><p class="docText">
+<tt>prog</tt>. 
+External program dependency; <tt>name</tt> is the name of program (without suffix).</p></li><li><p class="docText">
+<tt>ldlib</tt>. 
+Build-time library dependency.</p></li><li><p class="docText">
+<tt>rtlib</tt>. 
+Run-time library dependency.</p></li><LI><p class="docText">
+<tt>os</tt>. 
+Operating system dependency.</P></li><li><p class="docText">
+<tt>websrv</tt>. 
+Web server dependency.</P></li><li><p class="docText">
+<tt>sapi</tt>. 
+SAPI backend dependency.</p></li></ul>
+<p class="docText">Dependency types are described in detail later.</p>
+<a name="ch12lev3sec39"></a><H5 class="docSection3Title">12.8.2.3 <tt>rel</tt> Attribute</h5>
+<p class="docText"><tt>rel</tt> is short for <tt>relation</tt> and tells if and how the <tt>version</tt> attribute is compared. Possible values include<a name="ch12index244"></a><a name="ch12index245"></a></P>
+<ul><LI><p class="docText">
+<tt>has</tt>. 
+Default. No version comparison; target just needs to be installed/exist/be true.</p></li><li><p class="docText">
+<tt>lt</tt>. 
+Installed version must be less than specified.</p></LI><LI><p class="docText">
+<tt>le</tt>. 
+Installed version must be less than or equal to specified.</p></li><li><p class="docText">
+<tt>gt</tt>. 
+Installed version must be greater than specified.</p></LI><li><p class="docText">
+<tt>ge</tt>. 
+Installed version must be greater than or equal to specified.</p></LI><li><p class="docText">
+<tt>eq</tt>. 
+Installed version must be equal to specified.</P></li><li><p class="docText">
+<tt>ne</tt>. 
+Installed version must be different than specified.</p></li></ul>
+<a name="ch12lev3sec40"></a><h5 class="docSection3Title">12.8.2.4 <tt>optional</tt> Attribute</h5>
+<p class="docText">This attribute lets you specify that a dependency is not a drop-dead requirement for installing the package, but rather something that would provide enhanced functionality. You may leave it out, or give it the value <tt>yes</tt> or <tt>no</tt>.<a name="ch12index246"></a><a name="ch12index247"></a><a name="ch12index248"></a><a name="ch12index249"></a></p>
+<a name="ch12lev2sec13"></a><h4 class="docSection2Title">12.8.3. Dependency Types</h4>
+<p class="docText">The PEAR Installer supports different types of dependencies. A package may require another package, that some PHP extension is available, a specific operating system and so on. This is expressed with the following dependency types.<a name="ch12index250"></a><a name="ch12index251"></a><a name="ch12index252"></a></p>
+<a name="ch12lev3sec41"></a><h5 class="docSection3Title">12.8.3.1 PHP Dependencies</h5>
+<p class="docText"><span class="docEmphStrong">PHP dependencies</span> express what version of PHP the package requires.</p>
+<p class="docText">It is good practice to be conservative about PHP version dependencies. If you release the package to a lot of people (such as through <a class="docLink" target="_blank" href="http://pear.php.net">pear.php.net</a>), there will always be some PHP upgrade lag among your package's potential users. If you require bleeding-edge PHP, fewer people will be able to use your package.<a name="ch12index253"></a></p>
+<a name="ch12lev3sec42"></a><h5 class="docSection3Title">12.8.3.2 Extension Dependencies</H5>
+<p class="docText">This type of dependency expresses that the package needs a specific PHP extension. During package installation, the installer checks whether the extension is loaded, or if it can be loaded from the default extension directory. If not, the dependency fails.<a name="ch12index254"></a></P>
+<a name="ch12lev3sec43"></a><h5 class="docSection3Title">12.8.3.3 PEAR Package Dependencies</h5>
+<p class="docText">PEAR package dependencies say that this package requires another package. This type of dependency is checked by looking up the PEAR package registry. Because the registry information is stored inside <tt>php_dir</tt>, this means that the required package must be installed in the same <tt>php_dir</tt> as the depending package.<a name="ch12index255"></a></P>
+<a name="ch12lev3sec44"></a><h5 class="docSection3Title">12.8.3.4 External Program Dependencies</h5>
+<p class="docText">When a PEAR package relies on an external program that is not part of PHP or PEAR, this is expressed with an external program dependency. During installation, the installer checks if it can find the required program in the current PATH; if not, the dependency fails.<a name="ch12index256"></a></p>
+<a name="ch12lev3sec45"></a><h5 class="docSection3Title">12.8.3.5 Operating System Dependencies</h5>
+<p class="docText">Most packages run on all operating systems, but some are OS specific, such as the &quot;printer&quot; package. This is specified with an OS dependency.<a name="ch12index257"></a><a name="ch12index258"></a><a name="ch12index259"></a><a name="ch12index260"></a></p>
+<a name="ch12lev2sec14"></a><H4 class="docSection2Title">12.8.4. Reasons to Avoid Dependencies</h4>
+<p class="docText">Dependencies are a necessary mechanism for expressing that Package A requires B to function. Although reuse through components is a good practice in theory, it comes at the risk of creating run-way dependencies. These dependencies are not literally out of control, but they aggregate more dependencies than intended or reasonable.<a name="ch12index261"></a><a name="ch12index262"></a><a name="ch12index263"></a></P>
+<p class="docText">So, what is the problem with that? Aren't dependencies taken care of by the installer? Yes, but managing dependencies can become time-consuming and complex. If badly managed, complex dependencies will eventually require more time spent managing dependencies and builds than time spent on development. Often, the biggest motivation for re-use is saving development time, but if re-use becomes too complex, the economics of re-use suddenly fail, and, in a fit of irony, you would save time writing your own.</p>
+<p class="docText">Use dependencies consciously and wisely. If the difference is just a few lines of code or the fact that some package wraps some PHP extension without offering anything else you need, think twice before adding a dependency.</P>
+<p class="docText">As an example, imagine that Package A has dependencies to Packages B and C, and these have dependencies to Packages D, E, and F, respectively (see <a class="docLink" href="#ch12fig02">Figure 12.2</a>).<a name="ch12index264"></a><a name="ch12index265"></a><a name="ch12index266"></a></p>
+<a name="ch12fig02"></a><p><center><h5 class="docFigureTitle">Figure 12.2. Hairy dependencies.</h5>
+<p class="docText"><img border="0" alt="" width="300" height="161" SRC="images/013147149X/graphics/12fig02.gif;380137"></P></center></P><br>
+<p class="docText">In <a class="docLink" href="#ch12fig02">Figure 12.2</a>, the boxes are packages, and the arrows are dependencies between them. A depends on B and C, and so on. As we can see, the B dependency adds four dependencies in practice: B, D, E, and G, while the C dependency adds two: C and F. It may be worth looking at whether the B dependency is strictly necessary, because it causes so many extra dependencies.<a name="ch12index267"></a><a name="ch12index268"></a><a name="ch12index269"></a></p>
+<a name="ch12lev2sec15"></a><h4 class="docSection2Title">12.8.5. Optional Dependencies</h4>
+<p class="docText">Use optional dependencies (<tt>&lt;dep optional="yes" ...&gt;</tt> in <tt>package.xml</tt>) for packages or extensions that would add functionality to your package without being absolutely required.<a name="ch12index270"></a><a name="ch12index271"></a><a name="ch12index272"></a></P>
+<p class="docText">For example, if you have a file-handling package, you could use an optional dependency to the zlib extension and handle .gz files only if the zlib extension is available.</p>
+<a name="ch12lev2sec16"></a><h4 class="docSection2Title">12.8.6. Some Examples</H4>
+<p class="docText">This example shows a <tt>package.xml</tt> snippet with dependency definitions taken from the DB package:<a name="ch12index273"></a><a name="ch12index274"></a></p>
+<pre>
+&lt;deps&gt;
+  &lt;dep type="php" rel="ge" version="4.2.0" /&gt;
+  &lt;dep type="pkg" rel="ge" version="1.0b1"&gt;PEAR&lt;/dep&gt;
+&lt;/deps&gt;
+</pre><BR>
+<p class="docText">DB requires PHP 4.2.0 or newer, as well as release 1.0b1 or newer of the PEAR package.</p>
+<p class="docText">Here is a an example demonstrating optional dependencies:</p>
+<pre>
+&lt;deps&gt;
+  &lt;dep type="php" rel="ge" version="5.0.0" /&gt;
+  &lt;dep type="pkg" optional="yes"&gt;Cache_Lite&lt;/dep&gt;
+  &lt;dep type="ext"&gt;zlib&lt;/dep&gt;
+&lt;/deps&gt;
+</pre><br>
+<p class="docText">This package requires PHP 5.0.0 or newer with zlib loaded, and offers extra features if the <tt>Cache_Lite</tt> package is installed.<a name="ch12index275"></a><a name="ch12index276"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

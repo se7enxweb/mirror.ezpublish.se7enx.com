@@ -1,0 +1,105 @@
+[01-18-2006 00:08:56] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-18-2006 01:23:08] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-18-2006 01:26:33] -!- ordnas [n=ordnas@p549D4C32.dip.t-dialin.net] has joined #ezpublish
+[01-18-2006 01:41:43] -!- tobyS [n=dotxp@popeye.ez.no] has joined #ezpublish
+[01-18-2006 01:43:53] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-18-2006 02:07:16] -!- fh [n=fh@popeye.ez.no] has joined #ezpublish
+[01-18-2006 02:12:19] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-18-2006 02:12:37] -!- ordnas [n=ordnas@p549D4C32.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-18-2006 02:15:29] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-18-2006 02:44:09] -!- fh [n=fh@popeye.ez.no] has quit [Excess Flood]
+[01-18-2006 02:44:42] -!- fh [n=fh@popeye.ez.no] has joined #ezpublish
+[01-18-2006 02:49:46] [#ezpublish] <SEAwolfx> re
+[01-18-2006 02:56:26] [#ezpublish] <B-KiLLer`> hi all
+[01-18-2006 02:57:19] [#ezpublish] <B-KiLLer`> I've got a problem with access rights... I'm using a XML block in a class, but when placing an image inside it, it's not displayed in the site, i'm getting a permission denied error
+[01-18-2006 02:58:21] [#ezpublish] <B-KiLLer`> which is (are?) the correct role(s) I need to assign to the anonymous user (I guess) to have the requested permissions ?
+[01-18-2006 03:03:08] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[01-18-2006 03:03:25] [#ezpublish] <philG> hi all
+[01-18-2006 03:07:25] [#ezpublish] <philG> i search some infoormation about the way to change languague un ezpublish site ..  i don't understand for example why english is code "eng-US" and in the navigator it's en-Us ...  do you know a good example to add this in my site ?
+[01-18-2006 03:11:45] [#ezpublish] <philG> i will go to read this : http://ez.no/ez_publish/documentation/configuration/configuration/language_and_charset/how_to_setup_a_multilingual_site
+[01-18-2006 03:36:33] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[01-18-2006 03:36:43] [#ezpublish] <kalooni> good morning
+[01-18-2006 03:38:25] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-18-2006 03:54:24] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-18-2006 04:07:56] [#ezpublish] <philG> i have try to show the different flag on my template, it seems to have an error, someon can halp me ?
+[01-18-2006 04:24:46] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-18-2006 04:29:45] [#ezpublish] <SEAwolfx> B-KiLLer`: the image you place in the xml-block resides in another folder(media?). if so the permission for this folder must be set according to the access for anonymous user.
+[01-18-2006 04:44:55] -!- SEAwolfx_ [n=mike@tor/session/x-5618bcab063ad8b7] has joined #ezpublish
+[01-18-2006 04:46:05] -!- SEAwolfx [i=debian-t@tor/session/x-d9715b94081974b8] has quit [Nick collision from services.]
+[01-18-2006 04:46:35] -!- SEAwolfx_ is now known as SEAwolfx
+[01-18-2006 05:04:24] [#ezpublish] <B-KiLLer`> SEAwolfx: I had to add the role content/read/Class(Image) to allow the display of the images
+[01-18-2006 05:09:22] -!- SEAwolfx_ [n=mike@tor/session/x-43a50198718eca57] has joined #ezpublish
+[01-18-2006 05:11:09] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[01-18-2006 05:12:22] -!- SEAwolfx [n=mike@tor/session/x-5618bcab063ad8b7] has quit [Remote closed the connection]
+[01-18-2006 06:06:36] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-18-2006 06:07:06] [#ezpublish] <zrg> dang, -22 and falling
+[01-18-2006 06:20:11] -!- SEAwolfx [n=mike@tor/session/x-d8188c449770375d] has joined #ezpublish
+[01-18-2006 06:27:33] [#ezpublish] <SEAwolfx_> xmlarea is not compatible with 3.7?!
+[01-18-2006 06:30:02] [#ezpublish] <zrg> how not?
+[01-18-2006 06:30:36] [#ezpublish] <SEAwolfx> you run xmlarea inside of 3.7?
+[01-18-2006 06:30:43] [#ezpublish] <zrg> 3.6
+[01-18-2006 06:32:00] [#ezpublish] <SEAwolfx> hm, on the  contrib page they not that its compatible with 3.5. despite of this I tried to install it on a 3.7 installation which failed.
+[01-18-2006 06:32:13] [#ezpublish] <zrg> failed how
+[01-18-2006 06:32:16] -!- SEAwolfx_ [n=mike@tor/session/x-43a50198718eca57] has quit [Remote closed the connection]
+[01-18-2006 06:32:23] [#ezpublish] <SEAwolfx> hm, some js-errors appeared.
+[01-18-2006 06:32:53] [#ezpublish] <zrg> btw, to correctly work on 3.6 get the 3.6 patched version from svn
+[01-18-2006 06:32:56] [#ezpublish] <SEAwolfx> thus the edit-menu didnt appear.
+[01-18-2006 06:33:41] [#ezpublish] <SEAwolfx> the patched version against 3.6 is commited in svn per default?
+[01-18-2006 06:33:52] [#ezpublish] <zrg> huh?
+[01-18-2006 06:34:00] [#ezpublish] <SEAwolfx> or is this a special branch?
+[01-18-2006 06:34:14] [#ezpublish] <SEAwolfx> no matters, i always use svn here.
+[01-18-2006 06:34:17] [#ezpublish] <zrg> i hacked it to work better on 3.6 and its some special branch
+[01-18-2006 06:35:12] [#ezpublish] <SEAwolfx> so you made a simple svn co of the xmlarea extension?
+[01-18-2006 06:35:30] [#ezpublish] <SEAwolfx> s/co/check out/
+[01-18-2006 06:35:32] [#ezpublish] <SEAwolfx> ;)
+[01-18-2006 06:36:45] [#ezpublish] <zrg> i asked someone to do it
+[01-18-2006 06:37:08] [#ezpublish] <zrg> was not done in best way it appears from someones comment on xmlarea page
+[01-18-2006 06:37:25] [#ezpublish] <SEAwolfx> hmm :/
+[01-18-2006 06:39:58] [#ezpublish] <SEAwolfx> anyway, thanks for the info.
+[01-18-2006 06:42:20] [#ezpublish] <zrg> it works quite well in 3.6 tho
+[01-18-2006 07:03:55] -!- ordnas [n=ordnas@p549D4C32.dip.t-dialin.net] has joined #ezpublish
+[01-18-2006 07:30:19] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-18-2006 07:40:10] [#ezpublish] <ordnas> Planet eZ publish is alive: http://www.planetezpublish.org/
+[01-18-2006 07:41:40] -!- tobyS changed the topic of #ezpublish to: eZ publish | cms |  Welcome to #ezpublish (and Happy New Year :) Please be patient, wait and try again before leaving || eZ publish community: http://ez.no/community || News: http://ez.no/community/news/ez_components_1_0_release_candidate_1 | Articles: http://ez.no/community/articles/image_manipulation_with_ez_components | http://www.planetezpublish.org/
+[01-18-2006 07:49:31] [#ezpublish] <buz> neat
+[01-18-2006 07:59:53] [#ezpublish] <ordnas> feel free to add your feed here to be aggregated on Planet eZ publish: http://ez.no/community/forum/general/planet_ez_publish_is_alive
+[01-18-2006 08:02:14] -!- ordnas [n=ordnas@p549D4C32.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-18-2006 08:16:17] -!- kore_ [n=lordhong@217.194.224.41] has quit [Read error: 104 (Connection reset by peer)]
+[01-18-2006 08:20:03] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-18-2006 08:21:15] -!- B-KiLLer` [n=me@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[01-18-2006 08:41:19] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-18-2006 08:43:23] [#ezpublish] <kracker> cool deal
+[01-18-2006 08:43:55] -!- JaschaS [i=jascha@i577B9413.versanet.de] has joined #ezpublish
+[01-18-2006 08:44:43] [#ezpublish] <JaschaS> uff, i thought this would be a little bit bigger in here :D
+[01-18-2006 08:58:45] [#ezpublish] <kracker> heh
+[01-18-2006 08:59:08] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-18-2006 08:59:13] [#ezpublish] <JaschaS> someone know why {attribute_pdf_gui attribute=$article.data_map.image} doesnt loads any template? :(
+[01-18-2006 08:59:29] -!- tobyS [n=dotxp@popeye.ez.no] has quit ["Plant your channel to pearadise.net!"]
+[01-18-2006 08:59:35] [#ezpublish] <kracker> this is about the size, and frequency tho it does get a bit more bizzy
+[01-18-2006 09:00:06] [#ezpublish] <JaschaS> hm?
+[01-18-2006 09:00:31] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-18-2006 09:04:22] [#ezpublish] <JaschaS> it produces the alttext with a link (which not work^^) but without loading the embed.tpl, how can i change that -.-
+[01-18-2006 09:13:06] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[01-18-2006 09:14:33] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[01-18-2006 09:16:55] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[01-18-2006 09:17:31] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-18-2006 09:28:14] -!- kore_ [n=lordhong@217.194.224.41] has quit [Nick collision from services.]
+[01-18-2006 09:42:24] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[01-18-2006 09:50:02] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[01-18-2006 09:57:38] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-18-2006 10:50:34] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-18-2006 11:01:41] -!- tobmaster [n=tobmaste@dslb-084-061-063-120.pools.arcor-ip.net] has joined #ezpublish
+[01-18-2006 11:14:19] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-18-2006 11:24:46] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[01-18-2006 13:24:05] -!- JaschaS [i=jascha@i577B9413.versanet.de] has quit ["( wenn du dies lieﬂt, dann ist was falsch gelaufen und der bnc ist tot :P )"]
+[01-18-2006 13:39:48] -!- _Jens [n=jens@trac.codes-concepts.de] has quit [calvino.freenode.net irc.freenode.net]
+[01-18-2006 13:39:48] -!- seasonfive [n=seasonfi@AGrenoble-152-1-44-83.w82-122.abo.wanadoo.fr] has quit [calvino.freenode.net irc.freenode.net]
+[01-18-2006 13:40:41] -!- seasonfive [n=seasonfi@AGrenoble-152-1-44-83.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[01-18-2006 14:13:58] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-18-2006 15:04:34] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-18-2006 15:22:53] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-18-2006 15:38:51] -!- tobmaster [n=tobmaste@dslb-084-061-063-120.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[01-18-2006 16:12:19] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-18-2006 16:44:39] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-18-2006 17:43:31] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-18-2006 20:48:47] -!- SEAwolfx [n=mike@tor/session/x-d8188c449770375d] has quit [Connection reset by peer]

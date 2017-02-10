@@ -1,0 +1,456 @@
+[12-27-2005 00:05:04] -!- Shai_Tan [n=shai-tan@203.129.152.172] has quit [Read error: 113 (No route to host)]
+[12-27-2005 01:52:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-27-2005 02:04:11] -!- ordnas [n=ordnas@p549D7FA6.dip.t-dialin.net] has joined #ezpublish
+[12-27-2005 02:05:51] -!- ordna1 [n=ordnas@p549D7FA6.dip.t-dialin.net] has joined #ezpublish
+[12-27-2005 02:19:55] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-27-2005 02:22:51] -!- ordnas [n=ordnas@p549D7FA6.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-27-2005 02:28:15] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-27-2005 02:38:49] -!- Shai_Tan [n=shai-tan@203.129.156.8] has joined #ezpublish
+[12-27-2005 02:42:49] [#ezpublish] <Katana`> Shai_Tan ?
+[12-27-2005 02:42:53] [#ezpublish] <Katana`> the one i know ? :=
+[12-27-2005 02:43:01] [#ezpublish] <Katana`> (hi by the way)
+[12-27-2005 03:29:26] -!- ordna1 [n=ordnas@p549D7FA6.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-27-2005 03:31:25] [#ezpublish] <Shai_Tan> howdy Katana`
+[12-27-2005 03:31:35] [#ezpublish] <Shai_Tan> indeed, tis I
+[12-27-2005 03:34:53] -!- ordnas [n=ordnas@p549D7FA6.dip.t-dialin.net] has joined #ezpublish
+[12-27-2005 03:38:43] -!- kore_ [n=lordhong@essn-d9bd4a9a.pool.mediaWays.net] has joined #ezpublish
+[12-27-2005 03:44:18] [#ezpublish] <Katana`> what are you doing here Shai_Tan ? :)
+[12-27-2005 03:44:22] [#ezpublish] <Katana`> hi ordnas / kore_
+[12-27-2005 03:44:33] [#ezpublish] <kore_> moin :)
+[12-27-2005 03:45:01] [#ezpublish] <Shai_Tan> Katana`:  just downgrading apache to 1.3 and php down to 4.4 to install ez
+[12-27-2005 03:45:07] [#ezpublish] <Katana`> cool :)
+[12-27-2005 03:45:11] [#ezpublish] <Shai_Tan> see if I can break it
+[12-27-2005 03:45:18] [#ezpublish] <Katana`> break ez ? probably ;)
+[12-27-2005 03:45:38] [#ezpublish] <Shai_Tan> I got a large project on and need a CMS/Framework with a decent API
+[12-27-2005 03:45:48] [#ezpublish] <Katana`> you're probably in the right place then
+[12-27-2005 03:45:53] [#ezpublish] <Shai_Tan> I thought somebody here may be able to suggest one :)
+[12-27-2005 03:46:10] [#ezpublish] <Katana`> out of curiosity, have you checked the eZ PHP Components ?
+[12-27-2005 03:46:23] [#ezpublish] <Shai_Tan> have downloaded it, thats all
+[12-27-2005 03:46:43] [#ezpublish] <Katana`> it should give a good overview of what eZ Publish 4 may be ;)
+[12-27-2005 03:46:59] [#ezpublish] <Shai_Tan> I am curious about what does not work with php5 and why not
+[12-27-2005 03:47:46] [#ezpublish] <Shai_Tan> much of my recent work has been with pdo,exception handling, new OO model, iterators
+[12-27-2005 03:48:15] [#ezpublish] <Shai_Tan> seems I have to leave all that behind
+[12-27-2005 03:50:01] [#ezpublish] <Shai_Tan> also in the install manual it says apache can be downloaded from http://www.apache.org, this is true but correctly should be http:httpd.apache.org
+[12-27-2005 03:50:19] [#ezpublish] <Katana`> well, since eZP 3 uses PHP4 OO at its highest level, why it doesn't work with PHP5 is quite obvious...
+[12-27-2005 03:50:28] [#ezpublish] <Katana`> yes indeed
+[12-27-2005 03:50:35] [#ezpublish] <Katana`> fill in a bug report ;)
+[12-27-2005 03:50:44] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[12-27-2005 03:50:53] [#ezpublish] <Shai_Tan> I am sure I will find more important bugs :)
+[12-27-2005 03:51:00] [#ezpublish] <Katana`> :))
+[12-27-2005 03:51:20] [#ezpublish] <Shai_Tan> I gotta get this project right first time
+[12-27-2005 03:51:30] [#ezpublish] <Katana`> tight schedule ?
+[12-27-2005 03:51:46] [#ezpublish] <Shai_Tan> not really, looking at 4-5 months devel
+[12-27-2005 03:51:49] [#ezpublish] <Shai_Tan> maybe 6
+[12-27-2005 03:51:53] [#ezpublish] <Shai_Tan> with testing
+[12-27-2005 03:52:01] [#ezpublish] <Katana`> it depends on the project but it seems decent
+[12-27-2005 03:52:11] [#ezpublish] <Katana`> what's the project like ?
+[12-27-2005 03:52:22] [#ezpublish] <Shai_Tan> its not secret, tis another photo community
+[12-27-2005 03:52:38] [#ezpublish] <Shai_Tan> we are going up against flickr
+[12-27-2005 03:53:04] [#ezpublish] <Katana`> cool :)
+[12-27-2005 03:53:31] [#ezpublish] <Shai_Tan> they are making just too much cash, and we want some of it
+[12-27-2005 03:53:50] [#ezpublish] <Katana`> depending on the deadline for the project you may be able to start with eZP 3 and upgrade to 4 when it's finished...
+[12-27-2005 03:54:48] [#ezpublish] <Shai_Tan> hmm, need gd
+[12-27-2005 03:54:59] [#ezpublish] <Katana`> or imagemagick (commandline)
+[12-27-2005 03:55:03] [#ezpublish] <Katana`> it's actually better
+[12-27-2005 03:55:19] [#ezpublish] <Shai_Tan> yeah, but gd is easy, and I already have the image classes
+[12-27-2005 03:55:27] [#ezpublish] <Shai_Tan> although, they are in php5
+[12-27-2005 03:55:36] [#ezpublish] <Katana`> maybe GD is required for text generation
+[12-27-2005 03:55:45] [#ezpublish] <Shai_Tan> ./configure --with-mysql --with-apxs=/usr/local/apache/bin/apxs --with-gd
+[12-27-2005 03:55:49] [#ezpublish] <Shai_Tan> anything else?
+[12-27-2005 03:56:01] [#ezpublish] <Katana`> hmmm... lemme think...
+[12-27-2005 03:56:07] [#ezpublish] <Shai_Tan> is mysqli in 4.4?
+[12-27-2005 03:56:12] [#ezpublish] <Katana`> nope, i don't think so
+[12-27-2005 03:56:14] [#ezpublish] <Katana`> i do believe so
+[12-27-2005 03:56:30] [#ezpublish] <Shai_Tan> ez has a native abstraction layer?
+[12-27-2005 03:57:05] [#ezpublish] <Shai_Tan> what about xml/xsl?
+[12-27-2005 03:57:13] [#ezpublish] <Shai_Tan> sablotron?
+[12-27-2005 03:57:50] [#ezpublish] <Katana`> maybe DOM is required but I don't think so
+[12-27-2005 03:58:15] [#ezpublish] <ordnas> moin Katana`
+[12-27-2005 03:58:25] [#ezpublish] <Katana`> hey ordnas
+[12-27-2005 03:58:27] [#ezpublish] <Shai_Tan> --with-domxml ??
+[12-27-2005 03:58:37] [#ezpublish] <Shai_Tan> --with-dom5
+[12-27-2005 03:58:43] [#ezpublish] <Katana`> ordnas, is domxml required for ez ? i don't think so but i'm not sure
+[12-27-2005 03:59:26] [#ezpublish] <Shai_Tan> what about generating rss feeds?
+[12-27-2005 03:59:38] [#ezpublish] <Katana`> err... it is ? :)
+[12-27-2005 03:59:43] [#ezpublish] <Katana`> nothing specific required
+[12-27-2005 04:01:15] [#ezpublish] <ordnas> Katana`: no
+[12-27-2005 04:02:01] [#ezpublish] <Shai_Tan> ok, recompiling php
+[12-27-2005 04:02:38] [#ezpublish] <Shai_Tan> I moved house and my puter did not survive the move, so I am on my print server, dual PII 450 :/
+[12-27-2005 04:03:02] [#ezpublish] <Katana`> argh
+[12-27-2005 04:03:51] [#ezpublish] <Shai_Tan> ahh, png requires --with-zlib
+[12-27-2005 04:04:47] [#ezpublish] <Katana`> :)
+[12-27-2005 04:05:10] -!- DiGiTa|_ [n=guillaum@84.6.35.111] has joined #ezpublish
+[12-27-2005 04:05:18] [#ezpublish] <DiGiTa|_> hi
+[12-27-2005 04:05:33] [#ezpublish] <DiGiTa|_> is it possible to translate only some fields into the admin
+[12-27-2005 04:05:44] [#ezpublish] <Katana`> i don't think so DiGiTa|_
+[12-27-2005 04:06:04] [#ezpublish] <Katana`> but they should by default be set the to language you're translating from
+[12-27-2005 04:06:10] [#ezpublish] <DiGiTa|_> because if i translate an article with an image, and i reedit the image of the article, i should upload 2 times the same image
+[12-27-2005 04:06:35] [#ezpublish] <DiGiTa|_> for the eng version and the fr version
+[12-27-2005 04:06:36] [#ezpublish] <Katana`> that's why you set the attribute to non translatable
+[12-27-2005 04:06:48] [#ezpublish] <DiGiTa|_> ah yes i forgot thet :)
+[12-27-2005 04:06:52] [#ezpublish] <Katana`> :)
+[12-27-2005 04:07:00] [#ezpublish] <DiGiTa|_> thanks
+[12-27-2005 04:07:05] [#ezpublish] <Katana`> np
+[12-27-2005 04:23:16] [#ezpublish] <buz> i'm having trouble with fetching reverse_related again
+[12-27-2005 04:23:32] [#ezpublish] <buz> isnt that supposed to work in 3.6.4?
+[12-27-2005 04:23:49] [#ezpublish] <Katana`> no idea buz
+[12-27-2005 04:24:05] [#ezpublish] <buz> the docs at least list attribute_identifier as supported feature
+[12-27-2005 04:35:07] [#ezpublish] <buz> mhh stupid me
+[12-27-2005 04:35:18] [#ezpublish] <buz> i should probably put the fetch command into section loop= not section show=
+[12-27-2005 04:37:15] -!- SEAwolfx [n=mike@tor/session/x-89b6d345a3755bfb] has joined #ezpublish
+[12-27-2005 04:38:19] [#ezpublish] <SEAwolfx> re
+[12-27-2005 04:38:28] [#ezpublish] <buz> now it works lol
+[12-27-2005 04:38:40] [#ezpublish] <Shai_Tan> Katana` fixed it :)
+[12-27-2005 04:38:52] [#ezpublish] <DiGiTa|_> why arent you using foreach ?
+[12-27-2005 04:38:56] [#ezpublish] <DiGiTa|_> buz
+[12-27-2005 04:39:07] [#ezpublish] <buz> old habits die hard?
+[12-27-2005 04:40:48] [#ezpublish] <DiGiTa|_> eheh
+[12-27-2005 04:41:15] [#ezpublish] <buz> besides, where's the difference, really ;)
+[12-27-2005 04:41:21] [#ezpublish] <buz> foreach is likely the nicer name, i agree ;)
+[12-27-2005 04:41:51] [#ezpublish] <buz> mhh
+[12-27-2005 04:41:57] [#ezpublish] <buz> our dns does weird things this morning
+[12-27-2005 04:42:08] [#ezpublish] <buz> some slaves resolves some domains to other ips...
+[12-27-2005 04:45:32] [#ezpublish] <SEAwolfx> difference between foreach and what?
+[12-27-2005 04:45:38] [#ezpublish] <buz> section
+[12-27-2005 04:46:10] [#ezpublish] <SEAwolfx> ah, I reqad that section is deprecated.
+[12-27-2005 04:46:16] [#ezpublish] <SEAwolfx> s/reqad/read/
+[12-27-2005 04:47:19] [#ezpublish] <buz> it probably is
+[12-27-2005 04:47:28] [#ezpublish] <buz> but there's truckloads of it in ez still
+[12-27-2005 04:47:49] [#ezpublish] <SEAwolfx> and that section is replaced by foreach to be more compatible with common programming languages.
+[12-27-2005 04:48:17] [#ezpublish] <SEAwolfx> hehe ;) 'find | grep 'tpl$'| sed -i ..
+[12-27-2005 04:48:29] [#ezpublish] <Katana`> foreach / for / while
+[12-27-2005 04:48:31] [#ezpublish] <Katana`> not only foreach
+[12-27-2005 04:48:31] [#ezpublish] <buz> not sure if that would work like it should
+[12-27-2005 04:48:51] [#ezpublish] <buz> section is sort of like a combination of foreach/for/while andif
+[12-27-2005 04:49:08] [#ezpublish] <Shai_Tan> gosh I miss iterators
+[12-27-2005 04:49:21] [#ezpublish] <SEAwolfx> true .. the if expression has to appplied too.
+[12-27-2005 04:49:55] [#ezpublish] <buz> i can do without iterators if you're thinking of the c++ variety *uuugh*
+[12-27-2005 04:50:14] [#ezpublish] <buz> i dont think it gets much uglier than that, really
+[12-27-2005 04:52:06] [#ezpublish] <SEAwolfx> is there an eZ-way to retrieve the HTTP_REFERER in the context of ez-redirection instead of using $_SERVER['HTTP_REFERRER']
+[12-27-2005 04:52:30] [#ezpublish] <buz> ezhttp maybe
+[12-27-2005 04:52:48] [#ezpublish] <buz> ezhttptool or whatever it is called
+[12-27-2005 04:53:18] [#ezpublish] <SEAwolfx> Shai_Tan: u could write an template-operator hasNext.
+[12-27-2005 04:54:16] [#ezpublish] <Shai_Tan> SEAwolfx:  yeah, but was nice to have it all there built in
+[12-27-2005 04:54:38] [#ezpublish] <SEAwolfx> ;)
+[12-27-2005 04:55:53] [#ezpublish] <SEAwolfx>  buz | >ezhttptool or whatever it is called <- no functionality built for this.
+[12-27-2005 04:56:02] [#ezpublish] <buz> then use globals ;)
+[12-27-2005 04:58:00] [#ezpublish] * SEAwolfx is hard wired
+[12-27-2005 05:07:53] [#ezpublish] <buz> to what?
+[12-27-2005 05:07:55] [#ezpublish] <buz> 220V?
+[12-27-2005 05:12:49] [#ezpublish] <buz> ez.no is broken: Fatal error: Call to a member function on a non-object in /home/ezno/www/kernel/content/node_edit.php on line 65 when trying to create a forum reply
+[12-27-2005 05:15:59] [#ezpublish] <SEAwolfx> buz | >to what? <- to the use of $_SERVER ;)
+[12-27-2005 05:16:04] [#ezpublish] <buz> aaah
+[12-27-2005 05:24:09] [#ezpublish] <SEAwolfx> when I write a XML-RPC-class including the functions being accessable by using webservice this class must composite the functionality of other classes being wrapped this way. is there another way than aggregation, the instantiation of the appropriate objects in the XML-RPC-Class-functions?
+[12-27-2005 05:25:01] [#ezpublish] <buz> probably not
+[12-27-2005 05:25:25] [#ezpublish] <buz> single point interfaces usually need composite objects
+[12-27-2005 05:26:17] [#ezpublish] <SEAwolfx> hmm, unfortunately in php u cant inherit from more than on class.
+[12-27-2005 05:26:44] [#ezpublish] <SEAwolfx> this sux. long live python ;)
+[12-27-2005 05:29:08] [#ezpublish] <Shai_Tan> you can inherit from multiple classes, but only hierachially
+[12-27-2005 05:29:14] [#ezpublish] <Shai_Tan> (sp)
+[12-27-2005 05:29:43] [#ezpublish] <SEAwolfx> or i have to implement a chain with classes including functions for being published as webservices and build a inheritance chain with them. but then the function names must be unique.
+[12-27-2005 05:29:49] [#ezpublish] <SEAwolfx> Shai_Tan: ;)
+[12-27-2005 05:30:25] [#ezpublish] <Shai_Tan> object aggregation is your friend
+[12-27-2005 05:30:25] -!- kore_ [n=lordhong@essn-d9bd4a9a.pool.mediaWays.net] has quit []
+[12-27-2005 05:30:26] [#ezpublish] <buz> actually, after having seen the mess that inheritance from multiple classes can cause i'm tempted to say thankfully
+[12-27-2005 05:33:36] [#ezpublish] <Shai_Tan> well, if namespaces make php6, all may be well
+[12-27-2005 05:40:20] -!- SEAwolfx1 [n=mike@tor/session/x-d1868727d85bda95] has joined #ezpublish
+[12-27-2005 05:41:09] [#ezpublish] <SEAwolfx1> argh, lost connection. noticed Shai_Tan at last.
+[12-27-2005 05:45:37] -!- SEAwolfx1 [n=mike@tor/session/x-d1868727d85bda95] has quit [Remote closed the connection]
+[12-27-2005 05:48:33] -!- SEAwolfx1 [n=mike@tor/session/x-dbad60d346790bc0] has joined #ezpublish
+[12-27-2005 05:55:58] -!- SEAwolfx [n=mike@tor/session/x-89b6d345a3755bfb] has quit [Nick collision from services.]
+[12-27-2005 05:56:17] -!- SEAwolfx1 is now known as SEAwolfx
+[12-27-2005 06:02:46] [#ezpublish] <SEAwolfx> hm .. re
+[12-27-2005 06:42:43] [#ezpublish] <birger> good morning
+[12-27-2005 06:43:08] [#ezpublish] <SEAwolfx> hi birger
+[12-27-2005 06:43:18] -!- birger is now known as xbit
+[12-27-2005 06:43:31] [#ezpublish] <xbit> :)
+[12-27-2005 06:43:51] [#ezpublish] <xbit> whats up SEAwolfx ?
+[12-27-2005 06:44:02] [#ezpublish] <SEAwolfx> ah ;) xbit, long time not seen.
+[12-27-2005 06:44:06] [#ezpublish] <SEAwolfx> ;) well. currently fightening with templates.
+[12-27-2005 06:45:03] [#ezpublish] <xbit> yuck :)
+[12-27-2005 06:46:18] [#ezpublish] <SEAwolfx> and how are you?
+[12-27-2005 06:46:25] [#ezpublish] <xbit> fine :)
+[12-27-2005 06:46:38] [#ezpublish] <xbit> was struggling with viewcaching again yesterday
+[12-27-2005 06:46:47] [#ezpublish] <Katana`> :)
+[12-27-2005 06:47:03] [#ezpublish] <xbit> had to put CacheThreshold=0 to make it work :/
+[12-27-2005 06:47:11] [#ezpublish] <xbit> not too happy about that
+[12-27-2005 06:48:18] [#ezpublish] <SEAwolfx> is CahceThreshold the max size of the cache to initialize clearing it?
+[12-27-2005 06:48:37] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[12-27-2005 06:50:17] [#ezpublish] <xbit> what ini option contains the cache size?
+[12-27-2005 06:50:56] [#ezpublish] <xbit> i'm running 3.6.0 so my problem is perhaps related to this bug: http://ez.no/community/bugs/smart_cache_is_impossible_to_disable_in_3_5_2_and_3_6
+[12-27-2005 07:12:09] [#ezpublish] <SEAwolfx> help: http://www.rafb.net/paste/results/yCjV5v50.html
+[12-27-2005 07:17:29] [#ezpublish] <SEAwolfx> afk, eating.
+[12-27-2005 07:22:30] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-27-2005 07:26:27] [#ezpublish] <buz> what is it with ez.no? can you guys post?
+[12-27-2005 07:26:38] [#ezpublish] <buz> xavier obviously could http://ez.no/community/forum/setup_design/make_robust_to_using_back_button_rather_than_cancel#msg90482
+[12-27-2005 07:38:48] [#ezpublish] <SEAwolfx> re
+[12-27-2005 07:38:56] [#ezpublish] <SEAwolfx> [14:12:32]<SEAwolfx>help: http://www.rafb.net/paste/results/yCjV5v50.html ;)
+[12-27-2005 07:44:29] [#ezpublish] * Katana` has discovered that Google Desktop was very useful when working offline
+[12-27-2005 07:44:36] [#ezpublish] <DiGiTa|_> because $show_step is not defined ?
+[12-27-2005 07:44:48] [#ezpublish] <Katana`> searching through everything you've browsed on ez.no is good :)
+[12-27-2005 07:47:34] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[12-27-2005 07:47:56] -!- seasonfive [n=seasonfi@AGrenoble-152-1-56-188.w83-201.abo.wanadoo.fr] has quit [Read error: 110 (Connection timed out)]
+[12-27-2005 07:48:02] [#ezpublish] <zrg> grr
+[12-27-2005 07:48:21] [#ezpublish] <buz> for the german speakers: http://www.mary-joana.ch/files/jule.swf OMFFFFFFFFFFFFFFFFFG
+[12-27-2005 07:52:54] [#ezpublish] <zrg> i dont speak german but i think you gave right diagnose
+[12-27-2005 07:53:15] [#ezpublish] <buz> because of the guy on the screen?
+[12-27-2005 07:53:33] [#ezpublish] <buz> the discussion on the phone is waaaaay worse
+[12-27-2005 07:53:35] [#ezpublish] <zrg> i still understand the main idea :P
+[12-27-2005 07:53:40] [#ezpublish] <buz> ah ok
+[12-27-2005 07:54:04] [#ezpublish] <buz> how does anyone coem up with such an idea
+[12-27-2005 07:55:25] [#ezpublish] <zrg> did she get it in the end?
+[12-27-2005 07:55:33] [#ezpublish] <buz> get what
+[12-27-2005 07:56:21] [#ezpublish] <zrg> it :P
+[12-27-2005 07:56:29] [#ezpublish] <buz> the doc got it out
+[12-27-2005 07:57:12] [#ezpublish] <zrg> sure but afterwards?
+[12-27-2005 07:57:23] [#ezpublish] <buz> ah that i dont know
+[12-27-2005 07:57:34] [#ezpublish] <buz> ever since she cant think of anything else during sex ;)
+[12-27-2005 07:57:49] [#ezpublish] <zrg> my god :D
+[12-27-2005 07:59:40] [#ezpublish] <zrg> but i think the ambulance people have seen it all, people do strange shit :)
+[12-27-2005 07:59:50] [#ezpublish] <buz> yeah
+[12-27-2005 07:59:54] [#ezpublish] <DiGiTa|_> what is she doing ?
+[12-27-2005 08:00:06] [#ezpublish] <SEAwolfx> <     DiGiTa|_ | >because $show_step is not defined ? in on e of these if-branches.
+[12-27-2005 08:00:15] [#ezpublish] <SEAwolfx> but i solved it already, with a bit of redundancy
+[12-27-2005 08:00:20] [#ezpublish] <buz> on valentines day, to surprise her, her bf stuck a rose up his penis
+[12-27-2005 08:00:22] [#ezpublish] <zrg> she got flowers for valentines day, i wont go beyond that :P
+[12-27-2005 08:00:33] [#ezpublish] <zrg> nice gesture
+[12-27-2005 08:00:50] [#ezpublish] <DiGiTa|_> lol
+[12-27-2005 08:00:57] [#ezpublish] <DiGiTa|_> crazy guy
+[12-27-2005 08:00:59] [#ezpublish] <SEAwolfx> doh
+[12-27-2005 08:01:11] [#ezpublish] <SEAwolfx> indeed
+[12-27-2005 08:01:22] [#ezpublish] <SEAwolfx> next time i will do the same!!!
+[12-27-2005 08:01:23] [#ezpublish] <SEAwolfx> outsch
+[12-27-2005 08:01:41] [#ezpublish] <zrg> i suggest try some other flower :P
+[12-27-2005 08:01:49] [#ezpublish] <buz> i suggest a dildo
+[12-27-2005 08:02:31] [#ezpublish] <SEAwolfx> yeah .. both are cool alternatives;)
+[12-27-2005 08:03:05] [#ezpublish] <SEAwolfx> i would prefer the second one.
+[12-27-2005 08:04:05] [#ezpublish] <zrg> i'd prefer a girl with rose between her teeth :P
+[12-27-2005 08:04:23] [#ezpublish] <buz> dead or alive?
+[12-27-2005 08:04:36] [#ezpublish] * buz was just thinking about kylie minogue/nick cave
+[12-27-2005 08:04:51] [#ezpublish] <zrg> oh yeah
+[12-27-2005 08:04:58] [#ezpublish] <zrg> tough choice
+[12-27-2005 08:05:08] [#ezpublish] <buz> nono
+[12-27-2005 08:05:14] [#ezpublish] <buz> nick cave puts flowers between her teeth
+[12-27-2005 08:05:15] [#ezpublish] <zrg> johnny lee
+[12-27-2005 08:05:38] [#ezpublish] <buz> http://www.seeklyrics.com/lyrics/Nick-Cave/Where-The-Wild-Roses-Grow.html
+[12-27-2005 08:07:10] -!- hovik_ [n=hovik@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[12-27-2005 08:08:09] [#ezpublish] <zrg> no, henry lee it was :)
+[12-27-2005 08:08:44] [#ezpublish] <zrg> very nice video
+[12-27-2005 08:08:46] [#ezpublish] <zrg> http://www.lyricsfreak.com/n/nick-cave/100050.html
+[12-27-2005 08:09:28] -!- seasonfive [n=seasonfi@AGrenoble-152-1-36-202.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[12-27-2005 08:19:30] -!- tobyS_ [n=dotxp@dslb-084-061-131-164.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[12-27-2005 08:22:21] [#ezpublish] <SEAwolfx> better watch Necromantic :D
+[12-27-2005 08:25:07] -!- tobyS [n=dotxp@dslb-084-061-131-164.pools.arcor-ip.net] has joined #ezpublish
+[12-27-2005 08:33:49] [#ezpublish] <zrg> i would like to, a friend theology student recommended it :)
+[12-27-2005 09:16:02] [#ezpublish] <zrg> okay
+[12-27-2005 09:16:10] [#ezpublish] <zrg> can of fish, no opener
+[12-27-2005 09:16:54] [#ezpublish] <xbit> order a pizza
+[12-27-2005 09:16:55] [#ezpublish] <xbit> :)
+[12-27-2005 09:17:17] [#ezpublish] <zrg> ill order a opener :P
+[12-27-2005 09:22:42] [#ezpublish] <zrg> ah, theres flat pavement stones outside, that will do
+[12-27-2005 09:41:21] [#ezpublish] <zrg> is anyone using apc ?
+[12-27-2005 09:41:40] [#ezpublish] <buz> the one for php or the one for power distribution
+[12-27-2005 09:43:22] [#ezpublish] <zrg> what is your best guess? ;)
+[12-27-2005 09:43:30] [#ezpublish] <zrg> php 'course
+[12-27-2005 09:44:43] [#ezpublish] <zrg> im wolndering about best settings to it
+[12-27-2005 09:45:34] [#ezpublish] <zrg> there is very little information
+[12-27-2005 09:46:19] [#ezpublish] <zrg> i got:
+[12-27-2005 09:46:19] [#ezpublish] <zrg> apc.enabled ="1"
+[12-27-2005 09:46:19] [#ezpublish] <zrg> apc.shm_size = "60"
+[12-27-2005 09:46:19] [#ezpublish] <zrg> apc.num_files_hint = "5000"
+[12-27-2005 09:46:19] [#ezpublish] <zrg> apc.file_update_protection = "10"
+[12-27-2005 09:46:19] [#ezpublish] <zrg> apc.ttl = "300"
+[12-27-2005 09:46:39] [#ezpublish] <buz> why dont you just use eaccelerator
+[12-27-2005 09:46:49] [#ezpublish] <zrg> but i wonder about files_hint and ttl
+[12-27-2005 09:46:54] [#ezpublish] <zrg> it screwed up
+[12-27-2005 09:49:28] [#ezpublish] <zrg> it seems to me the apc works if only 1-2 sites are under load, as one site takes about 20M of cache memory, but im not sure what the algorithm is when much more php files are used than fits in cache
+[12-27-2005 09:54:13] [#ezpublish] <buz> that'd be very little
+[12-27-2005 09:54:29] [#ezpublish] <buz> i have 35mb cache with eaccelerator on a simple dev site alone
+[12-27-2005 09:54:58] [#ezpublish] <zrg> yeah i know, i have too little ram, half a gig and over 10 sites
+[12-27-2005 09:55:06] [#ezpublish] <buz> way too little
+[12-27-2005 09:55:15] [#ezpublish] <buz> that server needs another gig at the very least
+[12-27-2005 09:55:35] [#ezpublish] <zrg> for accelerator mostly?
+[12-27-2005 09:55:40] [#ezpublish] <buz> mostly
+[12-27-2005 09:55:49] [#ezpublish] <buz> also disk cache is always good
+[12-27-2005 09:55:57] [#ezpublish] <buz> -> http://www.triligon.org//blog/acl_datatype
+[12-27-2005 09:56:20] [#ezpublish] <zrg> disk cache gets leftovers, also i have mysql query cache, that does good
+[12-27-2005 09:56:27] [#ezpublish] <buz> yeah
+[12-27-2005 09:56:35] [#ezpublish] <buz> but the more cache the better (usually)
+[12-27-2005 09:56:48] [#ezpublish] <buz> ideally php cache should be able to store all its files in memory
+[12-27-2005 09:58:56] [#ezpublish] <zrg> i had some halfidea about this permissions thing
+[12-27-2005 10:00:11] [#ezpublish] <zrg> let me remember..
+[12-27-2005 10:05:17] [#ezpublish] <zrg> something about having special section where user can change permissions for objects and then relating them with ones in default section.. cant remember, must have been drunk :)
+[12-27-2005 10:08:13] [#ezpublish] <zrg> but what happens if object has location in other section with different permissions? could make sections for "read" "write" "delete" for each user and add the right to object by publishing it in this users "read" section, something like that?
+[12-27-2005 10:08:42] [#ezpublish] <zrg> would be real messy tho, special datatype is way better :P
+[12-27-2005 10:10:03] [#ezpublish] <buz> needs shitloads of assignments
+[12-27-2005 11:00:13] -!- Shai_Tan [n=shai-tan@203.129.156.8] has quit [Read error: 113 (No route to host)]
+[12-27-2005 11:15:43] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-27-2005 11:42:36] -!- ordnas [n=ordnas@p549D7FA6.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-27-2005 11:46:50] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-27-2005 12:23:42] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[12-27-2005 13:24:08] -!- DiGiTa|_ [n=guillaum@84.6.35.111] has quit [Read error: 110 (Connection timed out)]
+[12-27-2005 14:32:08] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-27-2005 14:56:26] -!- Shai-Tan [n=shai-tan@203.129.144.211] has joined #ezpublish
+[12-27-2005 14:57:12] -!- Shai-Tan [n=shai-tan@203.129.144.211] has quit [Client Quit]
+[12-27-2005 14:59:35] -!- Shai_Tan [n=shai-tan@203.129.144.211] has joined #ezpublish
+[12-27-2005 15:39:25] [#ezpublish] <Shai_Tan> can I create a private var during execution of a script?
+[12-27-2005 15:39:36] [#ezpublish] <Katana`> a private var ? where ?
+[12-27-2005 15:40:09] [#ezpublish] <Shai_Tan> randomly in a class
+[12-27-2005 15:40:18] [#ezpublish] <Katana`> i doubt that...
+[12-27-2005 15:40:25] [#ezpublish] <Shai_Tan> would be nice..
+[12-27-2005 15:40:28] [#ezpublish] <Shai_Tan> just a thought
+[12-27-2005 15:41:08] [#ezpublish] <Katana`> you could store vars in a struct defined as private in the instance...
+[12-27-2005 15:45:04] [#ezpublish] <zrg> by chance anyone has good example how to update image attribute of object in code?
+[12-27-2005 15:51:14] [#ezpublish] <Katana`> image as in ? datatype ?
+[12-27-2005 15:51:16] [#ezpublish] <Katana`> and what attributes ?
+[12-27-2005 15:54:36] [#ezpublish] <zrg> there is class which has atribute of type Image
+[12-27-2005 15:54:50] [#ezpublish] <zrg> and i want to put image there, in code :)
+[12-27-2005 15:55:05] [#ezpublish] <Katana`> the code used to do that should be in the image datatype
+[12-27-2005 15:55:35] [#ezpublish] <Katana`> kernel/classes/datatypes/ezimage/ezimagetype.tpl
+[12-27-2005 15:56:18] [#ezpublish] <Katana`> method fetchObjectAttributeHTTPInput
+[12-27-2005 15:56:42] [#ezpublish] <zrg>  The eZ publish libraries will be documented as soon as they have been reorganized and refurbished (within the end of 2005).
+[12-27-2005 16:02:06] [#ezpublish] <zrg> ok, any idea what this function does or how to use it?
+[12-27-2005 16:02:24] [#ezpublish] <Katana`> nah, don't use the function
+[12-27-2005 16:02:25] [#ezpublish] <Katana`> it's a code exemple ;)
+[12-27-2005 16:02:44] [#ezpublish] <Katana`> that's what eZ triggers when you post a form with a field name that indicates an ezimage attribute
+[12-27-2005 16:03:01] [#ezpublish] <Shai_Tan> ok, PHP Version 4.4.1 installed :)
+[12-27-2005 16:03:14] [#ezpublish] <Shai_Tan> all my scripts are broken :)
+[12-27-2005 16:03:14] [#ezpublish] <Katana`> $base . "_data_imagename_" . $contentObjectAttribute->attribute( "id" ) is the name of the imagenamefield
+[12-27-2005 16:03:22] [#ezpublish] <Katana`> haha Shai_Tan ;)
+[12-27-2005 16:03:30] [#ezpublish] <Shai_Tan> now to install ez
+[12-27-2005 16:03:30] [#ezpublish] <Katana`> http filename actually
+[12-27-2005 16:04:58] [#ezpublish] <zrg> katana: huh?
+[12-27-2005 16:05:08] [#ezpublish] <Katana`> are you looking at that piece of code ?
+[12-27-2005 16:05:14] [#ezpublish] <zrg> yes
+[12-27-2005 16:06:01] [#ezpublish] <Katana`> give me 20 seconds, i'll kill that mob and teleport to an inn ^^
+[12-27-2005 16:06:06] [#ezpublish] <zrg> maybe i misexplained, i have a image file at say /tmp/someimage.jpg and i want to put it in attribute of object
+[12-27-2005 16:06:16] [#ezpublish] <Katana`> using PHP code ?
+[12-27-2005 16:06:33] [#ezpublish] <zrg> preferably, morse code is ok too :P
+[12-27-2005 16:06:43] [#ezpublish] <Katana`> very funny zrg
+[12-27-2005 16:06:43] [#ezpublish] <Katana`> very funny
+[12-27-2005 16:06:45] [#ezpublish] <Katana`> anyway
+[12-27-2005 16:06:56] [#ezpublish] <zrg> sorry lame joke
+[12-27-2005 16:07:10] [#ezpublish] <zrg> its for my xml import routine
+[12-27-2005 16:07:30] [#ezpublish] <zrg> it has paths to file in case of image attribute
+[12-27-2005 16:07:30] [#ezpublish] <Katana`> sorry, lame 2nd degree answer ;)
+[12-27-2005 16:07:34] [#ezpublish] <Katana`> okay so
+[12-27-2005 16:07:46] [#ezpublish] <Katana`> see in that file
+[12-27-2005 16:07:47] [#ezpublish] <Katana`> $httpFileName = $base . "_data_imagename_" . $contentObjectAttribute->attribute( "id" );
+[12-27-2005 16:07:56] [#ezpublish] <Katana`> let's start earlier...
+[12-27-2005 16:08:14] [#ezpublish] <Katana`> that method is called when you submit a content/edit form for a content class that has an image attribute
+[12-27-2005 16:08:27] [#ezpublish] <zrg> im with you
+[12-27-2005 16:08:38] [#ezpublish] <Katana`> it's the standard method that fetches input data from http post and stores the attribute data depending on its implementation
+[12-27-2005 16:08:49] [#ezpublish] <Katana`> $httpFileName = $base . "_data_imagename_" . $contentObjectAttribute->attribute( "id" ); <=
+[12-27-2005 16:08:56] [#ezpublish] <Katana`> $httpFileName contains the name of the upload form field
+[12-27-2005 16:09:10] [#ezpublish] <zrg> ok
+[12-27-2005 16:10:18] [#ezpublish] <Katana`> so later on, everything it does is check the content of that field, and set the uploaded file as the attribute content
+[12-27-2005 16:11:09] [#ezpublish] <zrg> ah ok i see now i think
+[12-27-2005 16:12:13] [#ezpublish] <zrg> the data_imagename part threw me off, like why must file have this in name, but im not to use that function directly but code from eZHTTPFile::canFetch( $httpFileName ) onward, correct?
+[12-27-2005 16:12:35] [#ezpublish] <Katana`> yeah
+[12-27-2005 16:12:44] [#ezpublish] <Katana`> check any content / edit for and you'll see
+[12-27-2005 16:13:11] [#ezpublish] <Katana`> the field names contain everything eZ needs in order to know that field X contains an ezstring and has to be handled by datatype X
+[12-27-2005 16:13:53] [#ezpublish] <zrg> its a standalone script. by the way, is there switch to turn off content object caching, i resorted to deleting the cache variable often but king of clumsy
+[12-27-2005 16:14:56] [#ezpublish] <Katana`> yes i think so
+[12-27-2005 16:14:59] [#ezpublish] <zrg> king of clumsy, name to my next band :P
+[12-27-2005 16:15:06] [#ezpublish] <Katana`> but not sure where ;)
+[12-27-2005 16:15:10] [#ezpublish] <Katana`> probably site.ini
+[12-27-2005 16:15:25] [#ezpublish] <Katana`> i think there is an image upload batch contrib btw
+[12-27-2005 16:15:50] [#ezpublish] <zrg> checking
+[12-27-2005 16:18:32] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-27-2005 16:18:32] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-27-2005 16:18:58] -!- _Katana` is now known as Katana`
+[12-27-2005 16:21:27] [#ezpublish] <zrg> my god, and i thought my code was bad :)
+[12-27-2005 16:22:54] [#ezpublish] <Katana`> yeah that part could make with a code refresh ;)
+[12-27-2005 16:23:06] [#ezpublish] <Katana`> no ez guy to blame here, too bad
+[12-27-2005 16:23:30] [#ezpublish] <zrg> no i mean the upload batch :)
+[12-27-2005 16:23:37] [#ezpublish] <Katana`> ah okay :)
+[12-27-2005 16:23:42] [#ezpublish] <Katana`> ./clear ;)
+[12-27-2005 16:24:09] [#ezpublish] <zrg> but they should have professional scapegoat on channel anyway
+[12-27-2005 16:24:12] [#ezpublish] <zrg> :)
+[12-27-2005 16:24:15] [#ezpublish] <Katana`> :))
+[12-27-2005 16:24:34] [#ezpublish] <zrg> you killed my father! prepare to die!
+[12-27-2005 16:26:41] [#ezpublish] <Katana`> another cool method for ya : eZImageType::insertRegularFile()
+[12-27-2005 16:27:26] [#ezpublish] <Katana`> basically the same thing but it uses a file from disk
+[12-27-2005 16:32:37] [#ezpublish] <zrg> thats what i need :)
+[12-27-2005 16:32:44] [#ezpublish] <zrg> thanks :)
+[12-27-2005 16:32:52] [#ezpublish] <Katana`> but i'm not sure about that method's parameters ^^
+[12-27-2005 16:33:19] [#ezpublish] <zrg> this time the parameters make sense
+[12-27-2005 16:33:33] [#ezpublish] <Katana`> :)
+[12-27-2005 16:40:14] [#ezpublish] <Shai_Tan> ok, so when using the wizard, I need to create the directory structure first?
+[12-27-2005 16:40:57] [#ezpublish] <Katana`> the what ?
+[12-27-2005 16:41:01] [#ezpublish] <Katana`> what wizard :)
+[12-27-2005 16:41:17] [#ezpublish] <Shai_Tan> ezpublish setup wizard
+[12-27-2005 16:41:33] [#ezpublish] <Katana`> ah
+[12-27-2005 16:41:37] [#ezpublish] <Katana`> err no, it should be there already
+[12-27-2005 16:41:45] [#ezpublish] <Katana`> download, uncompress, go to index
+[12-27-2005 16:41:54] [#ezpublish] <Shai_Tan> yep, says "eZ publish cannot write to some important directories, without this the setup cannot finish and parts of eZ publish will fail."
+[12-27-2005 16:42:13] [#ezpublish] <Shai_Tan> I have chmod 77 7 the directory
+[12-27-2005 16:42:30] [#ezpublish] <Katana`> hummm...
+[12-27-2005 16:42:40] [#ezpublish] <Katana`> no safemode or stuff ?
+[12-27-2005 16:43:14] [#ezpublish] <Katana`> no it would say so...
+[12-27-2005 16:43:29] [#ezpublish] <Shai_Tan> bah, will do a manual install
+[12-27-2005 16:44:28] [#ezpublish] <Katana`> weird, never had any issues with the wizard
+[12-27-2005 16:44:36] [#ezpublish] <Katana`> have you refreshed after the chmod ? :)
+[12-27-2005 16:44:43] [#ezpublish] <Shai_Tan> yep
+[12-27-2005 16:44:48] [#ezpublish] <Katana`> it should write to setting / var / design
+[12-27-2005 16:45:21] [#ezpublish] <Shai_Tan> changed ownership to nobody:nobody
+[12-27-2005 16:46:30] [#ezpublish] <Shai_Tan> no better
+[12-27-2005 16:47:26] [#ezpublish] <Katana`> hum
+[12-27-2005 16:47:34] [#ezpublish] <Katana`> are you sure it's not another user ?
+[12-27-2005 16:47:45] [#ezpublish] <Katana`> i have never seen it fail for no reason
+[12-27-2005 16:53:31] [#ezpublish] <zrg> you changed it to 777 recursively?
+[12-27-2005 16:55:32] [#ezpublish] <Shai_Tan> indeed
+[12-27-2005 16:57:59] [#ezpublish] <zrg> also chowned to your apache user?
+[12-27-2005 16:58:06] [#ezpublish] <Shai_Tan> yep
+[12-27-2005 16:58:45] [#ezpublish] <zrg> did you do this aftyer the setup complained?
+[12-27-2005 16:58:51] [#ezpublish] <Shai_Tan> yep
+[12-27-2005 16:59:12] [#ezpublish] <zrg> some strange shit going on on your machine
+[12-27-2005 17:00:00] [#ezpublish] <zrg> did you try what the finetune step offered?
+[12-27-2005 17:00:22] [#ezpublish] <Shai_Tan> yep
+[12-27-2005 17:00:44] [#ezpublish] <zrg> just start over
+[12-27-2005 17:00:54] [#ezpublish] <Shai_Tan> doing it manually
+[12-27-2005 17:01:15] [#ezpublish] <zrg> delete whole thing, unpack again and we do it step by step
+[12-27-2005 17:01:41] [#ezpublish] <zrg> if install couldnt make sense of it i doubt you can manually
+[12-27-2005 17:07:43] [#ezpublish] <Shai_Tan> ouch Fatal error: Call to a member function on a non-object in /html/Photon/kernel/user/register.php on line 81
+[12-27-2005 17:12:35] [#ezpublish] <Shai_Tan> ok, deleted all and started afresh, set has me at ...
+[12-27-2005 17:12:36] [#ezpublish] <Shai_Tan> eZ publish cannot write to some important directories, without this the setup cannot finish and parts of eZ publish will fail.
+[12-27-2005 17:12:36] [#ezpublish] <Shai_Tan> The affected directories are: settings settings/override var var/storage var/cache settings/siteaccess settings/siteaccess/admin design
+[12-27-2005 17:13:54] [#ezpublish] <Shai_Tan> fixed perms an ok
+[12-27-2005 17:14:04] [#ezpublish] <Shai_Tan> does not like magic quotes
+[12-27-2005 17:15:18] [#ezpublish] <Shai_Tan> wants mbstring also
+[12-27-2005 17:27:55] [#ezpublish] <zrg> where did you get error?
+[12-27-2005 17:28:02] [#ezpublish] <zrg> first page on install?
+[12-27-2005 17:28:22] [#ezpublish] <Shai_Tan> yep, just recompiling php with mbstring and ttf
+[12-27-2005 17:28:58] [#ezpublish] <zrg> what os do you have, cant you just apt the right version or something?
+[12-27-2005 17:29:35] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-27-2005 18:12:29] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 113 (No route to host)]
+[12-27-2005 18:52:02] -!- Bedlore [n=me@ppp141-141.lns2.adl2.internode.on.net] has joined #ezpublish
+[12-27-2005 19:22:56] -!- SEAwolfx1 [n=mike@tor/session/x-0d641e4a5c20f3fe] has joined #ezpublish
+[12-27-2005 19:33:21] [#ezpublish] <Shai_Tan> hmm, this setup wizard wont accept my mysql username/password
+[12-27-2005 19:34:48] -!- SEAwolfx2 [n=mike@70.230.73.20] has joined #ezpublish
+[12-27-2005 19:40:00] -!- SEAwolfx1 [n=mike@tor/session/x-0d641e4a5c20f3fe] has quit [Remote closed the connection]
+[12-27-2005 19:49:37] [#ezpublish] <Shai_Tan> The database cannot be used, it uses the character set which is different from the requested charset iso-8859-1.
+[12-27-2005 19:49:40] [#ezpublish] <Shai_Tan> wtf!
+[12-27-2005 19:51:51] [#ezpublish] <zrg> heh, you certainly do get problems ;)
+[12-27-2005 19:58:53] -!- SEAwolfx_ [n=mike@tor/session/x-cb4740aebd1fb9ab] has quit [SendQ exceeded]
+[12-27-2005 20:07:00] [#ezpublish] <Shai_Tan> k, got it up and running, not to find out more about it
+[12-27-2005 20:07:09] [#ezpublish] <Shai_Tan> s/not/now
+[12-27-2005 20:07:50] [#ezpublish] <zrg> :)
+[12-27-2005 20:08:02] [#ezpublish] <Shai_Tan> maybe start with css
+[12-27-2005 20:08:18] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 110 (Connection timed out)]
+[12-27-2005 20:08:29] [#ezpublish] <zrg> you have overdue to your perl rehab, shai :P
+[12-27-2005 20:08:41] [#ezpublish] <Shai_Tan> perl!!!
+[12-27-2005 20:09:07] [#ezpublish] * zrg hides under table
+[12-27-2005 20:09:12] [#ezpublish] <Shai_Tan> echo "00j sn/\/\0 PHP" | perl -lne 'print scalar(reverse)'
+[12-27-2005 20:10:15] [#ezpublish] <zrg> definately overdue :P
+[12-27-2005 20:11:51] [#ezpublish] <zrg> well lucky you i guess :)
+[12-27-2005 20:58:37] -!- laleger [n=laleger@adsl-1-84-172.lft.bellsouth.net] has joined #ezpublish
+[12-27-2005 20:58:45] [#ezpublish] <laleger> hello
+[12-27-2005 21:03:38] [#ezpublish] <Shai_Tan> hello
+[12-27-2005 21:09:53] [#ezpublish] <laleger> does anyone know if there is a way to create an alias that points to the admin site (ex. /admin) using host access method
+[12-27-2005 21:10:25] [#ezpublish] <laleger> i'm unable to create a serveralias for admin and i need a way to access the admin page
+[12-27-2005 21:16:38] -!- laleger [n=laleger@adsl-1-84-172.lft.bellsouth.net] has quit []
+[12-27-2005 22:31:11] -!- tobyS_ [n=dotxp@dslb-084-061-135-207.pools.arcor-ip.net] has joined #ezpublish
+[12-27-2005 22:32:56] -!- tobyS [n=dotxp@dslb-084-061-131-164.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[12-27-2005 23:16:40] -!- Shai_Tan [n=shai-tan@203.129.144.211] has quit [Read error: 113 (No route to host)]
+[12-27-2005 23:16:44] -!- Shai_Tan [n=shai-tan@203.129.151.31] has joined #ezpublish

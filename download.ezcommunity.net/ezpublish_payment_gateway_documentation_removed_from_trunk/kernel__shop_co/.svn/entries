@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="7012"
+   name=""
+   committed-date="2004-07-05T11:04:20.036903Z"
+   url="http://pubsvn.ez.no/nextgen/trunk/kernel/shop"
+   last-author="dl"
+   kind="dir"
+   uuid="a01eee8c-daba-0310-acae-fa49f3023285"
+   revision="7012"/>
+<entry
+   committed-rev="5608"
+   name="removeorder.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-03-25T11:14:28.357737Z"
+   checksum="949a2a60c2739550bc039c5916bbe6ed"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="5897"
+   name="confirmorder.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-04-13T13:46:43.140642Z"
+   checksum="b0b7fc3e1bbae25eea7c7110c742db6c"
+   last-author="wy"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="4712"
+   name="ezshopfunctioncollection.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-01-09T15:43:33.449078Z"
+   checksum="7f87633ceefeca7a77ada7bf7a6cd262"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="4713"
+   name="vattype.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-01-09T15:58:05.727493Z"
+   checksum="83a49c67331b8ccf9c52d8264d2ce6f5"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   name="paymentgateways"
+   kind="dir"/>
+<entry
+   committed-rev="5608"
+   name="customerlist.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-03-25T11:14:28.357737Z"
+   checksum="43bef67d1a7bb59d3566b228b4f42f91"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="4712"
+   name="function_definition.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-01-09T15:43:33.449078Z"
+   checksum="6d4eb9c92e3aeb7df6b48176bac4c4cf"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="4713"
+   name="discountgroup.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-01-09T15:58:05.727493Z"
+   checksum="cbeeff4496d6245d950bd3608d2578f5"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="checkout.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="14e7a1c34035054a82f7f80f1944d0f1"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="6911"
+   name="ezshopoperationcollection.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-06-23T16:47:02.340844Z"
+   checksum="3210159dce69d532d346668f634320e8"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="6184"
+   name="orderview.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-04-22T12:42:47.820182Z"
+   checksum="1d72052e0dc9463c8e64b47535850a47"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="6683"
+   name="wishlist.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-05-28T11:42:58.973513Z"
+   checksum="921282472e5de5179147df1fab21f528"
+   last-author="sp"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="5497"
+   name="orderlist.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-03-11T08:02:05.649601Z"
+   checksum="62ce03bd34669056ece7dd0448d203b2"
+   last-author="wy"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   name="classes"
+   kind="dir"/>
+<entry
+   committed-rev="4713"
+   name="operation_definition.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-01-09T15:58:05.727493Z"
+   checksum="060e8dcf241129d5d676ac48fd1814f5"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   committed-rev="5179"
+   name="basket.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-02-19T12:51:38.159402Z"
+   checksum="63476170286a29a09c9d4c88a93cfe2b"
+   last-author="bf"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   committed-rev="4713"
+   name="discountgroupedit.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-01-09T15:58:05.727493Z"
+   checksum="48d4d87d2a5591b17788900b27b8ce20"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   committed-rev="4896"
+   name="discountgroupmembershipview.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-01-26T10:30:25.011409Z"
+   checksum="37e11c5612f066be2dc78470ae4ddee8"
+   last-author="kk"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   committed-rev="6501"
+   name="userregister.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-05-14T12:38:20.546689Z"
+   checksum="58f0f281ce99c66effe95407edcb18a4"
+   last-author="dr"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   committed-rev="4712"
+   name="register.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-01-09T15:43:33.449078Z"
+   checksum="3e9ff4f71c5f41bb5cd557860417ae96"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   committed-rev="5967"
+   name="module.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-04-16T07:33:23.493446Z"
+   checksum="b1488048f3e5f41d79c3ca45ab518aa3"
+   last-author="wy"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   committed-rev="4713"
+   name="discountruleedit.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-01-09T15:58:05.727493Z"
+   checksum="8853024f9073c8ab28335de295c7100d"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   committed-rev="5967"
+   name="orderstatistics.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-04-16T07:33:23.493446Z"
+   checksum="8f9b7c7f13e5ff8f2cbe326076463ca1"
+   last-author="wy"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+<entry
+   committed-rev="5608"
+   name="customerorderview.php"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-03-25T11:14:28.357737Z"
+   checksum="730d4caeef31dfe5e4ded62ae4a6a8ee"
+   last-author="amos"
+   kind="file"
+   prop-time="2007-04-08T20:44:27.000000Z"/>
+</wc-entries>

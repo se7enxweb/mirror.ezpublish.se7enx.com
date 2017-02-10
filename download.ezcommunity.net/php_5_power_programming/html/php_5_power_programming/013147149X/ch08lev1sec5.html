@@ -1,0 +1,190 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 8.5.&nbsp; PEAR</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch08lev1sec5"></a><h3 class="docSection1Title">8.5. PEAR</h3>
+<p class="docText">In some cases, none of the previous techniques may be appropriate. For example, the DOM XML extension might not be available, or you might want to parse something very specific and don't want to build a parser yourself. <span class="docEmphStrong">PEAR</span> contains classes that deal with parsing XML, which might be useful. We'll cover two of them: <tt>XML_Tree</tt> and <tt>XML_RSS</tt>. <tt>XML_Tree</tt> is useful for building XML documents through a tree when the DOM XML extension is not available or when you want to build a document fast without too many features. <tt>XML_RSS</tt>can parse RSS files. <span class="docEmphStrong">RSS</span> files are XML documents describing the last few items of (for example) a news site.<a name="ch08index108"></a><a name="ch08index109"></a><a name="ch08index110"></a><a name="ch08index111"></a><a name="ch08index112"></a><a name="ch08index113"></a></p>
+<a name="ch08lev2sec6"></a><h4 class="docSection2Title">8.5.1. XML_Tree</h4>
+<p class="docText">Building an XML document with <tt>XML_Tree</tt> is quite easy, and can be done when the DOM XML extension is not available. You can install this PEAR class by typing <tt>pear install XML_Tree</tt> at your command prompt. To show you the difference between <tt>XML_Trees</tt> and the &quot;normal&quot; DOM XML method, we're going to build the same X(HT)ML document again.<a name="ch08index114"></a><a name="ch08index115"></a></P>
+<pre>
+&lt;?php
+     require_once 'XML/Tree.php';
+
+     /* Create the document and the root node */
+     $dom = new XML_Tree;
+     $html =&amp; $dom-&gt;addRoot('html', '',
+            array (
+                  'xmlns' =&gt; 'http://www.w3.org/1999/xhtml',
+                  'xml:lang' =&gt; 'en',
+                  'lang' =&gt; 'en'
+            )
+     );
+
+     /* Create head and title elements */
+     $head =&amp; $html-&gt;addChild('head');
+     $title =&amp; $head-&gt;addChild('title', 'XML Example');
+
+     /* Create the body and p elements */
+     $body =&amp; $html-&gt;addChild('body', '', array ('background' =&gt; 'bg.png'));
+     $p =&amp; $body-&gt;addChild('p');
+
+     /* Add the "Moved to" */
+     $p-&gt;addChild(NULL, "Moved to ");
+
+     /* Add the a */
+     $p-&gt;addChild('a', 'example.org', array ('href' =&gt; 'http://example.org'));
+
+     /* Add the ".", br and "foo &amp; bar" */
+     $p-&gt;addChild(NULL, ".");
+     $p-&gt;addChild('br');
+     $p-&gt;addChild(NULL, "foo &amp; bar");
+
+     /* Dump the representation */
+     $dom-&gt;dump();
+?&gt;
+</pre><br>
+<p class="docText">As you can see, it's much easier to add an element with attributes and (simple) content with <tt>XML_Tree</tt>. For example, look at the following line that adds the a element to the <tt>p</tt> element:</P>
+<pre>
+$p-&gt;addChild('a', 'example.org', array ('href' =&gt; 'http://example.org'));
+</pre><br>
+<p class="docText">Instead of four method calls, you can add it with a one liner. Of course, the DOM XML extension has many more features than <tt>XML_Tree</tt>, but for simple tasks, we recommend this excellent PEAR Class.<a name="ch08index116"></a><a name="ch08index117"></a></P>
+<a name="ch08lev2sec7"></a><h4 class="docSection2Title">8.5.2. XML_RSS</h4>
+<p class="docText">RSS (RDF Site Summary, Really Simple Syndication) feeds are a common use of XML. <span class="docEmphStrong">RSS</span> is an XML vocabulary to describe news items, which can then be integrated (also called <span class="docEmphStrong">content syndication</span>) into your own web site. PHP.net has an RSS feed with the latest news items at <a class="docLink" target="_blank" href="http://www.php.net/news.rss">http://www.php.net/news.rss</a>. You can find the dry specs of the RSS specification at <a class="docLink" target="_blank" href="http://web.resource.org/rss/1.0/spec">http://web.resource.org/rss/1.0/spec</a>, but it's much better to see an example. Here is part of the RSS file we're going to parse:<a name="ch08index118"></a><a name="ch08index119"></a><a name="ch08index120"></a><a name="ch08index121"></a><a name="ch08index122"></a></p>
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rdf:RDF
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns="http://purl.org/rss/1.0/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+&gt;
+&lt;channel rdf:about="http://www.php.net/"&gt;
+     &lt;title&gt;PHP: Hypertext Preprocessor&lt;/title&gt;
+     &lt;link&gt;http://www.php.net/&lt;/link&gt;
+     &lt;description&gt;The PHP scripting language web site&lt;/description&gt;
+     &lt;items&gt;
+          &lt;rdf:Seq&gt;
+           &lt;rdf:li rdf:resource="http://qa.php.net/" /&gt;
+           &lt;rdf:li rdf:resource="http://php.net/downloads.php" /&gt;
+          &lt;/rdf:Seq&gt;
+     &lt;/items&gt;
+&lt;/channel&gt;
+&lt;!-- RSS-Items --&gt;
+
+&lt;item rdf:about="http://qa.php.net/"&gt;
+     &lt;title&gt;PHP 4.3.5RC1 released!&lt;/title&gt;
+     &lt;link&gt;http://qa.php.net/&lt;/link&gt;
+     &lt;description&gt;PHP 4.3.5RC1 has been released for testing. This is 
+     the first release candidate and should have a very low number 
+     of problems and/or bugs. Nevertheless, please download and test 
+     it as much as possible on real-life applications to uncover any
+     remaining issues. List of changes can be found in the NEWS
+     file.&lt;/description&gt;
+     &lt;dc:date&gt;2004-01-12&lt;/dc:date&gt;
+&lt;/item&gt;
+
+&lt;item rdf:about="http://www.php.net/downloads.php"&gt;
+     &lt;title&gt;PHP 5.0 Beta 3 released!&lt;/title&gt;
+     &lt;link&gt;http://www.php.net/downloads.php&lt;/link&gt;
+     &lt;description&gt;PHP 5.0 Beta 3 has been released. The third beta of 
+     PHP is also scheduled to be the last one (barring unexpected 
+     surprises). This beta incorporates dozens of bug fixes since 
+     Beta 2, better XML support and many other improvements, some 
+     of which are documented in the ChangeLog. Some of the key 
+     features of PHP 5 include: PHP 5 features the Zend Engine 2. 
+     XML support has been completely redone in PHP 5, all 
+     extensions are now focused around the excellent libxml2 
+     library (http://www.xmlsoft.org/). SQLite has been bundled 
+     with PHP. For more information on SQLite, please visit their
+     website. A new SimpleXML extension for easily accessing and 
+     manipulating XML as PHP objects. It can also interface with 
+     the DOM extension and vice-versa. Streams have been greatly
+     improved, including the ability to access low-level socket 
+     operations on streams.&lt;description&gt; &lt;dc:date&gt;2003-12-21&lt;
+     dc:date&gt;
+&lt;/item&gt;
+&lt;!-- / RSS-Items PHP/RSS --&gt;
+&lt;/rdf:RDF&gt;
+</pre><br>
+<p class="docText">This RSS files consists of two parts: the header, describing the site from which the content is syndicated, and a list of available items. The second part consists of the news items. We don't want to refetch the RSS file from <a class="docLink" target="_blank" href="http://php.net">http://php.net</a> every time a user visits a page that displays this information. Thus, we're going to add some caching. Downloading the file once a day should be sufficient because news isn't updated more often than daily. (On php.net, other sites might have different policies.)<a name="ch08index123"></a><a name="ch08index124"></a></P>
+<p class="docText">We're going to use the <tt>PEAR::XML_RSS</tt> class that we installed with <tt>pear install XML_RSS</tt>. Here is the script:</P>
+<pre>
+&lt;?php
+  require_once "XML/RSS.php";
+  $cache_file = "/tmp/php.net.rss";
+</pre><br>
+<p class="docText">First, as shown previously, we include the <tt>PEAR</tt> class and define the location of our cache file:</p>
+<pre>
+if (!file_exists($cache_file) ||
+    (filemtime($cache_file) &lt; time() - 86400))
+{
+    copy("http://www.php.net/news.rss", $cache_file);
+}
+</pre><br>
+<p class="docText">Next, we check whether the file has been cached before and whether the cache file is too old (86,400 seconds is one day). If it doesn't exist or is too old, we download a new copy from php.net and store it in the cache file:</p>
+<pre>
+$r =&amp; new XML_RSS($cache_file);
+$r-&gt;parse();
+</pre><BR>
+<p class="docText">We instantiate the <tt>XML_RSS</tt> class, passing our RSS file, and call the <tt>parse()</tt> method. This method parses the RSS file into a structure that can be fetched by other methods, such as <tt>getChannelInfo()</tt> that returns an array containing the title, description, and link of the web site, as shown here:<a name="ch08index125"></a><a name="ch08index126"></a></p>
+<pre>
+array(3) {
+  ["title"]=&gt;
+  string(27) "PHP: Hypertext Preprocessor"
+  ["link"]=&gt;
+  string(19) "http://www.php.net/"
+  ["description"]=&gt;
+  string(35) "The PHP scripting language web site"
+}
+</pre><br>
+<p class="docText"><tt>getItems()</tt> returns the title, description, and link of the news item. In the following code, we use the <tt>getItems()</tt> method to loop over all items and display them:</P>
+<pre>
+  foreach ($r-&gt;getItems() as $value) {
+      echo strtoupper($value['title']). "\n";
+      echo wordwrap($value['description']). "\n";
+      echo "\t{$value['link']}\n\n";
+  }
+?&gt;
+</pre><br>
+<p class="docText">When you run the script, you will see that it outputs the news items from the RSS file:<a name="ch08index127"></a><a name="ch08index128"></a></P>
+<pre>
+PHP 4.3.5RC1 RELEASED!
+PHP 4.3.5RC1 has been released for testing. This is the first release
+candidate and should have a very low number of problems and/or bugs.
+Nevertheless, please download and test it as much as possible on real-life 
+applications to uncover any remaining issues. List of changes can be found
+in the NEWS file.
+      http://qa.php.net/
+PHP 5.0 BETA 3 RELEASED!
+PHP 5.0 Beta 3 has been released. The third beta of PHP is also 
+scheduled to be the last one (barring unexpected surprises). This 
+beta incorporates dozens of bug fixes since Beta 2, better XML 
+support and many other improvements, some of which are documented in
+the ChangeLog. Some of the key features of PHP 5 include: PHP 5 
+features the Zend Engine 2. XML support has been completely redone in
+PHP 5, all extensions are now focused around the excellent libxml2
+library (http://www.xmlsoft.org/). SQLite has been bundled with PHP.
+For more information on SQLite, please visit their website. A new 
+SimpleXML extension for easily accessing and manipulating XML as PHP
+objects. It can also interface with the DOM extension and vice-versa.
+Streams have been greatly improved, including the ability to access 
+low-level socket operations on streams.
+      http://www.php.net/downloads.php
+</pre><br>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

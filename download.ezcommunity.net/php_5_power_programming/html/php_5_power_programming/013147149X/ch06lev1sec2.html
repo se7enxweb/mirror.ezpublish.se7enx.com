@@ -1,0 +1,384 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 6.2.&nbsp; MySQL</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch06lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch06lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch06lev1sec2"></a><h3 class="docSection1Title">6.2. MySQL</h3>
+<p class="docText">MySQL and PHP have become the &quot;bread and butter&quot; of web application builders. It is the combination you are most likely to encounter today and probably for the years to come. Consequently, this is also the first database covered in this chapter.<a name="ch06index02"></a><a name="ch06index03"></a></p>
+<p class="docText">This chapter focuses on the new <tt>mysqli</tt>or MySQL Improvedextension that is bundled with PHP 5. As mentioned in the chapter introduction, the <tt>mysqli</tt> extension requires that you use at least version 4.1.2 of the MySQL server.</p>
+<a name="ch06lev2sec1"></a><h4 class="docSection2Title">6.2.1. MySQL Strengths and Weaknesses</H4>
+<p class="docText">This section contains some information about the strengths and weaknesses of MySQL.<a name="ch06index04"></a><a name="ch06index05"></a></p>
+<a name="ch06lev3sec1"></a><H5 class="docSection3Title">6.2.1.1 Strength: Great Market Penetration</h5>
+<p class="docText">MySQL has the biggest market share of any open source database. Almost any web-hosting company can provide MySQL access, and books and articles about MySQL and PHP are abundant.</P>
+<a name="ch06lev3sec2"></a><h5 class="docSection3Title">6.2.1.2 Strength: Easy to Get Started</h5>
+<p class="docText">After your database is set up and you have access to it, managing the database is straightforward. Initial access needs to be configured by a database administrator (if that person is not you).</p>
+<p class="docText">Tools such as MySQL Administrator or <tt>phpMyAdmin</tt> let you manage your database.</p>
+<a name="ch06lev3sec3"></a><H5 class="docSection3Title">6.2.1.3 Strength: Open-Source License for Most Users</H5>
+<p class="docText">MySQL comes with a dual licenseeither GPL or a commercial license. You can use MySQL under the GPL as long as you are not commercially redistributing it.</p>
+<a name="ch06lev3sec4"></a><h5 class="docSection3Title">6.2.1.4 Strength: Fast</h5>
+<p class="docText">MySQL has always been relatively fast, much due to its simplicity. In the last few years, MySQL has gained foothold in the enterprise market due to new &quot;enterprise class&quot; features and general maturity without compromising performance for simple usage.<a name="ch06index06"></a><a name="ch06index07"></a><a name="ch06index08"></a><a name="ch06index09"></a></p>
+<a name="ch06lev3sec5"></a><H5 class="docSection3Title">6.2.1.5 Weakness: Commercial License for Commercial Redistribution</h5>
+<p class="docText">If you bundle MySQL (server or client) with a commercial closed-source product, you need to purchase a license. MySQL AB have published a FOSS (Free or Open-Source Software) exception to MySQL's license that grants all free or open-source products an exception from this restriction.<a name="ch06index10"></a><a name="ch06index11"></a></p>
+<a name="ch06lev3sec6"></a><H5 class="docSection3Title">6.2.1.6 Strength: Reasonable Scalability</h5>
+<p class="docText">MySQL used to be a lightweight database that did not have to drag around most of the expensive reliability features (such as transactions) of systems such as Oracle or IBM DB2. This was, and still is, one of the most important reasons for MySQL's high performance. Today, MySQL has evolved to almost match its commercial seniors in scalability and reliability, but you can still configure it for lightweight use.<a name="ch06index12"></a><a name="ch06index13"></a><a name="ch06index14"></a><a name="ch06index15"></a></P>
+<a name="ch06lev2sec2"></a><h4 class="docSection2Title">6.2.2. PHP Interface</h4>
+<p class="docText">The <tt>mysqli</tt> PHP extension was written from the ground up to support the new features of the MySQL 4.1 and 5.0 Client API. The improvements from the old mysql extension include the following:<a name="ch06index16"></a><a name="ch06index17"></a></p>
+<ul><li><p class="docList">Native bind/prepare/execute functionality</p></li><li><p class="docList">Cursor support</p></li><li><p class="docList"><tt>SQLSTATE</tt> error codes</p></li><li><p class="docList">Multiple statements from one query</p></li><LI><p class="docList">Index analyzer</P></li></ul>
+<p class="docText">The following sections give an overview of how to use the <tt>mysqli</tt> extension, and how it differs from the old <tt>mysql</tt> extension.</P>
+<p class="docText">Almost every <tt>mysqli</tt> function has a method or property counterpart, and the following list of functions describes both of them. The notation for the methods is similar to <tt>$mysqli-&gt;connect()</tt> for regular methods, calling <tt>connect()</tt> in an instance of the <tt>mysqli</tt> class.</p>
+<p class="docText">The parameter list is usually the same between <tt>mysqli</tt> functions and methods, except that functions in most cases have an object parameter first. Following that, function parameter lists are identical to that of their method counterparts. For the sake of brevity, &#8230; replaces the method parameter list in the parameter descriptions.<a name="ch06index18"></a><a name="ch06index19"></a></p>
+<a name="ch06lev2sec3"></a><h4 class="docSection2Title">6.2.3. Example Data</h4>
+<p class="docText">This section uses data from the &quot;world&quot; example database, available at <a class="docLink" target="_blank" href="http://dev.mysql.com/get/Downloads/Manual/world.sql.gz/from/pick">http://dev.mysql.com/get/Downloads/Manual/world.sql.gz/from/pick</a>.<a name="ch06index20"></a></p>
+<a name="ch06lev2sec4"></a><h4 class="docSection2Title">6.2.4. Connections</H4><a name="ch06index21"></a><a name="ch06index22"></a>
+<p class="docText"><a class="docLink" href="#ch06table01">Table 6.1</a> shows the <tt>mysqli</tt> functions that are related to connections.</p>
+<a name="ch06table01"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.1. <tt>mysqli</tt> Connection Functions and Methods</H5></caption><colgroup><col width="192.5"><col width="357.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><TR><TD class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_connect(...)
+$mysqli = new mysqli(...)
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Opens a connection to the MySQL server. Para-meters (all are optional)</p>
+<UL><li><p class="docList"><tt>host name</tt> (string)</p></LI><li><p class="docList"><tt>user name</tt> (string)</P></li><li><p class="docList"><tt>password</tt> (string)</p></li><li><p class="docList"><tt>database name</tt> (string)</p></li><li><p class="docList">TCP port (integer)</p></li><li><p class="docList">UNIX domain socket (string)</p></li></ul></td></tr><TR><TD class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_init()
+$mysqli = new mysqli
+mysqli_options(...)
+$mysqli-&gt;options(...)
+mysqli_real_connect(...)
+$mysqli-&gt;real_connect(...)
+</pre><br>
+</td><TD class="docTableCell" align="left" valign="top"><p class="docText">Initializes MySQLi and returns an object for use with <tt>mysqli_real_connect</tt></p>
+<p class="docText">Set various connection options</p>
+<p class="docText">Opens a connection to the MySQL server</p></td></tr><tr><TD class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_close(...)
+$mysqli-&gt;close()
+</pre><br>
+</TD><td class="docTableCell" align="left" valign="top"><p class="docText">Closes a MySQL server connection</P>
+<p class="docText">The parameter is <tt>connection object</tt> (function only)</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>mysqli_connect_errno()</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Obtains the error code of the last failed connect</p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>mysqli_connect_error()</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Obtains the error message of the last failed connect</p></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_get_host_info(...)
+$mysqli-&gt;host_info
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns a string telling what the connection is connected to</p></td></tr></table></p><br>
+<p class="docText">Here is a simple example:<a name="ch06index24"></a><a name="ch06index25"></a></p>
+<pre>
+&lt;?php
+
+$conn = mysqli_connect("localhost", "test", "", "world");
+if (empty($conn)) {
+    die("mysqli_connect failed: " . mysqli_connect_error());
+}
+print "connected to " . mysqli_get_host_info($conn) . "\n";
+mysqli_close($conn);
+</pre><br>
+<p class="docText">Here, the <tt>mysqli_connect()</tt> function connects to <tt>"localhost"</tt> with the user name <tt>"test"</tt>, an empty password, and selects the <tt>"world"</tt> database as the default database. If the connect fails, <tt>mysqli_connect()</tt> returns <tt>FALSE</tt>, and <tt>mysqli_connect_error()</tt> returns a message saying why it could not connect.</p>
+<p class="docText">When using the object-oriented interface, you can also specify your connection parameters by passing them to the constructor of the <tt>mysqli</tt> object:</P>
+<pre>
+&lt;?php
+
+$mysqli = new mysqli("localhost", "test", "", "world");
+if (mysqli_connect_errno) {
+    die("mysqli_connect failed: " . mysqli_connect_error());
+}
+print "connected to " . $mysqli-&gt;host_info . "\n";
+$mysqli-&gt;close();
+</pre><BR>
+<p class="docText">Sometimes, you might need some more options when connecting to a MySQL server. In this case, you can use the <tt>mysqli_init</tt>, <tt>mysqli_options</tt>, and <tt>mysqli_real_connect</tt> functions, which allow you to set different options for your database connection. The following example demonstrates how you can use these functions:<a name="ch06index26"></a><a name="ch06index27"></a></p>
+<pre>
+&lt;?php
+
+$mysqli = mysqli_init();
+
+$mysqli-&gt;options(MYSQLI_INIT_CMD, "SET AUTOCOMMIT=0");
+$mysqli-&gt;options(MYSQLI_READ_DEFAULT_FILE, "SSL_CLIENT");
+
+$mysqli-&gt;options(MYSQLI_OPT_CONNECT_TIMEOUT, 5);
+
+$mysqli-&gt;real_connect("localhost", "test", "", "world");
+if (mysqli_connect_errno) {
+    die("mysqli_connect failed: " . mysqli_connect_error());
+}
+print "connected to " . $mysqli-&gt;host_info . "\n";
+$mysqli-&gt;close();
+</pre><br>
+<p class="docText">The <tt>mysqli_options</tt> functions allow you to set the options shown in <a class="docLink" href="#ch06table02">Table 6.2</a>.<a name="ch06index28"></a><a name="ch06index29"></a></P>
+<a name="ch06table02"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.2. <tt>mysqli_options</tt> Constants</h5></caption><colgroup><col width="247.5"><col width="302.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Option</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></TR></thead><tr><TD class="docTableCell" align="left" valign="top">
+<pre>
+MYSQLI_OPT_CONNECT_TIMEOUT
+
+MYSQLI_OPT_LOCAL_INFILE
+MYSQLI_INIT_CMD
+
+
+MYSQLI_READ_DEFAULT_FILE
+MYSQLI_READ_DEFAULT_GROUP
+</pre><br>
+</TD><td class="docTableCell" align="left" valign="top"><p class="docText">Specifies the connection timeout in seconds</p>
+<p class="docText">Enables or disables the use of the <tt>LOAD_LOCAL INFILE</tt> command</p>
+<p class="docText">Specifies the command that must be executed after connect</p>
+<p class="docText">Specifies the name of the file that contains named options</P>
+<p class="docText">Reads options from the named group from my.cnf (or the file specified with MYSQLI_READ_ DEFAULT_FILE)</P></td></tr></table></p><br>
+<a name="ch06lev2sec5"></a><H4 class="docSection2Title">6.2.5. Buffered Versus Unbuffered Queries</h4>
+<p class="docText">The MySQL client has two types of queries: buffered and unbuffered queries. <span class="docEmphStrong">Buffered queries</span> will retrieve the query results and store them in memory on the client side, and subsequent calls to get rows will simply spool through local memory.<a name="ch06index31"></a><a name="ch06index32"></a><a name="ch06index33"></a></p>
+<p class="docText">Buffered queries have the advantage that you can seek in them, which means that you can move the &quot;current row&quot; pointer around in the result set freely because it is all in the client. Their disadvantage is that extra memory is required to store the result set, which could be very large, and that the PHP function used to run the query does not return until all the results have been retrieved.</P>
+<p class="docText"><span class="docEmphStrong">Unbuffered queries</span>, on the other hand, limit you to a strict sequential access of the results but do not require any extra memory for storing the entire result set. You can start fetching and processing or displaying rows as soon as the MySQL server starts returning them. When using an unbuffered result set, you have to retrieve all rows with <tt>mysqli_fetch_row</tt> or close the result set with <tt>mysqli_free_result</tt> before sending any other command to the server.<a name="ch06index34"></a><a name="ch06index35"></a><a name="ch06index36"></a></p>
+<p class="docText">Which type of query is best depends on the situation. Unbuffered queries save you a lot of temporary memory when the result set is large, and if the query does not require sorting, the first row of results will be available in PHP while the MySQL database is actually still processing the query. Buffered queries are convenient because of the seeking feature; it could provide an overall speedup. Because each individual query would finish faster, the <tt>mysqli</tt> extension would drain the result set immediately and store it in memory instead of keeping the query active while processing PHP code. With some experience and relentless benchmarking, you will figure out what is best for you.</P>
+<p class="docText">Another limitation for unbuffered queries is that you will not be able to send any command to the server unless all rows are read or the result set is freed by <tt>mysqli_free_result</tt>.</p>
+<a name="ch06lev2sec6"></a><h4 class="docSection2Title">6.2.6. Queries</h4>
+<p class="docText">This section describes functions and methods for executing queries see <a class="docLink" href="#ch06table03">Table 6.3</a>).<a name="ch06index37"></a><a name="ch06index38"></a></p>
+<a name="ch06table03"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.3. <tt>mysqli</tt> Query Functions</h5></caption><colgroup><col width="231"><col width="319"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>mysqli_query(...)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Sends a query to the database and returns a result object. Parameters:</P>
+<UL><li><p class="docList"><tt>connection</tt> (function only)</p></LI><li><p class="docList"><tt>query</tt> (string)</p></li><li><p class="docList"><tt>mode</tt> (buffered or unbuffered)</p></li></UL></td></TR><tr><TD class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_multi_query(...)
+$mysqli-&gt;multi_query(...)
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Sends and processes multiple queries at once. Parameters:</p>
+<UL><LI><p class="docList"><tt>connection</tt> object (function only)</p></li><li><p class="docList"><tt>query</tt> (string)</p></LI></ul></td></TR></table></p><BR>
+<p class="docText">The <tt>mysqli_query()</tt> function returns a result set object. On failure, use the <tt>mysqli_error()</tt> function or the <tt>$conn-&gt;error</tt> property to determine the cause of the failure:</p>
+<pre>
+&lt;?php
+
+$conn = mysqli_connect("localhost", "test", "", "world");
+
+$result = $conn-&gt;query("SELECT Name FROM City");
+while ($row = $result-&gt;fetch_row()) {
+    print $row[0] . "&lt;br&gt;\n";
+}
+$result-&gt;free();
+$conn-&gt;close();
+</pre><br>
+<p class="docText">After the query has been executed, memory on the client side is allocated to retrieve the complete result set. To use unbuffered <tt>resultset</tt>, you have to specify the optional parameter <tt>MYSQLI_USE_RESULT</tt>:</p>
+<pre>
+&lt;?php
+
+$conn = mysqli_connect("localhost", "test", "", "world");
+
+$result = $conn-&gt;query("SELECT Name FROM City", MYSQLI_USE_RESULT);
+while ($row = $result-&gt;fetch_row()) {
+    print $row[0] . "&lt;br&gt;\n";
+}
+$result-&gt;free();
+$conn-&gt;close();<a name="ch06index40"></a><a name="ch06index41"></a>
+</pre><br>
+<a name="ch06lev2sec7"></a><h4 class="docSection2Title">6.2.7. Multi Statements</h4>
+<p class="docText">The <tt>mysqli</tt> extension enables you to send multiple SQL statements in one function call by using <tt>mysqli_multi_query</tt>. The query string contains one or more SQL statements that are divided by a semicolon at the end of each statement. Retrieving result sets from multi statements is a little bit tricky, as the following example demonstrates:<a name="ch06index42"></a><a name="ch06index43"></a></p>
+<pre>
+&lt;?php
+
+$conn = mysqli_connect("localhost", "test", "", "world");
+
+$query = "SELECT Name FROM City";
+$query .= "SELECT Country FROM Country";
+
+if ($conn-&gt;multi_query($query)) {
+    do {
+        if ($result = $mysqli-&gt;store_result()) {
+            while ($row = $result-&gt;fetch_row()) {
+                 printf("Col: %s\n", $row[0];
+            }
+            $result-&gt;close();
+        }
+    } while ($conn-&gt;next_result());
+}
+$conn-&gt;close();<a name="ch06index44"></a><a name="ch06index45"></a>
+</pre><br>
+<a name="ch06lev2sec8"></a><h4 class="docSection2Title">6.2.8. Fetching Modes</h4>
+<p class="docText">There are three ways to fetch rows of results, as in the old <tt>mysql</tt> extension: as an enumerated array, as an associative array, or as an object (see <a class="docLink" href="#ch06table04">Table 6.4</a>).<a name="ch06index46"></a><a name="ch06index47"></a></p>
+<a name="ch06table04"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.4. <tt>mysqli</tt> Fetch Functions</h5></caption><colgroup><col width="280.5"><col width="269.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></P></th></TR></thead><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_fetch_row(...)
+$mysqli-&gt;fetch_row()
+</pre><BR>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Sends a query to the database and buffers the results. Its parameter is the <tt>result</tt> object (function only).</p></td></tr><tr><TD class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_fetch_assoc(...)
+$result-&gt;fetch_assoc()
+</pre><br>
+</TD><td class="docTableCell" align="left" valign="top"><p class="docText">Fetches all the results from the most recent query on the connection and stores them in memory. Its parameter is <tt>connection resource</tt> (function only).</P></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_fetch_object(...)
+$result-&gt;fetch_object()
+</pre><BR>
+</TD><td class="docTableCell" align="left" valign="top"><p class="docText">Fetches a row into an object. Its parameter is the <tt>result</tt> object (function only).</p></td></tr></table></P><br>
+<a name="ch06lev2sec9"></a><h4 class="docSection2Title">6.2.9. Prepared Statements</H4>
+<p class="docText">One of the major advantages of the <tt>mysqli</tt> extension as compared to the <tt>mysql</tt> extension are prepared statements. <span class="docEmphStrong">Prepared statements</span> provide developers with the ability to create queries that are more secure, have better performance, and are more convenient to write.<a name="ch06index51"></a><a name="ch06index52"></a></p>
+<p class="docText">There are two types of prepared statements: one that executes data manipulation statements, and one that executes data retrieval statements. Prepared statements allow you to bind PHP variables directly for input and output.</P>
+<p class="docText">Creating a prepared statement is simple. A query template is created and sent to the MySQL server. The MySQL server receives the query template, validates it to ensure that it is well-formed, parses it to ensure that it is meaningful, and stores it in a special buffer. It then returns a special handle that can later be used to reference the prepared statement.</p>
+<a name="ch06lev3sec7"></a><h5 class="docSection3Title">6.2.9.1 Binding Variables</h5>
+<p class="docText">There are two types of bound variables: <span class="docEmphStrong">input variables</span> that are bound to the statement, and <span class="docEmphStrong">output variables</span> that are bound to the result set. For input variables, you need to specify a question mark as a placeholder in your SQL statement, like this:<a name="ch06index53"></a><a name="ch06index54"></a><a name="ch06index55"></a><a name="ch06index56"></a></p>
+<pre>
+SELECT Id, Country FROM City WHERE City=?
+INSERT INTO City (Id, Name) VALUES (?,?)
+</pre><br>
+<p class="docText">Output variables can be bound directly to the columns of the result set. The procedure for binding input and output variables is slightly different. Input variables must be bound before executing a prepared statement, while output variables must be bound after executing the prepared statement.</p>
+<p class="docText">The process for input variables is as follows:</p>
+<a name="ch06pro01"></a>
+
+
+
+<table border="0" class="docText"><tr><td width="25" valign="top"><div class="docText"><b>1. </b></div></td><td><div class="docText">Preparing (parsing) the statement<br><br></div></td></tr><TR><TD width="25" valign="top"><div class="docText"><b>2. </b></div></td><TD><div class="docText">Binding input variables<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><B>3. </b></div></td><TD><div class="docText">Assigning values to bound variables<br><BR></div></td></tr><tr><td width="25" valign="top"><div class="docText"><B>4. </b></div></TD><td><div class="docText">Executing the prepared statement<br><br></div></td></TR></table>
+<p class="docText">The process for output variables is as follows:</p>
+<a name="ch06pro02"></a>
+
+
+
+<table border="0" class="docText"><tr><TD width="25" valign="top"><div class="docText"><b>1. </b></div></TD><td><div class="docText">Preparing (parsing) the statement<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>2. </b></div></td><td><div class="docText">Executing prepared statement<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><B>3. </b></div></TD><td><div class="docText">Binding output variables<br><BR></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>4. </b></div></td><TD><div class="docText">Fetching data into output variables<br><BR></div></td></TR></table>
+<p class="docText">Executing a prepared statement or fetching data from a prepared statement can be repeated multiple times until the statement will be closed or there are no more data to fetch (see <a class="docLink" href="#ch06table05">Table 6.5</a>).<a name="ch06index57"></a><a name="ch06index58"></a><a name="ch06index59"></a><a name="ch06index60"></a></p>
+<a name="ch06table05"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.5. <tt>mysqli</tt> Prepared Statement Functions</h5></caption><colgroup><col width="286"><col width="264"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_prepare(...)
+$mysqli-&gt;prepare()
+</pre><BR>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Prepares a SQL statement for execution. Parameters:</P>
+<ul><LI><p class="docList">0 Connection object (function only)</p></li><li><p class="docList">1 Statement</p></li></ul></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_stmt_bind_result(...)
+$stmt-&gt;bind_result(...)
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Binds variables to a statement's result set. Parameters:</p>
+<ul><li><p class="docList">0 Statement object (function only)</P></LI><li><p class="docList">1 Variables</p></LI></ul></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_stmt_bind_param(...)
+$stmt-&gt;bind_result(...)
+</pre><br>
+</TD><td class="docTableCell" align="left" valign="top"><p class="docText">Binds variables to a statement. Parameters:</P>
+<ul><LI><p class="docList">2 Statement object (function only)</p></li><li><p class="docList">3 String that specifies the type of variable (<tt>s</tt>=string, <tt>i</tt>=number, <tt>d</tt>=double, <tt>b</tt>=blob)</p></LI><LI><p class="docList">4 Variables</p></li></ul></td></TR><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_stmt_execute(...)
+$stmt-&gt;execute
+</pre><BR>
+</td><TD class="docTableCell" align="left" valign="top"><p class="docText">Executes a prepared statement. Parameters include a <tt>statement</tt> object (function only).</p></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_stmt_fetch(...)
+$stmt-&gt;fetch
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Fetches data into output variables. The parameter includes the <tt>statement</tt> object (function only).</p></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+mysqli_stmt_close(...)
+$stmt-&gt;close()
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Closes a prepared statement.</P></TD></tr></table></p><BR>
+<p class="docText">Here is an example of a data manipulation query using bound input variables:<a name="ch06index61"></a><a name="ch06index62"></a><a name="ch06index63"></a><a name="ch06index64"></a></p>
+<pre>
+&lt;?php
+
+$conn = mysqli_connect("localhost", "test", "", "world");
+
+$conn-&gt;query("CREATE TABLE alfas ".
+             "(year INTEGER, model VARCHAR(50), accel REAL)");
+$stmt = $conn-&gt;prepare("INSERT INTO alfas VALUES(?, ?)");
+$stmt-&gt;bind_param("isd", $year, $model, $accel);
+
+$year = 2001;
+$model = '156 2.0 Selespeed';
+$accel = 8.6;
+$stmt-&gt;execute();
+
+$year = 2003;
+$model = '147 2.0 Selespeed';
+$accel = 9.3;
+$stmt-&gt;execute();
+
+$year = 2004;
+$model = '156 GTA Sportwagon';
+$accel = 6.3;
+$stmt-&gt;execute();
+</pre><br>
+<p class="docText">Here is an example of using binding for retrieving data:<a name="ch06index65"></a><a name="ch06index66"></a><a name="ch06index67"></a><a name="ch06index68"></a></p>
+<pre>
+&lt;?php
+
+$conn = mysqli_connect("localhost", "test", "", "test");
+
+$stmt = $conn-&gt;prepare("SELECT * FROM alfas ORDER BY year");
+$stmt-&gt;execute();
+$stmt-&gt;bind_result($year, $model, $accel);
+print "&lt;table&gt;\n";
+print "&lt;tr&gt;&lt;th&gt;Model&lt;/th&gt;&lt;th&gt;0-100 km/h&lt;/th&gt;&lt;/tr&gt;\n";
+while ($stmt-&gt;fetch()) {
+    print "&lt;tr&gt;&lt;td&gt;$year $model&lt;/td&gt;&lt;td&gt;{$accel} sec&lt;/td&gt;\n";
+}
+print "&lt;/table&gt;\n";
+</pre><br>
+<p class="docText">Here, we bind <tt>$year</tt>, <tt>$model</tt>, and <tt>$accel</tt> to the columns of the <tt>"alfas"</tt> table. Each <tt>$stmt-&gt;fetch()</tt> call modifies these variables with data from the current row. The <tt>fetch()</tt> method returns <tt>trUE</tt> until there is no more data, then it returns <tt>FALSE</tt>.<a name="ch06index69"></a><a name="ch06index70"></a><a name="ch06index71"></a><a name="ch06index72"></a></p>
+<a name="ch06lev2sec10"></a><H4 class="docSection2Title">6.2.10. BLOB Handling</h4>
+<p class="docText"><span class="docEmphStrong">BLOB</span> stands for Binary Large OBject and refers to binary data, such as JPEG images stored in the database.<a name="ch06index73"></a><a name="ch06index74"></a></P>
+<a name="ch06lev3sec8"></a><h5 class="docSection3Title">6.2.10.1 Inserting BLOB Data</H5>
+<p class="docText">Previously, with the <tt>mysql</tt> PHP extension, BLOB data was inserted into the database directly as part of the query. You can still do this with <tt>mysqli</tt>, but when you insert several kilobytes or more, a more efficient method is to use the <tt>mysqli_stmt_send_long_data()</tt> function or the <tt>send_long_data()</tt> method of the <tt>stmt</tt> class.<a name="ch06index75"></a><a name="ch06index76"></a><a name="ch06index77"></a></p>
+<p class="docText">Here is an example:</p>
+<pre>
+&lt;?php
+
+$conn = mysqli_connect("localhost", "test", "", "test");
+
+$conn-&gt;query("CREATE TABLE files (id INTEGER PRIMARY KEY AUTO_INCREMENT, ".
+             "data BLOB)");
+$stmt = $conn-&gt;prepare("INSERT INTO files VALUES(NULL, ?)");
+$stmt-&gt;bind_param("s", $data);
+$file = "test.jpg";
+$fp = fopen($file, "r");
+$size = 0;
+while ($data = fread($fp, 1024)) {
+    $size += strlen($data);
+    $stmt-&gt;send_long_data(0, $data);
+}
+//$data = file_get_contents("test.jpg");
+
+if ($stmt-&gt;execute()) {
+    print "$file ($size bytes) was added to the files table\n";
+} else {
+    die($conn-&gt;error);
+}
+</pre><br>
+<p class="docText">In this example, the test.jpg file is inserted into the file's table by transferring 1,024 bytes at a time to the MySQL server with the <tt>send_long_data()</tt> method.</p>
+<p class="docText">This technique does not require PHP to buffer the entire BLOB in memory before sending it to MySQL.<a name="ch06index78"></a><a name="ch06index79"></a><a name="ch06index80"></a></P>
+<a name="ch06lev3sec9"></a><H5 class="docSection3Title">6.2.10.2 Retrieving BLOB Data</h5>
+<p class="docText">Retrieving BLOB data is the same as retrieving regular data. Use any of the <tt>fetch</tt> function/method variants as you see fit. Here is an example:<a name="ch06index81"></a><a name="ch06index82"></a><a name="ch06index83"></a></p>
+<pre>
+&lt;?php
+
+$conn = mysqli_connect("localhost", "test", "", "test");
+
+if (empty($_GET['id'])) {
+    $result = $conn-&gt;query("SELECT id, length(data) FROM files LIMIT 20");
+    if ($result-&gt;num_rows == 0) {
+        print "No images!\n";
+        print "&lt;a href=\"mysqli_blob1.php\"&gt;Click here to add one &lt;a&gt;\n";
+        exit;
+    }
+    while ($row = $result-&gt;fetch_row()) {
+        print "&lt;a href=\"$_SERVER[PHP_SELF]?id=$row[0]\"&gt;";
+        print "image $row[0] ($row[1] bytes)&lt;/a&gt;&lt;br /&gt;\n";
+    }
+    exit;
+}
+
+$stmt = $conn-&gt;prepare("SELECT data FROM files WHERE id = ?");
+$stmt-&gt;bind_param("i", $_GET['id']);
+$stmt-&gt;execute();
+$data = null;
+$stmt-&gt;bind_result($data);
+if (!$stmt-&gt;fetch()) {
+    die("No such image!");
+}
+
+header("Content-type: image/jpeg");
+print $data;<a name="ch06index84"></a><a name="ch06index85"></a><a name="ch06index86"></a>
+</pre><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch06lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch06lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

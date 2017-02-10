@@ -1,0 +1,120 @@
+[12-16-2005 00:41:06] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-16-2005 00:56:53] [#ezpublish] <kracker> anyone taken a look, minor poke, brief, summary on the recent release of the new eZ publish payment gateway, eZ authorize ?
+[12-16-2005 00:57:10] [#ezpublish] <kracker> http://ez.no/community/contribs/workflow/ez_authorize
+[12-16-2005 01:00:51] -!- ordnas [n=ordnas@p549D61E6.dip.t-dialin.net] has joined #ezpublish
+[12-16-2005 01:13:00] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-16-2005 01:35:03] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-16-2005 02:16:43] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[12-16-2005 02:22:53] -!- DiGiTa|_ [n=guillaum@84.5.143.92] has joined #ezpublish
+[12-16-2005 02:27:16] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[12-16-2005 02:29:53] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-16-2005 03:12:18] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[12-16-2005 03:12:51] [#ezpublish] <tobmaster> hi
+[12-16-2005 03:26:32] -!- AlexBlock [n=Alex@217.194.224.41] has joined #ezpublish
+[12-16-2005 03:26:40] [#ezpublish] <tobmaster> welcome alex :)
+[12-16-2005 03:27:04] -!- mode/#ezpublish [+o fh[eZ]] by hovik
+[12-16-2005 03:27:09] -!- mode/#ezpublish [+o kris10an] by hovik
+[12-16-2005 03:27:32] [#ezpublish] <kore_> hi tobmaster, AlexBlock & hovik
+[12-16-2005 03:27:55] [#ezpublish] <AlexBlock> hi alltogether
+[12-16-2005 03:28:31] [#ezpublish] <kore_> tobmaster, AlexBlock: I opened #ezublish.de ... if you are interested
+[12-16-2005 03:28:54] [#ezpublish] <kore_> +p
+[12-16-2005 03:28:54] [#ezpublish] <AlexBlock> i don't know. where is the difference?
+[12-16-2005 03:29:00] [#ezpublish] <@kris10an> good morning germany
+[12-16-2005 03:29:02] [#ezpublish] <@kris10an> :-)
+[12-16-2005 03:29:07] [#ezpublish] <kore_> hi kris10an =)
+[12-16-2005 03:29:16] [#ezpublish] <kore_> AlexBlock, you may spek german there ;)
+[12-16-2005 03:30:02] [#ezpublish] <AlexBlock> oh nice, but i speak german all the day, so i'm happy to talk in english here ;-)
+[12-16-2005 03:30:51] [#ezpublish] <kore_> Perhaps we should switch to english in the german office at all ;)
+[12-16-2005 03:31:30] [#ezpublish] <AlexBlock> nice idea, more improvements concerning the speech
+[12-16-2005 03:32:09] [#ezpublish] <kore_> Yes
+[12-16-2005 03:32:39] [#ezpublish] <kore_> That would help with with future english talks on conferences ;)
+[12-16-2005 03:34:53] [#ezpublish] <tobmaster> yeah chatting in german and talking english all day long :)
+[12-16-2005 03:35:03] -!- ordnas [n=ordnas@p549D61E6.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-16-2005 04:00:20] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[12-16-2005 04:03:55] -!- redoracle [n=BluHat@host228-37.pool8023.interbusiness.it] has joined #ezpublish
+[12-16-2005 04:13:19] [#ezpublish] <redoracle> whre i can find some open plugins of ez?
+[12-16-2005 04:13:34] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-16-2005 04:16:27] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[12-16-2005 04:17:34] -!- AlexBlock [n=Alex@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[12-16-2005 04:17:38] -!- kore_ [n=lordhong@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[12-16-2005 04:17:40] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[12-16-2005 04:18:13] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[12-16-2005 04:26:05] -!- redoracle [n=BluHat@host228-37.pool8023.interbusiness.it] has left #ezpublish []
+[12-16-2005 05:01:56] [#ezpublish] <kracker> uhh, open plugins?
+[12-16-2005 05:02:14] [#ezpublish] <kracker> even while gone :\ you must mean eXtensions
+[12-16-2005 05:02:31] [#ezpublish] <SEAwolfx_> hey, kracker;)
+[12-16-2005 05:03:00] [#ezpublish] <kracker> and if you found #ezpublish, you must know of the contribution section on the ez.no site :\
+[12-16-2005 05:04:12] [#ezpublish] <kracker> ehh, i should have given up my ghost a long time ago, questioning anything at this point seems like going back on my dreams turned nightmare :\
+[12-16-2005 05:04:23] [#ezpublish] <kracker> SEAwolfx, how are the mike & ikes ?
+[12-16-2005 05:04:43] [#ezpublish] <SEAwolfx_> hehe .. you mean the micorphones?
+[12-16-2005 05:05:06] [#ezpublish] <kracker> it's an american candy, nevermind
+[12-16-2005 05:05:18] [#ezpublish] <SEAwolfx_> hui ikes?
+[12-16-2005 05:05:27] [#ezpublish] <SEAwolfx_> ike turner? *duck*
+[12-16-2005 05:05:39] [#ezpublish] <kracker> not really, it was more of a diss to fb/J
+[12-16-2005 05:05:50] [#ezpublish] <kracker> sleep just out of reach again :\ here i am
+[12-16-2005 05:06:10] [#ezpublish] <kracker> in #ezpublish , where exactly did my life go so wrong :D
+[12-16-2005 05:06:12] [#ezpublish] <SEAwolfx_> fb/J ? weird acro
+[12-16-2005 05:06:24] [#ezpublish] <kracker> let it go man, it's ok
+[12-16-2005 05:06:39] [#ezpublish] <SEAwolfx_> ;) k
+[12-16-2005 05:09:41] [#ezpublish] <kracker> anyone still (sometimes) even a little using eZ publish 2 (in here?)
+[12-16-2005 05:10:35] [#ezpublish] <kracker> just checking :D
+[12-16-2005 05:15:48] [#ezpublish] <SEAwolfx_> hehe .. long time ago;)
+[12-16-2005 05:18:34] [#ezpublish] <kracker> hey! it wasn't that long ago
+[12-16-2005 05:19:03] [#ezpublish] <SEAwolfx_> 2-3 years IMHO?
+[12-16-2005 05:19:59] [#ezpublish] <kracker> i don't know what I would do without eZ publish 2 :) i don't think i could stand loosing any of my old custom applications :(
+[12-16-2005 05:21:12] [#ezpublish] * kracker puts his hat on the sidewalk and starts dancin for eZ publish 2 (php4.4->php5) compatiblity or hell, any (not forced) eZ authorize feedback :\
+[12-16-2005 05:21:34] [#ezpublish] <SEAwolfx_> *grin*
+[12-16-2005 05:23:24] [#ezpublish] <kracker> ehh, i've lost the faith tonight, but i'm already too far involved to run
+[12-16-2005 06:49:34] -!- DiGiTa|_ [n=guillaum@84.5.143.92] has quit []
+[12-16-2005 07:22:33] [#ezpublish] <_Rappy_> all caching in site.ini is on, I got a phpacelerator
+[12-16-2005 07:22:55] [#ezpublish] <_Rappy_> what else can I do to spet up the site?
+[12-16-2005 07:23:31] [#ezpublish] <_Rappy_> I got about 2.70 pageviews per second on 100 hits when benchmarking
+[12-16-2005 07:31:35] [#ezpublish] <@hovik> _Rappy_: use cache-blocks, http://ez.no/doc/ez_publish/technical_manual/3_6/reference/template_functions/miscellaneous/cache_block
+[12-16-2005 07:32:07] [#ezpublish] <_Rappy_> *bows*
+[12-16-2005 08:09:20] -!- hovik is now known as kk[eZ]
+[12-16-2005 08:30:14] -!- kore_ [n=lordhong@217.194.224.41] has quit []
+[12-16-2005 08:59:47] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Remote closed the connection]
+[12-16-2005 09:06:09] -lilo:$*- [Global Notice] Hi all. We're experiencing a major nuisancebot infestation. Please see http://freenode.net/news.shtml .... thanks for your patience, and thank you for using freenode!
+[12-16-2005 09:10:23] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-16-2005 09:10:40] -!- kris10an [n=kh@popeye.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[12-16-2005 09:15:27] [#ezpublish] <tobmaster> hmm jabber is dead
+[12-16-2005 09:15:28] [#ezpublish] <tobmaster> :)
+[12-16-2005 09:20:01] [#ezpublish] <kk[eZ]> back in 5 min
+[12-16-2005 09:21:13] -!- mode/#ezpublish [+o kore_] by kk[eZ]
+[12-16-2005 09:21:26] -!- mode/#ezpublish [+o tobmaster] by kk[eZ]
+[12-16-2005 09:21:44] -!- kk[eZ] [n=hovik@popeye.ez.no] has quit ["Leaving"]
+[12-16-2005 09:24:06] [#ezpublish] <@kore_> oh, thx :-)
+[12-16-2005 09:27:22] -lilo:$*- [Global Notice] Hi all. Per the news item ( http://freenode.net/news.shtml ), if your project points to irc.freenode.net, that pointer is currently broken. Please message me before repointing. Thanks.
+[12-16-2005 09:32:06] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-16-2005 09:32:24] [#ezpublish] <@tobmaster> :)
+[12-16-2005 09:32:27] [#ezpublish] <@tobmaster> thx
+[12-16-2005 10:00:10] -!- cow [n=kbot@phpugdo.de] has joined #ezpublish
+[12-16-2005 10:05:48] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has left #ezpublish [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[12-16-2005 10:07:27] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-16-2005 10:08:13] -!- cow [n=kbot@phpugdo.de] has quit [Remote closed the connection]
+[12-16-2005 10:08:45] -!- _kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-16-2005 10:08:51] -!- _kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has left #ezpublish [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[12-16-2005 10:15:10] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[12-16-2005 10:20:48] -!- pire [n=kbot@phpugdo.de] has quit [Remote closed the connection]
+[12-16-2005 10:22:05] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[12-16-2005 10:47:43] -!- mode/#ezpublish [+o _kore] by tobmaster
+[12-16-2005 10:53:46] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[12-16-2005 11:43:17] [#ezpublish] <@tobmaster> _kore: du passt auf ja?
+[12-16-2005 11:43:27] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[12-16-2005 11:47:14] -lilo:$*- [Global Notice] Hi all. We momentarily opened up irc.freenode.net, but as you may have noted, we're still seeing heavy spambot activity. We're reverting again. If you're running an infobot here, or are having trouble connecting, please take a look at http://freenode.net/news.shtml .... thank you for your patience, and thank you for using freenode!
+[12-16-2005 11:55:40] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-16-2005 12:08:38] -!- mode/#ezpublish [+o pire] by _kore
+[12-16-2005 12:30:52] -!- SEAwolfx1 [n=mike@tor/session/x-afd0ebd92f56e555] has joined #ezpublish
+[12-16-2005 12:35:59] -!- SEAwolfx_ [n=mike@tor/session/x-e5436572317404b7] has quit [Remote closed the connection]
+[12-16-2005 12:36:30] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[12-16-2005 15:05:14] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-16-2005 15:47:04] -!- SEAwolfx_ [n=mike@tor/session/x-d303f571ea9bef9d] has joined #ezpublish
+[12-16-2005 16:01:53] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-16-2005 17:00:44] -!- CoderForLife [n=CoderFor@EV-ESR1-66-42-131-233.fuse.net] has joined #ezpublish
+[12-16-2005 17:30:48] -!- CoderForLife [n=CoderFor@EV-ESR1-66-42-131-233.fuse.net] has left #ezpublish []
+[12-16-2005 17:31:50] -!- SEAwolfx_ [n=mike@tor/session/x-d303f571ea9bef9d] has quit [Remote closed the connection]
+[12-16-2005 17:37:31] -!- SEAwolfx_ [n=mike@tor/session/x-ee2a1cc41351312f] has joined #ezpublish
+[12-16-2005 18:01:49] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[12-16-2005 19:56:06] -!- rawman [i=info@u18-253.dsl.vianetworks.de] has quit [Read error: 110 (Connection timed out)]
+[12-16-2005 22:40:49] [#ezpublish] <kracker> http://ez.no/community/contribs/3rd_party/ez_publish_community_rss_feeds_opml_file
+[12-16-2005 22:42:08] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | http://ez.no/community/news/community_newsletter_02_12_2005 | http://ez.no/community/articles/an_introduction_to_ez_components

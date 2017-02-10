@@ -1,0 +1,204 @@
+[12-07-2005 01:52:59] -!- ordna1 [n=ordnas@p549DDD76.dip.t-dialin.net] has joined #ezpublish
+[12-07-2005 02:11:21] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-07-2005 02:26:08] -!- zrg [n=zurgutt@roop.pri.ee] has left #ezpublish []
+[12-07-2005 02:35:00] -!- kris10an [n=kh@popeye.ez.no] has quit [Connection timed out]
+[12-07-2005 02:36:35] [#ezpublish] * Katana` wishes you could have ez instantiate your own extended content classes for eZContentObjectTreeNode :)
+[12-07-2005 02:50:59] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[12-07-2005 02:54:51] [#ezpublish] <Katana`> hey kris
+[12-07-2005 03:12:46] [#ezpublish] <kris10an> hi Katana`
+[12-07-2005 03:13:56] [#ezpublish] <_Rappy_> hi all
+[12-07-2005 03:50:20] [#ezpublish] <Katana`> hi rappy
+[12-07-2005 04:07:26] [#ezpublish] <kris10an> some 87 year old fart here in norway is going to pay 100 000 dollars for marrying a 18-year old... very nice...
+[12-07-2005 04:12:34] [#ezpublish] <Katana`> lol
+[12-07-2005 04:12:43] [#ezpublish] <Katana`> he's gonna get laid and die :)
+[12-07-2005 04:19:03] [#ezpublish] <kris10an> think about the poor girl.. her mother gets all the money, and she has to be with that old guy... poor her...
+[12-07-2005 04:21:35] [#ezpublish] <Katana`> err why does the mother get the money ?? the girl's 18 yo right ?
+[12-07-2005 04:22:03] [#ezpublish] <kris10an> no.. she is 17 now...
+[12-07-2005 04:22:15] [#ezpublish] <kris10an> he marries her when she is 18, is the agreement...
+[12-07-2005 04:22:24] [#ezpublish] <kris10an> i dont really get how that is allowed...
+[12-07-2005 04:22:36] [#ezpublish] <kris10an> (allowed=legal)
+[12-07-2005 04:25:53] [#ezpublish] <Katana`> yep...
+[12-07-2005 04:40:08] [#ezpublish] <fh[eZ]> according to the newspapers it is
+[12-07-2005 04:40:45] [#ezpublish] <fh[eZ]> he's not buying her, its tradition in the country where the mothers comes from or something
+[12-07-2005 04:40:49] [#ezpublish] <fh[eZ]> anyway.. it is disgusting
+[12-07-2005 04:46:21] [#ezpublish] <Katana`> ah...
+[12-07-2005 04:49:35] [#ezpublish] <kris10an> sounds much like the tradition to get drunk on christmas eve, and hit your wife...
+[12-07-2005 04:50:11] [#ezpublish] <kris10an> bad traditions...
+[12-07-2005 05:01:48] [#ezpublish] <fh[eZ]> well, it is easy for us to say who come from a different culture
+[12-07-2005 05:01:58] [#ezpublish] <fh[eZ]> (not talking about the hitting thing)
+[12-07-2005 05:11:39] [#ezpublish] <Katana`> well, i still think that people have to adapt to the culture of the country they live in
+[12-07-2005 05:28:43] [#ezpublish] <LottoKim> Imported Image - You do not have sufficient permissions to view this object.
+[12-07-2005 05:28:51] [#ezpublish] <LottoKim> how can i give access to this object?
+[12-07-2005 06:07:18] [#ezpublish] <kris10an> LottoKim: maybe you need to give anonymous access to the media section?
+[12-07-2005 06:07:47] [#ezpublish] <LottoKim> how do i do that?
+[12-07-2005 06:11:45] [#ezpublish] <kris10an> edit anonymous role ( users->roles & policies )
+[12-07-2005 06:11:59] [#ezpublish] <kris10an> change  content  	 read  	 Section( Standard )
+[12-07-2005 06:12:05] [#ezpublish] <kris10an> to  content  	 read  	 Section( Standard, Media )
+[12-07-2005 06:25:03] [#ezpublish] <LottoKim> thanks:)
+[12-07-2005 08:13:15] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-07-2005 08:14:37] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-07-2005 09:20:42] [#ezpublish] * buz is building an ajax forum
+[12-07-2005 09:22:32] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-07-2005 09:23:44] [#ezpublish] <Sulfur> buz: wow
+[12-07-2005 09:24:18] [#ezpublish] <buz> nooow, if only i understood how contentview actually works
+[12-07-2005 09:27:18] [#ezpublish] <Sulfur> hum ... reading about those eZ components ... so I presume there will be no 4.x versions for them ?
+[12-07-2005 09:27:28] [#ezpublish] <buz> thats what i understood yes
+[12-07-2005 09:27:32] [#ezpublish] <buz> which kinda sucks
+[12-07-2005 09:30:24] [#ezpublish] <_Katana`> Sulfur: well, it would kinda defeat the purpose of the components...
+[12-07-2005 09:31:28] [#ezpublish] <buz> it kinda lowers their utility not being able to use them with current ezpublish
+[12-07-2005 09:31:31] [#ezpublish] <Sulfur> _Katana`: I take no objections from guys whose nickname starts with a lowly underscore!
+[12-07-2005 09:31:33] [#ezpublish] <Sulfur> :P :P :P
+[12-07-2005 09:31:48] [#ezpublish] <Sulfur> well
+[12-07-2005 09:31:49] [#ezpublish] <_Katana`> :)
+[12-07-2005 09:32:10] [#ezpublish] <_Katana`> well, you are right, they should write it for PHP4 in order to migrate ezp to PHP5
+[12-07-2005 09:32:13] [#ezpublish] <_Katana`> makes perfect sense
+[12-07-2005 09:32:34] [#ezpublish] <buz> oh cool http://ez.no/content/new works again
+[12-07-2005 09:32:44] [#ezpublish] <Sulfur> I can tell that they make heavy use of autoload capabilities so I can understand why php5 ... but I can't see why a 4.x version cannot be made or would void its philosophy
+[12-07-2005 09:33:09] [#ezpublish] <_Katana`> Sulfur: because it heavily relies on PHP 5 OO features ?
+[12-07-2005 09:33:19] [#ezpublish] <_Katana`> iterators, interfaces, visibility, etc ?
+[12-07-2005 09:33:21] [#ezpublish] <_Katana`> exceptions ...
+[12-07-2005 09:33:34] [#ezpublish] <_Katana`> the components are the first step toward eZ Publish for PHP 5...
+[12-07-2005 09:33:54] [#ezpublish] <Sulfur> hevily relies does not make it impossible to be made .... I am thinking that in my production environment we have many applications which cannot simply be moved into php5 yet
+[12-07-2005 09:34:07] [#ezpublish] <Sulfur> (said that, I think I'll be loving php5)
+[12-07-2005 09:34:51] [#ezpublish] <Sulfur> on a different note, what do you think of this ? http://ez.no/products/ez_components/ez_components_technical_details
+[12-07-2005 09:34:53] [#ezpublish] <_Katana`> we have the same issue
+[12-07-2005 09:34:53] [#ezpublish] <Sulfur> ooops
+[12-07-2005 09:34:54] [#ezpublish] <Sulfur> sorry
+[12-07-2005 09:35:03] [#ezpublish] <buz> it just means there needs to be a php5 compatible ezp version ASAP
+[12-07-2005 09:35:11] [#ezpublish] <Sulfur> I meant ..... of THIS http://www.theregister.co.uk/2005/12/07/creative_vision-m/
+[12-07-2005 09:35:22] [#ezpublish] <buz> Sulfur: yes, ezpublish being one of them
+[12-07-2005 09:35:36] [#ezpublish] <Sulfur> looks cool ... I am not really into apple ..... maybe I am kind of a Chav ;)
+[12-07-2005 09:35:54] [#ezpublish] <Sulfur> yes buz and _Katana`
+[12-07-2005 09:35:55] [#ezpublish] <buz> wtf needs video that small
+[12-07-2005 09:36:07] [#ezpublish] <Sulfur> as long as it doesn't scratch ... ;) :))
+[12-07-2005 09:36:30] [#ezpublish] <Sulfur> the black and the green one are just LOVELY
+[12-07-2005 09:38:13] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-07-2005 09:38:13] -!- _Katana` is now known as Katana`
+[12-07-2005 09:38:18] [#ezpublish] <Sulfur> yes it's not tiny ... but well ...
+[12-07-2005 09:50:29] [#ezpublish] <buz> help me in my ajax forum quest: http://ez.no/community/forum/developer/a_way_to_get_module_result_alone#msg88942
+[12-07-2005 09:54:25] [#ezpublish] <Sulfur> buz:  can't you solve it with an operator ? I am not sure I understood your need , but it seems you need a statement which will output "something" wherever you put it into a tpl
+[12-07-2005 09:54:40] [#ezpublish] <buz> nono
+[12-07-2005 09:54:52] [#ezpublish] <buz> i need the output of the content view, but NOT pagelayout around it
+[12-07-2005 09:56:12] [#ezpublish] <kris10an> buz: can't you just use "node_view_gui" from a module-template ?
+[12-07-2005 09:56:34] [#ezpublish] <buz> mhh do i get access checking then?
+[12-07-2005 09:56:40] [#ezpublish] <Sulfur> ok .... I am thinking of custom operators like randomnum which just cough out the desired number ...
+[12-07-2005 09:56:50] [#ezpublish] <buz> but that warrants further checking
+[12-07-2005 09:56:54] [#ezpublish] <Sulfur> buz: well yes you get access checking with node_view_gui
+[12-07-2005 09:56:59] [#ezpublish] <buz> after i get back from the gym ;)
+[12-07-2005 09:57:15] [#ezpublish] <Sulfur> be wary of recursion though ;)
+[12-07-2005 09:57:26] [#ezpublish] <buz> i was wrestling with recursion yesterday
+[12-07-2005 09:57:43] [#ezpublish] <Sulfur> you won?
+[12-07-2005 09:59:52] [#ezpublish] <buz> yes
+[12-07-2005 10:00:12] [#ezpublish] <buz> it seems like some operators have side effects though
+[12-07-2005 10:00:55] [#ezpublish] <Sulfur> aw
+[12-07-2005 10:01:27] [#ezpublish] <Sulfur> I had to tweak my extension after passing from eZ3.6.x to 3.7.2.
+[12-07-2005 10:01:44] [#ezpublish] <Sulfur> ezXML was behaving differently from before .... reference issues
+[12-07-2005 10:01:47] [#ezpublish] <Sulfur> yowch
+[12-07-2005 10:08:02] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Excess Flood]
+[12-07-2005 10:08:34] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-07-2005 10:15:06] [#ezpublish] <Katana`> would any ez guru be able to tell me anything about the is..temporary attribute of an ezorder ?
+[12-07-2005 10:15:14] -!- elephantMan [n=elephant@217.167.222.224] has quit [Read error: 104 (Connection reset by peer)]
+[12-07-2005 10:15:14] [#ezpublish] <Katana`> what it is, what it is used for, etc...
+[12-07-2005 10:15:45] [#ezpublish] <Sulfur> hey anyone can tell me how to set up URLtranslations to make so that my extension url /myext/myview/PARAM can be accessed under /nicename/PARAM ?
+[12-07-2005 10:16:13] [#ezpublish] <Sulfur> I think it's a system url but also an url with params .... in short I am confused :P
+[12-07-2005 10:16:21] [#ezpublish] <Katana`> url translator, New virtual URL forwarding with wildcard
+[12-07-2005 10:16:36] [#ezpublish] <Katana`> /myext/myview/* , /nicename/{1}
+[12-07-2005 10:16:43] [#ezpublish] <Katana`> NOT redirecting URL
+[12-07-2005 10:16:45] [#ezpublish] <Katana`> tada
+[12-07-2005 10:17:04] [#ezpublish] <Sulfur> why not redirecting url ?
+[12-07-2005 10:17:20] -!- artin_ [n=martin@217.167.222.224] has joined #ezpublish
+[12-07-2005 10:17:24] -!- artin_ [n=martin@217.167.222.224] has quit [Connection reset by peer]
+[12-07-2005 10:17:43] [#ezpublish] <Sulfur> and what if I have more params ? fo I have to do i.e. /myext/myview/*/* /nicename/{1}/{2} ?
+[12-07-2005 10:17:53] [#ezpublish] <Katana`> yep exactly
+[12-07-2005 10:18:02] [#ezpublish] <Sulfur> mm
+[12-07-2005 10:18:06] [#ezpublish] <Katana`> but {1} would probably match both
+[12-07-2005 10:18:10] [#ezpublish] <Sulfur> agh
+[12-07-2005 10:18:15] [#ezpublish] <Sulfur> really?
+[12-07-2005 10:18:21] [#ezpublish] <Katana`> and rewrite /nicename/1/2 to /myext/myview/1/2
+[12-07-2005 10:18:33] [#ezpublish] <Katana`> i don't think it would stop at the first /, no reason :)
+[12-07-2005 10:18:54] [#ezpublish] <Sulfur> anyway .... shouldn't the two strings you provide swapped ?
+[12-07-2005 10:19:17] [#ezpublish] <Katana`> yep a tad :)
+[12-07-2005 10:19:36] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-07-2005 10:20:45] [#ezpublish] <Sulfur> in my italian admin interface I have new existing virtual url on the left  .... and I suppose I need to put /nicename/{1} but example is /.../* ... and existing virtual url on right, where I should put /myext/myview/* but example id /.../{1}  ...... I got it right ? :-?
+[12-07-2005 10:21:08] [#ezpublish] <Katana`> the exemple should be self explanatory...
+[12-07-2005 10:21:16] [#ezpublish] <Katana`> it's the 3rd one
+[12-07-2005 10:21:22] [#ezpublish] <Sulfur> yes
+[12-07-2005 10:21:26] [#ezpublish] <Sulfur> the 3rd one ok
+[12-07-2005 10:21:28] [#ezpublish] <Sulfur> but ...
+[12-07-2005 10:22:21] [#ezpublish] <Sulfur> oh well I'll try putting the /nicename/* on the left and the old one /myext/myview/{1} on right regardless of the labels
+[12-07-2005 10:22:31] [#ezpublish] <Sulfur> this is what confuses me
+[12-07-2005 10:26:29] [#ezpublish] <Sulfur> and what does the redirect checkbox do? sloppy translations ...
+[12-07-2005 10:26:48] [#ezpublish] <Katana`> switch to english
+[12-07-2005 10:27:39] [#ezpublish] <Katana`> i don't use the french version it's really sloppy :)
+[12-07-2005 10:27:47] [#ezpublish] <Katana`> even if i'm partially responsible
+[12-07-2005 10:27:56] [#ezpublish] <Katana`> we have at least 3 different translations for "template" :)
+[12-07-2005 10:28:17] [#ezpublish] <Sulfur> can't Katana`. they made me install it with italian as only language .....
+[12-07-2005 10:28:24] [#ezpublish] <Katana`> the admin ?
+[12-07-2005 10:28:26] [#ezpublish] <Sulfur> ya
+[12-07-2005 10:28:33] [#ezpublish] <Katana`> create a siteaccess for you mate :)
+[12-07-2005 10:28:51] [#ezpublish] <Katana`> fuckmyboss.admin.yoursite
+[12-07-2005 10:29:14] [#ezpublish] <Sulfur> by the flipping hairy gods on a stick, it could be an idea when I have time ;)
+[12-07-2005 10:29:28] [#ezpublish] <Sulfur> but the available languages then are visible on admin
+[12-07-2005 10:29:46] [#ezpublish] <Katana`> are for ContentObjectLocale, not Locale
+[12-07-2005 10:29:48] [#ezpublish] <Sulfur> and as my boss would be admin'ing his fingers out with his access .... hm.
+[12-07-2005 10:30:03] [#ezpublish] <Sulfur> uh? (raises eyebrow)
+[12-07-2005 10:30:06] -!- fh[eZ] [n=fh@popeye.ez.no] has left #ezpublish []
+[12-07-2005 10:30:06] [#ezpublish] <Katana`> it would just change the language of template translations
+[12-07-2005 10:30:08] [#ezpublish] <Katana`> there are 2 locales
+[12-07-2005 10:30:18] [#ezpublish] <Sulfur> (raises 2 eyebrows)
+[12-07-2005 10:30:24] [#ezpublish] <Katana`> Locale is for the i18n operator, it just applies to template texts
+[12-07-2005 10:30:25] [#ezpublish] <Katana`> basically
+[12-07-2005 10:30:41] [#ezpublish] <Katana`> ContentObjectLocale determines the language you want your content objects in
+[12-07-2005 10:30:43] [#ezpublish] <Sulfur> I have half a dozen eyebrows raised while pondering this
+[12-07-2005 10:30:56] [#ezpublish] <Sulfur> ok
+[12-07-2005 10:31:00] [#ezpublish] <Sulfur> but ..
+[12-07-2005 10:31:04] [#ezpublish] <Katana`> lol
+[12-07-2005 10:31:08] [#ezpublish] <Katana`> i would pay for a pic :)
+[12-07-2005 10:31:11] [#ezpublish] <Katana`> so
+[12-07-2005 10:31:22] [#ezpublish] <Sulfur> isn't the list of avaliable languages (for site accesses too) displayed in admin?
+[12-07-2005 10:31:27] [#ezpublish] <Katana`> it means you could add a siteaccess with admin text displayed in english and content objects still in italian
+[12-07-2005 10:31:38] [#ezpublish] <Sulfur> yes yes this is ok
+[12-07-2005 10:31:41] [#ezpublish] <Katana`> it just lets you configure the language you can create the content objects in
+[12-07-2005 10:31:51] [#ezpublish] <Sulfur> but isn't the list of languages available ?
+[12-07-2005 10:31:54] [#ezpublish] <Katana`> err
+[12-07-2005 10:31:57] [#ezpublish] <Sulfur> I mean
+[12-07-2005 10:32:04] [#ezpublish] <Katana`> * raises eyebrows... *
+[12-07-2005 10:32:34] [#ezpublish] <Sulfur> aren't all available languages for admin siteaccess (not content) available in admin config section ?
+[12-07-2005 10:32:43] [#ezpublish] <Sulfur> I haven't looked at it thoroughly
+[12-07-2005 10:32:52] [#ezpublish] <Katana`> hummm...
+[12-07-2005 10:32:55] [#ezpublish] <Katana`> where exactly ?
+[12-07-2005 10:33:03] [#ezpublish] <Sulfur> but I think that as anyone can switch their own language ... they would be listed
+[12-07-2005 10:33:12] [#ezpublish] <Sulfur> wait a sec I'll try to find it
+[12-07-2005 10:33:14] [#ezpublish] <Katana`> i don't think that's it :)
+[12-07-2005 10:35:38] [#ezpublish] <Sulfur> hum ... I seem I was under mezcaline
+[12-07-2005 10:35:51] [#ezpublish] <Katana`> setup => translations
+[12-07-2005 10:36:01] [#ezpublish] <Katana`> lets you setup what languages the content objects can be translated to
+[12-07-2005 10:36:05] [#ezpublish] <Sulfur> well, then that'ssettled. I will make my siteaccess
+[12-07-2005 10:36:07] [#ezpublish] <Sulfur> yes yes
+[12-07-2005 10:36:20] [#ezpublish] <Sulfur> was wrong
+[12-07-2005 10:36:24] [#ezpublish] <Katana`> it would be an exact copy of the other one except Locale so ... :)
+[12-07-2005 10:36:50] [#ezpublish] <Sulfur> yes
+[12-07-2005 10:37:02] [#ezpublish] <Sulfur> *jots a note*
+[12-07-2005 10:38:45] [#ezpublish] <Sulfur> thanks Katana`
+[12-07-2005 10:42:44] [#ezpublish] <Katana`> my pleasure
+[12-07-2005 11:00:06] -!- ordna1 [n=ordnas@p549DDD76.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-07-2005 11:23:15] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-07-2005 12:04:27] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-07-2005 12:33:21] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[12-07-2005 13:37:54] -!- ordna1 [n=ordnas@p549DDD76.dip.t-dialin.net] has joined #ezpublish
+[12-07-2005 13:43:40] [#ezpublish] <buz> yeah i got the ajax forum working
+[12-07-2005 13:43:42] [#ezpublish] <buz> mostly
+[12-07-2005 13:44:10] [#ezpublish] * buz hands kris10an a beer
+[12-07-2005 14:18:59] [#ezpublish] <buz> http://triligon.org/triligon/projects/advancedforum/advancedforum_meta_forum/welcome_to_the_forum but dont click on the first item in the forum that's still broken
+[12-07-2005 14:19:04] [#ezpublish] <buz> and i do know it needs work ;)
+[12-07-2005 14:29:15] [#ezpublish] <buz> New French Government site - sacrebl.eu LOOOL
+[12-07-2005 14:38:26] [#ezpublish] <Katana`> .--
+[12-07-2005 14:38:56] [#ezpublish] <Katana`> hoho nice buz !
+[12-07-2005 15:00:29] [#ezpublish] <buz> live-paintball.com/free_video_preview.cfm NOW THAT'S FUCKED UP
+[12-07-2005 16:15:23] -!- ordnas [n=ordnas@p549DEFE5.dip.t-dialin.net] has joined #ezpublish
+[12-07-2005 16:15:52] -!- ordna1 [n=ordnas@p549DDD76.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-07-2005 16:30:11] -!- ordnas [n=ordnas@p549DEFE5.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-07-2005 16:31:47] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-07-2005 16:51:59] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 110 (Connection timed out)]
+[12-07-2005 21:05:45] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-07-2005 21:05:54] -!- Proteque_ [n=gjorans@213.184.199.245] has quit [Remote closed the connection]

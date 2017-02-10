@@ -1,0 +1,69 @@
+[03-14-2006 00:45:21] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-14-2006 01:21:33] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[03-14-2006 01:31:46] -!- ordnas [n=ordnas@p549D7847.dip.t-dialin.net] has joined #ezpublish
+[03-14-2006 01:55:43] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has joined #ezpublish
+[03-14-2006 02:00:50] [#ezpublish] <DiGiTa|_> hi
+[03-14-2006 02:08:22] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-14-2006 02:12:10] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-14-2006 02:38:10] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-14-2006 03:08:41] -!- puncept [i=nurember@60.52.87.215] has joined #ezpublish
+[03-14-2006 03:08:44] [#ezpublish] <puncept> hi!
+[03-14-2006 03:14:54] [#ezpublish] <kalooni> hi
+[03-14-2006 03:15:04] [#ezpublish] <kalooni> does anybody has ever develop a blog using ez?
+[03-14-2006 03:18:14] [#ezpublish] <puncept> the blog should be pretty easy
+[03-14-2006 03:18:16] [#ezpublish] <puncept> just install it
+[03-14-2006 03:18:26] [#ezpublish] <puncept> and it should be pretty straightforward.
+[03-14-2006 03:18:57] [#ezpublish] <puncept> choose the blog option
+[03-14-2006 03:19:18] [#ezpublish] <kalooni> yes it is. My question concerns "categories"
+[03-14-2006 03:19:29] [#ezpublish] <kalooni> how would you manage this on ez?
+[03-14-2006 03:19:59] [#ezpublish] <puncept> Isn't there a function that allows you to create paths and categories?
+[03-14-2006 03:20:06] [#ezpublish] <puncept> play around in the admin panel
+[03-14-2006 03:20:40] [#ezpublish] <kalooni> humm will check again
+[03-14-2006 03:23:11] [#ezpublish] <kalooni> not so obvious indeed
+[03-14-2006 03:25:57] [#ezpublish] <kalooni> sandro groganz did it
+[03-14-2006 03:26:31] [#ezpublish] <kalooni> but I think it is by playing with folders and multiple nodes
+[03-14-2006 03:35:31] [#ezpublish] <puncept> probably.
+[03-14-2006 03:35:42] [#ezpublish] <puncept> Have you gone through the technical manual yet?
+[03-14-2006 03:42:53] [#ezpublish] <_kore> kalooni, I added a Selection to my weblogentry object, and have a onpublish trigger, which uses an ini-defined mapping selectionentry -> rubricnode and links the weblogentry in the rubric according to the multiple selection
+[03-14-2006 03:43:32] [#ezpublish] <puncept> I'm going through the entire technical manual now.
+[03-14-2006 03:44:12] [#ezpublish] <puncept> That means I won't get to watch a movie tonight :|
+[03-14-2006 03:44:16] [#ezpublish] <_kore> As you can see at http://kore-nordmann.de ;)
+[03-14-2006 03:44:40] [#ezpublish] <kalooni> _kore: thanks ... seems a good way to manage this. the problem is that I have to make it simple for a client ... which mean he will never edit any ini file
+[03-14-2006 03:45:37] [#ezpublish] <puncept> there needs to be more tutorials out there for manipulating ezpublish
+[03-14-2006 03:45:39] [#ezpublish] <_kore> You only need to do it once, or when an rubric is added. Perhaps you can even manage to do it automagically with some kind of string comparision
+[03-14-2006 03:46:13] [#ezpublish] <kalooni> will think about it ;)
+[03-14-2006 03:51:50] [#ezpublish] <puncept> hesus there are plenty of web jobs in ny
+[03-14-2006 03:54:53] [#ezpublish] <_kore> I didn't mention, but the most elegant way would be to create a new datatype, which gives you a list of child nodes (of specific criterias, like the contentclass, and depth) with checkboxes, and create the links on the creation of the object
+[03-14-2006 03:55:18] [#ezpublish] <_kore> But this would take a bit more time to implement ;)
+[03-14-2006 03:56:42] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[03-14-2006 04:25:38] [#ezpublish] <Sulfur> hi guys
+[03-14-2006 04:44:03] [#ezpublish] <Sulfur> is there a way to make that fetch(content, search, hash(.....)) results be sorted by RELEVANCE?
+[03-14-2006 05:13:53] -!- _tobyS [n=dotxp@dslb-084-061-130-192.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[03-14-2006 05:20:20] -!- puncept [i=nurember@60.52.87.215] has quit [Read error: 110 (Connection timed out)]
+[03-14-2006 05:56:33] -!- hovik [n=hovik@dhcp-67157.fa-s.ntnu.no] has joined #ezpublish
+[03-14-2006 05:59:15] -!- hovik [n=hovik@dhcp-67157.fa-s.ntnu.no] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-14-2006 09:06:03] -!- Sulfur [n=mbariola@85.20.2.139] has quit [Read error: 110 (Connection timed out)]
+[03-14-2006 09:21:04] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has quit []
+[03-14-2006 09:26:11] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[03-14-2006 10:26:17] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[03-14-2006 10:26:56] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-14-2006 10:43:36] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-14-2006 11:20:26] -!- Sulfur [n=mbariola@85.20.2.139] has quit [Read error: 110 (Connection timed out)]
+[03-14-2006 11:42:42] -!- kalooni [n=nicolas@fbx.internethic.net] has left #ezpublish ["Quitte"]
+[03-14-2006 12:16:28] -!- ordnas [n=ordnas@p549D7847.dip.t-dialin.net] has left #ezpublish []
+[03-14-2006 12:34:56] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[03-14-2006 13:55:50] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has joined #ezpublish
+[03-14-2006 14:06:37] -!- tobyS [n=dotxp@dslb-084-061-130-192.pools.arcor-ip.net] has joined #ezpublish
+[03-14-2006 14:37:45] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has quit []
+[03-14-2006 15:15:56] -!- yassine21 [n=yassine2@196.203.32.162] has joined #ezpublish
+[03-14-2006 15:16:21] [#ezpublish] <yassine21> hi
+[03-14-2006 15:17:04] [#ezpublish] <yassine21> I want to get the node-id of the super-parent
+[03-14-2006 15:17:16] [#ezpublish] <yassine21> Is it possible in ez ?
+[03-14-2006 15:49:14] -!- polin8 [n=bskahan@host100.digitalpulp.com] has quit ["Quitting"]
+[03-14-2006 16:02:07] -!- yassine21 [n=yassine2@196.203.32.162] has quit ["-=SysReset 2.53=-"]
+[03-14-2006 16:40:42] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[03-14-2006 16:54:34] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-14-2006 18:11:07] -!- tobyS_ [n=dotxp@dslb-084-061-135-204.pools.arcor-ip.net] has joined #ezpublish
+[03-14-2006 18:12:43] -!- tobyS [n=dotxp@dslb-084-061-130-192.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[03-14-2006 22:54:34] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-14-2006 23:31:05] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish

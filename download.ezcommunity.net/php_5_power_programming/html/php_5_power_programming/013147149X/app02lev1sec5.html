@@ -1,0 +1,264 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section B.5.&nbsp; Using the phpDocumentor Tool</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app02lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app03.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app02lev1sec5"></a><h3 class="docSection1Title" id="409768-923">B.5. Using the phpDocumentor Tool</h3>
+<p class="docText">You need the phpDocumentor tool to generate the documentation from the sources enhanced with the tags from the previous section. This tool is installed along with some templates when you type <tt>pear install phpDocumentor</tt>. The tool has several parameters that are listed in <a class="docLink" href="#app02table02">Table B.2</a>. <tt>phpdoc -h</tt> gives you a full overview of parameters; here the most important are described:<a name="app02index190"></a><a name="app02index191"></a></p>
+<a name="app02table02"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table B.2. phpDocumentor Tool Parameters</H5></caption><colgroup><col width="110"><col width="209"><col width="231"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Option</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Comments</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Example</span></P></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-f, --filename</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">Comma-separated list of files to parse. You can use the wildcards * and ?.</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-f index.php,index2.php</tt></p></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>-d, --directory</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Comma-separated list of directories to parse, with the same wildcards supported as with <tt>-f</tt>.</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-d lib*,core</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-ed, --examplesdir</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Full path to the directory with examples.</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-ed /local/examples/sumexample</tt></p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-t, --target</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Target directory for the generated documentation.</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-t /local/docs/sumexample</tt></p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-i, --ignore</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Files that will be ignored during parsing, just as <tt>-f</tt> and <tt>-d</tt> are the wildcards that * and ? supported.</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>-i internal.php</tt></P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-ti, --title</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Title of the generated documentation.</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>-ti "Sum Example"</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-pp, --parseprivate</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">With this option on, <tt>@internal</tt> and elements with <tt>@access private</tt> will also be put in the generated documentation.</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-pp on</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-o, --output</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The output, converter, and template to use for generated documentation.</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-o HTML:frames:default</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-s, --sourcecode</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">If this option is on, generated documentation will also include syntax-highlighted source code.</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-s on</tt></p></td></tr></table></P><BR>
+<p class="docText">To start generating documentation with phpdoc, use the following command:</p>
+<pre>
+$ phpdoc -d directory -pp on -s on -o HTML:frames:default -t outputdir
+</pre><br>
+<a name="app02note01"></a><div class="docNote"><p class="docNoteTitle">Tip:</p>
+
+<p class="docText">All warnings and errors are placed in the file <tt>errors.html</tt> when you're running in HTML mode.</p></div><BR>
+<p class="docText">See the following example of how the generated documentation would appear. From this PHP source file, we will generate documentation with the default template:<a name="app02index194"></a><a name="app02index195"></a></p>
+<pre>
+&lt;?php
+/**
+* Example included file with utility functions
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @version $Id: $
+* @package PHPDocExample
+* @subpackage PHPDocExampleFunctions
+*/
+
+/**
+* Function to add numbers in arrays
+*
+* This function returns an array in which every element is the sum of the
+* two corresponding  elements in the input arrays.
+* @since Version 0.9
+* @param array $array1  The first input array
+* @param array $array2   The second input array
+* @return array
+*/
+function sumElements ($array1, $array2)
+{
+    $ret = $array1;
+
+    foreach ($array2 as $key =&gt; $element) {
+        if (isset ($ret[$key])) {
+            $ret[$key] += $element;
+        } else {
+            $ret[$key] = $element;
+        }
+    }
+    return $ret;
+}
+?&gt;
+
+</pre><br>
+<p class="docText">The file with error class is<a name="app02index196"></a><a name="app02index197"></a><a name="app02index198"></a><a name="app02index199"></a><a name="app02index200"></a></P>
+<pre>
+&lt;?php
+/**
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @package PHPDocExample
+* @subpackage PHPDocExampleFunctions
+*/
+/**
+* File with utility functions
+*/
+require_once 'utility.php';
+
+/**
+* The error class
+* This error class is thrown when an error in one of the
+* other Sum* classes occurs
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @author Stig Bakken &lt;ssb@fast.no&gt;
+* @copyright &#169; 2002 by Derick Rethans
+* @version $Id: $
+* @package PHPDocExample
+*/
+class SumError {
+    /**
+    * The constructor for the error class
+    * @param string $msg Error message
+    */
+    function SumError ($msg)
+    {
+        echo $msg. "\n";
+    }
+}
+?&gt;
+</pre><br>
+<p class="docText">The file with the <tt>Sum</tt> class is<a name="app02index201"></a><a name="app02index202"></a><a name="app02index203"></a><a name="app02index204"></a><a name="app02index205"></a></P>
+<pre>
+&lt;?php
+/**
+* This class adds things
+* This class adds things
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @copyright &#169; 2002 by Derick Rethans
+* @package PHPDocExample
+*/
+/**
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @copyright &#169; 2002 by Derick Rethans
+* @version $Id: $
+* @package PHPDocExample
+* @since version 0.3
+* @abstract
+*/
+class Sum {
+    /**
+    * @var string $type Type of the elements
+    */
+    var $type;
+
+    /**
+    * @var mixed $result Result of the summation
+    */
+    var $result;
+
+    /**
+    * Constructor
+    * @param string $type  The type of the elements
+    */
+    function Sum ($type)
+    {
+        $this-&gt;type = $type;
+    }
+
+    /**
+    * Sum elements
+    *
+    * Sums elements
+    * @abstract
+    * @param mixed $elem1  The first element
+    * @param mixed $elem2  The second element
+    */
+    function sumElements ($elem1, $elem2)
+    {
+        return new SumError('Please overload this class');
+    }
+
+    /**
+    * Return the result of the summation
+    * @abstract
+    * @return mixed
+    */
+    function getResult ()
+    {
+        return $this-&gt;result;
+    }
+}
+?&gt;
+</pre><br>
+<p class="docText"><a name="app02index206"></a><a name="app02index207"></a><a name="app02index208"></a><a name="app02index209"></a><a name="app02index210"></a>The file with the <tt>SumNumberElements</tt> class is<a name="app02index211"></a><a name="app02index212"></a><a name="app02index213"></a><a name="app02index214"></a><a name="app02index215"></a></p>
+<pre>
+&lt;?php
+/**
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @package PHPDocExample
+*/
+/**
+* Class for adding arrays of numbers
+* Class for adding arrays of numbers
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @copyright &#169; 2002 by Derick Rethans
+* @version $Id: $
+* @package PHPDocExample
+* @final
+*/
+class SumNumberElements extends Sum {
+    /**
+    * Function which sets the result for the Summation
+    * Function which sets the result for the Summation
+    * @param mixed $elem1  The first element
+    * @param mixed $elem2  The second element
+    * @access public
+    */
+    function sumElements ($elem1, $elem2)
+    {
+        /* Uses the sumElements utility function */
+        $this-&gt;result = sumElements ($elem1, $elem2);
+    }
+}
+?&gt;
+</pre><br>
+<p class="docText">The file with the <tt>SumNumbers</tt> class is<a name="app02index216"></a><a name="app02index217"></a><a name="app02index218"></a><a name="app02index219"></a><a name="app02index220"></a></p>
+<pre>
+&lt;?php
+/**
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @package PHPDocExample
+*/
+/**
+* Class for adding two numbers
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @copyright &#169; 2002 by Derick Rethans
+* @version $Id: $
+* @package PHPDocExample
+* @final
+*/
+class SumNumbers extends Sum {
+    /**
+    * Functon to add numbers
+    *
+    * This functions adds numbers
+    * @see sumElements()
+    * @access private
+    * @param integer $int1  The first number
+    * @param integer $int2  The second number
+    * @return integer
+    */
+    function _sumNumbers ($int1, $int2)
+    {
+        return $int1 + $int2;
+    }
+
+    /**
+    * Overloaded SumElements function
+    *
+    * Overloaded SumElements function
+    * @access public
+    * @param int $elem1  The first element
+    * @param int $elem2  The second element
+    */
+    function sumElements ($elem1, $elem2)
+    {
+        $this-&gt;result = _sumNumbers ($elem1, $elem2);
+    }
+}
+?&gt;
+</pre><br>
+<p class="docText">Now that we have the source files, we generate the documentation with<a name="app02index221"></a><a name="app02index222"></a><a name="app02index223"></a><a name="app02index224"></a><a name="app02index225"></a></p>
+<pre>
+$ phpdoc -d sums -pp on -s on -t Example -o HTML:frames:default -t sums_generated
+</pre><br>
+<a name="app02note02"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">There are plenty of other templates that you can usefor example, <tt>HTML:frames:earthli</tt> for colorful documentation with images indicating different elements, <tt>PDF:default:default</tt> for a PDF documentation of your classes, or <tt>HTML:Smarty:PHP</tt> for a layout similar to the <a class="docLink" target="_blank" href="http://php.net">php.net</a> web site layout. See the /usr/local/lib/php/PhpDocumentor/phpDocumentor directory and subdirectories for more supported templates. (You might have to check a different path, depending on your PEAR installation.)<a name="app02index226"></a></p></div><br>
+<p class="docText">Some screenshots from the generated documentation follow (see <a class="docLink" href="#app02fig02">Figure B.2</a> and <a class="docLink" href="#app02fig03">Figure B.3</a>).<a name="app02index227"></a><a name="app02index228"></a><a name="app02index229"></a></p>
+<a name="app02fig02"></a><p><center><h5 class="docFigureTitle">Figure B.2. SumNumber elements documenation.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/ap02fig02_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="374" SRC="images/013147149X/graphics/ap02fig02.gif;380137"></p></center></p><BR>
+<a name="app02fig03"></a><P><center><h5 class="docFigureTitle">Figure B.3. Method overview.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/ap02fig03_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="375" SRC="images/013147149X/graphics/ap02fig03.gif;380137"></P></center></p><br>
+<p class="docText">These screenshots (<a class="docLink" href="#app02fig02">Figures B.2</a> and <a class="docLink" href="#app02fig03">B.3</a>) show the documentation of the <tt>SumNumberElements</tt> class. The left pane shows the classes and modules in this package and the right pane shows all information of the <tt>SumNumberElements</tt> class. You can clearly see that this class is inherited from the <tt>Sum</tt> class in the class tree at the top. The second screenshot shows detailed information about the one method in this class <tt>sumElements</tt> and the methods that are inherited from the <tt>Sum</tt> class (such as the <tt>Sum::Sum()</tt> and <tt>Sum::getResult()</tt> methods).</p>
+<p class="docText"><a class="docLink" href="#app02fig04">Figure B.4</a> shows the relation between all classes in the package as a tree. It shows that the <tt>SumNumbers</tt> and <tt>SumNumberElements</tt> classes are sub-classes of <tt>Sum</tt>, and that the <tt>SumError</tt> class has no super- or subclasses.<a name="app02index230"></a><a name="app02index231"></a><a name="app02index232"></a></p>
+<a name="app02fig04"></a><p><center><h5 class="docFigureTitle">Figure B.4. Relations between packages.</H5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/ap02fig04_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="235" SRC="images/013147149X/graphics/ap02fig04.gif;380137"></p></center></P><br>
+<p class="docText">Another interesting screenshot (see <a class="docLink" href="#app02fig05">Figure B.5</a>) shows an index of all available elements in the packages. Shown elements are modules, classes, functions, variables, and constants. Have a look at fully generated documentation from our example scripts, which you can find online at the book's web site.<a name="app02index233"></a><a name="app02index234"></a><a name="app02index235"></a></P>
+<a name="app02fig05"></a><p><center><h5 class="docFigureTitle">Figure B.5. Overview of all elements in the package.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/ap02fig05_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="376" SRC="images/013147149X/graphics/ap02fig05.gif;380137"></p></center></P><BR>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app02lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app03.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

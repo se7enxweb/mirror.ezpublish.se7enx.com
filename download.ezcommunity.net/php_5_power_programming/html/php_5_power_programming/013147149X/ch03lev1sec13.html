@@ -1,0 +1,78 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.13.&nbsp; Interfaces</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec12.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec14.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec13"></a><h3 class="docSection1Title">3.13. Interfaces</h3>
+<p class="docText"><span class="docEmphStrong">Class inheritance</span> enables you to describe a parent-child relationship between classes. For example, you might have a base class <tt>Shape</tt> from which both <tt>Square</tt> and <tt>Circle</tt> derive. However, you might often want to add additional &quot;interfaces&quot; to classes, basically meaning additional contracts to which the class must adhere. This is achieved in C++ by using multiple inheritance and deriving from two classes. PHP chose interfaces as an alternative to multiple inheritance, which allows you to specify additional contracts a class must follow. An interface is declared similar to a class but only includes function prototypes (without implementation) and constants. Any class that &quot;implements&quot; this interface automatically has the interface's constants defined and, as the implementing class, needs to supply the function definitions for the interface's function prototypes that are all <tt>abstract</tt> methods (unless you declare the implementing class as <tt>abstract</tt>).<a name="ch03index127"></a><a name="ch03index128"></a><a name="ch03index129"></a></p>
+<p class="docText">To implement an interface, use the following syntax:</p>
+<pre>
+class A implements B, C, ... {
+    ...
+}
+</pre><br>
+<p class="docText">Classes that implement an interface have an <tt>instanceof</tt> (is-a) relationship with the interface; for example, if class <tt>A</tt> implements interface <tt>myInterface</tt>, the following results in <tt>'$obj is-A myInterface'</tt> printing:</P>
+<pre>
+$obj = new A();
+if ($obj instanceof myInterface) {
+    print '$obj is-A myInterface';
+}
+</pre><br>
+<p class="docText">The following example defines an interface called <tt>Loggable</tt>, which classes can implement to define what information will be logged by the <tt>MyLog()</tt> function. Objects of classes that don't implement this interface and are passed to the <tt>MyLog()</tt> function result in an error message being printed:<a name="ch03index130"></a></P>
+<pre>
+interface Loggable {
+    function logString();
+}
+
+class Person implements Loggable {
+    private $name, $address, $idNumber, $age;
+    function logString() {
+        return "class Person: name = $this-&gt;name, ID = $this &gt;idNumber\n";
+    }
+}
+
+class Product implements Loggable {
+    private $name, $price, $expiryDate;
+    function logString() {
+        return "class Product: name = $this-&gt;name, price = $this &gt;price\n";
+    }
+}
+
+function MyLog($obj) {
+    if ($obj instanceof Loggable) {
+        print $obj-&gt;logString();
+    } else {
+        print "Error: Object doesn't support Loggable interface\n";
+    }
+}
+
+$person = new Person();
+// ...
+$product = new Product();
+
+MyLog($person);
+MyLog($product);
+</pre><br>
+<a name="ch03note09"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">Interfaces are always considered to be <tt>public</tt>; therefore, you can't specify access modifiers for the method prototypes in the interface's declaration.</p></div><br>
+<a name="ch03note10"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">You may not implement multiple interfaces that clash with each other (for example, interfaces that define the same constants or methods).<a name="ch03index131"></a></p></div><BR>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec12.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec14.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

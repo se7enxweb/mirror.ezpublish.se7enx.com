@@ -1,0 +1,72 @@
+[06-25-2006 00:06:56] -lilo:$*- [Global Notice] Hi all. We've got to restart one of our servers due to load issues; it's a pretty big, noticeable hit. If you're restarted, please reconnect to chat.freenode.net .... thanks
+[06-25-2006 00:08:09] Diconnected. Sleeping for 2 second(s).
+[06-25-2006 00:08:11] >> Connecting to irc.freenode.net:6667
+[06-25-2006 00:08:16] >> Connected to irc.freenode.net:6667, registering...
+[06-25-2006 00:08:16] >> Attempting to join channels: #ezpublish
+[06-25-2006 00:08:17] >> Successfully registered. Nick is: ezlog
+[06-25-2006 00:08:17] -!- There are 5451 listed and 8188 unlisted users on 18 servers
+[06-25-2006 00:08:17] -!- 27 flagged staff members
+[06-25-2006 00:08:17] -!- 8035 channels formed
+[06-25-2006 00:08:17] -!- I have 2000 clients and 0 servers
+[06-25-2006 00:08:17] -!- Current local  users: 2000  Max: 2000
+[06-25-2006 00:08:17] -!- Current global users: 13639  Max: 20416
+[06-25-2006 00:08:17] -!- Highest connection count: 2000 (1999 clients) (2251 since server was (re)started)
+[06-25-2006 00:08:17] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[06-25-2006 00:08:17] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_16_06_2006 || New Article: http://ez.no/community/news/ez_systems_summer_conference_hackathon
+[06-25-2006 00:08:17] -!- Topic set by kracker [@] [Fri, 16 Jun 2006 16:41:17 -0500]
+[06-25-2006 00:08:25] -!- tobyS [i=dotxp@87.106.7.192] has joined #ezpublish
+[06-25-2006 00:08:40] -!- Paleo [n=Paleo@admin.pwsp.net] has joined #ezpublish
+[06-25-2006 00:08:51] -!- aya [n=aya@fbx.internethic.net] has joined #ezpublish
+[06-25-2006 01:05:10] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 01:05:50] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[06-25-2006 01:07:00] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 01:15:45] -lilo:$*- [Global Notice] Hi all. We're continuing to experience problems and we'll probably be shutting down in just a moment
+[06-25-2006 01:54:47] -lilo:$*- [Global Notice] Hi all. We're looking at some alternatives to a shutdown and restart. We'll keep you posted.
+[06-25-2006 02:26:36] -!- kore_ [n=lordhong@194.95.66.31] has joined #ezpublish
+[06-25-2006 02:35:04] -!- kris10an [n=kh@193.213.26.204] has joined #ezpublish
+[06-25-2006 03:13:55] -!- zrg [n=zurgutt@193.213.26.204] has joined #ezpublish
+[06-25-2006 04:24:04] -!- tobmaster [n=tobmaste@213.160.240.34] has joined #ezpublish
+[06-25-2006 04:25:22] -!- tobmaster [n=tobmaste@213.160.240.34] has quit [Client Quit]
+[06-25-2006 04:33:33] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-25-2006 04:43:46] -!- zrg [n=zurgutt@193.213.26.204] has quit [Read error: 110 (Connection timed out)]
+[06-25-2006 05:04:19] -!- kris10an [n=kh@193.213.26.204] has quit [Remote closed the connection]
+[06-25-2006 05:20:51] -!- Tidemann [i=Tidemann@062249180208.customer.alfanett.no] has joined #ezpublish
+[06-25-2006 07:28:48] -!- Tidemann [i=Tidemann@062249180208.customer.alfanett.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-25-2006 08:38:43] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-25-2006 08:49:38] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 08:54:59] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[06-25-2006 08:56:21] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 09:04:00] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-25-2006 09:07:25] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 09:07:37] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Client Quit]
+[06-25-2006 09:09:24] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 09:09:33] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[06-25-2006 09:10:46] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 09:12:34] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[06-25-2006 09:13:59] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 09:17:48] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Client Quit]
+[06-25-2006 09:21:30] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 09:22:01] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[06-25-2006 09:24:45] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 09:25:30] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[06-25-2006 09:27:50] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 09:41:56] -!- kore_ [n=lordhong@194.95.66.31] has quit []
+[06-25-2006 10:10:15] -!- SunRayCafe [i=raymond@cpe-65-28-151-10.bak.res.rr.com] has joined #ezpublish
+[06-25-2006 10:10:30] -!- SunRayCafe [i=raymond@cpe-65-28-151-10.bak.res.rr.com] has quit []
+[06-25-2006 10:10:57] -!- SunRay_Home [i=raymond@cpe-65-28-151-10.bak.res.rr.com] has joined #ezpublish
+[06-25-2006 12:19:53] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-25-2006 13:45:10] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-25-2006 15:28:50] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-25-2006 16:35:44] -!- Tidemann [i=Tidemann@062249180208.customer.alfanett.no] has joined #ezpublish
+[06-25-2006 16:36:00] [#ezpublish] <Tidemann> hoi
+[06-25-2006 16:46:39] [#ezpublish] <Tidemann> anyone?
+[06-25-2006 16:50:45] -lilo:$*- [Global Notice] Hi all. As you are aware, we experienced an episode some hours ago in which a staff password was sniffed or cracked. It would be prudent for you to change your nickserv and chanserv passwords at this point. We're continuing to investigate what happened. Thanks for your patience.
+[06-25-2006 16:58:00] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-25-2006 16:59:09] [#ezpublish] <Tidemann> humm
+[06-25-2006 16:59:49] [#ezpublish] <zrg> hum drum
+[06-25-2006 17:26:35] [#ezpublish] <Tidemann> grrrr...
+[06-25-2006 17:31:49] [#ezpublish] <zrg> naxnaxnax
+[06-25-2006 17:31:52] [#ezpublish] <zrg> wasup?
+[06-25-2006 21:26:02] -lilo:$*- [Global Notice] Hi all. As you are probably aware, freenode has had some difficulties in the last day or so. One of our staffers, Susan Stewart (HedgeMage), will be on hand in #freenode-moderated in just a couple of minutes, to make a quick statement and take some questions. Thanks.
+[06-25-2006 23:02:56] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-25-2006 23:25:08] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]

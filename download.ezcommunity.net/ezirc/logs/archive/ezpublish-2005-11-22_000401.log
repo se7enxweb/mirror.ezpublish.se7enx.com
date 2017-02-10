@@ -1,0 +1,123 @@
+[11-21-2005 00:10:29] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-21-2005 00:24:12] -!- Bedlored [n=me@219-90-188-186.ip.adam.com.au] has joined #ezpublish
+[11-21-2005 00:41:06] -!- Bedlore [n=me@219-90-182-230.ip.adam.com.au] has quit [Read error: 110 (Connection timed out)]
+[11-21-2005 00:54:10] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-21-2005 00:56:45] -!- Bedlored [n=me@219-90-188-186.ip.adam.com.au] has quit []
+[11-21-2005 01:26:07] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-21-2005 01:51:06] -!- ordnas [n=ordnas@p549DC53C.dip.t-dialin.net] has joined #ezpublish
+[11-21-2005 02:11:18] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-21-2005 02:20:56] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-21-2005 02:20:56] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[11-21-2005 02:21:20] -!- _Katana` is now known as Katana`
+[11-21-2005 02:49:57] [#ezpublish] <Katana`> morning
+[11-21-2005 02:50:07] [#ezpublish] * Katana` has started an ezp admin interface based on qooxdoo
+[11-21-2005 02:50:07] [#ezpublish] <Katana`> :)
+[11-21-2005 03:05:07] [#ezpublish] <_Rappy_> to make an interface?
+[11-21-2005 03:05:10] [#ezpublish] <_Rappy_> morning btw
+[11-21-2005 03:05:34] [#ezpublish] <Katana`> i've started writing it
+[11-21-2005 03:07:06] [#ezpublish] <_Rappy_> goodie
+[11-21-2005 03:30:10] [#ezpublish] <nnn0> :)
+[11-21-2005 03:45:59] [#ezpublish] <_Rappy_> so, if a user can edit content, he can edit all content on all nodes/object in all section he/she has access too. So if I wnat to let the user only edit articles, I need to put all other stuff in a section taht that user don't have edit-access too
+[11-21-2005 03:46:09] [#ezpublish] <_Rappy_> oh, taht was a difficult sentence
+[11-21-2005 03:48:24] [#ezpublish] <_Rappy_> nevermind
+[11-21-2005 04:10:30] [#ezpublish] <@kh[eZ]> Katana`:  that sounds cool...
+[11-21-2005 04:11:08] [#ezpublish] <@kh[eZ]> drag and drop workflows.. that would be the shit...
+[11-21-2005 04:12:48] [#ezpublish] <Katana`> hehehe :)
+[11-21-2005 04:12:50] [#ezpublish] <Katana`> i'm uploading a version kh[eZ]
+[11-21-2005 04:12:58] [#ezpublish] <Katana`> it's really proof of concept level but the idea is here :)
+[11-21-2005 04:13:29] [#ezpublish] <@kh[eZ]> ok.. cool... the ajax menu was just a prototype too :-)
+[11-21-2005 04:13:33] [#ezpublish] <Katana`> http://www.katana-inc.com/files/code/ez_publish_ajax_admin_interface
+[11-21-2005 04:13:35] [#ezpublish] <Katana`> there you are :)
+[11-21-2005 04:13:45] [#ezpublish] <Katana`> well, everything in the admin has to be implemented so... :)
+[11-21-2005 04:13:52] [#ezpublish] <Katana`> it doesn't do much at the moment ;)
+[11-21-2005 04:14:16] [#ezpublish] <@kh[eZ]> you should just put a demo online :-)
+[11-21-2005 04:14:29] [#ezpublish] <@kh[eZ]> it would be cool to see...
+[11-21-2005 04:14:31] [#ezpublish] <Katana`> i could do that yep
+[11-21-2005 04:14:41] [#ezpublish] <Katana`> but it's really easy to setup on any ezp install
+[11-21-2005 04:14:54] [#ezpublish] <Katana`> drop the extension, add an admin siteaccess, add the design & extension
+[11-21-2005 04:15:05] [#ezpublish] <Katana`> and add a rewrite rule
+[11-21-2005 04:15:06] [#ezpublish] <Katana`> tadaa
+[11-21-2005 04:15:29] [#ezpublish] <Katana`> i've just noticed it was even using crystalsvg for the icons, i have to mutualize that as well
+[11-21-2005 04:15:43] [#ezpublish] <Katana`> give it a try ;)
+[11-21-2005 04:20:01] [#ezpublish] <Katana`> with screenshot: http://www.katana-inc.com/files/code/ez_publish_ajax_admin_interface
+[11-21-2005 05:51:58] -!- ordnas [n=ordnas@p549DC53C.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-21-2005 05:58:51] [#ezpublish] <@kh[eZ]> looks cool... i dont have time to install it to test it thou...
+[11-21-2005 06:08:45] -!- ordnas [n=ordnas@p549DC5ED.dip.t-dialin.net] has joined #ezpublish
+[11-21-2005 06:40:14] [#ezpublish] <Katana`> hi sandro
+[11-21-2005 06:51:36] [#ezpublish] <_Rappy_> eZ should get a module which zaps users that tries to do stupid things
+[11-21-2005 06:51:49] [#ezpublish] <_Rappy_> actually, all software should have that
+[11-21-2005 06:52:01] [#ezpublish] <_Rappy_> then they'd learn
+[11-21-2005 06:52:02] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[11-21-2005 06:52:08] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-21-2005 06:52:38] [#ezpublish] <_Rappy_> "OH! nude_pix_britney.jpg.exe! Must open attachment!" *zap*
+[11-21-2005 06:52:53] [#ezpublish] <Katana`> :)
+[11-21-2005 07:22:02] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[11-21-2005 07:25:02] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-21-2005 07:41:43] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-21-2005 07:46:00] [#ezpublish] <Katana`> hey buz
+[11-21-2005 07:48:49] [#ezpublish] <buz> hi
+[11-21-2005 07:53:09] [#ezpublish] <@kh[eZ]> the buz is on... (just wantet to use that cheesy phrase...)
+[11-21-2005 07:53:16] [#ezpublish] <buz> ?
+[11-21-2005 07:53:18] [#ezpublish] <@kh[eZ]> hi buz
+[11-21-2005 07:53:37] [#ezpublish] <@kh[eZ]> nevermind.. just my brain disfunctioning again...
+[11-21-2005 07:55:58] [#ezpublish] <_Rappy_> I think kh[eZ] has been zapped
+[11-21-2005 08:01:01] [#ezpublish] <Katana`> why was I reading rapped instead of zapped ?
+[11-21-2005 08:02:55] [#ezpublish] <_Rappy_> because you have been zapped
+[11-21-2005 08:03:20] [#ezpublish] <Katana`> :)
+[11-21-2005 08:03:28] [#ezpublish] <buz> now i know why it's snowing: http://www.forbes.com/technology/feeds/afx/2005/11/20/afx2347168.html
+[11-21-2005 08:03:33] [#ezpublish] <Katana`> buz, http://www.katana-inc.com/files/code/ez_publish_ajax_admin_interface
+[11-21-2005 08:03:34] [#ezpublish] <buz> must be a truly cold day in hell
+[11-21-2005 08:03:51] [#ezpublish] <buz> wtf? 4mb
+[11-21-2005 08:04:25] [#ezpublish] <buz> do you have that online someplace? i should write on my paper today, not install pre alpha snapshots
+[11-21-2005 08:06:59] [#ezpublish] <Katana`> nope buz
+[11-21-2005 08:07:06] [#ezpublish] <Katana`> 4mb are for the icons in the widgets package
+[11-21-2005 08:07:12] [#ezpublish] <buz> doesnt live in svn either i presume?
+[11-21-2005 08:07:15] [#ezpublish] <Katana`> i have not simplified that yet
+[11-21-2005 08:07:20] [#ezpublish] <Katana`> not yet buz, only locally
+[11-21-2005 08:07:27] [#ezpublish] <buz> i'd leave the icons in
+[11-21-2005 08:07:31] [#ezpublish] <buz> who cares for some more space
+[11-21-2005 08:07:31] [#ezpublish] <Katana`> 4mb damnit, don't tell me you're on 56K
+[11-21-2005 08:07:37] [#ezpublish] <Katana`> the icons are the same as ez...
+[11-21-2005 08:07:38] [#ezpublish] <Katana`> crystal
+[11-21-2005 08:07:46] [#ezpublish] <buz> i like crystal
+[11-21-2005 08:07:46] [#ezpublish] <Katana`> i don't see why they should be duplicated :)
+[11-21-2005 08:07:53] [#ezpublish] <buz> have them everywhere ;)
+[11-21-2005 08:07:59] [#ezpublish] <_Rappy_> make icons not war
+[11-21-2005 08:08:00] [#ezpublish] <Katana`> so i'll probably use the ones from ez instead
+[11-21-2005 08:08:35] [#ezpublish] <buz> i hate that PoS online learing thing
+[11-21-2005 08:11:05] [#ezpublish] <Katana`> i'll add it to community if people are interested buz
+[11-21-2005 08:39:50] [#ezpublish] <Katana`> hum I think nobody's gonna try my interface until I add an online demo ;)
+[11-21-2005 08:44:48] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[11-21-2005 08:44:58] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-21-2005 08:45:15] -!- _Katana` is now known as Katana`
+[11-21-2005 09:05:01] -!- _Rappy_ is now known as _rappy_
+[11-21-2005 09:54:12] [#ezpublish] <Katana`> okay right... overrrides are broken, and i don't know why
+[11-21-2005 09:54:43] [#ezpublish] <buz> Katana`: damn right ;)
+[11-21-2005 10:00:03] [#ezpublish] <Katana`> okay now i'm pissed...
+[11-21-2005 10:00:22] [#ezpublish] <buz> ?
+[11-21-2005 10:00:29] [#ezpublish] <buz> why
+[11-21-2005 10:00:31] [#ezpublish] <Katana`> that override
+[11-21-2005 10:00:35] [#ezpublish] <buz> aaah
+[11-21-2005 10:00:37] [#ezpublish] <Katana`> it overrides where it shoul dnot
+[11-21-2005 10:00:44] [#ezpublish] <Katana`> it was working, and now it doesn't
+[11-21-2005 10:02:21] [#ezpublish] <Katana`> I feel like a section has gone mad
+[11-21-2005 10:03:16] [#ezpublish] <Katana`> okay now why is that node part of that section... and in a NON VISIBLE way ...
+[11-21-2005 10:13:20] [#ezpublish] <Katana`> a node can be in several sections ??
+[11-21-2005 10:28:39] [#ezpublish] <Katana`> ok now it works... no reason ...
+[11-21-2005 11:23:02] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-21-2005 11:28:39] -!- SEAwolfx [n=mike@DSL01.212.114.236.130.NEFkom.net] has joined #ezpublish
+[11-21-2005 12:25:58] [#ezpublish] <buz> http://arstechnica.com/news.ars/post/20051121-5604.html so that's why it's snowing here.
+[11-21-2005 12:26:08] [#ezpublish] <buz> the devil mustoh
+[11-21-2005 12:26:12] [#ezpublish] <buz> i'm repeating myself
+[11-21-2005 12:26:13] [#ezpublish] <buz> nevermind
+[11-21-2005 12:29:48] -!- SEAwolfx [n=mike@DSL01.212.114.236.130.NEFkom.net] has quit ["Lost terminal"]
+[11-21-2005 12:29:55] [#ezpublish] <buz> some of the people flooding the forum should be shot
+[11-21-2005 14:00:20] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[11-21-2005 14:09:46] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-21-2005 14:21:18] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-21-2005 15:03:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-21-2005 15:32:33] -!- ordnas [n=ordnas@p549DC5ED.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-21-2005 15:54:16] -!- SEAwolfx [n=mike@DSL01.83.171.154.170.NEFkom.net] has joined #ezpublish
+[11-21-2005 16:58:06] -!- SEAwolfx [n=mike@DSL01.83.171.154.170.NEFkom.net] has quit ["Lost terminal"]
+[11-21-2005 17:28:32] -!- SEAwolfx [n=mike@DSL01.83.171.165.168.NEFkom.net] has joined #ezpublish
+[11-21-2005 17:52:49] -!- SEAwolfx [n=mike@DSL01.83.171.165.168.NEFkom.net] has quit ["Changing server"]

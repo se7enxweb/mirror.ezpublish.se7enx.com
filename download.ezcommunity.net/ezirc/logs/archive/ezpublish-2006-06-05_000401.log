@@ -1,0 +1,62 @@
+[06-04-2006 01:55:46] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-04-2006 02:35:23] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-04-2006 04:42:59] [#ezpublish] <jeremiah> hi
+[06-04-2006 04:43:08] [#ezpublish] <jeremiah> <img src="{$node.object.data_map.my_image.content[image_size].full_path}" ... />
+[06-04-2006 04:43:16] [#ezpublish] <jeremiah> where i put the image in the article?
+[06-04-2006 04:43:50] [#ezpublish] <jeremiah> i dont understand how to put an image inside an article and then referencing the image from a template
+[06-04-2006 04:44:34] [#ezpublish] <buz> the default article class doesnt contain images i think
+[06-04-2006 04:45:00] [#ezpublish] <buz> other than that, use {attribute_view_gui} for the image attribute
+[06-04-2006 04:46:29] [#ezpublish] <jeremiah> Thx buz, but sorry , i dont understand yet. Must i upload an image in object relations in an article? and then reference it from a template?
+[06-04-2006 04:46:43] [#ezpublish] <jeremiah> i am trying to get articles with thumbnails
+[06-04-2006 04:46:51] [#ezpublish] <buz> that wholly depends on what you're trying to do
+[06-04-2006 04:47:15] [#ezpublish] <jeremiah> the tipical list of articles with a thumbnail
+[06-04-2006 04:47:31] [#ezpublish] <buz> mhh in that case i'd probably add an image field to article
+[06-04-2006 04:47:44] [#ezpublish] <jeremiah> aha, thx buz
+[06-04-2006 04:47:54] [#ezpublish] <jeremiah> i will try it
+[06-04-2006 04:48:03] [#ezpublish] <buz> of course you can use object relation as well but that seems more complicated to me
+[06-04-2006 04:48:25] [#ezpublish] <jeremiah> yes, its more logical with a image field
+[06-04-2006 04:49:42] [#ezpublish] <jeremiah> buz, is possible to chamge the class article without use the ADmin Panel?
+[06-04-2006 04:51:29] [#ezpublish] <buz> no
+[06-04-2006 04:52:10] [#ezpublish] <jeremiah> oh, its a pity i like i like to avoid the panel always i can, more like linux programmer than using a gui interface
+[06-04-2006 04:52:23] [#ezpublish] <jeremiah> it would be nice a .ini or .class file
+[06-04-2006 04:52:36] [#ezpublish] <buz> well you could try hacking the sql database yourself
+[06-04-2006 04:52:39] [#ezpublish] <buz> good luck with that
+[06-04-2006 04:52:56] [#ezpublish] <jeremiah> no buz, i dont know enought for that
+[06-04-2006 04:53:46] [#ezpublish] <jeremiah> i am learning EZP only this week, trying to do a little page, if i finish it i will ask your opinion
+[06-04-2006 04:59:24] [#ezpublish] <jeremiah> sorry buz one thing more
+[06-04-2006 04:59:42] [#ezpublish] <jeremiah> I see editing the class article this field called Image:	7. Image [Object relation] (id:187)
+[06-04-2006 05:00:47] [#ezpublish] <jeremiah> could i use that and how reference the image
+[06-04-2006 05:00:53] [#ezpublish] <jeremiah> ?
+[06-04-2006 05:06:27] [#ezpublish] <jeremiah> i understant that this atribute called Image refers to Attachments, if i could reference this Images and get the first image, i could use it like the thumbnail.
+[06-04-2006 05:07:05] [#ezpublish] <jeremiah> Buz how could i do that, do you have some idea to help me to search for how to do it?
+[06-04-2006 05:23:38] [#ezpublish] <jeremiah> buz, i have found the solution, thx
+[06-04-2006 05:23:39] [#ezpublish] <buz> not sure how standard object relation work
+[06-04-2006 05:23:43] [#ezpublish] <buz> ah ok
+[06-04-2006 05:24:00] [#ezpublish] <jeremiah> thx buz, i founded a similar question in the forum
+[06-04-2006 05:26:42] [#ezpublish] <jeremiah> i think ezpublish is too much fragmented in templates, overbloated tpl, in my page i am trying to reduce that
+[06-04-2006 05:59:47] -!- zr1 [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has joined #ezpublish
+[06-04-2006 06:00:10] [#ezpublish] <zr1> anyone awake rise hands!
+[06-04-2006 06:00:26] [#ezpublish] <buz> whx
+[06-04-2006 06:00:27] [#ezpublish] <buz> y
+[06-04-2006 06:00:31] [#ezpublish] * zr1 wields the fish.
+[06-04-2006 06:01:11] [#ezpublish] <zr1> nah, its just good to see some life among the corpses
+[06-04-2006 06:02:13] [#ezpublish] <zr1> think i grilled you on price/vat thing already.. do you think if i set ez guys to fire they will wake up?
+[06-04-2006 06:25:41] [#ezpublish] <buz> mhh i think it works in 3.8
+[06-04-2006 06:25:45] [#ezpublish] <buz> with those special products anyway
+[06-04-2006 06:41:00] [#ezpublish] <zr1> got it :)
+[06-04-2006 06:43:22] [#ezpublish] <zr1> for benefit of those reading log someday, this is how to set vat: $data_text = $vatID . ',' . $vatIncluded; $price->setAttribute( 'data_text', $data_text );
+[06-04-2006 06:44:14] [#ezpublish] <zr1> it seems that date_text acts as gateway to set more complex data but is of course totally undocumented.
+[06-04-2006 08:15:56] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 110 (Connection timed out)]
+[06-04-2006 09:54:06] -!- zr1 [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-04-2006 11:25:15] -!- awormus [n=aaron@89.50.199.234] has joined #ezpublish
+[06-04-2006 11:26:13] -!- awormus_ [n=aaron@Nd0c8.n.pppool.de] has joined #ezpublish
+[06-04-2006 11:33:47] -!- awormus [n=aaron@89.50.199.234] has quit [Read error: 145 (Connection timed out)]
+[06-04-2006 12:12:47] -!- awormus_ is now known as awormus
+[06-04-2006 12:46:01] -!- awormus [n=aaron@Nd0c8.n.pppool.de] has quit [Read error: 110 (Connection timed out)]
+[06-04-2006 12:54:56] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[06-04-2006 12:55:19] -!- ls is now known as luke
+[06-04-2006 13:20:33] -!- Enur [n=asd@249.80-203-121.nextgentel.com] has left #ezpublish []
+[06-04-2006 13:37:55] -!- luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[06-04-2006 15:38:40] -!- zr1 [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has joined #ezpublish
+[06-04-2006 16:00:42] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-04-2006 18:27:31] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]

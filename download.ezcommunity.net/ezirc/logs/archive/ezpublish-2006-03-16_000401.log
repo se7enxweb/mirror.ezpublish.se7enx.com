@@ -1,0 +1,144 @@
+[03-15-2006 01:06:14] -!- ordnas [n=ordnas@p549D76CC.dip.t-dialin.net] has joined #ezpublish
+[03-15-2006 01:28:42] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has joined #ezpublish
+[03-15-2006 01:55:31] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[03-15-2006 01:59:54] [#ezpublish] <DiGiTa|_> hi
+[03-15-2006 02:00:17] [#ezpublish] <DiGiTa|_> look the live search thing at top : http://www.bartelme.at/
+[03-15-2006 02:00:23] [#ezpublish] <DiGiTa|_> very cool stuff
+[03-15-2006 02:11:41] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-15-2006 02:41:42] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-15-2006 04:19:26] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-15-2006 04:22:21] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-15-2006 04:29:33] [#ezpublish] <kalooni> hello
+[03-15-2006 04:29:36] [#ezpublish] <kalooni> I have a class
+[03-15-2006 04:29:49] [#ezpublish] <kalooni> how can I add it to a group of class?
+[03-15-2006 04:38:53] -!- phretor [n=phretor@host190-160.pool874.interbusiness.it] has joined #ezpublish
+[03-15-2006 04:38:56] [#ezpublish] <phretor> hello there
+[03-15-2006 04:41:44] [#ezpublish] <phretor> I'm having issues with the design of a feedback form. I need to customise the default class providing the additional field 'Departement'; it should be of Option type (dropdown menu) listing all departements (dynamically added!). How would you handle this?
+[03-15-2006 04:42:07] [#ezpublish] <phretor> re tobmaster
+[03-15-2006 04:42:45] [#ezpublish] <tobmaster> hi
+[03-15-2006 04:43:02] [#ezpublish] <kalooni> hello
+[03-15-2006 04:43:19] [#ezpublish] <kalooni> forget my question about class and group of class
+[03-15-2006 04:43:21] [#ezpublish] <kalooni> ;)
+[03-15-2006 04:43:46] [#ezpublish] <phretor> if my problem is not well explained, please tell me; I'll rephrase it :-)
+[03-15-2006 04:44:33] [#ezpublish] <tobmaster> phretor: have you tried adding an attribute of type ezselection ?
+[03-15-2006 04:44:47] [#ezpublish] <tobmaster> that should be enough
+[03-15-2006 04:45:06] [#ezpublish] <phretor> tobmaster: this is not the main issue; the real problem is that the option list is not fixed
+[03-15-2006 04:45:23] [#ezpublish] <tobmaster> not fixed?
+[03-15-2006 04:45:35] [#ezpublish] <tobmaster> where does that list come from?
+[03-15-2006 04:45:48] [#ezpublish] <phretor> tobmaster: it can grow as new departments are added
+[03-15-2006 04:46:01] [#ezpublish] <tobmaster> you can also add new values to the selection
+[03-15-2006 04:46:06] [#ezpublish] <tobmaster> when you alter the class
+[03-15-2006 04:46:33] [#ezpublish] <phretor> tobmaster: the customer must be unaware about those changes
+[03-15-2006 04:47:06] [#ezpublish] <phretor> tobmaster: when a new instance of "Departement" is added by the customer, it must appear in the selection list
+[03-15-2006 04:47:24] [#ezpublish] <tobmaster> elsewise make a ordinary simple text attribute and a override template for the that attribute
+[03-15-2006 04:47:41] [#ezpublish] <tobmaster> -the
+[03-15-2006 04:47:57] [#ezpublish] <phretor> tobmaster: the admin template?
+[03-15-2006 04:47:57] [#ezpublish] <tobmaster> then you can fetch from whereever you want
+[03-15-2006 04:48:10] [#ezpublish] <tobmaster> admin?
+[03-15-2006 04:48:17] [#ezpublish] <tobmaster> i guess it was a feedback form
+[03-15-2006 04:48:29] [#ezpublish] <tobmaster> i guess you have that on some kinda frontpage?
+[03-15-2006 04:48:53] [#ezpublish] <phretor> tobmaster: yes, sorry, but this is a common problem so I generalised my question :-)
+[03-15-2006 04:49:08] [#ezpublish] <tobmaster> or use a single object relation
+[03-15-2006 04:49:16] [#ezpublish] <tobmaster> there you can define a location
+[03-15-2006 04:49:23] [#ezpublish] <tobmaster> where to fetch objects from
+[03-15-2006 04:49:47] [#ezpublish] <tobmaster> and define also that it is selected via dropdown
+[03-15-2006 04:49:50] [#ezpublish] <phretor> tobmaster: I'm now using Object Relations (since one, say Project, could belong to more than one Department)
+[03-15-2006 04:51:02] [#ezpublish] <tobmaster> ?
+[03-15-2006 04:52:26] [#ezpublish] <phretor> tobmaster: e.g., more than one Department could be involved to the same Project. For that reason, Project has more than one object relation (!= single object relation)
+[03-15-2006 04:53:40] [#ezpublish] <phretor> tobmaster: did you get the idea?
+[03-15-2006 05:09:43] -!- tobyS_ [n=dotxp@dslb-084-061-135-204.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[03-15-2006 05:18:00] [#ezpublish] <phretor> generally speaking, my problem is: "how do I affect the editing of a list of object relations in order to reduce it to a multiple-choice selection instead of the default way?"
+[03-15-2006 05:20:55] [#ezpublish] <tobmaster> then you maybe should use object rel. list and make a custom template to let the user select
+[03-15-2006 05:25:10] [#ezpublish] <phretor> tobmaster: ezobjectrelationlist.tpl?
+[03-15-2006 05:32:42] [#ezpublish] <phretor> tobmaster: I just overridden ezobjectrelationlist.tpl for the 'admin' siteaccess but I cannot feel any kind of modification; it remained the same, at all.
+[03-15-2006 05:37:52] [#ezpublish] <tobmaster> check the list of used templates
+[03-15-2006 05:38:06] [#ezpublish] <tobmaster> i havent it in my brain ready which template it is :)
+[03-15-2006 06:20:47] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has joined #ezpublish
+[03-15-2006 06:30:37] [#ezpublish] <phretor> tobmaster: ok, I found that is ezobjectrelationlist.tpl
+[03-15-2006 06:49:14] [#ezpublish] <phretor> what does $foo:bar means?
+[03-15-2006 06:50:42] [#ezpublish] <tobmaster> foo:bar?
+[03-15-2006 06:51:04] [#ezpublish] <phretor> tobmaster: I used dummy names, what does ':' means instead of '.'?
+[03-15-2006 06:51:17] [#ezpublish] <phretor> tobmaster: I found $Relation:item statements
+[03-15-2006 06:52:46] [#ezpublish] <phretor> tobmaster: anyway, it's not so easy to customize the way relations are added
+[03-15-2006 06:52:53] [#ezpublish] <tobmaster> : are namespaces in tpl language
+[03-15-2006 06:53:29] [#ezpublish] <phretor> tobmaster: have you ever tried to customize a relation list in that way?
+[03-15-2006 06:55:35] [#ezpublish] <phretor> tobmaster: if you have suggestions they would be appreciated :-)
+[03-15-2006 06:58:47] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has quit []
+[03-15-2006 07:06:14] [#ezpublish] <tobmaster> no not really. sorry
+[03-15-2006 07:06:24] [#ezpublish] <tobmaster> but should be possible
+[03-15-2006 07:06:31] [#ezpublish] <tobmaster> without great efforts
+[03-15-2006 07:06:39] [#ezpublish] <tobmaster> just a little bit time & work
+[03-15-2006 07:09:43] [#ezpublish] <phretor> tobmaster: the fetch of possible objects is not a problem, at all. The real problem is: what object data is needed for relations? where to send such data?
+[03-15-2006 07:10:41] [#ezpublish] <tobmaster> when you customized the fetch only it should work directly?!?! i hope :)
+[03-15-2006 07:11:30] [#ezpublish] <phretor> tobmaster: no man
+[03-15-2006 07:11:36] [#ezpublish] <phretor> tobmaster: it's not that simple
+[03-15-2006 07:11:49] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[03-15-2006 07:13:51] [#ezpublish] <phretor> tobmaster: believe me, it's not as easy as you think
+[03-15-2006 07:14:00] [#ezpublish] <tobmaster> i believe you
+[03-15-2006 07:14:20] [#ezpublish] <tobmaster> but from here on i cant help any more i guess
+[03-15-2006 07:14:45] [#ezpublish] <phretor> tobmaster: don't worry, it was just to warn you for the future
+[03-15-2006 07:29:44] [#ezpublish] <tobmaster> :)
+[03-15-2006 08:27:51] [#ezpublish] <phretor> tobmaster: I found an extension for customising the way relations are added
+[03-15-2006 08:28:04] [#ezpublish] <phretor> tobmaster: it's in the contribution/hack page of ez.no
+[03-15-2006 10:07:05] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-15-2006 10:11:15] -!- ordna1 [n=ordnas@p549D69A6.dip.t-dialin.net] has joined #ezpublish
+[03-15-2006 10:28:22] -!- ordnas [n=ordnas@p549D76CC.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-15-2006 10:44:26] -!- ordna1 [n=ordnas@p549D69A6.dip.t-dialin.net] has left #ezpublish []
+[03-15-2006 10:53:53] -!- ordnas [n=ordnas@p549D69A6.dip.t-dialin.net] has joined #ezpublish
+[03-15-2006 11:14:58] [#ezpublish] <phretor> suppose that I have to edit a class made of 30 attributes and I have to add the 31st and place it in the 2nd position (for editing purposes); is there a fast way to perform this operation? instead of clicking the UP arrow about 29 times...
+[03-15-2006 11:37:12] -!- ordnas [n=ordnas@p549D69A6.dip.t-dialin.net] has left #ezpublish []
+[03-15-2006 11:52:59] [#ezpublish] <tobmaster> phretor: currently no way
+[03-15-2006 11:53:35] [#ezpublish] <tobmaster> but maybe possible in near future. There are request according to this
+[03-15-2006 11:53:42] [#ezpublish] <phretor> tobmaster: it's annoying and it would just need an "update priorities" method
+[03-15-2006 11:54:01] [#ezpublish] <tobmaster> i know that too :(
+[03-15-2006 11:54:12] [#ezpublish] <tobmaster> i have to leave
+[03-15-2006 11:54:13] [#ezpublish] <tobmaster> bye
+[03-15-2006 11:54:22] [#ezpublish] <tobmaster> phretor: if you patch that tell me :)
+[03-15-2006 11:54:26] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-15-2006 11:55:47] [#ezpublish] <_kore> phretor, klick the "down" arrow two times ;)
+[03-15-2006 11:57:17] [#ezpublish] <phretor> _kore: nice, but - in the worst case - it still needs O(n/2) clicks, while an "update priorities" implementation would take O(1) in any case
+[03-15-2006 11:57:30] [#ezpublish] <_kore> yeah, I know :/
+[03-15-2006 12:13:06] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-15-2006 12:35:13] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[03-15-2006 12:35:55] -!- yassine21 [n=yassine2@196.203.32.162] has joined #ezpublish
+[03-15-2006 12:36:02] [#ezpublish] <yassine21> hello
+[03-15-2006 12:36:24] [#ezpublish] <yassine21> Can anybody help me ?
+[03-15-2006 12:40:06] [#ezpublish] <phretor> yassine21: maybe yes if you are so nice to tell us your problem
+[03-15-2006 12:41:35] [#ezpublish] <yassine21> sorry ;)
+[03-15-2006 12:42:37] [#ezpublish] <yassine21> In ez, i have very long texts, and when i put them in the editor and try to save the article, i have an error
+[03-15-2006 12:52:28] [#ezpublish] <yassine21> Fatal error: eZ publish did not finish its request
+[03-15-2006 12:52:28] [#ezpublish] <yassine21> The execution of eZ publish was abruptly ended, the debug output is present below.
+[03-15-2006 12:52:55] [#ezpublish] <yassine21> Phretor are you here ?
+[03-15-2006 12:53:21] [#ezpublish] <phretor> yassine21: clear the cache, reboot the dbms and the webserver
+[03-15-2006 12:53:56] [#ezpublish] <yassine21> Isn't there any size limit in the contents in ez ?
+[03-15-2006 12:56:33] [#ezpublish] <yassine21> we rebooted all the servers and the problem still apears :(
+[03-15-2006 12:56:53] [#ezpublish] <yassine21> When we try to insert a big text, same problem :(
+[03-15-2006 13:02:11] [#ezpublish] <yassine21> phretor : Do you have another idea ?
+[03-15-2006 13:02:57] [#ezpublish] <phretor> yassine21: cleared the cache?
+[03-15-2006 13:03:13] [#ezpublish] <yassine21> cleared the cache, rebooted mysql and apache :(
+[03-15-2006 13:11:06] [#ezpublish] <phretor> dunno, sorry
+[03-15-2006 13:11:15] [#ezpublish] <yassine21> thx ;)
+[03-15-2006 13:11:26] [#ezpublish] <phretor> I'd backup all data and make a frash installation
+[03-15-2006 13:11:46] [#ezpublish] <phretor> following an update procedure like documented
+[03-15-2006 13:12:10] [#ezpublish] <phretor> bye
+[03-15-2006 13:12:12] -!- phretor [n=phretor@host190-160.pool874.interbusiness.it] has quit []
+[03-15-2006 14:15:32] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-15-2006 14:17:58] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has joined #ezpublish
+[03-15-2006 14:18:39] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Client Quit]
+[03-15-2006 15:01:48] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has quit []
+[03-15-2006 15:02:42] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has joined #ezpublish
+[03-15-2006 15:08:15] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[03-15-2006 15:08:57] [#ezpublish] <zrg> morgen
+[03-15-2006 15:40:01] -!- ordnas [n=ordnas@p549D69A6.dip.t-dialin.net] has joined #ezpublish
+[03-15-2006 16:05:57] -!- ordnas [n=ordnas@p549D69A6.dip.t-dialin.net] has left #ezpublish []
+[03-15-2006 16:30:50] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-15-2006 16:43:30] -!- tobyS [n=dotxp@dslb-084-061-135-204.pools.arcor-ip.net] has joined #ezpublish
+[03-15-2006 16:52:07] -!- yassine21 [n=yassine2@196.203.32.162] has quit ["-=SysReset 2.53=-"]
+[03-15-2006 16:54:49] -!- DiGiTa|__ [n=guillaum@84.4.68.100] has joined #ezpublish
+[03-15-2006 17:09:01] -!- DiGiTa|_ [n=guillaum@84.4.68.180] has quit [Read error: 110 (Connection timed out)]
+[03-15-2006 17:28:46] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[03-15-2006 17:58:22] -!- tobyS [n=dotxp@dslb-084-061-135-204.pools.arcor-ip.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-15-2006 18:11:23] -!- tobyS [n=dotxp@dslb-084-061-133-229.pools.arcor-ip.net] has joined #ezpublish
+[03-15-2006 19:39:28] -!- kracker [n=kracker@66-169-180-136.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[03-15-2006 21:08:12] -!- DiGiTa|_ [n=guillaum@84.4.70.72] has joined #ezpublish
+[03-15-2006 21:22:19] -!- DiGiTa|__ [n=guillaum@84.4.68.100] has quit [Read error: 110 (Connection timed out)]

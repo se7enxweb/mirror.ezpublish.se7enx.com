@@ -1,0 +1,161 @@
+[05-16-2006 00:37:34] -!- DiGiTa|_ [n=pet2poul@84.4.125.100] has joined #ezpublish
+[05-16-2006 00:54:18] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-16-2006 00:54:53] -!- ordnas [n=ordnas@p549D5D35.dip.t-dialin.net] has joined #ezpublish
+[05-16-2006 00:58:26] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-16-2006 01:23:34] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-16-2006 01:29:52] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-16-2006 01:32:34] [#ezpublish] <Tidemann> mornin
+[05-16-2006 01:33:01] [#ezpublish] <Tidemann> B-KiLLer`: you there?
+[05-16-2006 01:33:29] [#ezpublish] <B-KiLLer`> hi
+[05-16-2006 01:33:39] [#ezpublish] <Tidemann> B-KiLLer`: I ran into the same bug you had...
+[05-16-2006 01:33:46] [#ezpublish] <B-KiLLer`> :-/
+[05-16-2006 01:34:24] [#ezpublish] <Tidemann> I've already contacted eZ reguarding this, so they're aware of it..
+[05-16-2006 01:35:46] [#ezpublish] <B-KiLLer`> did you find a way to reproduce this every time ?
+[05-16-2006 01:35:48] [#ezpublish] <Tidemann> B-KiLLer`: from what I understand, they had to delete the draft manually in the database
+[05-16-2006 01:39:07] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-16-2006 01:39:22] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-16-2006 01:42:24] [#ezpublish] <Tidemann> B-KiLLer`: but i can't find any bug reports on the problem though
+[05-16-2006 01:45:35] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-16-2006 01:49:36] [#ezpublish] <Tidemann> B-KiLLer`: still there?
+[05-16-2006 01:54:30] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-16-2006 01:54:38] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Client Quit]
+[05-16-2006 01:55:09] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-16-2006 02:08:42] [#ezpublish] <DiGiTa|_> i will use ezp 3.8 in 2007 i mean :)
+[05-16-2006 02:09:47] [#ezpublish] <kalooni> why?
+[05-16-2006 02:11:34] [#ezpublish] <kris10an> B-KiLLer`: is it this you experienced? http://ez.no/bugs/view/8287
+[05-16-2006 02:11:39] [#ezpublish] <DiGiTa|_> apparently too many bugs
+[05-16-2006 02:13:42] [#ezpublish] <kalooni> for the moment I didn't experience any
+[05-16-2006 02:13:53] [#ezpublish] <kalooni> except may be the fact I couldn't override the embed-inline view
+[05-16-2006 02:25:36] [#ezpublish] <B-KiLLer`> it's a real pity when you go to your customer, showing your nice creation, and then ...
+[05-16-2006 02:25:44] [#ezpublish] <B-KiLLer`> the unexpected thing happens :)
+[05-16-2006 02:28:05] [#ezpublish] <DiGiTa|_> yes right :)
+[05-16-2006 02:28:34] [#ezpublish] <kalooni> that always happen to me ... but in general it's my fault ;)
+[05-16-2006 02:29:27] [#ezpublish] <B-KiLLer`> kris10an: I have to try this report, because I didn't use the back button of the browser, I only hit the discard draft button
+[05-16-2006 02:35:55] [#ezpublish] <kalooni> question: in a loop {section loop=$array} what is the best way to know the current position ?
+[05-16-2006 02:36:32] [#ezpublish] <DiGiTa|_> with foreach you can set a $key
+[05-16-2006 02:37:23] [#ezpublish] <DiGiTa|_> {foreach $item as $key=>$array}
+[05-16-2006 02:37:58] [#ezpublish] <kalooni> thx Digital
+[05-16-2006 02:39:00] [#ezpublish] <kalooni> but isn't it {foreach $array as $key => $object}
+[05-16-2006 02:39:39] [#ezpublish] <DiGiTa|_> yes
+[05-16-2006 02:39:41] [#ezpublish] <DiGiTa|_> sorry :)
+[05-16-2006 02:39:46] [#ezpublish] <kalooni> np
+[05-16-2006 02:39:54] [#ezpublish] <DiGiTa|_> i'm in the paté this morning
+[05-16-2006 02:40:04] [#ezpublish] <kalooni> lol
+[05-16-2006 02:42:58] [#ezpublish] <kalooni> so am i ;)
+[05-16-2006 02:43:32] [#ezpublish] <DiGiTa|_> i will listen alberto balsam :)
+[05-16-2006 03:02:07] -!- nfrp [n=nfrp@ATuileries-153-1-76-184.w83-202.abo.wanadoo.fr] has joined #ezpublish
+[05-16-2006 03:27:10] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-16-2006 03:42:51] -!- _hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[05-16-2006 03:58:35] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[05-16-2006 04:33:53] -!- ns00n [n=hogne@212.33.152.198] has joined #ezpublish
+[05-16-2006 04:34:07] [#ezpublish] <m0ns00n> Is there a way to access cookies from the ez template script language?
+[05-16-2006 05:22:28] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-16-2006 06:12:12] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-16-2006 06:35:06] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-16-2006 06:39:18] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-16-2006 06:39:42] [#ezpublish] <kris10an> m0ns00n: there is no standard operator for doing it
+[05-16-2006 06:40:04] [#ezpublish] <kris10an> its not hard to make one...
+[05-16-2006 06:40:18] [#ezpublish] <kris10an> setup->rad->template operator wizard
+[05-16-2006 06:40:40] [#ezpublish] <m0ns00n> but it makes the site increasingly hard to operate if there comes a new webmaster
+[05-16-2006 06:40:49] [#ezpublish] <m0ns00n> he'd have to have a weekly course in the site, then eZ
+[05-16-2006 06:40:50] [#ezpublish] <m0ns00n> =)
+[05-16-2006 06:40:50] [#ezpublish] <kris10an> but there is an issue with viewcaching..
+[05-16-2006 06:41:03] [#ezpublish] <m0ns00n> I fixed it with a javascript
+[05-16-2006 06:42:01] [#ezpublish] <kris10an> if you make the operator properly, the webmaster should not care :-)
+[05-16-2006 06:42:17] [#ezpublish] <kris10an> soultions are good :-)
+[05-16-2006 06:42:32] [#ezpublish] <m0ns00n> The site is already humongous with overrides, classes, subclasses, template hacks
+[05-16-2006 06:42:40] [#ezpublish] <m0ns00n> We're soon moving the whole thing to another CMS anyway..
+[05-16-2006 06:42:56] [#ezpublish] <m0ns00n> eZ gave new meaning to "easy"
+[05-16-2006 06:42:57] [#ezpublish] <m0ns00n> =)
+[05-16-2006 06:43:10] [#ezpublish] <m0ns00n> and became ezhhhhhh..
+[05-16-2006 06:43:56] [#ezpublish] <m0ns00n> sometimes a system that is too generic makes the task harder than the system is flexible
+[05-16-2006 06:44:14] [#ezpublish] <m0ns00n> ex might be usable for everything under the sun, but it makes it hard to do one thing well
+[05-16-2006 06:44:17] [#ezpublish] <m0ns00n> ex=ez
+[05-16-2006 06:47:31] [#ezpublish] <Tidemann> B-KiLLer`: ?
+[05-16-2006 06:48:04] [#ezpublish] <B-KiLLer`> yes ?
+[05-16-2006 06:48:31] [#ezpublish] <Tidemann> B-KiLLer`: uhm.. the bug we discussed..
+[05-16-2006 06:48:46] [#ezpublish] <B-KiLLer`> yep?
+[05-16-2006 06:49:33] [#ezpublish] <Tidemann> Jo Henrik tipped me that the bug can be avoided by disabling EditDirtyObjectAction?
+[05-16-2006 06:50:13] [#ezpublish] <Tidemann> the actual bug is already fixed and will be out in 3.8.1
+[05-16-2006 06:50:38] [#ezpublish] <Tidemann> http://ez.no/community/bugs/editing_of_objects_crashes
+[05-16-2006 06:51:21] [#ezpublish] <B-KiLLer`> do you suggest changing that setting, or get back the 3.8.1 from svn ?
+[05-16-2006 06:51:55] [#ezpublish] <Tidemann> disable the setting and wait for 3.8.1
+[05-16-2006 06:52:19] [#ezpublish] <B-KiLLer`> ok
+[05-16-2006 06:54:14] [#ezpublish] <B-KiLLer`> in the options mentionned in the base site.ini, there is only showversions & usecurrent...
+[05-16-2006 06:55:18] [#ezpublish] <Tidemann> it's set to usecurrent..right?
+[05-16-2006 06:57:42] [#ezpublish] <B-KiLLer`> nope, showversions
+[05-16-2006 06:57:47] [#ezpublish] <Tidemann> ah..
+[05-16-2006 06:58:02] [#ezpublish] <Tidemann> it's probably a different bug then
+[05-16-2006 06:58:35] [#ezpublish] <Tidemann> B-KiLLer`: multilanguage site?
+[05-16-2006 06:59:58] [#ezpublish] <B-KiLLer`> yes
+[05-16-2006 07:00:19] [#ezpublish] <Tidemann> brb
+[05-16-2006 07:00:44] [#ezpublish] <B-KiLLer`> k
+[05-16-2006 07:02:06] -!- DiGiTa|_ [n=pet2poul@84.4.125.100] has quit []
+[05-16-2006 07:09:59] [#ezpublish] <Tidemann> AFAIK this bug is related to the new language system. It's the one kris10an mentioned earlier: http://ez.no/bugs/view/8287
+[05-16-2006 07:12:11] [#ezpublish] <B-KiLLer`> okay ...
+[05-16-2006 07:12:25] [#ezpublish] <Tidemann> I think I'm the "customer" mentioned here, and they told me over the phone they had to manually delete the draft in the database
+[05-16-2006 07:13:27] [#ezpublish] <Tidemann> kris10an: could you confirm this, or is there another workaround?
+[05-16-2006 07:14:16] [#ezpublish] <B-KiLLer`> (Why did I hurry to install this 3.8 ? ;) )
+[05-16-2006 07:15:43] [#ezpublish] <Tidemann> B-KiLLer`: hehe.. you're not the only one ;)
+[05-16-2006 07:21:30] [#ezpublish] <kalooni> no you are not
+[05-16-2006 07:22:59] [#ezpublish] <B-KiLLer`> the new features were appealing... sorry God for this, I won't be tempted again :)
+[05-16-2006 07:29:10] [#ezpublish] <Tidemann> I'm still waiting for a GOOD treemenu I can use outside pagelayout.. I guess I'm just too lazy
+[05-16-2006 08:15:26] [#ezpublish] <kris10an> Tidemann: the soluition is not to delete the draft in the database...
+[05-16-2006 08:15:51] [#ezpublish] <Tidemann> kris10an: k.. maybe I misunderstood then...
+[05-16-2006 08:15:55] [#ezpublish] <kris10an> i clicked on another editbutton, which for some reason works..
+[05-16-2006 08:16:31] [#ezpublish] <Tidemann> humm..
+[05-16-2006 08:17:41] [#ezpublish] <Tidemann> ok.. where is this magic button, may I ask? ;)
+[05-16-2006 08:18:31] [#ezpublish] <B-KiLLer`> :D
+[05-16-2006 08:42:56] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[05-16-2006 08:56:08] [#ezpublish] <kris10an> Tidemann: sorry, we had to change the database
+[05-16-2006 08:57:37] [#ezpublish] <kris10an> update ezcontentobject_version where contentobject_id=58 and status=5 set creator_id=14;
+[05-16-2006 08:58:15] [#ezpublish] <kris10an> where contentobject_id is your the _objectid_ of your object, and creator_is _your_ user-id
+[05-16-2006 08:59:08] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-16-2006 09:30:33] -!- polin8 [n=bskahan@209.176.7.100] has quit [Remote closed the connection]
+[05-16-2006 09:41:38] -!- _hovik [n=hovik@stalker.ez.no] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-16-2006 09:54:42] [#ezpublish] <kalooni> I have installed a 3.8 (corparate site).
+[05-16-2006 09:54:49] [#ezpublish] <kalooni> I now want to add blog features
+[05-16-2006 09:55:03] [#ezpublish] <kalooni> on a 3.6/3.7 it was quite EZ
+[05-16-2006 09:55:15] [#ezpublish] <kalooni> but now, how can we do that ?
+[05-16-2006 09:56:03] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[05-16-2006 09:58:06] [#ezpublish] <B-KiLLer`> they should rename in hardPublish :)
+[05-16-2006 09:58:18] [#ezpublish] <B-KiLLer`> it wasn't that ez before, though :)
+[05-16-2006 09:59:58] [#ezpublish] <kalooni> all is relative, adding a package like blog was ez
+[05-16-2006 10:05:15] [#ezpublish] <kalooni> for your info: http://ez.no/download/ez_publish/ez_publish_3_stable_releases/3_8/packages
+[05-16-2006 10:14:45] -!- elephantMan [n=elephant@36.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[05-16-2006 10:15:21] -!- elephantMan [n=elephant@73.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-16-2006 10:37:06] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-16-2006 10:39:22] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-16-2006 11:06:33] -!- nfrp [n=nfrp@ATuileries-153-1-76-184.w83-202.abo.wanadoo.fr] has quit ["Leaving"]
+[05-16-2006 11:14:25] [#ezpublish] <Tidemann> xbit?
+[05-16-2006 11:30:48] -!- elephantMan [n=elephant@73.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[05-16-2006 11:31:57] -!- elephantMan [n=elephant@119.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-16-2006 11:34:00] -!- DiGiTa|_ [n=pet2poul@84.4.125.100] has joined #ezpublish
+[05-16-2006 12:52:47] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-16-2006 12:53:00] [#ezpublish] <ls> hi
+[05-16-2006 12:54:58] [#ezpublish] <buz> hi
+[05-16-2006 13:00:58] [#ezpublish] <ls> nope :/
+[05-16-2006 13:01:07] [#ezpublish] <ls> damn registrations
+[05-16-2006 13:01:15] [#ezpublish] <buz> how about zak?
+[05-16-2006 13:02:55] [#ezpublish] <ls> http://ez.no/company/contact/contact_form
+[05-16-2006 13:02:58] [#ezpublish] <ls> here you go
+[05-16-2006 13:03:26] [#ezpublish] <ls> chceck on the right
+[05-16-2006 13:03:43] [#ezpublish] <buz> must be new
+[05-16-2006 13:03:49] [#ezpublish] <buz> last week north america wasnt there
+[05-16-2006 13:03:53] [#ezpublish] <ls> yes
+[05-16-2006 13:03:56] [#ezpublish] <ls> you are right
+[05-16-2006 13:04:27] [#ezpublish] <buz> thx anyway
+[05-16-2006 13:04:38] [#ezpublish] <ls> something important?
+[05-16-2006 13:04:50] [#ezpublish] <buz> i was wondering about the job in vancouver
+[05-16-2006 13:11:25] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[05-16-2006 14:39:34] -!- ordnas [n=ordnas@p549D5D35.dip.t-dialin.net] has left #ezpublish []
+[05-16-2006 15:28:55] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-16-2006 15:36:06] -!- DiGiTa|_ [n=pet2poul@84.4.125.100] has quit []
+[05-16-2006 15:47:10] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[05-16-2006 16:09:09] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-16-2006 19:17:23] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 110 (Connection timed out)]
+[05-16-2006 21:32:51] -!- Bedlore [n=me@59.167.164.46] has joined #ezpublish
+[05-16-2006 23:02:59] -!- awormus_ [n=aaron@p54B143BB.dip0.t-ipconnect.de] has joined #ezpublish
+[05-16-2006 23:10:08] -!- awormus [n=aaron@p54B1247A.dip0.t-ipconnect.de] has quit [Read error: 145 (Connection timed out)]
+[05-16-2006 23:15:23] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-16-2006 23:48:07] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]

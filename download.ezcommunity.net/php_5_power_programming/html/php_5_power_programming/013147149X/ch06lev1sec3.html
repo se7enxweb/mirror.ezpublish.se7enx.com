@@ -1,0 +1,571 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 6.3.&nbsp; SQLite</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch06lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch06lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch06lev1sec3"></a><h3 class="docSection1Title">6.3. SQLite</h3>
+<p class="docText">PHP 5 introduced a new bundled and, by default, an available &quot;database&quot; engine called <span class="docEmphStrong">SQLite</span>.<a name="ch06index87"></a><a name="ch06index88"></a></p>
+<a name="ch06lev2sec11"></a><h4 class="docSection2Title">6.3.1. SQLite Strengths and Weaknesses</h4>
+<p class="docText">This section describes the characteristics of SQLite compared to other DBMSes.<a name="ch06index89"></a><a name="ch06index90"></a></P>
+<a name="ch06lev3sec10"></a><h5 class="docSection3Title">6.3.1.1 Strength: Self-Contained, No Server Required</H5>
+<p class="docText">SQLite does not use a client/server model. It is embedded in your application, and only requires access to the database files. This makes integrating SQLite into other applications easier because there is no dependency on an external service.</p>
+<a name="ch06lev3sec11"></a><H5 class="docSection3Title">6.3.1.2 Strength: Easy to Get Started</h5>
+<p class="docText">Setting up a new database with SQLite is easy and requires no intervention from system administrators.</p>
+<a name="ch06lev3sec12"></a><h5 class="docSection3Title">6.3.1.3 Strength: Bundled with PHP 5</h5>
+<p class="docText">The entire SQLite engine is bundled with PHP 5. There is no need to install extra packages to make it available to PHP developers.</P>
+<a name="ch06lev3sec13"></a><H5 class="docSection3Title">6.3.1.4 Strength: Lightweight and Fast</h5>
+<p class="docText">The newest of the databases covered in this chapter, SQLite has little compatibility baggage and still has a lean and light design. For most queries, it is on par with or exceeds the performance of MySQL.</p>
+<a name="ch06lev3sec14"></a><h5 class="docSection3Title">6.3.1.5 Strength: Both a Procedural and an OO Interface</h5>
+<p class="docText">SQLite's PHP ex-tension features both procedural interfaces and an object-oriented interface. The latter makes it possible to have less code, and is, in some cases, faster than its procedural alternative.<a name="ch06index91"></a><a name="ch06index92"></a></P>
+<a name="ch06lev3sec15"></a><h5 class="docSection3Title">6.3.1.6 Weakness: No Server Process</h5>
+<p class="docText">Although this is one of SQLite's strong points, the fact that SQLite has no server process leads to a series of scaling difficulties: file locking and concurrency issues, lack of persistent query caches, and scaling problems when handling very large data volumes.<a name="ch06index93"></a><a name="ch06index94"></a></P>
+<p class="docText">Also, the only way to share a database between hosts is to share the file system with the database file. This way of running remote queries is much slower than sending queries and responses through a network socket, as well as less reliable.</p>
+<a name="ch06lev3sec16"></a><H5 class="docSection3Title">6.3.1.7 Weakness: Not Binary Safe</h5>
+<p class="docText">SQLite does not handle binary data natively. To put binary data in a SQLite database, you first need to encode it. Likewise, after a SELECT, you need to decode the encoded binary data.</p>
+<a name="ch06lev3sec17"></a><h5 class="docSection3Title">6.3.1.8 Weakness: Transactions Lock All Tables</h5>
+<p class="docText">Most databases lock individual tables (or even only rows) during transactions, but because of its implementation, SQLite locks the <span class="docEmphasis">whole</span> database on inserts, which makes concurrent read/write access dramatically slow.<a name="ch06index95"></a><a name="ch06index96"></a></p>
+<a name="ch06lev2sec12"></a><h4 class="docSection2Title">6.3.2. Best Areas of Use</h4>
+<p class="docText">SQLite's primary point of excellence is that it is stand alone and extremely well suited for web-hosting environments. Because the SQLite client works on files, there is no need to maintain a second set of credentials for database access; if you can write to the database file, you can make changes in the database. Hosting companies just need to support the SQLite PHP extension, and their customers can take care of the rest.<a name="ch06index97"></a></p>
+<p class="docText">A hosting company can limit the maximum size of databases (in combination with other data in the web space) easily because the SQLite database is just a file that takes space inside the web space of its customer.</p>
+<p class="docText">SQLite excels at stand alone applications. Especially in web-hosting environments where there are many read queries and little write queries, the speed of SQLite is fully shown. An example of such an application might be a weblog where all hits pull out comments from the database, but where only a few comments are added.<a name="ch06index98"></a></p>
+<a name="ch06lev2sec13"></a><h4 class="docSection2Title">6.3.3. PHP Interface</h4>
+<p class="docText">In this section, we present a full-fledged example using most of SQLite's feature sets. Each subsection introduces you to a new step in building an automatic indexed email storage system. We use the OO-based API in the examples, but also mention the procedural equivalent. The way this works is similar to the <tt>MySQLi</tt> extension.<a name="ch06index99"></a><a name="ch06index100"></a></p>
+<a name="ch06lev3sec18"></a><h5 class="docSection3Title">6.3.3.1 Setting Up Databases</h5>
+<p class="docText">Because SQLite doesn't require a daemon to function, setting up a database is in fact nothing more than creating a specially formatted file. To create a new database, you simply try to open one; if the database does not exist, a new one will be created for you. That's the reason why the second parameter to the constructor can be used to specify the permissions for the created database.<a name="ch06index101"></a><a name="ch06index102"></a><a name="ch06index103"></a></p>
+<p class="docText">The example script we start with is the <tt>create.php</tt> script, which creates the database and all tables inside our database (see <a class="docLink" href="#ch06table06">Table 6.6</a>).</P>
+<a name="ch06table06"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.6. Opening and Closing Databases</h5></caption><colgroup><col width="258.5"><col width="291.5"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+sqlite_open(...)
+$sqlite = new SQLiteDatabase(...)
+</pre><br>
+</TD><td class="docTableCell" align="left" valign="top"><p class="docText">Connects the script to an SQLite database, or creates one if none exists yet. Parameters:</P>
+<ul><LI><p class="docList">The path and file name (string)</p></li><li><p class="docList">Permissions in UNIX <tt>chmod</tt> style (octal number)</p></LI><LI><p class="docList">Error message (by-reference, string)</p></li></ul></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>sqlite_close(...)</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Disconnects the script from an SQLite database connection. The parameter is the SQLite descriptor.</p></td></tr></table></p><br>
+<p class="docText">You can also create in-memory databases by using the special keyword <tt>":memory:"</tt> as the first parameter to the <span class="docEmphasis">SQLiteDatabase</span> constructor. This allows for ultra-fast temporary SQL power. Do not forget to store your data somewhere else before ending a script; if you do not, the data you put into the database is gone.<a name="ch06index104"></a><a name="ch06index105"></a><a name="ch06index106"></a><a name="ch06index107"></a></p>
+<p class="docText">Here's an example:</p>
+<pre>
+&lt;?php
+    $db = new SQLiteDatabase("./crm.db", 0666, &amp;$error)
+        or die("Failed: $error");
+    ...
+    unset($db);
+?&gt;
+</pre><br>
+<a name="ch06lev3sec19"></a><h5 class="docSection3Title">6.3.3.2 Simple Queries</h5>
+<p class="docText">When the database is opened, we can start executing queries on the database. Because no tables are available in a new database, we have to create them first. The following example explains how to do this:<a name="ch06index108"></a><a name="ch06index109"></a><a name="ch06index110"></a><a name="ch06index111"></a></p>
+<pre>
+&lt;?php
+...
+    $create_query = "
+CREATE TABLE document (
+    id INTEGER PRIMARY KEY,
+    title,
+    intro,
+    body
+);
+
+CREATE TABLE dictionary (
+    id INTEGER PRIMARY KEY,
+    word
+);
+
+CREATE TABLE lookup (
+    document_id INTEGER,
+    word_id     INTEGER,
+    position    INTEGER
+);
+
+CREATE UNIQUE INDEX word ON dictionary(word);
+";
+
+    $db-&gt;query($create_query);
+?&gt;
+</pre><br>
+<p class="docText">If you are familiar with other database systems, you will most likely notice the absence of types for some of the field definitions in the <tt>CREATE TABLE</tt> queries shown earlier. SQLite actually has only two types internally: <tt>INTEGER</tt>, which is used to store numbers, and <tt>"something else"</tt>, which can be compared to a <tt>VARCHAR</tt> field in other databases. SQLite's <tt>VARCHAR</tt> can store more than 255 characters, though, which is sometimes a limitation in other database systems. You can also make an <tt>INTEGER</tt> field auto-increment by adding <tt>"PRIMARY KEY"</tt> as a postfix to the field definition. Of course, you can do this for only one field per table.</p>
+<p class="docText">Something else that you might notice is that we execute multiple <tt>CREATE TABLE</tt> queries with one function call to the <tt>query()</tt> method. This is often not possible with other PHP interfaces to other database systems, such as the <tt>MySQL</tt> (<span class="docEmphasis">not</span> <tt>MySQLi</tt>) extension.<a name="ch06index112"></a><a name="ch06index113"></a><a name="ch06index114"></a><a name="ch06index115"></a></p>
+<a name="ch06lev3sec20"></a><h5 class="docSection3Title">6.3.3.3 Error Handling</h5>
+<p class="docText">SQLite's error handling is a bit flakey because each of the query functions might throw a warning. It is therefore important to prepend the query functions with the &quot;shut-up&quot; operator <tt>@</tt>. The result of the function then needs to be checked against <tt>FALSE</tt> to see if the query succeeded. If it did not succeed, you can use <tt>sqlite_last_error()</tt> and <tt>sqlite_error_string()</tt> to retrieve a textual description of the error. Unfortunately, this error message is not very descriptive, either.<a name="ch06index116"></a><a name="ch06index117"></a><a name="ch06index118"></a></P>
+<p class="docText">SQLite's constructor might also throw an <tt>SQLiteException</tt>, which you need to handle yourself (with a <tt>TRy...catch</tt> block). There will be some future work on SQLite's error handling, but that's likely something for PHP 5.1.</p>
+<a name="ch06lev3sec21"></a><h5 class="docSection3Title">6.3.3.4 Simpler Queries and Transactions</H5>
+<p class="docText">By creating only the tables, our email indexer still does nothing useful, so the next step is to add the emails into our database. We do that in a new script called <tt>"insert.php"</tt>. Here is part of its code:<a name="ch06index119"></a><a name="ch06index120"></a><a name="ch06index121"></a><a name="ch06index122"></a><a name="ch06index123"></a></p>
+<pre>
+&lt;?php
+    $db = new SQLiteDatabase("./crm.db", 0666, &amp;$error)
+        or die("Failed: $error");
+    ...
+    if ($argc &lt; 2) {
+        echo "Usage:\n\tphp insert.php &lt;filename&gt;\n\n";
+        return;
+    }
+</pre><br>
+<p class="docText">First, we open the database and check if the number of parameters to this command-line script is correct. The first (and only) parameter passed to this script is the mailbox (in UNIX, the <tt>MBOX</tt> format) we're going to store and later index.</p>
+<pre>
+$body = file_get_contents($argv[1]);
+$mails = preg_split('/^From /m', $body);
+unset($body);
+</pre><br>
+<p class="docText">We load the mailbox into memory and split it into separate emails with a regular expression. You might wonder what happens if a line in an email starts with <tt>From:</tt>; in this case, the UNIX <tt>MBOX</tt> format requires this <tt>From:</tt> to be escaped with the <tt>&gt;</tt> character.<a name="ch06index124"></a><a name="ch06index125"></a><a name="ch06index126"></a><a name="ch06index127"></a><a name="ch06index128"></a></p>
+<pre>
+    // $db-&gt;query("BEGIN");
+    foreach ($mails as $id =&gt; $mail) {
+        $safe_mail = sqlite_escape_string($mail);
+        $insert_query = "
+INSERT INTO document(title, intro, body)
+VALUES ('Title', 'This is an intro.', '{$safe_mail}')
+";
+        echo "Indexing mail #$id.\n";
+        $db-&gt;query($insert_query);
+    }
+    // $db-&gt;query("COMMIT");
+
+?&gt;
+</pre><br>
+<p class="docText">Here, we loop over the mails, making sure we escape all possible dangerous characters with the <tt>sqlite_escape_string()</tt> functions, and insert the data into the database with the <tt>query()</tt> method.</P>
+<a name="ch06table07"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 6.7. <tt>sqlite</tt> Quoting Function</h5></caption><colgroup><col width="225.5"><col width="324.5"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>sqlite_escape_string(...)</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Escapes a string for use as parameter to a query</p></td></TR></table></p><br>
+<p class="docText">By default, SQLite commits all queries directly to disk, which makes the inserting of many queries rather slow. Another problem that might arise is that other processes can insert data into the database during the process of importing our emails. To fix those two problems, you can simply use a transaction to perform the entire importing. To start a transaction, you can execute a query containing "<tt>BEGIN TRANSACTION</tt>" or simply "<tt>BEGIN</tt>". At the end of the transaction, you can use the "<tt>COMMIT</tt>" query to commit all queries in the transaction to disk. In the full example (including the tricks we discuss later in this section), the time for importing 638 emails dropped from 60m29s to 1m59s, which is quite a speed boost.<a name="ch06index129"></a><a name="ch06index130"></a><a name="ch06index131"></a><a name="ch06index132"></a><a name="ch06index133"></a></P>
+<a name="ch06lev3sec22"></a><h5 class="docSection3Title">6.3.3.5 Triggers</H5>
+<p class="docText">SQLite has some advanced featuresfor example, it supports triggers. <span class="docEmphStrong">Triggers</span> can be set to data-modifying queries, and consist of a small SQL script that runs whenever the specified action is &quot;triggered.&quot; Our example will use triggers to automatically update our search index whenever a new document is added. To define the trigger, we extend our create.php script and add the following code to the file:<a name="ch06index134"></a><a name="ch06index135"></a><a name="ch06index136"></a></p>
+<pre>
+...
+    $trigger_query = "
+CREATE TRIGGER index_new
+AFTER INSERT ON document
+BEGIN
+SELECT php_index(new.id, new.title, new.intro, new.body);
+END;";
+    $db-&gt;query($trigger_query);
+?&gt;
+</pre><br>
+<p class="docText">This creates a trigger named <tt>index_new</tt> to be run after an insert query on the <tt>document</tt> table. The SQL script that runs when the trigger fires is a simple select query, but that query is not that simple as it appears. You can see that there is no <tt>FROM</tt> clause, nor is the <tt>php_index()</tt> function a function defined in the SQL standard. This brings us to the next cool feature of SQLite: User Defined Functions.<a name="ch06index137"></a><a name="ch06index138"></a><a name="ch06index139"></a><a name="ch06index140"></a><a name="ch06index141"></a></p>
+<a name="ch06lev3sec23"></a><h5 class="docSection3Title">6.3.3.6 User-Defined Functions (UDFs)</h5>
+<p class="docText">Because SQLite is Lite, it does not implement all the default SQL functions, but SQLite does provide you with the possibility to write your own functions that you then can use from your SQL queries.<a name="ch06index142"></a><a name="ch06index143"></a><a name="ch06index144"></a><a name="ch06index145"></a><a name="ch06index146"></a></p>
+<a name="ch06table08"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.8. <tt>sqlite</tt> UDF Functions</h5></caption><colgroup><col width="225.5"><col width="324.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+sqlite_create_function(...)
+$sqlite-&gt;createFunction(...)
+</pre><br>
+</TD><TD class="docTableCell" align="left" valign="top"><p class="docText">Binds an SQL function to a user defined function in your PHP script. Parameters:</p>
+<ul><LI><p class="docList">DB handle (procedural only)</p></li><li><p class="docList">SQL function name (string)</p></li><li><p class="docList">PHP function name (string)</P></li><LI><p class="docList">Number of arguments to the function (integer, optional)</p></LI></ul></td></tr></table></p><BR>
+<p class="docText">We're adding this function registration call after the argument check in <tt>insert.php</tt>:</P>
+<pre>
+...
+    $db-&gt;createFunction("php_index", "index_document", 4);
+...
+</pre><br>
+<p class="docText">Of course, we create this new PHP function <tt>index_document</tt>. We place this function, with another helper function at the start of our script:</p>
+<pre>
+function normalize($body)
+{
+    $body = strtolower($body);
+    $body = preg_replace(
+        '/[.;,:!?&#191;&#161;\[\]@\(\)]/', ' ', $body);
+    $body = preg_replace('/[^a-z0-9 -]/', '_', $body);
+
+    return $body;
+}
+</pre><br>
+<p class="docText">This helper function strips non-wanted characters and lowercase characters, and changes punctuation marks to spaces. It is used to normalize the words we put into our search index. After the helper function, our main function begins as follows:<a name="ch06index147"></a><a name="ch06index148"></a></p>
+<pre>
+function index_document($id, $title, $intro, $body)
+{
+    global $db;
+</pre><BR>
+<p class="docText">Because this function is called through SQLite, we need to import our database handle into the function's scope; we do that with the <tt>global</tt> keyword:</p>
+<pre>
+$id = $db-&gt;singleQuery("SELECT max(id) from document");
+</pre><br>
+<p class="docText">Because of a bug in the SQLite library, we have to figure out the latest auto-increment value ourselves because we cannot trust the value passed through our callback function by SQLite. Using the PHP function <tt>sqlite_last_insert_row_id()</tt> (or the OO variant <tt>lastInsertRowId()</tt>) did not work here, either.</P>
+<pre>
+$body = substr($body, 0, 32000);
+$body = normalize($body);
+</pre><br>
+<p class="docText">Here, we reduce the body to only 32KB with the reason that emails larger than this usually have an attachment, and that's not important to put into our index. After that, the text is normalized so that we can make a nice search index out of it:<a name="ch06index149"></a><a name="ch06index150"></a></P>
+<pre>
+$words = preg_split(
+    '@([\W]+)@', $body, -1,
+    PREG_SPLIT_OFFSET_CAPTURE |
+    PREG_SPLIT_NO_EMPTY
+);
+</pre><br>
+<p class="docText">This regular expression splits the body into words and calculates their position in the message (you can find more about regular expressions in <a class="docLink" href="ch09.html#ch09">Chapter 9</a>, &quot;Mainstream Extensions&quot;).</p>
+<pre>
+foreach ($words as $word) {
+    $safe_word = sqlite_escape_string($word[0]);
+
+    if ((strpos($safe_word, '_') === false) &amp;&amp;
+        (strlen($safe_word) &lt; 24))
+    {
+</pre><br>
+<p class="docText">Here, we start looping over all the words that the regular expression created. We escape the word, and enter only the index section of this function if there is no underscore present in the word, and when it is smaller than 24 characters.<a name="ch06index151"></a><a name="ch06index152"></a></p>
+<pre>
+$result = @$db-&gt;query(
+    "INSERT INTO dictionary(word) ".
+    "VALUES('$safe_word');");
+if ($result != SQLITE_OK) {
+    /* already exists, need to fetch the
+     * ID then */
+    $word_id = $db-&gt;singleQuery(
+        "SELECT id FROM dictionary ".
+        "WHERE word = '$safe_word'");
+} else {
+    $word_id = $db-&gt;lastInsertRowID();
+}
+</pre><br>
+<p class="docText">Here, we insert our word into the dictionary table, relying on the unique key of the word to prevent duplicate entries. In case the word already exists in the dictionary, the query will fail and we run a <tt>SELECT</tt> query to obtain the ID of the word with the <tt>singleQuery()</tt> method; otherwise, we request the ID with which the new word was inserted into the database. The <tt>singleQuery()</tt> method runs the query, and returns the first column of the first record returned by the query.<a name="ch06index153"></a><a name="ch06index154"></a></p>
+<pre>
+            $db-&gt;query(
+                "INSERT INTO ".
+                "lookup(document_id, word_id, position) ".
+                "VALUES($id, $word_id, {$word[1]})");
+        }
+    }
+}
+</pre><br>
+<p class="docText">When we know the ID of the word, we insert it with the <tt>document_id</tt> and the position into the lookup table (see <a class="docLink" href="#ch06table09">Table 6.9</a>).<a name="ch06index155"></a><a name="ch06index156"></a></p>
+<a name="ch06table09"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.9. <tt>sqlite_last_insert_row_id</tt> and <tt>sqlite_single_query</tt></h5></caption><colgroup><col width="236.5"><col width="313.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top">
+<pre>
+sqlite_last_insert_row_id(...)
+$sqlite-&gt;lastInsertRowId()
+</pre><BR>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the ID of the last inserted data in an auto increment column.</P>
+<p class="docText">The procedural version requires the database handler as its only parameter.</p></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+sqlite_single_query(...)
+$sqlite-&gt;singleQuery(...)
+</pre><br>
+</TD><td class="docTableCell" align="left" valign="top"><p class="docText">Executes a query and returns the first column of the first record. Parameters:</P>
+<ul><LI><p class="docList">The database handle (function only)</p></li><li><p class="docList">The query to execute (string)</p></LI></UL></td></tr></table></p><br>
+<a name="ch06lev3sec24"></a><H5 class="docSection3Title">6.3.3.7 Other Querying Functions</h5>
+<p class="docText">The <tt>singleQuery()</tt> method is one of many specialized functions for data retrieval. They are added for performance reasons, and there are a few more than we've already seen (see <a class="docLink" href="#ch06table10">Table 6.10</a>).<a name="ch06index159"></a><a name="ch06index160"></a><a name="ch06index161"></a><a name="ch06index162"></a></p>
+<a name="ch06table10"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.10. Query Functions and Methods</H5></caption><colgroup><col width="231"><col width="88"><col width="231"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Returns</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+sqlite_query()
+$sqlite-&gt;query()
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">handle</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Executes a simple query.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top">
+<pre>
+sqlite_unbuffered_query()
+$sqlite-&gt;unbufferedQuery()
+</pre><br>
+</td><TD class="docTableCell" align="left" valign="top"><p class="docText">handle</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Executes a query, but does not buffer the result in the client.</p></td></tr><TR><td class="docTableCell" align="left" valign="top">
+<pre>
+$sqlite-&gt;queryExec()
+sqlite_exec()
+</pre><BR>
+</td><TD class="docTableCell" align="left" valign="top"><p class="docText">boolean</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Executes a chained query (multiple queries separated by a ;) without result.</p></TD></TR><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+$sqlite-&gt;arrayQuery()
+sqlite_array_query()
+</pre><br>
+</td><TD class="docTableCell" align="left" valign="top"><p class="docText">data</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Execute a query and returns an array with all rows and columns in a two-dimensional array.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+$sqlite-&gt;singleQuery()
+sqlite_single_query()
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">data</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Executes a query and returns the first column of the first returned record.</p></td></tr></table></p><br>
+<a name="ch06lev3sec25"></a><h5 class="docSection3Title">6.3.3.8 Fetching Data</h5>
+<p class="docText">For the two functions that return handles to the resource, there is a complementary group of functions to actually fetch the data (see <a class="docLink" href="#ch06table11">Table 6.11</a>).<a name="ch06index165"></a><a name="ch06index166"></a><a name="ch06index167"></a></P>
+<a name="ch06table11"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.11. Fetching Functions and Methods</h5></caption><colgroup><col width="231"><col width="319"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+sqlite_fetch_array()
+$sqlite-&gt;fetch()
+</pre><br>
+</TD><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the next row as an array. Parameters:</P>
+<ul><LI><p class="docList">Result resource (function only)</p></li><li><p class="docList">Mode (<tt>SQLITE_ASSOC</tt>, <tt>SQLITE_NUM</tt>, or <tt>SQLITE_BOTH</tt>)</p></LI></UL></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+sqlite_fetch_object()
+$sqlite-&gt;fetchObject()
+</pre><BR>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the next row as an object with a chosen class. Parameters:</P>
+<ul><LI><p class="docList">Result resource (function only)</p></li><li><p class="docList">Class name (string)</p></li><li><p class="docList">Parameters to the constructor (array)</p></li></ul></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+sqlite_fetch_single()
+sqlite_fetch_string()
+$sqlite-&gt;fetchSingle()
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the first column of the next row. Its parameter is the result resource (functions only).</P></TD></tr><tr><TD class="docTableCell" align="left" valign="top">
+<pre>
+$sqlite-&gt;fetchAll()
+sqlite_fetch_all()
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the whole result set as a two-dimensional array. Parameters:</p>
+<ul><li><p class="docList">Result resource (functions only)</P></li><LI><p class="docList">The mode (<tt>SQLITE_ASSOC</tt>, <tt>SQLITE_NUM</tt>, or <tt>SQLITE_BOTH</tt>)</p></LI></ul></td></tr></table></p><BR>
+<p class="docText">The <tt>mode</tt> parameter determines how a result will be returned. When the <tt>SQLITE_ASSOC</tt> mode is used, the returned array will have the fields indexed by field name. When the <tt>SQLITE_NUM</tt> is used, the fields will be indexed by a field number only. When <tt>SQLITE_BOTH</tt> is used, there will be a numerical index and a field name index for each field in the returned array.</P>
+<p class="docText">One of the more interesting fetch functions is <tt>$sqlite-&gt;fetchObject()</tt>, and thus, we present a small example here (which has nothing to do with our email indexing scripts):<a name="ch06index168"></a><a name="ch06index169"></a><a name="ch06index170"></a></p>
+<pre>
+&lt;?php
+$db = new SQLiteDatabase("./crm.db", 0666, &amp;$error)
+    or die("Failed: $error");
+
+class Article {
+    private $id;
+    private $title;
+    public $intro;
+    private $body;
+    private $fromDb;
+
+    function save($db)
+    {
+        $intro = sqlite_escape_string($this-&gt;intro);
+        $db-&gt;query(
+            "UPDATE document SET intro = '$intro' ".
+            "WHERE id = {$this-&gt;id}");
+    }
+}
+</pre><br>
+<p class="docText">This is our class definition with only two interesting things to mention. The names of the properties are the same as the name of the fields in the database. This way, they will be automatically filled in with the property visibility level. As you can see, only the <tt>intro</tt> field is a public property. The second interesting part is the <tt>save()</tt> method that executes an update query with the new <tt>intro</tt> data. It uses the stored <tt>$id</tt> property to update the correct record.<a name="ch06index171"></a><a name="ch06index172"></a><a name="ch06index173"></a></p>
+<pre>
+$result = $db-&gt;query(
+    "SELECT * FROM document WHERE body LIKE '%conf%'");
+$obj1 = $result-&gt;fetchObject('Article', NULL);
+</pre><br>
+<p class="docText">Here, we execute our query, fetch the first record as an object of class <tt>article</tt>, and pass as only a parameter to the constructor of that class the value <tt>TRue</tt> (which we don't use, though).</p>
+<pre>
+$obj1-&gt;intro = "This is a changed intro";
+$obj1-&gt;save($db);
+?&gt;
+</pre><br>
+<p class="docText">This last part of the code changes the <tt>intro</tt> property of the object and then calls the <tt>save()</tt> method to save the changed data into the database.<a name="ch06index174"></a><a name="ch06index175"></a><a name="ch06index176"></a></P>
+<a name="ch06lev3sec26"></a><h5 class="docSection3Title">6.3.3.9 Iterators</H5>
+<p class="docText">There is another way to navigate through a result set, and that is with an <span class="docEmphStrong">iterator</span>. Using an iterator to <span class="docEmphasis">iterate</span> over the result set does not involve calling any functions, so it is therefore a bit faster than when you would use one of the fetch functions. In this example, we present the <tt>search.php</tt> script to find an email matching certain words:<a name="ch06index177"></a><a name="ch06index178"></a></p>
+<pre>
+&lt;?php
+$db = new SQLiteDatabase("./crm.db", 0666, &amp;$error)
+    or die("Failed: $error");
+
+if ($argc &lt; 2) {
+    echo "Usage:\n\tphp search.php &lt;search words&gt;\n\n";
+    return;
+}
+
+function escape_word(&amp;$value)
+{
+    $value = sqlite_escape_string($value);
+}
+
+$search_words = array_splice($argv, 1);
+array_walk($search_words, 'escape_word');
+$words = implode("', '", $search_words);;
+</pre><br>
+<p class="docText">The parameters that are passed to the script are the search words, which we, of course, need to escape with the <tt>sqlite_escape_string()</tt> function. In the previous example, we use the <tt>array_walk()</tt> function to iterate over the array and escape the words. After they are escaped, we construct a list of them to use in the queries with the <tt>implode()</tt> function.<a name="ch06index179"></a><a name="ch06index180"></a><a name="ch06index181"></a><a name="ch06index182"></a><a name="ch06index183"></a><a name="ch06index184"></a></p>
+<pre>
+$search_query = "
+    SELECT document_id, COUNT(*) AS cnt
+    FROM dictionary d, lookup l
+    WHERE d.id = l.word_id
+        AND word IN ('$words')
+    GROUP BY document_id
+    ORDER BY cnt DESC
+    LIMIT 10
+";
+
+$doc_ids = array();
+$rank = $db-&gt;query($search_query, SQLITE_NUM);
+foreach ($rank as $key =&gt; $row) {
+    $doc_ids[$key] = $row[0];
+}
+$doc_ids = implode(", ", $doc_ids);
+    ...
+</pre><br>
+<p class="docText">Next, we execute the query with the <tt>query()</tt> method that returns a result handle. With the <tt>foreach</tt> loop, we iterate over the result just as we would iterate over an array, except that we don't actually create an array first. The iterator tied to the <tt>SQLite buffered query</tt> object fetches the data for us row by row. In the most ideal case, we would use an unbuffered query here, but we can't do that because we need to reuse this result set; reusing result sets is not possible with an unbuffered query because the data is not buffered, of course.<a name="ch06index185"></a><a name="ch06index186"></a></p>
+<a name="ch06lev3sec27"></a><h5 class="docSection3Title">6.3.3.10 Homegrown Iteration</h5>
+<p class="docText">To more clearly see how the iterator internally works, you can also do it manually (without <tt>foreach</tt> doing all the magic), as is shown here in the second part of the script:<a name="ch06index187"></a><a name="ch06index188"></a></p>
+<pre>
+$details_query = "
+    SELECT document_id, substr(doc.body, position - 20, 100)
+    FROM dictionary d, lookup l, document doc
+    WHERE d.id = l.word_id
+        AND word in ('$words')
+        AND document_id IN ($doc_ids)
+        AND document_id = doc.id
+    GROUP BY document_id, doc.body
+";
+$result = $db-&gt;unbufferedQuery($details_query, SQLITE_NUM);
+while ($result-&gt;valid()) {
+    $record = $result-&gt;current();
+    $list[$record[0]] = $record[1];
+    $result-&gt;next();
+}
+</pre><br>
+<p class="docText">By default, the <tt>$result</tt> points to the first row when iterating, and the <tt>current()</tt> method returns the current record (indexed in the way indicated by the second parameter to <tt>unbufferedQuery()</tt>). With the <tt>next()</tt> method, you can advance to the next record in the result set. There are a few more methods that you can use; the next table shows which ones, and also lists the procedural functions for them. The first parameter to the procedural interface functions is always the result handle, and this one is not listed in <a class="docLink" href="#ch06table12">Table 6.12</a>.<a name="ch06index189"></a><a name="ch06index190"></a></p>
+<a name="ch06table12"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.12. Result Set Navigation Functions and Methods</h5></caption><colgroup><col width="214.5"><col width="335.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Method Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></TR></thead><TR><td class="docTableCell" align="left" valign="top">
+<pre>
+$result-&gt;seek()
+sqlite_seek()
+</pre><br>
+</TD><td class="docTableCell" align="left" valign="top"><p class="docText">Seeks to a row in the result set. The only parameter is the zero-based record number in the set. This function can only be used for buffered result sets.</p></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+$result-&gt;rewind()
+sqlite_rewind()
+</pre><BR>
+</td><TD class="docTableCell" align="left" valign="top"><p class="docText">Rewinds the result pointer to the first record in the result set. This function can only be used for buffered result sets.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+$result-&gt;next()
+sqlite_next()
+</pre><br>
+</TD><TD class="docTableCell" align="left" valign="top"><p class="docText">Advances to the next record in the result set.</p></td></tr><tr><TD class="docTableCell" align="left" valign="top">
+<pre>
+$result-&gt;prev()
+sqlite_prev()
+</pre><br>
+</td><TD class="docTableCell" align="left" valign="top"><p class="docText">Moves the result pointer back to the previous record in the result set. This function can only be used for buffered result sets.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+$result-&gt;valid()
+sqlite_valid()
+sqlite_has_more()
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns whether more record are available in the result set.</p></td></tr><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+$result-&gt;hasPrev()
+sqlite_has_prev()
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns whether a previous record is available. This function can not be used in unbuffered queries.</p></td></TR></table></P><br>
+<p class="docText">Now, only the last part of our search script followsthe part where we actually output the results:</p>
+<pre>
+foreach ($rank as $record) {
+    echo $record[0], "\n====\n...",
+        $list[$record[0]], "...\n---------\n";
+}
+?&gt;
+</pre><BR>
+<p class="docText">Here, we just reiterate over our first query result and use the message ID as key to the result set to display the relevant parts of the emails found.<a name="ch06index191"></a><a name="ch06index192"></a></p>
+<a name="ch06lev3sec28"></a><h5 class="docSection3Title">6.3.3.11 Other Result Set-Related Functions</h5>
+<p class="docText">You can use a few other functions and methods on result sets. The method <tt>numFields() (sqlite_num_fields())</tt> returns the number of fields in the result set, and the method <tt>fieldName() (sqlite_field_name())</tt> returns the name of the field. The only parameter to this method is the index of the field into the resultset (zero-based). If you do make a join between multiple tables, notice that this function returns the name of the field &quot;as-is&quot; from the query; for example, if the query contains <tt>"SELECT a.field1 FROM address a"</tt>, the name of the field that is returned will be <tt>"a.field1"</tt>.<a name="ch06index193"></a><a name="ch06index194"></a><a name="ch06index195"></a></p>
+<p class="docText">Another peculiarity with column names, which is also valid for keys in returned arrays with the <tt>SQLITE_ASSOC</tt> option set, is that they are always returned in the same case as they were created in the <tt>"CREATE TABLE"</tt> statement. By setting the <tt>sqlite.assoc_case</tt> option in <tt>php.ini</tt> to <tt>1</tt>, you force the SQLite extension to return uppercase column names. By setting it to <tt>2</tt>, you force the extension to return lowercase column names. A setting of <tt>0</tt> (the default) does not touch the case of column names at all.</p>
+<p class="docText">The <tt>numRows()</tt> method (<tt>sqlite_num_rows()</tt>) returns the number of records in the result set, but only works for buffered queries.<a name="ch06index196"></a><a name="ch06index197"></a><a name="ch06index198"></a></p>
+<a name="ch06lev3sec29"></a><H5 class="docSection3Title">6.3.3.12 Aggregate User Defined Functions</h5>
+<p class="docText">Besides normal UDFs similar to those we used to generate our index from a trigger, it is also possible to define a UDF for aggregation functions. In the following example, we calculate the average length of the words in our dictionary:<a name="ch06index199"></a><a name="ch06index200"></a></P>
+<pre>
+&lt;?php
+$db = new SQLiteDatabase("./crm.db", 0666, &amp;$error)
+    or die("Failed: $error");
+</pre><br>
+<p class="docText">After opening the database, we define two functions that will be called during the aggregation. The first one is called for each queried record, and the second one is called when all records have been returned.</P>
+<pre>
+function average_length_step(&amp;$ctxt, $string)
+{
+    if (!isset($ctxt['count'])) {
+        $ctxt['count'] = 0;
+    }
+    if (!isset($ctxt['length'])) {
+        $ctxt['length'] = 0;
+    }
+
+    $ctxt['count']++;
+    $ctxt['length'] += strlen($string);
+}
+</pre><br>
+<p class="docText">The <tt>$ctxt</tt> parameter can be used to maintain state between different records; in this case, we use the parameter as an array to store the number of words and the total lengths of all the words we've seen. We also need to initialize the two elements of the array to hide the <tt>"Warning: Undefined index: count"</tt> warnings that PHP will issue otherwise.<a name="ch06index201"></a><a name="ch06index202"></a></p>
+<pre>
+function average_length_finalize(&amp;$ctxt)
+{
+    return sprintf(
+        "Avg. over {$ctxt['count']} words is %.3f chars.",
+        $ctxt['length'] / $ctxt['count']);
+}
+</pre><br>
+<p class="docText">The <tt>finalize</tt> function returns a string containing the text <tt>"Avg. over x words is y chars."</tt>, where <tt>x</tt> and <tt>y</tt> are filled in dependent on the data.</p>
+<pre>
+$db-&gt;createAggregate(
+    'average_length',
+    'average_length_step', 'average_length_finalize'
+);
+</pre><BR>
+<p class="docText">The <tt>createAggregate()</tt> method creates our aggregate function. The first parameter is the name of the function that can be used from SQL queries; the second one is the function that is executed for each record (also called <span class="docEmphStrong">step</span>); and the third parameter is the name of the function that is run when all records are selected.<a name="ch06index203"></a><a name="ch06index204"></a><a name="ch06index205"></a><a name="ch06index206"></a></P>
+<pre>
+$avg = $db-&gt;singleQuery(
+    "SELECT average_length(word) FROM dictionary");
+echo "$avg\n";
+?&gt;
+</pre><br>
+<p class="docText">Here, we simply execute the query using our newly defined function and echo the result, which should look like something like this:<a name="ch06index207"></a><a name="ch06index208"></a></p>
+<pre>
+Average over 28089 words is 10.038 chars.
+</pre><br>
+<a name="ch06lev3sec30"></a><h5 class="docSection3Title">6.3.3.13 Character Encoding</H5>
+<p class="docText">SQLite has support for two character sets: ISO-8859-1, which is the default and used for most western-European languages, and UTF-8. To enable UTF-8 mode, you need to tell the PHP <tt>./configure</tt> command to do so. The switch to use SQLite's UTF-8 mode is --<span class="docEmphasis">enable-sqlite-utf8</span>. This option only affects sorting results.<a name="ch06index209"></a><a name="ch06index210"></a></p>
+<a name="ch06lev3sec31"></a><h5 class="docSection3Title">6.3.3.14 Tuning</H5>
+<p class="docText">We already saw that you can speed up large amounts of inserts by encapsulating the queries into a transaction. But, there are a few more tricks that we can do. Usually, when inserting a lot of data into the database, we're not interested in how many changes there were in the result set. SQLite allows you to turn off the counting of changes, which obviously improves speed during insertion. You can instruct SQLite not to count changes by running the following SQL query:<a name="ch06index211"></a><a name="ch06index212"></a></p>
+<pre>
+PRAGMA count_changes = 0
+</pre><BR>
+<p class="docText">For example, with</p>
+<pre>
+$db-&gt;query("PRAGMA count_changes = 0");
+</pre><br>
+<p class="docText">Another trick is to change the way SQLite flushes data to disk. With the <tt>synchronous</tt> pragma, you can switch between the following modes, as shown in <a class="docLink" href="#ch06table13">Table 6.13</a>.<a name="ch06index213"></a><a name="ch06index214"></a></p>
+<a name="ch06table13"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 6.13. &quot;PRAGMA Synchronous&quot; Options</h5></caption><colgroup><col width="159.5"><col width="390.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Mode</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>OFF</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">SQLite will not flush written to disk at all; it's up to the operating system to handle this.</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>ON/NORMAL (default)</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">In this mode, SQLite will make sure the data is committed to disk by issuing the <tt>fsync()</tt> system call once in a while.</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>FULL</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">SQLite will now issue extra <tt>fsync()</tt>s to reduce the risk of corruption of the data in case of a power loss.</P></td></tr></table></p><br>
+<p class="docText">In situations where there are a lot of reads from the SQLite database, it might be worthwhile to increase the cache size. Where the default is 2,000 pages (a page is 1,536 bytes), you can increase this size with the following query:</P>
+<pre>
+PRAGMA cache_size=5000;
+</pre><BR>
+<p class="docText">This setting only has effect for the current session, and the value will be lost when the connection to the database is broken. If you want to persist this setting, you need to use the <tt>default_cache_size</tt> pragma instead of just <tt>cache_size</tt>.<a name="ch06index215"></a><a name="ch06index216"></a></p>
+<a name="ch06lev3sec32"></a><h5 class="docSection3Title">6.3.3.15 Other Tricks</h5>
+<p class="docText">There are still a few things untold about SQLitefor example, what the method is to query the database structure. The answer is easyby using the following query:<a name="ch06index217"></a><a name="ch06index218"></a></p>
+<pre>
+SELECT * FROM sqlite_master
+</pre><BR>
+<p class="docText">This returns one element per database object (table, index, and trigger) with the following information: type of object, the name of the object, the table to which the object is linked (only useful for indexes and triggers), an ID, and the SQL DDL query to create the object. When executed on our example, the result is shown in <a class="docLink" href="#ch06table14">Table 6.14</a>.</p>
+<a name="ch06table14"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 6.14. <tt>sqlite_master</tt> Dump</h5></caption><colgroup><col width="54.45544554455446"><col width="81.68316831683168"><col width="87.12871287128714"><col width="32.67326732673268"><col width="294.0594059405941"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Type</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Table</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">ID</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">SQL DDL</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">table</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">document</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">document</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">3</P></td><td class="docTableCell" align="left" valign="top">
+<pre>
+CREATE TABLE document (
+    id INTEGER PRIMARY KEY,
+    title,
+    intro,
+    body
+)
+</pre><BR>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">table</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">dictionary</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">dictionary</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">4</p></td><TD class="docTableCell" align="left" valign="top">
+<pre>
+CREATE TABLE dictionary (
+    id INTEGER PRIMARY KEY,
+    word
+)
+</pre><BR>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">table</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">lookup</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">lookup</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">5</p></td><td class="docTableCell" align="left" valign="top">
+<pre>
+CREATE TABLE lookup (
+    document_id INTEGER,
+    word_id     INTEGER,
+    position    INTEGER
+)
+</pre><br>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">index</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">word</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">dictionary</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">6</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>CREATE UNIQUE INDEX word ON dictionary(word)</tt></p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">trigger</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">index_new</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">document</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">0</P></td><td class="docTableCell" align="left" valign="top">
+<a name="PLID54"></a><div class="v1"><a href="ch06lev1sec3.html#PLID54">[View full width]</a></div><pre>
+CREATE TRIGGER index_new AFTER INSERT ON document
+BEGIN
+SELECT php_index(new.id, new.title, new.intro, new
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif">.body);
+END
+</pre><br>
+</td></TR></table></p><br>
+<p class="docText">The last thing to discuss are <span class="docEmphStrong">views</span>, an SQL feature to simplify user-land queries. For example, if we want to create a view called <tt>"document_body_id"</tt> that contains only the <tt>id</tt> and <tt>body</tt> fields of the document table, we can execute the following query:<a name="ch06index219"></a><a name="ch06index220"></a></P>
+<pre>
+CREATE VIEW document_id_body AS
+SELECT id, body FROM document;
+</pre><br>
+<p class="docText">After the view is created, you can use it in SQL queries just like it was a real table. For example, the following query uses the view to return the ID and body fields of the first two record of our document table:</P>
+<pre>
+SELECT * FROM document_id_body LIMIT 2;
+</pre><br>
+<p class="docText">Of course, in this case, it doesn't really make sense to create a view on one table only, but it does make sense to create a view over a complex query that joins multiple tables. Another original idea of views was that you can assign permissions to specific views as though they were tables, but of course, that doesn't make sense with SQLite, which doesn't know anything about permissions except for permissions on the file system where the database file resides.<a name="ch06index221"></a><a name="ch06index222"></a></p>
+<a name="ch06lev3sec33"></a><h5 class="docSection3Title">6.3.3.16 Words of Wisdom</h5>
+<p class="docText">At last, here are some words of wisdom from the author of the SQLite engine, which he uses instead of a copyright notice:<a name="ch06index223"></a><a name="ch06index224"></a></p>
+<ul><li><p class="docList">May you do good and not evil.</p></li><li><p class="docList">May you find forgiveness for yourself and forgive others.</p></li><li><p class="docList">May you share freely, never taking more than you give.</p></li></ul>
+<p class="docText"> D. Richard Hipp</P>
+<UL></ul></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch06lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch06lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

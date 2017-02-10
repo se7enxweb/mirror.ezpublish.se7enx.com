@@ -1,0 +1,437 @@
+[12-15-2005 01:10:44] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-15-2005 01:26:16] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-15-2005 01:31:28] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[12-15-2005 01:38:04] -!- hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[12-15-2005 01:40:22] -!- ordnas [n=ordnas@p549D7BCE.dip.t-dialin.net] has joined #ezpublish
+[12-15-2005 01:41:41] -!- DiGiTa|_ [n=guillaum@84.4.39.205] has joined #ezpublish
+[12-15-2005 02:01:16] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-15-2005 02:01:39] [#ezpublish] <SEAwolfx> good morning@all
+[12-15-2005 02:01:44] [#ezpublish] <Katana`> hi SEAwolfx
+[12-15-2005 02:03:33] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-15-2005 02:03:37] [#ezpublish] <Katana`> hi fh
+[12-15-2005 02:04:13] [#ezpublish] <_Rappy_> morning peeps
+[12-15-2005 02:14:39] [#ezpublish] <fh[eZ]> gmrfm.f..
+[12-15-2005 02:15:43] [#ezpublish] <SEAwolfx> gmrfm ... this sound like a very early morning.
+[12-15-2005 02:15:46] [#ezpublish] <SEAwolfx> +s
+[12-15-2005 02:16:05] [#ezpublish] <kris10an> hmmpf
+[12-15-2005 02:18:24] [#ezpublish] <kris10an> i mean.. mornin all
+[12-15-2005 02:19:01] [#ezpublish] <SEAwolfx> hui this is an op ;) who are you?
+[12-15-2005 02:26:46] [#ezpublish] * Katana` hands kris10an a mug of coffee
+[12-15-2005 02:27:24] -!- SEAwolfx [n=mike@DSL01.83.171.153.6.NEFkom.net] has quit ["leaving"]
+[12-15-2005 02:28:32] -!- SEAwolfx [n=mike@tor/session/x-4ff4986e774ad2d0] has joined #ezpublish
+[12-15-2005 02:29:34] -!- SEAwolfx [n=mike@tor/session/x-4ff4986e774ad2d0] has quit [Client Quit]
+[12-15-2005 02:30:00] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[12-15-2005 02:38:07] -!- SEAwolfx [n=mike@tor/session/x-1545dd9909b9575a] has joined #ezpublish
+[12-15-2005 02:43:20] [#ezpublish] * kris10an is kh@ez
+[12-15-2005 02:43:55] [#ezpublish] <Katana`> who ?
+[12-15-2005 02:49:22] [#ezpublish] <buz> morning
+[12-15-2005 02:49:51] -!- mode/#ezpublish [+o fh[eZ]] by kris10an
+[12-15-2005 02:49:53] -!- mode/#ezpublish [+o hovik] by kris10an
+[12-15-2005 02:49:56] -!- mode/#ezpublish [+o ordnas] by kris10an
+[12-15-2005 02:50:19] [#ezpublish] <buz> will planetezpublish run on ez?
+[12-15-2005 02:50:30] [#ezpublish] <@fh[eZ]> no, it will use drupal :)
+[12-15-2005 02:50:34] [#ezpublish] <@fh[eZ]> not..
+[12-15-2005 02:50:44] [#ezpublish] <buz> now i'm confused
+[12-15-2005 02:50:50] [#ezpublish] <buz> two negations are too much ;)
+[12-15-2005 03:03:03] [#ezpublish] <@fh[eZ]> haha
+[12-15-2005 03:10:33] [#ezpublish] <buz> especialy if they are in different lines ;)
+[12-15-2005 03:11:02] [#ezpublish] <buz> the most natural solution would obviously be http://planetplanet.org/
+[12-15-2005 03:18:22] [#ezpublish] <buz> but sticking to eating your own dog food would suggest ez ;)
+[12-15-2005 03:18:37] [#ezpublish] <@fh[eZ]> yuck.. dog food
+[12-15-2005 03:18:48] [#ezpublish] <@fh[eZ]> I tried eating our dogs dry food
+[12-15-2005 03:18:56] [#ezpublish] <@fh[eZ]> can't understand how the dog likes that
+[12-15-2005 03:19:03] [#ezpublish] <buz> yeah
+[12-15-2005 03:19:07] [#ezpublish] <buz> i once tried cat food
+[12-15-2005 03:19:12] [#ezpublish] <buz> even the smell is disgusting
+[12-15-2005 03:19:34] [#ezpublish] <@fh[eZ]> strange animals
+[12-15-2005 03:22:09] [#ezpublish] <@ordnas> buz: yes, on eZ
+[12-15-2005 03:22:19] [#ezpublish] <buz> cool
+[12-15-2005 03:23:54] [#ezpublish] <@ordnas> the dog food at least got nicely wrapped for Planet eZ :)
+[12-15-2005 03:36:47] [#ezpublish] <buz> http://us.gizmodo.com/gadgets/smartphones/wzero3-smartphone-143048.php that is sooo what i want (minus windows)
+[12-15-2005 03:37:18] [#ezpublish] <buz> it's a wee bit big though
+[12-15-2005 03:37:22] [#ezpublish] <buz> but a vga screen rocks
+[12-15-2005 03:44:28] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-15-2005 03:44:35] [#ezpublish] <Sulfur> hi!
+[12-15-2005 03:46:52] [#ezpublish] <Katana`> damn the old syntax is really really ugly
+[12-15-2005 03:47:29] [#ezpublish] <buz> yeah
+[12-15-2005 03:47:34] [#ezpublish] <buz> the new one is a big improvement
+[12-15-2005 03:47:38] [#ezpublish] <Katana`> yeah
+[12-15-2005 03:47:47] [#ezpublish] <Katana`> it's almost usable :)
+[12-15-2005 03:47:50] [#ezpublish] <buz> i'm still missing operators such as == though
+[12-15-2005 03:48:28] [#ezpublish] <Katana`> i'm sure we'll have them one day
+[12-15-2005 03:49:46] [#ezpublish] <Katana`> hmmm now how am i gonna customize the meta description just for one content class and its children...
+[12-15-2005 03:50:26] [#ezpublish] <Sulfur> guys, I have a question about cache which I think belies some big misunderstanding of how cache works. anyone willing to do some guesswork/answering?
+[12-15-2005 03:50:39] [#ezpublish] <Katana`> i'm willing to give it a try
+[12-15-2005 03:50:45] [#ezpublish] <Sulfur> the misunderstanding of cuorse is mine ;)
+[12-15-2005 03:50:50] [#ezpublish] <Sulfur> ok ...
+[12-15-2005 03:51:54] [#ezpublish] <buz> Katana`: node overrides? different classes?
+[12-15-2005 03:51:55] [#ezpublish] <buz> Sulfur: shoot
+[12-15-2005 03:52:18] [#ezpublish] <Katana`> meta desc is shown in page_head.tpl , included from pagelayout
+[12-15-2005 03:52:20] [#ezpublish] <Katana`> no overrides here :)
+[12-15-2005 03:52:32] [#ezpublish] <Sulfur> I use , as cache switches, templatecache, viewcaching, templatecompile
+[12-15-2005 03:52:40] [#ezpublish] <buz> you can override anything i think
+[12-15-2005 03:52:47] [#ezpublish] <buz> maybe not as comfortably on a per node basis
+[12-15-2005 03:52:48] [#ezpublish] <Sulfur> my site works perfectly when those are off
+[12-15-2005 03:53:04] [#ezpublish] <buz> templatecompile and templatecache should always work
+[12-15-2005 03:53:11] [#ezpublish] <buz> viewcaching is usually where the fun ensues
+[12-15-2005 03:53:16] [#ezpublish] <Sulfur> on it I have 3 pages, especially homepage ( see http://www.ioscelgo.it ) which have a buggy behavior when caches are on
+[12-15-2005 03:53:30] [#ezpublish] <Sulfur> the buggy part is the poll part
+[12-15-2005 03:53:47] [#ezpublish] <Sulfur> its behavior is like this (it is NOT eZ 's poll module)
+[12-15-2005 03:54:17] [#ezpublish] <Sulfur> if an user has'nt voted, he will see the radiobuttons
+[12-15-2005 03:54:47] [#ezpublish] <Sulfur> when he votes, its vote will be recorded on a cookie, and if he is a registered user, also on DB
+[12-15-2005 03:54:54] [#ezpublish] <Sulfur> sorry
+[12-15-2005 03:54:59] [#ezpublish] <Sulfur> the fact that he has voted!
+[12-15-2005 03:55:02] [#ezpublish] <Sulfur> not the vote
+[12-15-2005 03:55:20] [#ezpublish] <Sulfur> to do that, I have written a custom operator
+[12-15-2005 03:55:31] [#ezpublish] <Sulfur> which checks in cookies and db if he did vote.
+[12-15-2005 03:55:36] [#ezpublish] <Sulfur> following me so far ?
+[12-15-2005 03:56:13] [#ezpublish] <Sulfur> you may try it if you want :)
+[12-15-2005 03:56:34] [#ezpublish] <Sulfur> the trouble is, when I turn on caching, this mechanism will no longer work
+[12-15-2005 03:56:53] [#ezpublish] <Sulfur> and every user - also those who haven't voted - will see the results and will be unable to vote
+[12-15-2005 03:57:10] [#ezpublish] <Sulfur> I had a similar problem (which I still have to resolve) when using paginator
+[12-15-2005 03:59:24] [#ezpublish] <Katana`> but buz: you don't have every override condition on every template
+[12-15-2005 03:59:39] [#ezpublish] <Katana`> i can't override page_head.tpl based on override conditions of node/view/*.tpl
+[12-15-2005 03:59:52] [#ezpublish] <Katana`> or can I ?
+[12-15-2005 03:59:54] [#ezpublish] <buz> i guess that makes some sense
+[12-15-2005 04:00:04] [#ezpublish] <Katana`> maybe I can actually :)
+[12-15-2005 04:00:06] [#ezpublish] <Sulfur> what's your problem Katana`?
+[12-15-2005 04:00:18] [#ezpublish] <Sulfur> we exchange expertise ;)
+[12-15-2005 04:00:44] [#ezpublish] <buz> Sulfur: google for cache-block and cache_ttl
+[12-15-2005 04:00:48] [#ezpublish] <Katana`> oh I do something similar already
+[12-15-2005 04:01:00] [#ezpublish] <Katana`> override Source=navigation/rightmenu.tpl Match[section]=13
+[12-15-2005 04:01:01] [#ezpublish] <Katana`> and it works
+[12-15-2005 04:02:01] [#ezpublish] <Sulfur> buz: I did cache-block based on user and uri and the only result I had is to have it even more broken
+[12-15-2005 04:04:38] [#ezpublish] <Sulfur> maybe it's becasue I don't understand well what each switch does
+[12-15-2005 04:04:59] [#ezpublish] <Sulfur> it's like the conditions and tpl operators were computed once and for all
+[12-15-2005 04:11:27] [#ezpublish] <Sulfur> so any ideas ?
+[12-15-2005 04:14:39] [#ezpublish] <DiGiTa|_> i don't get the node id with this script :
+[12-15-2005 04:14:40] [#ezpublish] <DiGiTa|_> http://pastebin.com/465013
+[12-15-2005 04:14:51] [#ezpublish] <DiGiTa|_> if someone can help me
+[12-15-2005 04:15:21] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[12-15-2005 04:16:57] [#ezpublish] <DiGiTa|_> is this not the right syntax : $node_id = $entry->attribute['node_id']; ?
+[12-15-2005 04:17:59] [#ezpublish] <kris10an> its a function: $entry->attribute( 'node_id' )
+[12-15-2005 04:18:35] [#ezpublish] <DiGiTa|_> i try
+[12-15-2005 04:19:01] [#ezpublish] <Sulfur> any eZ guys enlightening me ? :P
+[12-15-2005 04:19:03] [#ezpublish] <Katana`> attribute owns
+[12-15-2005 04:19:17] [#ezpublish] <Sulfur> owns ... btw purepwnage episode 9 is out
+[12-15-2005 04:19:25] [#ezpublish] <Katana`> what is it about ?
+[12-15-2005 04:19:35] [#ezpublish] <DiGiTa|_> ah yes
+[12-15-2005 04:19:40] [#ezpublish] <DiGiTa|_> now it's ok :)
+[12-15-2005 04:19:43] [#ezpublish] <buz> proper setter, getters would be cleaner than attribute
+[12-15-2005 04:20:07] [#ezpublish] <Katana`> probably
+[12-15-2005 04:20:08] [#ezpublish] <buz> but likely not feasible in php4
+[12-15-2005 04:20:10] [#ezpublish] <Katana`> attribute is still cool :)
+[12-15-2005 04:20:36] [#ezpublish] <kracker> Sulfur, i miss banatage :\
+[12-15-2005 04:20:43] [#ezpublish] <buz> (as i dont think you can create classes on the fly in 4, not sure about 5)
+[12-15-2005 04:21:56] [#ezpublish] <Sulfur> banatage ?
+[12-15-2005 04:22:09] [#ezpublish] <Katana`> you can using eval
+[12-15-2005 04:22:23] [#ezpublish] <kracker> iptv show that never got past -3 episodes :\
+[12-15-2005 04:22:50] [#ezpublish] <kracker> about gaming :\ funy characters those guys
+[12-15-2005 04:23:08] [#ezpublish] <Katana`> BOOM HEADSHOT
+[12-15-2005 04:23:11] [#ezpublish] <buz> ok but eval is far from being a sane interface to create classes
+[12-15-2005 04:23:20] [#ezpublish] <Katana`> it's the only way to create a class so far buz
+[12-15-2005 04:23:26] [#ezpublish] <Katana`> i think there is an override extension for php4
+[12-15-2005 04:23:29] [#ezpublish] <Katana`> overload
+[12-15-2005 04:23:38] [#ezpublish] <Katana`> php.net/overload
+[12-15-2005 04:23:43] [#ezpublish] <buz> actually, you can use require('somedynamicfile') as an even worse hack ;)
+[12-15-2005 04:23:46] [#ezpublish] <Katana`> by default since 4.3
+[12-15-2005 04:31:01] [#ezpublish] <Katana`> http://www.riemurasia.net/jylppy/albumit/13996/1129978111494.jpg
+[12-15-2005 04:31:44] [#ezpublish] <buz> lol
+[12-15-2005 04:31:51] [#ezpublish] <buz> soldier kitty
+[12-15-2005 04:32:59] [#ezpublish] <Katana`> :)
+[12-15-2005 04:33:27] -!- ordnas [n=ordnas@p549D7BCE.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-15-2005 04:40:33] [#ezpublish] <buz> i always knew those beasts were evil
+[12-15-2005 04:40:54] [#ezpublish] <SEAwolfx> http://www.riemurasia.net/jylppy/albumit/13996/11299 <- acab
+[12-15-2005 04:40:57] [#ezpublish] <SEAwolfx> ;)
+[12-15-2005 04:41:14] [#ezpublish] <Katana`> tssss
+[12-15-2005 04:41:17] [#ezpublish] <buz> ok but what does it say?
+[12-15-2005 04:42:15] [#ezpublish] <SEAwolfx> buz: acab?
+[12-15-2005 04:42:20] [#ezpublish] <buz> no the site
+[12-15-2005 04:42:24] [#ezpublish] <SEAwolfx> ^^
+[12-15-2005 04:42:28] [#ezpublish] <kris10an> SEAwolfx: are you finnish?
+[12-15-2005 04:42:30] [#ezpublish] <buz> the busted i get but otherwise i dont
+[12-15-2005 04:42:47] [#ezpublish] <SEAwolfx> <>>>@kris10an<<<>SEAwolfx: are you finnish? <- what u mean?
+[12-15-2005 04:46:13] [#ezpublish] <Katana`> from finland i guess ? :)
+[12-15-2005 04:46:14] [#ezpublish] <SEAwolfx> yes, my hairs are dry now.
+[12-15-2005 04:55:59] [#ezpublish] <kris10an> hmm.. i thought that sentance was good...
+[12-15-2005 04:56:06] [#ezpublish] <kris10an> SEAwolfx: are you from finland?
+[12-15-2005 04:56:24] [#ezpublish] <SEAwolfx> kris10an: for sure, i am not. you?
+[12-15-2005 04:56:26] [#ezpublish] <DiGiTa|_> is it hard to save data in xml ?
+[12-15-2005 04:56:53] [#ezpublish] <SEAwolfx> DiGiTa|_: not its not.
+[12-15-2005 04:57:02] [#ezpublish] <DiGiTa|_> what class should i use to do that
+[12-15-2005 04:57:03] [#ezpublish] <SEAwolfx> in which context?
+[12-15-2005 04:57:06] [#ezpublish] <kris10an> SEAwolfx: no. norway.
+[12-15-2005 04:57:08] [#ezpublish] <Katana`> eZXML ? :)
+[12-15-2005 04:57:24] [#ezpublish] <SEAwolfx> kris10an: i am from germany.
+[12-15-2005 04:57:53] [#ezpublish] <Katana`> hmmm 14 000 junk mail in that folder
+[12-15-2005 04:59:37] [#ezpublish] <DiGiTa|_> i need to save data from a datatype to data_text
+[12-15-2005 05:00:08] [#ezpublish] <SEAwolfx> DiGiTa|_: you can use the xml-block datatype to store xml
+[12-15-2005 05:00:23] [#ezpublish] <buz> no you cant
+[12-15-2005 05:00:28] [#ezpublish] <buz> you can use it to store ezxml
+[12-15-2005 05:00:36] [#ezpublish] <buz> which is a very small subset of xml
+[12-15-2005 05:01:27] [#ezpublish] <SEAwolfx> buz: witch ezxml u mean the tags that can be used for formatting content.
+[12-15-2005 05:01:57] [#ezpublish] <DiGiTa|_> ok i will try with ezxml
+[12-15-2005 05:02:03] [#ezpublish] <buz> yes
+[12-15-2005 05:02:11] [#ezpublish] <Katana`> the class is very good
+[12-15-2005 05:02:13] [#ezpublish] <buz> which are the ONLY tags allowed
+[12-15-2005 05:02:23] [#ezpublish] <SEAwolfx> so i would say it depends on the structure what DiGiTa|_ want to be stored.
+[12-15-2005 05:02:29] [#ezpublish] <buz> yeah
+[12-15-2005 05:02:36] [#ezpublish] <DiGiTa|_> not complicated
+[12-15-2005 05:03:13] [#ezpublish] <SEAwolfx> its rather depends on the tags you want to use. or better said the namespace.
+[12-15-2005 05:03:43] [#ezpublish] <DiGiTa|_> like image tags
+[12-15-2005 05:03:44] [#ezpublish] <SEAwolfx> unfortunately you have no xml-namespace support within eZ.
+[12-15-2005 05:03:46] [#ezpublish] <DiGiTa|_> ezimage
+[12-15-2005 05:03:51] [#ezpublish] <buz> huh?
+[12-15-2005 05:03:59] [#ezpublish] <buz> store images inside xml?
+[12-15-2005 05:04:04] [#ezpublish] <DiGiTa|_> no
+[12-15-2005 05:04:10] [#ezpublish] <DiGiTa|_> data like ezimage daatype
+[12-15-2005 05:04:19] [#ezpublish] <SEAwolfx> metadata for images?
+[12-15-2005 05:04:25] [#ezpublish] <SEAwolfx> ah.
+[12-15-2005 05:04:38] [#ezpublish] <buz> ezxml isnt particularly well suited for that
+[12-15-2005 05:04:44] [#ezpublish] <SEAwolfx> so u have the ez-intern namespace used in packages.
+[12-15-2005 05:04:51] [#ezpublish] <DiGiTa|_> Katana` found what i need : http://pubsvn.ez.no/doxygen/classeZDOMDocument.html#_details
+[12-15-2005 05:04:55] [#ezpublish] <DiGiTa|_> :)
+[12-15-2005 05:04:56] [#ezpublish] <buz> which afaik isnt documented at all
+[12-15-2005 05:04:56] [#ezpublish] <DiGiTa|_> thanks evby
+[12-15-2005 05:04:59] [#ezpublish] <Katana`> i just mean the XML Parser class
+[12-15-2005 05:05:06] [#ezpublish] <Katana`> eZDOMDocument that is
+[12-15-2005 05:05:12] [#ezpublish] <buz> yeah that one is quite good
+[12-15-2005 05:05:30] [#ezpublish] <buz> (quite contrary to ezxmltext itself)
+[12-15-2005 05:05:38] [#ezpublish] <Katana`> one of the best PHP4 XML parser / generator i've seen around
+[12-15-2005 05:05:42] [#ezpublish] <SEAwolfx> whats the difference to the common phpdom api?
+[12-15-2005 05:05:58] [#ezpublish] <buz> more oo
+[12-15-2005 05:06:02] [#ezpublish] <Katana`> more powerful, easier to use, oo
+[12-15-2005 05:06:09] [#ezpublish] <SEAwolfx> ok ;)
+[12-15-2005 05:06:15] [#ezpublish] <buz> i dont think it's necessarily more powerfol than domxml
+[12-15-2005 05:06:24] [#ezpublish] <Katana`> well probably not more powerful
+[12-15-2005 05:06:25] [#ezpublish] <buz> domxml exposes more features than ezdom
+[12-15-2005 05:06:28] [#ezpublish] <Katana`> much more user friendly
+[12-15-2005 05:06:31] [#ezpublish] <buz> but definitely saner api
+[12-15-2005 05:06:58] [#ezpublish] <buz> i still think it should expose schema validation if php supports it
+[12-15-2005 05:07:33] [#ezpublish] <buz> apropos ezxml, will we see that new OE4 parser open sourced?
+[12-15-2005 05:08:07] [#ezpublish] <@fh[eZ]> buz: wait and see.....
+[12-15-2005 05:10:29] [#ezpublish] <SEAwolfx> buz i would like to see regular-grammar-based validation like wich RELAX NG.
+[12-15-2005 05:10:37] [#ezpublish] <buz> yes
+[12-15-2005 05:10:47] [#ezpublish] <buz> schema is a WEIRD beast
+[12-15-2005 05:10:52] [#ezpublish] <buz> relax ng is much saner to use
+[12-15-2005 05:11:14] [#ezpublish] <buz> i THINK domxml can do relaxng
+[12-15-2005 05:11:21] [#ezpublish] <buz> it's just that it's errors are pretty useless
+[12-15-2005 05:11:47] [#ezpublish] <SEAwolfx> buz | >it's just that it's errors are pretty useless <- what u mean?
+[12-15-2005 05:11:58] [#ezpublish] <buz> well it gives out errors
+[12-15-2005 05:12:06] [#ezpublish] <buz> (in some cases) but nowhere near human readable
+[12-15-2005 05:12:33] [#ezpublish] <buz> ideally i'd want an error like "XY is not allowed as child of Z"
+[12-15-2005 05:13:35] [#ezpublish] <SEAwolfx> i thought exactly this is possible with it.
+[12-15-2005 05:13:45] [#ezpublish] <buz> well it does give out something
+[12-15-2005 05:13:50] [#ezpublish] <buz> but nothing a user would understand
+[12-15-2005 05:14:24] [#ezpublish] <SEAwolfx> it depends what rules u define for validation.
+[12-15-2005 05:14:37] [#ezpublish] <SEAwolfx> xml validated xml.
+[12-15-2005 05:14:49] [#ezpublish] <SEAwolfx> s/validated/validates/
+[12-15-2005 05:14:52] [#ezpublish] <buz> well i think i was using the w3c xhtml transitional schema
+[12-15-2005 05:14:55] [#ezpublish] * Katana` is unsure of how multiline text is to be handled by i18n...
+[12-15-2005 05:14:58] [#ezpublish] <buz> not relax ng
+[12-15-2005 05:15:05] [#ezpublish] <Katana`> ezlinguist handles it but you don't have something like nl2br ...
+[12-15-2005 05:15:11] [#ezpublish] <buz> dont use multiline text
+[12-15-2005 05:15:17] [#ezpublish] <Katana`> ...
+[12-15-2005 05:15:21] [#ezpublish] <buz> let the browser handle it
+[12-15-2005 05:15:27] [#ezpublish] <Katana`> thanks for that amazing contribution, problem solved
+[12-15-2005 05:15:41] [#ezpublish] <Katana`> yeah, <br /> is totally not standard and should never be used
+[12-15-2005 05:15:43] [#ezpublish] <SEAwolfx> Katana`: what contrib?
+[12-15-2005 05:15:55] [#ezpublish] <Katana`> ...
+[12-15-2005 05:16:02] [#ezpublish] <Katana`> it was a bloody sarcasm
+[12-15-2005 05:16:16] [#ezpublish] <SEAwolfx> i am dumb, so no wonder ;)
+[12-15-2005 05:16:34] [#ezpublish] <Katana`> ok, |nl2br does the job
+[12-15-2005 05:17:23] [#ezpublish] <SEAwolfx> doh.
+[12-15-2005 05:19:35] [#ezpublish] <SEAwolfx> buz: i had a look on schematron?
+[12-15-2005 05:32:33] [#ezpublish] <SEAwolfx> oops s/i/u/ ;)
+[12-15-2005 05:50:06] [#ezpublish] <buz> was out for lunch
+[12-15-2005 05:53:02] [#ezpublish] <buz> oh there's schematron for php http://phpxmlclasses.sourceforge.net/show_doc.php?class=class_schematron.html
+[12-15-2005 05:53:26] [#ezpublish] <buz> but it needs stinking sablotron
+[12-15-2005 05:54:41] [#ezpublish] <SEAwolfx> ;)
+[12-15-2005 05:54:51] [#ezpublish] <buz> is there a schematron schema for XHTML1.0?
+[12-15-2005 05:55:12] [#ezpublish] <SEAwolfx> well .. i dont know. sorry.
+[12-15-2005 05:55:54] [#ezpublish] <SEAwolfx> exactly this i want to have when ez checks if an content-xml-text is valid ;)
+[12-15-2005 05:56:10] [#ezpublish] <SEAwolfx> +is
+[12-15-2005 05:56:54] [#ezpublish] <buz> YEAH ez rss feeds
+[12-15-2005 05:58:41] [#ezpublish] <SEAwolfx> btw ... how i could process a submitted form which is a value of an contentObjectAttribute, when this attribute is displayed on the page?
+[12-15-2005 06:00:54] [#ezpublish] <buz> lock at attribute_view_edit gui
+[12-15-2005 06:01:05] [#ezpublish] <buz> not sure if it works without editing it first
+[12-15-2005 06:01:07] [#ezpublish] <buz> but maybe
+[12-15-2005 06:01:52] [#ezpublish] <SEAwolfx> buz: its no problem to display the form but how to process the submit of the form?
+[12-15-2005 06:02:03] [#ezpublish] <buz> mhh
+[12-15-2005 06:02:11] [#ezpublish] <buz> i think you just need to post it to the right url?
+[12-15-2005 06:03:11] [#ezpublish] <buz> try the url that's being used in the edit template
+[12-15-2005 06:04:14] [#ezpublish] <SEAwolfx> buz ;) uhm
+[12-15-2005 06:05:58] [#ezpublish] <buz> problem being the fact that only drafts can be edited i guess
+[12-15-2005 06:06:08] [#ezpublish] <buz> try asking on the forum
+[12-15-2005 06:06:45] [#ezpublish] <SEAwolfx> thanks buz.
+[12-15-2005 06:07:15] [#ezpublish] <SEAwolfx> sometimes a solution is so near and you dont get it anyway.
+[12-15-2005 06:07:36] [#ezpublish] <buz> it could certainly be done with an extension ;)
+[12-15-2005 06:09:45] -!- ordnas [n=ordnas@p549D54E2.dip.t-dialin.net] has joined #ezpublish
+[12-15-2005 06:12:28] [#ezpublish] <SEAwolfx> yeah, this is waht i had in mind before. the form-action envokes the extension.
+[12-15-2005 06:18:00] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-15-2005 06:46:10] -!- SEAwolfx_ [n=mike@tor/session/x-51282fcbb39e602d] has joined #ezpublish
+[12-15-2005 06:46:19] -!- kris10an [n=kh@popeye.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[12-15-2005 07:14:47] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-15-2005 07:14:55] -!- SEAwolfx [n=mike@tor/session/x-1545dd9909b9575a] has quit [Read error: 110 (Connection timed out)]
+[12-15-2005 07:15:04] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[12-15-2005 07:15:11] -!- _Katana` is now known as Katana`
+[12-15-2005 07:46:23] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-15-2005 08:03:46] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-15-2005 08:03:47] -!- _Katana` is now known as Katana`
+[12-15-2005 08:42:05] [#ezpublish] <Katana`> damn, when you setup a nice navigation system in a big eZ Project it's really, really nice to use afterwards
+[12-15-2005 08:49:51] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[12-15-2005 08:52:15] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-15-2005 09:12:48] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-15-2005 09:24:44] [#ezpublish] <DiGiTa|_> has someone an idea, while the |l10n operator not function
+[12-15-2005 09:25:00] [#ezpublish] <DiGiTa|_> on my system
+[12-15-2005 09:25:01] [#ezpublish] <DiGiTa|_> :)
+[12-15-2005 09:25:19] [#ezpublish] <DiGiTa|_> oh i knpw
+[12-15-2005 09:25:24] [#ezpublish] <DiGiTa|_> know :/
+[12-15-2005 09:25:29] [#ezpublish] <Katana`> ?
+[12-15-2005 09:25:37] [#ezpublish] <DiGiTa|_> {attribute_view_gui attribute=$saison.data_map.date_debut|l10n( 'shortdate' )}
+[12-15-2005 09:25:40] [#ezpublish] <DiGiTa|_> ......
+[12-15-2005 09:25:48] [#ezpublish] <DiGiTa|_> it's not my day today
+[12-15-2005 09:25:51] [#ezpublish] <DiGiTa|_> :)
+[12-15-2005 09:26:38] [#ezpublish] <Katana`> frenchism by yes :)
+[12-15-2005 09:30:53] [#ezpublish] <Katana`> by > but
+[12-15-2005 10:03:25] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-15-2005 10:11:41] [#ezpublish] <Sulfur> arrrrrrrrrrrrrrgh I hate vbulletin
+[12-15-2005 10:12:38] [#ezpublish] <buz> there's worse you know
+[12-15-2005 10:24:28] [#ezpublish] <Sulfur> any chan on which I can find some vbulletin hacker ?
+[12-15-2005 10:24:50] [#ezpublish] <Sulfur> or anyone knows where the hell are CONDITIONs specified ?
+[12-15-2005 10:31:53] [#ezpublish] <buz> vbulletin is commercial no?
+[12-15-2005 10:31:55] [#ezpublish] <buz> ask the vendor ;)
+[12-15-2005 10:34:13] [#ezpublish] <Sulfur> I am about to
+[12-15-2005 10:45:00] -!- SEAwolfx [n=mike@tor/session/x-9e55d15d8dd94769] has joined #ezpublish
+[12-15-2005 10:48:36] -!- SEAwolfx_ [n=mike@tor/session/x-51282fcbb39e602d] has quit [Remote closed the connection]
+[12-15-2005 11:20:33] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-15-2005 12:02:39] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[12-15-2005 12:16:14] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[12-15-2005 13:07:19] -!- ordnas [n=ordnas@p549D54E2.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-15-2005 13:23:57] -!- DiGiTa|__ [n=guillaum@84.5.143.92] has joined #ezpublish
+[12-15-2005 13:40:17] -!- Proteque [n=gjorans@213.184.199.245] has quit [Read error: 113 (No route to host)]
+[12-15-2005 13:40:32] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-15-2005 13:41:24] -!- DiGiTa|_ [n=guillaum@84.4.39.205] has quit [Read error: 110 (Connection timed out)]
+[12-15-2005 13:41:45] [#ezpublish] * Katana` is writing an article about setting up an ez website as an extension
+[12-15-2005 13:44:58] [#ezpublish] <buz> neat
+[12-15-2005 13:45:07] [#ezpublish] <buz> my advanced forum stuff is all extension
+[12-15-2005 13:45:32] [#ezpublish] <Katana`> nice :)
+[12-15-2005 13:52:00] [#ezpublish] <buz> it's not really that hard
+[12-15-2005 13:52:06] [#ezpublish] <buz> just painful because you dont get any gui support
+[12-15-2005 13:52:17] [#ezpublish] <Katana`> GUI for ?
+[12-15-2005 13:52:21] [#ezpublish] <Katana`> oh
+[12-15-2005 13:52:23] [#ezpublish] <Katana`> yeah
+[12-15-2005 13:52:24] [#ezpublish] <buz> creation of overrides
+[12-15-2005 13:52:30] [#ezpublish] <Katana`> since i don't use those...
+[12-15-2005 13:52:34] [#ezpublish] <buz> i like it
+[12-15-2005 13:52:37] [#ezpublish] <buz> it's foolproof
+[12-15-2005 13:52:50] [#ezpublish] <Katana`> but i'm sure we could find a way to make it work here :)
+[12-15-2005 13:53:06] [#ezpublish] <Katana`> with some templating and a custom module i'm sure it'd work
+[12-15-2005 13:53:13] [#ezpublish] <buz> a better INTERFACE would be more important to me
+[12-15-2005 13:53:17] [#ezpublish] <buz> like for FINDING tempaltes ;=
+[12-15-2005 13:53:21] [#ezpublish] <Katana`> hehehe
+[12-15-2005 13:53:32] [#ezpublish] <Katana`> debug does that pretty well imho
+[12-15-2005 13:53:40] [#ezpublish] <buz> usually edit them in quanta anyway
+[12-15-2005 13:53:51] [#ezpublish] <Katana`> i always find & edit stuff in my IDE
+[12-15-2005 13:53:59] [#ezpublish] <buz> tho the syntax coloring only works right with the old language
+[12-15-2005 13:54:01] [#ezpublish] <buz> gotta fix that
+[12-15-2005 13:54:13] [#ezpublish] <Katana`> :)
+[12-15-2005 13:54:26] [#ezpublish] <Katana`> it's pretty good in PHPEdit, and I even have code hint / insight for ez syntax
+[12-15-2005 13:54:30] [#ezpublish] <Katana`> as well as contextual help
+[12-15-2005 13:54:34] [#ezpublish] <buz> ok that's neat
+[12-15-2005 13:54:45] [#ezpublish] <buz> now if it would work on linux natively...
+[12-15-2005 13:55:07] [#ezpublish] <Katana`> we do have more plans ;)
+[12-15-2005 13:55:07] [#ezpublish] <Katana`> we really hope it will in the future
+[12-15-2005 13:55:07] [#ezpublish] <Katana`> but probably not before a year
+[12-15-2005 13:56:11] [#ezpublish] <Katana`> i have suggested that feature yesterday...
+[12-15-2005 13:56:11] [#ezpublish] <Katana`> http://issues.waterproof.fr/IssueView.php?Id=4194&activeItem=1
+[12-15-2005 13:56:35] [#ezpublish] <Katana`> there are a few nice ones
+[12-15-2005 14:00:24] [#ezpublish] <kris10an> buz: we also use extensions for all the customer projects
+[12-15-2005 14:03:03] [#ezpublish] <Katana`> there's no copyright on the concept right kris10an ? :)
+[12-15-2005 14:04:48] [#ezpublish] <buz> patent probably
+[12-15-2005 14:05:25] [#ezpublish] <buz> something like the 1click patent
+[12-15-2005 14:05:39] [#ezpublish] <buz> (i know is houldnt shop amazon, but they are cheaper than the others ;)
+[12-15-2005 14:06:34] [#ezpublish] <Katana`> wh not ??
+[12-15-2005 14:07:48] [#ezpublish] <buz> evil company
+[12-15-2005 14:07:53] [#ezpublish] <buz> with lots of evil patents
+[12-15-2005 14:08:06] [#ezpublish] <Katana`> i like them :)
+[12-15-2005 14:08:07] [#ezpublish] <buz> hey at least i dont buy any sony stuff anymore
+[12-15-2005 14:08:10] [#ezpublish] <Katana`> they're serious, fast, and have everything
+[12-15-2005 14:08:18] [#ezpublish] <buz> not so fast here
+[12-15-2005 14:08:21] [#ezpublish] <buz> stuff comes from germany
+[12-15-2005 14:08:24] [#ezpublish] <Katana`> i just get books or DVD from them
+[12-15-2005 14:08:29] [#ezpublish] <buz> yeah me too
+[12-15-2005 14:08:32] [#ezpublish] <Katana`> on .fr and .co.uk
+[12-15-2005 14:08:44] [#ezpublish] <buz> co.uk has rip off shipping to switzerland
+[12-15-2005 14:08:49] [#ezpublish] <kris10an> offcourse we have an evil patent on that :-s
+[12-15-2005 14:09:07] [#ezpublish] <Katana`> okay ^^
+[12-15-2005 14:09:15] [#ezpublish] <Katana`> no article it is then so much for the community ^^
+[12-15-2005 14:09:30] [#ezpublish] <buz> writing about patents is ok
+[12-15-2005 14:09:38] [#ezpublish] <buz> implementing the stuff isnt ;)
+[12-15-2005 14:11:06] [#ezpublish] <kris10an> no.. we let you patent it buz..
+[12-15-2005 14:11:26] [#ezpublish] <buz> no softpats in CH
+[12-15-2005 14:11:33] [#ezpublish] <buz> thank god
+[12-15-2005 14:11:55] [#ezpublish] <Katana`> oh, okay ;)
+[12-15-2005 14:12:03] [#ezpublish] <Katana`> no patents there either afaik
+[12-15-2005 14:12:28] [#ezpublish] <buz> i'm gonna buy a gun if they ever accept those here
+[12-15-2005 14:12:41] [#ezpublish] <buz> a BIG one
+[12-15-2005 14:12:53] [#ezpublish] <buz> (giant guns are more easily obtained here than small ones)
+[12-15-2005 14:13:26] [#ezpublish] <Katana`> harder to hide ;)
+[12-15-2005 14:15:14] [#ezpublish] <buz> exactly
+[12-15-2005 14:15:41] [#ezpublish] <buz> that is the legal reason for it even
+[12-15-2005 14:15:51] [#ezpublish] <buz> but even pistols and the like can be bought without muc htrouble
+[12-15-2005 14:16:06] [#ezpublish] <Katana`> :))
+[12-15-2005 14:16:17] [#ezpublish] <buz> http://www.wired.com/news/technology/0,1282,69817,00.html now what could i do with THAT
+[12-15-2005 14:16:25] [#ezpublish] <buz> finally, i CAN download the internet muahaha
+[12-15-2005 14:17:27] [#ezpublish] * Katana` wants a 10K RPM SATA disk
+[12-15-2005 14:17:31] [#ezpublish] <buz> i dont
+[12-15-2005 14:17:35] [#ezpublish] <buz> must be noisy suckers
+[12-15-2005 14:17:42] [#ezpublish] <buz> if i could, i'd get 5400RPM ones
+[12-15-2005 14:19:29] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-15-2005 14:19:29] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-15-2005 14:19:47] -!- _Katana` is now known as Katana`
+[12-15-2005 14:28:25] [#ezpublish] <kris10an> whoever wants software patents needs to be smacked hard in the head with a wet penguin
+[12-15-2005 14:33:24] [#ezpublish] <buz> mhh i'd shove them a dead raven where the sun doesnt shine
+[12-15-2005 14:34:42] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-15-2005 14:37:52] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-15-2005 14:38:29] [#ezpublish] <nnn0> :)
+[12-15-2005 14:38:35] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[12-15-2005 14:40:02] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-15-2005 14:41:24] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-15-2005 14:41:27] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-15-2005 14:41:42] -!- _Katana` is now known as Katana`
+[12-15-2005 14:45:02] [#ezpublish] <kris10an> Katana`: your internet connection is more jumpy than a cat in a dog-prison
+[12-15-2005 14:51:28] [#ezpublish] <Katana`> yeah, it has issues :(
+[12-15-2005 14:51:32] [#ezpublish] <Katana`> but i'm moving soon so...
+[12-15-2005 14:55:07] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-15-2005 15:33:51] -!- DiGiTa|__ [n=guillaum@84.5.143.92] has quit []
+[12-15-2005 15:58:10] -!- SEAwolfx_ [n=mike@tor/session/x-e5436572317404b7] has joined #ezpublish
+[12-15-2005 16:08:41] [#ezpublish] * kris10an slaps fh[eZ] with a large wet tie
+[12-15-2005 16:09:47] [#ezpublish] <@fh[eZ]> oooooh
+[12-15-2005 16:09:50] [#ezpublish] <@fh[eZ]> TIE SLAPPING
+[12-15-2005 16:09:55] [#ezpublish] <@fh[eZ]> now that has been a long time
+[12-15-2005 16:10:13] [#ezpublish] * @fh[eZ] dips his tie in the beer he got at the student house
+[12-15-2005 16:10:20] [#ezpublish] <@fh[eZ]> ............ SLAP
+[12-15-2005 16:10:26] [#ezpublish] <@fh[eZ]> IN YOUR FACE kris10an
+[12-15-2005 16:11:37] [#ezpublish] * kris10an finds his elephant-tie, and slaps fh[eZ]
+[12-15-2005 16:11:39] [#ezpublish] <kris10an> SLAP!
+[12-15-2005 16:12:01] [#ezpublish] <kris10an> (elephant ties hurt much more, cause of the weight)
+[12-15-2005 16:12:04] [#ezpublish] <SEAwolfx_> re
+[12-15-2005 16:13:19] [#ezpublish] <@fh[eZ]> damn.. can't beat that
+[12-15-2005 16:13:49] [#ezpublish] <@fh[eZ]> I can use my curling tie... that should be quite nice as well
+[12-15-2005 16:14:03] [#ezpublish] <SEAwolfx_> whats wrong with this: {section show = ( and( true(),'form'|compare( $ContentObjectAttribute:item.contentclass_attribute.name ) ) }
+[12-15-2005 16:14:39] [#ezpublish] <kris10an> try to remove the spaces
+[12-15-2005 16:14:48] [#ezpublish] <kris10an> {section show=(
+[12-15-2005 16:14:50] [#ezpublish] <SEAwolfx_> ah, lets try.
+[12-15-2005 16:16:44] [#ezpublish] <SEAwolfx_> hmm, no success: {section show=(and(true(),'form'|compare( $ContentObjectAttribute:item.contentclass_attribute.name))}
+[12-15-2005 16:17:30] [#ezpublish] <SEAwolfx_> otherwise, how else would u test two string for equality?
+[12-15-2005 16:18:08] [#ezpublish] <SEAwolfx_> ah, i see another space. second try!
+[12-15-2005 16:19:12] [#ezpublish] <SEAwolfx_> hm, still no success.
+[12-15-2005 16:25:24] [#ezpublish] <SEAwolfx_> even this fails: {section show=('form'|compare('form')}
+[12-15-2005 16:28:51] [#ezpublish] <SEAwolfx_> this is better: {section show='form'|compare('form'}
+[12-15-2005 16:28:56] [#ezpublish] <SEAwolfx_> ;)
+[12-15-2005 16:44:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-15-2005 16:46:06] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit []
+[12-15-2005 18:11:27] [#ezpublish] <kracker> heh
+[12-15-2005 18:12:20] [#ezpublish] <kracker> almost php5 compatible, the list shortens greatly. http://php5.demo.ezcommunity.net/
+[12-15-2005 21:36:12] -!- rawman [i=info@u18-253.dsl.vianetworks.de] has joined #ezpublish

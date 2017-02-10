@@ -1,0 +1,73 @@
+[01-23-2006 00:53:12] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[01-23-2006 01:34:55] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-23-2006 02:12:13] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-23-2006 02:14:22] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-23-2006 02:16:59] -!- ordna1 [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-23-2006 02:35:53] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[01-23-2006 02:39:31] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-23-2006 02:48:43] -!- ordna1 [n=ordnas@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-23-2006 03:16:01] -!- SEAwolfx [n=mike@tor/session/x-418670c07caab643] has joined #ezpublish
+[01-23-2006 03:17:04] [#ezpublish] <SEAwolfx> re
+[01-23-2006 03:18:05] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-23-2006 03:18:11] [#ezpublish] <y_sabal> plop
+[01-23-2006 03:18:47] [#ezpublish] <SEAwolfx> pong
+[01-23-2006 03:20:58] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 104 (Connection reset by peer)]
+[01-23-2006 03:21:19] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-23-2006 03:22:30] -!- tobyS [n=dotxp@dslb-084-060-009-225.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-23-2006 03:24:41] [#ezpublish] <y_sabal> 'sort_by', array('priority', false()),  <-- is this line making sense ?
+[01-23-2006 03:25:44] [#ezpublish] <y_sabal> eZ seems to ignore completly the sorting I am asking...
+[01-23-2006 03:31:33] [#ezpublish] <y_sabal> ...
+[01-23-2006 03:32:13] [#ezpublish] * y_sabal should maybe consider programming algol on a VAX machine
+[01-23-2006 03:54:54] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-23-2006 05:09:18] [#ezpublish] <_Rappy_> Can eZ handel creating an article in a translation-language, that does not exist in the primary language?
+[01-23-2006 05:16:39] -!- tobyS [n=dotxp@dslb-084-061-134-225.pools.arcor-ip.net] has joined #ezpublish
+[01-23-2006 05:16:58] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-23-2006 05:18:11] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-23-2006 05:21:33] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-23-2006 05:24:21] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-23-2006 05:32:57] [#ezpublish] <y_sabal> _Rappy_ : no directly
+[01-23-2006 05:34:02] [#ezpublish] <y_sabal> but you can create an entry in the primary language (even empty), translate it, and then destroy the translation in the primary language
+[01-23-2006 05:34:53] [#ezpublish] <y_sabal> mm, or if you have one admin side for each language, you may do it directly
+[01-23-2006 05:36:27] [#ezpublish] <_Rappy_> that's what I thought. :-\ well, tnx
+[01-23-2006 05:44:13] [#ezpublish] <Sulfur> hey guys. anyone knows what is the setting to limit the "preview siteaccesses" an user can see in the admin site, when previewing content?
+[01-23-2006 06:09:55] -!- jota [n=jota@fanzine.igalia.com] has quit [Remote closed the connection]
+[01-23-2006 06:20:06] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-23-2006 06:25:33] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-23-2006 07:33:50] -!- kore_ [n=lordhong@217.194.224.41] has quit []
+[01-23-2006 08:23:16] [#ezpublish] <Sulfur> ok np, found it ...
+[01-23-2006 08:44:08] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-23-2006 08:48:10] -!- SEAwolfx [n=mike@tor/session/x-418670c07caab643] has quit [Remote closed the connection]
+[01-23-2006 08:48:42] -!- ordna1 [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-23-2006 09:08:03] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[01-23-2006 09:08:06] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-23-2006 09:28:35] -!- ordna1 [n=ordnas@popeye.ez.no] has left #ezpublish []
+[01-23-2006 09:33:44] -!- ordnas [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-23-2006 09:51:54] -!- ordna1 [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-23-2006 10:10:09] -!- ordnas [n=ordnas@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-23-2006 10:11:01] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-23-2006 10:11:21] -!- ordna1 [n=ordnas@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-23-2006 10:12:27] -!- qms2 [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-23-2006 10:12:41] -!- qms2 [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Client Quit]
+[01-23-2006 10:20:01] [#ezpublish] <kris10an> you are all raven mad!
+[01-23-2006 10:20:07] [#ezpublish] <kris10an> no wait.. that's me...
+[01-23-2006 10:21:58] [#ezpublish] <Sulfur> *caw*
+[01-23-2006 11:17:48] -!- ordnas [n=ordnas@stalker.ez.no] has left #ezpublish []
+[01-23-2006 11:26:18] -!- LottoKim [n=kim@195.28.172.4] has left #ezpublish []
+[01-23-2006 11:40:45] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Isn't Gaim a cool program ? :-)"]
+[01-23-2006 11:55:15] -!- ordnas [n=ordnas@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-23-2006 12:09:01] -!- tobyS_ [n=dotxp@dslb-084-061-178-139.pools.arcor-ip.net] has joined #ezpublish
+[01-23-2006 12:10:30] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-23-2006 12:21:17] -!- nfrp [n=nfrp@men75-2-82-66-214-155.fbx.proxad.net] has joined #ezpublish
+[01-23-2006 12:25:22] -!- tobyS [n=dotxp@dslb-084-061-134-225.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[01-23-2006 12:26:09] -!- nfrp [n=nfrp@men75-2-82-66-214-155.fbx.proxad.net] has quit ["Leaving"]
+[01-23-2006 13:18:04] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-23-2006 13:51:07] -!- jota [n=jota@fanzine.igalia.com] has quit [Remote closed the connection]
+[01-23-2006 15:48:17] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-23-2006 16:05:44] -!- ordnas [n=ordnas@217.80-202-59.nextgentel.com] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-23-2006 16:15:52] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-23-2006 19:45:23] -lilo:$*- [Global Notice] Hi all. We're experiencing problems with one of our main rotation servers. It's been removed from rotation and will be shut down in a couple of minutes. Affected users: about 3,700. Thanks.
+[01-23-2006 20:23:00] -!- SEAwolfx [n=mike@70.230.73.20] has joined #ezpublish
+[01-23-2006 22:02:42] -!- seasonfive_ [n=seasonfi@AGrenoble-152-1-49-149.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[01-23-2006 22:03:29] -!- seasonfive [n=seasonfi@AGrenoble-152-1-6-10.w82-122.abo.wanadoo.fr] has quit [Read error: 110 (Connection timed out)]
+[01-23-2006 22:24:54] -!- seasonfive_ [n=seasonfi@AGrenoble-152-1-49-149.w82-122.abo.wanadoo.fr] has quit [Read error: 110 (Connection timed out)]
+[01-23-2006 23:01:39] -!- seasonfive [n=seasonfi@AGrenoble-152-1-4-2.w82-122.abo.wanadoo.fr] has joined #ezpublish

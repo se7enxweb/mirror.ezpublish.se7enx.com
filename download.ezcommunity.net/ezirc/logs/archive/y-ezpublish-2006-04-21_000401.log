@@ -1,0 +1,91 @@
+[04-19-2006 00:12:28] -lilo:$*- [Global Notice] Hi all. Once again, we're still having problems with a kiddie attacking channels. You should definitely consider setting your channel to +R for now, if at all possible, until the problem is resolved. Apologies for the inconvenience.
+[04-19-2006 00:24:40] -lilo:$*- [Global Notice] Hi all. We're currently having problems with trollbots on a number of channels, and as a result many channels are temporarily set to +R. If you can't talk on such a channel, please register with nickserv --- /msg nickserv help register .
+[04-19-2006 00:24:48] -lilo:$*- [Global Notice] Apologies for the inconvenience, and thank you for using freenode!
+[04-19-2006 00:48:04] -lilo:$*- [Global Notice] Hi all. You may want to consider reverting from channel mode +R at this point, though if our problem person comes back, we'd advise using it again promptly, and leaving it up for a while. Thanks to everyone involved for your patience!
+[04-19-2006 00:57:15] -!- ordnas [n=ordnas@p549D6F01.dip.t-dialin.net] has joined #ezpublish
+[04-19-2006 01:06:54] -lilo:$*- [Global Notice] Hi folks. Our problem child is back. You'll probably want to use +R for a few more hours. Sorry for the inconvenience, and thanks.
+[04-19-2006 01:09:50] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[04-19-2006 01:37:36] -!- DiGiTa|_ [n=guillaum@84.4.39.247] has joined #ezpublish
+[04-19-2006 02:01:22] -!- Tidemann [n=tidemann@ti132110a080-5819.bb.online.no] has joined #ezpublish
+[04-19-2006 02:12:02] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-19-2006 03:00:11] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-19-2006 03:34:29] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-19-2006 04:04:18] -!- Tidemann [n=tidemann@ti132110a080-5819.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[04-19-2006 04:11:29] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[04-19-2006 04:28:50] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[04-19-2006 04:32:28] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[04-19-2006 04:32:31] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-19-2006 04:52:20] -!- _Katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-19-2006 04:54:16] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-19-2006 05:08:18] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 110 (Connection timed out)]
+[04-19-2006 05:08:19] -!- _Katana` is now known as katana`
+[04-19-2006 06:30:58] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 113 (No route to host)]
+[04-19-2006 07:00:42] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[04-19-2006 07:56:51] -!- pire [n=kbot@phpugdo.de] has quit [Remote closed the connection]
+[04-19-2006 07:58:06] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[04-19-2006 09:31:52] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[04-19-2006 09:33:04] [#ezpublish] <kalooni> hi there
+[04-19-2006 09:34:16] [#ezpublish] <kalooni> if I've selected 2 payment gateways, the shop/checkout/ page will display 2 radio buttons with the name of the gateways user might choose ... Where this "template" is managed ?
+[04-19-2006 09:57:43] [#ezpublish] <kalooni> ok found it: kernel/classes/workflowtype/ezpaymentgatewaytype.php
+[04-19-2006 09:58:09] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-19-2006 10:17:31] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-19-2006 10:59:31] [#ezpublish] <kalooni> EZ_WORKFLOW_TYPE_STATUS_REDIRECT_REPEAT => anybody here could explain me what this mean (in eZRedirectGateway::execute) ?
+[04-19-2006 10:59:39] [#ezpublish] <kalooni> why REPEAT ?
+[04-19-2006 11:01:20] [#ezpublish] <kalooni> does it mean the execute function will be called one more time ?
+[04-19-2006 11:01:20] -!- ordnas [n=ordnas@p549D6F01.dip.t-dialin.net] has left #ezpublish []
+[04-19-2006 11:20:03] [#ezpublish] <kalooni> ok sorry I found the answer @ http://ez.no/products/ez_publish/documentation/
+[04-19-2006 11:32:35] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-19-2006 12:00:49] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[04-19-2006 12:07:34] -!- elephantMan [n=elephant@38.202.99-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[04-19-2006 12:08:25] -!- elephantMan [n=elephant@190.205.103-84.rev.gaoland.net] has joined #ezpublish
+[04-19-2006 12:11:24] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-19-2006 12:48:31] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[04-19-2006 13:01:16] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[04-19-2006 13:05:52] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[04-19-2006 13:15:42] -!- xigle1 [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[04-19-2006 13:42:03] Disconnecting due to lack of a lag response (0.16671100 1145472063 != 0.17690300 1145472093)
+[04-19-2006 13:42:03] Diconnected. Sleeping for 2 second(s).
+[04-19-2006 13:42:05] >> Connecting to irc.freenode.net:6667
+[04-19-2006 13:42:19] >> Connected to irc.freenode.net:6667, registering...
+[04-19-2006 13:42:19] >> Successfully registered. Nick is: ezlog
+[04-19-2006 13:42:19] -!- There are 15435 listed and 14893 unlisted users on 20 servers
+[04-19-2006 13:42:19] -!- 41 flagged staff members
+[04-19-2006 13:42:19] -!- 12129 channels formed
+[04-19-2006 13:42:19] -!- I have 6003 clients and 0 servers
+[04-19-2006 13:42:19] -!- Current local  users: 6003  Max: 6008
+[04-19-2006 13:42:19] -!- Current global users: 30328  Max: 30795
+[04-19-2006 13:42:20] -!- Highest connection count: 6010 (6008 clients) (930868 since server was (re)started)
+[04-19-2006 13:42:20] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-19-2006 13:42:20] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-19-2006 13:42:32] >> Attempting to join channels: #ezpublish
+[04-19-2006 13:42:32] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-19-2006 13:42:32] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-19-2006 13:42:32] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-19-2006 13:49:30] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-19-2006 13:57:51] -!- ordnas [n=ordnas@p549D6F01.dip.t-dialin.net] has joined #ezpublish
+[04-19-2006 14:24:49] [#ezpublish] <xigle1> I wonder when all templates bundled from eZ systems will be convertet to the new template language ...
+[04-19-2006 14:24:52] -!- xigle1 is now known as xigleth
+[04-19-2006 14:25:50] [#ezpublish] <ls> in 4.0 I think
+[04-19-2006 14:28:50] -!- ordnas [n=ordnas@p549D6F01.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[04-19-2006 14:35:09] [#ezpublish] <xigleth> Will 4.0 be .. kind of .. BASED on ez components?
+[04-19-2006 14:36:25] [#ezpublish] <xigleth> anyway, it's a long time until that :)
+[04-19-2006 14:45:52] [#ezpublish] <buz> it will
+[04-19-2006 14:45:55] [#ezpublish] <buz> from all i understand anway
+[04-19-2006 14:54:40] [#ezpublish] <xigleth> ok
+[04-19-2006 15:11:55] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-19-2006 15:13:15] [#ezpublish] <ls> yes, the process has been started with eZ components
+[04-19-2006 15:13:33] [#ezpublish] <ls> eZ publish 4.0 will be eZ components base
+[04-19-2006 15:20:01] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[04-19-2006 15:20:03] -!- xigleth [n=xiglet@cD9088F2C.sdsl.catch.no] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-19-2006 16:49:44] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[04-19-2006 16:50:11] -!- DiGiTa|_ [n=guillaum@84.4.39.247] has quit []
+[04-19-2006 16:55:23] -!- ordnas [n=ordnas@p549D6F01.dip.t-dialin.net] has joined #ezpublish
+[04-19-2006 16:59:56] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[04-19-2006 17:07:21] -!- ordnas [n=ordnas@p549D6F01.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[04-19-2006 17:48:40] -lilo:$*- [Global Notice] Hi all. Our problem child continues to spam random channels. He is in no way affiliated with #fazlamesai, http://www.fazlamesai.net/ or teknolojitelevizyonu.com (Turkish Technology Television)
+[04-19-2006 17:49:36] -lilo:$*- [Global Notice] You may want to consider setting channel mode +R for the time being (only registered users or +v users have voice) as a temporary measure. We apologize for the inconvenience!
+[04-19-2006 18:27:46] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[04-19-2006 20:13:58] -!- Bedlore [n=me@ppp221-173.lns2.adl4.internode.on.net] has joined #ezpublish
+[04-19-2006 20:14:53] [#ezpublish] <Bedlore> looks like kracker has his own bookmark system happening in the topic :)
+[04-19-2006 20:15:28] [#ezpublish] <Bedlore> hey does anyone have any idea how you can fetch the url from the user/register template?  driving me mad
+[04-19-2006 23:45:11] [#ezpublish] <Bedlore> lol http://cheese.blartwendo.com/web21-demo.html

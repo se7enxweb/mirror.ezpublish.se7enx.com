@@ -1,0 +1,84 @@
+[01-13-2006 00:14:29] -!- ordnas [n=ordnas@p549D7639.dip.t-dialin.net] has joined #ezpublish
+[01-13-2006 00:48:39] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-13-2006 01:06:04] -!- ordnas [n=ordnas@p549D7639.dip.t-dialin.net] has left #ezpublish []
+[01-13-2006 01:10:07] -!- ordnas [n=ordnas@p549D7639.dip.t-dialin.net] has joined #ezpublish
+[01-13-2006 01:11:17] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-13-2006 01:24:10] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-13-2006 01:26:26] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-13-2006 01:29:26] -!- tobyS [n=dotxp@popeye.ez.no] has joined #ezpublish
+[01-13-2006 01:35:53] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-13-2006 02:05:12] [#ezpublish] <SEAwolfx_> morning
+[01-13-2006 02:05:24] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-13-2006 02:11:18] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-13-2006 02:15:58] -!- hovik_ [n=hovik@popeye.ez.no] has joined #ezpublish
+[01-13-2006 02:17:06] -!- hovik [n=hovik@197.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[01-13-2006 02:26:29] -!- DiGiTa|_ [n=guillaum@84.4.38.94] has joined #ezpublish
+[01-13-2006 02:45:29] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-13-2006 02:53:39] -!- hovik_ [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-13-2006 02:54:22] -!- hovik_ [n=hovik@stalker.ez.no] has joined #ezpublish
+[01-13-2006 03:07:43] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[01-13-2006 03:09:01] -!- SEAwolfx_ is now known as SEAwolfx
+[01-13-2006 03:18:55] [#ezpublish] <DiGiTa|_> http://dl2.dumpalink.com/media/EQBQTheBGuGV/DiPJ7YY6vQ7v.wmv
+[01-13-2006 03:19:01] [#ezpublish] <DiGiTa|_> good morning evby
+[01-13-2006 03:33:18] [#ezpublish] <SEAwolfx> morning DiGiTa|_
+[01-13-2006 03:34:31] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-13-2006 03:44:30] -!- ordna1 [n=ordnas@p549D7639.dip.t-dialin.net] has joined #ezpublish
+[01-13-2006 04:02:52] -!- ordnas [n=ordnas@p549D7639.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-13-2006 04:03:59] -!- _kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-13-2006 04:06:06] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[01-13-2006 04:43:41] [#ezpublish] <_Rappy_> does anyone here use eZ publish network?
+[01-13-2006 05:08:45] -!- _Rappy_ is now known as _rappy_
+[01-13-2006 05:10:08] -!- hovik_ [n=hovik@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-13-2006 05:10:32] -!- hovik_ [n=hovik@popeye.ez.no] has joined #ezpublish
+[01-13-2006 05:21:34] [#ezpublish] <Sulfur> guys!
+[01-13-2006 05:52:10] [#ezpublish] <kalooni> Hi guys
+[01-13-2006 05:52:28] [#ezpublish] <kalooni> did anyone here has already work on "vouchers" or promotional code for the shop ?
+[01-13-2006 05:52:55] [#ezpublish] <Sulfur> :)
+[01-13-2006 05:53:10] [#ezpublish] * Sulfur still hasn't done a single project using eZ's shop functionalities
+[01-13-2006 07:05:38] -!- Sulfur [n=mbariola@85.20.2.139] has quit [Read error: 110 (Connection timed out)]
+[01-13-2006 07:20:49] [#ezpublish] <seasonfive> hi ppl
+[01-13-2006 07:21:08] [#ezpublish] <seasonfive> Fatal error: Maximum execution time of 120 seconds exceeded in ezxml.php on line 364
+[01-13-2006 07:21:19] [#ezpublish] <seasonfive> is a bad formated translation file could produce such problem ,
+[01-13-2006 07:21:20] [#ezpublish] <seasonfive> ?
+[01-13-2006 07:37:43] -!- hovik__ [n=hovik@stalker.ez.no] has joined #ezpublish
+[01-13-2006 07:38:13] -!- hovik_ [n=hovik@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-13-2006 08:09:59] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-13-2006 08:20:32] [#ezpublish] <seasonfive> (solved, its was an XML error in the translation file)
+[01-13-2006 09:13:53] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[01-13-2006 09:47:15] [#ezpublish] <kalooni> hi
+[01-13-2006 09:47:50] [#ezpublish] <kalooni> since I added cache-block on my site the basket is empty which key should I use to avoid these ?
+[01-13-2006 09:57:04] [#ezpublish] <kalooni> what is the best way to determine if we are in the shop module ,
+[01-13-2006 09:57:06] [#ezpublish] <kalooni> ?
+[01-13-2006 09:57:18] [#ezpublish] <kalooni> So I can inactivate cache block in it?
+[01-13-2006 10:05:41] -!- kore_ [n=lordhong@217.194.224.41] has quit []
+[01-13-2006 10:32:44] -!- tobyS [n=dotxp@popeye.ez.no] has quit ["Plant your channel to pearadise.net!"]
+[01-13-2006 10:37:44] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-13-2006 10:37:51] [#ezpublish] <Sulfur> :)
+[01-13-2006 10:37:52] [#ezpublish] <Sulfur> w00t
+[01-13-2006 10:41:38] [#ezpublish] <Sulfur> guys, a question which I think is rather staple but never tried it before: let's assume I have a large numbers of objects of a certain class (say 1500). then I need to add a new attribute to this class. As far as I know, all __old__ objects get this new attribute, but it is not initialized to any "default value". instead, the default value is dependent on the attribute's datatype. Question: how do I set the default value for the new attribute in all old o
+[01-13-2006 10:43:49] -!- hovik__ [n=hovik@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[01-13-2006 10:52:29] [#ezpublish] <Sulfur> ( no idea anyone ... :-) )
+[01-13-2006 10:52:49] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[01-13-2006 10:58:30] [#ezpublish] <kalooni> Sulfur: no idea ... but i wasn't aware of that so thank you for learning it to me
+[01-13-2006 11:00:42] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Isn't Gaim a cool program ? :-)"]
+[01-13-2006 11:01:27] -!- SEAwolfx_ [n=mike@tor/session/x-912691a1feeb9472] has joined #ezpublish
+[01-13-2006 11:13:42] -!- hovik [n=hovik@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[01-13-2006 11:16:10] [#ezpublish] <SEAwolfx_> re
+[01-13-2006 11:31:25] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-13-2006 11:32:43] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-13-2006 12:26:20] -!- ordnas [n=ordnas@p549D6A3C.dip.t-dialin.net] has joined #ezpublish
+[01-13-2006 12:28:28] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[01-13-2006 12:44:47] -!- ordna1 [n=ordnas@p549D7639.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-13-2006 12:48:54] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[01-13-2006 13:14:18] -!- SEAwolfx [n=mike@x225.veda.is] has quit [SendQ exceeded]
+[01-13-2006 13:14:28] -!- SEAwolfx_ is now known as SEAwolfx
+[01-13-2006 13:29:14] -!- ordnas [n=ordnas@p549D6A3C.dip.t-dialin.net] has left #ezpublish []
+[01-13-2006 13:33:01] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[01-13-2006 13:33:09] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[01-13-2006 15:19:24] -!- DiGiTa|_ [n=guillaum@84.4.38.94] has quit []
+[01-13-2006 16:42:13] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-13-2006 17:37:41] -!- _kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[01-13-2006 21:01:47] -!- SEAwolfx [n=mike@tor/session/x-912691a1feeb9472] has quit [Remote closed the connection]
+[01-13-2006 23:31:16] -lilo:$*- [Global Notice] Hi all. We have two main rotation servers to restart this weekend, and this is probably a good moment to give it a try. Total affected users: about 4200. We should be good to go in just a few minutes. This is the last batch for a while. Thanks for your understanding, and thank you for using freenode! Have a great morning.
+[01-13-2006 23:52:21] -!- LottoKim [n=kim@195.28.172.4] has quit [calvino.freenode.net irc.freenode.net]
+[01-13-2006 23:52:23] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish

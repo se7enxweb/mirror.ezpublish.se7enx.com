@@ -1,0 +1,136 @@
+[05-11-2006 00:17:26] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[05-11-2006 00:22:40] -!- awormus [n=aaron@p54B1182C.dip0.t-ipconnect.de] has joined #ezpublish
+[05-11-2006 01:08:17] -!- B-KiLLer` [n=me@bart.interact.lu] has quit []
+[05-11-2006 01:23:37] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-11-2006 01:25:03] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-11-2006 01:29:14] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-11-2006 01:29:57] -!- DiGiTa|_ [n=pet2poul@84.4.42.134] has joined #ezpublish
+[05-11-2006 01:33:13] -!- _kh is now known as kris10an
+[05-11-2006 01:39:31] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-11-2006 01:51:03] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-11-2006 02:05:48] -!- Tidemann [n=tidemann@ti132110a080-7303.bb.online.no] has joined #ezpublish
+[05-11-2006 02:05:57] [#ezpublish] <Tidemann> hey?
+[05-11-2006 02:06:07] [#ezpublish] <Tidemann> anyone?
+[05-11-2006 02:06:51] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-11-2006 02:08:24] [#ezpublish] <Tidemann> what's the syntax for the random operator in 3.8? or where can i find doc for the new features in 3.8?
+[05-11-2006 02:14:54] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-11-2006 02:17:00] [#ezpublish] <Tidemann> what's the syntax for the random operator in 3.8? or where can i find doc for the new features in 3.8?
+[05-11-2006 02:29:27] -!- ordnas [n=ordnas@p549D4F77.dip.t-dialin.net] has joined #ezpublish
+[05-11-2006 02:35:54] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-11-2006 03:14:24] [#ezpublish] <kris10an> Tidemann: which random operator?
+[05-11-2006 03:14:50] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-11-2006 03:17:06] [#ezpublish] <kris10an> the new features are in /doc/features/3.8
+[05-11-2006 03:20:33] -!- ordnas [n=ordnas@p549D4F77.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2006 03:22:29] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-11-2006 03:25:53] [#ezpublish] <kris10an> *Documentation:
+[05-11-2006 03:25:53] [#ezpublish] <kris10an> Generating random value. Optional input parameters.
+[05-11-2006 03:25:53] [#ezpublish] <kris10an> rand( [min_val, max_val] )
+[05-11-2006 03:38:59] -!- ordnas [n=ordnas@p549D5877.dip.t-dialin.net] has joined #ezpublish
+[05-11-2006 03:39:21] [#ezpublish] <Tidemann> kris10an: thanx
+[05-11-2006 03:41:00] [#ezpublish] <Tidemann> for some unknown reason I was looking in the changelog ;)
+[05-11-2006 04:24:38] -!- tobiS [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-11-2006 04:25:14] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[05-11-2006 04:51:39] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-11-2006 05:44:35] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-11-2006 06:23:19] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-11-2006 06:27:47] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-11-2006 06:51:16] -!- tobiS [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[05-11-2006 07:36:56] -!- alvaro- [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[05-11-2006 08:40:58] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-11-2006 08:57:06] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[05-11-2006 09:09:20] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[05-11-2006 09:27:11] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-11-2006 09:43:52] -!- Allman [n=allman@ti132110a340-0157.bb.online.no] has joined #ezpublish
+[05-11-2006 09:45:03] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-11-2006 09:56:11] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-11-2006 10:02:23] -!- nfrp [n=nfrp@LSt-Amand-152-31-36-33.w82-127.abo.wanadoo.fr] has joined #ezpublish
+[05-11-2006 10:14:24] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[05-11-2006 10:24:59] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[05-11-2006 10:30:57] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[05-11-2006 11:12:08] -!- Allman [n=allman@ti132110a340-0157.bb.online.no] has quit ["no more"]
+[05-11-2006 11:20:01] -!- ordnas [n=ordnas@p549D5877.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2006 11:24:31] -!- kore__ [n=lordhong@p54BB541C.dip.t-dialin.net] has joined #ezpublish
+[05-11-2006 11:32:48] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-11-2006 11:36:19] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-11-2006 11:47:18] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-11-2006 11:51:15] -!- nfrp [n=nfrp@LSt-Amand-152-31-36-33.w82-127.abo.wanadoo.fr] has quit ["Leaving"]
+[05-11-2006 12:14:01] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-11-2006 12:24:25] -!- ordnas [n=ordnas@p549D5877.dip.t-dialin.net] has joined #ezpublish
+[05-11-2006 12:24:48] -!- ordnas [n=ordnas@p549D5877.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-11-2006 12:25:25] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-11-2006 12:26:51] -!- ordnas [n=ordnas@p549D5877.dip.t-dialin.net] has joined #ezpublish
+[05-11-2006 12:50:47] [#ezpublish] <alvaro-> hi
+[05-11-2006 12:50:55] [#ezpublish] <buz> hi
+[05-11-2006 12:51:04] [#ezpublish] <alvaro-> is possible to insert custom commands inside content?
+[05-11-2006 12:56:31] -!- tobmaster [n=tobmaste@p54BB541C.dip.t-dialin.net] has joined #ezpublish
+[05-11-2006 13:26:33] -!- kore__ [n=lordhong@p54BB541C.dip.t-dialin.net] has quit []
+[05-11-2006 13:36:18] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-11-2006 13:39:21] [#ezpublish] <ls> what commands do you mean?
+[05-11-2006 13:50:36] [#ezpublish] <alvaro-> thx ls, i dont speak english very well, i woul like to insert things where i edit the content, for example if a put a tag {time } in the CONTENT, not in a tpl, then that time fetch for example a image from a web a put the image in my content, i dont now if i explain it well
+[05-11-2006 13:51:12] [#ezpublish] <alvaro-> how could i proçgram this tags than extend the content edition
+[05-11-2006 13:51:30] [#ezpublish] <ls> us can use custom tags
+[05-11-2006 13:51:41] [#ezpublish] <alvaro-> aha, custom tags
+[05-11-2006 13:52:02] [#ezpublish] <ls> http://ez.no/doc/ez_publish/technical_manual/3_7/reference/xml_tags#custom_tags
+[05-11-2006 13:52:08] [#ezpublish] <alvaro-> i will look for documentation about that
+[05-11-2006 13:52:10] [#ezpublish] <alvaro-> oh, thx
+[05-11-2006 13:52:26] [#ezpublish] <ls> yes, then you can display what you want in the output from custom tag
+[05-11-2006 13:52:39] [#ezpublish] <ls> <custom name="mytag"></custom>
+[05-11-2006 13:52:44] [#ezpublish] <ls> something like this
+[05-11-2006 13:53:19] [#ezpublish] <alvaro-> yes, thx ls, is just i was looking for
+[05-11-2006 13:53:33] [#ezpublish] <ls> you are welcome :)
+[05-11-2006 14:04:37] [#ezpublish] <alvaro-> ls, sorry, exists a design xhtml strict 1.0 ?
+[05-11-2006 14:05:29] [#ezpublish] <ls> yes
+[05-11-2006 14:06:58] [#ezpublish] <alvaro-> well i will look in the ez.no to try it
+[05-11-2006 14:07:43] [#ezpublish] <ls> what so you mean by design xhtml strict? eZ publish templates follows xhtml transitional DTD
+[05-11-2006 14:09:30] [#ezpublish] <alvaro-> yes, i refer if exist a design that override the standar and make Ez Publish to validate as xhtml strict
+[05-11-2006 14:15:36] [#ezpublish] <ls> no, eZ publish templates are valide with xhtml transitional not strict
+[05-11-2006 14:17:58] [#ezpublish] <alvaro-> but i suppose that if i change the templatesm the pagelayout etc, it validate ok in strict, no?
+[05-11-2006 14:18:53] -!- ordnas [n=ordnas@p549D5877.dip.t-dialin.net] has left #ezpublish []
+[05-11-2006 14:44:03] [#ezpublish] <buz> probably not
+[05-11-2006 14:44:17] [#ezpublish] <buz> unless you really check ALL the templates you use
+[05-11-2006 14:44:21] [#ezpublish] <buz> which would be a herculean job
+[05-11-2006 14:44:55] [#ezpublish] <buz> you might have a specific reason for strict, but if it isnt a really good one i wouldnt burden myself with it
+[05-11-2006 14:45:13] [#ezpublish] <buz> btw, is anyone from ez north america here?
+[05-11-2006 14:46:32] [#ezpublish] <alvaro-> well i will check all the templates in the design i do if i decide to use EP
+[05-11-2006 14:46:36] [#ezpublish] <alvaro-> thx buz
+[05-11-2006 14:47:32] [#ezpublish] <buz> be aware that it is HUNDREDS of templates
+[05-11-2006 14:48:00] [#ezpublish] <alvaro-> well, only the visible parts, not the admin
+[05-11-2006 14:48:13] [#ezpublish] <buz> could still be in the low hundreds
+[05-11-2006 14:50:15] [#ezpublish] <alvaro-> hundred is 100?, i think if is 100, is factible, but i will reduce to the minimun, of course, all the way i am learning a little of EzPublih, i an decidin Ezpublish vs BitWeaver this days
+[05-11-2006 14:50:25] [#ezpublish] <buz> bitweaver i've never heard of
+[05-11-2006 14:51:25] [#ezpublish] <alvaro-> bw is good, xhtml strict, but habe another problems, well, i will learn ep and decide
+[05-11-2006 14:55:54] [#ezpublish] <alvaro-> bitweaver is tikiwiki, but a fork to convert it object oriented and modular, i like it, but i like also EP and want to learn it, so this week i will stay in this chanel learning
+[05-11-2006 15:00:02] -!- DiGiTa|_ [n=pet2poul@84.4.42.134] has quit []
+[05-11-2006 15:00:07] [#ezpublish] <buz> mhh
+[05-11-2006 15:00:14] [#ezpublish] <buz> you probably wont learn so much in the channel
+[05-11-2006 15:00:18] [#ezpublish] <buz> not so much going on normally
+[05-11-2006 15:00:32] [#ezpublish] <alvaro-> buz, has EP a goog newsletter package?
+[05-11-2006 15:00:35] [#ezpublish] <buz> ez IS VERY powerful, but highly compley
+[05-11-2006 15:00:41] [#ezpublish] <alvaro-> no, i am reading manuals and doin a site also
+[05-11-2006 15:00:46] [#ezpublish] <buz> ez has released one last month
+[05-11-2006 15:00:56] [#ezpublish] <buz> it looks really powerful but i didnt quite get how it works
+[05-11-2006 15:01:07] [#ezpublish] <buz> otherwise, there's a link to phplist in the contributions
+[05-11-2006 15:01:51] [#ezpublish] <alvaro-> i know phplist, but i would like an integrated package
+[05-11-2006 15:02:09] [#ezpublish] <buz> well it is integrated from the users point of view
+[05-11-2006 15:02:14] [#ezpublish] <buz> but phplist is dirt slow
+[05-11-2006 15:02:24] [#ezpublish] <alvaro-> is slow?
+[05-11-2006 15:02:45] [#ezpublish] <buz> can do mayb 2 mails per second
+[05-11-2006 15:03:18] [#ezpublish] <alvaro-> yes, well, <buz> ez has released one last month, i will look for it in ez.no
+[05-11-2006 15:03:50] [#ezpublish] <alvaro-> i have seen just now one, but i dont know if is what yo refer
+[05-11-2006 15:04:07] [#ezpublish] <buz> 1 minute
+[05-11-2006 15:05:05] [#ezpublish] <buz> http://ez.no/community/contribs/applications/ez_newsletter
+[05-11-2006 15:05:52] [#ezpublish] <alvaro-> thx buz, i will try it
+[05-11-2006 15:24:11] -!- lucasr [n=lucasr@201.29.149.216] has joined #ezpublish
+[05-11-2006 15:24:17] [#ezpublish] <lucasr> hey all
+[05-11-2006 15:24:42] [#ezpublish] <lucasr> why when I change anything in a translation file, everything stop to work?
+[05-11-2006 15:25:02] [#ezpublish] <lucasr> is there any command I need to run after I change the translation files?
+[05-11-2006 15:28:31] -!- kore_ [n=lordhong@p54BB541C.dip.t-dialin.net] has joined #ezpublish
+[05-11-2006 15:48:14] -!- lucasr [n=lucasr@201.29.149.216] has left #ezpublish ["Fui embora"]
+[05-11-2006 15:54:49] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-11-2006 15:57:29] -!- kore_ [n=lordhong@p54BB541C.dip.t-dialin.net] has quit [Remote closed the connection]
+[05-11-2006 16:06:42] -!- awormus [n=aaron@p54B1182C.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[05-11-2006 16:18:21] -!- tobmaster [n=tobmaste@p54BB541C.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2006 17:02:20] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[05-11-2006 17:13:36] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[05-11-2006 18:16:00] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[05-11-2006 18:17:14] -!- nnn0 [n=nnn0@ti541110a080-1273.bb.online.no] has joined #ezpublish

@@ -1,0 +1,89 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 5.2.&nbsp; Embedding into HTML</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch05lev1sec2"></a><h3 class="docSection1Title">5.2. Embedding into HTML</h3>
+<p class="docText">PHP doesn't have to be embedded in an HTML file, of course; you can create a PHP file that includes no HTML. However, when building a web application, you often use PHP and HTML together in a file. PHP was developed primarily for web use, to be embedded in HTML files as a templating language. When PHP code is included in a file, the file is given the PHP extension (the extension that signals your web server to expect PHP code in the file); usually .php, but a different extension(s), such as .phtml or .php5, can be specified when you configure your web server.<a name="ch05index01"></a><a name="ch05index02"></a><a name="ch05index03"></a><a name="ch05index04"></a></p>
+<p class="docText">The following code shows PHP embedded in HTML:</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Example 1&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+<span class="docEmphStrong">&lt;?php</span>
+    /* If it is April 1st, we show a quote */
+    if (date('md' == '0401')) {
+        echo 'A bookstore is one of the only pieces of evidence we have '.
+            'that people are still thinking. &lt;i&gt;Jerry Seinfeld&lt;/i&gt;';
+    } else {
+        echo 'Good morning!';
+    }
+<span class="docEmphStrong">?&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">The line <tt>&lt;?php</tt> begins the PHP section embedded into the HTML code; the line <tt>?&gt;</tt> ends the PHP section. Notice that the code uses <tt>echo</tt> to send the output. When the text is so simple, the <tt>echo</tt> statements are acceptable. However, when you need to echo text strings that contain single or double quotes, the code becomes more complicated. If the text to be echoed in the example was a link statement (such as <tt>&lt;a href='http...'&gt;</tt>), the example would not have worked correctly because the single quotes in the text would conflict with the single quotes enclosing the text string. For such a case, the PHP section can be ended before the text needs to be output and begin again before the PHP code that ends the <tt>if</tt> block and starts the <tt>else</tt> bock is needed, as in the following example:<a name="ch05index05"></a><a name="ch05index06"></a><a name="ch05index07"></a><a name="ch05index08"></a></P>
+<pre>
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Example 2&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+<span class="docEmphStrong">&lt;?php</span>
+    /* If it is April 1st, we show a quote */
+    if (date('md' == '0401')) {
+        echo 'A bookstore is one of the only pieces of evidence we '.
+            'have that people are still thinking. &lt;i&gt;Jerry Seinfeld&lt;i&gt;';
+    } else {
+        echo 'Good morning!';
+}
+<span class="docEmphStrong">?&gt;</span>
+  &lt;/body&gt;
+  &lt;/html&gt;
+</pre><br>
+<p class="docText">This coding behavior is messy. You are violating one of the principles of programming: &quot;Separate logic from content.&quot; The following version of embedding stores the text in a variable and then echoes the variable:<a name="ch05index09"></a><a name="ch05index10"></a><a name="ch05index11"></a><a name="ch05index12"></a></P>
+<pre>
+&lt;<span class="docEmphStrong">?php</span>
+    /* If it is April 1st, we show a quote */
+    if (date('md' == '0401')) {
+        $greeting = 'A bookstore is one of the only pieces of '.
+            'evidence we have that people are still thinking. '.
+            '&lt;i&gt;Jerry Seinfeld&lt;/i&gt;';
+    } else {
+        $greeting = 'Good morning!';
+    }
+<span class="docEmphStrong">?&gt;</span>
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Example 3&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+<span class="docEmphStrong">&lt;?php echo $greeting; ?&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">A shorter form of the PHP tag, <tt>&lt;?</tt>, can usually be used instead of <tt>&lt;?php</tt>. The <tt>php.ini</tt> configuration setting &quot;short_tags&quot; must be set to &quot;on,&quot; but this is the default. However, you need to be careful using the short tags because not every server might always have <tt>short_tags</tt> turned on. Also, <tt>short_tags</tt> can conflict with XML usage because <tt>&lt;?</tt> is the start of a processing instruction. An additional tag <tt>&lt;?=</tt> is available, which is the equivalent of <tt>&lt;?php echo</tt>, as the following snippet demonstrates:<a name="ch05index13"></a><a name="ch05index14"></a><a name="ch05index15"></a><a name="ch05index16"></a></P>
+<pre>
+<span class="docEmphStrong">...</span>
+...
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Example 4&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+<span class="docEmphStrong">&lt;?= $greeting; ?&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">If you want to be sure your application can run on as many systems as possible, you should not rely on short tags because they might be turned off. The rest of the examples in this chapter use the non-short tags everywhere. We also cover some additional techniques for separating code and layout.<a name="ch05index17"></a><a name="ch05index18"></a><a name="ch05index19"></a><a name="ch05index20"></a></p>
+<ul></ul></TD></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

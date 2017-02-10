@@ -1,0 +1,161 @@
+[01-28-2006 00:52:40] Disconnecting due to lack of a lag response (0.06871800 1138431100 != 0.06899600 1138431130)
+[01-28-2006 00:52:40] Diconnected. Sleeping for 2 second(s).
+[01-28-2006 00:52:42] >> Connecting to irc.freenode.net:6667
+[01-28-2006 00:52:46] >> Connected to irc.freenode.net:6667, registering...
+[01-28-2006 00:52:49] >> Attempting to join channels: #ezpublish
+[01-28-2006 00:53:34] >> Attempting to join channels: #ezpublish
+[01-28-2006 00:53:46] Disconnecting due to lack of a lag response (0.68725700 1138431166 != 0.13185600 1138431196)
+[01-28-2006 00:53:46] Diconnected. Sleeping for 2 second(s).
+[01-28-2006 00:53:48] >> Connecting to irc.freenode.net:6667
+[01-28-2006 00:53:52] >> Connected to irc.freenode.net:6667, registering...
+[01-28-2006 00:54:19] >> Attempting to join channels: #ezpublish
+[01-28-2006 00:54:52] Disconnecting due to lack of a lag response (0.40138100 1138431232 != 0.04848600 1138431262)
+[01-28-2006 00:54:52] Diconnected. Sleeping for 2 second(s).
+[01-28-2006 00:54:54] >> Connecting to irc.freenode.net:6667
+[01-28-2006 00:54:58] >> Connected to irc.freenode.net:6667, registering...
+[01-28-2006 00:55:04] >> Attempting to join channels: #ezpublish
+[01-28-2006 00:55:12] >> Successfully registered. Nick is: ezlog
+[01-28-2006 00:55:12] -!- There are 10759 listed and 12310 unlisted users on 19 servers
+[01-28-2006 00:55:12] -!- 36 flagged staff members
+[01-28-2006 00:55:12] -!- 11329 channels formed
+[01-28-2006 00:55:12] -!- I have 3204 clients and 0 servers
+[01-28-2006 00:55:12] -!- Current local  users: 3204  Max: 5325
+[01-28-2006 00:55:12] -!- Current global users: 23069  Max: 28836
+[01-28-2006 00:55:12] -!- Highest connection count: 5327 (5325 clients) (184298 since server was (re)started)
+[01-28-2006 00:55:12] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[01-28-2006 00:55:13] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_27_01_2006
+[01-28-2006 00:55:13] -!- Topic set by kracker [@] [Fri, 27 Jan 2006 19:07:30 -0600]
+[01-28-2006 00:55:13] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[01-28-2006 00:55:13] [notice(freenode-connect)] VERSION IQ 0.9.3
+[01-28-2006 00:55:13] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[01-28-2006 00:55:13] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[01-28-2006 00:55:13] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] please register your nickname...don't forget to auto-identify! http://freenode.net/faq.shtml#nicksetup
+[01-28-2006 01:13:58] Disconnecting due to lack of a lag response (0.12393800 1138432378 != 0.01528400 1138432408)
+[01-28-2006 01:13:58] Diconnected. Sleeping for 2 second(s).
+[01-28-2006 01:14:00] >> Connecting to irc.freenode.net:6667
+[01-28-2006 01:14:04] >> Connected to irc.freenode.net:6667, registering...
+[01-28-2006 01:14:04] >> Primary nickname in use, trying alternate.
+[01-28-2006 01:14:04] >> Successfully registered. Nick is: ezpublishlog
+[01-28-2006 01:14:04] -!- There are 10883 listed and 12529 unlisted users on 22 servers
+[01-28-2006 01:14:04] -!- 36 flagged staff members
+[01-28-2006 01:14:04] -!- 11363 channels formed
+[01-28-2006 01:14:04] -!- I have 1142 clients and 0 servers
+[01-28-2006 01:14:04] -!- Current local  users: 1142  Max: 3093
+[01-28-2006 01:14:04] -!- Current global users: 23412  Max: 28800
+[01-28-2006 01:14:04] -!- Highest connection count: 3094 (3093 clients) (17883 since server was (re)started)
+[01-28-2006 01:14:05] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[01-28-2006 01:14:05] [notice(freenode-connect)] VERSION IQ 0.9.3
+[01-28-2006 01:14:34] >> Attempting to join channels: #ezpublish
+[01-28-2006 01:14:34] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[01-28-2006 01:14:34] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_27_01_2006
+[01-28-2006 01:14:34] -!- Topic set by kracker [@] [Fri, 27 Jan 2006 19:07:30 -0600]
+[01-28-2006 01:14:38] -!- ezlog [n=IQ@209.144.224.222] has quit [Remote closed the connection]
+[01-28-2006 01:14:38] -!- ezpublishlog is now known as ezlog
+[01-28-2006 01:14:38] My new nick is ezlog
+[01-28-2006 01:43:18] -!- SEAwolfx [n=mike@tor/session/x-11e19a70cc0e5c29] has quit [Remote closed the connection]
+[01-28-2006 01:48:22] -!- SEAwolfx [n=mike@tor/session/x-cf2bd95d8f9e6871] has joined #ezpublish
+[01-28-2006 03:35:04] [#ezpublish] <SEAwolfx> morning
+[01-28-2006 04:00:14] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-28-2006 04:53:11] -!- ordnas [n=ordnas@p549D52A2.dip.t-dialin.net] has joined #ezpublish
+[01-28-2006 05:35:44] -!- ordnas [n=ordnas@p549D52A2.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-28-2006 08:25:04] -!- tobyS [n=dotxp@dslb-084-061-172-052.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-28-2006 09:01:10] -!- ordnas [n=ordnas@p549D52A2.dip.t-dialin.net] has joined #ezpublish
+[01-28-2006 09:04:40] -!- SEAwolfx [n=mike@tor/session/x-cf2bd95d8f9e6871] has quit [Remote closed the connection]
+[01-28-2006 09:05:32] -!- SEAwolfx [n=mike@tor/session/x-f8bae892127266e1] has joined #ezpublish
+[01-28-2006 09:27:21] -!- zrg [n=zurgutt@80-235-51-82-dsl.kjj.estpak.ee] has joined #ezpublish
+[01-28-2006 09:27:45] [#ezpublish] <zrg> Shave your information!
+[01-28-2006 11:23:01] -!- elephantMan [n=elephant@252.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-28-2006 11:43:27] -!- ordnas [n=ordnas@p549D52A2.dip.t-dialin.net] has left #ezpublish []
+[01-28-2006 12:04:49] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[01-28-2006 12:40:49] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[01-28-2006 13:19:57] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-28-2006 13:20:04] [#ezpublish] * buz needs help
+[01-28-2006 13:20:26] [#ezpublish] <buz> on one of my sites, my wiki extension fails in a utterly weird way:
+[01-28-2006 13:20:29] [#ezpublish] <buz> error is
+[01-28-2006 13:20:30] [#ezpublish] <buz> Could not find module named 'projects'
+[01-28-2006 13:20:30] [#ezpublish] <buz> These directories were tried none of them exists:
+[01-28-2006 13:20:30] [#ezpublish] <buz> kernel/projects, extension/advancedforum/modules/projects, extension/owner/modules/projects, extension/wiki/modules/projects, extension/ezpaypal/modules/projects
+[01-28-2006 13:20:47] [#ezpublish] <buz> but there is no reference to a "projects" extension whatsoever to be found?!?
+[01-28-2006 13:24:31] [#ezpublish] <buz> i think the content tree is fucked up
+[01-28-2006 13:29:58] [#ezpublish] <buz> for one reason or another site/wiki redirects to some wikiobject way further down the tree???
+[01-28-2006 13:32:36] [#ezpublish] <zrg> no idea, sorry
+[01-28-2006 13:32:52] [#ezpublish] <buz> any way to regenerate the content tree?
+[01-28-2006 13:33:14] [#ezpublish] <zrg> from what? :)
+[01-28-2006 13:33:27] [#ezpublish] <buz> good point ;)
+[01-28-2006 13:34:00] [#ezpublish] <buz> i dont get it
+[01-28-2006 13:34:04] [#ezpublish] <buz> HTTP/1.x 301 Moved Permanently
+[01-28-2006 13:34:05] [#ezpublish] <buz> ez delivers a
+[01-28-2006 13:34:14] [#ezpublish] <buz> when i try to access the module base url?
+[01-28-2006 13:34:47] [#ezpublish] <zrg> i'd first do, in site root:
+[01-28-2006 13:34:47] [#ezpublish] <zrg> grep -r -i projects settings
+[01-28-2006 13:34:47] [#ezpublish] <zrg> grep -r -i projects extensions
+[01-28-2006 13:34:55] [#ezpublish] <buz> did that already
+[01-28-2006 13:34:57] [#ezpublish] <buz> doesnt help
+[01-28-2006 13:35:07] [#ezpublish] <zrg> ok, just had to suggest :)
+[01-28-2006 13:35:25] [#ezpublish] <buz> it would seem like there is some redirect going on
+[01-28-2006 13:35:28] [#ezpublish] <buz> but i cant figure out why
+[01-28-2006 13:35:32] [#ezpublish] <buz> url translation is not active
+[01-28-2006 13:35:37] [#ezpublish] <zrg> waait..
+[01-28-2006 13:35:47] [#ezpublish] <zrg> several siteaccesses?
+[01-28-2006 13:36:10] [#ezpublish] <buz> just admin and regular
+[01-28-2006 13:36:38] [#ezpublish] <zrg> cant acess in admin too?
+[01-28-2006 13:38:08] [#ezpublish] <buz> same weird redirect
+[01-28-2006 13:38:16] [#ezpublish] <buz> you can try it on triligon.org
+[01-28-2006 13:38:23] [#ezpublish] <buz> hit triligon.org/wiki and see what happens
+[01-28-2006 13:38:27] [#ezpublish] <buz> beyond understanding
+[01-28-2006 13:40:28] [#ezpublish] <buz> gets weirder
+[01-28-2006 13:40:34] [#ezpublish] <buz> i cant remove the object it redirects to
+[01-28-2006 13:42:32] [#ezpublish] <buz> or anything at all on the site, really
+[01-28-2006 13:42:35] [#ezpublish] <buz> WTF is going on
+[01-28-2006 13:44:25] [#ezpublish] <buz> it just silently doesnt do anything
+[01-28-2006 13:48:09] [#ezpublish] <zrg> seems to work, wheres error?
+[01-28-2006 13:48:27] [#ezpublish] <buz> the fact that you end up on a page not with an error message
+[01-28-2006 13:48:53] [#ezpublish] <buz> now the admin interface is broken as well
+[01-28-2006 13:48:59] [#ezpublish] <buz> whatever i acecss, i always get the same page
+[01-28-2006 13:49:22] [#ezpublish] <zrg> http://triligon.org/triligon/projects/xinha_and_ezxhtml/ezxhtml_wiki/sandbox
+[01-28-2006 13:49:32] [#ezpublish] <buz> yeah try to create an object
+[01-28-2006 13:49:42] [#ezpublish] <buz> its totally fucked up
+[01-28-2006 13:49:54] [#ezpublish] <buz> whatever link i click i always get the same admin interface page
+[01-28-2006 13:51:33] [#ezpublish] <zrg> need login to create anything i guess but browsing is ok
+[01-28-2006 13:51:46] [#ezpublish] <buz> i doubt that works
+[01-28-2006 13:51:52] [#ezpublish] <buz> i cant do anything with the admin interface now
+[01-28-2006 13:51:53] [#ezpublish] <buz> wtf
+[01-28-2006 13:52:14] [#ezpublish] <zrg> doubt what works
+[01-28-2006 13:52:19] [#ezpublish] <buz> even updated 3.6.4 to 3.6.5 now nothing works
+[01-28-2006 13:53:24] [#ezpublish] <zrg> please be more specific, site works ok for me
+[01-28-2006 13:53:35] [#ezpublish] <buz> yeah frontend works
+[01-28-2006 13:53:45] [#ezpublish] <buz> but whatever link i click on the backend, i always end up on the page i started
+[01-28-2006 13:53:50] [#ezpublish] <buz> no error no nothing but it doesnt do a thing
+[01-28-2006 13:54:19] [#ezpublish] <zrg> i once got error like this with corruptioin in url alias table
+[01-28-2006 13:54:52] [#ezpublish] <zrg> wonder if i filed bug..
+[01-28-2006 13:56:09] [#ezpublish] <buz> ok there lives stuff in that table that should NOT BE THERE
+[01-28-2006 13:57:36] [#ezpublish] <zrg> somehow line in style of * -> somepage had got there
+[01-28-2006 13:59:35] [#ezpublish] <zrg> http://ez.no/community/bugs/ezurlalias_table_entry_wrong
+[01-28-2006 14:00:00] [#ezpublish] <buz> yeah something like that happened as well
+[01-28-2006 14:01:45] [#ezpublish] <zrg> i suggest: clean cache (manually), turn on sql debugging, request page, go over log line by line
+[01-28-2006 14:01:59] [#ezpublish] <buz> i deleted all wildcards from the table
+[01-28-2006 14:02:02] [#ezpublish] <buz> lets see what happens
+[01-28-2006 14:02:06] [#ezpublish] <zrg> it will reveal what is going on
+[01-28-2006 14:02:37] [#ezpublish] <zrg> no need to tell you make backups first i guess :P
+[01-28-2006 14:02:52] [#ezpublish] <buz> can only do sqldump
+[01-28-2006 14:03:02] [#ezpublish] <zrg> good enough
+[01-28-2006 14:07:14] [#ezpublish] <buz> http://pastebin.com/527769 wtf
+[01-28-2006 14:16:16] [#ezpublish] <zrg> shit in urlrewrite, no?
+[01-28-2006 14:16:27] [#ezpublish] <buz> never changed it
+[01-28-2006 14:19:07] [#ezpublish] <zrg> i'd be interested in results of those sql
+[01-28-2006 14:26:03] [#ezpublish] <buz> look at the pastebin
+[01-28-2006 14:26:11] [#ezpublish] <buz> it looks like i can navigate the tree in admin menu
+[01-28-2006 14:26:17] [#ezpublish] <buz> but not access anything other than that
+[01-28-2006 14:38:35] [#ezpublish] <buz> i dont get it
+[01-28-2006 14:38:41] [#ezpublish] <buz> why are the other modules seemingly not working at all
+[01-28-2006 15:02:44] -!- nnn0 [n=therion@195.204.221.183] has quit [Connection timed out]
+[01-28-2006 15:03:35] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-28-2006 15:36:55] -!- zrg [n=zurgutt@80-235-51-82-dsl.kjj.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-28-2006 15:44:38] -!- ordnas [n=ordnas@p549D52A2.dip.t-dialin.net] has joined #ezpublish
+[01-28-2006 15:49:36] -!- ordnas [n=ordnas@p549D52A2.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-28-2006 16:03:48] -!- tobyS [n=dotxp@dslb-084-060-028-059.pools.arcor-ip.net] has joined #ezpublish
+[01-28-2006 16:14:40] -!- nnn1 [n=therion@195.204.221.183] has joined #ezpublish
+[01-28-2006 16:15:32] -!- nnn0 [n=therion@195.204.221.183] has quit [Success]
+[01-28-2006 16:18:26] -!- nnn1 is now known as nnn0
+[01-28-2006 16:29:39] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-28-2006 18:03:03] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 113 (No route to host)]

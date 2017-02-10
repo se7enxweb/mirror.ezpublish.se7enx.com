@@ -1,0 +1,104 @@
+[07-07-2006 00:01:08] -!- Paleo [n=Paleo@admin.pwsp.net] has quit [Excess Flood]
+[07-07-2006 00:01:45] -!- Paleo [n=Paleo@admin.pwsp.net] has joined #ezpublish
+[07-07-2006 00:04:54] -!- Tiny-Power [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has joined #ezpublish
+[07-07-2006 00:23:41] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[07-07-2006 00:36:42] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[07-07-2006 00:39:33] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[07-07-2006 00:59:05] [#ezpublish] <philG> hi all
+[07-07-2006 01:00:15] -!- PtiSeb [n=Miranda@pccri1.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-07-2006 01:11:31] -!- ordnas [n=ordnas@p549D6CCF.dip.t-dialin.net] has joined #ezpublish
+[07-07-2006 01:18:17] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[07-07-2006 01:57:47] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[07-07-2006 02:00:36] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-07-2006 02:29:06] -!- ordnas [n=ordnas@p549D6CCF.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[07-07-2006 03:13:10] -!- Beltza [n=Beltza@162.Red-80-25-116.staticIP.rima-tde.net] has joined #ezpublish
+[07-07-2006 03:33:17] -!- Beltza_ [n=Beltza@162.Red-80-25-116.staticIP.rima-tde.net] has joined #ezpublish
+[07-07-2006 03:33:36] -!- Beltza_ [n=Beltza@162.Red-80-25-116.staticIP.rima-tde.net] has left #ezpublish []
+[07-07-2006 03:35:45] -!- Beltza [n=Beltza@162.Red-80-25-116.staticIP.rima-tde.net] has quit [Read error: 110 (Connection timed out)]
+[07-07-2006 04:20:24] -!- kore_ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[07-07-2006 04:20:24] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Read error: 104 (Connection reset by peer)]
+[07-07-2006 04:33:55] [#ezpublish] <kalooni> hi
+[07-07-2006 05:22:13] [#ezpublish] <birger> hepp
+[07-07-2006 05:26:07] -!- ordnas [n=ordnas@p549D6CCF.dip.t-dialin.net] has joined #ezpublish
+[07-07-2006 05:46:20] [#ezpublish] <kalooni> is there a way to fetch all user of a group ?
+[07-07-2006 06:11:44] [#ezpublish] <tobmaster> kalooni: i bet :)
+[07-07-2006 06:12:04] [#ezpublish] <kalooni> I'd like to know how ;)
+[07-07-2006 06:13:43] [#ezpublish] <tobmaster> kalooni: users are a normal content tree
+[07-07-2006 06:13:45] [#ezpublish] <tobmaster> afaik
+[07-07-2006 06:13:53] [#ezpublish] <kalooni> I though this too
+[07-07-2006 06:14:01] [#ezpublish] <tobmaster> so you should be able to use fetch tree or similar
+[07-07-2006 06:14:13] [#ezpublish] <tobmaster> kalooni: didnt it work?
+[07-07-2006 06:14:20] [#ezpublish] <kalooni> but did a fetch('content','list',hash('parent_node_id',group_id))  didn't work
+[07-07-2006 06:15:06] [#ezpublish] <tobmaster> hmmmm
+[07-07-2006 06:15:20] [#ezpublish] <tobmaster> have you checked the ez templates/modules?
+[07-07-2006 06:16:33] [#ezpublish] <kalooni> no i did not
+[07-07-2006 06:17:12] [#ezpublish] <kalooni> ok I understand ... permission issue
+[07-07-2006 06:18:50] [#ezpublish] <tobmaster> yes thats what i wanted to say next
+[07-07-2006 06:21:04] [#ezpublish] <kalooni> i really need holidays :)
+[07-07-2006 06:38:08] -!- zurgutt [n=zurgutt@213.80-202-174.nextgentel.com] has joined #ezpublish
+[07-07-2006 06:57:04] -!- ordnas [n=ordnas@p549D6CCF.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-07-2006 07:01:47] [#ezpublish] <tobmaster> :)
+[07-07-2006 07:04:57] [#ezpublish] <zurgutt> damn, who said its not too hot in norway?
+[07-07-2006 07:46:36] -!- _ls [n=ls@85.19.74.66] has joined #ezpublish
+[07-07-2006 07:48:02] -!- _ls is now known as _luke
+[07-07-2006 07:55:58] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-07-2006 08:16:47] -!- Beltza [n=Beltza@162.Red-80-25-116.staticIP.rima-tde.net] has joined #ezpublish
+[07-07-2006 08:45:43] -!- Beltza [n=Beltza@162.Red-80-25-116.staticIP.rima-tde.net] has quit [Read error: 110 (Connection timed out)]
+[07-07-2006 09:03:41] [#ezpublish] <philG> hi all, what the best way to install a ezp site on windows plateform ?
+[07-07-2006 09:04:26] [#ezpublish] <philG> i have develop an ezp intranet on linux plateforme, all is ok but i have to migrate it after on windows
+[07-07-2006 09:09:41] -!- _luke [n=ls@85.19.74.66] has quit [Read error: 110 (Connection timed out)]
+[07-07-2006 09:10:29] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[07-07-2006 09:35:37] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[07-07-2006 10:12:16] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[07-07-2006 10:13:45] -!- PtiSeb [n=Miranda@pccri1.presidence.uhp-nancy.fr] has quit [Read error: 104 (Connection reset by peer)]
+[07-07-2006 10:21:01] -!- kalooni [n=nicolas@fbx.internethic.net] has left #ezpublish ["Quitte"]
+[07-07-2006 10:23:10] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-07-2006 11:10:46] -!- zurgutt [n=zurgutt@213.80-202-174.nextgentel.com] has quit ["Leaving."]
+[07-07-2006 12:01:10] -!- Tiny-Power [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has quit ["( www.nnscript.de :: NoNameScript 4.02 :: www.XLhost.de )"]
+[07-07-2006 12:01:43] -!- Tiny-Power [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has joined #ezpublish
+[07-07-2006 12:13:51] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[07-07-2006 12:24:22] -!- _luke [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[07-07-2006 12:42:24] -!- SunRayCafe [n=me@207.114.171.142] has joined #ezpublish
+[07-07-2006 12:42:54] [#ezpublish] <SunRayCafe> question: where should I look for uploaded PDFs in the eZ directory structure?
+[07-07-2006 12:43:22] [#ezpublish] <SunRayCafe> done a few greps, and I can't seem to find anything.
+[07-07-2006 12:43:32] [#ezpublish] <SunRayCafe> they're not blobbed, are they?
+[07-07-2006 12:44:35] [#ezpublish] <_luke> they are md5 hashed
+[07-07-2006 12:45:25] [#ezpublish] <SunRayCafe> the name is hashed?
+[07-07-2006 12:45:32] [#ezpublish] <SunRayCafe> so I'd have to hash the name I'm trying to find, and grep that?
+[07-07-2006 12:45:43] [#ezpublish] <_luke> yes, the name look on var/(site)/storage/original/application
+[07-07-2006 12:45:50] [#ezpublish] <_luke> look on ezbinaryfile table
+[07-07-2006 12:45:52] [#ezpublish] <_luke> in the database
+[07-07-2006 12:46:02] [#ezpublish] <_luke> there is original file name and hashed name
+[07-07-2006 12:46:49] [#ezpublish] <SunRayCafe> aaaah, very cool. Thank you
+[07-07-2006 12:46:57] [#ezpublish] <_luke> np ;)
+[07-07-2006 12:47:14] [#ezpublish] <SunRayCafe> trying to track down a weird limited scope upload issue, and I'm wondering if certain files had permissions effected.. couldn't find em for the life of me though
+[07-07-2006 12:48:52] [#ezpublish] <_luke> Man it is Firday, go to pub and drink some beer ;)
+[07-07-2006 12:50:24] [#ezpublish] <SunRayCafe> heh, I wish
+[07-07-2006 12:50:38] [#ezpublish] <SunRayCafe> any week with two mondays sucks, imo
+[07-07-2006 12:50:52] [#ezpublish] <SunRayCafe> but today is definitely the good day this week.
+[07-07-2006 12:51:43] [#ezpublish] <_luke> are you on deadline or sometihng?
+[07-07-2006 13:03:48] [#ezpublish] <SunRayCafe> wasn't for this, until Wednesday
+[07-07-2006 13:04:03] [#ezpublish] <SunRayCafe> it's suddenly become an international redflag issue in regard to one of the documents that won't work
+[07-07-2006 13:39:42] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[07-07-2006 13:56:09] -!- awormus [n=aaron@p54B04DBD.dip.t-dialin.net] has quit [Read error: 145 (Connection timed out)]
+[07-07-2006 14:34:59] -!- _luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[07-07-2006 15:10:26] -!- zurgutt [n=zurgutt@213.80-202-174.nextgentel.com] has joined #ezpublish
+[07-07-2006 15:31:27] -!- carroll [n=mc@82.153.97.146] has joined #ezpublish
+[07-07-2006 15:33:40] -!- Tiny-Power [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has quit ["( www.nnscript.de :: NoNameScript 4.02 :: www.XLhost.de )"]
+[07-07-2006 15:34:18] [#ezpublish] <mcarroll> Hi everyone, I managed to reproduce a rather critical content-loss bug in ezpublish earlier today, and was just looking for any email address to notify critical issues to ezsystems, but I can't find anything on the website. I've filed a bug report, but if anyone knows where else I should report this to so the developers know asap, then let me know. Thanks. http://ez.no/bugs/view/8628
+[07-07-2006 15:35:14] [#ezpublish] <zurgutt> bugreport is sufficent, they look into them
+[07-07-2006 15:36:38] [#ezpublish] <mcarroll> yeah, i know they look into them. i've reported before, but never anything so serious. thanks zurgutt, i'll leave it at that.
+[07-07-2006 15:37:44] [#ezpublish] <zurgutt> hmm, looks veery nasty
+[07-07-2006 15:38:37] [#ezpublish] <zurgutt> fantastic that you managed to track down and reproduce it, most people would not have bothered
+[07-07-2006 15:38:43] [#ezpublish] <mcarroll> yep. it is... wiped out a lot of files from the first site, some of which we haven't managed to recover :(
+[07-07-2006 15:39:39] [#ezpublish] <zurgutt> were you in ez conference by chance?
+[07-07-2006 15:39:40] [#ezpublish] <mcarroll> well i needed too, once it happened again on a different server it had to be ez, and with hundreds of people sharing files i couldn't sit back with the possibility of them getting lost inexplicably.
+[07-07-2006 15:39:57] [#ezpublish] <zurgutt> yeah, you are right
+[07-07-2006 15:41:46] [#ezpublish] <mcarroll> no, unfortunately - i would have quite liked to be there, i'm working with ez a lot at the moment
+[07-07-2006 15:44:39] [#ezpublish] <mcarroll> i'm moving to vancouver in september, so maybe if they have any events out in that area near the new office there i can attend :)
+[07-07-2006 15:45:34] [#ezpublish] <zurgutt> good, they are cool folks
+[07-07-2006 15:49:48] -!- awormus [n=aaron@p54B06E59.dip.t-dialin.net] has joined #ezpublish
+[07-07-2006 15:50:08] [#ezpublish] <zurgutt> tre great wurm :)
+[07-07-2006 16:26:08] -!- carroll [n=mc@82.153.97.146] has left #ezpublish []
+[07-07-2006 17:23:38] -!- kore_ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[07-07-2006 17:40:07] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]

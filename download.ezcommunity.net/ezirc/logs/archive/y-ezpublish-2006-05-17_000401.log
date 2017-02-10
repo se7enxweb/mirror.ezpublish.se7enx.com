@@ -1,0 +1,103 @@
+[05-15-2006 00:36:17] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-15-2006 00:40:27] -!- ordnas [n=ordnas@p549D57D5.dip.t-dialin.net] has joined #ezpublish
+[05-15-2006 01:03:37] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-15-2006 01:08:51] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-15-2006 01:18:44] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-15-2006 01:40:10] -!- DiGiTa|_ [n=pet2poul@84.4.42.31] has joined #ezpublish
+[05-15-2006 02:06:45] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-15-2006 02:22:34] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-15-2006 02:29:16] -!- Tidemann [n=tidemann@ti132110a340-3091.bb.online.no] has joined #ezpublish
+[05-15-2006 02:29:22] [#ezpublish] <Tidemann> mornin!
+[05-15-2006 02:29:42] [#ezpublish] <Tidemann> xbit?
+[05-15-2006 02:33:07] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-15-2006 03:09:19] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[05-15-2006 03:47:55] [#ezpublish] <Tidemann> xbit: gratulerer med gullruten!
+[05-15-2006 04:20:35] [#ezpublish] <Tidemann> ganger 2...
+[05-15-2006 05:11:11] -!- nfrp [n=nfrp@ATuileries-153-1-4-162.w82-123.abo.wanadoo.fr] has joined #ezpublish
+[05-15-2006 06:14:40] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[05-15-2006 06:14:47] [#ezpublish] <B-KiLLer`> hi all
+[05-15-2006 06:15:09] [#ezpublish] <B-KiLLer`> I have a small I just can't figure out right now
+[05-15-2006 06:15:43] [#ezpublish] <B-KiLLer`> to make simple: I have a site with 2 siteaccesses (admin + site itself)
+[05-15-2006 06:16:35] [#ezpublish] <B-KiLLer`> I created a module for the site itself, but in order to let it be accessed by "anonymous", I need to activate the extension containing this module, in the admin siteaccess.
+[05-15-2006 06:17:16] [#ezpublish] <B-KiLLer`> in my extension, I also extended the design and so on... BUT now in my admin siteaccess, ezp is trying to override the templates using the ones of the extension
+[05-15-2006 06:18:08] [#ezpublish] <kore__> use override on siteaccess basis - if needed symlink them to several siteaccesses
+[05-15-2006 06:18:54] [#ezpublish] <B-KiLLer`> you mean to place the override.ini settings in the settings/siteaccess/... dir ?
+[05-15-2006 06:22:26] [#ezpublish] <kore__> yes
+[05-15-2006 06:25:24] -!- DiGiTa|_ [n=pet2poul@84.4.42.31] has quit []
+[05-15-2006 06:26:36] [#ezpublish] <B-KiLLer`> is there any other way to do that ?
+[05-15-2006 06:26:57] [#ezpublish] <B-KiLLer`> I mean, when I have to activate the extension for instance, it's the only way to do that job to give access to anon user?
+[05-15-2006 06:35:18] [#ezpublish] <kris10an> B-KiLLer`: do you want to give everybody access to the module?
+[05-15-2006 06:39:14] [#ezpublish] <B-KiLLer`> yes
+[05-15-2006 06:54:03] [#ezpublish] <kris10an> [RoleSettings]
+[05-15-2006 06:54:16] [#ezpublish] <kris10an> PolicyOmitList[]=yourmodule
+[05-15-2006 06:54:38] [#ezpublish] <kris10an> in extension/yourext/settings/site.ini.append.php
+[05-15-2006 06:54:58] [#ezpublish] <kris10an> then roles will not be checked for your module
+[05-15-2006 06:59:47] [#ezpublish] <B-KiLLer`> hmm yes, that could be an option
+[05-15-2006 07:15:59] [#ezpublish] <B-KiLLer`> thanks
+[05-15-2006 07:34:55] -!- polin8 [n=bskahan@209.176.7.100] has joined #ezpublish
+[05-15-2006 07:37:11] [#ezpublish] <kalooni> quick question
+[05-15-2006 07:37:25] [#ezpublish] <kalooni> I have a problem with clearing cache on a 3.7.2 ez version
+[05-15-2006 07:37:50] [#ezpublish] <kalooni> it seems clearcache script doesn't empty the var/plain/cache directory ... Does anybody here could help me on that point ?
+[05-15-2006 07:39:15] [#ezpublish] <kalooni> the VarDir is correctly defined in the [FileSettings] of my site.ini.append.php file
+[05-15-2006 07:39:20] [#ezpublish] <kalooni> rights seems to be correct
+[05-15-2006 07:45:10] [#ezpublish] <B-KiLLer`> I think you can specify to the clearcache script which dir you want to empty
+[05-15-2006 07:45:51] [#ezpublish] <B-KiLLer`> ./clearcache --var-subdir=plain
+[05-15-2006 07:48:23] [#ezpublish] <kalooni> ok thanks
+[05-15-2006 07:48:29] [#ezpublish] <kalooni> It seems better
+[05-15-2006 07:48:59] [#ezpublish] <kalooni> but on other site I have develop when I do --clear-all the plain subdir is cleaned ... but not in that case ...
+[05-15-2006 07:51:02] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[05-15-2006 08:03:06] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[05-15-2006 08:07:28] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-15-2006 08:34:33] [#ezpublish] <kalooni> is there a way to replace \n by a space
+[05-15-2006 08:34:48] [#ezpublish] <buz> where
+[05-15-2006 08:34:59] [#ezpublish] <kalooni> or remove them
+[05-15-2006 08:35:32] [#ezpublish] <kalooni> I am changing the meta tag description ... by doing {$node.object.data_map.short_description.content.xml_data|striptags}
+[05-15-2006 08:35:43] [#ezpublish] <buz> dunno how that works in template
+[05-15-2006 08:35:49] [#ezpublish] <buz> in php its quite straightforwad
+[05-15-2006 08:36:05] [#ezpublish] <kalooni> how would you do in php ?
+[05-15-2006 08:36:15] [#ezpublish] <kalooni> str_replace ?
+[05-15-2006 08:37:08] [#ezpublish] <buz> sure
+[05-15-2006 08:48:00] -!- ordnas [n=ordnas@p549D57D5.dip.t-dialin.net] has left #ezpublish []
+[05-15-2006 08:55:51] [#ezpublish] <B-KiLLer`> you could create your own template operator
+[05-15-2006 08:56:22] [#ezpublish] <B-KiLLer`> if I'm not wrong ez can already use as template operator all the php functions which take only 1 argument... too bad for str_replace :)
+[05-15-2006 08:56:23] [#ezpublish] <kalooni> I think it is what I will do ...
+[05-15-2006 08:56:47] [#ezpublish] <kalooni> I just can't fnd the doc for creating custom template operator
+[05-15-2006 08:57:20] [#ezpublish] <buz> kalooni: go to admin -> setup -> rad
+[05-15-2006 08:57:54] [#ezpublish] <kalooni> yes buz : thx
+[05-15-2006 08:58:27] [#ezpublish] <kalooni> eh eh: http://ez.no/community/contribs/template_plugins/string_replace_operator
+[05-15-2006 08:59:33] [#ezpublish] <B-KiLLer`> hehe, there you go :)
+[05-15-2006 09:11:56] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[05-15-2006 09:12:46] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[05-15-2006 09:23:28] [#ezpublish] <B-KiLLer`> hmm, seems that ezp 3.8 is not that ready...
+[05-15-2006 09:23:57] [#ezpublish] <B-KiLLer`> I have some strange things in the admin like: If I edit an object, then discard draft, I get back to
+[05-15-2006 09:23:58] [#ezpublish] <B-KiLLer`> *  The ID number of the object is incorrect. Please check the URL for spelling mistakes.
+[05-15-2006 09:23:58] [#ezpublish] <B-KiLLer`> * The object is no longer available.
+[05-15-2006 09:26:15] [#ezpublish] <kris10an> B-KiLLer`: please make a detailed description on how to do it, and post a bugreport
+[05-15-2006 09:26:42] [#ezpublish] <B-KiLLer`> but it's so strange that I can't get it twice :)
+[05-15-2006 09:27:01] [#ezpublish] <B-KiLLer`> i'll try to reprocuce that
+[05-15-2006 09:27:04] [#ezpublish] <B-KiLLer`> reproduce
+[05-15-2006 09:28:33] [#ezpublish] <kris10an> those are the worst ones...
+[05-15-2006 09:28:46] [#ezpublish] <kris10an> the evil ones...
+[05-15-2006 09:31:08] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-15-2006 09:39:34] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[05-15-2006 10:00:54] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[05-15-2006 10:50:25] -!- awormus [n=aaron@84.177.15.118] has quit ["Leaving"]
+[05-15-2006 10:51:37] -!- nfrp [n=nfrp@ATuileries-153-1-4-162.w82-123.abo.wanadoo.fr] has quit ["Leaving"]
+[05-15-2006 11:35:09] -!- kracker [n=kracker@ip23.131.realtime.net] has joined #ezpublish
+[05-15-2006 11:35:32] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-15-2006 11:49:17] -!- awormus [n=aaron@84.177.15.118] has joined #ezpublish
+[05-15-2006 12:15:18] [#ezpublish] <xbit> Tidemann: takk takk! :)
+[05-15-2006 12:24:17] [#ezpublish] <buz> neeeeeeeeeat
+[05-15-2006 12:24:26] [#ezpublish] <buz> i just got bumped from 2mbit to 5mbit
+[05-15-2006 12:24:40] [#ezpublish] <buz> still sucks compared to france but less than before ;)
+[05-15-2006 12:27:28] [#ezpublish] <xbit> w0rd
+[05-15-2006 12:27:37] [#ezpublish] <xbit> :)
+[05-15-2006 12:27:44] [#ezpublish] <buz> makes the 50? a bit easier to bear
+[05-15-2006 12:32:57] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[05-15-2006 15:32:08] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-15-2006 15:45:13] [#ezpublish] <alvaro-> is there a problem installing packages in version 8?
+[05-15-2006 15:47:33] [#ezpublish] <alvaro-> i try to install packages it say me all is ok, but i cant see any change
+[05-15-2006 16:12:56] -!- awormus [n=aaron@84.177.15.118] has quit ["Leaving"]
+[05-15-2006 16:59:23] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[05-15-2006 21:20:01] -!- alvaro- [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 110 (Connection timed out)]
+[05-15-2006 23:48:57] -!- awormus [n=aaron@p54B1247A.dip0.t-ipconnect.de] has joined #ezpublish

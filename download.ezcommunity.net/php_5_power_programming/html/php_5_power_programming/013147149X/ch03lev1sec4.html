@@ -1,0 +1,51 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.4.&nbsp; The new Keyword and Constructors</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec4"></a><h3 class="docSection1Title">3.4. The <tt>new</tt> Keyword and Constructors</h3>
+<p class="docText">Instances of classes are created using the new keyword. In the previous example, we created a new instance of the <tt>Person</tt> class using <tt>$judy = new Person();</tt>. What happens during the <tt>new</tt> call is that a new object is allocated with its own copies of the properties defined in the class you requested, and then the constructor of the object is called in case one was defined. The constructor is a method named <tt>__construct()</tt>, which is automatically called by the <tt>new</tt> keyword after creating the object. It is usually used to automatically perform various initializations such as property initializations. Constructors can also accept arguments, in which case, when the <tt>new</tt> statement is written, you also need to send the constructor the function parameters in between the parentheses.<a name="ch03index15"></a><a name="ch03index16"></a><a name="ch03index17"></a><a name="ch03index18"></a><a name="ch03index19"></a></p>
+<p class="docText">In PHP 4, instead of using <tt>__construct()</tt> as the constructor's name, you had to define a method with the classes' names, like C++. This still works with PHP 5, but you should use the new unified constructor naming convention for new applications.</p>
+<p class="docText">We could have rewritten the previous example to pass the names of the people on the <tt>new</tt> line<tt>:</tt></p>
+<pre>
+class Person {
+    function __construct($name)
+    {
+        $this-&gt;name = $name;
+    }
+
+    function getName()
+    {
+        return $this-&gt;name;
+    }
+
+    private $name;
+};
+
+$judy = new Person("Judy") . "\n";
+$joe = new Person("Joe") . "\n";
+
+print $judy-&gt;getName();
+print $joe-&gt;getName();
+</pre><BR>
+<p class="docText">This code has the same result as the previous example.</p>
+<a name="ch03note01"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">Because a constructor cannot return a value, the most common practice for raising an error from within the constructor is by throwing an exception.<a name="ch03index20"></a><a name="ch03index21"></a><a name="ch03index22"></a><a name="ch03index23"></a></p></div><BR>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

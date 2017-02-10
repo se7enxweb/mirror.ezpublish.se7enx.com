@@ -1,0 +1,29 @@
+[04-30-2005 01:43:04] -!- Frekko [~larson@238.80-202-59.nextgentel.com] has quit [Remote closed the connection]
+[04-30-2005 01:46:02] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[04-30-2005 02:59:24] -!- ordnas [~ordnas@p549DC4E8.dip.t-dialin.net] has joined #ezpublish
+[04-30-2005 02:59:51] -!- ordnas [~ordnas@p549DC4E8.dip.t-dialin.net] has quit [Client Quit]
+[04-30-2005 03:39:45] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[04-30-2005 07:52:22] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-30-2005 07:52:38] [#ezpublish] <kracker> i wanna know . . with everything you got ... hit me
+[04-30-2005 07:53:10] [#ezpublish] <kracker> aesop rock : labor
+[04-30-2005 07:54:15] [#ezpublish] <kracker> neat, http://www.definitivejux.net/av/aesop_rock/
+[04-30-2005 07:54:26] [#ezpublish] <kracker> intro my life ... http://www.definitivejux.net/av/player.php?id=1&filetype=highvideo
+[04-30-2005 12:41:34] -!- yangoon [~mathiasb@J12b3.j.pppool.de] has joined #ezpublish
+[04-30-2005 12:54:10] -!- ordnas [~ordnas@p549DFD9C.dip.t-dialin.net] has joined #ezpublish
+[04-30-2005 12:54:21] -!- ordnas [~ordnas@p549DFD9C.dip.t-dialin.net] has quit [Remote closed the connection]
+[04-30-2005 12:59:11] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[04-30-2005 13:12:46] -!- CoderForLife [~mirc@nr17-66-117-211-149.fuse.net] has left #ezpublish []
+[04-30-2005 13:54:48] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-30-2005 15:14:01] -!- SEAwolfx [debian-tor@95f2b2714295df24.node.tor] has joined #ezpublish
+[04-30-2005 15:14:05] [#ezpublish] <SEAwolfx> hi
+[04-30-2005 15:15:08] -!- yangoon [~mathiasb@J12b3.j.pppool.de] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-30-2005 15:22:33] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[04-30-2005 15:54:52] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-30-2005 16:05:14] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit []
+[04-30-2005 16:15:32] [#ezpublish] <SEAwolfx> "{let nodes_h=fetch( 'content', 'list', hash( 'parent_node_id', 2) }<P>{$nodes_h|attribute}{/let}" display nothing ... how it comes?
+[04-30-2005 16:48:22] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-30-2005 16:57:07] -!- SEAwolfx [debian-tor@95f2b2714295df24.node.tor] has quit [Remote closed the connection]
+[04-30-2005 20:56:12] -!- SEAwolfx [~mike@bd094742d46cfab1.node.tor] has joined #ezpublish
+[04-30-2005 21:47:36] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-30-2005 21:48:12] [#ezpublish] <kracker> always and forever, without out a doubt, just never say never ., .
+[04-30-2005 22:25:29] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit []

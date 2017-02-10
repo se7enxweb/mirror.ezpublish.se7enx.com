@@ -1,0 +1,60 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 10.7.&nbsp; Installer Front-Ends</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch10lev1sec7"></a><h3 class="docSection1Title">10.7. Installer Front-Ends</h3>
+<p class="docText">The PEAR Installer provides a front-end (user interface) API that is used to implement different types of user interfaces.<a name="ch10index302"></a><a name="ch10index303"></a></p>
+<a name="ch10lev2sec24"></a><h4 class="docSection2Title">10.7.1. CLI (Command Line Interface) Installer</h4>
+<p class="docText">The PEAR Command Line Interface installer runs in a terminal shell with human-readable text output. You have seen examples for this front-end from in the previous sections.<a name="ch10index304"></a><a name="ch10index305"></a><a name="ch10index306"></a></P>
+<a name="ch10lev2sec25"></a><h4 class="docSection2Title">10.7.2. Gtk Installer</H4>
+<p class="docText">Earlier, you learned that the PEAR Installer separated the user interface code into &quot;front-ends.&quot; So far, this chapter has presented only the CLI front-end; in this section, you glance at the Gtk (GNOME) front-end.<a name="ch10index307"></a><a name="ch10index308"></a><a name="ch10index309"></a></p>
+<p class="docText"><span class="docEmphStrong">Gtk</span> is a graphical user interface toolkit that is common among Linux users. A Windows port exists as well, but this section focuses on the UNIX/Linux environment.<a name="ch10index310"></a></P>
+<p class="docText">The PEAR Gtk front-end requires that you have php-gtk installed. For help installing php-gtk, refer to <a class="docLink" target="_blank" href="http://gtk.php.net/">http://gtk.php.net/</a>.</p>
+<p class="docText">After you set up php-gtk, install the <tt>PEAR_Frontend_Gtk</tt> package:</p>
+<pre>
+$ <span class="docEmphStrong">pear install PEAR_Frontend_Gtk</span>
+     downloading PEAR_Frontend_Gtk-0.3.tgz ...
+...done: 70,008 bytes
+install ok: PEAR_Frontend_Gtk 0.3
+</pre><br>
+<a name="ch10lev3sec7"></a><h5 class="docSection3Title">10.7.2.1 Using the Gtk Installer</H5>
+<p class="docText">Now, fire up the Gtk installer with this command:</P>
+<pre>
+$ <span class="docEmphStrong">pear G</span>
+</pre><br>
+<p class="docText">The result should look like what is shown in <a class="docLink" href="#ch10fig03">Figure 10.3</a>.</p>
+<a name="ch10fig03"></a><p><center><h5 class="docFigureTitle">Figure 10.3. PEAR Gtk Installer Startup Screen.</H5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/10fig03_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="408" SRC="images/013147149X/graphics/10fig03.jpg;380137"></p></center></p><BR>
+<p class="docText">On the left-hand side, you can navigate between the different parts of the installer. The one that is currently being displayed is the <tt>PEAR Installer</tt>. The package list pane to the right has four columns: Package, Installed, New, and Summary. This is similar to the output of the <tt>pear list-all</tt> command, with the addition of the Summary field. Also, notice how packages are grouped into category folders that you may collapse and expand.</p>
+<p class="docText">The Installed column says which version of the package you have already installed. If it is not installed, this field will be blank for that package. If you have it installed, an outline of a trashcan appears that you can click on to schedule an uninstall, and the version of the release you have.<a name="ch10index311"></a><a name="ch10index312"></a><a name="ch10index313"></a></P>
+<p class="docText">The New field is filled if a newer release is available or you don't have the package, along with a checkbox that you can click to schedule the package for install or upgrade.</p>
+<p class="docText">But first, try clicking the Summary field for a package shown in <a class="docLink" href="#ch10fig04">Figure 10.4</a>.</p>
+<a name="ch10fig04"></a><p><center><h5 class="docFigureTitle">Figure 10.4. Summary field for package.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/10fig04_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="411" SRC="images/013147149X/graphics/10fig04.jpg;380137"></p></center></p><br>
+<p class="docText">This splits the package area in two and displays some information about the package you just selected. Click the X to make it go away.<a name="ch10index314"></a><a name="ch10index315"></a></p>
+<p class="docText">Now, let's install <tt>Cache_Lite</tt> by clicking the checkbox next to the version number in the New column, and then click Download and Install &gt; &gt; in the lower-right corner, as shown in <a class="docLink" href="#ch10fig05">Figure 10.5</a>.</p>
+<a name="ch10fig05"></a><p><center><h5 class="docFigureTitle">Figure 10.5. <tt>Cache_Lite</tt> package installed.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/10fig05_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="404" SRC="images/013147149X/graphics/10fig05.gif;380137"></p></center></p><br>
+<p class="docText">That's all there is to it. It is worth noting that the Gtk front-end to the PEAR Installer uses the same code to perform installation and so on; it just provides another user interface.</P>
+<p class="docText">Let's take a look at the Configuration part (click Configuration in the Navigation sidebar), as shown in <a class="docLink" href="#ch10fig06">Figure 10.6</a>.<a name="ch10index316"></a><a name="ch10index317"></a><a name="ch10index318"></a></P>
+<a name="ch10fig06"></a><p><center><h5 class="docFigureTitle">Figure 10.6. Configuring PEAR.</H5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/10fig06_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="431" SRC="images/013147149X/graphics/10fig06.jpg;380137"></p></center></p><br>
+<p class="docText">Just flip through the different configuration category tabs and take a look; the configuration parameters you see listed here are exactly the same ones that you learned about in the CLI version of the installer, just presented in a nicer way.<a name="ch10index319"></a><a name="ch10index320"></a><a name="ch10index321"></a><a name="ch10index322"></a><a name="ch10index323"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

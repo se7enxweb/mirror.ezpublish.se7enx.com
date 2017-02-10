@@ -1,0 +1,52 @@
+[04-24-2006 00:09:50] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[04-24-2006 00:21:40] -!- ordnas [n=ordnas@p549D723D.dip.t-dialin.net] has joined #ezpublish
+[04-24-2006 03:19:03] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-24-2006 03:20:15] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-24-2006 03:22:09] -!- DiGiTa|_ [n=guillaum@84.4.68.100] has joined #ezpublish
+[04-24-2006 03:22:18] [#ezpublish] <DiGiTa|_> hi eby
+[04-24-2006 03:22:23] [#ezpublish] <DiGiTa|_> evbdy
+[04-24-2006 03:24:38] -!- DiGiTa|_ [n=guillaum@84.4.68.100] has quit [Client Quit]
+[04-24-2006 03:25:21] -!- DiGiTa|_ [n=pet2poul@84.4.68.100] has joined #ezpublish
+[04-24-2006 03:31:59] [#ezpublish] <kalooni> I am looking for an example of ezsampleshipping integration
+[04-24-2006 03:32:06] [#ezpublish] <kalooni> if someone could help it would be great
+[04-24-2006 03:39:04] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-24-2006 04:02:35] -!- ordna1 [n=ordnas@p549D613E.dip.t-dialin.net] has joined #ezpublish
+[04-24-2006 04:15:56] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-24-2006 04:20:14] -!- ordnas [n=ordnas@p549D723D.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[04-24-2006 04:38:51] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[04-24-2006 04:44:58] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[04-24-2006 05:04:27] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[04-24-2006 05:24:03] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-24-2006 05:24:56] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[04-24-2006 06:19:44] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-24-2006 06:46:09] -!- DiGiTa|_ [n=pet2poul@84.4.68.100] has quit []
+[04-24-2006 08:24:33] -!- _hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[04-24-2006 08:24:37] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-24-2006 08:30:14] -!- ordnas [n=ordnas@p549D613E.dip.t-dialin.net] has joined #ezpublish
+[04-24-2006 08:49:16] -!- DiGiTa|_ [n=pet2poul@84.4.68.100] has joined #ezpublish
+[04-24-2006 08:49:58] -!- ordna1 [n=ordnas@p549D613E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[04-24-2006 08:53:52] -!- nnn0 [n=therion@ti541110a080-1273.bb.online.no] has joined #ezpublish
+[04-24-2006 08:54:39] -!- ordnas [n=ordnas@p549D613E.dip.t-dialin.net] has left #ezpublish []
+[04-24-2006 08:58:57] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[04-24-2006 09:21:13] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-24-2006 09:36:05] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-24-2006 09:58:21] -!- _hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[04-24-2006 10:33:49] -!- hovik [n=hovik@79.84-48-105.nextgentel.com] has joined #ezpublish
+[04-24-2006 11:38:47] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[04-24-2006 12:15:55] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-24-2006 13:35:07] -!- kracker [n=kracker@ip23.131.realtime.net] has joined #ezpublish
+[04-24-2006 13:35:44] [#ezpublish] <kracker> #php
+[04-24-2006 13:35:48] [#ezpublish] <kracker> doh
+[04-24-2006 13:35:48] [#ezpublish] <buz> ?
+[04-24-2006 13:35:53] [#ezpublish] <kracker> never mind
+[04-24-2006 13:36:03] [#ezpublish] <buz> tried that diff feature in 3.8?
+[04-24-2006 13:36:05] [#ezpublish] <buz> shaping up to be neat
+[04-24-2006 13:51:38] -lilo:$*- [Global Notice] Hi all. Just a reminder. Google's Summer of Code ( http://code.google.com/soc/ ) is coming up again, and the mentoring organizations have pretty much all been selected. Coder applications start on May 1.
+[04-24-2006 13:52:49] -lilo:$*- [Global Notice] Soc has moved to SlashNet this year, but it seemed to be a good idea to have an unofficial, local channel here on freenode for mentoring groups and participants.... so we've set up ##googlesummer .... if you're involved, or hoping to be involved, with Soc 2006, please stop by. As always, be nice, be chilled, and have a great evening! :)
+[04-24-2006 14:29:06] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-24-2006 14:37:10] -!- DiGiTa|_ [n=pet2poul@84.4.68.100] has quit []
+[04-24-2006 16:02:00] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-24-2006 16:27:57] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[04-24-2006 18:00:53] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[04-24-2006 19:01:26] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[04-24-2006 23:56:30] -!- ordnas [n=ordnas@p549D613E.dip.t-dialin.net] has joined #ezpublish

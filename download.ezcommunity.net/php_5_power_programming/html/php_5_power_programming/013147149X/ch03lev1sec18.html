@@ -1,0 +1,117 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.18.&nbsp; Exception Handling</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec17.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec19.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec18"></a><h3 class="docSection1Title">3.18. Exception Handling</h3>
+<p class="docText"><span class="docEmphStrong">Exception handling</span> tends to be one of the more problematic aspects in software development. Not only is it hard for the developer to decide what to do when an error occurs (such as database failure, network failure, or a software bug), but it is hard to spot all the places in the code to insert checks for failure and to call the correct function to handle it. An even more complicated task is that after you handle the failure, how do you fix your program's flow to continue at a certain point in your program?<a name="ch03index146"></a></p>
+<p class="docText">Today, most modern languages support some variant of the popular <tt>try/catch/throw</tt> exception-handling paradigm. <tt>try/catch</tt> is an enclosing language construct that protects its enclosing source codeand basically tells the language, &quot;I'm handling exceptions that occur in this code.&quot; Exceptions or errors are &quot;thrown&quot; when they are detected and the language run time searches its call stack to see if there is a relevant <tt>TRy/catch</tt> construct that is willing to handle the exception.</p>
+<p class="docText">There are many advantages to this method. To begin with, you don't have to place <tt>if()</tt> statements in every place where an exception might occur; thus, you end up writing a lot less code. Instead, you can enclose the entire section of code with a <tt>TRy/catch</tt> construct and handle an error if one occurs. Also, after you detecte an error using the <tt>throw</tt> statement, you can easily return to a point in the code that is responsible for handling and continuing execution of the program, because <tt>tHRow</tt> unwinds the function call-stack until it detects an appropriate <tt>try/catch</tt> block.</p>
+<p class="docText">The syntax of <tt>try/catch</tt> is as follows:<a name="ch03index147"></a></p>
+<pre>
+try {
+    ... // Code which might throw an exception
+} catch (FirstExceptionClass $exception) {
+    ... // Code which handles this exception
+} catch (SecondExceptionClass $exception) {
+}
+</pre><BR>
+<p class="docText">The <tt>TRy {}</tt> construct encloses the code that can throw an exception, which is followed by a series of <tt>catch</tt> statements, each declaring what exception class it handles and under what variable name the exception should be accessible inside the <tt>catch</tt> block.</p>
+<p class="docText">When an exception is thrown, the first <tt>catch()</tt> is reached and an <tt>instance of</tt> comparison with the declared class is performed. If the result is <tt>true</tt>, the <tt>catch</tt> block is entered and the exception is made available under the declared variable name. If the result is <tt>false</tt>, the next <tt>catch</tt> statement is checked. Once a <tt>catch</tt> statement is entered, the following <tt>catch</tt> statements will not be entered, even if the <tt>instanceof</tt> check would result in <tt>true</tt>. If no <tt>catch</tt> statements are relevant, the language engine checks for additional enclosing <tt>try/catch</tt> statements in the same function. When none exist, it continues searching by unwinding the call stack to the calling functions.</P>
+<p class="docText">The <tt>throw</tt> statement</p>
+<pre>
+throw &lt;object&gt;;
+</pre><BR>
+<p class="docText">can only throw an object. You can't throw any basic types such as strings or integers. A pre-defined exception class exists called <tt>Exception</tt>, from which all your exception classes must inherit. Trying to throw an object which does not inherit from class <tt>Exception</tt> will result in a final runtime error.</p>
+<p class="docText">The following code snippet shows the interface of this built-in exception class (the square brackets in the constructor declaration are used to represent optional parameters, which are not valid PHP syntax):<a name="ch03index148"></a></P>
+<pre>
+class Exception {
+    function __construct([$message [,$code]]);
+
+    final public getMessage();
+    final public getCode();
+    final public getFile();
+    final public getLine();
+    final public getTrace();
+    final public getTraceAsString();
+
+    protected $message;
+    protected $code;
+    protected $file;
+    protected $line;
+}
+</pre><br>
+<p class="docText">The following is a full-blown example of exception handling:<a name="ch03index149"></a></p>
+<pre>
+class NullHandleException extends Exception {
+    function __construct($message)
+    {
+        parent::__construct($message);
+    }
+}
+
+function printObject($obj)
+{
+    if ($obj == NULL) {
+         throw new NullHandleException("printObject received NULL object");
+    }
+    print $obj . "\n";
+}
+
+class MyName {
+    function __construct($name)
+    {
+        $this-&gt;name = $name;
+    }
+
+    function __toString()
+    {
+        return $this-&gt;name;
+    }
+
+    private $name;
+}
+
+try {
+    printObject(new MyName("Bill"));
+    printObject(NULL);
+    printObject(new MyName("Jane"));
+} catch (NullHandleException $exception) {
+    print $exception-&gt;getMessage();
+    print " in file " . $exception-&gt;getFile();
+    print " on line " . $exception-&gt;getLine() . "\n";
+} catch (Exception $exception) {
+    // This won't be reached
+}
+
+Running this script prints
+Bill
+printObject received NULL object in file C:\projects\php5\tests\test.php on line
+ 12
+</pre><br>
+<p class="docText">Notice that the name Jane isn't printed, only Bill. This is because the <tt>printObject(NULL)</tt> line throws an exception inside the function, and therefore, Jane is skipped. In the catch handler, inherited methods such as <tt>getFile()</tt> are used to give additional information on where the exception occurred.<a name="ch03index150"></a></p>
+<a name="ch03note11"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">You might have noticed that the constructor of <tt>NullHandleException</tt> calls its parent constructor. If <tt>NullHandleException</tt>'s constructor is left out, by default, <tt>new</tt> calls the parent constructor. However, it is good practice to add a constructor and call the parent constructor explicitly so that you don't forget to do so if you suddenly decide to add a constructor of your own.</p></div><br>
+<p class="docText">Today, most internal methods don't throw exceptions to keep backward compatibility with PHP 4. This somewhat limits its use, but it does allow your own code to use them. Some new extensions in PHP 5mainly the object-oriented onesdo throw exceptions. Make sure you check the extension's documentation to be sure.</p>
+<a name="ch03note12"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">When using exceptions, follow these basic rules (both for performance and code-manageability reasons):</p>
+<div style="font-weight:bold"><ol class="docList" type="1"><li><div style="font-weight:normal"><p class="docList">Remember that exceptions are exceptions. You should only use them to handle problems, which brings us to the next rule&#8230;.</p></div></li><li><div style="font-weight:normal"><p class="docList">Never use exceptions for flow control. This makes the code hard to follow (similar to the <tt>goto</tt> statement found in some languages) and is slow.</p></div></li><LI><div style="font-weight:normal"><p class="docList">The exception should only contain the error information and shouldn't contain parameters (or additional information) that affect flow control and logic inside the catch handler.<a name="ch03index151"></a></P></div></li></ol></div></div><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec17.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec19.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

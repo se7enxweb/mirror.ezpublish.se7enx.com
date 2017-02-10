@@ -1,0 +1,88 @@
+[05-22-2005 00:42:41] -deedra:$*- {global notice} Hi all! in about an hour and 15 minutes, I'm going to start in on upgrades to the network. This will be a major upgrade that affects about half the network. Please see 'http://www.freenode.net/news.shtml' for more info. Thank you for your patience, and thank you for using freenode!
+[05-22-2005 01:29:33] -deedra:$*- {global notice} Hi all! in half an hour I'm going to be rebooting several boxes for upgrades. This will affect about half the network. Please see  'http://www.freenode.net/news.shtml'  for more information. Any further announcements  are going to be given in wallops, '/mode your_nick +w' if you would like to watch what's going on. I will announce   what happens as I take boxes down for reboot.
+[05-22-2005 02:04:26] -!- Bedlore [~me@ppp239-78.lns2.adl2.internode.on.net] has quit [orwell.freenode.net irc.freenode.net]
+[05-22-2005 02:04:26] -!- xbit [xbit@pppoecl77018.minlos.no] has quit [orwell.freenode.net irc.freenode.net]
+[05-22-2005 02:04:47] -!- xbit [xbit@pppoecl77018.minlos.no] has joined #ezpublish
+[05-22-2005 02:09:33] -orwell.freenode.net(@)- Server Terminating. angel[~dmwaters@255.255.255.255]
+[05-22-2005 02:09:34] Diconnected. Sleeping for 10 second(s).
+[05-22-2005 02:09:44] >> Connecting to irc.kde.org:6667
+[05-22-2005 02:09:44] >> Connected to irc.kde.org:6667, registering...
+[05-22-2005 02:09:45] >> Successfully registered. Nick is: ezlog
+[05-22-2005 02:09:45] -!- There are 6711 victims and 8512 hiding on 23 servers
+[05-22-2005 02:09:45] -!- 23 flagged staff members
+[05-22-2005 02:09:45] -!- 7838 channels formed
+[05-22-2005 02:09:45] -!- I have 757 clients and 0 servers
+[05-22-2005 02:09:45] -!- Current local  users: 757  Max: 757
+[05-22-2005 02:09:45] -!- Current global users: 15223  Max: 23269
+[05-22-2005 02:09:45] -!- Highest connection count: 758 (756 clients) (2972 since server was (re)started)
+[05-22-2005 02:10:06] >> Attempting to join channels: #ezpublish
+[05-22-2005 02:10:06] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-22-2005 02:10:06] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1| final thursday, May 26.
+[05-22-2005 02:10:06] -!- Topic set by fh [@] [Thu, 19 May 2005 01:44:31 -0700]
+[05-22-2005 02:10:15] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-22-2005 02:10:15] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-22-2005 02:11:07] (unmatched::raw477) :sterling.freenode.net 477 ezlog #ezpublish :[freenode-info] help freenode weed out clonebots, please register your IRC nick and auto-identify: http://freenode.net/faq.shtml#nicksetup
+[05-22-2005 02:11:20] -!- xbit [xbit@pppoecl77018.minlos.no] has quit [sterling.freenode.net irc.freenode.net]
+[05-22-2005 02:11:20] -!- CoderForLife [~mirc@nr17-66-161-248-129.fuse.net] has quit [sterling.freenode.net irc.freenode.net]
+[05-22-2005 02:11:20] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [sterling.freenode.net irc.freenode.net]
+[05-22-2005 02:12:50] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-22-2005 02:17:40] -!- xbit [xbit@pppoecl77018.minlos.no] has joined #ezpublish
+[05-22-2005 02:17:58] -!- agentbob [~dan@216.130.216.30] has quit [sterling.freenode.net irc.freenode.net]
+[05-22-2005 02:18:44] Disconnecting due to lack of a lag response (0.00585800 1116753464 != 0.06586500 1116753494)
+[05-22-2005 02:18:44] Diconnected. Sleeping for 10 second(s).
+[05-22-2005 02:18:54] >> Connecting to irc.kde.org:6667
+[05-22-2005 02:18:54] >> Connected to irc.kde.org:6667, registering...
+[05-22-2005 02:18:57] >> Primary nickname in use, trying alternate.
+[05-22-2005 02:18:57] >> Successfully registered. Nick is: ezpublishlog
+[05-22-2005 02:18:57] -!- There are 4442 victims and 5667 hiding on 20 servers
+[05-22-2005 02:18:57] -!- 7 flagged staff members
+[05-22-2005 02:18:57] -!- 5419 channels formed
+[05-22-2005 02:18:57] -!- I have 2179 clients and 0 servers
+[05-22-2005 02:18:57] -!- Current local  users: 2179  Max: 2179
+[05-22-2005 02:18:57] -!- Current global users: 10109  Max: 19542
+[05-22-2005 02:18:57] -!- Highest connection count: 2179 (2178 clients) (2274 since server was (re)started)
+[05-22-2005 02:19:06] >> Attempting to join channels: #ezpublish
+[05-22-2005 02:19:06] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-22-2005 02:19:06] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1| final thursday, May 26.
+[05-22-2005 02:19:06] -!- Topic set by fh [@] [Thu, 19 May 2005 01:44:31 -0700]
+[05-22-2005 02:19:42] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-22-2005 02:19:42] -!- ezpublishlog is now known as ezlog
+[05-22-2005 02:19:42] My new nick is ezlog
+[05-22-2005 02:19:58] -!- agentbob [~dan@216.130.216.30] has joined #ezpublish
+[05-22-2005 02:47:42] -lilo:$*- [Global Notice] Hi all. We're stable again. Thanks to dmwaters for her excellent work on this upgrade!
+[05-22-2005 03:03:38] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-22-2005 03:49:05] -lilo:$*- [Global Notice] Hi all. Last bit of wrap-up. If you were in #gentoo or #debian before the maintenance, you'll probably want to rejoin. You might have to try a few times. Thanks again for your patience and understanding, and thank you for using freenode! :)
+[05-22-2005 04:37:04] -!- ordnas [~ordnas@p549DC39F.dip.t-dialin.net] has joined #ezpublish
+[05-22-2005 04:45:48] -!- CoderForLife [~mirc@nr17-66-161-248-129.fuse.net] has joined #ezpublish
+[05-22-2005 04:58:39] [#ezpublish] <Larson> morning
+[05-22-2005 05:05:02] -!- Bedlore [~me@ppp239-78.lns2.adl2.internode.on.net] has joined #ezpublish
+[05-22-2005 06:04:04] -!- ordnas [~ordnas@p549DC39F.dip.t-dialin.net] has left #ezpublish []
+[05-22-2005 06:46:13] -!- SEAwolfx_ [debian-tor@08ed4e9bf0e9df34.session.tor] has joined #ezpublish
+[05-22-2005 06:46:58] -!- SEAwolfx [~mike@2f92e509aa630127.session.tor] has quit [Remote closed the connection]
+[05-22-2005 09:46:35] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-22-2005 09:46:42] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-22-2005 10:53:10] -!- SEAwolfx_ [debian-tor@08ed4e9bf0e9df34.session.tor] has quit [Remote closed the connection]
+[05-22-2005 10:53:48] -!- SEAwolfx [debian-tor@b467e59c5d203183.session.tor] has joined #ezpublish
+[05-22-2005 11:43:02] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-22-2005 12:26:57] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-22-2005 12:38:49] -!- ordna1 [~ordnas@p549DC39F.dip.t-dialin.net] has joined #ezpublish
+[05-22-2005 13:20:31] -!- lucasr [~lucasr@201.19.234.88] has joined #ezpublish
+[05-22-2005 13:22:39] -!- SEAwolfx_ [~mike@2951cba04c722c9c.session.tor] has joined #ezpublish
+[05-22-2005 13:27:40] -!- SEAwolfx [debian-tor@b467e59c5d203183.session.tor] has quit [Remote closed the connection]
+[05-22-2005 14:25:01] -!- ordna1 [~ordnas@p549DC39F.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-22-2005 14:32:01] -!- SEAwolfx_ is now known as SEAwolfx
+[05-22-2005 14:35:41] -!- lucasr [~lucasr@201.19.234.88] has quit ["Leaving"]
+[05-22-2005 15:33:58] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-22-2005 15:53:25] -!- Allman [~allman@ti132110a080-12830.bb.online.no] has joined #ezpublish
+[05-22-2005 16:02:47] -!- Allman [~allman@ti132110a080-12830.bb.online.no] has quit []
+[05-22-2005 16:34:20] -!- ordnas [~ordnas@p549DC39F.dip.t-dialin.net] has joined #ezpublish
+[05-22-2005 18:09:42] -!- Uplink [~Uplink@200.199.53.239] has joined #ezpublish
+[05-22-2005 18:25:30] -!- ordnas [~ordnas@p549DC39F.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-22-2005 18:38:24] -!- ordnas [~ordnas@p549DC39F.dip.t-dialin.net] has joined #ezpublish
+[05-22-2005 18:44:35] [#ezpublish] <kracker> on a long enough time line the survival rate of everyone drops to 0 --tyler
+[05-22-2005 20:14:56] -!- ordnas [~ordnas@p549DC39F.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-22-2005 21:03:58] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has joined #ezpublish
+[05-22-2005 21:26:15] -!- kracker is now known as jond
+[05-22-2005 22:27:27] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-22-2005 22:59:25] -!- Bedlore [~me@ppp239-78.lns2.adl2.internode.on.net] has quit []
+[05-22-2005 23:19:17] -!- ordna1 [~ordnas@p549DFF1B.dip.t-dialin.net] has joined #ezpublish

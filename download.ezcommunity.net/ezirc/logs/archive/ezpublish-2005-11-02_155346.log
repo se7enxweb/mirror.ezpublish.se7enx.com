@@ -1,0 +1,458 @@
+[11-02-2005 00:00:23] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-02-2005 00:16:30] -!- kurna_pulandit [n=kurna@58.69.201.24] has quit [Read error: 110 (Connection timed out)]
+[11-02-2005 00:33:00] -!- DiGiTa|_ [n=guillaum@84.5.143.109] has joined #ezpublish
+[11-02-2005 01:38:51] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-02-2005 01:55:54] -!- fh[eZ] [n=fh@80.239.98.162] has joined #ezpublish
+[11-02-2005 01:57:31] -!- ordnas [n=ordnas@p549DE596.dip.t-dialin.net] has joined #ezpublish
+[11-02-2005 02:04:19] [#ezpublish] <Katana`> hi fh[eZ]
+[11-02-2005 02:04:22] [#ezpublish] <Katana`> and hi others, btw :)
+[11-02-2005 02:04:30] [#ezpublish] <fh[eZ]> moin
+[11-02-2005 02:05:08] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-02-2005 02:10:39] [#ezpublish] * Katana` has waaaay too much spam
+[11-02-2005 02:27:28] -!- kh[eZ]^ [n=kakemons@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[11-02-2005 02:35:05] -!- DiGiTa|__ [n=guillaum@84.4.190.108] has joined #ezpublish
+[11-02-2005 02:43:11] -!- DiGiTa|_ [n=guillaum@84.5.143.109] has quit [Read error: 110 (Connection timed out)]
+[11-02-2005 03:28:34] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-02-2005 03:28:48] [#ezpublish] <Sulfur> hi guys
+[11-02-2005 03:28:58] [#ezpublish] <Katana`> hi Sulfur
+[11-02-2005 03:30:02] [#ezpublish] * Sulfur will dedicate the day to understand why a script which saves content objects works when called from browser and doesn't when called through a non-browser
+[11-02-2005 03:30:05] [#ezpublish] <kracker> laugh, a day of trying to fax the signature page. only to the wrong number, *shakes head*, lol
+[11-02-2005 03:30:58] [#ezpublish] <Sulfur> -- suggestions very welcome :)
+[11-02-2005 03:31:09] [#ezpublish] <kracker> you make one little mistake copying down a number and then it's a week of laughs in the office.
+[11-02-2005 03:31:16] [#ezpublish] <Katana`> :))
+[11-02-2005 03:31:25] [#ezpublish] <Katana`> that stuff is never forgotten :)
+[11-02-2005 03:31:33] [#ezpublish] <kracker> weak sause
+[11-02-2005 03:31:34] [#ezpublish] <Sulfur> kracker: I lost 40 days due to the same problem when activating my adsl line ....
+[11-02-2005 03:31:43] [#ezpublish] <kracker> heh
+[11-02-2005 03:32:27] [#ezpublish] <kracker> in my defance i'm useing ... it's my 2nd time doing an international call ever and .... i'm still a little dry
+[11-02-2005 03:33:19] [#ezpublish] <Sulfur> I suppose it's an environment problem ... but why the hell would that script need any environment data??? after all it's just database stuff...
+[11-02-2005 03:35:00] [#ezpublish] * Sulfur bangs head
+[11-02-2005 03:35:22] [#ezpublish] <kracker> make a copy? :D ... a test version to output key point(s) results untill it narrows the missing dependancy
+[11-02-2005 03:35:44] [#ezpublish] <Sulfur> the lack of good structural documentation goes high in the "list of things that frustrate me about eZ" :)
+[11-02-2005 03:36:37] [#ezpublish] <kracker> heh, (not mocking just been there) if i was to say the same i'd tell myself to build a web page about it and mark it to not be indexed by search engines or robots :D
+[11-02-2005 03:41:58] [#ezpublish] <kracker> sounds dumb when i say it alloud but my first thought is to start at the end of the script and work backwards
+[11-02-2005 03:44:55] [#ezpublish] <Sulfur> yeah I am peppering the code of logfile statements
+[11-02-2005 03:45:02] [#ezpublish] <Sulfur> with
+[11-02-2005 03:46:31] [#ezpublish] <kracker> nods, even better idea!
+[11-02-2005 03:47:17] [#ezpublish] * kracker runs off to freakout on the success of a single fax (hey mail is ... sloooww)
+[11-02-2005 04:30:52] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-02-2005 04:43:12] [#ezpublish] <DiGiTa|__> how can i get the class attribute id with the name in php ?
+[11-02-2005 04:44:42] [#ezpublish] <DiGiTa|__> classAttributeIDByIdentifier ?
+[11-02-2005 04:44:51] [#ezpublish] <DiGiTa|__> well it seems to be that
+[11-02-2005 04:46:18] [#ezpublish] <Sulfur> hey guys, I seem to have narrowed down the problem. I put some debug lines in the code and the line  eZContentClass::fetchByIdentifier('my_class_identifier') silently fails when the script isn't called by a browser. no logging at all. fh[eZ] ... have you any ideas?
+[11-02-2005 04:47:09] [#ezpublish] <Katana`> have you tried debugging the method a little in order to see where it fails ?
+[11-02-2005 05:15:10] [#ezpublish] <Sulfur> Katana`: I found the problem :)
+[11-02-2005 05:17:00] [#ezpublish] <Sulfur> Katana`: it was mostly due to my following eZ ' coding practice of using include_onces instead of my trustworthy require_onces , coupled with a different environment when the script was called not by a browser;)
+[11-02-2005 05:17:47] [#ezpublish] * Sulfur creates an entry in his brain : "ez[silently_failing][0] => 'put a require_once'" :P
+[11-02-2005 05:21:49] [#ezpublish] <DiGiTa|__> someone has an idea, why this doesn't work :  $id_attribute_ville
+[11-02-2005 05:21:52] [#ezpublish] <DiGiTa|__> err
+[11-02-2005 05:22:01] [#ezpublish] <DiGiTa|__> not that, but that : $id_attribute_ville = eZContentObjectTreeNode::classAttributeIDByIdentifier('ville');
+[11-02-2005 05:23:24] [#ezpublish] <Sulfur> DiGiTa|__: how do you specfy the class?
+[11-02-2005 05:23:41] [#ezpublish] <Sulfur> tyou are caling it statically .. it won't work like that
+[11-02-2005 05:24:17] [#ezpublish] <Sulfur> because he does not know in which class it has to search attribute 'ville'
+[11-02-2005 05:24:31] [#ezpublish] <DiGiTa|__> it's a static method
+[11-02-2005 05:24:42] [#ezpublish] <DiGiTa|__> so it will search in all classes
+[11-02-2005 05:25:09] [#ezpublish] <DiGiTa|__> and should return the first id that match identifier
+[11-02-2005 05:25:21] [#ezpublish] <Sulfur> really? I neverused that ..... ok , if that's the behavior I stand corrected :)
+[11-02-2005 05:33:18] [#ezpublish] <DiGiTa|__> ok i found, it's the path : $id_attribute_ville = eZContentObjectTreeNode::classAttributeIDByIdentifier('bien/ville');
+[11-02-2005 05:35:35] [#ezpublish] <DiGiTa|__> all the classattributeidentifiers are in a file named classattributeridentifiers_$dbname.php
+[11-02-2005 05:36:10] [#ezpublish] <DiGiTa|__> so, no fetch is required with this static method, taht's cool
+[11-02-2005 05:36:11] [#ezpublish] <DiGiTa|__> :)
+[11-02-2005 05:59:20] [#ezpublish] <_Rappy_> ello all
+[11-02-2005 06:02:21] [#ezpublish] <Sulfur> ciao _Rappy_
+[11-02-2005 06:02:52] [#ezpublish] <Sulfur> I wonder how does my gaim assign a color to a nick ....
+[11-02-2005 06:03:05] [#ezpublish] <Sulfur> what criterion does it use
+[11-02-2005 06:04:27] [#ezpublish] <DiGiTa|__> whois _rappy_
+[11-02-2005 06:04:30] [#ezpublish] <DiGiTa|__> :)
+[11-02-2005 06:05:40] [#ezpublish] <_Rappy_> Sulfur, random?
+[11-02-2005 06:06:03] [#ezpublish] <Sulfur> _Rappy_: no, it's not random ... :) frex, Katana` has always this nice salmon color :P
+[11-02-2005 06:07:43] [#ezpublish] <_Rappy_> ah, but the initial assignment is random
+[11-02-2005 06:07:54] [#ezpublish] <_Rappy_> if (newnick) assign color
+[11-02-2005 06:08:03] [#ezpublish] <_Rappy_> and keep that color for thesame nick?
+[11-02-2005 06:08:22] [#ezpublish] <_Rappy_> ig I now got Katana`s nick, maybe I would get that color
+[11-02-2005 06:09:04] [#ezpublish] <Sulfur> that might be a hypothesis , but if I change nick, I keep the same color , IIRC
+[11-02-2005 06:09:14] -!- Sulfur is now known as Sulfur_polkadots
+[11-02-2005 06:09:19] [#ezpublish] <Sulfur_polkadots> lessee
+[11-02-2005 06:09:22] [#ezpublish] <Sulfur_polkadots> yeah same color
+[11-02-2005 06:09:27] -!- Sulfur_polkadots is now known as Sulfur
+[11-02-2005 06:09:57] [#ezpublish] <Sulfur> it might be some algorithm on the whois ...
+[11-02-2005 06:10:40] [#ezpublish] <_Rappy_> but that might be that the user always has the same color
+[11-02-2005 06:11:12] [#ezpublish] <_Rappy_> or maybe it's a combo of usernick and userinfo
+[11-02-2005 06:11:57] [#ezpublish] <_Rappy_> we should get the sourcecode and find out
+[11-02-2005 06:17:15] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[11-02-2005 06:18:13] [#ezpublish] <_Rappy_> hmm, I can't seem to find on what criteria to do the ovverside for the design/standard/templates/user/login.tpl
+[11-02-2005 06:18:26] [#ezpublish] <_Rappy_> *override
+[11-02-2005 06:18:39] [#ezpublish] <zrg> yo folks!
+[11-02-2005 06:18:50] [#ezpublish] <_Rappy_> hello zrg
+[11-02-2005 06:19:29] [#ezpublish] <zrg> does this look correct to you:
+[11-02-2005 06:19:29] [#ezpublish] <zrg> $node =& eZContentObjectTreeNode::fetchByURLPath( 'gallery/someimage' );
+[11-02-2005 06:19:33] [#ezpublish] <_Rappy_> should I still do the overide on Source=node/view/full.tpl ?
+[11-02-2005 06:27:58] [#ezpublish] <zrg> on templates/user/login.tpl ?
+[11-02-2005 06:28:12] [#ezpublish] <zrg> no, user/login.tpl
+[11-02-2005 06:28:43] [#ezpublish] <zrg> why dont you use override links in debug?
+[11-02-2005 06:28:53] [#ezpublish] <zrg> saves soem headache
+[11-02-2005 06:28:55] [#ezpublish] <_Rappy_> I have no idea. I want to override the login.tpl in standard
+[11-02-2005 06:30:07] [#ezpublish] <_Rappy_> I guess I can use url_alias
+[11-02-2005 06:30:13] [#ezpublish] <zrg> enable the used templates list in debug, view the login page, click red icon after right template in debug
+[11-02-2005 06:30:13] [#ezpublish] <_Rappy_> as the condition
+[11-02-2005 06:30:23] [#ezpublish] <zrg> no no no
+[11-02-2005 06:30:49] [#ezpublish] <_Rappy_> ok, i'll try that
+[11-02-2005 06:50:39] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-02-2005 07:27:20] [#ezpublish] <Sulfur> hmm ....
+[11-02-2005 07:56:25] [#ezpublish] <Sulfur> the extension now is 90% "working" .... I still don't get how to save the attribute URL into an URL datatype ... so far I can only save the title
+[11-02-2005 07:57:58] [#ezpublish] <zrg> extension?
+[11-02-2005 07:59:39] [#ezpublish] <zrg> good extension? :D
+[11-02-2005 08:02:16] [#ezpublish] <_Rappy_> Sulfur, make an parser there too, that translates & into &amp; for XML validation
+[11-02-2005 08:07:00] [#ezpublish] <Sulfur> zrg: it handles trackbacks :)
+[11-02-2005 08:07:20] [#ezpublish] <zrg> ?
+[11-02-2005 08:07:22] [#ezpublish] <Sulfur> _Rappy_:  .... what??
+[11-02-2005 08:07:38] [#ezpublish] <zrg> whatsa trackback
+[11-02-2005 08:08:04] [#ezpublish] <Sulfur> zrg: http://www.sixapart.com/pronet/docs/trackback_spec
+[11-02-2005 08:08:21] [#ezpublish] <Sulfur> a very cool thing for building a network of ideas :P
+[11-02-2005 08:10:03] [#ezpublish] <Sulfur> zrg: you had written something cool in your blog, I write on my own blog, different server and maybe different blogging platform, something related to your post, I enter the permalink of your post into my own post, and bingo! automagically , your own blog post will have an entry saying "Sulfur said this about what I wrote...." with a link to my own post, and vice versa :)
+[11-02-2005 08:11:16] [#ezpublish] <Sulfur> basically, my blogging platform will load up your page, parse it for an embedded RDF document containing a trackback ping URL, call it , and send data to automatically generate the bidirectional link
+[11-02-2005 08:11:56] [#ezpublish] <Sulfur> even a dead raven can use it ;)
+[11-02-2005 08:12:58] [#ezpublish] <zrg> ok, think i get the idea
+[11-02-2005 08:18:46] [#ezpublish] <Sulfur> but I will not be able to make it work as I want until I can correctly save a link datatype
+[11-02-2005 08:20:22] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[11-02-2005 08:23:09] [#ezpublish] <Sulfur> http://ez.no/community/forum/developer/how_to_save_from_php_all_the_fields_of_an_ezurl_attribute
+[11-02-2005 08:23:11] [#ezpublish] <Sulfur> :)
+[11-02-2005 08:28:44] [#ezpublish] <DiGiTa|__> you want to save the value into content object attribute ?
+[11-02-2005 08:31:01] [#ezpublish] <buz> must be a special day today, the firefox auto update to 1.5rc1 actually worked
+[11-02-2005 08:31:12] [#ezpublish] <DiGiTa|__> yes
+[11-02-2005 08:31:13] [#ezpublish] <DiGiTa|__> :)
+[11-02-2005 08:31:20] [#ezpublish] <Katana`> lol
+[11-02-2005 08:31:25] [#ezpublish] <Katana`> RC1 ? cool
+[11-02-2005 08:32:35] [#ezpublish] <buz> click help -> check update
+[11-02-2005 08:32:49] [#ezpublish] <buz> (of course some extensions will stop working ;)
+[11-02-2005 08:33:04] [#ezpublish] <Katana`> amazing stuff
+[11-02-2005 08:34:24] [#ezpublish] <buz> can anyone recommend a personal firewall for xp?
+[11-02-2005 08:34:35] [#ezpublish] <Katana`> zonealarm ?
+[11-02-2005 08:34:38] [#ezpublish] <buz> slooooow
+[11-02-2005 08:34:40] [#ezpublish] <Katana`> or a hardware router ;)
+[11-02-2005 08:34:50] [#ezpublish] <zrg> m0n0wall
+[11-02-2005 08:34:53] [#ezpublish] <buz> cant very well carry one with me when i go to uni
+[11-02-2005 08:34:54] [#ezpublish] <Katana`> well, i would definitely not recommend the norton security one then ;)
+[11-02-2005 08:35:01] [#ezpublish] <Katana`> bah it's not that big buz :)
+[11-02-2005 08:35:03] [#ezpublish] <buz> norton is bullcrap, yes ;)
+[11-02-2005 08:35:12] [#ezpublish] <buz> but doesnt run on battery
+[11-02-2005 08:35:17] [#ezpublish] <DiGiTa|__> bullshit
+[11-02-2005 08:35:20] [#ezpublish] <DiGiTa|__> :)
+[11-02-2005 08:35:20] [#ezpublish] <Katana`> lol
+[11-02-2005 08:35:35] [#ezpublish] <Katana`> maybe one day we'll have hardware firewalls in laptops... that would be top notch
+[11-02-2005 08:35:43] [#ezpublish] <buz> nforce chipset has hardware firewall
+[11-02-2005 08:35:48] [#ezpublish] <Katana`> really ?
+[11-02-2005 08:35:49] [#ezpublish] <Katana`> nice
+[11-02-2005 08:35:57] [#ezpublish] <Katana`> i wanna buy a new mobo / cpu :(
+[11-02-2005 08:36:12] [#ezpublish] <buz> personally, i dont htink its very useful
+[11-02-2005 08:36:18] [#ezpublish] <buz> unless you have 100mbit at home that is
+[11-02-2005 08:36:27] [#ezpublish] <DiGiTa|__> 20 mbit in here
+[11-02-2005 08:37:15] [#ezpublish] <buz> wtf? 20mbit? vdsl?
+[11-02-2005 08:37:24] [#ezpublish] <zrg> maybe go the easy way and kick windows out of your laptop?
+[11-02-2005 08:37:33] [#ezpublish] <buz> that is the hardway
+[11-02-2005 08:37:39] [#ezpublish] <Katana`> it's just ADSL
+[11-02-2005 08:37:42] [#ezpublish] <Katana`> ADSL2 actually
+[11-02-2005 08:37:42] [#ezpublish] <Sulfur> buz: http://www.grc.com/lt/scoreboard.htm
+[11-02-2005 08:37:43] [#ezpublish] <buz> unless you write some sane handwriting recognition software
+[11-02-2005 08:37:49] [#ezpublish] <Katana`> 20Mbps ATM not IP
+[11-02-2005 08:37:51] [#ezpublish] <Katana`> 16 Mb IP
+[11-02-2005 08:38:02] [#ezpublish] <DiGiTa|__> wimax not bad too
+[11-02-2005 08:39:30] [#ezpublish] <Sulfur> by the way, I'd suggest everybody take the time to browse that site in your spare time, lots of interesting security stuff
+[11-02-2005 08:42:16] [#ezpublish] <DiGiTa|__> i'm on osx so, no problems :p
+[11-02-2005 08:43:21] [#ezpublish] <Katana`> security sucks
+[11-02-2005 08:43:32] [#ezpublish] <Katana`> get a router, don't use IE / OE
+[11-02-2005 08:43:38] [#ezpublish] <Katana`> and you're 90% safe
+[11-02-2005 08:43:44] [#ezpublish] <buz> yes and dont use win
+[11-02-2005 08:43:46] [#ezpublish] <Katana`> get an antivirus if you download warez and go to pr0n sites ;)
+[11-02-2005 08:43:50] [#ezpublish] <buz> but alas, no tablet linux around
+[11-02-2005 08:43:54] [#ezpublish] <Katana`> that's if you have to use win ;)
+[11-02-2005 08:44:07] [#ezpublish] <DiGiTa|__> :)
+[11-02-2005 08:44:32] [#ezpublish] <DiGiTa|__> i you wanna use pphedit
+[11-02-2005 08:44:35] [#ezpublish] <DiGiTa|__> phpedit
+[11-02-2005 08:44:41] [#ezpublish] <DiGiTa|__> if
+[11-02-2005 08:44:42] [#ezpublish] <Katana`> hehehe
+[11-02-2005 08:44:44] [#ezpublish] <Katana`> that too ;)
+[11-02-2005 08:45:00] [#ezpublish] <Katana`> 2.0.0.179 (alpha) is out DiGiTa|__, starting to look good ;)
+[11-02-2005 08:45:14] [#ezpublish] <DiGiTa|__> well it's not my problem :p
+[11-02-2005 08:45:31] [#ezpublish] <Katana`> it's one of the big steps to crossplatform version dude
+[11-02-2005 08:45:32] [#ezpublish] <DiGiTa|__> doen't work on osx..; so ...
+[11-02-2005 08:45:35] [#ezpublish] <Katana`> new editing component
+[11-02-2005 08:45:41] [#ezpublish] <Katana`> the old one was closed source and only windows
+[11-02-2005 08:45:47] [#ezpublish] <DiGiTa|__> ah
+[11-02-2005 08:45:48] [#ezpublish] <DiGiTa|__> ok
+[11-02-2005 08:45:52] [#ezpublish] <Katana`> and changing the editing component in an IDE is BIG stuff ;)
+[11-02-2005 08:45:54] [#ezpublish] <DiGiTa|__> nice
+[11-02-2005 08:45:57] [#ezpublish] <Katana`> since it's the center of everything
+[11-02-2005 08:46:01] [#ezpublish] <buz> so will it be ported to linux
+[11-02-2005 08:46:10] [#ezpublish] <Katana`> yes, it will
+[11-02-2005 08:46:17] [#ezpublish] <Katana`> hard to give a date though... hopefully next year
+[11-02-2005 08:46:21] [#ezpublish] <DiGiTa|__> cool, than it will be available for osx
+[11-02-2005 08:46:25] [#ezpublish] <Katana`> marketing priorities first...
+[11-02-2005 08:46:42] [#ezpublish] <Katana`> it's not that easy DiGiTa|__, but it is requested, we'll do everything we can
+[11-02-2005 08:47:04] [#ezpublish] <buz> port it to qt and be done with it ;)
+[11-02-2005 08:47:21] [#ezpublish] <zrg> phpedit, works in wine?
+[11-02-2005 08:47:26] [#ezpublish] <DiGiTa|__> what editor are you using buz ?
+[11-02-2005 08:47:29] [#ezpublish] <buz> quanta
+[11-02-2005 08:47:35] [#ezpublish] <DiGiTa|__> ah, nice one
+[11-02-2005 08:47:40] [#ezpublish] <Katana`> zrg: some had success with that yes
+[11-02-2005 08:47:58] [#ezpublish] <DiGiTa|__> i didn't find a decent version on osx
+[11-02-2005 08:48:04] [#ezpublish] <zrg> i use jedit, good to know that you can dl and work on whatever platform
+[11-02-2005 08:48:19] [#ezpublish] <DiGiTa|__> i'm using bbedit
+[11-02-2005 08:48:25] [#ezpublish] * buz eagerly awaits KDE.whateveros
+[11-02-2005 08:48:35] [#ezpublish] <zrg> great, lets have a holy war :)
+[11-02-2005 08:48:56] [#ezpublish] <Katana`> errr no
+[11-02-2005 08:48:59] [#ezpublish] <Katana`> not on #ezpublish
+[11-02-2005 08:49:00] [#ezpublish] <Katana`> i refuse
+[11-02-2005 08:49:04] [#ezpublish] <Katana`> MAMBO OWNS !!!!
+[11-02-2005 08:49:05] [#ezpublish] <DiGiTa|__> lol
+[11-02-2005 08:49:09] [#ezpublish] <DiGiTa|__> :p
+[11-02-2005 08:49:09] [#ezpublish] <zrg> relax, joke :)
+[11-02-2005 08:49:12] [#ezpublish] <Katana`> :))
+[11-02-2005 08:49:20] [#ezpublish] <DiGiTa|__> DRUPAL IS BETTER
+[11-02-2005 08:49:21] [#ezpublish] <DiGiTa|__> :p
+[11-02-2005 08:49:37] [#ezpublish] <zrg> midgard forever!
+[11-02-2005 08:49:55] [#ezpublish] <zrg> btw, folks, what are your thoughts on logging the channel?
+[11-02-2005 08:50:11] [#ezpublish] <buz> i usually do
+[11-02-2005 08:50:32] [#ezpublish] <DiGiTa|__> me too
+[11-02-2005 08:50:37] [#ezpublish] <zrg> i mean, centrally - ezlog is doing it now
+[11-02-2005 08:50:56] [#ezpublish] <Sulfur> I think that the useful data / content ratio will be too low, and that the final decision should be made by eZ. but apart from that, I have no objections whatsoever.
+[11-02-2005 08:51:30] [#ezpublish] <buz> the use of it would likely be minor
+[11-02-2005 08:51:32] [#ezpublish] <zrg> yes, im just trying to gather opinions and ideas to speedi it up
+[11-02-2005 08:51:44] [#ezpublish] <Sulfur> that's mine, zrg
+[11-02-2005 08:52:16] [#ezpublish] <buz> mhh 3 cars and none of them is here
+[11-02-2005 08:52:18] [#ezpublish] <zrg> i disagree - if the log were included in ez main search, it could be useful
+[11-02-2005 08:52:30] [#ezpublish] <buz> and i sure as hell wont carry home mineral water packages by foot
+[11-02-2005 08:53:18] [#ezpublish] <zrg> dry them up, then add tapwater at home to get "100% water" like they do with orange juice :P
+[11-02-2005 08:53:20] [#ezpublish] * Katana` searches for raven in the log
+[11-02-2005 08:53:28] [#ezpublish] <Katana`> i don't think it's a good idea btw ;)
+[11-02-2005 08:54:06] [#ezpublish] <Sulfur> zrg: if anything were hooked into eZ main search, it will become unserachable , IMHO :(
+[11-02-2005 08:54:12] [#ezpublish] <zrg> ok, but there is lots of useful and educational debug sessions getting lost here.. its a waste, alternative ideas?
+[11-02-2005 08:54:25] [#ezpublish] <Sulfur> if it has to be logged, let's have google index it
+[11-02-2005 08:56:16] [#ezpublish] <zrg> what if ez made another section in search "irc sessions" and give write rights to number of residents here, we could then scroll back after some interesting part and copy-paste that to ez.no. better?
+[11-02-2005 08:56:40] [#ezpublish] <Sulfur> would you devote time to that? :P
+[11-02-2005 08:56:44] [#ezpublish] <zrg> this way info content will be higher
+[11-02-2005 08:56:49] [#ezpublish] <Sulfur> zrg: right
+[11-02-2005 08:56:56] [#ezpublish] <zrg> i would
+[11-02-2005 08:57:20] [#ezpublish] <Sulfur> fellas, let's toast to zrg , our unanimously-appointed chat-librarian!!! :D
+[11-02-2005 08:57:31] [#ezpublish] * zrg will do everything to have his name listed on web :)
+[11-02-2005 08:57:52] [#ezpublish] * zrg swings from the chandelier
+[11-02-2005 08:57:59] [#ezpublish] <zrg> uuga-uuga!
+[11-02-2005 08:58:08] [#ezpublish] <Sulfur> hehe
+[11-02-2005 08:58:20] [#ezpublish] <Sulfur> well, I think that a test can be done.
+[11-02-2005 08:58:51] [#ezpublish] <Sulfur> this would need to go into a doc page , with guidelines for submission (looooooose ones) and how to index material
+[11-02-2005 08:59:09] [#ezpublish] <zrg> because, altho i feel some sort of log is needed, if it is going to frighten away people like deric then its not worth it
+[11-02-2005 08:59:30] [#ezpublish] <Sulfur> indeed, this is why I say that eZ should have the final say
+[11-02-2005 08:59:47] [#ezpublish] * Sulfur thinks like a corporate shark ! ;)
+[11-02-2005 09:00:14] [#ezpublish] <zrg> well, they dont own the community but i give their opinion good respect, if they come out with one, how about it??
+[11-02-2005 09:00:22] [#ezpublish] * zrg pokes [ez]
+[11-02-2005 09:00:26] [#ezpublish] <Sulfur> by the way, can anyone shed some light on this ?? http://ez.no/community/forum/developer/how_to_save_from_php_all_the_fields_of_an_ezurl_attribute
+[11-02-2005 09:01:21] [#ezpublish] <zrg> i actually think the librarian-copy-paste idea is better than dumb log, too
+[11-02-2005 09:01:48] [#ezpublish] <zrg> makes also possible asking participants if they mind
+[11-02-2005 09:02:08] [#ezpublish] <zrg> and maybe derrick will come back, with raven
+[11-02-2005 09:02:22] [#ezpublish] <Sulfur> I suppose I could devote some minutes to help ....
+[11-02-2005 09:02:32] [#ezpublish] <Sulfur> guys, if my tags / trackback extension will work, we can use it to help
+[11-02-2005 09:02:47] [#ezpublish] <zrg> explain sulfur
+[11-02-2005 09:02:59] [#ezpublish] <Sulfur> after all, tags are just that, a collaborative , human-powered indexing of material
+[11-02-2005 09:03:22] [#ezpublish] <Sulfur> you want me to explain about tags, zrg ?
+[11-02-2005 09:04:28] [#ezpublish] <zrg> how the traceback thing helps with help
+[11-02-2005 09:05:14] [#ezpublish] <Sulfur> not the trackback thing in particular, zrg , but I have 2 extensions in alpha stage which my PM wants me to merge
+[11-02-2005 09:05:28] [#ezpublish] <Sulfur> the tagging stuff is useful
+[11-02-2005 09:06:05] [#ezpublish] <Sulfur> and there is a neat trick connecting tbs and tags ;)
+[11-02-2005 09:06:15] [#ezpublish] <Sulfur> if only I cann pull it off .. :)
+[11-02-2005 09:09:49] [#ezpublish] <zrg> holding thumbs for you :)
+[11-02-2005 09:14:56] [#ezpublish] * Katana` still wants to know how he can create new objects from a setup content class in the content tree...
+[11-02-2005 09:15:01] [#ezpublish] <Katana`> like in admin.../design
+[11-02-2005 09:17:28] [#ezpublish] <zrg> im not really comfortable with doing stuff in code, cant help..
+[11-02-2005 09:17:30] [#ezpublish] <Sulfur> ach Katana` .... what for ?
+[11-02-2005 09:19:03] [#ezpublish] <Katana`> i wanna store settings in content objects, but i don't wanna store settings in the content structure ;)
+[11-02-2005 09:19:10] [#ezpublish] <Katana`> it fits better in settings...
+[11-02-2005 09:19:22] [#ezpublish] <Katana`> or maybe create it in setup, yum
+[11-02-2005 09:19:45] [#ezpublish] <Sulfur> Katana`: do you have access to the learning ezpublish 3 book?
+[11-02-2005 09:19:54] [#ezpublish] <Katana`> yep
+[11-02-2005 09:20:01] [#ezpublish] <Katana`> just next to me, below a stack of waffels
+[11-02-2005 09:20:02] [#ezpublish] <Katana`> :)
+[11-02-2005 09:20:24] [#ezpublish] <zrg> is the book good?
+[11-02-2005 09:20:24] [#ezpublish] <DiGiTa|__> :)
+[11-02-2005 09:20:29] [#ezpublish] <Katana`> not bad at all
+[11-02-2005 09:20:35] [#ezpublish] <DiGiTa|__> a little obsolete
+[11-02-2005 09:20:44] [#ezpublish] <Sulfur> maybe the 2nd line above "content object node assignments" on page 136 can help? it speaks about which section to assign your node to
+[11-02-2005 09:20:55] [#ezpublish] <Sulfur> or maybe I didn't really get the question :P
+[11-02-2005 09:20:57] [#ezpublish] <zrg> i mean, i need insight into coding, how to do basic stuff, write new modules..
+[11-02-2005 09:21:15] [#ezpublish] <Sulfur> zrg: I found the eurofxref tutorial REALLY useful for that
+[11-02-2005 09:21:35] [#ezpublish] <DiGiTa|__> i look after existing modules and datatypes
+[11-02-2005 09:21:35] [#ezpublish] <DiGiTa|__> :)
+[11-02-2005 09:21:36] [#ezpublish] <zrg> that was online i think
+[11-02-2005 09:22:00] [#ezpublish] <zrg> yes, still existing modules are not commented enough
+[11-02-2005 09:22:14] [#ezpublish] <DiGiTa|__> true
+[11-02-2005 09:22:15] [#ezpublish] <zrg> better than code by ez tho, which isnt commented at all :)
+[11-02-2005 09:22:15] [#ezpublish] <Sulfur> yes zrg, it's online , and it's step-by-step
+[11-02-2005 09:22:55] [#ezpublish] <zrg> there was not much node manipulation in that one i think?
+[11-02-2005 09:23:46] [#ezpublish] <Sulfur> nope, but if you need that, I can pastebin some code from my extension (which is rather vanilla from the book)
+[11-02-2005 09:23:58] [#ezpublish] <zrg> im interested in stuff like navigating node tree, objects, versions in code, modifying fields
+[11-02-2005 09:24:36] [#ezpublish] <Sulfur> zrg: who wouldn't ... ;)
+[11-02-2005 09:24:45] [#ezpublish] <zrg> which classes are for waht etc - there is shitload of ezsomething classes and no real indication which is for what
+[11-02-2005 09:25:02] [#ezpublish] <zrg> sigh.. sorry for bitching :)
+[11-02-2005 09:25:05] [#ezpublish] <Sulfur> *nod*
+[11-02-2005 09:27:06] [#ezpublish] <zrg> ok, if you have code that would help me recursively go thru nodetree, load published objects, load search and replace in some field in object and republish..  ?
+[11-02-2005 09:27:58] [#ezpublish] <zrg> ah btw: anyone EVER used eZContentObjectTreeNode::fetchByURLPath ?
+[11-02-2005 09:30:58] [#ezpublish] <Katana`> no me
+[11-02-2005 09:30:58] [#ezpublish] <Sulfur> nope zrg , used fetchByidentifier, but maybe you have an error in your url. try to load one by identifier, print out the url, repeat with that url.
+[11-02-2005 09:30:58] [#ezpublish] <Katana`> not
+[11-02-2005 09:31:02] [#ezpublish] <Katana`> i don't rely on URL ;)
+[11-02-2005 09:43:54] [#ezpublish] <Katana`> Damn
+[11-02-2005 09:44:04] [#ezpublish] <Katana`> could any of you try adding a Ini settings datatype to a content class ?
+[11-02-2005 09:44:16] [#ezpublish] <zrg> i have done so
+[11-02-2005 09:44:17] [#ezpublish] <Katana`> i always get an error on that attribute when storing the content class
+[11-02-2005 09:44:30] [#ezpublish] <Katana`> and the error message is... not clear ;)
+[11-02-2005 09:44:34] [#ezpublish] <Katana`> invalid attribute
+[11-02-2005 09:44:52] -!- zrg is now known as zrg_away
+[11-02-2005 09:45:53] -!- zrg_away [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-02-2005 09:46:02] [#ezpublish] <Katana`> sob it doesn't want my setting...
+[11-02-2005 09:46:43] [#ezpublish] <Katana`> ok it doesn't find ini files in extensions
+[11-02-2005 09:48:27] [#ezpublish] <Sulfur> "invalid ..... target??????"
+[11-02-2005 09:57:45] [#ezpublish] <Katana`> it's funny... when in /setup you can only create objects of the content classes located in the content category...
+[11-02-2005 09:57:49] [#ezpublish] <DiGiTa|__> is it possible to convert a data_float to string ?
+[11-02-2005 09:58:57] [#ezpublish] <DiGiTa|__> or inverse
+[11-02-2005 09:59:09] [#ezpublish] <DiGiTa|__> a string to data_int or data_float
+[11-02-2005 10:05:43] [#ezpublish] <Sulfur> huh ..... DiGiTa|__ ... if you're working on PHP side, definitely yes. just assignment would do the trick, or you might use typecasting, like (float)$mystring to get a float version of $mystring ...
+[11-02-2005 10:21:58] [#ezpublish] <DiGiTa|__> well i get problems with this sort of data : 1.5e+06
+[11-02-2005 10:22:11] [#ezpublish] * Sulfur bangs his head ... how difficult must saving an URL be?
+[11-02-2005 10:22:39] [#ezpublish] <DiGiTa|__> if i try to filter btw 0 and 10, i get 1.5e+06 (1 500 000)
+[11-02-2005 10:23:10] [#ezpublish] <Sulfur> ..I don't get you
+[11-02-2005 10:23:32] [#ezpublish] <DiGiTa|__> well i have big price amount in my db
+[11-02-2005 10:23:38] [#ezpublish] <DiGiTa|__> like 1 500 000 euros
+[11-02-2005 10:23:54] [#ezpublish] <Katana`> hum it's really stupid... the ezini datatype does not handle ini files in extensions
+[11-02-2005 10:23:59] [#ezpublish] * Katana` might patch that
+[11-02-2005 10:24:12] [#ezpublish] <DiGiTa|__> data_float convert this to 1.5e+06
+[11-02-2005 10:24:57] [#ezpublish] <DiGiTa|__> so when i try to find an amount between 0 and 5, i get 1 500 000 too
+[11-02-2005 10:27:27] [#ezpublish] <Sulfur> mhhhhh ... I have difficulties understanding you
+[11-02-2005 10:28:55] [#ezpublish] <DiGiTa|__> no prob, it's ok now
+[11-02-2005 10:28:56] [#ezpublish] <DiGiTa|__> :)
+[11-02-2005 10:33:00] [#ezpublish] <Sulfur> ok ..
+[11-02-2005 10:33:26] [#ezpublish] <Sulfur> do you know if eZ has any facility to validate urls ? I am looking at httptool but I can find nothing.
+[11-02-2005 10:33:37] [#ezpublish] <buz> validate like what
+[11-02-2005 10:33:58] [#ezpublish] <Sulfur> correctly formed would be nice. but that's just the base.
+[11-02-2005 10:34:10] [#ezpublish] <buz> mhh ezurl does that so evidently the code is somewhere
+[11-02-2005 10:34:13] [#ezpublish] <Sulfur> PHP's parse_url just doesn't vut it
+[11-02-2005 10:34:18] [#ezpublish] <Sulfur> cut
+[11-02-2005 10:34:30] [#ezpublish] <buz> i was goint to suggest that :)
+[11-02-2005 10:34:35] [#ezpublish] <buz> ye gods
+[11-02-2005 10:34:40] [#ezpublish] <Sulfur> btw buz -- ever tried to save an url  attribute ?
+[11-02-2005 10:34:48] [#ezpublish] <buz> kingston wants 250EUR for 1gb ram
+[11-02-2005 10:34:52] [#ezpublish] <Sulfur> oh no, it's not good enough
+[11-02-2005 10:35:06] [#ezpublish] <buz> and the toshiba suckers have moved the nose of the s0dimm slightly so that i cant use standard dimms
+[11-02-2005 10:38:02] [#ezpublish] <Katana`> i'm off cya
+[11-02-2005 10:38:18] [#ezpublish] <Sulfur> bye Katana` :)
+[11-02-2005 11:04:44] [#ezpublish] <buz> the people who wrote the elearning system my uni uses should be shot
+[11-02-2005 11:04:53] [#ezpublish] <buz> it's at version 4 now and STILL doesnt work
+[11-02-2005 11:09:31] [#ezpublish] <Sulfur> they just shuffle bugz around, glad to know that buggy code isn't only a prerogative of italy ;)
+[11-02-2005 11:11:15] [#ezpublish] <buz> actually i think the thing is developed inhouse
+[11-02-2005 11:11:21] [#ezpublish] <buz> its open source even
+[11-02-2005 11:11:27] [#ezpublish] <buz> maybe i should go and find some bugs and hack it
+[11-02-2005 11:12:02] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-02-2005 11:12:39] [#ezpublish] <buz> maybe its the server, downloads dont work either
+[11-02-2005 11:12:49] [#ezpublish] <buz> i think they should get some more machines for that
+[11-02-2005 11:17:53] [#ezpublish] <Sulfur> "this is the life of a meganerd baby...."
+[11-02-2005 11:18:00] [#ezpublish] <buz> LOL
+[11-02-2005 11:18:04] [#ezpublish] <buz> ytcracker rocks
+[11-02-2005 11:18:19] [#ezpublish] <buz> (even tho i usually dont like hip hop at all)
+[11-02-2005 11:18:26] [#ezpublish] <Sulfur> yes, it's fun
+[11-02-2005 11:18:43] [#ezpublish] <Sulfur> speaking of freaky geeky stuff, I watched kung fusion yesterday night
+[11-02-2005 11:18:48] [#ezpublish] <Sulfur> it rocks
+[11-02-2005 11:19:12] [#ezpublish] <Sulfur> it's not the english name of the movie, tho'
+[11-02-2005 11:20:07] [#ezpublish] <Sulfur> I think I'll just listen to surge runner now
+[11-02-2005 12:12:37] -!- ordnas [n=ordnas@p549DE596.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-02-2005 12:30:38] [#ezpublish] <buz> wtf is kungfusion
+[11-02-2005 12:31:45] [#ezpublish] <Sulfur> it's a movie from the same guys of shaolin soccer
+[11-02-2005 12:31:52] [#ezpublish] <buz> gong fu?
+[11-02-2005 12:31:55] [#ezpublish] <Sulfur> but much much bettre, funnier etc
+[11-02-2005 12:32:02] [#ezpublish] <buz> cant be gong fu then
+[11-02-2005 12:32:09] [#ezpublish] <buz> i found shaolin soccer absolutely hilarious
+[11-02-2005 12:32:14] [#ezpublish] <Sulfur> no it has a different name ....
+[11-02-2005 12:32:23] [#ezpublish] <Sulfur> yes indeed, so download it dude
+[11-02-2005 12:32:38] [#ezpublish] <DiGiTa|__> yeah shaolin soccer rules :)
+[11-02-2005 12:32:51] [#ezpublish] <buz> i need the name first ;=
+[11-02-2005 12:35:46] [#ezpublish] <buz> imdb knows nothing
+[11-02-2005 12:36:23] [#ezpublish] <DiGiTa|__> is it possible to do something like that :  echo ("<script>alert ('pouet');</script>");
+[11-02-2005 12:37:48] [#ezpublish] <buz> do where
+[11-02-2005 12:38:24] [#ezpublish] <DiGiTa|__> in <?php
+[11-02-2005 12:38:47] [#ezpublish] <buz> to do what
+[11-02-2005 12:38:54] [#ezpublish] <buz> or more likely WHY
+[11-02-2005 12:41:20] [#ezpublish] <Sulfur> buz ... wait I'll try to fetch the info for ya
+[11-02-2005 12:42:10] [#ezpublish] <Sulfur> buz: yes original title is gong fu http://cinema.castlerock.it/film.php/id=3707
+[11-02-2005 12:42:22] [#ezpublish] <buz> i didnt think gong fu was particularly funny ;)
+[11-02-2005 12:42:31] [#ezpublish] <buz> i think the english title is kungfu hustle
+[11-02-2005 12:42:49] [#ezpublish] <Sulfur> yes it could be
+[11-02-2005 12:43:11] [#ezpublish] <Sulfur> you didn't find it funny? I laughed by myself all the time ... like for example the chase scene
+[11-02-2005 12:43:32] [#ezpublish] <buz> mhh found it a better than average FX movie but nothing special
+[11-02-2005 12:43:37] [#ezpublish] <buz> not even close to shaolin soccer
+[11-02-2005 12:43:40] [#ezpublish] <Sulfur> of course it also is very "serious" , and I liked the really casual atmosphere, like the Devil being this old wackoid with plastic slippers
+[11-02-2005 12:46:26] [#ezpublish] <Sulfur> and it's unpredictable
+[11-02-2005 12:57:59] [#ezpublish] <buz> still by far the best chinese movie: hero
+[11-02-2005 12:58:15] [#ezpublish] <buz> closely followed by crouching tiger
+[11-02-2005 12:58:27] [#ezpublish] <buz> then either shaolin soccer or house of the flying daggers
+[11-02-2005 12:58:46] [#ezpublish] <buz> (or if you're more the artsy type, that weird wong kar wai stuff like 2046)
+[11-02-2005 13:00:23] [#ezpublish] <Sulfur> buz: can you remind me the name of that site ripper on source forge we were talking about some time ago ?
+[11-02-2005 13:00:33] [#ezpublish] <buz> httrack?
+[11-02-2005 13:00:44] [#ezpublish] <buz> or webhttrack for the "gui" version
+[11-02-2005 13:00:48] [#ezpublish] <Sulfur> could be ... lessee
+[11-02-2005 13:01:35] [#ezpublish] <Sulfur> no matches found for httrack
+[11-02-2005 13:02:26] [#ezpublish] <Sulfur> next try ;)
+[11-02-2005 13:02:48] [#ezpublish] <buz> maybe it doesnt live on SF?
+[11-02-2005 13:02:58] [#ezpublish] <buz> cause it sure exists ;)
+[11-02-2005 13:03:19] [#ezpublish] <Sulfur> oh yes ... it has a site by itself . good
+[11-02-2005 13:04:06] [#ezpublish] <Sulfur> well
+[11-02-2005 13:04:09] [#ezpublish] <Sulfur> time to leave
+[11-02-2005 13:04:13] [#ezpublish] <Sulfur> see ya tomorrow
+[11-02-2005 13:04:35] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-02-2005 13:07:25] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[11-02-2005 13:22:41] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-02-2005 13:55:31] -!- luke__ [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-02-2005 14:18:06] [#ezpublish] <zrg> is it april the 1st today??
+[11-02-2005 14:18:17] [#ezpublish] * zrg reads slashdot
+[11-02-2005 14:20:25] [#ezpublish] <buz> why
+[11-02-2005 14:21:40] [#ezpublish] <buz> http://www.guba.com that cant be for real
+[11-02-2005 14:21:52] [#ezpublish] <buz> anyone want to bet how long usenet will remain out of mpaa focus now?
+[11-02-2005 14:22:30] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 104 (Connection reset by peer)]
+[11-02-2005 14:43:10] [#ezpublish] <zrg> debian for solaris, windows for browsers stuff like that :P
+[11-02-2005 14:46:20] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-02-2005 14:46:47] [#ezpublish] <Katana`> evening
+[11-02-2005 14:49:58] [#ezpublish] <zrg> *burp*
+[11-02-2005 15:00:02] [#ezpublish] <DiGiTa|__> how can i convert an array to string
+[11-02-2005 15:00:13] [#ezpublish] <Katana`> uh ?
+[11-02-2005 15:00:17] [#ezpublish] <Katana`> serialize it you mean ?
+[11-02-2005 15:00:27] [#ezpublish] <zrg> in php?
+[11-02-2005 15:00:32] [#ezpublish] <DiGiTa|__> yes
+[11-02-2005 15:00:41] [#ezpublish] <Katana`> serialize then ;)
+[11-02-2005 15:01:12] [#ezpublish] <DiGiTa|__> i need to do something like that :
+[11-02-2005 15:01:12] [#ezpublish] <DiGiTa|__>  $debug_node =& $cpaint->add_node('debug');
+[11-02-2005 15:01:12] [#ezpublish] <DiGiTa|__>  $debug_node->set_data(print_r($setted_values));
+[11-02-2005 15:01:19] [#ezpublish] <DiGiTa|__> to debug
+[11-02-2005 15:01:33] [#ezpublish] <DiGiTa|__> because it's hard to debug ajax things
+[11-02-2005 15:02:25] [#ezpublish] <zrg> maybe he means implode?
+[11-02-2005 15:02:55] [#ezpublish] <zrg> probably, result of serialize is not very human readable
+[11-02-2005 15:04:16] [#ezpublish] <DiGiTa|__> serialize is better
+[11-02-2005 15:04:19] [#ezpublish] <DiGiTa|__> thanks
+[11-02-2005 15:04:42] [#ezpublish] <Katana`> well, it depends on what you wanna do with it
+[11-02-2005 15:05:03] [#ezpublish] <DiGiTa|__> just need to output the content of an array
+[11-02-2005 15:05:13] [#ezpublish] <Katana`> print_r ? :)
+[11-02-2005 15:05:26] [#ezpublish] <DiGiTa|__> with ajax ?
+[11-02-2005 15:12:59] [#ezpublish] <zrg> then, print_r($setted_values, TRUE)
+[11-02-2005 15:13:10] [#ezpublish] <Katana`> works fine yes
+[11-02-2005 15:13:18] [#ezpublish] <Katana`> DiGiTa|__: what do you wanna do ?
+[11-02-2005 15:13:20] [#ezpublish] <Katana`> debug ?
+[11-02-2005 15:13:27] [#ezpublish] <DiGiTa|__> yes
+[11-02-2005 15:13:27] [#ezpublish] <Katana`> or do something with the array ?
+[11-02-2005 15:13:32] [#ezpublish] <DiGiTa|__> debug
+[11-02-2005 15:13:38] [#ezpublish] <Katana`> ez i suppose ?
+[11-02-2005 15:13:44] [#ezpublish] <DiGiTa|__> yeah
+[11-02-2005 15:13:51] [#ezpublish] <DiGiTa|__> a module view
+[11-02-2005 15:13:52] [#ezpublish] <Katana`> eZDebug::writeDebug($array);
+[11-02-2005 15:13:57] [#ezpublish] <Katana`> then check var/log/debug.log
+[11-02-2005 15:14:13] [#ezpublish] <DiGiTa|__> ah yes nice idea :)
+[11-02-2005 15:14:21] [#ezpublish] <Katana`> debug output won't be printed to screen if the DEBUG HTML comment is not in the code
+[11-02-2005 15:20:47] [#ezpublish] <DiGiTa|__> yay my filtering is now totally finished and ouptup listing with custom sorting and custom filtering
+[11-02-2005 15:21:30] [#ezpublish] <DiGiTa|__> i will probaly show to you online tomorrow
+[11-02-2005 15:30:27] [#ezpublish] <zrg> he will probably get run over by bus tonight ;)
+[11-02-2005 15:39:39] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-02-2005 15:52:55] [#ezpublish] <DiGiTa|__> Katana`: ?

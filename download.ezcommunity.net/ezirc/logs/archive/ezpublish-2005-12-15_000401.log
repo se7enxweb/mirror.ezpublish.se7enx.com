@@ -1,0 +1,516 @@
+[12-14-2005 00:08:58] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-14-2005 00:59:21] -!- ordnas [n=ordnas@p549D48F9.dip.t-dialin.net] has joined #ezpublish
+[12-14-2005 01:03:07] -!- SEAwolfx [n=mike@DSL01.83.171.155.144.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[12-14-2005 01:09:48] -!- SEAwolfx [n=mike@DSL01.83.171.165.124.NEFkom.net] has joined #ezpublish
+[12-14-2005 01:28:15] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[12-14-2005 02:07:10] -!- DiGiTa|_ [n=guillaum@84.6.75.81] has joined #ezpublish
+[12-14-2005 02:11:08] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-14-2005 02:26:02] -!- SEAwolfx_ [n=mike@DSL01.83.171.165.124.NEFkom.net] has joined #ezpublish
+[12-14-2005 02:26:14] -!- SEAwolfx_ [n=mike@DSL01.83.171.165.124.NEFkom.net] has quit [Client Quit]
+[12-14-2005 02:29:00] -!- SEAwolfx [n=mike@DSL01.83.171.165.124.NEFkom.net] has quit ["leaving"]
+[12-14-2005 02:32:32] -!- SEAwolfx [n=mike@DSL01.83.171.165.124.NEFkom.net] has joined #ezpublish
+[12-14-2005 02:32:41] -!- SEAwolfx [n=mike@DSL01.83.171.165.124.NEFkom.net] has quit [Client Quit]
+[12-14-2005 02:34:08] -!- SEAwolfx [n=mike@DSL01.83.171.165.124.NEFkom.net] has joined #ezpublish
+[12-14-2005 02:48:35] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Excess Flood]
+[12-14-2005 02:49:35] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-14-2005 03:19:21] [#ezpublish] <kris10an> wam, bam, thank you mom
+[12-14-2005 03:44:17] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-14-2005 03:55:17] -!- ordnas [n=ordnas@p549D48F9.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-14-2005 03:55:29] -!- ordnas [n=ordnas@p549D48F9.dip.t-dialin.net] has joined #ezpublish
+[12-14-2005 03:57:52] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-14-2005 04:03:07] [#ezpublish] <_Rappy_> has anyone here created a own full.tlp view? And if so, does it ever display content, or do you have custom and/or general overrides for everything?
+[12-14-2005 04:09:18] [#ezpublish] <Katana`> custom for everything
+[12-14-2005 04:13:21] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[12-14-2005 04:13:40] [#ezpublish] <_Rappy_> cuz I had made a custom full.tpl, and had it say something like "If you can view this, you need to make a custom override!" to remind myself of what was left to do. Now however, another of our programmers seems to want to use that to display content. it's no biggie, relly, I GOT custom override for everything so it will never display content. I was just unsure if that was something that is used by others.
+[12-14-2005 04:14:10] [#ezpublish] <Katana`> i just keep the default one, it's pretty explicit :)
+[12-14-2005 04:18:45] [#ezpublish] <DiGiTa|_> i have started to try using mosts of base overrides
+[12-14-2005 04:19:00] [#ezpublish] <DiGiTa|_> it's faster
+[12-14-2005 04:19:56] [#ezpublish] <DiGiTa|_> you just need to understand the css file and hierarchy
+[12-14-2005 04:24:16] [#ezpublish] <Katana`> yep
+[12-14-2005 04:28:49] [#ezpublish] <Katana`> damn it sucks... if you have your override.ini in an extension, the class overrides won't get listed in the admin unless you load the extension
+[12-14-2005 04:48:49] [#ezpublish] <buz> makes sense no?
+[12-14-2005 04:50:04] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-14-2005 04:55:31] [#ezpublish] <buz> yeah the autologin stuff seems to work
+[12-14-2005 04:57:14] [#ezpublish] <Katana`> yes buz but still :)
+[12-14-2005 04:57:22] [#ezpublish] <Katana`> it doesn't make it not suck ^^
+[12-14-2005 05:03:56] [#ezpublish] <Sulfur> autologin ?
+[12-14-2005 05:04:07] [#ezpublish] * Sulfur raises an ear
+[12-14-2005 05:04:19] [#ezpublish] <Sulfur> oh by the way , good morning! :)
+[12-14-2005 05:04:24] [#ezpublish] <buz> ez.no/community/contribs/hacks/cookie_user
+[12-14-2005 05:04:28] [#ezpublish] <buz> works like a charm
+[12-14-2005 05:05:41] [#ezpublish] <buz> perfekt
+[12-14-2005 05:05:47] [#ezpublish] <buz> now i dont need to login on my own sites
+[12-14-2005 05:05:59] [#ezpublish] <buz> now how about using that on ez.no? ;)
+[12-14-2005 05:06:53] [#ezpublish] <buz> anyone know about a good ajax rss reader?
+[12-14-2005 05:06:58] [#ezpublish] <buz> google reader is lame
+[12-14-2005 05:07:24] [#ezpublish] <DiGiTa|_> my fastest ez site : http://www2.parcduluberon.com/
+[12-14-2005 05:07:26] [#ezpublish] <DiGiTa|_> :)
+[12-14-2005 05:09:03] [#ezpublish] <DiGiTa|_> done with oe
+[12-14-2005 05:10:37] [#ezpublish] <DiGiTa|_> it's a site with like 500 objects
+[12-14-2005 05:10:51] [#ezpublish] <buz> did anyone ever benchmark a site with millions of objects?
+[12-14-2005 05:11:02] [#ezpublish] <DiGiTa|_> huhu
+[12-14-2005 05:11:05] [#ezpublish] <DiGiTa|_> no
+[12-14-2005 05:11:22] [#ezpublish] <buz> or maybe: when am i gonna run into scalability issues?
+[12-14-2005 05:11:37] [#ezpublish] <buz> issues i cant just make go away with throwing more servers at it
+[12-14-2005 05:13:41] [#ezpublish] <Katana`> indeed it's fast :)
+[12-14-2005 05:17:27] [#ezpublish] <Katana`> oh, it's online now btw: http://opticshop-online.com
+[12-14-2005 05:24:08] [#ezpublish] <buz> hey its german ;)
+[12-14-2005 05:26:18] [#ezpublish] <Katana`> partially :)
+[12-14-2005 05:28:01] [#ezpublish] <DiGiTa|_> this thing need a pager : http://fr.opticshop-online.com/produkte/kontaktlinsen
+[12-14-2005 05:28:04] [#ezpublish] <DiGiTa|_> :)
+[12-14-2005 05:28:24] [#ezpublish] <buz> eh DiGiTa|_ have you seen: http://triligon.org/triligon/projects/advancedforum/advancedforum_meta_forum/welcome_to_the_forum
+[12-14-2005 05:29:17] [#ezpublish] <buz> ouhm the debug shouldnt be there
+[12-14-2005 05:29:19] [#ezpublish] <DiGiTa|_> fast :)
+[12-14-2005 05:29:44] [#ezpublish] <buz> try again
+[12-14-2005 05:29:58] [#ezpublish] <DiGiTa|_> yeah
+[12-14-2005 05:30:03] [#ezpublish] <DiGiTa|_> very nice
+[12-14-2005 05:32:39] [#ezpublish] <DiGiTa|_> Katana`: when i choose an article it's very long to display
+[12-14-2005 05:43:41] [#ezpublish] <Katana`> it's being cached :)
+[12-14-2005 05:43:52] [#ezpublish] <Katana`> is it still slow if you reload the same article ?
+[12-14-2005 05:44:23] [#ezpublish] <Katana`> anyway the server is overloaded
+[12-14-2005 05:44:46] [#ezpublish] <Katana`> avg load 10.5
+[12-14-2005 05:45:30] -!- SEAwolfx [n=mike@DSL01.83.171.165.124.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[12-14-2005 05:47:09] [#ezpublish] <DiGiTa|_> faster now
+[12-14-2005 06:28:18] [#ezpublish] <buz> load 10.5? dude, you need a few more servers, quickly.
+[12-14-2005 07:00:25] [#ezpublish] <Katana`> yeah buz we know :)
+[12-14-2005 07:00:35] [#ezpublish] <Katana`> the antivirus / antispam eat ressources...
+[12-14-2005 07:00:46] [#ezpublish] <buz> you can get 3ghz servers for 50E you know
+[12-14-2005 07:00:57] [#ezpublish] <Katana`> well, the physical servers it not an issu
+[12-14-2005 07:00:58] [#ezpublish] <Katana`> e
+[12-14-2005 07:01:02] [#ezpublish] <Katana`> the bandwidth cost is :)
+[12-14-2005 07:01:11] -!- SEAwolfx [n=mike@DSL01.83.171.153.6.NEFkom.net] has joined #ezpublish
+[12-14-2005 07:01:11] [#ezpublish] <buz> that includes 1TB of traffic
+[12-14-2005 07:03:53] [#ezpublish] <Katana`> well, we already have one host
+[12-14-2005 07:04:04] [#ezpublish] <Katana`> there are constraints you see... contracts, management, stuff like that...
+[12-14-2005 07:04:15] [#ezpublish] <Katana`> things are easy when you are on your own, not that easy when you are part of a company
+[12-14-2005 07:05:51] [#ezpublish] <buz> it all depends on the management
+[12-14-2005 07:06:07] [#ezpublish] <buz> i've seen mid sized companies react at insane speeds
+[12-14-2005 07:06:15] [#ezpublish] <buz> whereas many small ones are very slow and vice versa
+[12-14-2005 07:06:41] [#ezpublish] <Katana`> we are rather a middle size company that reacts not that fast :)
+[12-14-2005 07:06:51] [#ezpublish] <Katana`> but well, in 2 weeks it won't be my problem anymore
+[12-14-2005 07:07:00] [#ezpublish] <buz> that's deadly in this field ;)
+[12-14-2005 07:08:53] [#ezpublish] <Katana`> gnnn don't feel like working
+[12-14-2005 07:09:00] [#ezpublish] <buz> neither do i
+[12-14-2005 07:09:05] [#ezpublish] <buz> i wanna write some cool ajax stuff
+[12-14-2005 07:09:12] [#ezpublish] <Katana`> :))
+[12-14-2005 07:09:15] [#ezpublish] <buz> stupid ajax got me hooked
+[12-14-2005 07:09:18] [#ezpublish] <Katana`> but i kinda have to ...
+[12-14-2005 07:09:27] [#ezpublish] <Katana`> i heard i was getting paid...
+[12-14-2005 07:09:36] [#ezpublish] <Katana`> :)
+[12-14-2005 07:11:52] [#ezpublish] * Katana` wonders if http://ez.no/products/solutions_and_software/content_server would be suitable for replication ...
+[12-14-2005 07:28:07] [#ezpublish] <buz> replication of what
+[12-14-2005 07:29:47] [#ezpublish] <Katana`> a website... they want staging
+[12-14-2005 07:29:48] [#ezpublish] <Katana`> bastards
+[12-14-2005 07:29:56] [#ezpublish] <buz> multiple sections?
+[12-14-2005 07:29:59] [#ezpublish] <Katana`> i'm facing a big, solid dark wall
+[12-14-2005 07:30:08] [#ezpublish] <Katana`> publish on demand... staging
+[12-14-2005 07:30:12] [#ezpublish] <Katana`> i don't have a better word
+[12-14-2005 07:30:29] [#ezpublish] <buz> just call in sick and wait til the end of the year
+[12-14-2005 07:30:34] [#ezpublish] <Katana`> :))
+[12-14-2005 07:30:37] [#ezpublish] <Katana`> won't work
+[12-14-2005 07:30:55] [#ezpublish] <buz> wtf is publish on demand
+[12-14-2005 07:30:55] [#ezpublish] <Katana`> they request impossible stuff, and you can't say no for political reasons... amazing
+[12-14-2005 07:31:02] [#ezpublish] <buz> oh i know that
+[12-14-2005 07:31:02] [#ezpublish] <Katana`> staging, forget about the other stuff
+[12-14-2005 07:31:13] [#ezpublish] <Katana`> they want to decide when each changed content goes to the live server
+[12-14-2005 07:31:22] [#ezpublish] <Katana`> i don't even wanna think about the dependancies and stuff...
+[12-14-2005 07:31:32] [#ezpublish] <Katana`> it's a huge mess and i don't know what to do with that
+[12-14-2005 07:31:48] [#ezpublish] <buz> it all depends how much you like the current company
+[12-14-2005 07:32:21] [#ezpublish] <Katana`> i know but it doesn't help :)
+[12-14-2005 07:33:02] [#ezpublish] <Katana`> the answer would be too much to just let that go
+[12-14-2005 07:36:18] [#ezpublish] <buz> can xmlhttprequest talk to other servers than the one the script comes from
+[12-14-2005 07:37:12] [#ezpublish] <Katana`> no you need what they call a proxy
+[12-14-2005 07:37:22] [#ezpublish] <Katana`> a script that transfers the request using a server side request
+[12-14-2005 07:37:32] [#ezpublish] <buz> i know what a proxy is ;)
+[12-14-2005 07:38:22] [#ezpublish] <Katana`> forget it
+[12-14-2005 07:38:29] [#ezpublish] <Katana`> i'm pissed and i'm about to get angry...
+[12-14-2005 07:38:45] [#ezpublish] * buz hands katana some weed
+[12-14-2005 07:38:56] [#ezpublish] <Katana`> it would probably help A LOT
+[12-14-2005 07:54:18] [#ezpublish] <Sulfur> Katana`: blame canada
+[12-14-2005 07:54:19] [#ezpublish] <Sulfur> ;)
+[12-14-2005 07:55:28] [#ezpublish] <Katana`> lol
+[12-14-2005 07:55:36] [#ezpublish] <Katana`> okay, problem *probably* solved
+[12-14-2005 07:58:08] [#ezpublish] <buz> I'd blame it on the decline of pirates
+[12-14-2005 08:02:36] [#ezpublish] <DiGiTa|_> has someone a powerball in here ?
+[12-14-2005 08:02:56] [#ezpublish] <Katana`> i do
+[12-14-2005 08:03:04] [#ezpublish] <buz> powerball
+[12-14-2005 08:03:07] [#ezpublish] <buz> ?
+[12-14-2005 08:03:29] [#ezpublish] <DiGiTa|_> http://www.powerballstore.net/
+[12-14-2005 08:03:31] [#ezpublish] <Katana`> http://www.powerballs.com/
+[12-14-2005 08:03:49] [#ezpublish] <DiGiTa|_> is it a good gift idea ?
+[12-14-2005 08:04:00] [#ezpublish] <DiGiTa|_> for my brother
+[12-14-2005 08:04:06] [#ezpublish] <buz> it tends to cause harm after a few minutes
+[12-14-2005 08:04:30] [#ezpublish] <Katana`> harm, harm...
+[12-14-2005 08:04:37] [#ezpublish] <buz> no really
+[12-14-2005 08:04:39] [#ezpublish] <Katana`> it just hurts but you won't break your arm :)
+[12-14-2005 08:04:48] [#ezpublish] <buz> when i was in highschool it would hurt for days after using it
+[12-14-2005 08:04:49] [#ezpublish] <Katana`> i don't really feel that
+[12-14-2005 08:05:29] [#ezpublish] <DiGiTa|_> Katana` is a strong bear, so...
+[12-14-2005 08:05:29] [#ezpublish] <DiGiTa|_> :)
+[12-14-2005 08:05:46] [#ezpublish] <buz> well using it for prolonged periods of time
+[12-14-2005 08:05:55] [#ezpublish] <Katana`> lol yeah
+[12-14-2005 08:06:11] [#ezpublish] <Katana`> you know, when it hurts you have to stop ^^
+[12-14-2005 08:06:18] [#ezpublish] <buz> http://www.powerballs.com/akis_19689.wmv
+[12-14-2005 08:06:23] [#ezpublish] <buz> holy crap
+[12-14-2005 08:06:28] [#ezpublish] <buz> mine  never made SUCH noise
+[12-14-2005 08:06:32] [#ezpublish] <DiGiTa|_> lol
+[12-14-2005 08:06:39] [#ezpublish] <Katana`> hehehe
+[12-14-2005 08:06:42] [#ezpublish] <buz> that cant be good for you
+[12-14-2005 08:06:45] [#ezpublish] <DiGiTa|_> 15000 rpm
+[12-14-2005 08:06:52] [#ezpublish] <Katana`> i never got above 12 000
+[12-14-2005 08:06:59] [#ezpublish] <buz> mine didnt have an rpm meter
+[12-14-2005 08:07:14] [#ezpublish] <Katana`> booooo looser
+[12-14-2005 08:12:20] [#ezpublish] <DiGiTa|_> insane :
+[12-14-2005 08:12:20] [#ezpublish] <DiGiTa|_> http://www.cdiscount.com/mag/fich_prod.asp?prix=discount&navid=1040402&prodid=000000000000000000000000000000000000D4IN
+[12-14-2005 08:12:50] [#ezpublish] <buz> i want that
+[12-14-2005 08:13:48] [#ezpublish] <DiGiTa|_> http://www.cdiscount.com/mag/fich_prod.asp?prix=discount&prodid=0000000000000000000000000000000000003BDC&navid=1040402&trilist=0&numpage=1
+[12-14-2005 08:13:52] [#ezpublish] <DiGiTa|_> 2,99 euros
+[12-14-2005 08:13:54] [#ezpublish] <DiGiTa|_> loool
+[12-14-2005 08:14:05] [#ezpublish] <DiGiTa|_> totally crazy shop
+[12-14-2005 08:14:24] [#ezpublish] <buz> at that prices, i wouldnt download stuf anymore
+[12-14-2005 08:14:30] [#ezpublish] <DiGiTa|_> yes
+[12-14-2005 08:14:51] [#ezpublish] <DiGiTa|_> it s what i was thinking about
+[12-14-2005 08:14:51] [#ezpublish] <DiGiTa|_> :)
+[12-14-2005 08:15:41] [#ezpublish] <DiGiTa|_> i want sin city for christmas
+[12-14-2005 09:00:14] [#ezpublish] <Katana`> have you seen our sexy eZ Publish powered PHPEdit documentation project ? http://doc.waterproof.fr/phpedit/2_0/debugging_profiling :)
+[12-14-2005 09:01:56] [#ezpublish] <kris10an> Katana`: our? i didnt know you were a phpedit guy...
+[12-14-2005 09:05:25] [#ezpublish] <Katana`> you didn't know ?
+[12-14-2005 09:05:32] [#ezpublish] <Katana`> well, i'm a shareholder of the company so...
+[12-14-2005 09:07:37] [#ezpublish] <Katana`> kris10an, i'm on there : http://www.waterproof.fr/company/people.php
+[12-14-2005 09:12:23] [#ezpublish] <kris10an> aha! :-)
+[12-14-2005 09:12:39] [#ezpublish] <kris10an> why is there a difference between people and team :-s
+[12-14-2005 09:19:05] [#ezpublish] <DiGiTa|_> hey i didn't see this new version of waterproof soft.
+[12-14-2005 09:19:22] [#ezpublish] <Katana`> do you like it ?
+[12-14-2005 09:19:34] [#ezpublish] <Katana`> everybody's people
+[12-14-2005 09:19:44] [#ezpublish] <Katana`> but it's splitted in executive and team
+[12-14-2005 09:19:50] [#ezpublish] <DiGiTa|_> looks like the previous design of ez
+[12-14-2005 09:19:54] [#ezpublish] <DiGiTa|_> but clean
+[12-14-2005 09:19:55] [#ezpublish] <DiGiTa|_> :)
+[12-14-2005 09:20:01] [#ezpublish] <Katana`> huhu
+[12-14-2005 09:20:16] [#ezpublish] <Katana`> i don't see why it looks like the previous design of ez.no...
+[12-14-2005 09:20:23] [#ezpublish] <DiGiTa|_> and the blue remind me miscrosoft
+[12-14-2005 09:20:30] [#ezpublish] <Katana`> navigation's totally different, for one
+[12-14-2005 09:20:54] [#ezpublish] <DiGiTa|_> well.. probably the colors
+[12-14-2005 09:21:25] [#ezpublish] <DiGiTa|_> http://www.waterproof.fr/products/PHPEdit/extensions/
+[12-14-2005 09:21:26] [#ezpublish] <DiGiTa|_> nice
+[12-14-2005 09:21:35] [#ezpublish] <Katana`> hehe
+[12-14-2005 09:21:43] [#ezpublish] <buz> horrible english
+[12-14-2005 09:21:44] [#ezpublish] <Katana`> not that nice :)
+[12-14-2005 09:21:50] [#ezpublish] <DiGiTa|_> :p
+[12-14-2005 09:22:12] [#ezpublish] <DiGiTa|_> Using the debugger you will produce better software because you'll be able to put breakpoints, ...
+[12-14-2005 09:22:18] [#ezpublish] <DiGiTa|_> lol
+[12-14-2005 09:22:25] [#ezpublish] <DiGiTa|_> looks like google english
+[12-14-2005 09:22:52] [#ezpublish] <buz> Few times after creating his own computer services company 6 years ago, Daniel met Sébastien on the internet thanks to XMI to PH
+[12-14-2005 09:22:56] [#ezpublish] <buz> makes no sense at all
+[12-14-2005 09:23:42] [#ezpublish] <DiGiTa|_> :)
+[12-14-2005 09:24:42] [#ezpublish] <kris10an> ahhh.. i didnt see the "exectuive".... i thought it devided into "people" and "team"....
+[12-14-2005 09:26:23] [#ezpublish] <Katana`> indeed :)
+[12-14-2005 09:28:55] [#ezpublish] <buz> http://www.engadget.com/entry/1234000253072470/ STUPID
+[12-14-2005 09:29:04] [#ezpublish] <Katana`> we'll work on the texts in the future... something has to be done
+[12-14-2005 09:29:15] [#ezpublish] <Katana`> but most people of the team are not natural english speakers
+[12-14-2005 09:29:31] [#ezpublish] <buz> get someone who is native speaker
+[12-14-2005 09:29:39] [#ezpublish] <buz> it casts bad light on the product
+[12-14-2005 09:29:39] [#ezpublish] <Katana`> we have one, he's working on the doc ;)
+[12-14-2005 09:29:47] [#ezpublish] <buz> especially if the company name is english
+[12-14-2005 09:30:12] [#ezpublish] <Katana`> indeed :)
+[12-14-2005 09:30:17] [#ezpublish] <Katana`> but it's a .fr
+[12-14-2005 09:30:34] [#ezpublish] <buz> yeah makes the americans even more sceptical ;)
+[12-14-2005 09:30:37] [#ezpublish] <Katana`> so screw you, you can burn in hell :)
+[12-14-2005 09:31:05] [#ezpublish] <buz> personally i dont care where my money comes from ;)
+[12-14-2005 09:31:10] [#ezpublish] <Katana`> hehehe
+[12-14-2005 09:31:10] [#ezpublish] <Katana`> yeah
+[12-14-2005 09:32:49] [#ezpublish] <DiGiTa|_> what is the difference btw xbox 360 premium and the other one ?
+[12-14-2005 09:33:01] [#ezpublish] <Katana`> premium has the wifi controller and HD i think
+[12-14-2005 09:33:28] [#ezpublish] <DiGiTa|_> oh kool
+[12-14-2005 09:33:39] [#ezpublish] <DiGiTa|_> probably my future media center then :)
+[12-14-2005 09:33:52] [#ezpublish] <Katana`> bleh i'm sure it just supports wmv 9 ;)
+[12-14-2005 09:34:02] [#ezpublish] <Katana`> classic xbox is kewl
+[12-14-2005 09:34:12] [#ezpublish] <DiGiTa|_> lol
+[12-14-2005 09:35:43] [#ezpublish] <Katana`> but if Xbox Media Center is ported to 360 i'll definitely buy one ;)
+[12-14-2005 09:38:22] [#ezpublish] <DiGiTa|_> PGR 3 looks very cool
+[12-14-2005 09:38:47] [#ezpublish] <Katana`> PGR ?
+[12-14-2005 09:42:30] [#ezpublish] <DiGiTa|_> project gotham racing 3
+[12-14-2005 09:43:29] [#ezpublish] <Katana`> oh ok
+[12-14-2005 09:43:36] [#ezpublish] <Katana`> i'm having fun with NFS:MW these days
+[12-14-2005 09:57:11] [#ezpublish] <Katana`> yay my gamepad has shipped :)
+[12-14-2005 09:57:20] [#ezpublish] <Katana`> should be here by saturday, can't wait
+[12-14-2005 09:57:58] [#ezpublish] <kris10an> DiGiTa|_: ofcourse mediacenter is ported to 360.. the mediacenter market is the one microsoft wants anyways...
+[12-14-2005 09:58:14] [#ezpublish] <Katana`> kris10an: i have doubts about how compatible it will be ;)
+[12-14-2005 09:58:21] [#ezpublish] <Katana`> a good old XBMC based on mplayer is all i need ;)
+[12-14-2005 09:58:38] [#ezpublish] <kris10an> they are just using xbox as the way to get in everybodys homes....
+[12-14-2005 09:58:45] [#ezpublish] <Katana`> :)
+[12-14-2005 09:58:55] [#ezpublish] <Katana`> since what i'm using is a 3rd party open source solution...
+[12-14-2005 09:58:57] [#ezpublish] <kris10an> which apparently works...
+[12-14-2005 09:59:02] [#ezpublish] <Katana`> i have only bought the XBOX :)
+[12-14-2005 09:59:10] [#ezpublish] <Katana`> and the modchip ^^
+[12-14-2005 09:59:22] [#ezpublish] <kris10an> Katana`:  have you tried freevo ?
+[12-14-2005 09:59:25] [#ezpublish] <DiGiTa|_> soon, we will be able to install osx on xbox ?
+[12-14-2005 09:59:25] [#ezpublish] <DiGiTa|_> :p
+[12-14-2005 09:59:36] [#ezpublish] <Katana`> well, you can already install gentoox
+[12-14-2005 09:59:40] [#ezpublish] <Katana`> nope, what's freevo ?
+[12-14-2005 09:59:51] [#ezpublish] <Katana`> my ISP provides something nice... free player
+[12-14-2005 09:59:54] [#ezpublish] <Katana`> it's a media player you start on the modem
+[12-14-2005 10:00:06] [#ezpublish] <Katana`> and it streams videos / music from any computer on your lan
+[12-14-2005 10:00:08] [#ezpublish] <kris10an> tivoo (or whatever that american tv-recorder thingy is called) in a linux
+[12-14-2005 10:00:12] [#ezpublish] <kris10an> in linux
+[12-14-2005 10:00:35] [#ezpublish] <Katana`> yeah... mythtv is cool too
+[12-14-2005 10:00:44] [#ezpublish] <kris10an> a linuxdistribution made for recording movies, and watchin movies, playing music.. browsing..
+[12-14-2005 10:00:51] [#ezpublish] <kris10an> i didnt try it yet...
+[12-14-2005 10:01:09] [#ezpublish] <kris10an> is mythtv free more?
+[12-14-2005 10:01:19] [#ezpublish] <Katana`> hmmm it's opensource and free isn't it ?
+[12-14-2005 10:02:50] [#ezpublish] <Katana`> nice isn't it ? http://www.mythtv.org/modules.php?name=MythFeatures
+[12-14-2005 10:06:36] [#ezpublish] <kris10an> bah.. so much crap to register a nick...
+[12-14-2005 10:06:42] [#ezpublish] <Katana`> lol !
+[12-14-2005 10:08:14] -!- kore_ [n=lordhong@217.194.224.41] has quit [Remote closed the connection]
+[12-14-2005 10:11:41] [#ezpublish] * Katana` blames foreach for working by value
+[12-14-2005 10:12:05] [#ezpublish] <buz> mythtv aint a distro for all iknow
+[12-14-2005 10:13:35] [#ezpublish] <Katana`> no, it's just a media center
+[12-14-2005 10:13:37] -!- ordnas [n=ordnas@p549D48F9.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-14-2005 10:29:35] [#ezpublish] <DiGiTa|_> Katana`:  ?
+[12-14-2005 10:29:37] [#ezpublish] <DiGiTa|_> pv ?
+[12-14-2005 10:29:45] [#ezpublish] <DiGiTa|_> :/
+[12-14-2005 10:35:24] [#ezpublish] <Katana`> sorry
+[12-14-2005 10:38:52] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-14-2005 10:56:19] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-14-2005 10:56:20] -!- _Katana` is now known as Katana`
+[12-14-2005 11:22:31] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-14-2005 12:11:50] [#ezpublish] <Sulfur> yay!!!!
+[12-14-2005 12:11:59] [#ezpublish] <Sulfur> we're online with our first eZ community site
+[12-14-2005 12:12:04] [#ezpublish] <Sulfur> http://www.ioscelgo.it
+[12-14-2005 12:12:05] [#ezpublish] <Sulfur> ;)
+[12-14-2005 12:27:34] [#ezpublish] <fh[eZ]> congrats sulfur
+[12-14-2005 12:27:35] [#ezpublish] <fh[eZ]> it looks good
+[12-14-2005 12:27:51] [#ezpublish] <fh[eZ]> 3.7.2 and everything :)
+[12-14-2005 12:29:48] [#ezpublish] <Sulfur> :)
+[12-14-2005 12:30:31] [#ezpublish] <Sulfur> fh[eZ]: and it has tags trackbacks and so on , although currently tag functionality is mostly disabled :) plus trackback link autodiscovery, etc :)
+[12-14-2005 12:44:50] [#ezpublish] <fh[eZ]> nice, large servers?
+[12-14-2005 12:45:24] [#ezpublish] <Sulfur> fh[eZ]: not at all!!! that machine has a load average above 5 :)
+[12-14-2005 12:45:44] [#ezpublish] <fh[eZ]> auch ;)
+[12-14-2005 12:45:47] [#ezpublish] <Sulfur> we're planning to migrate, we already have the servers but we're currently understaffed
+[12-14-2005 12:46:20] [#ezpublish] <fh[eZ]> ah, I know that song well..
+[12-14-2005 12:46:53] [#ezpublish] <Sulfur> the song of the dead raven!!
+[12-14-2005 12:46:57] [#ezpublish] <fh[eZ]> haha
+[12-14-2005 12:47:04] [#ezpublish] <fh[eZ]> I wonder if that exists
+[12-14-2005 12:47:16] [#ezpublish] <fh[eZ]> maybe I should write it
+[12-14-2005 12:47:35] [#ezpublish] <fh[eZ]> http://wolves.tamu.edu/en/disc/gre.html
+[12-14-2005 12:47:36] [#ezpublish] <fh[eZ]> what about that
+[12-14-2005 12:47:40] [#ezpublish] <fh[eZ]> the dead raven choir
+[12-14-2005 12:48:02] [#ezpublish] <Sulfur> but fh[eZ], we are currently very crippled by a pesky bug on rss ..... which impairs one of the mainstays of the site http://ez.no/community/bugs/fatal_error_in_runcronjobs_php
+[12-14-2005 12:48:41] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-14-2005 12:49:09] [#ezpublish] <fh[eZ]> yep, saw that one.. will be fixed as soon as we can reproduce it
+[12-14-2005 12:49:31] [#ezpublish] <Sulfur> how can I help lenara ?
+[12-14-2005 12:49:58] [#ezpublish] <Sulfur> anyway, I hopwe you're seeing the site served fast enough. we're not on static cache yet, I hope to have time to bring it up
+[12-14-2005 12:50:14] [#ezpublish] <fh[eZ]> it is quite responsive actually
+[12-14-2005 12:50:18] [#ezpublish] <fh[eZ]> for a machine with 5 in load
+[12-14-2005 12:50:26] [#ezpublish] <Sulfur> yes
+[12-14-2005 12:50:51] [#ezpublish] <Sulfur> it was flat dead, then we put the trial version of zend platform (accelerator & optimizer I think)
+[12-14-2005 12:51:07] [#ezpublish] <Sulfur> speaks a lot for difference between compiled and interpreted languages ;)
+[12-14-2005 12:51:44] [#ezpublish] <Sulfur> that dead raven choir is ... quite the thing!
+[12-14-2005 12:51:45] [#ezpublish] <Sulfur> :)
+[12-14-2005 12:54:09] [#ezpublish] <fh[eZ]> quite a lot of noise in their recordings
+[12-14-2005 12:54:22] [#ezpublish] <fh[eZ]> don't know if that is part of the music or due to bad equipment though
+[12-14-2005 12:54:24] [#ezpublish] <fh[eZ]> :)
+[12-14-2005 12:55:15] [#ezpublish] <fh[eZ]> haha.. my equalizer almost maxes in all levels
+[12-14-2005 12:55:16] [#ezpublish] <Sulfur> oh, so you listened to them
+[12-14-2005 12:55:27] [#ezpublish] <fh[eZ]> in other words.. close to white noise...
+[12-14-2005 12:55:28] [#ezpublish] <Sulfur> maybe there were ravens squawking in the amps! ;)
+[12-14-2005 12:55:28] [#ezpublish] <fh[eZ]> haha
+[12-14-2005 12:55:34] [#ezpublish] <Sulfur> lol
+[12-14-2005 12:56:09] [#ezpublish] <fh[eZ]> man this stuff is hypnotizing
+[12-14-2005 12:56:30] [#ezpublish] <Sulfur> have you ever listened to In Extremo or Corvus Corax ?
+[12-14-2005 12:56:33] [#ezpublish] <fh[eZ]> their interpretation of leonard cohen is..well.. disturbing
+[12-14-2005 12:56:44] [#ezpublish] <Sulfur> Corvus Corax could be really fit too! ;)
+[12-14-2005 12:56:47] [#ezpublish] <fh[eZ]> nope, but I can imagine what it sounds like
+[12-14-2005 12:56:57] [#ezpublish] <fh[eZ]> Extremo <--- great name
+[12-14-2005 12:57:01] [#ezpublish] <Sulfur> http://www.corvuscorax.de
+[12-14-2005 12:57:10] [#ezpublish] <Sulfur> http://www.inextremo.de
+[12-14-2005 12:57:28] [#ezpublish] <Sulfur> try to lsiten to some of their cds
+[12-14-2005 12:57:42] [#ezpublish] <Sulfur> Corvus Corax make medieval music, played i na very wild way
+[12-14-2005 12:58:00] [#ezpublish] <Sulfur> In Extremo go some steps further by playing that kind of music with modern instruments
+[12-14-2005 13:01:46] [#ezpublish] <fh[eZ]> intresting
+[12-14-2005 13:01:55] [#ezpublish] <fh[eZ]> i've put in on my "to listen to" list
+[12-14-2005 13:02:46] [#ezpublish] <Sulfur> I love them
+[12-14-2005 13:12:09] -!- pcdog [n=pcdog@213.144.156.56] has joined #ezpublish
+[12-14-2005 13:12:23] [#ezpublish] <pcdog> hi
+[12-14-2005 13:12:27] [#ezpublish] <pcdog> is someone here
+[12-14-2005 13:12:49] [#ezpublish] <pcdog> who can say me how i can set a text in "new article" partically an other color? *G*
+[12-14-2005 13:13:14] [#ezpublish] <Sulfur> you have to do it in html
+[12-14-2005 13:14:20] [#ezpublish] <pcdog> ok ;)
+[12-14-2005 13:14:33] [#ezpublish] <pcdog> but how include html?
+[12-14-2005 13:14:33] [#ezpublish] <pcdog> i dont know, is my version too old?
+[12-14-2005 13:14:47] [#ezpublish] <pcdog> it removes <html> as <ezhtml>
+[12-14-2005 13:15:01] [#ezpublish] <pcdog> have i to upgrade?
+[12-14-2005 13:15:11] [#ezpublish] <pcdog> 3.7.4 imho running ;)
+[12-14-2005 13:15:13] [#ezpublish] <Sulfur> which version of ez are you running?
+[12-14-2005 13:15:22] [#ezpublish] <Sulfur> maybe 3.4.7 ?
+[12-14-2005 13:15:32] [#ezpublish] <pcdog> nope
+[12-14-2005 13:15:39] [#ezpublish] <pcdog> 5 subminor less ;)
+[12-14-2005 13:15:44] [#ezpublish] <pcdog> 3.4.2
+[12-14-2005 13:15:49] [#ezpublish] <pcdog> is upgrade complicated?
+[12-14-2005 13:15:56] [#ezpublish] <pcdog> is there the problem?
+[12-14-2005 13:17:32] [#ezpublish] <Sulfur> I don't know ... but anyway, you have to put the correct html in the correct view template
+[12-14-2005 13:17:37] [#ezpublish] <Sulfur> it's all HTML
+[12-14-2005 13:17:39] [#ezpublish] <Sulfur> and CSS
+[12-14-2005 13:17:41] [#ezpublish] <pcdog> hmm
+[12-14-2005 13:17:52] [#ezpublish] <pcdog> i have to change it in the template, right?
+[12-14-2005 13:18:00] [#ezpublish] <pcdog> isnt possible to change it for a single page?
+[12-14-2005 13:20:14] [#ezpublish] <fh[eZ]> you can set up special tags etc. to do that, or you can override the template for that page
+[12-14-2005 13:20:17] [#ezpublish] <Sulfur> no, as all the pages are visualized through templates, but you can choose which tpl to use
+[12-14-2005 13:20:30] [#ezpublish] <fh[eZ]> but in general the system is designed in such a way that it is not possible (on purpose)
+[12-14-2005 13:20:33] [#ezpublish] <Sulfur> I think you need to check http://ez.no/doc
+[12-14-2005 13:22:00] [#ezpublish] <pcdog> ok thx
+[12-14-2005 13:22:02] [#ezpublish] <pcdog> damn
+[12-14-2005 13:22:13] [#ezpublish] <pcdog> and now i have to explain that the customer *G*
+[12-14-2005 13:22:17] [#ezpublish] <pcdog> mon dieu
+[12-14-2005 13:22:18] [#ezpublish] <pcdog> ;)
+[12-14-2005 13:22:39] [#ezpublish] <pcdog> (i  got several ezpublish installations on my server ;) )
+[12-14-2005 13:23:23] [#ezpublish] <fh[eZ]> pcdog, just to clarify.. the system is designed this way because users tend to abuse colors etc..
+[12-14-2005 13:23:28] [#ezpublish] <pcdog> ok ;)
+[12-14-2005 13:23:29] [#ezpublish] <fh[eZ]> and produce what we call the "rainbow effect"
+[12-14-2005 13:23:34] [#ezpublish] <pcdog> i seek look
+[12-14-2005 13:23:45] [#ezpublish] <pcdog> that is a customer with a spleen here
+[12-14-2005 13:23:54] [#ezpublish] <pcdog> first he wanted to user word 97 as cms ;)
+[12-14-2005 13:24:05] [#ezpublish] <fh[eZ]> nice
+[12-14-2005 13:24:17] [#ezpublish] <pcdog> or wisi-not-wig
+[12-14-2005 13:24:18] [#ezpublish] <pcdog> ;)
+[12-14-2005 13:24:27] [#ezpublish] <fh[eZ]> what about using notepad
+[12-14-2005 13:24:31] [#ezpublish] <fh[eZ]> works for a lot of people :)
+[12-14-2005 13:24:31] [#ezpublish] <pcdog> lol
+[12-14-2005 13:24:41] [#ezpublish] <pcdog> ;)
+[12-14-2005 13:24:41] [#ezpublish] <pcdog> he cant really html ;)
+[12-14-2005 13:26:22] [#ezpublish] <Sulfur> or make a tpl in which you only have a XMLArea object attribute
+[12-14-2005 13:26:35] [#ezpublish] <Sulfur> that way he will be able to put whatever html he wants ;)
+[12-14-2005 13:34:03] [#ezpublish] <pcdog> hmm
+[12-14-2005 13:34:07] [#ezpublish] <pcdog> *dont know why*
+[12-14-2005 13:34:10] [#ezpublish] <pcdog> what means that
+[12-14-2005 13:34:20] [#ezpublish] <pcdog> can you help me?
+[12-14-2005 13:34:36] [#ezpublish] <pcdog> i will also read but i dont find any understandable for my level *G*
+[12-14-2005 13:36:28] [#ezpublish] <Sulfur> do you know how to override a template?
+[12-14-2005 13:36:40] [#ezpublish] <pcdog> not really
+[12-14-2005 13:36:48] [#ezpublish] <pcdog> i only commented some things out in ezpublish
+[12-14-2005 13:36:50] [#ezpublish] <pcdog> or ...
+[12-14-2005 13:36:55] [#ezpublish] <pcdog> look at www.pcdog.ch
+[12-14-2005 13:37:03] [#ezpublish] <pcdog> thats all i can do at the moment
+[12-14-2005 13:37:07] [#ezpublish] <pcdog> :|
+[12-14-2005 13:37:15] [#ezpublish] <pcdog> www.lwe.ch is the customer
+[12-14-2005 13:38:16] [#ezpublish] <Sulfur> :)
+[12-14-2005 13:38:50] [#ezpublish] <Sulfur> I am sorry to tell you this ... but unless you know how to fudge with the template basics (overriding, getting info) you'll be crying a lot :-/
+[12-14-2005 13:38:56] [#ezpublish] <Sulfur> anyway
+[12-14-2005 13:39:05] [#ezpublish] <Sulfur> what you PROBABLY want is
+[12-14-2005 13:40:13] [#ezpublish] <Sulfur> to override a "full" template for the nodes (i.e. content objects) which match certain conditions
+[12-14-2005 13:40:32] [#ezpublish] <Sulfur> e.g. all the visualizations of objects of type "article"
+[12-14-2005 13:40:46] [#ezpublish] <Sulfur> or the node with id 67 so to say
+[12-14-2005 13:41:03] [#ezpublish] <Sulfur> and in this override template, you put the <font color .... etc stuff you need
+[12-14-2005 13:43:11] [#ezpublish] <Sulfur> so you need to make a settings/siteaccesses/your_user_siteaccess/override.ini.append.php file
+[12-14-2005 13:43:21] [#ezpublish] <Sulfur> put into it the info for the override (see docs)
+[12-14-2005 13:43:49] [#ezpublish] <Sulfur> make an override template to put into design/your_user_siteaccess/override/templates/
+[12-14-2005 13:43:56] [#ezpublish] <Sulfur> clear the cache ... ;
+[12-14-2005 13:44:03] [#ezpublish] <Sulfur> and trim the tmeplates
+[12-14-2005 14:03:51] [#ezpublish] <pcdog> thanks ;)
+[12-14-2005 14:03:55] [#ezpublish] <pcdog> i look ;)
+[12-14-2005 14:20:29] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Remote closed the connection]
+[12-14-2005 14:20:29] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[12-14-2005 14:53:17] [#ezpublish] <buz> there's something weird going on with content/new on ez.no
+[12-14-2005 14:53:18] [#ezpublish] <buz> it shows
+[12-14-2005 14:53:20] [#ezpublish] <buz> planetezpublish.org
+[12-14-2005 14:53:20] [#ezpublish] <buz> 	16 	Sandro Groganz 	Wednesday 14 December 2005 5:11:47 pm
+[12-14-2005 14:53:30] [#ezpublish] <buz> but when i click on the link, i see that last post ist by me on 2pm
+[12-14-2005 15:43:48] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[12-14-2005 15:44:13] [#ezpublish] <zrg> hi folks
+[12-14-2005 15:52:14] [#ezpublish] <zrg> is there a reasonable way to translate class and attribute names?
+[12-14-2005 15:52:38] [#ezpublish] <zrg> none of my sites are in english and many are multilang..
+[12-14-2005 15:59:58] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-14-2005 16:36:18] [#ezpublish] <SEAwolfx> zrg: i guess this is not possible.
+[12-14-2005 16:36:58] [#ezpublish] <zrg> it beats me why not, why arent the names piped thru i18n function?
+[12-14-2005 16:38:21] [#ezpublish] <SEAwolfx> you want the translations of the class attributes?
+[12-14-2005 16:38:35] [#ezpublish] <SEAwolfx> the identifier or the values you mean?
+[12-14-2005 16:38:51] [#ezpublish] <zrg> names
+[12-14-2005 16:39:08] [#ezpublish] <zrg> not identifiers, why would i want that
+[12-14-2005 16:39:16] [#ezpublish] <SEAwolfx> indeed.
+[12-14-2005 16:39:27] [#ezpublish] <SEAwolfx> but the names, i understand.
+[12-14-2005 16:39:43] [#ezpublish] <zrg> names, so field labels would be understandable in edit page, thats all
+[12-14-2005 16:41:03] [#ezpublish] <zrg> i wonder if it would be right approach to find the class and attribute class in code and replace the name there at load time?
+[12-14-2005 16:43:43] [#ezpublish] <SEAwolfx> it seems that there is a change request ;)
+[12-14-2005 16:45:57] [#ezpublish] <SEAwolfx> zrg: but there is a "disable translation" option during the attributes definition process.
+[12-14-2005 16:46:16] [#ezpublish] <zrg> what does it do?
+[12-14-2005 16:46:17] [#ezpublish] <SEAwolfx> maybe this is what you are looking for?
+[12-14-2005 16:46:29] [#ezpublish] <zrg> i want to enable translation :P
+[12-14-2005 16:46:37] [#ezpublish] <SEAwolfx> so dont check it ;)
+[12-14-2005 16:47:12] [#ezpublish] <zrg> i havent, dont see where/how it makes them translatable
+[12-14-2005 16:47:55] [#ezpublish] <zrg> comments i have found in forums only mention it being not possible, i have wondered why that box is there
+[12-14-2005 16:48:17] [#ezpublish] <SEAwolfx> hmm, good question.
+[12-14-2005 16:48:45] [#ezpublish] <SEAwolfx> maybe there is an user manual describing the definition of a content class?
+[12-14-2005 16:48:52] [#ezpublish] <SEAwolfx> *duck*
+[12-14-2005 16:50:47] [#ezpublish] <zrg> nope
+[12-14-2005 16:50:51] [#ezpublish] <SEAwolfx> hmm ;(
+[12-14-2005 16:52:37] [#ezpublish] <SEAwolfx> take a look at the eZContentClass->contentObjectName function
+[12-14-2005 16:53:02] [#ezpublish] <SEAwolfx> -> function contentObjectName( &$contentObject, $version = false, $translation = false )
+[12-14-2005 16:54:40] [#ezpublish] <SEAwolfx> @zrg
+[12-14-2005 17:03:54] [#ezpublish] <zrg> eZContentClass->contentObjectName - that is name of content object, not content class
+[12-14-2005 17:04:34] [#ezpublish] <zrg> content object has copies for each language and name is just generated field from content
+[12-14-2005 17:04:53] [#ezpublish] <zrg> kris10an?
+[12-14-2005 17:06:32] [#ezpublish] <SEAwolfx> zrg .. but with the datamap i can get the attributes of the contentObject?
+[12-14-2005 17:07:10] [#ezpublish] <SEAwolfx> at least i can set the attribiutes of the contentObject by using identifiers.
+[12-14-2005 17:08:24] [#ezpublish] <zrg> dont see how it relates to class name
+[12-14-2005 17:11:23] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[12-14-2005 17:13:20] -!- DiGiTa|__ [n=guillaum@84.4.39.205] has joined #ezpublish
+[12-14-2005 17:16:46] [#ezpublish] <SEAwolfx> i guess you are right there is no relation the contentClassAttribute
+[12-14-2005 17:16:51] [#ezpublish] <SEAwolfx> +to
+[12-14-2005 17:17:19] [#ezpublish] <zrg> mumble curse mumble
+[12-14-2005 17:18:46] [#ezpublish] <SEAwolfx> btw ... the tool-tip for the "disable translation"-checkbox during class definitiion is related to non-translatable content for the value of an objectattribute.
+[12-14-2005 17:19:10] [#ezpublish] <SEAwolfx> s/the tool-tip for// ;)
+[12-14-2005 17:20:09] [#ezpublish] <zrg> yeah i just digged to it too :P
+[12-14-2005 17:20:24] -!- DiGiTa|__ [n=guillaum@84.4.39.205] has quit []
+[12-14-2005 17:20:34] [#ezpublish] <zrg> too bad
+[12-14-2005 17:20:40] [#ezpublish] <SEAwolfx> indeed.
+[12-14-2005 17:22:28] [#ezpublish] <SEAwolfx> hmmm... i need to attach a form to a contentobject. the form should be a contentObject without a explicit classdefinition? is there a way to do so?
+[12-14-2005 17:23:03] [#ezpublish] <zrg> attach a form?
+[12-14-2005 17:23:49] [#ezpublish] <SEAwolfx> guess the contentObject is like a todo ... and the form is what the users has to fill out.
+[12-14-2005 17:24:47] [#ezpublish] <SEAwolfx> i dont want to create a extra class for each form.
+[12-14-2005 17:24:48] -!- DiGiTa|_ [n=guillaum@84.6.75.81] has quit [Read error: 110 (Connection timed out)]
+[12-14-2005 17:28:42] [#ezpublish] <SEAwolfx> i guess i would have to change the ezs object model.
+[12-14-2005 17:30:39] [#ezpublish] <zrg> form would have text fields only?
+[12-14-2005 17:31:41] [#ezpublish] <zrg> actually does not matter, want easy solution?
+[12-14-2005 17:32:14] [#ezpublish] <SEAwolfx> checkboxes, text areas, radio-buttons
+[12-14-2005 17:33:01] [#ezpublish] <zrg> have a textfield in the object and store the form as html in there, display as is on edit page and when submitted, update the value fields in the original html and store again
+[12-14-2005 17:33:02] [#ezpublish] <SEAwolfx> it should be like a persitent information collector withour defining a extra class for it.
+[12-14-2005 17:33:20] [#ezpublish] <zrg> should be quite easy to do i think
+[12-14-2005 17:33:48] [#ezpublish] <SEAwolfx> how would u solve it?
+[12-14-2005 17:34:03] [#ezpublish] <zrg> create a datatype for this
+[12-14-2005 17:34:58] [#ezpublish] <SEAwolfx> what should include this datatype?
+[12-14-2005 17:35:52] [#ezpublish] <zrg> basicly a text field, with added processing  to update values in it after fubmit
+[12-14-2005 17:36:38] [#ezpublish] <zrg> submit :P
+[12-14-2005 17:37:20] [#ezpublish] <SEAwolfx> so you would add for instance to an article object a datatype dynamically? but only to this object?
+[12-14-2005 17:38:06] [#ezpublish] <SEAwolfx> is this possible?
+[12-14-2005 17:38:49] [#ezpublish] <zrg> eh.. you could add this "freeform" datatype to article, or you could make new class based on it and attach it to anything
+[12-14-2005 17:41:34] [#ezpublish] <SEAwolfx> is this what you mean? http://ez.no/community/forum/developer/linking_objects_to_other_objects
+[12-14-2005 17:43:47] [#ezpublish] <zrg> you want to have different forms in different article objects, for example, yes?
+[12-14-2005 17:45:56] [#ezpublish] <SEAwolfx> ok .. i want to add a form to an article which only stores the form-input which should be kept persitent. but the forms may differ from article to article. they should only store the contents of it self.
+[12-14-2005 17:46:12] [#ezpublish] <zrg> okay
+[12-14-2005 17:47:27] [#ezpublish] <SEAwolfx> the forms should be defined dynamically and attached to an article.
+[12-14-2005 17:47:46] [#ezpublish] <zrg> so you make a datatype "freeform", copy it from textfield as start. everything works as in textfield, except when user input is coming in, the values in it get updated
+[12-14-2005 17:49:23] [#ezpublish] <SEAwolfx> this asumes that i can a loose datatype to an articleObject?
+[12-14-2005 17:49:57] [#ezpublish] <SEAwolfx> s/loose/attach/ ... excuse my lousy english ;)
+[12-14-2005 17:51:05] [#ezpublish] <SEAwolfx> but what you mean with "freeform". is this an explicit expression of the eZ-world? ;)
+[12-14-2005 17:51:36] [#ezpublish] <SEAwolfx> *rolling a cigarette*
+[12-14-2005 17:52:14] [#ezpublish] <zrg> admin makes a new article and writes in freeform field:
+[12-14-2005 17:52:14] [#ezpublish] <zrg> Your nickname: <input type="text" name="yournickname">
+[12-14-2005 17:52:14] [#ezpublish] <zrg> this gets output to user as is so he sees:
+[12-14-2005 17:52:14] [#ezpublish] <zrg> Your nickname: TEXTFIELD
+[12-14-2005 17:52:14] [#ezpublish] <zrg> when he has entered something, the content of field will be updated, like:
+[12-14-2005 17:52:14] [#ezpublish] <zrg> <input type="text" name="yournickname" value="Ford Perfect">
+[12-14-2005 17:52:53] [#ezpublish] <zrg> freeform would be just a name of new datatype, like "text" "float"
+[12-14-2005 17:54:38] [#ezpublish] <SEAwolfx> ahh.. but how to submit an store the value?
+[12-14-2005 17:54:47] [#ezpublish] <SEAwolfx> s/an/and/
+[12-14-2005 17:55:38] [#ezpublish] <zrg> back in the content, i just told
+[12-14-2005 17:55:39] [#ezpublish] <SEAwolfx> the submitting alters the freeform text itself.
+[12-14-2005 17:58:30] [#ezpublish] <SEAwolfx> cool idea, i will check this out.
+[12-14-2005 17:59:28] [#ezpublish] <zrg> question is what is it good for though :P
+[12-14-2005 18:01:22] [#ezpublish] <SEAwolfx> s/article/todo/
+[12-14-2005 18:01:24] [#ezpublish] <SEAwolfx> ;)
+[12-14-2005 18:03:08] [#ezpublish] <zrg> you seem to suffer from chronical case of Perl :P
+[12-14-2005 18:03:29] [#ezpublish] <SEAwolfx> ;) linux makes it possible.
+[12-14-2005 19:10:40] -!- SEAwolfx [n=mike@DSL01.83.171.153.6.NEFkom.net] has quit [Remote closed the connection]
+[12-14-2005 19:10:45] -!- SEAwolfx [n=mike@DSL01.83.171.153.6.NEFkom.net] has joined #ezpublish
+[12-14-2005 19:11:47] -!- pcdog [n=pcdog@213.144.156.56] has quit [Read error: 104 (Connection reset by peer)]
+[12-14-2005 23:14:51] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []

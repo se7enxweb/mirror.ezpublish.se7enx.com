@@ -1,0 +1,166 @@
+[05-24-2006 00:48:56] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[05-24-2006 00:48:59] [#ezpublish] <philG> hi all
+[05-24-2006 01:19:18] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-24-2006 01:26:02] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[05-24-2006 01:49:14] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-24-2006 02:02:06] -!- Tidemann [n=tidemann@ti132110a340-3091.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[05-24-2006 02:27:27] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-24-2006 02:33:58] [#ezpublish] <kalooni> need help for configuring a multilanguage site
+[05-24-2006 02:34:29] [#ezpublish] <kalooni> I have a french site
+[05-24-2006 02:34:56] [#ezpublish] <kalooni> I want to translate it in english
+[05-24-2006 02:35:17] [#ezpublish] <kalooni> on a 3.7.3
+[05-24-2006 02:35:27] [#ezpublish] <kalooni> so I create a new siteaccess
+[05-24-2006 02:35:42] [#ezpublish] <kalooni> and I assume I have to change the local in [RegionalSettings] of site.ini
+[05-24-2006 02:36:09] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-24-2006 02:36:16] [#ezpublish] <kalooni> Do I have to change the ContentObjectLocale too ?
+[05-24-2006 02:36:27] [#ezpublish] <kalooni> and change anything else anywhere else ?
+[05-24-2006 02:38:35] [#ezpublish] <philG> hello kalooni
+[05-24-2006 02:38:50] [#ezpublish] <philG> you just have to translate your content after that ...
+[05-24-2006 02:39:14] [#ezpublish] <philG> when you edit a content, on the left menu, you have manage translation
+[05-24-2006 02:39:34] [#ezpublish] <philG> configure sthe language for your new site access simply
+[05-24-2006 02:40:00] [#ezpublish] <kalooni> yes the content is already translated
+[05-24-2006 02:40:17] [#ezpublish] <kalooni> ok so i change the ContentObjectLocale too
+[05-24-2006 02:40:25] [#ezpublish] <philG> we can speack french in private room if you want kalooni
+[05-24-2006 02:43:15] [#ezpublish] <philG> [RegionalSettings]
+[05-24-2006 02:43:15] [#ezpublish] <philG> Locale=fre-FR
+[05-24-2006 02:43:15] [#ezpublish] <philG> ContentObjectLocale=fre-FR
+[05-24-2006 02:43:15] [#ezpublish] <philG> TextTranslation=enabled
+[05-24-2006 02:43:27] [#ezpublish] <philG> forr your fr siteacess
+[05-24-2006 02:44:05] [#ezpublish] <kalooni> yes
+[05-24-2006 02:44:07] [#ezpublish] <philG> to switch, you can add little flag on your page ( french and english for example )
+[05-24-2006 02:44:14] [#ezpublish] <kalooni> philG: thanks
+[05-24-2006 02:44:23] [#ezpublish] <kalooni> the ezpublish-fr room exists ;)
+[05-24-2006 02:44:41] [#ezpublish] <philG> yes !
+[05-24-2006 02:56:23] -!- Tidemann [n=tidemann@ti132110a340-3091.bb.online.no] has joined #ezpublish
+[05-24-2006 02:57:32] [#ezpublish] <Tidemann> so... good(!) morning!
+[05-24-2006 02:59:26] [#ezpublish] <philG> hello Tidemann
+[05-24-2006 03:12:14] [#ezpublish] <Tidemann> www.dojotoolkit.org
+[05-24-2006 03:13:08] [#ezpublish] <Tidemann> I have a dream...
+[05-24-2006 03:13:49] [#ezpublish] <Tidemann> that some day... we will see.... eZ admin and Ajax.. combined... bundled into one...
+[05-24-2006 03:16:14] [#ezpublish] <Tidemann> halleluja
+[05-24-2006 03:16:29] [#ezpublish] <Tidemann> amen
+[05-24-2006 03:38:33] [#ezpublish] <awormus> 2008 will make 2006 look like 1997 did to 2005
+[05-24-2006 03:39:24] [#ezpublish] <kris10an> awormus: what about 2009 ?
+[05-24-2006 03:39:24] -!- awormus [n=aaron@p54B12FF8.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[05-24-2006 03:39:24] -!- awormus [n=aaron@p54B12FF8.dip0.t-ipconnect.de] has joined #ezpublish
+[05-24-2006 04:59:09] [#ezpublish] <kalooni> Can anybody could give me some tips to make the admin interface faster ?
+[05-24-2006 05:07:05] [#ezpublish] <zr1> put all caching on and install eaccelerator
+[05-24-2006 05:09:15] [#ezpublish] <Tidemann> kalooni: do you have a LOT of content?
+[05-24-2006 05:11:22] [#ezpublish] <kalooni> quite a lot
+[05-24-2006 05:11:52] [#ezpublish] <kalooni> less than 10k object but growing quite fast (new users)
+[05-24-2006 05:12:24] [#ezpublish] <kalooni> so for eZ this is not really too much
+[05-24-2006 05:13:03] [#ezpublish] <kalooni> we already have APC as php cache manager
+[05-24-2006 05:13:06] [#ezpublish] <Tidemann> well.. if it's a lot of content then the content navigation tree gets really big
+[05-24-2006 05:13:29] [#ezpublish] <Tidemann> i've seen admin content page being over 3mb
+[05-24-2006 05:13:52] [#ezpublish] <Tidemann> I've solved this by using the ajax extention
+[05-24-2006 05:13:59] [#ezpublish] <kalooni> yes, browsing the user section is really taking long time
+[05-24-2006 05:14:07] [#ezpublish] <kalooni> yes I have it on my dev serv
+[05-24-2006 05:14:16] [#ezpublish] <kalooni> I will migrate it into prod soon
+[05-24-2006 05:15:20] [#ezpublish] <zr1> you mean ezodcsm js menu?
+[05-24-2006 05:15:37] [#ezpublish] <kalooni> yes
+[05-24-2006 05:16:25] [#ezpublish] <zr1> it has some bug btw, at runtime the module goes through all nodes in site, which on my site with 40000 nodes creates memory overflow
+[05-24-2006 05:16:52] [#ezpublish] <kalooni> interesting
+[05-24-2006 05:17:19] [#ezpublish] <zr1> if you start getting segfaults switch to the older "experimental" dynamicmenu that does not have that problem
+[05-24-2006 05:20:02] [#ezpublish] <kalooni> what about PreviewCache ?
+[05-24-2006 05:41:33] -!- xigletjobb [n=Miranda@62.92.35.139] has joined #ezpublish
+[05-24-2006 05:50:46] [#ezpublish] <Tidemann> kris10an: you there?
+[05-24-2006 06:02:51] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[05-24-2006 06:23:03] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-24-2006 06:43:34] [#ezpublish] <xigletjobb> what does the ">" in front of a lot of lines when using input|attribute(show) ?
+[05-24-2006 06:43:54] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[05-24-2006 06:44:03] [#ezpublish] <kalooni> kind of tabbing
+[05-24-2006 06:44:20] [#ezpublish] <kalooni> children of children
+[05-24-2006 06:44:28] [#ezpublish] <xigletjobb> ok
+[05-24-2006 06:49:07] [#ezpublish] <xigletjobb> i'm trying to figure out something here . I have a content class with attribute: test (text-line) and attribute: thing (option with the two options thing1 and thing2). It's easy to print the text {$node.object.data_map.test.content}, but how do I know the syntax for other attributes, like "option"? I'we tried $node.object.data_map.thing|attribute(show) but I can't find the value "thing1" or "thing
+[05-24-2006 06:49:07] [#ezpublish] <xigletjobb> 2" anywhere so I don't know where to look
+[05-24-2006 06:55:24] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[05-24-2006 07:07:17] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[05-24-2006 07:09:54] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-24-2006 07:23:50] [#ezpublish] <kris10an> xigletjobb: use |attribute(show,1) to see the contents
+[05-24-2006 07:23:51] [#ezpublish] <kalooni> I have added a new view in the shop module to allow the admin user to easily update products prices without editing each products (which is time consuming).
+[05-24-2006 07:24:05] [#ezpublish] <kris10an> see also here http://ez.no/doc/ez_publish/technical_manual/3_7/reference/datatypes
+[05-24-2006 07:24:39] [#ezpublish] <kalooni> The problem is that when doing so the price is not updated in the front end which is a problem
+[05-24-2006 07:24:42] [#ezpublish] <kris10an> http://ez.no/doc/ez_publish/technical_manual/3_7/reference/datatypes/option
+[05-24-2006 07:24:52] [#ezpublish] <kris10an> http://ez.no/doc/ez_publish/technical_manual/3_7/reference/objects/ezoption
+[05-24-2006 07:25:04] [#ezpublish] <kalooni> any idea on how to solve this problem ?
+[05-24-2006 07:25:41] [#ezpublish] <kris10an> kalooni: how do you solve updating prices for all objects?
+[05-24-2006 07:27:28] [#ezpublish] <kalooni> listing all products
+[05-24-2006 07:27:35] [#ezpublish] <kalooni> retrieving the price attribute
+[05-24-2006 07:28:21] [#ezpublish] <kalooni> and at the end a button "Update Prices"
+[05-24-2006 07:28:45] [#ezpublish] <kalooni> then looping and modifying data_float of the price attribute for each products
+[05-24-2006 07:29:04] [#ezpublish] <kalooni> so no new version
+[05-24-2006 07:29:22] [#ezpublish] <kalooni> a little bit like it is done for quantity in one of the workflow
+[05-24-2006 07:33:17] [#ezpublish] <kalooni> kris10an: do you see what i mean?
+[05-24-2006 07:33:38] [#ezpublish] <kalooni> this could be compared to the update priority feature
+[05-24-2006 07:33:40] [#ezpublish] <kalooni> on nodes
+[05-24-2006 07:34:59] [#ezpublish] <kris10an> i see.. do you clear the cache after doing this?
+[05-24-2006 07:35:51] [#ezpublish] <kalooni> no i do not cause I do not know how to
+[05-24-2006 07:35:58] [#ezpublish] <kalooni> through the api
+[05-24-2006 07:36:18] [#ezpublish] <kris10an> kernel/classes/ezcontentcachemanager.php
+[05-24-2006 07:36:28] [#ezpublish] <kris10an> clearObjectViewCacheIfNeeded
+[05-24-2006 07:36:30] [#ezpublish] <kalooni> and what would be great would be to delete only cache file concerned by the change
+[05-24-2006 07:36:58] -!- kore__ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[05-24-2006 07:37:10] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[05-24-2006 07:37:59] [#ezpublish] <kalooni> great
+[05-24-2006 07:38:09] [#ezpublish] <kalooni> does it mean I have to change the object version ?
+[05-24-2006 07:42:04] [#ezpublish] <kris10an>      \param $versionNum The version of the object to use or \c true for current version
+[05-24-2006 07:42:29] [#ezpublish] <kalooni> let's go for "true" then ;=)
+[05-24-2006 07:45:25] -!- zr1 [n=zurgutt@roop.pri.ee] has quit [Read error: 110 (Connection timed out)]
+[05-24-2006 07:50:41] [#ezpublish] <kalooni> hum: don't have the impression it worked
+[05-24-2006 08:06:09] [#ezpublish] <kalooni> i got an eZDebug::writeDebug in my script but I have the impression nothing is written to my debug.log file
+[05-24-2006 08:06:15] [#ezpublish] <kalooni> what should I do ?
+[05-24-2006 08:07:15] [#ezpublish] <kalooni> ok it is solved ;)
+[05-24-2006 08:12:04] [#ezpublish] <xigletjobb> I want to fetch only nodes with attrubute id 224 enabled (attribute type is checkbox), what do I do wrong here? : fetch(content,list,hash( parent_node_id, $node.node_id, attribute_filter, array( 224, =, true) ) ) }
+[05-24-2006 08:23:58] [#ezpublish] <kalooni> kris10an: it seems the clearObjectViewCache has no effect :(
+[05-24-2006 08:28:05] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[05-24-2006 08:54:35] -!- kris10an [n=kh@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[05-24-2006 08:54:36] -!- _kh [n=kh@85.19.74.66] has joined #ezpublish
+[05-24-2006 09:13:33] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-24-2006 09:25:42] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-24-2006 09:26:50] -!- ordnas [n=ordnas@p549D7025.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-24-2006 09:31:25] -!- zr1 [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[05-24-2006 09:31:29] [#ezpublish] <zr1> kalooni, very interesting about mass changing of product price, how does it work?
+[05-24-2006 09:32:04] [#ezpublish] <kalooni> looks like changing priority
+[05-24-2006 09:32:31] [#ezpublish] <kalooni> the problem for  the moment is that cache are not cleared ;)
+[05-24-2006 09:32:35] [#ezpublish] <zr1> and changes many prices at once?
+[05-24-2006 09:32:43] [#ezpublish] <kalooni> yes
+[05-24-2006 09:33:06] [#ezpublish] <zr1> had to do it once, ended up doing db dump, search-replace and db restore :P
+[05-24-2006 09:33:18] [#ezpublish] <kalooni> lol
+[05-24-2006 09:33:25] [#ezpublish] <zr1> actually it was options i had to change
+[05-24-2006 09:33:38] [#ezpublish] <kalooni> On the same page you can change stocks infos
+[05-24-2006 09:33:39] [#ezpublish] <kalooni> too
+[05-24-2006 09:33:47] [#ezpublish] <kalooni> yes it doesn't manage options
+[05-24-2006 09:34:21] [#ezpublish] <zr1> options cant have defaults set in class, thats too bad
+[05-24-2006 09:46:07] -!- _hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-24-2006 10:16:28] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-24-2006 10:18:46] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-24-2006 10:37:04] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Peace and Protection 4.22"]
+[05-24-2006 10:58:41] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-24-2006 11:35:40] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[05-24-2006 12:08:49] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Remote closed the connection]
+[05-24-2006 12:14:15] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[05-24-2006 12:16:06] -!- zr1 [n=zurgutt@roop.pri.ee] has left #ezpublish []
+[05-24-2006 12:29:30] -!- kracker [n=kracker@ip23.131.realtime.net] has joined #ezpublish
+[05-24-2006 12:42:48] -!- SEAwolfx [n=SEAwolfx@p5493C04B.dip0.t-ipconnect.de] has joined #ezpublish
+[05-24-2006 12:42:55] [#ezpublish] <SEAwolfx> hi @all
+[05-24-2006 12:43:08] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-24-2006 12:43:56] [#ezpublish] <nnn0> hi :)
+[05-24-2006 12:57:04] [#ezpublish] <kracker> mehh, i'm so ghosting it's like toasting marshmellos
+[05-24-2006 12:57:07] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[05-24-2006 13:07:02] [#ezpublish] <ls> hi :)
+[05-24-2006 14:51:04] -!- SEAwolfx_ [n=SEAwolfx@p5493834F.dip0.t-ipconnect.de] has joined #ezpublish
+[05-24-2006 14:59:23] -!- SEAwolfx_ [n=SEAwolfx@p5493834F.dip0.t-ipconnect.de] has quit ["Ottos Mops kotzt"]
+[05-24-2006 14:59:33] -!- SEAwolfx_ [n=SEAwolfx@p5493834F.dip0.t-ipconnect.de] has joined #ezpublish
+[05-24-2006 15:05:18] -!- SEAwolfx_ [n=SEAwolfx@p5493834F.dip0.t-ipconnect.de] has quit ["Ottos Mops kotzt"]
+[05-24-2006 15:07:33] -!- SEAwolfx_ [n=SEAwolfx@p5493834F.dip0.t-ipconnect.de] has joined #ezpublish
+[05-24-2006 15:11:55] -!- SEAwolfx [n=SEAwolfx@p5493C04B.dip0.t-ipconnect.de] has quit [Connection timed out]
+[05-24-2006 15:49:32] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Konversation terminated!"]
+[05-24-2006 16:41:07] -!- kore__ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[05-24-2006 17:06:37] -!- awormus [n=aaron@p54B12FF8.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-24-2006 17:29:27] -!- zr1 [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[05-24-2006 17:29:56] [#ezpublish] <zr1> enemy never sleeps!
+[05-24-2006 17:41:07] [#ezpublish] <SEAwolfx_> right
+[05-24-2006 18:30:58] -!- elephantMan [n=elephant@46.205.103-84.rev.gaoland.net] has quit [Success]
+[05-24-2006 18:32:02] -!- elephantMan [n=elephant@250.202.99-84.rev.gaoland.net] has joined #ezpublish
+[05-24-2006 20:41:06] -!- SEAwolfx_ [n=SEAwolfx@p5493834F.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-24-2006 20:53:13] -!- xigletjobb [n=Miranda@62.92.35.139] has quit [Read error: 104 (Connection reset by peer)]

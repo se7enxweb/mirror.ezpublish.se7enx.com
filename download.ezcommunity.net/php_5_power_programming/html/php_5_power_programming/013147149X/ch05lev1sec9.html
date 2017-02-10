@@ -1,0 +1,111 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 5.9.&nbsp; Architecture</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec10.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch05lev1sec9"></a><h3 class="docSection1Title">5.9. Architecture</h3>
+<p class="docText">In this section, we discuss a few ways to organize the code in your web application. Although we cannot present you with every possible way of organizing code, we can at least discuss some of the most common ways.</p>
+<a name="ch05lev2sec9"></a><h4 class="docSection2Title">5.9.1. One Script Serves All</h4>
+<p class="docText"><span class="docEmphStrong">One script serves all</span> stands for the idea that one script, usually <tt>index.php</tt>, handles all the requests for all different pages. Different content is passed as parameters to the <tt>index.php</tt> script by adding URL parameters such as <tt>?page=register</tt>. It is not wise to store all code in the <tt>index.php</tt> script itself, but you can include the required code into the script. <a class="docLink" href="#ch05fig04">Figure 5.4</a> shows how it might work.<a name="ch05index215"></a><a name="ch05index216"></a><a name="ch05index217"></a></P>
+<a name="ch05fig04"></a><p><center><H5 class="docFigureTitle">Figure 5.4. The &quot;one script serves all&quot; approach.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/05fig04_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="395" SRC="images/013147149X/graphics/05fig04.gif;380137"></P></center></p><br>
+<p class="docText">As you can see, there is a case for every module (<tt>products</tt>, <tt>contact</tt>, <tt>about</tt>). In this application, a specific file and class can handle the request. You can imagine that, in case you have many different modules, the switch case will grow large, so it might be worthwhile to do it dynamically by loading a number of modules from a dedicated directory, like the following (pseudo code)<a name="ch05index218"></a><a name="ch05index219"></a><a name="ch05index220"></a></p>
+<pre>
+foreach (directory in "modules/") {
+    if file_exists("definition.php") {
+        module_def = include "definition";
+        register_module(module_def);
+    }
+}
+
+if registered_module($_GET['module']) {
+    $driver = new $_GET['module'];
+    $driver-&gt;execute();
+}
+?&gt;
+</pre><br>
+<a name="ch05lev2sec10"></a><H4 class="docSection2Title">5.9.2. One Script per Function</H4>
+<p class="docText">Another alternative is the <span class="docEmphStrong">one script per function</span> approach. Here, there is no driver script like in the previous section, but each function is stored in a different script and accessed through its URL (for example, <tt>about.php</tt>, where in the previous example, we had <tt>index.php?page=about</tt>). Both styles have pros and cons; in the &quot;one script serves all&quot; method, you only have to include the basics (like session handling, connecting to a database) in one script, while with this method, you have to do that in each script that implements the functionality. On the other hand, a monolithic script is often harder to maintain (because you have to dig through more files to find your problem).<a name="ch05index221"></a><a name="ch05index222"></a><a name="ch05index223"></a></p>
+<p class="docText">Of course, it's always up to you, the programmer, to make decisions regarding the layout of your application. The only real advice that we can give is that you always need to think before you implement. It helps to sit down and brainstorm about how to lay out your code.</p>
+<a name="ch05lev2sec11"></a><h4 class="docSection2Title">5.9.3. Separating Logic from Layout</h4>
+<p class="docText">In each of the two approaches, you always need to strive to separate your logic from the layout of your pages. There are a few ways to do thisfor example, with a templating engine (see <a class="docLink" href="ch14.html#ch14">Chapter 14</a>, &quot;Performance&quot;)but you can also use your own templating method, perhaps something similar to this example:<a name="ch05index224"></a><a name="ch05index225"></a><a name="ch05index226"></a><a name="ch05index227"></a></P>
+<pre>
+template.tpl:
+
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;&lt;?php echo $tpl['title']; ?&gt;&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+      &lt;h1&gt;&lt;?php echo $tpl['title']; ?&gt;&lt;/h1&gt;
+
+      &lt;p&gt;
+            &lt;?php echo $tpl['description']; ?&gt;
+      &lt;/p&gt;
+      &lt;?php echo $tpl['content']; ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">This file is the &quot;static&quot; part of the site, and it's the same for most pages. It's simply HTML with some PHP statements to echo simple variables that are filled in by logic in the script that uses this template.<a name="ch05index228"></a><a name="ch05index229"></a><a name="ch05index230"></a><a name="ch05index231"></a></p>
+<pre>
+list_parts.tpl.php:
+
+     &lt;?php
+          $header = &lt;&lt;&lt;END
+     &lt;table&gt;
+          &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;City&lt;/th&gt;&lt;/tr&gt;
+     END;
+
+          $footer = &lt;&lt;&lt;END
+     &lt;/table&gt;
+     END;
+
+          $item = "&lt;tr&gt;&lt;td&gt;{name}&lt;/td&gt;&lt;td&gt;{city}&lt;/th&gt;";
+     ?&gt;
+</pre><BR>
+<p class="docText">This file contains elements for use in a dynamic list. You see that in the <tt>$item</tt> variable, we also have two placeholders (<tt>{name}</tt> and <tt>{city}</tt>) which are used by the logic to fill in data.<a name="ch05index232"></a><a name="ch05index233"></a><a name="ch05index234"></a><a name="ch05index235"></a></p>
+<pre>
+show_names.php:
+
+
+     &lt;?php
+          include 'list_parts.tpl.php';
+</pre><BR>
+<p class="docText">First, we include the template file containing the definitions for the different elements of the list to display:</p>
+<pre>
+$list = array('Andi' =&gt; 'Tel Aviv', 'Derick' =&gt; 'Skien', 'Stig' =&gt; 'Trondheim);
+
+$items = '';
+foreach ($list as $name =&gt; $city) {
+       $items .= str_replace(
+            array('{name}' , '{city}'),
+            array($name, $city), $item
+       );
+}
+</pre><br>
+<p class="docText">After initializing our variables, we loop through the array and concatenate the filled-in <tt>$item</tt> variable to the <tt>$items</tt> variable, which will contain the layout for all items in the list:<a name="ch05index236"></a><a name="ch05index237"></a><a name="ch05index238"></a><a name="ch05index239"></a></p>
+<pre>
+    $tpl = array();
+    $tpl['title'] = "List with names";
+    $tpl['description'] = "This list shows names and the cities.";
+    $tpl['content'] = $header . $items . $footer;
+
+    include 'template.tpl';
+?&gt;
+</pre><br>
+<p class="docText">At last, we create the <tt>$tpl</tt> array, fill in the items that the template wants, and include the template file. Because the variables are now set, the included template is displayed with the data filled in. This is, of course, only one method of attacking this problem; I'll leave the rest to your imagination.<a name="ch05index240"></a><a name="ch05index241"></a><a name="ch05index242"></a><a name="ch05index243"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec10.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

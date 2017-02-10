@@ -1,0 +1,500 @@
+[12-22-2005 00:07:19] -lilo:$*- [Global Notice] Hi all. Per the news item from earlier this morning ( http://freenode.net/news.shtml ), we're about to have a fairly large, though hopefully quick, break in service.... it should all hit in roughly five minutes. Thanks.
+[12-22-2005 00:14:06] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:06] -!- SEAwolfx_ [n=mike@tor/session/x-ac35968b83e1e0bd] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:06] -!- SEAwolfx [n=mike@tor/session/x-7f3ff76a0bc9d770] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:06] -!- Proteque [n=gjorans@213.184.199.245] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:06] -!- elephantMan [n=elephant@217.167.222.224] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:06] -!- tobyS [n=dotxp@dslb-084-061-151-015.pools.arcor-ip.net] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:06] -!- seasonfive [n=seasonfi@AGrenoble-152-1-40-24.w82-122.abo.wanadoo.fr] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:06] -!- pire [n=kbot@phpugdo.de] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:06] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:06] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:23] Diconnected. Sleeping for 2 second(s).
+[12-22-2005 00:14:25] >> Connecting to irc.freenode.net:6667
+[12-22-2005 00:14:27] >> Connected to irc.freenode.net:6667, registering...
+[12-22-2005 00:14:28] >> Successfully registered. Nick is: ezlog
+[12-22-2005 00:14:28] -!- There are 1887 listed and 2182 unlisted users on 16 servers
+[12-22-2005 00:14:28] -!- 13 flagged staff members
+[12-22-2005 00:14:28] -!- 4266 channels formed
+[12-22-2005 00:14:28] -!- I have 425 clients and 0 servers
+[12-22-2005 00:14:28] -!- Current local  users: 425  Max: 425
+[12-22-2005 00:14:28] -!- Current global users: 4069  Max: 4069
+[12-22-2005 00:14:28] -!- Highest connection count: 425 (424 clients) (427 since server was (re)started)
+[12-22-2005 00:14:46] >> Attempting to join channels: #ezpublish
+[12-22-2005 00:14:46] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[12-22-2005 00:14:46] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/news/community_newsletter_02_12_2005 | http://ez.no/community/articles/an_introduction_to_ez_components
+[12-22-2005 00:14:46] -!- Topic set by kracker [@] [Fri, 16 Dec 2005 22:42:08 -0600]
+[12-22-2005 00:14:46] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-22-2005 00:14:48] -!- elephantMan [n=elephant@217.167.222.224] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 00:14:48] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[12-22-2005 00:14:51] -!- tobyS [n=dotxp@84.61.151.15] has joined #ezpublish
+[12-22-2005 00:14:59] -!- fh[eZ] [n=fh@80.239.98.162] has joined #ezpublish
+[12-22-2005 00:15:05] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[12-22-2005 00:15:06] -!- seasonfive [n=seasonfi@AGrenoble-152-1-40-24.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[12-22-2005 00:15:09] -!- kris10an [n=kh@80.239.98.162] has joined #ezpublish
+[12-22-2005 00:15:21] -!- pire [n=kbot@217.160.130.142] has joined #ezpublish
+[12-22-2005 00:16:53] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-22-2005 00:19:28] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[12-22-2005 00:34:06] -!- SEAwolfx_ [n=mike@tor/session/x-ac35968b83e1e0bd] has quit [Remote closed the connection]
+[12-22-2005 00:34:48] -!- SEAwolfx_ [n=mike@tor/session/x-0b5c9a97a7cbe86e] has joined #ezpublish
+[12-22-2005 00:35:32] -!- SEAwolfx [n=mike@tor/session/x-7f3ff76a0bc9d770] has quit [Nick collision from services.]
+[12-22-2005 00:35:43] -!- SEAwolfx_ is now known as SEAwolfx
+[12-22-2005 00:40:58] -lilo:$*- [Global Notice] Hi all. The server restarts we did a few minutes ago, the ones announced about 6 hours ago ( http://freenode.net/news.shtml ), are mostly complete. There will probably be a few small server restarts, but considerably fewer users will be affected. Thanks for your patience and understanding, and thank you for using freenode!
+[12-22-2005 00:53:56] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[12-22-2005 00:54:00] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [Read error: 104 (Connection reset by peer)]
+[12-22-2005 00:54:55] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[12-22-2005 01:04:06] -!- SEAwolfx [n=mike@tor/session/x-0b5c9a97a7cbe86e] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 01:04:06] -!- Proteque [n=gjorans@213.184.199.245] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-22-2005 01:04:17] -!- SEAwolfx [n=mike@tor/session/x-8e6c8e0df33bf614] has joined #ezpublish
+[12-22-2005 01:04:20] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-22-2005 01:33:34] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-22-2005 01:43:12] -!- tobyS_ [n=dotxp@dslb-084-061-151-238.pools.arcor-ip.net] has joined #ezpublish
+[12-22-2005 01:43:25] [#ezpublish] <kris10an> mornin folks
+[12-22-2005 01:43:32] -!- SEAwolfx is now known as SEAwolf|py
+[12-22-2005 01:44:28] [#ezpublish] <_Rappy_> hello
+[12-22-2005 01:44:41] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[12-22-2005 01:45:18] -!- tobyS [n=dotxp@84.61.151.15] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 01:51:56] -!- ordnas [n=ordnas@p549D6A3C.dip.t-dialin.net] has joined #ezpublish
+[12-22-2005 01:52:20] [#ezpublish] <tobmaster> moin
+[12-22-2005 02:15:18] [#ezpublish] <SEAwolf|py> good morning @all.
+[12-22-2005 02:20:52] -!- DiGiTa|_ [n=guillaum@84.4.42.108] has joined #ezpublish
+[12-22-2005 02:27:58] -!- kore_ [n=lordhong@essn-d9bd4e07.pool.mediaWays.net] has joined #ezpublish
+[12-22-2005 02:30:26] -!- DiGiTa|__ [n=guillaum@84.4.42.108] has joined #ezpublish
+[12-22-2005 02:30:37] [#ezpublish] <DiGiTa|__> hi, hey buz : http://ez.no/community/bugs/ezurlalias_using_pathprefix_causes_wrong_index_page
+[12-22-2005 02:30:45] [#ezpublish] <DiGiTa|__> it was my problem
+[12-22-2005 02:30:49] [#ezpublish] <DiGiTa|__> it's a bug
+[12-22-2005 02:31:03] [#ezpublish] <buz> ah ok
+[12-22-2005 02:34:05] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-22-2005 02:41:38] -!- DiGiTa|_ [n=guillaum@84.4.42.108] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 03:05:06] -!- tobyS_ [n=dotxp@dslb-084-061-151-238.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[12-22-2005 03:08:36] -!- hovik_ [n=hovik@popeye.ez.no] has joined #ezpublish
+[12-22-2005 03:10:16] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 03:43:15] [#ezpublish] <_Rappy_> anyone here using svn?
+[12-22-2005 03:43:21] [#ezpublish] <buz> depends
+[12-22-2005 03:43:24] [#ezpublish] <buz> use for what
+[12-22-2005 03:47:09] [#ezpublish] <seasonfive> hi all :)
+[12-22-2005 03:52:05] -!- Sulfur [n=mbariola@xd-85-20-211-160.rm2.albacom.net] has joined #ezpublish
+[12-22-2005 03:57:27] [#ezpublish] <Sulfur> hi :)
+[12-22-2005 03:59:07] -!- ez_schroeder [n=kvirc@p50909C44.dip0.t-ipconnect.de] has joined #ezpublish
+[12-22-2005 04:00:01] [#ezpublish] <Sulfur> I am asking myself how to implement some kind of "acid" operation using myisam tables .... anyone had the same need? :)
+[12-22-2005 04:00:12] [#ezpublish] <buz> i dont think they support ACID
+[12-22-2005 04:00:21] [#ezpublish] <buz> why cant you use innodb
+[12-22-2005 04:00:37] [#ezpublish] <buz> i'm not even sure if innodb truly is acid
+[12-22-2005 04:01:53] [#ezpublish] <seasonfive> for me, MySQL is simply not a true RDBMS :p
+[12-22-2005 04:01:57] [#ezpublish] <Sulfur> hi buz. myisam ain't acid , innodb comes close ...
+[12-22-2005 04:02:14] [#ezpublish] <buz> seasonfive: its getting there
+[12-22-2005 04:02:26] [#ezpublish] <buz> of course postgre is still ahead but postgre is a bitch to maintain compared to mysql
+[12-22-2005 04:02:39] [#ezpublish] <buz> both are HARMLESS compared to the commercial juggernauts
+[12-22-2005 04:02:50] [#ezpublish] <seasonfive> buz: like Oracle ?
+[12-22-2005 04:02:53] [#ezpublish] <Sulfur> ... the fact is that I have a biiiiiiiiiiiiiiiiiiig myisam table which will be updated with a batch from an xml file, and each record could be both insert or update, depending on a field's value ....
+[12-22-2005 04:02:54] [#ezpublish] <buz> yes
+[12-22-2005 04:03:09] [#ezpublish] <buz> cant you just convert it to inno?
+[12-22-2005 04:03:17] [#ezpublish] <Sulfur> so the problem is, in case of failure, that I cannot just resubmit the old batch as it simply won't work
+[12-22-2005 04:03:30] [#ezpublish] <Sulfur> I don't know. I am having resistance about this.
+[12-22-2005 04:03:34] [#ezpublish] <Sulfur> so ...
+[12-22-2005 04:03:43] [#ezpublish] <buz> i think inno is recommended for ez 3.6+ no?
+[12-22-2005 04:03:51] [#ezpublish] <Sulfur> I was thinking that maybe I could just emulate this transaction by building a tmeporary memory tabel
+[12-22-2005 04:03:52] [#ezpublish] <buz> SEAwolf|py: are you using postgre with ez?
+[12-22-2005 04:04:01] [#ezpublish] <Sulfur> and if all is ok, then I'll save it into table
+[12-22-2005 04:04:02] -!- ez_schroeder [n=kvirc@p50909C44.dip0.t-ipconnect.de] has quit [Client Quit]
+[12-22-2005 04:04:06] [#ezpublish] <buz> that's gonna be efficient for suuuuure
+[12-22-2005 04:04:20] [#ezpublish] <Sulfur> .... but I wanted to know if anyone had similar needs and found another solution
+[12-22-2005 04:04:38] [#ezpublish] <Sulfur> heh :) yeah buz ... we play with the deck of cards the client gives :)
+[12-22-2005 04:05:01] [#ezpublish] <Sulfur> buz: the db in object is an external db which I hook into ez
+[12-22-2005 04:05:26] [#ezpublish] <buz> tell the client what he wants to do isn't safe
+[12-22-2005 04:05:38] [#ezpublish] <buz> if he doesnt want to change, go with it and let it burn
+[12-22-2005 04:05:41] [#ezpublish] <Sulfur> well, this solution surely can help me check if there are any syntax errors
+[12-22-2005 04:05:51] [#ezpublish] <buz> get written approval that you should do an ugly hack
+[12-22-2005 04:07:06] [#ezpublish] <seasonfive> I really like MySQL / PostgreSQL slogan :
+[12-22-2005 04:07:30] [#ezpublish] <seasonfive> most used open source database / most advanced open source database :)
+[12-22-2005 04:08:02] [#ezpublish] <Sulfur> I never had the time to actually check/examine pgresql
+[12-22-2005 04:08:09] [#ezpublish] <buz> has neat features
+[12-22-2005 04:08:15] [#ezpublish] <buz> but setup is quite a bit harder than for mysql
+[12-22-2005 04:08:53] [#ezpublish] <seasonfive> yes, its why everybody go to MySQL
+[12-22-2005 04:09:33] [#ezpublish] <buz> in the past, postgre was slow, too
+[12-22-2005 04:09:35] [#ezpublish] <seasonfive> (and of course for the "fastest" argument of MySQL too)
+[12-22-2005 04:09:53] [#ezpublish] <buz> mysql is only fast for many selects, few updates
+[12-22-2005 04:09:54] [#ezpublish] <Sulfur> hm
+[12-22-2005 04:09:59] [#ezpublish] <seasonfive> buz: for me slow wasn't a problem
+[12-22-2005 04:10:06] [#ezpublish] <buz> for me neither
+[12-22-2005 04:10:10] [#ezpublish] <seasonfive> buz:  you can easily buy bigger computer
+[12-22-2005 04:10:10] [#ezpublish] <buz> but the pain of maintaining it
+[12-22-2005 04:10:42] [#ezpublish] <seasonfive> but not have trigger, cascading etc is a problem for me :p
+[12-22-2005 04:11:10] [#ezpublish] <buz> i rarely interface with the db myself so its not much of an issue for me
+[12-22-2005 04:12:46] [#ezpublish] <Sulfur> well ... this project requires me to use ezxml and interfacing with this ext db .... each node is about 1 - 1.5 kb .... and we easily get batches of 10.000 and up nodes
+[12-22-2005 04:13:08] [#ezpublish] <buz> go for something with proper transactions then
+[12-22-2005 04:13:16] [#ezpublish] <buz> everything else is just plain criminal in my view
+[12-22-2005 04:13:37] [#ezpublish] <Sulfur> *sigh*
+[12-22-2005 04:13:47] [#ezpublish] <buz> have your boss explain it to the client
+[12-22-2005 04:21:17] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-22-2005 04:26:28] [#ezpublish] <Katana`> hi
+[12-22-2005 04:30:33] [#ezpublish] <Sulfur> hi Katana` :)
+[12-22-2005 04:42:42] -!- bOkO [i=martin@cecilias2.kansliM.lu.se] has joined #ezpublish
+[12-22-2005 04:44:42] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[12-22-2005 04:44:45] [#ezpublish] <philG> hi all
+[12-22-2005 04:45:10] [#ezpublish] <philG> i want know waht is the best size and specificity for a server with ezpublish
+[12-22-2005 04:45:38] [#ezpublish] <Katana`> it really depends on the site complexity and amount of traffic...
+[12-22-2005 04:45:50] [#ezpublish] <buz> yeah
+[12-22-2005 04:45:53] [#ezpublish] <buz> what do you want to do with it
+[12-22-2005 04:46:10] [#ezpublish] <buz> base line is likely 2ghz cpu and 1gb ram
+[12-22-2005 04:46:25] [#ezpublish] <buz> ah maybe 512mb can be enough
+[12-22-2005 04:46:30] [#ezpublish] <buz> but more surely wont hurt
+[12-22-2005 04:47:32] [#ezpublish] <philG> 350 users Katana`
+[12-22-2005 04:47:37] [#ezpublish] <buz> how active
+[12-22-2005 04:47:51] [#ezpublish] <buz> and more importantly, doing what?
+[12-22-2005 04:48:06] [#ezpublish] <philG> only intranet ...
+[12-22-2005 04:48:15] [#ezpublish] <buz> just browsing a mostly static site?
+[12-22-2005 04:48:19] [#ezpublish] <philG> more of them just view the site
+[12-22-2005 04:48:23] [#ezpublish] <buz> or updating it all the time
+[12-22-2005 04:48:28] [#ezpublish] <philG> only a few add content
+[12-22-2005 04:48:31] [#ezpublish] <Katana`> any decent server should do the job then
+[12-22-2005 04:48:34] [#ezpublish] <buz> yeah
+[12-22-2005 04:48:37] [#ezpublish] <Katana`> since you'll have viewcaching
+[12-22-2005 04:48:45] [#ezpublish] <Katana`> some P4 2.6+ GHz, at least 1GB of RAM
+[12-22-2005 04:48:54] [#ezpublish] <philG> ok Katana`
+[12-22-2005 04:49:07] [#ezpublish] <buz> cheap and cheerful: http://www.sun.com/servers/entry/x2100/
+[12-22-2005 04:49:34] [#ezpublish] <philG> i can put debian on this serveur buz ? ;-)
+[12-22-2005 04:49:39] [#ezpublish] <buz> yes
+[12-22-2005 04:49:47] [#ezpublish] <buz> it's standard opteron
+[12-22-2005 04:50:19] [#ezpublish] <buz> probably need a recent 2.6 kernel for sata but besides that, it will work
+[12-22-2005 04:50:31] [#ezpublish] <philG> AMD opteron, i want to check that it's really compatible with linux debian
+[12-22-2005 04:50:32] [#ezpublish] <buz> and the price is unbeaten by even dell
+[12-22-2005 04:50:35] [#ezpublish] <buz> it iss
+[12-22-2005 04:50:42] [#ezpublish] <Katana`> indeed, nice stuff
+[12-22-2005 04:50:52] [#ezpublish] <buz> and it beats the crap out of xeons
+[12-22-2005 04:51:37] [#ezpublish] <buz> i have debian running on a athlon64 (opteron's little desktop brother but same architecture) no issue whatosever
+[12-22-2005 04:51:51] [#ezpublish] <philG> ok buz
+[12-22-2005 04:52:06] [#ezpublish] <buz> and besides, sun builds good hardware
+[12-22-2005 04:52:13] [#ezpublish] <buz> (cant really say that about dell)
+[12-22-2005 04:52:40] [#ezpublish] <Katana`> :))
+[12-22-2005 04:52:55] [#ezpublish] <buz> last time i checked, sun was cheaper than the lowend dell even
+[12-22-2005 04:53:14] [#ezpublish] <buz> tho i never actually managed to order something at dell at the price they quote on the site
+[12-22-2005 04:53:21] [#ezpublish] <buz> i suspect that's impossible
+[12-22-2005 04:55:31] [#ezpublish] <philG> the price is just for the rack no buz ?
+[12-22-2005 04:55:47] [#ezpublish] <buz> ?
+[12-22-2005 04:55:56] [#ezpublish] <philG> 745 $
+[12-22-2005 04:55:57] [#ezpublish] <buz> i think it's server + cpu + 512mb ram
+[12-22-2005 04:56:01] [#ezpublish] <Katana`> as soon as you add more RAM you quickly reach 2000
+[12-22-2005 04:56:05] [#ezpublish] <buz> yeah
+[12-22-2005 04:56:10] [#ezpublish] <buz> but you can buy your own ram
+[12-22-2005 04:56:27] [#ezpublish] <buz> iirc sun doesnt care for that when it fails
+[12-22-2005 04:56:33] [#ezpublish] <buz> they just remove it and test their own stuff
+[12-22-2005 04:57:06] [#ezpublish] <buz> the things are damn noisy though
+[12-22-2005 04:57:16] [#ezpublish] <buz> they definitely arent useable outside a server room
+[12-22-2005 04:57:18] [#ezpublish] <Katana`> i won't install one in my bedroom then ;)
+[12-22-2005 04:57:34] [#ezpublish] <buz> most ridiculous thing ever are dell poweredge 2850
+[12-22-2005 04:57:36] [#ezpublish] <Katana`> a friend of mine has a cisco router in his living room... 64 ports
+[12-22-2005 04:57:46] [#ezpublish] <buz> plug em in and they start making alot of noise
+[12-22-2005 04:57:50] [#ezpublish] <Katana`> he's kind enough to stop it when i come over ;)
+[12-22-2005 04:57:58] [#ezpublish] <buz> "oh, it spowered itself on"
+[12-22-2005 04:58:12] [#ezpublish] <buz> no it didnt, you need to turn it on after which the thing sounds like a fucking airplane
+[12-22-2005 04:58:19] [#ezpublish] <Katana`> "no no it's just residual noise"
+[12-22-2005 04:58:25] [#ezpublish] <buz> yeah
+[12-22-2005 04:58:40] [#ezpublish] <buz> but nobody actually knows why a machine is spinning fans when its not even powered on
+[12-22-2005 04:58:40] [#ezpublish] <Katana`> silence costs money ;)
+[12-22-2005 04:59:27] [#ezpublish] <buz> yeah
+[12-22-2005 04:59:42] [#ezpublish] <buz> i spent nearly as much for silencing components than i did for cpu and motherboard in my last machine
+[12-22-2005 04:59:48] [#ezpublish] <seasonfive> btw a server is always on ... :p
+[12-22-2005 04:59:58] [#ezpublish] <seasonfive> buz: same here !
+[12-22-2005 05:00:05] [#ezpublish] <buz> seasonfive: not during transport, no ;)
+[12-22-2005 05:00:23] [#ezpublish] <buz> i even have a fanless psu
+[12-22-2005 05:00:36] [#ezpublish] <seasonfive> buz: i could change mother board/CPU but i prefer change box and fans
+[12-22-2005 05:00:52] [#ezpublish] <buz> well i needed new components, the old ones died of bad cap syndrome
+[12-22-2005 05:01:00] [#ezpublish] <seasonfive> buz: i have only 12 & 8 cm fan running quite low
+[12-22-2005 05:01:00] [#ezpublish] <buz> my whole box is cooled by a single 120mm fan spinning at 800rpm
+[12-22-2005 05:01:01] [#ezpublish] <buz> near silent
+[12-22-2005 05:01:24] [#ezpublish] <buz> of course i dont have fancy vga cards or anything like that
+[12-22-2005 05:01:43] [#ezpublish] <seasonfive> the problem is still my 4 hard-disks ... But i switch off them when not used. When i look film, only one is ON
+[12-22-2005 05:02:30] [#ezpublish] <philG> not really clear the site of sun ... buz
+[12-22-2005 05:02:46] [#ezpublish] <buz> yeah the raid5 is my main problem
+[12-22-2005 05:02:51] [#ezpublish] <buz> cant just turn one disk off
+[12-22-2005 05:03:03] [#ezpublish] <buz> what disks have you got? seagate? samsung?
+[12-22-2005 05:03:12] [#ezpublish] <philG> it's difficult to understand what composant is install in the 745$ solution ...
+[12-22-2005 05:03:26] [#ezpublish] <buz> philG: lemme check
+[12-22-2005 05:03:48] [#ezpublish] <buz> philG: you in the us?
+[12-22-2005 05:04:04] [#ezpublish] <philG> no in france buz
+[12-22-2005 05:04:20] [#ezpublish] <buz> mhh my french is rusty
+[12-22-2005 05:04:32] [#ezpublish] <buz> and the french site is broken
+[12-22-2005 05:04:38] [#ezpublish] <buz> but the configshould be the same as in switzerland
+[12-22-2005 05:04:57] [#ezpublish] <philG> ok i try in switzerland
+[12-22-2005 05:05:43] [#ezpublish] <buz> probably easiest to just call sun
+[12-22-2005 05:05:48] [#ezpublish] <buz> usually their support is good
+[12-22-2005 05:08:34] [#ezpublish] <philG> switzeland server don't work too .... congratulation sun ...
+[12-22-2005 05:08:50] [#ezpublish] <buz> mhh swiss redirects me to resellers that sucks
+[12-22-2005 05:10:18] [#ezpublish] <philG> french canadian perhaps
+[12-22-2005 05:11:48] [#ezpublish] <seasonfive> buz: Seagate, WD and ... don't remember :p
+[12-22-2005 05:12:26] [#ezpublish] <buz> i found  wd to be noisy as hell
+[12-22-2005 05:12:30] [#ezpublish] <buz> only maxtor was worse
+[12-22-2005 05:12:41] [#ezpublish] <seasonfive> buz: i have one maxtor too ! :)
+[12-22-2005 05:12:49] [#ezpublish] <buz> i'm gonna kick  mine
+[12-22-2005 05:12:56] [#ezpublish] <buz> or put it in the basement or something like that
+[12-22-2005 05:12:59] [#ezpublish] <seasonfive> buz: moreover my WD sometimes do some "cliik .... claaaakk"
+[12-22-2005 05:13:11] [#ezpublish] <buz> next to central heating it can to as much noise as it cares to
+[12-22-2005 05:13:26] [#ezpublish] <seasonfive> :D
+[12-22-2005 05:13:37] [#ezpublish] <buz> but our new main heating unit is one noisy sucker
+[12-22-2005 05:13:49] [#ezpublish] <buz> sounds like an overly loud dish washer at times
+[12-22-2005 05:13:57] [#ezpublish] <seasonfive> i thought to externalize one box with these hard-drive in my toilets and do NFS/samba
+[12-22-2005 05:14:15] [#ezpublish] <buz> i tried that
+[12-22-2005 05:14:25] [#ezpublish] <buz> not a bad way but heat can be a problem in small rooms
+[12-22-2005 05:14:28] [#ezpublish] <seasonfive> works great ?
+[12-22-2005 05:14:38] [#ezpublish] <buz> well its slower than locally
+[12-22-2005 05:14:43] [#ezpublish] <buz> but usually you dont notice it much
+[12-22-2005 05:15:11] [#ezpublish] <buz> i thought of maybe building a big box for the drives, stick a 80mm fan in it and put a lot of insulation around it
+[12-22-2005 05:16:16] [#ezpublish] <seasonfive> i thinkg with Giga Ethernet you can read 20/30Mb by sec ?
+[12-22-2005 05:16:21] [#ezpublish] <seasonfive> s/read/reach
+[12-22-2005 05:17:21] [#ezpublish] <seasonfive> the sad part is my 4 hard disk isn't same size, can't do RAID 5 :-/
+[12-22-2005 05:17:29] [#ezpublish] <seasonfive> have you got software RAID ?
+[12-22-2005 05:19:49] -!- Guest1739727 [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-22-2005 05:23:48] -!- DiGiTa|__ [n=guillaum@84.4.42.108] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 05:50:13] -!- Guest1739727 [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 06:05:02] [#ezpublish] <buz> i tried both software and hardware raid
+[12-22-2005 06:05:08] [#ezpublish] <buz> these days for home use i'd go software
+[12-22-2005 06:05:11] [#ezpublish] <buz> more flexible
+[12-22-2005 06:05:14] [#ezpublish] <buz> and muuuch cheaper
+[12-22-2005 06:05:32] [#ezpublish] <buz> yeah gige should be  plenty fast IF you got gige switches ;)
+[12-22-2005 06:13:22] [#ezpublish] <seasonfive> really, its _REALLY_ fun to build website with ezPublish. Good job guys !
+[12-22-2005 06:13:39] [#ezpublish] <buz> that's why most of us are here you know
+[12-22-2005 06:14:22] [#ezpublish] <seasonfive> =]
+[12-22-2005 06:14:36] [#ezpublish] <Sulfur> becasue it's fun?
+[12-22-2005 06:14:42] [#ezpublish] <buz> that and because of the dead raven fetish some of us share
+[12-22-2005 06:14:54] [#ezpublish] <buz> if we thought it sucked we'd likely use another cms, no?
+[12-22-2005 06:14:56] [#ezpublish] <Sulfur> or becasue of the high amount of both technicality and high-quality noise? ;)
+[12-22-2005 06:15:03] [#ezpublish] <buz> yes that too
+[12-22-2005 06:15:11] [#ezpublish] <buz> and no trolls
+[12-22-2005 06:15:15] [#ezpublish] <buz> mostly not
+[12-22-2005 06:15:32] [#ezpublish] <Sulfur> ah, am I in the eZ CMS channel??? whoops ... now I understand WHY many of the stuff I read here does not apply to my cms installations
+[12-22-2005 06:15:33] [#ezpublish] <Sulfur> :))
+[12-22-2005 06:15:54] [#ezpublish] <buz> that because you never do standard stuff, Sulfur
+[12-22-2005 06:16:01] [#ezpublish] <buz> nobody quite knows what it is you do, anyhow
+[12-22-2005 06:16:05] [#ezpublish] <Sulfur> point taken
+[12-22-2005 06:16:25] [#ezpublish] <Sulfur> well ... yes ... I can say that I still have to do a STANDARD ezp project
+[12-22-2005 06:16:27] [#ezpublish] <seasonfive> is there ezpublish contributor here ?
+[12-22-2005 06:16:36] [#ezpublish] <buz> contributor as in what
+[12-22-2005 06:16:50] [#ezpublish] <seasonfive> code, documentation, howto ...
+[12-22-2005 06:16:56] [#ezpublish] <Sulfur> my first ezp project was actually a GIANT ezp extension ;)
+[12-22-2005 06:17:00] [#ezpublish] <buz> well the [ez] guys work for ez ;)
+[12-22-2005 06:17:13] [#ezpublish] <buz> and some of the others (such as my self) write extensions
+[12-22-2005 06:17:14] [#ezpublish] <Sulfur> poke them with a dead raven
+[12-22-2005 06:17:42] [#ezpublish] <seasonfive> is ez recruiting ? :p
+[12-22-2005 06:17:57] [#ezpublish] <buz> depends on the country i guess
+[12-22-2005 06:17:59] [#ezpublish] <buz> where are you from
+[12-22-2005 06:18:07] [#ezpublish] <seasonfive> France
+[12-22-2005 06:18:32] [#ezpublish] <buz> mhh i think they just hired the french team no?
+[12-22-2005 06:19:04] [#ezpublish] <buz> gotta run
+[12-22-2005 06:19:12] [#ezpublish] <buz> last two uni hours for this year
+[12-22-2005 06:19:21] [#ezpublish] <buz> l8ter
+[12-22-2005 06:20:41] -!- tobyS [n=dotxp@dslb-084-061-151-238.pools.arcor-ip.net] has joined #ezpublish
+[12-22-2005 06:27:04] -lilo:$*- [Global Notice] Hi all. As you may be aware, about 6 hours ago freenode restarted a number of servers per the news article posted yesterday evening ( http://freenode.net/news.shtml ). In the process of restoring the network, a number of users lost their identifications to NickServ.
+[12-22-2005 06:27:37] -lilo:$*- [Global Notice] If you're no longer identified to NickServ, you may want to manually reidentify or restart your client. Thanks, and thank you for using freenode!
+[12-22-2005 06:28:24] [#ezpublish] <Sulfur> see you buz
+[12-22-2005 06:48:00] [#ezpublish] <SEAwolf|py> <>>>buz<<<>SEAwolf|py: are you using postgre with ez? <- atm mysql
+[12-22-2005 06:48:31] [#ezpublish] <SEAwolf|py> buz: why u asked? any problems?
+[12-22-2005 06:50:18] [#ezpublish] <fh[eZ]> seasonfive: we are always recruiting :) Send a mail to af@ez.no if you are serious about it...
+[12-22-2005 06:50:37] [#ezpublish] <seasonfive> fh[eZ]: really serious :)
+[12-22-2005 06:50:50] [#ezpublish] <fh[eZ]> great, then you know what to do
+[12-22-2005 06:50:53] [#ezpublish] <seasonfive> thanks
+[12-22-2005 06:51:03] [#ezpublish] <seasonfive> French is ok or english ?
+[12-22-2005 06:51:11] [#ezpublish] <fh[eZ]> english
+[12-22-2005 06:51:15] [#ezpublish] <seasonfive> ok
+[12-22-2005 06:58:38] [#ezpublish] <Katana`> yes, the french team has been recruited ;)
+[12-22-2005 06:59:16] [#ezpublish] <seasonfive> Katana`: that mean too late for me ? :-/
+[12-22-2005 06:59:34] [#ezpublish] <Katana`> nah, as fh[eZ] said they're always recruiting
+[12-22-2005 07:00:24] [#ezpublish] <seasonfive> i just read http://ez.no/company/career. Seems they search for me =] ;)
+[12-22-2005 07:12:06] [#ezpublish] <ordnas> seasonfive: we'll see :)
+[12-22-2005 07:12:41] [#ezpublish] <SEAwolf|py> big brother is watching you ;)
+[12-22-2005 07:12:48] [#ezpublish] <ordnas> hehe
+[12-22-2005 07:14:21] [#ezpublish] <seasonfive> but there are some problems ...i haven't got driving licence and i haven't got too much skills in C++ (but i'm good in C ;))
+[12-22-2005 07:15:30] [#ezpublish] <SEAwolf|py> oh, oh, oh ... so give it up then ;) *duck*
+[12-22-2005 07:15:46] [#ezpublish] * SEAwolf|py is just joking
+[12-22-2005 07:27:33] [#ezpublish] <Katana`> seasonfive: query ;)
+[12-22-2005 07:29:11] [#ezpublish] <seasonfive> of course i'll try ! =]
+[12-22-2005 07:44:31] -!- kore_ [n=lordhong@essn-d9bd4e07.pool.mediaWays.net] has quit []
+[12-22-2005 07:44:59] -!- ordnas [n=ordnas@p549D6A3C.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 07:45:55] [#ezpublish] <Sulfur> arrrr, why aren't they looking for italian guys :P
+[12-22-2005 07:46:35] [#ezpublish] <Sulfur> I could make my universally-reckoned  coffee for starters! ;)
+[12-22-2005 07:47:11] [#ezpublish] <Katana`> :))
+[12-22-2005 07:47:48] [#ezpublish] <Sulfur> it can put mediterranean clients at home and strike the fear of god in others ;)
+[12-22-2005 07:48:06] [#ezpublish] <Sulfur> of course, cost in cups is quite high
+[12-22-2005 07:48:20] -!- SEAwolf|1y [n=mike@tor/session/x-b712fd2762e117c7] has joined #ezpublish
+[12-22-2005 07:48:22] [#ezpublish] <seasonfive> is there some alcool in ?
+[12-22-2005 07:48:45] [#ezpublish] <Sulfur> no. you want it to explode ?
+[12-22-2005 07:48:59] -!- SEAwolf|1y is now known as SEAwolfx
+[12-22-2005 07:49:13] [#ezpublish] <SEAwolfx>  /msg
+[12-22-2005 07:49:19] [#ezpublish] <SEAwolfx> argh
+[12-22-2005 07:50:01] -!- SEAwolf|py [n=mike@tor/session/x-8e6c8e0df33bf614] has quit [Remote closed the connection]
+[12-22-2005 07:55:16] -!- ordnas [n=ordnas@p549D5F67.dip.t-dialin.net] has joined #ezpublish
+[12-22-2005 07:56:36] -!- kore_ [n=lordhong@essn-d9bd4e07.pool.mediaWays.net] has joined #ezpublish
+[12-22-2005 07:56:55] [#ezpublish] <seasonfive> how to do a "You are here : Home / Products / viagra " ?
+[12-22-2005 07:59:29] -!- xbit [i=xbit@87.252.66.62] has joined #ezpublish
+[12-22-2005 07:59:49] [#ezpublish] <kris10an> seasonfive: {include uri="design:viagra.tpl"}
+[12-22-2005 07:59:50] [#ezpublish] <SEAwolfx> this is already implemented in design:parts/path.tpl
+[12-22-2005 08:00:19] [#ezpublish] <kris10an> or you can use "page_toppath.tpl"
+[12-22-2005 08:00:31] [#ezpublish] <kris10an> page_toppath.tpl probably works better.
+[12-22-2005 08:00:38] [#ezpublish] <seasonfive> thanks
+[12-22-2005 08:01:06] [#ezpublish] <xbit> viagra :)
+[12-22-2005 08:01:07] [#ezpublish] <SEAwolfx> have o look in <site-design>/templates/parts/path.tpl
+[12-22-2005 08:01:47] [#ezpublish] <seasonfive> yeah found it
+[12-22-2005 08:05:20] [#ezpublish] <seasonfive> works well, thanks
+[12-22-2005 08:32:37] -!- Sulfur [n=mbariola@xd-85-20-211-160.rm2.albacom.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-22-2005 08:52:55] [#ezpublish] <_Rappy_> well, I'm off. For good. This year. Or until I can't stay away anymore :D Happy Holidays everyone, and may 2006 become a big year for eZ and it's users :)
+[12-22-2005 08:56:40] [#ezpublish] <Katana`> happy holidays to you too !
+[12-22-2005 08:57:10] -!- Sulfur [n=mbariola@xd-85-20-210-114.rm2.albacom.net] has joined #ezpublish
+[12-22-2005 09:01:33] -!- Sulfur [n=mbariola@xd-85-20-210-114.rm2.albacom.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-22-2005 09:02:17] -!- bOkO [i=martin@cecilias2.kansliM.lu.se] has quit ["bye"]
+[12-22-2005 09:04:36] -!- DiGiTa|_ [n=guillaum@84.6.39.158] has joined #ezpublish
+[12-22-2005 09:13:25] [#ezpublish] <DiGiTa|_> i'm going crazy with those smartviewcache rulez
+[12-22-2005 09:17:47] -!- Sulfur [n=mbariola@xd-85-20-0-159.rm2.albacom.net] has joined #ezpublish
+[12-22-2005 09:26:29] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[12-22-2005 09:26:36] [#ezpublish] <Katana`> :))
+[12-22-2005 09:34:30] [#ezpublish] <Sulfur> 23 users ..
+[12-22-2005 09:38:47] [#ezpublish] <Katana`> world record ;)
+[12-22-2005 09:44:30] -!- Sulfur [n=mbariola@xd-85-20-0-159.rm2.albacom.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-22-2005 10:22:29] [#ezpublish] <DiGiTa|_> is it possible to add automiatically a langage for the translations
+[12-22-2005 10:22:51] [#ezpublish] <Katana`> uh ?
+[12-22-2005 10:23:23] [#ezpublish] <DiGiTa|_> ex : i want to traslate a textinto the admin
+[12-22-2005 10:23:30] [#ezpublish] <DiGiTa|_> so i edit the article
+[12-22-2005 10:24:02] [#ezpublish] <Katana`> then the admin guesses what language you wanna translate to and offers it to you ? :)
+[12-22-2005 10:39:25] [#ezpublish] <seasonfive> what could i do for remove these errors ? -> http://validator.w3.org/check?uri=http%3A%2F%2Fwww.ctr.itioweb.com%2Findex.php%2Fl_actualite%2Ftoutes_les_actualites_politiques%2Flettre_a_monsieur_faure_gnassingbe
+[12-22-2005 10:39:47] [#ezpublish] <seasonfive> error: non SGML character number ...
+[12-22-2005 10:41:51] [#ezpublish] <SEAwolfx> hmm .. I need an extension to the xslt-extension. probably someone already made an exslt-extension for it?
+[12-22-2005 10:44:23] [#ezpublish] * Katana` doesn't know what he should do when eZ crashes upon object publication...
+[12-22-2005 10:44:28] [#ezpublish] <SEAwolfx> probably i only have to compile php with "--with-dom-exslt"?!?!?
+[12-22-2005 10:46:10] [#ezpublish] <SEAwolfx> hmmm .. definetely its not enough, the extension has to be extended.
+[12-22-2005 10:47:16] [#ezpublish] <Katana`> FGH ?
+[12-22-2005 10:47:20] [#ezpublish] <Katana`> fh[eZ] even ?
+[12-22-2005 10:55:23] [#ezpublish] <Katana`> hmmm publishing content with relations crashes my eZ :(
+[12-22-2005 10:55:31] [#ezpublish] <Katana`> totally uncool
+[12-22-2005 10:57:54] [#ezpublish] <Katana`> holy crap i have no idea why
+[12-22-2005 10:59:33] -!- hovik_ [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[12-22-2005 11:01:59] [#ezpublish] <SEAwolfx> Katana: what means crashes .. the database structure or the request?
+[12-22-2005 11:02:27] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[12-22-2005 11:17:08] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-22-2005 11:19:02] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[12-22-2005 11:20:27] [#ezpublish] <buz> apropos recruiting, any plans for a ez swiss office?
+[12-22-2005 11:20:50] [#ezpublish] <buz> after just having get rid of my old company i'm up for new challenges ;)
+[12-22-2005 11:21:19] [#ezpublish] <SEAwolfx> hmm ... buz would you program more for customers or on the ezCore?
+[12-22-2005 11:21:30] [#ezpublish] <buz> how would i know?
+[12-22-2005 11:21:45] [#ezpublish] <SEAwolfx> idk
+[12-22-2005 11:21:58] [#ezpublish] <buz> i mean i'd love job where i can decide what i want to do
+[12-22-2005 11:22:01] [#ezpublish] <buz> but those a rare
+[12-22-2005 11:22:16] -!- fh[eZ] [n=fh@80.239.98.162] has quit ["using sirc version 2.211+KSIRC/1.3.12"]
+[12-22-2005 11:22:32] [#ezpublish] <buz> i cant work fulltime anyhow
+[12-22-2005 11:22:42] [#ezpublish] <SEAwolfx> hehe
+[12-22-2005 11:22:55] [#ezpublish] <SEAwolfx> student, IMHO?!?!
+[12-22-2005 11:22:59] [#ezpublish] <buz> yes
+[12-22-2005 11:23:14] [#ezpublish] <DiGiTa|_> is it possible to do a transltion extension without ezlupdate ?
+[12-22-2005 11:24:39] [#ezpublish] <buz> but since i'm serious about my degree, full time is out of question
+[12-22-2005 11:25:20] [#ezpublish] <SEAwolfx> understandable ;)
+[12-22-2005 11:26:14] [#ezpublish] <buz> looking at my curriculum, i should likely either get a job at a bank or at mckinsey ;)
+[12-22-2005 11:26:39] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[12-22-2005 11:26:39] [#ezpublish] <SEAwolfx> why, is it so good? ;)
+[12-22-2005 11:27:08] [#ezpublish] <buz> it's primarily financial stuff these days
+[12-22-2005 11:27:33] [#ezpublish] <buz> and swiss banks hire just about anyone with a SMALL clue of finance
+[12-22-2005 11:27:52] [#ezpublish] <SEAwolfx> ah, the same here ;) But I more into programming then into finacial stuff.
+[12-22-2005 11:28:10] [#ezpublish] <buz> well after some time in the computer science program i decided that i could learn that stuff my self
+[12-22-2005 11:28:15] [#ezpublish] <SEAwolfx> +am
+[12-22-2005 11:28:29] [#ezpublish] <buz> and figured i'm gonna do the financial stuff at uni
+[12-22-2005 11:28:48] [#ezpublish] <buz> where are you from?
+[12-22-2005 11:29:03] [#ezpublish] <buz> (bloody tor users)
+[12-22-2005 11:29:04] [#ezpublish] <SEAwolfx> I´m from germany.
+[12-22-2005 11:29:51] [#ezpublish] <buz> up north then :)
+[12-22-2005 11:30:15] [#ezpublish] <SEAwolfx> afk ... atm
+[12-22-2005 11:30:17] [#ezpublish] <SEAwolfx> sorry
+[12-22-2005 11:30:33] [#ezpublish] <buz> me2, edinner
+[12-22-2005 12:01:34] -!- kore_ [n=lordhong@essn-d9bd4e07.pool.mediaWays.net] has quit []
+[12-22-2005 12:52:19] [#ezpublish] <SEAwolfx> re
+[12-22-2005 12:54:44] [#ezpublish] <buz> re
+[12-22-2005 12:59:11] [#ezpublish] <SEAwolfx>  buz | >up north then <- rather from the south of germany, bavaria.
+[12-22-2005 12:59:38] [#ezpublish] <buz> ooh i'm just drinking paulaner, prost then
+[12-22-2005 12:59:54] [#ezpublish] <SEAwolfx> hehe, this stuff is from munich ;)
+[12-22-2005 13:00:26] [#ezpublish] <SEAwolfx> actually i´m from franconia, nürnberg.
+[12-22-2005 13:00:30] [#ezpublish] <buz> which in turn is (i think, at least) capital of bavaria no?
+[12-22-2005 13:00:43] [#ezpublish] <SEAwolfx> yes, true.
+[12-22-2005 13:01:37] [#ezpublish] <SEAwolfx> but the franconians rather want to be considered separatly from the rest of bavarians, hehe.
+[12-22-2005 13:01:52] [#ezpublish] <SEAwolfx> but this is not valid for me, cause i dont care.
+[12-22-2005 13:02:00] [#ezpublish] <buz> and the bavarians are already freistaat no?
+[12-22-2005 13:02:13] [#ezpublish] <SEAwolfx> indeed, they are.
+[12-22-2005 13:03:42] [#ezpublish] <SEAwolfx> when u enter this federal state, you can recognize the inscription "Freistaat Bayern" at the highway.
+[12-22-2005 13:04:16] [#ezpublish] <SEAwolfx> .oO( i should order some food, now. )
+[12-22-2005 13:04:43] [#ezpublish] <buz> i dont go to germany
+[12-22-2005 13:04:53] [#ezpublish] <buz> german court wants money from me
+[12-22-2005 13:05:03] [#ezpublish] <SEAwolfx> hui ;)
+[12-22-2005 13:05:06] [#ezpublish] <buz> i say screw them
+[12-22-2005 13:05:10] [#ezpublish] <buz> i dont pay for stuff i never got
+[12-22-2005 13:05:14] [#ezpublish] <SEAwolfx> smoked some weed on the streets?
+[12-22-2005 13:05:21] [#ezpublish] <buz> na ordered domains
+[12-22-2005 13:05:24] [#ezpublish] <buz> which never worked
+[12-22-2005 13:05:29] [#ezpublish] <SEAwolfx> hehe.
+[12-22-2005 13:05:29] [#ezpublish] <buz> still want me to pay
+[12-22-2005 13:05:36] [#ezpublish] <buz> they can try sueing me here if they care
+[12-22-2005 13:06:02] [#ezpublish] <SEAwolfx> wait, until the swiss is in the EU. :P
+[12-22-2005 13:06:15] [#ezpublish] <SEAwolfx> this may last some time.
+[12-22-2005 13:06:18] [#ezpublish] <buz> i certainly wont lose sleep over that
+[12-22-2005 13:06:36] [#ezpublish] <SEAwolfx> yeah.
+[12-22-2005 13:06:36] [#ezpublish] <buz> besides even in the eu they'd have to sue locally over something like that
+[12-22-2005 13:07:07] [#ezpublish] <SEAwolfx> true.
+[12-22-2005 13:07:20] [#ezpublish] <buz> besides its like 300EUR or something
+[12-22-2005 13:07:27] [#ezpublish] <buz> back from the days when i wasnt even 18
+[12-22-2005 13:08:00] [#ezpublish] <SEAwolfx> hehe, youth sins.
+[12-22-2005 13:09:35] [#ezpublish] <SEAwolfx> btw ... is it true that 'xslt_process' cant process exslt even when php is compiled with exslt?
+[12-22-2005 13:09:54] [#ezpublish] <buz> i dont even know what exslt is
+[12-22-2005 13:11:03] [#ezpublish] <SEAwolfx> this is an extension to the normal xslt-processing, so you can use for instance regular expressions and things like that.
+[12-22-2005 13:12:15] [#ezpublish] <buz> that sounds like a bad mixture
+[12-22-2005 13:12:16] [#ezpublish] <SEAwolfx> this is means i have to alter the xslt-extension for the usage.
+[12-22-2005 13:12:46] [#ezpublish] <buz> i used to think xslt is neat. but i was wrong. it's really a rather weird concept.
+[12-22-2005 13:13:36] [#ezpublish] <SEAwolfx> hehe ;) its cool in my eyes. multiple formats as export. wonderful.
+[12-22-2005 13:13:42] [#ezpublish] <buz> yeah
+[12-22-2005 13:13:49] [#ezpublish] <buz> but the language itself is just weeeeird
+[12-22-2005 13:13:54] [#ezpublish] <SEAwolfx> but to write xslt is a bit tricky.
+[12-22-2005 13:13:55] [#ezpublish] <buz> are there any swiss around, btw?
+[12-22-2005 13:14:01] [#ezpublish] <buz> and its sloooow
+[12-22-2005 13:14:25] [#ezpublish] <SEAwolfx> its only about matching nodes ;)
+[12-22-2005 13:15:12] [#ezpublish] <SEAwolfx> indeed, its slow. but the results can also be cached.
+[12-22-2005 13:25:57] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[12-22-2005 13:33:04] [#ezpublish] <SEAwolfx> yeah, xslt extension is now exsltified
+[12-22-2005 13:53:25] -!- DiGiTa|__ [n=guillaum@84.5.138.3] has joined #ezpublish
+[12-22-2005 13:54:49] -!- DiGiTa|_ [n=guillaum@84.6.39.158] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 14:07:16] -!- ordnas [n=ordnas@p549D5F67.dip.t-dialin.net] has left #ezpublish []
+[12-22-2005 14:22:19] [#ezpublish] <SEAwolfx> damn .. the parameters arent processed as awaited. on the commandline everything works right using "xsltproc --param..." but not with PHP. *sigh*
+[12-22-2005 15:00:39] -!- DiGiTa|__ [n=guillaum@84.5.138.3] has quit [Remote closed the connection]
+[12-22-2005 15:01:27] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 15:01:43] -!- DiGiTa|_ [n=guillaum@84.5.138.3] has joined #ezpublish
+[12-22-2005 15:04:44] [#ezpublish] <kracker> heh, DiGiTa|_ you have the right idea tho :)
+[12-22-2005 15:05:18] [#ezpublish] <kracker> Greg Mann really wants that extension to be written :)
+[12-22-2005 15:05:54] [#ezpublish] <buz> ?
+[12-22-2005 15:06:07] -!- fh[eZ] [n=fh@238.80-202-59.nextgentel.com] has joined #ezpublish
+[12-22-2005 15:06:12] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[12-22-2005 15:08:05] [#ezpublish] <kracker> DiGiTa|_ is it possible to add automiatically a langage for the translations
+[12-22-2005 15:08:06] [#ezpublish] <kracker> Katana` uh ?
+[12-22-2005 15:08:06] [#ezpublish] <kracker> DiGiTa|_ ex : i want to traslate a textinto the admin
+[12-22-2005 15:08:06] [#ezpublish] <kracker> DiGiTa|_ so i edit the article
+[12-22-2005 15:08:06] [#ezpublish] <kracker> Katana` then the admin guesses what language you wanna translate to and offers it to you ? :)
+[12-22-2005 15:25:43] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-22-2005 15:40:51] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 15:41:20] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[12-22-2005 15:42:23] -!- DiGiTa|_ [n=guillaum@84.5.138.3] has quit []
+[12-22-2005 16:04:41] -!- nnn0 [n=therion@195.204.221.183] has quit [Connection timed out]
+[12-22-2005 16:14:53] -!- kore_ [n=lordhong@essn-d9bd4e07.pool.mediaWays.net] has joined #ezpublish
+[12-22-2005 16:24:07] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-22-2005 16:54:13] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[12-22-2005 17:13:43] -!- kore_ [n=lordhong@essn-d9bd4e07.pool.mediaWays.net] has quit [Remote closed the connection]
+[12-22-2005 19:25:01] -!- Bedlore [n=me@219-90-175-146.ip.adam.com.au] has joined #ezpublish
+[12-22-2005 19:26:01] -!- mode/#ezpublish [+o fh[eZ]] by ChanServ
+[12-22-2005 19:38:46] [#ezpublish] <Bedlore> how can I filter the array returned from fetch( 'content', 'reverse_related_objects' down to just one class type?
+[12-22-2005 20:22:35] [#ezpublish] <Bedlore> no one awake?
+[12-22-2005 20:33:35] [#ezpublish] <nnn0> kind of
+[12-22-2005 20:34:02] [#ezpublish] <Bedlore> just looking for advice on that question above
+[12-22-2005 20:34:36] [#ezpublish] <nnn0> hm
+[12-22-2005 20:38:17] [#ezpublish] <nnn0> maybe something like fetch(content,tree,hash(...,class_filter_type,include,class_filter,array('book','magazine')
+[12-22-2005 20:38:22] [#ezpublish] <nnn0> donno really
+[12-22-2005 20:38:36] [#ezpublish] <nnn0> you have to check it out if you can use filters like that
+[12-22-2005 20:39:48] [#ezpublish] <Bedlore> yes if your fetching a tree, list node etc that's fine but I don't think that is possible when using content reverse_related_objects
+[12-22-2005 20:39:57] [#ezpublish] <nnn0> ah
+[12-22-2005 20:40:04] [#ezpublish] <Bedlore> :(
+[12-22-2005 20:40:05] [#ezpublish] <nnn0> hkm not used to those ones
+[12-22-2005 20:40:13] [#ezpublish] <Bedlore> thanks anywya
+[12-22-2005 20:40:26] [#ezpublish] <Bedlore> hopefully someone here knows when they wake up
+[12-22-2005 20:41:12] [#ezpublish] <nnn0> :)
+[12-22-2005 20:58:55] -!- Bedlore [n=me@219-90-175-146.ip.adam.com.au] has quit []
+[12-22-2005 22:23:56] -!- tobyS [n=dotxp@dslb-084-061-151-238.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[12-22-2005 22:29:31] -!- tobyS [n=dotxp@dslb-084-061-135-101.pools.arcor-ip.net] has joined #ezpublish

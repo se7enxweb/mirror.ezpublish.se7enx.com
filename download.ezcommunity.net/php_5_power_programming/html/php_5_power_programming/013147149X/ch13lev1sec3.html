@@ -1,0 +1,66 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 13.3.&nbsp; Passing Objects to Functions</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch13lev1sec3"></a><h3 class="docSection1Title">13.3. Passing Objects to Functions</h3>
+<p class="docText">As previously mentioned, one of the larger changes in PHP 5 is that if you pass objects to a function, they are no longer copied. Although this is usually what you want, it might be that you actually relied on your object being copied. If that's the case, your script will no longer work correctly. Look at this example:<a name="ch13index05"></a><a name="ch13index06"></a><a name="ch13index07"></a></p>
+<pre>
+&lt;?php
+      class str {
+            var $string;
+
+            function str($string) {
+                  $this-&gt;string = $string;
+            }
+      }
+
+      function display_quoted($string)
+      {
+            $string-&gt;string = addslashes($string-&gt;string);
+            echo $string-&gt;string;
+      }
+
+
+      $s = new str("Montreal's Finest Bagels\n");
+
+      display_quoted($s);
+
+      echo $s-&gt;string;
+?&gt;
+</pre><br>
+<p class="docText">Because in PHP 4, passing the <tt>$s</tt> object to the function creates a copy of the object, the output in PHP 4 is<a name="ch13index08"></a><a name="ch13index09"></a><a name="ch13index10"></a><a name="ch13index11"></a></p>
+<pre>
+Montreal\'s Finest Bagels
+Montreal's Finest Bagels
+</pre><BR>
+<p class="docText">In PHP 5, the object's handle is passed and the object is actually modified. Thus, PHP 5 produces different output:<a name="ch13index12"></a></p>
+<pre>
+Montreal\'s Finest Bagels
+Montreal\'s Finest Bagels
+</pre><BR>
+<p class="docText">If you want to modify only a <span class="docEmphasis">copy</span> in PHP 5, one solution is to copy (clone) the object yourself when you pass it to the function. Do this by using the <tt>clone</tt> operator:</p>
+<pre>
+display_quoted(clone $s);
+</pre><BR>
+<p class="docText">Another solution is to disable the new behavior by setting the <tt>php.ini</tt> option <tt>zend.ze1_compatibility_mode</tt> to <tt>1</tt>. Or, you can set this option inside your script itself, but you need to set it before passing the object to a function.</p>
+<a name="ch13note01"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">If your script that relies on the pass-by-copy behavior needs to work with both PHP 4 and PHP 5, using the <tt>clone</tt> operator won't work, because this operator does not exist in PHP 4. The clone operation will throw an <tt>E_ERROR</tt> error when run in PHP 4. In this case, it's better to use the compatibility mode setting.<a name="ch13index13"></a><a name="ch13index14"></a><a name="ch13index15"></a></p></div><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

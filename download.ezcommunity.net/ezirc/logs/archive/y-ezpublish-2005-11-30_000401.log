@@ -1,0 +1,319 @@
+[11-29-2005 00:57:07] -!- _rappy_ is now known as _Rappy_
+[11-29-2005 00:57:11] [#ezpublish] <_Rappy_> morning all
+[11-29-2005 01:32:40] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-29-2005 01:54:25] [#ezpublish] <kracker>  yeah
+[11-29-2005 02:02:06] -!- ordna1 [n=ordnas@p549DCA46.dip.t-dialin.net] has joined #ezpublish
+[11-29-2005 02:07:42] -!- ordna1 [n=ordnas@p549DCA46.dip.t-dialin.net] has left #ezpublish []
+[11-29-2005 02:08:03] -!- ordnas [n=ordnas@p549DCA46.dip.t-dialin.net] has joined #ezpublish
+[11-29-2005 02:11:34] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-29-2005 02:15:56] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-29-2005 02:16:41] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Client Quit]
+[11-29-2005 02:22:33] -!- Bjorn [n=Bjorn@85.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[11-29-2005 02:30:01] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-29-2005 02:31:34] [#ezpublish] <kris10an> mornings
+[11-29-2005 02:38:14] [#ezpublish] <xbit> morn
+[11-29-2005 02:38:18] [#ezpublish] <xbit> hvordan gaar det?
+[11-29-2005 02:56:33] [#ezpublish] <kracker> http://www.albinoblacksheep.com/flash/ndsound.php
+[11-29-2005 03:21:27] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-29-2005 03:21:51] [#ezpublish] <Katana`> morning folks
+[11-29-2005 03:41:28] [#ezpublish] <kracker> wow, the usa has no eZ publish referenaces?
+[11-29-2005 03:41:49] [#ezpublish] <kracker> http://ez.no/products/ez_publish_cms/references/filter/(country)/United+States+of+America
+[11-29-2005 03:42:07] [#ezpublish] <kracker> i wonder how often they clear these out :\
+[11-29-2005 03:44:40] [#ezpublish] * Katana` is amazed at how famous his ISP is: http://www.businessweek.com/magazine/content/05_49/b3962071.htm
+[11-29-2005 03:50:44] [#ezpublish] <kracker> heh, 24mbps (you guys get all the best bandwidth) <grin />
+[11-29-2005 03:52:05] [#ezpublish] <Katana`> you have to be living like ON the access point but well, yes :)
+[11-29-2005 03:52:17] [#ezpublish] * kracker is `this` close to defecting ... 
+[11-29-2005 03:52:23] [#ezpublish] <Katana`> i even get free fixed IP addrss and reverse DNS
+[11-29-2005 03:53:23] [#ezpublish] <kracker> yah and here they want to fck with you for every bit, byte, feature, service, and restrict how you can use the service
+[11-29-2005 03:53:37] [#ezpublish] <Katana`> err i'm having doubts about my connection lately :)
+[11-29-2005 03:53:48] [#ezpublish] <kracker> freaking vampires the lot of them
+[11-29-2005 03:53:52] [#ezpublish] <Katana`> i'm severely limited on BT... but i'm having problems with irc as well so i hope that's not it :
+[11-29-2005 03:53:53] [#ezpublish] <Katana`> :)
+[11-29-2005 03:54:08] [#ezpublish] <Katana`> but as far as I know no ports are blocked...
+[11-29-2005 03:54:14] [#ezpublish] <Katana`> and uncapped connection, my god, that's good
+[11-29-2005 03:55:51] [#ezpublish] <kracker> lucky
+[11-29-2005 03:56:05] [#ezpublish] <Katana`> yeah
+[11-29-2005 03:56:07] [#ezpublish] <Katana`> definitely
+[11-29-2005 03:57:13] [#ezpublish] <kracker> most isps i have encountered here in the lower48 ( what we alaskan's call hell on earth ), is (among other restrictions to get more business (2x cost) customers), no hosting your own servers ...
+[11-29-2005 03:57:36] [#ezpublish] <Katana`> :))
+[11-29-2005 03:58:29] [#ezpublish] <kracker> ehh, it wouldn't be so bad, i'm not trying to run my own slashdot off my cable modem just do some simple beta / development publicly ... (it's a joke), oh well
+[11-29-2005 03:58:55] [#ezpublish] <kracker> just going to have to rack another server in the colo (everybody's going to make their cut)
+[11-29-2005 04:02:43] [#ezpublish] <Katana`> :))
+[11-29-2005 04:05:14] [#ezpublish] <kracker> ahh i get it, they were moved in the last revision (re: references)
+[11-29-2005 04:05:19] [#ezpublish] <Katana`> :)
+[11-29-2005 04:05:30] [#ezpublish] <kracker> the old ones are still around at ... https://shop.ez.no/products/ez_publish_cms/references/company
+[11-29-2005 04:06:55] [#ezpublish] <kracker> confusing, why they seem to be the same objects but some just don't show
+[11-29-2005 04:08:09] [#ezpublish] <Katana`> weird
+[11-29-2005 04:09:09] [#ezpublish] <kracker> ehh, i'm sure it's normal the one that i could find in there is not using eZ publish any longer ...
+[11-29-2005 04:09:48] [#ezpublish] <Katana`> ouchie
+[11-29-2005 04:10:44] [#ezpublish] <kracker> sad for them, but it doesn't take much to guess just why :D (and that's an FB diss not eZ)
+[11-29-2005 04:11:20] [#ezpublish] <kris10an> kracker: you allways have the US navy: http://ez.no/products/ez_publish_cms/references/case_studies/navy_dasn
+[11-29-2005 04:11:38] [#ezpublish] <kris10an> http://ez.no/products/ez_publish_cms/references/governmental/department_of_navy_acquisition_one_source
+[11-29-2005 04:12:19] [#ezpublish] <kracker> heh, best place to target is .dov departments ...
+[11-29-2005 04:12:29] [#ezpublish] <kracker> heh, the navy, lol
+[11-29-2005 04:12:48] [#ezpublish] <kracker> still just comenting on the references filter results being 0
+[11-29-2005 04:13:24] [#ezpublish] <kracker> errum i ment,    .gov
+[11-29-2005 04:14:24] [#ezpublish] <kris10an> hehe,... if you use .dov, i guess you won't get that many... ;-)
+[11-29-2005 04:14:44] [#ezpublish] <Katana`> .dov ?
+[11-29-2005 04:14:50] [#ezpublish] <Katana`> don't tell me you have a .dov
+[11-29-2005 04:15:03] [#ezpublish] <kracker> can i have a .dov bar (ice cream)
+[11-29-2005 04:15:09] [#ezpublish] <Katana`> :)
+[11-29-2005 04:16:05] [#ezpublish] <kracker> no, what i was saying is that using the references filter tool on the references page
+[11-29-2005 04:16:35] [#ezpublish] <kracker> does not show any result if you select the country "United States of America"
+[11-29-2005 04:16:49] [#ezpublish] <kracker> even if you leave all other options as "All" (default)
+[11-29-2005 04:17:54] [#ezpublish] <kracker> which means unless you really bounce ez.no through google or know a bit about ez url hacking .... one might get the wrong idea about eZ publish use in the USA
+[11-29-2005 04:18:57] [#ezpublish] <Katana`> :)
+[11-29-2005 04:18:58] [#ezpublish] <Katana`> indeed
+[11-29-2005 04:19:34] [#ezpublish] <kracker> example of some data not shown, http://www.google.com/search?hl=en&lr=&client=firefox&rls=org.mozilla%3Aen-US%3Aunofficial&q=site%3Aez.no%2Fproducts%2Fez_publish_cms%2Freferences+USA&btnG=Search
+[11-29-2005 04:20:34] [#ezpublish] <kracker> just seems like either a bug, a choice or .... `other`
+[11-29-2005 04:20:41] [#ezpublish] <kracker> not that any of those are really any good
+[11-29-2005 04:21:28] [#ezpublish] <Katana`> i'd say "other" :)
+[11-29-2005 04:21:29] [#ezpublish] <kracker> but no results is just ... disenfranchising
+[11-29-2005 04:23:11] [#ezpublish] <kracker> alright, alright, | but i'm going to be kinda disapointed if i submit some of my references only for them to hit /dev/null
+[11-29-2005 04:27:19] [#ezpublish] <kris10an> they are defenetly not sendt to /dev/null....
+[11-29-2005 04:27:33] [#ezpublish] <kris10an> (i think)
+[11-29-2005 04:27:58] [#ezpublish] <kris10an> i sent an email about this to the respoinsible
+[11-29-2005 04:28:08] [#ezpublish] <kris10an> responsible
+[11-29-2005 04:29:18] [#ezpublish] <kris10an> i hope there is no byte-eatier in my email...
+[11-29-2005 04:29:22] [#ezpublish] <kris10an> eater
+[11-29-2005 04:29:27] [#ezpublish] <kris10an> byte-eater
+[11-29-2005 04:30:32] [#ezpublish] <Katana`> yum, 150 MB of images on that site
+[11-29-2005 04:30:36] [#ezpublish] <Katana`> 18 000 jpg files
+[11-29-2005 04:32:17] [#ezpublish] <kris10an> Katana`: they need a byte-eater ;-)
+[11-29-2005 04:33:00] [#ezpublish] * kracker wears a wife beater, southern white trash bottom feader, bug eater, weetaadeeed overthetop tweaker 
+[11-29-2005 04:33:43] [#ezpublish] <Katana`> wife beater ??
+[11-29-2005 04:33:47] [#ezpublish] <Katana`> what the hell is that ? :)
+[11-29-2005 04:34:08] [#ezpublish] <kracker> white t-shirt
+[11-29-2005 04:34:12] [#ezpublish] <Katana`> ah
+[11-29-2005 04:34:18] [#ezpublish] <Katana`> why is that called a wife eater ?:)
+[11-29-2005 04:35:17] [#ezpublish] <kracker> commonly worn (for several days untill it is very dirty not to mention stinky, stained by spilt food) by lower income males in southern regions of the land
+[11-29-2005 04:35:29] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has quit [Read error: 104 (Connection reset by peer)]
+[11-29-2005 04:36:17] [#ezpublish] <kracker> i'm insulting myself, to reinforce my point, it's not about me, i'm not important, i never will be, neither is what i do
+[11-29-2005 04:37:06] [#ezpublish] <kracker> still, none of that can take away from what i say
+[11-29-2005 04:37:27] [#ezpublish] <kracker> i have a point ..... and it makes sense ,  in a tyler durden sort of way
+[11-29-2005 04:53:58] [#ezpublish] <Katana`> are you high right now kracker ? :)
+[11-29-2005 04:56:34] [#ezpublish] <kracker> no
+[11-29-2005 04:58:06] [#ezpublish] * kracker levels a little with the edge
+[11-29-2005 04:58:29] [#ezpublish] <kracker> look, i'm sure it sounds worse than it really is, esp comming from me
+[11-29-2005 04:58:40] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-29-2005 04:58:44] [#ezpublish] <kracker> it's too late, or too early ...
+[11-29-2005 04:59:01] [#ezpublish] <zrg> it lives!
+[11-29-2005 04:59:50] [#ezpublish] <zrg> so, what's bad today?
+[11-29-2005 04:59:54] [#ezpublish] <kris10an> kracker: small mismatch with storing and searching the references... (USA and United States of America)
+[11-29-2005 04:59:55] [#ezpublish] <kracker> wraping up a long and disapointing (if not infuriating day dealing with a client who is not only long over due but intentionaly withholding payment, 7k+)
+[11-29-2005 05:00:12] [#ezpublish] <kris10an> try to search with "USA"
+[11-29-2005 05:00:24] [#ezpublish] <kracker> kris10an, i wasn't searching
+[11-29-2005 05:00:39] [#ezpublish] <kris10an> i know
+[11-29-2005 05:00:56] [#ezpublish] <kracker> ok, re loading
+[11-29-2005 05:01:05] [#ezpublish] <zrg> that sucks kracker
+[11-29-2005 05:01:24] [#ezpublish] <kracker> kris10an, if you go to this page http://ez.no/products/ez_publish_cms/references
+[11-29-2005 05:01:30] [#ezpublish] <kris10an> http://ez.no/products/ez_publish_cms/references/filter/(country)/USA
+[11-29-2005 05:01:56] [#ezpublish] <zrg> i just gave a finger to one like that few days ago.. 'course there was less $$ involved
+[11-29-2005 05:01:57] [#ezpublish] <kracker> if you use the drop down box "country" and select "United States of America" and click "show"
+[11-29-2005 05:02:19] [#ezpublish] <kracker> the server will redirect the user to this url
+[11-29-2005 05:02:39] [#ezpublish] <kracker> http://ez.no/products/ez_publish_cms/references/filter/(country)/United+States+of+America
+[11-29-2005 05:02:46] [#ezpublish] <kris10an> kracker: yep. that one is wrong... use: http://ez.no/products/ez_publish_cms/references/filter/(country)/USA . it will be fixed on ez.no
+[11-29-2005 05:03:18] [#ezpublish] <kracker> kris10an, it seems that the template may need to be adjusted to properly , yada yada yada
+[11-29-2005 05:03:42] [#ezpublish] <kris10an> yap.. it will be fixed...
+[11-29-2005 05:04:16] [#ezpublish] <kracker> zrg, yeah funny part is he can't walk away untill after he gets the last 2+ months of code released into production so he's only screwing himself
+[11-29-2005 05:04:49] [#ezpublish] <zrg> masochists. surprising amount of them in the world.
+[11-29-2005 05:05:53] [#ezpublish] <kracker> an frankly it's time he moved on afterwards, he's way out of line, 2 months overdue, and out of contract, end of the line and ..
+[11-29-2005 05:06:57] [#ezpublish] <kracker> yeah, i'm beyond miffed, it's like ...  i enjoy providing services, but there are limits to the number of these situations any company would endure
+[11-29-2005 05:08:28] [#ezpublish] <kracker> i'm moving away from these kinds of clients and to a more ez.no model of providing services and consulting, if they truely want my services then they can sign the agreement and keep the terms they agreed to ...
+[11-29-2005 05:08:48] [#ezpublish] <kracker> kris10an, good to know
+[11-29-2005 05:09:46] [#ezpublish] <zrg> kris10an is from the source?
+[11-29-2005 05:10:00] [#ezpublish] <kracker> survey says ...
+[11-29-2005 05:10:08] [#ezpublish] <kracker> heh, `the source`
+[11-29-2005 05:10:23] [#ezpublish] <zrg> ;)
+[11-29-2005 05:11:16] [#ezpublish] <kracker> kris10an, the url you mention (again purely fyi) also fails to filter based on the provided country text string of USA    http://ez.no/products/ez_publish_cms/references/filter/(country)/USA
+[11-29-2005 05:11:29] [#ezpublish] <kracker> oh, wait ..
+[11-29-2005 05:11:41] [#ezpublish] <Katana`> works for me
+[11-29-2005 05:11:45] [#ezpublish] <kracker> must have caught some cache
+[11-29-2005 05:12:16] [#ezpublish] <kracker> hey! that's a nice list
+[11-29-2005 05:12:20] [#ezpublish] <Katana`> indeed, quite big
+[11-29-2005 05:12:22] [#ezpublish] <Katana`> about 30 isn't it ?
+[11-29-2005 05:12:27] [#ezpublish] <kracker> not to shaby
+[11-29-2005 05:12:39] -!- ordnas [n=ordnas@p549DCA46.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-29-2005 05:12:47] -!- ordnas [n=ordnas@p549DE16D.dip.t-dialin.net] has joined #ezpublish
+[11-29-2005 05:14:53] [#ezpublish] <kris10an> hehe.. i come from the source.. :-)
+[11-29-2005 05:16:39] [#ezpublish] <zrg> nice
+[11-29-2005 05:16:52] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-29-2005 05:17:25] [#ezpublish] <Katana`> bbl, lunch
+[11-29-2005 05:19:59] [#ezpublish] <zrg> ok folks, im gonna clean up the office now, if i dont survive remember me with a kind word :P
+[11-29-2005 05:22:23] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-29-2005 05:22:29] [#ezpublish] <kracker> heh
+[11-29-2005 05:44:00] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has quit [Read error: 104 (Connection reset by peer)]
+[11-29-2005 06:52:39] [#ezpublish] <kracker> heh
+[11-29-2005 06:52:51] [#ezpublish] <kracker> well my references showed up alright
+[11-29-2005 06:52:55] [#ezpublish] <kracker> http://ez.no/products/ez_publish_cms/references/filter/(country)/United+States+of+America
+[11-29-2005 06:55:13] [#ezpublish] <kracker> which rocks :)
+[11-29-2005 07:05:44] [#ezpublish] <kris10an> hehe.. if somebody looks for those kind of references now, yours will be rated high :-)
+[11-29-2005 07:06:02] [#ezpublish] <kracker> better than that actualy
+[11-29-2005 07:06:21] [#ezpublish] <kracker> if anyone looks for references for using the application, as is, ie: right now
+[11-29-2005 07:06:33] [#ezpublish] <kracker> they are the only ones listed
+[11-29-2005 07:06:45] [#ezpublish] <kracker> but i'm sure that's what you were saying
+[11-29-2005 07:07:30] [#ezpublish] <kracker> errum rather i mean, that if anyone looks for references using the application selecting country "United States of America" .....
+[11-29-2005 07:09:00] [#ezpublish] <kracker> november point reported, perhapse now i can get a little rest before the rest of today's onslaught begins ... *sigh*
+[11-29-2005 07:18:51] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[11-29-2005 07:21:32] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-29-2005 07:27:16] [#ezpublish] <nnn0> hm when i embed an image - it's just invisible
+[11-29-2005 07:27:34] [#ezpublish] <nnn0> it makes room for it, but nothing shows
+[11-29-2005 07:28:47] [#ezpublish] <xbit> is imagemagick and/or GD installed and configured properly?
+[11-29-2005 07:29:03] [#ezpublish] <nnn0> hm
+[11-29-2005 07:29:37] [#ezpublish] <nnn0> not sure really - is there an esay way to check ?
+[11-29-2005 07:30:19] [#ezpublish] <nnn0> ez was installed on another system, and then moved here - so could be there is something missing maybe :)
+[11-29-2005 07:39:57] [#ezpublish] <nnn0> maybe the rights
+[11-29-2005 07:43:43] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-29-2005 07:47:10] [#ezpublish] <nnn0> yepp :)
+[11-29-2005 07:47:39] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[11-29-2005 07:48:28] [#ezpublish] <Katana`> another eZ Publish site online :)
+[11-29-2005 07:50:13] -!- dylan__ [n=dylan@c-24-22-155-128.hsd1.wa.comcast.net] has joined #ezpublish
+[11-29-2005 07:50:23] [#ezpublish] <kracker> yeah!
+[11-29-2005 07:50:30] [#ezpublish] <dylan__> yo
+[11-29-2005 07:50:34] [#ezpublish] <kracker> hey!
+[11-29-2005 07:50:50] [#ezpublish] <kracker> thanks for droping in :)
+[11-29-2005 07:51:19] [#ezpublish] <Katana`> nobody wanna see our new site ? :)
+[11-29-2005 07:51:37] [#ezpublish] <kracker> sure, whatcha got ?
+[11-29-2005 07:51:47] [#ezpublish] <Katana`> hmm wait actually i think there's a password and I don't remember it :)
+[11-29-2005 07:51:57] [#ezpublish] <Katana`> http://en.opticshop-online.com
+[11-29-2005 07:51:58] [#ezpublish] <Katana`> try
+[11-29-2005 07:52:13] -!- dylan__ [n=dylan@c-24-22-155-128.hsd1.wa.comcast.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-29-2005 07:53:13] [#ezpublish] <kracker> hey that's slick
+[11-29-2005 07:53:26] [#ezpublish] <Katana`> it doesn't ask for a password ?
+[11-29-2005 07:53:32] [#ezpublish] <kracker> i don't think so
+[11-29-2005 07:53:35] [#ezpublish] <Katana`> crap0rz :)
+[11-29-2005 07:53:41] [#ezpublish] <kracker> beter check that security :)
+[11-29-2005 07:53:42] [#ezpublish] <Katana`> bah it'll wait
+[11-29-2005 07:56:19] [#ezpublish] <Katana`> so you like it kracker ?
+[11-29-2005 07:58:53] -!- dylan_ [n=c46a7b0b@c-24-22-155-128.hsd1.wa.comcast.net] has joined #ezpublish
+[11-29-2005 08:19:19] [#ezpublish] <Katana`> YAY, we got the appartment we really wanted :
+[11-29-2005 08:19:20] [#ezpublish] <Katana`> !
+[11-29-2005 08:19:22] [#ezpublish] <Katana`> victory :)
+[11-29-2005 08:20:09] [#ezpublish] <buz> congrats
+[11-29-2005 08:20:19] [#ezpublish] <Katana`> finally :)
+[11-29-2005 08:20:23] [#ezpublish] <Katana`> (thanks)
+[11-29-2005 08:24:23] [#ezpublish] <kris10an> Katana`: new livingroom?
+[11-29-2005 08:24:27] [#ezpublish] <kris10an> congrats
+[11-29-2005 08:24:39] [#ezpublish] <Katana`> yeah, my new place in Lyon ;)
+[11-29-2005 08:25:02] [#ezpublish] <Katana`> I wanna work with you but i don't wanna sleep on the street ;)
+[11-29-2005 08:25:15] [#ezpublish] <Katana`> http://www.katana-inc.com/galleries/our_next_appartment
+[11-29-2005 08:25:30] [#ezpublish] <Katana`> blury pictures but that's all we have ;)
+[11-29-2005 08:33:04] -!- dylan_ [n=c46a7b0b@c-24-22-155-128.hsd1.wa.comcast.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-29-2005 08:35:07] [#ezpublish] * buz is updating to kde 3.5 final
+[11-29-2005 08:37:20] [#ezpublish] <_Rappy_> *cuddles GNOME*
+[11-29-2005 08:37:36] [#ezpublish] <buz> iiiew stinky feet
+[11-29-2005 08:39:52] [#ezpublish] <_Rappy_> Free Software is your religion, Ubuntu is (one of) your gods, and GNOME is it's prophet ;D
+[11-29-2005 08:40:21] [#ezpublish] <Katana`> damn... now that client wants staging
+[11-29-2005 08:40:38] [#ezpublish] * Katana` throws kris10an at fh[eZ]. Why isn't that implemented already ? :)
+[11-29-2005 08:40:50] [#ezpublish] * buz doesnt believe in religion. 
+[11-29-2005 08:40:56] [#ezpublish] <buz> so i stick to kubuntu
+[11-29-2005 08:41:25] [#ezpublish] <_Rappy_> I'm an ateisth too, but I had to say something cool :P
+[11-29-2005 08:41:34] [#ezpublish] <buz> kris10an == dead raven ?!?!
+[11-29-2005 08:42:55] [#ezpublish] <Katana`> he's here on disguise, shhh
+[11-29-2005 08:44:26] [#ezpublish] <nnn0> hm trying to make a table, but the headers are set one field to the right ?
+[11-29-2005 08:46:12] -!- jeanvoye [n=nfrp@popeye.ez.no] has joined #ezpublish
+[11-29-2005 08:47:27] [#ezpublish] <nnn0> nevermind
+[11-29-2005 08:49:16] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has quit [Read error: 110 (Connection timed out)]
+[11-29-2005 09:13:15] -!- jeanvoye [n=nfrp@popeye.ez.no] has left #ezpublish ["Leaving"]
+[11-29-2005 09:19:00] -!- nfrp [n=nfrp@popeye.ez.no] has joined #ezpublish
+[11-29-2005 09:23:27] -!- nfrp [n=nfrp@popeye.ez.no] has left #ezpublish ["Leaving"]
+[11-29-2005 09:25:03] -!- nfrp_ [n=nfrp@popeye.ez.no] has joined #ezpublish
+[11-29-2005 09:25:33] [#ezpublish] <nfrp_>       /msg nickserv link nfrp cawerks
+[11-29-2005 09:26:20] [#ezpublish] <Katana`> hum :)
+[11-29-2005 09:26:23] [#ezpublish] <Katana`> who's nfrp_ ...
+[11-29-2005 09:26:45] [#ezpublish] <nfrp_> sorry..messed up the registration thingy..
+[11-29-2005 09:27:00] [#ezpublish] <Katana`> :))
+[11-29-2005 09:27:21] [#ezpublish] <nfrp_> i juss wanted to associate another nick to my main one.
+[11-29-2005 09:28:39] [#ezpublish] <buz> one can do that?
+[11-29-2005 09:28:46] [#ezpublish] <Katana`> yeah with nickserv
+[11-29-2005 09:28:51] [#ezpublish] <Katana`> /msg nickserv help
+[11-29-2005 09:29:02] [#ezpublish] <buz> ok but what is it good for
+[11-29-2005 09:29:16] [#ezpublish] <nfrp_> http://freenode.net/faq.shtml#nicksetup
+[11-29-2005 09:30:15] [#ezpublish] <Katana`> having several links
+[11-29-2005 09:30:36] [#ezpublish] <buz> if you ever develop split personality disorder?
+[11-29-2005 09:30:57] [#ezpublish] <nfrp_> schizophrenia yes :)
+[11-29-2005 09:31:27] [#ezpublish] <kris10an> Katana`: hehe.. are you saying the streets of lyon are not nice ?
+[11-29-2005 09:31:50] [#ezpublish] <kris10an> very nice pictures btw... i can almost see something that looks like a wall ;-)
+[11-29-2005 09:31:50] [#ezpublish] <Katana`> did I say that ? oh
+[11-29-2005 09:31:57] [#ezpublish] <Katana`> lol kracker
+[11-29-2005 09:31:58] [#ezpublish] <Katana`> kris10an
+[11-29-2005 09:32:09] [#ezpublish] <Katana`> the camera was set with an exposition time of 1.5s
+[11-29-2005 09:32:16] [#ezpublish] <Katana`> given that, they're actually very very good ;)
+[11-29-2005 09:32:30] [#ezpublish] <kris10an> hehe.. ok.. then you have a steady hand :-)
+[11-29-2005 09:32:37] [#ezpublish] <Katana`> i don't
+[11-29-2005 09:32:39] [#ezpublish] <Katana`> my gf has ;)
+[11-29-2005 09:33:55] [#ezpublish] <kris10an> you have a real-life gf, with a camera? jackpot baby jackpot :-)
+[11-29-2005 09:34:03] [#ezpublish] <Katana`> well, the camera was mine :)
+[11-29-2005 09:34:23] [#ezpublish] <Katana`> but one of her cameras is a gift from me ;)
+[11-29-2005 09:34:38] [#ezpublish] <Katana`> hehe yes, i'm even gonna live with her in Lyon
+[11-29-2005 09:35:00] [#ezpublish] <Katana`> add to that the fact that i'm gonna work with a team of crazy devs, this is a lot of changes ;)
+[11-29-2005 09:35:01] -!- nfrp_ [n=nfrp@popeye.ez.no] has quit ["Leaving"]
+[11-29-2005 09:35:27] [#ezpublish] <nnn0> `tables
+[11-29-2005 09:37:40] [#ezpublish] <nnn0> wrong channel - sry
+[11-29-2005 09:38:08] -!- nfrp [n=nfrp@popeye.ez.no] has joined #ezpublish
+[11-29-2005 09:39:00] -!- nfrp [n=nfrp@popeye.ez.no] has quit [Client Quit]
+[11-29-2005 09:39:20] [#ezpublish] <kris10an> ok.. so you don't have a real-life gf with a camera? too bad..
+[11-29-2005 09:39:39] -!- nfrp [n=nfrp@popeye.ez.no] has joined #ezpublish
+[11-29-2005 09:40:02] [#ezpublish] <kris10an> nrfp you need to get a grip of yourself...
+[11-29-2005 09:42:21] [#ezpublish] <nfrp> :) i'll pull myself together and keep logged in for more than 3minutes.
+[11-29-2005 09:42:24] [#ezpublish] <nfrp> promised
+[11-29-2005 09:44:14] [#ezpublish] <Katana`> okay, now you need to introduce yourself ;)
+[11-29-2005 09:44:18] [#ezpublish] <Katana`> anyone with a .ez.no host have to
+[11-29-2005 09:45:43] [#ezpublish] <nfrp> ok. i'm nicolas pastorino, came @ eZ at the early beginning of september in Skien, and will be working in Lyon with you in 2006 ;)
+[11-29-2005 09:46:19] [#ezpublish] <Katana`> aaaah it's you :)
+[11-29-2005 09:46:21] [#ezpublish] <Katana`> nice to meet you ;)
+[11-29-2005 09:46:22] [#ezpublish] <nnn0> :)
+[11-29-2005 09:46:23] [#ezpublish] <nfrp> :)
+[11-29-2005 09:46:31] [#ezpublish] <nfrp> pleased to meet you too monsieur :)
+[11-29-2005 09:51:02] [#ezpublish] <kris10an> it's so sweet to see the frenchies greeting eachother ;-)
+[11-29-2005 09:51:18] [#ezpublish] <Katana`> did you think we wouldn't ? :)
+[11-29-2005 09:51:24] [#ezpublish] <Katana`> after all we have to work together soon ;)
+[11-29-2005 09:51:49] [#ezpublish] <buz> and its evening, not morning after all hehe
+[11-29-2005 09:51:57] [#ezpublish] <Katana`> hum
+[11-29-2005 09:52:01] [#ezpublish] <Katana`> you have to explain buz
+[11-29-2005 09:52:33] [#ezpublish] <buz> in the morning you'd simply say mumpf no?
+[11-29-2005 09:52:41] [#ezpublish] <Katana`> only on monday morning
+[11-29-2005 09:52:46] [#ezpublish] <nfrp> true.
+[11-29-2005 09:52:49] [#ezpublish] <buz> oh yeah right its tuesday
+[11-29-2005 09:52:53] [#ezpublish] <nfrp> the other days it's nthg at all :D
+[11-29-2005 09:52:54] [#ezpublish] <Katana`> :)
+[11-29-2005 09:59:58] -!- fh[eZ] [n=fh@popeye.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.12"]
+[11-29-2005 10:00:54] [#ezpublish] <nnn0> hm how did i disable user registration again ?
+[11-29-2005 10:01:45] [#ezpublish] <nnn0> found it :)
+[11-29-2005 10:10:08] [#ezpublish] <buz> http://www.alistapart.com/articles/boom thats neat
+[11-29-2005 10:10:14] [#ezpublish] <buz> that should be used for pdf printing in ez ;)
+[11-29-2005 10:13:14] [#ezpublish] <buz> its kinda expensive though ;)
+[11-29-2005 10:20:36] [#ezpublish] <buz> http://www.columbia.edu/~xs23/keynes/keynes1.htm ROTFL
+[11-29-2005 11:25:33] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[11-29-2005 12:01:01] -!- nfrp [n=nfrp@popeye.ez.no] has left #ezpublish ["Leaving"]
+[11-29-2005 12:25:07] -!- kris10an [n=kh@popeye.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[11-29-2005 13:54:15] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[11-29-2005 14:07:52] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-29-2005 14:24:19] -!- ordnas [n=ordnas@p549DE16D.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-29-2005 14:31:58] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[11-29-2005 14:49:05] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[11-29-2005 15:00:21] [#ezpublish] <buz> This article provides a glimpse into the usage of the eZ components for PHP 5.
+[11-29-2005 15:00:27] [#ezpublish] <buz> so i cant use em with php4.4?
+[11-29-2005 15:00:40] [#ezpublish] <buz> Please notice that the eZ components will only work on PHP 5.1 or higher
+[11-29-2005 15:00:51] [#ezpublish] <buz> that is kinda useless considering that 3.7 wont work on 5.1 no?
+[11-29-2005 15:09:53] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-29-2005 15:49:51] [#ezpublish] <kracker> buz misses the point ...
+[11-29-2005 15:51:16] [#ezpublish] <kracker> components != eZ publish (existing) , it's an intro
+[11-29-2005 15:51:36] [#ezpublish] <kracker> it's history repeating itself, anyone remember round 2.9.x?
+[11-29-2005 15:51:53] [#ezpublish] <kracker> interesting, http://www.sitepoint.com/blogs/2005/11/27/ez-components-%e2%80%93-new-competition-for-zend-php-framework/
+[11-29-2005 15:53:02] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-29-2005 15:57:04] [#ezpublish] <kracker> hey ls
+[11-29-2005 15:58:48] [#ezpublish] <ls[eZ]> hi kracker
+[11-29-2005 15:59:35] -!- ls[eZ] is now known as luke`
+[11-29-2005 16:05:50] -!- luke` [n=ls@unregister049205219081.c205.msk.pl] has quit [Remote closed the connection]
+[11-29-2005 16:16:51] [#ezpublish] <Katana`> very good article :))
+[11-29-2005 16:38:12] [#ezpublish] <kracker> heh, as i said it was interesting, i thought it was great that they linked serveral times to more info on components
+[11-29-2005 16:38:19] [#ezpublish] <Katana`> yeah
+[11-29-2005 16:39:14] [#ezpublish] <kracker> tho it would be interesting to see who steps up to the table with more involved / usefull component examples and ... what everyone really wants to see implimentations (in the meantime while we wait for the first preview of 4x)
+[11-29-2005 17:23:37] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-29-2005 17:23:37] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-29-2005 17:24:03] -!- _Katana` is now known as Katana`
+[11-29-2005 17:24:25] -!- Katana` [n=katana@ankh-morpork.net] has quit [Client Quit]
+[11-29-2005 21:26:05] [#ezpublish] <kracker> silence!
+[11-29-2005 21:26:20] [#ezpublish] <kracker> i can't think with all the white noise in here :D
+[11-29-2005 22:19:34] [#ezpublish] <kracker> wondering .... when eZ and PHP will get along so we no longer continue to play this version specific match making game eZ components loves php 5.10 but php 5.1.1 is at odds with eZ components 1.0 beta1 ...

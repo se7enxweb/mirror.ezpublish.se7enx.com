@@ -1,0 +1,54 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.4.&nbsp; CLI Environment</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec4"></a><h3 class="docSection1Title">12.4. CLI Environment</h3>
+<p class="docText">PEAR lets you include command-line scripts in a package. However, when doing so, you will quickly run into configuration problems like, &quot;Which <tt>include_path</tt> should I use here&quot; or &quot;What is the full path of the PHP executable that should be used?&quot; This information may be specified by users in a set of environment variables, as shown in <a class="docLink" href="#ch12table01">Table 12.1</a>.<a name="ch12index49"></a><a name="ch12index50"></a></p>
+<a name="ch12table01"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 12.1. PEAR Installer Environment Variables</H5></caption><colgroup><col width="275"><col width="275"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Environment Variable</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Corresponding Configuration Parameter</span></p></th></TR></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_SYSCONF_DIR</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>none</tt></P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_MASTER_SERVER</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>master_server</tt></P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_HTTP_PROXY</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>http_proxy</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_INSTALL_DIR</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>php_dir</tt></p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_EXTENSION_DIR</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>ext_dir</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_DOC_DIR</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>doc_dir</tt></P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_BIN_DIR</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>bin_dir</tt></P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_DATA_DIR</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>data_dir</tt></P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_TEST_DIR</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>test_dir</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_CACHE_DIR</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>cache_dir</tt></p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_PHP_BIN</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>php_bin</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_VERBOSE</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>verbose</tt></P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_PREFERRED_STATE</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>preferred_state</tt></P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_UMASK</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>umask</tt></P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_CACHE_TTL</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>cache_ttl</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_SIG_TYPE</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>sig_type</tt></p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_SIG_BIN</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>sig_bin</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_PEAR_SIG_KEYDIR</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>sig_keydir</tt></P></td></TR></table></p><br>
+<p class="docText">If any of this information is needed during bootstrapping of a PHP script, these environment variables should be used. The PEAR installer uses these environment variables when it sets up default values for its configuration parameters.</p>
+<p class="docText">Here is an example of a UNIX command-line scripts, using the <tt>PHP_PEAR_PHP_BIN</tt> environment variable to find the right PHP binary:<a name="ch12index53"></a><a name="ch12index54"></a></p>
+<pre>
+#!/bin/sh
+export PHP_PEAR_PHP_BIN=${PHP_PEAR_PHP_BIN:-php}
+exec $PHP_PEAR_PHP_BIN d output_buffering=1 $0 $@
+&lt;?php
+ob_end_clean();
+print "PHP " . phpversion() . " on " . php_uname() . "\n";
+</pre><BR>
+<UL><li><p class="docText">
+<span class="docEmphStrong">PHP embedded in UNIX shell script.</span> 
+What happens here is that the <tt>PHP_PEAR_PHP_BIN</tt> is set to either its current existing value or to <tt>php</tt> if it is not set. Then, the shell script exec's (replaces itself with) PHP with a parameter that enables output buffering, followed by the name of the script and all the command-line parameters. When PHP starts executing the file, it would normally just display the second and third line with shell script code, but because it is running with output buffering enabled, these lines are just buffered. In the PHP block, <tt>ob_end_clean()</tt> ends output buffering and discards the output so far, so PHP never displays the shell code:<a name="ch12index55"></a></p><pre>
+@echo off
+
+if "%OS"=="Windows_NT" @setlocal
+if "%PHP_PEAR_PHP_BIN%"=="" goto useDefault
+goto run
+:useDefault
+set PHP_PEAR_PHP_BIN=php.exe
+:run
+%PHP_PEAR_PHP_BIN% -d output_buffering=1 %~dp0 %1 %2 %3 %4 %5 %6 %7 
+%8 %9
+&lt;?php
+ob_end_clean();
+print "PHP " . phpversion() . " on " . php_uname() . "\n";
+</pre><br></li><LI><p class="docText">
+<span class="docEmphStrong">PHP embedded in a Windows .bat file.</span> 
+The basic approach here is the same as in the UNIX shell example. The <tt>PHP_PEAR_PHP_BIN</tt> environment variable is used to getting the right PHP executable, defaulting to just <tt>php.exe</tt>. (One limitation to note for .bat scripts is that you cannot pass more than nine parameters.)<a name="ch12index56"></a><a name="ch12index57"></a><a name="ch12index58"></a></p></li></UL>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

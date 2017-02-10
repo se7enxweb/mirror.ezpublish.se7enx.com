@@ -1,0 +1,142 @@
+[01-09-2006 00:13:31] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-09-2006 01:47:52] -!- ordnas [n=ordnas@p549D6DDB.dip.t-dialin.net] has joined #ezpublish
+[01-09-2006 01:52:53] -!- SEAwolfx [n=mike@tor/session/x-ae2d7c264a7f39e7] has joined #ezpublish
+[01-09-2006 01:53:35] -!- Bedlore [n=me@219-90-177-160.ip.adam.com.au] has quit []
+[01-09-2006 01:58:46] [#ezpublish] <SEAwolfx> re
+[01-09-2006 02:01:39] -!- tobyS [n=dotxp@popeye.ez.no] has joined #ezpublish
+[01-09-2006 02:04:04] -!- _kore [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-09-2006 02:41:47] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-09-2006 02:44:53] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-09-2006 02:48:40] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-09-2006 03:15:19] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[01-09-2006 03:24:48] [#ezpublish] <kris10an> morning folks
+[01-09-2006 03:43:37] [#ezpublish] <y_sabal> morning
+[01-09-2006 04:15:51] -!- DiGiTa|_ [n=guillaum@84.4.188.131] has joined #ezpublish
+[01-09-2006 04:15:56] [#ezpublish] <DiGiTa|_> hi all
+[01-09-2006 04:16:12] [#ezpublish] <DiGiTa|_> i need to know if it's possible to detect the current sitedomain
+[01-09-2006 04:16:26] [#ezpublish] <DiGiTa|_> in a tpl
+[01-09-2006 04:22:48] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-09-2006 04:32:43] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-09-2006 04:36:20] [#ezpublish] <DiGiTa|_> no on e?
+[01-09-2006 04:36:23] [#ezpublish] <DiGiTa|_> one
+[01-09-2006 04:43:06] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-09-2006 04:51:52] [#ezpublish] <DiGiTa|_> fh[eZ]:  ?
+[01-09-2006 04:53:37] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Remote closed the connection]
+[01-09-2006 04:54:36] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-09-2006 05:44:32] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-09-2006 05:45:43] [#ezpublish] <Sulfur> w000000000t :P
+[01-09-2006 05:45:49] [#ezpublish] <DiGiTa|_> yo sulfur
+[01-09-2006 05:45:56] [#ezpublish] <Sulfur> yo DiGiTa|_
+[01-09-2006 05:46:06] [#ezpublish] <DiGiTa|_> happy new year :)
+[01-09-2006 05:46:15] [#ezpublish] <Sulfur> same to you pal :)
+[01-09-2006 05:46:46] [#ezpublish] <DiGiTa|_> have you an idea how to detect the current sitedomain ?
+[01-09-2006 05:46:50] [#ezpublish] <DiGiTa|_> not siteaccess
+[01-09-2006 05:46:56] [#ezpublish] <DiGiTa|_> but sitedomain
+[01-09-2006 05:47:14] [#ezpublish] <DiGiTa|_> because i have severral domains that use one siteaccess
+[01-09-2006 05:47:24] [#ezpublish] <DiGiTa|_> -r
+[01-09-2006 05:47:34] [#ezpublish] <Sulfur> write an operator
+[01-09-2006 05:47:42] [#ezpublish] <Sulfur> it's simple stuf
+[01-09-2006 05:48:08] [#ezpublish] <DiGiTa|_> ah yes
+[01-09-2006 06:19:57] [#ezpublish] <y_sabal> you can't simply use data from site.ini ?
+[01-09-2006 06:23:06] [#ezpublish] <y_sabal> the siteURL variable ?
+[01-09-2006 06:25:18] -!- ordna1 [n=ordnas@p549D4983.dip.t-dialin.net] has joined #ezpublish
+[01-09-2006 06:42:56] -!- ordnas [n=ordnas@p549D6DDB.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-09-2006 07:12:14] [#ezpublish] <DiGiTa|_> no i cant y_sabal
+[01-09-2006 07:12:14] [#ezpublish] <DiGiTa|_> because many domains use one siteaccess
+[01-09-2006 07:15:29] [#ezpublish] <y_sabal> ah... okay...
+[01-09-2006 07:52:01] -!- Sulfur [n=mbariola@85.20.2.139] has quit [Read error: 110 (Connection timed out)]
+[01-09-2006 07:56:19] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-09-2006 07:57:07] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-09-2006 07:57:14] -!- r [n=vali@217.194.224.41] has joined #ezpublish
+[01-09-2006 07:58:19] -!- r [n=vali@217.194.224.41] has quit [Client Quit]
+[01-09-2006 07:59:11] -!- r [n=vali@217.194.224.41] has joined #ezpublish
+[01-09-2006 08:09:42] [#ezpublish] <Sulfur> for all my fellows who hadn't seen it already .... http://ars.userfriendly.org/cartoons/?id=20060108 :P
+[01-09-2006 08:39:14] [#ezpublish] <xbit> hehe
+[01-09-2006 08:39:16] [#ezpublish] <xbit> good :)
+[01-09-2006 08:47:46] -!- _kore [n=lordhong@217.194.224.41] has quit []
+[01-09-2006 09:07:13] [#ezpublish] <Sulfur> I am at score 2 for today
+[01-09-2006 09:07:18] [#ezpublish] <Sulfur> quiet day
+[01-09-2006 09:13:33] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-09-2006 09:53:18] -!- ordnas [n=ordnas@p549D4983.dip.t-dialin.net] has joined #ezpublish
+[01-09-2006 10:04:51] -!- r [n=vali@217.194.224.41] has quit ["Verlassend"]
+[01-09-2006 10:05:32] -!- tobyS [n=dotxp@popeye.ez.no] has quit ["Plant your channel to pearadise.net!"]
+[01-09-2006 10:06:15] -!- DiGiTa|_ [n=guillaum@84.4.188.131] has quit [Read error: 110 (Connection timed out)]
+[01-09-2006 10:08:39] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[01-09-2006 10:08:51] -!- kalooni is now known as nottavi
+[01-09-2006 10:09:01] [#ezpublish] <nottavi> Hi there
+[01-09-2006 10:09:19] [#ezpublish] <Sulfur> hey
+[01-09-2006 10:09:55] [#ezpublish] <nottavi> I need help concerning related object fetching
+[01-09-2006 10:10:47] [#ezpublish] <nottavi> I would like to have the same behavior as in the admin interface where we can edit object relation ... in extenso I want to distinguish images and objects
+[01-09-2006 10:10:52] [#ezpublish] <nottavi> I should I do this ?
+[01-09-2006 10:11:01] -!- ordna1 [n=ordnas@p549D4983.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-09-2006 10:11:22] [#ezpublish] <nottavi> I looked at the code of edit_relation.tpl but couldn't understand it cause it seems to use some specific variables
+[01-09-2006 10:11:35] [#ezpublish] <nottavi> like $grouped_related ...
+[01-09-2006 10:13:27] -!- hovik [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-09-2006 10:19:50] [#ezpublish] <nottavi> a simpler question: how do you declare a new array in a template ?
+[01-09-2006 10:20:11] [#ezpublish] <nottavi> {set $newarray=array()} ?
+[01-09-2006 10:20:52] [#ezpublish] <Sulfur> {def $newarray = array()}
+[01-09-2006 10:21:06] [#ezpublish] <Sulfur> you can use set only when it has been def'ed
+[01-09-2006 10:21:44] [#ezpublish] <Sulfur> about the first question ... can you explain better please?
+[01-09-2006 10:21:46] [#ezpublish] <nottavi> ok thanks ...
+[01-09-2006 10:22:01] [#ezpublish] <nottavi> I have a product class
+[01-09-2006 10:22:10] [#ezpublish] <nottavi> I can associate images and other product to a product
+[01-09-2006 10:22:59] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[01-09-2006 10:23:53] [#ezpublish] <nottavi> but I want to display a div solely if the related_contentobject_array contains related "product" and not if it contains only images ... not sure I'm clear
+[01-09-2006 10:23:59] [#ezpublish] <nottavi> this is the case in the admin interface
+[01-09-2006 10:24:16] [#ezpublish] <nottavi> where the edit_relation.tpl do the distinction between files, images and objects
+[01-09-2006 10:24:24] [#ezpublish] <nottavi> and I was wondering if it was possible to do the same
+[01-09-2006 10:25:16] [#ezpublish] <nottavi> but i found out that this was managed in kernel/content/relationedit.php
+[01-09-2006 10:25:50] -!- SEAwolfx [n=mike@tor/session/x-ae2d7c264a7f39e7] has quit [Remote closed the connection]
+[01-09-2006 10:26:43] -!- SEAwolfx [n=mike@tor/session/x-ca9605b5f62e1348] has joined #ezpublish
+[01-09-2006 10:27:07] [#ezpublish] <nottavi> So now this is how I do. I declare a new array for related images (i need them too), and another one for related products... I am going through $node.object.related_contentobject_array and bases on the class of the related object i append it to the corresponding array I can use later in my template
+[01-09-2006 10:27:10] [#ezpublish] <nottavi> clearer ?
+[01-09-2006 10:28:31] [#ezpublish] <nottavi> if not this is due to my poor english level sorry ;)
+[01-09-2006 10:30:10] [#ezpublish] <nottavi> hum ... indeed, how can I append objects to an array in templates ... using $arrayname|append($object) will display Array
+[01-09-2006 10:30:18] [#ezpublish] <Sulfur> yes, I think that is the way you can do it
+[01-09-2006 10:31:10] [#ezpublish] <Sulfur> {set $alreadyexistingarray = $alreadyexistingarray|append($yourobject)}
+[01-09-2006 10:31:45] [#ezpublish] <nottavi> oh ... ok
+[01-09-2006 10:31:48] [#ezpublish] <nottavi> thanks sir
+[01-09-2006 10:32:03] [#ezpublish] <Sulfur> there are no sirs here only fellows :)
+[01-09-2006 10:32:23] [#ezpublish] <nottavi> ;)
+[01-09-2006 10:32:41] [#ezpublish] <Sulfur> and dead ravens too but you'll understand in due time :)
+[01-09-2006 10:32:54] [#ezpublish] <nottavi> I tried to use the fetch fonction 'related_objects' but get no results
+[01-09-2006 10:33:07] [#ezpublish] <nottavi> dead ravens ? could you explain for the poor "french" I am ?
+[01-09-2006 10:34:06] -!- ordnas [n=ordnas@p549D4983.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-09-2006 10:34:21] [#ezpublish] <nottavi> last question (i hope) ... how do i know the size of my generated array ? $myarray.count ?
+[01-09-2006 10:34:21] [#ezpublish] <Sulfur> oh, I will not spoil the fun for you :)
+[01-09-2006 10:34:30] [#ezpublish] <Sulfur> $myarray|count
+[01-09-2006 10:35:27] [#ezpublish] <Sulfur> . operator is for exploring data structures, pipe operator is a notation to pass params to tpl operators
+[01-09-2006 10:37:16] [#ezpublish] <nottavi> sorry my question was really ridiculous ... I am a bit sick today ;)
+[01-09-2006 10:37:53] [#ezpublish] <nottavi> ok I now see what ravens are ... but don't really understand what you meant with dead ravens ... but ...
+[01-09-2006 10:52:15] -!- ordnas [n=ordnas@p549D6D41.dip.t-dialin.net] has joined #ezpublish
+[01-09-2006 10:57:23] -!- ordna1 [n=ordnas@p549D600F.dip.t-dialin.net] has joined #ezpublish
+[01-09-2006 11:12:15] -!- ordnas [n=ordnas@p549D6D41.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-09-2006 11:17:00] -!- tobyS [n=dotxp@7.80-202-59.nextgentel.com] has joined #ezpublish
+[01-09-2006 11:30:16] -!- ordnas [n=ordnas@p549D5481.dip.t-dialin.net] has joined #ezpublish
+[01-09-2006 11:36:01] [#ezpublish] <nottavi> quit
+[01-09-2006 11:36:04] -!- nottavi [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[01-09-2006 11:48:03] -!- ordna1 [n=ordnas@p549D600F.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-09-2006 11:49:54] -!- ordnas [n=ordnas@p549D5481.dip.t-dialin.net] has quit [Read error: 113 (No route to host)]
+[01-09-2006 11:49:55] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has left #ezpublish []
+[01-09-2006 11:51:01] -!- elephantMan [n=elephant@15.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[01-09-2006 11:53:33] -!- elephantMan [n=elephant@15.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-09-2006 12:40:02] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[01-09-2006 12:40:07] [#ezpublish] <kalooni> Hi there
+[01-09-2006 12:40:11] [#ezpublish] <kalooni> (again)
+[01-09-2006 12:40:27] [#ezpublish] <kalooni> How do you generate a valid .diff for ezpublish contributions ?
+[01-09-2006 12:40:44] [#ezpublish] <kalooni> diff file1 file2 -ru ? correct ?
+[01-09-2006 12:51:24] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Isn't Gaim a cool program ? :-)"]
+[01-09-2006 12:57:32] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[01-09-2006 13:28:22] -!- SEAwolfx_ [n=mike@tor/session/x-dfe46cebaf97f77d] has joined #ezpublish
+[01-09-2006 13:31:02] -lilo:$calvino.freenode.net- [Server Notice] Hi all. The server you're on, calvino.freenode.net, has been removed from rotation and will be restarted for maintenance on a non-urgent basis. Please help us get there a bit sooner by disconnecting and reconnecting to chat.freenode.net when you get a moment.... thanks!
+[01-09-2006 13:35:17] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-09-2006 13:36:23] -!- SEAwolfx [n=mike@tor/session/x-ca9605b5f62e1348] has quit [Remote closed the connection]
+[01-09-2006 14:05:21] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-09-2006 15:44:06] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-09-2006 16:43:49] -!- SEAwolfx_ [n=mike@tor/session/x-dfe46cebaf97f77d] has quit [Remote closed the connection]
+[01-09-2006 16:44:24] -!- SEAwolfx [n=mike@tor/session/x-158cfa988785b926] has joined #ezpublish
+[01-09-2006 17:02:58] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[01-09-2006 17:57:53] -!- SEAwolfx_ [n=mike@tor/session/x-e73b5344a753a711] has joined #ezpublish
+[01-09-2006 18:01:03] -!- SEAwolfx [n=mike@tor/session/x-158cfa988785b926] has quit [Remote closed the connection]
+[01-09-2006 22:58:08] -!- SEAwolfx_ [n=mike@tor/session/x-e73b5344a753a711] has quit [Remote closed the connection]
+[01-09-2006 23:13:25] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish

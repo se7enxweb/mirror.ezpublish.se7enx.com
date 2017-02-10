@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+	<head>
+		<title>eZ publish Community</title>
+		<ownerName>kracker</ownerName>
+		<ownerEmail>thekracker+ezopml [ a t ] gmail [ d o t ] com</ownerEmail>
+		<dateCreated>10/26/2005; 17:53:03 AM</dateCreated>
+		<dateModified>Fri, 17 Dec 2005 21:13:09 -0600</dateModified>
+		</head>
+	<body>
+	<outline text="ez-no">
+		<outline language="english" type="rss" version="RSS" text="eZ News" htmlUrl="http://ez.no/company/news/" xmlUrl="http://ez.no/rss/feed/news" />
+		<outline language="english" type="rss" version="RSS" text="eZ Community News" htmlUrl="http://ez.no/community/news/" xmlUrl="http://ez.no/rss/feed/communitynews" />
+		<outline language="english" type="rss" version="RSS" text="eZ Articles" htmlUrl="http://ez.no/community/articles/" xmlUrl="http://ez.no/rss/feed/community_articles" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Blog" htmlUrl="http://ez.no/community/blog/" xmlUrl="http://ez.no/rss/feed/blog" />
+
+	 	<outline language="english" type="rss" version="RSS" text="eZ Future Specifications" htmlUrl="http://ez.no/community/developer/specs/" xmlUrl="http://ez.no/rss/feed/specs" />
+                <outline language="english" type="rss" version="RSS" text="eZ Bugs" htmlUrl="http://ez.no/rss/feed/bugs" xmlUrl="http://ez.no/rss/feed/bugs" />
+        </outline>
+        <outline text="ez-forum">
+                <outline language="english" type="rss" version="RSS" text="eZ Forum Install and Configuration" htmlUrl="http://ez.no/community/forum/install_configuration/" xmlUrl="http://ez.no/rss/feed/forum_install_configuration" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Forum Setup and Design" htmlUrl="http://ez.no/community/forum/setup_design/" xmlUrl="http://ez.no/rss/feed/forum_setup_design" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Forum General" htmlUrl="http://ez.no/community/forum/general/" xmlUrl="http://ez.no/rss/feed/forum_general" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Forum Developer" htmlUrl="http://ez.no/community/forum/developer/" xmlUrl="http://ez.no/rss/feed/forum_developer" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Forum Suggestions" htmlUrl="http://ez.no/community/forum/suggestions/" xmlUrl="http://ez.no/rss/feed/forum_suggestions" />
+                <outline language="english" type="rss" version="RSS" text="eZ Forum Components" htmlUrl="http://ez.no/rss/feed/forum_ez_components" xmlUrl="http://ez.no/rss/feed/forum_ez_components" />
+	</outline>
+	<outline text="ez-svn">
+                <outline language="english" type="rss" version="RSS" text="svn.ez.no | components | commit recent commits" htmlUrl="http://svn.ez.no/rss.php?repname=ezcomponents&amp;rev=0&amp;sc=1&amp;isdir=1" xmlUrl="http://svn.ez.no/rss.php?repname=ezcomponents&amp;rev=0&amp;sc=1&amp;isdir=1" />
+                <outline language="english" type="rss" version="RSS" text="svn.ez.no | extensions | commit log" htmlUrl="http://svn.ez.no/rss.php?repname=extensions&amp;path=%2F&amp;rev=0&amp;sc=1&amp;isdir=1" xmlUrl="http://svn.ez.no/rss.php?repname=extensions&amp;path=%2F&amp;rev=0&amp;sc=1&amp;isdir=1" />
+		<outline language="english" type="rss" version="RSS" text="pubsvn.ez.no | ezpublish | commit log" htmlUrl="http://pubsvn.ez.no/websvn/log.php?repname=nextgen&amp;path=&amp;rev=0&amp;sc=0&amp;isdir=1" xmlUrl="http://pubsvn.ez.no/websvn/rss.php?repname=nextgen&amp;path=%2F&amp;rev=0&amp;sc=1&amp;isdir=1" />
+                <outline language="english" type="rss" version="RSS" text="pubsvn.ez.no | community extensions | commit log" htmlUrl="http://pubsvn.ez.no/websvn/rss.php?repname=community&amp;path=%2F&amp;rev=0&amp;sc=1&amp;isdir=1" xmlUrl="http://pubsvn.ez.no/websvn/rss.php?repname=community&amp;path=%2F&amp;rev=0&amp;sc=1&amp;isdir=1" />
+        </outline>
+	<outline text="ez-community">
+		<outline language="english" type="rss" version="RSS" text="eZ csr | Code Snippet Repository" htmlUrl="http://snippets.ezcommunity.net/" xmlUrl="http://snippets.ezcommunity.net/feed.php" />
+
+                <outline language="english" type="rss" version="RSS" text="eZ Community | eZ publish 2 Community" htmlUrl="http://rss.ezcommunity.net/" xmlUrl="http://rss.ezcommunity.net/" />
+
+                <outline language="english" type="rss" version="RSS" text="Brookins Consulting : Blog" htmlUrl="http://blog.brookinsconsulting.com/rss" xmlUrl="http://blog.brookinsconsulting.com/rss" />                
+
+        	<outline language="english" type="rss" version="RSS" text="Technorati : Tag : eZ publish" htmlUrl="http://www.technorati.com/tag/ez%20publish/" xmlUrl="http://feeds.technorati.com/feed/posts/tag/ez%20publish" />
+        </outline>
+        <outline text="ez-partners">
+                <outline language="english" type="rss" version="RSS" text="VisionWT News" htmlUrl="http://www.visionwt.com/news/" xmlUrl="http://www.visionwt.com/rss/feed/news/" />
+
+                <outline language="english" type="rss" version="RSS" text="Brookins Consulting News" htmlUrl="http://rss.brookinsconsulting.com/" xmlUrl="http://rss.brookinsconsulting.com/" />
+        </outline>
+	</body>
+</opml>

@@ -1,0 +1,67 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.8.&nbsp; Cloning Objects</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec8"></a><h3 class="docSection1Title">3.8. Cloning Objects</h3>
+<p class="docText">When creating an object (using the <tt>new</tt> keyword), the returned value is a handle to an object or, in other words, the <span class="docEmphStrong">id number</span> of the object. This is unlike PHP 4, where the value was the object itself. This doesn't mean that the syntax for calling methods or accessing properties has changed, but the copying semantics of objects have changed.<a name="ch03index76"></a><a name="ch03index77"></a></p>
+<p class="docText">Consider the following code:</p>
+<pre>
+class MyClass {
+    public $var = 1;
+}
+
+$obj1 = new MyClass();
+$obj2 = $obj1;
+$obj2-&gt;var = 2;
+print $obj1-&gt;var;
+</pre><br>
+<p class="docText">In PHP 4, this code would have printed 1, because <tt>$obj2</tt> is assigned the object value of <tt>$obj1</tt>, therefore creating a copy, leaving <tt>$obj1</tt> unchanged. However, in PHP 5, because <tt>$obj1</tt> is an object handle (its id number), what is copied to <tt>$obj2</tt> is the handle. So, when changing <tt>$obj2</tt>, you actually change the same object <tt>$obj1</tt> is referencing. Running this code snippet, therefore, results in <tt>2</tt> being printed.</P>
+<p class="docText">Sometimes, though, you really do want to create a copy of the object. How can you achieve that? The solution is the language construct <tt>clone</tt>. This built-in operator automatically creates a new instance of the object with its own copy of the properties. The property values are copied as is. In addition, you may define a <tt>__clone()</tt> method that is called on the newly created object to perform any final manipulation.</p>
+<a name="ch03note05"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">References are copied as references, and don't perform a deep copy. This means that if one of your properties points at another variable by reference (after it was assigned by reference), after the automatic cloning, the cloned object will point at the same variable.</p></div><BR>
+<p class="docText">Changing the <tt>$obj2 = $obj1;</tt> line in the previous example to <tt>$obj2 = clone $obj1;</tt> will assign <tt>$obj2</tt> a handle to a new copy of <tt>$obj1</tt>, resulting in 1 being printed out.</p>
+<p class="docText">As previously mentioned, for any of your classes, you may implement a <tt>__clone()</tt> method. After the new (cloned) object is created, your <tt>__clone()</tt> method is called and the cloned object is accessible using the <tt>$this</tt> variable.</p>
+<p class="docText">The following is an example of a typical situation where you might want to implement the <tt>__clone()</tt> method. Say that you have an object that holds a resource such as a file handle. You may want the new object to not point at the same file handle, but to open a new one itself so that it has its own private copy:<a name="ch03index78"></a><a name="ch03index79"></a></p>
+<pre>
+class MyFile {
+    function setFileName($file_name)
+    {
+        $this-&gt;file_name = $file_name;
+    }
+
+    function openFileForReading()
+    {
+      $this-&gt;file_handle = fopen($this-&gt;file_name, "r");
+    }
+
+    function __clone()
+    {
+        if ($this-&gt;file_handle) {
+            $this-&gt;file_handle = fopen($this-&gt;file_name, "r");
+        }
+    }
+
+    private $file_name;
+    private $file_handle = NULL;
+}
+</pre><br>
+<p class="docText">Although this code is only partially written, you can see how you can control the cloning process. In this code snippet, <tt>$file_name</tt> is copied as is from the original object, but if the original object has an open file handle (which was copied to the cloned object), the new copy of the object will create its own copy of the file handle by opening the file by itself.<a name="ch03index80"></a><a name="ch03index81"></a></P>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

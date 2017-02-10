@@ -1,0 +1,256 @@
+Subject: Request for Comment : Inconsistencies in the eZ publish forum Templates
+Bcc: .\current_projects\ez_systems\lukasz@serwatka.net
+
+Luke,
+
+I wanted to bounce my ideas / suggestions off you, first 
+to see what you might think of my notes. 
+
+I truly hope that my tone does not sound negative.
+My only wish is to help improve the status quo.
+
+Respectfully
+//kracker
+
+Dear eZ systems (Ole / Luke)
+
+I wanted to take the time to point out mistakes not in eZ publish 
+(per say) but ez.no's eZ publish (installation's) custom templates.
+
+I want you to know I've waited over 2 years before building this list.
+Not seeing the bugs being addressed I am compelled to write it up ...
+
+As we move forward, and as more of the F/OSS community adopts eZ publish
+it is undocumented and unresolved bugs that make eZ systems and eZ publish look kinda bad ...
+(This has been brought to ez.no's attention several times over the past 2 years in various one time only forum posts)
+
+Most of my forum statistics related bug reports are simply a case of 
+incorrect variable labeling, saying number of posts when in actuality
+ the variable used is number of edits (or drafts)
+
+
+BUGS:
+------------------------------
+
+1. eZ publish forum statistics
+
+The eZ publish forum statistics numbers are inconsistent, because the 
+template code variables used are different on each page view.
+
+Forum (Per User) Statistics Lists
+
+a) Most active in forum - this month top 20
+    Community member     -       Number of posts
+    kracker                      179 
+
+Problem: This number is labeled as number of posts when in actuality
+it is really using not number of posts per user but rather, number
+of edits (or drafts). 
+
+Solution: Reliable the Number or switch the variable used to truly 
+be number of posts (instead of number of posts/edits)
+
+b) Most active in forum - all time top 20
+    Community member     -       Number of posts
+    kracker                      593 
+    
+Problem: This number is labeled as number of posts when in actuality
+it is really using not number of posts per user but rather, number
+of edits (or drafts). 
+
+Solution: Reliable the Number or switch the variable used to truly 
+be number of posts (instead of number of posts/edits)
+
+c) Most active in community documentation
+    Community member     -       Number of edits
+    Balazs Halasy                883 
+
+Most of my suggestions stem from the properly labeled statics list for the documentation (edits).
+
+
+2. Individual Forum Message View
+
+The number of of posts bellow the forum user name is a smaller number 
+(inconsistent) with the numbers listed on the stats page AND a users individual profile edit page.
+
+<code>
+kracker's info:
+ Member since:
+07/03/2003
+Posts: 217
+</code>
+
+
+3. User's Profile Page:
+
+<code>
+kracker's : Activity stats
+This month
+
+    * Forum messages: 64
+
+Total
+
+    * Forum messages: 206
+    * Bug reports: 3
+    * Contributions: 1
+    * Comments: 17
+</code>
+
+
+Note: Review my profile edit page, forum message and stats entries 
+(or anyone's for that matter, the numbers are different in each view, but labeled the same)
+
+
+
+Feature Requests: 
+------------------------------
+1. Increased eZ publish forum statistics page views. 
+
+The current statistics page ...
+http://ez.no/community/forum/stat
+
+Currently the the only statistics that are tracked on the stats page are current month's posts.
+
+Importunately the only statistics we have to track,
+or rather that are displayed are forum posting statistics are all
+in one (total) statistics.
+
+Example #1
+
+Here we will show some of the statistics we collect
+on the eZ publish community.
+
+Total postings in forum: 42982, this month so far 434.
+
+While the total postings were useful back when we didn't have 
+that many forum posts in the new forums, now this information is 
+not nearly as useful as it once was for day to day users.
+
+Suggestion #1
+
+Push Total Forum Posts to the side bar (re: Total users, downloads, page views, posts)
+
+Suggestion #2
+
+Add an entry for per month statistics list.
+
+Example #2
+
+This month's forum posts (to date): 434
+Last month's forum posts (to date): 148
+
+List of Last 3 / 6 - 12 month Months Forum Post Count.
+
+January : 150
+February: 200
+March   : 220
+
+April   : 360
+May     : 434
+
+
+2. Improved Forum Top Level View
+http://ez.no/community/forum
+
+a) Increase the Last Post List (current limit per forum, 4)
+
+Note: Because the forums are getting 15 - 30 posts a day 
+spread through the 5 forum (categories) it is nearly 
+impossible to look at this view and get a sense of 
+the history / movement in the forum in an overview way.
+
+Solution: Increase the last post limit from 4 to 10 / 15 (or better still a user controlled limit)
+
+
+2. User controlled display limits
+
+I think, the eZ publish forums must have user controllable display
+limits / controls to better allow users to filter / sift the forum
+contents to suite their own tastes. 
+
+The current limits are too small and users don't like not having
+control over the amount information they see when reading the forums.
+
+As we grow as a community this becomes more and more of a problem
+which leads users to pine for other forum products and tarnishes
+the eZ forum (module's) name.
+
+3. Orphaned Forum Posts (new view)
+
+Forum Posts which have no replies (1 post only). 
+These posts should be queued to be addressed in the 
+documentation/faq and removed 
+
+We have an almost dire need to clean the ez.no forums of bad posts, 
+which it is littered with thousands which are confusing new users
+and creating more trouble to the people in the community struggling 
+to support them on their own time.
+
+4. Recently Orphaned Forum Posts (new view)
+
+Show the eZ publish forum users (moderators, advanced users) a new view
+which simply displays all the forum topics / posts 
+(say in the last 1 - 3 months or greater) which have no replies and are being either ignored, forgotten or missed.
+
+This view will allow us to address user requests which get "buried" by a flood of other user request and are never answered.
+
+Fyi. most users don't use the individual forum views,
+mostly because they are weak templates with week limits / controls for browsing the "sea"/"oceans" of forum posts.
+
+These templates only show the 20 most popular threads at any given moment with an option of clicking through well over 111 different pages (ordered by date descending)
+
+http://www.ez.no/community/forum/setup_design
+http://www.ez.no/content/view/full/494/(offset)/2840
+
+http://www.ez.no/content/view/full/6751/(offset)/20
+http://www.ez.no/content/view/full/6751/(offset)/2200
+
+
+5. Forum Posts (Timed Expire vs Moderated Expire)
+
+The eZ publish forums do not display forum posts older than 1 year 3 months (est).
+While initially this might have been acceptable. I have posts which are perfectly valid today as they were 2 years ago but I loose access to my posts because of bad templates??
+
+The forums need 
+1) more moderators
+2) a moderator meetings / introduction / make sure they are going to be fair.
+3) allow moderators flag messages to be no longer displayed (which prevents them from removing with prejudice
+4) a core group of master moderators which allows them to review the standard moderator's removal flags).
+
+Instead of loosing messages by date, let the moderators prune out bad messages from future display.
+
+This is a more time consuming approach but with the forum's continued growth the original implementation just simply pisses users off in the long run (it really is no wonder so many people pine for better forum templates / functionality).
+
+
+Note: I would like to suggest that the forum be given some much awaited development time to increase the functionality NOT simply change the existing templates with no new functionality.
+
+
+6. Replace the usage of forum edit (post) submit image buttons with href+images
+
+When loading forum threads from ez.no the images take a while to load, on longer pages the wait is excessive.
+
+If the buttons where regular href+img+image(height+width defined)+alt text("edit") the links would be usable quickly even before the entire page has properly rendered. 
+
+This would speed up usage of the forum's edit post features dramatically. This is because most browsers support clicking a image link which has a defined height / width before the image has been rendered.
+
+
+Offer of Support: 
+
+With the forum activity growing at an almost exponential rate, 
+I think it is time to address these flaws. If the templates were 
+released to the community I would make these improvements 
+and bug fixes and release them back for the community to use.
+
+Closing
+
+I guess I would really love to be an eZ publish forum 
+moderator / faq / documentation contributor.
+  
+I've been writing and waiting for someone to take notice to my 
+continued efforts to support the eZ publish community, now I'm asking.
+
+respectfully,
+//kracker
+
+References:

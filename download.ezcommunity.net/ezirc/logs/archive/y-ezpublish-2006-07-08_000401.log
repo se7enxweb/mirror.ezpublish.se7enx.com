@@ -1,0 +1,81 @@
+[07-06-2006 00:03:29] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[07-06-2006 00:34:38] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[07-06-2006 00:50:47] -!- awormus [n=aaron@p54B04D24.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 01:12:18] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[07-06-2006 01:12:22] [#ezpublish] <philG> hi all
+[07-06-2006 01:14:46] -!- ordnas [n=ordnas@p549D6178.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 01:24:15] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[07-06-2006 01:28:00] -!- awormus [n=aaron@p54B04D24.dip.t-dialin.net] has quit [calvino.freenode.net irc.freenode.net]
+[07-06-2006 01:29:07] -!- awormus [n=aaron@p54B04D24.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 01:32:49] -!- ordnas [n=ordnas@p549D6178.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[07-06-2006 01:38:14] [#ezpublish] <philG> i have a qst about windows installer
+[07-06-2006 01:38:42] [#ezpublish] <philG> what this file do ? it install apache+php+mysql+ the good librairies on a server ?
+[07-06-2006 01:56:11] -!- PtiSeb [n=Miranda@pccri1.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-06-2006 01:56:23] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has quit [Remote closed the connection]
+[07-06-2006 01:57:29] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[07-06-2006 02:11:57] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[07-06-2006 02:21:40] [#ezpublish] <awormus> anyone have any idea what the name was of that singer who sung at the opening of the eZconf?
+[07-06-2006 02:23:08] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[07-06-2006 02:35:43] -!- ls [n=ls@85.19.74.66] has joined #ezpublish
+[07-06-2006 02:36:15] -!- ls is now known as luke_
+[07-06-2006 02:45:45] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-06-2006 04:20:32] -!- zurgutt [n=zurgutt@213.80-202-174.nextgentel.com] has joined #ezpublish
+[07-06-2006 04:43:52] -!- awormus_ [n=aaron@p54B067F5.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 04:48:13] -!- aaronw [n=aaron@p54B0789E.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 04:58:21] -!- awormus [n=aaron@p54B04D24.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 05:04:47] -!- awormus [n=aaron@p54B063BA.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 05:05:31] -!- awormus_ [n=aaron@p54B067F5.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 05:18:16] -!- tools_descriptio [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has joined #ezpublish
+[07-06-2006 05:19:41] -!- DiGiTa|_ [n=pet2poul@84.4.36.186] has joined #ezpublish
+[07-06-2006 05:19:57] [#ezpublish] <DiGiTa|_> hi
+[07-06-2006 05:21:52] -!- aaronw [n=aaron@p54B0789E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 05:22:49] [#ezpublish] <tools_descriptio> Hello
+[07-06-2006 05:23:27] [#ezpublish] <luke_> hi
+[07-06-2006 05:31:14] [#ezpublish] <zurgutt> hihi
+[07-06-2006 05:34:34] -!- tools_descriptio is now known as Tiny_Power
+[07-06-2006 05:39:12] -!- ordnas [n=ordnas@p549D6178.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 05:49:34] -!- DiGiTa|__ [n=pet2poul@84.5.143.124] has joined #ezpublish
+[07-06-2006 06:01:33] -!- ordna1 [n=ordnas@p549D59C0.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 06:03:36] -!- DiGiTa|_ [n=pet2poul@84.4.36.186] has quit [Read error: 104 (Connection reset by peer)]
+[07-06-2006 06:08:12] -!- DiGiTa|_ [n=pet2poul@84.4.40.43] has joined #ezpublish
+[07-06-2006 06:11:03] -!- DiGiTa|__ [n=pet2poul@84.5.143.124] has quit [Read error: 104 (Connection reset by peer)]
+[07-06-2006 06:19:56] -!- DiGiTa|__ [n=pet2poul@84.6.73.151] has joined #ezpublish
+[07-06-2006 06:20:14] -!- ordnas [n=ordnas@p549D6178.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 06:27:02] -!- ordna1 [n=ordnas@p549D59C0.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 06:33:38] -!- DiGiTa|_ [n=pet2poul@84.4.40.43] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 06:35:30] -!- DiGiTa|_ [n=pet2poul@84.5.142.74] has joined #ezpublish
+[07-06-2006 06:48:21] -!- DiGiTa|__ [n=pet2poul@84.6.73.151] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 07:04:29] -!- DiGiTa|_ [n=pet2poul@84.5.142.74] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 07:25:22] -!- awormus [n=aaron@p54B063BA.dip.t-dialin.net] has quit ["Leaving"]
+[07-06-2006 07:27:22] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[07-06-2006 07:42:01] -!- ordnas [n=ordnas@p549D6CCF.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 07:42:24] [#ezpublish] <kalooni> hi, does anybody here had a pb with the i18n operator on the 3.8?
+[07-06-2006 07:43:25] [#ezpublish] <kalooni> => http://ez.no/community/forum/general/i18n/(offset)/0#msg104657
+[07-06-2006 09:03:13] -!- luke_ [n=ls@85.19.74.66] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 09:35:58] -!- PtiSeb [n=Miranda@pccri1.presidence.uhp-nancy.fr] has quit ["Miranda IM! Smaller, Faster, Easier. http://miranda-im.org"]
+[07-06-2006 09:51:19] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[07-06-2006 09:54:20] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[07-06-2006 10:01:00] -!- awormus [n=aaron@p54B063BA.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 10:22:55] -!- luke_ [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[07-06-2006 10:49:15] -!- _ls [n=ls@85.19.74.66] has joined #ezpublish
+[07-06-2006 10:56:31] -!- ordnas [n=ordnas@p549D6CCF.dip.t-dialin.net] has left #ezpublish []
+[07-06-2006 11:02:41] -!- luke_ [n=ls@unregister049029239087.c29.msk.pl] has quit [Read error: 110 (Connection timed out)]
+[07-06-2006 11:24:10] -!- kore_ [n=lordhong@p54BB5016.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 11:27:30] -!- kalooni [n=nicolas@fbx.internethic.net] has left #ezpublish ["Quitte"]
+[07-06-2006 11:38:53] -!- tobmaster [n=tobmaste@p54BB5016.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 11:46:29] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[07-06-2006 12:08:06] -!- Tiny_Power [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has quit ["( www.nnscript.de :: NoNameScript 4.02 :: www.XLhost.de )"]
+[07-06-2006 12:40:40] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit [Remote closed the connection]
+[07-06-2006 12:51:46] -!- SEAwolfx [n=SEAwolfx@p549389BA.dip0.t-ipconnect.de] has joined #ezpublish
+[07-06-2006 13:20:06] -!- zurgutt [n=zurgutt@213.80-202-174.nextgentel.com] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[07-06-2006 13:25:02] -!- azkon [n=mazkon@cmd18.neoplus.adsl.tpnet.pl] has joined #ezpublish
+[07-06-2006 13:25:02] -!- azkon [n=mazkon@cmd18.neoplus.adsl.tpnet.pl] has quit [Client Quit]
+[07-06-2006 13:43:51] -!- SEAwolfx [n=SEAwolfx@p549389BA.dip0.t-ipconnect.de] has left #ezpublish []
+[07-06-2006 14:36:48] -!- tobmaster [n=tobmaste@p54BB5016.dip.t-dialin.net] has quit ["Thx 4 all the fisch"]
+[07-06-2006 14:57:51] -!- kore_ [n=lordhong@p54BB5016.dip.t-dialin.net] has quit []
+[07-06-2006 15:47:35] -!- awormus [n=aaron@p54B063BA.dip.t-dialin.net] has quit ["Leaving"]
+[07-06-2006 16:29:23] -!- _ls [n=ls@85.19.74.66] has quit [Remote closed the connection]
+[07-06-2006 17:10:37] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[07-06-2006 23:34:22] -!- awormus [n=aaron@p54B04DBD.dip.t-dialin.net] has joined #ezpublish
+[07-06-2006 23:39:43] [#ezpublish] <kracker> is this the same lukas? http://code.google.com/soc/php/appinfo.html?csaid=9A862141BC109672
+[07-06-2006 23:43:39] [#ezpublish] <kracker> doh

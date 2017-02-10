@@ -1,0 +1,34 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.16.&nbsp; final Classes</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec15.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec17.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec16"></a><h3 class="docSection1Title">3.16. <tt>final</tt> Classes</h3>
+<p class="docText">Similar to <tt>final</tt> methods, you can also define a class as <tt>final</tt>. Doing so disallows inheriting from this class. The following code does not work:<a name="ch03index138"></a><a name="ch03index139"></a></p>
+<pre>
+final class MyBaseClass {
+    ...
+}
+
+class MyConcreteClass extends MyBaseClass {
+    ...
+}
+</pre><br>
+<p class="docText"><tt>MyBaseClass</tt> has been declared as <tt>final</tt>; <tt>MyConcreteClass</tt> may not extend it and, therefore, execution of the script fails.</p>
+<UL></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec15.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec17.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

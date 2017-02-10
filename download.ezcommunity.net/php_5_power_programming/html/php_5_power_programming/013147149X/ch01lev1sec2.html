@@ -1,0 +1,217 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 1.2.&nbsp; Language Features</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch01lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch01lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch01lev1sec2"></a><h3 class="docSection1Title">1.2. Language Features</h3>
+<a name="ch01lev2sec1"></a><h4 class="docSection2Title">1.2.1. New Object-Oriented Model</h4>
+<p class="docText">When Zeev Suraski added the object-oriented syntax back in the days of PHP 3, it was added as &quot;syntactic sugar for accessing collections.&quot; The OO model also had support for inheritance and allowed a class (and object) to aggregate both methods and properties, but not much more. When Zeev and Andi Gutmans rewrote the scripting engine for PHP 4, it was a completely new engine; it ran much faster, was more stable, and boasted more features. However, the OO model first introduced in PHP 3 was barely touched.<a name="ch01index01"></a><a name="ch01index02"></a><a name="ch01index03"></a></p>
+<p class="docText">Although the object model had serious limitations, it was used extensively around the world, often in large PHP applications. This impressive use of the OOP paradigm with PHP 4, despite its weaknesses, led to it being the main focus for the PHP 5 release.</P>
+<p class="docText">So, what were some of the limitations in PHP 3 and 4? The biggest limitation (which led to further limitations) was the fact that the copy semantics of objects were the same as for native types. So, how did this actually affect the PHP developer? When assigning a variable (that points to an object) to another variable, a copy of the object would be created. Not only did this impact performance, but it also usually led to obscure behavior and bugs in PHP 4 applications because many developers thought that both variables would point at the same object, which was not the case. The variables were instead pointing at separate copies of the same object. Changing one would not change the other.<a name="ch01index04"></a><a name="ch01index05"></a><a name="ch01index06"></a></p>
+<p class="docText">For example:</P>
+<pre>
+class Person {
+    var $name;
+    function getName() 
+    {
+        return $this-&gt;name;
+    }
+    function setName($name) 
+    {
+        $this-&gt;name = $name;
+    }
+    function Person($name) 
+    {
+        $this-&gt;setName($name);
+    }
+}
+
+function changeName($person, $name) 
+{
+    $person-&gt;setName($name);
+}
+
+$person = new Person("Andi");
+changeName($person, "Stig");
+print $person-&gt;getName();
+</pre><br>
+<p class="docText">In PHP 4, this code would print out <tt>"Andi"</tt>. The reason is that we pass the object <tt>$person</tt> to the <tt>changeName()</tt> function by-value, and thus, <tt>$person</tt> is copied and <tt>changeName()</tt> works on a copy of <tt>$person</tt>.<a name="ch01index07"></a><a name="ch01index08"></a><a name="ch01index09"></a></P>
+<p class="docText">This behavior is not intuitive, as many developers would expect the Java-like behavior. In Java, variables actually hold a handle (or pointer) to the object, and therefore, when it is copied, only the handle (and not the entire object) is duplicated.</p>
+<p class="docText">There were two kinds of users in PHP 4: the ones who were aware of this problem and the ones who were not. The latter would usually not notice this problem and their code was written in a way where it did not really matter if the problem existed. Surely some of these people had sleepless nights trying to track down weird bugs that they could not pinpoint. The former group dealt with this problem by always passing and assigning objects by reference. This would prevent the engine from copying their objects, but it would be a headache because the code included numerous <tt>&amp;</tt> signs<tt>.</tt></p>
+<p class="docText">The old object model not only led to the afore-mentioned problems, but also to fundamental problems that prevented implementing some additional features on top of the existing object model.</p>
+<p class="docText">In PHP 5, the infrastructure of the object model was rewritten to work with object handles. Unless you explicitly clone an object by using the <tt>clone</tt> keyword, you never create behind-the-scenes duplicates of your objects. In PHP 5, you don't need a need to pass objects by reference or assign them by reference.</p>
+<a name="ch01note01"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">Passing by reference and assigning by reference are still supported, in case you want to actually change a variable's content (whether object or other type).</P></div><br>
+<a name="ch01lev2sec2"></a><h4 class="docSection2Title">1.2.2. New Object-Oriented Features</h4>
+<p class="docText">The new OO features are too numerous to give a detailed description in this section. <a class="docLink" href="ch03.html#ch03">Chapter 3</a>, &quot;PHP 5 OO Language,&quot; details each feature.</p>
+<p class="docText">The following list provides the main new features:<a name="ch01index10"></a><a name="ch01index11"></a></P>
+<ul><li><p class="docList"><tt>public</tt>/<tt>private</tt>/<tt>protected</tt> access modifiers for methods and properties.</P><p class="docList">Allows the use of common OO access modifiers to control access to methods and properties:</p><pre>
+class MyClass {
+    private $id = 18;
+
+    public function getId() {
+        return $this-&gt;id;
+   }
+}
+</pre><BR></li><li><p class="docList">Unified constructor name <tt>__construct().</tt></p><p class="docList">Instead of the constructor being the name of the class, it is now declared as <tt>__construct()</tt>, which makes it easier to shift classes inside class hierarchies:<a name="ch01index12"></a></p><pre>
+class MyClass {
+     function __construct() {
+        print "Inside constructor";
+    }
+}
+</pre><br></li><li><p class="docList">Object destructor support by defining a <tt>__destructor()</tt> method.<a name="ch01index13"></a></p><p class="docList">Allows defining a destructor function that runs when an object is destroyed:</p><pre>
+class MyClass {
+    function __destruct() {
+        print "Destroying object";
+    }
+}
+</pre><br></li><li><p class="docList">Interfaces.</p><p class="docList">Gives the ability for a class to fulfill more than one is-a relationships. A class can inherit only from one class, but may implement as many interfaces as it wants:<a name="ch01index14"></a><a name="ch01index15"></a><a name="ch01index16"></a></p><pre>
+interface Display {
+    function display();
+}
+class Circle implements Display {
+    function display() {
+        print "Displaying circle\n";
+    }
+}
+</pre><br></li><LI><p class="docList"><tt>instanceof</tt> operator.</P><p class="docList">Language-level support for is-a relationship checking. The PHP 4 <tt>is_a()</tt> function is now deprecated:<a name="ch01index17"></a><a name="ch01index18"></a></p><pre>
+if ($obj instanceof Circle) {
+    print '$obj is a Circle';
+}
+</pre><br></LI><li><p class="docList">Final methods.</p><p class="docList">The <tt>final</tt> keyword allows you to mark methods so that an inheriting class cannot overload them:<a name="ch01index19"></a><a name="ch01index20"></a></p><pre>
+class MyClass {
+    final function getBaseClassName() {
+        return __CLASS__;
+    }
+}
+</pre><br></li><li><p class="docList">Final classes.</P><p class="docList">After declaring a class as <tt>final</tt>, it cannot be inherited. The following example would error out.<a name="ch01index21"></a><a name="ch01index22"></a></p><pre>
+final class FinalClass {
+}
+
+
+
+class BogusClass extends FinalClass {
+}
+</pre><BR></li><LI><p class="docList">Explicit object cloning.</p><p class="docList">To clone an object, you must use the clone keyword. You may declare a <tt>__clone()</tt> method, which will be called during the clone process (after the properties have been copied from the original object):<a name="ch01index23"></a><a name="ch01index24"></a><a name="ch01index25"></a></p><pre>
+class MyClass {
+    function __clone() {
+         print "Object is being cloned";
+    }
+}
+$obj = new MyClass();
+$obj_copy = clone $obj;
+</pre><br></li><LI><p class="docList">Class constants.</P><p class="docList">Class definitions can now include constant values and are referenced using the class:<a name="ch01index26"></a><a name="ch01index27"></a><a name="ch01index28"></a><a name="ch01index29"></a></p><pre>
+class MyClass {
+     const SUCCESS = "Success";
+     const FAILURE = "Failure";
+}
+print MyClass::SUCCESS;
+</pre><br></li><li><p class="docList">Static methods.</P><p class="docList">You can now define methods as static by allowing them to be called from non-object context. Static methods do not define the $this variable because they are not bound to any specific object:<a name="ch01index30"></a><a name="ch01index31"></a></p><pre>
+class MyClass {
+    static function helloWorld() {
+        print "Hello, world";
+    }
+}
+MyClass::helloWorld();
+</pre><br></LI><li><p class="docList">Static members.</P><p class="docList">Class definitions can now include static members (properties) that are accessible via the class. Common usage of static members is in the <tt>Singleton</tt> pattern:<a name="ch01index32"></a><a name="ch01index33"></a></p><pre>
+class Singleton {
+    static private $instance = NULL;
+
+    private function __construct() {
+    }
+
+    static public function getInstance() {
+        if (self::$instance == NULL) {
+            self::$instance = new Singleton();
+        }
+        return self::$instance;
+    }
+}
+</pre><br></li><li><p class="docList">Abstract classes.</p><p class="docList">A class may be declared <tt>abstract</tt> to prevent it from being instantiated. However, you may inherit from an abstract class:<a name="ch01index34"></a><a name="ch01index35"></a><a name="ch01index36"></a><a name="ch01index37"></a></p><pre>
+abstract class MyBaseClass {
+    function display() {
+        print "Default display routine being called";
+    }
+}
+</pre><br></li><li><p class="docList">Abstract methods.</p><p class="docList">A method may be declared <tt>abstract</tt>, thereby deferring its definition to an inheriting class. A class that includes abstract methods must be declared <tt>abstract</tt>:<a name="ch01index38"></a><a name="ch01index39"></a></p><pre>
+abstract class MyBaseClass {
+    abstract function display();
+}
+</pre><br></li><li><p class="docList">Class type hints.</p><p class="docList">Function declarations may include class type hints for their parameters. If the functions are called with an incorrect class type, an error occurs:<a name="ch01index40"></a><a name="ch01index41"></a></p><pre>
+function expectsMyClass(MyClass $obj) {
+
+}
+</pre><BR></LI><li><p class="docList">Support for dereferencing objects that are returned from methods.</p><p class="docList">In PHP 4, you could not directly dereference objects that were returned from methods. You had to first assign the object to a dummy variable and then dereference it.<a name="ch01index42"></a><a name="ch01index43"></a></P><p class="docList">PHP 4:</p><pre>
+$dummy = $obj-&gt;method();
+$dummy-&gt;method2();
+</pre><br><p class="docList">PHP 5:</p><pre>
+$obj-&gt;method()-&gt;method2();
+</pre><br></li><li><p class="docList">Iterators.</P><p class="docList">PHP 5 allows both PHP classes and PHP extension classes to implement an <tt>Iterator</tt> interface. After you implement this interface, you can iterate instances of the class by using the <tt>foreach()</tt> language construct:</p><pre>
+$obj = new MyIteratorImplementation();
+foreach ($obj as $value) {
+    print "$value";
+}
+</pre><BR></li></UL>
+<p class="docText">For a more complete example, see <a class="docLink" href="ch04.html#ch04">Chapter 4</a>, &quot;PHP 5 Advanced OOP and Design Patterns.&quot;</p>
+<ul><li><p class="docList"><tt>__autoload().</tt></p></LI></UL>
+<p class="docText">Many developers writing object-oriented applications create one PHP source file per class definition. One of the biggest annoyances is having to write a long list of needed inclusions at the beginning of each script (one for each class). In PHP 5, this is no longer necessary. You may define an <tt>__autoload()</tt> function that is automatically called in case you are trying to use a class that has not been defined yet. By calling this function, the scripting engine offers one last chance to load the class before PHP bails out with an error:<a name="ch01index44"></a><a name="ch01index45"></a></p>
+<pre>
+function __autoload($class_name) {
+    include_once($class_name . "php");
+}
+
+$obj = new MyClass1();
+$obj2 = new MyClass2();
+</pre><br>
+<a name="ch01lev2sec3"></a><h4 class="docSection2Title">1.2.3. Other New Language Features</h4>
+<UL><li><p class="docList">Exception handling.</p><p class="docList">PHP 5 adds the ability for the well-known <tt>TRy/throw/catch</tt> structured exception-handling paradigm. You are only allowed to throw objects that inherit from the <tt>Exception</tt> class:<a name="ch01index46"></a></p><pre>
+class SQLException extends Exception {
+    public $problem;
+    function __construct($problem) {
+        $this-&gt;problem = $problem;
+    }
+}
+
+try {
+    ...
+    throw new SQLException("Couldn't connect to database");
+    ...
+} catch (SQLException $e) {
+    print "Caught an SQLException with problem $obj-&gt;problem";
+} catch (Exception $e) {
+    print "Caught unrecognized exception";
+}
+</pre><BR></li></ul>
+<p class="docText">Currently for backward-compatibility purposes, most internal functions do not throw exceptions. However, new extensions make use of this capability, and you can use it in your own source code. Also, similar to the already existing <tt>set_error_handler()</tt>, you may use <tt>set_exception_handler()</tt> to catch an unhandled exception before the script terminates.<a name="ch01index47"></a></p>
+<ul><li><p class="docList"><tt>foreach</tt> with references.</p><p class="docList">In PHP 4, you could not iterate through an array and modify its values. PHP 5 supports this by enabling you to mark the <tt>foreach()</tt> loop with the <tt>&amp;</tt> (reference) sign, which makes any values you change affect the array over which you are iterating:<a name="ch01index48"></a><a name="ch01index49"></a><a name="ch01index50"></a></p><pre>
+foreach ($array as &amp;$value) {
+    if ($value === "NULL") {
+        $value = NULL;
+    }
+}
+</pre><br></li><li><p class="docList">Default values for by-reference parameters.</p><p class="docList">In PHP 4, default values could be given only to parameters, which are passed by-values. PHP 5 now supports giving default values to by-reference parameters:<a name="ch01index51"></a></p><pre>
+function my_func(&amp;$arg = null) {
+    if ($arg === NULL) {
+        print '$arg is empty';
+    }
+}
+my_func();
+</pre><br></li></ul>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch01lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch01lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

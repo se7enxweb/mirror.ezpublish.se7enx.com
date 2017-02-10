@@ -1,0 +1,110 @@
+[06-08-2006 01:27:05] -!- DiGiTa|_ [n=pet2poul@84.6.74.2] has joined #ezpublish
+[06-08-2006 01:28:11] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[06-08-2006 01:42:07] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-08-2006 01:56:37] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-08-2006 02:11:42] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[06-08-2006 02:18:29] [#ezpublish] <Tidemann> kris10an?
+[06-08-2006 02:26:25] -!- _hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[06-08-2006 02:32:30] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has quit []
+[06-08-2006 02:32:38] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has joined #ezpublish
+[06-08-2006 02:42:43] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[06-08-2006 02:49:11] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-08-2006 03:08:33] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-08-2006 03:08:43] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-08-2006 03:28:40] [#ezpublish] <Tidemann> uhm..
+[06-08-2006 03:31:14] [#ezpublish] <Tidemann> if I wanna create a different pagelayout for a section..
+[06-08-2006 03:31:46] [#ezpublish] <Tidemann> do I have to do more than editing override.ini.append
+[06-08-2006 03:31:53] [#ezpublish] <Tidemann> like this:
+[06-08-2006 03:31:53] [#ezpublish] <Tidemann> [pagelayout_tcd]
+[06-08-2006 03:31:54] [#ezpublish] <Tidemann> Source=pagelayout.tpl
+[06-08-2006 03:31:54] [#ezpublish] <Tidemann> MatchFile=pagelayout_tcd.tpl
+[06-08-2006 03:31:54] [#ezpublish] <Tidemann> Subdir=templates
+[06-08-2006 03:31:54] [#ezpublish] <Tidemann> Match[section]=6
+[06-08-2006 03:32:12] [#ezpublish] <Tidemann> ?
+[06-08-2006 03:33:23] [#ezpublish] <Tidemann> ..ahem.. and clear the cache...
+[06-08-2006 03:33:25] [#ezpublish] <Tidemann> <-- dumb
+[06-08-2006 03:33:39] [#ezpublish] <Tidemann> nevermind :)
+[06-08-2006 03:34:02] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-08-2006 03:34:02] [#ezpublish] <kalooni> this is the way I do it
+[06-08-2006 03:42:01] -!- kris10an^ [n=kh@85.19.74.66] has joined #ezpublish
+[06-08-2006 03:43:35] -!- kris10an [n=kh@85.19.74.66] has quit [Read error: 110 (Connection timed out)]
+[06-08-2006 04:08:24] -!- _hovik [n=hovik@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[06-08-2006 04:46:52] [#ezpublish] <DiGiTa|_> hi
+[06-08-2006 04:47:16] [#ezpublish] <DiGiTa|_> how can i execute a bin from an ezp directory
+[06-08-2006 04:47:53] [#ezpublish] <DiGiTa|_> example my directory is devel/httpdocs/payline/
+[06-08-2006 04:48:10] [#ezpublish] <DiGiTa|_> in this dir i should execute plpass
+[06-08-2006 04:48:54] [#ezpublish] <DiGiTa|_> i ve set my .conf like that :
+[06-08-2006 04:48:55] [#ezpublish] <DiGiTa|_>  <Directory /home/httpd/vhosts/les-colorades.com/subdomains/devel/httpdocs/payline>
+[06-08-2006 04:48:59] [#ezpublish] <DiGiTa|_>         Options FollowSymLinks Indexes ExecCGI
+[06-08-2006 04:49:01] [#ezpublish] <DiGiTa|_>         AllowOverride None
+[06-08-2006 04:49:04] [#ezpublish] <DiGiTa|_>     </Directory>
+[06-08-2006 04:52:20] [#ezpublish] <DiGiTa|_> but the browser want to save the file
+[06-08-2006 05:01:59] [#ezpublish] <kris10an^> DiGiTa|_: maybe you are missing:    AddType application/x-httpd-php .php
+[06-08-2006 05:08:00] -!- DiGiTa|__ [n=pet2poul@84.5.141.178] has joined #ezpublish
+[06-08-2006 05:19:24] -!- DiGiTa|_ [n=pet2poul@84.6.74.2] has quit [Read error: 110 (Connection timed out)]
+[06-08-2006 05:31:36] -!- awormus [n=aaron@Nd0de.n.pppool.de] has joined #ezpublish
+[06-08-2006 06:14:58] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[06-08-2006 06:42:35] -!- awormus [n=aaron@Nd0de.n.pppool.de] has quit ["Leaving"]
+[06-08-2006 06:55:54] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[06-08-2006 08:57:09] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[06-08-2006 08:58:29] -!- _hovik [n=hovik@85.19.74.66] has quit [Read error: 110 (Connection timed out)]
+[06-08-2006 09:20:38] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[06-08-2006 09:20:48] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-08-2006 10:09:23] -!- B-KiLLer` [n=me@bart.interact.lu] has quit []
+[06-08-2006 10:18:38] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-08-2006 10:22:43] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-08-2006 10:31:39] -!- G-Fuank [n=gfuank@200.73.29.231] has joined #ezpublish
+[06-08-2006 10:33:15] [#ezpublish] <G-Fuank> hello everybody
+[06-08-2006 10:33:53] [#ezpublish] <G-Fuank> wondering if theres is a way or hack to edit or erase article comments in expublish 2.2.9
+[06-08-2006 10:54:46] [#ezpublish] <nnn0> i usually just comment them out in the overrideing template
+[06-08-2006 10:55:11] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[06-08-2006 10:55:55] [#ezpublish] <nnn0> or maybe i misunderstood
+[06-08-2006 10:57:07] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Remote closed the connection]
+[06-08-2006 11:04:46] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[06-08-2006 11:05:56] [#ezpublish] <G-Fuank> mnnn0, what i need is to edit them or delete them when somenone, for example, use improper language in the article comment,
+[06-08-2006 11:10:48] [#ezpublish] <DiGiTa|__> how can i do a simple redirection
+[06-08-2006 11:11:29] [#ezpublish] <DiGiTa|__> like {if is_set($myvar)} {redirectTo....} {/if}
+[06-08-2006 11:38:46] -!- kore_ [n=lordhong@p54BB6E32.dip.t-dialin.net] has joined #ezpublish
+[06-08-2006 12:29:44] -!- SEAwolfx [n=SEAwolfx@p54939CA1.dip0.t-ipconnect.de] has joined #ezpublish
+[06-08-2006 13:16:12] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[06-08-2006 13:17:03] [#ezpublish] <ls> hi
+[06-08-2006 13:51:21] -!- nnn0_ [n=nnn0@ti541110a080-1719.bb.online.no] has joined #ezpublish
+[06-08-2006 13:52:01] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[06-08-2006 13:58:30] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-08-2006 14:19:03] -!- DiGiTa|__ [n=pet2poul@84.5.141.178] has quit []
+[06-08-2006 14:31:50] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-08-2006 15:06:20] -!- carroll [n=mc@CPE0080c8b7b6bf-CM014400121516.cpe.net.cable.rogers.com] has joined #ezpublish
+[06-08-2006 15:10:31] -!- ls is now known as Luke
+[06-08-2006 15:12:40] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-08-2006 15:12:45] [#ezpublish] <jeremiah> hi
+[06-08-2006 15:12:50] [#ezpublish] <mcarroll> hi everyone. i expect this has been asked a bunch of times already today, apologies if so, but does anyone know what's going on with pubsvn.ez.no?
+[06-08-2006 15:58:40] [#ezpublish] <Luke> perhaps is sync time
+[06-08-2006 15:59:56] [#ezpublish] <Luke> try later
+[06-08-2006 16:02:10] -!- Luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[06-08-2006 16:05:04] -!- kore_ [n=lordhong@p54BB6E32.dip.t-dialin.net] has quit []
+[06-08-2006 16:56:36] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-08-2006 17:05:03] -!- G-Fuank [n=gfuank@200.73.29.231] has quit [Read error: 110 (Connection timed out)]
+[06-08-2006 17:33:37] -!- SEAwolfx [n=SEAwolfx@p54939CA1.dip0.t-ipconnect.de] has left #ezpublish []
+[06-08-2006 17:58:55] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[06-08-2006 18:05:26] -!- G-Fuank [n=gfuank@200.73.29.66] has joined #ezpublish
+[06-08-2006 18:06:33] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_02_06_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal || http://ez.no/community/news/ez_systems_summer_
+[06-08-2006 18:06:51] [#ezpublish] <kracker> darn, hit the brick (text limit)
+[06-08-2006 18:07:05] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_02_06_2006 || New Article: http://ez.no/community/news/ez_systems_summer_conference_hackathon
+[06-08-2006 18:07:36] [#ezpublish] <kracker> cause ... newer news is neater news *wince*
+[06-08-2006 18:47:04] -!- nnn0_ is now known as nnn0
+[06-08-2006 19:18:02] [#ezpublish] <G-Fuank> has anyone found a way for deleting or editing article comments?
+[06-08-2006 19:18:09] [#ezpublish] <G-Fuank> version 2.2.9
+[06-08-2006 19:21:00] [#ezpublish] <kracker> lol
+[06-08-2006 19:22:06] [#ezpublish] <kracker> a app to promote the rewriting of comments (psudo random, group inclusion) to promote some kind of coment content war ... oh wait, wikipedia
+[06-08-2006 19:30:58] [#ezpublish] <kracker> na, i bet someone has though (re: 2.2.x)
+[06-08-2006 19:31:08] [#ezpublish] <kracker> http://ezcommunity.net/
+[06-08-2006 19:31:34] [#ezpublish] <kracker> might like to post the question ;)
+[06-08-2006 20:43:10] -!- saraujo [n=msaraujo@201-016-141-059.xd-dynamic.ctbcnetsuper.com.br] has joined #ezpublish
+[06-08-2006 20:51:48] -!- pire_ [n=kbot@phpugdo.de] has joined #ezpublish
+[06-08-2006 20:51:52] -!- pire_ is now known as pire__
+[06-08-2006 20:56:11] -!- pire [n=kbot@phpugdo.de] has quit [Read error: 110 (Connection timed out)]
+[06-08-2006 20:56:48] -!- pire__ is now known as pire
+[06-08-2006 21:54:22] -!- saraujo [n=msaraujo@201-016-141-059.xd-dynamic.ctbcnetsuper.com.br] has quit [Remote closed the connection]
+[06-08-2006 22:11:13] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-08-2006 23:16:15] -!- carroll [n=mc@CPE0080c8b7b6bf-CM014400121516.cpe.net.cable.rogers.com] has left #ezpublish []
+[06-08-2006 23:18:11] -!- G-Fuank [n=gfuank@200.73.29.66] has quit []

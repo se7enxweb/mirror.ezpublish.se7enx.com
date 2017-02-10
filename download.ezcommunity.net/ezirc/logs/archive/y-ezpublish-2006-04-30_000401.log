@@ -1,0 +1,106 @@
+[04-28-2006 01:02:17] -!- ordnas [n=ordnas@p549D649A.dip.t-dialin.net] has joined #ezpublish
+[04-28-2006 01:11:00] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[04-28-2006 01:14:15] -!- DiGiTa|_ [n=pet2poul@84.4.37.47] has joined #ezpublish
+[04-28-2006 01:40:58] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-28-2006 01:51:54] -!- Tidemann [n=tidemann@ti132110a080-7303.bb.online.no] has joined #ezpublish
+[04-28-2006 01:51:57] [#ezpublish] <Tidemann> hey?
+[04-28-2006 01:59:11] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-28-2006 02:25:05] -!- DiGiTa|_ [n=pet2poul@84.4.37.47] has quit []
+[04-28-2006 02:40:00] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-28-2006 02:45:29] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-28-2006 03:38:11] -!- SEAwolfx [n=SEAwolf@p5493C072.dip0.t-ipconnect.de] has joined #ezpublish
+[04-28-2006 03:38:14] [#ezpublish] <SEAwolfx> re
+[04-28-2006 03:52:29] [#ezpublish] <zrg> do re mi
+[04-28-2006 03:52:50] [#ezpublish] <SEAwolfx> ;)
+[04-28-2006 04:02:12] -!- ordna1 [n=ordnas@p549D6ECB.dip.t-dialin.net] has joined #ezpublish
+[04-28-2006 04:20:05] -!- ordnas [n=ordnas@p549D649A.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[04-28-2006 04:58:26] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[04-28-2006 04:58:33] [#ezpublish] <y_sabal> plop
+[04-28-2006 05:09:38] [#ezpublish] <buz> w00t
+[04-28-2006 05:09:44] [#ezpublish] <buz> that performance tuning article is neat
+[04-28-2006 05:09:50] [#ezpublish] <zrg> hm?
+[04-28-2006 05:10:01] [#ezpublish] <buz> http://ez.no/community/articles/ez_publish_performance_best_practices/planning
+[04-28-2006 05:10:47] [#ezpublish] <buz> tho some numbers would be nice
+[04-28-2006 05:10:54] [#ezpublish] <buz> like what amount of ram to give to eaccelerator etc
+[04-28-2006 05:12:55] [#ezpublish] <buz> i'm not entirely sure if it's indeed true that imagemagick is faster than gd
+[04-28-2006 05:13:08] [#ezpublish] <buz> after all, convert is an external app whereas gd lives in php memory space?
+[04-28-2006 05:13:35] [#ezpublish] <zrg> ive read the gd is faster..
+[04-28-2006 05:50:59] -!- DiGiTa|_ [n=pet2poul@84.4.37.47] has joined #ezpublish
+[04-28-2006 06:18:25] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[04-28-2006 07:52:05] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-28-2006 08:19:29] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[04-28-2006 08:19:31] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-28-2006 08:29:54] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[04-28-2006 08:39:24] -!- DiGiTa|_ [n=pet2poul@84.4.37.47] has quit []
+[04-28-2006 08:46:19] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[04-28-2006 09:08:22] [#ezpublish] <kalooni> humm not sure to understand how the multi language is working with the 3.8
+[04-28-2006 09:08:32] [#ezpublish] <kalooni> does anybody here has tried ?
+[04-28-2006 09:09:10] [#ezpublish] <kalooni> assuming I am viewing a node which is translated ... how to link to the other language versions ?
+[04-28-2006 09:24:55] -!- ordna1 [n=ordnas@p549D6ECB.dip.t-dialin.net] has left #ezpublish []
+[04-28-2006 10:14:55] [#ezpublish] <buz> in 3.7 you could do otherlanguagesiteaccess/samepath
+[04-28-2006 10:20:52] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-28-2006 10:32:30] [#ezpublish] <kalooni> like it is on ez.no
+[04-28-2006 10:34:42] [#ezpublish] <ls> ?
+[04-28-2006 10:35:34] [#ezpublish] <katana`> no, ez.no is 3.7
+[04-28-2006 10:37:02] [#ezpublish] <ls> hi katana`
+[04-28-2006 10:37:21] [#ezpublish] <ls> nice article ;)
+[04-28-2006 10:37:39] [#ezpublish] <buz> yeah
+[04-28-2006 10:37:44] [#ezpublish] <buz> tho i muss some numbers
+[04-28-2006 10:39:56] [#ezpublish] <ls> hmm, looks like we need new download handler
+[04-28-2006 10:40:06] [#ezpublish] <buz> for the clustering stuff?
+[04-28-2006 10:40:28] [#ezpublish] <buz> it sure would be neat to have user auth for images ;)
+[04-28-2006 10:40:48] [#ezpublish] <ls> no, 3 users asking how to open PDF uploaded file via link
+[04-28-2006 10:41:11] [#ezpublish] <buz> they should kick their admins
+[04-28-2006 10:41:22] [#ezpublish] <buz> with proper mime types it just works
+[04-28-2006 10:41:27] [#ezpublish] <ls> ezfiledirecthandler.php
+[04-28-2006 10:42:14] [#ezpublish] <ls> this returns path directly to file but is a bit messy, http://admin.test.ez/media_folder/multimedia/new_file
+[04-28-2006 10:42:35] [#ezpublish] <ls> /var/plain/storage/original/application/0dd976dd601a968d7dda515340dc5939.pdf
+[04-28-2006 10:42:41] [#ezpublish] <ls> nice path
+[04-28-2006 10:43:40] [#ezpublish] <katana`> thanks ls ;)
+[04-28-2006 10:43:47] [#ezpublish] <katana`> first but definitely not last !
+[04-28-2006 10:43:54] [#ezpublish] <ls> I hope so
+[04-28-2006 10:43:57] [#ezpublish] <ls> ;)
+[04-28-2006 10:44:38] [#ezpublish] <ls> will you come to Skien on conference, btw?
+[04-28-2006 10:50:20] [#ezpublish] <katana`> of course :)
+[04-28-2006 10:50:44] [#ezpublish] <ls> cool :)
+[04-28-2006 10:53:32] [#ezpublish] <katana`> gotta go now, cya !
+[04-28-2006 10:53:46] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Peace and Protection 4.22"]
+[04-28-2006 11:13:26] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[04-28-2006 11:20:06] -!- tobmaster [n=tobmaste@dslb-084-061-056-209.pools.arcor-ip.net] has joined #ezpublish
+[04-28-2006 11:32:50] -!- kalooni [n=nicolas@fbx.internethic.net] has left #ezpublish ["Quitte"]
+[04-28-2006 11:39:21] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[04-28-2006 11:51:58] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-28-2006 12:33:22] -!- DiGiTa|_ [n=pet2poul@84.5.137.166] has joined #ezpublish
+[04-28-2006 13:09:46] [#ezpublish] <ls> http://ez.no/community/news/community_newsletter_28_04_2006
+[04-28-2006 13:11:16] -!- ls changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_28_04_2006 | http://ez.no/community/news/ez_publish_3_8_0rc1 | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-28-2006 14:47:01] -!- ls is now known as ls[eZ]
+[04-28-2006 14:56:18] -!- DiGiTa|_ [n=pet2poul@84.5.137.166] has quit []
+[04-28-2006 15:10:37] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-28-2006 15:47:10] Disconnecting due to lack of a lag response (0.10308200 1146257170 != 0.19430900 1146257200)
+[04-28-2006 15:47:10] Diconnected. Sleeping for 2 second(s).
+[04-28-2006 15:47:12] >> Connecting to irc.freenode.net:6667
+[04-28-2006 15:47:28] >> Connected to irc.freenode.net:6667, registering...
+[04-28-2006 15:47:29] >> Primary nickname in use, trying alternate.
+[04-28-2006 15:47:29] >> Successfully registered. Nick is: ezpublishlog
+[04-28-2006 15:47:29] -!- There are 14392 listed and 14547 unlisted users on 20 servers
+[04-28-2006 15:47:29] -!- 48 flagged staff members
+[04-28-2006 15:47:29] -!- 10045 channels formed
+[04-28-2006 15:47:29] -!- I have 4198 clients and 0 servers
+[04-28-2006 15:47:29] -!- Current local  users: 4198  Max: 6134
+[04-28-2006 15:47:29] -!- Current global users: 28939  Max: 30795
+[04-28-2006 15:47:29] -!- Highest connection count: 6136 (6134 clients) (1014807 since server was (re)started)
+[04-28-2006 15:47:30] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-28-2006 15:47:30] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-28-2006 15:47:34] >> Attempting to join channels: #ezpublish
+[04-28-2006 15:47:34] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-28-2006 15:47:34] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_28_04_2006 | http://ez.no/community/news/ez_publish_3_8_0rc1 | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-28-2006 15:47:34] -!- Topic set by ls [@] [Fri, 28 Apr 2006 13:37:50 -0500]
+[04-28-2006 15:47:34] -!- ezlog [n=IQ@209.144.224.222] has quit [Read error: 104 (Connection reset by peer)]
+[04-28-2006 15:47:36] -!- ezpublishlog is now known as ezlog
+[04-28-2006 15:47:36] My new nick is ezlog
+[04-28-2006 16:37:52] -!- tobmaster [n=tobmaste@dslb-084-061-056-209.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[04-28-2006 16:53:21] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-28-2006 16:53:26] -!- ls[eZ] [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[04-28-2006 17:37:18] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[04-28-2006 19:08:11] -!- nnn1 is now known as nnn0
+[04-28-2006 23:17:03] -!- SEAwolfx [n=SEAwolf@p5493C072.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]

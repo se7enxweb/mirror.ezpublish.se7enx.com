@@ -1,0 +1,163 @@
+[05-05-2006 00:18:31] -!- DiGiTa|_ [n=pet2poul@84.4.39.81] has joined #ezpublish
+[05-05-2006 01:02:52] -!- ordnas [n=ordnas@p54A9D33D.dip.t-dialin.net] has joined #ezpublish
+[05-05-2006 01:09:03] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-05-2006 01:21:48] [#ezpublish] <awormus> ordnas: I'm looking for someone to split a double room with over the eZpublish conference... do you know anyone? or know who I can contact? It's not absolutely nessesary, but I figured if someone was looking to save a little money as well it would work
+[05-05-2006 01:24:07] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-05-2006 01:27:12] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-05-2006 01:31:40] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-05-2006 01:38:09] -!- ordnas [n=ordnas@p54A9D33D.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2006 02:00:13] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-05-2006 02:24:58] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[05-05-2006 02:28:55] -!- awormus [n=aaron@p54B10A28.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[05-05-2006 02:35:55] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-05-2006 02:57:23] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-05-2006 03:27:51] [#ezpublish] <DiGiTa|_> hi
+[05-05-2006 03:28:19] [#ezpublish] <DiGiTa|_> i like when my ez sites look so fast : http://www.renovation-luberon.com/ :)
+[05-05-2006 03:30:02] [#ezpublish] <buz> fast?
+[05-05-2006 03:30:04] [#ezpublish] <buz> it's slow as hell
+[05-05-2006 03:30:11] [#ezpublish] <buz> too many images to load individually
+[05-05-2006 03:32:22] [#ezpublish] <buz> i'm not so sure about the design, either
+[05-05-2006 03:32:33] [#ezpublish] <buz> it looks like too many different styles cramped into one page?
+[05-05-2006 03:33:42] [#ezpublish] <katana`> it's really fast once the images are cached by the browser buz
+[05-05-2006 03:33:47] [#ezpublish] <katana`> don't be an asshole :))
+[05-05-2006 03:33:59] [#ezpublish] <buz> well i had to wait 5s to see anything in konqueror
+[05-05-2006 03:34:01] [#ezpublish] <B-KiLLer`> muhu
+[05-05-2006 03:34:12] [#ezpublish] <katana`> it's kinda instant here once the first pages have been loaded
+[05-05-2006 03:34:21] [#ezpublish] <buz> yeah after that it's good
+[05-05-2006 03:34:29] [#ezpublish] <B-KiLLer`> DiGiTa|_, master in the website indirect promotion :p
+[05-05-2006 03:34:31] [#ezpublish] <buz> problem is probably that konqui doesnt display before he got the images
+[05-05-2006 03:34:45] [#ezpublish] <katana`> hi B-KiLLer` ;)
+[05-05-2006 03:34:49] [#ezpublish] <B-KiLLer`> hi there
+[05-05-2006 03:35:11] [#ezpublish] <DiGiTa|_> bleh konqueror :)
+[05-05-2006 03:35:14] [#ezpublish] <DiGiTa|_> who use that :)
+[05-05-2006 03:35:20] [#ezpublish] <buz> its like safari
+[05-05-2006 03:35:21] [#ezpublish] <DiGiTa|_> except buz
+[05-05-2006 03:35:28] [#ezpublish] <katana`> well, safari is...
+[05-05-2006 03:35:42] [#ezpublish] <DiGiTa|_> safari is slow
+[05-05-2006 03:35:43] [#ezpublish] <B-KiLLer`> yup, I agree it's slow as hell... or maybe it's because of our ADSL line completely submerged with email sending with 5mb of attachments :-x
+[05-05-2006 03:36:00] [#ezpublish] <buz> that's not the reason in MY case ;)
+[05-05-2006 03:36:06] [#ezpublish] <buz> http gets preference over email here
+[05-05-2006 03:36:08] [#ezpublish] <B-KiLLer`> :D
+[05-05-2006 03:39:43] [#ezpublish] <buz> DiGiTa|_: is that drop down thing at the top left dhtml or something?
+[05-05-2006 03:39:52] [#ezpublish] <DiGiTa|_> yup
+[05-05-2006 03:40:14] [#ezpublish] <DiGiTa|_> but it's shit no ?
+[05-05-2006 03:40:23] [#ezpublish] <buz> i dont think i like it
+[05-05-2006 03:40:34] [#ezpublish] <buz> doesnt work like one would expect
+[05-05-2006 03:40:46] [#ezpublish] <DiGiTa|_> lol
+[05-05-2006 03:41:04] [#ezpublish] <DiGiTa|_> buz, the man who doesn't like anything :p
+[05-05-2006 03:41:13] [#ezpublish] <buz> no
+[05-05-2006 03:41:21] [#ezpublish] <buz> just very few things ;)
+[05-05-2006 03:41:25] [#ezpublish] <buz> oh gotta run
+[05-05-2006 03:41:27] [#ezpublish] <buz> bbl
+[05-05-2006 03:50:19] [#ezpublish] <B-KiLLer`> no, he just does not like what YOU make :)
+[05-05-2006 03:52:43] [#ezpublish] <DiGiTa|_> why ?
+[05-05-2006 03:52:47] [#ezpublish] <DiGiTa|_> i'm not gay :)
+[05-05-2006 03:54:02] [#ezpublish] <B-KiLLer`> huhu
+[05-05-2006 04:21:55] [#ezpublish] <katana`> B-KiLLer`: they still send huge emails out ? :)
+[05-05-2006 04:25:21] [#ezpublish] <B-KiLLer`> yup
+[05-05-2006 04:25:31] [#ezpublish] <B-KiLLer`> sometimes for business... but most of the time for fun :D
+[05-05-2006 04:25:58] [#ezpublish] <B-KiLLer`> if you (by accident...) send a small video on the internal mailing list
+[05-05-2006 04:26:17] [#ezpublish] <B-KiLLer`> you can be sure that 5 minutes later, access to the net is slow as hell :)
+[05-05-2006 04:58:25] [#ezpublish] <buz> not true. i liked some designs by DiGiTa|_ very much
+[05-05-2006 04:58:36] [#ezpublish] <DiGiTa|_> ;)
+[05-05-2006 04:58:39] [#ezpublish] <buz> just not the current one
+[05-05-2006 04:58:49] [#ezpublish] <buz> (and i freely admit that i totally suck as designer)
+[05-05-2006 04:58:49] [#ezpublish] <DiGiTa|_> yes i will change the background
+[05-05-2006 04:59:01] [#ezpublish] <buz> i think there's too many different boxes
+[05-05-2006 04:59:46] [#ezpublish] <DiGiTa|_> well it"s a site that talk about construction
+[05-05-2006 04:59:57] [#ezpublish] <DiGiTa|_> so the different parts are like stone
+[05-05-2006 05:00:12] [#ezpublish] <buz> aaaah
+[05-05-2006 05:00:20] [#ezpublish] <buz> that's too high for me to figure out ;)
+[05-05-2006 05:00:26] [#ezpublish] <DiGiTa|_> :p
+[05-05-2006 05:01:19] [#ezpublish] <DiGiTa|_> it's my first site that doesn't use any ezp template
+[05-05-2006 05:01:22] [#ezpublish] <DiGiTa|_> :)
+[05-05-2006 05:08:19] [#ezpublish] <DiGiTa|_> without css : http://www.renovation-luberon.com/chantiers_realises/(css)/false
+[05-05-2006 05:20:10] [#ezpublish] <Tidemann> DiGiTa|_: hooked on tableless design? ;)
+[05-05-2006 05:21:06] [#ezpublish] <DiGiTa|_> i only do tabeless design
+[05-05-2006 05:21:12] [#ezpublish] <DiGiTa|_> table is for tabular data
+[05-05-2006 05:21:17] [#ezpublish] <DiGiTa|_> not for layout
+[05-05-2006 05:21:32] [#ezpublish] <Tidemann> uhm.. what do you mean by not using ezp template exactly..
+[05-05-2006 05:21:34] [#ezpublish] <Tidemann> <-- confused
+[05-05-2006 05:22:00] [#ezpublish] <DiGiTa|_> ezp templates are sometimes too complicated
+[05-05-2006 05:22:10] [#ezpublish] <DiGiTa|_> too many layers
+[05-05-2006 05:24:27] [#ezpublish] <Tidemann> uhm.. so by "doesn't use any ezp template" you mean "doesn't use {include uri"design:sometpl.tpl"}"?
+[05-05-2006 05:25:09] [#ezpublish] <Tidemann> or do you mean template overrides as well
+[05-05-2006 05:25:26] [#ezpublish] <DiGiTa|_> well i mean basic templates
+[05-05-2006 05:25:32] [#ezpublish] <Tidemann> ie doing everything in pagelayout...
+[05-05-2006 05:25:45] [#ezpublish] <DiGiTa|_> like pagelayout
+[05-05-2006 05:25:46] [#ezpublish] <DiGiTa|_> :)
+[05-05-2006 05:26:13] [#ezpublish] <DiGiTa|_> pagelayout.tpl or header.tpl or footer.tpl or ezimage.tpl
+[05-05-2006 05:26:25] [#ezpublish] <Tidemann> ah..
+[05-05-2006 05:26:53] [#ezpublish] <Tidemann> blank pagelayout and all html/smarty in the override templates?
+[05-05-2006 05:27:38] [#ezpublish] <DiGiTa|_> no i don't do a blank pagelayout
+[05-05-2006 05:27:48] [#ezpublish] <DiGiTa|_> smarty ?
+[05-05-2006 05:27:49] [#ezpublish] <DiGiTa|_> lol
+[05-05-2006 05:28:16] [#ezpublish] <Tidemann> well .. "smarty" then
+[05-05-2006 05:28:34] [#ezpublish] <Tidemann> -ish
+[05-05-2006 05:31:00] -!- _rappy_ is now known as _Rappy_
+[05-05-2006 05:31:51] [#ezpublish] <Tidemann> it's pretty close to smarty
+[05-05-2006 05:32:00] [#ezpublish] <DiGiTa|_> yes a little
+[05-05-2006 05:42:22] -!- awormus [n=aaron@p54B12FD0.dip0.t-ipconnect.de] has joined #ezpublish
+[05-05-2006 05:47:30] [#ezpublish] <buz> probably much faster doing it this way?
+[05-05-2006 05:47:38] [#ezpublish] <buz> (faster to run, not faster to build ;)
+[05-05-2006 05:48:08] [#ezpublish] <DiGiTa|_> yes probably
+[05-05-2006 05:48:22] [#ezpublish] <buz> did you compare page generation times?
+[05-05-2006 05:48:32] [#ezpublish] <DiGiTa|_> no :)
+[05-05-2006 05:48:40] [#ezpublish] <buz> that would be interesting
+[05-05-2006 06:08:35] [#ezpublish] <buz> how can i assign product to categories in 3.8=
+[05-05-2006 06:10:14] [#ezpublish] <buz> ah theres a new datatype for that
+[05-05-2006 06:13:46] [#ezpublish] <katana`> :)
+[05-05-2006 06:14:08] [#ezpublish] <buz> is there any doc for the new ezxml in 3.8?
+[05-05-2006 06:28:59] [#ezpublish] <Tidemann> do treemenu STILL depend on $module_result.path in 3.8?
+[05-05-2006 06:46:27] [#ezpublish] <Tidemann> omg
+[05-05-2006 06:50:42] [#ezpublish] <buz> how would it otherwise work?
+[05-05-2006 06:52:36] [#ezpublish] <Tidemann> well.. would be nice if there was an equivalent to $module_result.path in the override templates
+[05-05-2006 06:53:58] [#ezpublish] <Tidemann> as it is now I can't use treemenu in i.e. folder_full.tpl
+[05-05-2006 06:54:15] [#ezpublish] <buz> i dont think treemenu is very useful for normal things
+[05-05-2006 06:54:19] [#ezpublish] <buz> at least i never figured out how it really works
+[05-05-2006 06:54:36] [#ezpublish] <buz> the datastructure is kinda weird
+[05-05-2006 06:55:08] [#ezpublish] <Tidemann> it's quite nice in 3.7 http://ez.no/doc/ez_publish/technical_manual/3_7/reference/template_operators/miscellaneous/treemenu
+[05-05-2006 06:55:22] [#ezpublish] <Tidemann> the first example...
+[05-05-2006 06:55:53] [#ezpublish] <buz> well as long as you cant really code recursively in tempalte language its an ugly hack no matter what
+[05-05-2006 06:56:02] [#ezpublish] <buz> (you can in fact code recursively it's just very very ugly)
+[05-05-2006 06:56:41] [#ezpublish] <buz> as {include current_tpl_file} works recursively
+[05-05-2006 07:00:20] [#ezpublish] <Tidemann> is it possible to make variables in pagelayout global?
+[05-05-2006 07:00:49] [#ezpublish] <Tidemann> hmm.. no.. pagelayout is compiled after module result...
+[05-05-2006 07:08:52] -!- awormus [n=aaron@p54B12FD0.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-05-2006 07:11:55] [#ezpublish] <buz> you can store into session i think
+[05-05-2006 07:16:28] -!- elephantMan [n=elephant@190.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2006 07:17:07] [#ezpublish] <B-KiLLer`> wow...
+[05-05-2006 07:17:12] [#ezpublish] <B-KiLLer`> did someone know about this service ?
+[05-05-2006 07:17:13] [#ezpublish] <B-KiLLer`> http://answers.google.com/answers/
+[05-05-2006 07:29:48] [#ezpublish] <buz> uhm
+[05-05-2006 07:29:55] [#ezpublish] <buz> is image upload in 3.8 broken per chance?
+[05-05-2006 07:30:31] [#ezpublish] <DiGiTa|_> dunno, i'm on 3.6
+[05-05-2006 07:41:54] [#ezpublish] <buz> http://ez.no/bugs/view/8229
+[05-05-2006 07:43:38] [#ezpublish] <xbit> that's sad
+[05-05-2006 07:46:40] [#ezpublish] <katana`> i doubt that this is a realu 3.8 bug... it's too big
+[05-05-2006 07:46:48] [#ezpublish] <katana`> but it's of course possible something is broken...
+[05-05-2006 07:49:46] -!- elephantMan [n=elephant@20.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-05-2006 07:59:35] [#ezpublish] <buz> well 3.7.5 works as expected on the same machine
+[05-05-2006 08:00:52] [#ezpublish] <buz> it is also rather weird that i dont see any images in 3.8's media folder no?
+[05-05-2006 08:08:01] -!- elephantMan [n=elephant@20.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2006 08:08:23] -!- elephantMan [n=elephant@216.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-05-2006 09:07:01] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Peace and Protection 4.22"]
+[05-05-2006 09:55:41] -!- B-KiLLer` [n=me@bart.interact.lu] has quit []
+[05-05-2006 10:04:56] -!- elephantMan [n=elephant@216.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2006 10:05:25] -!- elephantMan [n=elephant@157.202.99-84.rev.gaoland.net] has joined #ezpublish
+[05-05-2006 10:38:17] -!- elephantMan [n=elephant@157.202.99-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2006 10:48:21] -!- elephantMan [n=elephant@76.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-05-2006 12:07:13] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-05-2006 12:33:18] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-05-2006 14:29:10] -!- awormus [n=aaron@p54B12FD0.dip0.t-ipconnect.de] has joined #ezpublish
+[05-05-2006 15:46:42] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[05-05-2006 16:14:34] -!- DiGiTa|_ [n=pet2poul@84.4.39.81] has quit []
+[05-05-2006 16:24:57] -!- awormus [n=aaron@p54B12FD0.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-05-2006 16:52:29] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-05-2006 17:53:34] -!- _Rappy_ is now known as _raptor_
+[05-05-2006 17:53:41] -!- _raptor_ is now known as _rappy_
+[05-05-2006 18:34:00] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 113 (No route to host)]
+[05-05-2006 20:11:02] -!- elephantMan [n=elephant@76.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2006 20:11:15] -!- elephantMan [n=elephant@32.202.99-84.rev.gaoland.net] has joined #ezpublish
+[05-05-2006 23:18:29] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[05-05-2006 23:19:31] -!- nnn0 [n=nnn0@ti541110a080-1273.bb.online.no] has joined #ezpublish

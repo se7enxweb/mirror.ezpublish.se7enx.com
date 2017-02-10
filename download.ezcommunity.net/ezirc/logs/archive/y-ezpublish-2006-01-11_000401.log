@@ -1,0 +1,1472 @@
+[01-10-2006 00:36:09] -lilo:$calvino.freenode.net- [Server Notice] Hi all. The server you're on, calvino.freenode.net, is scheduled for a restart in the near future. If you're around and can disconnect and reconnect to chat.freenode.net, it will help us to finish up sooner rather than later. Please do so if you can, and then we'll take stock and decide whether it's time.
+[01-10-2006 00:36:25] -lilo:$calvino.freenode.net- [Server Notice] Thanks in advance for any help you can provide.
+[01-10-2006 01:03:35] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-10-2006 01:11:54] -lilo:$calvino.freenode.net- [Server Notice] okay, here we go.... you'll be coming down and restarting pretty quickly
+[01-10-2006 01:12:11] Diconnected. Sleeping for 2 second(s).
+[01-10-2006 01:12:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 01:12:17] >> Connected to irc.freenode.net:6667, registering...
+[01-10-2006 01:12:27] >> Successfully registered. Nick is: ezlog
+[01-10-2006 01:12:27] -!- There are 8814 listed and 10038 unlisted users on 21 servers
+[01-10-2006 01:12:27] -!- 24 flagged staff members
+[01-10-2006 01:12:27] -!- 10357 channels formed
+[01-10-2006 01:12:27] -!- I have 95 clients and 0 servers
+[01-10-2006 01:12:27] -!- Current local  users: 95  Max: 95
+[01-10-2006 01:12:27] -!- Current global users: 18852  Max: 18852
+[01-10-2006 01:12:27] -!- Highest connection count: 95 (94 clients) (95 since server was (re)started)
+[01-10-2006 01:12:28] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[01-10-2006 01:12:28] [notice(freenode-connect)] VERSION IQ 0.9.3
+[01-10-2006 01:12:42] >> Attempting to join channels: #ezpublish
+[01-10-2006 01:12:42] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[01-10-2006 01:12:42] -!- Topic for #ezpublish: eZ publish | cms |  Welcome to #ezpublish (and Happy New Year :) Please be patient, wait and try again before leaving || eZ publish community: http://ez.no/community || News: http://ez.no/community/news/community_newsletter_23_12_2005 | http://ez.no/community/news/ez_components_beta2 | http://ez.no/community/articles/a_joyride_to_ez_components_beta2
+[01-10-2006 01:12:42] -!- Topic set by kracker [@] [Mon,  2 Jan 2006 06:12:20 -0600]
+[01-10-2006 01:12:58] -!- kris10an [n=kh@80.239.98.162] has joined #ezpublish
+[01-10-2006 01:13:09] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#privmsg
+[01-10-2006 01:17:22] -!- xbit [i=birger@129.240.78.7] has joined #ezpublish
+[01-10-2006 01:27:49] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[01-10-2006 01:28:12] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-10-2006 01:38:06] -!- tobyS [n=dotxp@7.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-10-2006 01:39:03] -!- ordnas [n=ordnas@p549D6B24.dip.t-dialin.net] has joined #ezpublish
+[01-10-2006 01:41:47] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-10-2006 01:42:48] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-10-2006 01:54:11] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Remote closed the connection]
+[01-10-2006 01:55:11] -!- tobyS [n=dotxp@popeye.ez.no] has joined #ezpublish
+[01-10-2006 02:20:54] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-10-2006 04:20:55] -!- DiGiTa|_ [n=guillaum@84.4.41.31] has joined #ezpublish
+[01-10-2006 04:21:05] [#ezpublish] <DiGiTa|_> Hi
+[01-10-2006 05:36:33] [#ezpublish] <DiGiTa|_> does someone know if there's a direct link to remove an object ?
+[01-10-2006 05:37:09] [#ezpublish] <DiGiTa|_> like : admin.mysite.com/remove/151
+[01-10-2006 06:01:41] [#ezpublish] <zrg> you cant use form?
+[01-10-2006 06:23:49] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-10-2006 06:28:23] [#ezpublish] <seasonfive> hi all :) What is the first PHP version able to run ezPublish 3.7.2 ?
+[01-10-2006 06:28:40] [#ezpublish] <seasonfive> i tried with php 4.3.10, that doesn't work :-/
+[01-10-2006 06:29:03] [#ezpublish] <zrg> 3.7.x is for php 4.4 and upwards only
+[01-10-2006 06:29:43] [#ezpublish] <zrg> latest 3.6 and 3.7 should be pretty much same, just 3.6 is for older php
+[01-10-2006 06:38:22] -!- DiGiTa|__ [n=guillaum@84.4.191.143] has joined #ezpublish
+[01-10-2006 06:43:24] [#ezpublish] <seasonfive> ok, thanks :)
+[01-10-2006 06:52:24] -!- DiGiTa|_ [n=guillaum@84.4.41.31] has quit [Read error: 110 (Connection timed out)]
+[01-10-2006 07:29:23] -!- tobiS [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-10-2006 07:30:44] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-10-2006 07:39:53] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-10-2006 07:42:52] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[01-10-2006 07:43:20] [#ezpublish] <kalooni> Hello all
+[01-10-2006 07:43:31] [#ezpublish] <zrg> allo Hell!
+[01-10-2006 07:48:21] [#ezpublish] <kalooni> does someone can tell me where I can manage the number of version I can "see"/"keep" for an object ?
+[01-10-2006 07:48:55] [#ezpublish] <zrg> it is a ini setting
+[01-10-2006 07:50:32] [#ezpublish] <zrg> it would be very good to read through all ini files in settings directory
+[01-10-2006 07:50:48] [#ezpublish] <zrg> start with site.ini and content.ini
+[01-10-2006 08:01:40] [#ezpublish] <kalooni> ok should be in content.ini ;)
+[01-10-2006 08:10:06] -!- seasonfive [n=seasonfi@AGrenoble-152-1-34-113.w82-122.abo.wanadoo.fr] has quit [Read error: 110 (Connection timed out)]
+[01-10-2006 08:11:00] -!- seasonfive [n=seasonfi@AGrenoble-152-1-28-77.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[01-10-2006 08:49:11] [#ezpublish] <DiGiTa|__> the calendar contribution seems cool
+[01-10-2006 08:49:27] [#ezpublish] <DiGiTa|__> agenda
+[01-10-2006 08:49:27] [#ezpublish] <DiGiTa|__> http://ez.no/community/contribs/applications/agenda_v_1_0_by_stefano_guandalini_modified_to_start_on_monday
+[01-10-2006 09:12:02] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-10-2006 09:12:24] [#ezpublish] <Sulfur> w00t
+[01-10-2006 09:40:06] [#ezpublish] <zrg> grrr-nax-nax-nax
+[01-10-2006 09:40:32] [#ezpublish] <Sulfur> wee! :) ol'zrg :)
+[01-10-2006 09:40:54] [#ezpublish] <zrg> coughin' and kickin'
+[01-10-2006 09:41:10] [#ezpublish] <Sulfur> coughing ?
+[01-10-2006 09:41:28] [#ezpublish] <zrg> old and weak, youknow ;)
+[01-10-2006 09:41:41] [#ezpublish] <Sulfur> how old ar eya, man ?
+[01-10-2006 09:42:12] [#ezpublish] <zrg> im ancient
+[01-10-2006 09:42:15] [#ezpublish] <zrg> 30 :)
+[01-10-2006 09:42:38] [#ezpublish] <zrg> a/s/l everyone!
+[01-10-2006 09:42:46] [#ezpublish] <zrg> *ducks*
+[01-10-2006 09:43:02] [#ezpublish] <Sulfur> 33/M/rome
+[01-10-2006 09:43:08] [#ezpublish] <Sulfur> you lose , sucker
+[01-10-2006 09:43:09] [#ezpublish] <Sulfur> ;)
+[01-10-2006 09:44:31] [#ezpublish] <zrg> yeah :)
+[01-10-2006 09:44:45] [#ezpublish] <Sulfur> back in my days ....
+[01-10-2006 09:44:51] [#ezpublish] <Sulfur> .//rant
+[01-10-2006 09:45:23] [#ezpublish] <Sulfur> back in my days, we used to hand-craft our CMS, ya know ....
+[01-10-2006 09:46:57] [#ezpublish] <Sulfur> and we wrote files using cat > blah blah ...
+[01-10-2006 09:47:50] [#ezpublish] <zrg> oh yes, putting cats through pipes
+[01-10-2006 09:49:13] [#ezpublish] <Sulfur> *sigh* those were the times .....
+[01-10-2006 09:49:39] [#ezpublish] <Sulfur> ever told ya when our main web server was a commodore 64 ?
+[01-10-2006 09:54:21] [#ezpublish] <DiGiTa|__> hey it's not hard to customize the admin :)
+[01-10-2006 09:54:47] [#ezpublish] * DiGiTa|__ happy
+[01-10-2006 09:57:39] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit [Read error: 110 (Connection timed out)]
+[01-10-2006 10:00:38] -!- tobyS [n=dotxp@popeye.ez.no] has quit ["Plant your channel to pearadise.net!"]
+[01-10-2006 10:17:55] [#ezpublish] <Sulfur> we would like to add some functionality like technorati "add a tag by clicking"
+[01-10-2006 10:18:09] [#ezpublish] <Sulfur> I'll tackle that later this month
+[01-10-2006 10:19:58] [#ezpublish] <DiGiTa|__> http://en-luberon.com/tmp/
+[01-10-2006 10:20:06] [#ezpublish] <DiGiTa|__> ouuuups
+[01-10-2006 10:20:09] [#ezpublish] <DiGiTa|__> wrong chan
+[01-10-2006 10:20:33] [#ezpublish] <Sulfur> was that for #Ilikehairyllamamamas , DiGiTa|__ ? :p
+[01-10-2006 10:20:50] [#ezpublish] <DiGiTa|__> yeah :p
+[01-10-2006 10:22:43] [#ezpublish] <zrg> bring out the goat!
+[01-10-2006 10:23:02] [#ezpublish] <DiGiTa|__> hhuhu
+[01-10-2006 10:24:54] [#ezpublish] <DiGiTa|__> goat mind
+[01-10-2006 11:33:28] -!- tobyS [n=dotxp@7.80-202-59.nextgentel.com] has joined #ezpublish
+[01-10-2006 12:23:58] -lilo:$*- [Global Notice] Hi all. For reference, MacWorld coverage: #apple-x in English, #macbidouille en Francais
+[01-10-2006 12:24:44] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-10-2006 12:26:35] -!- ordna1 [n=ordnas@p549D6572.dip.t-dialin.net] has joined #ezpublish
+[01-10-2006 12:35:01] -!- tobiS [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-10-2006 12:40:52] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit ["sleeping time - mahar shiur boker"]
+[01-10-2006 12:43:27] -!- ordnas [n=ordnas@p549D6B24.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-10-2006 12:49:27] -lilo:$*- [Global Notice] At the same time Macworld Expo started, FSF announced the addition of Gnash, a flash player and firefox plugin ( http://tinyurl.com/a6mev ).... it's one of the FSF's priority projects ( http://www.fsf.org/campaigns/priority.html ) and a real FOSS milestone
+[01-10-2006 12:53:07] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-10-2006 12:54:27] -!- ordna1 [n=ordnas@p549D6572.dip.t-dialin.net] has left #ezpublish []
+[01-10-2006 12:56:12] -lilo:$*- [Global Notice] (sorry, I think we nailed that news site....here's the release on the Gnash flash player and firefox plugin: http://www.fsf.org/news/gnash.html )
+[01-10-2006 12:56:22] -lilo:$*- [Global Notice] Thank you for using freenode, and have a great evening!
+[01-10-2006 13:29:11] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Isn't Gaim a cool program ? :-)"]
+[01-10-2006 13:51:56] -!- ordnas [n=ordnas@p549D6572.dip.t-dialin.net] has joined #ezpublish
+[01-10-2006 14:31:04] -!- DiGiTa|__ [n=guillaum@84.4.191.143] has quit []
+[01-10-2006 14:33:56] -!- ordnas [n=ordnas@p549D6572.dip.t-dialin.net] has left #ezpublish []
+[01-10-2006 15:07:27] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-10-2006 15:19:47] Disconnecting due to lack of a lag response (0.09840500 1136927927 != 0.09255900 1136927957)
+[01-10-2006 15:19:47] Diconnected. Sleeping for 2 second(s).
+[01-10-2006 15:19:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:20:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:20:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:20:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:21:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:21:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:22:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:22:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:22:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:23:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:24:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:24:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:24:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:25:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:25:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:25:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:26:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:26:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:26:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:27:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:27:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:27:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:28:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:28:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:28:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:29:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:29:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:29:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:30:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:30:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:30:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:31:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:31:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:31:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:32:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:32:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:33:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:33:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:33:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:34:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:35:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:35:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:35:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:36:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:36:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:36:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:37:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:37:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:37:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:38:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:38:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:38:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:39:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:39:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:39:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:40:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:40:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:40:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:41:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:41:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:41:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:42:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:42:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:42:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:43:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:43:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:44:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:44:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:44:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:45:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:46:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:46:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:46:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:47:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:47:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:47:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:48:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:48:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:48:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:49:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:49:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:49:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:50:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:50:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:50:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:51:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:51:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:51:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:52:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:52:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:52:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:53:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:53:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:53:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:54:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:54:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:55:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:55:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:55:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:56:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:57:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:57:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:57:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:58:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:58:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:58:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 15:59:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 15:59:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 15:59:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:00:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:00:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:00:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:01:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:01:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:01:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:02:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:02:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:02:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:03:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:03:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:03:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:04:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:04:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:04:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:05:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:05:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:06:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:06:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:06:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:07:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:08:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:08:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:08:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:09:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:09:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:09:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:10:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:10:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:10:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:11:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:11:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:11:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:12:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:12:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:12:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:13:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:13:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:13:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:14:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:14:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:14:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:15:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:15:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:15:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:16:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:16:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:17:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:17:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:17:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:18:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:19:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:19:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:19:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:20:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:20:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:20:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:21:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:21:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:21:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:22:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:22:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:22:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:23:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:23:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:23:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:24:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:24:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:24:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:25:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:25:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:25:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:26:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:26:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:26:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:27:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:27:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:28:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:28:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:28:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:29:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:30:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:30:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:30:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:31:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:31:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:31:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:32:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:32:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:32:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:33:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:33:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:33:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:34:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:34:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:34:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:35:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:35:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:35:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:36:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:36:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:36:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:37:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:37:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:37:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:38:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:38:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:39:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:39:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:39:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:40:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:41:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:41:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:41:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:42:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:42:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:42:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:43:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:43:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:43:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:44:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:44:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:44:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:45:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:45:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:45:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:46:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:46:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:46:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:47:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:47:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:47:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:48:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:48:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:48:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:49:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:49:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:50:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:50:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:50:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:51:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:52:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:52:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:52:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:53:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:53:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:53:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:54:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:54:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:54:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:55:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:55:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:55:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:56:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:56:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:56:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:57:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:57:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:57:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:58:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:58:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:58:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 16:59:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 16:59:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 16:59:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:00:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:00:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:01:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:01:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:01:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:02:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:03:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:03:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:03:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:04:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:04:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:04:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:05:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:05:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:05:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:06:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:06:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:06:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:07:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:07:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:07:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:08:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:08:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:08:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:09:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:09:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:09:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:10:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:10:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:10:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:11:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:11:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:12:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:12:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:12:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:13:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:14:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:14:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:14:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:15:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:15:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:15:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:16:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:16:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:16:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:17:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:17:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:17:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:18:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:18:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:18:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:19:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:19:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:19:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:20:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:20:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:20:49] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:21:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:21:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:21:55] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:22:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:22:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:23:01] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:23:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:23:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:24:07] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:25:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:25:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:25:13] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:26:09] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:26:09] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:26:19] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:27:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:27:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:27:25] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:28:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:28:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:28:31] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:29:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:29:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:29:37] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:30:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:30:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:30:43] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:31:39] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:31:39] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:31:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:32:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:32:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:32:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:33:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:33:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:34:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:34:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:34:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:35:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:36:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:36:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:36:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:37:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:37:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:37:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:38:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:38:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:38:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:39:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:39:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:39:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:40:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:40:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:40:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:41:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:41:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:41:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:42:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:42:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:42:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:43:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:43:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:43:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:44:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:44:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:45:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:45:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:45:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:46:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:47:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:47:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:47:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:48:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:48:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:48:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:49:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:49:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:49:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:50:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:50:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:50:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:51:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:51:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:51:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:52:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:52:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:52:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:53:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:53:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:53:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:54:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:54:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:54:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:55:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:55:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:56:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:56:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:56:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:57:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:58:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:58:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:58:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 17:59:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 17:59:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 17:59:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:00:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:00:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:00:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:01:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:01:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:01:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:02:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:02:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:02:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:03:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:03:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:03:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:04:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:04:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:04:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:05:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:05:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:05:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:06:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:06:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:07:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:07:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:07:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:08:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:09:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:09:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:09:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:10:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:10:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:10:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:11:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:11:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:11:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:12:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:12:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:12:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:13:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:13:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:13:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:14:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:14:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:14:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:15:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:15:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:15:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:16:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:16:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:16:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:17:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:17:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:18:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:18:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:18:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:19:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:20:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:20:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:20:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:21:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:21:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:21:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:22:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:22:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:22:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:23:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:23:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:23:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:24:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:24:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:24:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:25:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:25:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:25:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:26:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:26:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:26:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:27:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:27:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:27:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:28:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:28:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:29:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:29:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:29:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:30:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:31:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:31:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:31:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:32:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:32:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:32:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:33:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:33:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:33:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:34:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:34:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:34:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:35:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:35:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:35:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:36:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:36:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:36:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:37:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:37:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:37:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:38:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:38:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:38:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:39:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:39:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:40:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:40:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:40:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:41:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:42:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:42:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:42:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:43:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:43:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:43:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:44:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:44:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:44:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:45:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:45:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:45:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:46:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:46:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:46:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:47:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:47:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:47:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:48:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:48:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:48:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:49:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:49:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:49:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:50:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:50:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:51:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:51:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:51:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:52:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:53:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:53:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:53:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:54:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:54:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:54:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:55:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:55:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:55:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:56:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:56:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:56:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:57:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:57:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:57:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:58:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:58:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:58:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 18:59:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 18:59:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 18:59:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:00:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:00:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:00:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:01:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:01:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:02:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:02:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:02:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:03:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:04:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:04:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:04:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:05:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:05:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:05:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:06:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:06:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:06:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:07:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:07:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:07:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:08:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:08:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:08:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:09:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:09:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:09:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:10:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:10:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:10:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:11:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:11:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:11:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:12:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:12:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:13:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:13:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:13:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:14:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:15:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:15:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:15:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:16:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:16:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:16:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:17:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:17:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:17:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:18:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:18:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:18:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:19:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:19:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:19:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:20:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:20:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:20:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:21:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:21:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:21:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:22:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:22:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:22:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:23:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:23:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:24:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:24:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:24:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:25:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:26:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:26:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:26:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:27:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:27:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:27:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:28:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:28:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:28:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:29:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:29:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:29:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:30:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:30:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:30:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:31:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:31:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:31:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:32:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:32:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:32:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:33:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:33:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:33:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:34:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:34:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:35:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:35:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:35:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:36:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:37:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:37:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:37:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:38:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:38:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:38:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:39:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:39:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:39:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:40:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:40:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:40:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:41:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:41:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:41:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:42:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:42:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:42:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:43:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:43:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:43:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:44:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:44:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:44:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:45:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:45:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:46:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:46:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:46:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:47:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:48:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:48:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:48:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:49:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:49:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:49:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:50:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:50:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:50:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:51:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:51:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:51:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:52:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:52:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:52:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:53:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:53:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:53:44] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:54:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:54:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:54:50] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:55:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:55:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:55:56] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:56:52] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:56:52] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:57:02] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:57:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:57:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:58:08] >> Connecting to irc.freenode.net:6667
+[01-10-2006 19:59:04] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 19:59:04] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 19:59:14] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:00:10] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:00:10] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:00:20] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:01:16] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:01:16] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:01:26] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:02:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:02:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:02:32] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:03:28] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:03:28] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:03:38] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:04:34] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:04:34] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:04:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:05:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:05:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:05:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:06:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:06:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:06:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:07:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:07:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:08:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:08:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:08:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:09:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:10:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:10:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:10:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:11:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:11:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:11:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:12:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:12:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:12:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:13:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:13:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:13:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:14:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:14:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:14:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:15:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:15:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:15:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:16:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:16:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:16:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:17:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:17:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:17:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:18:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:18:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:19:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:19:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:19:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:20:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:21:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:21:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:21:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:22:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:22:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:22:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:23:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:23:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:23:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:24:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:24:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:24:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:25:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:25:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:25:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:26:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:26:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:26:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:27:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:27:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:27:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:28:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:28:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:28:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:29:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:29:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:30:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:30:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:30:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:31:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:32:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:32:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:32:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:33:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:33:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:33:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:34:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:34:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:34:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:35:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:35:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:35:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:36:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:36:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:36:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:37:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:37:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:37:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:38:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:38:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:38:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:39:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:39:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:39:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:40:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:40:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:41:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:41:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:41:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:42:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:43:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:43:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:43:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:44:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:44:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:44:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:45:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:45:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:45:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:46:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:46:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:46:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:47:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:47:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:47:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:48:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:48:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:48:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:49:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:49:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:49:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:50:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:50:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:50:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:51:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:51:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:52:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:52:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:52:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:53:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:54:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:54:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:54:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:55:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:55:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:55:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:56:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:56:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:56:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:57:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:57:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:57:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:58:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:58:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:58:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 20:59:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 20:59:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 20:59:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:00:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:00:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:00:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:01:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:01:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:01:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:02:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:02:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:03:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:03:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:03:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:04:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:05:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:05:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:05:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:06:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:06:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:06:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:07:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:07:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:07:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:08:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:08:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:08:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:09:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:09:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:09:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:10:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:10:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:10:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:11:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:11:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:11:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:12:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:12:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:12:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:13:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:13:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:14:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:14:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:14:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:15:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:16:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:16:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:16:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:17:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:17:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:17:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:18:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:18:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:18:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:19:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:19:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:19:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:20:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:20:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:20:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:21:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:21:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:21:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:22:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:22:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:22:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:23:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:23:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:23:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:24:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:24:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:25:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:25:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:25:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:26:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:27:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:27:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:27:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:28:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:28:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:28:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:29:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:29:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:29:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:30:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:30:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:30:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:31:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:31:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:31:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:32:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:32:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:32:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:33:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:33:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:33:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:34:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:34:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:34:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:35:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:35:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:36:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:36:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:36:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:37:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:38:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:38:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:38:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:39:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:39:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:39:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:40:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:40:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:40:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:41:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:41:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:41:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:42:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:42:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:42:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:43:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:43:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:43:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:44:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:44:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:44:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:45:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:45:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:45:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:46:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:46:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:47:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:47:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:47:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:48:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:49:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:49:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:49:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:50:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:50:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:50:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:51:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:51:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:51:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:52:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:52:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:52:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:53:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:53:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:53:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:54:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:54:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:54:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:55:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:55:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:55:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:56:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:56:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:56:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:57:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:57:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:58:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 21:58:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 21:58:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 21:59:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:00:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:00:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:00:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:01:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:01:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:01:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:02:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:02:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:02:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:03:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:03:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:03:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:04:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:04:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:04:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:05:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:05:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:05:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:06:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:06:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:06:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:07:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:07:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:07:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:08:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:08:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:09:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:09:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:09:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:10:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:11:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:11:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:11:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:12:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:12:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:12:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:13:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:13:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:13:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:14:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:14:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:14:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:15:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:15:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:15:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:16:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:16:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:16:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:17:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:17:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:17:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:18:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:18:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:18:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:19:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:19:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:20:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:20:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:20:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:21:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:22:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:22:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:22:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:23:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:23:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:23:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:24:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:24:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:24:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:25:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:25:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:25:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:26:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:26:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:26:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:27:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:27:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:27:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:28:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:28:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:28:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:29:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:29:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:29:57] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:30:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:30:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:31:03] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:31:59] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:31:59] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:32:09] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:33:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:33:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:33:15] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:34:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:34:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:34:21] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:35:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:35:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:35:27] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:36:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:36:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:36:33] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:37:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:37:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:37:39] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:38:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:38:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:38:45] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:39:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:39:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:39:51] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:40:48] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:40:48] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:40:58] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:41:54] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:41:54] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:42:04] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:43:00] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:43:00] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:43:10] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:44:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:44:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:44:16] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:45:12] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:45:12] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:45:22] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:46:18] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:46:18] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:46:28] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:47:24] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:47:24] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:47:34] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:48:30] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:48:30] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:48:40] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:49:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:49:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:49:46] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:50:42] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:50:42] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:50:52] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:51:48] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:51:48] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:51:58] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:52:54] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:52:54] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:53:04] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:54:00] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:54:00] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:54:10] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:55:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:55:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:55:16] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:56:12] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:56:12] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:56:22] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:57:18] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:57:18] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:57:28] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:58:24] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:58:24] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:58:34] >> Connecting to irc.freenode.net:6667
+[01-10-2006 22:59:30] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 22:59:30] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 22:59:40] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:00:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:00:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:00:46] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:01:42] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:01:42] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:01:52] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:02:48] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:02:48] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:02:58] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:03:54] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:03:54] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:04:04] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:05:00] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:05:00] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:05:10] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:06:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:06:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:06:16] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:07:12] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:07:12] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:07:22] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:08:18] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:08:18] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:08:28] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:09:24] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:09:24] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:09:34] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:10:30] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:10:30] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:10:40] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:11:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:11:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:11:46] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:12:42] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:12:42] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:12:52] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:13:48] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:13:48] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:13:58] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:14:54] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:14:54] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:15:04] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:16:00] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:16:00] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:16:10] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:17:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:17:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:17:16] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:18:12] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:18:12] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:18:22] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:19:18] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:19:18] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:19:28] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:20:24] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:20:24] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:20:34] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:21:30] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:21:30] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:21:40] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:22:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:22:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:22:46] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:23:42] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:23:42] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:23:52] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:24:48] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:24:48] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:24:58] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:25:54] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:25:54] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:26:04] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:27:00] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:27:00] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:27:10] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:28:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:28:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:28:16] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:29:12] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[01-10-2006 23:29:12] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[01-10-2006 23:29:22] >> Connecting to irc.freenode.net:6667
+[01-10-2006 23:29:28] >> Connected to irc.freenode.net:6667, registering...
+[01-10-2006 23:29:29] >> Attempting to join channels: #ezpublish
+[01-10-2006 23:29:29] >> Successfully registered. Nick is: ezlog
+[01-10-2006 23:29:29] -!- There are 10736 listed and 12309 unlisted users on 23 servers
+[01-10-2006 23:29:29] -!- 36 flagged staff members
+[01-10-2006 23:29:29] -!- 10774 channels formed
+[01-10-2006 23:29:29] -!- I have 1781 clients and 0 servers
+[01-10-2006 23:29:29] -!- Current local  users: 1781  Max: 2427
+[01-10-2006 23:29:29] -!- Current global users: 23045  Max: 28609
+[01-10-2006 23:29:29] -!- Highest connection count: 2428 (2427 clients) (29156 since server was (re)started)
+[01-10-2006 23:29:29] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[01-10-2006 23:29:29] -!- Topic for #ezpublish: eZ publish | cms |  Welcome to #ezpublish (and Happy New Year :) Please be patient, wait and try again before leaving || eZ publish community: http://ez.no/community || News: http://ez.no/community/news/community_newsletter_23_12_2005 | http://ez.no/community/news/ez_components_beta2 | http://ez.no/community/articles/a_joyride_to_ez_components_beta2
+[01-10-2006 23:29:29] -!- Topic set by kracker [@] [Mon,  2 Jan 2006 06:12:20 -0600]
+[01-10-2006 23:29:29] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[01-10-2006 23:29:29] [notice(freenode-connect)] VERSION IQ 0.9.3
+[01-10-2006 23:30:36] -!- tobyS_ [n=dotxp@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-10-2006 23:31:31] -!- tobyS [n=dotxp@7.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[01-10-2006 23:40:23] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []

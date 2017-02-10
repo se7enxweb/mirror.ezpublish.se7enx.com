@@ -1,0 +1,49 @@
+/* Menu Style Sheet */
+
+.Menu
+{
+	background-color: white;
+	font-family: Verdana;
+	font-size: 13px;
+}
+
+MenuItem,MenuItemSelected,MenuItemActive,MenuItemHover A:link,A:active,A:hover,A:visited
+{
+	text-decoration : none;
+}
+
+.MenuItem
+{
+	cursor: pointer;
+	cursor: hand;
+	background-color: inherit;
+}
+
+.MenuItemSelected
+{
+	cursor: pointer;
+	cursor: hand;
+	background-color: WHITE;
+	border:1px solid #999999;
+}
+
+.MenuItemActive
+{
+	cursor: pointer;
+	cursor: hand;
+	background-color: #BBBBBB;
+	border:1px solid #999999;
+}
+
+.MenuItemHover
+{
+	cursor: pointer;
+	cursor: hand;
+	background-color: #CCCCCC;
+	border:1px solid #999999;
+}
+
+.SubMenu
+{
+	display: none;
+}

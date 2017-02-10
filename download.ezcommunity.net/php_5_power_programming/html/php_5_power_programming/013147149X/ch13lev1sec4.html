@@ -1,0 +1,104 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 13.4.&nbsp; Compatibility Mode</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch13lev1sec4"></a><h3 class="docSection1Title">13.4. Compatibility Mode</h3>
+<p class="docText">In an earlier section, one suggested solution was to turn on the compatibility mode. This mode actually changes more behavior than just the pass-by-reference behavior. It also affects other Zend Engine 2 (PHP 5) related changes. Turning on Zend Engine 1 (PHP 4) compatibility mode changes the following:<a name="ch13index16"></a><a name="ch13index17"></a><a name="ch13index18"></a></p>
+<ul><li><p class="docList">Passing objects to a function results in a copy of the object (discussed in the previous section).</P></li><LI><p class="docList">Casting an object to a Boolean, integer, or double results in 0 if the object has no properties.</p></LI><li><p class="docList">Comparing objects results in true when the properties of the two objects have the same content.</p></li></ul>
+<a name="ch13lev2sec1"></a><H4 class="docSection2Title">13.4.1. Casting Objects</H4>
+<p class="docText">In PHP 4, <tt>(int) $object</tt> returns <tt>1</tt> if the object has properties or <tt>0</tt> if the object has no properties. This is deprecated in PHP 5, where <tt>(int) $object</tt> always results in a <tt>1</tt>. The following example shows this behavior:<a name="ch13index19"></a><a name="ch13index20"></a><a name="ch13index21"></a></p>
+<pre>
+&lt;?php
+    /* Turn error reporting off */
+    error_reporting(0);
+
+
+    class bagel {
+    }
+
+
+    $b = new bagel();
+
+
+    /* Cast to an integer */
+    if ((int) $b) {
+        echo "Groovy baby!\n";
+    }
+
+
+    /* Turn on compatibility mode and cast to an integer */
+    ini_set('zend.ze1_compatibility_mode', 1);
+    if ((int) $b) {
+        echo "Yeah baby!\n";
+    }
+?&gt;
+</pre><br>
+<p class="docText">In PHP 4, this example results in no output. However, in PHP 5 the output is<a name="ch13index22"></a><a name="ch13index23"></a><a name="ch13index24"></a></p>
+<pre>
+Groovy baby!
+</pre><br>
+<a name="ch13lev2sec2"></a><H4 class="docSection2Title">13.4.2. Comparing Objects</h4>
+<p class="docText">The results when you compare objects with the <tt>== operator</tt> changed in PHP 5. In PHP 4, if all the objects' properties are the same, comparing objects returns <tt>true</tt>. In PHP 5, the equality operator only returns <tt>TRue</tt> if the objects are really the same, which means that they have the same object handle. Compatibility mode turns on the old PHP 4 way of comparing objects:<a name="ch13index25"></a><a name="ch13index26"></a><a name="ch13index27"></a></p>
+<pre>
+&lt;?php
+    class bagel {
+        var $topping;
+
+
+        function bagel($topping)
+        {
+            $this-&gt;topping = $topping;
+        }
+    }
+
+
+    class icecream {
+        var $topping;
+
+
+        function icecream($topping)
+        {
+            $this-&gt;topping = $topping;
+        }
+    }
+
+    /* Instantiate the bagel and ice cream */
+    $bagel = new bagel('chocolate');
+    $icecream = new icecream('chocolate');
+
+    /* In Zend engine 2 this comparison will return false */
+
+    if ($bagel == $icecream) {
+        echo "A bagel is the same as icecream! (1)\n";
+    }
+
+
+    /* If we turn on compatibility mode, it will return true */
+    ini_set('zend.ze1_compatibility_mode', 1);
+    if ($bagel == $icecream) {
+        echo "A bagel is the same as icecream! (2)\n";
+    }
+?&gt;
+</pre><BR>
+<p class="docText">This example shows that the compatibility mode makes a bagel the same as ice cream, as long as the topping is the same:<a name="ch13index28"></a><a name="ch13index29"></a><a name="ch13index30"></a></p>
+<pre>
+A bagel is the same as icecream! (2)
+</pre><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

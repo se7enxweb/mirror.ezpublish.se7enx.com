@@ -1,0 +1,420 @@
+[05-02-2005 00:18:09] [#ezpublish] <agentbob> anyone around?
+[05-02-2005 00:24:32] [#ezpublish] <SEAwolfx> yeah
+[05-02-2005 01:05:10] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 01:09:29] [#ezpublish] <agentbob> kracka!
+[05-02-2005 01:09:33] [#ezpublish] <agentbob> it's 2am, wtf you doin up
+[05-02-2005 01:12:51] [#ezpublish] <agentbob> question though... do you know a way of circumventing ezpub access restrictions?
+[05-02-2005 01:13:13] [#ezpublish] <agentbob> ie i want to show anon users a page that would only be viewable if they were logged in.. if an extra variable is passed in query string or whatever
+[05-02-2005 01:25:46] -!- ordna1 [~ordnas@p549DDFB4.dip.t-dialin.net] has joined #ezpublish
+[05-02-2005 01:26:05] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2005 01:34:32] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-02-2005 01:37:48] -!- jota [~jota@fanzine.igalia.com] has joined #ezpublish
+[05-02-2005 02:14:14] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-02-2005 02:19:46] [#ezpublish] <SEAwolfx> can you confirm this bug? http://ez.no/community/bugs/fetch_content_list_no_data_fetching_with_an_array_of_node_ids_for_parent_node_id
+[05-02-2005 02:40:51] -!- mode/#ezpublish [+o fh] by ChanServ
+[05-02-2005 02:41:40] [#ezpublish] <Bedlore> anyone know much about smart cache control
+[05-02-2005 02:42:10] [#ezpublish] <Bedlore> I need to be able to clear a grandparent folder when an article is published
+[05-02-2005 02:42:31] [#ezpublish] <Bedlore> however the article is not technically related to the grandparent
+[05-02-2005 02:47:15] [#ezpublish] <Bedlore> The problem seems to be SmartCache can only access parents and related objects, my grandparent folder is neither]
+[05-02-2005 02:48:21] [#ezpublish] <Bedlore> I have embeded a folder into another folder in order to produce a list of "5 latest articles"
+[05-02-2005 02:48:40] [#ezpublish] <Bedlore> and embedding does not constitute related it seems?
+[05-02-2005 02:49:19] [#ezpublish] <Bedlore> ie. the embeded folder is related of course, but not the children of the embeded folder which is what I display and thus need to clear\
+[05-02-2005 02:49:29] [#ezpublish] <Bedlore> any ideas one
+[05-02-2005 02:49:34] [#ezpublish] <Bedlore> fh?
+[05-02-2005 02:50:10] [#ezpublish] <Bedlore> how does ez.no build their frontpage, is it all template fetches rather than embeded nodes?
+[05-02-2005 02:58:23] -!- ordna1 [~ordnas@p549DDFB4.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2005 03:05:20] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 03:09:22] -!- ordna1 [~ordnas@p549DDFB4.dip.t-dialin.net] has joined #ezpublish
+[05-02-2005 03:18:06] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-02-2005 03:18:31] -!- Bedlore [~me@dsl-203-113-238-81.SA.netspace.net.au] has quit []
+[05-02-2005 03:22:37] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-02-2005 03:22:42] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-02-2005 03:23:07] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-02-2005 03:23:19] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-02-2005 03:25:00] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-02-2005 03:25:08] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-02-2005 03:26:42] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-02-2005 03:27:50] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 03:27:56] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-02-2005 03:31:16] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-02-2005 03:31:23] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-02-2005 03:31:29] [#ezpublish] <danmiru> morning everyone
+[05-02-2005 03:31:36] [#ezpublish] <kracker> morning
+[05-02-2005 03:32:14] [#ezpublish] <kracker> what's up on your side of the net
+[05-02-2005 03:32:21] [#ezpublish] <danmiru> how can i count invisible items using fetch('content', 'list_count',
+[05-02-2005 03:32:44] [#ezpublish] <danmiru> my side? someting wrong?
+[05-02-2005 03:32:52] [#ezpublish] <kracker> hmmm, interesting ...
+[05-02-2005 03:33:12] [#ezpublish] <kracker> you might have to do some work on that one
+[05-02-2005 03:33:26] [#ezpublish] <danmiru> template operator?
+[05-02-2005 03:34:04] [#ezpublish] <danmiru> any other way? don't want to hack kernel
+[05-02-2005 03:34:28] [#ezpublish] <kracker> the answere would be to patch or extend to provide that support ( blinded by thoughts of paul's fetch operator work latele ) the other way might be an operator (that can be said of anything tho)
+[05-02-2005 03:35:07] [#ezpublish] <kracker> it might be possible to fetch your items and then sift through them but that's a bit performance intensive on the server side
+[05-02-2005 03:35:56] -!- ezlog1 [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-02-2005 03:36:11] -!- ezlog1 [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-02-2005 03:41:31] -!- ezlog1 [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-02-2005 03:41:32] -!- ezlog1 [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-02-2005 03:41:50] [#ezpublish] <kracker> you get me ?
+[05-02-2005 03:42:32] [#ezpublish] <danmiru> fetch and filter doesnt sound good. i'll try template operator
+[05-02-2005 03:42:34] [#ezpublish] <danmiru> thanx
+[05-02-2005 03:44:23] [#ezpublish] <kracker> i was trying to say that i don't think that fetching based on an attribute like hidden (status: show vs hide) exists todate in the kernel but that you could add it (fairly simply i think), if you are more comfortable an operator can be used as a reference for the kernel patch if someone else wants to do it later ...
+[05-02-2005 03:46:58] [#ezpublish] <kracker> .
+[05-02-2005 03:47:10] [#ezpublish] <kracker> happy hacking
+[05-02-2005 03:47:16] [#ezpublish] <danmiru> hm.. i'll take a look into kernel.
+[05-02-2005 03:47:20] [#ezpublish] <danmiru> %) thanx
+[05-02-2005 03:47:26] [#ezpublish] <kracker> np
+[05-02-2005 04:26:24] -!- ordna1 [~ordnas@p549DDFB4.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-02-2005 04:34:44] [#ezpublish] <SEAwolfx> in a template i want to traverse through a given contentobject_array to grab the node_ids from them to generate a new array of this ids.
+[05-02-2005 04:36:18] [#ezpublish] <prottelotte> can I use nice url in DefaulPage?
+[05-02-2005 04:36:31] [#ezpublish] <prottelotte> or do I have to use /view/content etc?
+[05-02-2005 04:36:31] [#ezpublish] <SEAwolfx> I posted here my try but then i have some namespace problems, look at this: http://ez.no/community/forum/setup_design/template_building_an_array_of_ids_for_further_processing
+[05-02-2005 04:36:43] [#ezpublish] <prottelotte> content/view sorry.
+[05-02-2005 04:36:45] -!- daffen [~bob@213.184.199.226] has joined #ezpublish
+[05-02-2005 04:36:55] [#ezpublish] <prottelotte> yo daffen !
+[05-02-2005 04:37:02] [#ezpublish] <daffen> Hallo!
+[05-02-2005 04:37:08] [#ezpublish] <SEAwolfx> hi
+[05-02-2005 04:38:54] [#ezpublish] <SEAwolfx> prottelotte: u could use the URL translator
+[05-02-2005 04:40:09] [#ezpublish] <prottelotte> in the ini files?
+[05-02-2005 04:40:19] -!- prottelotte is now known as Proteque
+[05-02-2005 04:40:25] [#ezpublish] <SEAwolfx> no in the admin-interface under setup
+[05-02-2005 04:40:55] [#ezpublish] <Proteque> okay. thank you :)
+[05-02-2005 04:41:08] [#ezpublish] <SEAwolfx> when this solves your problem ;)
+[05-02-2005 04:43:53] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2005 04:53:40] -!- ezlog1 [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-02-2005 04:54:04] Disconnecting due to lack of a lag response (0.02596900 1115034784 != 0.19618100 1115034814)
+[05-02-2005 04:54:04] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 04:54:14] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:54:24] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 04:54:24] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 04:54:24] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 04:54:34] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:54:34] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 04:54:34] >> Primary nickname in use, trying alternate.
+[05-02-2005 04:54:49] >> Attempting to join channels: #ezpublish
+[05-02-2005 04:54:49] (unmatched::raw451) :brown.freenode.net 451 * JOIN :Register first.
+[05-02-2005 04:55:03] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 04:55:13] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:55:13] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 04:55:34] >> Attempting to join channels: #ezpublish
+[05-02-2005 04:55:34] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 04:55:35] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 04:55:45] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:55:45] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 04:56:06] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 04:56:16] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:56:16] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 04:56:19] >> Attempting to join channels: #ezpublish
+[05-02-2005 04:56:19] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 04:56:37] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 04:56:47] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:56:57] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 04:56:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 04:56:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 04:57:07] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:57:07] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 04:57:07] >> Attempting to join channels: #ezpublish
+[05-02-2005 04:57:08] (unmatched::raw451) :brown.freenode.net 451 * JOIN :Register first.
+[05-02-2005 04:57:37] (unmatched::raw451) :brown.freenode.net 451 * PRIVMSG :Register first.
+[05-02-2005 04:57:37] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 04:57:47] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:57:47] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 04:57:52] >> Attempting to join channels: #ezpublish
+[05-02-2005 04:57:52] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 04:58:08] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 04:58:18] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:58:18] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 04:58:37] >> Attempting to join channels: #ezpublish
+[05-02-2005 04:58:37] (unmatched::raw451) :brown.freenode.net 451 * JOIN :Register first.
+[05-02-2005 04:58:39] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 04:58:49] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:58:49] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 04:59:12] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 04:59:22] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:59:32] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 04:59:32] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 04:59:32] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 04:59:42] >> Connecting to irc.freenode.net:6667
+[05-02-2005 04:59:42] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 04:59:42] >> Attempting to join channels: #ezpublish
+[05-02-2005 04:59:43] (unmatched::raw451) :brown.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:00:03] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:00:13] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:00:13] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:00:27] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:00:27] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:00:35] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:00:45] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:00:55] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:00:55] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:00:55] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:01:05] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:01:05] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:01:12] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:01:12] (unmatched::raw451) :brown.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:01:26] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:01:36] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:01:36] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:01:57] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:01:57] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:01:58] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:02:08] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:02:18] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:02:18] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:02:18] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:02:28] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:02:28] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:02:42] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:03:27] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:03:28] Disconnecting due to lack of a lag response (0.97715200 1115035348 != 0.17587700 1115035378)
+[05-02-2005 05:03:28] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:03:38] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:03:38] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:04:03] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:04:13] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:04:23] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:04:23] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:04:23] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:04:33] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:04:43] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:04:43] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:04:43] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:04:53] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:04:53] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:04:54] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:04:54] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:05:16] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:05:26] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:05:36] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:05:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:05:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:05:46] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:05:56] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:05:56] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:05:56] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:06:06] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:06:06] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:06:06] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:06:07] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:06:27] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:06:37] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:06:47] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:06:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:06:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:06:57] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:06:57] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:06:57] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:06:57] (unmatched::raw451) :sterling.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:07:27] (unmatched::raw451) :sterling.freenode.net 451 * PRIVMSG :Register first.
+[05-02-2005 05:07:27] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:07:37] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:07:37] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:07:42] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:07:42] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:08:00] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:08:10] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:08:20] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:08:20] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:08:20] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:08:30] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:08:40] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:08:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:08:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:08:50] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:08:50] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:08:51] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:08:51] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:09:11] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:09:21] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:09:31] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:09:31] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:09:31] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:09:41] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:09:51] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:09:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:09:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:10:01] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:10:01] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:10:02] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:10:02] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-02-2005 05:10:23] Diconnected. Sleeping for 10 second(s).
+[05-02-2005 05:10:33] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:10:43] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:10:43] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:10:43] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:10:53] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:11:03] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:11:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-02-2005 05:11:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-02-2005 05:11:13] >> Connecting to irc.freenode.net:6667
+[05-02-2005 05:11:13] >> Connected to irc.freenode.net:6667, registering...
+[05-02-2005 05:11:14] >> Attempting to join channels: #ezpublish
+[05-02-2005 05:11:14] >> Successfully registered. Nick is: ezlog
+[05-02-2005 05:11:14] -!- There are 9827 victims and 11305 hiding on 27 servers
+[05-02-2005 05:11:14] -!- 30 flagged staff members
+[05-02-2005 05:11:14] -!- 8345 channels formed
+[05-02-2005 05:11:14] -!- I have 3557 clients and 0 servers
+[05-02-2005 05:11:14] -!- Current local  users: 3557  Max: 4813
+[05-02-2005 05:11:14] -!- Current global users: 21132  Max: 24743
+[05-02-2005 05:11:14] -!- Highest connection count: 4814 (4813 clients) (641822 since server was (re)started)
+[05-02-2005 05:11:14] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-02-2005 05:11:14] -!- Topic for #ezpublish: http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn
+[05-02-2005 05:11:14] -!- Topic set by fh [@] [Sun, 24 Apr 2005 23:12:38 -0700]
+[05-02-2005 05:11:16] [#ezpublish] <kracker> let me get my inital doing the basics and i'll announce availablity of source code
+[05-02-2005 05:11:34] [#ezpublish] <kracker> shouldn't be too long
+[05-02-2005 05:11:45] -!- ordna1 [~ordnas@p549DDFB4.dip.t-dialin.net] has joined #ezpublish
+[05-02-2005 05:35:00] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-02-2005 05:37:12] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 06:40:34] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2005 06:48:41] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 07:01:59] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-02-2005 07:15:34] -!- SEAwolfx [~mike@DSL01.212.114.205.169.NEFkom.net] has quit [Read error: 60 (Operation timed out)]
+[05-02-2005 07:54:54] -!- ordna1 [~ordnas@p549DDFB4.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2005 08:19:49] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 08:51:26] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-02-2005 08:57:18] -!- danmiru_ [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-02-2005 08:57:18] -!- danmiru [~chatzilla@80.94.225.138] has quit [Read error: 54 (Connection reset by peer)]
+[05-02-2005 08:57:24] -!- danmiru_ is now known as danmiru
+[05-02-2005 09:17:23] -!- SEAwolfx [~mike@559a4a79b04ab1b0.node.tor] has joined #ezpublish
+[05-02-2005 09:17:29] [#ezpublish] <SEAwolfx> re
+[05-02-2005 10:13:04] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-02-2005 10:39:25] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 11:03:09] [#ezpublish] <xbit> hmm
+[05-02-2005 11:03:26] [#ezpublish] <xbit> is there ways to count how many times a node or object has been accessed in ez?
+[05-02-2005 11:03:47] [#ezpublish] <xbit> i remember at least seeing something about integrating apache-logs with it or something
+[05-02-2005 11:11:41] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-02-2005 11:14:41] -!- ordna1 [~ordnas@p549DDFB4.dip.t-dialin.net] has joined #ezpublish
+[05-02-2005 11:16:17] -!- ordna1 [~ordnas@p549DDFB4.dip.t-dialin.net] has left #ezpublish []
+[05-02-2005 11:45:39] -!- SEAwolfx_ [~mike@c7b0bce5ce7d61e4.node.tor] has joined #ezpublish
+[05-02-2005 11:45:52] [#ezpublish] <SEAwolfx_> re
+[05-02-2005 11:46:25] -!- SEAwolfx_ [~mike@c7b0bce5ce7d61e4.node.tor] has quit [Client Quit]
+[05-02-2005 11:50:03] -!- SEAwolfx_ [~mike@fe34d8860729f49f.node.tor] has joined #ezpublish
+[05-02-2005 12:14:07] [#ezpublish] <agentbob> allo?
+[05-02-2005 12:21:11] [#ezpublish] <SEAwolfx_> hi
+[05-02-2005 12:23:54] [#ezpublish] <agentbob> hey sea, how's it going
+[05-02-2005 12:36:29] [#ezpublish] <SEAwolfx_> well ... big hurray here.
+[05-02-2005 12:36:49] [#ezpublish] <SEAwolfx_> agentbob: now my virtual servers here are running fine.
+[05-02-2005 12:37:48] [#ezpublish] <SEAwolfx_> + grsec and lids are running too, puh!
+[05-02-2005 12:39:09] [#ezpublish] <SEAwolfx_> btw .. where are the eztemplate specialists?
+[05-02-2005 12:39:29] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 12:40:13] [#ezpublish] <SEAwolfx_> virtual server + grsec together is a hard thing.
+[05-02-2005 12:40:32] [#ezpublish] <SEAwolfx_> kracker: did u have a look at my template question?
+[05-02-2005 12:40:36] [#ezpublish] <agentbob> have no idea what grsec is
+[05-02-2005 12:40:46] [#ezpublish] <agentbob> whats the template question?
+[05-02-2005 12:40:59] [#ezpublish] <SEAwolfx_> agentbob: its a kernel patch for hardcore security.
+[05-02-2005 12:41:18] [#ezpublish] <SEAwolfx_> http://ez.no/community/forum/setup_design/template_building_an_array_of_ids_for_further_processing
+[05-02-2005 12:41:55] [#ezpublish] <agentbob> not overkill?
+[05-02-2005 12:42:12] [#ezpublish] <SEAwolfx_> what the template or the security patch?
+[05-02-2005 12:42:14] [#ezpublish] <SEAwolfx_> ;)
+[05-02-2005 12:42:49] [#ezpublish] <agentbob> two ways
+[05-02-2005 12:42:58] [#ezpublish] <agentbob> s/let/set/ or
+[05-02-2005 12:43:25] [#ezpublish] <SEAwolfx_> ?? .. well for hosting vservers its a good idea to take security issues into account
+[05-02-2005 12:43:46] [#ezpublish] <agentbob> {set folder_node_id_array=blah scope=root}
+[05-02-2005 12:44:12] [#ezpublish] <SEAwolfx_> i already tried the scope=global with no success.
+[05-02-2005 12:44:24] [#ezpublish] <agentbob> try scope=root
+[05-02-2005 12:44:47] [#ezpublish] <agentbob> and get rid of let
+[05-02-2005 12:45:00] [#ezpublish] <agentbob> and/or, that is
+[05-02-2005 12:46:36] [#ezpublish] <SEAwolfx_> why get rid of let? shouldnt be the variables writen with set declared by let?
+[05-02-2005 12:46:56] [#ezpublish] <agentbob> {set} will create it if it doesn't exist
+[05-02-2005 12:47:17] [#ezpublish] <SEAwolfx_> true.
+[05-02-2005 12:47:53] [#ezpublish] <SEAwolfx_> so u generally dont use {let}?!?
+[05-02-2005 12:48:27] [#ezpublish] <agentbob> was giving me too much trouble.. i just {set} everything now
+[05-02-2005 12:49:01] [#ezpublish] <SEAwolfx_> good to know. nice advice tho
+[05-02-2005 12:49:14] [#ezpublish] <agentbob> don't have to worry about properly closing the {let}s and i generally need the variable throughout the page
+[05-02-2005 12:50:18] [#ezpublish] <SEAwolfx_> yes. .. so i would have to get confused with scopes to transfer vars outside of the default namespace.
+[05-02-2005 12:51:00] [#ezpublish] <SEAwolfx_> better said: to make the accessable outside the namespace.
+[05-02-2005 12:51:05] [#ezpublish] <SEAwolfx_> +m
+[05-02-2005 12:52:36] [#ezpublish] <SEAwolfx_> dispite of this its a mysterious: B:{$folder_node_id_array|attribute(show)} is in the scope of {let}.
+[05-02-2005 12:53:05] [#ezpublish] <SEAwolfx_> -a
+[05-02-2005 12:55:37] [#ezpublish] <agentbob> yeah... but theres scope of section too...
+[05-02-2005 12:56:07] [#ezpublish] <agentbob> and its a loop.. so things get weird in a loop
+[05-02-2005 12:56:19] [#ezpublish] <agentbob> like $item:varname
+[05-02-2005 13:12:41] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2005 13:13:27] -!- SEAwolfx [~mike@559a4a79b04ab1b0.node.tor] has quit [Remote closed the connection]
+[05-02-2005 13:33:56] [#ezpublish] <SEAwolfx_> thx ... agentbob ;)
+[05-02-2005 13:39:32] [#ezpublish] <agentbob> np =)
+[05-02-2005 13:54:49] -!- SEAwolfx_ [~mike@fe34d8860729f49f.node.tor] has quit [Remote closed the connection]
+[05-02-2005 14:16:49] [#ezpublish] <agentbob> anyone here?
+[05-02-2005 14:19:55] [#ezpublish] <xbit> hi bob
+[05-02-2005 14:30:53] [#ezpublish] <agentbob> hey xbit, how's it going?
+[05-02-2005 14:31:03] [#ezpublish] <agentbob> (had a question but solved it) :D
+[05-02-2005 14:31:10] [#ezpublish] <xbit> good
+[05-02-2005 14:31:14] [#ezpublish] <xbit> alright i guess :)
+[05-02-2005 14:31:33] [#ezpublish] <xbit> just tried ezp on a pII-300 :o
+[05-02-2005 14:31:35] [#ezpublish] <agentbob> goodstuff. got any good projects going on?
+[05-02-2005 14:31:41] [#ezpublish] <agentbob> hehehe how'd that work out
+[05-02-2005 14:32:04] [#ezpublish] <xbit> well...it worked after setting max_execution_time to infintiy
+[05-02-2005 14:32:13] [#ezpublish] <agentbob> heheheh
+[05-02-2005 14:32:40] [#ezpublish] <agentbob> did it speed up after it cached stuff?
+[05-02-2005 14:33:00] [#ezpublish] <xbit> yeah, i bit
+[05-02-2005 14:33:07] [#ezpublish] <xbit> but i intended to develop on that box
+[05-02-2005 14:33:12] [#ezpublish] <xbit> and that's so not going to happen :)
+[05-02-2005 14:33:28] [#ezpublish] <xbit> thinking about finding something else than ezp, something a bit more lighter
+[05-02-2005 14:33:34] [#ezpublish] <xbit> :)
+[05-02-2005 14:41:39] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-02-2005 14:42:02] [#ezpublish] <agentbob> yeah.. ezp is nice but bloated
+[05-02-2005 14:42:17] [#ezpublish] <agentbob> tried mojavi or propel + creole?
+[05-02-2005 14:43:05] [#ezpublish] <xbit> nope, never heard of
+[05-02-2005 14:43:08] [#ezpublish] <xbit> will check out :)
+[05-02-2005 14:44:50] [#ezpublish] <agentbob> they look nice but haven't had a chance to try em yet
+[05-02-2005 14:44:56] [#ezpublish] <agentbob> they're moreso frameworks than CMS...
+[05-02-2005 14:45:11] [#ezpublish] <xbit> okay
+[05-02-2005 14:45:15] [#ezpublish] <xbit> any urls?
+[05-02-2005 14:45:37] [#ezpublish] <agentbob> thats what i like about ezpub.. they have a good framework..to some degree... only too bloated i think, the time it takes to learn ezpub classes/objects people could learn to do the stuff in php/mysql themselves
+[05-02-2005 14:45:40] [#ezpublish] <xbit> searching for "mojave" just gives me desert :o
+[05-02-2005 14:45:59] [#ezpublish] <xbit> hehe, yeah, kind of :o
+[05-02-2005 14:46:12] [#ezpublish] <agentbob> http://phpdb.org/ http://www.mojavi.org/
+[05-02-2005 14:46:45] [#ezpublish] <xbit> okay :)
+[05-02-2005 14:53:15] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 15:00:05] -!- SEAwolfx [~mike@DSL01.83.171.153.115.NEFkom.net] has joined #ezpublish
+[05-02-2005 15:00:07] [#ezpublish] <SEAwolfx> re
+[05-02-2005 15:01:18] [#ezpublish] <xbit> how come you say re everytime you join? :)
+[05-02-2005 15:02:31] [#ezpublish] <SEAwolfx> re means returned ;)
+[05-02-2005 15:02:56] [#ezpublish] <SEAwolfx> this could be a reason for to answer with wb=welcome back ;)
+[05-02-2005 15:07:11] [#ezpublish] <xbit> ah
+[05-02-2005 15:07:15] [#ezpublish] <xbit> yep
+[05-02-2005 15:07:16] [#ezpublish] <xbit> wb :)
+[05-02-2005 15:08:21] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-02-2005 15:08:27] [#ezpublish] <SEAwolfx> ;)
+[05-02-2005 15:08:40] [#ezpublish] <SEAwolfx> .oO(damn shit, no X to run)
+[05-02-2005 15:13:53] [#ezpublish] <agentbob> question.. any of you know how to paste something into stdin and have it end up in a file?
+[05-02-2005 15:14:11] [#ezpublish] <agentbob> ie something like: output.txt <
+[05-02-2005 15:14:15] [#ezpublish] <agentbob> (paste my stuff)
+[05-02-2005 15:14:17] [#ezpublish] <agentbob> ^D
+[05-02-2005 15:14:20] [#ezpublish] <agentbob> and its saved
+[05-02-2005 15:15:54] [#ezpublish] <SEAwolfx> cat out.txt >> file.txt
+[05-02-2005 15:16:32] [#ezpublish] <SEAwolfx> agentbob: is that for what you are looking for?
+[05-02-2005 15:17:00] [#ezpublish] <agentbob> no.. want to paste to console... not copy file :P
+[05-02-2005 15:17:28] [#ezpublish] <SEAwolfx> copy?
+[05-02-2005 15:17:45] [#ezpublish] <SEAwolfx> ah .. ok. now i get what u mean.
+[05-02-2005 15:18:17] [#ezpublish] <agentbob> i'm sure its a unix cmd just don't know the name of it :|
+[05-02-2005 15:18:19] [#ezpublish] <SEAwolfx> simply use a editor on the shell and use you mouse to paste the content.
+[05-02-2005 15:18:21] [#ezpublish] <SEAwolfx> ;)
+[05-02-2005 15:18:30] [#ezpublish] <SEAwolfx> you could pipe
+[05-02-2005 15:18:44] [#ezpublish] <SEAwolfx> 2&>1 or something like that.
+[05-02-2005 15:18:46] [#ezpublish] <agentbob> yeah... was sending weird chars to the editor though and didn't paste all
+[05-02-2005 15:18:58] [#ezpublish] <agentbob> got it working in old vi though :D so no worried
+[05-02-2005 15:19:02] [#ezpublish] <agentbob> no worries, rather
+[05-02-2005 15:19:29] [#ezpublish] <SEAwolfx> yeah .. i have the same problem with vi. so use emacs or nano.
+[05-02-2005 15:19:47] [#ezpublish] <SEAwolfx> better said with vim.
+[05-02-2005 15:20:19] [#ezpublish] <agentbob> have any good ways of debugging javascript?
+[05-02-2005 15:20:21] [#ezpublish] <SEAwolfx> the indention is set in a weired way when i copy more than one line into the vi-window
+[05-02-2005 15:20:46] [#ezpublish] <SEAwolfx> i always use the firefox js-console.
+[05-02-2005 15:20:49] [#ezpublish] <SEAwolfx> ;)
+[05-02-2005 15:22:35] [#ezpublish] <agentbob> thanks for the tip
+[05-02-2005 15:23:02] [#ezpublish] <SEAwolfx> np, if this helps.
+[05-02-2005 15:23:44] [#ezpublish] <agentbob> yeah.. thanks.. told me waht the problem was.. ie just wouldn't stop bitching and not say what was wrong
+[05-02-2005 15:30:49] [#ezpublish] <SEAwolfx> hehe .. unless u have installed the NET-development environment providing debugging JS.
+[05-02-2005 15:31:02] [#ezpublish] <SEAwolfx> *duck*
+[05-02-2005 15:32:04] [#ezpublish] <agentbob> yeah.. don't got
+[05-02-2005 16:53:21] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 16:55:43] -!- daffen [~bob@213.184.199.226] has quit [Read error: 110 (Connection timed out)]
+[05-02-2005 20:35:24] [#ezpublish] <agentbob> ping
+[05-02-2005 20:35:35] [#ezpublish] <agentbob> anyone had this problem: http://www.ez.no/community/forum/setup_design/logging_in_ignores_current_layout_set_uri
+[05-02-2005 22:10:08] -!- thekracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-02-2005 22:10:16] [#ezpublish] <thekracker> dink
+[05-02-2005 22:27:32] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2005 22:43:58] -!- thekracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2005 22:44:34] -!- Bedlore [~me@ppp44-106.lns1.adl1.internode.on.net] has joined #ezpublish
+[05-02-2005 23:32:33] [#ezpublish] <SEAwolfx> remorning
+[05-02-2005 23:34:45] -!- SEAwolfx [~mike@DSL01.83.171.153.115.NEFkom.net] has quit ["leaving"]
+[05-02-2005 23:40:47] -!- SEAwolfx [~mike@DSL01.83.171.153.115.NEFkom.net] has joined #ezpublish
+[05-02-2005 23:42:12] [#ezpublish] <agentbob> dink dink... dink dink dink dink dink dink... dink dink... da da dink dink

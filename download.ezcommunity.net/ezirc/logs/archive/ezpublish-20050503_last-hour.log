@@ -1,0 +1,332 @@
+[05-03-2005 00:01:17] -!- _buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-03-2005 00:07:40] -!- _buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-03-2005 00:08:27] -!- SEAwolfx_ [~mike@decea24d5243005b.node.tor] has joined #ezpublish
+[05-03-2005 00:10:28] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-03-2005 00:10:38] [#ezpublish] <kracker> bumped again
+[05-03-2005 00:11:09] [#ezpublish] <kracker> hey i'm going to go and change this topic thing , it's icky vicky old ...
+[05-03-2005 00:13:14] -!- SEAwolfx [~mike@DSL01.83.171.153.115.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2005 00:16:52] [#ezpublish] <SEAwolfx_> agentbob:
+[05-03-2005 00:35:35] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2005 01:01:52] [#ezpublish] <agentbob> seawolfx_: i agree
+[05-03-2005 01:02:10] [#ezpublish] * agentbob yawns
+[05-03-2005 01:02:12] [#ezpublish] <SEAwolfx_> hey.
+[05-03-2005 01:02:31] [#ezpublish] <agentbob> it's 2am!! are you out of your mind?!
+[05-03-2005 01:02:38] [#ezpublish] <agentbob> j/k
+[05-03-2005 01:02:38] [#ezpublish] <SEAwolfx_> ur recommendation related to my problem doesnt work.
+[05-03-2005 01:02:40] [#ezpublish] <agentbob> whats up
+[05-03-2005 01:02:46] [#ezpublish] <SEAwolfx_> lol .. 2am
+[05-03-2005 01:02:47] [#ezpublish] <agentbob> :|
+[05-03-2005 01:02:56] [#ezpublish] <SEAwolfx_> here its 8:00 AM
+[05-03-2005 01:02:59] [#ezpublish] <agentbob> whaddya mean it didn't work, it's got to work!
+[05-03-2005 01:03:10] [#ezpublish] <agentbob> in EU?
+[05-03-2005 01:03:14] [#ezpublish] <SEAwolfx_> yeah
+[05-03-2005 01:03:22] [#ezpublish] <SEAwolfx_> germany
+[05-03-2005 01:03:28] [#ezpublish] <agentbob> ah cool
+[05-03-2005 01:03:36] [#ezpublish] <SEAwolfx_> i dont know ;)
+[05-03-2005 01:03:40] [#ezpublish] <SEAwolfx_> hehe
+[05-03-2005 01:04:13] [#ezpublish] <SEAwolfx_> this only excuses my bad english.
+[05-03-2005 01:04:14] [#ezpublish] <agentbob> better than canada :P you can drive for 10 hours in germany and go through 4 countries... in canada you can drive for 5days and still be stuck here
+[05-03-2005 01:04:35] [#ezpublish] <SEAwolfx_> hehe ... the bigest country in world.
+[05-03-2005 01:04:38] [#ezpublish] <agentbob> ich bin eine berliner! mmmmmmmmm donut
+[05-03-2005 01:04:46] [#ezpublish] <agentbob> next to russia :P
+[05-03-2005 01:05:02] [#ezpublish] <SEAwolfx_> yes .. indeed. i forgot putin.
+[05-03-2005 01:05:03] [#ezpublish] <agentbob> my girlfriend speaks german... i don't sorry :|
+[05-03-2005 01:05:24] [#ezpublish] <SEAwolfx_> no problem... i only wish to speak and write proper english.
+[05-03-2005 01:06:19] [#ezpublish] <agentbob> bahh why... english is a messed up language
+[05-03-2005 01:06:24] [#ezpublish] <agentbob> so many exceptions
+[05-03-2005 01:06:33] [#ezpublish] <SEAwolfx_> why that? messed up?!?!
+[05-03-2005 01:07:09] [#ezpublish] <SEAwolfx_> its quite easy at the countrary to german.
+[05-03-2005 01:07:31] [#ezpublish] <SEAwolfx_> or chinese
+[05-03-2005 01:08:24] [#ezpublish] <SEAwolfx_> well .. back to work:
+[05-03-2005 01:08:30] [#ezpublish] <agentbob> not sure about german... haven't really tried to learn.. chinese just has a lot of letters
+[05-03-2005 01:08:30] [#ezpublish] <SEAwolfx_>  parser error @ design/sounders/override/templates/full/folder.tpl:75[8]
+[05-03-2005 01:08:31] [#ezpublish] <SEAwolfx_> Unterminated tag "let" does not match tag "section"
+[05-03-2005 01:08:43] [#ezpublish] <SEAwolfx_> at first can u interpret this error message?
+[05-03-2005 01:09:21] [#ezpublish] <agentbob> ha! your fault not mine
+[05-03-2005 01:09:34] [#ezpublish] <agentbob> you opened {let} and closed it with {/section} or vice versa
+[05-03-2005 01:09:41] [#ezpublish] <agentbob> http://www.plainlanguage.gov/examples/humor/marktwain.php
+[05-03-2005 01:09:48] [#ezpublish] <SEAwolfx_> this is only the first step to come closer to your fault ;) hehe
+[05-03-2005 01:09:55] [#ezpublish] <agentbob> hehehe
+[05-03-2005 01:09:57] [#ezpublish] <agentbob> fair enough
+[05-03-2005 01:10:25] [#ezpublish] <SEAwolfx_> i will put the code on nopaste, w8.
+[05-03-2005 01:10:58] [#ezpublish] <SEAwolfx_> http://nopaste.php-q.net/131373
+[05-03-2005 01:11:42] [#ezpublish] <SEAwolfx_> the line 10 is analog to the line 75 in error-log
+[05-03-2005 01:12:42] [#ezpublish] <SEAwolfx_> i cant see a failure.
+[05-03-2005 01:13:07] [#ezpublish] <agentbob> paste whole tpl
+[05-03-2005 01:13:10] [#ezpublish] <agentbob> how many lines
+[05-03-2005 01:13:12] [#ezpublish] <SEAwolfx_> ok
+[05-03-2005 01:16:05] [#ezpublish] <SEAwolfx_> http://nopaste.php-q.net/131374
+[05-03-2005 01:16:40] [#ezpublish] <SEAwolfx_> its only an addition to the standard full/folder.tpl
+[05-03-2005 01:18:48] [#ezpublish] <agentbob> cleared all caches?
+[05-03-2005 01:18:56] [#ezpublish] <SEAwolfx_> if you delete the lines between line 65 to 83, no error would be printed out.
+[05-03-2005 01:19:13] [#ezpublish] <SEAwolfx_> yep, cleared all caches.
+[05-03-2005 01:19:16] [#ezpublish] <SEAwolfx_> --clear-all
+[05-03-2005 01:19:35] [#ezpublish] <agentbob> what happens if you get rid of the {let} wrapping around it
+[05-03-2005 01:19:44] [#ezpublish] <agentbob> clear from admin panel too
+[05-03-2005 01:19:53] [#ezpublish] <agentbob> i find the commandline one doesn't always clear everything
+[05-03-2005 01:20:01] [#ezpublish] <SEAwolfx_> doh
+[05-03-2005 01:20:15] [#ezpublish] <SEAwolfx_> really? havent controlled that.
+[05-03-2005 01:20:47] [#ezpublish] <SEAwolfx_> still errors.
+[05-03-2005 01:20:49] [#ezpublish] <agentbob> maybe it was just my badluck though :P
+[05-03-2005 01:21:02] [#ezpublish] <agentbob> get rid of the {let} wrapping around
+[05-03-2005 01:21:05] [#ezpublish] <SEAwolfx_> ok ... i will delete the let
+[05-03-2005 01:22:12] [#ezpublish] <SEAwolfx_> here comes you fault in the game ;)
+[05-03-2005 01:22:14] [#ezpublish] <SEAwolfx_> "Unknown template variable 'folder_node_id_array' in namespace ''"
+[05-03-2005 01:22:27] [#ezpublish] <agentbob> scope=root instead of global
+[05-03-2005 01:22:32] [#ezpublish] <SEAwolfx_> beacuse {section} create a new namespace.
+[05-03-2005 01:23:06] [#ezpublish] <SEAwolfx_> oops... sorry, not true.
+[05-03-2005 01:23:30] [#ezpublish] <SEAwolfx_> the set and the output is in the same namespace.
+[05-03-2005 01:24:06] [#ezpublish] <SEAwolfx_> http://nopaste.php-q.net/131375
+[05-03-2005 01:24:31] [#ezpublish] <agentbob> and its saying unknown template variable?
+[05-03-2005 01:24:56] [#ezpublish] <SEAwolfx_> folder_node_id_array=$folder_node_id_array|append($folder.item.main_node.node_id)
+[05-03-2005 01:25:07] [#ezpublish] <SEAwolfx_> i feel here is a let necessary
+[05-03-2005 01:25:17] [#ezpublish] <SEAwolfx_> ?!?!
+[05-03-2005 01:25:23] [#ezpublish] <agentbob> no let
+[05-03-2005 01:25:50] [#ezpublish] <SEAwolfx_> "Unknown template variable 'folder_node_id_array' in namespace ''" this appears twice, because of the section loop
+[05-03-2005 01:26:08] [#ezpublish] <SEAwolfx_> {set scope=global folder_node_id_array=$folder_node_id_array|append($folder.item.main_node.node_id)}
+[05-03-2005 01:26:13] [#ezpublish] <SEAwolfx_> i will delete the scope
+[05-03-2005 01:26:22] [#ezpublish] <agentbob> k
+[05-03-2005 01:27:22] [#ezpublish] <agentbob> if it doesn't work, outside the {sections}
+[05-03-2005 01:27:35] [#ezpublish] <agentbob> do {set folder_node_id_array=array()}
+[05-03-2005 01:27:46] [#ezpublish] <agentbob> then remove the scope and leave the other line the same
+[05-03-2005 01:30:52] [#ezpublish] <agentbob> i'm doing the same thing basically like this:
+[05-03-2005 01:31:06] [#ezpublish] <agentbob> {set myvar=hash('blah','val')}
+[05-03-2005 01:31:35] [#ezpublish] <agentbob> {section show=eq(1,1)}{set myvar=$myvar|merge(hash('blah2','var2'))}{/section}
+[05-03-2005 01:31:39] [#ezpublish] <agentbob> and it works for me......
+[05-03-2005 01:35:22] [#ezpublish] <agentbob> any luck?
+[05-03-2005 01:35:55] [#ezpublish] <SEAwolfx_> http://nopaste.php-q.net/131376
+[05-03-2005 01:35:59] [#ezpublish] <SEAwolfx_> not really
+[05-03-2005 01:36:26] [#ezpublish] <agentbob> lol the code just doesn't like you today
+[05-03-2005 01:36:34] [#ezpublish] <SEAwolfx_> hehe
+[05-03-2005 01:36:47] [#ezpublish] <agentbob> why section-exclude?
+[05-03-2005 01:37:30] [#ezpublish] <SEAwolfx_> ensures that any related images are not included in your related items list.
+[05-03-2005 01:38:38] [#ezpublish] <agentbob> sec tryin it on my site
+[05-03-2005 01:38:50] [#ezpublish] <SEAwolfx_> this would be nice.
+[05-03-2005 01:39:31] [#ezpublish] <SEAwolfx_> just relate some node inheriting some articles to folder, and display this folder.
+[05-03-2005 01:43:38] [#ezpublish] <agentbob> Related objects: LALA:
+[05-03-2005 01:43:38] [#ezpublish] <agentbob> Attribute	Type	Value
+[05-03-2005 01:43:38] [#ezpublish] <agentbob> 0	string	277
+[05-03-2005 01:45:24] [#ezpublish] <SEAwolfx_> could u paste it on nopaste?
+[05-03-2005 01:46:12] [#ezpublish] <agentbob> i copied and pasted your code lol
+[05-03-2005 01:47:11] [#ezpublish] <SEAwolfx_> aRGH
+[05-03-2005 01:47:48] [#ezpublish] <agentbob> sorry dude :|
+[05-03-2005 01:47:58] -!- SEAwolfx_ [~mike@decea24d5243005b.node.tor] has quit [Remote closed the connection]
+[05-03-2005 01:48:11] -!- SEAwolfx [~mike@d366a66f960a522d.node.tor] has joined #ezpublish
+[05-03-2005 01:48:17] [#ezpublish] <SEAwolfx> this is crazy
+[05-03-2005 01:48:22] [#ezpublish] <agentbob> used http://nopaste.php-q.net/131376 lines 65-77
+[05-03-2005 01:49:28] [#ezpublish] <SEAwolfx> ok .. now plz try to print the array outside of all the sections
+[05-03-2005 01:49:46] [#ezpublish] <SEAwolfx> like in line 79
+[05-03-2005 01:50:08] [#ezpublish] <SEAwolfx> what ez-version u are using?
+[05-03-2005 01:50:15] [#ezpublish] <SEAwolfx> i use 3.5 svn stable
+[05-03-2005 01:50:53] [#ezpublish] <agentbob> 3.5.0
+[05-03-2005 01:51:24] [#ezpublish] <SEAwolfx> will make a svn update now
+[05-03-2005 01:52:02] [#ezpublish] <SEAwolfx> hmm .. nothing special happened during svn update.
+[05-03-2005 01:54:37] [#ezpublish] <agentbob> hmf doesn't want to update the new template
+[05-03-2005 01:55:54] [#ezpublish] <agentbob> actually.. just doesn't want to print anything after line 79
+[05-03-2005 01:57:33] [#ezpublish] <agentbob> very weird... it stops printing right after the last {/section}
+[05-03-2005 01:59:05] [#ezpublish] <agentbob> does section-exclude even exist...?
+[05-03-2005 01:59:19] [#ezpublish] <agentbob> thats your problem
+[05-03-2005 01:59:32] [#ezpublish] <agentbob> you have an extra {/section}
+[05-03-2005 01:59:45] [#ezpublish] <agentbob> {section-exclude} belonds inside {section}{/section}
+[05-03-2005 01:59:48] [#ezpublish] <agentbob> not by itself
+[05-03-2005 01:59:49] [#ezpublish] <SEAwolfx> TRUE
+[05-03-2005 02:00:03] [#ezpublish] * SEAwolfx kicks his own ass.
+[05-03-2005 02:00:49] [#ezpublish] <agentbob> ok 3am now, bedtime :P
+[05-03-2005 02:00:52] [#ezpublish] <agentbob> goodluck
+[05-03-2005 02:00:59] [#ezpublish] <SEAwolfx> thx for all.
+[05-03-2005 02:01:00] [#ezpublish] <SEAwolfx> ;)
+[05-03-2005 02:01:04] [#ezpublish] <SEAwolfx> good night.
+[05-03-2005 02:01:10] -!- ordnas [~ordnas@p549DCF33.dip.t-dialin.net] has joined #ezpublish
+[05-03-2005 02:01:17] [#ezpublish] <agentbob> no problem, anytime. 'night
+[05-03-2005 02:05:16] -!- xbit [xbit@pppoecl77187.minlos.no] has quit ["EKSAMENSTID"]
+[05-03-2005 02:13:18] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-03-2005 02:45:40] [#ezpublish] <kracker> dink
+[05-03-2005 02:45:53] [#ezpublish] <kracker> go team fisher-price!
+[05-03-2005 03:10:49] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2005 03:22:57] [#ezpublish] <@fh> 3.6 beta is out
+[05-03-2005 03:28:01] [#ezpublish] <SEAwolfx> set a new topic
+[05-03-2005 03:28:05] [#ezpublish] <SEAwolfx> hi fh
+[05-03-2005 03:28:52] -!- fh changed the topic of #ezpublish to: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta
+[05-03-2005 03:29:25] [#ezpublish] <@fh> like that?
+[05-03-2005 03:29:48] [#ezpublish] <SEAwolfx> ;) yeah ... if some bugs from 3.5 are knocked out.
+[05-03-2005 03:30:20] [#ezpublish] <SEAwolfx> bugs like that: http://ez.no/bugs/view/6580 ;)
+[05-03-2005 03:33:41] [#ezpublish] <@fh> yep, it's on the list
+[05-03-2005 03:34:30] [#ezpublish] <SEAwolfx> so its fixed in 3.6, when it will be fixed in 3.5 stable? how runs the bugfix process?
+[05-03-2005 03:34:58] [#ezpublish] <@fh> I don't think it's fixed in 3.6
+[05-03-2005 03:35:03] [#ezpublish] <SEAwolfx> shouldnt it be fixed in 3.5 stable at first before in 3.6 beta?
+[05-03-2005 03:35:07] [#ezpublish] <SEAwolfx> ahhh
+[05-03-2005 03:35:14] [#ezpublish] <@fh> usually we fix bugs in the oldest stable
+[05-03-2005 03:35:25] [#ezpublish] <@fh> and then merge into newer stable releases until we reach trunk
+[05-03-2005 03:35:58] [#ezpublish] <SEAwolfx> yeah, this is the way to go, as usual.
+[05-03-2005 03:36:04] [#ezpublish] <@fh> unless the bug requires big structural changes, then we fix it in trunk only
+[05-03-2005 03:36:21] [#ezpublish] <SEAwolfx> ah
+[05-03-2005 03:37:15] [#ezpublish] <SEAwolfx> probably u could help me, with this, if u have some minutes. http://ez.no/community/forum/setup_design/template_building_an_array_of_ids_for_further_processing
+[05-03-2005 03:51:38] [#ezpublish] <@fh> tested the logic in 3.5.1 like this:
+[05-03-2005 03:51:49] [#ezpublish] <@fh> {let folder_node_id_array=array()}
+[05-03-2005 03:51:49] [#ezpublish] <@fh>   {section var=folder loop=array(1,2,3,4)}
+[05-03-2005 03:51:49] [#ezpublish] <@fh>     {set folder_node_id_array=$folder_node_id_array|append($folder) }
+[05-03-2005 03:51:49] [#ezpublish] <@fh>    A:{$folder_node_id_array|attribute(show)}
+[05-03-2005 03:51:50] [#ezpublish] <@fh>   {/section}
+[05-03-2005 03:51:50] [#ezpublish] <@fh> <br>B:{$folder_node_id_array|attribute(show)}
+[05-03-2005 03:51:51] [#ezpublish] <@fh> {/let}
+[05-03-2005 03:51:53] [#ezpublish] <@fh> works
+[05-03-2005 03:53:02] [#ezpublish] <SEAwolfx> hm ... this is the same as i have posted in forum.
+[05-03-2005 03:53:31] [#ezpublish] <SEAwolfx> .oO(this is makes me sick)
+[05-03-2005 03:54:31] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-03-2005 03:54:53] [#ezpublish] <SEAwolfx> hmm ... i will test your code now.
+[05-03-2005 03:56:03] [#ezpublish] <SEAwolfx> indeed the code is ok.
+[05-03-2005 03:56:21] [#ezpublish] <SEAwolfx> so I will adapt it to my needs.
+[05-03-2005 03:56:25] [#ezpublish] <SEAwolfx> thank you very much.
+[05-03-2005 03:56:50] [#ezpublish] <kracker> hmm?
+[05-03-2005 03:57:20] [#ezpublish] <kracker> ahh
+[05-03-2005 03:57:22] [#ezpublish] <SEAwolfx> fh ... helped me out with my prob, posted here http://ez.no/community/forum/setup_design/template_building_an_array_of_ids_for_further_processing
+[05-03-2005 03:57:26] [#ezpublish] <SEAwolfx> ;)
+[05-03-2005 03:57:51] [#ezpublish] <SEAwolfx> u droped, as frequently *duck*
+[05-03-2005 03:58:55] [#ezpublish] <kracker> i know, it sucks ... i gotta find a beter irc network ...
+[05-03-2005 03:59:10] [#ezpublish] <kracker> congrats on the solution :)
+[05-03-2005 03:59:35] [#ezpublish] <SEAwolfx> gonna test it, with my needs.. after that i can/we make jump.
+[05-03-2005 03:59:52] [#ezpublish] <SEAwolfx> +a
+[05-03-2005 04:00:05] [#ezpublish] <kracker> <grin>
+[05-03-2005 04:00:52] [#ezpublish] <SEAwolfx> argh .... this is amazing .. it works *jump*
+[05-03-2005 04:01:10] [#ezpublish] <kracker> sick
+[05-03-2005 04:02:46] [#ezpublish] <SEAwolfx> fh: u can say to Yelitza, that she is no allowd to kiss you.
+[05-03-2005 04:02:55] [#ezpublish] <SEAwolfx> s/no/now/
+[05-03-2005 04:03:17] [#ezpublish] <@fh> aah.. she's not here :/
+[05-03-2005 04:03:57] [#ezpublish] <SEAwolfx> hehe ... never mind, she comes back.
+[05-03-2005 04:04:06] [#ezpublish] <@fh> true, true.. I'll remind her :)
+[05-03-2005 04:04:25] [#ezpublish] <SEAwolfx> wise ...
+[05-03-2005 04:04:30] [#ezpublish] <SEAwolfx> ;)
+[05-03-2005 04:09:30] -!- th[eZ] [~Miranda@stalker.ez.no] has joined #ezpublish
+[05-03-2005 04:11:14] [#ezpublish] <th[eZ]> Anyone here has experienced the Online Editor - Internet Explorer blinking bug?
+[05-03-2005 04:11:56] [#ezpublish] <SEAwolfx> not really, IE isnt seen on my screen. ;)
+[05-03-2005 04:12:19] [#ezpublish] <th[eZ]> I'm currently trying to research the issue, but we're not able to reproduce the set up yet
+[05-03-2005 04:12:41] [#ezpublish] <th[eZ]> so I'm looking for info on affected versions
+[05-03-2005 04:13:00] [#ezpublish] <SEAwolfx> but .. sometimes the toolbar flickers on firefox
+[05-03-2005 04:13:11] [#ezpublish] <SEAwolfx> could this be the same problem?
+[05-03-2005 04:13:42] [#ezpublish] <th[eZ]> wouldn't think so. this other issue are probably an IE bug
+[05-03-2005 04:13:57] [#ezpublish] <SEAwolfx> k
+[05-03-2005 04:14:12] [#ezpublish] <th[eZ]> but what kind of flickering are you talking about?
+[05-03-2005 04:14:26] [#ezpublish] <th[eZ]> serious stuff? or just minor?
+[05-03-2005 04:15:54] [#ezpublish] <SEAwolfx> well, sorry i have to say now this was a older problem which vannished after a svn update.
+[05-03-2005 04:16:00] [#ezpublish] <th[eZ]> ok
+[05-03-2005 04:26:45] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2005 04:54:30] -!- pedro7918 [~peterkudl@stalker.ez.no] has joined #ezpublish
+[05-03-2005 04:55:28] -!- pedro7918 [~peterkudl@stalker.ez.no] has quit [Client Quit]
+[05-03-2005 05:15:32] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-03-2005 06:15:32] -!- oh^ez [~Ole@stalker.ez.no] has joined #ezpublish
+[05-03-2005 06:21:12] [#ezpublish] <SEAwolfx> where is the code for the fetch template-operator?
+[05-03-2005 06:22:32] [#ezpublish] <SEAwolfx> i guess in lib/eztemplate/classes
+[05-03-2005 06:23:39] -!- jota [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[05-03-2005 06:28:12] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[05-03-2005 06:34:02] -!- Bedlore [~me@ppp44-106.lns1.adl1.internode.on.net] has quit [Read error: 113 (No route to host)]
+[05-03-2005 07:35:43] Disconnecting due to lack of a lag response (0.08588300 1115130883 != 0.11586900 1115130913)
+[05-03-2005 07:35:43] Diconnected. Sleeping for 10 second(s).
+[05-03-2005 07:35:53] >> Connecting to irc.freenode.net:6667
+[05-03-2005 07:36:03] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-03-2005 07:36:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[05-03-2005 07:36:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-03-2005 07:36:13] >> Connecting to irc.freenode.net:6667
+[05-03-2005 07:36:13] >> Connected to irc.freenode.net:6667, registering...
+[05-03-2005 07:36:13] >> Attempting to join channels: #ezpublish
+[05-03-2005 07:36:16] >> Primary nickname in use, trying alternate.
+[05-03-2005 07:36:16] (unmatched::raw451) :tolkien.freenode.net 451 * JOIN :Register first.
+[05-03-2005 07:36:17] >> Successfully registered. Nick is: ezpublishlog
+[05-03-2005 07:36:17] -!- There are 10754 victims and 11752 hiding on 27 servers
+[05-03-2005 07:36:17] -!- 31 flagged staff members
+[05-03-2005 07:36:17] -!- 8532 channels formed
+[05-03-2005 07:36:17] -!- I have 2683 clients and 0 servers
+[05-03-2005 07:36:17] -!- Current local  users: 2683  Max: 4153
+[05-03-2005 07:36:17] -!- Current global users: 22506  Max: 24743
+[05-03-2005 07:36:17] -!- Highest connection count: 4154 (4153 clients) (573855 since server was (re)started)
+[05-03-2005 07:36:58] >> Attempting to join channels: #ezpublish
+[05-03-2005 07:36:58] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-03-2005 07:36:58] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta
+[05-03-2005 07:36:58] -!- Topic set by fh [@] [Tue,  3 May 2005 01:29:00 -0700]
+[05-03-2005 07:39:06] -!- oh^ez [~Ole@stalker.ez.no] has quit [tolkien.freenode.net irc.freenode.net]
+[05-03-2005 07:39:06] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit [tolkien.freenode.net irc.freenode.net]
+[05-03-2005 07:39:06] -!- agentbob [~dan@216.130.216.30] has quit [tolkien.freenode.net irc.freenode.net]
+[05-03-2005 07:39:06] -!- ordnas [~ordnas@p549DCF33.dip.t-dialin.net] has quit [tolkien.freenode.net irc.freenode.net]
+[05-03-2005 07:39:06] -!- fh [~fh@stalker.ez.no] has quit [tolkien.freenode.net irc.freenode.net]
+[05-03-2005 07:39:06] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [tolkien.freenode.net irc.freenode.net]
+[05-03-2005 07:39:17] (ezpublishlog) Attempting to gain back primary nickname
+[05-03-2005 07:40:58] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-03-2005 07:40:58] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[05-03-2005 07:40:58] -!- oh^ez [~Ole@stalker.ez.no] has joined #ezpublish
+[05-03-2005 07:40:58] -!- ordnas [~ordnas@p549DCF33.dip.t-dialin.net] has joined #ezpublish
+[05-03-2005 07:40:58] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-03-2005 07:40:58] -!- agentbob [~dan@216.130.216.30] has joined #ezpublish
+[05-03-2005 07:40:58] -!- mode/#ezpublish [+o fh] by irc.freenode.net
+[05-03-2005 07:41:14] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Read error: 54 (Connection reset by peer)]
+[05-03-2005 07:41:15] -!- ezpublishlog is now known as ezlog
+[05-03-2005 07:41:15] My new nick is ezlog
+[05-03-2005 07:57:25] -!- ordnas [~ordnas@p549DCF33.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2005 07:59:57] -!- ordna1 [~ordnas@p549DCF33.dip.t-dialin.net] has joined #ezpublish
+[05-03-2005 08:46:05] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-03-2005 09:01:55] -!- ordna1 [~ordnas@p549DCF33.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2005 09:07:26] [#ezpublish] <SEAwolfx> JUHU ... all ok now!
+[05-03-2005 09:12:51] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit ["Fui embora"]
+[05-03-2005 09:18:40] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2005 10:01:04] -!- th[eZ] [~Miranda@stalker.ez.no] has quit ["Miranda IM! Smaller, Faster, Easier. http://miranda-im.org"]
+[05-03-2005 10:12:54] -!- ordnas [~ordnas@p549DFAA2.dip.t-dialin.net] has joined #ezpublish
+[05-03-2005 10:18:04] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-03-2005 10:21:01] -!- SEAwolfx [~mike@d366a66f960a522d.node.tor] has quit [Remote closed the connection]
+[05-03-2005 10:26:14] -!- xbit [xbit@pppoecl77187.minlos.no] has joined #ezpublish
+[05-03-2005 10:27:33] -!- xbit [xbit@pppoecl77187.minlos.no] has quit [Client Quit]
+[05-03-2005 10:28:12] -!- xbit [xbit@pppoecl77187.minlos.no] has joined #ezpublish
+[05-03-2005 10:29:34] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-03-2005 10:30:36] -!- oh^ez [~Ole@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[05-03-2005 10:40:44] -!- _buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-03-2005 11:34:41] -!- oh^ez [~Ole@telem-dsl36TI132110A080.mtulink.net] has joined #ezpublish
+[05-03-2005 11:43:14] -!- ordnas [~ordnas@p549DFAA2.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-03-2005 12:14:42] -!- _buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-03-2005 12:18:12] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-03-2005 13:00:03] -!- SEAwolfx [~mike@DSL01.83.171.145.125.NEFkom.net] has joined #ezpublish
+[05-03-2005 13:18:10] -!- oh^ez [~Ole@telem-dsl36TI132110A080.mtulink.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2005 13:18:48] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2005 13:26:20] -!- SEAwolfx [~mike@DSL01.83.171.145.125.NEFkom.net] has quit [Read error: 145 (Connection timed out)]
+[05-03-2005 13:26:33] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-03-2005 13:43:46] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-03-2005 14:18:23] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-03-2005 15:08:33] [#ezpublish] <_luke> ping
+[05-03-2005 15:17:04] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-03-2005 15:18:19] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-03-2005 15:43:21] -!- oh^ez [~Ole@telem-dsl36TI132110A080.mtulink.net] has joined #ezpublish
+[05-03-2005 16:18:30] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-03-2005 16:39:48] -!- oh^ez [~Ole@telem-dsl36TI132110A080.mtulink.net] has quit [Remote closed the connection]
+[05-03-2005 16:48:20] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-03-2005 17:12:41] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-03-2005 17:25:01] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-03-2005 18:18:34] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-03-2005 20:21:04] -!- rw [arcelo@rw.user] has joined #ezpublish
+[05-03-2005 20:21:10] [#ezpublish] <rw> hi
+[05-03-2005 20:21:16] [#ezpublish] <kracker> hey!
+[05-03-2005 20:21:31] [#ezpublish] <rw> I just installed it my system, I was used to mambo! Ez Publish is great!
+[05-03-2005 20:21:45] [#ezpublish] <rw> the translation feature (aka mambelfish in mambo) isn't that good.
+[05-03-2005 20:21:50] [#ezpublish] <rw> in ez publish is awesome!
+[05-03-2005 20:22:05] [#ezpublish] <kracker> cool. sho nuff
+[05-03-2005 20:22:48] [#ezpublish] <rw> I am just having a hard time to find how to add option in the main page so the user can choose from all the translated languages, right now two. Any idea?
+[05-03-2005 20:23:01] [#ezpublish] <kracker> so what are you going to do with eZ publish
+[05-03-2005 20:23:39] [#ezpublish] <rw> right now it will be a website for my "brother"
+[05-03-2005 20:23:57] [#ezpublish] <rw> which died almost 2 years ago. His father created an organization to help people.
+[05-03-2005 20:23:59] [#ezpublish] <kracker> Weeeelll, that's a good question
+[05-03-2005 20:24:37] [#ezpublish] <rw> hehehe
+[05-03-2005 20:24:42] [#ezpublish] <kracker> i think you need to manually add links into your pagelayout
+[05-03-2005 20:25:01] [#ezpublish] <rw> i've just installed, I think I will test it a little bit more before doing a theme.
+[05-03-2005 20:25:07] [#ezpublish] <kracker> like http://ez.no/ has 3 in the top right and side
+[05-03-2005 20:25:18] [#ezpublish] <kracker> nods
+[05-03-2005 20:25:22] [#ezpublish] <rw> yeah! true I see
+[05-03-2005 20:26:00] [#ezpublish] <kracker> i don't think eZ publish currently has a drop down / auto gen list of per item translations.
+[05-03-2005 20:26:32] [#ezpublish] <rw> not really important to me, add links it's ok...
+[05-03-2005 20:27:44] [#ezpublish] <kracker> If I were you, and I was really intersted in that kind of functionality I would first (search ez.no via google for lots of possible keywords) and if you can't find a past thread that answeres your question, simply start a new thread and refernece any past relevant threads along with a very detailed description of what you would like to know how to accomplish.
+[05-03-2005 20:27:56] [#ezpublish] <kracker> hehe
+[05-03-2005 20:28:04] [#ezpublish] <kracker> as i throw myself out with the bathwater ..
+[05-03-2005 20:28:22] [#ezpublish] <kracker> still, it's what I would do ...
+[05-03-2005 20:28:31] [#ezpublish] <rw> yeah I will do it...
+[05-03-2005 20:28:32] [#ezpublish] <kracker> i think that someone has even asked this question before ...
+[05-03-2005 20:28:51] [#ezpublish] <kracker> but ... i don't recall a stand up solution but I could have missed the bus ...
+[05-03-2005 22:40:12] [#ezpublish] * kracker smirk
+[05-03-2005 23:04:43] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-03-2005 23:05:58] -!- ezlog1 [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-03-2005 23:06:14] [#ezpublish] <kracker> sweet
+[05-03-2005 23:06:31] [#ezpublish] <kracker> wait a second, i'm still playing catchup arn't i ...
+[05-03-2005 23:06:38] [#ezpublish] <kracker> yup, hmm

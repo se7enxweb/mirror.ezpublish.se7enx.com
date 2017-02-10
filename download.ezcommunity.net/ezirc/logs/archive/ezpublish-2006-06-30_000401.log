@@ -1,0 +1,126 @@
+[06-29-2006 00:08:00] -!- xigle1 [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[06-29-2006 00:27:50] -!- awormus [n=aaron@p54B04ED7.dip.t-dialin.net] has joined #ezpublish
+[06-29-2006 00:28:56] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-29-2006 01:02:36] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[06-29-2006 01:04:53] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-29-2006 01:19:47] -!- ordnas [n=ordnas@p549D7060.dip.t-dialin.net] has joined #ezpublish
+[06-29-2006 02:10:45] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-29-2006 02:26:10] -!- TideJOBB [n=tidemann@ti132110a340-2652.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-29-2006 02:32:22] -!- xigle1 [n=xiglet@62.92.115.22] has joined #ezpublish
+[06-29-2006 02:33:18] [#ezpublish] <xigle1> what is the recommended linux distro for 3.8? I don't want to compile php/apache/mysql myself, I want to use the package system. Debian Sarge uses too old version of php in the default repos.
+[06-29-2006 02:37:20] -!- _hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[06-29-2006 02:43:30] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[06-29-2006 02:50:22] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[06-29-2006 02:50:25] [#ezpublish] <philG> hi all
+[06-29-2006 03:08:23] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-29-2006 03:10:35] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[06-29-2006 03:14:43] -!- xigle1 [n=xiglet@62.92.115.22] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-29-2006 04:46:12] [#ezpublish] <kalooni> hi there
+[06-29-2006 04:46:30] [#ezpublish] <kalooni> I would like to put in a session variable the current url how can I do this ?
+[06-29-2006 04:46:42] [#ezpublish] <kalooni> or the last page visited by the user ...
+[06-29-2006 04:58:02] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-29-2006 05:46:23] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-29-2006 06:03:28] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has quit [Read error: 113 (No route to host)]
+[06-29-2006 06:13:57] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-29-2006 06:18:20] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Read error: 110 (Connection timed out)]
+[06-29-2006 06:18:25] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-29-2006 06:41:38] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-29-2006 06:53:30] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[06-29-2006 06:53:45] [#ezpublish] <philG> hi all
+[06-29-2006 06:54:55] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-29-2006 07:21:08] [#ezpublish] <kalooni> hi philG
+[06-29-2006 07:55:56] [#ezpublish] <jeremiah> hi philG
+[06-29-2006 07:56:20] [#ezpublish] <jeremiah> one hour later, hehe
+[06-29-2006 07:58:23] [#ezpublish] <philG> hi kalooni and jeremiah
+[06-29-2006 08:01:16] [#ezpublish] <kracker> *rubs eyes*
+[06-29-2006 08:15:00] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-29-2006 09:33:45] [#ezpublish] <ordnas> Congratulations to the winners of the eZ awards 2006! http://ez.no/company/awards/2006
+[06-29-2006 10:02:55] -!- _hovik [n=hovik@85.19.74.66] has quit [Remote closed the connection]
+[06-29-2006 10:12:06] -!- ordnas [n=ordnas@p549D7060.dip.t-dialin.net] has left #ezpublish []
+[06-29-2006 10:40:39] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-29-2006 11:30:41] -!- kore_ [n=lordhong@p54BB6084.dip.t-dialin.net] has joined #ezpublish
+[06-29-2006 11:36:13] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-29-2006 11:40:43] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-29-2006 11:44:23] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[06-29-2006 11:44:57] [#ezpublish] <zrg> right
+[06-29-2006 11:46:33] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-29-2006 11:57:14] [#ezpublish] <awormus> left
+[06-29-2006 12:32:39] [#ezpublish] <zrg> you had something yesterday wormus
+[06-29-2006 12:38:23] [#ezpublish] <awormus> zrg: yes, should we PM
+[06-29-2006 12:38:40] [#ezpublish] <zrg> PM, sounds kinky :)
+[06-29-2006 12:39:04] [#ezpublish] <awormus> heh
+[06-29-2006 12:42:17] [#ezpublish] <awormus> zrg: getting my PMs?
+[06-29-2006 12:42:23] [#ezpublish] <zrg> yes
+[06-29-2006 12:42:33] [#ezpublish] <zrg> you?
+[06-29-2006 12:42:38] [#ezpublish] <awormus> nope
+[06-29-2006 12:42:39] [#ezpublish] <awormus> :)
+[06-29-2006 12:42:45] [#ezpublish] <zrg> gwah..
+[06-29-2006 12:42:45] [#ezpublish] <awormus> you need to register
+[06-29-2006 12:42:56] [#ezpublish] <zrg> hows taht done..
+[06-29-2006 12:43:09] [#ezpublish] <awormus> /msg nickserv register
+[06-29-2006 12:43:21] [#ezpublish] <awormus> or we could move to efnet :)
+[06-29-2006 12:44:25] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-29-2006 12:45:31] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-29-2006 12:46:28] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[06-29-2006 12:48:18] [#ezpublish] <zrg> apparently i am registered but cant remember pass
+[06-29-2006 12:51:28] -!- awormus_ [n=aaron@p54B06946.dip.t-dialin.net] has joined #ezpublish
+[06-29-2006 12:56:03] [#ezpublish] <zrg> anyone knows how to make irc send your password or something?
+[06-29-2006 12:58:31] -!- awormus [n=aaron@p54B04ED7.dip.t-dialin.net] has quit [Read error: 145 (Connection timed out)]
+[06-29-2006 13:12:56] -!- xigle1 [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-29-2006 13:22:42] [#ezpublish] <zrg> /MSG NickServ SENDPASS zrg
+[06-29-2006 13:28:18] -!- zrg is now known as zurgutt
+[06-29-2006 13:29:35] -!- zurgutt [n=zurgutt@216-2-30.0512.adsl.tele2.no] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-29-2006 13:30:08] -!- zurgutt [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-29-2006 14:00:42] [#ezpublish] <zurgutt> alive wurmus?
+[06-29-2006 14:16:51] -!- kore_ [n=lordhong@p54BB6084.dip.t-dialin.net] has quit []
+[06-29-2006 14:21:47] [#ezpublish] <xigle1> what are your favourite distro for ezpublish sites?
+[06-29-2006 14:25:46] [#ezpublish] <zurgutt> i use redhat since 4.0, doesnt matter tho, its what you are used to
+[06-29-2006 14:48:34] [#ezpublish] <kracker> centos.org !
+[06-29-2006 15:10:52] [#ezpublish] <kracker> an debian.org !
+[06-29-2006 15:11:01] [#ezpublish] <kracker> an ubuntu.org !
+[06-29-2006 15:11:09] [#ezpublish] <kracker> an ...
+[06-29-2006 15:11:34] [#ezpublish] <kracker> from sources to gentoo :D
+[06-29-2006 15:11:51] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[06-29-2006 15:12:37] -!- awormus_ is now known as awormus
+[06-29-2006 15:54:42] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-29-2006 16:00:05] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[06-29-2006 16:04:47] -!- awormus [n=aaron@p54B06946.dip.t-dialin.net] has quit ["Leaving"]
+[06-29-2006 16:09:38] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-29-2006 16:18:20] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-29-2006 16:19:08] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-29-2006 16:20:30] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-29-2006 16:37:06] -!- zurgutt [n=zurgutt@216-2-30.0512.adsl.tele2.no] has quit [Remote closed the connection]
+[06-29-2006 16:42:54] -!- xigle1 [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[06-29-2006 18:16:22] Disconnecting due to lack of a lag response (0.09538500 1151622922 != 0.02222000 1151622952)
+[06-29-2006 18:16:22] Diconnected. Sleeping for 2 second(s).
+[06-29-2006 18:16:24] >> Connecting to irc.freenode.net:6667
+[06-29-2006 18:16:46] >> Connected to irc.freenode.net:6667, registering...
+[06-29-2006 18:16:46] >> Attempting to join channels: #ezpublish
+[06-29-2006 18:16:47] >> Primary nickname in use, trying alternate.
+[06-29-2006 18:16:47] (unmatched::raw451) :calvino.freenode.net 451 * JOIN :Register first.
+[06-29-2006 18:16:47] >> Successfully registered. Nick is: ezpublishlog
+[06-29-2006 18:16:47] -!- There are 12574 listed and 13241 unlisted users on 19 servers
+[06-29-2006 18:16:47] -!- 30 flagged staff members
+[06-29-2006 18:16:47] -!- 10680 channels formed
+[06-29-2006 18:16:47] -!- I have 2522 clients and 0 servers
+[06-29-2006 18:16:47] -!- Current local  users: 2522  Max: 3046
+[06-29-2006 18:16:47] -!- Current global users: 25815  Max: 29690
+[06-29-2006 18:16:47] -!- Highest connection count: 3048 (3046 clients) (49114 since server was (re)started)
+[06-29-2006 18:16:48] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[06-29-2006 18:16:48] [notice(freenode-connect)] VERSION IQ 0.9.3
+[06-29-2006 18:17:31] >> Attempting to join channels: #ezpublish
+[06-29-2006 18:17:31] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[06-29-2006 18:17:31] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_1_includes_gpl_online_editor || New Article: http://ez.no/community/articles/new_features_in_ez_publish_3_8
+[06-29-2006 18:17:31] -!- Topic set by luke [@] [Tue, 27 Jun 2006 02:45:16 -0500]
+[06-29-2006 18:17:31] (unmatched::raw477) :calvino.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] if you're at a conference and other people are having trouble connecting, please mention it to staff: http://freenode.net/faq.shtml#gettinghelp
+[06-29-2006 18:19:47] (ezpublishlog) Attempting to gain back primary nickname
+[06-29-2006 18:19:47] -!- ezpublishlog is now known as ezlog
+[06-29-2006 18:19:47] My new nick is ezlog
+[06-29-2006 20:36:25] -!- yper [i=yper@c-eb4472d5.024-2014-67626714.cust.bredbandsbolaget.se] has quit [calvino.freenode.net irc.freenode.net]
+[06-29-2006 20:37:30] -!- yper [i=yper@c-eb4472d5.024-2014-67626714.cust.bredbandsbolaget.se] has joined #ezpublish
+[06-29-2006 21:15:35] -lilo:$*- [Global Notice] Hi all. A few minutes ago we experienced some connectivity problems on a main rotation server....we're looking at the problem and removing it from main rotation. Apologies for the inconvenience!
+[06-29-2006 21:36:51] -!- Tidemann [i=Tidemann@062249180208.customer.alfanett.no] has quit [Read error: 110 (Connection timed out)]
+[06-29-2006 22:05:19] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [calvino.freenode.net irc.freenode.net]
+[06-29-2006 22:05:43] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-29-2006 22:19:58] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[06-29-2006 22:21:24] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish

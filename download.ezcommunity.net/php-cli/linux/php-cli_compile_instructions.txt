@@ -1,0 +1,60 @@
+php-cli (php 4.4.4) for eZ publish
+
+on Friday 08 September 2006 5:03:01 am
+by kracker
+
+I have seen a number of folks (in irc://irc.freenode.net #ezpublish) recently ask about the subject of php-cli and eZ publish.
+
+Many seem to be without a php-cli executable binary and looking to find, install or build from source and install php-cli.
+
+I have for some time been offering compiled php-cli binaries at:
+
+http://download.ezcommunity.net/php-cli/
+
+I have ready to go php-cli binaries for GNU/Linux (php v4.3.x and php v4.4.4) and Windows (php v4.3 only).
+
+The binaries have been tested (lightly) and are known to work on just about any current glibc GNU/Linux distribution.
+
+Today I compiled the very latest php-cli (php v4.4.4) for GNU/Linux for an eZ publish client in need of a stand alone php-cli (v4.4.x) binary.
+
+I have posted the packaged binary for others who do not have php-cli and have found they need php-cli in their eZ publish development and production servers.
+
+http://download.ezcommunity.net/php-cli/linux/php-4-4-4-cli.tar.gz
+
+The packaged binary is simple for anyone with shell access (ssh) to upload to their eZ publish installation and use it without having to ask your hosting provider to install php-cli (some hosting providers will not offer this service or the software). This compiled works out of the box.
+
+For those users who can, I still recommend compiling the standalone php-cli from source themselves.
+
+Here are the commands I used today to compile php-cli from source
+
+
+# php-cli (php 4.4.4) compile instructions:
+
+lynx http://www.php.net/get/php-4.4.4.tar.gz/from/a/mirror
+
+tar -vzxf php-4.4.4.tar.gz
+
+cd php-4.4.4
+
+mkdir /usr/local/php-4-4-4-cli
+
+./configure --prefix=/usr/local/php-4-4-4-cli/php-cli --disable-cgi
+
+make
+
+make test
+
+make install-cli
+
+cd /usr/local/
+
+tar -vzcf php-4-4-4-cli.tar.gz php-4-4-4-cli
+
+For the rest ... enjoy the php-cli precompiled binary package!
+
+Happy Hacking,
+//kracker
+
+Kottonmouth Kings - Enjoy
+
+

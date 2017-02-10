@@ -1,0 +1,869 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 9.3.&nbsp; Regular Expressions</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch09lev1sec3"></a><h3 class="docSection1Title">9.3. Regular Expressions</h3>
+<p class="docText">Although regular expressions are very powerful, they are difficult to use, especially if you're new to them. So, instead of jumping on the functions that PHP supports for dealing with the regular expressions, we cover the pattern matching syntax first. If PCRE is enabled, the following should show up in <tt>phpinfo()</tt> output, as shown in <a class="docLink" href="#ch09fig03">Figure 9.3</a>.<a name="ch09index161"></a><a name="ch09index162"></a></p>
+<a name="ch09fig03"></a><p><center><h5 class="docFigureTitle">Figure 9.3. PCRE <tt>phpinfo()</tt> output.</H5><a name="ch09index163"></a><a name="ch09index164"></a>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig03_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="55" SRC="images/013147149X/graphics/09fig03.gif;380137"></p></center></P><br>
+<a name="ch09lev2sec10"></a><H4 class="docSection2Title">9.3.1. Syntax</h4>
+<p class="docText">PCRE functions check whether a text string matches a pattern. The syntax of a pattern always has the following format:<a name="ch09index165"></a><a name="ch09index166"></a><a name="ch09index167"></a></p>
+<pre>
+&lt;delimiter&gt; &lt;pattern&gt; &lt;delimiter&gt; [&lt;modifiers&gt;]
+</pre><br>
+<p class="docText">The modifiers are optional. The delimiter separates the pattern from the modifiers. PCRE uses the first character of the expression as the delimiter. You should use a character that does not exist in the pattern itself. Or, you can use a character that exists in your expression, but then you must escape it with the <tt>\</tt>. traditionally, the <tt>/</tt> is used as the delimiter, but other common delimiters are <tt>|</tt> or <tt>@</tt>. It's your choice. Personally, in most cases, we would pick the <tt>@</tt>, unless we need to do matching on an email or similar pattern that contains the <tt>@</tt>, in which case we would use the <tt>/</tt>.</P>
+<p class="docText">The PHP function <tt>preg_match()</tt> is used to match regular expressions. The first parameter passed to the function is the <span class="docEmphStrong">pattern</span>. The second parameter is the string to be matched to the pattern and is also called the <span class="docEmphStrong">subject</span>. The function returns <tt>TRUE</tt> (the pattern matches) or <tt>FALSE</tt> (the pattern does not match). You can also pass a third parametera variable name. The text that matches is stored by reference in the array with this name. If you don't need to use the matching text but just want to know if there is a match or not, you can leave out the third parameter. In short, the format is as follows, with <tt>$matches</tt> being optional:<a name="ch09index168"></a><a name="ch09index169"></a><a name="ch09index170"></a><a name="ch09index171"></a></p>
+<pre>
+$result = preg_match($pattern, $subject, $matches);
+</pre><br>
+<a name="ch09note02"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">The examples in this section will not use the <tt>&lt;?php</tt> and <tt>?&gt;</tt> tags, but of course, they are required.<a name="ch09index172"></a><a name="ch09index173"></a><a name="ch09index174"></a></p></div><BR>
+<a name="ch09lev3sec14"></a><h5 class="docSection3Title">9.3.1.1 Pattern Syntax</h5>
+<p class="docText">PCRE's matching syntax is very complex. A full discussion of all its details would exceed the scope of this book. We cover just the basics here, which is enough to be very useful. On most UNIX systems with the PCRE library installed, you can use <tt>man pcrepattern</tt> to read about the whole pattern matching language, or have a look at the (somewhat outdated) PHP Manual page at <a class="docLink" target="_blank" href="http://www.php.net/manual/en/pcre.pattern.syntax.php">http://www.php.net/manual/en/pcre.pattern.syntax.php</a>. But here we start with the simple things:<a name="ch09index175"></a><a name="ch09index176"></a><a name="ch09index177"></a><a name="ch09index178"></a></P>
+<a name="ch09lev3sec15"></a><h5 class="docSection3Title">9.3.1.2 Metacharacters</H5>
+<p class="docText">The characters from the <a class="docLink" href="#ch09table01">Table 9.1</a> are special characters in the way that they can be used to construct patterns.<a name="ch09index179"></a><a name="ch09index180"></a><a name="ch09index181"></a></p>
+<a name="ch09table01"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 9.1. Metacharacters</h5></caption><colgroup><col width="137.5"><col width="412.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Character</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The general escape character. You need this in case you want to use any of the metacharacters in your pattern, or the delimiter. The backslash also can be used to specify other special characters, which you can find in the next table.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>.</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Matches exactly one character, except a newline character.</p>
+
+<pre>
+preg_match('/./', 'PHP 5', $matches);
+</pre><br>
+
+<p class="docText"><tt>$matches</tt> now contains</p>
+
+<pre>
+Array
+(
+[0] =&gt; P
+)
+</pre><br>
+</td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>?</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Marks the preceding character or sub-pattern (optional).</p>
+
+<pre>
+preg_match('/PHP.?5/', 'PHP 5', $matches);
+</pre><br>
+
+<p class="docText">This matches both <tt>PHP5</tt> and <tt>PHP 5</tt>.</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>+</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Matches the preceding character or sub-pattern one or more times.</P>
+<p class="docText"><tt>'/a+b/'</tt> matches both <tt>'ab'</tt>, <tt>'aab'</tt>, <tt>'aaaaaaaab'</tt>, but not <tt>'b'</tt>. <tt>preg_match</tt> also returns <tt>trUE</tt> in the example, but <tt>$matches</tt> does not contain the excessive characters.</p>
+
+<pre>
+preg_match('/a+b/', 'caaabc', $matches);
+</pre><BR>
+
+<p class="docText"><tt>$matches</tt> now contains</p>
+
+<pre>
+Array
+(
+      [0] =&gt; aaab
+)
+</pre><BR>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>*</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Matches the preceding character zero or more times.</p>
+<p class="docText"><tt>'/de*f/'</tt> matches both <tt>'df'</tt>, '<tt>def'</tt> and <tt>'deeeef'</tt>. Again, excessive characters are not part of the matched substring, but do not cause the match to fail.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>{m} {m.n}</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Matches the preceding character or sub-pattern <tt>'m'</tt> times in case the <tt>{m}</tt> variant is used, or <tt>'m'</tt> to <tt>'n'</tt> times if the <tt>{m,n}</tt> variant is used.</P>
+<p class="docText"><tt>'/TRe{1,2}f/'</tt> matches <tt>'tref'</tt> and <tt>'treef'</tt>, but not <tt>'TReeef'</tt>. It is possible to leave out the <tt>'m'</tt> part of the equation or the <tt>'n'</tt> part. In case there is no number in front of the comma, it means that the lower boundary for the number of matches is 0 and the upper boundary is determined by the number after the comma; in case the number after the comma is missing, then the upper boundary is undetermined.</p>
+<p class="docText"><tt>'/fo{2,}ba{,2}r/'</tt> matches <tt>'foobar'</tt>, <tt>'fooooooobar'</tt>, and <tt>'fooobaar'</tt>, but not <tt>'foobaaar'</tt>.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>^</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Marks the beginning of the subject.</p>
+<p class="docText"><tt>' /^ghi/'</tt> matches <tt>'ghik'</tt> and <tt>'ghi'</tt>, but not <tt>'fghi'</tt>.</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>$</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Marks the end of the subject, unless the last character is a newline <tt>(\n)</tt> character. In that case, it will match just before that newline character. <tt>'/Derick$/'</tt> matches <tt>"Rethans, Derick"</tt> and <tt>"Rethans, Derick\n"</tt> but not <tt>"Derick Rethans"</tt>.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>[ ... ]</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Makes a character class out of the characters between the opening and closing bracket. You can use this to create a group of characters to match. Using an hypen inside the character class creates a range of characters. In case you want to use the hypen as a character being part of the class, put it as last character in the class. The caret (<tt>^</tt>) has a special meaning if it is used as the first character in the class. In this case, it negates the character class, which means that it does <span class="docEmphasis">not</span> match with the characters listed.</P>
+<p class="docText">Example 1:</p>
+
+<a name="PLID7"></a><div class="v1"><a href="ch09lev1sec3.html#PLID7">[View full width]</a></div><pre>
+preg_match('/[0-9]+/', 'PHP is released in 2005.',
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> $matches);
+</pre><br>
+
+<p class="docText"><tt>$matches</tt> now contains</p>
+
+<pre>
+Array
+(
+    [0] =&gt; 2005
+)
+</pre><br>
+
+<p class="docText">Example 2:</p>
+
+<a name="PLID9"></a><div class="v1"><a href="ch09lev1sec3.html#PLID9">[View full width]</a></div><pre>
+preg_match('/[^0-9]+/', 'PHP is released in  2005
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif">.',  $matches);
+</pre><br>
+
+<p class="docText"><tt>$matches</tt> now contains</p>
+
+<pre>
+Array
+(
+      [0] =&gt; PHP is released in
+)
+</pre><br>
+
+<p class="docText">Note that the $matches does not include the dot from the subject because a pattern always matches a consecutive string of characters.</p>
+<p class="docText">Inside the character class, you cannot use any of the mentioned metacharacters from this table, except for <tt>^</tt> (to negate the character class), <tt>-</tt> (to create a range), <tt>]</tt> (to end the character class) and, the <tt>\</tt> (to escape special characters).</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>( ... )</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Creates a sub-pattern, which can be used to group certain elements in a pattern. For example, if we had the string <tt>'PHP in 2005.'</tt> and we wanted to extract both the century and the year as two separate entries, in the $matches array we would use the following: <tt>regexp: '/([12][0-9])([0-9]{2})/'</tt></P>
+<p class="docText">This creates two sub-patterns:</p>
+<p class="docText"><tt>([12][0-9])</tt> to match all centuries from 10 to 29.</p>
+<p class="docText"><tt>([0-9]{2})</tt> to match the year in the century.</P>
+
+<pre>
+preg_match(
+      '/([12][0-9])([0-9]{2})/',
+      'PHP in 2005.',
+      $matches
+);
+</pre><br>
+
+<p class="docText"><tt>$matches</tt> now contains</p>
+
+<pre>
+Array
+(
+      [0] =&gt; 2005
+      [1] =&gt; 20
+      [2] =&gt; 05
+)
+</pre><br>
+
+<p class="docText">The element with index 0 is always the fully matched string, and all sub-patterns are assigned a number in the order in which they occur in the pattern.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>(?: ...)</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Creates a sub-pattern that is not captured in the output. You can use this to assert that the pattern is followed by something.</p>
+
+<a name="PLID13"></a><div class="v1"><a href="ch09lev1sec3.html#PLID13">[View full width]</a></div><pre>
+preg_match('@([A-Za-z ]+)(?:hans)@', 'Derick
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> Rethans', $matches);
+</pre><br>
+
+<p class="docText"><tt>$matches</tt> now contains</p>
+
+<pre>
+Array
+(
+      [0] =&gt; Derick Rethans
+      [1] =&gt; Derick Ret
+)
+</pre><br>
+
+<p class="docText">As you can see, the full match string still includes the fully matched part of the subject, but there is only one element extra for the sub-pattern matches. Without the <tt>?:</tt> in the second sub-pattern, there would also have been an element containing hans.</P></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>(?P&lt;name&gt;...)</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Creates a named sub-pattern. It is the same as a normal sub-pattern, but it generates additional elements in the <tt>$matches</tt> array.</p>
+
+<pre>
+preg_match(
+      '/(?P&lt;century&gt;[12][0-9])(?P&lt;year&gt;[0-9]{2})/',
+      'PHP in 2005.',
+      $matches
+);
+</pre><BR>
+
+<p class="docText"><tt>$matches</tt> now contains:</p>
+
+<pre>
+Array
+(
+      [0] =&gt; 2005
+      [century] =&gt; 20
+      [1] =&gt; 20
+      [year] =&gt; 05
+      [2] =&gt; 05
+)
+</pre><BR>
+
+<p class="docText">This is useful in case you have a complex pattern and don't want to bother finding out the correct index number in the <tt>$matches</tt> array.</p></td></tr></table></p><br>
+<a name="ch09lev3sec16"></a><h5 class="docSection3Title">9.3.1.3 Example 1</h5>
+<p class="docText">Let's dissect some useful complex regular expressions that we can create with the metacharacters from <a class="docLink" href="#ch09table01">Table 9.1</a>:<a name="ch09index182"></a><a name="ch09index183"></a><a name="ch09index184"></a></p>
+<pre>
+$pattern = "/^([0-9a-f][0-9a-f]:){5}[0-9a-f][0-9a-f]$/";<a name="ch09index185"></a>
+</pre><br>
+<p class="docText">This pattern matches a <span class="docEmphStrong">MAC address</span>a unique number bound to a network cardwith the format <tt>00:04:23:7c5d:01.</tt></p>
+<p class="docText">The pattern is bound to the start and end of our subject string with <tt>^</tt> and <tt>$</tt>, and it contains two parts:</p>
+<ul><li><p class="docText">
+<tt>([0-9a-f][0-9a-f]:){5}</tt>. 
+Matches the first five 2 character groups and the associated colon</p></li><li><p class="docText">
+<tt>([0-9a-f][0-9a-f])</tt>. 
+The sixth group of two digits</P></LI></ul>
+<p class="docText">This <tt>regexp</tt> could also have been written as <tt>/^([0-9a-f]{2}:){5}[0-9a-f]{2}$/</tt>, which would have been a bit shorter. To test the text against the pattern, use the following code:</p>
+<pre>
+preg_match($pattern, '00:04:23:7c:5d:01', $matches);
+print_r($matches);
+</pre><BR>
+<p class="docText">With either pattern, the output would be the same, as follows:</p>
+<pre>
+Array
+(
+     [0] =&gt; 00:04:23:7c:5d:01
+     [1] =&gt; 5d:
+)
+</pre><br>
+<a name="ch09lev3sec17"></a><h5 class="docSection3Title">9.3.1.4 Example 2</h5>
+<pre>
+"/([^&lt;]+)&lt;([a-zA-Z0-9_-]+@([a-zA-Z0-9_-]+\\.)+[a-zA-Z0-9_-]+)&gt;/"
+</pre><br>
+<p class="docText">This pattern is used to match email addresses in the following format:</p>
+<pre>
+'Derick Rethans &lt;derick@php.net&gt;'
+</pre><BR>
+<p class="docText">This pattern is not good enough to match all email addresses, and validates some addresses that should not be matched. It only serves as a simple example.</p>
+<p class="docText">The first part is <tt>([^&lt;]+)&lt;</tt>, as follows:</P>
+<ul><LI><p class="docText">
+<tt>/</tt>. 
+Delimiter used in this pattern.</p></li><li><p class="docText">
+<tt>( [^&lt;]+)</tt>. 
+Subpattern that matches all characters unless it is the '&lt;' character.</p></LI><LI><p class="docText">
+<tt>&lt;</tt>. 
+The <tt>&lt;</tt> character which is not part of any sub-pattern.</p></li></ul>
+<p class="docText">The second part is <tt>([a-zA-Z0-9_-]+@([a-zA-Z0-9_-]+\\.)+[a-zA-Z0-9_-]+)</tt>, which used to match the email address itself:</p>
+<UL><li><p class="docText">
+<tt>[a-zA-Z0-9_-]+</tt>. 
+This matches everything until the <tt>@</tt> and consists of one or more characters from the specified character class.</p></LI><li><p class="docText">
+<tt>@</tt>. 
+The <tt>@</tt> sign.</P></li><li><p class="docText">
+<tt>([a-zA-Z0-9_-]+\\.)+</tt>. 
+A subpattern that matches one or more levels of subdomains. Notice that the <tt>.</tt> in the pattern is escaped with the <tt>\</tt>, but also note that this <tt>\</tt> is escaped with another <tt>\</tt>. This is needed because the pattern is enclosed in double quotes (<tt>"</tt>). You need to be careful with this. It would usually be better to use single quotes for the pattern.</p></li><li><p class="docText">
+<tt>[a-zA-Z0-9_-]+</tt>. 
+The top-level domain name (as in .com). As you can see, the <tt>regexp</tt> is not correct here; the last part should have been simply <tt>[a-z]{2,4}</tt>.</p></li></ul>
+<p class="docText">Then there is the trailing <tt>&gt;</tt> and delimiter.</p>
+<p class="docText">The following example shows the contents of the <tt>$matches</tt> array after running the <tt>preg_match()</tt> function:<a name="ch09index186"></a><a name="ch09index187"></a><a name="ch09index188"></a></p>
+<pre>
+&lt;?php
+       $string = 'Derick Rethans &lt;derick@php.net&gt;';
+       preg_match(
+             "/([^&lt;]+)&lt;([a-zA-Z0-9_-]+@([a-zA-Z0-9_-]+\\.)+[a-zA-Z09_]+)&gt;/",
+             $string,
+             $matches
+       );
+       print_r($matches);
+?&gt;
+</pre><br>The output is<pre>
+Array
+(
+      [0] =&gt; Derick Rethans &lt;derick@php.net&gt;
+      [1] =&gt; Derick Rethans
+      [2] =&gt; derick@php.net
+      [3] =&gt; php.
+)
+</pre><br>
+<p class="docText">The fourth element cannot really be avoided because a subpattern was used for the (sub)domain part of the pattern, but of course, it doesn't hurt to have it.<a name="ch09index189"></a><a name="ch09index190"></a><a name="ch09index191"></a></p>
+<a name="ch09lev3sec18"></a><h5 class="docSection3Title">9.3.1.5 Escape Sequences</h5>
+<p class="docText">As shown in the previous table, the <tt>\</tt> character is the general escape character. In combination with the character that follows it, the <tt>\</tt> stands for a special group of characters. <a class="docLink" href="#ch09table02">Table 9.2</a> shows the different cases.<a name="ch09index192"></a><a name="ch09index193"></a><a name="ch09index194"></a><a name="ch09index195"></a></p>
+<a name="ch09table02"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 9.2. Escape Sequences</h5></caption><colgroup><col width="121"><col width="429"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Case</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\? \+ \* \[ \] \{ \}</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The first use of the escape character is to take away the special meaning of the other metacharacters. For example, if you need to match <tt>4**</tt> in your pattern, you can use</p>
+
+<pre>
+'/^4\*\*$/'
+</pre><BR>
+
+<p class="docText">Be careful with using double quotes around your patterns, because PHP gives a special meaning to the <tt>\</tt> in there too. The following pattern is therefore equal to the one above.</p>
+
+<pre>
+"/^4\\*\\*$/"
+</pre><BR>
+
+<p class="docText">(Note: In this case, <tt>"/^4\*\*$"</tt> would also have worked because <tt>\*</tt> is not recognized by PHP as a valid escape sequence, but what is shown here is not correct way to do it.)</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>\\</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Escapes the <tt>\</tt> so that it can be used in patterns.</p>
+
+<a name="PLID26"></a><div class="v1"><a href="ch09lev1sec3.html#PLID26">[View full width]</a></div><pre>
+&lt;?php
+    $subject = 'PHP\5';
+    $pattern1 = '/^PHP\\\5$/';
+    $pattern2 = "/^PHP\\\\5$/";
+    $ret1 = preg_match($pattern1, $subject,
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> $matches1);
+    $ret2 = preg_match($pattern2, $subject,
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> $matches2);
+    var_dump($matches1, $matches2);
+?&gt;
+</pre><br>
+
+<p class="docText">Now you are probably wondering why we used three slashes in $pattern1; this is because PHP recognizes the <tt>\</tt> as a special character inside single quotes when it parses the script. This is because you need to use the <tt>\</tt> to escape a single quote in such a string (<tt>$str = 'derick\'s';</tt>). So, the first <tt>\</tt> escapes the second <tt>\</tt> for the PHP parser, and that combined character escapes the third slash for PCRE.</P>
+<p class="docText">The second pattern inside double quotes even has four slashes. This is because inside double quotes <tt>\5</tt> has a special meaning to PHP. It means &quot;the octal character 5,&quot; which is, of course, not really useful at all, but it does give a problem for our pattern so we have to escape this slash with another slash, too.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>\a</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The BEL character (ASCII 7).</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\e</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The Escape character (ASCII 27).</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\f</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The Formfeed character (ASCII 12).</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\n</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The Newline character (ASCII 10).</P></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>\r</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The Carriage Return character (ASCII 13).</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\t</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The Tab character (ASCII 9).</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>\xhh</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Any character represented by its hexadecimal code (<tt>hh</tt>). Use <tt>\xdf</tt> for the <tt>&szlig;</tt> (iso-8859-15), for example.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\ddd</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Any character represented by its octal code (<tt>ddd</tt>).</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\d</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Any decimal digit, which is the same as specifying the character class [0-9] in a pattern.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\D</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Any character that is not a decimal digit (is the same as <tt>[^0-9]</tt>).</P></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>\s</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Any whitespace character. (It the same as <tt>[\t\f\r\n ]</tt>, or in words: tab, formfeed, carriage return, newline, and space.)</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\S</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Any character that is not a whitespace character.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>\w</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Any character that is part of a <span class="docEmphStrong">words</span>, meaning any letter or digit, or the underscore character. <span class="docEmphStrong">Letters</span> are letters used in the current locale (language-specific):</p>
+
+<a name="PLID27"></a><div class="v1"><a href="ch09lev1sec3.html#PLID27">[View full width]</a></div><pre>
+&lt;?php
+    $subject = "Montr&eacute;al";
+    /* The 'default' locale */
+    setlocale(LC_ALL, 'C');
+    preg_match('/^\w+/', $subject, $matches);
+    print_r($matches);
+    /* Set the locale to Dutch, which has the &eacute;
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> in it's
+    alphabet */
+    setlocale(LC_ALL, 'nl_NL');
+    preg_match('/^\w+/', $subject, $matches);
+    print_r($matches);
+?&gt;
+</pre><br>
+
+<p class="docText">outputs</p>
+
+<pre>
+Array
+(
+    [0] =&gt; Montr
+)
+Array
+(
+    [0] =&gt; Montr&eacute;al
+)
+</pre><br>
+
+<a name="ch09note03"></a><div class="docNote"><p class="docNoteTitle"><span class="docEmphStrong">Tip</span></p>
+<p class="docText">For this example to work, you will need to have the locale <tt>nl_NL</tt> installed. Names of locales are system-dependent, toofor example, on Windows, the name of the locale is called <tt>nld_nld</tt>. See <a class="docLink" target="_blank" href="http://www.macmax.org/locales/index_en.html">http://www.macmax.org/locales/index_en.html</a> for locale names for MacOS X and <a class="docLink" target="_blank" href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/vclib/html/_crt_language_strings.asp">http://msdn.microsoft.com/library/default.asp?url=/library/en-us/vclib/html/_crt_language_strings.asp</a> for Windows.</p></div><br></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>s</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Any character that does not belong to the \w set.</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\b</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">An anchor point for a word boundary. In simple words, this means a point in a string between a word character (<tt>\w</tt>) and a non-word character (<tt>\W</tt>). The following example matches only the letters in the subject:</p>
+
+<pre>
+&lt;?php
+    $string = "##Testing123##";
+    preg_match('@\b.+\b@', $string, $matches);
+    print_r($matches);
+?&gt;
+</pre><br>
+
+<p class="docText">outputs</P>
+
+<pre>
+Array
+(
+    [0] =&gt; Testing123
+)
+</pre><br>
+</TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\B</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The opposite of the <tt>\b</tt>, it acts as an anchor between either two word characters in the <tt>\w</tt> set, or between two non-word characters from the <tt>\W</tt> set. Because of the first point that matches this restriction, the following example only prints <tt>estin</tt>:</P>
+
+<pre>
+&lt;?php
+    $string = "Testing";
+    preg_match('@\B.+\B@', $string, $matches);
+    echo $matches[0]. "\n";
+?&gt;
+</pre><BR>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\Q ... \E</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Can be used inside patterns to turn off the special meaning of metacharacters. The pattern '<tt>@\Q.+*?\E@</tt>' will therefore match the string '<tt>.+*?</tt>'.</P></td></TR></table></p><br>
+<a name="ch09lev3sec19"></a><h5 class="docSection3Title">9.3.1.6 Examples <tt>'/\w+\s+\w+/'</tt></h5>
+<p class="docText">Matches two words separated by whitespace.<a name="ch09index196"></a><a name="ch09index197"></a><a name="ch09index198"></a><a name="ch09index199"></a></p>
+<pre>
+'/(\d{1,3}\.){3}\d{1,3}/'
+</pre><br>
+<p class="docText">Matches (but not validates) an IP address. The IP address may appear anywhere in the string.</p>
+<pre>
+&lt;?php
+     $str = "My IP address is 212.187.38.47.";
+     preg_match('/(\d{1,3}\.){3}\d{1,3}/', $str, $matches);
+     print_r($matches);
+?&gt;
+</pre><br>outputs<pre>
+Array
+(
+     [0] =&gt; 212.187.38.47
+     [1] =&gt; 38.
+)
+</pre><br>
+<p class="docText">It is interesting to notice that the second element only contains the last one of the three matched subpatterns.<a name="ch09index200"></a><a name="ch09index201"></a><a name="ch09index202"></a><a name="ch09index203"></a></p>
+<a name="ch09lev3sec20"></a><h5 class="docSection3Title">9.3.1.7 Lazy Matching</h5>
+<p class="docText">Suppose you have the following string and you want to match the string inside the first <tt>&lt;a /&gt;</tt> tag:<a name="ch09index204"></a><a name="ch09index205"></a><a name="ch09index206"></a></p>
+<pre>
+&lt;a href="http://php.net/"&gt;PHP&lt;/a&gt; has an &lt;a href="http://php.net/manual"&gt;excellent&lt;/a&gt; manual.
+</pre><br>
+<p class="docText">The following pattern looks like it will work:</p>
+<pre>
+'@&lt;a.*&gt;(.*)&lt;/a&gt;@'
+</pre><br>
+<p class="docText">However, when you run the following example, you see that it outputs the wrong result:</P>
+<pre>
+&lt;?php
+      $str = '&lt;a href="http://php.net/"&gt;PHP&lt;/a&gt; has an '.
+           '&lt;a href="http://php.net/manual"&gt;excellent&lt;/a&gt; manual.';
+      $pattern = '@&lt;a.*&gt;(.*)&lt;/a&gt;@';
+      preg_match($pattern, $str, $matches);
+      print_r($matches);
+?&gt;
+</pre><BR>outputs<pre>
+Array
+(
+      [0] =&gt; &lt;a href="http://php.net/"&gt;PHP&lt;/a&gt;
+      [1] =&gt; PHP
+)
+</pre><br>
+<p class="docText">The example fails because the <tt>*</tt> and the <tt>+</tt> are greedy operators. They try to match as many characters as possible. In this case, <tt>&lt;a.*&gt;</tt> will match everything to <tt>manual"&gt;</tt>. You can tell the PCRE engine not to do this by appending the <tt>?</tt> to the quantifier. If the <tt>?</tt> is added, the PCRE engine tries to match as little characters/sub-patterns as possible, which is what we want here.<a name="ch09index207"></a><a name="ch09index208"></a><a name="ch09index209"></a></p>
+<p class="docText">When the pattern <tt>@&lt;a.*?&gt;(.*?)&lt;/a&gt;@</tt> is used, the output is correct:</P>
+<pre>
+Array
+(
+      [0] =&gt; &lt;a href="http://php.net"&gt;PHP&lt;/a&gt;
+      [1] =&gt; PHP
+)
+</pre><br>
+<p class="docText">However, this is not the most efficient way. It's usually better to use the pattern <tt>@&lt;a[^&gt;]+&gt;([^&lt;]+)&lt;/a&gt;@</tt>, which requires less processing by the PCRE engine.<a name="ch09index210"></a><a name="ch09index211"></a><a name="ch09index212"></a></p>
+<a name="ch09lev3sec21"></a><h5 class="docSection3Title">9.3.1.8 Modifiers</h5>
+<p class="docText">The modifiers &quot;modify&quot; the behavior of the pattern matching engine. <a class="docLink" href="#ch09table03">Table 9.3</a> lists them all with descriptions and examples.<a name="ch09index213"></a><a name="ch09index214"></a><a name="ch09index215"></a></p>
+<a name="ch09table03"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 9.3. Modifiers</h5></caption><colgroup><col width="143"><col width="407"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Modifier</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></P></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>i</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">Makes the PCRE engine match in a case-insensitive way.</p>
+<p class="docText"><tt>/[a-z]/</tt> matches a letter in the range a..z.<tt>/[a-z]/i</tt> matches a letter in the ranges A..Z and a..z.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>m</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Changes the behavior of the <tt>^</tt> and <tt>$</tt> in such a way that <tt>^</tt> also matches just after a newline character, and <tt>$</tt> also matches just before a newline character.</P>
+
+<pre>
+&lt;?php
+     $str = "ABC\nDEF\nGHI";
+     preg_match('@^DEF@', $str, $matches1);
+     preg_match('@^DEF@m', $str, $matches2);
+     print_r($matches1);
+     print_r($matches2);
+?&gt;
+</pre><br>
+
+<p class="docText">outputs</p>
+
+<pre>
+Array
+(
+)
+Array
+(
+     [0] =&gt; DEF
+)
+</pre><br>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>s</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">With this modifier set, the . (dot) also matches the newline character; without this modifier set (the default), it does not match the newline character.</p>
+
+<pre>
+&lt;?php
+     $str = "ABC\nDEF\nGHI";
+     preg_match('@BC.DE@', $str, $matches1);
+     preg_match('@BC.DE@s', $str, $matches2);
+     print_r($matches1);
+     print_r($matches2);
+?&gt;
+</pre><br>
+
+<p class="docText">outputs</p>
+
+<pre>
+Array
+(
+)
+Array
+(
+      [0] =&gt; BC
+DE
+)
+</pre><br>
+</td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>x</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">If this modifier is set, you can put arbitrary whitespace inside your pattern, except of course in character classes.</p>
+
+<pre>
+&lt;?php
+      $str = "ABC\nDEF\nGHI";
+      preg_match('@A B C@', $str, $matches1);
+      preg_match('@A B C@x', $str, $matches2);
+      print_r($matches1);
+      print_r($matches2);
+?&gt;
+</pre><br>
+
+<p class="docText">outputs</p>
+
+<pre>
+Array
+(
+)
+Array
+(
+      [0] =&gt; ABC
+)
+</pre><br>
+</td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>e</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Only has an effect on the <tt>preg_replace()</tt> function. When it is set, it performs the normal replacement of back references and then evaluates the replacement string as PHP code. For an example, see the section &quot;<a class="docLink" href="#ch09lev3sec23">Replacement Functions</a>.&quot;</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>a</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Setting this modifier has the same effect as using ^ as the first character in your pattern unless the m modifier is set.</p>
+
+<pre>
+&lt;?php
+      $str = "ABC";
+      preg_match('@BC@', $str, $matches1);
+      preg_match('@BC@A', $str, $matches2);
+      print_r($matches1);
+      print_r($matches2);
+?&gt;
+</pre><br>
+
+<p class="docText">outputs</P>
+
+<pre>
+Array
+(
+      [0] =&gt; BC
+)
+Array
+(
+)
+</pre><br>
+</td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>D</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Makes the <tt>$</tt> only match at the very end of the subject string, and not one character before the end in case that is a newline character.</p>
+
+<pre>
+&lt;?php
+       $str = "ABC\n";
+       preg_match('@BC$@', $str, $matches1);
+       preg_match('@BC$@D', $str, $matches2);
+       print_r($matches1);
+       print_r($matches2);
+?&gt;
+</pre><br>
+
+<p class="docText">outputs</p>
+
+<pre>
+Array
+(
+       [0] =&gt; BC
+)
+Array
+(
+)
+</pre><br>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>U</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Swaps the &quot;greediness&quot; of the PCRE engine. Quantifiers become ungreedy by default, and the ? character turns on greediness. This makes the pattern we saw in an earlier example (<tt>'@&lt;a.*?&gt;(.*?)&lt;/a&gt;@'</tt>) an equivalent of '<tt>@&lt;a.*&gt;.*&lt;/a&gt;@U'</tt>.</p>
+
+<a name="PLID50"></a><div class="v1"><a href="ch09lev1sec3.html#PLID50">[View full width]</a></div><pre>
+&lt;?php
+       $str = '&lt;a href="http://php.net/"&gt;PHP&lt;/a&gt;
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> has an '.
+            '&lt;a href="http://php.net/manual"&gt;'.
+            'excellent&lt;/a&gt; manual.';
+       $pattern = '@&lt;a.*&gt;(.*)&lt;/a&gt;@U';
+       preg_match($pattern, $str, $matches);
+       print_r($matches);
+?&gt;
+</pre><br>
+
+<p class="docText">outputs</P>
+
+<a name="PLID51"></a><div class="v1"><a href="ch09lev1sec3.html#PLID51">[View full width]</a></div><pre>
+Array
+(
+       [0] =&gt; &lt;a href="http://php.net/"&gt;PHP&lt;/a&gt; has an
+              &lt;a href="http://php.net
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif">/manual"&gt;excellent&lt;/a&gt;
+       [1] =&gt; excellent
+)
+</pre><BR>
+</td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>X</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Turns on extra features in the PCRE engine. At the moment, the only feature it turns on is that the engine will throw an error in case an unknown escape sequence was detected. Normally, this would just have been treated as a literal. (Notice that we still have to escape the one \ for PHP itself.)</p>
+
+<pre>
+&lt;?php
+       $str = '\\h';
+       preg_match('@\\h@', $str, $matches1);
+       preg_match('@\\h@X', $str, $matches2);
+?&gt;
+</pre><br>
+
+<p class="docText">output:</P>
+
+<a name="PLID53"></a><div class="v1"><a href="ch09lev1sec3.html#PLID53">[View full width]</a></div><pre>
+Warning: preg_match(): Compilation failed:
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> unrecognized 
+character follows \ at offset 1 in /dat/docs/book/
+prenticehall/php5powerprogramming/chapters/draft/10-
+mainstream-extensions/pcre/mod-X.php on line 4
+</pre><br>
+</TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>u</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Turns on UTF-8 mode. In UTF-8 mode the PCRE engine treats the pattern as UTF-8 encoded. This means that the . (dot) matches a multi-byte character for example. (The next example expects you to view this book in the iso-8859-1 character set; if you view it in UTF-8, you'll see <tt>D&eacute;rick</tt> instead.)</P>
+
+<pre>
+&lt;?php
+       $str = 'D&Atilde;&#169;rick';
+       preg_match('@D.rick@', $str, $matches1);
+       preg_match('@D.rick@u', $str, $matches2);
+       print_r($matches1);
+       print_r($matches2);
+?&gt;
+</pre><BR>
+
+<p class="docText">outputs</p>
+
+<pre>
+Array
+(
+)
+Array
+(
+       [0] =&gt;  D&Atilde;&#169;rick
+)
+</pre><br>
+<a name="ch09index216"></a><a name="ch09index217"></a><a name="ch09index218"></a></td></tr></table></P><br>
+<a name="ch09lev2sec11"></a><h4 class="docSection2Title">9.3.2. Functions</H4>
+<p class="docText">Three groups of PCRE-related functions are available: matching functions, replacement functions, and splitting functions. <tt>preg_match()</tt>, discussed previously, belongs to the first group. The second group contains functions that replace substrings, which match a specific pattern. The last group of functions split strings based on regular expression matches.<a name="ch09index219"></a><a name="ch09index220"></a></p>
+<a name="ch09lev3sec22"></a><H5 class="docSection3Title">9.3.2.1 Matching Functions</h5>
+<p class="docText"><tt>preg_match()</tt> is the function that matches one pattern with the subject string and returns either true or false depending whether the subject matched the pattern. It also can return an array containing the contents of the different sub-pattern matches.<a name="ch09index221"></a><a name="ch09index222"></a><a name="ch09index223"></a><a name="ch09index224"></a><a name="ch09index225"></a></p>
+<p class="docText">The function <tt>preg_match_all()</tt> is similar, except that it matches the pattern with the subject repeatedly. Finding all the matches is useful when extracting information from documents. Take, for example, the situation in which you want to extract email addresses from a web site:<a name="ch09index226"></a><a name="ch09index227"></a></p>
+<pre>
+&lt;?php
+       $raw_document = file_get_contents('http://www.w3.org/TR/CSS21');
+       $doc = html_entity_decode($raw_document);
+       $count = preg_match_all(
+              '/&lt;(?P&lt;email&gt;([a-z.]+).?@[a-z0-9]+\.[a-z]{1,6})&gt;/Ui',
+              $doc,
+              $matches
+       );
+       var_dump($matches);
+?&gt;
+</pre><br>outputs<pre>
+Array
+(
+    [0] =&gt; Array
+        (
+            [0] =&gt; &lt;bert @w3.org&gt;
+            [1] =&gt; &lt;tantekc @microsoft.com&gt;
+            [2] =&gt; &lt;ian @hixie.ch&gt;
+            [3] =&gt; &lt;howcome @opera.com&gt;
+        )
+
+    [email] =&gt; Array
+        (
+            [0] =&gt; bert @w3.org
+            [1] =&gt; tantekc @microsoft.com
+            [2] =&gt; ian @hixie.ch
+            [3] =&gt; howcome @opera.com
+        )
+
+    [1] =&gt; Array
+        (
+            [0] =&gt; bert @w3.org
+            [1] =&gt; tantekc @microsoft.com
+            [2] =&gt; ian @hixie.ch
+            [3] =&gt; howcome @opera.com
+        )
+
+    [2] =&gt; Array
+        (
+            [0] =&gt; bert
+            [1] =&gt; tantekc
+            [2] =&gt; ian
+            [3] =&gt; howcome
+        )
+
+)
+</pre><br>
+<p class="docText">This example reads the contents of the CSS 2.1 specification into a string and decodes the HTML entities in it. The script then uses a <tt>preg_match_all()</tt> on the document, using a pattern that matches &lt; + an email address + &gt;, and stores the email addresses in the <tt>$matches array</tt>. The output shows that <tt>preg_match_all()</tt> doesn't store all sub-pattern belonging to one match in one element of the <tt>$matches</tt> array. Instead, it stores all the sub-pattern matches belonging to the different matches into one element of <tt>$matches</tt>.<a name="ch09index228"></a><a name="ch09index229"></a><a name="ch09index230"></a><a name="ch09index231"></a><a name="ch09index232"></a></p>
+<p class="docText"><tt>preg_grep()</tt> performs similarly to the UNIX <tt>egrep</tt> command. It compares a pattern against elements of an array containing the subjects. It returns an array containing the elements that were successfully matched against the pattern. See the next example, which returns all valid IP addresses from the array <tt>$addresses</tt>:<a name="ch09index233"></a><a name="ch09index234"></a><a name="ch09index235"></a><a name="ch09index236"></a><a name="ch09index237"></a></p>
+<pre>
+&lt;?php
+       $addresses =
+          array('212.187.38.47', '188.141.21.91', '2.9.256.7', '&lt;&lt;empty&gt;&gt;');
+       $pattern =
+          '@^((\d?\d|1\d\d|2[0-4]\d|25[0-5])\.){3}'.
+          '(\d?\d|1\d\d|2[0-4]\d|25[0-5])@';
+       $addresses = preg_grep($pattern, $addresses);
+       print_r($addresses);
+?&gt;
+</pre><br>
+<a name="ch09lev3sec23"></a><h5 class="docSection3Title">9.3.2.2 Replacement Functions</h5>
+<p class="docText">In addition to the matching described in the previous section, PHP's regular expression functions can also replace text based on pattern matching. The <span class="docEmphStrong">replacement functions</span> can replace a substring that matches a subpattern with different text. In the replacement, you can refer to the pattern matches using <span class="docEmphStrong">back references</span>. Here is an example that explains the replacement functions. In this example, we use <tt>preg_replace()</tt> to replace a pseudo-link, such as <tt>[link url="www.php.net"]PHP[/link]</tt>, with a real HTML link:<a name="ch09index238"></a><a name="ch09index239"></a><a name="ch09index240"></a><a name="ch09index241"></a></p>
+<pre>
+&lt;?php
+       $str = '[link url="http://php.net"]PHP[/link] is cool.';
+       $pattern = '@\[link\ url="([^"]+)"\](.*?)\[/link\]@';
+       $replacement = '&lt;a href="\\1"&gt;\\2&lt;/a&gt;';
+       $str = preg_replace($pattern, $replacement, $str);
+       echo $str;
+?&gt;
+</pre><br>The script outputs<pre>
+&lt;a href="http://php.net"&gt;PHP&lt;/a&gt; is cool.
+</pre><br>
+<p class="docText">The pattern consists of two sub-patterns, <tt>([^"]+)</tt> for the URL and <tt>(.*?)</tt>. Instead of returning the substring of the subject that matches the two sub-patterns, the PCRE engine assigns the substring to back references, which you can access by using <tt>\\1</tt> and <tt>\\2</tt> in the replacement string. If you don't want to use <tt>\\1</tt>, you may use <tt>$1</tt>. Be careful when putting the replacement string into double quotes, because you will have to escape either the slashes (so that a back reference looks like <tt>\\\\1</tt>) or the dollar sign (so that a back reference looks like <tt>\$1</tt>). You should always put the replacement string in single quotes.<a name="ch09index242"></a><a name="ch09index243"></a></p>
+<p class="docText">The full pattern match is assigned to back reference 0, just like the element with key 0 in the <tt>matches</tt> array of the <tt>preg_match()</tt> function.<a name="ch09index244"></a><a name="ch09index245"></a><a name="ch09index246"></a></p>
+<a name="ch09note04"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">If the replacement string needs to be <span class="docEmphasis">back reference</span> + <span class="docEmphasis">number</span>, you can also use <tt>${1}1</tt> for the first back reference, followed by the number 1.</P></div><BR>
+<p class="docText"><tt>preg_replace()</tt> can replace more than one subject at the same time by using an array of subjects. For instance, the following example script changes the format of the names in the array <tt>$names</tt>:<a name="ch09index247"></a><a name="ch09index248"></a></p>
+<pre>
+&lt;?php
+       $names = array(
+             'rethans, derick',
+             's&aelig;ther bakken, stig',
+             'gutmans, andi'
+       );
+       $names = preg_replace('@([^,]+).\ (.*)@', '\\2 \\1', $names);
+?&gt;
+</pre><br>
+<p class="docText">The names array is changed to<a name="ch09index249"></a><a name="ch09index250"></a><a name="ch09index251"></a></P>
+<pre>
+array('derick rethans', 'stig s&oelig;ther bakken', 'andi gutmans');
+</pre><br>
+<p class="docText">However, names usually start with an uppercase letter. You can uppercase the first letter by using either the <tt>/e</tt> modifier or <tt>preg_replace_callback()</tt>. The <tt>/e</tt> modifier uses the replacement string to be evaluated as PHP code. Its return value is the replacement string:<a name="ch09index252"></a><a name="ch09index253"></a></p>
+<pre>
+&lt;?php
+       $names = array(
+             'rethans, derick',
+             's&aelig;ther bakken, stig',
+             'gutmans, andi'
+       );
+       $names = preg_replace('@([^,]+).\ (.*)@e', 'ucwords("\\2 \\1")', $names);
+?&gt;
+</pre><br>
+<p class="docText">If you need to do more complex manipulation with the matched patterns, evaluating replacement strings becomes complicated. You can use the <tt>preg_replace_callback()</tt> function instead:</p>
+<pre>
+&lt;?php
+     function format_string($matches)
+     {
+           return ucwords("{$matches[2]} {$matches[1]}");
+     }
+
+     $names = array(
+           'rethans, derick',
+           's&aelig;ther bakken, stig',
+           'gutmans, andi'
+     );
+     $names = preg_replace_callback(
+           '@([^,]+).\ (.*)@',  // pattern
+           'format_string',     // callback function
+           $names               // array with 'subjects'
+     );
+     print_r($names);
+?&gt;
+</pre><br>
+<p class="docText">Here's one more useful example:<a name="ch09index254"></a><a name="ch09index255"></a><a name="ch09index256"></a></p>
+<pre>
+&lt;?php
+      $show_with_vat = true;
+      $format = '&amp;euro; %.2f';
+      $exchange_rate = 1.2444;
+
+      function currency_output_vat ($data)
+      {
+            $price = $data[1];
+            $vat_percent = $data[2];
+
+
+            $show_vat = isset ($_GLOBALS['show_with_vat']) &amp;&amp;
+                  $_GLOBALS['show_with_vat'];
+
+            $amount = ($show_vat)
+                  ? $price * (1 + $vat_percent / 100)
+                  : $price;
+
+            return sprintf(
+                  $GLOBALS['format'],
+                  $amount / $GLOBALS['exchange_rate']
+            );
+      }
+
+      $data = "This item costs {amount: 27.95 %19%} ".
+            "and the other one costs {amount: 29.95 %0%}.\n";
+
+      echo preg_replace_callback (
+            '/\{amount\:\ ([0-9.]+)\ \%([0-9.]+)\%\}/',
+            'currency_output_vat',
+            $data
+      );
+?&gt;
+</pre><BR>
+<p class="docText">This example originates from a webshop where the format and exchange rate are decoupled from the text, which is stored in a cache file. With this solution, it is possible to use caching techniques and still have a dynamic exchange rate.</p>
+<p class="docText"><tt>preg_replace()</tt> and <tt>preg_replace_callback()</tt> allow the pattern to be an array of patterns. When an array is passed as the first parameter, every pattern is matched against the subject. <tt>preg_replace()</tt> also enables you to pass an array for the replacement string when the first parameter is an array with patterns:<a name="ch09index257"></a><a name="ch09index258"></a><a name="ch09index259"></a><a name="ch09index260"></a><a name="ch09index261"></a></P>
+<pre>
+&lt;?php
+      $text = "This is a nice text; with punctuation AND capitals";
+      $patterns = array('@[A-Z]@e', '@[\W]@', '@_+@');
+      $replacements = array('strtolower(\\0)', '_', '_');
+      $text = preg_replace($patterns, $replacements, $text);
+      echo $text."\n";
+?&gt;
+</pre><br>
+<p class="docText">The first pattern <tt>@[A-Z]@e</tt> matches any uppercase character and, because the <tt>e</tt> modifier is used, the accompanying replacement string <tt>strtolower(\\0)</tt> is evaluated as PHP code. The second pattern <tt>[\W\]</tt> matches all non-word characters and, because the second replacement string is simply <tt>_</tt>, all non-word characters are replaced by the underscore (<tt>_</tt>). Because the replacements are done in order, the third pattern matches the already modified subject, replacing all multiple occurrences of <tt>_</tt> with one. The subject string contains the following after each pattern/replacement match, as shown in <a class="docLink" href="#ch09table04">Table 9.4</a>.<a name="ch09index262"></a><a name="ch09index263"></a><a name="ch09index264"></a></P>
+<a name="ch09table04"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 9.4. Replacement Steps</h5></caption><colgroup><col width="110"><col width="440"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Step</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Result</span></P></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Before:</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">This is a nice text; with punctuation AND capitals</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Step 1:</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">this is a nice text; with punctuation and capitals</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Step 2:</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">this_is_a_nice_text__with_punctuation_and_capitals</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Step 3:</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">this_is_a_nice_text_with_punctuation_and_capitals</P></td></tr></table></p><br>
+<a name="ch09lev3sec24"></a><h5 class="docSection3Title">9.3.2.3 Splitting Strings</h5>
+<p class="docText">The last group of functions includes only <tt>preg_split()</tt>, which can be used to split a string into substrings by using a regular expression match for the delimiters. PHP provides an <tt>explode()</tt> function that also splits strings, but <tt>explode()</tt> can only use a simple string as the delimiter. <tt>explode()</tt> is much faster than using a regular expression, so you might be better off using <tt>explode()</tt> when possible. A simple example of <tt>preg_splits()</tt>'s usage might be to split a string into the words it contains. See the following example:<a name="ch09index265"></a><a name="ch09index266"></a><a name="ch09index267"></a><a name="ch09index268"></a><a name="ch09index269"></a><a name="ch09index270"></a><a name="ch09index271"></a><a name="ch09index272"></a></P>
+<pre>
+&lt;?php
+      $str = 'This is an example for preg_split().';
+      $words = preg_split('@[\W]+@', $str);
+      print_r($words);
+?&gt;
+</pre><br>The script outputs<pre>
+Array
+(
+    [0] =&gt; This
+    [1] =&gt; is
+    [2] =&gt; an
+    [3] =&gt; example
+    [4] =&gt; for
+    [5] =&gt; preg_split
+    [6] =&gt;
+)
+</pre><BR>
+<p class="docText">As you can see, the last element is empty. By default, the function returns empty elements, too. The character(s) before the end of the string are non-word characters so they act as a delimiter, resulting in an empty element. You can pass two more parameters to the <tt>preg_split()</tt> function: a limit and a flag. The &quot;limit&quot; parameter controls how many elements are returned before the splitting stops. In the <tt>preg_split()</tt> example, two elements are returned:<a name="ch09index273"></a><a name="ch09index274"></a><a name="ch09index275"></a><a name="ch09index276"></a></p>
+<pre>
+&lt;?php
+     $str = 'This is an example for preg_split().';
+     $words = preg_split('@[\W]+@', $str, 2);
+     print_r($words);
+?&gt;
+</pre><BR>The output is<pre>
+Array
+(
+    [0] =&gt; This
+    [1] =&gt; is an example for preg_split().
+)
+</pre><br>
+<p class="docText">In the next example, we use <tt>-1</tt> as the limit. <tt>-1</tt> means that there is no limit at all, and allows us to pass flags without shortening our output array. Three flags specify what is returned:<a name="ch09index277"></a><a name="ch09index278"></a><a name="ch09index279"></a><a name="ch09index280"></a><a name="ch09index281"></a></p>
+<ul><li><p class="docText">
+<tt>PREG_SPLIT_NO_EMPTY</tt>. 
+Prevents empty elements from ending up in the returned array:</P><pre>
+&lt;?php
+     $str = 'This is an example.';
+     $words = preg_split('@[\W]+@', $str, -1, PREG_SPLIT_NO_EMPTY);
+     print_r($words);
+?&gt;
+
+</pre><BR>The script outputs<pre>
+
+Array
+(
+    [0] =&gt; This
+    [1] =&gt; is
+    [2] =&gt; an
+    [3] =&gt; example
+)
+</pre><br></li><li><p class="docText"><tt>PREG_SPLIT_DELIM_CAPTURE</tt>. 
+Returns the delimiters itself, but only if the delimiters are surrounded by parentheses. We combine the flag with <tt>PREG_SPLIT_NO_EMPTY</tt>:<a name="ch09index282"></a><a name="ch09index283"></a><a name="ch09index284"></a><a name="ch09index285"></a><a name="ch09index286"></a></p><pre>
+&lt;?php
+     $str = 'This is an example.';
+     $words = preg_split(
+          '@([\W]+)@', $str, -1,
+          PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY
+     );
+     print_r($words);
+?&gt;
+
+</pre><BR>The script outputs<pre>
+
+Array
+(
+    [0] =&gt; This
+    [1] =&gt;
+    [2] =&gt; is
+    [3] =&gt;
+    [4] =&gt; an
+    [5] =&gt;
+    [6] =&gt; example
+    [7] =&gt; .
+)
+</pre><br></li><LI><p class="docText">
+<tt>PREG_SPLIT_OFFSET_CAPTURE</tt>. 
+Specifies that the function return a two-dimensional array containing both the text and the offset in the string where the element started. In this example, we combine all three flags:<a name="ch09index287"></a><a name="ch09index288"></a><a name="ch09index289"></a><a name="ch09index290"></a><a name="ch09index291"></a></p><pre>
+&lt;?php
+     $str = 'This is an example.';
+     $words = preg_split(
+          '@([\W]+)@', $str, -1,
+          PREG_SPLIT_OFFSET_CAPTURE |
+                 PREG_SPLIT_DELIM_CAPTURE |
+                 PREG_SPLIT_NO_EMPTY
+     );
+     var_export($words);
+?&gt;
+</pre><BR>The script outputs (reformatted):<pre>
+array (
+  0 =&gt; array ( 0 =&gt; 'This',    1 =&gt;  0 ),
+  1 =&gt; array ( 0 =&gt; ' ',       1 =&gt;  4 ),
+  2 =&gt; array ( 0 =&gt; 'is',      1 =&gt;  5 ),
+  3 =&gt; array ( 0 =&gt; ' ',       1 =&gt;  7 ),
+  4 =&gt; array ( 0 =&gt; 'an',      1 =&gt;  8 ),
+  5 =&gt; array ( 0 =&gt; ' ',       1 =&gt; 10 ),
+  6 =&gt; array ( 0 =&gt; 'example', 1 =&gt; 11 ),
+  7 =&gt; array ( 0 =&gt; '.',       1 =&gt; 18 ),
+)
+</pre><br></li></ul>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

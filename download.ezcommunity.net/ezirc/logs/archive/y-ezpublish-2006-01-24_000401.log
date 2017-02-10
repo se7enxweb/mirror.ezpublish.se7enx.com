@@ -1,0 +1,116 @@
+[01-22-2006 00:15:17] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has joined #ezpublish
+[01-22-2006 00:22:33] -!- ordnas [n=ordnas@p549D73CA.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-22-2006 03:16:49] -!- Jens [n=jens@trac.codes-concepts.de] has quit [Nick collision from services.]
+[01-22-2006 03:17:30] -!- _Jens [n=jens@trac.codes-concepts.de] has joined #ezpublish
+[01-22-2006 04:09:31] -!- SEAwolfx [n=mike@cpe-66-75-246-142.san.res.rr.com] has joined #ezpublish
+[01-22-2006 04:23:30] [#ezpublish] <SEAwolfx> re
+[01-22-2006 04:26:20] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-22-2006 07:04:36] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-22-2006 07:04:45] [#ezpublish] <y_sabal> hi
+[01-22-2006 07:05:17] [#ezpublish] <y_sabal> got an interesting bug
+[01-22-2006 07:05:34] [#ezpublish] <y_sabal> I have an article
+[01-22-2006 07:05:38] [#ezpublish] <y_sabal> with in
+[01-22-2006 07:05:46] [#ezpublish] <y_sabal> inside
+[01-22-2006 07:06:18] [#ezpublish] <y_sabal> a related object, pointing on a folder
+[01-22-2006 07:06:42] [#ezpublish] <y_sabal> (I forgot to said that the article has property container)
+[01-22-2006 07:07:06] [#ezpublish] <y_sabal> and the folder is also contained under the article.
+[01-22-2006 07:07:20] [#ezpublish] <y_sabal> clear until here ?
+[01-22-2006 07:07:45] [#ezpublish] <y_sabal> the bug is such :
+[01-22-2006 07:07:55] [#ezpublish] <y_sabal> for some reason
+[01-22-2006 07:08:31] [#ezpublish] <y_sabal> (the name of the related object field inside article is called "lessons_folder")
+[01-22-2006 07:08:44] [#ezpublish] <y_sabal> {$node.data_map.lessons_folder.content.name} <br />
+[01-22-2006 07:08:45] [#ezpublish] <y_sabal>                 {$node.data_map.lessons_folder.content.main_parent_node_id} <br />
+[01-22-2006 07:09:10] [#ezpublish] <y_sabal> the first line is always returning the name
+[01-22-2006 07:09:29] [#ezpublish] <y_sabal> but sometime, the second line is null
+[01-22-2006 07:09:47] [#ezpublish] <y_sabal> I have no .main_parent_node_id
+[01-22-2006 07:10:14] [#ezpublish] <y_sabal> and neither have I, in such cases, .main_node_id
+[01-22-2006 07:10:56] [#ezpublish] <y_sabal> which make extremely uneasy to fetch the content of the folder
+[01-22-2006 07:10:59] [#ezpublish] <y_sabal> ...
+[01-22-2006 07:12:53] [#ezpublish] <y_sabal> okay, well, if someone pass by, just feel free to comment, help, slaps...
+[01-22-2006 07:51:13] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[01-22-2006 07:54:12] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-22-2006 07:59:25] [#ezpublish] * y_sabal start to dammage the furniture.. maybe someone will move
+[01-22-2006 08:02:20] [#ezpublish] <y_sabal> is this chinese vase belonging to someone ?
+[01-22-2006 08:02:52] [#ezpublish] <y_sabal> oups ... >*plink*<
+[01-22-2006 08:03:37] [#ezpublish] <y_sabal> sorry...
+[01-22-2006 08:10:21] [#ezpublish] <y_sabal> ...
+[01-22-2006 08:10:38] [#ezpublish] <y_sabal> mmm, I wonder if this sofa is fireproof...
+[01-22-2006 08:11:37] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-22-2006 08:11:45] [#ezpublish] <y_sabal> aparently not...
+[01-22-2006 08:11:50] [#ezpublish] <zrg> it lives!
+[01-22-2006 08:12:17] [#ezpublish] <y_sabal> zrg : well, not for long
+[01-22-2006 08:12:54] [#ezpublish] <zrg> ah.. "gonna die tomorrow" club in session?
+[01-22-2006 08:13:24] [#ezpublish] <y_sabal> mm, out of boreness, I started to destroy the furniture in this channel
+[01-22-2006 08:13:27] [#ezpublish] * zrg slaps fh around with a wet herring
+[01-22-2006 08:13:36] [#ezpublish] <y_sabal> hoping someone would answer
+[01-22-2006 08:14:13] [#ezpublish] <y_sabal> but people seems not to be to much interested, neither by the sofa bor by bug in eZ
+[01-22-2006 08:18:31] [#ezpublish] <zrg> what bug
+[01-22-2006 08:19:09] [#ezpublish] <zrg> the proper place for bugs is bugtracker, no problem if you tell here too though
+[01-22-2006 08:22:54] [#ezpublish] <y_sabal> well, I am not sure it's bug inside eZ
+[01-22-2006 08:23:04] [#ezpublish] <y_sabal> it might just be in my own code
+[01-22-2006 08:23:13] [#ezpublish] <y_sabal> but I wanted to check
+[01-22-2006 08:23:42] [#ezpublish] <zrg> well what is it then man
+[01-22-2006 08:24:59] [#ezpublish] <zrg> and, generally, always post the bugreport in tracker, even if you are not 100% sure. It is much better for developers to have few negatives than to not have them reported at all.
+[01-22-2006 08:25:10] [#ezpublish] <zrg> always file bug
+[01-22-2006 08:25:16] [#ezpublish] <y_sabal> ok
+[01-22-2006 08:25:38] [#ezpublish] <y_sabal> here is the pbm: I have an article, with container property, and with a "related object" field, named "lessons_folder"
+[01-22-2006 08:26:54] [#ezpublish] <y_sabal> the lessons_folder point on a folder (logic) located under the article itself.
+[01-22-2006 08:27:03] [#ezpublish] <y_sabal> (until now, clear ?)
+[01-22-2006 08:28:01] [#ezpublish] <y_sabal> the problem arrive just now : I am inside the article template, and I am trying to access the node id of this folder
+[01-22-2006 08:28:13] [#ezpublish] <zrg> ok?
+[01-22-2006 08:28:26] [#ezpublish] <y_sabal> here is the code  {$node.data_map.lessons_folder.content.main_node_id}
+[01-22-2006 08:29:03] [#ezpublish] <y_sabal> the problem is that randomly, this attribute does not exist
+[01-22-2006 08:29:06] [#ezpublish] <y_sabal> or is empty
+[01-22-2006 08:29:54] [#ezpublish] <y_sabal> and when I try attribute (show, 5) to get to the content of the main_node_id, I get a kernel crash
+[01-22-2006 08:30:23] [#ezpublish] <y_sabal> the main problem is that it is randomly here, and randomly not
+[01-22-2006 08:30:26] [#ezpublish] <zrg> suspicious looking code
+[01-22-2006 08:31:25] [#ezpublish] <zrg> you have tried attribute(show) level by level?
+[01-22-2006 08:31:35] [#ezpublish] <y_sabal> yes
+[01-22-2006 08:31:40] [#ezpublish] <y_sabal> until level 4
+[01-22-2006 08:31:46] [#ezpublish] <y_sabal> it is okay
+[01-22-2006 08:32:08] [#ezpublish] <y_sabal> level 5, when I actually get to display main_node_id, it crash
+[01-22-2006 08:32:33] [#ezpublish] <zrg> is "content" of type object ?
+[01-22-2006 08:39:12] [#ezpublish] <y_sabal> mm, yes
+[01-22-2006 08:39:45] [#ezpublish] <y_sabal> (just found something good doing some digging at level 4)
+[01-22-2006 08:48:24] [#ezpublish] <zrg> no excrement :)
+[01-22-2006 08:51:47] [#ezpublish] <y_sabal> mm, washing phase... no clear what I found
+[01-22-2006 09:23:48] [#ezpublish] <y_sabal> *headache*
+[01-22-2006 09:30:21] [#ezpublish] <y_sabal> yeeeeeeeeeeeeeeeeeeessssssssssssssssssssssssss
+[01-22-2006 09:30:45] [#ezpublish] <y_sabal> the exact path was : {$node.data_map.lessons_folder.content.assigned_nodes.0.node_id}
+[01-22-2006 09:32:07] [#ezpublish] <zrg> :)
+[01-22-2006 10:25:21] -!- tobyS [n=dotxp@dslb-084-060-017-027.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[01-22-2006 12:01:51] -!- ordnas [n=ordnas@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-22-2006 12:10:32] [#ezpublish] <zrg> who the hell rates contributions?
+[01-22-2006 12:10:34] [#ezpublish] <zrg> http://ez.no/community/contribs/applications/agenda_v_1_0_by_stefano_guandalini_modified_to_start_on_monday
+[01-22-2006 12:12:28] [#ezpublish] <zrg> stable? its broken to hell and back
+[01-22-2006 12:21:40] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit ["mode-snooze-on"]
+[01-22-2006 12:47:26] -!- ordnas [n=ordnas@217.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[01-22-2006 13:10:17] -!- elephantMan [n=elephant@149.202.99-84.rev.gaoland.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-22-2006 13:26:16] -!- elephantMan [n=elephant@7.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-22-2006 15:11:04] -!- tobyS [n=dotxp@dslb-084-060-017-027.pools.arcor-ip.net] has joined #ezpublish
+[01-22-2006 15:15:38] -!- tobyS [n=dotxp@dslb-084-060-017-027.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-22-2006 15:17:30] -!- Baloo [n=b@i-83-67-99-100.freedom2surf.net] has joined #ezpublish
+[01-22-2006 15:17:48] [#ezpublish] <Baloo> hi
+[01-22-2006 15:18:03] [#ezpublish] <Baloo> any humen here?
+[01-22-2006 15:18:19] [#ezpublish] <Baloo> anyone using ez publish for e-commerce?
+[01-22-2006 15:18:51] [#ezpublish] <zrg> i guess so ;)
+[01-22-2006 15:19:01] [#ezpublish] <Baloo> good :)
+[01-22-2006 15:19:21] [#ezpublish] <Baloo> well i like the way ez publish works
+[01-22-2006 15:19:35] [#ezpublish] <Baloo> but i need it for e-commerce
+[01-22-2006 15:20:01] [#ezpublish] <Baloo> the built-in WebShop is good
+[01-22-2006 15:20:23] [#ezpublish] <Baloo> however it is not as comprehensive as say zen-cart
+[01-22-2006 15:20:41] [#ezpublish] <Baloo> is there any integration of zen-cart for ez publish?
+[01-22-2006 15:20:59] [#ezpublish] <Baloo> (i may even put up with an integration of osCommerce)
+[01-22-2006 15:34:35] -!- elephantMan [n=elephant@7.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[01-22-2006 15:35:12] -!- elephantMan [n=elephant@180.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-22-2006 15:39:40] -!- tobyS [n=dotxp@dslb-084-060-017-027.pools.arcor-ip.net] has joined #ezpublish
+[01-22-2006 15:40:51] [#ezpublish] <zrg> no idea
+[01-22-2006 15:54:35] -!- Baloo [n=b@i-83-67-99-100.freedom2surf.net] has quit []
+[01-22-2006 16:51:02] -!- tobyS [n=dotxp@dslb-084-060-017-027.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[01-22-2006 16:54:05] -!- tobyS [n=dotxp@dslb-084-060-009-225.pools.arcor-ip.net] has joined #ezpublish
+[01-22-2006 16:59:15] -!- _Jens [n=jens@trac.codes-concepts.de] has left #ezpublish []
+[01-22-2006 17:46:43] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-22-2006 18:11:53] -!- SEAwolfx [n=mike@cpe-66-75-246-142.san.res.rr.com] has quit [Remote closed the connection]
+[01-22-2006 19:00:47] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []
+[01-22-2006 19:35:25] -!- seasonfive [n=seasonfi@AGrenoble-152-1-44-83.w82-122.abo.wanadoo.fr] has quit [Read error: 110 (Connection timed out)]
+[01-22-2006 20:02:14] -!- seasonfive [n=seasonfi@AGrenoble-152-1-6-10.w82-122.abo.wanadoo.fr] has joined #ezpublish

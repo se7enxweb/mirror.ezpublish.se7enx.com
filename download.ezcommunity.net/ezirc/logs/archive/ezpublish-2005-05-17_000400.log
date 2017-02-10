@@ -1,0 +1,137 @@
+[05-16-2005 03:16:30] -!- SEAwolfx_ [~mike@128.30.2.236] has joined #ezpublish
+[05-16-2005 03:16:37] -!- SEAwolfx [~mike@0585c0dc247c28a7.session.tor] has quit [Remote closed the connection]
+[05-16-2005 03:56:54] -!- ordna1 [~ordnas@p549DE9F3.dip.t-dialin.net] has joined #ezpublish
+[05-16-2005 04:18:05] -!- ordna1 [~ordnas@p549DE9F3.dip.t-dialin.net] has left #ezpublish []
+[05-16-2005 04:29:45] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-16-2005 05:15:32] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-16-2005 06:01:33] -!- awormus [~aaron@p54B10DF1.dip0.t-ipconnect.de] has joined #ezpublish
+[05-16-2005 06:02:00] [#ezpublish] <awormus> anyone know where I can report typos on the website?
+[05-16-2005 06:50:57] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[05-16-2005 08:24:32] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit ["Fui embora"]
+[05-16-2005 09:17:32] -!- yangoon [~mathiasb@J2bcc.j.pppool.de] has joined #ezpublish
+[05-16-2005 09:17:48] -!- yangoon [~mathiasb@J2bcc.j.pppool.de] has left #ezpublish []
+[05-16-2005 09:44:11] [#ezpublish] <buz> might try to file a bugreport?
+[05-16-2005 10:08:46] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-16-2005 10:24:58] [#ezpublish] <kracker> bingo!
+[05-16-2005 10:36:08] [#ezpublish] <agentbob> yep
+[05-16-2005 11:19:58] -!- ike_ [~mike@65.204.124.194] has joined #ezpublish
+[05-16-2005 11:20:13] [#ezpublish] <mike_> Hi.
+[05-16-2005 11:21:24] [#ezpublish] <mike_> I'm having a "AcceptPathInfo" problem when trying to install EzPublish 3.5.2 on Apache 2.0.54-r4 (gentoo package)
+[05-16-2005 11:21:59] [#ezpublish] <mike_> I've tried adding the directive in the directory section for "/", as well is in the general server config, with seemingly no effect.
+[05-16-2005 11:24:06] [#ezpublish] <xbit> remembered restarting?
+[05-16-2005 11:24:56] [#ezpublish] <mike_> Indeed.
+[05-16-2005 11:29:38] -!- ordnas [~ordnas@p549DBA3D.dip.t-dialin.net] has joined #ezpublish
+[05-16-2005 11:33:00] [#ezpublish] <agentbob> gettinh any specific error msgs/logs?
+[05-16-2005 11:33:09] [#ezpublish] <agentbob> s/h/g/
+[05-16-2005 11:33:32] [#ezpublish] <mike_> no, looked at the error log but nothing related to this is there.
+[05-16-2005 11:33:46] [#ezpublish] <mike_> It's almost like it's just not seeing it, sort of. No error, just ezpub complains.
+[05-16-2005 11:34:05] [#ezpublish] <mike_> I'm probably doing something stupid out of ignorance, but I don't see what.
+[05-16-2005 11:35:41] [#ezpublish] <agentbob> haven't really ran into that problem... sorry
+[05-16-2005 11:37:42] [#ezpublish] <mike_> no problem, thanks for trying.
+[05-16-2005 11:38:10] [#ezpublish] <agentbob> tried searching the site in google? http://www.google.com/search?client=safari&rls=en&q=site:ez.no+acceptpathinfo&ie=UTF-8&oe=UTF-8
+[05-16-2005 11:38:29] [#ezpublish] <agentbob> err http://www.google.com/search?q=site:ez.no+acceptpathinfo
+[05-16-2005 11:39:56] [#ezpublish] <mike_> must admit, I didn't search this site specifically, but I shall do so now.
+[05-16-2005 11:50:02] [#ezpublish] <mike_> I did a phpinfo() page, and it's picking up the path_info env variable.
+[05-16-2005 11:50:11] [#ezpublish] <mike_> So apache itself seems to be taking it fine.
+[05-16-2005 12:04:26] [#ezpublish] <agentbob> you did phpinfo inside the same dir as ezpub?
+[05-16-2005 12:07:43] [#ezpublish] <mike_> yeah.
+[05-16-2005 12:08:40] [#ezpublish] <mike_> to be exact, for the URL "http://192.168.6.203/ezpub/phpinfo.php/test/something/else", the PATH_INFO env variable is "/test/something/else"
+[05-16-2005 12:09:13] [#ezpublish] <mike_> and PHP's "_SERVER["PATH_INFO"]" is the same.
+[05-16-2005 12:11:44] [#ezpublish] <mike_> alright, before I finish tackling this problem, I think I'll tackle some lunch.
+[05-16-2005 12:12:00] [#ezpublish] <mike_> Thanks for the help, I'll be around again after a bit if anything comes to mind.
+[05-16-2005 12:21:30] [#ezpublish] <agentbob> a'ight np... not sure what ezpub's problem is...
+[05-16-2005 12:47:10] [#ezpublish] <mike_> I return.
+[05-16-2005 12:53:27] [#ezpublish] <mike_> I don't suppose I could just check "skip this check", eh?
+[05-16-2005 12:53:39] [#ezpublish] <mike_> 'Ignore this test", rather
+[05-16-2005 13:02:01] [#ezpublish] <mike_> seems like this is a common problem, but no one ever goes back and posts the solution once they get it working.
+[05-16-2005 13:02:04] [#ezpublish] <mike_> I hate when people do that.
+[05-16-2005 13:37:48] [#ezpublish] <mike_> alright, I just skipped that test
+[05-16-2005 13:37:56] [#ezpublish] <mike_> seems to be working fine anyway
+[05-16-2005 13:38:05] [#ezpublish] <mike_> meh. I'll call it a fluke and leave it at that.
+[05-16-2005 13:38:08] [#ezpublish] <mike_> hehe.
+[05-16-2005 13:38:14] [#ezpublish] <mike_> Thanks for the help, lal
+[05-16-2005 13:38:15] [#ezpublish] <mike_> er, all
+[05-16-2005 13:46:32] -!- ordnas [~ordnas@p549DBA3D.dip.t-dialin.net] has left #ezpublish []
+[05-16-2005 13:54:41] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 148 (No route to host)]
+[05-16-2005 13:54:58] [#ezpublish] <agentbob> hehe np
+[05-16-2005 14:40:38] -!- SEAwolfx_ [~mike@128.30.2.236] has quit [Remote closed the connection]
+[05-16-2005 15:08:24] Disconnecting due to lack of a lag response (0.14586800 1116281244 != 0.19586500 1116281274)
+[05-16-2005 15:08:24] Diconnected. Sleeping for 10 second(s).
+[05-16-2005 15:08:34] >> Connecting to irc.kde.org:6667
+[05-16-2005 15:08:34] >> Connected to irc.kde.org:6667, registering...
+[05-16-2005 15:08:48] >> Successfully registered. Nick is: ezlog
+[05-16-2005 15:08:48] -!- There are 11958 victims and 12345 hiding on 26 servers
+[05-16-2005 15:08:48] -!- 32 flagged staff members
+[05-16-2005 15:08:48] -!- 7950 channels formed
+[05-16-2005 15:08:48] -!- I have 4575 clients and 0 servers
+[05-16-2005 15:08:48] -!- Current local  users: 4575  Max: 4625
+[05-16-2005 15:08:48] -!- Current global users: 24303  Max: 24741
+[05-16-2005 15:08:48] -!- Highest connection count: 4626 (4625 clients) (551077 since server was (re)started)
+[05-16-2005 15:08:48] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-16-2005 15:08:48] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-16-2005 15:09:04] >> Attempting to join channels: #ezpublish
+[05-16-2005 15:09:04] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-16-2005 15:09:04] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-16-2005 15:09:04] -!- Topic set by Bedlore [@] [Thu, 12 May 2005 20:05:32 -0700]
+[05-16-2005 15:27:34] Disconnecting due to lack of a lag response (0.03591200 1116282394 != 0.07588100 1116282424)
+[05-16-2005 15:27:34] Diconnected. Sleeping for 10 second(s).
+[05-16-2005 15:27:44] >> Connecting to irc.kde.org:6667
+[05-16-2005 15:27:44] >> Connected to irc.kde.org:6667, registering...
+[05-16-2005 15:27:49] >> Attempting to join channels: #ezpublish
+[05-16-2005 15:27:57] >> Successfully registered. Nick is: ezlog
+[05-16-2005 15:27:57] -!- There are 11862 victims and 12332 hiding on 26 servers
+[05-16-2005 15:27:57] -!- 32 flagged staff members
+[05-16-2005 15:27:57] -!- 7950 channels formed
+[05-16-2005 15:27:57] -!- I have 4553 clients and 0 servers
+[05-16-2005 15:27:57] -!- Current local  users: 4553  Max: 4625
+[05-16-2005 15:27:57] -!- Current global users: 24194  Max: 24741
+[05-16-2005 15:27:57] -!- Highest connection count: 4626 (4625 clients) (551289 since server was (re)started)
+[05-16-2005 15:27:58] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-16-2005 15:27:58] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-16-2005 15:27:58] -!- Topic set by Bedlore [@] [Thu, 12 May 2005 20:05:32 -0700]
+[05-16-2005 15:27:58] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-16-2005 15:27:58] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-16-2005 15:38:14] Disconnecting due to lack of a lag response (0.14586500 1116283034 != 0.18586500 1116283064)
+[05-16-2005 15:38:14] Diconnected. Sleeping for 10 second(s).
+[05-16-2005 15:38:24] >> Connecting to irc.kde.org:6667
+[05-16-2005 15:38:27] >> Connected to irc.kde.org:6667, registering...
+[05-16-2005 15:38:27] >> Attempting to join channels: #ezpublish
+[05-16-2005 15:38:39] >> Successfully registered. Nick is: ezlog
+[05-16-2005 15:38:39] -!- There are 11844 victims and 12313 hiding on 26 servers
+[05-16-2005 15:38:39] -!- 32 flagged staff members
+[05-16-2005 15:38:39] -!- 7942 channels formed
+[05-16-2005 15:38:39] -!- I have 4551 clients and 0 servers
+[05-16-2005 15:38:39] -!- Current local  users: 4551  Max: 4625
+[05-16-2005 15:38:39] -!- Current global users: 24157  Max: 24741
+[05-16-2005 15:38:39] -!- Highest connection count: 4626 (4625 clients) (551422 since server was (re)started)
+[05-16-2005 15:38:39] -!- ezlog [[U2FsdGVkX@64.30.116.29] has joined #ezpublish
+[05-16-2005 15:38:39] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-16-2005 15:38:39] -!- Topic set by Bedlore [@] [Thu, 12 May 2005 20:05:32 -0700]
+[05-16-2005 15:38:40] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-16-2005 15:38:40] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-16-2005 16:12:04] -!- awormus [~aaron@p54B10DF1.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-16-2005 16:43:22] -!- ike_ [~mike@65.204.124.194] has quit ["leaving"]
+[05-16-2005 16:43:27] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-16-2005 16:59:32] [#ezpublish] <kracker> wow, what a day
+[05-16-2005 17:13:41] [#ezpublish] <kracker> i mean i really try to front sell these guys with economical / decent hosting solutions which avoid all these problems but they just are all so stuborn for all the wrong reasons
+[05-16-2005 19:00:27] Disconnecting due to lack of a lag response (0.02590300 1116295167 != 0.06587100 1116295197)
+[05-16-2005 19:00:27] Diconnected. Sleeping for 10 second(s).
+[05-16-2005 19:00:37] >> Connecting to irc.kde.org:6667
+[05-16-2005 19:00:37] >> Connected to irc.kde.org:6667, registering...
+[05-16-2005 19:00:57] >> Attempting to join channels: #ezpublish
+[05-16-2005 19:01:27] >> Successfully registered. Nick is: ezlog
+[05-16-2005 19:01:27] -!- There are 9951 victims and 11398 hiding on 26 servers
+[05-16-2005 19:01:27] -!- 32 flagged staff members
+[05-16-2005 19:01:27] -!- 7849 channels formed
+[05-16-2005 19:01:27] -!- I have 3987 clients and 0 servers
+[05-16-2005 19:01:27] -!- Current local  users: 3987  Max: 4625
+[05-16-2005 19:01:27] -!- Current global users: 21349  Max: 24741
+[05-16-2005 19:01:27] -!- Highest connection count: 4626 (4625 clients) (553385 since server was (re)started)
+[05-16-2005 19:01:28] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-16-2005 19:01:28] -!- Topic for #ezpublish: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-16-2005 19:01:28] -!- Topic set by Bedlore [@] [Thu, 12 May 2005 20:05:32 -0700]
+[05-16-2005 19:01:28] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-16-2005 19:01:28] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-16-2005 19:09:51] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 148 (No route to host)]
+[05-16-2005 22:21:25] -!- aravillo [~colombia5@69.79.253.150] has joined #ezpublish
+[05-16-2005 23:03:18] -!- aravillo [~colombia5@69.79.253.150] has quit []

@@ -1,0 +1,30 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 15.1.&nbsp; Introduction</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch15.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch15lev1sec2.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch15lev1sec1"></a><h3 class="docSection1Title">15.1. Introduction</h3>
+<p class="docText">One of the main reasons for PHP's success is the large amount of available extensions. No matter what a web developer might need, he'll most probably find it in the PHP distribution, including extensions that support various databases, graphic file formats, compression, XML technologies, and lots more.</p>
+<p class="docText">The big breakthrough for PHP happened in PHP 3 with the introduction of the <span class="docEmphStrong">extension API</span>, which allowed the PHP development community to easily extend PHP with dozens of extensions. Today, two versions later, the API still very strongly resembles what existed in PHP 3. The idea was to hide the internals of PHP and the scripting engine itself as much as possible from the extension writer, and only require him to be proficient in the API itself.<a name="ch15index01"></a><a name="ch15index02"></a></p>
+<p class="docText">There are two main reasons for writing your own PHP extension. The first is if you need PHP to support a technology it doesn't support yet. This usually involves wrapping some kind of existing C library to give it an interface from PHP. For example, if a new database called FooBase made it to the market, you'd need to create a PHP extension which allows you to interface with FooBase's C library from PHP. This work would only have to be done by one person and could later be shared with the whole PHP community (if you'd want to). The second, less common, reason is if you need to write some of your business logic in C for performance or functionality reasons.<a name="ch15index03"></a><a name="ch15index04"></a></p>
+<p class="docText">If both of these reasons aren't relevant to you and you don't feel adventurous, you can probably skip this chapter.</P>
+<p class="docText">This chapter teaches you how to write relatively simple PHP extensions with a subset of the extension API. It covers enough material for the majority of developers who want to write custom PHP extensions. One of the best ways of learning a programming subject is by doing something extremely simple, which is the route this chapter takes. Once you know the basics, you'll be able to easily enrich yourself by reading documentation on the web, the source code, or participating in discussions on mailing lists and newsgroups. Therefore, this chapter concentrates on getting you started. It makes use of a UNIX script called <tt>ext_skel</tt>, which creates skeleton extensions from a function definition file describing the extension's interface. For this reason, you will need to use UNIX to create the skeleton. Windows developers may use the Windows <tt>ext_skel_win32.php</tt> alternative to <tt>ext_skel</tt>. However, the instructions in this chapter referring to building PHP with your extensions only cover the UNIX build system. All the API explanations in this chapter are relevant to both UNIX and Windows extensions.</p>
+<p class="docText">After you finish reading this chapter, you will have learned how to</P>
+<ul><LI><p class="docList">Create a simple extension with business logic.</p></li><li><p class="docList">Create a wrapper extension for a C library, specifically some of the standard C file operation functions such as <tt>fopen()</tt>.</p></LI></UL>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch15.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch15lev1sec2.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

@@ -1,0 +1,194 @@
+[01-31-2006 00:48:44] -!- nnn1 [n=therion@195.204.221.183] has joined #ezpublish
+[01-31-2006 00:48:58] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 00:53:54] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[01-31-2006 00:54:18] [#ezpublish] <kracker> ezxml kills me inside
+[01-31-2006 01:02:40] -!- DiGiTa|_ [n=guillaum@84.4.40.4] has joined #ezpublish
+[01-31-2006 01:06:40] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-31-2006 01:30:12] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-31-2006 01:41:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-31-2006 01:48:45] -!- ordnas [n=ordnas@p549D6C06.dip.t-dialin.net] has joined #ezpublish
+[01-31-2006 01:56:48] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[01-31-2006 02:06:38] -!- SEAwolfx_ [n=mike@tor/session/x-4d848c549a60e1f4] has joined #ezpublish
+[01-31-2006 02:10:28] -!- SEAwolfx [n=mike@tor/session/x-3bd5add9e49cd61d] has quit [Remote closed the connection]
+[01-31-2006 02:30:31] [#ezpublish] <DiGiTa|_> hi
+[01-31-2006 02:41:16] [#ezpublish] <DiGiTa|_> is it possible to replace a word in many files with a command line ?
+[01-31-2006 02:53:30] [#ezpublish] <nnn1> you can use perl
+[01-31-2006 02:53:53] [#ezpublish] <nnn1> http://www.debian-administration.org/articles/197
+[01-31-2006 03:19:48] [#ezpublish] <DiGiTa|_> thanks nnn1
+[01-31-2006 03:19:55] [#ezpublish] <DiGiTa|_> works like a charm ;)
+[01-31-2006 03:20:09] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[01-31-2006 03:23:10] [#ezpublish] <nnn1> np
+[01-31-2006 03:39:24] [#ezpublish] <SEAwolfx_> sed ;)
+[01-31-2006 03:39:37] [#ezpublish] <SEAwolfx_> no perl *duck*
+[01-31-2006 04:12:53] [#ezpublish] <kalooni> hi there
+[01-31-2006 04:14:31] [#ezpublish] <SEAwolfx_> hi kalooni
+[01-31-2006 04:16:59] [#ezpublish] <B-KiLLer`> is there any template function which would do the same result as the php one "isset()" ?
+[01-31-2006 04:17:46] [#ezpublish] <kalooni> B Killer is_set()
+[01-31-2006 04:17:48] [#ezpublish] <kalooni> i thing
+[01-31-2006 04:17:53] [#ezpublish] <kalooni> s/g/k
+[01-31-2006 04:18:27] [#ezpublish] <B-KiLLer`> hey, thanks :)
+[01-31-2006 04:18:29] [#ezpublish] <kalooni> http://ez.no/doc/ez_publish/technical_manual/3_6/reference/template_operators/variable_and_type_handling/is_set
+[01-31-2006 04:18:47] [#ezpublish] <kalooni> hi Seawolfx ;)
+[01-31-2006 04:19:10] [#ezpublish] <B-KiLLer`> searching their documentation is so boring, using their search engine
+[01-31-2006 04:19:48] [#ezpublish] <kalooni> I am using the Online Editor. When I want to edit a link, i would like to specify a specific class style. How can I add style classes to the link popup ?
+[01-31-2006 04:20:30] [#ezpublish] <kalooni> the problem with the ez.no doc is that it is very uncomplete to my point of view
+[01-31-2006 04:22:29] -!- tobyS [n=dotxp@dslb-084-060-030-109.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-31-2006 04:22:33] [#ezpublish] <B-KiLLer`> yes, I agree with you on that point, there is a lot of missing content
+[01-31-2006 04:23:48] [#ezpublish] <B-KiLLer`> http://ez.no/doc/extensions/online_editor/4_x/settings
+[01-31-2006 04:23:54] [#ezpublish] <B-KiLLer`> is that what you're looking for ?
+[01-31-2006 04:24:59] [#ezpublish] <kalooni> not sure
+[01-31-2006 04:25:29] [#ezpublish] <kalooni> as we can manage available custom tags, I am looking where to manage available style classes ...
+[01-31-2006 04:25:49] [#ezpublish] <kalooni> and it seems the editor.css file only concerns the rendering of the ezdhtml extension
+[01-31-2006 04:29:31] [#ezpublish] <kalooni> ok I think I have found it. It is in the content.ini file ... AvailableClasses
+[01-31-2006 04:32:02] -!- season|away is now known as seasonfive
+[01-31-2006 06:55:42] -!- nnn1 is now known as nnn0
+[01-31-2006 07:13:33] [#ezpublish] <B-KiLLer`> could someone advice me on the best way to place an ezpublish site in a load balancing environnement ?
+[01-31-2006 07:13:47] [#ezpublish] <B-KiLLer`> because of the cache and so on...
+[01-31-2006 07:14:54] [#ezpublish] <B-KiLLer`> for the database, it's not a problem, but for the filesystem I don't really know which solution would be the best to deal with
+[01-31-2006 07:37:21] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-31-2006 07:41:09] [#ezpublish] <seasonfive> B-KiLLer`: Buy a SAN and put a clustered FS (like GFS) :)
+[01-31-2006 07:41:47] [#ezpublish] <seasonfive> or more like a NAS using samba or nfs
+[01-31-2006 07:43:39] [#ezpublish] <seasonfive> or let each node manage their own cache
+[01-31-2006 07:43:57] [#ezpublish] <B-KiLLer`> that would be the easiest way, yes
+[01-31-2006 07:44:15] [#ezpublish] <B-KiLLer`> :)
+[01-31-2006 07:45:37] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-31-2006 07:46:26] [#ezpublish] <seasonfive> =]
+[01-31-2006 07:51:55] [#ezpublish] <buz> i dont think sharing the cache would be very wise
+[01-31-2006 07:52:20] [#ezpublish] <buz> locking on network filesystems is a PITA
+[01-31-2006 08:04:34] [#ezpublish] <_kore> Imagine to share or sync var/storage between the servers
+[01-31-2006 08:18:36] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-31-2006 08:34:25] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-31-2006 08:34:52] [#ezpublish] <zrg> hi folks, there was a site selling ez site designs, what was it?
+[01-31-2006 08:49:31] -!- tobyS [n=dotxp@dslb-084-062-199-068.pools.arcor-ip.net] has joined #ezpublish
+[01-31-2006 08:59:02] -!- kore__ [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[01-31-2006 09:01:09] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 09:18:18] [#ezpublish] <buz> zrg: its linked on ez.np
+[01-31-2006 09:18:29] [#ezpublish] <buz> but beware, the designs are uhm, ugly?
+[01-31-2006 09:19:03] [#ezpublish] <zrg> not for me, someone asked
+[01-31-2006 09:19:27] [#ezpublish] <zrg> on ez.no ?
+[01-31-2006 09:19:33] [#ezpublish] <buz> thought so
+[01-31-2006 09:19:33] [#ezpublish] <zrg> cant find..
+[01-31-2006 10:04:14] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-31-2006 10:04:15] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[01-31-2006 10:04:21] [#ezpublish] <Sulfur> w00t guys :)
+[01-31-2006 10:04:40] -!- kore__ [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 10:05:33] [#ezpublish] <Sulfur> question to all extension - makers / module coders : usually the user/login view redirects to the page which needed the login upon success. this does not happen for my custom - coded extension. what do I have to set to make it work correctly ?
+[01-31-2006 10:07:40] [#ezpublish] <kalooni> Sulfur: maybe you should override this in your extension settings ?
+[01-31-2006 10:07:49] [#ezpublish] <zrg> dunno except look at inifiles, was some setting for after-login page i think
+[01-31-2006 10:22:03] [#ezpublish] <Sulfur> but .... zrg , it usually redirects already to the page which is shown, so inifiles would be ok as they are ... the problem is I have to redirect to module/view/params .... and that I don't know how to save or where to store
+[01-31-2006 10:22:39] -!- ordna1 [n=ordnas@p549D6C06.dip.t-dialin.net] has joined #ezpublish
+[01-31-2006 10:23:57] [#ezpublish] <Sulfur> fh: any hint ?
+[01-31-2006 10:24:25] [#ezpublish] <zrg> you must be very desperate if you ask from the dead :)
+[01-31-2006 10:25:29] [#ezpublish] <Sulfur> he is ?
+[01-31-2006 10:36:19] [#ezpublish] <zrg> from the looks of it at least :P
+[01-31-2006 10:36:39] [#ezpublish] <zrg> well keep prodding, miracles happen :)
+[01-31-2006 10:39:58] -!- ordnas [n=ordnas@p549D6C06.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 10:40:57] [#ezpublish] <Sulfur> dead ravens, dead lead developers ....
+[01-31-2006 10:41:36] [#ezpublish] * zrg is spreading goat blood with a lawn sprinkler
+[01-31-2006 10:41:54] [#ezpublish] <buz> arent you supposed to spread female blonde virgin blood
+[01-31-2006 10:42:04] [#ezpublish] <buz> (just so you dont slaughter any devs)
+[01-31-2006 10:42:51] [#ezpublish] <Sulfur> the only virgins around nowadays  are those made so by their starsign
+[01-31-2006 10:43:02] [#ezpublish] <Sulfur> buz: ya got any idea on how to overcome that prob ?
+[01-31-2006 10:43:11] [#ezpublish] <buz> no
+[01-31-2006 10:43:13] [#ezpublish] <zrg> blondes only on special ocasions :P
+[01-31-2006 10:43:59] [#ezpublish] <zrg> im not quite sure i understood problem, step by step?
+[01-31-2006 10:44:21] [#ezpublish] <Sulfur> I am feeling greener and hulkier my the minute
+[01-31-2006 10:44:48] [#ezpublish] <zrg> thats malaria
+[01-31-2006 10:45:43] [#ezpublish] <Sulfur> shouldn't be $params or $view_parameters defined in any template ?
+[01-31-2006 10:46:27] [#ezpublish] <Sulfur> arrrghù
+[01-31-2006 10:47:49] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-31-2006 10:48:13] [#ezpublish] <zrg> no, if you use $view_parameters in your module you have to pass it
+[01-31-2006 10:48:31] [#ezpublish] <zrg> and there is gotcha related to this too i found out recently ;)
+[01-31-2006 10:50:31] [#ezpublish] <zrg> in yourmodule.php
+[01-31-2006 10:50:35] [#ezpublish] <zrg> $tpl->setVariable('view_parameters', $Params['UserParameters']);
+[01-31-2006 10:51:28] [#ezpublish] <zrg> made a eventcalendar module, wasted a day :(
+[01-31-2006 10:51:55] [#ezpublish] <Sulfur> well ... need to go ....
+[01-31-2006 10:51:58] [#ezpublish] <Sulfur> see ya :)
+[01-31-2006 10:52:05] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Isn't Gaim a cool program ? :-)"]
+[01-31-2006 11:03:51] -!- ordnas [n=ordnas@p549D7E61.dip.t-dialin.net] has joined #ezpublish
+[01-31-2006 11:21:57] -!- ordna1 [n=ordnas@p549D6C06.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 11:33:59] -!- tobyS_ [n=dotxp@dslb-084-061-136-030.pools.arcor-ip.net] has joined #ezpublish
+[01-31-2006 11:48:32] -!- tobyS [n=dotxp@dslb-084-062-199-068.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 12:02:17] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-31-2006 12:02:28] [#ezpublish] <y_sabal> hi there
+[01-31-2006 12:03:53] [#ezpublish] <y_sabal> one question : I want to fetch and filter out folder with a special attribute "hide_on_left_menu", but I want to fetch all the rest
+[01-31-2006 12:04:08] [#ezpublish] <y_sabal> I tried with
+[01-31-2006 12:04:09] [#ezpublish] <y_sabal> 'attribute_filter',array(array('folder/hide_on_left_menu','=',0)),
+[01-31-2006 12:04:33] [#ezpublish] <y_sabal> but it filter out everything else
+[01-31-2006 12:10:46] [#ezpublish] * y_sabal should learn how to think before asking...
+[01-31-2006 12:10:51] [#ezpublish] <buz> zrg: wasted why
+[01-31-2006 12:12:38] [#ezpublish] <y_sabal> one question thought...
+[01-31-2006 12:13:26] [#ezpublish] <buz> are there any really big community sites built upon ez? bigger than ez.no i mean
+[01-31-2006 12:14:27] [#ezpublish] <y_sabal> what is the aritmetique sign for "not equal" : != or <> ??
+[01-31-2006 12:16:24] [#ezpublish] <nnn0> != i think
+[01-31-2006 12:18:04] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[01-31-2006 12:18:52] [#ezpublish] <nnn0> or is this in a template ?
+[01-31-2006 12:19:55] [#ezpublish] <y_sabal> in a template
+[01-31-2006 12:20:37] [#ezpublish] <nnn0> hm - i'm abit rusty at this now :)
+[01-31-2006 12:20:44] [#ezpublish] <nnn0> what are you trying to do ?
+[01-31-2006 12:20:53] [#ezpublish] <nnn0> yes of course
+[01-31-2006 12:21:08] [#ezpublish] <y_sabal> I am trying to invert the condition up there
+[01-31-2006 12:21:15] [#ezpublish] <y_sabal> from :  'attribute_filter',array(array('folder/hide_on_left_menu','=',0)),
+[01-31-2006 12:21:28] [#ezpublish] <y_sabal> to :  'attribute_filter',array('not', array('folder/hide_on_left_menu','!=',0)),
+[01-31-2006 12:21:48] [#ezpublish] <nnn0> you want to just show one element in the array ?
+[01-31-2006 12:22:52] [#ezpublish] <y_sabal> well, I want to exclude from the fetch all folder with a "hide_on_left_menu" true
+[01-31-2006 12:23:04] [#ezpublish] <nnn0> hm
+[01-31-2006 12:25:55] [#ezpublish] <nnn0> what about something like ('not',array('folder/hide_on_left_menu','=',true())
+[01-31-2006 12:25:56] [#ezpublish] <nnn0> hm
+[01-31-2006 12:26:07] [#ezpublish] <zrg> buz: time was wasted on trying to use view parameters while in fact i had to pass them to template
+[01-31-2006 12:26:24] [#ezpublish] <nnn0> was that right ? eh ?
+[01-31-2006 12:27:14] [#ezpublish] <nnn0> or maybe ('folder/hide_on_left_menu','=',true())
+[01-31-2006 12:27:26] [#ezpublish] * y_sabal test ...
+[01-31-2006 12:27:41] [#ezpublish] <y_sabal> mm, the first doesn't
+[01-31-2006 12:27:52] [#ezpublish] <y_sabal> it does the exact oposite
+[01-31-2006 12:28:00] [#ezpublish] <y_sabal> mm
+[01-31-2006 12:28:02] [#ezpublish] <y_sabal> wait a sec
+[01-31-2006 12:28:06] [#ezpublish] <y_sabal> yes
+[01-31-2006 12:28:09] [#ezpublish] <nnn0> just change the true() with false() then
+[01-31-2006 12:28:25] [#ezpublish] <y_sabal> *smart* :)
+[01-31-2006 12:28:27] [#ezpublish] <nnn0> or the '=' with '!=' or something
+[01-31-2006 12:29:57] [#ezpublish] <zrg> maybe related http://ez.no/community/forum/setup_design/question_reguarding_attribute_filter_array
+[01-31-2006 12:30:40] [#ezpublish] <nnn0> another way would be to loop thru the elements and use if section, but you shouldn't need too
+[01-31-2006 12:31:00] [#ezpublish] <zrg> says there, for boolena: array(projekt/beendet', '!=', '1' )
+[01-31-2006 12:31:24] [#ezpublish] <zrg> i guess '1' instead of true is key
+[01-31-2006 12:31:28] [#ezpublish] <nnn0> k
+[01-31-2006 12:34:37] [#ezpublish] <zrg> and naturally dont forget to clean caches every time you sneeze :P
+[01-31-2006 12:37:11] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[01-31-2006 12:42:24] [#ezpublish] <ls> hi
+[01-31-2006 12:47:27] [#ezpublish] <SEAwolfx_> re
+[01-31-2006 12:47:37] [#ezpublish] <SEAwolfx_> hi
+[01-31-2006 12:48:07] [#ezpublish] <ls> hi SEAwolfx_
+[01-31-2006 12:50:26] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 12:51:28] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-31-2006 12:56:05] -!- DiGiTa|__ [n=guillaum@84.4.36.48] has joined #ezpublish
+[01-31-2006 12:59:32] [#ezpublish] <ls> 20 ppl here? amazing ;)
+[01-31-2006 12:59:53] [#ezpublish] <ls> well 19, DiGiTa|_ is twice :P
+[01-31-2006 13:03:04] [#ezpublish] <SEAwolfx_> well, the most time all are rather ideling then discussing, so it doesnt matters how many of us can be count here ;)
+[01-31-2006 13:03:32] [#ezpublish] <ls> hehe, true, but anyway 20 ideling ppl here is impressive ;)
+[01-31-2006 13:04:59] [#ezpublish] <SEAwolfx_> ;)
+[01-31-2006 13:08:49] [#ezpublish] <ls> need some food, cu soon
+[01-31-2006 13:09:36] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[01-31-2006 13:14:45] -!- DiGiTa|_ [n=guillaum@84.4.40.4] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 13:19:08] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 13:33:15] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-31-2006 14:31:26] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 14:33:55] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-31-2006 14:50:06] -!- DiGiTa|__ [n=guillaum@84.4.36.48] has quit []
+[01-31-2006 15:02:00] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 15:10:41] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-31-2006 15:11:46] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-31-2006 15:28:33] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-31-2006 15:34:37] -!- nnn1 [n=therion@195.204.221.183] has joined #ezpublish
+[01-31-2006 15:39:03] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Connection timed out]
+[01-31-2006 15:46:19] -!- ordnas [n=ordnas@p549D7E61.dip.t-dialin.net] has left #ezpublish []
+[01-31-2006 15:46:24] -!- nnn1 is now known as nnn0
+[01-31-2006 15:46:26] -!- B-KiLLer` [n=me@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 18:34:37] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 18:37:19] -!- nnn1 [n=therion@195.204.221.183] has joined #ezpublish
+[01-31-2006 18:39:58] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[01-31-2006 18:57:29] -!- nnn1 is now known as nnn0
+[01-31-2006 19:21:56] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 104 (Connection reset by peer)]
+[01-31-2006 19:37:48] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[01-31-2006 23:42:53] -!- fh [n=fh@popeye.ez.no] has quit [niven.freenode.net irc.freenode.net]
+[01-31-2006 23:44:10] -!- SEAwolfx_ is now known as SEAwolfx
+[01-31-2006 23:56:34] -!- fh [n=fh@popeye.ez.no] has joined #ezpublish

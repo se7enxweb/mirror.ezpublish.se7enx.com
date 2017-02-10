@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+	<head>
+		<title>eZ systems : rss : opml</title>
+		<ownerName/>
+		<ownerEmail/>
+		<dateCreated>10/26/2005; 17:53:03 AM</dateCreated>
+		<dateModified>Mon, 07 Nov 2005 02:18:01 +0100</dateModified>
+		</head>
+	<body>
+		<outline type="link" text="Amyloo's OPML blog" url="http://blogs.opml.org/amyloo/" htmlUrl="http://blogs.opml.org/amyloo/" xmlUrl="http://hosting.opml.org/amyloo/blog/rss.xml"/>
+		<outline type="link" text="Josh Hardcastle's OPML blog" url="http://blogs.opml.org/JoshHardcastle/" htmlUrl="http://blogs.opml.org/JoshHardcastle/" xmlUrl="http://hosting.opml.org/JoshHardcastle/blog/rss.xml"/>
+		<outline type="link" text="minima's OPML blog" url="http://blogs.opml.org/minima/" htmlUrl="http://blogs.opml.org/minima/" xmlUrl="http://hosting.opml.org/minima/blog/rss.xml"/>
+		<outline type="link" text="Donovan's Brain" url="http://blogs.opml.org/dwatts/" htmlUrl="http://blogs.opml.org/dwatts/" xmlUrl="http://hosting.opml.org/dwatts/blog/rss.xml"/>
+
+<outline type="link" text="eZ News" url="http://ez.no/company/news/" htmlUrl="http://ez.no/company/news/" xmlUrl="http://ez.no/rss/feed/news" />
+<outline type="link" text="eZ Community News" url="http://ez.no/community/news/" htmlUrl="http://ez.no/community/news/" xmlUrl="http://ez.no/rss/feed/communitynews.xml" />
+<outline type="link" text="eZ Articles" url="http://ez.no/community/articles/" htmlUrl="http://ez.no/community/articles/" xmlUrl="http://ez.no/rss/feed/communityarticles.xml" />
+	 	<outline type="link" text="eZ Blog" url="http://ez.no/community/blog/" htmlUrl="http://ez.no/community/blog/" xmlUrl="http://ez.no/rss/feed/blog.xml" />
+	 	<outline type="link" text="eZ Future Specifications" url="http://ez.no/community/developer/specs/" htmlUrl="http://ez.no/community/developer/specs/" xmlUrl="http://ez.no/rss/feed/specs.xml" />
+	 	<outline type="link" text="eZ Forum Install and Configuration" url="http://ez.no/community/forum/install_configuration/" htmlUrl="http://ez.no/community/forum/install_configuration/" xmlUrl="http://ez.no/rss/feed/forum_install_configuration.xml" />
+	 	<outline type="link" text="eZ Forum Setup and Design" url="http://ez.no/community/forum/setup_design/" htmlUrl="http://ez.no/community/forum/setup_design/" xmlUrl="http://ez.no/rss/feed/forum_setup_design.xml" />
+	 	<outline type="link" text="eZ Forum General" url="http://ez.no/community/forum/general/" htmlUrl="http://ez.no/community/forum/general/" xmlUrl="http://ez.no/rss/feed/forum_general.xml" />
+	 	<outline type="link" text="eZ Forum Developer" url="http://ez.no/community/forum/developer/" htmlUrl="http://ez.no/community/forum/developer/" xmlUrl="http://ez.no/rss/feed/forum_developer.xml" />
+	 	<outline type="link" text="eZ Forum Suggestions" url="http://ez.no/community/forum/suggestions/" htmlUrl="http://ez.no/community/forum/suggestions/" xmlUrl="http://ez.no/rss/feed/forum_suggestions.xml" />
+	</body>
+</opml>

@@ -1,0 +1,73 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 13.8.&nbsp; Changes in Functions</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch13lev1sec8"></a><h3 class="docSection1Title">13.8. Changes in Functions</h3>
+<p class="docText">Some minor changes in functions break backward compatibility. There are countless other additions to functions and additional functions, but these do not affect compatibility between PHP 4 and PHP 5.</p>
+<a name="ch13lev2sec13"></a><h4 class="docSection2Title">13.8.1. <tt>array_merge()</tt></h4>
+<p class="docText">This function no longer accepts a non-array parameter as one of its arguments. In PHP 4, it was perfectly valid to use scalar types, like an integer or string (but not a variable representing &quot;null&quot;), as parameter. These types are happily included as an element in the resulting array. PHP 5 no longer supports this. If you use a scalar type, PHP 5 issues an error of type <tt>E_WARNING</tt> and return an empty array. You can see this behavior by comparing the output of this script from PHP 4 and PHP 5:<a name="ch13index88"></a><a name="ch13index89"></a><a name="ch13index90"></a></P>
+<pre>
+&lt;?php
+    $array1 = array (1, 2, 3, 4);
+    $array2 = null;
+    $array3 = 'non-array';
+    $array4 = array ('a', 'b', 'c');
+
+    print_r(array_merge($array1, $array2, $array3, $array4));
+?&gt;
+</pre><br>The output with PHP 4 is<pre>
+Array
+(
+    [0] =&gt; 1
+    [1] =&gt; 2
+    [2] =&gt; 3
+    [3] =&gt; 4
+    [4] =&gt; non-array
+    [5] =&gt; a
+    [6] =&gt; b
+    [7] =&gt; c
+)
+</pre><BR>The output with PHP 5 is<a name="ch13index91"></a><a name="ch13index92"></a><a name="ch13index93"></a><pre>
+Warning: array_merge(): Argument #2 is not an array in /13-making 
+the-move/array_merge.php on line 7
+
+Warning: array_merge(): Argument #3 is not an array in /13-making 
+the-move/array_merge.php on line 7
+</pre><br>
+<a name="ch13lev2sec14"></a><H4 class="docSection2Title">13.8.2. <tt>strrpos()</tt> and <tt>strripos()</tt></h4>
+<p class="docText"><tt>strrpos()</tt> and <tt>strripos()</tt> search for the last occurrence of a string inside a string in a respectively case-sensitive and case-insensitive way. In PHP 5, the full <tt>$needle</tt> is searched for in the string, searching from the end rather than the first character of this <tt>$needle</tt> string, as in PHP 4. The following example shows this:<a name="ch13index94"></a><a name="ch13index95"></a><a name="ch13index96"></a><a name="ch13index97"></a><a name="ch13index98"></a><a name="ch13index99"></a></p>
+<pre>
+&lt;?php
+    $str = "This is a short string.";
+
+
+    var_dump(strrpos($str, "small"));
+?&gt;
+</pre><br>
+<p class="docText">In PHP 4, this returns position 16 (the index of the &quot;s&quot; of &quot;string&quot;):</p>
+<pre>
+int(16)
+</pre><BR>
+<p class="docText">In PHP 5 this returns</P>
+<pre>
+bool(false)
+</pre><br>
+<p class="docText">It is possible that more functions broke compatibility between PHP 4 and PHP 5, but they are either not known, a bug fix, or are too unimportant to be noticed.<a name="ch13index100"></a><a name="ch13index101"></a><a name="ch13index102"></a><a name="ch13index103"></a><a name="ch13index104"></a><a name="ch13index105"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

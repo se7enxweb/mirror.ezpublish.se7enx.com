@@ -1,0 +1,179 @@
+[04-02-2006 00:39:58] -!- ordnas [n=ordnas@p549D4E2C.dip.t-dialin.net] has joined #ezpublish
+[04-02-2006 01:27:40] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-02-2006 01:39:52] -!- ordnas [n=ordnas@p549D4E2C.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[04-02-2006 01:45:15] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 104 (Connection reset by peer)]
+[04-02-2006 01:45:22] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-02-2006 01:57:17] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[04-02-2006 05:32:16] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[04-02-2006 06:34:50] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-02-2006 06:53:30] [#ezpublish] <buz> anyone got a few minutes to test a patch of mine?
+[04-02-2006 07:05:48] [#ezpublish] <zrg> good patch?
+[04-02-2006 07:05:50] [#ezpublish] <zrg> :)
+[04-02-2006 07:06:02] [#ezpublish] <buz> http://triligon.org/triligon/blog/two_toolbox_patches_to_sdk_public_sort_order_for_node_list_and_editor_s_little_helper
+[04-02-2006 07:06:06] [#ezpublish] <buz> hopefully working now
+[04-02-2006 07:08:19] [#ezpublish] <zrg> i would have to get ez from svn to test?
+[04-02-2006 07:09:00] [#ezpublish] <buz> no
+[04-02-2006 07:09:11] [#ezpublish] <buz> works with 3.6 and 3.7 for me
+[04-02-2006 07:19:50] [#ezpublish] <zrg> ok how to get
+[04-02-2006 07:22:38] [#ezpublish] <buz> http://triligon.org/triligon/playground/patch
+[04-02-2006 07:26:31] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-02-2006 07:26:51] -!- Tidemann [n=tidemann@ti132110a080-14487.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[04-02-2006 07:29:44] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[04-02-2006 08:17:18] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-02-2006 08:35:20] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[04-02-2006 08:54:54] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[04-02-2006 08:54:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[04-02-2006 08:56:46] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-02-2006 09:45:52] -!- Tidemann [n=tidemann@ti132110a080-7508.bb.online.no] has joined #ezpublish
+[04-02-2006 09:46:11] [#ezpublish] <Tidemann> hello?
+[04-02-2006 09:46:33] [#ezpublish] <xbit_> hei tidemann
+[04-02-2006 09:46:49] [#ezpublish] <Tidemann> xbit_: heyzann! åssn hengern?
+[04-02-2006 09:47:17] [#ezpublish] <xbit_> stabilt :)
+[04-02-2006 09:47:18] [#ezpublish] <xbit_> du da?
+[04-02-2006 09:47:42] [#ezpublish] <Tidemann> joda.. jobber ræva av meg om dagen? holder du på å fullføre ting i grimstad for tida eller?
+[04-02-2006 09:48:26] [#ezpublish] <xbit_> jepp, holder paa med hovedoppgaven naa :)
+[04-02-2006 09:48:42] [#ezpublish] <Tidemann> ajj ajj.. hvem var vill-ledern din igjen?
+[04-02-2006 09:48:55] [#ezpublish] <xbit_> vi har morgan og folke som villedere ;)
+[04-02-2006 09:49:18] [#ezpublish] <Tidemann> ah.. ikke det værste du kunne fått
+[04-02-2006 09:49:19] [#ezpublish] <xbit_> lager j2me-spill
+[04-02-2006 09:49:27] [#ezpublish] <xbit_> nei, tror det var ganske greit
+[04-02-2006 09:49:50] [#ezpublish] <Tidemann> har du noe erfaring med discount-systemet på ez-webshop btw?
+[04-02-2006 09:50:56] [#ezpublish] <xbit_> nei, er ikke rare greiene jeg har gjort med webshopen til ez
+[04-02-2006 09:51:24] [#ezpublish] <Tidemann> k... brb.. må bare fløtte bilen
+[04-02-2006 09:51:31] [#ezpublish] <xbit_> :)
+[04-02-2006 09:55:27] [#ezpublish] <Tidemann> banner litt her.. dersom en skal sette rabatt på en range av produkter og samtidig sleppe å sette rabatt på en og en må det lages en ny seksjon for subtreet som rabatten skal omfatte.. dermed må jeg også gi anonymous + kunde-gruppen tilgang til seksjonen for hver gang en ny produkt-rabatt opprettes...
+[04-02-2006 09:56:12] [#ezpublish] <Tidemann> hadde det bare fantes en måte for å sette rabatt på et subtree hadde hele problemet vært løst...
+[04-02-2006 09:57:06] [#ezpublish] <Tidemann> måtte også reorganisere alle folder-templatene sånn att produkt-folder-templaten kicka inn som standard
+[04-02-2006 09:57:37] [#ezpublish] <xbit_> slit :/
+[04-02-2006 09:57:56] [#ezpublish] <Tidemann> kunden kommer neppe til å bli happy når jeg viser dem hvor knotete rabatt-systemet vil fungere
+[04-02-2006 09:58:55] [#ezpublish] <xbit_> nei, hoertes ikke noe greit ut det der
+[04-02-2006 09:59:12] [#ezpublish] <xbit_> men ez-webshopen er jo ikke akkurat "enterprise"...
+[04-02-2006 09:59:34] [#ezpublish] <xbit_> men er vel planlagt en del endringer der etterhvert
+[04-02-2006 09:59:48] [#ezpublish] <xbit_> hjelper jo lite akkurat naa men :/
+[04-02-2006 10:00:22] [#ezpublish] <Tidemann> sant... alt for mye hardkoda også.. jeg måtte hacke kernelen for å redirecte brukern til produktet hver gang en la et produkt i handlekurven
+[04-02-2006 10:00:38] [#ezpublish] <Tidemann> ellers endte man opp i handlekurven by default
+[04-02-2006 10:01:28] [#ezpublish] <xbit_> ja, det der irriterte meg ogsaa
+[04-02-2006 10:03:47] -!- tobyS [n=dotxp@dslb-084-061-136-147.pools.arcor-ip.net] has joined #ezpublish
+[04-02-2006 10:08:19] [#ezpublish] <Tidemann> xbit_: jeg kommer nok til å poste den inn så den blir med i 3.8
+[04-02-2006 10:09:17] [#ezpublish] <xbit_> nice :)
+[04-02-2006 10:09:25] [#ezpublish] <Tidemann> den funker sånn som redirecten til login: <input type="hidden" name="RedirectURI" value={$node.url|ezurl} />
+[04-02-2006 10:09:52] [#ezpublish] <xbit_> mmh
+[04-02-2006 10:10:18] [#ezpublish] <xbit_> hva med aa hacke til noe for rabattregler for subtre da?
+[04-02-2006 10:10:47] [#ezpublish] <Tidemann> jeg er jo c#-mann.. ikke php.. er et mirakel at jeg klarte å lage den ene hacken ;)
+[04-02-2006 10:11:03] [#ezpublish] <xbit_> hehe :)
+[04-02-2006 10:12:32] [#ezpublish] <Tidemann> xbit_: kommer du på ez-campen til sommern btw?
+[04-02-2006 10:13:10] [#ezpublish] <xbit_> har ikke noen planer om det egentlig
+[04-02-2006 10:13:45] [#ezpublish] <Tidemann> k
+[04-02-2006 10:45:45] [#ezpublish] <Tidemann> xbit_: hvem er oppdragsgiver på prosjektet ditt btw?
+[04-02-2006 10:47:06] [#ezpublish] <xbit_> mindup
+[04-02-2006 10:47:28] [#ezpublish] <xbit_> de som staar bak det geniale domenet smshit.no
+[04-02-2006 10:47:30] [#ezpublish] <xbit_> :)
+[04-02-2006 10:47:49] [#ezpublish] <xbit_> oi, hadde visst faatt seg hjemmeside paa mindup.no ogsaa naa
+[04-02-2006 10:48:09] [#ezpublish] <Tidemann> *sjekke*
+[04-02-2006 10:49:07] [#ezpublish] <Tidemann> jeg grøsser litt når jeg ser giffene på høyresida på smshit.no
+[04-02-2006 10:50:43] [#ezpublish] <Tidemann> litt småpirk på mindup.no også.. men ellers ser det jo greit ut
+[04-02-2006 10:51:14] [#ezpublish] <Tidemann> mindup-logoen fløtter seg fra side til side.. og endrer størrelse
+[04-02-2006 10:52:16] [#ezpublish] <xbit_> mmh, det gjoer den visst
+[04-02-2006 10:52:19] [#ezpublish] <xbit_> litt unoedvendig
+[04-02-2006 10:52:58] [#ezpublish] <xbit_> tror det er noen fra skolen som har laget mindup-sidene, kanskje jeg skal klage litt :p
+[04-02-2006 10:53:13] [#ezpublish] <Tidemann> noen på eller fra skolen?
+[04-02-2006 10:53:19] [#ezpublish] <Tidemann> det er en vesentlig forskjell der ;)
+[04-02-2006 10:53:54] [#ezpublish] <xbit_> paa! som gaar det naa altsdaa :)
+[04-02-2006 10:54:06] [#ezpublish] <xbit_> arg, lagger idag..
+[04-02-2006 10:54:09] [#ezpublish] <Tidemann> akkerat..
+[04-02-2006 10:54:44] [#ezpublish] <Tidemann> har du begynt å snuse på ajax og sånt?
+[04-02-2006 10:55:48] [#ezpublish] <xbit_> testet litt i forbindelse med internettjenester
+[04-02-2006 10:56:03] [#ezpublish] <xbit_> j2ee og dwr
+[04-02-2006 10:56:16] [#ezpublish] <xbit_> hot hot :)
+[04-02-2006 10:56:22] [#ezpublish] <Tidemann> etter den ajax-buzzen tok av har det jo dukka opp en del fine javascript
+[04-02-2006 10:56:48] [#ezpublish] <Tidemann> http://www.huddletogether.com/projects/lightbox2/ <-- jeg får fortsatt litt reisning av den
+[04-02-2006 10:58:23] [#ezpublish] <xbit_> hmm, men det er bare javascript er det ikke?
+[04-02-2006 10:58:29] [#ezpublish] <Tidemann> jo
+[04-02-2006 10:58:43] [#ezpublish] <Tidemann> det er det som gjør det litt psycho
+[04-02-2006 10:58:49] [#ezpublish] <xbit_> mmh, men ser fint ut ja
+[04-02-2006 10:58:50] [#ezpublish] <xbit_> :)
+[04-02-2006 10:59:29] [#ezpublish] <Tidemann> http://moofx.mad4milk.net/ <-- også har vi denne lille søte her
+[04-02-2006 11:00:12] [#ezpublish] <xbit_> fancy
+[04-02-2006 11:01:45] [#ezpublish] <Tidemann> www.ajaxian.com
+[04-02-2006 11:04:14] [#ezpublish] <xbit_> ai, ajaxwrite VAR fancy greier jo
+[04-02-2006 11:04:14] [#ezpublish] <xbit_> :)
+[04-02-2006 11:05:40] [#ezpublish] <Tidemann> ja den der er helt rå
+[04-02-2006 11:06:13] [#ezpublish] <Tidemann> de kom vel med ajaxsketch eller.no også nå på onsdag
+[04-02-2006 11:06:44] [#ezpublish] <xbit_> mmh
+[04-02-2006 11:50:45] -!- tobyS [n=dotxp@dslb-084-061-136-147.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[04-02-2006 12:07:53] -!- kore_ [n=lordhong@p54BB5C5E.dip.t-dialin.net] has joined #ezpublish
+[04-02-2006 12:11:51] [#ezpublish] <_buz> wow lightbox is neat
+[04-02-2006 12:11:52] -!- tobmaster [n=tobmaste@p54BB5C5E.dip.t-dialin.net] has joined #ezpublish
+[04-02-2006 12:14:05] [#ezpublish] <_buz> http://www.themaninblue.com/writing/perspective/2005/10/05/slideshow/index.htm is even neater  but slooow
+[04-02-2006 12:24:46] -!- tobyS [n=dotxp@p54BB5C5E.dip.t-dialin.net] has joined #ezpublish
+[04-02-2006 12:26:07] -!- tobyS [n=dotxp@p54BB5C5E.dip.t-dialin.net] has quit [Client Quit]
+[04-02-2006 12:27:28] -!- tobyS [n=dotxp@p54BB5C5E.dip.t-dialin.net] has joined #ezpublish
+[04-02-2006 12:27:50] -!- tobyS_ [n=dotxp@dslb-084-061-136-147.pools.arcor-ip.net] has joined #ezpublish
+[04-02-2006 12:27:50] -!- tobyS [n=dotxp@p54BB5C5E.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[04-02-2006 12:48:10] [#ezpublish] <Tidemann> _buz: i thought it was ugly as hell... and it doesn't work in ie
+[04-02-2006 12:48:31] [#ezpublish] <_buz> which one?
+[04-02-2006 12:48:47] [#ezpublish] <Tidemann>  http://www.themaninblue.com/writing/perspective/2005/10/05/slideshow/index.htm
+[04-02-2006 12:48:59] [#ezpublish] <_buz> i dont think its supposed to be really good
+[04-02-2006 12:49:03] [#ezpublish] <_buz> more of a demo thing
+[04-02-2006 12:49:09] [#ezpublish] <Tidemann> probably
+[04-02-2006 12:51:21] [#ezpublish] <_buz> the moofx stuff could conceivably make for a neat tree menu
+[04-02-2006 12:51:47] [#ezpublish] <Tidemann> _buz: yeah.. i thought of that...
+[04-02-2006 12:52:32] [#ezpublish] <Tidemann> there is even an example of a treemenu in the forum...
+[04-02-2006 12:52:44] [#ezpublish] <_buz> havent seen the forum yet
+[04-02-2006 12:52:50] [#ezpublish] <_buz> but i suppose it's pretty obvious eh
+[04-02-2006 12:53:06] [#ezpublish] <Tidemann> scary fact: only planned improvement in ez webshop is improved VAT handling for the shop and improved multicurrency support
+[04-02-2006 12:53:19] [#ezpublish] <_buz> that is actually going a long way
+[04-02-2006 12:53:35] [#ezpublish] <_buz> VAT is the main weakness so far
+[04-02-2006 12:53:59] [#ezpublish] <_buz> besides, the webshop is more of stepchild anyway
+[04-02-2006 12:54:37] [#ezpublish] <Tidemann> WAY to much hardcoded stuff
+[04-02-2006 12:55:05] [#ezpublish] <_buz> to me it's more a proof of concept than a real shop
+[04-02-2006 12:55:19] [#ezpublish] <Tidemann> I would say the whole webshop is the main weakness ;)
+[04-02-2006 12:55:49] [#ezpublish] <_buz> well if you need a webshop there's plenty of other solutions
+[04-02-2006 12:55:52] [#ezpublish] <_buz> good cms are rare though
+[04-02-2006 12:58:36] [#ezpublish] <Tidemann> true.. and making cross-searches in an external shop and ez is pretty close to hell on earth...
+[04-02-2006 12:59:34] [#ezpublish] <_buz> what exactly would you need in ez shop?
+[04-02-2006 13:00:13] [#ezpublish] <Tidemann> discount based on subtree would be nice... as it is now I have to make a section for each product-range
+[04-02-2006 13:02:54] [#ezpublish] <Tidemann> and who wanna see the basket every time they add a product to it?
+[04-02-2006 13:03:08] [#ezpublish] <_buz> that could easily be solved with ajax
+[04-02-2006 13:04:15] [#ezpublish] <Tidemann> probably.. I made a hack for it though... like the login-redirect...
+[04-02-2006 13:04:33] [#ezpublish] <Tidemann> like this: <input type="hidden" name="RedirectURI" value={$node.url|ezurl} />
+[04-02-2006 13:04:55] [#ezpublish] <_buz> yeah that's the other solution
+[04-02-2006 13:05:01] [#ezpublish] <_buz> slower but safer
+[04-02-2006 13:05:43] [#ezpublish] <Tidemann> I predict the costumer will _hate_ the discount system tomorrow...
+[04-02-2006 13:09:19] [#ezpublish] <_buz> you could simply write a guy for section assigning for the discounts no?
+[04-02-2006 13:10:08] [#ezpublish] <Tidemann> meaning?
+[04-02-2006 13:10:53] [#ezpublish] <_buz> well a gui (not guy ;) that allows them to easily select a part of the tree and assign a discount
+[04-02-2006 13:11:01] [#ezpublish] <_buz> in the background it sets up the required rules
+[04-02-2006 13:11:23] [#ezpublish] <Tidemann> hehe..
+[04-02-2006 13:13:37] [#ezpublish] <_buz> looking at it the discount stuff doesnt actually seem to do anything really
+[04-02-2006 13:13:39] [#ezpublish] <Tidemann> well.. the problem is this.. for each section in the subtree, there is a discount for each group or user... if I assign a user discount on the wrapping section (product root section) .. the discount won't apply on the sub-sections...
+[04-02-2006 13:14:31] [#ezpublish] <_buz> ah now
+[04-02-2006 13:16:58] [#ezpublish] <Tidemann> it'll be hell do administrate... and for every subsection made in the future... the administrator of the webshop has to update ALL of the discount rules that affects that section
+[04-02-2006 13:17:27] [#ezpublish] <Tidemann> .. because the discount isn't inherited
+[04-02-2006 13:19:58] [#ezpublish] <_buz> well then hack the code ;)
+[04-02-2006 13:20:47] [#ezpublish] <Tidemann> wouldn't know where to begin ;)
+[04-02-2006 13:32:54] [#ezpublish] <_buz> you could of course hire someone ;)
+[04-02-2006 13:53:54] [#ezpublish] <kracker> <grin />
+[04-02-2006 14:05:52] -!- tobmaster [n=tobmaste@p54BB5C5E.dip.t-dialin.net] has quit ["Thx 4 all the fisch"]
+[04-02-2006 14:19:26] -!- DiGiTa|_ [n=guillaum@84.5.136.113] has joined #ezpublish
+[04-02-2006 14:29:20] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[04-02-2006 14:32:06] -!- tobyS [n=dotxp@dslb-084-061-147-155.pools.arcor-ip.net] has joined #ezpublish
+[04-02-2006 14:35:29] -!- tobyS_ [n=dotxp@dslb-084-061-136-147.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[04-02-2006 15:08:05] -!- tobyStest [n=dotxp@hartes-php.de] has joined #ezpublish
+[04-02-2006 15:12:28] -!- tobyS [n=dotxp@dslb-084-061-147-155.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[04-02-2006 15:13:33] -!- tobyStest is now known as tobyS
+[04-02-2006 15:17:43] -!- tobyS [n=dotxp@hartes-php.de] has quit ["leaving"]
+[04-02-2006 15:17:45] -!- tobyStest [n=dotxp@hartes-php.de] has joined #ezpublish
+[04-02-2006 15:19:18] -!- tobyStest [n=dotxp@hartes-php.de] has quit [Client Quit]
+[04-02-2006 15:29:19] -!- tobyS [n=dotxp@hartes-php.de] has joined #ezpublish
+[04-02-2006 15:35:02] -!- tobyS [n=dotxp@hartes-php.de] has quit ["leaving"]
+[04-02-2006 15:35:19] -!- tobyS [n=dotxp@hartes-php.de] has joined #ezpublish
+[04-02-2006 15:42:50] -!- kore_ [n=lordhong@p54BB5C5E.dip.t-dialin.net] has quit []
+[04-02-2006 16:15:17] -!- DiGiTa|_ [n=guillaum@84.5.136.113] has quit []
+[04-02-2006 16:37:11] -!- tobyS [n=dotxp@hartes-php.de] has quit ["leaving"]
+[04-02-2006 16:37:12] -!- tobyS [n=dotxp@hartes-php.de] has joined #ezpublish
+[04-02-2006 17:51:30] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[04-02-2006 18:03:38] -!- Tidemann [n=tidemann@ti132110a080-7508.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[04-02-2006 18:23:15] -!- Bedlore [n=me@ppp155-170.lns3.adl2.internode.on.net] has joined #ezpublish
+[04-02-2006 20:16:55] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-02-2006 22:35:54] [#ezpublish] <Bedlore> anyone seen Gabriel around?

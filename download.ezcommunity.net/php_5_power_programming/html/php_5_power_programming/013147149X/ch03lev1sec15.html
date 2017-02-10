@@ -1,0 +1,43 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.15.&nbsp; final Methods</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec14.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec16.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec15"></a><h3 class="docSection1Title">3.15. <tt>final</tt> Methods</h3>
+<p class="docText">Until now, you have seen that when you extend a class (or inherit from a class), you may override inherited methods with a new implementation. However, there are times where you might want to make sure that a method cannot be re-implemented in its derived classes. For this purpose, PHP supports the Java-like <tt>final</tt> access modifier for methods that declares the method as the final version, which can't be overridden.<a name="ch03index134"></a><a name="ch03index135"></a></p>
+<p class="docText">The following example is not a valid PHP script because it is trying to override a <tt>final</tt> method:</p>
+<pre>
+class MyBaseClass {
+    final function idGenerator()
+    {
+        return $this-&gt;id++;
+    }
+
+    protected $id = 0;
+}
+
+class MyConcreteClass extends MyBaseClass {
+    function idGenerator()
+    {
+        return $this-&gt;id += 2;
+    }
+}
+</pre><br>
+<p class="docText">This script won't work because by defining <tt>idGenerator()</tt> as <tt>final</tt> in <tt>MyBaseClass</tt>, it disallows the deriving classes to override it and change the behavior of the id generation logic.<a name="ch03index136"></a><a name="ch03index137"></a></P>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec14.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec16.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

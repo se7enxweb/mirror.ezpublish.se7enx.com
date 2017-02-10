@@ -1,0 +1,40 @@
+[05-21-2006 02:48:46] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-21-2006 04:03:44] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[05-21-2006 05:34:03] -!- ordnas [n=ordnas@p549D599F.dip.t-dialin.net] has joined #ezpublish
+[05-21-2006 05:34:35] -!- ordnas [n=ordnas@p549D599F.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-21-2006 05:34:37] -!- ordna1 [n=ordnas@p549D599F.dip.t-dialin.net] has joined #ezpublish
+[05-21-2006 05:35:31] -!- ordna1 [n=ordnas@p549D599F.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-21-2006 05:35:34] -!- ordnas [n=ordnas@p549D599F.dip.t-dialin.net] has joined #ezpublish
+[05-21-2006 05:56:44] -!- ordnas [n=ordnas@p549D599F.dip.t-dialin.net] has left #ezpublish []
+[05-21-2006 06:50:42] -!- ordnas [n=ordnas@p549D599F.dip.t-dialin.net] has joined #ezpublish
+[05-21-2006 09:27:06] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[05-21-2006 09:41:41] -!- tobmaster [n=tobmaste@dslb-084-061-025-152.pools.arcor-ip.net] has joined #ezpublish
+[05-21-2006 10:13:09] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-21-2006 10:42:34] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[05-21-2006 11:21:26] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-21-2006 11:25:04] [#ezpublish] <xiglet> ls: so you made the intranet solution? :)
+[05-21-2006 11:25:18] [#ezpublish] <xiglet> didn't know when we spoke about this a few days ago ;-)
+[05-21-2006 11:28:05] -!- alvaro- [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-21-2006 12:05:10] [#ezpublish] <tobmaster> moin
+[05-21-2006 12:15:39] [#ezpublish] <ls> xiglet: yep
+[05-21-2006 12:16:15] [#ezpublish] <Tidemann> hoi
+[05-21-2006 12:17:51] [#ezpublish] <ls> hey
+[05-21-2006 12:18:35] -!- ls is now known as luke
+[05-21-2006 12:23:04] [#ezpublish] <xbit> yo
+[05-21-2006 12:23:26] [#ezpublish] <xiglet> ls: Planning on updating the package in the future?
+[05-21-2006 12:24:16] [#ezpublish] <xiglet> maybe I should post some requests as comments on the web...
+[05-21-2006 12:24:25] [#ezpublish] <xiglet> if anyone reads it ... :)
+[05-21-2006 12:33:54] [#ezpublish] <luke> xiglet: yes, first it will be updated to 3.8, as a package in the future
+[05-21-2006 12:55:55] -!- ordnas [n=ordnas@p549D599F.dip.t-dialin.net] has left #ezpublish []
+[05-21-2006 13:10:30] [#ezpublish] <xiglet> great
+[05-21-2006 13:35:18] -!- DiGiTa|_ [n=pet2poul@84.5.138.53] has joined #ezpublish
+[05-21-2006 13:41:28] -!- DiGiTa|_ [n=pet2poul@84.5.138.53] has left #ezpublish []
+[05-21-2006 14:05:48] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-21-2006 14:44:29] -!- luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-21-2006 16:34:02] -!- tobmaster [n=tobmaste@dslb-084-061-025-152.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[05-21-2006 16:34:03] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 110 (Connection timed out)]
+[05-21-2006 16:34:53] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[05-21-2006 16:49:50] -!- elephantMan [n=elephant@119.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[05-21-2006 16:50:49] -!- elephantMan [n=elephant@46.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-21-2006 17:43:52] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[05-21-2006 23:53:48] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish

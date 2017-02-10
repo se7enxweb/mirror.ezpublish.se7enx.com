@@ -1,0 +1,325 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 4.4.&nbsp; Design Patterns</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch04lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch04lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch04lev1sec4"></a><h3 class="docSection1Title">4.4. Design Patterns</h3>
+<p class="docText">So, what exactly qualifies a language as being <span class="docEmphStrong">objectoriented</span> (OO)? Some people believe that any language that has objects that encapsulate data and methods can be considered OO. Others would also include polymorphism via inheritance and access modifiers into the definition. The purists would probably list dozens of pages of things they think an OO language must support, such as exceptions, method overloading, reflection, strict typing, and more. You can bet that none of these people would ever agree with each other because of the diversity of OOP languages, each of them good for certain tasks and not quite as good for others.<a name="ch04index59"></a><a name="ch04index60"></a></p>
+<p class="docText">However, what most people would agree with is that developing OO software is not only about the syntax and the language features but it is a state of mind. Although there are some professionally written programs in functional languages such as C (for example, PHP), people developing in OO languages tend to give the software design more of an emphasis. One reason might be the fact that OO languages tend to contain features that help in the design phase, but the main reason is probably cultural because the OO community has always put a lot of emphasis on good design.</p>
+<p class="docText">This chapter covers some of the more advanced OO techniques that are possible with PHP, including the implementation of some common design patterns that are easily adapted to PHP.</p>
+<p class="docText">When designing software, certain programming patterns repeat themselves. Some of these have been addressed by the software design community and have been given accepted general solutions. These repeating problems are called <span class="docEmphStrong">design patterns</span>. The advantage of knowing and using these patterns is not only to save time instead of reinventing the wheel, but also to give developers a common language in software design. You'll often hear software developers say, &quot;Let's use a singleton pattern for this,&quot; or &quot;Let's use a factory pattern for that.&quot; Due to the importance of these patterns in today's software development, this section covers some of these patterns.<a name="ch04index61"></a><a name="ch04index62"></a></P>
+<a name="ch04lev2sec3"></a><h4 class="docSection2Title">4.4.1. Strategy Pattern</H4>
+<p class="docText">The <span class="docEmphStrong">strategy pattern</span> is typically used when your programmer's algorithm should be interchangeable with different variations of the algorithm. For example, if you have code that creates an image, under certain circumstances, you might want to create JPEGs and under other circumstances, you might want to create GIF files.<a name="ch04index63"></a><a name="ch04index64"></a><a name="ch04index65"></a></p>
+<p class="docText">The strategy pattern is usually implemented by declaring an abstract base class with an algorithm method, which is then implemented by inheriting concrete classes. At some point in the code, it is decided what concrete strategy is relevant; it would then be instantiated and used wherever relevant.</P>
+<p class="docText">Our example shows how a download server can use a different file selection strategy according to the web client accessing it. When creating the HTML with the download links, it will create download links to either .tar.gz files or .zip files according to the browser's OS identification. Of course, this means that files need to be available in both formats on the server. For simplicity's sake, assume that if the word &quot;Win&quot; exists in <tt>$_SERVER["HTTP_ USER_AGENT"]</tt>, we are dealing with a Windows system and want to create .zip links; otherwise, we are dealing with systems that prefer .tar.gz.</p>
+<p class="docText">In this example, we would have two strategies: the .tar.gz strategy and the .zip strategy, which is reflected as the following strategy hierarchy (see <a class="docLink" href="#ch04fig03">Figure 4.3</a>).</p>
+<a name="ch04fig03"></a><p><center><h5 class="docFigureTitle">Figure 4.3. Strategy hierarchy.</H5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/04fig03_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="264" SRC="images/013147149X/graphics/04fig03.gif;380137"></P></center></p><br>
+<p class="docText">The following code snippet should give you an idea of how to use such a strategy pattern:<a name="ch04index66"></a><a name="ch04index67"></a><a name="ch04index68"></a></p>
+<pre>
+abstract class FileNamingStrategy {
+    abstract function createLinkName($filename);
+}
+
+class ZipFileNamingStrategy extends FileNamingStrategy {
+    function createLinkName($filename)
+    {
+        return "http://downloads.foo.bar/$filename.zip";
+    }
+}
+
+class TarGzFileNamingStrategy extends FileNamingStrategy {
+    function createLinkName($filename)
+    {
+        return "http://downloads.foo.bar/$filename.tar.gz";
+    }
+}
+
+if (strstr($_SERVER["HTTP_USER_AGENT"], "Win")) {
+    $fileNamingObj = new ZipFileNamingStrategy();
+} else {
+    $fileNamingObj = new TarGzFileNamingStrategy();
+}
+
+$calc_filename = $fileNamingObj-&gt;createLinkName("Calc101");
+$stat_filename = $fileNamingObj-&gt;createLinkName("Stat2000");
+
+print &lt;&lt;&lt;EOF
+&lt;h1&gt;The following is a list of great downloads&lt;&lt;/h1&gt;
+&lt;br&gt;
+&lt;a href="$calc_filename"&gt;A great calculator&lt;/a&gt;&lt;br&gt;
+&lt;a href="$stat_filename"&gt;The best statistics application&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;
+EOF;
+</pre><br>
+<p class="docText">Accessing this script from a Windows system gives you the following HTML output:<a name="ch04index69"></a><a name="ch04index70"></a><a name="ch04index71"></a></P>
+<pre>
+&lt;h1&gt;The following is a list of great downloads&lt;&lt;/h1&gt;
+&lt;br&gt;
+&lt;a href="http://downloads.foo.bar/Calc101.zip"&gt;A great calculator&lt; a&gt;&lt;br&gt;
+&lt;a href="http://downloads.foo.bar/Stat2000.zip"&gt;The best statistics application&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;
+</pre><br>
+<a name="ch04note02"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">The strategy pattern is often used with the factory pattern, which is described later in this section. The factory pattern selects the correct strategy.<a name="ch04index72"></a><a name="ch04index73"></a><a name="ch04index74"></a></P></div><br>
+<a name="ch04lev2sec4"></a><H4 class="docSection2Title">4.4.2. Singleton Pattern</h4>
+<p class="docText">The <span class="docEmphStrong">singleton pattern</span> is probably one of the best-known design patterns. You have probably encountered many situations where you have an object that handles some centralized operation in your application, such as a logger object. In such cases, it is usually preferred for only one such application-wide instance to exist and for all application code to have the ability to access it. Specifically, in a logger object, you would want every place in the application that wants to print something to the log to have access to it, and let the centralized logging mechanism handle the filtering of log messages according to log level settings. For this kind of situation, the singleton pattern exists.<a name="ch04index75"></a><a name="ch04index76"></a><a name="ch04index77"></a></p>
+<p class="docText">Making your class a singleton class is usually done by implementing a <tt>static</tt> class method <tt>getInstance()</tt>, which returns the only single instance of the class. The first time you call this method, it creates an instance, saves it in a <tt>private static</tt> variable, and returns you the instance. The subsequent times, it just returns you a handle to the already created instance.</p>
+<p class="docText">Here's an example:</p>
+<pre>
+class Logger {
+    static function getInstance()
+    {
+        if (self::$instance == NULL) {
+            self::$instance = new Logger();
+        }
+        return self::$instance;
+    }
+
+    private function __construct()
+    {
+    }
+
+    private function __clone()
+    {
+
+    }
+
+    function Log($str)
+    {
+        // Take care of logging
+    }
+
+    static private $instance = NULL;
+}
+
+Logger::getInstance()-&gt;Log("Checkpoint");
+</pre><br>
+<p class="docText">The essence of this pattern is <tt>Logger::getInstance()</tt>, which gives you access to the logging object from anywhere in your application, whether it is from a function, a method, or the global scope.<a name="ch04index78"></a><a name="ch04index79"></a><a name="ch04index80"></a></p>
+<p class="docText">In this example, the constructor and clone methods are defined as <tt>private</tt>. This is done so that a developer can't mistakenly create a second instance of the <tt>Logger</tt> class using the <tt>new</tt> or <tt>clone</tt> operators; therefore, <tt>getInstance()</tt> is the only way to access the singleton class instance.</p>
+<a name="ch04lev2sec5"></a><h4 class="docSection2Title">4.4.3. Factory Pattern</h4>
+<p class="docText">Polymorphism and the use of base class is really the center of OOP. However, at some stage, a concrete instance of the base class's subclasses must be created. This is usually done using the <span class="docEmphStrong">factory pattern</span>. A <tt>Factory</tt> class has a <tt>static</tt> method that receives some input and, according to that input, it decides what class instance to create (usually a subclass).<a name="ch04index81"></a><a name="ch04index82"></a><a name="ch04index83"></a></p>
+<p class="docText">Say that on your web site, different kinds of users can log in. Some are guests, some are regular customers, and others are administrators. In a common scenario, you would have a base class <tt>User</tt> and have three subclasses: <tt>GuestUser</tt>, <tt>CustomerUser</tt>, and <tt>AdminUser</tt>. Likely <tt>User</tt> and its subclasses would contain methods to retrieve information about the user (for example, permissions on what they can access on the web site and their personal preferences).</p>
+<p class="docText">The best way for you to write your web application is to use the base class <tt>User</tt> as much as possible, so that the code would be generic and that it would be easy to add additional kinds of users when the need arises.</p>
+<p class="docText">The following example shows a possible implementation for the four <tt>User</tt> classes, and the <tt>UserFactory</tt> class that is used to create the correct user object according to the username:</p>
+<pre>
+abstract class User {
+    function __construct($name)
+    {
+        $this-&gt;name = $name;
+    }
+
+    function getName()
+    {
+        return $this-&gt;name;
+    }
+
+    // Permission methods
+    function hasReadPermission()
+    {
+        return true;
+    }
+
+    function hasModifyPermission()
+    {
+        return false;
+    }
+
+    function hasDeletePermission()
+    {
+        return false;
+    }
+
+    // Customization methods
+    function wantsFlashInterface()
+    {
+        return true;
+    }
+
+    protected $name = NULL;
+}
+
+class GuestUser extends User {
+}<a name="ch04index84"></a><a name="ch04index85"></a><a name="ch04index86"></a>
+
+class CustomerUser extends User {
+   function hasModifyPermission()
+    {
+        return true;
+    }
+}
+
+class AdminUser extends User {
+   function hasModifyPermission()
+    {
+        return true;
+    }
+
+    function hasDeletePermission()
+    {
+        return true;
+    }
+
+    function wantsFlashInterface()
+    {
+        return false;
+    }
+}
+
+class UserFactory {
+    private static $users = array("Andi"=&gt;"admin", "Stig"=&gt;"guest",
+                           "Derick"=&gt;"customer");
+
+    static function Create($name)
+    {
+        if (!isset(self::$users[$name])) {
+            // Error out because the user doesn't exist
+        }
+        switch (self::$users[$name]) {
+            case "guest": return new GuestUser($name);
+            case "customer": return new CustomerUser($name);
+            case "admin": return new AdminUser($name);
+            default: // Error out because the user kind doesn't exist
+        }
+    }
+}
+
+function boolToStr($b)
+{
+    if ($b == true) {
+        return "Yes\n";
+    } else {
+        return "No\n";
+    }
+}
+
+function displayPermissions(User $obj)
+{
+    print $obj-&gt;getName() . "'s permissions:\n";
+    print "Read: " . boolToStr($obj-&gt;hasReadPermission());
+    print "Modify: " . boolToStr($obj-&gt;hasModifyPermission());
+    print "Delete: " . boolToStr($obj-&gt;hasDeletePermission());
+
+}<a name="ch04index87"></a><a name="ch04index88"></a><a name="ch04index89"></a>
+
+function displayRequirements(User $obj)
+{
+    if ($obj-&gt;wantsFlashInterface()) {
+        print $obj-&gt;getName() . " requires Flash\n";
+    }
+}
+
+$logins = array("Andi", "Stig", "Derick");
+
+foreach($logins as $login) {
+    displayPermissions(UserFactory::Create($login));
+    displayRequirements(UserFactory::Create($login));
+}
+</pre><br>Running this code outputs<pre>
+Andi's permissions:
+Read: Yes
+Modify: Yes
+Delete: Yes
+Stig's permissions:
+Read: Yes
+Modify: No
+Delete: No
+Stig requires Flash
+Derick's permissions:
+Read: Yes
+Modify: Yes
+Delete: No
+Derick requires Flash
+</pre><br>
+<p class="docText">This code snippet is a classic example of a factory pattern. You have a class hierarchy (in this case, the <tt>User</tt> hierarchy), which your code such as <tt>displayPermissions()</tt> treats identically. The only place where treatment of the classes differ is in the factory itself, which constructs these instances. In this example, the factory checks what kind of user the username belongs to and creates its class accordingly. In real life, instead of saving the user to user-kind mapping in a static array, you would probably save it in a database or a configuration file.<a name="ch04index90"></a><a name="ch04index91"></a><a name="ch04index92"></a></P>
+<a name="ch04note03"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">Besides <tt>Create()</tt>, you will often find other names used for the factory method, such as <tt>factory()</tt>, <tt>factoryMethod()</tt>, or <tt>createInstance()</tt>.</p></div><br>
+<a name="ch04lev2sec6"></a><H4 class="docSection2Title">4.4.4. Observer Pattern</h4>
+<p class="docText">PHP applications, usually manipulate data. In many cases, changes to one piece of data can affect many different parts of your application's code. For example, the price of each product item displayed on an e-commerce site in the customer's local currency is affected by the current exchange rate. Now, assume that each product item is represented by a PHP object that most likely originates from a database; the exchange rate itself is most probably being taken from a different source and is not part of the item's database entry. Let's also assume that each such object has a <tt>display()</tt> method that outputs the HTML relevant to this product.<a name="ch04index93"></a><a name="ch04index94"></a><a name="ch04index95"></a></p>
+<p class="docText">The <span class="docEmphStrong">observer pattern</span> allows for objects to register on certain events and/or data, and when such an event or change in data occurs, it is automatically notified. In this way, you could develop the product item to be an observer on the currency exchange rate, and before printing out the list of items, you could trigger an event that updates all the registered objects with the correct rate. Doing so gives the objects a chance to update themselves and take the new data into account in their <tt>display()</tt> method.</p>
+<p class="docText">Usually, the observer pattern is implemented using an interface called <tt>Observer,</tt> which the class that is interested in acting as an observer must implement.</p>
+<p class="docText">For example:</p>
+<pre>
+interface Observer {
+    function notify($obj);
+}
+</pre><br>
+<p class="docText">An object that wants to be &quot;observable&quot; usually has a <tt>register</tt> method that allows the <tt>Observer</tt> object to register itself. For example, the following might be our exchange rate class:<a name="ch04index96"></a><a name="ch04index97"></a><a name="ch04index98"></a></P>
+<pre>
+class ExchangeRate {
+    static private $instance = NULL;
+    private $observers = array();
+    private $exchange_rate;
+
+    private function ExchangeRate() {
+    }
+
+    static public function getInstance() {
+        if (self::$instance == NULL) {
+            self::$instance = new ExchangeRate();
+        }
+        return self::$instance;
+    }
+
+    public function getExchangeRate() {
+        return $this-&gt;$exchange_rate;
+    }
+
+    public function setExchangeRate($new_rate) {
+        $this-&gt;$exchange_rate = $new_rate;
+        $this-&gt;notifyObservers();
+    }
+
+    public function registerObserver($obj) {
+        $this-&gt;observers[] = $obj;
+    }
+
+    function notifyObservers() {
+        foreach($this-&gt;observers as $obj) {
+            $obj-&gt;notify($this);
+        }
+    }
+}
+
+class ProductItem implements Observer {
+    public function __construct() {
+        ExchangeRate::getInstance()-&gt;registerObserver($this);
+    }<a name="ch04index99"></a><a name="ch04index100"></a><a name="ch04index101"></a>
+
+    public function notify($obj) {
+        if ($obj instanceof ExchangeRate) {
+             // Update exchange rate data
+             print "Received update!\n";
+        }
+   }
+}
+
+$product1 = new ProductItem();
+$product2 = new ProductItem();
+
+ExchangeRate::getInstance()-&gt;setExchangeRate(4.5);
+</pre><br>This code prints<pre>
+Received update!
+Received update!
+</pre><BR>
+<p class="docText">Although the example isn't complete (the <tt>ProductItem</tt> class doesn't do anything useful), when the last line executes (the <tt>setExchangeRate()</tt> method), both <tt>$product1</tt> and <tt>$product2</tt> are notified via their <tt>notify()</tt> methods with the new exchange rate value, allowing them to recalculate their cost.</p>
+<p class="docText">This pattern can be used in many cases; specifically in web development, it can be used to create an infrastructure of objects representing data that might be affected by cookies, <tt>GET</tt>, <tt>POST</tt>, and other input variables.<a name="ch04index102"></a><a name="ch04index103"></a><a name="ch04index104"></a></P>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch04lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch04lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

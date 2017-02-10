@@ -1,0 +1,120 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 14.5.&nbsp; Profiling with APD</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch14lev1sec5"></a><h3 class="docSection1Title">14.5. Profiling with APD</h3>
+<p class="docText">You can use <span class="docEmphStrong">APD</span> (Advanced PHP Debugger) to profile your applications. It is a Zend extension that collects performance statistics during execution of PHP scripts and records them to a file. This file may be analyzed later with the bundled pprofp utility.<a name="ch14index122"></a><a name="ch14index123"></a><a name="ch14index124"></a><a name="ch14index125"></a></p>
+<p class="docText">APD works by keeping an eye on function calls in your code; each time PHP enters or leaves execution of a function, APD records timing information to a trace file.</p>
+<p class="docText">After PHP is finished executing the profiled code, you analyze the trace file to determine bottlenecks. This is the interesting part; you quickly learn a lot about your (or other people's) code by analyzing trace files because it gives you a bottom-up view of the application.</p>
+<a name="ch14lev2sec7"></a><H4 class="docSection2Title">14.5.1. Installing APD</h4>
+<p class="docText">You can install APD from PECL simply by running <tt>pear install apd.</tt> Then, you must load APD into Zend and define a directory for trace dump files. Here's an example <tt>php.ini</tt> snippet:<a name="ch14index126"></a><a name="ch14index127"></a><a name="ch14index128"></a><a name="ch14index129"></a></P>
+<pre>
+zend_extension = "/usr/lib/php/extensions/20040316/apd.so"
+apd.dumpdir = "/var/tmp/apd"
+</pre><br>
+<p class="docText">Create the directory, make it writeable for the web server user, and restart the web server:</P>
+<pre>
+shell# mkdir /var/tmp/apd
+shell# chmod 1777 /var/tmp/apd
+shell# apachectl restart
+</pre><br>
+<p class="docText">To collect profiling data during execution, call <tt>apd_set_pprof_trace()</tt> in the beginning of your PHP script.</p>
+<a name="ch14note01"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">To automatically profile all of your scripts, call <tt>apd_set_pprof_trace()</tt> from a file that is automatically included by the <tt>auto_prepend_file php.ini</tt> directive.</p>
+<p class="docText">To selectively profile specific requests, add something like this to your code:</P>
+<pre>
+if ($_GET["_profile"] == "apd") {
+    apd_set_pprof_trace();
+}
+</pre><BR>
+<p class="docText">Then, simply add the <tt>_profile=apd GET</tt> parameter to a request to enable APD profiling. (Use this only for development servers, or you may expose yourself to denial-of-service attacks taking up disk space and eating CPU cycles.)</p></div><br>
+<p class="docText">Set up an application you would like to profile. The following example uses code from the <a class="docLink" target="_blank" href="http://pear.php.net">pear.php.net</a> web site.<a name="ch14index130"></a><a name="ch14index131"></a><a name="ch14index132"></a><a name="ch14index133"></a></p>
+<a name="ch14lev2sec8"></a><h4 class="docSection2Title">14.5.2. Analyzing Trace Data</H4>
+<p class="docText">When you have enabled tracing, APD will generate one trace file per request in the dump directory you configured. The trace file will be called <tt>pprof.PID</tt>, where <tt>PID</tt> is the process id of the web server process (or standalone parser).<a name="ch14index134"></a><a name="ch14index135"></a><a name="ch14index136"></a><a name="ch14index137"></a><a name="ch14index138"></a></p>
+<a name="ch14note02"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">The trace information is appended to the trace file, but the pprofp utility only reads the first trace per file. Clean up the trace files regularly to avoid analyzing old trace data.</P></div><br>
+<p class="docText">Use the pprofp utility to inspect trace files. This example trace output shown in <a class="docLink" href="#ch14fig07">Figure 14.7</a> originates from analyzing <a class="docLink" target="_blank" href="http://pear.php.net/">http://pear.php.net/</a>, and pprofp shows which functions and statements that alone consume the most user CPU.</P>
+<a name="ch14fig07"></a><p><center><h5 class="docFigureTitle">Figure 14.7. Example trace output after analyzing <a class="docLink" target="_blank" href="http://pear.php.net">pear.php.net</a>.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/14fig07_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="235" SRC="images/013147149X/graphics/14fig07.gif;380137"></p></center></p><br>
+<p class="docText">There's not much to pick on, but the time spent by <tt>require_once</tt> (50 percent) indicates that an opcode cache would cut the execution time in half.</p>
+<p class="docText">The longer the script runs, the more exact data pprofp gives you. <a class="docLink" href="#ch14fig08">Figure 14.8</a> shows another example that profiles <a class="docLink" target="_blank" href="http://pear.php.net/get">http://pear.php.net/get</a>, which is a PHP script that delivers PEAR package tarballs.<a name="ch14index139"></a><a name="ch14index140"></a><a name="ch14index141"></a><a name="ch14index142"></a><a name="ch14index143"></a></p>
+<a name="ch14fig08"></a><p><center><h5 class="docFigureTitle">Figure 14.8. Profiling <a class="docLink" target="_blank" href="http://pear.php.net/get">pear.php.net/get</a>.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/14fig08_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="235" SRC="images/013147149X/graphics/14fig08.gif;380137"></p></center></p><br>
+<p class="docText">Once again, an opcode cache would help a lot (60 percent of the time spent by <tt>require_once</tt>). The peculiar thing here is that calls to <tt>define()</tt> take 20 percent of the CPU time, which is worth looking into. Even if this is only 12ms in the previous example, everything adds up, and the process of analyzing code in this way is helpful for writing efficient code later.</p>
+<p class="docText">To find out more about where these <tt>define()</tt> calls are, use pprofp to generate a call graph:<a name="ch14index144"></a><a name="ch14index145"></a><a name="ch14index146"></a><a name="ch14index147"></a><a name="ch14index148"></a></p>
+<pre>
+$ pprofp -T /var/tmp/apd/pprof.PID
+main
+define
+require_once
+require_once
+  require_once
+    define
+    define
+    define
+    define
+    define
+    define
+    function_exists
+    zend_version
+    version_compare
+    define
+    substr
+    define
+    define
+    define
+    ini_set
+    register_shutdown_function
+  define (x49)
+require_once
+  define (x21)
+  ...
+</pre><BR>
+<a name="ch14note03"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">APD does not let you see the parameters of the <tt>require_once</tt> statements here. Xdebug and Zend Studio have this feature, though.</p></div><br>
+<p class="docText">In this graph, the indentation represents a function or statement called within the outer function or statement.</P>
+<p class="docText">Code inspection lets you figure out the rest. Start immediately after the <tt>apd_set_pprof_trace()</tt> call, and note the order and depth of the two largest batches of <tt>define()</tt> calls in the previous graph (49x and 21x). You can see that the 49x batch is called during the second <tt>require_once</tt> in the top-level script, and the 21x batch is called during the third <tt>require_once</tt>.<a name="ch14index149"></a><a name="ch14index150"></a><a name="ch14index151"></a><a name="ch14index152"></a><a name="ch14index153"></a></p>
+<p class="docText">The code just after enabling the trace looks like this:</p>
+<pre>
+if (isset($_GET['_profiler']) &amp;&amp; $_GET['_profiler'] == ''apd'') { apd_set_pprof_trace();
+}
+
+if ($_SERVER['SERVER_NAME'] != 'pear.php.net') {
+    define('DEVBOX', true);
+} else {
+    define('DEVBOX', false);
+}
+
+require_once "pear-cache.php"; // first
+
+require_once "DB.php";         // second
+require_once "DB/storage.php"; // third
+require_once "pear-config.php";
+require_once "pear-auth.php";
+require_once "pear-database.php";
+</pre><br>
+<p class="docText">The first 49 defines are from <tt>DB.php</tt>; the following 21 are from <tt>DB/storage.php</tt>.</p>
+<p class="docText">In PHP 5, defines can be optimized by changing them to <tt>const</tt> class variables, which are stored as part of the class definition and thus cached by opcode caches. Constants that are defined in script with <tt>define()</tt> are not cached; instead, the code calling <tt>define()</tt> is cached and executed every time.<a name="ch14index154"></a><a name="ch14index155"></a><a name="ch14index156"></a><a name="ch14index157"></a><a name="ch14index158"></a></p>
+<p class="docText">The <tt>pprofp</tt> program can display more than just user CPU time. <a class="docLink" href="#ch14table01">Table 14.1</a> contains a list of command-line options (just type <tt>pprofp</tt> without any parameters to see it).</p>
+<a name="ch14table01"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="groups" cellpadding="5"><caption><h5 class="docTableTitle">Table 14.1. <tt>pprofp</tt> Options</H5></caption><colgroup><col width="159.5"><col width="390.5"></colgroup><thead><tr><th class="bottomBorder thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Option</span></P></th><th class="bottomBorder thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-l</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Sort by the number of calls to each function.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-u</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Sort by user CPU time consumed.</P></td></tr><tr><td class="bottomBorder" align="left" valign="top"><p class="docText"><tt>-U</tt></p></td><td class="bottomBorder" align="left" valign="top"><p class="docText">Sort by user CPU time consumed, including child calls.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-s</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Sort by system CPU time consumed, including child calls.</p></TD></TR><tr><td class="bottomBorder" align="left" valign="top"><p class="docText"><tt>-S</tt></P></td><td class="bottomBorder" align="left" valign="top"><p class="docText">Sort by system CPU time consumed (system CPU is time spent by the operating system waiting for IO operations, for example).</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>-z</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Sort by user and system CPU time consumed.</P></td></tr><tr><td class="bottomBorder" align="left" valign="top"><p class="docText"><tt>-r</tt></P></TD><td class="bottomBorder" align="left" valign="top"><p class="docText">Sort by elapsed wall-clock time.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-R</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Sort by elapsed wall-clock time, including child calls.</P></td></tr><tr><td class="bottomBorder" align="left" valign="top"><p class="docText"><tt>-O</tt> <span class="docEmphasis">n</span></p></td><td class="bottomBorder" align="left" valign="top"><p class="docText">Display at most <span class="docEmphasis">n</span> functions (the default is 20).</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-t</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Display call graph with repeating entries collapsed.</p></TD></TR><tr><td class="bottomBorder" align="left" valign="top"><p class="docText"><tt>-T</tt></P></td><td class="bottomBorder" align="left" valign="top"><p class="docText">Display uncollapsed call graph.</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>-i</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Ignore PHP built-in functions.</P></td></tr></table></p><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

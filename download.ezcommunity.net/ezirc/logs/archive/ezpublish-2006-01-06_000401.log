@@ -1,0 +1,85 @@
+[01-05-2006 02:05:40] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[01-05-2006 02:07:49] -!- hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[01-05-2006 02:13:59] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-05-2006 02:39:51] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-05-2006 03:01:27] [#ezpublish] <SEAwolfx> re
+[01-05-2006 03:03:11] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-05-2006 03:21:02] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-05-2006 03:21:11] [#ezpublish] <Sulfur> morning everybody ... :)
+[01-05-2006 03:23:26] [#ezpublish] <SEAwolfx> good morning Sulfur ;)
+[01-05-2006 03:23:39] [#ezpublish] <Sulfur> hi  SEAwolfx
+[01-05-2006 03:25:38] [#ezpublish] * Sulfur is facing a tricky cache - related design problem .. hum :)
+[01-05-2006 03:25:59] [#ezpublish] <Sulfur> maybe I'll post this to the forums
+[01-05-2006 03:27:55] [#ezpublish] <Sulfur> (damn those who don't heed the developer's advice ;) )
+[01-05-2006 03:42:01] [#ezpublish] <Sulfur> eZ crew ( fh[eZ] , hovik, kris10an ) and seasoned eZ programmers, I invite you to spend your .02€ on this: http://ez.no/community/forum/developer/interesting_i_think_design_issue_regarding_caches :)
+[01-05-2006 03:44:58] [#ezpublish] <fh[eZ]> Sulfur: yep, aware of this.. the smart view cache needs to get more rules to support all the cases properly
+[01-05-2006 03:45:46] [#ezpublish] <fh[eZ]> but it quickly leads you to a place where you would have to write PHP code to do proper cache clearing
+[01-05-2006 03:46:45] [#ezpublish] <fh[eZ]> or that you have to clear the cache of the fetching page every time content is posted on your site
+[01-05-2006 03:46:50] [#ezpublish] <Sulfur> fh[eZ]: were it for me, in that case I'd go for the custom workflow, if applicable. but anyway, is there a way , with current ez version, to get me out of this situation ?
+[01-05-2006 03:47:06] [#ezpublish] <Sulfur> yes, you mean clear all caches, right ?
+[01-05-2006 03:47:31] [#ezpublish] <fh[eZ]> no, not all caches, just for the pages where you do the fetch based on the keywords
+[01-05-2006 03:47:54] [#ezpublish] <fh[eZ]> you could do that with a workflow...
+[01-05-2006 03:48:19] [#ezpublish] <fh[eZ]> you could also use a cacheblock on these pages if it is not important that the new content is visible right away
+[01-05-2006 03:48:24] [#ezpublish] <fh[eZ]> like five minutes for example
+[01-05-2006 03:49:05] [#ezpublish] <Sulfur> how can I clear caches using a workflow ?
+[01-05-2006 03:49:58] [#ezpublish] <Sulfur> or fh[eZ] , would you mind to put your answer in the thread? so everyone will benefit from it
+[01-05-2006 03:50:08] [#ezpublish] <fh[eZ]> I
+[01-05-2006 03:50:10] [#ezpublish] <fh[eZ]> adsf
+[01-05-2006 03:50:18] [#ezpublish] <fh[eZ]> I'll try to remember.. quite busy at the moment
+[01-05-2006 03:52:20] [#ezpublish] <Sulfur> ok ... I'll be your autoreminder :P
+[01-05-2006 03:52:36] [#ezpublish] <Sulfur> (aka "nagger"
+[01-05-2006 04:28:03] -!- technocrat [i=tuscia@hst-250-241.splius.lt] has joined #ezpublish
+[01-05-2006 04:33:26] [#ezpublish] <Sulfur> (lookie here another italian )
+[01-05-2006 05:23:38] -!- SEAwolfx [n=mike@64.90.191.90.nyinternet.net] has quit [Remote closed the connection]
+[01-05-2006 05:29:23] -!- SEAwolfx [n=mike@tor/session/x-f78bdb39e21b1e7c] has joined #ezpublish
+[01-05-2006 05:45:27] [#ezpublish] <Sulfur> technocrat: are you from italy ?
+[01-05-2006 05:46:32] [#ezpublish] <technocrat> no :)
+[01-05-2006 05:46:35] [#ezpublish] <technocrat> from
+[01-05-2006 05:46:40] [#ezpublish] <technocrat> Lithuania
+[01-05-2006 05:48:22] [#ezpublish] <Sulfur> ok technocrat -- I saw your id coming in and I mistook lt with it
+[01-05-2006 05:48:32] [#ezpublish] <Sulfur> welcome anyway ? :)
+[01-05-2006 05:48:39] [#ezpublish] <Sulfur>  without  the " ? "
+[01-05-2006 05:49:01] [#ezpublish] <technocrat> :) thanks
+[01-05-2006 05:51:15] [#ezpublish] <technocrat> is here eZ 2.x developers?
+[01-05-2006 05:53:37] [#ezpublish] <Sulfur> don't know ..
+[01-05-2006 06:45:59] -!- _thomas [n=thomas@62.134.232.141] has joined #ezpublish
+[01-05-2006 07:56:25] [#ezpublish] <_Rappy_> does anyone have a URI to a multi-language eZ-site?
+[01-05-2006 07:59:10] [#ezpublish] <Sulfur> nope
+[01-05-2006 07:59:42] [#ezpublish] <technocrat> ez 3 ?
+[01-05-2006 08:00:00] [#ezpublish] <xbit> http://ez.no/
+[01-05-2006 08:01:01] [#ezpublish] <_Rappy_> oh! never noticed that ez has made those chanhes :p
+[01-05-2006 08:01:05] [#ezpublish] <xbit> :)
+[01-05-2006 08:01:06] [#ezpublish] <_Rappy_> *changes
+[01-05-2006 08:36:18] [#ezpublish] <Sulfur> hey guys, I am at a slight loss. what was that ini setting that made the names of the used templates appear within your page, in addition to be listed on the debug zone? I want to turn it off :)
+[01-05-2006 08:39:07] [#ezpublish] <Sulfur> no problem, found it
+[01-05-2006 08:40:51] [#ezpublish] <seasonfive> check box wich appear when debug = on help a lot :)
+[01-05-2006 08:43:29] [#ezpublish] <Sulfur> mmm yes you are right, I notice it now .... I am so used to editing the conf files by myself that I filter that zone out
+[01-05-2006 08:54:48] [#ezpublish] <seasonfive> i've got a little problem: i'm using <embed href='ezobject://101' size='small' align='left' /> for display a picture
+[01-05-2006 08:54:51] [#ezpublish] <seasonfive> but then i have errors :
+[01-05-2006 08:54:59] [#ezpublish] <seasonfive> No such attribute for array(5): classification
+[01-05-2006 08:54:59] [#ezpublish] <seasonfive> Choose one of following: href, class, target, title, id
+[01-05-2006 08:55:05] [#ezpublish] <seasonfive> any idea ?
+[01-05-2006 08:55:13] [#ezpublish] <seasonfive> (the picture is correctly displayed)
+[01-05-2006 08:56:50] [#ezpublish] <seasonfive> (i have 8 errors for 4 pictures)
+[01-05-2006 09:04:50] [#ezpublish] <Sulfur> check the embed.tpl
+[01-05-2006 10:50:07] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-05-2006 10:58:54] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-05-2006 10:59:26] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-05-2006 11:51:31] -!- elephantMan [n=elephant@15.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[01-05-2006 11:53:56] -!- elephantMan [n=elephant@15.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-05-2006 11:55:40] -!- Sulfur [n=mbariola@85.20.2.139] has left #ezpublish []
+[01-05-2006 11:58:02] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-05-2006 13:46:00] [#ezpublish] <SEAwolfx> how can i extend the ezxml with a new namespace which triggers a xslt-transformation to render the xhtml-output? any suggestions?
+[01-05-2006 13:54:36] [#ezpublish] <SEAwolfx> .oO(eZSimplifiedXMLInput)
+[01-05-2006 13:58:44] [#ezpublish] <SEAwolfx> .oO(eZSimplifiedXMLInput'?
+[01-05-2006 13:58:52] [#ezpublish] <SEAwolfx> someone knows anything about namespace 'xmlns:custom='http://ez.no/namespaces/ezpublish3/custom/'?
+[01-05-2006 14:27:58] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-05-2006 15:00:22] -!- hovik [n=hovik@popeye.ez.no] has quit [Remote closed the connection]
+[01-05-2006 15:09:56] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[01-05-2006 15:36:17] -!- _thomas [n=thomas@62.134.232.141] has quit [Remote closed the connection]
+[01-05-2006 16:38:26] -!- technocrat [i=tuscia@hst-250-241.splius.lt] has quit []
+[01-05-2006 17:58:37] -!- SEAwolfx_ [n=mike@tor/session/x-ff2956af80ef8309] has joined #ezpublish
+[01-05-2006 19:17:57] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-05-2006 19:22:35] -!- SEAwolfx_ [n=mike@tor/session/x-ff2956af80ef8309] has quit [Remote closed the connection]
+[01-05-2006 19:27:52] -!- SEAwolfx_ [n=mike@tor/session/x-b55b9dcf64ab7e48] has joined #ezpublish
+[01-05-2006 22:44:21] -!- SEAwolfx [n=mike@tor/session/x-f78bdb39e21b1e7c] has quit [SendQ exceeded]

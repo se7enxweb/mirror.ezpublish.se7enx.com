@@ -1,0 +1,387 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 5.5.&nbsp; Techniques to Make Scripts &quot;Safe&quot;</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch05lev1sec5"></a><h3 class="docSection1Title">5.5. Techniques to Make Scripts &quot;Safe&quot;</h3>
+<p class="docText">There is only one solution to keeping your scripts running safe: Do <span class="docEmphasis">not</span> trust users. Although this may sound harsh, it's perfectly true. Not only might users &quot;hack&quot; your site, but they also do weird things by accident. It's the programmer's responsibility to make sure that these inevitable errors can't do serious damage. Thus, you need to deploy some techniques to save the user from insanity.<a name="ch05index85"></a><a name="ch05index86"></a></p>
+<a name="ch05lev2sec2"></a><h4 class="docSection2Title">5.5.1. Input Validation</h4>
+<p class="docText">One essential technique to protect your web site from users is <span class="docEmphStrong">input validation</span>, which is an impressive term that doesn't mean much at all. The term simply means that you need to check all input that comes from the user, whether the data comes from cookies, <tt>GET</tt>, or <tt>POST</tt> data.<a name="ch05index87"></a><a name="ch05index88"></a><a name="ch05index89"></a></P>
+<p class="docText">First, turn off <tt>register_globals</tt> in <tt>php.ini</tt> and set the <tt>error_level</tt> to the highest possible value (<tt>E_ALL | E_STRICT</tt>). The <tt>register_globals</tt> setting stops the registration of request data (<tt>Cookie</tt>, <tt>Session</tt>, <tt>GET</tt>, and <tt>POST</tt> variables) as global variables in your script; the high <tt>error_level</tt> setting will enable notices for uninitialized variables.</p>
+<p class="docText">For different kinds of input, you can use different methods. For instance, if you expect a parameter passed with the HTTP <tt>GET</tt> method to be an integer, force it to be an integer in your script:</P>
+<pre>
+&lt;?php
+$product_id = (int) $_GET['prod_id'];
+?&gt;
+</pre><br>
+<p class="docText">Everything other than an integer value is converted to 0. But, what if <tt>$_GET['prod_id']</tt> doesn't exist? You will receive a notice because we turned the <tt>error_level</tt> setting up. A better way to validate the input would be</P>
+<pre>
+&lt;?php
+if (!isset($_GET['prod_id'])) {
+    die ("Error, product ID was not set");
+}
+$product_id = (int) $_GET['prod_id'];
+?&gt;
+</pre><br>
+<p class="docText">However, if you have a large number of input variables, it can be tedious to write this code for each and every variable separately. Instead, you might want to create and use a function for this, as shown in the following example:<a name="ch05index90"></a><a name="ch05index91"></a><a name="ch05index92"></a></p>
+<pre>
+&lt;?php
+function sanitize_vars(&amp;$vars, $signatures, $redir_url = null)
+{
+    $tmp = array();
+
+    /* Walk through the signatures and add them to the temporary
+     * array $tmp */
+    foreach ($signatures as $name =&gt; $sig) {
+        if (!isset($vars[$name]]) &amp;&amp;
+            isset($sig['required']) &amp;&amp; $sig['required'])
+        {
+            /* redirect if the variable doesn't exist in the array */
+            if ($redir_url) {
+                header("Location: $redir_url");
+            } else {
+                echo 'Parameter $name not present and no redirect URL';
+            }
+            exit();
+        }
+
+        /* apply type to variable */
+        $tmp[$name] = $vars[$name];
+        if (isset($sig['type'])) {
+            settype($tmp[$name], $sig['type']);
+        }
+        /* apply functions to the variables, you can use the standard PHP
+         * functions, but also use your own for added flexibility. */
+        if (isset($sig['function'])) {
+            $tmp[$name] = {$sig['function']}($tmp[$name]);
+        }
+    }
+    $vars = $tmp;
+}
+
+$sigs = array(
+    'prod_id' =&gt; array('required' =&gt; true, 'type' =&gt; 'int'),
+    'desc' =&gt;    array('required' =&gt; true, 'type' =&gt; 'string',
+        'function' =&gt; 'addslashes')
+);
+
+sanitize_vars(&amp;$_GET, $sigs,
+    "http:// {$_SERVER['SERVER_NAME']}/error.php?cause=vars");
+?&gt;<a name="ch05index93"></a><a name="ch05index94"></a><a name="ch05index95"></a>
+</pre><br>
+<a name="ch05lev2sec3"></a><h4 class="docSection2Title">5.5.2. HMAC Verification</H4>
+<p class="docText">If you need to prevent bad guys from tampering with variables passed in the URL (such as for a redirect as shown previously, or for links that pass special parameters to the linked script), you can use a hash, as shown in the following script:<a name="ch05index96"></a><a name="ch05index97"></a><a name="ch05index98"></a></P>
+<pre>
+&lt;?php
+
+function create_parameters($array)
+{
+    $data = '';
+    $ret = array();
+
+    /* For each variable in the array we a string containing
+     * "$key=$value" to an array and concatenate
+     * $key and $value to the $data string. */
+    foreach ($array as $key =&gt; $value) {
+        $data .= $key . $value;
+        $ret[] = "$key=$value";
+    }
+
+    /* We also add the md5sum of the $data as element
+     * to the $ret array. */
+    $hash = md5($data);
+    $ret[] = "hash=$hash";
+
+    return join ('&amp;amp;', $ret);
+}
+echo '&lt;a href="script.php?'. create_parameters(array('cause' =&gt; 'vars')).'"&gt;err!&lt;/a&gt;';
+
+?&gt;
+</pre><br>
+<p class="docText">Running this script echoes the following link:<a name="ch05index99"></a><a name="ch05index100"></a><a name="ch05index101"></a></p>
+<pre>
+&lt;a href='script.php?cause=vars&amp;hash=8eee14fe10d3f612589cdef079c025f6'&gt;err!&lt;/a&gt;
+</pre><br>
+<p class="docText">However, this URL is still vulnerable. An attacker can modify both the variables <span class="docEmphasis">and</span> the hash. We must do something better. We're not the first ones with this problem, so there is an existing solution: <span class="docEmphStrong">HMAC</span> (Keyed-Hashing for Message Authentication). The HMAC method is proven to be stronger cryptographically, and should be used instead of home-cooked validation algorithms. The HMAC algorithm uses a secret key in a two-step hashing of plain text (in our case, the string containing the key/value pairs) with the following steps:<a name="ch05index102"></a><a name="ch05index103"></a></p>
+<a name="ch05pr01"></a>
+
+
+
+<table border="0" class="docText"><TR><td width="25" valign="top"><div class="docText"><b>1. </b></div></TD><td><div class="docText">If the key length is smaller than 64 bytes (the block size that most hashing algorithms use), we pad the key to 64 bytes with <tt>\0</tt>s; if the key length is larger than 64, we first use the hash function on the key and then pad it to 64 bytes with <tt>\0</tt>s.<BR><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>2. </b></div></td><td><div class="docText">We construct <tt>opad</tt> (the 64-byte key XORed with 0x5C) and <tt>ipad</tt> (the 64-byte key <tt>XOR</tt>ed with 0x36).<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>3. </b></div></td><TD><div class="docText">We create the &quot;inner&quot; hash by running the hash function with the parameter <tt>ipad . plain text</tt>. (Because we use an &quot;iterative&quot; hash function, like <tt>md5()</tt> or <tt>sha1()</tt>, we don't need to seed the hash function with our key and then run the seeded hash function over our plain text. Internally, the hash will do the same anyway, which is the reason we padded the key up to 64 bytes).<BR><br></div></td></TR><tr><td width="25" valign="top"><div class="docText"><b>4. </b></div></td><td><div class="docText">We create the &quot;outer&quot; hash by running the hash function over <tt>opad . inner_result</tt>  that is, using the result obtained in step 3.<br><BR></div></td></TR></table>
+<p class="docText">Here is the formula to calculate HMAC, which should help you understand the calculation:</p>
+<pre>
+H(K XOR opad, H(K XOR ipad, text))
+</pre><BR>
+<p class="docText">With</p>
+<ul><li><p class="docText">
+<tt>H</tt>. 
+The hash function to use</p></LI><LI><p class="docText">
+<tt>K</tt>. 
+The key padded to 64 bytes with zeroes (0x0)</p></li><li><p class="docText">
+<tt>opad</tt>. 
+The 64 bytes of 0x5Cs</p></LI><li><p class="docText">
+<tt>ipad</tt>. 
+The 64 bytes of 0x36s</p></LI><li><p class="docText">
+<tt>text</tt>. 
+The plain text for which we are calculating the hash</P></li></ul>
+<p class="docText">Greatso much for the boring theory. Now let's see how we can use it with a PEAR class that was developed to calculate the hashes.<a name="ch05index104"></a><a name="ch05index105"></a><a name="ch05index106"></a></p>
+<a name="ch05lev2sec4"></a><h4 class="docSection2Title">5.5.3. PEAR::Crypt_HMAC</h4><a name="ch05index107"></a><a name="ch05index108"></a><a name="ch05index109"></a><a name="ch05index110"></a>
+<p class="docText">The Crypt_HMAC class implements the algorithm as described in RFC 2104 and can be installed with <tt>pear install crypt_hmac</tt>. Let's look at it:</p>
+<pre>
+class Crypt_HMAC {
+
+    /**
+    * Constructor
+    * Pass method as first parameter
+    *
+    * @param  string method - Hash function used for the calculation
+    * @return void
+    * @access public
+    */
+    function Crypt_HMAC($key, $method = 'md5')
+    {
+        if (!in_array($method, array('sha1', 'md5'))) {
+            die("Unsupported hash function '$method'.");
+        }
+        $this-&gt;_func = $method;
+
+        /* Pad the key as the RFC wishes (step 1) */
+        if (strlen($key) &gt; 64) {
+            $key = pack('H32', $method($key));
+        }
+
+        if (strlen($key) &lt; 64) {
+            $key = str_pad($key, 64, chr(0));
+        }
+
+        /* Calculate the padded keys and save them (step 2 &amp; 3) */
+        $this-&gt;_ipad = substr($key, 0, 64) ^ str_repeat(chr(0x36), 64);
+        $this-&gt;_opad = substr($key, 0, 64) ^ str_repeat(chr(0x5C), 64);
+    }
+
+</pre><br>
+<p class="docText">First, we make sure that the requested underlying hash function is actually supported (for now, only the built-in PHP functions <tt>md5()</tt> and <tt>sha1()</tt> are supported). Then, we create a key, according to steps 1 and 2, as previously described. Finally, in the constructor, we pre-pad and XOR the key so that the <tt>hash()</tt> method can be used several times without losing performance by padding the key every time a hash is requested:<a name="ch05index111"></a><a name="ch05index112"></a><a name="ch05index113"></a><a name="ch05index114"></a><a name="ch05index115"></a><a name="ch05index116"></a></p>
+<pre>
+    /**
+    * Hashing function
+    *
+    * @param  string data - string that will hashed (step 4)
+    * @return string
+    * @access public
+    */
+    function hash($data)
+    {
+        $func = $this-&gt;_func;
+        $inner  = pack('H32', $func($this-&gt;_ipad . $data));
+        $digest = $func($this-&gt;_opad . $inner);
+
+        return $digest;
+    }
+}
+?&gt;
+</pre><br>
+<p class="docText">In the hash function, we use the pre-padded key. First, we hash the inner result. Then, we hash the outer result, which is the digest (a different name for hash) that we return.</p>
+<p class="docText">Back to our original problem. We want to verify that no one tampered with our precious <tt>$_GET</tt> variables. Here is the second, more secure, version of our <tt>create_parameters()</tt> function:<a name="ch05index117"></a><a name="ch05index118"></a><a name="ch05index119"></a><a name="ch05index120"></a></p>
+<pre>
+&lt;?php
+
+require_once('Crypt/HMAC.php');
+
+/* The RFC recommends a key size larger than the output hash
+ * for the hash function you use (16 for md5() and 20 for sha1()). */
+define ('SECRET_KEY', 'Professional PHP 5 Programming Example');
+
+function create_parameters($array)
+{
+    $data = '';
+    $ret = array();
+
+    /* Construct the string with our key/value pairs */
+    foreach ($array as $key =&gt; $value) {
+        $data .= $key . $value;
+        $ret[] = "$key=$value";
+    }
+
+    $h = new Crypt_HMAC(SECRET_KEY, 'md5');
+    $hash = $h-&gt;hash($data);
+    $ret[] = "hash=$hash";
+
+    return join ('&amp;amp;', $ret);
+}
+
+echo '&lt;a href="script.php?'.
+    create_parameters(array('cause' =&gt; 'vars')).'"&gt;err!&lt;/a&gt;';
+
+?&gt;
+</pre><br>The output is<a name="ch05index121"></a><a name="ch05index122"></a><a name="ch05index123"></a><a name="ch05index124"></a><pre>
+&lt;a href="script.php?cause=vars&amp;hash=6a0af635f1bbfb100297202ccd6dce53"&gt;err!&lt;/a&gt;
+</pre><br>To verify the parameters passed to the script, we can use this script:<pre>
+&lt;?php
+
+require_once('Crypt/HMAC.php');
+
+define ('SECRET_KEY', 'Professional PHP 5 Programming Example');
+
+function verify_parameters($array)
+{
+    $data = '';
+    $ret = array();
+
+    /* Store the hash in a separate variable and unset the hash from
+     * the array itself (as it was not used in constructing the hash */
+    $hash = $array['hash'];
+    unset ($array['hash']);
+
+    /* Construct the string with our key/value pairs */
+    foreach ($array as $key =&gt; $value) {
+        $data .= $key . $value;
+        $ret[] = "$key=$value";
+    }
+
+    $h = new Crypt_HMAC(SECRET_KEY, 'md5');
+    if ($hash != $h-&gt;hash($data)) {
+        return FALSE;
+    } else {
+        return TRUE;
+    }
+}
+
+/* We use a static array here, but in real life you would be using
+ * $array = $_GET or similar. */
+$array = array(
+    'cause' =&gt; 'vars',
+    'hash' =&gt; '6a0af635f1bbfb100297202ccd6dce53'
+);
+
+if (!verify_parameters($array)) {
+    die("Dweep! Somebody tampered with our parameters.\n");
+} else {
+    echo "Good guys, they didn't touch our stuff!!";
+}
+
+?&gt;<a name="ch05index125"></a><a name="ch05index126"></a><a name="ch05index127"></a><a name="ch05index128"></a>
+</pre><br>
+<p class="docText">The SHA1 hash method gives you more cryptographic strength, but both MD5 and SHA1 are adequate enough for the purpose of checking the validity of your parameters.</p>
+<a name="ch05lev2sec5"></a><h4 class="docSection2Title">5.5.4. Input Filter</H4>
+<p class="docText">By using PHP 5, you can add hooks to process incoming data, but it's mainly targeted at advanced developers with a sound knowledge of C and some knowledge of PHP internals. These hooks are called by the SAPI layer that treats the registering of the incoming data into PHP. One appliance might be to <tt>strip_tags()</tt> all incoming data automatically. Although all this can be done in user land with a function such as <tt>sanitize_vars()</tt>, this solution can only be enforced by writing a script that performs the desired processing and setting <tt>auto_prepend_file</tt> in <tt>php.ini</tt> to designate this script. Setting <tt>auto_prepend</tt> causes the processing script to be run at the beginning of every script. On the other hand, the server administrator can enforce a solution. For information on this, see <a class="docLink" target="_blank" href="http://www.derickrethans.nl/sqlite_filter.php">http://www.derickrethans.nl/sqlite_filter.php</a> for an implementation of a filter that uses SQLite as an information source for filter rules.<a name="ch05index129"></a><a name="ch05index130"></a><a name="ch05index131"></a><a name="ch05index132"></a></P>
+<a name="ch05lev2sec6"></a><h4 class="docSection2Title">5.5.5. Working with Passwords</h4>
+<p class="docText">Another appliance of hash functions is authenticating a password entered in a form on your web site with a password stored in your database. For obvious reasons, you don't want to store unencrypted passwords in your database. You want to prevent evil hackers who have access to your database (because the sysadmin blundered) from stealing passwords used by your clients. Because hash functions are not at all reversible, you can store the password hashed with a function like <tt>md5()</tt> or <tt>sha1()</tt> so the evil hackers can't get the password in plain text.<a name="ch05index133"></a><a name="ch05index134"></a><a name="ch05index135"></a></P>
+<p class="docText">The example <tt>Auth</tt> class implements two methods<tt>addUser()</tt> and <tt>authUser()</tt>and makes use of the <tt>sha1()</tt> hashing function. The table scheme looks like this:</p>
+<pre>
+CREATE TABLE users (
+  email   VARCHAR(128) NOT NULL PRIMARY KEY,
+  passwd CHAR(40) NOT NULL
+);
+</pre><br>
+<p class="docText">We use a length of 40 here, which is the same as the <tt>sha1()</tt> digest in hexadecimal characters:</p>
+<pre>
+&lt;?php
+class Auth {
+
+    function Auth()
+    {
+        mysql_connect('localhost', 'user', 'password');
+        mysql_select_db('my_own_bookshop');
+    }
+
+    public function addUser($email, $password)
+    {
+        $q = '
+            INSERT INTO users(email, passwd)
+               VALUES ("'. $email. '", "'. sha1($password).'")
+        ';
+        mysql_query($q);
+    }
+
+    public function authUser($email, $password)
+    {
+        $q = '
+            SELECT * FROM users
+            WHERE email="'. $email. '"
+                AND passwd ="'. sha1($password). '"
+        ';
+        $r = mysql_query($q);
+
+        if (mysql_num_rows($r) == 1) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+}
+?&gt;
+</pre><br>
+<p class="docText">We didn't use <tt>addslashes()</tt> around the <tt>$email</tt> and <tt>$password</tt> variables earlier. We will do that in the script that calls the methods of this class:<a name="ch05index136"></a><a name="ch05index137"></a><a name="ch05index138"></a><a name="ch05index139"></a></p>
+<pre>
+&lt;?php
+/* Include our authentication class  and sanitizing function*/
+require_once 'Auth.php';
+require_once 'sanitize.php';
+
+/* Define our parameters */
+$sigs = array (
+    'email'  =&gt; array ('required' =&gt; TRUE, 'type' =&gt; 'string',
+        'function' =&gt; 'addslashes'),
+    'passwd' =&gt; array ('required' =&gt; TRUE, 'type' =&gt; 'string',
+        'function' =&gt; 'addslashes')
+);
+
+/* Clean up our input */
+sanitize_vars(&amp;$_POST, $sigs);
+
+/* Instantiate the Auth class and add the user */
+$a = new Auth();
+$a-&gt;addUser($_POST['email'], $_POST['passwd']);
+
+/* or... we instantiate the Auth class and validate the user */
+$a = new Auth();
+echo $a-&gt;authUser($_POST['email'], $_POST['passwd']) ? 'OK' : 'ERROR';
+?&gt;
+</pre><br>
+<p class="docText">After the user is added to the database, something like this appears in your table:<a name="ch05index140"></a><a name="ch05index141"></a><a name="ch05index142"></a></P>
+<pre>
++--------+------------------------------------------+
+| user   | password                                 |
++--------+------------------------------------------+
+| derick | 5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8 |
++--------+------------------------------------------+
+</pre><br>
+<p class="docText">The first person who receives the correct password back from this <tt>sha1()</tt> hash can ask me for a crate of Kossu.<a name="ch05index143"></a><a name="ch05index144"></a><a name="ch05index145"></a></P>
+<a name="ch05lev2sec7"></a><h4 class="docSection2Title">5.5.6. Error Handling</H4>
+<p class="docText">During development, you probably want to code with <tt>error_reporting</tt> set to <tt>E_ALL &amp; E_STRICT</tt>. Doing so helps you catch some bugs. If you have <tt>error_reporting</tt> set to <tt>E_ALL &amp; E_STRICT</tt>, the executed script will show you errors like this:<a name="ch05index146"></a><a name="ch05index147"></a><a name="ch05index148"></a></p>
+<pre>
+Warning: Call-time pass-by-reference has been deprecated - argument
+passed by value;  If you would like to pass it by reference, modify
+the declaration of sanitize_vars().  If you would like to enable
+call-time pass-by-reference, you can set
+allow_call_time_pass_reference to true in your INI file.  However,
+future versions may not support this any longer.
+</pre><br>
+<p class="docText">The reason for this is that we prefixed <tt>$_POST</tt> in the call to sanitize with the reference operator, which is no longer supported. The correct line is:</p>
+<pre>
+sanitize_vars($_POST, $sigs);
+</pre><br>
+<p class="docText">However, you definitely do not want to see <a class="docLink" href="ch16lev1sec2.html#ch16lev3sec10">error messages</a> like these on your production sites, especially not your cusomers. Not only is it unsightly, but some debuggers show the full parameters, including username and password, which is information that should be kept private. PHP has features that make the experience much nicer for you, your customers, and visitors to the site. With the <tt>php.ini</tt> directives '<tt>log_errors</tt>' and '<tt>display_errors</tt>', you can control where the errors appear. If you set the <tt>log_errors</tt> directive to <tt>1</tt>, all errors are recorded in a file that you specify with the <tt>error_log</tt> directive. You can set <tt>error_log</tt> to <tt>syslog</tt> or to a file name.<a name="ch05index149"></a><a name="ch05index150"></a></P>
+<p class="docText">In some cases, recording errors in a file (rather than displaying them to the user) may not make the experience nicer for the visitors. Instead, it may result in an empty or broken page. In such cases, you may want to tell visitors that something went wrong, or you may want to hide the problem from visitors. PHP supports a customized error handler that can be set with <tt>set_error_handler()</tt>. This function accepts one parameter that can be either a string containing the function name for the error-handling function or an array containing a classname/methodname combination. The error-handling function should be defined like<a name="ch05index151"></a><a name="ch05index152"></a><a name="ch05index153"></a><a name="ch05index154"></a><a name="ch05index155"></a></P>
+<pre>
+error_function($type, $error, $file, $line)
+</pre><br>
+<p class="docText">The <tt>$type</tt> is the type of error that is caught and can be either <tt>E_NOTICE</tt>, <tt>E_WARNING</tt>, <tt>E_USER_NOTICE</tt>, <tt>E_USER_WARNING</tt>, or <tt>E_USER_ERROR</tt>. No additional errors should be possible because the PHP code and the extensions are not supposed to emit other errors except parse errors or other low-level error messages. <tt>$error</tt> is the textual error message. <tt>$file</tt> and <tt>$line</tt> are the file name and line number on which the error occurred.<a name="ch05index156"></a></p>
+<p class="docText">By using the error handler, you can tell the user in a nice way that something went wrong (for instance, in the layout of your site) or you can redirect the user to the main page (to hide the fact that something went wrong). The redirect, of course, will only work if no output was sent before the redirect, or if you have <tt>output_buffering</tt> turned on. Note that a user-defined error handler captures <span class="docEmphasis">all</span> errors, even if the <tt>error_reporting</tt> level tells PHP that not all errors should be shown.<a name="ch05index157"></a><a name="ch05index158"></a><a name="ch05index159"></a></p>
+<ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

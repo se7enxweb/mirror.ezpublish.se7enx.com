@@ -1,0 +1,42 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.5.&nbsp; Destructors</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec5"></a><h3 class="docSection1Title">3.5. Destructors</h3>
+<p class="docText"><span class="docEmphStrong">Destructor functions</span> are the opposite of constructors. They are called when the object is being destroyed (for example, when there are no more references to the object). As PHP makes sure all resources are freed at the end of each request, the importance of destructors is limited. However, they can still be useful for performing certain actions, such as flushing a resource or logging information on object destruction. There are two situations where your destructor might be called: during your script's execution when all references to an object are destroyed, or when the end of the script is reached and PHP ends the request. The latter situation is delicate because you are relying on some objects that might already have had their destructors called and are not accessible anymore. So, use it with care, and don't rely on other objects in your destructors.<a name="ch03index24"></a></p>
+<p class="docText">Defining a destructor is as simple as adding a <tt>__destruct()</tt> method to your class:</p>
+<pre>
+class MyClass  {
+    function __destruct()
+    {
+        print "An object of type MyClass is being destroyed\n";
+    }
+}
+
+$obj = new MyClass();
+$obj = NULL;
+</pre><br>This script prints<pre>
+An object of type MyClass is being destroyed
+</pre><BR>
+<p class="docText">In this example, when <tt>$obj = NULL;</tt> is reached, the only handle to the object is destroyed, and therefore the destructor is called, and the object itself is destroyed. Even without the last line, the destructor would be called, but it would be at the end of the request during the execution engine's shutdown.<a name="ch03index25"></a></p>
+<a name="ch03note02"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">The exact point in time of the destructor being called is not guaranteed by PHP, and it might be a few statements after the last reference to the object has been released. Thus, be aware not to write your application in a way where this could hurt you.</p></div><BR>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

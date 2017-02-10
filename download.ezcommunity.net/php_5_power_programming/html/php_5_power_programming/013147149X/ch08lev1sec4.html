@@ -1,0 +1,113 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 8.4.&nbsp; SimpleXML</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch08lev1sec4"></a><h3 class="docSection1Title" id="409768-884">8.4. SimpleXML</h3>
+<p class="docText">The <span class="docEmphStrong">SimpleXML extension</span>, enabled by default in PHP 5, is the easiest way to work with XML. You don't need to remember a difficult DOM API. You just access the XML through a data structure representation. Here are its four simple rules:<a name="ch08index83"></a><a name="ch08index84"></a><a name="ch08index85"></a></p>
+<div style="font-weight:bold"><ol class="docList" type="1"><li><div style="font-weight:normal"><p class="docList">Properties denote element iterators.</p></div></LI><li><div style="font-weight:normal"><p class="docList">Numeric indices denote elements.</P></div></li><LI><div style="font-weight:normal"><p class="docList">Non-numeric indices denote attributes.</p></div></li><li><div style="font-weight:normal"><p class="docList">String conversion allows access to TEXT data.</p></div></LI></ol></div>
+<p class="docText">By using these four rules, you can access all the data from an XML file.</P>
+<a name="ch08lev2sec3"></a><h4 class="docSection2Title">8.4.1. Creating a SimpleXML Object</h4>
+<p class="docText">You can create a SimpleXML object in any of three ways, as shown in this example:<a name="ch08index86"></a><a name="ch08index87"></a><a name="ch08index88"></a></p>
+<pre>
+&lt;?php
+  $sx1 = simplexml_load_file('example.xml');
+
+$string = &lt;&lt;&lt;XML
+&lt;?xml version='1.0'?&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;XML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body background="bg.png"&gt;
+    &lt;p&gt;
+      Moved to &lt;a href="http://example.org/"&gt;example.org&lt;a&gt;.
+    &lt;/p&gt;
+    &lt;pre&gt;
+      foo
+    &lt;/pre&gt;
+    &lt;p&gt;
+      Moved to &lt;a href="http://example.org/"&gt;example.org&lt;/a&gt;.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+XML;
+  $sx2 = simplexml_load_string($string);
+
+  $sx3 = simplexml_load_dom(new DomDocument());
+?&gt;
+</pre><br>
+<p class="docText">In the first method, <tt>simplexml_load_file()</tt> opens the specified file and parses it into memory. In the second method, <tt>$string</tt> is created and passed to the function <tt>simplexml_load_string()</tt>. In the third method, <tt>simplexml_load_dom()</tt> imports a <tt>DomDocument</tt> created with the DOM functions in PHP. In all three cases, a SimpleXML object is returned. The <tt>simplexml_load_dom()</tt> function in SimpleXML extension has a brother in the DOM extension, called <tt>dom_import_simplexml()</tt>. These related functions allow you to share the same XML structure between both extensions. You can, for example, modify simple documents with SimpleXML and more complicated ones with DOM.<a name="ch08index89"></a><a name="ch08index90"></a><a name="ch08index91"></a></P>
+<a name="ch08lev2sec4"></a><h4 class="docSection2Title">8.4.2. Browsing SimpleXML Objects</h4>
+<p class="docText">The first rule is &quot;Properties denote element iterators,&quot; which means that you can loop over all <tt>&lt;p&gt;</tt> tags in the <tt>&lt;body&gt;,</tt> like this:<a name="ch08index92"></a><a name="ch08index93"></a><a name="ch08index94"></a><a name="ch08index95"></a></P>
+<pre>
+&lt;?php
+  foreach ($sx2-&gt;body-&gt;p as $p) {
+  }
+?&gt;
+</pre><br>
+<p class="docText">The second states &quot;Numeric indices denote elements,&quot; which means that we can access the second <tt>&lt;p&gt;</tt> tag with</P>
+<pre>
+&lt;?php
+  $sx-&gt;body-&gt;p[1];
+?&gt;
+</pre><br>
+<p class="docText">The third rule is &quot;Non-numeric indexes denote attributes,&quot; which means that we can access the background attribute of the <tt>body</tt> tag with</p>
+<pre>
+&lt;?php
+  echo $sx-&gt;body['background'];
+?&gt;
+</pre><br>
+<p class="docText">The last rule, &quot;String conversion allows access to TEXT data,&quot; means we can access all text data from the elements. With the following code, we echo the contents of the second <tt>&lt;p&gt;</tt> tag (thus combining rules 2 and 4):</p>
+<pre>
+&lt;?php
+  echo $sx-&gt;body-&gt;p[1];
+?&gt;
+</pre><br>
+<p class="docText">However, the output doesn't show <tt>Moved to example.org.</tt>. Rather, it shows <tt>Moved to .</tt>. As you can see, accessing TEXT data from a node will <span class="docEmphasis">not</span> include its child nodes. You can use the <tt>asXML()</tt> method to include child nodes, but this will also add all the text. Using <tt>strip_tags()</tt> prevents this. The following example outputs <tt>Moved to example.org</tt>:<a name="ch08index96"></a><a name="ch08index97"></a><a name="ch08index98"></a><a name="ch08index99"></a></p>
+<pre>
+&lt;?php
+  echo strip_tags($sx-&gt;body-&gt;p[1]-&gt;asXML()) . "\n";
+?&gt;
+</pre><br>
+<p class="docText">If you want to iterate over all child elements of the body node, use the <tt>children()</tt> method of the SimpleXML element object. The following example iterates over all children of <tt>&lt;body&gt;</tt>:</p>
+<pre>
+&lt;?php
+  foreach ($sx-&gt;body-&gt;children() as $element) {
+   /* do something with the element */
+  }
+?&gt;
+</pre><br>
+<p class="docText">If you want to iterate over all the attributes of an element, the <tt>attributes()</tt> method is available to you. Let's iterate over all the attributes of the first <tt>&lt;a&gt;</tt> tag:<a name="ch08index100"></a><a name="ch08index101"></a><a name="ch08index102"></a><a name="ch08index103"></a></p>
+<pre>
+&lt;?php
+  foreach ($sx-&gt;body-&gt;p[0]-&gt;a-&gt;attributes() as $attribute) {
+    echo $attribute . "\n";
+  }
+?&gt;
+</pre><br>
+<a name="ch08lev2sec5"></a><h4 class="docSection2Title">8.4.3. Storing SimpleXML Objects</h4>
+<p class="docText">You can store a changed or manipulated structure or a subnode to disk. You use the <tt>asXML()</tt> method to do this, which you can call on any SimpleXML object:<a name="ch08index104"></a><a name="ch08index105"></a><a name="ch08index106"></a><a name="ch08index107"></a></p>
+<pre>
+&lt;?php
+  file_put_contents('filename.xml', $sx2-&gt;asXML());
+?&gt;
+</pre><br>
+<ul></UL></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

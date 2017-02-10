@@ -1,0 +1,286 @@
+[05-24-2005 01:21:53] [#ezpublish] <kracker> hrm
+[05-24-2005 01:28:28] -!- ordnas [~ordnas@p549DD1F6.dip.t-dialin.net] has joined #ezpublish
+[05-24-2005 01:48:20] [#ezpublish] <kracker> wow!
+[05-24-2005 01:48:34] [#ezpublish] <kracker> i had no idea, i really didn't
+[05-24-2005 01:49:51] [#ezpublish] <kracker> eZ publish does not work we/reliably on Apache2 + mod_rewrite using Apache2 (cgi) on my favorite eZ publish hosting service ....
+[05-24-2005 01:50:21] [#ezpublish] <kracker> i'd encountered this problem sometime ago and over time and releases, the problem quietly went away ...
+[05-24-2005 01:50:40] [#ezpublish] <kracker> now it's back in full force and beating me to death
+[05-24-2005 01:51:19] [#ezpublish] <fh> I did see your bug report
+[05-24-2005 01:51:27] [#ezpublish] <kracker> i know it's my problem/fault for my server configuration but .. wow, not fun
+[05-24-2005 01:51:32] [#ezpublish] <kracker> <grin>
+[05-24-2005 01:52:04] [#ezpublish] <kracker> yeah i was too tierd and posted my intro but not the bug report into the body of the bug (see my comment for full report)
+[05-24-2005 01:52:22] [#ezpublish] <kracker> i also cross posted to the mailling list (which was a much beter reply)
+[05-24-2005 01:53:39] [#ezpublish] <kracker> then i had to reply back to Wenyue Yu / support because his solution was only for login not for saving object / draft edits ...
+[05-24-2005 01:54:39] [#ezpublish] <fh> I don't really get this problem though
+[05-24-2005 01:54:47] [#ezpublish] <fh> I mean... I use apache2 always
+[05-24-2005 01:54:51] [#ezpublish] <fh> and several other developers do
+[05-24-2005 01:55:00] [#ezpublish] <fh> and we have never had this issue (that I know of)
+[05-24-2005 01:55:10] [#ezpublish] <kracker> i have like 5 - 7 different sub task for this specific workflow to ensure the maxumum documentation is created from me bringing this thread up, hopefully i can contribute a solid solution ... or understand the breakdown more closely
+[05-24-2005 01:55:19] [#ezpublish] <kracker> cool
+[05-24-2005 01:56:12] [#ezpublish] <kracker> i use it every day to, i prefer it on many levels, but this wierd 'unstable' negative feature / breakdown is elusive and troubling :|
+[05-24-2005 01:56:36] [#ezpublish] <kracker> i first encountered it when porting the ezpub.co.uk
+[05-24-2005 01:56:39] [#ezpublish] <fh> It is probably related to some apache2 setting
+[05-24-2005 01:56:55] [#ezpublish] <fh> maybe your provider changed some setting globally which made the problem go away
+[05-24-2005 01:56:59] [#ezpublish] <fh> now he changed it back..
+[05-24-2005 01:57:16] [#ezpublish] <kracker> the old host, was apache1 (moved) to firebright's vds platform (apache2)
+[05-24-2005 01:57:22] [#ezpublish] <kracker> i wondered
+[05-24-2005 01:58:02] [#ezpublish] <kracker> but with 200+ clients on a single hardware/os node, it's odd that one installation would suddenly break
+[05-24-2005 01:59:38] [#ezpublish] <kracker> now if only i could 'identify' a setting which could create a problem of this nature, i could attempt to controll this behavior ...
+[05-24-2005 02:01:27] [#ezpublish] <kracker> anything is possible, not entirely sure what is most probable, let alone what is directly suspect in this one client installation vs the legions of other eZ publish clients under the platform :(
+[05-24-2005 02:03:04] [#ezpublish] <kracker> time will tell, interesting tho, remembering all those days back in the early days trying to get eZ publish ezurloperator & ezsys to function properly on the various shared hosting providers I used to use ...
+[05-24-2005 02:04:24] [#ezpublish] <kracker> oh how i have grown in skills yet still hit up hard by the wierd bug 'instances...'
+[05-24-2005 02:05:26] [#ezpublish] <kracker> fh: so you think i should add more details into the bug comments to explain the situation more clearly?
+[05-24-2005 02:06:04] [#ezpublish] <fh> that would be helpful
+[05-24-2005 02:06:40] [#ezpublish] <fh> you're not doing anything wrong you know.. :)
+[05-24-2005 02:07:01] [#ezpublish] <kracker> even if my best details are on another page linked in my eZ publish wiki (linked in the comments)
+[05-24-2005 02:07:21] [#ezpublish] <kracker> ok, thanks for the assurance :)
+[05-24-2005 02:08:15] [#ezpublish] <kracker> ...
+[05-24-2005 02:08:20] [#ezpublish] <fh> np :)
+[05-24-2005 02:13:03] [#ezpublish] <kracker> sorry for being unclear but i really would like to know if you think that my reference links which contain extensive information on the situation (recaped from the support@ez.no threads) as external links instead of inside the bug itself
+[05-24-2005 02:13:29] [#ezpublish] <fh> as long as it stays online it is ok
+[05-24-2005 02:14:23] [#ezpublish] <kracker> as long as i am in the ezcommunity and it is relevant, my life's work will remain online for others to learn ;)
+[05-24-2005 02:14:40] [#ezpublish] <kracker> thanks fh :)
+[05-24-2005 02:53:27] -!- ordnas [~ordnas@p549DD1F6.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-24-2005 03:14:41] [#ezpublish] <kracker> wheew, funny i hope i answered the question well enough, i was a bit edgy but i did answer it with examples (untested), funny i need to lighten up :| i used to ask the same exact question all the time ...
+[05-24-2005 03:15:34] [#ezpublish] <kracker> re: gnu diff / gnu patch usage required to install a patch (in diff format): http://www.ez.no/community/forum/setup_design/webdav_cannot_acces_to_the_content_folder#msg75776
+[05-24-2005 03:17:18] -!- jota_ [~jota@fanzine.igalia.com] has joined #ezpublish
+[05-24-2005 03:17:29] [#ezpublish] <kracker> hrm. i guess i squeek by again, not chastized by the thread originator but not hyped either, ehh ... x+ did the real work :)
+[05-24-2005 03:17:45] [#ezpublish] <kracker> waddata jata!
+[05-24-2005 03:18:00] [#ezpublish] <kracker> hey i had this crazy idea this morning...
+[05-24-2005 03:18:43] [#ezpublish] <kracker> what if i personaly restricted my efforts to ezcommunity support to the publish-list @ http://lists.ez.no/
+[05-24-2005 03:19:20] [#ezpublish] <kracker> in the effort to encourge / use the original user mailling list created for general eZ publish discussions ...
+[05-24-2005 03:20:33] [#ezpublish] <kracker> ehh, i said it was (a little) crazy , but to be fair it wasn't my idea, i saw bedlore still holding out for the revolution ;)
+[05-24-2005 03:21:43] [#ezpublish] <kracker> ideas like breath from the mind of a wierdo ...
+[05-24-2005 03:22:34] [#ezpublish] <kracker> Eyedea & Abilities : Weird Side ;P
+[05-24-2005 03:22:45] [#ezpublish] <kracker> http://sing365.com/music/lyric.nsf/Weird-Side-lyrics-Eyedea/695E3B470691F70448256E4D00079E46
+[05-24-2005 03:42:45] -!- ordnas [~ordnas@p549DD1F6.dip.t-dialin.net] has joined #ezpublish
+[05-24-2005 03:44:45] [#ezpublish] <seasonfive_> hi ppl
+[05-24-2005 03:44:57] [#ezpublish] <seasonfive_> is it possible to deploy several site with same installation of ezpublish ?
+[05-24-2005 03:45:16] [#ezpublish] <seasonfive_> (i have created a second DB for this new site, but in admin i have a kernel 3 error ... :/)
+[05-24-2005 03:51:53] [#ezpublish] <kracker> sweet deal! thank you Wenyue Yu! At least in the short term ... i think his latest revision to my support ticket has resolved (in general, here's hopin') the breakdown!
+[05-24-2005 03:52:08] [#ezpublish] <kracker> Yaaaaah! --SpecialEd|CrankYankers
+[05-24-2005 03:53:09] [#ezpublish] <kracker> eZ publish users <i>As</i> fuzzy puppets (people) on the end of a telephone ...
+[05-24-2005 03:53:29] [#ezpublish] <kracker> seasonfive_ it is possible!
+[05-24-2005 03:54:04] [#ezpublish] <kracker> seasonfive_ i did a 4 site in one installation (3 different domains) just recently
+[05-24-2005 03:55:10] [#ezpublish] <kracker> seasonfive_ it sounds like you might have a settings/site.ini configuration issue surrounding the configuration of the additional siteaccess options
+[05-24-2005 04:00:11] [#ezpublish] <seasonfive_> kracker: i don't think i've problem with siteaccess
+[05-24-2005 04:00:20] [#ezpublish] <seasonfive_> kracker: i verify this a lot ...
+[05-24-2005 04:00:26] [#ezpublish] <seasonfive_> kracker: root node is existing too
+[05-24-2005 04:00:36] [#ezpublish] <seasonfive_> kracker: i suceed to change admin password (so database is working)
+[05-24-2005 04:00:37] [#ezpublish] <kracker> hey np
+[05-24-2005 04:00:51] [#ezpublish] <kracker> can you elaborate on the specific kernel error code
+[05-24-2005 04:00:55] [#ezpublish] <seasonfive_> kracker: i don't understand :(
+[05-24-2005 04:01:02] [#ezpublish] <kracker> and where you get the error (what url)
+[05-24-2005 04:01:20] [#ezpublish] <kracker> you say " (i have created a second DB for this new site, but in admin i have a kernel 3 error ...
+[05-24-2005 04:01:24] [#ezpublish] <seasonfive_> kernel(3): object is unavailable (translated by me from french :D)
+[05-24-2005 04:01:29] [#ezpublish] <kracker> np
+[05-24-2005 04:01:33] [#ezpublish] <kracker> i gotcha now
+[05-24-2005 04:02:05] [#ezpublish] <seasonfive_> i looked into DB, data seems here ... root node is existing
+[05-24-2005 04:02:33] [#ezpublish] <kracker> well you can see the error code #3 is "Object not available"
+[05-24-2005 04:02:47] [#ezpublish] <kracker> there is a list of these i helped build at : http://www.ez.no/community/forum/install_configuration/kernel_error_code_documentation
+[05-24-2005 04:03:42] [#ezpublish] <kracker> <snickers> i knew it was worth the work to get a forum thread (searchable) on this topic :)
+[05-24-2005 04:03:59] [#ezpublish] <kracker> an bjorn wanted to slap me down all those times ... :(
+[05-24-2005 04:04:15] [#ezpublish] <kracker> i guess ya get what you give ...
+[05-24-2005 04:04:21] [#ezpublish] <kracker> anyhoo ...
+[05-24-2005 04:04:36] [#ezpublish] <seasonfive_> why my object isn't available ... :'(
+[05-24-2005 04:04:41] [#ezpublish] <kracker> seasonfive_ so give me an example url that kicks the error
+[05-24-2005 04:05:01] [#ezpublish] <kracker> if i don't know the url your trying to use i can't really tell you why it's not working :|
+[05-24-2005 04:05:15] [#ezpublish] <kracker> please copy and paste don't hand type the url
+[05-24-2005 04:05:38] [#ezpublish] <kracker> human input is not trustworth, too much prone to error ...
+[05-24-2005 04:06:02] [#ezpublish] <seasonfive_> http://www.admin.newsite.itioweb.com/
+[05-24-2005 04:06:59] [#ezpublish] <kracker> wow
+[05-24-2005 04:07:02] [#ezpublish] <kracker> ok ...
+[05-24-2005 04:07:07] [#ezpublish] <seasonfive_> =]
+[05-24-2005 04:07:12] [#ezpublish] <kracker> brave..
+[05-24-2005 04:07:15] [#ezpublish] <seasonfive_> its french ... sorry :p
+[05-24-2005 04:08:02] [#ezpublish] <kracker> looking
+[05-24-2005 04:08:13] [#ezpublish] <kracker> well only certain views kick the error
+[05-24-2005 04:08:23] [#ezpublish] <seasonfive_> exactly
+[05-24-2005 04:08:32] [#ezpublish] <kracker> mostly, urls calling /content/view/xxx
+[05-24-2005 04:08:32] [#ezpublish] <seasonfive_> example : i can change admin passwd
+[05-24-2005 04:09:56] [#ezpublish] <seasonfive_> i'm enabling debug
+[05-24-2005 04:10:10] [#ezpublish] <kracker> i said it genearly before and i ment it these are settings/ misconfigurations for your sepcific host (IMHO)
+[05-24-2005 04:10:31] [#ezpublish] <kracker> i see url issues at hand, server / configuration specific
+[05-24-2005 04:10:36] [#ezpublish] <seasonfive_> object 14 ... why 14 ?
+[05-24-2005 04:10:48] [#ezpublish] <kracker> so the ruff answere is no, right now you can't do that or much else
+[05-24-2005 04:11:29] [#ezpublish] <kracker> you must first reconfigure your eZ publish (again my opinion, not fact) to not use the index.php in the url
+[05-24-2005 04:11:52] [#ezpublish] <seasonfive_> strang because object 14 is existing ...
+[05-24-2005 04:11:56] [#ezpublish] <seasonfive_> hmmm ! idea
+[05-24-2005 04:11:56] [#ezpublish] <kracker> (ouch, that has to hurt) cause it's not that simple either, lots of forum threads on it tho
+[05-24-2005 04:12:02] [#ezpublish] <seasonfive_> perhaps bad rights on DB ... ?
+[05-24-2005 04:12:25] [#ezpublish] <seasonfive_> no ... right are correct
+[05-24-2005 04:12:34] [#ezpublish] <kracker> no, you could be correct too
+[05-24-2005 04:12:38] [#ezpublish] <seasonfive_> is it possible to display query which are done ?
+[05-24-2005 04:12:55] [#ezpublish] <kracker> db rights can do something similar per say
+[05-24-2005 04:13:22] [#ezpublish] <seasonfive_> i done "SELECT * FROM ezcontentobject WHERE id=14;" without problem
+[05-24-2005 04:13:31] [#ezpublish] <seasonfive_> using same user as ezpublish is using ...
+[05-24-2005 04:13:35] [#ezpublish] <kracker> you could need to GRANT specificly select,update,privilates to your ... hrm
+[05-24-2005 04:13:40] [#ezpublish] <kracker> ok
+[05-24-2005 04:13:56] [#ezpublish] <kracker> so back to my idea (they rock in the long run anyway ;)
+[05-24-2005 04:14:28] [#ezpublish] <seasonfive_> reconfigure ezpublish ?
+[05-24-2005 04:15:41] [#ezpublish] <kracker> i would, your install looks very virgin ...
+[05-24-2005 04:15:47] [#ezpublish] <kracker> you have the right idea tho
+[05-24-2005 04:16:08] [#ezpublish] <seasonfive_> i done the second site install by hand
+[05-24-2005 04:16:15] [#ezpublish] <seasonfive_> using db_schema and db_data
+[05-24-2005 04:16:21] [#ezpublish] <seasonfive_> creating directories by hand
+[05-24-2005 04:16:30] [#ezpublish] <seasonfive_> and copying my working *.ini files
+[05-24-2005 04:16:45] [#ezpublish] <seasonfive_> and change specific data to these ini ...
+[05-24-2005 04:16:55] [#ezpublish] <kracker> yeah i've done that before (hurts)
+[05-24-2005 04:17:24] [#ezpublish] <seasonfive_> i'll try to put some "echo" to see queries done
+[05-24-2005 04:17:27] [#ezpublish] <kracker> are you really sure eZ publish is using the right database_name in the admin site.ini.append.php siteaccess for your second site?
+[05-24-2005 04:17:38] [#ezpublish] <kracker> you know you can't use the same admin siteaccess for both sites ...
+[05-24-2005 04:18:44] [#ezpublish] <kracker> you could turn on sqlquery debug in your site.ini (excellent idea!!)
+[05-24-2005 04:19:38] [#ezpublish] <kracker> better than "echo"s
+[05-24-2005 04:19:59] [#ezpublish] <kracker> faster, simpler, more detailed, definative... the right way (tm)
+[05-24-2005 04:20:53] [#ezpublish] <seasonfive_> i think i found
+[05-24-2005 04:21:02] [#ezpublish] <seasonfive_> installing by hand set default language to eng-GB
+[05-24-2005 04:21:13] [#ezpublish] <seasonfive_> in my .ini files i'm using fre-FR for default
+[05-24-2005 04:21:42] [#ezpublish] <seasonfive_> yes this is that
+[05-24-2005 04:21:44] [#ezpublish] <seasonfive_> =]
+[05-24-2005 04:21:58] [#ezpublish] <seasonfive_> the query done is :
+[05-24-2005 04:22:00] [#ezpublish] <seasonfive_> SELECT ezcontentobject.* , ezcontentobject_name.name as name,  ezcontentobject_name.real_translation
+[05-24-2005 04:22:01] [#ezpublish] <seasonfive_>                       FROM
+[05-24-2005 04:22:01] [#ezpublish] <seasonfive_>                          ezcontentobject
+[05-24-2005 04:22:01] [#ezpublish] <seasonfive_>                          , ezcontentobject_name
+[05-24-2005 04:22:01] [#ezpublish] <seasonfive_>                       WHERE
+[05-24-2005 04:22:01] [#ezpublish] <seasonfive_>                          ezcontentobject.id='14'
+[05-24-2005 04:22:03] [#ezpublish] <seasonfive_>                           and  ezcontentobject.id = ezcontentobject_name.contentobject_id and
+[05-24-2005 04:22:05] [#ezpublish] <seasonfive_>                                   ezcontentobject.current_version = ezcontentobject_name.content_version and
+[05-24-2005 04:22:08] [#ezpublish] <seasonfive_>                                   ezcontentobject_name.content_translation = 'fre-FR'
+[05-24-2005 04:22:15] [#ezpublish] <seasonfive_> and this query return result if i remove ezcontentobject_name.content_translation = 'fre-FR'
+[05-24-2005 04:22:24] [#ezpublish] <seasonfive_> and the entry returned is "eng-GB"
+[05-24-2005 04:22:51] [#ezpublish] <seasonfive_> kracker: thanks ! :)
+[05-24-2005 04:23:06] [#ezpublish] <kracker> wait? what did i do?
+[05-24-2005 04:23:12] [#ezpublish] <kracker> :)
+[05-24-2005 04:23:26] [#ezpublish] <seasonfive_> two brain are three times more efficiant than one ;)
+[05-24-2005 04:23:28] [#ezpublish] <kracker> here's hopin' kid ...:)
+[05-24-2005 04:25:19] [#ezpublish] <kracker> course my parents would call me a psycotic, multiple personality, mental ward pacient but i like your note on efficancy more :)
+[05-24-2005 04:28:28] [#ezpublish] <kracker> it sounds like your objects were being created as eng-GB by default instead of fre-FR
+[05-24-2005 04:29:23] [#ezpublish] <kracker> which also points to one if not either a mistake selecting the primary language durring setup and or a few language settings/
+[05-24-2005 04:29:40] [#ezpublish] <seasonfive_> i didn't use setup
+[05-24-2005 04:29:42] [#ezpublish] <seasonfive_> i do it by hand
+[05-24-2005 04:29:56] [#ezpublish] <seasonfive_> now i must replace all theses things ... :/
+[05-24-2005 04:29:59] [#ezpublish] <kracker> how did you get the sql from the custom installer into a your db ?
+[05-24-2005 04:30:31] [#ezpublish] <seasonfive_> bin/php/ezsqlinsertschema.php :)
+[05-24-2005 04:30:35] [#ezpublish] <kracker> cause i've been wanting to dump a raw of the ezpublish installer sql (default) for a while and i don't know how to do that...
+[05-24-2005 04:30:53] [#ezpublish] <seasonfive_> bin/php/ezsqldumpschema.php :)
+[05-24-2005 04:31:08] [#ezpublish] <kracker> hmm, but not the data ?
+[05-24-2005 04:31:20] [#ezpublish] <kracker> just the db create schema (table) sql
+[05-24-2005 04:31:52] [#ezpublish] <kracker> well, it's cool, i need to grind myself (now ;) ....
+[05-24-2005 04:32:33] [#ezpublish] <seasonfive_> yes data too
+[05-24-2005 04:32:39] [#ezpublish] <kracker> oh cripes! wha??
+[05-24-2005 04:32:40] [#ezpublish] <seasonfive_> --insert-data or something like this
+[05-24-2005 04:32:44] [#ezpublish] <kracker> hrm
+[05-24-2005 04:32:46] [#ezpublish] <kracker> neato
+[05-24-2005 04:32:49] [#ezpublish] <seasonfive_> read ezsqlinsert.php code
+[05-24-2005 04:32:50] [#ezpublish] <kracker> thnx sf
+[05-24-2005 04:32:59] [#ezpublish] <seasonfive_> no pb :)
+[05-24-2005 04:32:59] [#ezpublish] <kracker> you know i will buddy
+[05-24-2005 04:33:19] [#ezpublish] <kracker> hey what show (season five) does your name refer too?
+[05-24-2005 04:33:30] [#ezpublish] <kracker> i've been wondering for weeks if not longer ..
+[05-24-2005 04:33:42] [#ezpublish] <kracker> is it a tv show dvd or something ?
+[05-24-2005 04:33:46] [#ezpublish] <seasonfive_> no
+[05-24-2005 04:33:55] [#ezpublish] <seasonfive_> it was the company name i created with friends
+[05-24-2005 04:33:56] [#ezpublish] <kracker> confusing
+[05-24-2005 04:34:00] [#ezpublish] <seasonfive_> no more existing today
+[05-24-2005 04:34:09] [#ezpublish] <kracker> ahh, right on
+[05-24-2005 04:34:14] [#ezpublish] <kracker> i used to be : 7x
+[05-24-2005 04:34:26] [#ezpublish] <kracker> or more popularly known as (the) 7x Group, LLC
+[05-24-2005 04:34:52] [#ezpublish] <kracker> then the bubble poped and even our primary investor had to sell us out
+[05-24-2005 04:35:17] [#ezpublish] <seasonfive_> we aren't a start up
+[05-24-2005 04:35:25] [#ezpublish] <seasonfive_> we were more a little company :)
+[05-24-2005 04:35:29] [#ezpublish] <kracker> we could not transision to free software web application development (from non-free / propriatary) development fast enough
+[05-24-2005 04:35:34] [#ezpublish] <seasonfive_> btw, customer don't do difference ... :(
+[05-24-2005 04:36:09] [#ezpublish] <kracker> so were me ... privatly held, it was more of he just didn't want to keep investing anymore and gave up on us ...
+[05-24-2005 04:37:18] [#ezpublish] <kracker> oh well, his loss... my gain ;l
+[05-24-2005 04:37:50] [#ezpublish] <kracker> ok, i'm outohere for tonight
+[05-24-2005 04:37:55] [#ezpublish] <kracker> cheers
+[05-24-2005 04:38:05] [#ezpublish] <seasonfive_> bye !
+[05-24-2005 04:38:09] [#ezpublish] <seasonfive_> see you later :)
+[05-24-2005 04:38:24] [#ezpublish] * kracker runs through a fissur in timespace as it closes behind me 
+[05-24-2005 06:55:00] -!- ordnas [~ordnas@p549DD1F6.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-24-2005 07:04:19] -!- Teeb [Lucy_bi_19@host81-155-218-178.range81-155.btcentralplus.com] has joined #ezpublish
+[05-24-2005 07:04:23] [#ezpublish] <Teeb> help anyone?
+[05-24-2005 07:09:22] [#ezpublish] <fh> Teeb: just ask.. if anyone can answer, they will :)
+[05-24-2005 07:13:29] [#ezpublish] <Teeb> thank you
+[05-24-2005 07:14:25] [#ezpublish] <Teeb> Well It's me being stupid no doubt but it's probably a mysql related question more anyway... when I attempt to log into the mysql database I can't
+[05-24-2005 07:14:36] [#ezpublish] <Teeb> during ezpublish browser setup
+[05-24-2005 07:16:46] [#ezpublish] <Teeb> one sec please
+[05-24-2005 07:21:06] -!- ordnas [~ordnas@p549DD1F6.dip.t-dialin.net] has joined #ezpublish
+[05-24-2005 07:24:34] -!- Teebs [Lucy_bi_19@host81-155-218-178.range81-155.btcentralplus.com] has joined #ezpublish
+[05-24-2005 07:24:39] [#ezpublish] <Teebs> yo sorry...back
+[05-24-2005 07:25:11] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-24-2005 07:32:55] [#ezpublish] <Teebs> does ezpublish use postgre sql?
+[05-24-2005 07:34:19] [#ezpublish] <kracker> eZ publish does support the use of the PostgreSQL database completely
+[05-24-2005 07:35:17] [#ezpublish] <seasonfive_> that work fine with postgres
+[05-24-2005 07:35:34] [#ezpublish] <kracker> You will need to confirm that mysql has granted your database user the required permissions (in mysql.user and mysql.db )
+[05-24-2005 07:36:39] [#ezpublish] <kracker> you might also wish to test mysql authentication by loging in via the commandline to test the username / password / database details to ensure they are being used correctly.
+[05-24-2005 07:37:36] [#ezpublish] <kracker> because you are either using the wrong information or the permissions are incorrect or another less common breadkown ...
+[05-24-2005 07:39:18] -!- Teeb [Lucy_bi_19@host81-155-218-178.range81-155.btcentralplus.com] has quit [Read error: 110 (Connection timed out)]
+[05-24-2005 07:39:59] [#ezpublish] <Teebs> cheers guys
+[05-24-2005 07:44:04] -!- jota_ [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[05-24-2005 07:47:08] [#ezpublish] <Teebs> with ezpublish you can log in on the site itself and publish files/pages that way with ftp correct?
+[05-24-2005 07:50:13] [#ezpublish] <xbit> what?
+[05-24-2005 07:50:21] [#ezpublish] <xbit> i don't understand
+[05-24-2005 07:50:39] [#ezpublish] <Teebs> sorry
+[05-24-2005 07:50:40] [#ezpublish] <xbit> you cannot publish pages with ftp afaik
+[05-24-2005 07:50:47] [#ezpublish] <Teebs> being filly
+[05-24-2005 07:51:18] [#ezpublish] <Teebs> I mean with ezpublish you can edit site content through the login portal on the site
+[05-24-2005 07:51:27] [#ezpublish] <Teebs> if that makes any sense
+[05-24-2005 07:52:18] [#ezpublish] <xbit> of course you can edit your site content via web
+[05-24-2005 07:52:42] [#ezpublish] <xbit> otherwise i wouldn't really call it a "cms" :)
+[05-24-2005 07:53:40] [#ezpublish] <Teebs> haha good just making sure
+[05-24-2005 07:53:44] [#ezpublish] <Teebs> better safe than sorry :P
+[05-24-2005 07:53:55] [#ezpublish] <Teebs> bear with me please
+[05-24-2005 07:54:07] [#ezpublish] <Teebs> I have set up ezpublish on localhost
+[05-24-2005 07:54:09] [#ezpublish] <Teebs> and logged in
+[05-24-2005 07:54:14] [#ezpublish] <Teebs> where is the admin interface?
+[05-24-2005 07:55:18] [#ezpublish] <xbit> please, read the tutorial/documentation on the ezp-site
+[05-24-2005 07:55:37] [#ezpublish] <xbit> i don't mean to be rude, but this is pretty basic information which is well covered there
+[05-24-2005 07:55:41] [#ezpublish] <xbit> :)
+[05-24-2005 07:56:11] [#ezpublish] <Teebs> haha I apologize
+[05-24-2005 07:56:15] [#ezpublish] <Teebs> nto rude at all
+[05-24-2005 07:56:33] [#ezpublish] <Teebs> *not*
+[05-24-2005 07:56:51] [#ezpublish] <xbit> good :)
+[05-24-2005 08:04:26] -!- fh [~fh@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[05-24-2005 08:05:32] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-24-2005 08:22:50] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-24-2005 08:41:59] -!- Teebs [Lucy_bi_19@host81-155-218-178.range81-155.btcentralplus.com] has quit []
+[05-24-2005 09:15:16] -!- SEAwolfx_ [~mike@9cabc05442bd644a.session.tor] has joined #ezpublish
+[05-24-2005 09:42:47] -!- SEAwolfx [~mike@65.214.56.42] has quit [Remote closed the connection]
+[05-24-2005 10:22:40] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-24-2005 10:54:32] -!- SEAwolfx [~mike@102d3432e531c541.session.tor] has joined #ezpublish
+[05-24-2005 11:03:04] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 60 (Operation timed out)]
+[05-24-2005 12:11:53] -!- ordnas [~ordnas@p549DD1F6.dip.t-dialin.net] has left #ezpublish []
+[05-24-2005 12:13:52] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-24-2005 12:34:43] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-24-2005 12:35:34] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-24-2005 12:42:15] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-24-2005 12:46:45] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-24-2005 13:47:21] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-24-2005 13:50:52] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-24-2005 14:16:37] [#ezpublish] <kracker> woah!
+[05-24-2005 14:16:44] [#ezpublish] <_buz> what
+[05-24-2005 14:17:00] [#ezpublish] <kracker> my head is pounding ... information overload
+[05-24-2005 14:17:11] [#ezpublish] <_buz> ah i know that
+[05-24-2005 14:17:12] [#ezpublish] <kracker> na...just a headache ;)
+[05-24-2005 14:17:15] [#ezpublish] <_buz> get it at uni a lot ;)
+[05-24-2005 14:17:20] [#ezpublish] <kracker> don't mind me :)
+[05-24-2005 14:17:27] [#ezpublish] <kracker> time to hit the pills
+[05-24-2005 14:17:28] [#ezpublish] <_buz> usually it involves formulas
+[05-24-2005 14:18:08] [#ezpublish] <kracker> you know your not sleeping well when you wake up with a headache
+[05-24-2005 14:29:39] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-24-2005 14:32:59] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-24-2005 14:33:01] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-24-2005 14:48:18] -!- SEAwolfx_ [~mike@9cabc05442bd644a.session.tor] has quit [Ping timeout: 14400 seconds]
+[05-24-2005 15:22:32] [#ezpublish] <kracker> hey luke
+[05-24-2005 15:22:39] [#ezpublish] <kracker> how goes it :)
+[05-24-2005 15:23:52] [#ezpublish] <kracker> hey, now, you know it ... 'Ain`t Nuttin` But Music' - D12 ... ;-)
+[05-24-2005 15:36:55] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-24-2005 15:42:49] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-24-2005 15:44:42] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-24-2005 17:22:35] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-24-2005 17:22:52] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-24-2005 23:55:41] [#ezpublish] <kracker> sup yall
+[05-24-2005 23:57:20] [#ezpublish] <kracker> fakin a souther drawl, down with sports most importantly basketball, heck, forget this like going out at all, just never say never, adults are like 'boy you better' when there's no way, fdd that like whatever ...
+[05-24-2005 23:59:02] [#ezpublish] <kracker> toe the nose, like, folloing directions down to the letter, in the future I know I get her.

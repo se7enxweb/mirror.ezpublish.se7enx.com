@@ -1,0 +1,142 @@
+[11-10-2005 00:13:32] -!- DiGiTa|_ [n=guillaum@80.125.104.180] has quit []
+[11-10-2005 00:50:44] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-10-2005 01:08:50] -!- Bedlore [n=me@219-90-238-58.ip.adam.com.au] has quit []
+[11-10-2005 01:12:52] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-10-2005 01:41:26] -!- DiGiTa|_ [n=guillaum@80.125.104.180] has joined #ezpublish
+[11-10-2005 01:42:45] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-10-2005 01:58:44] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-10-2005 02:01:23] -!- ordna1 [n=ordnas@p549DECFB.dip.t-dialin.net] has joined #ezpublish
+[11-10-2005 02:12:35] [#ezpublish] <Katana`> hmmmm why is my HTML output different when template compile is enabled ...
+[11-10-2005 02:17:15] [#ezpublish] <DiGiTa|_> hmm no idea
+[11-10-2005 02:17:15] [#ezpublish] <DiGiTa|_> :)
+[11-10-2005 02:17:20] [#ezpublish] <DiGiTa|_> hi Katana`
+[11-10-2005 02:18:32] [#ezpublish] <_Rappy_> hello all
+[11-10-2005 02:20:15] [#ezpublish] <Katana`> hi
+[11-10-2005 02:23:45] [#ezpublish] <Katana`> really funny, an align="left" code piece appears in my compiled template ...
+[11-10-2005 02:27:12] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[11-10-2005 02:37:45] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-10-2005 02:50:41] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-10-2005 03:07:37] -!- ordna1 [n=ordnas@p549DECFB.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-10-2005 03:13:19] -!- ordnas [n=ordnas@p549DECFB.dip.t-dialin.net] has joined #ezpublish
+[11-10-2005 03:32:39] [#ezpublish] <kracker> heyya
+[11-10-2005 03:32:55] [#ezpublish] <kracker> ahh ezgpg, how many times do we have to fight :?
+[11-10-2005 03:34:27] [#ezpublish] <kracker> ok for fun ... how many people in the room think it's dangeriously insaine to store complete credit card information comming out of a eZ publish 2 site via gpg ?
+[11-10-2005 03:35:09] [#ezpublish] <kracker> clients ... all completely mad, first one wanted to be emailing encrypted cc info
+[11-10-2005 03:35:18] [#ezpublish] <kracker> second one wants to store it ...
+[11-10-2005 03:35:25] [#ezpublish] <kracker> korn - when will this end
+[11-10-2005 03:37:37] [#ezpublish] <_Rappy_> store, never good
+[11-10-2005 03:38:32] [#ezpublish] <kracker> very dangerous, such a huge liablity, even encrypted (oh and encryption was my insistance as developer, the client didnt' care just wanted them on file for order chagnes ...)
+[11-10-2005 03:38:55] [#ezpublish] <kracker> note to self do not buy via credit card from twistedthrottle.com
+[11-10-2005 03:47:10] -!- SEAwolfx [n=mike@DSL01.212.114.238.84.NEFkom.net] has joined #ezpublish
+[11-10-2005 03:48:38] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[11-10-2005 03:48:54] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-10-2005 03:52:22] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-10-2005 03:52:35] [#ezpublish] <Sulfur> morning gentlemen
+[11-10-2005 03:57:06] [#ezpublish] <_Rappy_> hello Sulfur
+[11-10-2005 04:16:43] [#ezpublish] <Sulfur> ;) _Rappy_
+[11-10-2005 04:46:35] [#ezpublish] <Sulfur> kh[eZ]: how do I save a keyword list into a content object ? I have tried  $mykeywordattr->setAttribute('data_text', $foundTags) and $mykeywordattr->setContent($foundTags) but it does not get saved...
+[11-10-2005 04:47:21] [#ezpublish] * Sulfur badly needs some unified methods for doing stuff 
+[11-10-2005 04:48:14] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 110 (Connection timed out)]
+[11-10-2005 04:48:48] -!- mode/#ezpublish [-oo fh[eZ] kh[eZ]] by ChanServ
+[11-10-2005 05:03:27] [#ezpublish] <Katana`> hmmmmm OE really has issues :(
+[11-10-2005 05:06:35] [#ezpublish] <Sulfur> Katana`: would you tell me which issues are you encountering? So I can warn my content editors
+[11-10-2005 05:07:17] [#ezpublish] <Sulfur> and which version ..
+[11-10-2005 05:21:10] [#ezpublish] <Katana`> after lunch ;)
+[11-10-2005 05:23:33] [#ezpublish] <Sulfur> ok
+[11-10-2005 05:41:35] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[11-10-2005 05:41:57] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-10-2005 05:50:55] [#ezpublish] <SEAwolfx> hallo.
+[11-10-2005 05:53:23] [#ezpublish] <Sulfur> hi
+[11-10-2005 06:25:17] -!- fh[eZ] [n=fh@80.239.98.162] has quit [Read error: 110 (Connection timed out)]
+[11-10-2005 06:27:20] [#ezpublish] <kracker> SEAwolfx, it's been a while since i've seen you online :D
+[11-10-2005 06:32:22] [#ezpublish] <_Rappy_> GASP! Maybe he's been away!
+[11-10-2005 06:32:33] [#ezpublish] <_Rappy_> Maybe he's been.... in the REAL world
+[11-10-2005 06:33:13] [#ezpublish] <zrg> few return fro mthere..
+[11-10-2005 06:33:19] [#ezpublish] <zrg> morning
+[11-10-2005 06:34:47] [#ezpublish] <_Rappy_> yes. I was there once and barely made it back. Don't believe anything them tell you there, all lies!
+[11-10-2005 06:39:17] [#ezpublish] <zrg> all lies!
+[11-10-2005 06:39:57] [#ezpublish] <zrg> now where is my last pack of fast noodles..
+[11-10-2005 06:40:10] [#ezpublish] <kracker> the real world is dream
+[11-10-2005 06:41:46] [#ezpublish] <zrg> a lucid dream?
+[11-10-2005 06:50:19] -!- fh[eZ] [n=fh@80.239.98.162] has joined #ezpublish
+[11-10-2005 06:54:07] [#ezpublish] <zrg> another one has escaped!
+[11-10-2005 07:06:20] [#ezpublish] <Sulfur> follow the dead raven
+[11-10-2005 07:07:05] [#ezpublish] <Sulfur> or was it "you eat the dead raven, you return to your dream; you eat the live raven, you discover how deep is the rabbit's nest" ?
+[11-10-2005 07:09:18] [#ezpublish] * zrg wears the dead raven as a hat
+[11-10-2005 07:10:31] [#ezpublish] <Sulfur> on your hat, on the other side of the mouse ?
+[11-10-2005 07:10:45] [#ezpublish] <zrg> :P
+[11-10-2005 07:16:59] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-10-2005 07:32:14] [#ezpublish] <SEAwolfx> kracker: yeah .. indeed. a lot of thing happened while this time.
+[11-10-2005 07:32:16] [#ezpublish] <SEAwolfx> ;)
+[11-10-2005 07:40:02] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-10-2005 07:44:09] [#ezpublish] * _Katana` has a question: it's okay to have several modules implemented by one extension right ?
+[11-10-2005 07:47:50] [#ezpublish] * _Rappy_ does not know
+[11-10-2005 07:52:25] [#ezpublish] <Sulfur> um Katana` .... I think that the extension is your module, so I cannot answer ..... but the directory structure of an extension would suggest you can
+[11-10-2005 07:57:11] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-10-2005 07:57:12] -!- _Katana` is now known as Katana`
+[11-10-2005 08:00:09] [#ezpublish] <Katana`> it does
+[11-10-2005 08:00:23] [#ezpublish] <Katana`> actually I have 2 modules in an extension and it works, but the 2nd module is not listed in Roles & Policies...
+[11-10-2005 08:00:30] [#ezpublish] <Katana`> kh[eZ] / fh[eZ], do you have a hint for me ?
+[11-10-2005 08:06:52] [#ezpublish] <Katana`> damnit i have an eZDebug::writeDebug line lost somewhere in my code :(
+[11-10-2005 08:22:22] [#ezpublish] <fh[eZ]> grep
+[11-10-2005 08:23:32] [#ezpublish] <zrg> grep!
+[11-10-2005 08:23:49] [#ezpublish] <zrg> thanks fh!
+[11-10-2005 08:24:01] [#ezpublish] <zrg> almost forgot to go and feed my cat..
+[11-10-2005 08:24:18] [#ezpublish] <Katana`> yes fh[eZ], i was doing that :)
+[11-10-2005 08:24:27] [#ezpublish] <Katana`> and fh[eZ], advice on the previous one ?
+[11-10-2005 08:24:33] [#ezpublish] <Katana`> i can handle the writeDebug one ;)
+[11-10-2005 08:25:40] [#ezpublish] <zrg> fh while you are awake: is content import by package supposed to work reliably?
+[11-10-2005 08:26:14] [#ezpublish] <Katana`> zrg: i've been using it, works reliably
+[11-10-2005 08:26:26] [#ezpublish] <fh[eZ]> Katana`: yes you can, it should work as long as you enable everything like it is supposed to
+[11-10-2005 08:26:40] [#ezpublish] <Katana`> well i have...
+[11-10-2005 08:26:52] [#ezpublish] <Katana`> the module works and everything i just don't see it in the roles & policies dropdown
+[11-10-2005 08:26:55] [#ezpublish] <Katana`> i'll investigate further
+[11-10-2005 08:27:42] [#ezpublish] <zrg> dunno i have tried 3 times, usually crashes at install, last time i unticked the classes and templates options and it says installed, however no content in sight
+[11-10-2005 08:28:35] [#ezpublish] <_Rappy_> ah well, I'm off! adios
+[11-10-2005 08:28:39] -!- _Rappy_ is now known as _raptor_
+[11-10-2005 08:28:47] [#ezpublish] <_raptor_> ack
+[11-10-2005 08:28:51] -!- _raptor_ is now known as _rappy_
+[11-10-2005 08:30:49] -!- ordnas [n=ordnas@p549DECFB.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-10-2005 08:44:44] [#ezpublish] <Sulfur> zrg, your cat is called grep?
+[11-10-2005 08:44:51] [#ezpublish] <Sulfur> :-?
+[11-10-2005 08:44:53] [#ezpublish] <zrg> mhmh
+[11-10-2005 08:45:13] [#ezpublish] <Sulfur> so you can find it easily or is that becasue it finds stuff easily ?
+[11-10-2005 08:46:47] [#ezpublish] <zrg> it is reverse grep :P
+[11-10-2005 08:47:36] [#ezpublish] <Sulfur> ha
+[11-10-2005 08:47:44] [#ezpublish] <Sulfur> and its real name is Satchel
+[11-10-2005 08:49:02] [#ezpublish] <zrg> it loses things easily
+[11-10-2005 08:49:45] [#ezpublish] <Sulfur> :)
+[11-10-2005 08:49:51] [#ezpublish] <zrg> and it sleeps on my laptop, the wretched animal :P
+[11-10-2005 08:52:40] [#ezpublish] <Katana`> YAY found them
+[11-10-2005 08:52:41] [#ezpublish] <Katana`> BITCHES
+[11-10-2005 08:58:07] [#ezpublish] <Sulfur> hehe
+[11-10-2005 09:21:41] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-10-2005 09:35:32] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit [Remote closed the connection]
+[11-10-2005 09:47:40] -!- DiGiTa|_ [n=guillaum@80.125.104.180] has quit [Remote closed the connection]
+[11-10-2005 09:59:43] -!- fh[eZ] [n=fh@80.239.98.162] has quit [Remote closed the connection]
+[11-10-2005 10:04:43] -!- SEAwolfx_ [n=mike@DSL01.212.114.233.108.NEFkom.net] has joined #ezpublish
+[11-10-2005 10:15:24] -!- SEAwolfx [n=mike@DSL01.212.114.238.84.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[11-10-2005 10:46:24] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-10-2005 10:53:05] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-10-2005 10:55:59] [#ezpublish] * Katana` experiences that bug with 3.6.1... http://ez.no/bugs/view/6477
+[11-10-2005 10:56:02] [#ezpublish] <Katana`> any idea ??
+[11-10-2005 10:56:37] [#ezpublish] <Katana`> kh[eZ] ?
+[11-10-2005 11:25:12] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-10-2005 11:44:23] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-10-2005 12:56:11] -!- ordnas [n=ordnas@p549DFA28.dip.t-dialin.net] has joined #ezpublish
+[11-10-2005 13:05:19] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-10-2005 13:14:03] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-10-2005 13:19:21] [#ezpublish] <Sulfur> ankh-morpork?? :|
+[11-10-2005 13:19:23] [#ezpublish] <Sulfur> lol
+[11-10-2005 13:19:35] [#ezpublish] <Sulfur> Katana`: what are you doing on a work related channel now??? :D
+[11-10-2005 13:24:06] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-10-2005 13:36:17] [#ezpublish] <Katana`> evening
+[11-10-2005 14:21:28] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-10-2005 14:47:14] -!- ordnas [n=ordnas@p549DFA28.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-10-2005 16:02:47] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[11-10-2005 16:03:14] [#ezpublish] <nnn0> noen som har no erfaring med den der enhancedselection ?
+[11-10-2005 16:28:14] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-10-2005 16:32:09] [#ezpublish] <nnn0> eheh i forgot to clear the cache :D
+[11-10-2005 18:35:38] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-10-2005 19:40:10] [#ezpublish] <nnn0> hm nå vil den ikke lagre parametrene
+[11-10-2005 21:38:17] [#ezpublish] <nnn0> :)

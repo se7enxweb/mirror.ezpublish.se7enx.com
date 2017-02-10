@@ -1,0 +1,45 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.9.&nbsp; String Substitutions</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec10.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec9"></a><h3 class="docSection1Title">12.9. String Substitutions</h3>
+<p class="docText">It is possible to set up replacements, or substitutions, that are performed on files when installed. This is useful to keep default path names and other configuration data in sync with the user's PEAR configuration, to invoke PHP with the right PATH, and more.<a name="ch12index277"></a><a name="ch12index278"></a></p>
+<a name="ch12lev2sec17"></a><h4 class="docSection2Title">12.9.1. Element: <tt>&lt;replace&gt;</tt></h4>
+<P><table cellspacing="0" FRAME="void" RULES="none" cellpadding="5"><colgroup><col width="275"><col width="275"></colgroup><thead></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Element name:</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>replace</tt></p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText">Attributes:</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>from</tt> (required)</p>
+<p class="docText"><tt>to</tt> (required)</P>
+<p class="docText"><tt>type</tt> (required)</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">May occur in:</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>file</tt> (optional)</p></td></tr></table></p><br>
+<p class="docText">The <tt>replace</tt> element specifies a substitution that is performed for the containing file during installation. All occurrences of the <tt>from</tt> attribute in the file are replaced with a string represented by the <tt>to</tt> and <tt>type</tt> attributes. The <tt>type</tt> attribute may have one of these values:</p>
+<ul><li><p class="docList"><tt>php-const</tt>. <tt>from</tt> is replaced by the value of the PHP constant named by <tt>to</tt>.</p></li><li><p class="docList"><tt>pear-config</tt>. <tt>from</tt> is replaced by the PEAR configuration parameter named by <tt>to</tt>.</p></li><LI><p class="docList"><tt>package-info</tt>. <tt>from</tt> is replaced by the <tt>to</tt> field from the package's configuration.</P></li></ul>
+<p class="docText">Usually, the <tt>from</tt> pattern is of the form <tt>@foo@</tt>, but in theory, you can replace anything because what is being done by the installer is a straightforward <tt>str_replace()</tt>.<a name="ch12index279"></a><a name="ch12index280"></a></P>
+<a name="ch12lev2sec18"></a><h4 class="docSection2Title">12.9.2. Examples</h4>
+<p class="docText">A typical use for string substitutions is setting up the PEAR install directory and PHP executable path in command-line PHP scripts. Consider this script:<a name="ch12index281"></a><a name="ch12index282"></a></p>
+<pre>
+#!@php_bin@
+&lt;?php
+print "Hello!\n";
+?&gt;
+</pre><br>
+<p class="docText">Because the PHP executable may be installed in different locations on different machines, the PEAR installer has a configuration parameter for which PHP executable should be used (<tt>php_bin</tt>). By setting up a <tt>pear-config</tt> substitution in the <tt>package.xml</tt> file, we can insert the right path to the PHP executable during installation:<a name="ch12index283"></a><a name="ch12index284"></a><a name="ch12index285"></a></p>
+<pre>
+&lt;file role="script" name="myscript"&gt;
+  &lt;replace type="pear-config" from="@php_bin@" to="php_bin"/&gt;
+&lt;/file&gt;
+</pre><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec10.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

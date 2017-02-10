@@ -1,0 +1,714 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section B.3.&nbsp; Tag Reference</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app02lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app02lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app02lev1sec3"></a><h3 class="docSection1Title" id="409768-816">B.3. Tag Reference</h3>
+<p class="docText">Some of the keywords mention &quot;Available for PHP 4 only.&quot; This does not mean that you cannot document this type of element in PHP 5; instead, phpDocumentor extracts this information from the source so that you don't have to mark it explicitly with a keyword.<a name="app02index15"></a><a name="app02index16"></a></p>
+<a name="app02lev2sec1"></a><h4 class="docSection2Title">B.3.1. <tt>abstract</tt></h4><a name="app02index17"></a><a name="app02index18"></a><a name="app02index19"></a><a name="app02index20"></a>
+<p class="docText">Available for PHP 4 only.</P>
+<p class="docText">Syntax:</p>
+<pre>
+@abstract
+</pre><BR>
+<p class="docText">The <tt>abstract</tt> keyword documents an <tt>abstract</tt> class or member function, or variable that should be implemented by the class that extends this one. A good example of an <tt>abstract</tt> class is a <tt>container</tt> class, and an example of an <tt>abstract</tt> function might be an output function of a generator. An abstract class or function itself usually does not implement any kind of functionality, but it might contain fallback routines:<a name="app02index21"></a><a name="app02index22"></a><a name="app02index23"></a><a name="app02index24"></a></p>
+<pre>
+/**
+* Example class to show @abstract
+*
+* Abstract class to add two elements
+*
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @abstract
+*/
+class Sum {
+
+    /**
+    * Sum function
+    *
+    * This function adds two elements and stores the result
+    *
+    * @abstract
+    * @param mixed $e1  The first element
+    * @param mixed $e2  The second element
+    */
+    function Sum ($e1, $e2) {
+        ;
+    }
+}
+
+/**
+* Example inherited class
+*
+* Add two arrays
+*/
+class SumArray extends Sum {
+
+    /**
+    * Add two arrays
+    *
+    * @param array $a1  The first array
+    * @param array $a2  The second array
+    */
+    function Sum ($a1, $a2) {
+        return array_merge($a1, $a2);
+    }
+}
+
+</pre><BR>
+<a name="app02lev2sec2"></a><h4 class="docSection2Title">B.3.2. <tt>access</tt></h4><a name="app02index25"></a><a name="app02index26"></a><a name="app02index27"></a><a name="app02index28"></a>
+<p class="docText">Available for PHP 4 only.</p>
+<p class="docText">Syntax:</p>
+<pre>
+@access &lt;accesstype&gt;
+accesstype :== 'private' | 'protected' | 'public'
+</pre><BR>
+<p class="docText">The <tt>@access</tt> keyword marks an element as either public, protected, or private. Private elements are for internal use, and do not belong in the user documentation. phpDocumentor will only output private elements when <tt>pp</tt> is passed on the command line. The default access method of elements is public, thus, this tag is only required when you want to mark an element as <tt>private</tt>. Following the PEAR coding standards, private functions and variables should have an underscore as a prefix to the symbol name.<a name="app02index29"></a><a name="app02index30"></a><a name="app02index31"></a><a name="app02index32"></a></P>
+<pre>
+/**
+* Example class to show the use of the access tag
+*/
+class Example {
+
+    /**
+    * @var    float $_amount   Amount of money in my pocket
+    * @access private
+    */
+    var $_amount;
+
+    /**
+    * Subtracts money from my pocket and gives it away
+    *
+    * @param  float $money   Amount of money to give away
+    * @access private
+    */
+    function _giveMoneyAway ($money) {
+        $ret = $this-&gt;_amount;
+        $this-&gt;_amount -= $money;
+        return $ret;
+    }
+
+    /**
+    * Calculate the amount of money and give it away
+    *
+    * @param  int $bills   Number of &#164;10 bills to give away
+    * @access public
+    */
+    function giveBillsAway ($bills) {
+        return $this-&gt;_giveMoneyAway($bills * 10);
+    }
+}
+
+</pre><br>
+<a name="app02lev2sec3"></a><h4 class="docSection2Title">B.3.3. <tt>author</tt></h4><a name="app02index33"></a><a name="app02index34"></a><a name="app02index35"></a><a name="app02index36"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@author &lt;name&gt; '&lt;' &lt;email-address&gt; '&gt;'
+</pre><BR>
+<p class="docText">The <tt>author</tt> keyword documents the author of an element:</p>
+<pre>
+/**
+* Super-duper resource management class
+*
+* @author  Derick Rethans &lt;derick@php.net&gt;
+*/
+class ResourceManager {
+}
+</pre><br>
+<a name="app02lev2sec4"></a><H4 class="docSection2Title">B.3.4. <tt>category</tt></h4><a name="app02index37"></a><a name="app02index38"></a><a name="app02index39"></a><a name="app02index40"></a>
+<p class="docText">Syntax:</P>
+<pre>
+@category &lt;categoryname&gt;
+</pre><br>
+<p class="docText">This tag puts a specific class into a category. This is most useful for documenting PEAR classes, which are always in a category like Database, HTTP, or XML. For example, see this header from XML/Parser.php:</p>
+<pre>
+/**
+ * XML Parser class.  This is an XML parser based on PHP's "xml" extension,
+ * based on the bundled expat library.
+ *
+ * @category XML
+ * @package XML_Parser
+...
+</pre><br>
+<a name="app02lev2sec5"></a><h4 class="docSection2Title">B.3.5. <tt>copyright</tt></h4>
+<p class="docText">Syntax:<a name="app02index41"></a><a name="app02index42"></a><a name="app02index43"></a><a name="app02index44"></a></p>
+<pre>
+@copyright &lt;copyright_information&gt;
+</pre><br>
+<p class="docText">With the <tt>@copyright</tt> keyword, you can document copyright information. Although it is mostly used for whole files, you can also document the copyright information of a single function or class:</p>
+<pre>
+/**
+* Copyright example
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @copyright Copyright &#169; 2002, Derick Rethans
+*/
+
+/**
+* Loaned function
+* @copyright Copyright &#169; 2004, the PHP Group
+*/
+function crash_computer() {
+}
+</pre><br>
+<a name="app02lev2sec6"></a><h4 class="docSection2Title">B.3.6. <tt>deprecated</tt></h4><a name="app02index45"></a><a name="app02index46"></a><a name="app02index47"></a><a name="app02index48"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@deprecated &lt;description&gt;
+</pre><br>
+<p class="docText">To document obsolete functions, use the <tt>@deprecated</tt> keyword. The parameter to this keyword will be copied verbatim to the generated documentation. It's most useful to use this parameter to document when, and from which version of the application or script the documented element is deprecated:</p>
+<pre>
+/**
+* @deprecated Removed in version 0.8.1.2
+*/
+function add_all_arrays() {
+}
+</pre><br>
+<a name="app02lev2sec7"></a><h4 class="docSection2Title">B.3.7. <tt>example</tt></H4><a name="app02index49"></a><a name="app02index50"></a><a name="app02index51"></a><a name="app02index52"></a>
+<p class="docText">Syntax:</P>
+<pre>
+@example &lt;path/to/example.php&gt; &lt;description&gt;
+</pre><br>
+<p class="docText">Examples of using specific classes can be put in the documentation in different ways. With <tt>&lt;code&gt;</tt>, you can do it inline:</p>
+<pre>
+/**
+ * This function is an example
+ * &lt;code&gt;
+ * example_function("example_var");
+ * &lt;/code&gt;
+ */
+function example_function($var) {
+}
+</pre><BR>
+<p class="docText">But, you can also link in an example from a file, like this:</p>
+<pre>
+/**
+ * This function is another example
+ * @example example_example.php
+ */
+function example_function($var) {
+}
+</pre><br>
+<p class="docText">This will make phpDocumentor look in the directory that is specified with the <tt>-ed</tt> para-meter on the command line for the file <tt>example_example.php</tt>. If this file does not exist, phpDocumentor first looks for this file in the examples subdirectory of the current directory in which the documented file resides. If that also fails, it checks for the file <tt>example_example.php</tt> in the subdirectory &quot;examples&quot; of the top-level directory of the parsed files.<a name="app02index53"></a><a name="app02index54"></a><a name="app02index55"></a><a name="app02index56"></a></p>
+<a name="app02lev2sec8"></a><h4 class="docSection2Title">B.3.8. <tt>filesource</tt></h4><a name="app02index57"></a><a name="app02index58"></a><a name="app02index59"></a><a name="app02index60"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@filesource
+</pre><BR>
+<p class="docText">This tag makes phpDocumentor generate a syntax-highlighted version of the file being parsed and linked to from the documentation. The command line parameter <tt>-s on</tt> will be automatically performed for every source file:<a name="app02index61"></a><a name="app02index62"></a><a name="app02index63"></a><a name="app02index64"></a></p>
+<pre>
+&lt;?php
+/**
+* @author Derick Rethans &lt;derick@php.net&gt;
+* @filesource
+* @package Examples
+*/
+/**
+* This class has automatic version numbers
+* @version $Id: version.php,v 1.4 2002/07/25 16:42:48 Derick exp $
+* @package Examples
+*/
+class source_foo {
+}
+?&gt;
+</pre><BR>
+<a name="app02lev2sec9"></a><h4 class="docSection2Title">B.3.9. <tt>final</tt></H4><a name="app02index65"></a><a name="app02index66"></a><a name="app02index67"></a><a name="app02index68"></a>
+<p class="docText">Available for PHP 4 only.</p>
+<p class="docText">Syntax:</p>
+<pre>
+@final
+</pre><br>
+<p class="docText">Use the <tt>@final</tt> keyword to document that the class or property should not be overloaded. (See it as the final node in an inheritance chain.)<a name="app02index69"></a><a name="app02index70"></a><a name="app02index71"></a><a name="app02index72"></a></p>
+<pre>
+/**
+* Top level class
+* @abstract
+*/
+class top {
+}
+
+/**
+* Middle layer class
+*/
+class middle extends top {
+}
+/**
+* Bottom layer class
+* @final
+*/
+class bottom extends middle {
+}
+</pre><BR>
+<a name="app02lev2sec10"></a><H4 class="docSection2Title">B.3.10. <tt>global</tt></h4><a name="app02index73"></a><a name="app02index74"></a><a name="app02index75"></a><a name="app02index76"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@global  (type | object_definition)  &lt;$variable&gt;  &lt;description&gt;
+type              ::=  php_type | 'mixed'
+php_type          ::= 'bool' | 'int' | 'float' | 'string' | 'array' | 'resource'
+object_definition ::= 'object' &lt;classname&gt;
+</pre><br>
+<p class="docText">The <tt>@global</tt> tag has two functions. The first one is available with both PHPDoc and phpDocumentor, and documents the use of a global variable in a function or method. The second one is only available in phpDocumentor and documents global variables for the whole script (a top-level variable). Either of those functions are showed in a different example:</p>
+<pre>
+/**
+* This function rewinds the directory
+*/
+function rewindDir() {
+    /**
+    * Global variable which holds the directory object to rewind
+    * @global object Dir $dir   Instance of the directory class
+    */
+    global $dir;
+
+    $dir-&gt;rewind();
+}
+
+
+/**
+* Example to document a global variable
+* @global string $GLOBALS['foo']
+* @name foo
+*/
+$GLOBALS['foo'] = "Foobar";
+</pre><BR>
+<p class="docText">The variable name after the <tt>@global</tt> keyword should be exactly the same one as below the comment. This includes the quotes! You can also &quot;rename&quot; the documented variables with the <tt>@name</tt> tag. See the documentation on the <tt>@name</tt> tag for more information.<a name="app02index77"></a><a name="app02index78"></a><a name="app02index79"></a><a name="app02index80"></a></p>
+<a name="app02lev2sec11"></a><h4 class="docSection2Title">B.3.11. <tt>ignore</tt></H4><a name="app02index81"></a><a name="app02index82"></a><a name="app02index83"></a><a name="app02index84"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@ignore
+</pre><BR>
+<p class="docText">This keyword is meant to exclude certain elements from the documentation. An example usage follows:</p>
+<pre>
+if (version_compare(phpversion(), "4.3.0", "&lt;")) {
+    /**
+     * @name BROKEN_PHP
+     */
+    define("BROKEN_PHP", TRUE);
+} else {
+    /**
+     * @ignore
+     */
+    define("BROKEN_PHP", FALSE);
+}
+</pre><br>
+<p class="docText">Without the <tt>@ignore</tt> tag, the element would have been included twice in the documentation.<a name="app02index85"></a><a name="app02index86"></a><a name="app02index87"></a><a name="app02index88"></a></p>
+<a name="app02lev2sec12"></a><h4 class="docSection2Title">B.3.12. <tt>inheritdoc</tt> (inline)</h4><a name="app02index89"></a><a name="app02index90"></a><a name="app02index91"></a><a name="app02index92"></a>
+<p class="docText">Syntax:</p>
+<pre>
+{@inheritdoc}
+</pre><br>
+<a name="app02lev2sec13"></a><h4 class="docSection2Title">B.3.13. <tt>internal, internal</tt> (inline)</h4><a name="app02index93"></a><a name="app02index94"></a><a name="app02index95"></a><a name="app02index96"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@internal &lt;description&gt;
+</pre><br>
+<p class="docText">or</p>
+<pre>
+{@internal &lt;description&gt; }}
+</pre><br>
+<p class="docText">Use this tag to document something not interesting for the public (for example, for in-company documentation). An example is</p>
+<pre>
+/**
+ * Class to modify files
+ *
+ * With this class you can easily modify existing files on your system.
+ * {@internal The way this class does this is kinda stupid though... }}
+ */
+</pre><br>
+<p class="docText">Another one not using the inline version of <tt>@internal</tt>:</p>
+<pre>
+/**
+ * Class to modify files
+ *
+ * With this class you can easily modify existing files on your system.
+ * @internal The this class does this is kinda stupid though.
+ */
+</pre><BR>
+<p class="docText">It doesn't really matter which one you pick because the rendering to the documentation is the same. If you want to have this shown in the generated documentation, you'll have to specify the <tt>-pp</tt> option (just as you do when showing private methods).<a name="app02index97"></a><a name="app02index98"></a><a name="app02index99"></a><a name="app02index100"></a></P>
+<a name="app02lev2sec14"></a><h4 class="docSection2Title">B.3.14. <tt>licence</tt></h4><a name="app02index101"></a><a name="app02index102"></a><a name="app02index103"></a><a name="app02index104"></a>
+<p class="docText">Syntax:</P>
+<pre>
+@licence &lt;url&gt; ( &lt;description&gt; )
+</pre><br>
+<p class="docText">This keyword makes a link to <tt>url</tt> with an optional description <tt>description</tt>:</p>
+<pre>
+/**
+ * @package Examples
+ * @licence http://www.php.net/licence/3_0.txt PHP License
+ */
+</pre><br>
+<a name="app02lev2sec15"></a><h4 class="docSection2Title">B.3.15. <tt>link</tt></h4><a name="app02index105"></a><a name="app02index106"></a><a name="app02index107"></a><a name="app02index108"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@link &lt;url&gt; ( &lt;description&gt; )
+</pre><BR>
+<p class="docText">This keyword adds a link into the generated documentation. You can use this to make a link to an example on how to use this element. (For an example, see <tt><a class="docLink" href="#app02lev2sec15">link</a></tt> <tt>(internal)</tt>.)</p>
+<a name="app02lev2sec16"></a><H4 class="docSection2Title">B.3.16. <tt>link</tt> (inline)</h4><a name="app02index109"></a><a name="app02index110"></a><a name="app02index111"></a><a name="app02index112"></a>
+<p class="docText">Syntax:</P>
+<pre>
+{@link &lt;url&gt; &lt;description&gt;}
+</pre><br>
+<p class="docText">or</p>
+<pre>
+{@link &lt;element&gt; &lt;description&gt;}
+</pre><br>
+<p class="docText">The <tt>{@link}</tt> inline tag makes links to either a URL or another documented element by placing a link in the flow of the text. See the following examples:</p>
+<pre>
+/**
+ * Page level docblock for link test
+ * @package Examples
+ */
+/**
+ * Function link_foo1
+ *
+ * The following adds a link at the end of the description block.
+ * @link http://www.example.com example link
+ */
+function link_foo1() {
+}
+
+/**
+ * Function link_foo2
+ *
+ * This is a {@link foo1() link to foo1}, inline rendered in the
+ * documentation.
+ */
+function link_foo2() {
+}
+
+</pre><BR>
+<a name="app02lev2sec17"></a><H4 class="docSection2Title">B.3.17. <tt>name</tt></h4><a name="app02index113"></a><a name="app02index114"></a><a name="app02index115"></a><a name="app02index116"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@name &lt;global_variable_name&gt;
+</pre><br>
+<p class="docText">This keyword gives a pretty name to a global variable. In the next example, <tt>$foo</tt> is used in the generated documentation instead of <tt>$GLOBALS['foo']</tt>:</p>
+<pre>
+/**
+* Example to document a global variable
+* @name $foo
+* @global string $GLOBALS['foo']
+*/
+$GLOBALS['foo'] = "Foobar";
+</pre><BR>
+<a name="app02lev2sec18"></a><h4 class="docSection2Title">B.3.18. <tt>package</tt></h4><a name="app02index117"></a><a name="app02index118"></a><a name="app02index119"></a><a name="app02index120"></a>
+<p class="docText">Syntax:</P>
+<pre>
+@package &lt;modulename&gt;
+</pre><br>
+<p class="docText">The <tt>@package</tt> tag is the tag used for grouping elements (and subpackages with phpDocumentor). It's the top-level grouping item and usually associated with a PEAR package. See the <a class="docLink" href="#app02lev2sec7">example</a> shown in <a class="docLink" href="#app02fig01">Figure B.1</a>, which uses the package and subpackage tags to document functions in a structure with two levels from the following structure.<a name="app02index121"></a><a name="app02index122"></a><a name="app02index123"></a><a name="app02index124"></a></P>
+<pre>
+/**
+* Cache management
+* @package Cache
+*/
+function Cache() {
+}
+
+/**
+* Caching in a database
+* @package Cache
+* @subpackage Cache_DB
+*/
+function Cache_DB() {
+}
+
+/**
+* Caching in a MySQL database
+* @package Cache
+* @subpackage Cache_DB
+*/
+function Cache_DB_MySQL() {
+}
+
+/**
+* Caching in an Oracle database
+* @package Cache
+* @subpackage Cache_DB
+*/
+function Cache_DB_Oracle() {
+}
+
+/**
+* Caching in a file
+* @package Cache
+* @subpackage Cache_File
+*/
+function Cache_File() {
+}
+
+</pre><br>
+<a name="app02fig01"></a><p><center><h5 class="docFigureTitle">Figure B.1. Package structure.</h5>
+<p class="docText"><img border="0" alt="" id="217066145005" width="180" height="156" SRC="images/013147149X/graphics/ap02fig01.gif;380137"></p></center></p><br>
+<a name="app02lev2sec19"></a><h4 class="docSection2Title">B.3.19. <tt>param</tt></h4><a name="app02index125"></a><a name="app02index126"></a><a name="app02index127"></a><a name="app02index128"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@param  (type | object_definition)  &lt;$variable&gt;  &lt;description&gt;
+type              ::=  php_type | 'mixed'
+php_type          ::= 'bool' | 'int' | 'float' | 'string' | 'array' | 'resource'
+object_definition ::= 'object' &lt;classname&gt;
+</pre><br>
+<p class="docText">Parameters to functions are documented with the <tt>@param</tt> tag.</p>
+<p class="docText">Some examples follow:</p>
+<pre>
+/**
+* Function to add numbers and multiple by two
+* @param float $a  This is the first element that's going
+*                  to be in the result
+* @param int   $b  And here we have the second parameter
+* @return mixed
+*/
+function addNumbersAndMultiplyByTwo ($a, $b)
+{
+    return ($a + $b) * 2;
+}
+</pre><br>
+<p class="docText">phpDocumentor detects the default value of a variable from the source, and includes this automatically in the generated documentation. A more complex example follows:<a name="app02index129"></a><a name="app02index130"></a><a name="app02index131"></a><a name="app02index132"></a><a name="app02index133"></a><a name="app02index134"></a><a name="app02index135"></a><a name="app02index136"></a></p>
+<pre>
+/**
+* Return rows
+*
+* Run a query on the database connection and return the specified number
+* of rows if specified
+* @private
+* @param resource $conn  The database connection resource
+* @param string   $query The query
+* @param int      $limit Limit to this number of returned rows
+* @return array
+*/
+function _runQuery ($conn, $query, $limit = 0)
+{
+    $ret = array();
+    mysql_query ($conn, $query . ($limit ? " LIMIT $limit" : ""));
+    while ($row = $mysql_fetch_row) {
+        $ret[] = $row;
+    }
+    return $ret;
+}
+
+</pre><br>
+<a name="app02lev2sec20"></a><H4 class="docSection2Title">B.3.20. <tt>return</tt></H4><a name="app02index137"></a><a name="app02index138"></a><a name="app02index139"></a><a name="app02index140"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@return (type | object_definition) &lt;description&gt;
+type              ::=  php_type | 'mixed'
+php_type          ::= 'bool' | 'int' | 'float' | 'string' | 'array' | 'resource'
+object_definition ::= 'object' &lt;classname&gt;
+</pre><br>
+<p class="docText">Use the <tt>@return</tt> tag to document the return type of your function:</P>
+<pre>
+/**
+* @param  string    $filename   The filename of the image
+* @return resource              A GD image resource
+*/
+function returnNiceGif ($filename)
+{
+    return imagecreatefromgif ($filename);
+}
+</pre><br>
+<a name="app02lev2sec21"></a><h4 class="docSection2Title">B.3.21. <tt>see</tt></h4><a name="app02index141"></a><a name="app02index142"></a><a name="app02index143"></a><a name="app02index144"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@see &lt;element&gt;
+</pre><br>
+<p class="docText">With the <tt>@see</tt> tag, you can add links to other elements in the documentation. Every phpDocumentor element type is supported as parameter to the <tt>@see</tt> tag:</p>
+<pre>
+/**
+* Adds numbers
+* @see string::add()
+*/
+function addNumbers ($number1, $number2)
+{
+    return $number1 + $number2;
+}
+
+/**
+* String manupulation class
+*/
+class string {
+    /**
+    * Adds strings
+    * @see addNumbers
+    */
+    function add ($string1, $string2)
+    {
+        return $string1 . $string2;
+    }
+}
+</pre><BR>
+<a name="app02lev2sec22"></a><h4 class="docSection2Title">B.3.22. <tt>since</tt></H4><a name="app02index145"></a><a name="app02index146"></a><a name="app02index147"></a><a name="app02index148"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@since &lt;description&gt;
+</pre><BR>
+<p class="docText">This tag documents when an element was added to the API. The format of the description string is <tt>free</tt>. Here is an example from the PEAR class <tt>HTML_Common</tt>:</p>
+<pre>
+/**
+ * Returns the tabOffset
+ *
+ * @since     1.5
+ * @return    void
+ */
+function getTabOffset()
+{
+    return $this-&gt;_tabOffset;
+}
+</pre><br>
+<a name="app02lev2sec23"></a><h4 class="docSection2Title">B.3.23. <tt>static</tt></h4><a name="app02index149"></a><a name="app02index150"></a><a name="app02index151"></a><a name="app02index152"></a>
+<p class="docText">Available for PHP 4 only.</P>
+<p class="docText">Syntax:</P>
+<pre>
+@static
+</pre><br>
+<p class="docText">This tag documents that methods may be statically called (like <tt>Foo::Bar();</tt> ):</p>
+<pre>
+/**
+* Class foo that does static bar
+*/
+class foo {
+    /**
+    * This function may be called statically
+    * @static
+    */
+    function bar () {
+    }
+}
+
+foo::bar();
+</pre><br>
+<a name="app02lev2sec24"></a><h4 class="docSection2Title">B.3.24. <tt>staticvar</tt></H4><a name="app02index153"></a><a name="app02index154"></a><a name="app02index155"></a><a name="app02index156"></a>
+<p class="docText">Available for PHP 4 only.</p>
+<p class="docText">Syntax:</p>
+<pre>
+@staticvar  (type | object_definition)  &lt;$variable&gt;  &lt;description&gt;
+type              ::=  php_type | 'mixed'
+php_type          ::= 'bool' | 'int' | 'float' | 'string' | 'array' | 'resource'
+object_definition ::= 'object' &lt;classname&gt;
+</pre><BR>
+<p class="docText">The <tt>@staticvar</tt> tag documents a static variable within a function. Static variables are not destroyed when the function ends. The following example will print <tt>123</tt>:<a name="app02index157"></a><a name="app02index158"></a><a name="app02index159"></a><a name="app02index160"></a></p>
+<pre>
+/**
+* Example for static variable in a function
+* @staticvar  integer $count  Count the number of times this function was called.
+*/
+function foo() {
+    static $count;
+
+    $count++;
+    echo $count. "\n";
+}
+
+foo();
+foo();
+foo():
+</pre><BR>
+<p class="docText">Here's the output:</p>
+<pre>
+1
+2
+3
+</pre><br>
+<a name="app02lev2sec25"></a><h4 class="docSection2Title">B.3.25. <tt>subpackage</tt></h4><a name="app02index161"></a><a name="app02index162"></a><a name="app02index163"></a><a name="app02index164"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@subpackage &lt;subpackagename&gt;
+</pre><br>
+<p class="docText">A <span class="docEmphStrong">subpackage</span> can be used as an additional grouping layer for elements in your package. See the <a class="docLink" href="app01lev1sec1.html#app01lev3sec1">description</a> of the <tt>package</tt> tag for an example.</p>
+<a name="app02lev2sec26"></a><h4 class="docSection2Title">B.3.26. <tt>todo</tt></h4><a name="app02index165"></a><a name="app02index166"></a><a name="app02index167"></a><a name="app02index168"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@todo &lt;description&gt;
+</pre><br>
+<p class="docText">With the <tt>@todo</tt> tag, you can document changes that still need to be made to a specific element. Here's an example:</p>
+<pre>
+/**
+ * @todo Document parameters
+ */
+function todo_example($a, $b) {
+}
+</pre><br>
+<a name="app02lev2sec27"></a><h4 class="docSection2Title">B.3.27. <tt>uses</tt></h4><a name="app02index169"></a><a name="app02index170"></a><a name="app02index171"></a><a name="app02index172"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@uses &lt;element&gt;
+</pre><BR>
+<p class="docText">This tag does the same as the <tt>@see</tt> tag, except that it makes a two-way link between the &quot;used&quot; element and the element from which <tt>@uses</tt> is used. phpDocumentor does this by adding a pseudo pseudo tag <tt>@usedby</tt> to the element to which the <tt>@uses</tt> tag points. Here's a small example to illustrate this:</P>
+<pre>
+/**
+ * This function multiples
+ * @param int a
+ * @param int b
+ * @uses divide()
+ */
+function multiply($a, $b)
+{
+    return divide($a, 1 / $b);
+}
+
+/**
+ * This function divides
+ * @param int a
+ * @param int b
+ */
+function divide ($a, $b)
+{
+    return $a / $b;
+}
+
+</pre><br>
+<p class="docText">This example makes a link from multiply to divide and from divide to multiply.<a name="app02index173"></a><a name="app02index174"></a><a name="app02index175"></a><a name="app02index176"></a></p>
+<a name="app02lev2sec28"></a><H4 class="docSection2Title">B.3.28. <tt>var</tt></h4><a name="app02index177"></a><a name="app02index178"></a><a name="app02index179"></a><a name="app02index180"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@var  (type | object_definition)  &lt;$variable&gt;  &lt;description&gt;
+type              ::=  php_type | 'mixed'
+php_type          ::= 'bool' | 'int' | 'float' | 'string' | 'array' | 'resource'
+object_definition ::= 'object' &lt;classname&gt;
+</pre><br>
+<p class="docText"><a name="app02index181"></a><a name="app02index182"></a><a name="app02index183"></a><a name="app02index184"></a><tt>var</tt> documents the type of class variables. The type should be a valid PHP data type, or &quot;mixed&quot; if the variable can have different types:</p>
+<pre>
+/**
+* Class that 'emulates' a structure as in C
+*/
+class person {
+    /**
+    * @var string $name The name of the person
+    */
+    var $name;
+
+    /**
+    * @var int $age   The person's age
+    */
+    var $age;
+}
+</pre><br>
+<a name="app02lev2sec29"></a><h4 class="docSection2Title">B.3.29. <tt>version</tt></H4><a name="app02index185"></a><a name="app02index186"></a><a name="app02index187"></a><a name="app02index188"></a>
+<p class="docText">Syntax:</p>
+<pre>
+@version &lt;description&gt;
+</pre><BR>
+<p class="docText">The version of the element may be documented with this tag. If you use CVS, you can use the CVS tags <tt>$Id: $</tt> and/or <tt>$Revision: $</tt>, which are automatically replaced with the correct version when you check your source in the CVS tree.</p>
+<pre>
+/**
+* This class has automatic version numbers
+* @version $Id: version.php,v 1.4 2002/07/25 16:42:48 Derick exp $
+* @author Derick Rethans &lt;derick@php.net&gt;
+*/
+class foo {
+}
+</pre><BR>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app02lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app02lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

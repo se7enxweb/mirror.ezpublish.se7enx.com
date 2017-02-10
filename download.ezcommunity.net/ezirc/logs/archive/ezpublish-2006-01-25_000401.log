@@ -1,0 +1,270 @@
+[01-24-2006 02:08:56] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-24-2006 02:23:27] -!- B-KiLLer` [n=me@217.31.64.170] has joined #ezpublish
+[01-24-2006 02:23:44] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-24-2006 02:44:16] -!- tobiS [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-24-2006 02:46:03] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-24-2006 02:48:41] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-24-2006 02:51:56] [#ezpublish] <kris10an> Whose motorcycle is this?
+[01-24-2006 03:05:04] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-24-2006 03:05:22] [#ezpublish] <y_sabal> dmorning
+[01-24-2006 03:09:21] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-24-2006 03:11:14] [#ezpublish] <SEAwolfx> morning.
+[01-24-2006 03:36:04] [#ezpublish] <SEAwolfx> someone on v3.7.x and using webdav?
+[01-24-2006 03:36:42] [#ezpublish] <SEAwolfx> seems to be broken?!
+[01-24-2006 03:37:42] -!- ordna1 [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-24-2006 03:38:43] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-24-2006 03:39:20] [#ezpublish] <B-KiLLer`> hi
+[01-24-2006 03:39:30] [#ezpublish] <SEAwolfx> hi B-KiLLer`
+[01-24-2006 03:39:41] [#ezpublish] <Sulfur> w0000t :)
+[01-24-2006 03:39:49] [#ezpublish] <SEAwolfx> hey Sulfur
+[01-24-2006 03:40:14] [#ezpublish] <B-KiLLer`> how can I proceed to have a object of the "file" class to be downloaded ?
+[01-24-2006 03:40:41] [#ezpublish] <B-KiLLer`> let's say that /downloads/myfile is a "file" object
+[01-24-2006 03:42:10] [#ezpublish] <SEAwolfx> the objects it self cant be downloaded only in form of a package.
+[01-24-2006 03:42:36] [#ezpublish] <SEAwolfx> or do you mean the content attribute (binary file)?
+[01-24-2006 03:42:45] [#ezpublish] <B-KiLLer`> yes
+[01-24-2006 03:43:38] [#ezpublish] <B-KiLLer`> so I uploaded a file using that file class, and now I want this binary file to be downloaded when I access the node
+[01-24-2006 03:43:49] [#ezpublish] <Sulfur> B-KiLLer`: you have to look into which template is used for it. I can't remember it now, but if you have "show used tpls" you'll find it easily
+[01-24-2006 03:44:48] [#ezpublish] <SEAwolfx> imo it is in a full_*.tpl for your contentclass.
+[01-24-2006 03:53:53] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[01-24-2006 03:58:54] -!- ordna1 [n=ordnas@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-24-2006 03:59:10] [#ezpublish] <B-KiLLer`> but what I don't really understand, is how this is supposed to be processed
+[01-24-2006 03:59:11] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-24-2006 03:59:22] [#ezpublish] <B-KiLLer`> how is this file reachable inside this node ?
+[01-24-2006 04:00:04] [#ezpublish] <SEAwolfx> the datatype is handling the mapping to the var/.. folder in which the files are actually stored.
+[01-24-2006 04:00:24] [#ezpublish] <Sulfur> B-KiLLer`: the view tpl for that attribute (not node) generates a link that allows the direct download of the file, since the file is stored on the filesystem.
+[01-24-2006 04:02:13] -!- tobyS_ [n=dotxp@dslb-084-061-178-139.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-24-2006 04:17:32] [#ezpublish] <y_sabal> mm, is the depth of attribute(show, $depth) is limited ?
+[01-24-2006 04:18:00] [#ezpublish] <y_sabal> every time I try to show until depth 5, I get a kernel crash
+[01-24-2006 04:18:23] [#ezpublish] <y_sabal> Fatal error: Call to a member function on a non-object in /home/yohan/ez35/kernel/classes/ezcontentobjectversion.php on line 247 Fatal error: eZ publish did not finish its request
+[01-24-2006 04:18:38] [#ezpublish] <kris10an> y_sabal: going too deep here will generate an insane amount of memoryusage and database querys...
+[01-24-2006 04:19:18] [#ezpublish] <SEAwolfx> btw, does ezpublish intern uses database views?
+[01-24-2006 04:34:13] [#ezpublish] <kris10an> SEAwolfx: you mean using "create view" and so on?
+[01-24-2006 04:34:21] [#ezpublish] <SEAwolfx> yes
+[01-24-2006 04:38:44] [#ezpublish] <kris10an> i don't think so...
+[01-24-2006 04:38:46] [#ezpublish] <kris10an> its not consistent between postgres, mysql and oracle..
+[01-24-2006 04:39:24] -!- SEAwolfx_ [n=mike@tor-proxy.qnet.com] has joined #ezpublish
+[01-24-2006 04:39:49] [#ezpublish] <SEAwolfx_> oops.. connection dropped.
+[01-24-2006 04:41:36] [#ezpublish] <SEAwolfx_> kris10an: if you gave an answer please repeat it.
+[01-24-2006 04:43:06] [#ezpublish] <kris10an> no. i dont thinke it uses views
+[01-24-2006 04:43:16] [#ezpublish] <kris10an> its not consistent between postgres, mysql and oracle
+[01-24-2006 04:43:32] [#ezpublish] <SEAwolfx_> ahh, good to know. ;)
+[01-24-2006 04:44:26] [#ezpublish] <SEAwolfx_> are there plans to support the free oracle db?
+[01-24-2006 05:01:28] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[01-24-2006 05:02:28] [#ezpublish] <SEAwolfx_> kris10an: i mean the oracle database 10G
+[01-24-2006 05:17:12] -!- tobyS [n=dotxp@vpn086.hrz.uni-dortmund.de] has joined #ezpublish
+[01-24-2006 05:19:26] [#ezpublish] <y_sabal> someone can help to sort out why :
+[01-24-2006 05:19:37] [#ezpublish] <y_sabal> {section name=temp loop=fetch('content', 'list',hash(parent_node_id,$:item.node_id))}
+[01-24-2006 05:19:37] [#ezpublish] <y_sabal>                                                                 PLuP={$temp:item.node_id}<br />
+[01-24-2006 05:19:37] [#ezpublish] <y_sabal>                                                               {set $kmedia_text_node_id=$temp:item.node_id}
+[01-24-2006 05:19:37] [#ezpublish] <y_sabal>                                                                 {set $kmedia_text_node_id="PPPPOPLOP"}
+[01-24-2006 05:19:46] [#ezpublish] <y_sabal> {/section}
+[01-24-2006 05:20:35] [#ezpublish] <y_sabal> is displaying something for PluP
+[01-24-2006 05:21:57] [#ezpublish] <y_sabal> and nothing for $kmedia_text_node_id
+[01-24-2006 05:22:15] [#ezpublish] <y_sabal> when I try to display something just after the loop
+[01-24-2006 05:22:56] [#ezpublish] <y_sabal> (mm, actually even inside the loop it's not displaying anything...)
+[01-24-2006 05:28:58] [#ezpublish] <y_sabal> mmmm.... actually, even
+[01-24-2006 05:29:01] [#ezpublish] <y_sabal> {let plop=""}
+[01-24-2006 05:29:11] [#ezpublish] <y_sabal> {set $plop="AAAAAAAAAAAAAAAAA"}
+[01-24-2006 05:29:19] [#ezpublish] <y_sabal> NARF={$plop}<br />
+[01-24-2006 05:29:25] [#ezpublish] <y_sabal> {/let}
+[01-24-2006 05:29:37] [#ezpublish] <y_sabal> is not displaying anything....
+[01-24-2006 05:29:56] [#ezpublish] <y_sabal> anyone ?
+[01-24-2006 05:34:03] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-24-2006 05:35:38] [#ezpublish] <kris10an> y_sabal: do not use name=
+[01-24-2006 05:35:42] [#ezpublish] <kris10an> that only makes confusing namespaces
+[01-24-2006 05:35:56] [#ezpublish] <kris10an> use var=
+[01-24-2006 05:36:02] [#ezpublish] <y_sabal> oh.. ok..
+[01-24-2006 05:36:04] [#ezpublish] <kris10an> and use $temp.node_id
+[01-24-2006 05:36:25] [#ezpublish] <kris10an> or better if >3.6 use foreach
+[01-24-2006 05:36:57] [#ezpublish] <y_sabal> mm, unfortunatly not, still 3.5
+[01-24-2006 05:37:06] [#ezpublish] <SEAwolfx_> kris10an: are there plans to support the free oracle db?
+[01-24-2006 05:37:45] -!- kris10an [n=kh@popeye.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[01-24-2006 05:38:22] [#ezpublish] <SEAwolfx_> hui
+[01-24-2006 05:38:54] [#ezpublish] <SEAwolfx_> explosive question?
+[01-24-2006 05:46:29] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[01-24-2006 05:47:03] -!- ordna1 [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-24-2006 05:47:33] [#ezpublish] <y_sabal> kris10an: but the problem seems independant for the loop, I try outside of the loop: it is still fucked up
+[01-24-2006 05:49:10] -!- t0bmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-24-2006 05:49:52] [#ezpublish] <kris10an> y_sabal: what was the problem again?
+[01-24-2006 05:50:25] [#ezpublish] <y_sabal> {let plop=""}
+[01-24-2006 05:50:34] [#ezpublish] <y_sabal>  {set $plop="AAAAAAAAAAAAAAAAA"}
+[01-24-2006 05:50:41] [#ezpublish] <y_sabal>  NARF={$plop}<br />
+[01-24-2006 05:50:46] [#ezpublish] <y_sabal>  {/let}
+[01-24-2006 05:50:49] -!- tobiS [n=tobmaste@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-24-2006 05:50:58] [#ezpublish] <y_sabal> is not displaying anything...
+[01-24-2006 05:52:27] [#ezpublish] <y_sabal> I should see, according to doc : NARF=AAAAAAAAAAAAAAAAA
+[01-24-2006 05:53:16] [#ezpublish] <y_sabal> any idea ?
+[01-24-2006 05:53:30] [#ezpublish] <kris10an> you probably have an error in the debugoutput
+[01-24-2006 05:53:37] [#ezpublish] <y_sabal> mmm...
+[01-24-2006 05:53:45] [#ezpublish] <kris10an> anyways.. the problem is that you are using {set $plop
+[01-24-2006 05:53:54] [#ezpublish] <kris10an> you should use {set plop=
+[01-24-2006 05:53:58] [#ezpublish] <kris10an> wihtout the $
+[01-24-2006 05:54:16] [#ezpublish] <y_sabal> http://ez.no/doc/ez_publish/technical_manual/3_6/reference/template_functions/variables/set
+[01-24-2006 05:54:17] [#ezpublish] <kris10an> a bit confusing with the old templateoperators...
+[01-24-2006 05:54:24] [#ezpublish] <kris10an> brb
+[01-24-2006 05:55:06] [#ezpublish] <y_sabal> mm, right, the prob was the $
+[01-24-2006 05:55:20] [#ezpublish] <y_sabal> shit... I thought eZ was retrocompatible..
+[01-24-2006 05:55:47] [#ezpublish] <y_sabal> well, at least the pbm is fixed
+[01-24-2006 05:56:26] [#ezpublish] <y_sabal> thanks
+[01-24-2006 06:03:40] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[01-24-2006 06:11:41] -!- ordna1 [n=ordnas@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-24-2006 06:14:36] -!- tobyS [n=dotxp@vpn086.hrz.uni-dortmund.de] has quit ["Plant your channel to pearadise.net!"]
+[01-24-2006 06:33:08] -!- tobyS [n=dotxp@217.194.224.41] has joined #ezpublish
+[01-24-2006 06:41:09] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[01-24-2006 06:51:57] -!- technocrat [i=sniegeli@hst-250-241.splius.lt] has joined #ezpublish
+[01-24-2006 07:01:45] [#ezpublish] <B-KiLLer`> is there any possibility to get back the content of a node, in a different language than the current one ?
+[01-24-2006 07:02:01] [#ezpublish] <y_sabal> get "back" ?
+[01-24-2006 07:02:15] [#ezpublish] <B-KiLLer`> so, if I'm in the eng-GB version of site, and I want to display both eng-GB and ger-DE content of a node
+[01-24-2006 07:02:37] [#ezpublish] <zrg> i understand this is problematic
+[01-24-2006 07:02:43] [#ezpublish] <y_sabal> well, in your template you need to fetch the german version
+[01-24-2006 07:02:46] [#ezpublish] <y_sabal> also
+[01-24-2006 07:02:55] [#ezpublish] <zrg> it CAN be fetched?
+[01-24-2006 07:03:17] [#ezpublish] <B-KiLLer`> it's because I have to create a page where I have to list downloadable files, and in this list, I have to display the 3 languages in which this file is available
+[01-24-2006 07:03:17] [#ezpublish] <Sulfur> I'd like to display the Klingon version.
+[01-24-2006 07:03:35] [#ezpublish] <zrg> klingon is easy
+[01-24-2006 07:03:39] [#ezpublish] <Sulfur> is it?
+[01-24-2006 07:03:52] -!- SEA-711 [n=SEA-711@DSL01.83.171.146.114.NEFkom.net] has joined #ezpublish
+[01-24-2006 07:04:13] [#ezpublish] <SEAwolfx_> !info template_operator fetch
+[01-24-2006 07:04:14] -!- SEA-711 [n=SEA-711@DSL01.83.171.146.114.NEFkom.net] has quit [Remote closed the connection]
+[01-24-2006 07:04:33] [#ezpublish] <SEAwolfx_> fuck
+[01-24-2006 07:05:02] [#ezpublish] * Sulfur proceeds to poke his eZ installation with a battlek
+[01-24-2006 07:05:29] [#ezpublish] <Sulfur> all youe eZs are belongs to us
+[01-24-2006 07:05:39] [#ezpublish] <SEAwolfx_> hehe
+[01-24-2006 07:06:50] [#ezpublish] <technocrat> ;)
+[01-24-2006 07:11:57] [#ezpublish] <B-KiLLer`> y_sabal: can I fetch a different language content then? :)
+[01-24-2006 07:15:18] [#ezpublish] <SEAwolfx_> it depends on the fetch options ;)
+[01-24-2006 07:16:32] [#ezpublish] <zrg> if people learn it without being condemned to it from birth, it has to be :P
+[01-24-2006 07:16:46] [#ezpublish] <SEAwolfx_> B-KiLLer`: http://ez.no/doc/ez_publish/technical_manual/3_6/reference/modules/content/fetch_functions/contentobject_attributes
+[01-24-2006 07:20:55] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-24-2006 07:21:23] [#ezpublish] <Sulfur> zrg: I suppose most can also be due to the fact that no one would spell-check you unless he is some wikipedia creep ;)
+[01-24-2006 07:24:45] [#ezpublish] <B-KiLLer`> SEAwolfx_: thanks :)
+[01-24-2006 07:25:33] [#ezpublish] <zrg> hm it actually seems you can get different language in template, cool, i kind of remembered it was impossible :)
+[01-24-2006 07:25:52] [#ezpublish] <SEAwolfx_> np
+[01-24-2006 07:31:24] -!- ordna1 [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-24-2006 07:49:36] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[01-24-2006 08:40:26] [#ezpublish] <SEAwolfx_> after successful authentication using cadaver while using the webdav functionality: "XML parse error at line 27: Extra content at the end of the document ." <- appeared inside cadaver, no error-output in webdav.log
+[01-24-2006 08:41:13] [#ezpublish] <SEAwolfx_> and before that: "Could not access /web/ (not WebDAV-enabled?):"
+[01-24-2006 08:41:27] [#ezpublish] <SEAwolfx_> also in cadaver
+[01-24-2006 08:45:17] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-24-2006 08:48:43] -!- ordna1 [n=ordnas@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-24-2006 09:24:53] -!- ordna1 [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-24-2006 09:41:42] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[01-24-2006 09:45:21] -!- ordna1 [n=ordnas@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-24-2006 10:05:10] -!- tobyS [n=dotxp@217.194.224.41] has quit ["Plant your channel to pearadise.net!"]
+[01-24-2006 10:25:13] -!- SEAwolfx [n=mike@70.230.73.20] has quit [SendQ exceeded]
+[01-24-2006 10:32:40] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-24-2006 10:43:25] -!- kris10an [n=kh@popeye.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[01-24-2006 10:56:29] -!- t0bmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-24-2006 11:17:07] -!- ordnas [n=ordnas@stalker.ez.no] has left #ezpublish []
+[01-24-2006 11:18:35] [#ezpublish] * y_sabal wants sleep now
+[01-24-2006 11:21:46] [#ezpublish] <zrg> sleep is for mortals!
+[01-24-2006 11:23:50] -!- danmiru [n=chatzill@80.94.225.138] has joined #ezpublish
+[01-24-2006 11:24:43] -!- danmiru [n=chatzill@80.94.225.138] has quit [Client Quit]
+[01-24-2006 11:25:23] [#ezpublish] <y_sabal> zrg: shhh ! I am here under cover.
+[01-24-2006 11:26:16] -!- tobyS [n=dotxp@dslb-084-061-178-139.pools.arcor-ip.net] has joined #ezpublish
+[01-24-2006 12:12:26] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit ["mv /y_sabal /dev/null aaaahh... pong"]
+[01-24-2006 12:12:28] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Isn't Gaim a cool program ? :-)"]
+[01-24-2006 12:25:54] -!- tobyS_ [n=dotxp@dslb-084-061-132-108.pools.arcor-ip.net] has joined #ezpublish
+[01-24-2006 12:27:48] -!- tobyS [n=dotxp@dslb-084-061-178-139.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[01-24-2006 13:16:02] -!- kore_ [n=lordhong@dslb-084-061-132-108.pools.arcor-ip.net] has joined #ezpublish
+[01-24-2006 13:18:43] -!- Katana` [i=katana@c5850-a2-3-62-147-58-240.dial.proxad.net] has joined #ezpublish
+[01-24-2006 13:18:57] [#ezpublish] <Katana`> heya
+[01-24-2006 13:21:41] [#ezpublish] <zrg> ello
+[01-24-2006 13:23:23] [#ezpublish] <zrg> i have a strange problem, am trying to make a calendar extension, problem is a template in extension does not seem to receive variables from "outside" it
+[01-24-2006 13:23:27] -!- Katana` [i=katana@c5850-a2-3-62-147-58-240.dial.proxad.net] has quit [Client Quit]
+[01-24-2006 13:24:43] [#ezpublish] <zrg> like $node whitch is set in pagelayout etc
+[01-24-2006 13:24:53] [#ezpublish] <zrg> ah, ok :(
+[01-24-2006 13:46:13] [#ezpublish] <zrg> wtf is "Undefined variable:  show4" in compiled template?
+[01-24-2006 14:45:06] -!- technocrat [i=sniegeli@hst-250-241.splius.lt] has quit ["o vakarais kaþko taip tolima, kaþko nëra - lyg artimø..."]
+[01-24-2006 15:32:12] -!- ordnas [n=ordnas@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-24-2006 15:42:41] -!- kore_ [n=lordhong@dslb-084-061-132-108.pools.arcor-ip.net] has quit []
+[01-24-2006 16:03:59] [#ezpublish] <SEAwolfx_> someone who got webdav running on his site and can help me out with a bit debugging?
+[01-24-2006 16:04:02] [#ezpublish] <SEAwolfx_> ;)
+[01-24-2006 16:04:10] [#ezpublish] <SEAwolfx_> *rollingacigarette*
+[01-24-2006 16:06:53] -!- ordnas [n=ordnas@217.80-202-59.nextgentel.com] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-24-2006 16:14:52] [#ezpublish] <zrg> i got plenty of them
+[01-24-2006 16:17:18] [#ezpublish] <SEAwolfx_> zrg: well, the problem is that i cant browse into the folders Media or Contents
+[01-24-2006 16:17:55] [#ezpublish] <SEAwolfx_> but i can login for the <siteaccess>-folder
+[01-24-2006 16:18:54] [#ezpublish] <SEAwolfx_> 'cd Content' in cadaver prints out: 'Could not access /web/Content/ (not WebDAV-enabled?):'
+[01-24-2006 16:19:02] [#ezpublish] <SEAwolfx_> 'Did not find a collection resource.'
+[01-24-2006 16:19:50] [#ezpublish] <SEAwolfx_> there seems to be a problem with the access set by the function 'setCurrentSite'
+[01-24-2006 16:20:51] [#ezpublish] <zrg> testing
+[01-24-2006 16:20:56] [#ezpublish] <SEAwolfx_> could you please print out in wedav.php before '$server->setCurrentSite( $currentSite)' the $currentSite-var?
+[01-24-2006 16:21:51] [#ezpublish] <SEAwolfx_> eZWebDAVServer::appendLogEntry( "SEAWOLF:". $currentSite );
+[01-24-2006 16:22:14] [#ezpublish] <SEAwolfx_> then you can see the output in the webdav.log
+[01-24-2006 16:22:38] [#ezpublish] <zrg> what dav client?
+[01-24-2006 16:22:45] [#ezpublish] <SEAwolfx_> cadaver
+[01-24-2006 16:23:03] [#ezpublish] <zrg> was ok i think, can you try with konqueror?
+[01-24-2006 16:23:31] [#ezpublish] <SEAwolfx_> the client plays no role imo
+[01-24-2006 16:23:38] [#ezpublish] <zrg> it may
+[01-24-2006 16:23:58] [#ezpublish] <SEAwolfx_> important is the output of the $currentSite - var
+[01-24-2006 16:24:29] [#ezpublish] <zrg> 3.6 site?
+[01-24-2006 16:25:11] [#ezpublish] <SEAwolfx_> my siteaccess is 'web'
+[01-24-2006 16:25:52] [#ezpublish] <SEAwolfx_> in webdav.log: 'SEAWOLF:web' when i access the web folder
+[01-24-2006 16:25:59] [#ezpublish] <SEAwolfx_> zrg | >3.6 site <- yes
+[01-24-2006 16:26:02] [#ezpublish] <SEAwolfx_> no
+[01-24-2006 16:26:04] [#ezpublish] <SEAwolfx_> 3.7
+[01-24-2006 16:26:21] [#ezpublish] <SEAwolfx_> sry
+[01-24-2006 16:26:45] [#ezpublish] <zrg> hang on
+[01-24-2006 16:27:00] [#ezpublish] <SEAwolfx_> ;) yes
+[01-24-2006 16:28:32] [#ezpublish] <SEAwolfx_> in ezwebdavconentserver.php inside the function setCurrentSite i wrote this:
+[01-24-2006 16:29:01] [#ezpublish] <SEAwolfx_> eZWebDAVServer::appendLogEntry( "SEAWOLF4: in setCurrentSite" );$access = changeAccess( $access );eZWebDAVServer::appendLogEntry( "SEAWOLF5: $access" );
+[01-24-2006 16:29:22] [#ezpublish] <zrg> SEAWOLF:plain
+[01-24-2006 16:29:37] [#ezpublish] <SEAwolfx_> i added the output before and after '$access = changeAccess( $access);'
+[01-24-2006 16:30:02] [#ezpublish] <SEAwolfx_> here only 'SEAWOLF4: in setCurrentSite' is output
+[01-24-2006 16:30:34] [#ezpublish] <SEAwolfx_> 'SEAWOLF5..' isnt printed out in the log. hmmmmm?!?!?
+[01-24-2006 16:31:03] [#ezpublish] <zrg> mh?
+[01-24-2006 16:31:22] [#ezpublish] <SEAwolfx_> so it seems the changeAccess()-function in access.php is broken?!?!
+[01-24-2006 16:32:30] [#ezpublish] <zrg> i dont know, works for me
+[01-24-2006 16:32:55] [#ezpublish] <SEAwolfx_> did you have placed the debug-output also in the ezwebdavconentserver.php?
+[01-24-2006 16:33:09] [#ezpublish] <zrg> no, ok i try
+[01-24-2006 16:33:25] [#ezpublish] <SEAwolfx_> this would be very nice ;)
+[01-24-2006 16:33:57] [#ezpublish] <SEAwolfx_> the problem is that i can only test with 3.7 as it is compatible with php 4.4
+[01-24-2006 16:34:29] [#ezpublish] <SEAwolfx_> so at the moment i cant test any 3.6 sites.
+[01-24-2006 16:34:30] [#ezpublish] <SEAwolfx_> ;(
+[01-24-2006 16:36:05] [#ezpublish] <SEAwolfx_> 'SEAWOLF5..' never appears in my logs.
+[01-24-2006 16:37:01] [#ezpublish] <SEAwolfx_> so the instruction pointer never comes back from the changeAccess()-function.
+[01-24-2006 16:38:06] [#ezpublish] <SEAwolfx_> despite the contents of the my siteaccess 'web' IS printed out in cadaver.
+[01-24-2006 16:38:18] [#ezpublish] <SEAwolfx_> +of
+[01-24-2006 16:38:42] [#ezpublish] <SEAwolfx_> thats strange imho.
+[01-24-2006 16:39:46] [#ezpublish] <zrg> that is not really "in" the site yet
+[01-24-2006 16:40:01] [#ezpublish] <SEAwolfx_> btw, i recommend using cadaver as there are more pieces of information is output at the countraty to konqueror.
+[01-24-2006 16:40:11] [#ezpublish] <zrg> adding above code in ezwebdavconentserver.php crashed it
+[01-24-2006 16:40:18] [#ezpublish] <SEAwolfx_> -is
+[01-24-2006 16:41:18] [#ezpublish] <zrg> is eZWebDAVServer available there?
+[01-24-2006 16:42:17] [#ezpublish] <SEAwolfx_> zrg | >adding above code in ezwebdavconentserver.php crashed it <- how its crashed?
+[01-24-2006 16:42:29] [#ezpublish] <SEAwolfx_> not being able to browse inside?
+[01-24-2006 16:46:50] [#ezpublish] <SEAwolfx_> zrg | >is eZWebDAVServer available there? <- it should be as it is already included
+[01-24-2006 16:47:46] [#ezpublish] <SEAwolfx_> 'include_once( 'lib/ezwebdav/classes/ezwebdavserver.php' );' is in ezwebdavconentserver.php
+[01-24-2006 16:49:01] [#ezpublish] <zrg> now ive fucked up something..
+[01-24-2006 16:49:52] [#ezpublish] <SEAwolfx_> ahh ;(. just delete the lines of debug-output.
+[01-24-2006 16:51:53] [#ezpublish] <SEAwolfx_> zrg: cleared the cache?!
+[01-24-2006 16:52:30] [#ezpublish] <zrg> deleting lines did not help, clearing cache helped i think but not instantly
+[01-24-2006 16:52:39] [#ezpublish] <zrg> trying again
+[01-24-2006 16:52:51] [#ezpublish] <SEAwolfx_> ok ;)
+[01-24-2006 16:54:17] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[01-24-2006 16:56:59] -!- SEAwolfx_ is now known as SEAwolfx
+[01-24-2006 16:58:27] [#ezpublish] <zrg> no, seawolf5 doesnt come out
+[01-24-2006 16:59:12] [#ezpublish] <zrg> you have to take it from here.. i got much to do :(
+[01-24-2006 16:59:48] [#ezpublish] <zrg> eZWebDAVServer::appendLogEntry( "SEAWOLF4: in setCurrentSite" );
+[01-24-2006 16:59:48] [#ezpublish] <zrg> $access = changeAccess( $access );
+[01-24-2006 16:59:48] [#ezpublish] <zrg> eZWebDAVServer::appendLogEntry( "SEAWOLF5:");
+[01-24-2006 17:00:08] [#ezpublish] <zrg> last one wont go to log altho dav works ok
+[01-24-2006 17:02:31] [#ezpublish] <SEAwolfx> hmm, ok. thank you anyhow ;)
+[01-24-2006 18:04:29] [#ezpublish] <SEAwolfx> zrg: http://ez.no/community/forum/install_configuration/setting_up_webdav_on_3_7_4_stable_svn
+[01-24-2006 18:27:07] -!- SEAwolfx [n=mike@tor-proxy.qnet.com] has quit [Remote closed the connection]
+[01-24-2006 20:19:11] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-24-2006 20:19:21] [#ezpublish] <y_sabal> some people around ?
+[01-24-2006 20:22:34] [#ezpublish] <zrg> nah
+[01-24-2006 20:22:50] [#ezpublish] <y_sabal> mm...
+[01-24-2006 20:23:10] [#ezpublish] <y_sabal> someone is using eZ behind a proxy ?
+[01-24-2006 20:23:30] [#ezpublish] <zrg> huh?
+[01-24-2006 20:24:42] [#ezpublish] <y_sabal> someone is using eZ CMS, on a server accessed through a proxy ?
+[01-24-2006 20:26:06] [#ezpublish] <y_sabal> I have problems with cache on the proxy side...
+[01-24-2006 20:26:15] [#ezpublish] <y_sabal> HTTP header in EZ are fucked up
+[01-24-2006 20:26:26] [#ezpublish] <y_sabal> so I wonder if someone found a solution
+[01-24-2006 21:14:42] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-24-2006 21:46:13] -!- zrg [n=zurgutt@roop.pri.ee] has left #ezpublish []
+[01-24-2006 23:12:02] -!- Bedlore [n=me@219-90-187-236.ip.adam.com.au] has joined #ezpublish
+[01-24-2006 23:12:32] [#ezpublish] <Bedlore> hi ppl
+[01-24-2006 23:13:19] [#ezpublish] <Bedlore> has anyone ever controlled the ignore_vat setting during shop orders?

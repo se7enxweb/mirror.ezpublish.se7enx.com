@@ -1,0 +1,167 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section A.32.&nbsp; XML</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec31.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app02.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app01lev1sec32"></a><h3 class="docSection1Title">A.32. XML</h3>
+<a name="app01lev2sec267"></a><h4 class="docSection2Title">A.32.1. XML_Beautifier</h4><a name="app01index550"></a><a name="app01index551"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stephan Schmidt (lead)</span></p>
+<p class="docText">Class to format XML documents.</P>
+<a name="app01lev3sec261"></a><h5 class="docSection3Title">A.32.1.1 Description</H5>
+<p class="docText">XML_Beautifier will add indentation and linebreaks to you XML files, replace all entities, format your comments and makes your document easier to read. You can influence the way your document is beautified with several options.</p>
+<a name="app01lev2sec268"></a><H4 class="docSection2Title">A.32.2. XML_CSSML</h4><a name="app01index552"></a><a name="app01index553"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Daniel Allen (lead)</span></p>
+<p class="docText">The PEAR::XML_CSSML package provides methods for creating cascading style sheets (CSS) from an XML standard called CSSML.</p>
+<a name="app01lev3sec262"></a><h5 class="docSection3Title">A.32.2.1 Description</H5>
+<p class="docText">The best way to describe this library is to classify it as a template system for generating cascading style sheets (CSS). It is ideal for storing all of the CSS in a single location and allowing it to be parsed as needed at runtime (or from cache) using both general and browser filters specified in the attribute for the style tags. It can be driven with either the libxslt pear extenstion (part of xmldom) or the xslt extension (part of the sablotron libraries).</P>
+<p class="docText">You may see an example usage of this class at the follow url:</p>
+<p class="docText"><a class="docLink" target="_blank" href="http://mojave.mojavelinux.com/forum/viewtopic.php?p=22#22">http://mojave.mojavelinux.com/forum/viewtopic.php?p=22#22</a></p>
+<p class="docText">Users may post questions or comments about the class at this location. My hope is that such a system becomes the standard for the organization of stylesheet information in the future.</p>
+<a name="app01lev2sec269"></a><h4 class="docSection2Title">A.32.3. XML_DTD</H4><a name="app01index554"></a><a name="app01index555"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP 3.0 - By Tomas V.V.Cox (lead)</span></p>
+<p class="docText">Parsing of DTD files and DTD validation of XML files</p>
+<a name="app01lev3sec263"></a><H5 class="docSection3Title">A.32.3.1 Description</h5>
+<p class="docText">Parsing of DTD files and DTD validation of XML files. The XML validation is done with the php sax parser, the xml extension, it does not use the domxml extension.</P>
+<p class="docText">Currently supports most of the current XML spec, including entities, elements and attributes. Some uncommon parts of the spec may still be unsupported.</p>
+<a name="app01lev2sec270"></a><h4 class="docSection2Title">A.32.4. XML_fo2pdf</h4><a name="app01index556"></a><a name="app01index557"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Christian Stocker (lead)</span></p>
+<p class="docText">Converts a xsl-fo file to pdf/ps/pcl/text/etc with the help of apache-fop</p>
+<a name="app01lev2sec271"></a><h4 class="docSection2Title">A.32.5. XML_FOAF</h4><a name="app01index558"></a><a name="app01index559"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Davey Shafik (lead)</span></p>
+<p class="docText">Provides the ability to manipulate FOAF RDF/XML</p>
+<a name="app01lev3sec264"></a><h5 class="docSection3Title">A.32.5.1 Description</h5>
+<p class="docText">XML_FOAF Allows advanced creation and simple parsing of FOAF RDF/XML files.</p>
+<a name="app01lev2sec272"></a><h4 class="docSection2Title">A.32.6. XML_HTMLSax</h4><a name="app01index560"></a><a name="app01index561"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: PHP -</span></p>
+<p class="docText">A SAX based parser for HTML and other badly formed XML documents</p>
+<a name="app01lev3sec265"></a><H5 class="docSection3Title">A.32.6.1 Description</H5>
+<p class="docText">XML_HTMLSax is a SAX based XML parser for badly formed XML documents, such as HTML. The original code base was developed by Alexander Zhukov and published at <a class="docLink" target="_blank" href="http://sourceforge.net/projects/phpshelve/">http://sourceforge.net/projects/phpshelve/</a>. Alexander kindly gave permission to modify the code and license for inclusion in PEAR.</p>
+<p class="docText">PEAR::XML_HTMLSax provides an API very similar to the native PHP Expat extension, allowing handlers using one to be easily adapted to the other. The key difference is HTMLSax will not break on badly formed XML, allowing it to be used for parsing HTML documents. Otherwise HTMLSax supports all the handlers available from Expat except namespace and external entity handlers. Provides methods for handling XML escapes as well as JSP/ASP opening and close tags.</p>
+<p class="docText">Version 2 has had it's internals completely overhauled to use a Lexer, delivering performance *approaching* that of the native XML extension, as well as a radically improved, modular design that makes adding further functionality easy.</P>
+<p class="docText">The public API has remained the same as older versions, except for the set_option() method, the available options having been renamed. Additional options are now also available, which allow HTMLSax to behave almost exactly like the native Expat extension. For example if the contents of XML elements contain linefeeds, tabs and XML entities, HTMLSax can be instructed to trigger additional data handler calls.</p>
+<p class="docText">A big thanks to Jeff Moore (lead developer of WACT: <a class="docLink" target="_blank" href="http://wact.sourceforge.net">http://wact.sourceforge.net</a>) who's largely responsible for new design, as well input from other members at Sitepoint's Advanced PHP forums: <a class="docLink" target="_blank" href="http://www.sitepointforums.com/showthread.php?threadid=121246">http://www.sitepointforums.com/showthread.php?threadid=121246</a>.</p>
+<p class="docText">Thanks also to Marcus Baker (lead developer of SimpleTest: <a class="docLink" target="_blank" href="http://www.lastcraft.com/simple_test.php">http://www.lastcraft.com/simple_test.php</a>) for sorting out the unit tests.</p>
+<a name="app01lev2sec273"></a><h4 class="docSection2Title">A.32.7. XML_image2svg</h4><a name="app01index562"></a><a name="app01index563"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP 2.02 - By Urs Gehrig (lead)</span></p>
+<p class="docText">Image to SVG conversion</P>
+<a name="app01lev3sec266"></a><h5 class="docSection3Title">A.32.7.1 Description</H5>
+<p class="docText">The class converts images, such as of the format JPEG, PNG and GIF to a standalone SVG representation. The image is being encoded by the PHP native encode_base64() function. You can use it to get back a complete SVG file, which is based on a predefinded, easy adaptable template file, or you can take the encoded file as a return value, using the get() method. Due to the encoding by base64, the SVG files will increase approx. 30% in size compared to the conventional image.</p>
+<a name="app01lev2sec274"></a><H4 class="docSection2Title">A.32.8. XML_NITF</h4><a name="app01index564"></a><a name="app01index565"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Patrick O'Lone (lead)</span></p>
+<p class="docText">Parse NITF documents.</p>
+<a name="app01lev3sec267"></a><h5 class="docSection3Title">A.32.8.1 Description</H5>
+<p class="docText">This package provides a NITF XML parser. The parser was designed with NITF version 3.1, but should be forward-compatible when new versions of the NITF DTD are produced. Various methods for accessing the major elements of the document, such as the hedline(s), byline, and lede are provided. This class was originally tested against the Associated Press's (AP) XML data feed.</P>
+<a name="app01lev2sec275"></a><h4 class="docSection2Title">A.32.9. XML_Parser</h4><a name="app01index566"></a><a name="app01index567"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stig S&aelig;ther Bakken (developer) - Stephan Schmidt (lead) - Tomas V.V.Cox (developer)</span></p>
+<p class="docText">XML parsing class based on PHP's bundled expat</p>
+<a name="app01lev3sec268"></a><H5 class="docSection3Title">A.32.9.1 Description</h5>
+<p class="docText">This is an XML parser based on PHPs built-in xml extension. It supports two basic modes of operation: &quot;func&quot; and &quot;event&quot;. In &quot;func&quot; mode, it will look for a function named after each element (xmltag_ELEMENT for start tags and xmltag_ELEMENT_ for end tags), and in &quot;event&quot; mode it uses a set of generic callbacks.</p>
+<a name="app01lev2sec276"></a><H4 class="docSection2Title">A.32.10. XML_RDDL</h4><a name="app01index568"></a><a name="app01index569"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stephan Schmidt (lead)</span></P>
+<p class="docText">Class to read RDDL (Resource Directory <span class="docEmphBoldItalic">Description</span> Language) documents.</p>
+<a name="app01lev3sec269"></a><h5 class="docSection3Title">A.32.10.1 Description</h5>
+<p class="docText">XML_RDDL provides an easy-to-use interface to extract RDDL resources from XML documents. More on RDDL can be found at <a class="docLink" target="_blank" href="http://www.rddl.org/">http://www.rddl.org/</a></p>
+<a name="app01lev2sec277"></a><h4 class="docSection2Title">A.32.11. XML_RSS</h4><a name="app01index570"></a><a name="app01index571"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Martin Jansen (lead)</span></p>
+<p class="docText">RSS parser</p>
+<a name="app01lev3sec270"></a><h5 class="docSection3Title">A.32.11.1 Description</h5>
+<p class="docText">Parser for Resource <span class="docEmphBoldItalic">Description</span> Framework (RDF) Site Summary (RSS) documents.</p>
+<a name="app01lev2sec278"></a><h4 class="docSection2Title">A.32.12. XML_SaxFilters</h4><a name="app01index572"></a><a name="app01index573"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: PHP -</span></p>
+<p class="docText">A framework for building XML filters using the SAX API</p>
+<a name="app01lev3sec271"></a><h5 class="docSection3Title">A.32.12.1 Description</H5>
+<p class="docText">XML_SaxFilters provides a foundation for using Sax filters in PHP. The original code base was developed by Luis Argerich and published at <a class="docLink" target="_blank" href="http://phpxmlclasses.sourceforge.net/show_doc.php?class=class_sax_filters.html">phpxmlclasses.sourceforge.net/show_doc.php?class=class_sax_filters.html</a>. Luis discussed how SaxFilters work, using the Sourceforge classes as an example, in <a class="docLink" href="ch10.html#ch10">Chapter 10</a> of Wrox &quot;PHP 4 XML&quot;.</P>
+<p class="docText">Luis kindly gave permission to modify the code and license for inclusion in PEAR.</p>
+<p class="docText">This version of the Sax Filters makes significant changes to Luis's original code (backwards compatibility is definately broken), seperating abstract classes from interfaces, providing interfaces for data readers and writers and providing methods to help parse XML documents recursively with filters (for example AbstractFilter::setParent()) for documents where the structure can vary significantly.</p>
+<p class="docText">Sax Filtering is an approach to making parsing XML documents with Sax modular and easy to maintain. The parser delegates events to a child filter which may in turn delegate events to another filter. In general it's possible to implement filters for a document which are as flexible and powerful as DOM.</P>
+<p class="docText">For some discussions on Sax filtering try; <a class="docLink" target="_blank" href="http://www.cafeconleche.org/books/xmljava/chapters/ch08.html">http://www.cafeconleche.org/books/xmljava/chapters/ch08.html</a> (Java)<a class="docLink" target="_blank" href="http://www-106.ibm.com/developerworks/xml/library/x-tipsaxflex.html">http://www-106.ibm.com/developerworks/xml/library/x-tipsaxflex.html</a> (Python) <a class="docLink" target="_blank" href="http://www.xml.com/pub/a/2001/10/10/sax-filters.html">http://www.xml.com/pub/a/2001/10/10/sax-filters.html</a> (Perl)</p>
+<p class="docText">The API provided by XML_SaxFilters is a little different from that commonly used in other languages, providing the concepts of &quot;parent&quot; and &quot;child&quot;. A parent of the current filter is the filter (or parser) &quot;upsteam&quot; which receive XML event notifications before the current filter. A &quot;child&quot; is a filter &quot;downstream&quot; of the current filter (or parser) to which XML events are delegated.</p>
+<p class="docText">The top of the &quot;family tree&quot; of filters is always the parser itself, which can have children but cannot have parents. Filters can have parents and children. The parsers themselves never handle any XML events personally but always delegate to a filter. The parser accepts an object implementing the reader interface from which it streams the XML. The filters can be given an object implementing the writer interface to write output to. For an example of SAX filters in action with PHP try; <a class="docLink" target="_blank" href="http://www.phppatterns.com/index.php/article/articleview/48/1/2/">http://www.phppatterns.com/index.php/article/articleview/48/1/2/</a> (example uses Luis Argerich original Sax Filters).</p>
+<a name="app01lev2sec279"></a><h4 class="docSection2Title">A.32.13. XML_Serializer</h4><a name="app01index574"></a><a name="app01index575"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stephan Schmidt (lead)</span></p>
+<p class="docText">Swiss-army knive for reading and writing XML files. Creates XML files from data structures and vice versa.</P>
+<a name="app01lev3sec272"></a><h5 class="docSection3Title">A.32.13.1 Description</H5>
+<p class="docText">XML_Serializer serializes complex data structures like arrays or object as XML documents. This class helps you generating any XML document you require without the need for DOM. Furthermore this package can be used as a replacement to serialize() and unserialize() as it comes with a matching XML_Unserializer that is able to create PHP data strcutures (like arrays and objects) from XML documents, if type hints are available.</p>
+<p class="docText">If you use the XML_Unserialzer on standard XML files, it will try to guess how it has to be unserialized. In most cases it does exactly what you expect it to do.</P>
+<p class="docText">Try reading a RSS file with XML_Unserializer and you have the whole RSS file in a structured array or even a collection of objects, similar to XML_RSS.</p>
+<p class="docText">Since version 0.8 the package is able to treat XML documents like the simplexml extension of PHP 5.</p>
+<a name="app01lev2sec280"></a><h4 class="docSection2Title">A.32.14. XML_sql2xml</h4><a name="app01index576"></a><a name="app01index577"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Christian Stocker (lead)</span></P>
+<p class="docText">Returns XML from a SQL-Query.</P>
+<a name="app01lev3sec273"></a><h5 class="docSection3Title">A.32.14.1 Description</h5>
+<p class="docText">This class takes a PEAR::DB-Result Object, a sql-query-string, an array and/or an xml-string/file and returns a xml-representation of it. It relies on the DOMXML extension of PHP.</p>
+<a name="app01lev2sec281"></a><h4 class="docSection2Title">A.32.15. XML_Statistics</H4><a name="app01index578"></a><a name="app01index579"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stephan Schmidt (lead)</span></p>
+<p class="docText">Class to obtain statistical information from an XML documents.</p>
+<a name="app01lev3sec274"></a><H5 class="docSection3Title">A.32.15.1 Description</h5>
+<p class="docText">XML_Statistics is able to retrieve statistics about tags, attributes, entities, processing instructions and CDaata chunks in any XML document.</P>
+<a name="app01lev2sec282"></a><h4 class="docSection2Title">A.32.16. XML_SVG</h4><a name="app01index580"></a><a name="app01index581"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: LGPL -</span></p>
+<p class="docText">XML_SVG API</p>
+<a name="app01lev3sec275"></a><h5 class="docSection3Title">A.32.16.1 Description</h5>
+<p class="docText">This package provides an object-oriented API for building SVG documents.</p>
+<a name="app01lev2sec283"></a><h4 class="docSection2Title">A.32.17. XML_svg2image</h4><a name="app01index582"></a><a name="app01index583"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Christian Stocker (lead)</span></p>
+<p class="docText">Converts a svg file to a png/jpeg image</p>
+<a name="app01lev3sec276"></a><h5 class="docSection3Title">A.32.17.1 Description</h5>
+<p class="docText">Converts a svg file to a png/jpeg image with the help of apache-batik (java-program), needs therefore a php with ext/java compiled-in and the batik files from <a class="docLink" target="_blank" href="http://xml.apache.org/batik">http://xml.apache.org/batik</a></p>
+<a name="app01lev2sec284"></a><h4 class="docSection2Title">A.32.18. XML_Transformer</h4><a name="app01index584"></a><a name="app01index585"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Sebastian Bergmann (lead) - Kristian K&ouml;hntopp (developer)</span></P>
+<p class="docText">XML Transformations in PHP</P>
+<a name="app01lev3sec277"></a><h5 class="docSection3Title">A.32.18.1 Description</h5>
+<p class="docText">With the XML/Transformer class one can easily bind PHP functionality to XML tags, thus transforming the input XML tree into an output XML tree without the need for XSLT.</P>
+<a name="app01lev2sec285"></a><h4 class="docSection2Title">A.32.19. XML_Tree</h4><a name="app01index586"></a><a name="app01index587"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP - By Bernd R&ouml;mer (lead) - Tomas V.V.Cox (lead)</span></p>
+<p class="docText">Represent XML data in a tree structure</p>
+<a name="app01lev3sec278"></a><h5 class="docSection3Title">A.32.19.1 Description</h5>
+<p class="docText">Allows for the building of XML data structures using a tree representation, without the need for an extension like DOMXML.</P>
+<a name="app01lev2sec286"></a><h4 class="docSection2Title">A.32.20. XML_Util</H4><a name="app01index588"></a><a name="app01index589"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stephan Schmidt (lead)</span></p>
+<p class="docText">XML utility class.</P>
+<a name="app01lev3sec279"></a><h5 class="docSection3Title">A.32.20.1 Description</h5>
+<p class="docText">Selection of methods that are often needed when working with XML documents. Functionality includes creating of attribute lists from arrays, creation of tags, validation of XML names and more.</p>
+<a name="app01lev2sec287"></a><h4 class="docSection2Title">A.32.21. XML_Wddx</H4><a name="app01index590"></a><a name="app01index591"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Alan Knowles (lead)</span></P>
+<p class="docText">Wddx pretty serializer and deserializer</p>
+<a name="app01lev3sec280"></a><h5 class="docSection3Title">A.32.21.1 Description</h5>
+<p class="docText">XML_Wddx does 2 things:</p>
+<div style="font-weight:bold"><ol class="docList" type="a"><LI><div style="font-weight:normal"><p class="docList">a drop in replacement for the XML_Wddx extension (if it's not built in)</p></div></li><LI><div style="font-weight:normal"><p class="docList">produce an editable wddx file (with indenting etc.) and uses CDATA, rather than char tags</p></div></LI></ol></div>
+<p class="docText">This package contains 2 static method:</p>
+<blockquote><p><p class="docList">XML_Wddx:serialize($value)</p></p><p><p class="docList">XML_Wddx:deserialize($value)</p></p></blockquote>
+<p class="docText">should be 90% compatible with wddx_deserialize(), and the deserializer will use wddx_deserialize if it is built in. No support for recordsets is available at present in the PHP version of the deserializer.</p>
+<a name="app01lev2sec288"></a><h4 class="docSection2Title">A.32.22. XML_XPath</h4><a name="app01index592"></a><a name="app01index593"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Dan Allen (lead)</span></p>
+<p class="docText">The PEAR::XML_XPath class provided an XPath/DOM XML manipulation, maneuvering and query interface.</p>
+<a name="app01lev3sec281"></a><h5 class="docSection3Title">A.32.22.1 Description</h5>
+<p class="docText">The PEAR::XML_XPath class provided an XPath/DOM XML manipulation, maneuvering and query interface.</p>
+<p class="docText">The class allows for easy manipulation, maneuvering and querying of a domxml tree using both xpath queries and DOM walk functions. It uses an internal pointer for all methods on which the action is performed. Results from an dom/xpath query are returned as an XPath_Result object, which contains an internal array of DOM nodes and which extends the common DOM class and hence contains all the DOM functions from the main object to run on each of the elements in the internal array. This class tries to hold as close as possible to the DOM Recommendation. You MUST have the domxml extension to use this class. The XML_XPath class was inspired by a class maintained by Nigel Swinson called phpxpath. The phpxpath class does not rely on PHP xmldom functions and is therefore a sibling to this class: <a class="docLink" target="_blank" href="http://sourceforge.net/projects/phpxpath">http://sourceforge.net/projects/phpxpath</a></p>
+<a name="app01lev2sec289"></a><H4 class="docSection2Title">A.32.23. XML_XSLT_Wrapper</H4><a name="app01index594"></a><a name="app01index595"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Pierre-Alain Joye (lead) - Arnaud Limbourg (contributor)</span></p>
+<p class="docText">Provides a single interface to the different XSLT interface or commands</p>
+<a name="app01lev3sec282"></a><H5 class="docSection3Title">A.32.23.1 Description</h5>
+<p class="docText">This package was written to provide a simpler, cross-library and cross commands interface to doing XSL transformations.</p>
+<p class="docText">It provides :</p>
+<ul><li><p class="docList">support for :</p><UL><li><p class="docList">DOM XSLT php extension</P></li><LI><p class="docList">XSLT php extension</p></li><li><p class="docList">XSLT command line tool (xsltproc)</p></LI><LI><p class="docList">MSXML using COM php extension</p></li><li><p class="docList">XT command line (<a class="docLink" target="_blank" href="http://www.blnz.com/xt/xt-20020426a-src/butorindex.html">http://www.blnz.com/xt/xt-20020426a-src/butorindex.html</a>)<a name="app01index596"></a></p></LI><li><p class="docList">Sablotron command line (<a class="docLink" target="_blank" href="http://www.gingerall.com/charlie/ga/act/gadoc.act?pg=sablot#i__1940">http://www.gingerall.com/charlie/ga/act/gadoc.act?pg=sablot#i__1940</a>) Planned interface :</p><UL><li><p class="docList">XT java interface</P></li><li><p class="docList">xml.apache.org java and C interface (<a class="docLink" target="_blank" href="http://xml.apache.org">http://xml.apache.org</a>)<a name="app01index597"></a></p></li><li><p class="docList">Instant Saxon (<a class="docLink" target="_blank" href="http://users.iclway.co.uk/mhkay/saxon/instant.html">http://users.iclway.co.uk/mhkay/saxon/instant.html</a>)<a name="app01index598"></a></p></li></ul></li></ul></li><li><p class="docList">Batch mode</p><ul><li><p class="docList">XML: multiple transformations of a single XML file</p></LI><LI><p class="docList">XSL: multiple transformations of multiple XML files using a single XSL</p></li></UL></li></ul>
+<p class="docText">See <a class="docLink" target="_blank" href="http://www.pearfr.org/xslt_wrapper/">http://www.pearfr.org/xslt_wrapper/</a> for samples and documentation</p>
+<a name="app01lev2sec290"></a><h4 class="docSection2Title">A.32.24. XML_XUL</h4><a name="app01index599"></a><a name="app01index600"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stephan Schmidt (lead)</span></p>
+<p class="docText">Class to build Mozilla XUL applications.</P>
+<a name="app01lev3sec283"></a><h5 class="docSection3Title">A.32.24.1 Description</H5>
+<p class="docText">The XML User Interface Language (XUL) is a markup language for describing user interfaces. With XUL you can create rich, sophisticated cross-platform web applications easily. XML_XUL provides a API similar to DOM to create XUL applications. There's a PHP object for each XUL element, and the more complex widgets like grids, trees and tabboxes can easily be created with these objects.</p>
+<UL></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec31.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app02.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

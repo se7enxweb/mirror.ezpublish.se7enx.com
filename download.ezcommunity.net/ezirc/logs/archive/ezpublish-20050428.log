@@ -1,0 +1,113 @@
+[04-28-2005 00:03:46] [#ezpublish] <kracker> hmmm
+[04-28-2005 00:12:40] -!- SEAwolfx_ [debian-tor@f46b3caf3adc15cc.node.tor] has quit [Remote closed the connection]
+[04-28-2005 00:17:59] -!- SEAwolfx [~mike@e7068b74525bb815.node.tor] has joined #ezpublish
+[04-28-2005 00:21:12] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[04-28-2005 00:28:06] [#ezpublish] <SEAwolfx> good morning.
+[04-28-2005 00:28:17] [#ezpublish] <SEAwolfx> ez.no is down?!
+[04-28-2005 01:43:59] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 01:44:04] [#ezpublish] <kracker> sweet
+[04-28-2005 01:44:19] [#ezpublish] * kracker now using irc.kde.org
+[04-28-2005 01:51:54] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[04-28-2005 02:09:22] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[04-28-2005 02:27:52] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[04-28-2005 03:02:42] -!- SEAwolfx [~mike@e7068b74525bb815.node.tor] has quit [Remote closed the connection]
+[04-28-2005 03:15:52] -!- Bedlore [~me@ppp241-93.lns2.adl2.internode.on.net] has joined #ezpublish
+[04-28-2005 03:16:37] -!- mode/#ezpublish [+o fh] by ChanServ
+[04-28-2005 03:44:29] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 03:44:56] [#ezpublish] <kracker> dink
+[04-28-2005 04:02:14] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit [Remote closed the connection]
+[04-28-2005 04:03:53] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[04-28-2005 04:19:24] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[04-28-2005 04:28:36] -!- SEAwolfx [debian-tor@5d8b1cdde50cc2f0.node.tor] has joined #ezpublish
+[04-28-2005 05:03:32] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[04-28-2005 05:45:08] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 05:45:46] [#ezpublish] <kracker> ping
+[04-28-2005 06:10:46] -!- Tidemann_ [~SPAZ@ti132110a080-9569.bb.online.no] has joined #ezpublish
+[04-28-2005 06:24:25] [#ezpublish] <Bedlore> anyone know anything about preventing multiple votes on polls
+[04-28-2005 06:29:01] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[04-28-2005 07:07:56] -!- jbrw2 [~jamie@80.168.33.2] has joined #ezpublish
+[04-28-2005 07:09:29] -!- jbrw2 [~jamie@80.168.33.2] has left #ezpublish ["Client Exiting"]
+[04-28-2005 07:45:52] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 07:47:29] [#ezpublish] <kracker> dink
+[04-28-2005 07:56:41] -!- Bedlore [~me@ppp241-93.lns2.adl2.internode.on.net] has quit [tolkien.freenode.net irc.freenode.net]
+[04-28-2005 07:56:57] -!- buz is now known as _buz
+[04-28-2005 07:57:00] -!- _buz is now known as buz
+[04-28-2005 08:01:57] -!- CoderForLife [~mirc@nr17-66-117-211-149.fuse.net] has quit [Read error: 113 (No route to host)]
+[04-28-2005 08:05:13] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[04-28-2005 08:05:43] danmiru [~chatzilla@80.94.225.138] requested CTCP VERSION: 
+[04-28-2005 08:05:43] [notice(danmiru)] VERSION IQ 0.9.3
+[04-28-2005 08:07:18] -!- fh [~fh@stalker.ez.no] has quit [Read error: 148 (No route to host)]
+[04-28-2005 08:11:45] [#ezpublish] <danmiru> i know that it's impossible to use attribute_filer when fetching list for xml data field
+[04-28-2005 08:11:55] [#ezpublish] <danmiru> but i need it, really hardly
+[04-28-2005 08:12:01] [#ezpublish] <danmiru> is there any workaround?
+[04-28-2005 08:26:20] -!- Bedlore [~me@ppp241-93.lns2.adl2.internode.on.net] has joined #ezpublish
+[04-28-2005 08:43:59] -!- SEAwolfx [debian-tor@5d8b1cdde50cc2f0.node.tor] has quit [Remote closed the connection]
+[04-28-2005 08:51:37] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[04-28-2005 09:02:46] -!- SachaS [~Sacha@195.225.201.186] has joined #ezpublish
+[04-28-2005 09:03:07] -!- SachaS [~Sacha@195.225.201.186] has left #ezpublish ["Client exiting"]
+[04-28-2005 09:47:36] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 09:53:13] -!- fh [~fh@stalker.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[04-28-2005 09:58:22] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[04-28-2005 09:58:43] -!- SachaS [~Sacha@195.225.201.186] has joined #ezpublish
+[04-28-2005 09:59:05] -!- SachaS [~Sacha@195.225.201.186] has left #ezpublish ["Client exiting"]
+[04-28-2005 10:11:23] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[04-28-2005 11:47:40] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 13:33:46] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[04-28-2005 13:42:18] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[04-28-2005 13:47:46] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 14:15:57] -!- Zetnix [~zetnix@vpn-tilsatt.hio.no] has joined #ezpublish
+[04-28-2005 14:17:13] [#ezpublish] <Zetnix> What's actually the case with js and ez publish. Is it possible to include a javascript in the pagelayout.tpl with a reference like this?  <script language="JavaScript" src="/design/cc/stylesheets/wtrends.js"></script>
+[04-28-2005 14:17:39] [#ezpublish] <Zetnix> I need to implement a webtrends script to post data from the ez site to another server
+[04-28-2005 14:17:54] [#ezpublish] <Zetnix> but nothing happends
+[04-28-2005 14:18:16] [#ezpublish] <_luke> yes
+[04-28-2005 14:18:16] [#ezpublish] <Zetnix> I get no data
+[04-28-2005 14:18:30] [#ezpublish] <Zetnix> This is the correct way, isn't it`?
+[04-28-2005 14:18:44] [#ezpublish] <Zetnix> and I have placed the script in design/cc/stylesheets/
+[04-28-2005 14:18:46] [#ezpublish] <_luke> <script language="JavaScript" src={"js/wtrends.js"|ezdesign}>
+[04-28-2005 14:18:47] [#ezpublish] <Zetnix> hmm
+[04-28-2005 14:18:55] [#ezpublish] <_luke> makee dir js under design folder
+[04-28-2005 14:19:19] [#ezpublish] <_luke> design folder for your site of course
+[04-28-2005 14:19:27] [#ezpublish] <Zetnix> I got a dir design/sitedesign/stylesheet/
+[04-28-2005 14:19:37] [#ezpublish] <Zetnix> and want to place the js file in the stylesheet folder
+[04-28-2005 14:19:37] [#ezpublish] <_luke> design/(your_design)/js
+[04-28-2005 14:19:43] [#ezpublish] <Zetnix> then  <script language="JavaScript" src="/design/cc/stylesheets/wtrends.js"></script>
+[04-28-2005 14:19:47] [#ezpublish] <Zetnix> this must be right
+[04-28-2005 14:19:53] [#ezpublish] <_luke> <script language="JavaScript" src={"stylesheets/wtrends.js"|ezdesign}>
+[04-28-2005 14:20:00] [#ezpublish] <_luke> should works
+[04-28-2005 14:20:07] [#ezpublish] <Zetnix> but why don't  <script language="JavaScript" src="/design/cc/stylesheets/wtrends.js"></script> work
+[04-28-2005 14:20:09] [#ezpublish] <Zetnix> ?
+[04-28-2005 14:20:10] [#ezpublish] <Zetnix> ;)
+[04-28-2005 14:20:20] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-28-2005 14:20:24] [#ezpublish] <_luke> <script language="JavaScript" src={"stylesheets/wtrends.js"|ezdesign}> -> more flexibile
+[04-28-2005 14:20:35] [#ezpublish] <Zetnix> yes, but  <script language="JavaScript" src="/design/cc/stylesheets/wtrends.js"></script> shuld also work or`?
+[04-28-2005 14:20:45] [#ezpublish] <_luke> yep
+[04-28-2005 14:20:49] [#ezpublish] <Zetnix> but it don't
+[04-28-2005 14:21:02] [#ezpublish] <Zetnix> so I guess the other solution wont work either
+[04-28-2005 14:21:05] [#ezpublish] <_luke> you have ezpublish in root folder
+[04-28-2005 14:21:05] [#ezpublish] <Zetnix> hmm
+[04-28-2005 14:21:29] [#ezpublish] <_luke> http://localhost/ez_root/index.php
+[04-28-2005 14:21:32] [#ezpublish] <_luke> or
+[04-28-2005 14:21:40] [#ezpublish] <_luke> http://localhost/index.php
+[04-28-2005 14:21:47] [#ezpublish] <Zetnix> yup
+[04-28-2005 14:21:57] [#ezpublish] <_luke> the last one?
+[04-28-2005 14:22:02] [#ezpublish] <Zetnix> 3.4.3
+[04-28-2005 14:22:43] [#ezpublish] <Zetnix> usr/local/ez/ezinstallation
+[04-28-2005 14:25:08] [#ezpublish] <Zetnix> naja, dann versuche ich mit etwas anders
+[04-28-2005 14:25:11] [#ezpublish] <Zetnix> danke
+[04-28-2005 14:25:18] [#ezpublish] <Zetnix> tschüss
+[04-28-2005 14:25:56] [#ezpublish] <Zetnix> Have just set up an ez site....am a student, and testing this
+[04-28-2005 14:26:20] -!- Zetnix [~zetnix@vpn-tilsatt.hio.no] has quit []
+[04-28-2005 14:32:05] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[04-28-2005 15:31:32] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[04-28-2005 15:41:05] -!- SachaS [~Sacha@195.225.201.186] has joined #ezpublish
+[04-28-2005 15:41:27] -!- SachaS [~Sacha@195.225.201.186] has left #ezpublish ["Client exiting"]
+[04-28-2005 15:47:55] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 17:56:48] [#ezpublish] <kracker> weaker ...
+[04-28-2005 17:57:36] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit []
+[04-28-2005 17:57:57] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 17:58:27] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has left #ezpublish []
+[04-28-2005 17:58:32] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 17:58:38] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has left #ezpublish []
+[04-28-2005 17:59:02] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-28-2005 17:59:16] -!- CoderForLife [~mirc@nr17-66-117-211-149.fuse.net] has joined #ezpublish
+[04-28-2005 18:35:58] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit []

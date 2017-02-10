@@ -1,0 +1,158 @@
+[01-20-2006 01:04:06] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-20-2006 01:19:57] -!- ordnas [n=ordnas@p549D7409.dip.t-dialin.net] has joined #ezpublish
+[01-20-2006 01:37:10] -!- ordna1 [n=ordnas@p549D740D.dip.t-dialin.net] has joined #ezpublish
+[01-20-2006 01:39:09] -!- tobyS [n=dotxp@popeye.ez.no] has joined #ezpublish
+[01-20-2006 01:55:20] -!- ordnas [n=ordnas@p549D7409.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-20-2006 02:01:40] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-20-2006 02:46:42] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-20-2006 02:56:16] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-20-2006 02:56:39] -!- ordna1 [n=ordnas@p549D740D.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-20-2006 02:56:53] -!- ordnas [n=ordnas@p549D740D.dip.t-dialin.net] has joined #ezpublish
+[01-20-2006 03:03:52] -!- SEAwolfx [n=mike@tor/session/x-b2ffcdaf1305da1a] has quit [Remote closed the connection]
+[01-20-2006 03:32:46] -!- SEAwolfx [n=mike@tor/session/x-80fa3a703d818e2b] has joined #ezpublish
+[01-20-2006 04:33:10] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[01-20-2006 05:07:42] -!- SEAwolfx [n=mike@tor/session/x-80fa3a703d818e2b] has quit [Remote closed the connection]
+[01-20-2006 05:07:53] -!- SEAwolfx [n=mike@h213-50-70-70.vokby.se] has joined #ezpublish
+[01-20-2006 05:26:33] -!- technocrat [i=sniegeli@hst-250-241.splius.lt] has joined #ezpublish
+[01-20-2006 05:41:13] -!- zrg [n=zurgutt@roop.pri.ee] has quit [Read error: 110 (Connection timed out)]
+[01-20-2006 07:02:04] -!- tobyS [n=dotxp@popeye.ez.no] has quit ["Plant your channel to pearadise.net!"]
+[01-20-2006 07:05:50] -!- tobyS [n=dotxp@popeye.ez.no] has joined #ezpublish
+[01-20-2006 07:50:40] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-20-2006 07:55:32] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-20-2006 07:59:07] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[01-20-2006 07:59:17] [#ezpublish] <zrg> i run ez symlinked, kracker
+[01-20-2006 08:35:02] -!- _thomas [n=thomas@c-134-176-13.d.dsl.de.ignite.net] has joined #ezpublish
+[01-20-2006 09:01:45] -!- ordnas [n=ordnas@p549D740D.dip.t-dialin.net] has left #ezpublish []
+[01-20-2006 09:10:59] [#ezpublish] * kris10an hands out cake for everyone! 
+[01-20-2006 09:19:38] -!- SEAwolfx [n=mike@h213-50-70-70.vokby.se] has quit [Remote closed the connection]
+[01-20-2006 09:20:38] -!- SEAwolfx [n=mike@tor/session/x-9ecea7947441e1f1] has joined #ezpublish
+[01-20-2006 09:34:22] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[01-20-2006 09:37:42] -!- technocrat [i=sniegeli@hst-250-241.splius.lt] has quit ["dirbam tyliai"]
+[01-20-2006 10:01:04] -!- tobyS [n=dotxp@popeye.ez.no] has quit ["Plant your channel to pearadise.net!"]
+[01-20-2006 10:01:22] -!- _thomas [n=thomas@c-134-176-13.d.dsl.de.ignite.net] has quit [Remote closed the connection]
+[01-20-2006 10:45:35] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[01-20-2006 10:48:05] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-20-2006 11:52:55] -!- SEAwolfx_ [n=mike@it-hluchnik.de] has joined #ezpublish
+[01-20-2006 12:11:46] [#ezpublish] <kracker> zrg, care to share just how your doin all that?
+[01-20-2006 12:12:10] [#ezpublish] <kracker> pondering....i tried saying it to ez parner people ...
+[01-20-2006 12:12:30] [#ezpublish] <kracker> it didn't even get a flinch then
+[01-20-2006 12:12:54] [#ezpublish] <kracker> (wondering how wrong it is to say it again now that the topic (in general) was mentiond)
+[01-20-2006 12:12:57] [#ezpublish] <kracker> Nice to hear about ez.no site improvements before they are implimented.
+[01-20-2006 12:12:57] [#ezpublish] <kracker> <i>But as for author info, feedback, etc ... what's the point?</i>
+[01-20-2006 12:12:57] [#ezpublish] <kracker> With a total of ... 9 articles in the last 12 months. Only eZ systems posts (or has the ability to post) to the `community` articles category.
+[01-20-2006 12:12:57] [#ezpublish] <kracker> eZ systems makes references to allowing eZ partners being able to submit articles but ... when has anyone seen this?
+[01-20-2006 12:12:57] [#ezpublish] <kracker> /kracker
+[01-20-2006 12:12:59] [#ezpublish] <kracker> <i>not that any of us lowly users have anything to say in the next 6months</i>
+[01-20-2006 12:13:14] [#ezpublish] <kracker> re: http://ez.no/community/forum/general/new_article_section_on_ez_no
+[01-20-2006 12:13:20] [#ezpublish] <zrg> well maybe what i do doesnt qualify, design and settings directories are still separate for sites
+[01-20-2006 12:13:34] [#ezpublish] <kracker> zrg, no i think it does quallify
+[01-20-2006 12:14:00] [#ezpublish] <kracker> zrg,  you are able to keep var/ dirs and db's separate ... right?
+[01-20-2006 12:14:06] [#ezpublish] <zrg> its just so updates to system templates and more importantly, extensions, are easy
+[01-20-2006 12:14:23] [#ezpublish] <zrg> separate, yes
+[01-20-2006 12:14:28] [#ezpublish] <kracker> nods
+[01-20-2006 12:14:42] [#ezpublish] <kracker> yeah i'll have to mention it to bedlore next time round
+[01-20-2006 12:14:48] [#ezpublish] <zrg> i have been long thinking and planning to move to one datatbase for all setup
+[01-20-2006 12:15:09] [#ezpublish] <kracker> i've been there, ... a long time ago, too long really
+[01-20-2006 12:15:51] [#ezpublish] <kracker> zrg, you think that stuff I said is out of line?
+[01-20-2006 12:16:09] [#ezpublish] <zrg> ill have a look, not been on site much
+[01-20-2006 12:19:27] [#ezpublish] <zrg> not much articles yes.. how does the partner thing work, shouldnt anyone get lotsa bonus for writing good practical article?
+[01-20-2006 12:21:58] -!- SEAwolfx [n=mike@tor/session/x-9ecea7947441e1f1] has quit [Remote closed the connection]
+[01-20-2006 12:25:53] [#ezpublish] <kracker> i mean i wrote it and my negative reply to my own coments is ... go write your own web page .. but still i digress
+[01-20-2006 12:47:10] [#ezpublish] <zrg> btw kracker, got a problem - thousands of shop items that need a Option field added and same options for all. Class definition does not have "defaults" unfortunately, any ideas how to do it?
+[01-20-2006 12:47:46] [#ezpublish] <kracker> yeah i remember hearingabout this one the other day
+[01-20-2006 12:48:16] [#ezpublish] <kracker> i did think about it for a while
+[01-20-2006 12:48:35] [#ezpublish] <zrg> someone suggested to just hack it into template but im not sure it will work in shop if the field in actual item does not have the option you select
+[01-20-2006 12:49:06] [#ezpublish] <kracker> i think i (all to quickly) went to thinking , hack you a gibson and you got it ( aka hack the kernel or extension what you need :( )
+[01-20-2006 12:49:20] [#ezpublish] <kracker> i recently added this feature to 2.2 about 2 months ago
+[01-20-2006 12:49:36] [#ezpublish] <kracker> and i had to hack the kernel (errum eztrade module / db)
+[01-20-2006 12:49:58] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-20-2006 12:50:32] [#ezpublish] <kracker> i think the template hack is ... short sighted as other problems will be encountered using that as a solution (long term more problematic , IMHO)
+[01-20-2006 12:51:53] [#ezpublish] <kracker> in the end (linkin park), you want to associate a single product - option with `many` products (one to many relationship), while by default it's only a many to many relationship
+[01-20-2006 12:52:51] [#ezpublish] <kracker> so you could alter the class to support ... defining this relationship at an object level (thought)
+[01-20-2006 12:57:16] [#ezpublish] <kracker> but short of just saying that , i know it prolly wouldbe harder (out of the box) than just talkingabout it. first example, selecting (simply) out of a list of all the products or categories which would be associated with the option (or vise versa)
+[01-20-2006 12:57:42] [#ezpublish] <kracker> in the option edit view (in the admin) ...
+[01-20-2006 12:58:19] [#ezpublish] <kracker> zrg, did i loose ya:?
+[01-20-2006 12:58:32] [#ezpublish] <zrg> yeah :)
+[01-20-2006 12:59:26] [#ezpublish] <zrg> i think i add the option to class and then will have to make script that goes over items and adds the actual choices
+[01-20-2006 13:00:16] [#ezpublish] <kracker> i don't know if the admin (by default provides for a simple way to manage those relationships at a class / object (i'm stale with ez3 lately), this is where i fear you might have to hack something to support just enough to support the relationhips
+[01-20-2006 13:00:32] [#ezpublish] <zrg> relationships?
+[01-20-2006 13:00:37] [#ezpublish] <kracker> yeah a script might be simpler, just insert the sql entries you need
+[01-20-2006 13:00:59] [#ezpublish] <kracker> many products associated to a single option?
+[01-20-2006 13:01:06] [#ezpublish] <zrg> the options are kept fot each object separately i think, what relationships?
+[01-20-2006 13:01:57] [#ezpublish] <kracker> i'm sure they are, but it would be more flexible if it wasn't so 1:1 but instead many : 1
+[01-20-2006 13:02:11] [#ezpublish] <zrg> ah, ok, so i could change it, yes
+[01-20-2006 13:02:20] [#ezpublish] <kracker> which was what i meant by relationships, links, etc
+[01-20-2006 13:02:52] [#ezpublish] <zrg> mhmh, get it now, would be nice but not necessary in my case
+[01-20-2006 13:02:54] [#ezpublish] <kracker> it might take a bit of reworking how the whole thing works (or rather augmenting it to meet your needs) but i do think it is totally do able
+[01-20-2006 13:03:01] [#ezpublish] <kracker> nods
+[01-20-2006 13:03:31] [#ezpublish] <kracker> it all depends on your specific situation, what you need, or *HEHE* what the client can afford
+[01-20-2006 13:03:36] [#ezpublish] <zrg> now if there was example how to modify option in php.. :D
+[01-20-2006 13:04:24] [#ezpublish] <kracker> i sold an ajax product option manager which did (basicly) what your talking about (to speed up the administration (less reloads))
+[01-20-2006 13:04:44] [#ezpublish] <kracker> but it was for eZ publish 2 not eZ publish 3
+[01-20-2006 13:04:59] [#ezpublish] <zrg> mhmh
+[01-20-2006 13:05:08] [#ezpublish] <kracker> so the concept really doesn't help you solve the real problem you have
+[01-20-2006 13:05:37] [#ezpublish] <kracker> 1. backend db is designed in a way which conflicts with your need (guess)
+[01-20-2006 13:06:31] [#ezpublish] <kracker> 2. subsequent kernel code for option features (add/edit/etc) follow and use the conflicting db design
+[01-20-2006 13:06:46] [#ezpublish] <zrg> i get it, im screwed :)
+[01-20-2006 13:07:47] [#ezpublish] <kracker> 3. administration follows the design (and other features of the admin may not exist to support a simple agmentation of specifiying an option to many products (in one page load) )
+[01-20-2006 13:08:14] [#ezpublish] <kracker> these are just a few of the things i never did like about eZ publish 3's ecommerce design :(
+[01-20-2006 13:09:30] [#ezpublish] <kracker> tho i have this lingering thought .... that i had heard (in the ez.no forums) of someone who did address this problem .... once) but i don't recall where and i don't think source code was contributed
+[01-20-2006 13:10:34] [#ezpublish] <zrg> yeah, its main focus is not commerce, the shop is really very primitive, Ive done Interchange sites, now IC is horrendously complex i think but whatever you can think of in a shop is possible
+[01-20-2006 13:11:08] [#ezpublish] <kracker> i don't think your screwed, it's just how much of a solutiondo you need
+[01-20-2006 13:11:39] [#ezpublish] <zrg> dont get paid for it really so ill try easiest way out :P
+[01-20-2006 13:12:03] [#ezpublish] <kracker> 1. one time - script the sql creation to fake it to look like it works right but with lots of product option ( i did this back in 2002 )
+[01-20-2006 13:12:40] [#ezpublish] <kracker> 2. hack eZ publish kernel (to support the feature properly , takes time, worst solution)
+[01-20-2006 13:13:09] [#ezpublish] <kracker> 3. write a clean extension to support the features not dependant on the existing option functionlity (most time consuming, best solution)
+[01-20-2006 13:13:14] [#ezpublish] <zrg> maybe if i enter one manually and then look at sql log, that should help
+[01-20-2006 13:13:28] [#ezpublish] <kracker> worth a shot
+[01-20-2006 13:13:45] [#ezpublish] <kracker> hey wait a minute, you don't get paid for it? dude why
+[01-20-2006 13:15:36] [#ezpublish] <kracker> blind (fyi), you might be able to hack eZ publish kernel and the admin and use http://ez.no/community/contribs/datatypes/enhanced_selection (for the product selection in optionedit) ...
+[01-20-2006 13:16:22] [#ezpublish] <kracker> if you really need a way to add or remove products from an option || or || options from a product ... etc
+[01-20-2006 13:16:31] [#ezpublish] <kracker> after you have done the inital setup?
+[01-20-2006 13:18:51] [#ezpublish] <kracker> searching ez.no
+[01-20-2006 13:18:53] [#ezpublish] <kracker> http://ez.no/content/advancedsearch?&SearchText=product+option&SubTreeArray%5B%5D=308&SearchDate=-1&SearchPageLimit=5
+[01-20-2006 13:18:59] [#ezpublish] <kracker> http://ez.no/community/forum/setup_design/shop_options
+[01-20-2006 13:20:33] [#ezpublish] <kracker> http://ez.no/community/forum/developer/datatype_to_handle_product_options
+[01-20-2006 13:21:33] [#ezpublish] <kracker> http://ez.no/community/forum/developer/datatype_to_handle_product_options/(offset)/20
+[01-20-2006 13:23:32] [#ezpublish] <kracker> ahh, bard talks a bit on this in the second page
+[01-20-2006 13:23:34] [#ezpublish] <kracker> http://ez.no/community/forum/developer/datatype_to_handle_product_options/(offset)/20#msg40024
+[01-20-2006 13:25:19] [#ezpublish] <kracker> http://ez.no/community/forum/general/product_options_in_ez_3/re_product_options_in_ez_3
+[01-20-2006 13:25:23] [#ezpublish] <kracker> ...
+[01-20-2006 13:25:31] [#ezpublish] <kracker> ehh i threw down
+[01-20-2006 13:29:54] [#ezpublish] <zrg> "Though the available product options are specified at class level, one can select the desired product option when ordering the product. As mentioned, I suggest you try creating a class using the price and option datatypes to see how this works."
+[01-20-2006 13:30:52] [#ezpublish] <zrg> thats what i want, option at class level, is he talking bs?
+[01-20-2006 13:31:04] [#ezpublish] <zrg> or maybe it has been changed
+[01-20-2006 13:31:12] [#ezpublish] <kracker> i think it's real
+[01-20-2006 13:31:17] [#ezpublish] <zrg> how?
+[01-20-2006 13:31:25] [#ezpublish] <kracker> i doubt it would be removed feature
+[01-20-2006 13:31:38] [#ezpublish] <kracker> do you have custom product class  or stock
+[01-20-2006 13:31:48] [#ezpublish] <zrg> custom
+[01-20-2006 13:32:16] [#ezpublish] <zrg> its pictures and i need print sizes for all, A4, A3 etc
+[01-20-2006 13:32:27] [#ezpublish] <kracker> with the option datatype in the product class ?
+[01-20-2006 13:32:55] [#ezpublish] <zrg> just added one, only field i can fill in is called "Default name"
+[01-20-2006 13:33:38] [#ezpublish] <kracker> nods, can you add another field?
+[01-20-2006 13:34:06] [#ezpublish] <zrg> no, thats all there is, name, identifier, default name
+[01-20-2006 13:34:21] [#ezpublish] <kracker> hrm :?
+[01-20-2006 13:34:31] [#ezpublish] <zrg> should be more?
+[01-20-2006 13:36:06] [#ezpublish] <zrg> i have a dark feeling about this..
+[01-20-2006 13:37:02] [#ezpublish] <zrg> maybe my installation is broken
+[01-20-2006 13:37:06] [#ezpublish] <kracker> i thought it suppored more but i could bery well be wrong, it has been a while
+[01-20-2006 13:37:22] [#ezpublish] <kracker> this is a job for a qui8ck look at the ez3 demo admin
+[01-20-2006 13:38:44] [#ezpublish] <kracker> wait one ... checking
+[01-20-2006 13:38:52] [#ezpublish] <kracker> fyi , http://ez.no/products/ez_publish_cms/demo
+[01-20-2006 13:39:18] [#ezpublish] <kracker> oh
+[01-20-2006 13:39:29] [#ezpublish] <kracker> well add an optionfield to your product class (Then save)
+[01-20-2006 13:39:32] [#ezpublish] <kracker> then edit a product
+[01-20-2006 13:40:27] [#ezpublish] <kracker> while editing option you can add multi option
+[01-20-2006 13:41:53] [#ezpublish] <kracker> (cough) though they only save for that one product
+[01-20-2006 13:42:43] [#ezpublish] <kracker>  so you might do well to hack that functionality (which is alright ... i guess) to make that optionlist availaable at a class level rather than at an object level :(
+[01-20-2006 13:42:47] [#ezpublish] <kracker> which was what you were saying
+[01-20-2006 13:43:39] [#ezpublish] <kracker> though
+[01-20-2006 13:43:49] [#ezpublish] <kracker> a lot of work for no money
+[01-20-2006 14:12:04] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-20-2006 17:02:26] -!- tobmaster [n=tobmaste@dslb-084-061-005-177.pools.arcor-ip.net] has joined #ezpublish
+[01-20-2006 17:50:08] -!- tobmaster [n=tobmaste@dslb-084-061-005-177.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[01-20-2006 18:33:17] -!- _Jens is now known as Jens
+[01-20-2006 18:52:57] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 113 (No route to host)]
+[01-20-2006 21:44:32] -!- SEAwolfx_ [n=mike@it-hluchnik.de] has quit [Remote closed the connection]
+[01-20-2006 21:44:47] -!- SEAwolfx [n=mike@tor/session/x-acf0f3cf777e2f86] has joined #ezpublish

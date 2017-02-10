@@ -1,0 +1,51 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.2.&nbsp; Objects</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec2"></a><h3 class="docSection1Title">3.2. Objects</h3>
+<p class="docText">The main difference in OOP as opposed to functional programming is that the data and code are bundled together into one entity, which is known as an <span class="docEmphStrong">object</span>. Object-oriented applications are usually split up into a number of objects that interact with each other. Each object is usually an entity of the problem, which is self-contained and has a bunch of properties and methods. The properties are the object's <span class="docEmphStrong">data</span>, which basically means the variables that belong to the object. The <span class="docEmphStrong">methods</span>if you are coming from a functional backgroundare basically the functions that the object supports. Going one step further, the functionality that is intended for other objects to be accessed and used during interaction is called an object's <span class="docEmphStrong">interface</span>.<a name="ch03index03"></a><a name="ch03index04"></a></p>
+<p class="docText"><a class="docLink" href="#ch03fig01">Figure 3.1</a> represents a class. A <span class="docEmphStrong">class</span> is a template for an object and describes what methods and properties an object of this type will have. In this example, the class represents a person. For each person in your application, you can make a separate instance of this class that represents the person's information. For example, if two people in our application are called Joe and Judy, we would create two separate instances of this class and would call the <tt>setName()</tt> method of each with their names to initialize the variable holding the person's name, <tt>$name</tt>. The methods and members that other interacting objects may use are a class's contract. In this example, the person's contracts to the outside world are the two <tt>set</tt> and <tt>get</tt> methods, <tt>setName()</tt> and <tt>getName().</tt><a name="ch03index05"></a><a name="ch03index06"></a><a name="ch03index07"></a><a name="ch03index08"></a><a name="ch03index09"></a></p>
+<a name="ch03fig01"></a><p><center><H5 class="docFigureTitle">Figure 3.1. Diagram of class Person.</h5>
+<p class="docText"><img border="0" alt="" width="200" height="442" SRC="images/013147149X/graphics/03fig01.gif;380137"></P></center></p><BR>
+<p class="docText">The following PHP code defines the class, creates two instances of it, sets the name of each instance appropriately, and prints the names:<a name="ch03index10"></a></p>
+<pre>
+class Person {
+    private $name;
+
+    function setName($name)
+    {
+        $this-&gt;name = $name;
+    }
+    function getName()
+    {
+        return $this-&gt;name;
+    }
+};
+
+$judy = new Person();
+$judy-&gt;setName("Judy");
+
+$joe = new Person();
+$joe-&gt;setName("Joe");
+
+print $judy-&gt;getName() . "\n";
+print $joe-&gt;getName(). "\n";
+</pre><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></TD></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

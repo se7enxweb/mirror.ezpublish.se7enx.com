@@ -1,0 +1,388 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 2.5.&nbsp; Basic Data Types</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch02lev1sec5"></a><h3 class="docSection1Title">2.5. Basic Data Types</h3>
+<p class="docText">Eight different data types exist in PHP, five of which are scalar and each of the remaining three has its own uniqueness. The previously discussed variables can contain values of any of these data types without explicitly declaring their type. The variable &quot;behaves&quot; according to the data type it contains.<a name="ch02index41"></a><a name="ch02index42"></a></p>
+<a name="ch02lev2sec4"></a><h4 class="docSection2Title">2.5.1. Integers</h4>
+<p class="docText"><span class="docEmphStrong">Integers</span> are whole numbers and are equivalent in range as your C compiler's <tt>long</tt> value. On many common machines, such as Intel Pentiums, that means a 32-bit signed integer with a range between 2,147,483,648 to +2,147,483,647.<a name="ch02index43"></a><a name="ch02index44"></a></P>
+<p class="docText">Integers can be written in decimal, hexadecimal (prefixed with 0x), and octal notation (prefixed with 0), and can include <tt>+</tt>/<tt>-</tt> signs.</p>
+<p class="docText">Some examples of integers include</P>
+<pre>
+240000
+0xABCD
+007
+-100
+</pre><br>
+<a name="ch02note02"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">As integers are signed, the right shift operator in PHP always does a signed shift.</p></div><br>
+<a name="ch02lev2sec5"></a><h4 class="docSection2Title">2.5.2. Floating-Point Numbers</h4>
+<p class="docText"><span class="docEmphStrong">Floating-point numbers</span> (also known as <span class="docEmphStrong">real numbers</span>) represent real numbers and are equivalent to your platform C compiler's <span class="docEmphasis">double</span> data type. On common platforms, the data type size is 8 bytes and it has a range of approximately 2.2E308 to 1.8E+308. Floating-point numbers include a decimal point and can include a <tt>+</tt>/<tt>-</tt> sign and an exponent value.<a name="ch02index45"></a><a name="ch02index46"></a><a name="ch02index47"></a><a name="ch02index48"></a></P>
+<p class="docText">Examples of floating-point numbers include</P>
+<pre>
+3.14
++0.9e-2
+-170000.5
+54.6E42
+</pre><br>
+<a name="ch02lev2sec6"></a><h4 class="docSection2Title">2.5.3. Strings</h4>
+<p class="docText"><span class="docEmphStrong">Strings</span> in PHP are a sequence of characters that are always internally null-terminated. However, unlike some other languages, such as C, PHP does not rely on the terminating null to calculate a string's length, but remembers its length internally. This allows for easy handling of binary data in PHPfor example, creating an image on-the-fly and outputting it to the browser. The maximum length of strings varies according to the platform and C compiler, but you can expect it to support at least 2GB. Don't write programs that test this limit because you're likely to first reach your memory limit.<a name="ch02index49"></a><a name="ch02index50"></a></p>
+<p class="docText">When writing string values in your source code, you can use double quotes ("), single quotes (') or here-docs to delimit them. Each method is explained in this section.</P>
+<a name="ch02lev3sec4"></a><h5 class="docSection3Title">2.5.3.1 Double Quotes</h5>
+<p class="docText">Examples for double quotes:<a name="ch02index51"></a><a name="ch02index52"></a><a name="ch02index53"></a><a name="ch02index54"></a></P>
+<pre>
+"PHP: Hypertext Pre-processor"
+"GET / HTTP/1.0\n"
+"1234567890"
+</pre><br>
+<p class="docText">Strings can contain pretty much all characters. Some characters can't be written as is, however, and require special notation:</P>
+<p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><colgroup><col width="137.5"><col width="412.5"></colgroup><thead></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\n</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Newline.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\t</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Tab.</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\"</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Double quote.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\\</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Backslash.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\0</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">ASCII 0 (null).</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>\r</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Line feed.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\$</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Escape <tt>$</tt> sign so that it is not treated as a variable but as the character <tt>$</tt>.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\{Octal #}</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The character represented by the specified octal <tt>#</tt>for example, <tt>\70</tt> represents the letter <tt>8</tt>.</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\x{Hexadecimal #}</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The character represented by the specified hexadecimal <tt>#</tt>for example, <tt>\0x32</tt> represents the letter <tt>2</tt>.</p></td></tr></table></p><br>
+<p class="docText">An additional feature of double-quoted strings is that certain notations of variables and expressions can be embedded directly within them. Without going into specifics, here are some examples of legal strings that embed variables. The references to variables are automatically replaced with the variables' values, and if the values aren't strings, they are converted to their corresponding string representations (for example, the integer <tt>123</tt> would be first converted to the string <tt>"123"</tt>).<a name="ch02index55"></a><a name="ch02index56"></a><a name="ch02index57"></a><a name="ch02index58"></a></P>
+<pre>
+"The result is $result\n"
+"The array offset $i contains $arr[$i]"
+</pre><br>
+<p class="docText">In cases, where you'd like to concatenate strings with values (such as variables and expressions) and this syntax isn't sufficient, you can use the . (dot) operator to concatenate two or more strings. This operator is covered in a later section.</P>
+<a name="ch02lev3sec5"></a><h5 class="docSection3Title">2.5.3.2 Single Quotes</H5>
+<p class="docText">In addition to double quotes, single quotes may also delimit strings. However, in contrast to double quotes, single quotes do not support all the double quotes' escaping and variable substitution.<a name="ch02index59"></a><a name="ch02index60"></a><a name="ch02index61"></a><a name="ch02index62"></a></p>
+<p class="docText">The following table includes the only two escapings supported by single quotes:</p>
+<p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><colgroup><col width="192.5"><col width="357.5"></colgroup><thead></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>\'</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Single quote.</p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>\\</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Backslash, used when wanting to represent a backslash followed by a single quotefor example, <tt>\\'.</tt></p></td></tr></table></p><br>
+<p class="docText">Examples:</p>
+<pre>
+'Hello, World'
+'Today\'s the day'
+</pre><br>
+<a name="ch02lev3sec6"></a><h5 class="docSection3Title">2.5.3.3 Here-Docs</h5>
+<p class="docText"><span class="docEmphStrong">Here-docs</span> enable you to embed large pieces of text in your scripts, which may include lots of double quotes and single quotes, without having to constantly escape them.<a name="ch02index63"></a><a name="ch02index64"></a><a name="ch02index65"></a></p>
+<p class="docText">The following is an example of a here-doc:</p>
+<pre><a name="PLID5"></a><div class="v1"><a href="ch02lev1sec5.html#PLID5">[View full width]</a></div>
+&lt;&lt;&lt;THE_END
+PHP stands for "PHP: Hypertext Preprocessor".
+The acronym "PHP" is therefore, usually referred to as a recursive acronym because the
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> long form contains the acronym itself.
+As this text is being written in a here-doc there is no need to escape the double quotes.
+THE_END
+</pre><br>
+<p class="docText">The strings starts with <tt>&lt;&lt;&lt;</tt>, followed by a string that you know doesn't appear in your text. It is terminated by writing that string at the beginning of a line, followed by an optional semicolon (<tt>;</tt>), and then a required newline (<tt>\n</tt>). Escaping and variable substitution in here-docs is identical to double-quoted strings except that you are not required to escape double quotes.</p>
+<a name="ch02lev3sec7"></a><h5 class="docSection3Title">2.5.3.4 Accessing String Offsets</h5>
+<p class="docText">Individual characters in a string can be accessed using the <tt>$str{offset}</tt> notation. You can use it to both read and write string offsets. When reading characters, this notation should be used only to access valid indices. When modifying characters, you may access offsets that don't yet exist. PHP automatically sets that offset to the said character, and if this results in a gap between the ending of the original string and the offset of the new character, the gap filled with space characters (' ').<a name="ch02index66"></a><a name="ch02index67"></a><a name="ch02index68"></a><a name="ch02index69"></a></p>
+<p class="docText">This example creates and prints the string <tt>"Andi"</tt> (in an awkward way):</P>
+<pre>
+$str = "A";
+$str{2} = "d";
+$str{1} = "n";
+$str = $str . "i";
+print $str;
+</pre><BR>
+<a name="ch02note03"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">For many cases, PHP has string manipulation functions which use efficient algorithms. You should first look at them before you access strings directly using string offsets. They are usually prefixed with <tt>str_</tt>. For more complex needs, the regular expressions functionsmost notably the <tt>pcre_</tt> family of functionswill come in handy.</p></div><BR>
+<a name="ch02note04"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">In PHP 4, you could use <tt>[]</tt> (square brackets) to access string offsets. This support still exists in PHP 5, and you are likely to bump into it often. However, you should really use the <tt>{}</tt> notation because it differentiates string offsets from array offsets and thus, makes your code more readable.<a name="ch02index70"></a><a name="ch02index71"></a><a name="ch02index72"></a><a name="ch02index73"></a></p></div><br>
+<a name="ch02lev2sec7"></a><h4 class="docSection2Title">2.5.4. Booleans</h4>
+<p class="docText">Booleans were introduced for the first time in PHP 4 and didn't exist in prior versions. A Boolean value can be either <tt>true</tt> or <tt>false</tt>.<a name="ch02index74"></a><a name="ch02index75"></a></P>
+<p class="docText">As previously mentioned, PHP automatically converts types when needed. Boolean is probably the type that other types are most often converted to behind the scenes. This is because, in any conditional code such as <tt>if</tt> statements, loops, and so on, types are converted to this scalar type to check if the condition is satisfied. Also, comparison operators result in a Boolean value.</p>
+<p class="docText">Consider the following code fragment:</P>
+<pre>
+$numerator = 1;
+$denominator = 5;
+
+if ($denominator == 0) {
+    print "The denominator needs to be a non-zero number\n";
+}
+</pre><br>
+<p class="docText">The result of the equal-than operator is a Boolean; in this case, it would be <tt>false</tt> and, therefore, the <tt>if()</tt> statement would not be entered.</P>
+<p class="docText">Now, consider the next code fragment:</p>
+<pre>
+$numerator = 1;
+$denominator = 5;
+
+if ($denominator) {
+    /* Perform calculation */
+} else {
+    print "The denominator needs to be a non-zero number\n";
+}
+</pre><br>
+<p class="docText">You can see that no comparison operator was used in this example; however, PHP automatically internally converted <tt>$denominator</tt> or, to be more accurate, the value <tt>5</tt> to its Boolean equivalent, <tt>true</tt>, to perform the <tt>if()</tt> statement and, therefore, enter the calculation.</p>
+<p class="docText">Although not all types have been covered yet, the following table shows truth values for their values. You can revisit this table to check for the types of Boolean value equivalents, as you learn about the remaining types.<a name="ch02index76"></a><a name="ch02index77"></a></P>
+<P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><colgroup><col width="183.33333333333331"><col width="183.33333333333331"><col width="183.33333333333331"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Data Type</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">False Values</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">True Values</span></p></th></TR></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Integer</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">0</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">All non-zero values</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Floating point</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">0.0</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">All non-zero values</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Strings</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Empty strings ()""</p>
+<p class="docText">The zero string ()"0"</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">All other strings</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Null</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Always</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Never</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Array</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">If it does not contain any elements</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">If it contains at least one element</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Object</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Never</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Always</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Resource</P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Never</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Always</p></td></tr></table></p><br>
+<a name="ch02lev2sec8"></a><H4 class="docSection2Title">2.5.5. Null</h4>
+<p class="docText"><span class="docEmphStrong">Null</span> is a data type with only one possible value: the <tt>NULL</tt> value. It marks variables as being empty, and it's especially useful to differentiate between the empty string and null values of databases.<a name="ch02index78"></a><a name="ch02index79"></a></P>
+<p class="docText">The <tt>isset($variable)</tt> operator of PHP returns <tt>false</tt> for <tt>NULL</tt>, and <tt>true</tt> for any other data type, as long as the variable you're testing exists.</P>
+<p class="docText">The following is an example of using <tt>NULL</tt>:</p>
+<pre>
+$value = NULL;
+</pre><br>
+<a name="ch02lev2sec9"></a><h4 class="docSection2Title">2.5.6. Resources</h4>
+<p class="docText"><span class="docEmphStrong">Resources</span>, a special data type, represent a PHP extension resource such as a database query, an open file, a database connection, and lots of other external types.</P>
+<p class="docText">You will never directly touch variables of this type, but will pass them around to the relevant functions that know how to interact with the specified resource.</P>
+<a name="ch02lev2sec10"></a><h4 class="docSection2Title">2.5.7. Arrays</h4>
+<p class="docText">An <span class="docEmphStrong">array</span> in PHP is a collection of key/value pairs. This means that it maps keys (or indexes) to values. <span class="docEmphStrong">Array indexes</span> can be either integers or strings whereas values can be of any type (including other arrays).<a name="ch02index80"></a><a name="ch02index81"></a><a name="ch02index82"></a></p>
+<a name="ch02note05"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">Arrays in PHP are implemented using hash tables, which means that accessing a value has an average complexity of O(1).<a name="ch02index83"></a></P></div><br>
+<a name="ch02lev3sec8"></a><h5 class="docSection3Title">2.5.7.1 <tt>array()</tt> construct</H5>
+<p class="docText">Arrays can be declared using the <tt>array()</tt> language construct, which generally takes the following form (elements inside square brackets, <tt>[]</tt>, are optional):<a name="ch02index84"></a><a name="ch02index85"></a><a name="ch02index86"></a></p>
+<pre>
+array([key =&gt;] value, [key =&gt;] value, ...)
+</pre><BR>
+<p class="docText">The key is optional, and when it's not specified, the key is automatically assigned one more than the largest previous integer key (starting with 0). You can intermix the use with and without the key even within the same declaration.</p>
+<p class="docText">The value itself can be of any PHP type, including an array. Arrays containing arrays give a similar result as multi-dimensional arrays in other languages.</p>
+<p class="docText">Here are a few examples:</p>
+<ul><li><p class="docList"><tt>array(1, 2, 3)</tt> is the same as the more explicit <tt>array(0 =&gt; 1, 1 =&gt; 2, 2 =&gt; 3)</tt>.</p></li><li><p class="docList"><tt>array("name" =&gt; "John", "age" =&gt; 28)</tt></p></li><li><p class="docList"><tt>array(1 =&gt; "ONE", "TWO", "THREE")</tt> is equivalent to <tt>array(1 =&gt; "ONE", 2 =&gt; "TWO", 3 =&gt; "THREE").</tt></p></li><li><p class="docList"><tt>array()</tt> an empty array.</p></li></UL>
+<p class="docText">Here's an example of a nested <tt>array()</tt> statement:</P>
+<pre>
+array(array("name" =&gt; "John", "age" =&gt; 28), array("name" =&gt; "Barbara", "age" =&gt; 67))
+</pre><br>
+<p class="docText">The previous example demonstrates an array with two elements: Each one is a collection (array) of a person's information.</p>
+<a name="ch02lev3sec9"></a><H5 class="docSection3Title">2.5.7.2 Accessing Array Elements</h5>
+<p class="docText">Array elements can be accessed by using the <tt>$arr[key]</tt> notation, where <tt>key</tt> is either an integer or string expression. When using a constant string for <tt>key,</tt> make sure you don't forget the single or double quotes, such as <tt>$arr["key"]</tt>. This notation can be used for both reading array elements and modifying or creating new elements.<a name="ch02index87"></a><a name="ch02index88"></a><a name="ch02index89"></a></p>
+<a name="ch02lev3sec10"></a><h5 class="docSection3Title">2.5.7.3 Modifying/Creating Array Elements</h5>
+<pre>
+$arr1 = array(1, 2, 3);
+$arr2[0] = 1;
+$arr2[1] = 2;
+$arr2[2] = 3;
+
+print_r($arr1);
+print_r($arr2);
+</pre><br>
+<p class="docText">The <tt>print_r()</tt> function has not been covered yet in this book, but when it is passed an array, it prints out the array's contents in a readable way. You can use this function when debugging your scripts.</p>
+<p class="docText">The previous example prints</P>
+<pre>
+Array
+(
+    [0] =&gt; 1
+    [1] =&gt; 2
+    [2] =&gt; 3
+)
+Array
+(
+    [0] =&gt; 1
+    [1] =&gt; 2
+    [2] =&gt; 3
+)
+</pre><br>
+<p class="docText">So, you can see that you can use both the <tt>array()</tt> construct and the <tt>$arr[key]</tt> notation to create arrays. Usually, <tt>array()</tt> is used to declare arrays whose elements are known at compile-time, and the <tt>$arr[key]</tt> notation is used when the elements are only computed at runtime.</P>
+<p class="docText">PHP also supports a special notation, <tt>$arr[]</tt>, where the key is not specified. When creating new array offsets using this notation (fo example, using it as the l-value), the key is automatically assigned as one more than the largest previous integer key.</p>
+<p class="docText">Therefore, the previous example can be rewritten as follows:</P>
+<pre>
+$arr1 = array(1, 2, 3);
+$arr2[] = 1;
+$arr2[] = 2;
+$arr2[] = 3;
+</pre><br>
+<p class="docText">The result is the same as in the previous example.<a name="ch02index90"></a><a name="ch02index91"></a><a name="ch02index92"></a><a name="ch02index93"></a></p>
+<p class="docText">The same holds true for arrays with string keys:</p>
+<pre>
+$arr1 = array("name" =&gt; "John", "age" =&gt; 28);
+$arr2["name"] = "John";
+$arr2["age"] = 28;
+
+if ($arr1 == $arr2) {
+    print '$arr1 and $arr2 are the same' . "\n";
+}
+</pre><br>
+<p class="docText">The message confirming the equality of both arrays is printed.</P>
+<a name="ch02lev3sec11"></a><H5 class="docSection3Title">2.5.7.4 Reading array values</h5>
+<p class="docText">You can use the <tt>$arr[key]</tt> notation to read array values. The next few examples build on top of the previous example:<a name="ch02index94"></a><a name="ch02index95"></a><a name="ch02index96"></a></p>
+<pre>
+print $arr2["name"];
+if ($arr2["age"] &lt; 35) {
+    print " is quite young\n";
+}
+</pre><br>This example prints<pre>
+John is quite young
+</pre><br>
+<a name="ch02note06"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">As previously mentioned, using the <tt>$arr[]</tt> syntax is not supported when reading array indexes, but only when writing them.</p></div><br>
+<a name="ch02lev3sec12"></a><H5 class="docSection3Title">2.5.7.5 Accessing Nested Arrays (or Multi-Dimensional Arrays)</h5>
+<p class="docText">When accessing nested arrays, you can just add as many square brackets as required to reach the relevant value. The following is an example of how you can declare nested arrays:<a name="ch02index97"></a><a name="ch02index98"></a><a name="ch02index99"></a><a name="ch02index100"></a><a name="ch02index101"></a></P>
+<pre><a name="PLID18"></a><div class="v1"><a href="ch02lev1sec5.html#PLID18">[View full width]</a></div>
+$arr = array(1 =&gt; array("name" =&gt; "John", "age" =&gt; 28), array("name" =&gt; "Barbara", "age" =&gt;
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> 67))
+</pre><br>
+<p class="docText">You could achieve the same result with the following statements:</p>
+<pre>
+$arr[1]["name"] = "John";
+$arr[1]["age"] = 28;
+$arr[2]["name"] = "Barbara";
+$arr[2]["age"] = 67;
+</pre><br>
+<p class="docText">Reading a nested array value is trivial using the same notation. For example, if you want to print John's age, the following statement does the trick:</p>
+<pre>
+print $arr[1]["age"];
+</pre><br>
+<a name="ch02lev3sec13"></a><h5 class="docSection3Title">2.5.7.6 Traversing Arrays Using <tt>foreach</tt></h5>
+<p class="docText">There are a few different ways of iterating over an array. The most elegant way is the <tt>foreach()</tt> loop construct.<a name="ch02index102"></a><a name="ch02index103"></a><a name="ch02index104"></a><a name="ch02index105"></a></p>
+<p class="docText">The general syntax of this loop is</p>
+<pre>
+foreach($array as [$key =&gt;] [&amp;] $value)
+        ...
+</pre><br>
+<p class="docText"><tt>$key</tt> is optional, and when specified, it contains the currently iterated value's key, which can be either an integer or a string value, depending on the key's type.<a name="ch02index106"></a></p>
+<p class="docText">Specifying <tt>&amp;</tt> for the value is also optional, and it has to be done if you are planning to modify <tt>$value</tt> and want it to propagate to <tt>$array</tt>. In most cases, you won't want to modify the <tt>$value</tt> when iterating over an array and will, therefore, not need to specify it.<a name="ch02index107"></a></p>
+<p class="docText">Here's a short example of the <tt>foreach()</tt> loop:</p>
+<pre>
+$players = array("John", "Barbara", "Bill", "Nancy");
+
+print  "The players are:\n";
+foreach ($players as $key =&gt; $value) {
+       print "#$key = $value\n";
+}
+</pre><br>The output of this example is<pre>
+The players are:
+#0 = John
+#1 = Barbara
+#2 = Bill
+#3 = Nancy
+</pre><br>
+<p class="docText">Here's a more complicated example that iterates over an array of people and marks which person is considered old and which one is considered young:</p>
+<pre><a name="PLID24"></a><div class="v1"><a href="ch02lev1sec5.html#PLID24">[View full width]</a></div>
+$people = array(1 =&gt; array("name" =&gt; "John", "age" =&gt; 28), array("name" =&gt; "Barbara",
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> "age" =&gt; 67));
+
+foreach ($people as &amp;$person) {
+    if ($person["age"] &gt;= 35) {
+           $person["age group"] = "Old";
+    } else {
+           $person["age group"] = "Young";
+    }
+}
+
+print_r($people);
+</pre><BR>
+<p class="docText">Again, this code makes use of the <tt>print_r()</tt> function.</P>
+<p class="docText">The output of the previous code is the following:<a name="ch02index108"></a><a name="ch02index109"></a><a name="ch02index110"></a><a name="ch02index111"></a></p>
+<pre>
+Array
+(
+    [1] =&gt; Array
+        (
+            [name] =&gt; John
+            [age] =&gt; 28
+            [age group] =&gt; Young
+        )
+
+    [2] =&gt; Array
+        (
+            [name] =&gt; Barbara
+            [age] =&gt; 67
+            [age group] =&gt; Old
+        )
+
+)
+</pre><br>
+<p class="docText">You can see that both the John and Barbara arrays inside the <tt>$people</tt> array were added an additional value with their respective age group.</P>
+<a name="ch02lev3sec14"></a><h5 class="docSection3Title">2.5.7.7 Traversing Arrays Using <tt>list()</tt> and <tt>each()</tt></h5><a name="ch02index112"></a>
+<p class="docText">Although <tt>foreach()</tt> is the nicer way of iterating over an array, an additional way of traversing an array is by using a combination of the <tt>list()</tt> construct and the <tt>each()</tt> function:<a name="ch02index113"></a><a name="ch02index114"></a><a name="ch02index115"></a><a name="ch02index116"></a><a name="ch02index117"></a><a name="ch02index118"></a><a name="ch02index119"></a><a name="ch02index120"></a></p>
+<pre>
+$players = array("John", "Barbara", "Bill", "Nancy");
+
+reset($players);
+
+while (list($key, $val) = each($players)) {
+       print "#$key = $val\n";
+}
+</pre><br>The output of this example is<a name="ch02index121"></a><a name="ch02index122"></a><a name="ch02index123"></a><a name="ch02index124"></a><a name="ch02index125"></a><a name="ch02index126"></a><a name="ch02index127"></a><a name="ch02index128"></a><pre>
+#0 = John
+#1 = Barbara
+#2 = Bill
+#3 = Nancy
+</pre><br>
+<a name="ch02lev3sec15"></a><h5 class="docSection3Title">2.5.7.8 <tt>reset()</tt></H5>
+<p class="docText">Iteration in PHP is done by using an internal array pointer that keeps record of the current position of the traversal. Unlike with <tt>foreach()</tt>, when you want to use <tt>each()</tt> to iterate over an array, you must <tt>reset()</tt> the array before you start to iterate over it. In general, it is best for you to always use <tt>foreach()</tt> and not deal with this subtle nuisance of <tt>each()</tt> traversal.<a name="ch02index129"></a><a name="ch02index130"></a><a name="ch02index131"></a><a name="ch02index132"></a></P>
+<a name="ch02lev3sec16"></a><h5 class="docSection3Title">2.5.7.9 <tt>each()</tt></H5>
+<p class="docText">The <tt>each()</tt> function returns the current key/value pair and advances the internal pointer to the next element. When it reaches the end of of the array, it returns a booloean value of <tt>false</tt>. The key/value pair is returned as an array with four elements: the elements <tt>0</tt> and <tt>"key"</tt>, which have the value of the key, and elements <tt>1</tt> and <tt>"value"</tt>, which have the value of the value. The reason for duplication is that, if you're accessing these elements individually, you'll probably want to use the names such as <tt>$elem["key"]</tt> and <tt>$elem["value"]</tt>:<a name="ch02index133"></a><a name="ch02index134"></a><a name="ch02index135"></a><a name="ch02index136"></a></p>
+<pre>
+$ages = array("John" =&gt; 28, "Barbara" =&gt; 67);
+reset($ages);
+$person = each($ages);
+print $person["key"];
+print " is of age ";
+print $person["value"];
+</pre><br>This prints<pre>
+John is of age 28
+</pre><br>
+<p class="docText">When we explain how the <tt>list()</tt> construct works, you will understand why offsets 0 and 1 also exist.</p>
+<a name="ch02lev3sec17"></a><H5 class="docSection3Title">2.5.7.10 <tt>list()</tt></H5>
+<p class="docText">The <tt>list()</tt> construct is a way of assigning multiple array offsets to multiple variables in one statement:<a name="ch02index137"></a><a name="ch02index138"></a><a name="ch02index139"></a><a name="ch02index140"></a></p>
+<pre>
+list($var1, $var2, ...) = $array;
+</pre><br>
+<p class="docText">The first variable in the list is assigned the array value at offset 0, the second is assigned offset 1, and so on. Therefore, the <tt>list()</tt> construct translates into the following series of PHP statements:</p>
+<pre>
+$var1 = $array[0];
+$var2 = $array[1];
+...
+</pre><br>
+<p class="docText">As previously mentioned, the indexes 0 and 1 returned by <tt>each()</tt> are used by the <tt>list()</tt> construct. You can probably already guess how the combination of <tt>list()</tt> and <tt>each()</tt> work.</P>
+<p class="docText">Consider the highlighted line from the previous <tt>$players</tt> traversal example:</p>
+<pre>
+$players = array("John", "Barbara", "Bill", "Nancy");
+
+reset($players);
+
+<span class="docEmphStrong">while (list($key, $val) = each($players)) {</span>
+       print "#$key = $val\n";
+}
+</pre><BR>
+<p class="docText">What happens in the boldfaced line is that during every loop iteration, <tt>each()</tt> returns the current position's key/value pair array, which, when examined with <tt>print_r()</tt>, is the following array:</p>
+<pre>
+Array
+(
+    [1] =&gt; John
+    [value] =&gt; John
+    [0] =&gt; 0
+    [key] =&gt; 0
+)
+</pre><BR>
+<p class="docText">Then, the <tt>list()</tt> construct assigns the array's offset 0 to <tt>$key</tt> and offset 1 to <tt>$val</tt>.<a name="ch02index141"></a><a name="ch02index142"></a><a name="ch02index143"></a><a name="ch02index144"></a></p>
+<a name="ch02lev3sec18"></a><h5 class="docSection3Title">2.5.7.11 Additional Methods for Traversing Arrays</h5>
+<p class="docText">You can use other functions to iterate over arrays including <tt>current()</tt> and <tt>next()</tt>. You shouldn't use them because they are confusing and are legacy functions. In addition, some standard functions allow all sorts of elegant ways of dealing with arrays such as <tt>array_walk()</tt>, which is covered in a later chapter.<a name="ch02index145"></a><a name="ch02index146"></a><a name="ch02index147"></a></p>
+<a name="ch02lev2sec11"></a><h4 class="docSection2Title">2.5.8. Constants</h4>
+<p class="docText">In PHP, you can define names, called <span class="docEmphStrong">constants</span>, for simple values. As the name implies, you cannot change these constants once they represent a certain value. The names for constants have the same rules as PHP variables except that they don't have the leading dollar sign. It is common practice in many programming languagesincluding PHPto use uppercase letters for constant names, although you don't have to. If you wish, which we do not recommend, you may define your constants as case-insensitive, thus not requiring code to use the correct casing when referring to your constants.<a name="ch02index148"></a><a name="ch02index149"></a></p>
+<a name="ch02note07"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">Only use case-sensitive constants both to be consistent with accepted coding standards and because it is unclear if case-insensitive constants will continued to be supported in future versions of PHP.<a name="ch02index150"></a></p></div><br>
+<p class="docText">Unlike variables, constants, once defined, are globally accessible. You don't have to (and can't) redeclare them in each new function and PHP file.</p>
+<p class="docText">To define a constant, use the following function:</p>
+<pre>
+define("CONSTANT_NAME", value [, case_sensitivity])
+</pre><br>
+<p class="docText">Where:</p>
+<ul><li><p class="docList"><tt>"CONSTANT_NAME"</tt> is a string.</P></LI><li><p class="docList"><tt>value</tt> is any valid PHP expression excluding arrays and objects.</p></LI><li><p class="docList"><tt>case_sensitivity</tt> is a Boolean (<tt>true/false</tt>) and is optional. The default is <tt>true</tt>.</p></li></ul>
+<p class="docText">An example for a built-in constant is the Boolean value <tt>TRue</tt>, which is registered as case-insensitive.</p>
+<p class="docText">Here's a simple example for defining and using a constant:<a name="ch02index151"></a><a name="ch02index152"></a></P>
+<pre>
+define("MY_OK", 0);
+define("MY_ERROR", 1);
+
+...
+
+if ($error_code == MY_ERROR) {
+    print("There was an error\n");
+}
+</pre><br>
+<UL></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

@@ -1,0 +1,75 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section A.17.&nbsp; Mail</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec16.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec18.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app01lev1sec17"></a><h3 class="docSection1Title">A.17. Mail</h3>
+<a name="app01lev2sec135"></a><h4 class="docSection2Title">A.17.1. Mail</h4><a name="app01index279"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP/BSD - By Chuck Hagenbuch (lead) - Richard Heyes (developer) - Jon Parise (lead)</span></p>
+<p class="docText">Class that provides multiple interfaces for sending emails</P>
+<a name="app01lev3sec132"></a><h5 class="docSection3Title">A.17.1.1 Description</H5>
+<p class="docText">PEAR's Mail:: package defines the interface for implementing mailers under the PEAR hierarchy, and provides supporting functions useful in multiple mailer backends. Currently supported are native PHP mail() function, sendmail and SMTP. This package also provides a RFC 822 Email address list validation utility class.</p>
+<a name="app01lev2sec136"></a><H4 class="docSection2Title">A.17.2. mailparse</h4><a name="app01index280"></a><a name="app01index281"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP - By Wez Furlong (lead)</span></p>
+<p class="docText">Email message manipulation</p>
+<a name="app01lev3sec133"></a><h5 class="docSection3Title">A.17.2.1 Description</H5>
+<p class="docText">Mailparse is an extension for parsing and working with email messages. It can deal with rfc822 and rfc2045 (MIME) compliant messages.</P>
+<a name="app01lev2sec137"></a><h4 class="docSection2Title">A.17.3. Mail_IMAP</h4><a name="app01index282"></a><a name="app01index283"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: PHP -</span></p>
+<p class="docText">Provides a c-client backend for webmail.</p>
+<a name="app01lev3sec134"></a><H5 class="docSection3Title">A.17.3.1 Description</h5>
+<p class="docText">Mail_IMAP provides a simplified backend for working with the c-client (IMAP) extension. It serves as an OO wrapper for commonly used c-client functions. It provides structure and header parsing as well as body retrieval.</p>
+<p class="docText">Mail_IMAP provides a simple inbox example that demonstrates its ability to parse and view simple and multipart email messages. Mail_IMAP also provides a connection wizard to determine the correct protocol and port settings for a remote mail server, all you need to provide is a server, a username and a password. Mail_IMAP may be used as a webmail backend or as a component in a mailing list manager. This package requires the c-client extension. To download the latest version of the c-client extension goto: <a class="docLink" target="_blank" href="http://www.php.net/imap">http://www.php.net/imap</a>.</P>
+<a name="app01lev2sec138"></a><h4 class="docSection2Title">A.17.4. Mail_Mbox</H4><a name="app01index284"></a><a name="app01index285"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Roberto Berto (lead)</span></p>
+<p class="docText">Mbox PHP class to Unix MBOX parsing and using.</p>
+<a name="app01lev3sec135"></a><h5 class="docSection3Title">A.17.4.1 Description</h5>
+<p class="docText">It can split messages inside a Mbox, return the number of messages, return, update or remove an specific message or add a message on the Mbox.</p>
+<a name="app01lev2sec139"></a><h4 class="docSection2Title">A.17.5. Mail_Mime</h4><a name="app01index286"></a><a name="app01index287"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP - By Richard Heyes (lead) - Tomas V.V.Cox (contributor)</span></p>
+<p class="docText">Provides classes to create and decode mime messages.</p>
+<a name="app01lev3sec136"></a><h5 class="docSection3Title">A.17.5.1 Description</h5>
+<p class="docText">Provides classes to deal with creation and manipulation of mime messages:</p>
+<ul><li><p class="docText">
+<span class="docEmphRoman">mime.php:</span> 
+Create mime email, with html, attachments, embedded images etc.</p></li><LI><p class="docText">
+<span class="docEmphRoman">mimePart.php:</span> 
+Advanced method of creating mime messages.</P></li><li><p class="docList">mimeDecode.php - Decodes mime messages to a usable structure.</P></li><li><p class="docText">
+<span class="docEmphRoman">xmail.dtd:</span> 
+An XML DTD to acompany the getXML() method of the decoding class.</p></li><li><p class="docText">
+<span class="docEmphRoman">xmail.xsl:</span> 
+An XSLT stylesheet to transform the output of the getXML() method back to an email</p></LI></ul>
+<a name="app01lev2sec140"></a><H4 class="docSection2Title">A.17.6. Mail_Queue</h4><a name="app01index288"></a><a name="app01index289"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP - By Radek Maciaszek (lead) - Lorenzo Alberton (contributor)</span></P>
+<p class="docText">Class for put mails in queue and send them later in background.</p>
+<a name="app01lev3sec137"></a><h5 class="docSection3Title">A.17.6.1 Description</h5>
+<p class="docText">Class to handle mail queue managment. Wrapper for PEAR::Mail and PEAR::DB (or PEAR::MDB). It can load, save and send saved mails in background and also backup some mails.</p>
+<p class="docText">The Mail_Queue class puts mails in a temporary container waiting to be fed to the MTA (Mail Transport Agent) and send them later (eg. every few minutes) by crontab or in other way.</P>
+<a name="app01lev2sec141"></a><H4 class="docSection2Title">A.17.7. POP3</h4><a name="app01index290"></a><a name="app01index291"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: PHP -</span></p>
+<p class="docText">POP3 Client Library</p>
+<a name="app01lev3sec138"></a><h5 class="docSection3Title">A.17.7.1 Description</H5>
+<p class="docText">The POP3 extension makes it possible for a PHP script to connect to and interact with a POP3 mail server.</p>
+<p class="docText">It is based on the PHP streams interface and requires no external library.</p>
+<a name="app01lev2sec142"></a><H4 class="docSection2Title">A.17.8. vpopmail</h4><a name="app01index292"></a><a name="app01index293"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP - By James Cox (lead)</span></P>
+<p class="docText">Provides functions to interact with vpopmail, a Qmail addon</p>
+<a name="app01lev3sec139"></a><h5 class="docSection3Title">A.17.8.1 Description</h5>
+<p class="docText">A wrapper to vpopmail, a Qmail addon</p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec16.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec18.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

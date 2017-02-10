@@ -1,0 +1,225 @@
+[11-24-2005 00:56:21] -!- _rappy_ is now known as _Rappy_
+[11-24-2005 00:57:42] -!- ordnas [n=ordnas@p549DEACD.dip.t-dialin.net] has joined #ezpublish
+[11-24-2005 01:38:34] [#ezpublish] <kracker> happy turkey day to all! and to all eZ publish!
+[11-24-2005 01:39:47] [#ezpublish] <kracker> eminem - nuttin' ta do ...
+[11-24-2005 01:40:01] [#ezpublish] <kracker> cept
+[11-24-2005 01:40:08] [#ezpublish] <kracker> eminem - puke ...
+[11-24-2005 01:44:05] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-24-2005 01:44:47] [#ezpublish] <_Rappy_> for those of who who celebrate that :p
+[11-24-2005 01:44:55] [#ezpublish] * buz doesnt
+[11-24-2005 01:46:25] [#ezpublish] <Katana`> hi
+[11-24-2005 01:47:00] [#ezpublish] <_Rappy_> isn't it originally to honor the indians who gave some fodd to some needy settlers?
+[11-24-2005 01:47:50] [#ezpublish] <Katana`> talking about thanksgiving ?
+[11-24-2005 02:12:22] [#ezpublish] <DiGiTa|__> thanks giving shit
+[11-24-2005 02:12:25] [#ezpublish] <DiGiTa|__> hi all
+[11-24-2005 02:12:51] [#ezpublish] <buz> thanks for not giving a shit
+[11-24-2005 02:14:20] [#ezpublish] <@kh[eZ]> good morning ezpublishers!
+[11-24-2005 02:14:36] [#ezpublish] <nnn0> morning kh
+[11-24-2005 02:18:47] [#ezpublish] <_Rappy_> yes, the big gobble gobble day
+[11-24-2005 02:23:12] [#ezpublish] <Katana`> morning kristian
+[11-24-2005 02:25:53] [#ezpublish] <_Rappy_> today I'm not an eZ publisher :o
+[11-24-2005 02:25:58] [#ezpublish] <@kh[eZ]> did you put the demo online yet? ;-)
+[11-24-2005 02:27:03] [#ezpublish] <_Rappy_> who?
+[11-24-2005 02:27:18] [#ezpublish] <Katana`> me i guess ? :)
+[11-24-2005 02:29:38] -!- DiGiTa|__ [n=guillaum@84.5.138.203] has quit [Read error: 110 (Connection timed out)]
+[11-24-2005 02:44:30] [#ezpublish] <@kh[eZ]> yes.. Katana`  :-)
+[11-24-2005 02:44:42] [#ezpublish] <@kh[eZ]> Katana`: did you put the demo online yet? ;-)
+[11-24-2005 02:48:07] [#ezpublish] <Katana`> nope kh[eZ]
+[11-24-2005 02:48:16] [#ezpublish] <Katana`> lots to do and not enough time ;)
+[11-24-2005 02:48:50] [#ezpublish] <@kh[eZ]> hehe.. sounds familiar...:-)
+[11-24-2005 02:48:58] [#ezpublish] <Katana`> :)
+[11-24-2005 02:48:58] [#ezpublish] <@kh[eZ]> which reminds me... work
+[11-24-2005 02:49:07] [#ezpublish] <@kh[eZ]> ;-)
+[11-24-2005 02:49:36] [#ezpublish] <Katana`> lol
+[11-24-2005 02:50:44] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[11-24-2005 02:51:31] [#ezpublish] <_Rappy_> I vote for "Humans should have no need for sleep!" and "Say yes to 48 hour days!"
+[11-24-2005 02:58:52] [#ezpublish] * kracker *Eminem - We As Americans*
+[11-24-2005 03:01:30] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-24-2005 03:06:14] [#ezpublish] <kracker> sleep is for the weak, those who fade out, blink, tink, see blurs and shaddows, tweak, geek like prof. fink, givin those who get it a two faced wince as close to a w i n k as i close these eyes in the face of all  i dispize, missplace and misspell the fire burning in my eyes ....
+[11-24-2005 03:09:00] [#ezpublish] <Katana`> duh
+[11-24-2005 03:09:12] [#ezpublish] <Katana`> i hate when i have to concentrate to read a sentence :)
+[11-24-2005 03:33:04] [#ezpublish] * Katana` didn't know about http://ez.no/products/ez_publish_cms/documentation/incoming/persistent_template_variable
+[11-24-2005 03:40:46] -!- st_ [n=st@popeye.ez.no] has joined #ezpublish
+[11-24-2005 03:46:39] [#ezpublish] <Katana`> hi st
+[11-24-2005 03:47:14] -!- CoderForLife [n=CoderFor@nr24-66-161-205-62.fuse.net] has joined #ezpublish
+[11-24-2005 04:01:46] [#ezpublish] <st_> Hey!
+[11-24-2005 04:02:23] [#ezpublish] <Katana`> which ez guy are you ? :)
+[11-24-2005 04:03:06] [#ezpublish] <st_> Sten
+[11-24-2005 04:03:10] [#ezpublish] <st_> System Administrator
+[11-24-2005 04:03:30] [#ezpublish] <Katana`> nice to meet you :)
+[11-24-2005 04:04:03] [#ezpublish] <_Rappy_> hello Sten
+[11-24-2005 04:04:03] [#ezpublish] <st_> you too ;)
+[11-24-2005 04:04:24] [#ezpublish] <st_> hello dark binary master
+[11-24-2005 04:04:48] [#ezpublish] * Katana` checks the picture on the website :)
+[11-24-2005 04:05:03] [#ezpublish] <_Rappy_> haha ;D
+[11-24-2005 04:05:10] [#ezpublish] <Katana`> okaaaay i remember you sten
+[11-24-2005 04:05:19] [#ezpublish] <Katana`> i've borrowed a mouse from you for the PHPEdit session at the camp ;)
+[11-24-2005 04:05:43] [#ezpublish] <Katana`> btw there's a typo on http://ez.no/company/ez_crew, #
+[11-24-2005 04:05:43] [#ezpublish] <Katana`> eZ headquartes
+[11-24-2005 04:05:44] [#ezpublish] <st_> hehe, yes, that's true!
+[11-24-2005 04:05:47] [#ezpublish] <Katana`> on the right
+[11-24-2005 04:06:42] [#ezpublish] <st_> i see.. will tell the ez.no guys to fix it! thanks
+[11-24-2005 04:37:54] [#ezpublish] <st_> it's fixed now
+[11-24-2005 04:37:59] [#ezpublish] <st_> he safed it ;)
+[11-24-2005 04:48:15] [#ezpublish] <Katana`> cool :)
+[11-24-2005 04:51:59] [#ezpublish] <_Rappy_> *cant remember seeing st_ at he Oslo HQ opening party*
+[11-24-2005 04:52:19] [#ezpublish] <@fh[eZ]> hahaha
+[11-24-2005 04:53:12] [#ezpublish] <Katana`> he was under the table
+[11-24-2005 04:58:26] [#ezpublish] <@kh[eZ]> hehe.. i think st_  wish he was there... but he got some problems with the car..
+[11-24-2005 04:58:40] [#ezpublish] <@kh[eZ]> so he couldnt come :-)
+[11-24-2005 05:00:29] [#ezpublish] <Katana`> that sucks :)
+[11-24-2005 05:01:28] [#ezpublish] <Katana`> demo is online
+[11-24-2005 05:01:32] [#ezpublish] <Katana`> i just need to setup policies
+[11-24-2005 05:02:33] [#ezpublish] <st_> tehe.. very funny ;)
+[11-24-2005 05:08:07] [#ezpublish] <Katana`> demo is online : http://ajax.katana-inc.com/
+[11-24-2005 05:08:16] [#ezpublish] <Katana`> username irc, password freenode
+[11-24-2005 05:08:24] [#ezpublish] <Katana`> i'll add a description later ;)
+[11-24-2005 05:09:19] [#ezpublish] <Katana`> kh[eZ] ?
+[11-24-2005 05:09:22] [#ezpublish] <Katana`> buz ?
+[11-24-2005 05:11:47] [#ezpublish] <_Rappy_> I'll check it
+[11-24-2005 05:13:16] [#ezpublish] <_Rappy_> pretty :)
+[11-24-2005 05:26:07] [#ezpublish] <Katana`> thanks :)
+[11-24-2005 05:27:52] [#ezpublish] <Katana`> out for lunch cya
+[11-24-2005 05:43:28] [#ezpublish] <nnn0> :)
+[11-24-2005 05:51:32] -!- ordnas [n=ordnas@p549DEACD.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-24-2005 05:51:38] [#ezpublish] <@fh[eZ]> Katana`: how is your server load while I click around?
+[11-24-2005 05:52:15] [#ezpublish] <@fh[eZ]> works really well though
+[11-24-2005 06:00:05] [#ezpublish] <@kh[eZ]> Katana`: it works pretty nice.. the middle window only updates some times thou...
+[11-24-2005 06:08:23] -!- ordna1 [n=ordnas@p549DC5CA.dip.t-dialin.net] has joined #ezpublish
+[11-24-2005 07:05:59] [#ezpublish] <Katana`> kh[eZ]: the event is only enabled on non container nodes so far i think
+[11-24-2005 07:06:05] [#ezpublish] <Katana`> i've uploaded a very alphaish version ;)
+[11-24-2005 07:06:14] [#ezpublish] <Katana`> not sure about the load I can check
+[11-24-2005 07:06:18] [#ezpublish] <Katana`> but it has other sites..
+[11-24-2005 07:07:21] [#ezpublish] <Katana`> i'm not sure how I can monitor that ;)
+[11-24-2005 07:13:24] [#ezpublish] <@kh[eZ]> ok.. that makes sence :-)
+[11-24-2005 07:13:42] [#ezpublish] <@kh[eZ]> now, where is the drag and drop workflows? ;-)
+[11-24-2005 07:15:40] [#ezpublish] <Katana`> lol
+[11-24-2005 07:15:57] [#ezpublish] <Katana`> I have lots of ideas don't worry ;)
+[11-24-2005 07:20:44] [#ezpublish] <@kh[eZ]> and also i want to include the image-recognition paint which allows you to draw your webpages...
+[11-24-2005 07:21:04] [#ezpublish] <Katana`> hehehe
+[11-24-2005 07:21:15] [#ezpublish] <@kh[eZ]> offcourse implemented in javascript
+[11-24-2005 07:21:20] [#ezpublish] <Katana`> QooxDoo supports drag & drop so it will probably be implemented ;)
+[11-24-2005 07:21:26] [#ezpublish] <@kh[eZ]> (ok.. cheaters can implement it in java)
+[11-24-2005 07:21:32] [#ezpublish] <Katana`> yeah, cheaters
+[11-24-2005 07:21:44] [#ezpublish] <@kh[eZ]> as long as i can draw the site, and it works...
+[11-24-2005 07:22:40] [#ezpublish] <@kh[eZ]> but relax.. i dont expect you to have implemented that before next week...
+[11-24-2005 07:26:24] [#ezpublish] <Katana`> really ? :)
+[11-24-2005 07:30:16] [#ezpublish] <@kh[eZ]> no.. actually i feel so nice today, that you can also get another 2 days...
+[11-24-2005 07:32:33] [#ezpublish] <Katana`> tsss ...
+[11-24-2005 07:33:00] [#ezpublish] <Katana`> hope & dreams are really good you know
+[11-24-2005 07:38:01] -!- st__ [n=st@stalker.ez.no] has joined #ezpublish
+[11-24-2005 07:49:53] -!- st_ [n=st@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[11-24-2005 08:08:16] -!- st_ [n=st@popeye.ez.no] has joined #ezpublish
+[11-24-2005 08:18:03] -!- st__ [n=st@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[11-24-2005 08:39:14] -!- CoderForLife [n=CoderFor@nr24-66-161-205-62.fuse.net] has left #ezpublish []
+[11-24-2005 08:56:11] [#ezpublish] <kracker> Katana`, that adjax eZ is helly slick rick
+[11-24-2005 08:56:40] [#ezpublish] <Katana`> hum
+[11-24-2005 08:56:52] [#ezpublish] <Katana`> could you rephrase ? I don't know if that's positive or negative :))
+[11-24-2005 08:58:54] [#ezpublish] <Katana`> kracker ?
+[11-24-2005 09:15:26] [#ezpublish] * Katana` throws fh[eZ] at kracker
+[11-24-2005 09:17:45] -!- ordna1 [n=ordnas@p549DC5CA.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-24-2005 09:53:49] -!- st_ [n=st@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[11-24-2005 10:03:38] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-24-2005 10:03:49] [#ezpublish] <Sulfur> hi guys ....
+[11-24-2005 10:04:35] [#ezpublish] <Sulfur> I am experiencing a problem (I pinpointed it) but I am unsure of whether it is incorrect assumptions on my part or an eZ bug.
+[11-24-2005 10:04:55] [#ezpublish] <Sulfur> anyone up for a quick consult ?
+[11-24-2005 10:07:14] [#ezpublish] <Katana`> ask
+[11-24-2005 10:13:35] [#ezpublish] <Sulfur> very briefly, I have this flow of operation: $db->eZDB::instance; some operations on eZ DB. using pear::DB to create a connection to a foreign DB. $surveyDB = DB::connect(mydsn); doing some work on this external, non-eZ database. script continues; then an eZ API call fails on an eZ DB query because it looks for eZ tables into the foreign db.
+[11-24-2005 10:13:46] [#ezpublish] <buz> uuugh
+[11-24-2005 10:13:47] [#ezpublish] <buz> not good
+[11-24-2005 10:13:50] [#ezpublish] <Katana`> ah, i have done that
+[11-24-2005 10:13:54] [#ezpublish] <buz> one of the main peering points in switzerland is flooded
+[11-24-2005 10:14:00] [#ezpublish] <Katana`> PEAR::DB will use the existing connection or something
+[11-24-2005 10:14:00] [#ezpublish] <Sulfur> note that eZ db objs and my foreign DB objs are called differently
+[11-24-2005 10:14:21] [#ezpublish] <Sulfur> well, ALL of them use the existing connection (I think PHP reuses them)
+[11-24-2005 10:14:40] [#ezpublish] <Katana`> we have met that issue, and we have fixed it
+[11-24-2005 10:15:01] [#ezpublish] <Katana`> ah actually we were NOT using PEAR::DB
+[11-24-2005 10:15:05] [#ezpublish] <Sulfur> also almost all eZ DB-interacting methods do an eZDB::instance ... but this seems not to check whether the parameters of the connection have been changed
+[11-24-2005 10:15:19] [#ezpublish] <Sulfur> yes ADODB has same problem
+[11-24-2005 10:15:34] [#ezpublish] <Sulfur> I think it's a PHP issue, but also an eZ wrong assumption
+[11-24-2005 10:15:38] [#ezpublish] <Katana`> are the username / host / pass for connect similar ?
+[11-24-2005 10:15:57] [#ezpublish] <Sulfur> hey are the same (I use same restricted user for both DBs)
+[11-24-2005 10:16:04] [#ezpublish] <Katana`> because I know PHP will reuse a connection if one has already been established with the same connection infos, NOT including the DB name
+[11-24-2005 10:16:11] [#ezpublish] <Katana`> since the DB is selected using _select_db
+[11-24-2005 10:16:28] [#ezpublish] <Katana`> so yes, connect will return the existing connection, and mysql_select_db will switch
+[11-24-2005 10:16:42] [#ezpublish] <Katana`> try adding a specific user for your application, it should fix the issue
+[11-24-2005 10:16:49] [#ezpublish] <Sulfur> so we agree with the cause; but the problem is : can it be considered a bug ?
+[11-24-2005 10:16:51] [#ezpublish] <Katana`> fh[eZ], do I get partner points for what i say on IRC ? :)
+[11-24-2005 10:16:57] [#ezpublish] <Katana`> nope it's PHP ...
+[11-24-2005 10:17:04] [#ezpublish] * buz should get plenty of those then
+[11-24-2005 10:17:12] [#ezpublish] <Katana`> are you a partner ? :
+[11-24-2005 10:17:14] [#ezpublish] <Katana`> ^^
+[11-24-2005 10:17:22] [#ezpublish] <Sulfur> we 're partnahs too
+[11-24-2005 10:17:34] [#ezpublish] <Katana`> cool :)
+[11-24-2005 10:20:00] [#ezpublish] <Sulfur> anyway, I think an additional check into eZDB::instance wouldn't harm. being blissfully unaware of what happens outside the window isn't a good thing ;)
+[11-24-2005 10:20:30] [#ezpublish] <Katana`> well... think about what it would imply...
+[11-24-2005 10:20:44] [#ezpublish] <Katana`> you have to run a query to check what db you're connected to
+[11-24-2005 10:20:54] [#ezpublish] <Katana`> and what would you do ? warn the dev ?
+[11-24-2005 10:21:08] [#ezpublish] <Katana`> there are situations where you can't do that for the developer, it should just be documented
+[11-24-2005 10:25:00] [#ezpublish] <buz> no i'm not
+[11-24-2005 10:25:38] [#ezpublish] <Katana`> you're not what ? :)
+[11-24-2005 10:25:45] [#ezpublish] <buz> partner
+[11-24-2005 10:26:00] [#ezpublish] <buz> i should still get points though
+[11-24-2005 10:26:10] [#ezpublish] * buz wants points *kiddiemode*
+[11-24-2005 10:26:25] [#ezpublish] <Katana`> lol
+[11-24-2005 10:26:27] [#ezpublish] <Katana`> okay :)
+[11-24-2005 10:26:37] [#ezpublish] <buz> and not raven points
+[11-24-2005 10:26:55] [#ezpublish] <Katana`> kristian is the one to blame for those
+[11-24-2005 10:37:37] [#ezpublish] <Sulfur> Katana`: isn't there a method to determine which db am I connected to ?
+[11-24-2005 10:37:45] [#ezpublish] <Katana`> with a query i think
+[11-24-2005 10:37:51] [#ezpublish] <Katana`> and i'm not even sure
+[11-24-2005 10:38:22] [#ezpublish] <Sulfur> there is already an eZDB:: instance before all calls which need playing with db. I just want it to explicitly call every time a mysql_select_db
+[11-24-2005 10:38:28] [#ezpublish] <Sulfur> brute and effective
+[11-24-2005 10:38:58] [#ezpublish] <Sulfur> no query involved
+[11-24-2005 10:39:42] [#ezpublish] <Sulfur> that, or either prepend all queries in eZ with the explicit db name. of course this is lousy.
+[11-24-2005 10:40:21] [#ezpublish] <Katana`> well, officially, mysql_select_db runs "USE dbname;"
+[11-24-2005 10:40:30] [#ezpublish] <Sulfur> ..... the only other workaround is for ME to call the mysql_select_db before I enter the eZ API
+[11-24-2005 10:40:32] [#ezpublish] <Katana`> damnit why won't you just change the username for the other DB ? :)
+[11-24-2005 10:40:41] [#ezpublish] <Katana`> no, THIS is the best workaround
+[11-24-2005 10:40:53] [#ezpublish] <Sulfur> because this project uses FIVE different DBs ?
+[11-24-2005 10:40:55] [#ezpublish] <Katana`> requires you to change ONE line, and not hack the core and not add any resource usage
+[11-24-2005 10:41:11] [#ezpublish] <Sulfur> on THREE different servers??? :D
+[11-24-2005 10:41:22] [#ezpublish] <Katana`> as long as they're on different servers it should not happen
+[11-24-2005 10:41:34] [#ezpublish] <Katana`> if they're on the same server just create one username for each and your problem will be solved
+[11-24-2005 10:41:43] [#ezpublish] <Sulfur> in fact, the problem arose now on those 3 DBs wich are on the same server
+[11-24-2005 10:41:51] [#ezpublish] <Sulfur> arrrrrrrrh
+[11-24-2005 10:41:53] [#ezpublish] <Katana`> there you are, usernames
+[11-24-2005 10:42:04] [#ezpublish] <Sulfur> I hate dat
+[11-24-2005 10:42:12] [#ezpublish] <Katana`> or db1.localhost, db2.localhost, db3.localhost as hostnames, will work as well
+[11-24-2005 10:42:20] [#ezpublish] <Katana`> but not that sure since they're all resolved ;)
+[11-24-2005 11:12:34] [#ezpublish] <_Rappy_> then dinner is digested and it's back to work
+[11-24-2005 11:12:51] [#ezpublish] <_Rappy_> we're swamped atm, so someone has to clock in some overtime
+[11-24-2005 11:15:59] [#ezpublish] <Sulfur> I gave in.
+[11-24-2005 11:24:51] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[11-24-2005 11:51:06] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-24-2005 11:55:35] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has left #ezpublish []
+[11-24-2005 11:56:18] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-24-2005 12:13:57] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has left #ezpublish []
+[11-24-2005 12:34:18] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[11-24-2005 13:27:48] [#ezpublish] <_Rappy_> HELP! ;D
+[11-24-2005 13:28:10] [#ezpublish] <_Rappy_> ok, when a node has a grey bg on the name, what's special about it?
+[11-24-2005 14:19:48] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[11-24-2005 14:51:15] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-24-2005 14:51:15] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[11-24-2005 14:55:43] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Client Quit]
+[11-24-2005 15:40:12] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-24-2005 15:50:03] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[11-24-2005 15:50:39] [#ezpublish] <zrg> rmh
+[11-24-2005 15:57:29] -!- _Rappy_ is now known as _rappt_
+[11-24-2005 15:57:32] -!- _rappt_ is now known as _rappy_
+[11-24-2005 15:57:42] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-24-2005 15:59:27] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[11-24-2005 16:36:52] -!- Katana` [n=katana@ankh-morpork.net] has quit []
+[11-24-2005 17:08:33] [#ezpublish] <nnn0> ^c ^,
+[11-24-2005 17:12:08] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[11-24-2005 17:12:17] -!- nnn0 is now known as ^c
+[11-24-2005 17:12:25] -!- ^c is now known as ^c^
+[11-24-2005 17:12:51] -!- ^c^ is now known as nnn0
+[11-24-2005 19:18:03] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-24-2005 20:52:21] [#ezpublish] <kracker> oops
+[11-24-2005 20:52:27] [#ezpublish] <kracker> sry Katana`
+[11-24-2005 20:52:38] [#ezpublish] <kracker> it was a complement
+[11-24-2005 20:53:18] [#ezpublish] <kracker> errum, positive comment..
+[11-24-2005 21:43:32] -!- Bedlore [n=me@ppp214-16.lns1.adl2.internode.on.net] has joined #ezpublish
+[11-24-2005 21:53:55] [#ezpublish] <Bedlore> anyone ever seen faults arise from a mysqldump duplicated database?
+[11-24-2005 21:54:25] [#ezpublish] <Bedlore> seeing strange behaviour where a straight copy of a database is playing up

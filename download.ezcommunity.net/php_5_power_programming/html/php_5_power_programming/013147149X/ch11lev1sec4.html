@@ -1,0 +1,185 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 11.4.&nbsp; Authentication</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch11lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch11lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch11lev1sec4"></a><h3 class="docSection1Title">11.4. Authentication</h3>
+<p class="docText">PEAR Auth is an abstracted authentication layer, with &quot;containers&quot; for interfacing with various authentication systems. It supports regular password files, databases accessed through DB or MDB, as well as IMAP, POP3, LDAP, RADIUS, SOAP, and Samba (Windows domain) logons.<a name="ch11index96"></a><a name="ch11index97"></a></p>
+<a name="ch11lev2sec4"></a><h4 class="docSection2Title">11.4.1. Overview</h4>
+<p class="docText">The Auth package uses a <tt>POST</tt> request for passing usernames and passwords. The username and password are checked in a container object that implements the interface with the authentication back-end (such as a password file, a MySQL database, or an LDAP server). When login succeeds, Auth uses sessions to keep track of the user. In practice, the PHP session works as an <span class="docEmphStrong">authentication ticket</span>, which is a single piece of information that gives login access for a limited amount of time.<a name="ch11index98"></a><a name="ch11index99"></a><a name="ch11index100"></a></P>
+<p class="docText">Using sessions to track the user has the advantage that the authentication check, which may be expensive for some back-ends, is done once for the session rather than once per HTTP request. The <tt>Auth</tt> package also provides mechanisms for expiring a session after a set time from login, or after a set idle time.</p>
+<p class="docText">Your application may store addition data along with the Auth data; you will see an example of this later.</P>
+<a name="ch11lev2sec5"></a><h4 class="docSection2Title">11.4.2. Example: Auth with Password File</H4>
+<p class="docText">The following example shows typical Auth usage using the file container. The file container requires that you have the <tt>File_Passwd</tt> package installed.<a name="ch11index101"></a><a name="ch11index102"></a><a name="ch11index103"></a></p>
+<pre>
+&lt;?php
+
+require_once 'Auth.php';
+
+$auth = new Auth("File", ".htpasswd", "login_function");
+$auth-&gt;start();
+if (!$auth-&gt;getAuth()) {
+    exit;
+}
+
+if (!empty($_REQUEST['logout'])) {
+    $auth-&gt;logout();
+    print "&lt;h1&gt;Logged out&lt;/h1&gt;\n";
+    print "&lt;a href=\"$_SERVER[PHP_SELF]\"&gt;Log in again&lt;/a&gt;\n";
+    exit;
+}
+
+print "&lt;h1&gt;Logged in!&lt;/h1&gt;\n";
+
+if (!empty($_REQUEST['dump'])) {
+    print "&lt;pre&gt;SESSION=";
+    var_dump($_SESSION);
+    print "&lt;/pre&gt;\n";
+} else {
+    print "&lt;a href=\"$_SERVER[PHP_SELF]?dump=1\"&gt;Dump session&lt;/a&gt;&lt;br&gt;\n";
+}
+
+print "&lt;a href=\"$_SERVER[PHP_SELF]?logout=1\"&gt;Log Out&lt;/a&gt;\n";
+
+// --- execution ends here ---
+
+function login_function()
+{
+    print "&lt;h1&gt;Please Log In&lt;/h1&gt;\n";
+    print "&lt;form action=\"$_SERVER[PHP_SELF]\" method=\"POST\"&gt;\n";
+    print "User name: &lt;input name=\"username\"&gt; ";
+    print "Password: &lt;input name=\"password\"&gt; ";
+    print "&lt;input type=\"submit\" value=\"Log In\"&gt;\n";
+    print "&lt;/form&gt;\n";
+    exit;
+}
+</pre><br>
+<p class="docText">The example password file (the username is &quot;guest,&quot; and the password is blank) is<a name="ch11index104"></a><a name="ch11index105"></a><a name="ch11index106"></a></p>
+<pre>
+guest:Z3kgRZpxQPbjo
+</pre><br>
+<p class="docText">This example script starts by creating an <tt>Auth</tt> object using <tt>.htpasswd</tt> as a password file.</P>
+<p class="docText">The <tt>$auth-&gt;start()</tt> call sets up the PHP session (you do not need to run <tt>session_start()</tt> in advance), reads the <tt>POST</tt> variables, checks the submitted username and password, and calls <tt>login_function()</tt> if the login failed.</P>
+<p class="docText">This example script first displays a login form. After you log in as a guest (with no password), you should get two links: <tt>Dump session</tt> and <tt>Log Out</tt>.<a name="ch11index107"></a><a name="ch11index108"></a><a name="ch11index109"></a></p>
+<a name="ch11lev2sec6"></a><h4 class="docSection2Title">11.4.3. Example: Auth with DB and User Data</h4>
+<p class="docText">This example adds on to the previous example by using a database for username and password, and does not provide a custom login form. Instead, a built-in login form is used.<a name="ch11index110"></a><a name="ch11index111"></a><a name="ch11index112"></a><a name="ch11index113"></a></p>
+<p class="docText">In addition, you learn how to attach additional user-related information to the login session, and how to implement auto-expiring login sessions. To give you a better idea of how the login information is stored in the session, here is an example of Auth session data:</P>
+<pre>
+$_SESSION["_authsession"] = array(
+    "data" =&gt; array(),
+    "registered" =&gt; 1,
+    "username" =&gt; "guest"
+    "timestamp" =&gt; 1075642673,
+    "idle" =&gt; 1075643017,
+)
+</pre><br>
+<p class="docText">The PHP session variable that holds the Auth session is always called <tt>_authsession</tt>. The keys within this array are shown in <a class="docLink" href="#ch11table05">Table 11.5</a>.<a name="ch11index114"></a><a name="ch11index115"></a><a name="ch11index116"></a><a name="ch11index117"></a></p>
+<a name="ch11table05"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 11.5. Auth Session Variables</H5></caption><colgroup><col width="137.5"><col width="412.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Key Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>data</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">This is where the user-provided Auth session data is stored. This could be set directly with <tt>setAuthData()</tt>, or loaded from the database when the <tt>db_field</tt> option to <tt>Auth_Container_DB</tt> is specified.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>registered</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Always set to <tt>TRUE</tt> when the user is logged in.</p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>username</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Holds the username.</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>timestamp</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Contains <tt>time()</tt> when the user logged in.</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>idle</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Contains <tt>time()</tt> of last session activity.</P></td></tr></table></P><br>
+<a name="ch11note02"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">The password is not stored in the session. It does not have to bethe user is already authenticated. The session only contains information that was retrieved upon successful authentication, and some that is updated constantly after authentication (such as <tt>idle</tt> and, optionally, <tt>data</tt>).</p></div><br>
+<p class="docText">This session array is just part of what goes behind the scenes; you never need to deal with it directly.<a name="ch11index118"></a><a name="ch11index119"></a></p>
+<p class="docText">Seeing it is useful to better understand how the <tt>Auth</tt> works. For example, to expire the user's login after N hours, Auth checks the <tt>timestamp</tt> session variable. In addition, to expire the user's login after N minutes of inactivity, Auth checks the <tt>idle</tt> session variable.</p>
+<p class="docText">Here is the code:</p>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+require_once 'PEAR.php';
+require_once 'Auth.php';
+require_once 'HTML/QuickForm.php';
+
+$auth_options = array(
+    'dsn' =&gt; 'mysql://test@localhost/test',
+    'table' =&gt; 'users',
+    'usernamecol' =&gt; 'username',
+    'passwordcol' =&gt; 'password',
+    'db_fields' =&gt; '*',
+    );
+PEAR::setErrorHandling(PEAR_ERROR_DIE);
+$auth = new Auth('DB', $auth_options, 'login_function');
+
+$auth-&gt;start();
+if (!$auth-&gt;getAuth()) {
+    exit;
+}
+
+if (!empty($_REQUEST['logout'])) {
+    $auth-&gt;logout();
+    print "&lt;h1&gt;Logged out&lt;/h1&gt;\n";
+    print "&lt;a href=\"$_SERVER[PHP_SELF]\"&gt;Log in again&lt;/a&gt;\n";
+    exit;
+}
+
+print "&lt;h1&gt;Logged in!&lt;/h1&gt;\n";
+
+if (!empty($_REQUEST['dump'])) {
+    print "&lt;pre&gt;_authsession = ";
+    print_r($_SESSION['_authsession']);
+    print "&lt;/pre&gt;\n";
+} else {
+    print "&lt;a href=\"$_SERVER[PHP_SELF]?dump=1\"&gt;Dump session&lt;/a&gt;&lt;br&gt;\n";
+}
+
+print "&lt;a href=\"$_SERVER[PHP_SELF]?logout=1\"&gt;Log Out&lt;/a&gt;\n";
+
+// --- execution ends here ---
+function login_function()
+{
+    $form = new HTML_QuickForm('login', 'POST');
+    $form-&gt;addElement('text', 'username', 'User name:', 'size="10"');
+    $form-&gt;addRule('username', 'Please enter your user name!', 'required',
+                   null, 'client');
+    $form-&gt;addElement('password', 'password', 'Password:');
+    $form-&gt;addElement('submit', 'submit', 'Log In!');
+    $form-&gt;display();
+    exit;
+}
+</pre><br>
+<p class="docText"><a name="ch11index120"></a><a name="ch11index121"></a><a name="ch11index122"></a><a name="ch11index123"></a>One difference from the previous example is that a different Auth container (<tt>DB</tt>) is specified. The second parameter to the Auth constructor is container-specific, and in the case of <tt>Auth_Container_DB</tt> it contains an array with the DSN (data source name, DB's way of specifying a database to connect to), as well as which table and which fields in the table to use for looking up the username and password.<a name="ch11index124"></a><a name="ch11index125"></a><a name="ch11index126"></a><a name="ch11index127"></a></p>
+<p class="docText">By default, <tt>Auth_Container_DB</tt> expects to find the password MD5-encoded, but you may specify any function for encoding the submitted password before comparing to the database value.</p>
+<a name="ch11lev2sec7"></a><h4 class="docSection2Title">11.4.4. Auth Security Considerations</h4>
+<p class="docText">The biggest security issue with Auth is that it relies on PHP sessions. <span class="docEmphStrong">PHP sessions</span> are secure by obscurity; the session id is secret, but at the same time, it is all a malicious user needs to compromise an account. This means you need to be extra careful not to expose the session id, so anything less than a network snoop does not reveal it.<a name="ch11index128"></a><a name="ch11index129"></a><a name="ch11index130"></a><a name="ch11index131"></a></p>
+<p class="docText">To counter this, you can reduce the risk of session ids being stolen, and you can limit the usefulness of a stolen session id. This section offers some suggestions.</p>
+<a name="ch11lev3sec10"></a><h5 class="docSection3Title">11.4.4.1 Auth Security Tip 1: Disable session.trans_sid</h5>
+<p class="docText">PHP's <tt>sesssion. trans_sid</tt> feature is meant to provide transparent sessions to users without cookies enabled. It will rewrite every link on the page to contain the session id as a <tt>GET</tt> parameter. Combined with Auth, this is the equivalent of putting the username and password in the URL.<a name="ch11index132"></a><a name="ch11index133"></a><a name="ch11index134"></a><a name="ch11index135"></a><a name="ch11index136"></a></p>
+<p class="docText">With <tt>trans_sid</tt> enabled, there's a big risk of the session id leaking out because it will follow users clicking outgoing links through the HTTP <tt>Referer:</tt> header. This means that the session id may be logged on any web server to which that the Auth-protected site has links.</P>
+<p class="docText">Some web servers are even so badly misconfigured that you can access their access logs through a browser. Hijacking the session is then just a matter of copying and pasting the URL from the access log.</P>
+<p class="docText">By disabling <tt>trans_sid</tt>, you shut out users who do not have cookies installed, but eliminate the risk of session ids leaking out through the <tt>Referer</tt> header.</p>
+<a name="ch11lev3sec11"></a><H5 class="docSection3Title">11.4.4.2 Auth Security Tip 2: Use Auth_HTTP</h5>
+<p class="docText">If you want to support users without cookies enabled, install the <tt>Auth_HTTP</tt> package. <tt>Auth_HTTP</tt> provides a wrapper around Auth that replaces the login form with a regular HTTP authentication pop-up window.<a name="ch11index137"></a><a name="ch11index138"></a><a name="ch11index139"></a><a name="ch11index140"></a></p>
+<p class="docText">By using <tt>Auth_HTTP</tt>, you lose the logout functionality.</p>
+<a name="ch11lev3sec12"></a><h5 class="docSection3Title">11.4.4.3 Auth Security Tip 3: Use HTTPS</h5>
+<p class="docText">Using HTTPS instead of HTTP protects usernames, passwords, and session ids from network packet sniffers. However, if an attacker has somehow obtained a session id, he may just as easily exploit it through HTTPS as through HTTP.<a name="ch11index141"></a><a name="ch11index142"></a><a name="ch11index143"></a><a name="ch11index144"></a></p>
+<p class="docText">The major hurdle for most people is the cost and hassle involved in obtaining and maintaining an SSL certificate for their site, as well as the hosting cost which is often significant.</P>
+<a name="ch11lev2sec8"></a><h4 class="docSection2Title">11.4.5. Auth Scalability Considerations</H4>
+<p class="docText">Because Auth uses sessions to keep track of logins and PHP stores sessions in local files by default, you will run into problems if you have a site that is being load balanced between several servers.<a name="ch11index145"></a><a name="ch11index146"></a><a name="ch11index147"></a></p>
+<p class="docText">As an example, say that you have a site at www.example.com that is being load balanced between the servers www1 and www2. A user logs in, the <tt>POST</tt> request with the username and password hits www1, which stores the login information in the <tt>Auth</tt> session in local files. This means that if the same user submits another request that hits the www2 server, PHP can't find the Auth session on that machine, so it checks the login info through the Auth container and stores the login information in www2's local session files.</P>
+<p class="docText">So far, so good; seen from the user's point of view, everything is working fine. However, you see two problems:</p>
+<ul><li><p class="docList">The load on the authentication back-end increases exponentially; the number of Auth checks will become N*M (sessions * servers), as opposed to just N (sessions) for a single-server setup.</p></LI><LI><p class="docList">If you set up sessions to idle-expire, you may experience erratic behavior because the same user could hit only www1 for a series of requests, and when he suddenly hits www2, his session could have expired on that server.</p></li></ul>
+<p class="docText">You can solve this in a number of ways, all of which have their pros and cons.</p>
+<a name="ch11lev3sec13"></a><H5 class="docSection3Title">11.4.5.1 Auth Scalability Approach 1: Load-Balancing by Session Id</h5>
+<p class="docText">Use a load-balancing system that can use the PHP session id to distribute requests. This ensures that the same session keeps hitting the same server. The only (minor) disadvantage of this solution is that the session will be reset if the designated web server goes down and the load-balancing system sends the user to another server.<a name="ch11index148"></a><a name="ch11index149"></a><a name="ch11index150"></a><a name="ch11index151"></a><a name="ch11index152"></a></p>
+<a name="ch11lev3sec14"></a><H5 class="docSection3Title">11.4.5.2 Auth Scalability Approach 2: Keep Session on Same Server</h5>
+<p class="docText">Redirect the user to a specific server once the Auth session is set up. In other words, send a <tt>Location:</tt> header back to the user redirecting him to www2.example.com for the remainder of his session. This is straightforward to implement, but it defeats any failover mechanisms because the user is sending requests directly to a specific server.<a name="ch11index153"></a><a name="ch11index154"></a><a name="ch11index155"></a></P>
+<a name="ch11lev3sec15"></a><h5 class="docSection3Title">11.4.5.3 Auth Scalability Approach 3: Common Session Storage</h5>
+<p class="docText">Use a different session back-end that shares data between all the web servers. This could be everything from a regular database to a session-specific system like <tt>msession</tt> (available as a PHP extension; see the ext/msession directory in the PHP source tree).<a name="ch11index156"></a><a name="ch11index157"></a><a name="ch11index158"></a><a name="ch11index159"></a></p>
+<a name="ch11lev2sec9"></a><h4 class="docSection2Title">11.4.6. Auth Summary</h4>
+<p class="docText">Auth is a versatile authentication package for the web environment. You have explored some of its functionality and learned about the advantages and challenges it presents.<a name="ch11index160"></a><a name="ch11index161"></a></p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch11lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch11lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

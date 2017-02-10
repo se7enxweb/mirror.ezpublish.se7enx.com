@@ -1,0 +1,245 @@
+[01-26-2006 00:13:09] -!- tobyS [n=dotxp@dslb-084-060-026-169.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-26-2006 01:15:31] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-26-2006 01:51:02] -!- tobyS [n=dotxp@217.194.224.41] has joined #ezpublish
+[01-26-2006 02:00:45] -!- kore__ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-26-2006 02:05:46] -!- ordnas [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-26-2006 02:11:12] -!- fh [n=fh@popeye.ez.no] has joined #ezpublish
+[01-26-2006 02:30:41] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-26-2006 02:30:47] [#ezpublish] <y_sabal> plop
+[01-26-2006 02:38:35] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-26-2006 02:58:08] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[01-26-2006 03:03:18] [#ezpublish] <kalooni> Hi I need help
+[01-26-2006 03:03:29] [#ezpublish] <kalooni> about toolbar
+[01-26-2006 03:05:26] [#ezpublish] <y_sabal> ?
+[01-26-2006 03:11:47] [#ezpublish] <kalooni> finally I found my mistake by myself
+[01-26-2006 03:11:56] [#ezpublish] <kalooni> I was calling a toolbar that was not existing
+[01-26-2006 03:31:33] -!- SEAwolfx_ [n=mike@tor/session/x-e14eeb04e508de4a] has joined #ezpublish
+[01-26-2006 03:50:44] -!- SEAwolfx1 [n=mike@tor/session/x-7786497f93b369de] has joined #ezpublish
+[01-26-2006 03:56:45] [#ezpublish] <SEAwolfx1> zrg in da house?
+[01-26-2006 03:56:59] [#ezpublish] <SEAwolfx1> morning @all
+[01-26-2006 03:57:26] -!- SEAwolfx [n=mike@tor/session/x-7149a98a1efb1fbd] has quit [Nick collision from services.]
+[01-26-2006 03:57:29] -!- SEAwolfx1 is now known as SEAwolfx
+[01-26-2006 04:38:31] -!- seasonfive [n=seasonfi@AGrenoble-152-1-4-2.w82-122.abo.wanadoo.fr] has quit [Read error: 113 (No route to host)]
+[01-26-2006 04:40:53] -!- seasonfive [n=seasonfi@81.255.119.162] has joined #ezpublish
+[01-26-2006 05:12:13] -!- SEAwolfx1 [n=mike@tor/session/x-78aac82bd35b2dad] has joined #ezpublish
+[01-26-2006 05:15:12] -!- seasonfive [n=seasonfi@81.255.119.162] has quit [Read error: 110 (Connection timed out)]
+[01-26-2006 05:16:03] -!- seasonfive [n=seasonfi@AGrenoble-152-1-30-66.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[01-26-2006 05:17:16] [#ezpublish] <y_sabal> ezlog help
+[01-26-2006 05:17:28] [#ezpublish] <y_sabal> ...
+[01-26-2006 05:17:34] [#ezpublish] <y_sabal> ok, was a test...
+[01-26-2006 05:17:43] [#ezpublish] <zrg> no brains there
+[01-26-2006 05:18:00] [#ezpublish] <y_sabal> thought was a bot or something...
+[01-26-2006 05:18:33] [#ezpublish] <zrg> it is
+[01-26-2006 05:18:47] [#ezpublish] <y_sabal> well, it doesn't have a builtin help sys...
+[01-26-2006 05:25:21] -!- kore__ [n=lordhong@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-26-2006 05:25:45] -!- tobyS [n=dotxp@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-26-2006 05:26:53] -!- tobyS [n=dotxp@217.194.224.41] has joined #ezpublish
+[01-26-2006 05:27:32] -!- kore__ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-26-2006 05:38:50] [#ezpublish] <kracker> i am jack's dead end just waiting to hit `rock bottom`
+[01-26-2006 05:40:23] [#ezpublish] <zrg> commence operation mayhem
+[01-26-2006 05:41:41] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community || RSS: http://www.planetezpublish.org/ || News: http://ez.no/community/news/new_portal_of_german_speaking_ez_publish_community | http://ez.no/community/contribs/applications/antivirus_clamav_integration | http://ez.no/community/news/ez_components_1_0_release_candidate_1 || Articles: http://e
+[01-26-2006 05:42:15] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community || RSS: http://www.planetezpublish.org/ || News: http://ez.no/community/news/new_portal_of_german_speaking_ez_publish_community | http://ez.no/community/contribs/applications/antivirus_clamav_integration
+[01-26-2006 05:43:23] [#ezpublish] <zrg> not bad
+[01-26-2006 05:48:29] [#ezpublish] <kracker> wicked smart too
+[01-26-2006 06:33:13] -!- ordnas [n=ordnas@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-26-2006 06:36:17] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[01-26-2006 06:49:03] -!- ordnas [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-26-2006 06:56:05] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-26-2006 06:59:58] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[01-26-2006 08:16:53] -!- tobyS_ [n=dotxp@217.194.224.41] has joined #ezpublish
+[01-26-2006 08:17:09] [#ezpublish] <kalooni> anybody here ?
+[01-26-2006 08:18:03] -!- tobyS [n=dotxp@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-26-2006 08:18:20] -!- kore__ [n=lordhong@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-26-2006 08:18:58] -!- kore__ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-26-2006 08:19:11] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-26-2006 08:19:29] [#ezpublish] <Sulfur> hi guys
+[01-26-2006 08:19:39] [#ezpublish] <kalooni> hi Sulfur
+[01-26-2006 08:22:02] [#ezpublish] <Sulfur> I need some help on something on which I can't find documentation ... maybe fh , _kore , kore__ , ordnas can clarify me this. in my extension, I use function_definition.php to define the fields I can specify in my PHP code to make the fetch.
+[01-26-2006 08:22:25] [#ezpublish] <Sulfur> in method definition() there is this  'parameter_type' => 'standard' line in all examples. but I cannot understand how the specified parameters are passed to the underlying method ?
+[01-26-2006 08:23:01] [#ezpublish] <Sulfur> it seems they are mapped positionally, which gives me some big trouble in case of optional parameters. is there a way to map them by name ?
+[01-26-2006 08:23:48] [#ezpublish] <Sulfur> I suppsoe I need to change that 'standard' to something else, and add some extra info ... but what info?
+[01-26-2006 08:25:52] [#ezpublish] <Sulfur> anyone can shed some light? :)
+[01-26-2006 08:26:18] -!- ordnas [n=ordnas@popeye.ez.no] has left #ezpublish []
+[01-26-2006 08:28:33] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[01-26-2006 08:28:51] [#ezpublish] <Sulfur> sorry, I have to correct myself: it is not in method definition(), but in array FunctionList['myfetch']['parameter_type']
+[01-26-2006 08:30:46] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-26-2006 08:30:55] [#ezpublish] <zrg> not smart enough to help, sulfur :(
+[01-26-2006 08:31:23] [#ezpublish] <kalooni> idem
+[01-26-2006 08:31:28] [#ezpublish] <zrg> or then, wait..
+[01-26-2006 08:31:46] [#ezpublish] <Sulfur> it's not lack of smartness zrg .... you have to have coded into it to know ..... :)
+[01-26-2006 08:33:49] [#ezpublish] <zrg> there was a extension i made once.. cant find..
+[01-26-2006 08:40:12] [#ezpublish] <zrg> cand even find one i made it after.. there was some extension that added redirect operator to templates
+[01-26-2006 08:43:41] [#ezpublish] <kore__> You mean something like this Sulfur? ... 'parameters' => array( array( 'name' => 'offset', 'type' => 'integer', 'required' => true, 'default' => false ),  arra( 'name' => 'limit', 'type' => 'integer', 'required' => false, 'default' => 42 ))
+[01-26-2006 08:46:58] [#ezpublish] <zrg> ok by off chance it helps you: i made my operators by modifying this http://ez.no/community/contribs/template_plugins/redirect_operators
+[01-26-2006 08:47:25] [#ezpublish] <zrg> kind of remember they had optional parameters
+[01-26-2006 08:47:36] [#ezpublish] <Sulfur> kore__:  yes, I need to know how they are mapped to the parameters of the method specified in the 'method' key
+[01-26-2006 09:07:59] [#ezpublish] <Sulfur> kore__:  ?
+[01-26-2006 09:09:25] [#ezpublish] <kore__> OK, so you want to know, what happens with 2 optional paramters, when you enter only the second one?
+[01-26-2006 09:10:18] [#ezpublish] <kore__> afaik this is not passible ... as you can define default values, these are used for optnal parameters, but if you want to set the second one from the template you would have to define the first optional, too
+[01-26-2006 09:10:27] [#ezpublish] <Sulfur> yes kore__ well what happens I know --- params get mismatched! :)) I need to know if there are options other than 'standard' that will allow mw to map the tetch parameters to the function parameters
+[01-26-2006 09:11:09] [#ezpublish] <Sulfur> ah ... so let's say I need to pass only params 1 and 5, I have to pass params 2 3 and 4 too ?
+[01-26-2006 09:12:18] [#ezpublish] <kore__> Yes, I think so - there is no possibilty for named paramteers - you may want to use a hash as one parameter, where you can define key-associations...
+[01-26-2006 09:13:17] [#ezpublish] <Sulfur> hmmmmm.....
+[01-26-2006 09:13:22] [#ezpublish] <kore__> like you do in the fetch-functions, where the first two parameters are fixed (like content, list) and the third is a hash with a list of completely position independent parameters
+[01-26-2006 09:13:51] [#ezpublish] <Sulfur> kore__: I am actually doing that. the problem is this: maybe I should pastebin it
+[01-26-2006 09:15:44] [#ezpublish] <Sulfur> kore__:  http://pastebin.com/524019
+[01-26-2006 09:20:55] [#ezpublish] <Sulfur> so as you see I have all optional parameters , just as in ez's fetches, I am not bound t ospecify even parameters that I will not use
+[01-26-2006 09:21:16] [#ezpublish] <Sulfur> so there must be a way ... but which one .. ?
+[01-26-2006 09:23:20] [#ezpublish] <kore__> As I said, just use only one parameter (a hash), where you define all your parameters as key=>value pairs
+[01-26-2006 09:25:01] [#ezpublish] <Sulfur> and how do I specify a hash parameter into function_definition.php ?
+[01-26-2006 09:25:40] [#ezpublish] <Sulfur>                                                 array(
+[01-26-2006 09:25:40] [#ezpublish] <Sulfur>                                                         'name' => 'myparams',
+[01-26-2006 09:25:40] [#ezpublish] <Sulfur>                                                         'type' => '........... ? ',
+[01-26-2006 09:25:40] [#ezpublish] <Sulfur>                                                         'required' => false,
+[01-26-2006 09:25:40] [#ezpublish] <Sulfur>                                                         'default' => ..... ?
+[01-26-2006 09:25:41] [#ezpublish] <Sulfur>                                                      ),
+[01-26-2006 09:28:47] [#ezpublish] <Sulfur> ok kore__ --- it seems I am getting somewhere.
+[01-26-2006 09:29:22] [#ezpublish] <Sulfur> it seems that the params are EVAL'ed .... so passing the array as string appears to work
+[01-26-2006 09:38:24] [#ezpublish] <kore__> 'type' => 'array' and 'default' => array() I think, but I'am not sure
+[01-26-2006 09:38:43] [#ezpublish] <kore__> Just look at some od the standard modules like kernel/content/ or such
+[01-26-2006 09:38:58] [#ezpublish] <Sulfur> kore__: seems to work with "string"
+[01-26-2006 09:59:55] [#ezpublish] <zrg> ok, sauna calls
+[01-26-2006 10:01:17] [#ezpublish] <zrg> must not keep girls waiting :)
+[01-26-2006 10:01:23] -!- zrg is now known as zrg_away
+[01-26-2006 10:04:16] -!- zrg_away [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-26-2006 10:34:20] -!- ordna1 [n=ordnas@ti132110a080-9317.bb.online.no] has joined #ezpublish
+[01-26-2006 10:34:50] [#ezpublish] <Sulfur> what permissions must an user have to access a specific module view ????
+[01-26-2006 10:35:23] [#ezpublish] <Sulfur> it seems that mymodule / myview , coupled with login / mysiteaccess is not enough
+[01-26-2006 10:35:57] [#ezpublish] <Sulfur> and my admin user can ... so it must be a permission problem
+[01-26-2006 10:38:06] -!- SEAwolfx1 [n=mike@tor/session/x-78aac82bd35b2dad] has quit [Remote closed the connection]
+[01-26-2006 10:43:04] -!- SEAwolfx1 [n=mike@tor/session/x-75475e50a156a6a3] has joined #ezpublish
+[01-26-2006 11:09:59] [#ezpublish] <Sulfur> hey
+[01-26-2006 11:10:24] [#ezpublish] <SEAwolfx1> yo
+[01-26-2006 11:10:25] [#ezpublish] <Sulfur> does anybody know if ezpublish can generate CSV files ?
+[01-26-2006 11:10:53] [#ezpublish] <SEAwolfx1> i guess not. never heared about this feature.
+[01-26-2006 11:11:07] [#ezpublish] <Sulfur> *sigh* I feared just as much.
+[01-26-2006 11:11:35] [#ezpublish] <SEAwolfx1> so you need table structures as source to do this.
+[01-26-2006 11:11:37] [#ezpublish] <Sulfur> anyone has any idea on how (outside from ezp) do I force a download of a csv file ?
+[01-26-2006 11:12:28] [#ezpublish] <Sulfur> well, I am in my extension so I can make it dish out a csv string, but I suppose I also need to set a header or something
+[01-26-2006 11:12:31] [#ezpublish] <SEAwolfx1> what should be exported as csv files?
+[01-26-2006 11:13:38] [#ezpublish] <SEAwolfx1> matrix i guess?
+[01-26-2006 11:14:16] [#ezpublish] <SEAwolfx1> ideal datatype for that. you could code an additional export handler ;)
+[01-26-2006 11:15:02] [#ezpublish] <Sulfur> nope, my own external db , SEAwolfx
+[01-26-2006 11:15:36] [#ezpublish] <SEAwolfx1> ah
+[01-26-2006 11:15:59] [#ezpublish] <SEAwolfx1> .oO( content aggregator )
+[01-26-2006 11:16:52] [#ezpublish] <Sulfur> ? eh ?
+[01-26-2006 11:17:05] [#ezpublish] <Sulfur> anyway, I have found something on google ....
+[01-26-2006 11:17:10] [#ezpublish] <Sulfur> let's see ...
+[01-26-2006 11:17:25] [#ezpublish] <SEAwolfx1> yeah
+[01-26-2006 11:17:46] [#ezpublish] <Sulfur> I only hope that the dreaded "first line blank" problem will show up
+[01-26-2006 11:17:55] [#ezpublish] <Sulfur> will NOT show up, sorry
+[01-26-2006 11:18:31] [#ezpublish] <SEAwolfx1> a check should do the job?!
+[01-26-2006 11:18:54] [#ezpublish] <SEAwolfx1> you mean the exporting of the columns in the first row?
+[01-26-2006 11:19:19] [#ezpublish] <SEAwolfx1> s/columns/column names/
+[01-26-2006 11:21:16] -!- SEAwolfx [n=mike@tor/session/x-7786497f93b369de] has quit [Nick collision from services.]
+[01-26-2006 11:21:22] -!- SEAwolfx1 is now known as SEAwolfx
+[01-26-2006 11:21:25] -!- kore__ [n=lordhong@217.194.224.41] has quit []
+[01-26-2006 11:21:38] [#ezpublish] <Sulfur> no .... the fact that all ezp pages have to pass through pagelayout.tpl , and even if I put a check if mycsvdumppage then {$module_result.content}, sometimes, the very first line is a blank, thus headers cannot be set anymore (header("Content-disposition: attachment; filename=" . date("Y-m-d").".xls");      )and the csv can't be downloaded
+[01-26-2006 11:22:54] [#ezpublish] <SEAwolfx> jep
+[01-26-2006 11:23:14] [#ezpublish] <Sulfur> that could kill my app
+[01-26-2006 11:26:13] -!- tobyS_ [n=dotxp@217.194.224.41] has quit ["Plant your channel to pearadise.net!"]
+[01-26-2006 12:09:58] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-26-2006 12:16:03] -!- ordna1 [n=ordnas@ti132110a080-9317.bb.online.no] has left #ezpublish []
+[01-26-2006 12:16:48] [#ezpublish] <y_sabal> question :
+[01-26-2006 12:17:59] [#ezpublish] <y_sabal> I have a website siting at  site.com/abc
+[01-26-2006 12:18:44] [#ezpublish] <y_sabal> I am going to access it throught proxy on web.org/def
+[01-26-2006 12:19:01] [#ezpublish] <y_sabal> a simple redirection
+[01-26-2006 12:19:52] [#ezpublish] <y_sabal> of course, all link over the site have sitebased :  site.com/abc
+[01-26-2006 12:20:01] [#ezpublish] <y_sabal> so I need to change the site.ini
+[01-26-2006 12:20:06] [#ezpublish] <y_sabal> may question is :
+[01-26-2006 12:21:12] [#ezpublish] <y_sabal> afterward, will I still be able to access it throught  site.com/abc
+[01-26-2006 12:21:13] [#ezpublish] <y_sabal> ???
+[01-26-2006 12:21:59] -!- SEAwolfx is now known as PythonWilli
+[01-26-2006 12:22:10] -!- PythonWilli is now known as SEAwolfx
+[01-26-2006 12:23:25] [#ezpublish] <y_sabal> allo ?
+[01-26-2006 12:35:28] [#ezpublish] <SEAwolfx> i dont get what you are asking, y_sabal.
+[01-26-2006 12:46:31] [#ezpublish] <y_sabal> I have been developing a website, located at site.com/abc. Tomorow, I need to make it public. The url need to change. A proxy, at web.org/def is pointing on my server, therfore, I may now access my website site at the following address : web.org/def, without any change in my eZ configuration. However..
+[01-26-2006 12:47:43] [#ezpublish] <y_sabal> ... all the links, on the website, are still using the first url : site.com/abc .Because in the site.ini, I did not changed yet the siteaccessURL.
+[01-26-2006 12:47:59] [#ezpublish] <SEAwolfx> you can change the site-url in the look and feel setup also.
+[01-26-2006 12:48:39] [#ezpublish] <y_sabal> that is not a problem
+[01-26-2006 12:48:47] [#ezpublish] <SEAwolfx> otherwise you have to set a rewrite-rule for the abc
+[01-26-2006 12:49:05] [#ezpublish] <y_sabal> there is a rewrite rule
+[01-26-2006 12:49:48] [#ezpublish] <SEAwolfx> so there is no need to change ezs´ configuration.
+[01-26-2006 12:51:22] [#ezpublish] <y_sabal> well, all url, generated in template, still use the siteURL field defined in site.ini.append ...
+[01-26-2006 12:51:30] [#ezpublish] <y_sabal> so I need to modified this parameter
+[01-26-2006 12:52:53] [#ezpublish] <SEAwolfx> so no internal rewrite would manage this?
+[01-26-2006 12:53:14] [#ezpublish] <y_sabal> well, there is no internal rewrite
+[01-26-2006 12:53:28] [#ezpublish] <SEAwolfx> you would have to define one.
+[01-26-2006 12:53:30] [#ezpublish] <y_sabal> there is a rewrite on the apache of the proxy
+[01-26-2006 12:53:39] [#ezpublish] <y_sabal> but nothing localy
+[01-26-2006 12:54:54] [#ezpublish] <y_sabal> I have to do some rewrite rule locally anyway ? what for ?
+[01-26-2006 12:55:28] [#ezpublish] <SEAwolfx> so the rewrite rule on the proxy would envoke your ez-app with the normal urls as before?
+[01-26-2006 12:55:49] [#ezpublish] <y_sabal> mm, let me check...
+[01-26-2006 12:56:22] [#ezpublish] <SEAwolfx> if so why to change the configuration?
+[01-26-2006 12:56:31] [#ezpublish] <y_sabal> the rewite rule make a straight use of IPs
+[01-26-2006 12:56:53] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-26-2006 12:56:54] [#ezpublish] <SEAwolfx> its about the url i tought?
+[01-26-2006 12:57:03] [#ezpublish] <SEAwolfx> +h
+[01-26-2006 12:57:08] [#ezpublish] * _buz is looking for a scalable forum package
+[01-26-2006 12:57:37] [#ezpublish] <SEAwolfx> scalable in which concern?
+[01-26-2006 12:57:47] [#ezpublish] <_buz> lots of traffic, posts and users
+[01-26-2006 12:57:49] [#ezpublish] <SEAwolfx> hey, buz btw. long time not see.
+[01-26-2006 12:58:09] [#ezpublish] <_buz> whereas lots is >5000 users, 100s to 1000s posts a day
+[01-26-2006 12:58:14] [#ezpublish] <_buz> unspecified amount of page hits
+[01-26-2006 12:59:21] [#ezpublish] <SEAwolfx> you want a standalone-app? phpbb probably?
+[01-26-2006 13:00:03] [#ezpublish] <_buz> phpbb is out of question
+[01-26-2006 13:00:09] [#ezpublish] <_buz> i was thining phorum maybe
+[01-26-2006 13:00:10] -!- SEAwolfx_ [n=mike@tor/session/x-e14eeb04e508de4a] has quit [SendQ exceeded]
+[01-26-2006 13:01:18] [#ezpublish] <SEAwolfx> why is phpbb out of question? phorum is not the style i like, but its a long time ago i tested it.
+[01-26-2006 13:01:31] [#ezpublish] <_buz> phpbb is slow and riddled with holes
+[01-26-2006 13:01:48] [#ezpublish] <SEAwolfx> i dont like phorums-threading-style
+[01-26-2006 13:02:40] [#ezpublish] <SEAwolfx> how about vBulletin
+[01-26-2006 13:02:51] [#ezpublish] <_buz> thought about it but i'd prefere FOSS
+[01-26-2006 13:03:10] [#ezpublish] <_buz> vbulletin can handle lots of traffic i believe
+[01-26-2006 13:03:41] [#ezpublish] <SEAwolfx> yes.
+[01-26-2006 13:04:35] [#ezpublish] <SEAwolfx> i know a site with : Threads: 43,116, Posts: 348,178, Members: 7,718
+[01-26-2006 13:04:52] [#ezpublish] <_buz> that somewhere along of the lines of what were are replacing
+[01-26-2006 13:04:56] [#ezpublish] <SEAwolfx> and it seems to run.
+[01-26-2006 13:05:23] [#ezpublish] <_buz> http://ubuntuforums.org/ is huge and seems to work ok
+[01-26-2006 13:05:35] [#ezpublish] <_buz> but really, i want free oss ;)
+[01-26-2006 13:06:08] [#ezpublish] <SEAwolfx> ubuntu Threads: 119,414, Posts: 679,724, Members: 68,196
+[01-26-2006 13:06:25] [#ezpublish] <SEAwolfx> yeah, also fine.
+[01-26-2006 13:06:33] [#ezpublish] <_buz> (it's kinda embarassing to use commercial forum on a linux community site i think=
+[01-26-2006 13:06:35] [#ezpublish] <SEAwolfx> seems to run under heavy load.
+[01-26-2006 13:06:44] [#ezpublish] <_buz> dunno about the servers behind it
+[01-26-2006 13:06:51] [#ezpublish] <_buz> cannonical gives major backing for ubuntu
+[01-26-2006 13:07:47] [#ezpublish] <SEAwolfx> whats about a ez-extension in vbulletin-style? ;)
+[01-26-2006 13:10:49] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[01-26-2006 13:25:28] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Isn't Gaim a cool program ? :-)"]
+[01-26-2006 14:08:04] -!- elephantMan [n=elephant@252.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[01-26-2006 14:47:04] Disconnecting due to lack of a lag response (0.04981600 1138308364 != 0.09991700 1138308394)
+[01-26-2006 14:47:04] Diconnected. Sleeping for 2 second(s).
+[01-26-2006 14:47:06] >> Connecting to irc.freenode.net:6667
+[01-26-2006 14:47:10] >> Connected to irc.freenode.net:6667, registering...
+[01-26-2006 14:47:11] >> Primary nickname in use, trying alternate.
+[01-26-2006 14:47:11] >> Successfully registered. Nick is: ezpublishlog
+[01-26-2006 14:47:11] -!- There are 14614 listed and 14123 unlisted users on 22 servers
+[01-26-2006 14:47:11] -!- 38 flagged staff members
+[01-26-2006 14:47:11] -!- 11688 channels formed
+[01-26-2006 14:47:11] -!- I have 3792 clients and 0 servers
+[01-26-2006 14:47:11] -!- Current local  users: 3792  Max: 5325
+[01-26-2006 14:47:11] -!- Current global users: 28737  Max: 28836
+[01-26-2006 14:47:11] -!- Highest connection count: 5327 (5325 clients) (174641 since server was (re)started)
+[01-26-2006 14:47:12] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[01-26-2006 14:47:12] [notice(freenode-connect)] VERSION IQ 0.9.3
+[01-26-2006 14:47:34] >> Attempting to join channels: #ezpublish
+[01-26-2006 14:47:34] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[01-26-2006 14:47:34] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community || RSS: http://www.planetezpublish.org/ || News: http://ez.no/community/news/new_portal_of_german_speaking_ez_publish_community | http://ez.no/community/contribs/applications/antivirus_clamav_integration
+[01-26-2006 14:47:34] -!- Topic set by kracker [@] [Thu, 26 Jan 2006 05:48:10 -0600]
+[01-26-2006 14:47:34] (unmatched::raw477) :calvino.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#privmsg
+[01-26-2006 14:47:51] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[01-26-2006 14:50:11] (ezpublishlog) Attempting to gain back primary nickname
+[01-26-2006 14:50:11] -!- ezpublishlog is now known as ezlog
+[01-26-2006 14:50:11] My new nick is ezlog
+[01-26-2006 14:55:33] -!- SEAwolfx [n=mike@tor/session/x-75475e50a156a6a3] has quit [Remote closed the connection]
+[01-26-2006 15:08:12] [#ezpublish] <kracker> the fuck?
+[01-26-2006 15:08:33] [#ezpublish] <kracker> ezlog, where have you been and who is ...?
+[01-26-2006 15:08:42] [#ezpublish] <_buz> ?
+[01-26-2006 15:09:04] [#ezpublish] <kracker> bright eyes - lover I don't have to love
+[01-26-2006 15:47:24] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-26-2006 15:50:23] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[01-26-2006 16:11:43] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-26-2006 16:31:00] -!- elephantMan [n=elephant@252.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-26-2006 16:34:41] -!- tobyS [n=dotxp@dslb-084-061-188-024.pools.arcor-ip.net] has joined #ezpublish
+[01-26-2006 16:39:59] -!- SEAwolfx [n=mike@tor/session/x-e28dcbb83baad960] has joined #ezpublish
+[01-26-2006 22:37:27] -!- SEAwolfx [n=mike@tor/session/x-e28dcbb83baad960] has quit [Remote closed the connection]

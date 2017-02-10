@@ -1,0 +1,36 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 14.7.&nbsp; Using APC (Advanced PHP Cache)</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch14lev1sec7"></a><h3 class="docSection1Title">14.7. Using APC (Advanced PHP Cache)</h3>
+<p class="docText">One of the biggest performance problems with PHP code has been that requests take longer the more the code PHP parses. Fortunately, there is now a solution: opcode caches. An <span class="docEmphStrong">opcode cache</span> works by caching the output from Zend's compiler in shared memory so subsequent requests do not have to reparse the same code again and again.<a name="ch14index198"></a><a name="ch14index199"></a><a name="ch14index200"></a><a name="ch14index201"></a><a name="ch14index202"></a></p>
+<p class="docText"><span class="docEmphStrong">APC</span> is a popular open-source cache for PHP written by George Schlossnagle and Daniel Cowgill, available through PECL:</p>
+<pre>
+shell$ pear install apc
+</pre><br>
+<p class="docText">To use APC, you need shared memory enabled in your operating system. You also need the following snippet added to your php.ini file:</P>
+<pre>
+apc.enable = yes
+apc.shm_size = 4
+</pre><br>
+<p class="docText">APC will not start up unless <tt>apc.enable</tt> is true. The <tt>apc.shm_size</tt> directive tells how many megabytes of memory APC reserves for caching scripts. APC will reparse code if the source file is updated.</P>
+<p class="docText">Now restart your web server, and you're all set.</p>
+<p class="docText">Try profiling some scripts using APD after you have APC running. The require/include subroutines should disappear completely from the top CPU consumers after a couple of requests.<a name="ch14index203"></a><a name="ch14index204"></a></P>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

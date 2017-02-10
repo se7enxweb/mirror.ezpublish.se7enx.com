@@ -1,0 +1,44 @@
+[01-14-2006 00:08:55] -lilo:$*- [Global Notice] All done. Thank you for your patience, and have a great day!
+[01-14-2006 01:42:22] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-14-2006 03:02:57] -!- SEAwolfx [n=mike@DSL01.212.114.232.55.NEFkom.net] has joined #ezpublish
+[01-14-2006 03:06:45] -!- SEAwolfx [n=mike@DSL01.212.114.232.55.NEFkom.net] has quit [Client Quit]
+[01-14-2006 03:07:47] -!- SEAwolfx [n=mike@tor/session/x-5c66e3483759b398] has joined #ezpublish
+[01-14-2006 03:28:45] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-14-2006 04:02:06] -!- ordnas [n=ordnas@p549D6A3C.dip.t-dialin.net] has joined #ezpublish
+[01-14-2006 04:49:00] -!- SEAwolfx_ [n=mike@tor/session/x-b5e09a6cb77d22e8] has joined #ezpublish
+[01-14-2006 04:50:00] [#ezpublish] <SEAwolfx_> re
+[01-14-2006 05:34:59] -!- SEAwolfx_ [n=mike@tor/session/x-b5e09a6cb77d22e8] has quit [Remote closed the connection]
+[01-14-2006 05:35:14] -!- SEAwolfx_ [n=mike@tor/session/x-7a4b4aa98e8f6825] has joined #ezpublish
+[01-14-2006 06:00:06] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-14-2006 06:00:16] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-14-2006 08:58:10] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[01-14-2006 09:23:23] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[01-14-2006 09:25:12] -!- kracker changed the topic of #ezpublish to: eZ publish | cms |  Welcome to #ezpublish (and Happy New Year :) Please be patient, wait and try again before leaving || eZ publish community: http://ez.no/community || News: http://ez.no/community/news/community_newsletter_13_01_2006 | http://ez.no/community/news/ez_components_beta2 | http://ez.no/community/articles/a_joyride_to_ez_components_beta2
+[01-14-2006 09:26:51] [#ezpublish] <SEAwolfx_> kracker
+[01-14-2006 09:46:19] -!- _xiglet [n=xiglet@62.92.35.142] has joined #ezpublish
+[01-14-2006 09:47:31] -!- _xiglet [n=xiglet@62.92.35.142] has quit [Remote closed the connection]
+[01-14-2006 09:52:35] [#ezpublish] <kracker> greetings
+[01-14-2006 09:55:50] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 110 (Connection timed out)]
+[01-14-2006 10:36:57] -!- SEAwolfx [n=mike@tor/session/x-5c66e3483759b398] has quit [SendQ exceeded]
+[01-14-2006 10:42:08] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-14-2006 12:06:10] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-14-2006 12:06:19] -!- jota [n=jota@fanzine.igalia.com] has quit [Client Quit]
+[01-14-2006 12:19:03] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-14-2006 12:20:47] -!- ordnas [n=ordnas@p549D6A3C.dip.t-dialin.net] has left #ezpublish []
+[01-14-2006 12:29:29] -!- SEAwolfx [n=mike@tor/session/x-41986928529266ce] has joined #ezpublish
+[01-14-2006 12:30:04] [#ezpublish] <SEAwolfx> re
+[01-14-2006 13:07:55] [#ezpublish] <kracker> tarded?
+[01-14-2006 13:27:06] [#ezpublish] <SEAwolfx> not really, rather retarded :P
+[01-14-2006 13:28:00] [#ezpublish] <SEAwolfx> oops, i mean returned ;->
+[01-14-2006 13:28:20] [#ezpublish] <SEAwolfx> maybe both
+[01-14-2006 13:39:28] [#ezpublish] <SEAwolfx> ;)
+[01-14-2006 13:40:35] -!- ordnas [n=ordnas@p549D6D3E.dip.t-dialin.net] has joined #ezpublish
+[01-14-2006 13:42:36] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[01-14-2006 13:55:32] -!- ordnas [n=ordnas@p549D6D3E.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-14-2006 15:17:38] -!- SEAwolfx_ [n=mike@tor/session/x-7a4b4aa98e8f6825] has quit [SendQ exceeded]
+[01-14-2006 16:11:25] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-14-2006 19:10:38] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[01-14-2006 19:32:17] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[01-14-2006 19:43:36] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit []
+[01-14-2006 22:51:35] -!- SEAwolfx [n=mike@tor/session/x-41986928529266ce] has quit [Remote closed the connection]
+[01-14-2006 23:01:08] -!- SEAwolfx [n=mike@tor/session/x-040822b214148d3a] has joined #ezpublish

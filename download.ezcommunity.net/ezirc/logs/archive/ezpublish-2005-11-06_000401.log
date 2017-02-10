@@ -1,0 +1,86 @@
+[11-03-2005 00:10:47] -!- xbit_ [i=xbit@pppoecl68157.minlos.no] has quit [Read error: 110 (Connection timed out)]
+[11-03-2005 00:11:19] -!- xbit [i=xbit@pppoecl68157.minlos.no] has quit [Read error: 110 (Connection timed out)]
+[11-03-2005 01:02:15] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-03-2005 01:13:43] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-03-2005 01:31:33] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-03-2005 01:40:48] -!- ordnas [n=ordnas@p549DDA14.dip.t-dialin.net] has joined #ezpublish
+[11-03-2005 01:47:07] -!- DiGiTa|_ [n=guillaum@84.4.190.108] has joined #ezpublish
+[11-03-2005 04:03:29] [#ezpublish] <DiGiTa|_> ouai il valait mieux que tu sortes :p
+[11-03-2005 04:06:15] [#ezpublish] <Katana`> :)))
+[11-03-2005 04:06:38] [#ezpublish] <Katana`> moi aussi j't'aime ma poule :)
+[11-03-2005 04:06:55] [#ezpublish] <DiGiTa|_> moi pas :p
+[11-03-2005 04:12:43] [#ezpublish] <Katana`> creve charogne
+[11-03-2005 05:14:44] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-03-2005 05:14:56] [#ezpublish] <Sulfur> good morning guys :)
+[11-03-2005 05:15:48] [#ezpublish] * Sulfur slaps ezlog with a dead raven
+[11-03-2005 05:59:51] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-03-2005 06:56:49] [#ezpublish] * Katana` slaps Sulfur around
+[11-03-2005 07:06:59] [#ezpublish] <Sulfur> oh, the tragedy
+[11-03-2005 07:30:16] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[11-03-2005 07:32:07] [#ezpublish] <kracker> hey now, leave him alone, he's just a automaton, it can't defend himself :\
+[11-03-2005 08:06:08] [#ezpublish] <fh[eZ]> http://ez.no/community/news/online_editor_4_0_alpha1
+[11-03-2005 08:13:50] [#ezpublish] <Sulfur> I am an automaton too
+[11-03-2005 08:13:54] [#ezpublish] <Sulfur> RoboSulfur
+[11-03-2005 08:15:11] [#ezpublish] <Sulfur> nice, fh[eZ]
+[11-03-2005 08:25:35] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-03-2005 08:31:39] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-03-2005 08:31:39] -!- _Katana` is now known as Katana`
+[11-03-2005 09:24:43] [#ezpublish] <bskahan> is it possible to sort a search fetch by a date attribute?
+[11-03-2005 09:38:33] >> IQ standard module loaded
+[11-03-2005 09:38:33] -- Configuration loaded.
+[11-03-2005 09:38:33] >> Connecting to irc.freenode.net:6667
+[11-03-2005 09:38:42] >> Connected to irc.freenode.net:6667, registering...
+[11-03-2005 09:38:43] >> Primary nickname in use, trying alternate.
+[11-03-2005 09:38:43] >> Successfully registered. Nick is: ezpublishlog
+[11-03-2005 09:38:43] >> Attempting to join channels: #ezpublish
+[11-03-2005 09:38:43] -!- There are 12968 listed and 13297 unlisted users on 23 servers
+[11-03-2005 09:38:43] -!- 41 flagged staff members
+[11-03-2005 09:38:43] -!- 10076 channels formed
+[11-03-2005 09:38:43] -!- I have 4356 clients and 0 servers
+[11-03-2005 09:38:43] -!- Current local  users: 4356  Max: 5531
+[11-03-2005 09:38:43] -!- Current global users: 26265  Max: 27525
+[11-03-2005 09:38:43] -!- Highest connection count: 5533 (5531 clients) (484634 since server was (re)started)
+[11-03-2005 09:38:44] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[11-03-2005 09:38:44] [notice(freenode-connect)] VERSION IQ 0.9.3
+[11-03-2005 09:38:44] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[11-03-2005 09:38:44] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/blog/components_from_svn_tutorial
+[11-03-2005 09:38:44] -!- Topic set by kracker [@] [Mon, 31 Oct 2005 16:02:29 -0600]
+[11-03-2005 09:39:12] -!- ezlog [n=IQ@209.144.224.222] has quit [Read error: 104 (Connection reset by peer)]
+[11-03-2005 09:39:12] -!- ezpublishlog is now known as ezlog
+[11-03-2005 09:39:12] My new nick is ezlog
+[11-03-2005 14:18:43] >> IQ standard module loaded
+[11-03-2005 14:18:43] -- Configuration loaded.
+[11-03-2005 14:18:43] >> Connecting to irc.freenode.net:6667
+[11-03-2005 14:18:47] >> Connected to irc.freenode.net:6667, registering...
+[11-03-2005 14:18:48] >> Successfully registered. Nick is: ezlog
+[11-03-2005 14:18:48] >> Attempting to join channels: #ezpublish
+[11-03-2005 14:18:48] -!- There are 13845 listed and 13560 unlisted users on 23 servers
+[11-03-2005 14:18:48] -!- 39 flagged staff members
+[11-03-2005 14:18:48] -!- 10157 channels formed
+[11-03-2005 14:18:48] -!- I have 4469 clients and 0 servers
+[11-03-2005 14:18:48] -!- Current local  users: 4469  Max: 5531
+[11-03-2005 14:18:48] -!- Current global users: 27405  Max: 27525
+[11-03-2005 14:18:48] -!- Highest connection count: 5533 (5531 clients) (486903 since server was (re)started)
+[11-03-2005 14:18:48] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[11-03-2005 14:18:48] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/blog/components_from_svn_tutorial
+[11-03-2005 14:18:48] -!- Topic set by kracker [@] [Mon, 31 Oct 2005 16:02:29 -0600]
+[11-03-2005 14:18:48] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[11-03-2005 14:18:48] [notice(freenode-connect)] VERSION IQ 0.9.3
+[11-03-2005 14:35:17] >> IQ standard module loaded
+[11-03-2005 14:35:17] -- Configuration loaded.
+[11-03-2005 14:35:17] >> Connecting to irc.freenode.net:6667
+[11-03-2005 14:35:21] >> Connected to irc.freenode.net:6667, registering...
+[11-03-2005 14:35:21] >> Successfully registered. Nick is: ezlog
+[11-03-2005 14:35:21] >> Attempting to join channels: #ezpublish
+[11-03-2005 14:35:21] -!- There are 13860 listed and 13587 unlisted users on 23 servers
+[11-03-2005 14:35:21] -!- 39 flagged staff members
+[11-03-2005 14:35:21] -!- 10161 channels formed
+[11-03-2005 14:35:21] -!- I have 4466 clients and 0 servers
+[11-03-2005 14:35:21] -!- Current local  users: 4466  Max: 5531
+[11-03-2005 14:35:21] -!- Current global users: 27447  Max: 27525
+[11-03-2005 14:35:22] -!- Highest connection count: 5533 (5531 clients) (487056 since server was (re)started)
+[11-03-2005 14:35:22] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[11-03-2005 14:35:22] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/blog/components_from_svn_tutorial
+[11-03-2005 14:35:22] -!- Topic set by kracker [@] [Mon, 31 Oct 2005 16:02:29 -0600]
+[11-03-2005 14:35:22] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[11-03-2005 14:35:22] [notice(freenode-connect)] VERSION IQ 0.9.3

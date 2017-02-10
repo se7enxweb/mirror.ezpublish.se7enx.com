@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="7012"
+   name=""
+   committed-date="2004-07-05T11:04:20.036903Z"
+   url="http://pubsvn.ez.no/nextgen/trunk/kernel/shop/classes/doc/images"
+   last-author="dl"
+   kind="dir"
+   uuid="a01eee8c-daba-0310-acae-fa49f3023285"
+   revision="7012"/>
+<entry
+   committed-rev="7012"
+   name="classes.png"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="c576da0d745115308ec57880c91c9dda"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:25.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="eZPaymentCallbackChecker.png"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="a21a6b8cb4e2de5dd8e185669cf95bbc"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:25.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="eZPaymentGateway.png"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="e30346e24183be4334653590007c31a1"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:25.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="eZPaymentGatewayType.png"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="d491b41f0d808c32561a49088aec9c53"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="eZRedirectGateway.png"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="74cd68c05029709512037122fc600f00"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="eZPaymentObject.png"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="ec399f3f58f674aded4f05a233cccb77"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+</wc-entries>

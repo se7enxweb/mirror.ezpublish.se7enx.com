@@ -1,0 +1,399 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 9.5.&nbsp; Graphics Manipulation with GD</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch09lev1sec5"></a><h3 class="docSection1Title">9.5. Graphics Manipulation with GD</h3>
+<p class="docText">Instead of describing all the GD functions that PHP supports, we discuss two common uses of the GD image library. In the first example, we use the GD libraries to build an image with a code word on it. We also add some distortions so that the image is machine-unreadablethe perfect protection against automatic tools that fill in forms. In the second example, we create a bar chart, including axis, labels, background, TrueType text, and alpha blending.<a name="ch09index369"></a><a name="ch09index370"></a></p>
+<p class="docText">Our examples require the bundled GD library. For UNIX OSs, you need to compile PHP using the option <tt>--with-gd</tt> (without path). For Windows, you can use the packaged <tt>php_gd2.dll</tt> and enable it in <tt>php.ini</tt>. Because we make use of some additional functions of the GD library, you need to see the information, shown in <a class="docLink" href="#ch09fig05">Figure 9.5</a>, in the GD section of your <tt>phpinfo()</tt> output (except for WBMP and XPM support).</p>
+<a name="ch09fig05"></a><p><center><H5 class="docFigureTitle">Figure 9.5. GD phpinfo() output.</h5><a name="ch09index371"></a>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig05_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="188" SRC="images/013147149X/graphics/09fig05.gif;380137"></P></center></p><BR>
+<p class="docText">A typical set of configuration options would be</p>
+<pre>
+--with-gd --with-jpeg-dir=/usr --with-png-dir=/usr --with-freetype-dir=/usr
+</pre><br>
+<a name="ch09lev2sec15"></a><h4 class="docSection2Title">9.5.1. Case 1: Bot-Proof Submission Forms</h4>
+<p class="docText">The following script makes it difficult for automatic tools to submit forms. The steps involved in this basic script are create a drawing space, allocate colors, fill the background, draw characters, add distortions, and output the image to the browser:<a name="ch09index372"></a><a name="ch09index373"></a><a name="ch09index374"></a><a name="ch09index375"></a><a name="ch09index376"></a></P>
+<pre>
+&lt;?php
+     $size_x = 200;
+     $size_y = 75;
+
+     if (!isset($_GET['code'])) {
+           $code = 'unknown';
+     }
+     $code = substr($_GET['code'], 0, 8);
+     $space_per_char = $size_x / (strlen($code) + 1);
+</pre><BR>
+<p class="docText">In the preceding code, we set the horizontal and vertical sizes of the images to variables, making possible future changes easier. Next, we grab the code from the <tt>GET</tt> parameter <tt>code</tt> and trim it to a maximum of eight characters. Then, we calculate <tt>$space_per_char</tt>the space between characters for use in rendering later in the script.</p>
+<a name="ch09note06"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">Using <tt>$_GET</tt> parameters to grab the code, of course, defeats the whole purpose of this script because a robot can simply read the HTML file that includes the <tt>&lt;img src='image.php?code=foobar'/&gt;</tt> line. For this to work, you need to store the code in a database and, for example, with a random key read the code back in the script generating the image, as in something like this:</p>
+<pre>
+<span class="docEmphasis">mysql_connect();</span>
+<span class="docEmphasis">$res = mysql_query('SELECT code FROM codes WHERE key='.</span>
+     <span class="docEmphasis">(int) $_GET['key']);</span>
+<span class="docEmphasis">$code = mysql_result($res, 0);</span>
+</pre><br>
+<p class="docText">and embed it into the HTML page with:</P>
+<pre>
+<span class="docEmphasis">&lt;img src='image.php?key=90'/&gt;</span>
+
+/* Create canvas */
+$img = imagecreatetruecolor($size_x, $size_y);
+</pre><br></div><br>
+<p class="docText">With <tt>imagecreatetruecolor()</tt>, we create a new &quot;canvas&quot; to draw on with 256 different shades of red, green, and blue available, and an alpha channel per pixel. PHP provides another variant of <tt>imagecreate</tt> that can be used to create &quot;paletted images&quot; with 256 colors maximum, but <tt>imagecreatetruecolor()</tt> is used more often because images produced by it usually look better. Both JPEG and PNG files support true color images, so we use this function for our PNG file. The default background is black. Because we want to change the background, we need to &quot;allocate&quot; some colors, as follows:<a name="ch09index377"></a><a name="ch09index378"></a><a name="ch09index379"></a><a name="ch09index380"></a><a name="ch09index381"></a><a name="ch09index382"></a></P>
+<pre>
+/* Allocate colors */
+$background = imagecolorallocate($img, 255, 255, 255);
+$border = imagecolorallocate($img, 128, 128, 128);
+$colors[] = imagecolorallocate($img, 128, 64, 192);
+$colors[] = imagecolorallocate($img, 192, 64, 128);
+$colors[] = imagecolorallocate($img, 108, 192, 64);
+</pre><br>
+<p class="docText">In the previous code, we use <tt>imagecolorallocate()</tt> to define five different colors<tt>$background</tt>, <tt>$border</tt>, and <tt>$colors</tt>, an array containing three colors to use in rendering the text. In each function call, we pass the variable <tt>$img</tt> (the image resource returned by the <tt>imagecreatetruecolor()</tt> function earlier in the script), followed by three parameters specifying color values. The first specifies the amount of red in the color, the second specifies a value for the blue channel, and the third indicates the amount of green in the color. The color values can range from 0 to 255. For example, white is specified by 255, 255, 255 (the highest possible color value for all three channels) and black is specified by 0, 0, 0 (the lowest possible color value for all three channels). In the script, <tt>$background</tt> is white and <tt>$border</tt> is defined with color values of 50%, which is gray. You can add more colors if you wish.<a name="ch09index383"></a><a name="ch09index384"></a></P>
+<pre>
+/* Fill background */
+imagefilledrectangle($img, 1, 1, $size_x - 2, $size_y - 2, $background);
+imagerectangle($img, 0, 0, $size_x - 1, $size_y - 1, $border);
+</pre><br>
+<p class="docText">By using the two functions, we change the background color to white and add the gray border. Both functions accept the same parameters: the image resource, the coordinates of the top-left corner, the coordinates of the bottom-right corner, and the color. The coordinates range from <tt>0, 0</tt> to <tt>size_x  1, size_y  1</tt>, so we draw a filled rectangle from position <tt>1, 1</tt> to <tt>size_x  2, size_y  2</tt>. We also draw a gray border around the edge of the image.<a name="ch09index385"></a><a name="ch09index386"></a><a name="ch09index387"></a><a name="ch09index388"></a><a name="ch09index389"></a></p>
+<pre>
+/* Draw text */
+for ($i = 0; $i &lt; strlen($code); $i++)
+{
+              $color = $colors[$i % count($colors)];
+              imagettftext(
+                     $img,
+                     28 + rand(0, 8),
+                     -20 + rand(0, 40),
+                     ($i + 0.3) * $space_per_char,
+                     50 + rand(0, 10),
+                     $color,
+                     'arial.ttf',
+                     $code{$i}
+               );
+   }
+</pre><br>
+<p class="docText">In this code, we loop through all the characters in our code string. First, we pick the next element in the colors array. We use the modulo (<tt>%</tt>) operator to be sure we have an element with this key in the array. Next, we use the <tt>imagettftext()</tt> function to draw the letter. We pass the parameters shown in <a class="docLink" href="#ch09table08">Table 9.8</a> to <tt>imagettftext()</tt>.<a name="ch09index390"></a><a name="ch09index391"></a><a name="ch09index392"></a><a name="ch09index393"></a><a name="ch09index394"></a><a name="ch09index395"></a><a name="ch09index396"></a></p>
+<pre>
+/* Adding some random distortions */
+imageantialias($img, true);
+</pre><br>
+<a name="ch09table08"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 9.8. Parameters to <tt>imagettftext()</tt></h5></caption><colgroup><col width="99"><col width="148.5"><col width="302.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Parameter</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Content</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Remarks</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>img</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>$img</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The image resource on which to draw.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>fontsize</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>28 + rand(0, 8)</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The size in points (not pixels) of the characters to be drawn. For randomness, we select a size between 28 and 36 points.</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>angle</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-20 + rand(0, 40)</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The angle in which the character is drawn in degrees (the range is 0360). We use it here to &quot;twist&quot; the characters a bit, which makes it harder for an automatic tool to read it.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>x</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>($i + 0.3) * $space_per_char</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The <tt>x</tt> location where the character is drawn (also some additional randomness here).</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>y</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>50 + rand(0, 10)</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The <tt>y</tt> location for the character. This is not the upper limit, but the place where the baseline of the character is drawn. The baseline is usually the location of the lower boundary of characters without any tails, such as <tt>s</tt> (and not p).</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>colour</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>$color</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The color to use for drawing the text.</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>font</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>'arial.ttf'</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The name of the font file to use.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>text</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>$code$i)</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The character from the code that we draw.</p></td></tr></table></p><br>
+<p class="docText">This line turns on anti-aliasing. <span class="docEmphStrong">Anti-aliasing</span> is a technique to create smoother lines. Because it is much better explained with an image, see the effect in <a class="docLink" href="#ch09fig06">Figure 9.6</a>.<a name="ch09index397"></a><a name="ch09index398"></a><a name="ch09index399"></a><a name="ch09index400"></a><a name="ch09index401"></a><a name="ch09index402"></a></p>
+<a name="ch09fig06"></a><p><center><h5 class="docFigureTitle">Figure 9.6. Anti-aliasing.</h5>
+<p class="docText"><img border="0" alt="" width="350" height="152" SRC="images/013147149X/graphics/09fig06.gif;380137"></p></center></p><br>
+<a name="ch09note07"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">Text drawn with the <tt>imagettftext()</tt> function is always anti-aliased. If you do not want this, you need to use a negative color number (like <tt>-$color</tt>) in the previous example. This trick does not work for totally black colors because the handle returned for black in a true color image is just <tt>0</tt>. Because <tt>0</tt> is the same as <tt>-0</tt> for PHP, the anti-aliasing is not turned off. You can easily work around this by allocating black with <tt>$black = imagecolorallocate($img, 0, 0, 1)</tt> (changing one of the components from 0 to 1).<a name="ch09index403"></a><a name="ch09index404"></a></p></div><BR>
+<pre>
+for ($i = 0; $i &lt; 1000; $i++)
+{
+       $x1 = rand(5, $size_x - 5);
+       $y1 = rand(5, $size_y - 5);
+       $x2 = $x1 - 4 + rand(0, 8);
+       $y2 = $y1 - 4 + rand(0, 8);
+       imageline($img, $x1, $y1, $x2, $y2,
+              $colors[rand(0, count($colors) - 1)]
+       );
+}
+</pre><BR>
+<p class="docText">We draw 1,000 small lines with randomized coordinates for both the start and end. The <tt>imageline()</tt> function has the following parameters: image resource, starting x and y coordinates, ending x and y coordinates, and the color with which to draw the line.<a name="ch09index405"></a><a name="ch09index406"></a><a name="ch09index407"></a><a name="ch09index408"></a><a name="ch09index409"></a></p>
+<pre>
+/* Output to browser */
+header('Content-type: image/png');
+imagepng($img);
+?&gt;
+</pre><br>
+<p class="docText">At the end of our script, we use the <tt>header()</tt> function to tell the browser to expect data representing <tt>image/png</tt>. This <tt>mime-type</tt> is associated with a PNG image by the browser, so that it knows how to handle the data properly. Different data types have different mime types. For images, you can specify <tt>image/gif</tt> (for GIF images), <tt>image/jpeg</tt> (for JPEG images), <tt>application/octet-stream</tt> (for binary data), and other mime types. With the <tt>Content-type</tt> HTTP header, we tell the browser what to expect. This <tt>header()</tt> function can only be used if no content is output before the header statement. That means no whitespace, no HTML tags, nothing at all. If output is sent before the <tt>header</tt> statement, you receive a warning like the following:</P>
+<pre><a name="PLID10"></a><div class="v1"><a href="ch09lev1sec5.html#PLID10">[View full width]</a></div>
+Warning: Cannot modify header information - headers already sent by (output started at 
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif">/dat/docs/book/gd/no-bot.php:2) in /dat/docs/book/gd/no-bot.php on line 53
+</pre><br>
+<p class="docText">Finally, we call the <tt>imagepng()</tt> function, which accepts the image resource as its first parameter. It accepts a second optional parameter: a file name where the image will be stored. If the second parameter is not included, the function &quot;echoes&quot; all image data to the browser. <a class="docLink" href="#ch09fig07">Figure 9.7</a> shows the image output by the preceding script.<a name="ch09index410"></a><a name="ch09index411"></a><a name="ch09index412"></a><a name="ch09index413"></a><a name="ch09index414"></a><a name="ch09index415"></a><a name="ch09index416"></a></p>
+<a name="ch09fig07"></a><p><center><h5 class="docFigureTitle">Figure 9.7. Output of the anti-bot script.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig07_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="158" SRC="images/013147149X/graphics/09fig07.gif;380137"></p></center></P><br>
+<p class="docText">Each image type has a specific output function. Two functions are <tt>imagewbmp()</tt>, for WBMP images (some wireless format), and <tt>imagejpeg()</tt>, for JPEG images. In addition to the two parameters <tt>$img</tt> and <tt>$filename</tt>, the JPEG output function accepts a third parameter that is the compression quality of the JPEG image. The default value is 75. A value of 100 gives the best quality image, but even with this value, you might still encounter little distortions in the image. For a better quality image, use a PNG image. If you want to change the default quality setting but don't want to save the image to a file, you need to set the second parameter of <tt>imagejpeg()</tt> to an empty string, as in<a name="ch09index417"></a><a name="ch09index418"></a><a name="ch09index419"></a><a name="ch09index420"></a><a name="ch09index421"></a></P>
+<pre>
+imagejpeg($img, '', 95);
+</pre><br>
+<p class="docText">It's best to use JPEG images with a quality greater than 85 for photos and PNG images, because that setting gives a better result for line-based images, such as charts. You can see the difference clearly in <a class="docLink" href="#ch09fig08">Figure 9.8</a>, which is a closeup of the bar chart image we will create in the second example.</P>
+<a name="ch09fig08"></a><p><center><h5 class="docFigureTitle">Figure 9.8. Comparing 75 percent quality JPEG and PNG.</h5><a name="ch09index422"></a><a name="ch09index423"></a><a name="ch09index424"></a>
+<p class="docText"><img border="0" alt="" width="175" height="81" SRC="images/013147149X/graphics/09fig08.gif;380137"></p></center></P><BR>
+<p class="docText">The left image is created with <tt>imagejpg($img)</tt> and the right one with <tt>imagepng($img)</tt>. You can see clearly that the JPEG image is not really sharp. JPEG images have the advantage in size. They are usually much smaller then PNG images. In this specific example, the full JPEG image is 44KB and the PNG image is 293KB.<a name="ch09index425"></a><a name="ch09index426"></a><a name="ch09index427"></a><a name="ch09index428"></a><a name="ch09index429"></a></p>
+<a name="ch09lev2sec16"></a><h4 class="docSection2Title">9.5.2. Case 2: Bar Chart</h4>
+<p class="docText"><a class="docLink" href="#ch09fig08">Figure 9.8</a> already gave you a peek at the chart we will make. Some keywords include background, transparent bars, and TrueType text positioning.<a name="ch09index430"></a><a name="ch09index431"></a><a name="ch09index432"></a><a name="ch09index433"></a><a name="ch09index434"></a></p>
+<pre>
+&lt;?php
+     $size_x = 640;
+     $size_y = 480;
+     $title  = 'People m&#248;ving to the snow every winter';
+     $title2 = 'Head count (in 1.000)';
+</pre><BR>
+<p class="docText">As in the previous example, we first store the horizontal and vertical size of the image in variables. The rest of the script will scale correctly (except for the background) if these values are changed. To make things easier, we also defined the titles statically at the beginning.</p>
+<pre>
+$values = array(
+       1999 =&gt; 5300,
+       2000 =&gt; 5700,
+       2001 =&gt; 6400,
+       2002 =&gt; 6700,
+       2003 =&gt; 6600,
+       2004 =&gt; 7100
+);
+$max_value = 8000;
+$units     = 500;
+</pre><br>
+<p class="docText">The <tt>$values</tt> array defines our data set from which we will draw the bars on our chart. Normally, you would not hardcode those values into your script. Rather, the values would come from another source such as a database. The <tt>$max_value</tt> variable defines the maximum value in the chart and is used for the automatic scaling of the values. The <tt>$units</tt> variable defines the distance between vertical lines of the grid.<a name="ch09index435"></a><a name="ch09index436"></a><a name="ch09index437"></a><a name="ch09index438"></a><a name="ch09index439"></a></P>
+<pre>
+$img = imagecreatetruecolor($size_x, $size_y);
+imageantialias($img, true);
+imagealphablending($img, true);
+</pre><br>
+<p class="docText">As before, we create a true-color image and turn on anti-aliasing. The call to <tt>imagealphablending()</tt> is not always needed because the setting <tt>TRue</tt> is default for true-color images. <span class="docEmphStrong">Alpha blending</span> is a technique to &quot;blend&quot; new pixels being drawn onto an image by using its alpha channel. We need to use the function here because we want our bars on the chart to be transparent (letting us see the background through the image). Transparency is a color property for PHP, defined in the fifth parameter to <tt>imagecolorallocatealpha()</tt> used later in the script.<a name="ch09index440"></a><a name="ch09index441"></a><a name="ch09index442"></a><a name="ch09index443"></a></p>
+<pre>
+$bg_image = '../images/chart-bg.png';
+$bg = imagecreatefrompng($bg_image);
+$sizes = getimagesize($bg_image);
+</pre><br>
+<p class="docText">The previous section of the script loads the background image with <tt>imagecreatefrompng()</tt>. Similar functions for reading JPEG files (<tt>imagecreatefromjpg()</tt>) and GIF files (<tt>imagecreatefromgif()</tt>) are available. <tt>getimagesize()</tt> is a function that returns an array containing the width and height of an image, along with additional information. The width and height are the first two elements in the array. The third element is a text string, <tt>width='640' height='480'</tt>, that you can embed into HTML where needed. The fourth element is the type of image. PHP can determine the size of about 18 different file types, including PNG, JPEG, GIF, SWF (Flash files), TIFF, BMP, and PSD (Photoshop). With the <tt>image_type_to_mime_type()</tt> function, you can transform the type in the array to a valid mime type like <tt>image/png</tt> or <tt>application/x-shockwave-flash</tt>.<a name="ch09index444"></a><a name="ch09index445"></a></p>
+<pre>
+imagecopyresampled(
+      $img, $bg,
+      0, 0, 0, 0,
+      $size_x, $size_y, $sizes[0], $sizes[1]
+);
+</pre><br>
+<p class="docText">We copy the PNG we read from file onto the destination imageour chart. The function requires 10 parameters. The first two are the handle of the destination image and the handle of the loaded PNG image, followed by four sets of coordinates: the top-left coordinates for the destination image, the top-left coordinates of the source image, the bottom-right coordinates for the destination image, and the bottom-right coordinates of the source image. You can copy a part of the source image onto the destination image by using the appropriate coordinates of the source image. The function <tt>imagecopyresized()</tt> also copies images and is faster, but the result is not as good because the algorithm is less capable.<a name="ch09index446"></a><a name="ch09index447"></a><a name="ch09index448"></a><a name="ch09index449"></a><a name="ch09index450"></a></p>
+<pre>
+/* Chart area */
+$background = imagecolorallocatealpha($img, 127, 127, 192, 32);
+imagefilledrectangle(
+      $img,
+      20, 20, $size_x - 20, $size_y  80,
+      $background
+);
+imagefilledrectangle(
+      $img, 20, $size_y - 60, $size_x - 20, $size_y  20,
+      $background
+);
+</pre><br>
+<p class="docText">We draw the two bluish areas on the background image: one for the chart and one for the title. Because we want the areas to be transparent, we create a color with an alpha value of 32. The alpha value must lie between 0 and 127, where zero means a fully opaque color and 127 means fully transparent.</p>
+<pre>
+/* Values */
+$barcolor = imagecolorallocatealpha($img, 0, 0, 128, 80);
+$spacing = ($size_x - 140) / count($values);
+$start_x = 120;
+
+foreach ($values as $key =&gt; $value) {
+       $x1 = $start_x + 0.2 * $spacing;
+       $x2 = $start_x + 0.8 * $spacing;
+
+       $y1 = $size_y - 120;
+       $y2 = $y1 - (($value / $max_value) * ($size_y - 160));
+
+       imagefilledrectangle($img, $x1, $y1, $x2, $y2,
+$barcolor);
+       $start_x += $spacing;
+}
+</pre><br>
+<p class="docText">We draw the bars (as defined in the <tt>$values</tt> array created at the beginning of the script) with the <tt>imagefilledrectangle()</tt>. We calculate the spacing between the bars by dividing the width available for the bars (image width minus the outside margins, which total 140-120 on the left and 20 on the right) by the number of values in our array. The loop increments the <tt>$start_x component</tt> by the correct amount and the bar is drawn from 20 percent to 80 percent of its available horizontal space. Vertically, we take into account the maximum drawable value and adjust the size accordingly.<a name="ch09index451"></a><a name="ch09index452"></a><a name="ch09index453"></a><a name="ch09index454"></a><a name="ch09index455"></a></p>
+<pre>
+/* Grid */
+$black = imagecolorallocate($img, 0, 0, 0);
+$grey = imagecolorallocate($img, 128, 128, 192);
+for ($i = $units; $i &lt;= $max_value; $i += $units) {
+      $x1 = 110;
+      $y1 = $size_y - 120 - (($i / $max_value) * ($size_y - 160));
+      $x2 = $size_x - 20;
+      $y2 = $y1;
+
+      imageline(
+           $img,
+           $x1, $y1, $x2, $y2,
+           ($i % (2 * $units)) == 0 ? $black : $grey
+      );
+}
+
+/* Axis */
+imageline($img, 120, $size_y - 120, 120, 40, $black);
+imageline(
+      $img,
+      120, $size_y - 120, $size_x - 20, $size_y  120,
+      $black
+);
+</pre><br>
+<p class="docText">The grid and axis are drawn in a similar way. The only thing worth mentioning is that we color every second horizontal line black and the others gray.<a name="ch09index456"></a><a name="ch09index457"></a><a name="ch09index458"></a><a name="ch09index459"></a><a name="ch09index460"></a></p>
+<pre>
+/* Title */
+$c_x = $size_x / 2;
+$c_y = $size_y - 40;
+
+$box = imagettfbbox(20, 0, 'arial.ttf', $title);
+$sx = $box[4] - $box[0];
+$sy = $box[5] + $box[1];
+imagettftext(
+       $img,
+       20, 0,
+       $c_x - $sx / 2, $c_y - ($sy / 2),
+       $black,
+       'arial.ttf', $title
+);
+</pre><br>
+<p class="docText">We want to draw the title in the exact middle of our bottom blue bar. Therefore, we need to calculate the exact space (bounding box) required for our text. We use <tt>imagettfbbox()</tt> to do this. The parameters passed are the <tt>fontsize</tt>, <tt>angle</tt>, <tt>fontfile</tt>, and the <tt>text</tt>. These parameters need to be the same as the text we are drawing later. The function returns an array with eight elements, grouped by two, to provide the coordinates of the four corners of the bounding box. The groups stand for the lower-left corner, the lower-right corner, the upper-right corner and the upper-left corner. In <a class="docLink" href="#ch09fig09">Figure 9.9</a>, you can see the bounding box drawn around the text &quot;Im&aring;g&ecirc;&szlig;?&quot;.<a name="ch09index461"></a><a name="ch09index462"></a><a name="ch09index463"></a><a name="ch09index464"></a><a name="ch09index465"></a></p>
+<a name="ch09fig09"></a><p><center><h5 class="docFigureTitle">Figure 9.9. Different measurements for TrueType.</h5><a name="ch09index466"></a>
+<p class="docText"><img border="0" alt="" width="300" height="123" SRC="images/013147149X/graphics/09fig09.gif;380137"></P></center></P><br>
+<p class="docText">The <tt>baseline (x)</tt> and <tt>(y)</tt> axis drawn in <a class="docLink" href="#ch09fig09">Figure 9.9</a> are the 0-lines to which the bounding box coordinates are related. As you can see, the left side is not exactly zero. In addition, the bottom of the normal letters is on the baseline, with the &quot;tails&quot; below the baseline. To calculate the width of the text to be drawn, we subtract Element 0 (lower-left x) from Element 4 (upper-right x); to calculate the height, we <span class="docEmphasis">add</span> Element 1 (lower-left y) to Element 5 (upper-right y). The resulting sizes can then be used to center the text on the image. Calculating sizes with the bounding box only works reliably for angles of 0, 90, 180, and 270. The GD library does not calculate the bounding boxes totally correctly, but this problem does not account for the angles mentioned.</p>
+<pre>
+$c_x = 50;
+$c_y = ($size_y - 60) / 2;
+
+$box = imagettfbbox(14, 90, 'arial.ttf', $title2);
+$sx = $box[4] - $box[0];
+$sy = $box[5] + $box[1];
+imagettftext(
+      $img,
+      14, 90,
+      $c_x - ($sx / 2), $c_y - ($sy / 2),
+      $black,
+      'arial.ttf', $title2
+);
+</pre><BR>
+<p class="docText">We do the same for the title for the Y axis, except that we use an angle of 90. The rest of the code remains the same.<a name="ch09index467"></a><a name="ch09index468"></a><a name="ch09index469"></a><a name="ch09index470"></a><a name="ch09index471"></a></p>
+<pre>
+/* Labels */
+$c_y = $size_y - 100;
+$start_x = 120;
+
+foreach ($values as $label =&gt; $dummy) {
+      $box = imagettfbbox(12, 0, 'arial.ttf', $label);
+      $sx = $box[4] - $box[0];
+      $sy = $box[5] + $box[1];
+      $c_x = $start_x + (0.5 * $spacing);
+      imagettftext(
+             $img,
+             12, 0,
+             $c_x - ($sx / 2), $c_y - ($sy / 2),
+             $black,
+             'arial.ttf', $label
+      );
+
+             $start_x += $spacing;
+      }
+
+$r_x = 100;
+for ($i = 0; $i &lt;= $max_value; $i += ($units * 2)) {
+      $c_y = $size_y - 120 - (($i / $max_value) * ($size_y - 160));
+
+             $box = imagettfbbox(12, 0, 'arial.ttf', $i / 100);
+             $sx = $box[4] - $box[0];
+             $sy = $box[5] + $box[1];
+             imagettftext(
+                    $img,
+                    12, 0,
+                    $r_x - $sx, $c_y - ($sy / 2),
+                    $black,
+                    'arial.ttf', $i / 100
+             );
+}
+</pre><br>
+<p class="docText">In the previous code, we draw the different labels. The ones for the X axis are not interesting, but for the Y axis, we try to align the text on the right margin by not dividing the width of the text to be drawn by 2.<a name="ch09index472"></a><a name="ch09index473"></a><a name="ch09index474"></a><a name="ch09index475"></a><a name="ch09index476"></a><a name="ch09index477"></a><a name="ch09index478"></a></p>
+<pre>
+/* Output to browser */
+header('Content-type: image/png');
+imagepng($img);
+?&gt;
+</pre><br>
+<p class="docText">With those final lines, we output the bar chart to the browser. The result can be seen in <a class="docLink" href="#ch09fig10">Figure 9.10</a>.<a name="ch09index479"></a><a name="ch09index480"></a><a name="ch09index481"></a><a name="ch09index482"></a><a name="ch09index483"></a></p>
+<a name="ch09fig10"></a><p><center><H5 class="docFigureTitle">Figure 9.10. The result of the bar chart script.</h5>
+<p class="docText"><img border="0" alt="" width="500" height="375" SRC="images/013147149X/graphics/09fig10.jpg;380137"></P></center></p><BR>
+<a name="ch09lev2sec17"></a><h4 class="docSection2Title">9.5.3. <tt>Exif</tt></h4>
+<p class="docText"><tt>Exif</tt> is not totally related to handling image content. <tt>Exif</tt> is a method, normally used by digital cameras, of storing metadata (such as time, focal length, and exposure time) inside a digital image. It's a nice feature provided by PHP for learning more about how a photo was taken. To read <tt>Exif</tt> tags from images, compile PHP with the <tt>--enable-exif</tt> configure option, which does not require any external library. (On Windows, you need to enable the <tt>php_exif.dll</tt> in <tt>php.ini.</tt>) The section in <tt>phpinfo()</tt> should be similar to <a class="docLink" href="#ch09fig11">Figure 9.11</a>.<a name="ch09index484"></a><a name="ch09index485"></a><a name="ch09index486"></a><a name="ch09index487"></a></p>
+<a name="ch09fig11"></a><p><center><H5 class="docFigureTitle">Figure 9.11. Exif <tt>phpinfo()</tt> output.</H5><a name="ch09index488"></a>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig11_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="89" SRC="images/013147149X/graphics/09fig11.gif;380137"></p></center></p><br>
+<p class="docText">In the following example, we read <tt>Exif</tt> data from an image and display the aperture, shutter speed, focal length, and owner name.</p>
+<a name="ch09note08"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">For information in addition to the information stored in an image with <tt>Exif</tt>, see <a class="docLink" target="_blank" href="http://exif.org/specifications.html">http://exif.org/specifications.html</a>.</p></div><br>
+<a name="ch09note09"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">Not all cameras set all headers, so you have to test whether a header exists!</p></div><BR>
+<pre>
+&lt;?php
+     $image = '../images/img_1554.jpg';
+     $size = getimagesize($image);
+     $img = imagecreatefromjpeg($image);
+</pre><br>
+<p class="docText">First, we open the image and assign it to the <tt>$img</tt> handle.</p>
+<pre>
+$exif = exif_read_data($image);
+</pre><br>
+<p class="docText"><tt>exif_read_data()</tt> reads the <tt>Exif</tt> information from the image and returns an array with elements that contain all the information. If you dump this array, you will see that a lot of information is stored by your digital camera. In our script, we pick some of the most interesting values.<a name="ch09index489"></a><a name="ch09index490"></a></p>
+<pre>
+$str = array();
+
+$items = array('ShutterSpeedValue', 'ApertureValue', 'FocalLength');
+foreach ($items as $item) {
+      if (isset($exif[$item])) {
+         $parts = split('/', $exif[$item]);
+         if ($item == 'ShutterSpeedValue') {
+              $str[] = 'Shutter Speed: 1/'.
+                 (int) pow(2, $parts[0] / $parts[1]). ' sec';
+         } else if ($item == 'ApertureValue') {
+             $str[] = 'Aperture: '.
+                round(exp(($parts[0]/$parts[1]) * 0.5 * log(2)), 1);
+         } else if ($item == 'FocalLength') {
+              $str[] = 'FocalLength: '.
+                  round($parts[0] / $parts[1], 2). ' mm';
+         }
+      }
+}
+</pre><br>
+<p class="docText">Unfortunately, the values we want are not stored in a nice format at all. They are stored as an <span class="docEmphStrong">APEX</span> (Additive System of Photographic Exposure) number, which means that we have to convert them. With some luck, you might find an <tt>ExposureTime</tt> (the same as the shutter speed) and <tt>FNumber</tt> (the same as aperture) element in the array, which should contain the converted value already but still in a number/divider format.<a name="ch09index491"></a><a name="ch09index492"></a><a name="ch09index493"></a><a name="ch09index494"></a><a name="ch09index495"></a><a name="ch09index496"></a><a name="ch09index497"></a><a name="ch09index498"></a></p>
+<pre>
+if (isset($exif['OwnerName'])) {
+      $str[] = '&#169; '. $exif['OwnerName'];
+}
+</pre><br>
+<p class="docText">The <tt>OwnerString</tt> is usually the name of the owner of the camera. If it's available, we display it prefixed by the copyright sign.<a name="ch09index499"></a><a name="ch09index500"></a><a name="ch09index501"></a><a name="ch09index502"></a></p>
+<pre>
+imagestring(
+     $img, 5,
+     3, $size[1]  21,
+     implode('; ', $str),
+     imagecolorallocate($img, 0, 0, 0)
+);
+imagestring(
+     $img, 5,
+     2, $size[1]  20,
+     implode('; ', $str),
+     imagecolorallocate($img, 0, 255, 0)
+);
+</pre><br>
+<p class="docText">With <tt>imagestring()</tt>, we draw the recorded data onto the image. <tt>imagestring()</tt> is not as nice as <tt>imagettftext()</tt> because it can only draw bitmap fonts, but it does the trick here. The first parameter is the image handle, and the second is the font number. The first two parameters are followed by the x and y coordinates, and then by the string to draw. The last parameter is the color.<a name="ch09index503"></a></p>
+<pre>
+header('Content-Type: image/jpeg');
+imagejpeg($img, '', 90);
+?&gt;
+</pre><br>
+<p class="docText">The result of this script is the image shown in <a class="docLink" href="#ch09fig12">Figure 9.12</a> with the information added to it.<a name="ch09index504"></a><a name="ch09index505"></a><a name="ch09index506"></a><a name="ch09index507"></a></p>
+<a name="ch09fig12"></a><p><center><h5 class="docFigureTitle">Figure 9.12. <tt>Exif</tt> data drawn on the image.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig12_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="376" SRC="images/013147149X/graphics/09fig12.gif;380137"></p></center></P><BR>
+<p class="docText">If you look closely, you see that the copyright sign (&#169;) is replaced by something we didn't expect (<img border="0" alt="" width="10" height="17" SRC="images/013147149X/graphics/su.gif;380137">). This is because the default fonts for <tt>imagestring()</tt> are always in the ISO-8859-2 character set and the script was written in ISO-8859-1. This brings us to the next topic.<a name="ch09index508"></a><a name="ch09index509"></a><a name="ch09index510"></a><a name="ch09index511"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

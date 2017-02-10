@@ -1,0 +1,52 @@
+[12-11-2005 00:06:02] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-11-2005 00:06:11] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-11-2005 00:06:35] -!- _Katana` is now known as Katana`
+[12-11-2005 02:49:53] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit ["Konversation terminated!"]
+[12-11-2005 03:00:19] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-11-2005 03:00:20] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-11-2005 03:00:35] -!- _Katana` is now known as Katana`
+[12-11-2005 04:04:22] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-11-2005 04:10:48] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-11-2005 04:11:59] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-11-2005 04:12:27] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-11-2005 04:17:08] [#ezpublish] <buz> is there a way to do a remember me feature (think permanent login as used by many forums)? it sucks having to login each time i restart the browser...
+[12-11-2005 04:23:18] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[12-11-2005 04:23:44] -!- _Katana` is now known as Katana`
+[12-11-2005 04:50:39] -!- ordnas [n=ordnas@p549D7A1E.dip.t-dialin.net] has joined #ezpublish
+[12-11-2005 05:30:12] -!- ordnas [n=ordnas@p549D7A1E.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-11-2005 05:50:41] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-11-2005 05:50:41] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-11-2005 05:51:04] -!- _Katana` is now known as Katana`
+[12-11-2005 07:52:01] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-11-2005 07:55:27] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-11-2005 07:55:39] -!- _Katana` is now known as Katana`
+[12-11-2005 08:33:30] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-11-2005 08:35:44] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-11-2005 08:35:48] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-11-2005 10:14:22] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Remote closed the connection]
+[12-11-2005 10:24:15] [#ezpublish] <buz> http://demo.mooflex.net/ <-ajax cms
+[12-11-2005 13:18:52] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [calvino.freenode.net irc.freenode.net]
+[12-11-2005 13:18:52] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [calvino.freenode.net irc.freenode.net]
+[12-11-2005 13:18:52] -!- elephantMan [n=elephant@217.167.222.224] has quit [calvino.freenode.net irc.freenode.net]
+[12-11-2005 13:18:52] -!- thekracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has quit [calvino.freenode.net irc.freenode.net]
+[12-11-2005 13:20:50] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-11-2005 13:20:50] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[12-11-2005 13:20:50] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-11-2005 13:20:50] -!- thekracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[12-11-2005 13:21:55] -!- mode/#ezpublish [-o kh[eZ]] by ChanServ
+[12-11-2005 13:22:47] -!- elephantMan [n=elephant@217.167.222.224] has quit [calvino.freenode.net irc.freenode.net]
+[12-11-2005 13:22:47] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [calvino.freenode.net irc.freenode.net]
+[12-11-2005 13:22:47] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [calvino.freenode.net irc.freenode.net]
+[12-11-2005 13:22:47] -!- thekracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has quit [calvino.freenode.net irc.freenode.net]
+[12-11-2005 13:23:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-11-2005 13:23:54] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[12-11-2005 13:23:54] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-11-2005 13:23:54] -!- thekracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[12-11-2005 13:24:23] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[12-11-2005 13:24:23] [notice(freenode-connect)] VERSION IQ 0.9.3
+[12-11-2005 13:40:17] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[12-11-2005 13:40:17] [notice(freenode-connect)] VERSION IQ 0.9.3
+[12-11-2005 14:18:10] [#ezpublish] <buz> somehow, i cant get http://ez.no/community/contribs/hacks/cookie_user to work
+[12-11-2005 15:55:57] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-11-2005 18:59:37] [#ezpublish] <thekracker> hmmm, the question ... can eZ publish 2 have php5 runtime compatablity .... and if so, at what cost (in terms of time vs. number of lines refactored)
+[12-11-2005 23:54:29] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish

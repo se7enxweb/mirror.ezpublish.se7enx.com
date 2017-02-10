@@ -1,0 +1,39 @@
+[01-07-2006 02:16:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-07-2006 03:19:24] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-07-2006 04:33:26] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-07-2006 06:00:05] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[01-07-2006 06:14:07] -!- SEAwolfx [n=mike@tor/session/x-1faca35204f649bc] has joined #ezpublish
+[01-07-2006 06:19:23] -!- SEAwolfx_ [n=mike@tor/session/x-5ddbd2ffb9bc63b4] has quit [Remote closed the connection]
+[01-07-2006 06:33:09] -!- ordnas [n=ordnas@p549D7B24.dip.t-dialin.net] has joined #ezpublish
+[01-07-2006 07:16:25] -!- zrg [n=zurgutt@roop.pri.ee] has left #ezpublish []
+[01-07-2006 07:31:28] -!- ordnas [n=ordnas@p549D7B24.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-07-2006 07:36:02] -!- ordnas [n=ordnas@p549D7B24.dip.t-dialin.net] has joined #ezpublish
+[01-07-2006 08:29:26] -!- LottoKim_ [n=kim@195.28.172.4] has joined #ezpublish
+[01-07-2006 08:29:49] -!- LottoKim [n=kim@195.28.172.4] has quit [Read error: 104 (Connection reset by peer)]
+[01-07-2006 08:33:03] -!- LottoKim_ is now known as LottoKim
+[01-07-2006 09:03:50] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[01-07-2006 09:05:03] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-07-2006 10:02:20] [#ezpublish] <SEAwolfx> re
+[01-07-2006 11:42:20] -!- LottoKim [n=kim@195.28.172.4] has quit [Read error: 110 (Connection timed out)]
+[01-07-2006 12:00:05] [#ezpublish] <hovik> hi, anyone tested the patch here : http://ez.no/bugs/view/6199  ?
+[01-07-2006 12:06:37] [#ezpublish] <SEAwolfx> this is for version 3.5.0
+[01-07-2006 12:07:14] [#ezpublish] <SEAwolfx> @hovik
+[01-07-2006 12:09:13] [#ezpublish] <SEAwolfx> but flew already into 3.7 stable svn
+[01-07-2006 12:09:50] [#ezpublish] <SEAwolfx> ah, ok-
+[01-07-2006 12:42:40] -!- ordnas [n=ordnas@p549D7B24.dip.t-dialin.net] has left #ezpublish []
+[01-07-2006 12:47:06] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-07-2006 16:15:05] -!- SEAwolfx [n=mike@tor/session/x-1faca35204f649bc] has quit [Remote closed the connection]
+[01-07-2006 16:15:19] -!- SEAwolfx [n=mike@tor/session/x-fe4119dbe97e9410] has joined #ezpublish
+[01-07-2006 16:19:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-07-2006 16:26:08] -!- tobyS [n=dotxp@7.80-202-59.nextgentel.com] has joined #ezpublish
+[01-07-2006 16:46:30] -!- SEAwolfx [n=mike@tor/session/x-fe4119dbe97e9410] has quit [Read error: 104 (Connection reset by peer)]
+[01-07-2006 16:46:45] -!- SEAwolfx [n=mike@postmortem.csd.auth.gr] has joined #ezpublish
+[01-07-2006 17:58:26] -!- SEAwolfx_ [n=mike@h679643.serverkompetenz.net] has joined #ezpublish
+[01-07-2006 18:18:54] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[01-07-2006 18:40:27] -!- SEAwolfx [n=mike@postmortem.csd.auth.gr] has quit [Read error: 104 (Connection reset by peer)]
+[01-07-2006 19:33:28] -!- tobyS [n=dotxp@7.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-07-2006 20:10:42] -!- SEAwolfx_ [n=mike@tor/session/x-3a446f8da0b0f04c] has quit [Connection reset by peer]
+[01-07-2006 20:11:37] -!- SEAwolfx [n=mike@tor/session/x-74f1c909d8c7c924] has joined #ezpublish
+[01-07-2006 21:07:24] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Remote closed the connection]
+[01-07-2006 23:25:05] -!- SEAwolfx [n=mike@tor/session/x-74f1c909d8c7c924] has quit [Remote closed the connection]
+[01-07-2006 23:25:10] -!- SEAwolfx [n=mike@tor/session/x-69f42cf5d8fd27a2] has joined #ezpublish

@@ -1,0 +1,43 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.12.&nbsp; The PEAR Release Process</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec11.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec13.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec12"></a><h3 class="docSection1Title">12.12. The PEAR Release Process</h3>
+<p class="docText">Before you begin, you need a PEAR account. You can request one by following a link from the login page, or by going directly to <a class="docLink" target="_blank" href="http://pear.php.net/account-request.php">http://pear.php.net/account-request.php</a>.<a name="ch12index305"></a></p>
+<p class="docText">The <span class="docEmphStrong">PEAR Release Process</span> is a procedure for developers who publish PEAR package releases. The first time you release a package, you need to go through the following steps:</p>
+<a name="ch12pr01"></a>
+
+
+
+
+
+<table border="0" class="docText"><tr><TD width="25" valign="top"><div class="docText"><b>1. </b></div></TD><td><div class="docText">Propose a package.<BR><br></div></td></tr><tr><TD width="25" valign="top"><div class="docText"><B>2. </b></div></td><td><div class="docText">Wait for vote results.<br><br></div></TD></tr><tr><TD width="25" valign="top"><div class="docText"><b>3. </b></div></TD><td><div class="docText">Create a package.<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>4. </b></div></td><td><div class="docText">Roll a tarball.<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><B>5. </b></div></TD><td><div class="docText">Test/QA.<br><BR></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>6. </b></div></td><TD><div class="docText">Upload the release.<br><BR></div></td></TR></table>
+<p class="docText">Steps 1 through 3 are only required for the first release. For subsequent releases, you only need to go through Steps 4 to 6.</p>
+<p class="docText">Once you intend to publish a package through the PEAR infrastructure, it is a good idea to just suggest the package to the pear-dev mailing list, so you do not put a lot of effort into duplicating an existing package or to get reactions from the community before the proposal process:<a name="ch12index306"></a></p>
+<a name="ch12pr02"></a>
+
+
+
+
+
+<table border="0" class="docText"><tr><td width="25" valign="top"><div class="docText"><B>1. </b></div></TD><td><div class="docText">Propose a package. You propose a package by going to <a class="docLink" target="_blank" href="http://pear.php.net/">http://pear.php.net/</a> and clicking New Proposal in the left-hand sidebar.<br><br>
+The proposal process is meant to help you pick a good name for your package, and to ensure that standards are being followed from the very first release. The PEAR developer community manages PEAR's namespace. When you create a package, you occupy part of that namespace, so the PEAR community wants to ensure that your package has a function that fits with the name.<a name="ch12index307"></a><a name="ch12index308"></a><br><BR>
+The proposal goes through a voting phase that is open to all registered PEAR package developers. Other PEAR developers may look at whether your package offers functionality that exists in another package. If it does, they may propose incorporating your code into that package, or request that you justify the need for another package. When voting closes, your package proposal will be accepted, accepted with comments, or rejected. &quot;Accepted with comments&quot; means that the proposal is accepted on the condition that you change something.<br><br></div></TD></tr><TR><td width="25" valign="top"><div class="docText"><b>2. </b></div></td><td><div class="docText">Wait for vote results. The voting process takes some time, so have patience and wear your goggles; not everyone expresses the same amount of tact when disagreeing with people.<a name="ch12index309"></a><a name="ch12index310"></a><br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>3. </b></div></td><td><div class="docText">Create a package. After your package proposal is accepted, you submit a package creation request on <a class="docLink" target="_blank" href="http://pear.php.net/package-new.php">http://pear.php.net/package-new.php</a>. A PEAR administrator will approve the request, and then you are ready to start uploading releases.<a name="ch12index311"></a><a name="ch12index312"></a><br><br></div></td></TR><TR><td width="25" valign="top"><div class="docText"><b>4. </b></div></TD><td><div class="docText">Roll a tarball. This is when you create the package tarball (a gzip-compressed UNIX tar file). See the &quot;<a class="docLink" href="ch12lev1sec13.html#ch12lev1sec13">Packaging</a>&quot; section for details.<a name="ch12index313"></a><a name="ch12index314"></a><br><br></div></td></tr><tr><TD width="25" valign="top"><div class="docText"><b>5. </b></div></TD><td><div class="docText">Test/QA. Run your regression tests (that you have diligently written), and convince yourself that your release is ready to face the masses.<a name="ch12index315"></a><a name="ch12index316"></a><BR><br></div></td></tr><tr><TD width="25" valign="top"><div class="docText"><B>6. </b></div></td><td><div class="docText">Upload the release. Finally, you make your release available to the world. See the &quot;<a class="docLink" href="ch12lev1sec14.html#ch12lev1sec14">Uploading</a>&quot; section later in this chapter for the details.<a name="ch12index317"></a><a name="ch12index318"></a><br><br></div></TD></tr></table>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec11.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec13.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

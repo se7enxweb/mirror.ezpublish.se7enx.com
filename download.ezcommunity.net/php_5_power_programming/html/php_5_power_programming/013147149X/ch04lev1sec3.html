@@ -1,0 +1,172 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 4.3.&nbsp; Iterators</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch04lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch04lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch04lev1sec3"></a><h3 class="docSection1Title" id="409768-942">4.3. Iterators</h3>
+<p class="docText">The properties of an object can be iterated using the <tt>foreach()</tt> loop:<a name="ch04index31"></a><a name="ch04index32"></a><a name="ch04index33"></a></p>
+<pre>
+class MyClass {
+    public $name = "John";
+    public $sex = "male";
+}
+
+$obj = new MyClass();
+
+foreach ($obj as $key =&gt; $value) {
+    print "obj[$key] = $value\n";
+}
+</pre><br>Running this script results in<pre>
+obj[name] = John
+obj[sex] = male
+</pre><br>
+<p class="docText">However, often when you write object-oriented code, your classes don't necessarily represent a simple key/value array as in the previous example, but represent more complex data, such as a database query or a configuration file.</P>
+<p class="docText">PHP 5 allows you to overload the behavior of the <tt>foreach()</tt> iteration from within your code so you can have it do what makes sense in respect to your class's design.</p>
+<a name="ch04note01"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">Not only does PHP 5 enable you to overload this behavior, but it also allows extension authors to override such behavior, which has brought iterator support to various PHP extensions such as SimpleXML and SQLite.</p></div><BR>
+<p class="docText">To overload iteration for your class kind, you need to adhere to certain interfaces that are pre-defined by the language (see <a class="docLink" href="#ch04fig02">Figure 4.2</a>).<a name="ch04index34"></a><a name="ch04index35"></a><a name="ch04index36"></a><a name="ch04index37"></a></p>
+<a name="ch04fig02"></a><p><center><h5 class="docFigureTitle">Figure 4.2. Class diagram of Iterator hierarchy.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/04fig02_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="302" SRC="images/013147149X/graphics/04fig02.gif;380137"></P></center></P><br>
+<p class="docText">Any class that implements the <tt>traversable</tt> interface is a class that can be traversed using the <tt>foreach()</tt> construct. However, <tt>traversable</tt> is an empty interface that shouldn't be implemented directly; instead, you should either implement <tt>Iterator</tt> or <tt>IteratorAggregate</tt> that inherit from <tt>traversable</tt>.<a name="ch04index38"></a><a name="ch04index39"></a></P>
+<p class="docText">The main interface is <tt>Iterator</tt>. It defines the methods you need to implement to give your classes the <tt>foreach()</tt> iteration capabilities. These methods should be public and are listed in the following table.</p>
+<p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><colgroup><col width="110"><col width="440"></colgroup><thead><TR><th class="thead" scope="col" align="center" valign="top" colspan="2"><p class="docText"><span class="docEmphStrong">Interface Iterator</span></p></th></TR></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>void rewind()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Rewinds the iterator to the beginning of the list (this might not always be possible to implement).</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>mixed current()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the value of the current position.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>mixed key()</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Returns the key of the current position.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>void next()</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Moves the iterator to the next key/value pair.</P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>bool valid()</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Returns <tt>TRue/false</tt> if there are more values (used before the call to <tt>current() or key()</tt>).</p></td></tr></table></p><BR>
+<p class="docText">If your class implements the <tt>Iterator</tt> interface, it will be traversable with <tt>foreach()</tt>. Here's a simple example:<a name="ch04index40"></a><a name="ch04index41"></a><a name="ch04index42"></a><a name="ch04index43"></a><a name="ch04index44"></a></p>
+<pre>
+class NumberSquared implements Iterator {
+    public function __construct($start, $end)
+    {
+        $this-&gt;start = $start;
+        $this-&gt;end = $end;
+    }
+
+    public function rewind()
+    {
+        $this-&gt;cur = $this-&gt;start;
+    }
+
+    public function key()
+    {
+        return $this-&gt;cur;
+    }
+
+    public function current()
+    {
+        return pow($this-&gt;cur, 2);
+    }
+
+    public function next()
+    {
+        $this-&gt;cur++;
+    }
+
+    public function valid()
+    {
+        return $this-&gt;cur &lt;= $this-&gt;end;
+    }
+
+    private $start, $end;
+    private $cur;
+}
+
+$obj = new NumberSquared(3, 7);
+
+foreach ($obj as $key =&gt; $value) {
+    print "The square of $key is $value\n";
+}
+</pre><br>The output is<a name="ch04index45"></a><a name="ch04index46"></a><a name="ch04index47"></a><pre>
+The square of 3 is 9
+The square of 4 is 16
+The square of 5 is 25
+The square of 6 is 36
+The square of 7 is 49
+</pre><BR>
+<p class="docText">This example demonstrates how you can implement you own behavior for iterating a class. In this case, the class represents the square of integers, and after given a minimum and maximum value, iterating over those values will give you the number itself and its square.</p>
+<p class="docText">Now in many cases, your class itself will represent data and have methods to interact with this data. The fact that it also requires an iterator might not be its main functionality. Also, when iterating an object, the state of the iteration (current position) is usually stored in the object itself, thus not allowing for nested iterations. For these two reasons, you may separate the implementation of your class and its iterator by making your class implement the <tt>IteratorAggregate</tt> interface. Instead of having to define all the previous methods, you need to define a method that returns an object of a different class, which implements the iteration scheme for your class.<a name="ch04index48"></a><a name="ch04index49"></a></P>
+<p class="docText">The <tt>public</tt> method you need to implement is <tt>Iterator getIterator()</tt> because it returns an iterator object that handles the iteration for this class.<a name="ch04index50"></a><a name="ch04index51"></a><a name="ch04index52"></a></p>
+<p class="docText">By using this method of separating between the class and its iterator, we can rewrite the previous example the following way:</p>
+<pre>
+class NumberSquared implements IteratorAggregate {
+    public function __construct($start, $end)
+    {
+        $this-&gt;start = $start;
+        $this-&gt;end = $end;
+    }
+
+    public function getIterator()
+    {
+        return new NumberSquaredIterator($this);
+    }
+
+    public function getStart()
+    {
+        return $this-&gt;start;
+    }
+
+    public function getEnd()
+    {
+        return $this-&gt;end;
+    }
+
+    private $start, $end;
+}
+
+class NumberSquaredIterator implements Iterator {
+    function __construct($obj)
+    {
+        $this-&gt;obj = $obj;
+    }
+
+    public function rewind()
+    {
+        $this-&gt;cur = $this-&gt;obj-&gt;getStart();
+    }
+
+    public function key()
+    {
+        return $this-&gt;cur;
+    }
+
+    public function current()<a name="ch04index53"></a><a name="ch04index54"></a><a name="ch04index55"></a>
+    {
+        return pow($this-&gt;cur, 2);
+    }
+
+    public function next()
+    {
+        $this-&gt;cur++;
+    }
+
+    public function valid()
+    {
+        return $this-&gt;cur &lt;= $this-&gt;obj-&gt;getEnd();
+    }
+
+    private $cur;
+    private $obj;
+}
+$obj = new NumberSquared(3, 7);
+
+foreach ($obj as $key =&gt; $value) {
+    print "The square of $key is $value\n";
+}
+</pre><br>
+<p class="docText">The output is the same as the previous example. You can clearly see that the <tt>IteratorAggregate</tt> interface enables you to separate your classes' main functionality and the methods needed for iterating it into two independent entities.</p>
+<p class="docText">Choose whatever method suits the problem at hand. It really depends on the class and its functionality as to whether the iterator should be in a separate class.<a name="ch04index56"></a><a name="ch04index57"></a><a name="ch04index58"></a></p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch04lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch04lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

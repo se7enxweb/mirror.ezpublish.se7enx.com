@@ -1,0 +1,82 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 11.6.&nbsp; Caching</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch11lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch11lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch11lev1sec6"></a><h3 class="docSection1Title">11.6. Caching</h3>
+<p class="docText">PEAR offers two different packages for caching: <tt>Cache</tt> and <tt>Cache_Lite</tt>. As suggested by the name, <tt>Cache_Lite</tt> has a lighter design than <tt>Cache</tt>, and is designed to be faster at the expense of some flexibility and functionality.<a name="ch11index176"></a><a name="ch11index177"></a></p>
+<a name="ch11lev2sec13"></a><h4 class="docSection2Title">11.6.1. <tt>Cache_Lite</tt></h4>
+<p class="docText">The <tt>Cache_Lite</tt> package offers simple, fast, file-based caching. It is restricted to caching in files for speed and simplicity. <tt>Cache_Lite</tt> provides three types of caching:<a name="ch11index178"></a><a name="ch11index179"></a><a name="ch11index180"></a><a name="ch11index181"></a></P>
+<ul><LI><p class="docList">Generic caching of any data</p></LI><li><p class="docList">Caching of PHP output</p></li><li><p class="docList">Caching of function return values</P></LI></ul>
+<p class="docText">The idea behind <tt>Cache_Lite</tt> is that you only need to load the <tt>Cache_Lite</tt> class to use it. It does not load the <tt>PEAR</tt> class unless needed in a <tt>raiseError()</tt> call, and not many other classes. If you are not using a PHP code cache, this package avoids compiling code you potentially will not execute, and keeps latency down.</p>
+<a name="ch11lev3sec16"></a><h5 class="docSection3Title">11.6.1.1 Example: Output Caching</h5>
+<p class="docText">Following is an example of PHP output caching that serves the entire page from the cache:<a name="ch11index182"></a><a name="ch11index183"></a><a name="ch11index184"></a><a name="ch11index185"></a><a name="ch11index186"></a></P>
+<pre>
+&lt;?php
+
+require_once "Cache/Lite/Output.php";
+
+$time_s = utime();
+
+if (empty($_GET['id'])) {
+    die("please specify an article id!");
+}
+
+$cache = new Cache_Lite_Output(
+    array('lifeTime' =&gt; 300, // 5 minutes
+          'cacheDir' =&gt; '/tmp/article_cache/'));
+
+if ($cache-&gt;start($_GET['id'], 'article')) {
+    $cached = true;
+} else {
+    include_once "DB.php";
+    include_once "HTML/Template/Flexy.php";
+
+    $dbh = DB::connect("mysql://test@localhost/test");
+    $article = $dbh-&gt;getRow(
+        "SELECT * FROM articles WHERE id = ?",
+        array($_GET['id']), DB_FETCHMODE_OBJECT);
+
+    $dir = dirname(__FILE__);
+    $tpl = new HTML_Template_Flexy(
+        array('templateDir' =&gt; "$dir/templates",
+              'compileDir' =&gt; "$dir/templates/compiled",
+              'filters' =&gt; 'Php,SimpleTags,BodyOnly'));
+    $tpl-&gt;compile('flexy_display_article.tpl');
+    $tpl-&gt;outputObject($article);
+
+    $cache-&gt;end();
+    $cached = false;
+}
+
+$elapsed = utime() - $time_s;
+printf("&lt;div style=\"font-size:x-small\"&gt;".
+       "(spent %.1fms %s)&lt;/div&gt;\n", $elapsed * 1000,
+       $cached ? "serving page from cache" : "generating page");
+
+function utime() {
+    list($usec, $sec) = explode(" ", microtime());
+    return (double)$usec + $sec;
+}
+</pre><br>
+<p class="docText">As you can see, this script only includes <tt>Cache/Lite/Output.php</tt> every time. If the page is served from a cache, no other code is loaded because <tt>DB.php</tt> and <tt>HTML/Template/Flexy.php</tt> are included only if there was no cache hit.<a name="ch11index187"></a><a name="ch11index188"></a><a name="ch11index189"></a><a name="ch11index190"></a><a name="ch11index191"></a></p>
+<p class="docText">The <tt>$cache-&gt;start()</tt> looks up the requested entry in the cache. If it is found there and has not expired, the cached entry is printed, and the <tt>start()</tt> method returns <tt>TRue</tt>.</p>
+<p class="docText">If a cache entry was not found, <tt>start()</tt> returns <tt>false</tt>. Then, the script connects to the database, pulls out the article, compiles a template, and displays the article. After all this, the <tt>$cache-&gt;end()</tt> call prints the output and stores it in the cache.</P>
+<p class="docText">At the end, the cache output example displays a message to illustrate the response time difference with a cache hit.</p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch11lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch11lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

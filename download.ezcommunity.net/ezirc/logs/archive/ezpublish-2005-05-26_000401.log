@@ -1,0 +1,217 @@
+[05-25-2005 02:02:21] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-25-2005 02:03:10] [#ezpublish] <fh> morning cracker :)
+[05-25-2005 02:09:34] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has joined #ezpublish
+[05-25-2005 02:17:34] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit [kornbluth.freenode.net irc.freenode.net]
+[05-25-2005 02:17:34] -!- fh [~fh@stalker.ez.no] has quit [kornbluth.freenode.net irc.freenode.net]
+[05-25-2005 02:18:02] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-25-2005 02:18:02] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-25-2005 02:18:30] [#ezpublish] <kracker> wow
+[05-25-2005 02:18:43] [#ezpublish] <kracker> fh morning :-)
+[05-25-2005 02:19:19] -!- agentbob [~dan@216.130.216.30] has quit [Read error: 104 (Connection reset by peer)]
+[05-25-2005 02:19:29] [#ezpublish] <kracker> an... seriously no c in kracker, please, it gives everyone the wrong idea about me, and honestly (chuckles) I create enough of that on my own :P
+[05-25-2005 02:20:07] -!- agentbob [~dan@216.130.216.30] has joined #ezpublish
+[05-25-2005 02:20:08] [#ezpublish] <kracker> still, i think ishould have been watching my anime tonight and not chastizing new forum users on forum edicate ...
+[05-25-2005 02:21:02] [#ezpublish] <kracker> i tend to think back to the original 2.x community, users who didn't write descriptivly got ignored and either figured it out on their own or ... (IMHO) would leave
+[05-25-2005 02:21:26] freenode-connect [freenode@connect.utility.freenode] requested CTCP VERSION: 
+[05-25-2005 02:21:27] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-25-2005 02:22:08] [#ezpublish] <kracker> not that we need those kinds of users just yet but , i tend to hit the problem head on feelings and emotions be damned', tell em what's what and then move on, if they can't adjust then it might not be worth the investment in time ...
+[05-25-2005 02:22:42] [#ezpublish] <kracker> ehh, again.. reasons to 'shut up and drive'--deftones
+[05-25-2005 02:23:25] [#ezpublish] <kracker> funny tho, i was pumped this evening, too much GNU / FSF Speches in my mp3 player ;)
+[05-25-2005 02:25:23] [#ezpublish] <kracker>  //eminem - Call 911 for Stan feat Wyclef Jean and Mary J. Blige
+[05-25-2005 03:11:29] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-25-2005 04:03:20] -!- _Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-25-2005 04:03:23] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[05-25-2005 04:03:44] -!- _Katana` is now known as Katana`
+[05-25-2005 04:09:44] -!- jota [~jota@fanzine.igalia.com] has joined #ezpublish
+[05-25-2005 04:14:45] -!- _Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-25-2005 04:16:38] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[05-25-2005 04:16:39] -!- _Katana` is now known as Katana`
+[05-25-2005 04:32:12] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has joined #ezpublish
+[05-25-2005 05:04:28] -!- _Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-25-2005 05:04:29] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[05-25-2005 05:04:46] -!- _Katana` is now known as Katana`
+[05-25-2005 05:22:19] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-25-2005 05:27:51] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has joined #ezpublish
+[05-25-2005 05:40:45] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[05-25-2005 06:31:31] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-25-2005 06:34:48] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has joined #ezpublish
+[05-25-2005 06:52:41] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-25-2005 06:55:46] -!- SEAwolfx [~mike@102d3432e531c541.session.tor] has quit [Remote closed the connection]
+[05-25-2005 06:56:19] -!- SEAwolfx [~mike@netsvc-ext.microsource.com] has joined #ezpublish
+[05-25-2005 07:17:41] [#ezpublish] <seasonfive_> Hi ppl
+[05-25-2005 07:17:57] [#ezpublish] <seasonfive_> how to fetch object associed to a folder ? (a picture in my case)
+[05-25-2005 07:46:45] -!- jota [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[05-25-2005 07:55:17] -!- SEAwolfx_ [~mike@e74ecb09ab5773d2.session.tor] has joined #ezpublish
+[05-25-2005 07:56:43] -!- SEAwolfx [~mike@netsvc-ext.microsource.com] has quit [Remote closed the connection]
+[05-25-2005 07:58:45] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-25-2005 08:39:23] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has joined #ezpublish
+[05-25-2005 09:57:34] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-25-2005 10:53:19] -!- Foolish [~foolish@dsl222-219.adsl.no] has joined #ezpublish
+[05-25-2005 10:54:12] [#ezpublish] <Foolish> I'm trying learn some EZ basics, I want to do a simple if statement to check if the current node_id equals a given number and then perform an action. Is there no simple method of doing this?
+[05-25-2005 11:06:59] -!- SEAwolfx_ [~mike@e74ecb09ab5773d2.session.tor] has quit [Remote closed the connection]
+[05-25-2005 11:09:36] -!- Teebie [Lucy_bi_19@host81-152-40-161.range81-152.btcentralplus.com] has joined #ezpublish
+[05-25-2005 11:09:39] [#ezpublish] <Teebie> hey?
+[05-25-2005 11:10:33] -!- SEAwolfx [[U2FsdGVkX@b11581295afccbf5.session.tor] has joined #ezpublish
+[05-25-2005 11:10:40] -!- ordna1 [~ordnas@p549DD6EF.dip.t-dialin.net] has joined #ezpublish
+[05-25-2005 11:10:58] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-25-2005 11:12:25] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[05-25-2005 11:13:37] [#ezpublish] <Teebie> could anyone help me? I'm having trouble logging into my mysql database well I can without a root password. Is there a way of later on setting one?
+[05-25-2005 12:16:17] -!- SEAwolfx [[U2FsdGVkX@b11581295afccbf5.session.tor] has quit [Read error: 54 (Connection reset by peer)]
+[05-25-2005 12:21:41] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-25-2005 12:27:24] -!- SEAwolfx [~mike@65.214.56.42] has joined #ezpublish
+[05-25-2005 12:27:52] -!- ordna1 [~ordnas@p549DD6EF.dip.t-dialin.net] has left #ezpublish []
+[05-25-2005 12:33:00] -!- Teebie [Lucy_bi_19@host81-152-40-161.range81-152.btcentralplus.com] has quit [Read error: 110 (Connection timed out)]
+[05-25-2005 12:39:42] [#ezpublish] <kracker> afternoon hipsters...
+[05-25-2005 12:40:01] [#ezpublish] <kracker> Sell eZ publish 3.6 as a Dreamweaver Killer ;) it works ... well!
+[05-25-2005 12:44:34] [#ezpublish] <kracker> Foolish : use the eq function! Here is a great example! http://www.ez.no/community/forum/setup_design/retrieve_integer_from_field
+[05-25-2005 12:44:37] [#ezpublish] <kracker> Teebie : who do you host with?
+[05-25-2005 12:45:24] [#ezpublish] <kracker> Teebie : Hrm ... well you really need to specify a password as I'm sure one Is specified and that's why your having problems :(
+[05-25-2005 13:05:24] -!- SEAwolfx_ [~mike@b66729225374f515.session.tor] has joined #ezpublish
+[05-25-2005 13:10:59] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-25-2005 13:17:36] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has joined #ezpublish
+[05-25-2005 13:35:52] -!- Straight|off [Straightli@p50925E21.dip.t-dialin.net] has joined #ezpublish
+[05-25-2005 13:35:58] [#ezpublish] <Straight|off> hi @all
+[05-25-2005 13:36:16] -!- Straight|off is now known as Straightliner
+[05-25-2005 13:36:43] [#ezpublish] <Straightliner> anyone here with experience in packages?
+[05-25-2005 13:46:00] [#ezpublish] <kracker> hmm
+[05-25-2005 13:46:13] [#ezpublish] <kracker> what kind of experince?
+[05-25-2005 13:47:17] [#ezpublish] <kracker> fyi i would get used to writing out your questions wihtout caring if anyone is listening and just stay in #ezpublish and keep asking periodicly through the day or linking to a forum thread you create about your questions
+[05-25-2005 13:48:09] [#ezpublish] <kracker> point being, get used to asking the questions (in detail) first and waiting for distant answere, instead of holding back the real question and instead asking a "any body here question?"
+[05-25-2005 13:49:01] [#ezpublish] <kracker> it make you a better question asker in the long run and teaches you about your own understanding and will eventualy lead you to answering your own questions ..
+[05-25-2005 13:54:31] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-25-2005 14:08:54] [#ezpublish] <Straightliner> I´m currently havin the problem that i cannot import packages
+[05-25-2005 14:10:43] [#ezpublish] <Straightliner>  Apache/1.3.31 (Win32) mod_ssl/2.8.18 OpenSSL/0.9.7d PHP/4.3.10 / ez352 /
+[05-25-2005 14:11:05] [#ezpublish] <Straightliner> REV10972
+[05-25-2005 14:11:44] [#ezpublish] <Straightliner> i read something within the forum that some others had the same problem under windows
+[05-25-2005 14:11:59] [#ezpublish] <Straightliner> in the meantime i installed the package manual
+[05-25-2005 14:13:52] [#ezpublish] <Straightliner> if i export a package the tar.gz is valid, the problem only appers when i import something
+[05-25-2005 14:16:40] [#ezpublish] <Straightliner> Error:  May 25 2005 21:16:22
+[05-25-2005 14:16:40] [#ezpublish] <Straightliner> Failed loading temporary package structural_1_1_0_1_ezpkg from var/plain/cache/packages/import/structural_1_1_0_1_ezpkg
+[05-25-2005 14:16:40] [#ezpublish] <Straightliner> Error:  May 25 2005 21:16:22
+[05-25-2005 14:16:40] [#ezpublish] <Straightliner> Uploaded file is not an eZ publish package
+[05-25-2005 14:17:17] [#ezpublish] <Straightliner> ok seems like the package wasn`t found or stored
+[05-25-2005 14:18:20] [#ezpublish] <Straightliner> DIR var/plain/cache/packages/import/structural_1_1_0_1_ezpkg is empty
+[05-25-2005 14:38:02] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has joined #ezpublish
+[05-25-2005 15:12:03] -!- ordnas [~ordnas@p549DD6EF.dip.t-dialin.net] has left #ezpublish []
+[05-25-2005 15:31:35] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[05-25-2005 15:48:03] [#ezpublish] <kracker> so any one got an idea they could throw kracker on ...?
+[05-25-2005 15:48:09] [#ezpublish] <kracker> http://www.ez.no/community/forum/install_configuration/ez_publish_kickstart_configuration
+[05-25-2005 16:00:55] [#ezpublish] <buz> yo mean you need something to hack?
+[05-25-2005 16:02:06] -!- Katana` [~katana@d213-103-211-39.cust.tele2.fr] has joined #ezpublish
+[05-25-2005 16:02:35] [#ezpublish] <kracker> umm...
+[05-25-2005 16:02:39] [#ezpublish] <kracker> i guess
+[05-25-2005 16:03:16] [#ezpublish] <kracker> i mean i'm doing something productive for the_client .. but i would call it hacking, why do i get a negative impresion from your reply?
+[05-25-2005 16:04:29] [#ezpublish] <kracker> in any cercumstance, i am trying to build documentation so i can use this functionality ... i thought it might be a good idea to do this outloud
+[05-25-2005 16:04:50] [#ezpublish] <kracker> i might help someone else in my capitalistic efforts ... right or wrong
+[05-25-2005 16:05:02] [#ezpublish] <buz> ahh i meant you're looking for an idea to improve ez
+[05-25-2005 16:05:20] [#ezpublish] <kracker> *shrugs* then again ...
+[05-25-2005 16:05:26] [#ezpublish] <kracker> no, not an idea
+[05-25-2005 16:05:46] [#ezpublish] <buz> permissions based on the owner of the parent objects would be nice
+[05-25-2005 16:05:59] [#ezpublish] <kracker> it already exists, I'm only looking to learn how to USE the existing standard part of eZ publish ... callled kickstart.ini
+[05-25-2005 16:06:25] [#ezpublish] <buz> ahh
+[05-25-2005 16:06:26] [#ezpublish] <kracker> but there are no documentation on how to use kickstart.ini yet ... :|
+[05-25-2005 16:06:27] [#ezpublish] <buz> that i never tried
+[05-25-2005 16:06:35] [#ezpublish] <kracker> bingo, yeah few have i wadger
+[05-25-2005 16:06:36] [#ezpublish] <buz> i dont need ez so often to be bothered by it
+[05-25-2005 16:06:45] [#ezpublish] <kracker> awww
+[05-25-2005 16:06:58] [#ezpublish] <kracker> thats so ... sad :~\
+[05-25-2005 16:07:07] -!- Teebie [Lucy_bi_19@host81-152-40-161.range81-152.btcentralplus.com] has joined #ezpublish
+[05-25-2005 16:07:09] [#ezpublish] <Teebie> hello?
+[05-25-2005 16:07:56] [#ezpublish] <kracker> hey Teebie
+[05-25-2005 16:08:03] [#ezpublish] <kracker> how goes it today?
+[05-25-2005 16:09:49] [#ezpublish] <kracker> wow ;) by the silence of your reply ... it sounds like a doozie ;)
+[05-25-2005 16:10:05] [#ezpublish] <Teebie> sorry
+[05-25-2005 16:10:06] [#ezpublish] <Teebie> im here
+[05-25-2005 16:10:11] [#ezpublish] <Teebie> and ina  spot of bother
+[05-25-2005 16:10:17] [#ezpublish] <Teebie> maybe you can help me?
+[05-25-2005 16:11:13] [#ezpublish] <kracker> no worries, please write me a few paragraphs on whats on your mind
+[05-25-2005 16:11:22] [#ezpublish] <Teebie> okay
+[05-25-2005 16:11:29] [#ezpublish] <kracker> you might wish to log this converstation for later evaluation and re reading / reuse
+[05-25-2005 16:11:30] [#ezpublish] <Teebie> well it's about ezpublish
+[05-25-2005 16:11:37] [#ezpublish] <kracker> isn't it always ;)
+[05-25-2005 16:11:41] [#ezpublish] <Teebie> autologged
+[05-25-2005 16:11:43] [#ezpublish] <Teebie> haha
+[05-25-2005 16:11:46] [#ezpublish] <kracker> nods
+[05-25-2005 16:11:47] [#ezpublish] <Teebie> just making sure
+[05-25-2005 16:12:32] [#ezpublish] <Teebie> anyways, I have downloaded the winsows version of ezpublish and unpacked it and uploaded it to my site in it's own directory
+[05-25-2005 16:13:12] [#ezpublish] <Teebie> I have apache, php and mysql installed yet when I run index.php from the directory on my site I don't get the setup wizard, I get a what appears to be a text file
+[05-25-2005 16:13:18] [#ezpublish] <Teebie> most confusing for me
+[05-25-2005 16:14:09] [#ezpublish] <kracker> sure, now, i'm working so you keep talking and i'll chime in when as I work (i'm a tab switcher, it's just how most of us work round here, k)
+[05-25-2005 16:14:30] [#ezpublish] <kracker> hmm does it display your php code in index.php
+[05-25-2005 16:14:43] [#ezpublish] <kracker> that means your web host (who do you host with) ...
+[05-25-2005 16:14:46] [#ezpublish] <Teebie> i'll give you the link
+[05-25-2005 16:14:55] [#ezpublish] <Teebie> don't allow php?
+[05-25-2005 16:15:04] [#ezpublish] <Teebie> http://conormcgloin.com/my_site/index.php
+[05-25-2005 16:16:09] [#ezpublish] <kracker> nw,cool
+[05-25-2005 16:16:16] [#ezpublish] <kracker> who is your web hosting provider?
+[05-25-2005 16:16:30] [#ezpublish] <Teebie> 123-reg
+[05-25-2005 16:16:41] [#ezpublish] <kracker> interesting, thnx, just curious ya know
+[05-25-2005 16:17:01] [#ezpublish] <kracker> well it sounds like they don't have php (parsing/in general) enabled on your hosting provider
+[05-25-2005 16:17:02] [#ezpublish] <Teebie> okay
+[05-25-2005 16:17:10] [#ezpublish] <kracker> what plan do you have with 123-reg?
+[05-25-2005 16:17:13] [#ezpublish] <Teebie> so I need to get a different host?
+[05-25-2005 16:17:21] [#ezpublish] <kracker> i don't know yet, what plan do you have ?
+[05-25-2005 16:17:22] [#ezpublish] <Teebie> just the basic 100mb hosting
+[05-25-2005 16:17:27] [#ezpublish] <Teebie> i'll check now
+[05-25-2005 16:17:36] [#ezpublish] <kracker> checking .... limp bizket : pepsi
+[05-25-2005 16:19:46] [#ezpublish] <kracker> Teebie : I checked and you do need another web hosting provider. I've been doing eZ publish development for a long time. If I was to recommend a replacement hosting provider I would recommend ....
+[05-25-2005 16:20:50] [#ezpublish] <Teebie> it's alright I have a friend who will let me uplaod to theirs I will just to url forwarding
+[05-25-2005 16:20:55] [#ezpublish] <Teebie> but go on
+[05-25-2005 16:21:06] [#ezpublish] <Teebie> you staying for a bit in here?
+[05-25-2005 16:21:14] [#ezpublish] <kracker> woah, url forwarding is slow
+[05-25-2005 16:21:21] [#ezpublish] <kracker> but for testing ... maybee
+[05-25-2005 16:21:26] [#ezpublish] <kracker> yeah, i'm always in here ;)
+[05-25-2005 16:21:33] [#ezpublish] <buz> yeah
+[05-25-2005 16:21:36] [#ezpublish] <buz> he doesnt sleep
+[05-25-2005 16:21:41] [#ezpublish] <kracker> seriously, you should relocate too
+[05-25-2005 16:21:45] [#ezpublish] <kracker> hey!
+[05-25-2005 16:21:51] [#ezpublish] <buz> to be honest, nobody really knows what he actually does ;)
+[05-25-2005 16:21:58] [#ezpublish] <kracker> you can notice in my late night forum posts ...
+[05-25-2005 16:22:05] [#ezpublish] <kracker> or who i really am ...
+[05-25-2005 16:22:16] [#ezpublish] <buz> besides posting weird lyrics when seawolf is actually aroudn
+[05-25-2005 16:22:33] [#ezpublish] <kracker> i am tyler's voice
+[05-25-2005 16:22:39] [#ezpublish] <kracker> lol, the_voice
+[05-25-2005 16:22:44] [#ezpublish] <kracker> anyway back to
+[05-25-2005 16:22:44] [#ezpublish] <Teebie> kracker lets focus on installing it first then I'll worry about optimization ;)
+[05-25-2005 16:23:04] [#ezpublish] <kracker> yeah, you want to purchase eZ publish hosting from an eZ systems partern : http://www.ez.no/partner/partner_list/(partner)/hosting/(sort)/name
+[05-25-2005 16:23:20] [#ezpublish] <kracker> if you don't you'll waste a lot of time trying to 'just make it work'
+[05-25-2005 16:23:24] -!- Katana` [~katana@d213-103-211-39.cust.tele2.fr] has quit [Read error: 113 (No route to host)]
+[05-25-2005 16:25:31] [#ezpublish] <Teebie> hmmm yeah in the mean time I'll try my friends hosting
+[05-25-2005 16:25:43] [#ezpublish] <kracker> I speak from a serious amount of past experiance here (3+ years), but best of luck
+[05-25-2005 16:26:16] [#ezpublish] <kracker> off hand (trying to be specific / fair / ballanced) The top two I would recommend are FireBright / VisionWT
+[05-25-2005 16:26:34] [#ezpublish] <Teebie> checking them out now
+[05-25-2005 16:26:35] [#ezpublish] <kracker> Standard Account : https://my.firebright.com/store/index.cgi/sid,4
+[05-25-2005 16:26:43] [#ezpublish] <kracker> http://www.visionwt.com/en/hosting/developer_hosting
+[05-25-2005 16:26:47] [#ezpublish] <Teebie> if I have any problems could you try and help me out though?
+[05-25-2005 16:27:27] [#ezpublish] <kracker> ummm, that is so open ended i could hang myself with an answere ...
+[05-25-2005 16:27:40] [#ezpublish] <kracker> i'm always here and i try to help everyone the same :)
+[05-25-2005 16:28:13] [#ezpublish] <kracker> i see you all as me, thousands of revisions ago ... only; different.
+[05-25-2005 16:28:32] [#ezpublish] <kracker> Limp Bizkit : Hot Dog!
+[05-25-2005 16:29:20] [#ezpublish] <Teebie> problems with ezpublish I should have said;)
+[05-25-2005 16:30:13] [#ezpublish] <kracker> no worries Teebie, we're all here to get down |P
+[05-25-2005 16:30:14] [#ezpublish] <kracker> http://www.lyrics007.com/Limp%20Bizkit%20Lyrics/Hot%20Dog%20Lyrics.html
+[05-25-2005 16:34:07] [#ezpublish] <Teebie> into limp bizket I take it :p?
+[05-25-2005 16:36:20] [#ezpublish] <kracker> na, not anymore
+[05-25-2005 16:36:34] [#ezpublish] <kracker> back in the day, ya
+[05-25-2005 16:36:42] [#ezpublish] <kracker> i just throw drops
+[05-25-2005 16:37:03] [#ezpublish] <kracker> they really arn't ..(smirk, always, rolls eyes) negative
+[05-25-2005 16:37:15] [#ezpublish] <kracker> mostly they are positive and fun ... if your open minded
+[05-25-2005 16:37:35] [#ezpublish] <Teebie> haha he was into Paris Hilton...literally
+[05-25-2005 16:37:36] [#ezpublish] <Teebie> yip
+[05-25-2005 16:37:43] [#ezpublish] <kracker> it's usualy what i'm listening at any given moment
+[05-25-2005 16:37:54] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-25-2005 16:40:00] [#ezpublish] <kracker> and it's usualy has a reference that comes to mind in a given converstation ...
+[05-25-2005 16:55:00] [#ezpublish] <kracker> which i'll liken to the situation or conversation i'm currently in
+[05-25-2005 16:55:44] [#ezpublish] <kracker> but now that i say it outloud i wonder if that's ... crazy, (lol, runs off to look for a medical dictionary ...)
+[05-25-2005 16:57:33] -!- SEAwolfx [~mike@65.214.56.42] has quit [Ping timeout: 14400 seconds]
+[05-25-2005 17:16:31] -!- Foolish [~foolish@dsl222-219.adsl.no] has quit ["mbop.."]
+[05-25-2005 17:24:06] [#ezpublish] <Teebie> hey back
+[05-25-2005 17:55:35] -!- Teebie [Lucy_bi_19@host81-152-40-161.range81-152.btcentralplus.com] has left #ezpublish []
+[05-25-2005 18:19:01] -!- SEAwolfx_ [~mike@b66729225374f515.session.tor] has quit [Ping timeout: 14400 seconds]
+[05-25-2005 18:40:53] [#ezpublish] <kracker> hey
+[05-25-2005 18:40:55] [#ezpublish] <kracker> drat
+[05-25-2005 22:32:11] -!- Lastent [~romanhuer@201.240.226.210] has joined #ezpublish
+[05-25-2005 22:35:17] [#ezpublish] <Lastent> hi
+[05-25-2005 22:35:24] [#ezpublish] <Lastent> what can i find here?
+[05-25-2005 22:37:32] -!- Lastent [~romanhuer@201.240.226.210] has quit ["—I-n-v-i-s-i-o-n— 2.0 Build 3515"]
+[05-25-2005 22:46:00] [#ezpublish] <kracker> well you gotta be a bit more pacient to make it in #ezpublish ( i know ;) cause i didn't have any either back in da day ... oh wait <chuckles>)

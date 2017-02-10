@@ -1,0 +1,117 @@
+[06-07-2006 00:02:11] -!- awormus [n=aaron@Nd0c0.n.pppool.de] has quit [Read error: 104 (Connection reset by peer)]
+[06-07-2006 00:43:25] -!- DiGiTa|_ [n=pet2poul@84.6.74.2] has joined #ezpublish
+[06-07-2006 01:01:10] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[06-07-2006 01:04:19] -!- aya_ [n=aya@fbx.internethic.net] has joined #ezpublish
+[06-07-2006 01:04:41] [#ezpublish] <aya_> hi
+[06-07-2006 01:06:03] [#ezpublish] <DiGiTa|_> hi
+[06-07-2006 01:06:07] [#ezpublish] <DiGiTa|_> http://abum.com/file/shadow/animations/17632.swf
+[06-07-2006 01:06:10] -!- SEAwolfx [n=SEAwolfx@p5493A2A1.dip0.t-ipconnect.de] has joined #ezpublish
+[06-07-2006 01:06:51] [#ezpublish] <SEAwolfx> morning
+[06-07-2006 01:20:32] -!- SEAwolfx_ [n=SEAwolfx@p54938D1A.dip0.t-ipconnect.de] has joined #ezpublish
+[06-07-2006 01:36:54] -!- SEAwolfx [n=SEAwolfx@p5493A2A1.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[06-07-2006 01:45:47] [#ezpublish] <Tidemann> DiGiTa|_: fun ;)
+[06-07-2006 01:47:27] [#ezpublish] <Tidemann> I'm having some cache issues...
+[06-07-2006 01:48:00] [#ezpublish] <Tidemann> if I try this:
+[06-07-2006 01:48:01] [#ezpublish] <Tidemann> 	{cache-block keys=$uri_string}
+[06-07-2006 01:48:01] [#ezpublish] <Tidemann> 		{include uri="design:main-menu.tpl" id=$module_result.node_id}
+[06-07-2006 01:48:01] [#ezpublish] <Tidemann> 	{/cache-block}
+[06-07-2006 01:49:13] [#ezpublish] <Tidemann> shouldn't that result in main-menu.tpl having a unique cache for every uri?
+[06-07-2006 01:52:36] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-07-2006 02:06:08] [#ezpublish] <Tidemann> ?
+[06-07-2006 02:07:32] [#ezpublish] <DiGiTa|_> yes
+[06-07-2006 02:07:37] [#ezpublish] <DiGiTa|_> that's right
+[06-07-2006 02:13:09] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[06-07-2006 02:17:18] [#ezpublish] <Tidemann> aaah! wasn't a cache-issue after all.. or.. well .. sort of...
+[06-07-2006 02:19:59] [#ezpublish] <Tidemann> works not anyway
+[06-07-2006 02:23:04] [#ezpublish] <Tidemann> not == now
+[06-07-2006 02:28:04] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-07-2006 02:53:45] -!- tobiS [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-07-2006 02:55:29] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[06-07-2006 02:58:46] -!- tobiS is now known as tobmaster
+[06-07-2006 03:28:45] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-07-2006 04:20:11] -!- SEAwolfx_ [n=SEAwolfx@p54938D1A.dip0.t-ipconnect.de] has quit []
+[06-07-2006 04:22:26] [#ezpublish] <kris10an> Tidemann, can i quote you on the fact that "not == now" ? ;-)
+[06-07-2006 05:31:19] [#ezpublish] <Tidemann> kris10an: hehe.. sure ;)
+[06-07-2006 05:49:34] [#ezpublish] <Tidemann> kris10an: you there?
+[06-07-2006 05:50:05] [#ezpublish] <Tidemann> kris10an: *nudge*
+[06-07-2006 05:50:33] [#ezpublish] <Tidemann> /nudge kris10an
+[06-07-2006 06:27:38] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[06-07-2006 06:32:18] [#ezpublish] <kris10an> Tidemann: every now and then..
+[06-07-2006 06:43:11] [#ezpublish] <Tidemann> every time I look the other way?
+[06-07-2006 06:50:45] -!- hovik [n=hovik@stalker.ez.no] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-07-2006 06:52:34] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[06-07-2006 06:54:45] -!- saraujo [n=msaraujo@201-016-141-152.xd-dynamic.ctbcnetsuper.com.br] has joined #ezpublish
+[06-07-2006 07:04:26] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[06-07-2006 07:07:13] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-07-2006 07:27:25] -!- gluegadget [n=amir@unaffiliated/gluegadget] has joined #ezpublish
+[06-07-2006 07:28:08] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-07-2006 07:39:01] [#ezpublish] <kris10an> yes
+[06-07-2006 08:08:02] -!- awormus [n=aaron@Ncd81.n.pppool.de] has joined #ezpublish
+[06-07-2006 08:09:55] -!- saraujo [n=msaraujo@201-016-141-152.xd-dynamic.ctbcnetsuper.com.br] has quit [Remote closed the connection]
+[06-07-2006 08:17:59] -!- zrg [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has joined #ezpublish
+[06-07-2006 08:32:20] -!- awormus [n=aaron@Ncd81.n.pppool.de] has quit [Read error: 145 (Connection timed out)]
+[06-07-2006 08:42:46] [#ezpublish] <jeremiah> hi
+[06-07-2006 08:43:47] [#ezpublish] <jeremiah> why in the admin panel , at the left, i see the content structure, but i onlsy see the nodes with folders, how could i see the real node structure, not only the nodes with folders.
+[06-07-2006 08:44:27] [#ezpublish] <kalooni> jeremiah: => contentstructuremenu.ini
+[06-07-2006 08:45:25] [#ezpublish] <zrg> should show verything in admin by default
+[06-07-2006 08:46:28] [#ezpublish] <jeremiah> ah, ok ok, thx
+[06-07-2006 08:50:20] [#ezpublish] <jeremiah> it works, thx kalooni
+[06-07-2006 08:51:08] [#ezpublish] <jeremiah> its a pity the panel control is so terribly slow in my localhost, apache with windows
+[06-07-2006 08:51:13] [#ezpublish] <jeremiah> where i am learning
+[06-07-2006 08:52:33] [#ezpublish] <zrg> lots of content?
+[06-07-2006 08:53:05] [#ezpublish] <jeremiah> no
+[06-07-2006 08:53:16] [#ezpublish] <jeremiah> very little content
+[06-07-2006 08:53:53] [#ezpublish] <jeremiah> only ten articles, no more
+[06-07-2006 08:54:08] [#ezpublish] <zrg> poor pc?
+[06-07-2006 08:54:26] [#ezpublish] <jeremiah> two processors, 1GB i think is good
+[06-07-2006 08:55:03] [#ezpublish] <zrg> have cacahing turned off or something?
+[06-07-2006 08:55:18] [#ezpublish] <jeremiah> HEHEHEHE, probably
+[06-07-2006 08:55:19] [#ezpublish] <zrg> windows sucks naturally but should not be that bad
+[06-07-2006 08:56:12] [#ezpublish] <jeremiah> yes, i have just seen i have the cache disconeccted in the admin panel, i disconected it to learn, but i think that i have to disconect it only in the web, not in the panel, ok?
+[06-07-2006 08:57:14] [#ezpublish] <jeremiah> si, i will try to modify the settings to conect the cache in the PANEL ADMIN, and let disconnected in the web while i learn
+[06-07-2006 08:57:19] [#ezpublish] <jeremiah> i think is better so
+[06-07-2006 08:58:23] [#ezpublish] <jeremiah> thx zrg
+[06-07-2006 08:59:17] [#ezpublish] <zrg> just leave the caching on and use clear cache whenever you have changed something
+[06-07-2006 09:01:33] [#ezpublish] <gluegadget> I've checked-out svn and then exported it to a directory for VirtualHost, although it's my first attempt to run index.php but the installer doesn't start and the login page appears
+[06-07-2006 09:02:59] [#ezpublish] <zrg> All mimsy were the borogoves?
+[06-07-2006 09:05:05] [#ezpublish] <gluegadget> huh ?
+[06-07-2006 09:06:16] [#ezpublish] <zrg> just joking, the above sentence did not make any sense to me :)
+[06-07-2006 09:07:28] [#ezpublish] <gluegadget> :)
+[06-07-2006 09:07:53] [#ezpublish] <gluegadget> so seems I should play with it ;)
+[06-07-2006 09:09:22] [#ezpublish] <jeremiah> thx zrg it work faster now
+[06-07-2006 09:18:59] -!- gluegadget [n=amir@unaffiliated/gluegadget] has left #ezpublish ["Leaving"]
+[06-07-2006 09:33:21] [#ezpublish] <kalooni> just a question about session
+[06-07-2006 09:33:29] [#ezpublish] <kalooni> I add a variable in the session
+[06-07-2006 09:33:41] [#ezpublish] <kalooni> does this variable always available after a user login ?
+[06-07-2006 09:33:49] [#ezpublish] <kalooni> if yes, i might have a problem retrieving it
+[06-07-2006 09:42:48] -!- phretor [n=phretor@host203-155.pool874.interbusiness.it] has joined #ezpublish
+[06-07-2006 09:42:55] [#ezpublish] <phretor> hi there
+[06-07-2006 09:43:13] [#ezpublish] <phretor> div(10,2) works but div($a, $b) returns me an error: solutions?
+[06-07-2006 09:43:31] [#ezpublish] <phretor> the error is "Unsupported operand types..."
+[06-07-2006 09:45:03] [#ezpublish] <zrg> convert to int
+[06-07-2006 09:45:25] [#ezpublish] <zrg> there probably is function like int()
+[06-07-2006 09:45:36] [#ezpublish] <phretor> they ARE int
+[06-07-2006 10:15:16] [#ezpublish] <phretor> zrg: I need to do a fetch and to filter an attribute that is an array of integers. I other words I need to do the dual of array( array( 'my_array_of_ints', 'in',  '1') ) ) )}
+[06-07-2006 10:15:58] [#ezpublish] <phretor> zrg: in other words, the node must be fetched if the attribute named my_array_of_ints does contain a certain integer
+[06-07-2006 10:37:21] -!- hovik [n=hovik@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[06-07-2006 10:57:08] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[06-07-2006 11:09:53] [#ezpublish] <zrg> im doing once-in-three-years office cleaning, do cant be disturbed :P
+[06-07-2006 11:16:47] -!- nnn0 [n=nnn0@ti541110a080-1719.bb.online.no] has joined #ezpublish
+[06-07-2006 11:17:46] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-07-2006 11:50:42] -!- phretor [n=phretor@host203-155.pool874.interbusiness.it] has left #ezpublish []
+[06-07-2006 12:23:17] -!- SEAwolfx [n=SEAwolfx@p5493C2EB.dip0.t-ipconnect.de] has joined #ezpublish
+[06-07-2006 12:38:59] [#ezpublish] <jeremiah> why now redirect me all the time? Redirecting to /index.php/corporate_site_admin/
+[06-07-2006 12:45:16] -!- zrg [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-07-2006 12:53:31] [#ezpublish] <jeremiah> i have resolved it was an option in settings, grrr
+[06-07-2006 13:11:42] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[06-07-2006 13:35:02] -!- DiGiTa|_ [n=pet2poul@84.6.74.2] has quit []
+[06-07-2006 13:37:39] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[06-07-2006 13:46:32] -!- awormus [n=aaron@Nc4cf.n.pppool.de] has joined #ezpublish
+[06-07-2006 14:12:37] -!- awormus [n=aaron@Nc4cf.n.pppool.de] has quit ["Leaving"]
+[06-07-2006 14:54:40] -!- awormus [n=aaron@Nc456.n.pppool.de] has joined #ezpublish
+[06-07-2006 15:07:57] -!- awormus [n=aaron@Nc456.n.pppool.de] has quit ["Leaving"]
+[06-07-2006 15:30:44] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-07-2006 15:47:12] -!- equals-peterd [n=peterd@156.154.19.153] has joined #ezpublish
+[06-07-2006 15:48:52] -!- equals-peterd [n=peterd@156.154.19.153] has quit [Client Quit]
+[06-07-2006 16:02:37] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-07-2006 17:15:08] -!- SEAwolfx [n=SEAwolfx@p5493C2EB.dip0.t-ipconnect.de] has quit [Connection timed out]

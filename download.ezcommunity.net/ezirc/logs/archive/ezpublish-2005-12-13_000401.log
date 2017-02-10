@@ -1,0 +1,460 @@
+[12-12-2005 00:08:41] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-12-2005 02:05:12] -!- ordnas [n=ordnas@p549D7524.dip.t-dialin.net] has joined #ezpublish
+[12-12-2005 02:09:36] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-12-2005 02:12:53] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-12-2005 03:48:06] -!- mode/#ezpublish [+oo fh[eZ] kh[eZ]] by ChanServ
+[12-12-2005 03:51:44] -!- Sulfu1 [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-12-2005 03:52:05] [#ezpublish] <Sulfu1> hi :)
+[12-12-2005 03:52:58] [#ezpublish] <Sulfu1> guys, how can I override a "full" template for a node in case I am in a print layout? what condition need I specify ?
+[12-12-2005 03:55:42] [#ezpublish] <Katana`> now that's a good question
+[12-12-2005 03:55:46] [#ezpublish] <Sulfu1> no ideas?
+[12-12-2005 03:56:22] [#ezpublish] * Sulfu1 pulls fh[eZ] and kh[eZ] 's leg
+[12-12-2005 03:56:30] [#ezpublish] <Sulfu1> agh!
+[12-12-2005 03:57:24] [#ezpublish] <Sulfu1> I see that someone robbed me of my registered nick
+[12-12-2005 03:57:33] [#ezpublish] <Sulfu1> whodunnit
+[12-12-2005 03:57:51] -!- Sulfu1 is now known as umbojumbo
+[12-12-2005 03:57:59] -!- umbojumbo is now known as Sulfu1
+[12-12-2005 03:58:43] [#ezpublish] <Sulfu1> dammit, how can they have taken away a registered nick?
+[12-12-2005 04:04:27] -!- SEAwolfx [n=mike@DSL01.212.114.229.78.NEFkom.net] has joined #ezpublish
+[12-12-2005 04:05:10] [#ezpublish] <Katana`> identify and they should get kicked
+[12-12-2005 04:10:43] [#ezpublish] <Sulfu1> I did identify but I cannot get my nick
+[12-12-2005 04:11:52] [#ezpublish] <Katana`> i think there's a command
+[12-12-2005 04:12:10] [#ezpublish] <Katana`> /msg nickserv recover
+[12-12-2005 04:12:19] [#ezpublish] <Katana`> should change the bummer's nickname :)
+[12-12-2005 04:14:22] -!- Sulfu1 is now known as umbojumbo
+[12-12-2005 04:14:31] -!- umbojumbo is now known as Sulfur
+[12-12-2005 04:14:37] [#ezpublish] <Sulfur> aaaah
+[12-12-2005 04:14:42] [#ezpublish] <Katana`> :))
+[12-12-2005 04:15:04] [#ezpublish] <Sulfur> so refreshing to be in my old pants
+[12-12-2005 04:15:16] [#ezpublish] <Sulfur> any way ...
+[12-12-2005 04:15:31] [#ezpublish] <Sulfur> this is a bummer , if there is no way to make a print override
+[12-12-2005 04:19:18] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-12-2005 04:19:20] [#ezpublish] <Sulfur> Katana`: have you ever needed to have a selection datatype / attribute to be mandatory ?
+[12-12-2005 04:19:21] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[12-12-2005 04:19:38] -!- _Katana` is now known as Katana`
+[12-12-2005 04:28:47] [#ezpublish] <Katana`> hummmm I don't think so Sulfur
+[12-12-2005 04:32:30] [#ezpublish] <Sulfur> even though you can specify it as mandatory, it is not handled
+[12-12-2005 04:32:47] -!- ordnas [n=ordnas@p549D7524.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-12-2005 04:33:08] [#ezpublish] <Sulfur> ... it seems that if an user does not specify a value, it will assign a "default" one .. at least this is what I gleaned from the tpl
+[12-12-2005 04:33:23] [#ezpublish] <Katana`> ah
+[12-12-2005 04:33:27] [#ezpublish] <Katana`> that's a problem :)
+[12-12-2005 04:37:20] -!- ordnas [n=ordnas@p549D7524.dip.t-dialin.net] has joined #ezpublish
+[12-12-2005 04:37:58] [#ezpublish] <Sulfur> yes ..
+[12-12-2005 04:38:20] [#ezpublish] <Sulfur> and I cannot even find a node or eZ variable to check if it contains layout/set/print
+[12-12-2005 04:38:34] [#ezpublish] <Sulfur> if I did, I could work around this all and put an if ..
+[12-12-2005 04:38:54] [#ezpublish] <Katana`> that's weird...
+[12-12-2005 04:39:42] [#ezpublish] <Sulfur> ahh found something .... $module_content.uri contains the uri
+[12-12-2005 04:39:58] [#ezpublish] <Sulfur> now I have to check how to pass it to the override template ...
+[12-12-2005 04:40:06] [#ezpublish] <Katana`> i think the layout is in there as well
+[12-12-2005 04:40:09] -!- Bedlore [n=me@ppp209-5.lns1.adl2.internode.on.net] has quit []
+[12-12-2005 04:40:50] [#ezpublish] <Sulfur> yes but the problem is how to override the template, or how to provide the needed info to the "normal" override template so that it will switch based on this uri
+[12-12-2005 04:41:29] [#ezpublish] <Katana`> yeah
+[12-12-2005 04:41:34] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[12-12-2005 04:41:56] [#ezpublish] <Sulfur> I think it's strange that no one ever had this need
+[12-12-2005 04:45:16] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-12-2005 04:46:37] [#ezpublish] <Sulfur> fh[eZ]: ... how can I specify an override condition for a "full" view depending on whether I am into a printable version or not? :)
+[12-12-2005 04:53:55] [#ezpublish] <Katana`> i've checked and I don't think it's possible...
+[12-12-2005 04:54:08] [#ezpublish] <Katana`> it's possible for layout/set.tpl
+[12-12-2005 04:54:13] [#ezpublish] <Katana`> layout
+[12-12-2005 04:54:14] [#ezpublish] <Katana`> 
+[12-12-2005 04:54:14] [#ezpublish] <Katana`> Matches the name of the layout (for example "print", "fullpage", etc.).
+[12-12-2005 04:54:19] [#ezpublish] <Sulfur> I tried t oset the persistent_variable but I get a slew of errors
+[12-12-2005 04:54:38] [#ezpublish] <Sulfur> yes, but that merely specifies what's the name of the pagelayout you want
+[12-12-2005 04:54:57] [#ezpublish] <Katana`> i suppose it's not available in the other views ?
+[12-12-2005 04:55:41] [#ezpublish] <Sulfur> I wouldn't bet my life on my answer , but I think not
+[12-12-2005 04:56:06] [#ezpublish] <Sulfur> I see there is a possibility of specifying an override condition based on persistent_variabel
+[12-12-2005 04:56:18] [#ezpublish] <Sulfur> so I was trying to set it in print_pagelayout.tpl
+[12-12-2005 04:56:23] [#ezpublish] <Sulfur> but I get errors :))
+[12-12-2005 04:56:39] [#ezpublish] <Sulfur> have you had luck with that Katana`?
+[12-12-2005 04:56:47] [#ezpublish] <Katana`> never tried :)
+[12-12-2005 04:56:54] [#ezpublish] <Katana`> so no luck but no bad luck either ;)
+[12-12-2005 04:56:58] [#ezpublish] <Sulfur> where are those damn buz and zrg when you need them :)
+[12-12-2005 04:57:02] [#ezpublish] <Katana`> i don't trust printable versions ;)
+[12-12-2005 04:57:11] [#ezpublish] <Katana`> paper is for the weak
+[12-12-2005 04:58:45] [#ezpublish] <Sulfur> yet only those who serve will be exalted ;)
+[12-12-2005 04:58:49] [#ezpublish] <Sulfur> pah
+[12-12-2005 04:58:50] [#ezpublish] <Sulfur> :))
+[12-12-2005 05:55:23] [#ezpublish] <thekracker> this just in, http://pubsvn.ez.no/community/trunk/extension/ezauthorize
+[12-12-2005 05:55:40] [#ezpublish] <thekracker> following, http://pubsvn.ez.no/community/trunk/extension/ezcurlgateway
+[12-12-2005 07:25:43] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Excess Flood]
+[12-12-2005 07:26:32] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-12-2005 07:46:07] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-12-2005 07:53:25] [#ezpublish] <Sulfur> zrg
+[12-12-2005 07:53:43] [#ezpublish] <Sulfur> have you ever needed to make overrides based on being in a print layout?
+[12-12-2005 07:54:56] [#ezpublish] <zrg> huh?
+[12-12-2005 07:55:05] [#ezpublish] <zrg> print layout?
+[12-12-2005 07:57:15] [#ezpublish] <Sulfur> yes
+[12-12-2005 07:57:26] [#ezpublish] <Sulfur> you know zrg, printable version of a page ....
+[12-12-2005 07:58:15] [#ezpublish] <zrg> ah, no, would need to make a view for this i think?
+[12-12-2005 07:58:22] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-12-2005 07:58:43] [#ezpublish] <Sulfur> the problem is that you're using a different pagelayout too
+[12-12-2005 07:58:47] [#ezpublish] <Sulfur> buz:
+[12-12-2005 07:58:57] [#ezpublish] <buz> yes
+[12-12-2005 07:59:35] [#ezpublish] <zrg> dont understand the problem..
+[12-12-2005 08:00:07] [#ezpublish] <Sulfur> buz: how do I make an override for full.tpl based on the fact that I am in a print layout ?
+[12-12-2005 08:00:16] [#ezpublish] <buz> no idea
+[12-12-2005 08:00:27] [#ezpublish] <Katana`> :))
+[12-12-2005 08:00:31] [#ezpublish] <Sulfur> zrg: simple. my full.tpl override is good for web view, but print version needs no links , and so on ....
+[12-12-2005 08:00:42] [#ezpublish] <zrg> ah
+[12-12-2005 08:01:46] [#ezpublish] <zrg> perhaps pass a parameter, then use different template from full.tpl if parameter is set
+[12-12-2005 08:02:02] [#ezpublish] <Katana`> that's not overriding ;)
+[12-12-2005 08:02:30] [#ezpublish] <Sulfur> that could be a solution  pro tempore ...
+[12-12-2005 08:03:03] [#ezpublish] <zrg> translation: for decades :P
+[12-12-2005 08:03:24] [#ezpublish] <Sulfur> yes , I fear so
+[12-12-2005 08:03:48] [#ezpublish] <Sulfur> but yet it can be A solution
+[12-12-2005 08:04:21] [#ezpublish] <zrg> sacrifice to the 7 headed deity of dirty hacks
+[12-12-2005 08:04:42] [#ezpublish] <buz> but remember that deity wants LIVING ravens
+[12-12-2005 08:04:47] [#ezpublish] <Sulfur> well, it's not a hack, but a workaround ... I think it could work
+[12-12-2005 08:04:59] [#ezpublish] <Sulfur> I'll try it.
+[12-12-2005 08:05:17] [#ezpublish] <zrg> wasnt there a override based on url?
+[12-12-2005 08:05:18] [#ezpublish] <buz> someone know how http://ez.no/community/contribs/hacks/cookie_user works?
+[12-12-2005 08:05:24] [#ezpublish] <buz> gives php errors for me
+[12-12-2005 08:07:00] [#ezpublish] <Sulfur> I think there was , on url_alias or navigation_part, but alas, it does not work becasue those 2 variables remain unchanged independent of the layout
+[12-12-2005 08:07:08] [#ezpublish] <zrg> if i were in evil mood i would send user password hash in a cookie
+[12-12-2005 08:09:17] [#ezpublish] <zrg> there is no print layout in default package, no?
+[12-12-2005 08:10:01] -!- nfrp [n=nfrp@popeye.ez.no] has joined #ezpublish
+[12-12-2005 08:10:49] [#ezpublish] <Sulfur> zrg: yes there is
+[12-12-2005 08:10:58] -!- SEAwolfx_ [n=mike@DSL01.83.171.152.151.NEFkom.net] has joined #ezpublish
+[12-12-2005 08:11:04] [#ezpublish] * Katana` really hopes eZ Publish 4 is gonna improve stuff
+[12-12-2005 08:11:35] [#ezpublish] <zrg> ah ok, you use layout view to change pagelayout template?
+[12-12-2005 08:12:10] [#ezpublish] <Sulfur> yes..
+[12-12-2005 08:12:11] [#ezpublish] <buz> we all do
+[12-12-2005 08:12:43] [#ezpublish] <buz> if only ez4 was in beta already
+[12-12-2005 08:12:47] [#ezpublish] <ordnas> anyone with a weblog, please read this: http://ez.no/community/forum/general/planetezpublish_org
+[12-12-2005 08:13:04] [#ezpublish] <buz> some people around here are talking about a huge project
+[12-12-2005 08:13:10] [#ezpublish] <buz> which we really would rather base around php5
+[12-12-2005 08:13:53] [#ezpublish] <buz> ordnas: planetezpublish is empty
+[12-12-2005 08:18:37] [#ezpublish] <Katana`> well, i don't think ezp 4 is gonna be beta or even alpha until components are final
+[12-12-2005 08:18:51] [#ezpublish] <Katana`> since ezp is based on the components it would be stupid :)
+[12-12-2005 08:20:33] [#ezpublish] <fh[eZ]> we didn't even start on 4.0 yet
+[12-12-2005 08:20:44] [#ezpublish] <fh[eZ]> at least.. not coding it
+[12-12-2005 08:20:55] [#ezpublish] <fh[eZ]> we have started planning etc.
+[12-12-2005 08:20:59] [#ezpublish] <fh[eZ]> you'll see the result of that pretty soon
+[12-12-2005 08:21:23] -!- SEAwolfx [n=mike@DSL01.212.114.229.78.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[12-12-2005 08:21:36] [#ezpublish] <Sulfur> did you made the proper offerings to the gods ?
+[12-12-2005 08:22:29] [#ezpublish] <buz> so what should those of us wanting to future proof our extensions do?
+[12-12-2005 08:24:42] [#ezpublish] <zrg> nothing, if current extensions will be compatible, i will be hugely disappointed :P
+[12-12-2005 08:25:20] [#ezpublish] <buz> if ez itself isnt compatible to php5 chances are many extensions will suffer of the same fate
+[12-12-2005 08:25:43] [#ezpublish] <ordnas> buz: read the post
+[12-12-2005 08:25:51] [#ezpublish] <Sulfur> yeah
+[12-12-2005 08:26:07] [#ezpublish] <zrg> not just because of that, i expect there be design changes
+[12-12-2005 08:27:02] [#ezpublish] <buz> yeah that too
+[12-12-2005 08:27:16] [#ezpublish] <buz> it's kinda sad, soon we'll have components but we cant use them to develop extensions...
+[12-12-2005 08:29:07] [#ezpublish] <Katana`> ...
+[12-12-2005 08:29:23] [#ezpublish] <Katana`> is it me or you've been complaining about that since the components were released as beta ? :)
+[12-12-2005 08:29:43] [#ezpublish] <Katana`> i'm sure it would have been much better if the components had been kept a secret until ezp 4.0 was released
+[12-12-2005 08:30:01] [#ezpublish] <buz> i can understand why they are out now
+[12-12-2005 08:30:11] [#ezpublish] <buz> i'm not sure if its the right decision though
+[12-12-2005 08:30:13] [#ezpublish] <Katana`> and why they can't be used with ez 3 ? :)
+[12-12-2005 08:30:37] [#ezpublish] <buz> i dont really understand why php5 isnt backward compatible, no
+[12-12-2005 08:31:50] [#ezpublish] <buz> a deprecated "compatibility mode" would have been a nice thing
+[12-12-2005 08:32:14] [#ezpublish] <buz> make the user jump through hoops to enable it but offer some possibility to use php4 code
+[12-12-2005 08:34:53] [#ezpublish] <@kh[eZ]> buz: why dont you think its right to release the components?
+[12-12-2005 08:35:30] [#ezpublish] <buz> it makes us ez devs all lusty but we cant use it before 4 is released
+[12-12-2005 08:36:21] [#ezpublish] <Katana`> lol
+[12-12-2005 08:38:00] [#ezpublish] <zrg> muhahaha :)
+[12-12-2005 08:38:33] [#ezpublish] <zrg> they WANT us all lusty and drooling well advance of release :P
+[12-12-2005 08:40:21] [#ezpublish] <fh[eZ]> haha.. you guys scare me
+[12-12-2005 08:40:37] [#ezpublish] <Katana`> ^^
+[12-12-2005 08:40:46] [#ezpublish] <Katana`> don't count me among them fh[eZ]
+[12-12-2005 08:41:06] [#ezpublish] <fh[eZ]> hehe
+[12-12-2005 08:41:08] [#ezpublish] <Katana`> i'm only pissed because i have to work with the search engine of ez 3, and i'm being asked weird stuff ^^
+[12-12-2005 08:41:28] [#ezpublish] <Katana`> and it remembers me of the nice starting thread about the next search engine
+[12-12-2005 08:42:04] [#ezpublish] <buz> fh[eZ]: didnt you know that we regularly have ez gangbangs?
+[12-12-2005 08:42:13] [#ezpublish] <buz> and dead raven fetish parties, of course
+[12-12-2005 08:42:17] [#ezpublish] * Katana` stares at ezlog
+[12-12-2005 08:42:21] [#ezpublish] <Katana`> i hope you're not logging that bitch
+[12-12-2005 08:42:30] [#ezpublish] <fh[eZ]> I'm logging
+[12-12-2005 08:42:33] [#ezpublish] <Katana`> crap
+[12-12-2005 08:42:44] [#ezpublish] * Katana` hands fh[eZ] some money
+[12-12-2005 08:42:44] [#ezpublish] <fh[eZ]> buz: hm... regular you say
+[12-12-2005 08:42:50] [#ezpublish] <Katana`> and a cookie
+[12-12-2005 08:42:51] [#ezpublish] <ordnas> hehe
+[12-12-2005 08:42:58] [#ezpublish] <fh[eZ]> mm.. cookie
+[12-12-2005 08:43:10] [#ezpublish] <buz> we'll send that log to your GF, Katana`
+[12-12-2005 08:44:04] [#ezpublish] <Katana`> yeah sure :)
+[12-12-2005 08:44:13] [#ezpublish] <Katana`> she likes cms gangbangs
+[12-12-2005 08:44:32] [#ezpublish] <Sulfur> kinky french fries
+[12-12-2005 08:44:58] [#ezpublish] <Katana`> :
+[12-12-2005 08:46:10] [#ezpublish] <zrg> bring out the goat!
+[12-12-2005 08:46:20] [#ezpublish] <nfrp> lol
+[12-12-2005 08:47:32] [#ezpublish] <nfrp> heard about the next "CMS summer gangbang" round there so stay tuned.
+[12-12-2005 08:48:16] [#ezpublish] <zrg> somehow i feel lucky i did not sleep in hotel at nights :P
+[12-12-2005 08:48:54] [#ezpublish] <Sulfur> you were out chasing ekls ?
+[12-12-2005 08:49:05] [#ezpublish] <zrg> no i tented at hilltop
+[12-12-2005 08:49:51] [#ezpublish] <Sulfur> nice
+[12-12-2005 08:53:49] [#ezpublish] <Sulfur> so you wer ein a better condition to chase after elks without being noticed, no doubt
+[12-12-2005 08:53:52] [#ezpublish] <Katana`> fh[eZ], are frenchies from eZ sent to the camp ? ^^
+[12-12-2005 08:54:08] [#ezpublish] <fh[eZ]> yep
+[12-12-2005 08:54:11] [#ezpublish] <Katana`> kewl
+[12-12-2005 08:54:39] [#ezpublish] <Katana`> okay search time...
+[12-12-2005 08:54:43] [#ezpublish] <Katana`> bleh
+[12-12-2005 08:56:02] [#ezpublish] <Sulfur> boot camp?
+[12-12-2005 08:56:05] [#ezpublish] <Sulfur> :))
+[12-12-2005 08:58:30] [#ezpublish] <Katana`> :)
+[12-12-2005 09:00:01] [#ezpublish] <zrg> sulfur: http://www.gg.ee/gallery/album100
+[12-12-2005 09:00:17] [#ezpublish] <@kh[eZ]> nfrp: CMS summer gangbang you say? that is going to be nice, with the massive amount of girls showing up :-p
+[12-12-2005 09:00:27] [#ezpublish] <Katana`> lol yes
+[12-12-2005 09:00:35] [#ezpublish] * Katana` is not gonna invite his gf, actually
+[12-12-2005 09:00:53] [#ezpublish] <zrg> BOTH of the girls are coming?
+[12-12-2005 09:00:59] [#ezpublish] <Katana`> lol
+[12-12-2005 09:01:15] [#ezpublish] <Katana`> you won't be able to hit on them with 200 guys around ;)
+[12-12-2005 09:01:51] [#ezpublish] <Sulfur> ultracool, zrg
+[12-12-2005 09:01:53] [#ezpublish] <zrg> i have some tricks..
+[12-12-2005 09:02:01] [#ezpublish] <Sulfur> well...
+[12-12-2005 09:02:02] [#ezpublish] <@kh[eZ]> Katana`: you are not brining your GF? it will be nice for her there.... :-)
+[12-12-2005 09:02:12] [#ezpublish] <zrg> yeah, bring her :)
+[12-12-2005 09:02:15] [#ezpublish] <@kh[eZ]> she will get a lot of attention :-)
+[12-12-2005 09:02:24] [#ezpublish] <Katana`> well, if it's a CMS gangbang i don't know actually :)
+[12-12-2005 09:02:34] [#ezpublish] <@kh[eZ]> which is good for the selfasteem and stuff...
+[12-12-2005 09:03:26] [#ezpublish] <Katana`> lol
+[12-12-2005 09:03:28] [#ezpublish] <nfrp> ok, then we'll just order two busses of norwegian ladies instead. no one should  bring his gf .
+[12-12-2005 09:03:28] [#ezpublish] <@kh[eZ]> so she don't like CMSes?
+[12-12-2005 09:03:32] [#ezpublish] <Katana`> don't worry about my selfesteem
+[12-12-2005 09:03:57] [#ezpublish] <@kh[eZ]> i wasnt talking about your selfesteem, i was talking about hers ;-)
+[12-12-2005 09:04:05] [#ezpublish] <Katana`> lol
+[12-12-2005 09:04:09] [#ezpublish] <nfrp> lol
+[12-12-2005 09:04:15] [#ezpublish] <Katana`> /clear please
+[12-12-2005 09:04:15] [#ezpublish] <Katana`> :)
+[12-12-2005 09:04:20] [#ezpublish] <@kh[eZ]> hehehe
+[12-12-2005 09:04:26] [#ezpublish] <Katana`> anyway i would really like to take her to norway
+[12-12-2005 09:04:39] [#ezpublish] <Katana`> i really enjoyed the last camp, even if it was not summer enough imho :)
+[12-12-2005 09:04:48] [#ezpublish] <@kh[eZ]> yes.. but maybe its better to do that when nfrp is not around...
+[12-12-2005 09:04:56] [#ezpublish] <nfrp>  you can also take her in norway. but you need to take her to norway first true.
+[12-12-2005 09:05:19] [#ezpublish] <Katana`> ...
+[12-12-2005 09:05:33] [#ezpublish] <Katana`> i think we're gonna get along well, nfrp :)
+[12-12-2005 09:05:40] [#ezpublish] <nfrp> ( some kh is spreading sort of a awful image of frenchies working at eZ... )
+[12-12-2005 09:05:42] [#ezpublish] <nfrp> :P
+[12-12-2005 09:05:51] [#ezpublish] <nfrp> yes seems like :)
+[12-12-2005 09:06:26] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-12-2005 09:06:48] [#ezpublish] <_Katana`> mrmmrpf
+[12-12-2005 09:06:52] [#ezpublish] <@kh[eZ]> hehe... its much fun when you are sitting next to me.. i need to do it now, before you go back to frenchieland...
+[12-12-2005 09:06:59] -!- kh[eZ] is now known as kris10an
+[12-12-2005 09:07:24] [#ezpublish] <_Katana`> lol
+[12-12-2005 09:08:28] [#ezpublish] <buz> Katana` can take her to norway then the others can take her
+[12-12-2005 09:09:11] [#ezpublish] * _Katana` stares at buz
+[12-12-2005 09:09:29] [#ezpublish] <buz> i'm a little out of whack today, i admit
+[12-12-2005 09:09:33] [#ezpublish] <_Katana`> yep a tad
+[12-12-2005 09:09:41] [#ezpublish] <buz> could be worse though
+[12-12-2005 09:09:47] [#ezpublish] <_Katana`> yeah always
+[12-12-2005 09:09:52] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[12-12-2005 09:09:53] -!- _Katana` is now known as Katana`
+[12-12-2005 09:09:58] [#ezpublish] <buz> evilness is boundless ;)
+[12-12-2005 09:10:08] [#ezpublish] <Katana`> especially yours ;)
+[12-12-2005 09:10:20] [#ezpublish] <buz> sure
+[12-12-2005 09:10:42] -!- buz is now known as lucifer_himself
+[12-12-2005 09:11:40] [#ezpublish] <Katana`> dad !!
+[12-12-2005 09:12:03] [#ezpublish] <fh[eZ]> did you guys read "preacher"?
+[12-12-2005 09:12:07] [#ezpublish] <lucifer_himself> best devil ever: al pacino in devils advocate
+[12-12-2005 09:12:18] [#ezpublish] * Katana` agrees with lucifer_himself
+[12-12-2005 09:12:24] [#ezpublish] <lucifer_himself> doesnt sound like something /me would read
+[12-12-2005 09:12:25] [#ezpublish] <Katana`> al pacino pwns
+[12-12-2005 09:12:32] [#ezpublish] <Katana`> preacher ? no i don't think so fh[eZ]
+[12-12-2005 09:12:42] [#ezpublish] <lucifer_himself> he very obviously enjoys playing me
+[12-12-2005 09:12:59] [#ezpublish] <lucifer_himself> (it is a nice job, after all ;)
+[12-12-2005 09:13:05] [#ezpublish] <fh[eZ]> http://www.neonwheels.com/preacher/index.shtml
+[12-12-2005 09:13:07] [#ezpublish] <fh[eZ]> that series
+[12-12-2005 09:13:10] [#ezpublish] <fh[eZ]> I think you will like it
+[12-12-2005 09:13:27] [#ezpublish] <Katana`> looks dark
+[12-12-2005 09:13:33] [#ezpublish] <Katana`> i'm too sensitive for that
+[12-12-2005 09:13:41] [#ezpublish] <lucifer_himself> shame on you, son
+[12-12-2005 09:13:43] [#ezpublish] <fh[eZ]> http://www.dccomics.com/graphic_novels/?gn=1645
+[12-12-2005 09:14:11] [#ezpublish] <fh[eZ]> after reading the intro you'll think WTF.. this must be an insame mess
+[12-12-2005 09:14:19] [#ezpublish] <fh[eZ]> but it's very cool
+[12-12-2005 09:14:24] [#ezpublish] <Katana`> fh[eZ], eZ question: alternative locations + search engine = ? issues ? :)
+[12-12-2005 09:14:47] [#ezpublish] <fh[eZ]> http://www.univie.ac.at/Anglistik/easyrider/data/preacher.htm <- better intro
+[12-12-2005 09:14:54] [#ezpublish] <fh[eZ]> check out "arseface"
+[12-12-2005 09:14:54] [#ezpublish] <Katana`> sounds funny
+[12-12-2005 09:15:20] [#ezpublish] <fh[eZ]> Katana`: you'll get double results I think
+[12-12-2005 09:15:42] [#ezpublish] <Katana`> actually no i think it does not even search in the alternative locations
+[12-12-2005 09:15:47] [#ezpublish] <Katana`> the search engine indexes content objects right ?
+[12-12-2005 09:16:32] [#ezpublish] <lucifer_himself> it should
+[12-12-2005 09:16:35] [#ezpublish] <fh[eZ]> yes, true
+[12-12-2005 09:16:39] [#ezpublish] <fh[eZ]> ah, forget it
+[12-12-2005 09:16:40] [#ezpublish] <Katana`> so it doesn't know about locations
+[12-12-2005 09:16:48] [#ezpublish] <fh[eZ]> I was thinking of a special implementation we have here
+[12-12-2005 09:16:49] [#ezpublish] <Katana`> i have to trick it since the main location is not to be seen
+[12-12-2005 09:16:50] [#ezpublish] <Katana`> nor opened
+[12-12-2005 09:16:51] [#ezpublish] <Katana`> never
+[12-12-2005 09:16:54] [#ezpublish] <Katana`> the site may explode
+[12-12-2005 09:16:58] [#ezpublish] <fh[eZ]> the normal search engine just cares about locations
+[12-12-2005 09:17:02] [#ezpublish] <Katana`> a special implementation ?
+[12-12-2005 09:17:04] -!- lucifer_himself is now known as buz
+[12-12-2005 09:17:06] [#ezpublish] <fh[eZ]> for the doc
+[12-12-2005 09:17:11] [#ezpublish] <Katana`> hohoho
+[12-12-2005 09:17:24] [#ezpublish] <buz> back to being incognito
+[12-12-2005 09:17:46] [#ezpublish] <Katana`> ah, the famous "call me daddy" in the devil's advocate... :)
+[12-12-2005 09:17:57] [#ezpublish] <buz> exactly
+[12-12-2005 09:18:06] [#ezpublish] <buz> him being a lawyer is particularly fitting
+[12-12-2005 09:18:12] [#ezpublish] <Katana`> yep :)
+[12-12-2005 09:20:12] [#ezpublish] <buz> laying awake last night, an idea for a new data type struck me
+[12-12-2005 09:20:58] [#ezpublish] <buz> basically, i want to create an ACL datatype so the owner of an object can decide who gets to do what with it himself
+[12-12-2005 09:21:13] [#ezpublish] <buz> but it wont work without some kernel hackery
+[12-12-2005 09:21:20] [#ezpublish] <Katana`> probably not
+[12-12-2005 09:21:36] [#ezpublish] <buz> it'd be a very powerful tool
+[12-12-2005 09:23:34] [#ezpublish] <buz> especially for community sites
+[12-12-2005 09:27:27] [#ezpublish] <Katana`> yep definitely
+[12-12-2005 09:28:56] [#ezpublish] <Sulfur> nod
+[12-12-2005 09:29:14] [#ezpublish] * Katana` was thinking about that NNTP <=> Forum gateway again the other day
+[12-12-2005 09:35:31] [#ezpublish] <buz> it'd be neat
+[12-12-2005 09:35:33] [#ezpublish] <buz> but a lot of work
+[12-12-2005 09:36:08] [#ezpublish] <buz> well it kinda depends if you're gonna simply gate the stuff between usenet and forum or stick an NNTP interface on the forum...
+[12-12-2005 09:36:27] [#ezpublish] <buz> for starters, working rss streams on ez.no would be much easier ;)
+[12-12-2005 09:39:20] [#ezpublish] <Sulfur> lol
+[12-12-2005 09:39:36] [#ezpublish] <buz> no really, that would be a lot more useful than content/new to me
+[12-12-2005 09:39:36] [#ezpublish] * Sulfur still has a fatal error on rssimport.php called by ez's cronjob
+[12-12-2005 09:51:23] [#ezpublish] <Katana`> hummm... any idea why even though content.ini.append is properly configured, changing the content of an object doesn't seem to affect the user site ?
+[12-12-2005 09:52:32] [#ezpublish] <buz> broken caching?
+[12-12-2005 09:53:09] [#ezpublish] <Katana`> well, it's most likely
+[12-12-2005 09:53:16] [#ezpublish] <Katana`> but what exactly ? caching is pretty vast :)
+[12-12-2005 09:54:10] [#ezpublish] <Katana`> unclosed cache block maybe...
+[12-12-2005 09:56:06] [#ezpublish] <Katana`> no :(
+[12-12-2005 09:56:27] [#ezpublish] <buz> caching is gigantic
+[12-12-2005 09:56:45] [#ezpublish] <buz> and since i wanna become gigantic, too, i'm off to the gym now ;)
+[12-12-2005 09:57:31] [#ezpublish] <Katana`> :)
+[12-12-2005 09:57:47] -!- nfrp [n=nfrp@popeye.ez.no] has quit ["Leaving"]
+[12-12-2005 09:58:09] [#ezpublish] <zrg> some violent sport probably, working off anger from days worth of ez :P
+[12-12-2005 09:58:45] [#ezpublish] <Katana`> anyway my caching issue is still there
+[12-12-2005 09:59:42] [#ezpublish] <Katana`> and clearing the content cache for that page did the job...
+[12-12-2005 09:59:54] [#ezpublish] <Sulfur> Katana`: now THAT is what I'd like to know .. I have the same issue sometimes
+[12-12-2005 10:01:06] [#ezpublish] <Katana`> i wish kris10an would say a word here
+[12-12-2005 10:01:14] [#ezpublish] <Katana`> a useful one, related to the caching issue ;)
+[12-12-2005 10:02:14] [#ezpublish] <kris10an> are you sure you set up content.ini correct for the siteaccess?
+[12-12-2005 10:02:47] [#ezpublish] <Katana`> that's what i'm triple checking
+[12-12-2005 10:03:03] [#ezpublish] <Katana`> it's not [VersionView] is it ?
+[12-12-2005 10:04:34] [#ezpublish] <Katana`> yes it is...
+[12-12-2005 10:04:52] [#ezpublish] <kris10an> versionview yes...
+[12-12-2005 10:05:00] [#ezpublish] <kris10an> [VersionView]
+[12-12-2005 10:05:00] [#ezpublish] <kris10an> AvailableSiteDesignList[]
+[12-12-2005 10:05:10] [#ezpublish] <kris10an> this needs to be set correctly...
+[12-12-2005 10:05:14] [#ezpublish] <Katana`> shit so it is
+[12-12-2005 10:05:22] [#ezpublish] <Katana`> [VersionView]
+[12-12-2005 10:05:22] [#ezpublish] <Katana`> AvailableSiteDesignList[]
+[12-12-2005 10:05:22] [#ezpublish] <Katana`> AvailableSiteDesignList[]=opticshop
+[12-12-2005 10:05:22] [#ezpublish] <Katana`> AvailableSiteDesignList[]=opticshop-fr
+[12-12-2005 10:05:22] [#ezpublish] <Katana`> AvailableSiteDesignList[]=opticshop-en
+[12-12-2005 10:05:22] [#ezpublish] <Katana`> AvailableSiteDesignList[]=opticshopadmin
+[12-12-2005 10:05:24] [#ezpublish] <Katana`> DefaultPreviewDesign=opticshop
+[12-12-2005 10:05:27] [#ezpublish] <Katana`> sounds good to me
+[12-12-2005 10:05:35] [#ezpublish] <Katana`> in settings/override/content.ini.append
+[12-12-2005 10:05:43] [#ezpublish] <Katana`> and not overriden by anything as far as I can see
+[12-12-2005 10:06:05] [#ezpublish] <kris10an> are you having some crazy contentstructure which needs to clear all kinds of stuff?
+[12-12-2005 10:06:28] [#ezpublish] <kris10an> hmm.. is the node you are editing being updated?
+[12-12-2005 10:06:36] [#ezpublish] <Katana`> well, the page i'm having the issue with is VERY simple
+[12-12-2005 10:06:42] [#ezpublish] <Katana`> http://opticshop-online.com/faq
+[12-12-2005 10:06:47] [#ezpublish] <Katana`> not related to anything and stuff
+[12-12-2005 10:06:56] [#ezpublish] <Katana`> we're gonna have other content issues but not there ;)
+[12-12-2005 10:07:56] [#ezpublish] <kris10an> the cache is not being cleared for the node you are editing?
+[12-12-2005 10:08:09] [#ezpublish] <Katana`> yep
+[12-12-2005 10:08:20] [#ezpublish] <Katana`> i've checked, the old cache content is still on disk
+[12-12-2005 10:08:34] [#ezpublish] <Katana`> it shows correctly in admin / node/view/full as soon as edited but not on user site
+[12-12-2005 10:08:35] [#ezpublish] <kris10an> (you can check the actuall value of the ini-settings in admin-interface... but i never try to change it there)
+[12-12-2005 10:08:46] [#ezpublish] <Katana`> i've just done that it's correct
+[12-12-2005 10:09:00] [#ezpublish] <Katana`> for admin siteaccess right ? since it's the one i'm editing from
+[12-12-2005 10:09:06] [#ezpublish] <kris10an> did you spell the name of the desing porperly...
+[12-12-2005 10:09:13] [#ezpublish] <kris10an> no.. for user siteaccess...
+[12-12-2005 10:09:22] [#ezpublish] <Katana`> hum wait design ?
+[12-12-2005 10:09:22] [#ezpublish] <kris10an> that is the one you want to check the values for...
+[12-12-2005 10:09:24] [#ezpublish] <Katana`> isn't it access ?
+[12-12-2005 10:09:30] [#ezpublish] <kris10an> no.. its design...
+[12-12-2005 10:09:32] [#ezpublish] <Katana`> ...
+[12-12-2005 10:09:46] [#ezpublish] <Katana`> content is cached for a... design ?
+[12-12-2005 10:10:28] [#ezpublish] <Katana`> DAMNIT
+[12-12-2005 10:10:28] [#ezpublish] <Katana`> :)
+[12-12-2005 10:10:37] [#ezpublish] <kris10an> im not sure about the technicallities there.. but you need to specify the design...
+[12-12-2005 10:10:52] [#ezpublish] <Katana`> that array has to hold every design used as SiteDesign in various site.ini's right ?
+[12-12-2005 10:11:16] [#ezpublish] <zrg> swearing prophecizes the truth
+[12-12-2005 10:11:24] [#ezpublish] <Katana`> indeed it does
+[12-12-2005 10:11:27] [#ezpublish] <kris10an> you should list the sitedesign for the siteaccess..
+[12-12-2005 10:11:31] [#ezpublish] <Katana`> damn you fifteens !!
+[12-12-2005 10:11:35] [#ezpublish] <Katana`> yay
+[12-12-2005 10:11:42] [#ezpublish] <Katana`> siteaccesses, please, 3 languages ;)
+[12-12-2005 10:12:29] [#ezpublish] <kris10an> rite...
+[12-12-2005 10:12:41] [#ezpublish] <kris10an> but you only have one sitedesign for each siteaccess ;-)
+[12-12-2005 10:12:49] [#ezpublish] <Katana`> yeah
+[12-12-2005 10:12:55] [#ezpublish] <Katana`> actually they're cascaded
+[12-12-2005 10:13:03] [#ezpublish] <Katana`> opticshop-lang => opticshop => standard
+[12-12-2005 10:13:17] [#ezpublish] <Katana`> and i didn't have opticshop-de in there since there is no siteaccess by that name...
+[12-12-2005 10:13:34] [#ezpublish] <Katana`> the site was only in 1 language in the beggining, the client thought 3 languages were implicit ;)
+[12-12-2005 10:14:04] [#ezpublish] <kris10an> offcourse... there is allways 2 implicit languages...
+[12-12-2005 10:14:09] [#ezpublish] <Katana`> :))
+[12-12-2005 10:14:18] [#ezpublish] <Katana`> early specifications are for the weak
+[12-12-2005 10:14:32] [#ezpublish] <Katana`> pwnage, it works
+[12-12-2005 10:14:38] [#ezpublish] <Katana`> kris10an you're my hero
+[12-12-2005 10:14:51] [#ezpublish] <kris10an> this one is the best.... http://www.start.no/tegneserier/dilbert/dil-striper/dil20051025.gif
+[12-12-2005 10:14:57] [#ezpublish] <kris10an> but its in norwegian....
+[12-12-2005 10:15:10] [#ezpublish] <kris10an> but i can give you the rought translation..
+[12-12-2005 10:15:11] [#ezpublish] <Katana`> it was translated by someone once...
+[12-12-2005 10:15:19] [#ezpublish] <Katana`> translate again please ;)
+[12-12-2005 10:15:21] [#ezpublish] <kris10an> its brilliant...
+[12-12-2005 10:15:29] [#ezpublish] <Katana`> i can't google translate an image
+[12-12-2005 10:15:34] [#ezpublish] <Katana`> yay :)
+[12-12-2005 10:15:34] [#ezpublish] <kris10an> "our webpage needs to be more webby"
+[12-12-2005 10:15:39] [#ezpublish] <kris10an> "but not to webby"
+[12-12-2005 10:15:50] [#ezpublish] <kris10an> "how long will that take?"
+[12-12-2005 10:16:03] [#ezpublish] <Sulfur> dilbert
+[12-12-2005 10:16:11] [#ezpublish] <Sulfur> :D
+[12-12-2005 10:17:52] [#ezpublish] <Katana`> yes very good :))
+[12-12-2005 10:19:01] [#ezpublish] <Katana`> works, i pwn
+[12-12-2005 10:19:02] [#ezpublish] <Sulfur> I like the one about agile programming
+[12-12-2005 10:19:52] [#ezpublish] <kris10an> time to eat some stuff... l8r dudes
+[12-12-2005 10:21:11] [#ezpublish] <zrg> "Programmer Chow", 20 kilos bag.
+[12-12-2005 10:21:19] [#ezpublish] <Sulfur> heh
+[12-12-2005 10:21:27] [#ezpublish] <Katana`> l8er kris
+[12-12-2005 10:21:33] [#ezpublish] <Sulfur> with parts of dead raven
+[12-12-2005 10:21:40] [#ezpublish] <zrg> yeah
+[12-12-2005 10:21:49] [#ezpublish] <zrg> goes well with liquid bread
+[12-12-2005 10:23:26] [#ezpublish] <zrg> had a friend overnight few weeks back, we were hitting pubs hard so later when at my place and out of snack he ate half a bag of whiskas
+[12-12-2005 10:23:52] [#ezpublish] <zrg> now he fakes memory loss ;)
+[12-12-2005 10:31:24] [#ezpublish] <Katana`> loool
+[12-12-2005 10:55:17] [#ezpublish] <buz> zrg: actually, just plain weights mixed with some cardio, most of my anger comes from uni stuff, not ez
+[12-12-2005 10:55:22] [#ezpublish] <buz> ez is more like relaxation
+[12-12-2005 10:55:39] [#ezpublish] <buz> mhh whiskas
+[12-12-2005 11:06:46] [#ezpublish] <buz> concerning rss http://blogs.law.harvard.edu/tech/rss#hrelementsOfLtitemgt shouldnt item.pubDate be mapped to last modified? the way it currently is, it doesnt get updated when a content object changes?
+[12-12-2005 11:21:07] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-12-2005 11:47:46] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[12-12-2005 12:28:22] -!- ordnas [n=ordnas@p549D7524.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-12-2005 13:04:50] [#ezpublish] <nnn0> i think i fixed a "bug" :) heh
+[12-12-2005 13:04:56] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[12-12-2005 13:05:13] [#ezpublish] <zrg> nnn0: wooot! :)
+[12-12-2005 13:05:33] [#ezpublish] <nnn0> it's just some bad css
+[12-12-2005 13:05:35] [#ezpublish] <nnn0> :)
+[12-12-2005 13:05:51] [#ezpublish] <nnn0> bug 6691
+[12-12-2005 13:06:16] [#ezpublish] <nnn0> about the break in the search/login bar in firefox
+[12-12-2005 13:06:48] [#ezpublish] <nnn0> it's seems there is no resolution ?
+[12-12-2005 13:06:56] [#ezpublish] <nnn0> but this works for me:
+[12-12-2005 13:07:08] [#ezpublish] <nnn0> in the css
+[12-12-2005 13:07:37] [#ezpublish] <nnn0> div#toolbar-top ul { float: right; white-space: nowrap;}
+[12-12-2005 13:07:57] [#ezpublish] <nnn0> i should post that  in the forum
+[12-12-2005 13:08:41] [#ezpublish] <zrg> comment on bug?
+[12-12-2005 13:08:47] [#ezpublish] <nnn0> yes
+[12-12-2005 13:12:05] [#ezpublish] <nnn0> done
+[12-12-2005 13:12:06] [#ezpublish] <nnn0> :D
+[12-12-2005 13:12:16] [#ezpublish] <nnn0> i should apply for partnership :D
+[12-12-2005 13:12:20] [#ezpublish] <nnn0> hhe
+[12-12-2005 13:14:25] [#ezpublish] <zrg> people who grok css should get more appreciation
+[12-12-2005 13:14:59] [#ezpublish] <nnn0> :) hehe
+[12-12-2005 13:16:18] [#ezpublish] <nnn0> heh 60 points to correct a bug :D which i don't get :)
+[12-12-2005 13:16:32] [#ezpublish] <nnn0> hm
+[12-12-2005 13:21:03] [#ezpublish] <nnn0> i should definetly apply
+[12-12-2005 13:22:15] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-12-2005 13:27:29] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-12-2005 13:57:01] -!- ordnas [n=ordnas@p549D7524.dip.t-dialin.net] has joined #ezpublish
+[12-12-2005 14:07:46] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-12-2005 14:25:25] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[12-12-2005 14:33:22] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[12-12-2005 14:41:48] -!- ordnas [n=ordnas@p549D7524.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-12-2005 14:44:37] [#ezpublish] <zrg> chili coffee mm
+[12-12-2005 15:02:36] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[12-12-2005 15:06:12] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-12-2005 15:07:44] [#ezpublish] <Katana`> hooo, is eZ subject to that: hohooo, nice : http://www.phpit.net/article/php-security-3-example-exploits/ ? :)
+[12-12-2005 16:27:37] -!- ordnas [n=ordnas@p549D7524.dip.t-dialin.net] has joined #ezpublish
+[12-12-2005 16:27:43] -!- ordnas [n=ordnas@p549D7524.dip.t-dialin.net] has quit [Client Quit]
+[12-12-2005 17:01:25] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit []
+[12-12-2005 21:17:34] [#ezpublish] <thekracker> the public notice: http://ez.no/community/contribs/workflow/ez_authorize and http://ez.no/community/contribs/workflow/ezcurlgateway
+[12-12-2005 21:26:22] [#ezpublish] <zrg> money money money :)
+[12-12-2005 21:39:21] [#ezpublish] <thekracker> i sure hope it is useful to someone using eZ publish
+[12-12-2005 21:39:31] [#ezpublish] <zrg> bet it is
+[12-12-2005 22:33:27] [#ezpublish] <thekracker> we created a simple, neat tutorial on installing and using payment gateway extensions as well to help users get the extension installed and configured eZ, http://brookinsconsulting.com/solutions/ez_authorize/ez_authorize_tutorial
+[12-12-2005 22:43:56] [#ezpublish] <zrg> thats one weird page layout :P
+[12-12-2005 22:46:32] [#ezpublish] <thekracker> very we are going to be upgrading the site's design and content very soon to address the growth problems with the current layout

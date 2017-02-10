@@ -1,0 +1,297 @@
+[06-13-2006 00:11:22] [#ezpublish] <kracker> Yes?
+[06-13-2006 00:16:15] [#ezpublish] <Paleo> is it distributed stand-alone or I need to installe the whole CMS ?
+[06-13-2006 00:29:06] -!- DiGiTa|_ [n=pet2poul@84.4.70.38] has joined #ezpublish
+[06-13-2006 00:35:56] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-13-2006 00:40:50] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-13-2006 00:53:27] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-13-2006 01:06:14] -!- _hovik [n=hovik@85.19.74.66] has quit [Remote closed the connection]
+[06-13-2006 01:06:47] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-13-2006 01:11:07] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[06-13-2006 01:14:57] -!- awormus [i=aaron@Nd0ca.n.pppool.de] has joined #ezpublish
+[06-13-2006 01:18:45] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[06-13-2006 01:18:52] [#ezpublish] <B-KiLLer`> hi !
+[06-13-2006 01:18:56] -!- ordnas [n=ordnas@p549D727B.dip.t-dialin.net] has joined #ezpublish
+[06-13-2006 01:21:18] [#ezpublish] <tobmaster> moin
+[06-13-2006 01:21:28] [#ezpublish] <awormus> moin
+[06-13-2006 01:23:14] -!- awormus [i=aaron@Nd0ca.n.pppool.de] has quit ["Leaving"]
+[06-13-2006 01:26:56] [#ezpublish] <ordnas> moin
+[06-13-2006 01:31:04] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-13-2006 01:40:08] [#ezpublish] <DiGiTa|_> plus
+[06-13-2006 01:44:37] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-13-2006 01:48:51] [#ezpublish] <B-KiLLer`> has someone already done a graphical navigation (with rollover images), within ezp? if so, how did you proceed?
+[06-13-2006 02:02:18] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[06-13-2006 02:13:02] [#ezpublish] <kris10an> B-KiLLer`: You mean like uploading two images for each content-object, and make javascript switch between them?
+[06-13-2006 02:13:57] [#ezpublish] <B-KiLLer`> yep, something like this
+[06-13-2006 02:14:07] [#ezpublish] <B-KiLLer`> but not really "upload", because those images are part of the design
+[06-13-2006 02:14:21] [#ezpublish] <B-KiLLer`> my idea was to associate in a .ini file, the node / image_file_name
+[06-13-2006 02:14:37] [#ezpublish] <B-KiLLer`> and then, while displaying the menu, doing some |ezimage, with the content from that .ini
+[06-13-2006 02:21:10] [#ezpublish] <kris10an> B-KiLLer`: that also works.
+[06-13-2006 02:21:20] [#ezpublish] <kris10an> i have done something similar
+[06-13-2006 02:25:22] -!- SEAwolfx_ is now known as SEAwolfx
+[06-13-2006 02:32:57] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-13-2006 02:56:11] [#ezpublish] <tobmaster> B-KiLLer`: do you really want to use images there?
+[06-13-2006 02:56:27] [#ezpublish] <tobmaster> B-KiLLer`: the most things you can do with css and lists.
+[06-13-2006 02:56:52] [#ezpublish] <tobmaster> if more complex you even can try the ezp text to image functionalities
+[06-13-2006 03:26:31] -!- awormus [n=aaron@Nd0c2.n.pppool.de] has joined #ezpublish
+[06-13-2006 03:26:33] [#ezpublish] <Tidemann> is it possible to output ezxml without the leading:<?xml version="1.0" encoding="utf-8"?> <section xmlns:image="http://ez.no/namespaces/ezpublish3/image/" xmlns:xhtml="http://ez.no/namespaces/ezpublish3/xhtml/" xmlns:custom="http://ez.no/namespaces/ezpublish3/custom/">
+[06-13-2006 03:27:24] [#ezpublish] <Tidemann> and ending </section>
+[06-13-2006 03:34:28] [#ezpublish] <Tidemann> all I need is <p> and <strong>
+[06-13-2006 03:42:55] [#ezpublish] <Tidemann> ahem
+[06-13-2006 03:42:56] [#ezpublish] <Tidemann> help?
+[06-13-2006 03:43:24] [#ezpublish] <awormus> Tidemann: would if I could ;)
+[06-13-2006 04:02:16] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-13-2006 04:04:00] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-13-2006 04:09:08] -!- aul_ is now known as tobyS
+[06-13-2006 04:09:56] -!- awormus [n=aaron@Nd0c2.n.pppool.de] has quit ["Leaving"]
+[06-13-2006 04:11:29] [#ezpublish] <B-KiLLer`> tobmaster: It would have been great If I could have used CSS, but the menus are too much of an image unfortunately :-/
+[06-13-2006 04:30:41] [#ezpublish] <tobmaster> B-KiLLer`: show ;)
+[06-13-2006 04:31:37] [#ezpublish] <tobmaster> Tidemann: erm. you want to fetch the raw xml source. why strip that then?
+[06-13-2006 04:35:39] [#ezpublish] <B-KiLLer`> http://www.leo-energy.lu/
+[06-13-2006 04:35:53] [#ezpublish] <B-KiLLer`> uups
+[06-13-2006 04:35:53] [#ezpublish] <B-KiLLer`> http://www.leoenergy.lu/
+[06-13-2006 04:35:55] [#ezpublish] <B-KiLLer`> better
+[06-13-2006 04:38:01] [#ezpublish] <kalooni> nice design ;)
+[06-13-2006 04:59:32] -!- tobyS [n=dotxp@hartes-php.de] has quit ["leaving"]
+[06-13-2006 04:59:43] -!- tobyS [i=dotxp@hartes-php.de] has joined #ezpublish
+[06-13-2006 05:05:30] [#ezpublish] <Tidemann> tobmaster: I have no idea what I was thinking ;)
+[06-13-2006 05:13:59] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-13-2006 05:15:47] -!- kris10an [n=kh@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[06-13-2006 05:18:53] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-13-2006 05:23:46] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Read error: 110 (Connection timed out)]
+[06-13-2006 05:24:28] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-13-2006 05:40:06] [#ezpublish] <tobmaster> B-KiLLer`: that topmenu you can do with pure css
+[06-13-2006 05:40:28] [#ezpublish] <tobmaster> set a blue background color
+[06-13-2006 05:40:39] [#ezpublish] <tobmaster> and a white corner and position it to the top right
+[06-13-2006 05:40:41] [#ezpublish] <tobmaster> fin
+[06-13-2006 05:52:09] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[06-13-2006 05:58:25] -!- koni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-13-2006 05:59:42] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-13-2006 06:04:43] [#ezpublish] <B-KiLLer`> there are some small details in those buttons ;)
+[06-13-2006 06:17:23] [#ezpublish] <DiGiTa|_> use them as background image
+[06-13-2006 06:21:03] [#ezpublish] <B-KiLLer`> variable size
+[06-13-2006 06:34:48] -!- koni [n=nicolas@fbx.internethic.net] has quit [Read error: 110 (Connection timed out)]
+[06-13-2006 06:35:29] -!- koni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-13-2006 06:42:24] -!- koni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-13-2006 07:21:57] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-13-2006 08:00:55] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[06-13-2006 08:02:35] -!- awormus [n=aaron@Ncde8.n.pppool.de] has joined #ezpublish
+[06-13-2006 08:25:24] -!- awormus_ [n=aaron@Nd0c4.n.pppool.de] has joined #ezpublish
+[06-13-2006 08:32:30] -!- awormus [n=aaron@Ncde8.n.pppool.de] has quit [Read error: 145 (Connection timed out)]
+[06-13-2006 08:37:41] -!- awormus_ is now known as awormus
+[06-13-2006 08:38:09] [#ezpublish] <awormus> anyone know what dates sleeping places are available for phpvikinger
+[06-13-2006 08:41:22] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-13-2006 08:49:34] [#ezpublish] <ordnas> awormus: maybe ask here somewhere: http://phpvikinger.org/
+[06-13-2006 08:50:04] [#ezpublish] <awormus> already did :/
+[06-13-2006 08:51:08] [#ezpublish] <awormus> I guess we'll see when we get there :)
+[06-13-2006 08:51:45] [#ezpublish] <ordnas> definitely! I am sure you will not be left sleeping on the street
+[06-13-2006 08:53:20] [#ezpublish] <awormus> :)
+[06-13-2006 08:53:49] [#ezpublish] <ordnas> seriously!
+[06-13-2006 08:54:25] [#ezpublish] <ordnas> just make sure you take off your shoes when you are invited to sleep at someone's place :)
+[06-13-2006 09:20:22] -!- awormus [n=aaron@Nd0c4.n.pppool.de] has quit [Read error: 110 (Connection timed out)]
+[06-13-2006 09:25:29] [#ezpublish] <DiGiTa|_> how can i get a "GET" var from a cutom module view
+[06-13-2006 09:25:53] [#ezpublish] <DiGiTa|_> i tried $http->getVariable('sessionid')
+[06-13-2006 09:25:59] [#ezpublish] <DiGiTa|_> but doesn't work
+[06-13-2006 09:26:30] [#ezpublish] <DiGiTa|_> and $_GET['sessionid'] too
+[06-13-2006 09:26:49] [#ezpublish] <DiGiTa|_> i don't know wtf
+[06-13-2006 09:39:01] -!- yper [i=yper@c-eb4472d5.024-2014-67626714.cust.bredbandsbolaget.se] has joined #ezpublish
+[06-13-2006 09:39:50] [#ezpublish] <yper> Good day/evning/mornign gentlemen and ofcorse even all the ladies in the channel
+[06-13-2006 09:49:23] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[06-13-2006 09:50:50] -!- Paleo [n=Paleo@admin.pwsp.net] has quit [Connection reset by peer]
+[06-13-2006 09:53:06] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-13-2006 10:10:24] -!- Paleo [n=Paleo@admin.pwsp.net] has joined #ezpublish
+[06-13-2006 10:19:57] [#ezpublish] <yper> So I have some issues with my new installation of ezpub version 3.8.0 regarding images. As soon as i try to add an image from the admin interface regardless of where I am I end up with the same error: Fatal error: Call to a member function on a non-object in /var/www/ezpublish-3.8.0/kernel/classes/datatypes/ezimage/ezimagealiashandler.php on line 1053. As I'm quite new to ez i have no Idea of what is wrong and how to fi
+[06-13-2006 10:21:58] [#ezpublish] <kracker> yper your message was cut off at "what is wrong and how to f......"
+[06-13-2006 10:23:20] [#ezpublish] <B-KiLLer`> ... fix this strange and very annoying problem which should not occur :(
+[06-13-2006 10:23:21] [#ezpublish] <B-KiLLer`> ;)
+[06-13-2006 10:25:57] [#ezpublish] <yper>  what is wrong and how to fix it. pls help
+[06-13-2006 10:26:05] [#ezpublish] <yper> that's all :)
+[06-13-2006 10:26:31] [#ezpublish] <yper> so B-KiLLer` was almost correct :)
+[06-13-2006 10:38:29] [#ezpublish] <B-KiLLer`> :D
+[06-13-2006 10:39:34] [#ezpublish] <yper> Anyone who recognise this problem ?
+[06-13-2006 10:43:31] [#ezpublish] <B-KiLLer`> are you quite new to php as well or not ?
+[06-13-2006 10:44:12] [#ezpublish] <B-KiLLer`> if not, then you could open the concerned file and try to follow up that "bug", maybe you could see the reason, just looking at the code
+[06-13-2006 10:44:16] [#ezpublish] <B-KiLLer`> (as first step)
+[06-13-2006 10:48:20] [#ezpublish] <yper> I'm on it right now :)
+[06-13-2006 10:55:29] [#ezpublish] <yper> It seems to be in the function that extracts the EXIF data from the file.
+[06-13-2006 10:55:39] [#ezpublish] <yper> file == image :)
+[06-13-2006 11:05:14] [#ezpublish] <yper> Hmm theres a call to a object function $itemValueNode->node_value() The problem as I see it is that the last time the foreach runs this loop $itemValueNode contains no object and therefor the error is quite obvius
+[06-13-2006 11:37:08] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[06-13-2006 11:41:34] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-13-2006 11:43:25] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[06-13-2006 11:44:33] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-13-2006 11:44:34] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-13-2006 11:46:00] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-13-2006 11:49:40] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Client Quit]
+[06-13-2006 11:51:00] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-13-2006 12:04:54] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-13-2006 12:13:27] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-13-2006 12:16:33] -!- awormus [n=aaron@Nd0c5.n.pppool.de] has joined #ezpublish
+[06-13-2006 12:21:55] [#ezpublish] <yper> noone here that can help me ?
+[06-13-2006 12:27:37] -!- ordnas [n=ordnas@p549D727B.dip.t-dialin.net] has left #ezpublish []
+[06-13-2006 12:37:46] -!- awormus [n=aaron@Nd0c5.n.pppool.de] has quit ["Leaving"]
+[06-13-2006 12:40:08] -!- xigle1 [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-13-2006 12:51:21] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[06-13-2006 13:44:43] [#ezpublish] <buz> depends
+[06-13-2006 13:58:11] -!- DiGiTa|_ [n=pet2poul@84.4.70.38] has quit []
+[06-13-2006 14:06:48] -!- awormus [n=aaron@Nd0d0.n.pppool.de] has joined #ezpublish
+[06-13-2006 14:14:03] [#ezpublish] <yper> on what ?
+[06-13-2006 14:14:25] [#ezpublish] <SunRayCafe> the pace on this channel is amazing :)
+[06-13-2006 14:14:32] [#ezpublish] <yper> indeed :)
+[06-13-2006 14:14:34] [#ezpublish] <SunRayCafe> I wish I was viewing timestamps...
+[06-13-2006 14:14:48] [#ezpublish] <yper> hehe
+[06-13-2006 14:26:07] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[06-13-2006 14:26:17] [#ezpublish] <ls> yo
+[06-13-2006 14:28:52] [#ezpublish] <yper> yo
+[06-13-2006 14:29:02] [#ezpublish] <ls> what's up?
+[06-13-2006 14:29:39] [#ezpublish] <yper> not much trying to figure out what is wrong with my ez installation
+[06-13-2006 14:29:52] [#ezpublish] <ls> what is worng :P?
+[06-13-2006 14:30:04] [#ezpublish] <yper> no backlog ?
+[06-13-2006 14:30:44] [#ezpublish] <ls> check var/log/error.log
+[06-13-2006 14:30:50] [#ezpublish] <ls> in the eZ publish root dir
+[06-13-2006 14:32:57] [#ezpublish] <ls> back soon, I'm going to watch second half of the match
+[06-13-2006 14:33:01] -!- xigle1 [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[06-13-2006 14:33:03] [#ezpublish] <ls> deboug output is your firend
+[06-13-2006 14:33:27] [#ezpublish] <ls> just enable it from admin intefrace or in site.ini.append.php
+[06-13-2006 14:35:54] [#ezpublish] <yper> it is not that kind of error. When I try to add images I get fatal error that I traced to a loop that runs to many loops and by that tries to call a function from an object that is'nt there
+[06-13-2006 14:42:48] [#ezpublish] <buz> what version
+[06-13-2006 14:43:00] [#ezpublish] <buz> i think i reported a bug like that for 3.8
+[06-13-2006 14:43:05] [#ezpublish] <buz> supposedly got fixed since
+[06-13-2006 14:43:31] [#ezpublish] <yper> it's 3.8
+[06-13-2006 14:46:10] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-13-2006 14:52:28] [#ezpublish] <SunRayCafe> hmmmm.... I'm about to run an update to 3.8.8, I think it is
+[06-13-2006 14:52:34] [#ezpublish] <SunRayCafe> is that still an open bug?
+[06-13-2006 14:54:25] [#ezpublish] <yper> might be don't know
+[06-13-2006 14:54:53] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-13-2006 14:59:28] [#ezpublish] <yper> I'm looking for the bug at the page. Will look more after the game has ended
+[06-13-2006 15:01:58] -!- awormus [n=aaron@Nd0d0.n.pppool.de] has quit ["Leaving"]
+[06-13-2006 15:05:02] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-13-2006 15:08:48] [#ezpublish] <yper> SunRayCafe: Wich version are you running right now ?
+[06-13-2006 15:11:43] [#ezpublish] <yper> Is 3.8.8 the latest I'm currently running 3.8.0 and it is only a testsite locally so I'll update if thats the case and see if the bug is still there
+[06-13-2006 15:16:57] [#ezpublish] <yper> Hmm it sems that 3.8.0 is the latest release
+[06-13-2006 15:23:24] -!- xiglet__ [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-13-2006 15:23:25] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-13-2006 15:31:21] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-13-2006 15:32:43] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-13-2006 15:33:25] [#ezpublish] <yper> Might be a good idea to fall back to a 3.7 release for me
+[06-13-2006 15:36:08] [#ezpublish] <ls> yper: I can't reproduce fatal error with images on 3.8, works fine here
+[06-13-2006 15:36:27] [#ezpublish] <ls> what error do you have exactly, do you have E_ALL error reporting for PHP on?
+[06-13-2006 15:37:35] [#ezpublish] <ls> on windows and linux no errors
+[06-13-2006 15:38:22] [#ezpublish] <xiglet__> ls: have you any plans of redesigning the standard stylesheets?
+[06-13-2006 15:38:28] -!- xiglet__ is now known as xigleth
+[06-13-2006 15:38:36] [#ezpublish] <yper> linux
+[06-13-2006 15:38:52] [#ezpublish] <yper> I'll look in error
+[06-13-2006 15:39:33] [#ezpublish] <ls> put in the index.php second line error_reporting(2047);
+[06-13-2006 15:39:43] [#ezpublish] <ls> you should get all errors
+[06-13-2006 15:39:52] [#ezpublish] <xigleth> ls: just presented a basic eZ  publish intranet solution to a customer of mine today, he wasn't impressed by the layout :) So now he have to spend some money on a redesign (good for us..:) )
+[06-13-2006 15:40:51] [#ezpublish] <ls> xigleth: do you mean for new template syntax?
+[06-13-2006 15:40:58] [#ezpublish] <ls> (redesign)
+[06-13-2006 15:41:08] [#ezpublish] <xigleth> ls: no ... design as in layout
+[06-13-2006 15:41:09] [#ezpublish] <xigleth> css
+[06-13-2006 15:41:21] [#ezpublish] <xigleth> the base templates
+[06-13-2006 15:42:01] [#ezpublish] <yper> ls: Fatal error: Call to a member function on a non-object in /var/www/ezpublish-3.8.0/kernel/classes/datatypes/ezimage/ezimagealiashandler.php on line 1053
+[06-13-2006 15:42:04] [#ezpublish] <yper> Fatal error: eZ publish did not finish its request
+[06-13-2006 15:42:35] [#ezpublish] <ls> acually I don't know about plans in that case ...
+[06-13-2006 15:43:11] [#ezpublish] <ls> is this clean 3.8 installation? What is your environment configuration?
+[06-13-2006 15:43:50] [#ezpublish] <xigleth> I belive some potential "customers" will walk away when they try out the online demos .. let's face it, they are ugly :)
+[06-13-2006 15:44:01] [#ezpublish] <xigleth> but not a huge problem for me as I know how to fix it ;-)
+[06-13-2006 15:44:23] [#ezpublish] <yper> installed 3.8 as forum site. Added packages gallery and contacts
+[06-13-2006 15:44:32] [#ezpublish] <ls> the power is under cover, if you need good examples look on reference page or my site :P
+[06-13-2006 15:44:57] [#ezpublish] <xigleth> your site?
+[06-13-2006 15:45:14] [#ezpublish] <ls> http://serwatka.net
+[06-13-2006 15:45:18] [#ezpublish] <ls> no shame ;)
+[06-13-2006 15:45:43] [#ezpublish] <xigleth> hey, pretty nice layout
+[06-13-2006 15:46:02] [#ezpublish] <yper> ls: cool site
+[06-13-2006 15:46:04] [#ezpublish] <ls> thanks ;)
+[06-13-2006 15:46:41] [#ezpublish] <xigleth> you work at eZ systems right?
+[06-13-2006 15:46:42] [#ezpublish] <ls> much more better in the reference section, use it if you want to show examples of eZ publish ;)
+[06-13-2006 15:46:45] [#ezpublish] <ls> yes
+[06-13-2006 15:47:04] [#ezpublish] <xigleth> yeah, have read a lot there
+[06-13-2006 15:47:16] [#ezpublish] <xigleth> the documentation pages is starting to get pretty good
+[06-13-2006 15:47:28] [#ezpublish] <ls> yes, we have good progress there
+[06-13-2006 15:47:34] [#ezpublish] <xigleth> except a huge faq and a new updated "how to build a ez site"
+[06-13-2006 15:47:45] [#ezpublish] <ls> FAQ us under way
+[06-13-2006 15:49:05] [#ezpublish] <xigleth> read something about it in the forums
+[06-13-2006 15:49:41] [#ezpublish] <ls> yper: do you have exif extensions installed?
+[06-13-2006 15:49:50] [#ezpublish] <ls> or your jpeg contains any exif info?
+[06-13-2006 15:50:04] [#ezpublish] <yper> ls: the function that crashes for me has to do with Exif data extraction it seems. its a foreach loop that runs in my case 15 times 0-14 (added a counter) and the last time calls it calls the $itemValueNode->node_value(); it crashes since this time strangly enough there is no object in $itemValueNode
+[06-13-2006 15:50:18] [#ezpublish] <yper> ls don't know
+[06-13-2006 15:50:30] [#ezpublish] <ls> check phpinfo
+[06-13-2006 15:51:23] [#ezpublish] <ls> try enabled it, recompile with --with-exif or install from rpm if you use packages
+[06-13-2006 15:52:06] [#ezpublish] <ls> --enable-exif
+[06-13-2006 15:52:12] [#ezpublish] <ls> if correct syntax
+[06-13-2006 15:53:36] [#ezpublish] <xigleth> hope Alman releases his book soon
+[06-13-2006 15:54:04] [#ezpublish] <ls> yeah this summer
+[06-13-2006 15:54:12] [#ezpublish] <yper> ls: exif is enabled and version is 1.4
+[06-13-2006 15:54:50] [#ezpublish] <xigleth> ls: how long time would you use making a script that captured id3 information for all .mp3 files in a directory (with subdirectories). An object only get the information, not the file itself
+[06-13-2006 15:55:27] [#ezpublish] <ls> not much,
+[06-13-2006 15:55:40] [#ezpublish] <yper> ls: however, the exif info in my image I've tried to upload is 0221 and 1.4 supports 0220
+[06-13-2006 15:56:03] [#ezpublish] <ls> try with different image
+[06-13-2006 15:57:14] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-13-2006 15:57:37] [#ezpublish] <yper> same error
+[06-13-2006 15:57:49] [#ezpublish] <yper> for a image with no exif
+[06-13-2006 15:58:42] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-13-2006 15:58:57] [#ezpublish] <xigleth> ls: all sites in your portfolio made with ez?
+[06-13-2006 15:59:30] [#ezpublish] <ls> not all
+[06-13-2006 16:00:17] [#ezpublish] <ls> yper: I can't reproduce it :/
+[06-13-2006 16:00:35] [#ezpublish] <ls> tried with images from my camera with exif, works fine with 3.8.0
+[06-13-2006 16:02:34] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[06-13-2006 16:03:26] [#ezpublish] <yper> ls: the wierd thing is that with a image that has no exif it still runns 15 times in the foreach loop
+[06-13-2006 16:03:40] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-13-2006 16:04:18] [#ezpublish] <yper> ls could you send me a picture that works for you ?
+[06-13-2006 16:05:13] [#ezpublish] <yper> ls: do you run win or linux ?
+[06-13-2006 16:05:37] [#ezpublish] <xigleth> ls: your eZDE extension ... When I start to write eZ templates syntax, does it then suggest what i'm about to type? Like some wysiwyg-editors does with html/php etc
+[06-13-2006 16:07:49] [#ezpublish] <ls> yper: sure
+[06-13-2006 16:07:54] [#ezpublish] <ls> run linux
+[06-13-2006 16:08:10] [#ezpublish] <ls> xigleth: nope
+[06-13-2006 16:08:34] [#ezpublish] <ls> PHPEdit has that feature If I remeber
+[06-13-2006 16:08:34] [#ezpublish] <xigleth> I guess there is no such thing for eZp yet - for any editor
+[06-13-2006 16:08:40] [#ezpublish] <xigleth> oh
+[06-13-2006 16:08:50] [#ezpublish] <xigleth> I thought it was only highlighing
+[06-13-2006 16:09:15] [#ezpublish] <ls> check that article http://ez.no/community/articles/development_tools_for_ez_publish
+[06-13-2006 16:09:20] [#ezpublish] <ls> it has
+[06-13-2006 16:09:22] [#ezpublish] <yper> ls: cool how will you send it or can you put it on the web somewhere ?
+[06-13-2006 16:09:33] [#ezpublish] <ls> let me upload it
+[06-13-2006 16:13:12] [#ezpublish] <ls> http://serwatka.net/var/storage/dsc_0032.jpg
+[06-13-2006 16:13:16] [#ezpublish] <ls> here you go
+[06-13-2006 16:13:26] [#ezpublish] <ls> that is with exif and works fine for me
+[06-13-2006 16:13:40] [#ezpublish] <ls> resize it since can be to big
+[06-13-2006 16:16:45] [#ezpublish] <ls> yper: got it?
+[06-13-2006 16:16:51] [#ezpublish] <yper> the same error
+[06-13-2006 16:17:20] [#ezpublish] <yper> wierd and it runs the loop 15 times it seems
+[06-13-2006 16:17:29] [#ezpublish] <ls> EXIF Version 	1.4 $Id: exif.c,v 1.118.2.37.2.4 2006/01/01 13:46:52 sniper Exp $
+[06-13-2006 16:17:35] [#ezpublish] <ls> 0220 support here
+[06-13-2006 16:18:17] [#ezpublish] <yper> 1.4 $Id: exif.c,v 1.118.2.37.2.4 2006/01/01 13:46:52 sniper Exp $
+[06-13-2006 16:18:24] [#ezpublish] <yper> same here
+[06-13-2006 16:19:14] [#ezpublish] <ls> I'm run out of ideas since we can't reporduce it, have yout tried with different eZ publish package e.g zip?
+[06-13-2006 16:19:35] [#ezpublish] <yper> nope.. only tar.bz2
+[06-13-2006 16:19:46] [#ezpublish] <ls> just resintall with plain
+[06-13-2006 16:19:53] [#ezpublish] <yper> I'll do that
+[06-13-2006 16:20:01] [#ezpublish] <ls> might be package corrupted or something
+[06-13-2006 16:20:10] [#ezpublish] <yper> maybe
+[06-13-2006 16:20:26] [#ezpublish] <ls> will you try it now?
+[06-13-2006 16:20:47] [#ezpublish] <ls> I will run within 10 min
+[06-13-2006 16:22:20] [#ezpublish] <yper> I'm on it
+[06-13-2006 16:23:11] [#ezpublish] <yper> have really slow connection though
+[06-13-2006 16:23:25] [#ezpublish] <ls> oki let me know if works ;)
+[06-13-2006 16:24:27] [#ezpublish] <ls> If not reopen bug by Gabriel, search for similar problem ... or open new one with your image as attachment and details about installation
+[06-13-2006 16:25:40] [#ezpublish] <yper> ok
+[06-13-2006 16:36:24] [#ezpublish] <yper> ls: worked much better with clean install no swedish language and just plain site
+[06-13-2006 16:37:25] [#ezpublish] <ls> are you able to reproduce this?
+[06-13-2006 16:41:05] [#ezpublish] <yper> maybe. will look in to ir
+[06-13-2006 16:41:07] [#ezpublish] <yper> it
+[06-13-2006 16:44:27] [#ezpublish] <ls> g nite
+[06-13-2006 16:45:01] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[06-13-2006 16:46:57] [#ezpublish] <yper> right back at you
+[06-13-2006 16:54:04] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-13-2006 17:01:59] -!- xigleth [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 110 (Connection timed out)]
+[06-13-2006 17:38:38] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Connection timed out]
+[06-13-2006 18:33:12] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-13-2006 18:34:38] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-13-2006 19:05:58] -!- SEAwolfx [n=SEAwolfx@p549391FB.dip0.t-ipconnect.de] has quit ["Ottos Mops kotzt"]
+[06-13-2006 22:59:53] -lilo:$*- [Global Notice] Hi all. If you've been knocked off freenode by the 'D C C' exploit recently, please be aware that a quick fix is to connect to chat.freenode.net via port 8001, instead of the default port (6667). Please check with the support channel for your favorite IRC client if you have more questions. Thanks!
+[06-13-2006 23:04:03] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-13-2006 23:25:02] -!- awormus [n=aaron@Nd0d2.n.pppool.de] has joined #ezpublish
+[06-13-2006 23:32:14] -!- ordnas [n=ordnas@p549D48B3.dip.t-dialin.net] has joined #ezpublish
+[06-13-2006 23:35:43] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-13-2006 23:43:16] -!- awormus [n=aaron@Nd0d2.n.pppool.de] has quit [Read error: 104 (Connection reset by peer)]
+[06-13-2006 23:57:06] -!- xigleth [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish

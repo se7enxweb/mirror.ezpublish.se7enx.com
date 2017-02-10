@@ -1,0 +1,62 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.11.&nbsp; instanceof Operator</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec10.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec12.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec11"></a><h3 class="docSection1Title" id="409768-809">3.11. <tt>instanceof</tt> Operator</h3>
+<p class="docText">The <tt>instanceof</tt> operator was added as syntactic sugar instead of the already existing <tt>is_a()</tt> built-in function (which is now deprecated). Unlike the latter, <tt>instanceof</tt> is used like a logical binary operator:<a name="ch03index103"></a><a name="ch03index104"></a></p>
+<pre>
+class Rectangle {
+    public $name = __CLASS__;
+}
+
+class Square extends Rectangle {
+    public $name = __CLASS__;
+}
+
+class Circle {
+    public $name = __CLASS__;
+}
+
+function checkIfRectangle($shape)
+{
+    if ($shape instanceof Rectangle) {
+        print $shape-&gt;name;
+        print " is a rectangle\n";
+    }
+}
+
+checkIfRectangle(new Square());
+checkIfRectangle(new Circle());
+</pre><br>
+<p class="docText">This small program prints <tt>'Square is a rectangle\n'</tt>. Note the use of <tt>__CLASS__</tt>, which is a special constant that resolves to the name of the current class.</p>
+<p class="docText">As previously mentioned, <tt>instanceof</tt> is an operator and therefore can be used in expressions in conjunction to other operators (for example, the <tt>!</tt> [negation] operator). This allows you to easily write a <tt>checkIfNotRectangle()</tt> function:<a name="ch03index105"></a><a name="ch03index106"></a><a name="ch03index107"></a><a name="ch03index108"></a></P>
+<pre>
+function checkIfNotRectangle($shape)
+{
+    if (!($shape instanceof Rectangle)) {
+        print $shape-&gt;name;
+        print " is not a rectangle\n";
+    }
+}
+</pre><br>
+<a name="ch03note07"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText"><tt>instanceof</tt> also checks if an object implements an interface (which is also a classic is-a relationship). Interfaces are covered later in this chapter.<a name="ch03index109"></a><a name="ch03index110"></a></p></div><BR>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec10.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec12.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

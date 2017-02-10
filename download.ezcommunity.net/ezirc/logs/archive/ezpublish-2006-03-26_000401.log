@@ -1,0 +1,35 @@
+[03-25-2006 01:15:35] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-25-2006 02:33:11] -!- katana` [n=Katana@ankh-morpork.net] has joined #ezpublish
+[03-25-2006 02:43:06] -!- katana` [n=Katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-25-2006 03:20:37] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-25-2006 03:23:19] -!- katana` [n=Katana@ankh-morpork.net] has joined #ezpublish
+[03-25-2006 03:37:01] -!- fh [n=fh@208.80-202-59.nextgentel.com] has joined #ezpublish
+[03-25-2006 03:38:10] [#ezpublish] <katana`> hi fh
+[03-25-2006 04:44:05] -!- _Katana` [n=Katana@ankh-morpork.net] has joined #ezpublish
+[03-25-2006 04:44:06] -!- katana` [n=Katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-25-2006 04:44:17] -!- _Katana` is now known as katana`
+[03-25-2006 05:16:15] -!- katana` [n=Katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-25-2006 06:20:59] -!- tobyS_ [n=dotxp@dslb-084-061-190-147.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-25-2006 07:01:01] -!- ordnas [n=ordnas@p549D6BB5.dip.t-dialin.net] has joined #ezpublish
+[03-25-2006 07:09:13] -!- ordnas [n=ordnas@p549D6BB5.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-25-2006 07:45:26] [#ezpublish] <buz> is there any list of css classes that are usually used to format ezxml?
+[03-25-2006 08:56:20] -!- katana` [n=Katana@ankh-morpork.net] has joined #ezpublish
+[03-25-2006 09:03:15] -!- katana` [n=Katana@ankh-morpork.net] has quit ["Peace and Protection 4.22"]
+[03-25-2006 09:21:47] [#ezpublish] <buz> is there something like an append functionality for css files?
+[03-25-2006 09:21:56] [#ezpublish] <buz> (like there is for ini)
+[03-25-2006 11:48:17] -!- Enur [n=asd@83.84-48-58.nextgentel.com] has joined #ezpublish
+[03-25-2006 11:50:38] [#ezpublish] <Enur> $db->array_query($rows, $sql);      <- does that make sense for someone? i cant find where $rows is initialized
+[03-25-2006 12:02:57] [#ezpublish] * buz is struggling with ezxml parser http://ez.no/community/forum/developer/entities_are_always_escaped_in_ezxml
+[03-25-2006 12:49:11] [#ezpublish] <buz> http://www.google.com/search?client=safari&rls=en-us&q=xgl+kubuntu&ie=UTF-8&oe=UTF-8 LOOOOL
+[03-25-2006 12:49:17] [#ezpublish] <buz> and i just wrote that it works on my notebook
+[03-25-2006 13:05:04] -!- tobyS [n=dotxp@dslb-084-061-190-147.pools.arcor-ip.net] has joined #ezpublish
+[03-25-2006 13:28:58] -!- tobyS_ [n=dotxp@dslb-084-061-140-035.pools.arcor-ip.net] has joined #ezpublish
+[03-25-2006 13:29:07] -!- tobyS [n=dotxp@dslb-084-061-190-147.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[03-25-2006 13:38:48] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-25-2006 13:39:00] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-25-2006 13:46:22] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-25-2006 13:58:23] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-25-2006 14:35:41] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[03-25-2006 15:23:41] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-25-2006 17:53:45] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 113 (No route to host)]
+[03-25-2006 21:58:24] -!- tobyS_ [n=dotxp@dslb-084-061-140-035.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]

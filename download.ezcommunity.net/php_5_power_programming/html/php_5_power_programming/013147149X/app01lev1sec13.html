@@ -1,0 +1,76 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section A.13.&nbsp; HTTP</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec12.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec14.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app01lev1sec13"></a><h3 class="docSection1Title">A.13. HTTP</h3>
+<a name="app01lev2sec105"></a><h4 class="docSection2Title">A.13.1. HTTP</h4><a name="app01index219"></a><a name="app01index220"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stig S&aelig;ther Bakken (lead) - Pierre-Alain Joye (lead)</span></p>
+<p class="docText">Miscellaneous HTTP utilities</P>
+<a name="app01lev3sec103"></a><h5 class="docSection3Title">A.13.1.1 Description</H5>
+<p class="docText">The HTTP class is a class with static methods for doing miscellaneous HTTP-related stuff like date formatting or language negotiation.</p>
+<a name="app01lev2sec106"></a><H4 class="docSection2Title">A.13.2. HTTP_Client</h4><a name="app01index221"></a><a name="app01index222"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Alexey Borzov (lead)</span></p>
+<p class="docText">Easy way to perform multiple HTTP requests and process their results</p>
+<a name="app01lev3sec104"></a><h5 class="docSection3Title">A.13.2.1 Description</H5>
+<p class="docText">The HTTP_Client class wraps around HTTP_Request and provides a higher level interface for performing multiple HTTP requests.</P>
+<p class="docText">Features:</p>
+<ul><li><p class="docList">Manages cookies and referrers between requests</p></LI><li><p class="docList">Handles HTTP redirection</p></LI><li><p class="docList">Has methods to set default headers and request parameters</P></li><li><p class="docList">Implements the Subject-Observer design pattern: the base class sends events to listeners that do the response processing.</p></li></ul>
+<a name="app01lev2sec107"></a><h4 class="docSection2Title">A.13.3. HTTP_Download</h4><a name="app01index223"></a><a name="app01index224"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP - By Michael Wallner (lead)</span></p>
+<p class="docText">Send HTTP Downloads</p>
+<a name="app01lev3sec105"></a><h5 class="docSection3Title">A.13.3.1 Description</h5>
+<p class="docText">Provides an interface to easily send hidden files or any arbitrary data to the client through HTTP. It features HTTP caching, compression and ranges (partial downloads and resuming).</p>
+<a name="app01lev2sec108"></a><h4 class="docSection2Title">A.13.4. HTTP_Header</h4><a name="app01index225"></a><a name="app01index226"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Wolfram Kriesing (lead) - Davey Shafik (lead)</span></p>
+<p class="docText">OO-Interface to modify and handle HTTP-Headers easily, including some classes that handle common subjects (like Caching, etc.).</p>
+<a name="app01lev3sec106"></a><H5 class="docSection3Title">A.13.4.1 Description</H5>
+<p class="docText">This class provides methods to set/modify HTTP-Headers. To abstract common things, like caching etc. some sub classes are provided that handle special cases (i.e. HTTP_Header_Cache). Also provides methods for checking Status types (i.e. HTTP_Header::isError())</p>
+<a name="app01lev2sec109"></a><h4 class="docSection2Title">A.13.5. HTTP_Request</H4><a name="app01index227"></a><a name="app01index228"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: BSD - By Richard Heyes (lead)</span></p>
+<p class="docText">Provides an easy way to perform HTTP requests</p>
+<a name="app01lev3sec107"></a><h5 class="docSection3Title">A.13.5.1 Description</h5>
+<p class="docText">Supports GET/POST/HEAD/TRACE/PUT/DELETE, Basic authentication, Proxy, Proxy Authentication, SSL, file uploads etc.</p>
+<a name="app01lev2sec110"></a><h4 class="docSection2Title">A.13.6. HTTP_Server</H4><a name="app01index229"></a><a name="app01index230"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stephan Schmidt (lead)</span></p>
+<p class="docText">HTTP server class.</P>
+<a name="app01lev3sec108"></a><h5 class="docSection3Title">A.13.6.1 Description</H5>
+<p class="docText">HTTP server class that allows you to easily implement HTTP servers by supplying callbacks. The base class will parse the request, call the appropriate callback and build a response based on an array that the callbacks have to return.</p>
+<a name="app01lev2sec111"></a><h4 class="docSection2Title">A.13.7. HTTP_Session</h4><a name="app01index231"></a><a name="app01index232"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: BSD - By Alexander Radivanovich (lead)</span></p>
+<p class="docText">Object-oriented interface to the session_* family functions</P>
+<a name="app01lev3sec109"></a><H5 class="docSection3Title">A.13.7.1 Description</h5>
+<p class="docText">Object-oriented interface to the session_* family functions it provides extra features such as database storage for session data using DB package. It introduces new methods like isNew(), useCookies(), setExpire(), setIdle(), isExpired(), isIdled() and others.</p>
+<a name="app01lev2sec112"></a><h4 class="docSection2Title">A.13.8. HTTP_Upload</h4><a name="app01index233"></a><a name="app01index234"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Tomas V.V.Cox (lead)</span></P>
+<p class="docText">Easy and secure managment of files submitted via HTML Forms</p>
+<a name="app01lev3sec110"></a><h5 class="docSection3Title">A.13.8.1 Description</H5>
+<p class="docText">This class provides an advanced file uploader system for file uploads made from html forms. Features:</p>
+<UL><li><p class="docList">Can handle from one file to multiple files.</p></li><li><p class="docList">Safe file copying from tmp dir.</p></li><li><p class="docList">Easy detecting mechanism of valid upload, missing upload or error.</p></li><li><p class="docList">Gives extensive information about the uploaded file.</p></li><li><p class="docList">Rename uploaded files in different ways: as it is, safe or unique</p></li><li><p class="docList">Validate allowed file extensions</P></LI><li><p class="docList">Multiple languages error messages support (es, en, de, fr, nl)</p></LI></ul>
+<a name="app01lev2sec113"></a><h4 class="docSection2Title">A.13.9. HTTP_WebDAV_Client</h4><a name="app01index235"></a><a name="app01index236"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP - By Hartmut Holzgraefe (lead)</span></p>
+<p class="docText">WebDAV stream wrapper class</p>
+<a name="app01lev3sec111"></a><h5 class="docSection3Title">A.13.9.1 Description</H5>
+<p class="docText">RFC2518 compliant stream wrapper that allows to use WebDAV server resources like a regular file system from within PHP.</p>
+<a name="app01lev2sec114"></a><H4 class="docSection2Title">A.13.10. HTTP_WebDAV_Server</h4><a name="app01index237"></a><a name="app01index238"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP - By Hartmut Holzgraefe (lead) - Christian Stocker (lead)</span></P>
+<p class="docText">WebDAV Server Baseclass.</p>
+<a name="app01lev3sec112"></a><h5 class="docSection3Title">A.13.10.1 Description</h5>
+<p class="docText">RFC2518 compliant helper class for WebDAV server implementation.</p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec12.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec14.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

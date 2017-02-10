@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.1">
+<head>
+<title>eZ systems : rss : opml</title>
+<dateModified>Wed, 26 Oct 2005 17:53:03 +0000</dateModified>
+</head>
+<body>
+<outline text="eZ News" xmlUrl="http://ez.no/rss/feed/news" />
+<outline text="eZ Community News" xmlUrl="http://ez.no/rss/feed/communitynews.xml" />
+<outline text="eZ Articles" xmlUrl="http://ez.no/rss/feed/communityarticles.xml" />
+<outline text="eZ Blog" xmlUrl="http://ez.no/rss/feed/blog.xml" />
+<outline text="eZ Future Specifications" xmlUrl="http://ez.no/rss/feed/specs.xml" />
+<outline text="eZ Forum Install and Configuration" xmlUrl="http://ez.no/rss/feed/forum_install_configuration.xml" />
+<outline text="eZ Forum Setup and Design" xmlUrl="http://ez.no/rss/feed/forum_setup_design.xml" />
+<outline text="eZ Forum General" xmlUrl="http://ez.no/rss/feed/forum_general.xml" />
+<outline text="eZ Forum Developer" xmlUrl="http://ez.no/rss/feed/forum_developer.xml" />
+<outline text="eZ Forum Suggestions" xmlUrl="http://ez.no/rss/feed/forum_suggestions.xml" />
+</body>
+</opml>

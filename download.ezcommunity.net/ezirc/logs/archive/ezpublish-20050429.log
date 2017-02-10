@@ -1,0 +1,29 @@
+[04-29-2005 01:21:11] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[04-29-2005 01:21:31] -!- jota [~jota@fanzine.igalia.com] has joined #ezpublish
+[04-29-2005 01:44:53] -!- danmiru [~chatzilla@80.94.225.138] has quit [Read error: 104 (Connection reset by peer)]
+[04-29-2005 01:45:16] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[04-29-2005 01:45:21] -!- danmiru_ [~chatzilla@80.94.225.138] has joined #ezpublish
+[04-29-2005 01:45:29] -!- danmiru_ is now known as danmiru
+[04-29-2005 01:59:19] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[04-29-2005 02:16:04] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-29-2005 02:19:49] -!- danmiru [~chatzilla@80.94.225.138] has quit [Read error: 131 (Connection reset by peer)]
+[04-29-2005 02:20:09] -!- SachaS [~Sacha@195.225.201.186] has joined #ezpublish
+[04-29-2005 02:20:48] -!- SachaS [~Sacha@195.225.201.186] has left #ezpublish ["Client exiting"]
+[04-29-2005 03:10:25] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[04-29-2005 06:10:20] -!- fh-ez [~fh@stalker.ez.no] has joined #ezpublish
+[04-29-2005 06:10:20] -!- fh [~fh@stalker.ez.no] has quit [Read error: 104 (Connection reset by peer)]
+[04-29-2005 06:22:30] -!- jota [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[04-29-2005 07:40:33] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[04-29-2005 08:38:33] [#ezpublish] <danmiru> i want to fetch only visible nodes using content/list while logged as admin
+[04-29-2005 08:38:53] [#ezpublish] <danmiru> can't find a way
+[04-29-2005 08:41:37] [#ezpublish] <xbit> if you only want to fetch visible nodes while logged in as admin, then how will you change visible/hidden status?
+[04-29-2005 08:42:13] [#ezpublish] <xbit> i think it's best to fetch everything when using the admin-interface
+[04-29-2005 09:03:10] [#ezpublish] <danmiru> i need to get amount of visible nodes
+[04-29-2005 09:15:47] -!- danmiru [~chatzilla@80.94.225.138] has quit [Read error: 104 (Connection reset by peer)]
+[04-29-2005 10:14:57] -!- fh-ez [~fh@stalker.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[04-29-2005 10:16:00] -!- bonam [~bonam@194.254.15.22] has joined #ezpublish
+[04-29-2005 11:06:24] -!- bonam [~bonam@194.254.15.22] has quit [Remote closed the connection]
+[04-29-2005 14:53:05] -!- Bedlore [~me@ppp241-93.lns2.adl2.internode.on.net] has quit [tolkien.freenode.net irc.freenode.net]
+[04-29-2005 14:54:06] -!- Bedlore [~me@ppp241-93.lns2.adl2.internode.on.net] has joined #ezpublish
+[04-29-2005 15:30:47] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-29-2005 23:46:44] -!- Bedlore [~me@ppp241-93.lns2.adl2.internode.on.net] has quit []

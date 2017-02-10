@@ -1,0 +1,147 @@
+[06-21-2006 00:11:33] -!- src [n=rwilliam@207.114.171.142] has joined #ezpublish
+[06-21-2006 00:11:33] -!- SunRayCafe [n=rwilliam@66.17.4.108] has quit [Read error: 104 (Connection reset by peer)]
+[06-21-2006 01:11:57] -!- SEAwolfx [n=SEAwolfx@p5493BB5C.dip0.t-ipconnect.de] has joined #ezpublish
+[06-21-2006 01:24:55] -!- ordnas [n=ordnas@85.19.74.66] has joined #ezpublish
+[06-21-2006 01:26:34] -!- ordna1 [n=ordnas@stalker.ez.no] has joined #ezpublish
+[06-21-2006 01:27:04] -!- ordnas [n=ordnas@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[06-21-2006 01:30:25] -!- ordnas [n=ordnas@85.19.74.66] has joined #ezpublish
+[06-21-2006 01:46:43] -!- ordna1 [n=ordnas@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[06-21-2006 01:46:49] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[06-21-2006 01:46:56] [#ezpublish] <philG> hi all
+[06-21-2006 01:47:16] [#ezpublish] <philG> i have a qst to upgrade eZ from 3.7 to 3.8 ..
+[06-21-2006 01:48:11] [#ezpublish] <philG> i have find the folder update/database
+[06-21-2006 01:48:44] [#ezpublish] <philG> i have a new install of eZ (3.8) and an old install (3.7.3)
+[06-21-2006 01:49:09] [#ezpublish] <philG> I have copy settings/ and design/ folder of the old to the new ...
+[06-21-2006 01:49:56] [#ezpublish] <philG> but i have error with the database ... wich file use to upgrade the 3.7.3 database to 3.8 ?
+[06-21-2006 02:17:53] -!- ordnas [n=ordnas@85.19.74.66] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-21-2006 02:18:57] -!- ordnas [n=ordnas@85.19.74.66] has joined #ezpublish
+[06-21-2006 02:21:15] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[06-21-2006 02:22:16] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[06-21-2006 02:25:14] [#ezpublish] <philG> i have read the upgrade documentation but the database upgrade seems to not be correct
+[06-21-2006 02:27:44] -!- ordna1 [n=ordnas@stalker.ez.no] has joined #ezpublish
+[06-21-2006 02:35:33] [#ezpublish] <philG> nobody here ?
+[06-21-2006 02:45:12] -!- ordnas [n=ordnas@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[06-21-2006 02:51:42] -!- ordna1 [n=ordnas@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[06-21-2006 02:52:41] -!- ordnas [n=ordnas@85.19.74.66] has joined #ezpublish
+[06-21-2006 03:02:44] -!- SEAwolfx [n=SEAwolfx@p5493BB5C.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[06-21-2006 03:07:45] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-21-2006 03:53:03] [#ezpublish] <yper> what kind of error is it ?
+[06-21-2006 03:56:54] -!- ordnas [n=ordnas@85.19.74.66] has quit [Read error: 110 (Connection timed out)]
+[06-21-2006 04:13:21] [#ezpublish] <philG> i can't see the content structure in the admin for example
+[06-21-2006 04:51:43] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[06-21-2006 05:01:14] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-21-2006 05:01:23] [#ezpublish] <zrg> wasup folks?
+[06-21-2006 05:44:55] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[06-21-2006 05:57:17] [#ezpublish] <philG> i have porblem to install packages with 3.8 eZ
+[06-21-2006 05:57:24] [#ezpublish] <philG> the error is :
+[06-21-2006 05:58:04] [#ezpublish] <philG> Call to a member function on a non-object in /var/www/ezSite/kernel/package/install.php on line 107
+[06-21-2006 05:58:18] [#ezpublish] <philG> i have the good php version 4.4.2
+[06-21-2006 05:58:47] [#ezpublish] <zrg> have not done 3.8 or 4.4 ..
+[06-21-2006 05:59:29] [#ezpublish] <philG> what ?
+[06-21-2006 06:00:12] [#ezpublish] <philG> nobody use 3.8 ?
+[06-21-2006 06:07:49] -!- ordnas [n=ordnas@stalker.ez.no] has quit [Read error: 110 (Connection timed out)]
+[06-21-2006 06:45:45] -!- awormus [n=Aaron@212.17.153.14] has joined #ezpublish
+[06-21-2006 07:15:57] [#ezpublish] <zrg> is there some better forum templates available besides ones coming with ez by default?
+[06-21-2006 07:16:14] [#ezpublish] <zrg> cause those mostly suck :(
+[06-21-2006 07:24:03] [#ezpublish] <zrg> ok I guess everything is busy drinking themselves silly on the partners day ;)
+[06-21-2006 07:24:18] [#ezpublish] <philG> generaly, what's the cause of this sort of error : "Call to a member function on a non-object " ?
+[06-21-2006 07:27:00] [#ezpublish] <yper> philG: i got the same error when I tried to upload images using the admin interface in 3.8, that error was however only present in the tar.bz2 version and not in the tar.gz.
+[06-21-2006 07:27:57] [#ezpublish] <philG> i have the tar.gz version .... and no problem with image but with file yper
+[06-21-2006 07:28:12] [#ezpublish] <philG> no problem with image class
+[06-21-2006 07:28:16] [#ezpublish] <yper> okok
+[06-21-2006 07:28:30] [#ezpublish] <yper> my problem is resolved however
+[06-21-2006 07:28:55] [#ezpublish] <philG> ok ok and no problem to add file object ?
+[06-21-2006 07:29:33] [#ezpublish] <yper> nope not that I have encountered
+[06-21-2006 07:31:14] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-21-2006 07:38:20] [#ezpublish] <zrg> there was a site that sold readymade ezp designs, anyone remember url?
+[06-21-2006 07:45:50] [#ezpublish] <philG> yper: yoy don't have problem with file ?
+[06-21-2006 07:55:23] [#ezpublish] <yper> nope
+[06-21-2006 08:13:32] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[06-21-2006 08:25:36] -!- snowboarder04 [n=snow04@snowboarder04.be] has joined #ezpublish
+[06-21-2006 08:30:04] [#ezpublish] <snowboarder04> hi guys, just trying a local install of ezpublish, I seem to be having the same problem as this guy:
+[06-21-2006 08:30:08] [#ezpublish] <snowboarder04> http://ez.no/community/bugs/the_page_cannot_be_displayed_in_installation
+[06-21-2006 08:32:41] [#ezpublish] <zrg> the gut feeling says: database connection fails
+[06-21-2006 08:33:16] [#ezpublish] <zrg> see the error log
+[06-21-2006 08:36:56] [#ezpublish] <snowboarder04> i don't even see the front-page of the install guide, loading http://localhost redirects me to http://www.localhost.com/ and times out
+[06-21-2006 08:39:11] [#ezpublish] <snowboarder04> checked the apache error logs... http://pastebin.com/723375
+[06-21-2006 08:40:39] [#ezpublish] <zrg> by ip, 127.0.0.1 ?
+[06-21-2006 08:41:49] [#ezpublish] <snowboarder04> by ip gives "The connection was reset"
+[06-21-2006 08:47:48] [#ezpublish] <snowboarder04> Apache/2.2.2 (Win32) | PHP/4.4.2 | MySQL - 5.0.21
+[06-21-2006 08:48:00] [#ezpublish] <snowboarder04> does that look compatible?
+[06-21-2006 08:51:15] -!- src [n=rwilliam@207.114.171.142] has quit [calvino.freenode.net irc.freenode.net]
+[06-21-2006 08:51:15] -!- tobyS [i=dotxp@hartes-php.de] has quit [calvino.freenode.net irc.freenode.net]
+[06-21-2006 08:51:36] -!- src [n=rwilliam@207.114.171.142] has joined #ezpublish
+[06-21-2006 08:51:36] -!- tobyS [i=dotxp@hartes-php.de] has joined #ezpublish
+[06-21-2006 08:51:51] [#ezpublish] * awormus pokes tobyS 
+[06-21-2006 08:53:36] [#ezpublish] <snowboarder04> here's the thing though, running php 5 and I at least get to see a part of the installation guide, but when running php4 all i get is re-directed
+[06-21-2006 08:54:11] [#ezpublish] <snowboarder04> anyone got any ideas?
+[06-21-2006 08:59:30] [#ezpublish] <zrg> windows?
+[06-21-2006 09:00:05] [#ezpublish] <buz> that sounds alot like a windows braindeadness issue
+[06-21-2006 09:00:34] [#ezpublish] <zrg> unpredictability i would say but yes..
+[06-21-2006 09:00:47] [#ezpublish] <zrg> no experience, cant help :(
+[06-21-2006 09:01:22] [#ezpublish] <buz> really i've seen cases where windows couldnt ping localhost
+[06-21-2006 09:07:52] [#ezpublish] <snowboarder04> localhost is working fine for other sites running locally
+[06-21-2006 09:10:33] [#ezpublish] <snowboarder04> *sigh*
+[06-21-2006 09:11:07] [#ezpublish] <zrg> php sites?
+[06-21-2006 09:14:54] [#ezpublish] <snowboarder04> yeah
+[06-21-2006 09:15:17] [#ezpublish] <buz> use live http header and look if theres a redirect
+[06-21-2006 09:52:51] -!- awormus [n=Aaron@212.17.153.14] has quit [Read error: 104 (Connection reset by peer)]
+[06-21-2006 09:58:27] -!- awormus [n=Aaron@212.17.153.14] has joined #ezpublish
+[06-21-2006 10:09:49] [#ezpublish] <snowboarder04> there are no redirect headers, it just doesn't work at all
+[06-21-2006 10:10:04] [#ezpublish] <snowboarder04> shame, would've been a nice intranet addition :/
+[06-21-2006 10:44:58] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[06-21-2006 10:57:17] [#ezpublish] <awormus> anyone at the hotel in skien?
+[06-21-2006 10:57:57] [#ezpublish] <zrg> yeah, anyone? i am just starting to drive from Oslo
+[06-21-2006 10:58:12] [#ezpublish] <zrg> maybe someone wants to come with me?
+[06-21-2006 10:58:48] [#ezpublish] <zrg> and how about wifi at skien, provided? what about parking space?
+[06-21-2006 10:59:11] [#ezpublish] <awormus> zrg, at the hotel they have very good free wifi
+[06-21-2006 10:59:29] [#ezpublish] <awormus> I'm wondering if dinner is included
+[06-21-2006 10:59:48] [#ezpublish] <zrg> dinner was obligatory with conference package
+[06-21-2006 11:00:07] [#ezpublish] <zrg> and main cause of why it was so expensive
+[06-21-2006 11:00:26] [#ezpublish] <awormus> Good to know :)
+[06-21-2006 11:11:17] [#ezpublish] <zrg> you will be there?
+[06-21-2006 11:22:12] [#ezpublish] <awormus> yes
+[06-21-2006 11:22:16] [#ezpublish] <awormus> am here already
+[06-21-2006 11:22:38] [#ezpublish] <zrg> easy to find place?
+[06-21-2006 11:22:56] [#ezpublish] <awormus> found it in the rain this morning...
+[06-21-2006 11:23:01] [#ezpublish] <awormus> it's by the water
+[06-21-2006 11:23:05] [#ezpublish] <awormus> on the right of the fountains
+[06-21-2006 11:23:08] [#ezpublish] <awormus> big red building
+[06-21-2006 11:24:10] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-21-2006 11:24:20] [#ezpublish] <zrg> but hotel is separately?
+[06-21-2006 11:24:43] [#ezpublish] <zrg> my concern is if i come today i need a place with wifi
+[06-21-2006 11:26:33] [#ezpublish] <zrg> either by sitting in lobby somewhere or by deathray, if there is parking nearby
+[06-21-2006 11:29:15] [#ezpublish] <src> wifi by deathray
+[06-21-2006 11:29:16] [#ezpublish] <src> nice
+[06-21-2006 11:29:32] [#ezpublish] <zrg> nickname for my wifi cannon..
+[06-21-2006 11:41:18] [#ezpublish] <awormus> zrg, are you booked in the hotel?
+[06-21-2006 11:41:48] [#ezpublish] <zrg> no :)
+[06-21-2006 11:41:57] [#ezpublish] <awormus> ahh
+[06-21-2006 11:42:39] [#ezpublish] <zrg> where is the actual meeting, in the hotel on ez hq?
+[06-21-2006 11:43:05] [#ezpublish] <awormus> it's in a confernce center
+[06-21-2006 11:43:21] [#ezpublish] <zrg> separate place then, free wifi too?
+[06-21-2006 11:44:17] [#ezpublish] <awormus> I think so
+[06-21-2006 11:45:02] [#ezpublish] <zrg> guess i can get close enough, cannon should be good up to 5-10 km
+[06-21-2006 11:49:50] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[06-21-2006 12:03:11] [#ezpublish] <buz> pringles cannon or what?
+[06-21-2006 12:08:27] [#ezpublish] <zrg> 1m parabolic :P
+[06-21-2006 12:10:52] [#ezpublish] <zrg> pringles can is a toy gun :)
+[06-21-2006 12:11:03] [#ezpublish] <buz> omfg
+[06-21-2006 12:11:13] [#ezpublish] <buz> how do you board a plane with one of those
+[06-21-2006 12:11:18] [#ezpublish] <zrg> you there buz?
+[06-21-2006 12:11:26] [#ezpublish] <buz> not in norway no
+[06-21-2006 12:11:29] [#ezpublish] <buz> exams next week
+[06-21-2006 12:11:42] [#ezpublish] <zrg> guess you could give it to luggage but havent needed to
+[06-21-2006 12:11:47] [#ezpublish] <zrg> ah, too bad
+[06-21-2006 12:14:30] [#ezpublish] <zrg> ok guess ill be moving out the battlewagon now..
+[06-21-2006 12:16:21] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-21-2006 12:53:48] -!- _kore [n=lordhong@137.80-202-59.nextgentel.com] has joined #ezpublish
+[06-21-2006 12:53:48] -!- kris10an^ [n=kh@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[06-21-2006 13:40:03] -!- ordnas [n=ordnas@ti132110a340-2063.bb.online.no] has joined #ezpublish
+[06-21-2006 14:09:14] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-21-2006 15:53:41] -!- ordnas [n=ordnas@ti132110a340-2063.bb.online.no] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-21-2006 16:03:34] -!- src is now known as SunRay_Work
+[06-21-2006 16:40:17] -!- awormus [n=Aaron@212.17.153.14] has quit ["Leaving"]
+[06-21-2006 17:35:27] -!- LottoKim [n=kim@195.28.172.4] has quit [calvino.freenode.net irc.freenode.net]
+[06-21-2006 17:35:50] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[06-21-2006 17:37:57] -lilo:$*- [Global Notice] Good evening all. We just experienced routing loss to one of our main rotation servers. It's been removed from rotation for now and we're looking at the problem. Apologies for the inconvenience, and thank you for using freenode!

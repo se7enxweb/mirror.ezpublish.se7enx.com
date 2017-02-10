@@ -1,0 +1,375 @@
+A Guide to Building eZ publish from Subversion Sources
+
+Forword
+
+eZ publish stable releases from (raw) svn sources are very different from 
+the packaged zip/tar.gz/bz2 releases most average eZ publish users are
+accustomed.
+
+Introduction
+
+To bridge this gap one must 'build' eZ publish which entails running the script
+
+./bin/shell/makedist.sh
+
+This script requires several dependancies above the base eZ publish dependancies.
+
+Specificly the makedist.sh script requires the ezlupdate program which is provided
+with eZ publish in source code form. ezlupdate must be compiled if your running on
+a GNU/Linux system. In order to compile this required dependancy, you will need to 
+make sure you have the TrollTech/QT Library + Tools installed (specificly the qt-devel files).
+
+I built my copy of eZ publish stable/3.6 from svn sources using GNU/Linux,
+Centos 4 which is an rpm/yum like GNU System similar to Redhat Enterprize Linux (RHEL).
+This makes installing some of these dependancies much simpler to those without a lot of linux experiance.
+
+Checklist
+
+1) Package Dependancies
+   yum install qt.i386 qt-devel.i386 qt-config.i386 qt-designer.i386
+   yum install gcc-c++.i386
+
+2) Get the eZ publish source via svn, I recommend the latest stable release from eZ systems / pubsvn
+-> svn checkout http://pubsvn.ez.no/nextgen/stable/3.6
+
+3) Build ezlupdate For more information on this process please refer to these documents:
+
+http://pubsvn.ez.no/nextgen/stable/3.6/support/lupdate-ezpublish3/README.txt
+
+http://www.ez.no/ez_publish/documentation/configuration/configuration/language_and_charset/creating_a_new_translation
+
+http://www.ez.no/br/ez_publish/download/translations/ezlupdate_and_linguist
+
+a) Export the QT (Library) Directory (required for the compile)
+-> export QTDIR="/usr/lib/qt-3.3"
+b) Make Step 1
+-> qmake ezlupdate.pro
+c) Make Step 2 (compile)
+-> make
+
+If you get errors you may have an older version of qt or a different QTDIR location. I had problems with a) at first myself :)
+If you don't have errors than everything should be good to go / continue :)
+
+4) Build eZ publish
+
+Review Build Script Options: ./bin/shell/makedist.sh --help
+
+First Try:
+
+./bin/shell/makedist.sh --final \
+--with-release=http://pubsvn.ez.no/nextgen/stable/3.6 \
+--db-name=ezph36 \
+--db-user=publish \
+--db-password=publish \
+--db-host=locally \
+--db-type=mysql \
+--mysql-user=publish \
+--mysql-password=publish \
+--mysql-host=locally \
+--use-working-copy          \
+--help
+
+
+Second Try:
+
+./bin/shell/makedist.sh \
+--db-name=ezph36 \
+--db-user=publish \
+--db-password=publish \
+--db-host=locally \
+--db-type=mysql \
+--mysql-user=publish \
+--mysql-password=publish \
+--mysql-host=locally \
+--build-root=/tmp/ez36   \
+--final \
+--with-svn-server=http://pubsvn.ez.no   \
+--with-release=stable/3.6 
+
+
+Final Command :
+
+./bin/shell/makedist.sh --db-name=ezph36 --db-user=publish --db-password=publish --db-host=locally --db-type=mysql --mysql-user=publish --mysql-password=publish --mysql-host=locally --build-root=/tmp/ez36   --final --with-svn-server=http://pubsvn.ez.no   --with-release=stable/3.6
+
+
+COMMAND OUTPUT:
+
+Creating full release
+Updating ezlupdate                     [ Success ]
+Connecting to MySQL using mysql://publish:***@locally
+Connecting to PostgreSQL using postgresql://root@localhost
+Checking out from server http://pubsvn.ez.no
+Checking out trunk
+SVN_PATH=http://pubsvn.ez.no/trunk
+All operations are done from SVN server, official builds are possible
+Distribution source files taken from /tmp/nextgen-stable/3.6
+Checking db update version numbers                         [ Failure ]
+
+************** WARNING **************
+
+There are problems with the db update files
+Run the following command to see what must be fixed
+./bin/php/checkdbfiles.php
+
+************** WARNING **************
+
+
+*** HAD TO install php-cli to run the above file
+chmod 775 bin/linux/php-cli
+
+
+*** ALSO HAD TO customize bin/linux/common.sh to get it to run (which is hard coded like most of the svn tools to eZ systems internal resources)
+
+RAN:     ./bin/linux/php-cli ./bin/php/checkdbfiles.php
+         ./bin/linux/php-cli ./bin/php/checkdbfiles.php -qcv
+
+*** ALSO HAD TO customize ./bin/php/checkdbfiles.php to get it to run (which is hard coded like most of the svn tools to eZ systems internal resources)
+
+
+./bin/shell/makedist.sh
+
+./bin/shell/makedist.sh --skip-db-check --skip-db-schema --skip-db-update --skip-version-check
+
+
+PROBLEM #1: Build Files are hard coded to eZ systems internal resources (zev.ez.no / svn.ez.no/svn/nextgen/ezpublish )
+-> Question #1: How can we run these build scripts without customizing the build scripts every time we run them?
+
+PROBLEM #2: Buill scripts do not allow for php-cli binary path to be passed instead it just expects that php to be php-cli
+This is often not the case on most user/developer installations
+-> Question #2: how can we tell the build scripts to use a custom php-cli binary sidebyside with a standard php binary? Passed Paramiter, Editing the script, Moving php to php-php and moving php-cli to php?
+
+Problem # 2.1: This file has a problem expecting php-cli but getting standard php
+./bin/php/checkdbfiles.php
+
+Problem # 2.2: This file has a problem expecting php-cli but getting standard php
+./bin/shell/phpcheck.sh
+
+
+
+EVERY TIME I skip an option (which requires php-cli as php) i get another error ...
+
+./bin/shell/makedist.sh --skip-db-check --skip-db-schema --skip-db-update --skip-version-check --skip-code-template-check
+
+#----------------------------------------------#
+
+SOOOOOOO To solve this I moved php around (not sure if this causes server problems later, i will move this back afterwards ...)
+
+cp -a bin/linux/php-cli /usr/bin/php-cli
+cp -a bin/linux/php-cli /usr/bin/php-cli
+
+ln -s /usr/bin/php-cli /usr/bin/php
+ls -la /usr/bin/php
+
+lrwxrwxrwx  1 root root 16 Jun 13 04:05 /usr/bin/php -> /usr/bin/php-cli
+
+Which seems to have solved the php-cli problems in the short term. 
+Question: Is this the best solution from the php-developers / advanced users perspective?
+
+#----------------------------------------------#
+
+TTTHIS seemed to solve the problems .....
+
+#----------------------------------------------#
+
+CEPT SOME OF THE PREVIOUSLY REQUIRED CUSTOm MODIFCATIONS TO bin/shell/custom.sh? 
+BROKE TRANSLATIONS PART
+
+Examining settings directory                               [ Success ]
+Exporting translations                                     [ Failure ]
+
+svn export http://svn.ez.no/svn/translations/URL: http://pubsvn.ez.no/nextgen/stable/3.6/translations /tmp/ez-root/ezpublish-3.6.1/share/translations &>/dev/null
+Failed to check out translations from trunk
+
+########################
+
+not knowing just what to do i started over (again)
+
+./bin/shell/makedist.sh
+
+
+finding my setup of the inital hacked files (see begining of makedisht/common.sh)
+i find i can't build without db sql file errors (cause it's not checking against svn properly)
+without skip options ...
+
+ ./bin/shell/makedist.sh --skip-db-check --skip-db-schema --skip-db-update --skip-version-check
+
+----------------
+
+hrm, realizing i added anextra slash to changing eZ systems internal svn server to pubsvn server 
+which kicked the first fatal error ....  translation (end) 
+
+Per Instructions RAN...
+
+ ./bin/linux/ezlupdate eng-US
+ eng-US: 5193 known, 8 new and 0 obsoleted messages
+
+and just in case ...
+
+./bin/linux/ezlupdate eng-GB
+eZ publish translations directory created: share/translations/eng-GB
+ eng-GB: 0 known, 5201 new and 0 obsoleted messages
+
+----------------
+
+re run makedist ....
+error didn't go away ... so ? added skip
+
+ ./bin/shell/makedist.sh --skip-db-check --skip-db-schema --skip-db-update --skip-version-check --skip-translation
+
+PROBLEM #3 Translations do not validate (possible svn problem?)
+
+#-------------------------------------------------#
+
+./bin/shell/makeaddonpackages.sh --export-path="/tmp/ez-root/ezpublish-3.6.1/packages/addons" --db-type=mysql --db-name=ezph36 --db-user=publish --db-password=publish  --db-host=localhost   --db-type=mysql
+Connecting to DB using mysql://publish:***@localhost/ezph36
+Failed to login with user admin
+Created package contacts-3.6.1 Contacts
+Attribute description was set to Adds a simple contact database, it contains companies and persons.
+Attribute type was set to contentobject
+Could not find content-node using path contacts
+Failed adding items to package
+
+
+NOTE: all above makebuild.sh should use --db-host=localhost instead of locally!!
+
+ ./bin/shell/makedist.sh --skip-db-check --skip-db-schema --skip-db-update --skip-version-check --skip-translation  --db-host=localhost
+
+./bin/shell/makeaddonpackages.sh --export-path="/tmp/ez-root/ezpublish-3.6.1/packages/addons" --db-type=mysql --db-name=ezph36 --db-user=publish --db-password=publish  --db-host=localhost   --db-type=mysql
+
+./bin/shell/makeaddonpackages.sh --export-path="/tmp/ez-root/ezpublish-3.6.1/packages/addons" --db-type=mysql --db-name=ezph36 --db-user=publish --db-password=publish  --db-host=localhost   --db-type=mysql --help
+
+ ./bin/shell/makeaddonpackages.sh --export-path="/tmp/ez-root/ezpublish-3.6.1/packages/addons" --db-type=mysql --db-name=ezpublish3svn --db-user=publish --db-password=publish  --db-host=localhost   --db-type=mysql
+Connecting to DB using mysql://publish:***@localhost/ezpublish3svn
+Version '' in database 'ezpublish3svn' is different from the running version 3.6.1
+
+ ./bin/shell/makedist.sh --skip-translation  --db-host=localhost  --mysql-host=localhost --use-svn-server
+
+./bin/shell/makedist.sh --use-svn-server --skip-translation  --db-host=localhost  --mysql-host=localhost--db-type=mysql
+
+
+#-------------------------------------------------#
+
+./bin/shell/makedist.sh --use-svn-server --skip-translation  --db-host=localhost  --mysql-host=localhost--db-type=mysql
+Creating full release
+Connecting to MySQL using mysql://publish:***@localhost--db-type=mysql
+Connecting to PostgreSQL using postgresql://root@localhost
+Using local copy from /home/web/family/site/3.6
+All operations are done from SVN server, official builds are possible
+Distribution source files taken from /home/web/site/3.6
+Checking db update version numbers                         [ Failure ]
+
+************** WARNING **************
+
+There are problems with the db update files
+Run the following command to see what must be fixed
+./bin/php/checkdbfiles.php
+
+************** WARNING **************
+
+#-------------------------------------------------#
+
+Recap?
+
+
+PROBLEM #1: Build Files are hard coded to eZ systems internal resources (zev.ez.no / svn.ez.no/svn/nextgen/ezpublish )
+-> Question #1: How can we run these build scripts without customizing the build scripts every time we run them?
+
+
+PROBLEM #2: Buill scripts do not allow for php-cli binary path to be passed instead it just expects that php to be php-cli
+This is often not the case on most user/developer installations
+-> Question #2: how can we tell the build scripts to use a custom php-cli binary sidebyside with a standard php binary? Passed Paramiter, Editing the script, Moving php to php-php and moving php-cli to php?
+
+Problem # 2.1: This file has a problem expecting php-cli but getting standard php
+./bin/php/checkdbfiles.php
+
+Problem # 2.2: This file has a problem expecting php-cli but getting standard php
+./bin/shell/phpcheck.sh
+
+
+PROBLEM #3 Translations do not validate (possible svn problem?)
+
+PROBLEM #4 Addon package Errors (see above) 
+
+#-------------------------------------------------#
+
+Last Big Breakdown that does not work without skips:
+
+
+PROBLEM #1 Build Files are hard coded to eZ systems internal resources
+        Instead of accepting --option-paramiters to support commandline 
+	override (suggest this in public-sdk mailling list.
+
+PROBLEM #2 Installing php-cli as /usr/bin/php
+
+PROBLEM #3 DB Files errors (unknown?)
+
+PROBLEM #4 Translations do not validate (possible svn problem?)
+
+PROBLEM #5 Addon package Errors (see above, ralates to )
+
+
+
+
+#-------------------------------------------------#
+
+Examples / Ideas : 
+
+./bin/shell/makedist.sh 
+Usage: ./bin/shell/makedist.sh [options]
+
+Options: -h
+         --help                     This message
+         --final                    Makes the release a final release
+         --build-root=DIR           Set build root, default is /tmp
+         --build-snapshot           Make a snapshot, this will add a build number to the name
+         --with-svn-server[=SERVER] Checkout fresh repository
+         --with-release=NAME        Checkout a previous release, default is trunk
+         --skip-version-check       Do not check version numbers*
+         --skip-php-check           Do not check PHP for syntax correctnes*
+         --skip-code-template-check Do not check code templates*
+         --skip-unit-tests          Do not run unit tests*
+         --skip-db-schema           Do not create db schema (requires mysql and postgresql)*
+         --skip-db-update           Do not run db update check*
+         --skip-db-check            Do not run db schema check*
+         --skip-translation         Do not run translation check*
+         --skip-styles              Do not create style packages*
+         --skip-addons              Do not create addon packages*
+         --skip-test-framework      Do not copy test framework*
+         --skip-core-files          Do not copy kernel/lib files*
+         --skip-changelogs          Do not changelogs from earlier versions*
+         --skip-sql-generation      Do not generate SQL files*
+         --skip-extensions          Do not package extensions*
+         --db-name=databasename     MySQL DB name ( default: ez_tmp_makedist )
+
+Database options:
+         --db-user=USER         DB user
+         --db-password=PASSWORD DB password ( default:  )
+         --db-socket=SOCKET     DB socket ( default:  )
+         --db-host=HOST         DB host ( default:  )
+         --db-name=NAME         DB name
+         --db-port=PORT         DB port
+         --db-type=TYPE         DB type (mysql or postgresql)
+         --mysql                Short for --db-type=mysql
+         --postgresql           Short for --db-type=postgresql
+MySQL options:
+         --mysql-user=USER          MySQL DB user ( default: root )
+         --mysql-password=PASSWORD  MySQL DB password ( default:  )
+         --mysql-socket=SOCKET      MySQL DB socket ( default:  )
+         --mysql-host=HOST          MySQL DB host ( default:  )
+         --mysql-host=PORT          MySQL DB port
+PostgreSQL options:
+         --postgresql-user=USER          PostgreSQL DB user ( default: postgres )
+         --postgresql-password=PASSWORD  PostgreSQL DB password ( default:  )
+         --postgresql-host=HOST          PostgreSQL DB host ( default:  )
+         --postgresql-port=PORT          PostgreSQL DB port
+SVN options:
+         --use-svn-server           Do all operation using SVN server
+         --use-working-copy         Do all operations on working copy, SVN server is not contacted
+
+* Warning: Using these options will not make a valid distribution
+
+Example:
+./bin/shell/makedist.sh --release-sdk --with-svn-server 
+
+
+

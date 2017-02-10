@@ -1,0 +1,28 @@
+Luke
+
+Here are a few more key issues as I see them ...
+
+1. Forum Post Preview, to allow users to preview and review their post for language and visual accuracy. This is a highly desired features as it is painfull to type and check a longer forum post (like the kind I promote) inside of this very very small forum edit html form textarea.
+
+2. Increase forum edit textarea length / width.
+   I recomend either a larger text area for everyone or a small, medium, very long text area setting for each user on ez.no, with a default of small or perhapse medium.
+
+3. Forum Section : Layout / List Limits
+   Location: http://www.ez.no/community/forum
+   Problem: This view is a major section view, yet it only lists the 4 most recent threads per forum and wastes a lot of usable space which could be populated with more thread information per view to maximixe it's effectiveness for the users.
+   Possible Solutions: 
+   1) Forum / Category description text takes up a lot of realistate on the entire page.
+    a) Remove the forum description from this view
+    b) Reduce the size of the forum description text
+     c) Move the last post lists to underneath the  the forum name / description to the farthest left hand side column.
+    d) Move the Topics ( Topic / Thread Count) and Posts (Post Count) to the farthest right hand side column.
+    d) Rename Topics to Threads (Easier for users to comprehend)
+    e) Increase the Last Post List Limit to 7 - 10 posts per forum.
+    f) Increase the width of the container of the Last Post List to double if not tripple the width (re: switching from a tight very small and hard to read list of threads / messages to a human readable / comprehendable (horizontaly width friendly based layout for the mini lists (re: less truncation of forum thread / message )
+   2) Insert an a-name link into forum section introduction to the information at the bottom of the section (statistics / rules)
+   
+
+ cheers,
+ //kracker
+
+Conan O'Brian : Jessie Ventura (TV Interview Bit) : cob_ventura.mpeg 

@@ -1,0 +1,73 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.13.&nbsp; Packaging</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec12.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec14.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec13"></a><h3 class="docSection1Title" id="409768-943">12.13. Packaging</h3>
+<p class="docText">In the &quot;<a class="docLink" href="ch12lev1sec6.html#ch12lev1sec6">Building Packages</a>&quot; section earlier, we saw an example of using <tt>pear package</tt> to build a release tarball. In this section, we go deeper into that process. The component of the PEAR Installer that creates packages is called the <span class="docEmphStrong">PEAR packager</span>. When we refer to the PEAR packager in this section, know that it is part of the installer.<a name="ch12index319"></a><a name="ch12index320"></a></p>
+<a name="ch12lev2sec21"></a><h4 class="docSection2Title">12.13.1. Source Analysis</h4>
+<p class="docText">One of the things that the PEAR packager does is analyze PHP code to determine what dependencies it has, and what classes and functions it defines. It does this both to ease dependency handling and to catch coding standard-related problems. For example, if a package defines a class with a name that is outside the package's namespace, the packager issues an error.<a name="ch12index321"></a><a name="ch12index322"></a><a name="ch12index323"></a></P>
+<a name="ch12lev2sec22"></a><h4 class="docSection2Title">12.13.2. MD5 Checksum Generation</H4>
+<p class="docText">To give the PEAR Installer a way to check that files in a package tarball are intact, the PEAR packager calculates an MD5 checksum for each file. This checksum is embedded in the tarball as an attribute to the <tt>&lt;file&gt;</tt> element, for example:<a name="ch12index324"></a><a name="ch12index325"></a><a name="ch12index326"></a></p>
+<pre>
+&lt;file role="php" md5sum="c2aa3b18afa22286e946aeed60b7233c" name="HelloWorld.php"/&gt;
+</pre><BR>
+<p class="docText">This is done automatically during packaging so the package.xml file does not have to be updated every time a file is updated.</p>
+<a name="ch12lev2sec23"></a><h4 class="docSection2Title">12.13.3. Package.xml Update</h4>
+<p class="docText">The package.xml file that is embedded in the package tarball is generated during packaging. The results of the source analysis and MD5 checksum steps are embedded in the new package.xml file. To illustrate this, the generated package.xml for our HelloWorld package looks like this:<a name="ch12index327"></a><a name="ch12index328"></a><a name="ch12index329"></a></p>
+<pre><a name="PLID1"></a><div class="v1"><a href="ch12lev1sec13.html#PLID1">[View full width]</a></div>
+&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
+&lt;package version="1.0"&gt;
+  &lt;name&gt;HelloWorld&lt;/name&gt;
+  &lt;summary&gt;Simple Hello World Package&lt;/summary&gt;
+  &lt;description&gt;This package contains a class that simply prints &amp;quot;Hello, World!&amp;quot;.&lt;
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif">/description&gt;
+  &lt;maintainers&gt;
+    &lt;maintainer&gt;
+      &lt;user&gt;ssb&lt;/user&gt;
+      &lt;name&gt;Stig S. Bakken&lt;/name&gt;
+      &lt;email&gt;stig@php.net&lt;/email&gt;
+      &lt;role&gt;lead&lt;/role&gt;
+    &lt;/maintainer&gt;
+  &lt;/maintainers&gt;
+  &lt;release&gt;
+    &lt;version&gt;1.0&lt;/version&gt;
+    &lt;date&gt;2003-02-24&lt;/date&gt;
+    &lt;license&gt;PHP License&lt;/license&gt;
+    &lt;state&gt;stable&lt;/state&gt;
+    &lt;notes&gt;First production release.&lt;/notes&gt;
+    <span class="docEmphStrong">&lt;provides type="class" name="HelloWorld" /&gt;</span>
+    &lt;filelist&gt;
+    <span class="docEmphStrong">&lt;file role="php" md5sum="c2aa3b18afa22286e946aeed60b7233c" name="HelloWorld.php"/&gt;</span>
+    &lt;/filelist&gt;
+  &lt;/release&gt;
+&lt;/package&gt;
+</pre><BR>
+<p class="docText">The lines that have changed are emphasized in bold. As you can see, the source analysis found our HelloWorld class, and an MD5 checksum has been created for HelloWorld.php.<a name="ch12index330"></a><a name="ch12index331"></a><a name="ch12index332"></a></P>
+<a name="ch12lev2sec24"></a><h4 class="docSection2Title">12.13.4. Tarball Creation</h4>
+<p class="docText">Finally, the tarball is created. If your CLI version of PHP has zlib support enabled, it will be compressed; if not, it will be a plain .tar file. PEAR works without zlib enabled, but it adds some hassle for you during package creation, and downloads takes much longer.<a name="ch12index333"></a><a name="ch12index334"></a><a name="ch12index335"></a></p>
+<p class="docText">The file layout of the generated tarball is like this:</p>
+<pre>
+package.xml
+HelloWorld-1.0/HelloWorld.php
+HelloWorld-1.0/hello
+HelloWorld-1.0/HelloWorld.phpt
+</pre><BR>
+<p class="docText">The file layout inside the package is based on that in the source tree, because that structure is used in the package.xml file.</p>
+<ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec12.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec14.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

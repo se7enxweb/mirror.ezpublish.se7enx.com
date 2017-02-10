@@ -1,0 +1,249 @@
+[03-30-2006 00:34:56] -!- elephantMan [n=elephant@149.202.99-84.rev.gaoland.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-30-2006 00:36:57] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-30-2006 00:52:45] -!- elephantMan [n=elephant@149.202.99-84.rev.gaoland.net] has joined #ezpublish
+[03-30-2006 01:05:55] [#ezpublish] <kracker> kris10an, thank you for your help the other day, that was perfect (i'll reply to it tomorrow, up late working on that client proj and exausted)
+[03-30-2006 01:07:47] [#ezpublish] <kris10an> kracker: np
+[03-30-2006 01:47:46] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-30-2006 02:15:05] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-30-2006 02:21:04] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-30-2006 02:51:34] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[03-30-2006 02:52:32] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-30-2006 03:30:57] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[03-30-2006 03:32:43] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-30-2006 03:34:03] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-30-2006 03:42:45] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-30-2006 03:50:35] -!- DiGiTa|_ [n=guillaum@84.5.136.113] has joined #ezpublish
+[03-30-2006 04:18:13] -!- tobyS_ [n=dotxp@dslb-084-061-134-127.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-30-2006 04:36:28] -!- _Katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-30-2006 04:45:05] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-30-2006 04:46:00] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-30-2006 04:54:59] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 110 (Connection timed out)]
+[03-30-2006 05:02:59] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-30-2006 05:09:52] -!- _Katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 110 (Connection timed out)]
+[03-30-2006 05:36:03] -!- awormus [n=aaron@p54B11275.dip0.t-ipconnect.de] has joined #ezpublish
+[03-30-2006 06:21:46] [#ezpublish] <buz> anyone got a good idea how to create an offline copy of an ez site that requires login?
+[03-30-2006 06:29:25] [#ezpublish] <kris10an> wget and .htpass ?
+[03-30-2006 06:29:33] [#ezpublish] <buz> i mean cookie auth
+[03-30-2006 06:29:53] [#ezpublish] <buz> i dunno how i can have httrack authenticate itself to ez for one
+[03-30-2006 06:30:34] [#ezpublish] <kris10an> hmm.. i had a login-by-ip patch.. but i'm not sure where it is now...
+[03-30-2006 06:31:16] [#ezpublish] <buz> mhh its not that important
+[03-30-2006 06:50:50] -!- awormus_ [n=aaron@p54B12FE3.dip0.t-ipconnect.de] has joined #ezpublish
+[03-30-2006 06:57:14] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[03-30-2006 07:04:32] [#ezpublish] <buz> who's responsible for the german translation?
+[03-30-2006 07:08:16] -!- awormus [n=aaron@p54B11275.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[03-30-2006 07:09:03] [#ezpublish] <ls> community ;)
+[03-30-2006 07:09:12] [#ezpublish] <buz> lousy
+[03-30-2006 07:09:31] [#ezpublish] <buz> ez germany would better  take a good look at it
+[03-30-2006 07:10:37] [#ezpublish] <ls> many ppl from community worked on it I think, feel free to submit fixes
+[03-30-2006 07:10:44] [#ezpublish] <buz> no time
+[03-30-2006 07:11:05] [#ezpublish] <buz> and for the site i'm currently building it doesnt matter so muc
+[03-30-2006 07:13:06] [#ezpublish] <buz> but it's somewhat embarassing considering that there's ez germany these days ;)
+[03-30-2006 07:45:30] [#ezpublish] * katana` waves around
+[03-30-2006 07:47:34] [#ezpublish] * buz waves back
+[03-30-2006 07:49:42] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[03-30-2006 08:01:38] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[03-30-2006 08:21:08] -!- _Katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-30-2006 08:38:15] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 110 (Connection timed out)]
+[03-30-2006 08:38:16] -!- _Katana` is now known as katana`
+[03-30-2006 09:44:24] -!- Tidemann [n=tidemann@ti132110a080-14487.bb.online.no] has joined #ezpublish
+[03-30-2006 09:44:31] [#ezpublish] <Tidemann> xbit_?!
+[03-30-2006 09:44:41] [#ezpublish] <Tidemann> xbit_: faen da .. du dukker jo opp overalt ;)
+[03-30-2006 09:45:03] -!- Tidemann [n=tidemann@ti132110a080-14487.bb.online.no] has quit [Client Quit]
+[03-30-2006 09:45:38] -!- Tidemann [n=tidemann@ti132110a080-14487.bb.online.no] has joined #ezpublish
+[03-30-2006 09:46:09] [#ezpublish] <Tidemann> so.. just idlers here?
+[03-30-2006 10:01:54] [#ezpublish] <buz> mostly
+[03-30-2006 10:04:59] [#ezpublish] <Tidemann> figures...
+[03-30-2006 10:07:58] -!- _Katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-30-2006 10:09:57] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-30-2006 10:14:12] [#ezpublish] <DiGiTa|_> does someone know how to create a dynamic input element ?
+[03-30-2006 10:14:16] [#ezpublish] <DiGiTa|_> with js
+[03-30-2006 10:14:25] [#ezpublish] <DiGiTa|_> to create dynamically...
+[03-30-2006 10:14:33] [#ezpublish] <DiGiTa|_> with createlement
+[03-30-2006 10:14:42] [#ezpublish] <DiGiTa|_> or something like that
+[03-30-2006 10:23:36] [#ezpublish] <B-KiLLer`> you want to add a new tag inside a page, dynamically, right ?
+[03-30-2006 10:23:41] [#ezpublish] <Tidemann> uhm.. you could just do an innerhtml replace
+[03-30-2006 10:23:59] [#ezpublish] <B-KiLLer`> if so, document.createElement(your_tag_name)
+[03-30-2006 10:24:11] [#ezpublish] <B-KiLLer`> document.createElement("input");
+[03-30-2006 10:24:48] [#ezpublish] <B-KiLLer`> and then you have to get back the ID of the elem which will be the father of that new node
+[03-30-2006 10:24:49] [#ezpublish] <Tidemann> anyone tested the xajax-contribution btw?
+[03-30-2006 10:25:11] [#ezpublish] <B-KiLLer`> and finally, that_parent_id.appendChild(your_newly_created_element);
+[03-30-2006 10:25:27] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 113 (No route to host)]
+[03-30-2006 10:26:01] [#ezpublish] <Tidemann> DiGiTa|_: do you need to add x elements, or just one btw?
+[03-30-2006 10:26:04] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[03-30-2006 10:26:41] [#ezpublish] <B-KiLLer`> gotta go
+[03-30-2006 10:26:44] [#ezpublish] <DiGiTa|_> i should add an element when i check a box
+[03-30-2006 10:26:53] [#ezpublish] <Tidemann> just _one_?
+[03-30-2006 10:26:54] [#ezpublish] <B-KiLLer`> nice evening for those of you who have the evening ;)
+[03-30-2006 10:26:56] [#ezpublish] <DiGiTa|_> thanks B-KiLLer`
+[03-30-2006 10:27:06] [#ezpublish] <DiGiTa|_> see you
+[03-30-2006 10:27:18] -!- _Katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 113 (No route to host)]
+[03-30-2006 10:27:19] [#ezpublish] <DiGiTa|_> and don't drive too fast
+[03-30-2006 10:27:20] [#ezpublish] <DiGiTa|_> :)
+[03-30-2006 10:27:22] [#ezpublish] <B-KiLLer`> huhu ;)
+[03-30-2006 10:27:28] [#ezpublish] <B-KiLLer`> bye
+[03-30-2006 10:30:23] [#ezpublish] <Tidemann> argh!.. I wish they could do something about the searchengine on ez.no.. or at least make better documentation.. it's almost impossible to find any relevant information
+[03-30-2006 10:50:13] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[03-30-2006 11:01:16] -!- tobmaster [n=tobmaste@p54BB7A4D.dip.t-dialin.net] has joined #ezpublish
+[03-30-2006 11:07:06] [#ezpublish] <buz> Tidemann: thats why all use google with site:ez.no ;)
+[03-30-2006 11:07:12] [#ezpublish] <buz> i even have a firefox quicksearch for that
+[03-30-2006 11:11:25] [#ezpublish] <awormus_> does zend ever contribute anything back to ezpublish?
+[03-30-2006 11:11:52] [#ezpublish] <awormus_> they have all this ajax in their new myzend section...
+[03-30-2006 11:27:38] [#ezpublish] <Tidemann> buz: hehe..
+[03-30-2006 11:28:39] [#ezpublish] <Tidemann> awormus_: checked out the xajax-contrib?
+[03-30-2006 11:53:13] [#ezpublish] <buz> yes
+[03-30-2006 11:53:26] [#ezpublish] <buz> zend and ez are fighting each other
+[03-30-2006 11:53:32] [#ezpublish] <buz> so no i doubt zend will contribute to ez
+[03-30-2006 11:54:30] [#ezpublish] <kracker> but everyone else should :)
+[03-30-2006 11:57:53] [#ezpublish] <Tidemann> is it possible to redirect back to the current page when I update a webshop basket (i.e. change the number of items to be bought)
+[03-30-2006 11:58:32] [#ezpublish] <Tidemann> RedirectAfterAddToBasket=basket doesn't seem to have any effect
+[03-30-2006 12:06:13] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-30-2006 12:08:08] [#ezpublish] <Tidemann> anyone?
+[03-30-2006 12:08:16] -!- tobmaster [n=tobmaste@p54BB7A4D.dip.t-dialin.net] has quit ["Thx 4 all the fisch"]
+[03-30-2006 12:16:03] [#ezpublish] <ls> hi Tidemann
+[03-30-2006 12:16:18] [#ezpublish] <ls> anyone for ?
+[03-30-2006 12:18:09] [#ezpublish] <Tidemann> is it possible to redirect back to the current page when I update a webshop basket (i.e. change the number of items to be bought)
+[03-30-2006 12:18:19] [#ezpublish] <Tidemann> RedirectAfterAddToBasket=basket doesn't seem to have any effect
+[03-30-2006 12:19:02] [#ezpublish] <Tidemann> well.. it has an effect, but only when adding items to basket
+[03-30-2006 12:20:33] [#ezpublish] <ls> I haven't use it but let me check the code ...
+[03-30-2006 12:21:05] [#ezpublish] <Tidemann> should have been something like  RedirectAfterUpdateBasket
+[03-30-2006 12:22:57] [#ezpublish] <ls> RedirectAfterAddToBasket=reload
+[03-30-2006 12:26:07] [#ezpublish] <Tidemann> ls: doesn't have any effect on update basket
+[03-30-2006 12:26:34] [#ezpublish] <Tidemann> StoreChangesButton that is..
+[03-30-2006 12:26:44] [#ezpublish] <Tidemann> seems like I have to make a little hack
+[03-30-2006 12:27:16] [#ezpublish] <ls> yep then is not supported on update
+[03-30-2006 12:27:35] [#ezpublish] <ls> with reload works when you add something then you should back to page
+[03-30-2006 12:28:03] [#ezpublish] <ls> with empty RedirectAfterAddToBasket you will be redirect to /shop/basket
+[03-30-2006 12:29:56] [#ezpublish] <ls> btw, when you will make patch send it to sdk-public mailing list, then it has chance to be included in next eZp version
+[03-30-2006 12:39:00] [#ezpublish] <Tidemann> yup... but I'm no php-guru.. so don't expect too much ;)
+[03-30-2006 12:39:51] [#ezpublish] <ls> well, code can be re-written a little by profs ;) if you need it them probably someone else will need it too
+[03-30-2006 12:40:11] [#ezpublish] <ls> patches are welcome
+[03-30-2006 12:43:28] [#ezpublish] <Tidemann> i know i know.. but the issue isn't if I want to post the code or not.. the issue is "can I make this work at all" ;)
+[03-30-2006 12:45:57] [#ezpublish] <ls> haha, ok I see
+[03-30-2006 12:46:16] [#ezpublish] <ls> check with support@ez.no
+[03-30-2006 12:46:39] [#ezpublish] <Tidemann> if I can't make it work, i'll call them tomorrow
+[03-30-2006 12:59:30] [#ezpublish] <Tidemann> got it working.. where do I send this shite...?
+[03-30-2006 13:03:18] [#ezpublish] <ls> http://lists.ez.no/mailman/listinfo/sdk-public
+[03-30-2006 13:03:25] [#ezpublish] <ls> you can subscribe here
+[03-30-2006 13:03:32] [#ezpublish] <ls> and send patch with description
+[03-30-2006 13:04:27] [#ezpublish] <Tidemann> ls: lukazs?
+[03-30-2006 13:04:35] [#ezpublish] <ls> yes
+[03-30-2006 13:04:40] [#ezpublish] <Tidemann> aah :)
+[03-30-2006 13:05:08] [#ezpublish] <Tidemann> I didn't catch that until now ;)
+[03-30-2006 13:05:35] [#ezpublish] <ls> haha, you can check my profile ;)
+[03-30-2006 13:05:58] [#ezpublish] <Tidemann> hehe .. dunno if you remember me.. I work at edison in porsgrunn
+[03-30-2006 13:06:14] [#ezpublish] <ls> designer?
+[03-30-2006 13:06:24] [#ezpublish] <Tidemann> developer
+[03-30-2006 13:06:53] [#ezpublish] <ls> don't remeber If we meet together ;) but prsgrunn is so nice ;)
+[03-30-2006 13:07:22] [#ezpublish] <Tidemann> I don't think we've met yet... but you helped me out with an issue a month ago or so..
+[03-30-2006 13:08:15] [#ezpublish] <Tidemann> an xml-export issue
+[03-30-2006 13:08:24] [#ezpublish] <Tidemann> you helped me out with an issue
+[03-30-2006 13:08:27] [#ezpublish] <Tidemann> gah
+[03-30-2006 13:08:28] [#ezpublish] <ls> ah, remember
+[03-30-2006 13:08:31] [#ezpublish] <Tidemann> http://ez.no/community/forum/developer/rss_export_and_flash/#msg113914
+[03-30-2006 13:08:34] [#ezpublish] <Tidemann> that one
+[03-30-2006 13:09:07] [#ezpublish] <ls> yeah, it was the easiest way ;)
+[03-30-2006 13:09:12] [#ezpublish] <Tidemann> check out the result btw: http://www.borgestadholmen.no
+[03-30-2006 13:09:40] [#ezpublish] <ls> sorry, Macromedia still not release Flahs player 8 for linux
+[03-30-2006 13:09:47] [#ezpublish] <Tidemann> aah
+[03-30-2006 13:09:48] [#ezpublish] <ls> ://
+[03-30-2006 13:09:50] [#ezpublish] <Tidemann> too bad
+[03-30-2006 13:09:56] [#ezpublish] <ls> yes
+[03-30-2006 13:10:03] [#ezpublish] <ls> this is problem with many websites
+[03-30-2006 13:10:10] [#ezpublish] <Tidemann> it runs completely on flash consuming a dynamic xml on an ez platform...
+[03-30-2006 13:10:58] [#ezpublish] <ls> yeah xml can be a nice bridge
+[03-30-2006 13:11:07] [#ezpublish] <ls> I will check it out on windows later
+[03-30-2006 13:11:09] [#ezpublish] <Tidemann> are you in poland these days, or are you just using a bouncer or something?
+[03-30-2006 13:11:59] [#ezpublish] <ls> in poland, I work from my place here
+[03-30-2006 13:12:09] [#ezpublish] <Tidemann> ah.. i thought you worked at ez hg
+[03-30-2006 13:12:13] [#ezpublish] <Tidemann> hq that is
+[03-30-2006 13:12:52] [#ezpublish] <ls> yes, this is true, but from poland, basicaly location doesn't matter, I will come to norway for conference
+[03-30-2006 13:13:04] [#ezpublish] <ls> so we can meet
+[03-30-2006 13:13:29] [#ezpublish] <ls> and drink some beer, non-alcohole of course ;)
+[03-30-2006 13:13:30] [#ezpublish] <Tidemann> cool.. we're signing up as partners now, so we'll probably meet then, yeah
+[03-30-2006 13:13:43] [#ezpublish] <ls> this is great
+[03-30-2006 13:14:33] [#ezpublish] <Tidemann> yup.. anyone else from ez who hang out here?
+[03-30-2006 13:14:44] [#ezpublish] <Tidemann> kris10an == Kristian Hole
+[03-30-2006 13:14:45] [#ezpublish] <Tidemann> ?
+[03-30-2006 13:14:47] [#ezpublish] <ls> yes
+[03-30-2006 13:15:00] [#ezpublish] <ls> _kore
+[03-30-2006 13:15:10] [#ezpublish] <Tidemann> kåre khøler i assume?
+[03-30-2006 13:15:20] [#ezpublish] <ls> nope form german
+[03-30-2006 13:15:21] [#ezpublish] <Tidemann> køhler that is
+[03-30-2006 13:15:23] [#ezpublish] <Tidemann> ah
+[03-30-2006 13:16:05] [#ezpublish] <Tidemann> Kore Nordmann
+[03-30-2006 13:16:13] [#ezpublish] <ls> and you can often meet ordans, fh, and tobys
+[03-30-2006 13:16:54] [#ezpublish] <Tidemann> cool...
+[03-30-2006 13:17:19] [#ezpublish] <Tidemann> did you by any chance check out that xajax contrib that was added on monday?
+[03-30-2006 13:17:52] [#ezpublish] <ls> nope, I did not
+[03-30-2006 13:18:17] [#ezpublish] <Tidemann> http://ez.no/community/contribs/applications/xajax
+[03-30-2006 13:18:39] [#ezpublish] <ls> yep, I saw it, but I did not use it yet
+[03-30-2006 13:18:43] [#ezpublish] <Tidemann> looks really interesting..
+[03-30-2006 13:18:58] [#ezpublish] <ls> it is Kristof did some cool stuff base on it
+[03-30-2006 13:20:47] [#ezpublish] <Tidemann> yeah.. i see a lot of nice javascripts these days.. all because of the ajax buzz
+[03-30-2006 13:20:51] [#ezpublish] <Tidemann> like this one: http://www.huddletogether.com/projects/lightbox2/
+[03-30-2006 13:22:39] -!- DiGiTa|_ [n=guillaum@84.5.136.113] has quit []
+[03-30-2006 13:23:32] [#ezpublish] <ls> yeah, lightbox is cool, more and more projects is ajax ...
+[03-30-2006 13:29:47] [#ezpublish] <Tidemann> uhm.. one question... in the default basket there is a checkbox for every item.. I assume this is for deletion of an item?
+[03-30-2006 13:37:29] [#ezpublish] <ls> yes it is handle by RemoveProductItemButton
+[03-30-2006 13:38:42] [#ezpublish] <ls> btw you have talented designer ;)
+[03-30-2006 13:42:35] [#ezpublish] <Tidemann> hehe.. I'll be sure to tell him that tomorrow.. now we have two btw ;)
+[03-30-2006 13:44:58] [#ezpublish] <ls> I like his work ;)
+[03-30-2006 13:45:26] [#ezpublish] <Tidemann> what are you looking at btw? viggen?
+[03-30-2006 13:45:44] [#ezpublish] <Tidemann> or ez.no? ;)
+[03-30-2006 13:45:56] [#ezpublish] <ls> just in general I saw many I think
+[03-30-2006 13:46:00] [#ezpublish] <ls> from edison.no
+[03-30-2006 13:46:00] [#ezpublish] <Tidemann> or ez admin interface maybe
+[03-30-2006 13:46:03] [#ezpublish] <Tidemann> ah
+[03-30-2006 13:46:36] [#ezpublish] <ls> nice stuff for eye
+[03-30-2006 13:48:32] [#ezpublish] <Tidemann> yup.. he resently redesigned http://www.haugesunds-avis.no
+[03-30-2006 13:49:45] [#ezpublish] <Tidemann> seems like the developers has screwed it up some though
+[03-30-2006 13:49:47] [#ezpublish] <ls> nice, a lot of content
+[03-30-2006 13:51:55] [#ezpublish] <ls> http://www.sommarland.no/
+[03-30-2006 13:51:58] [#ezpublish] <ls> this one is nice :)
+[03-30-2006 13:52:14] [#ezpublish] <Tidemann> yeah. i programmed that one.. first ez site I ever made...
+[03-30-2006 13:52:33] [#ezpublish] <ls> I like the idea with calendar
+[03-30-2006 13:52:53] [#ezpublish] <ls> ang layout module
+[03-30-2006 13:53:06] [#ezpublish] <Tidemann> yeah.. dirty solution though...
+[03-30-2006 13:53:24] [#ezpublish] <ls> haha
+[03-30-2006 13:53:33] [#ezpublish] <ls> well works nice
+[03-30-2006 13:53:38] [#ezpublish] <Tidemann> iframe and seperate siteaccess
+[03-30-2006 13:53:54] [#ezpublish] <ls> http://www.viggen.no/
+[03-30-2006 13:53:57] [#ezpublish] <ls> is nice too
+[03-30-2006 13:54:27] [#ezpublish] <Tidemann> yeah.. yelitza coded that one.. I made the html
+[03-30-2006 13:54:55] [#ezpublish] <Tidemann> i think kris10an was involved with the coding too..
+[03-30-2006 13:55:02] [#ezpublish] <ls> yep
+[03-30-2006 13:57:53] [#ezpublish] <ls> http://www.edison.no/telemarkreiser/main.html
+[03-30-2006 13:58:09] [#ezpublish] <ls> this is only flash or connected to cms?
+[03-30-2006 13:59:16] [#ezpublish] <Tidemann> no cms.. static page
+[03-30-2006 13:59:25] [#ezpublish] <ls> oki
+[03-30-2006 13:59:56] [#ezpublish] <ls> hmm, why you don't have more references on edison.no?
+[03-30-2006 14:00:15] [#ezpublish] <ls> at least designs
+[03-30-2006 14:05:18] [#ezpublish] <Tidemann> well.. the thing is... we never have time to make our own site ;)
+[03-30-2006 14:05:52] [#ezpublish] <Tidemann> the one you see there is just a job opening..
+[03-30-2006 14:06:34] [#ezpublish] <Tidemann> hopefully we will have a decent site sometime this summer...
+[03-30-2006 14:06:45] [#ezpublish] <ls> haha, we can make for you ;)
+[03-30-2006 14:06:54] [#ezpublish] <Tidemann> hehe...
+[03-30-2006 14:07:16] [#ezpublish] <Tidemann> it will probably be a flash-site though ;)
+[03-30-2006 14:07:45] [#ezpublish] <ls> yeah, no problem ;) with ez publish ;)
+[03-30-2006 14:13:01] [#ezpublish] <Tidemann> hehe
+[03-30-2006 14:21:17] [#ezpublish] <ls> do you often visit #ezpublish?
+[03-30-2006 14:33:01] -!- tobmaster [n=tobmaste@dslb-084-061-007-028.pools.arcor-ip.net] has joined #ezpublish
+[03-30-2006 14:35:33] [#ezpublish] <Tidemann> first time actually
+[03-30-2006 14:36:02] [#ezpublish] <Tidemann> i've visited ez hq several times though ;)
+[03-30-2006 14:41:20] [#ezpublish] <ls> yeah, 10 min drive ;) however I remember that I took one bus from Skien -> Posgrunn and I drove 35 min !
+[03-30-2006 14:41:35] [#ezpublish] <ls> was long trip ;)
+[03-30-2006 14:42:16] [#ezpublish] <ls> looking forward to see you more often ;)
+[03-30-2006 14:43:59] -!- tobmaster [n=tobmaste@dslb-084-061-007-028.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[03-30-2006 14:44:37] [#ezpublish] <Tidemann> hehe.. the "klyve"-bus i guess
+[03-30-2006 14:46:05] [#ezpublish] <ls> yes maybe :) don't remeber number
+[03-30-2006 14:58:56] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has joined #ezpublish
+[03-30-2006 15:02:17] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-30-2006 15:21:56] [#ezpublish] <ls> good night
+[03-30-2006 15:22:19] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[03-30-2006 15:41:24] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[03-30-2006 18:40:21] [#ezpublish] <kracker> hmm, so i'm wondering someone might ask as a support service fee to upgrade a medium sized eZ publish 3.5.2 to 3.6.7 aka how much might this be worth in USD$
+[03-30-2006 18:42:03] [#ezpublish] <kracker> a client recently asked me for these services and i'm working on the project right now ... i guess i was trying to weigh others thoughts on the subject against what i've estimated/proposed to the client already
+[03-30-2006 23:18:06] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-30-2006 23:32:14] [#ezpublish] <tobmaster> moin
+[03-30-2006 23:48:51] [#ezpublish] <kracker> mornin
+[03-30-2006 23:49:25] [#ezpublish] <kracker> ever provided upgrade services :/ to an external client?

@@ -1,0 +1,176 @@
+[01-25-2006 01:30:41] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-25-2006 01:54:20] -!- Bedlore [n=me@219-90-187-236.ip.adam.com.au] has quit []
+[01-25-2006 02:01:27] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-25-2006 02:06:40] -!- ordnas [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-25-2006 02:09:21] -!- kore_ [n=lordhong@217.194.224.41] has quit [Nick collision from services.]
+[01-25-2006 02:10:52] -!- kore__ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-25-2006 02:35:16] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-25-2006 02:44:24] -!- SEAwolfx [n=mike@tor/session/x-5cc6d668bda4dd6a] has joined #ezpublish
+[01-25-2006 02:44:46] [#ezpublish] <SEAwolfx> morning
+[01-25-2006 03:11:19] -!- ordnas [n=ordnas@popeye.ez.no] has quit [Read error: 104 (Connection reset by peer)]
+[01-25-2006 03:12:00] -!- ordnas [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-25-2006 03:13:26] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-25-2006 03:15:09] [#ezpublish] <y_sabal> plop
+[01-25-2006 03:27:07] -!- SEAwolfx_ [n=mike@tor/session/x-7149a98a1efb1fbd] has joined #ezpublish
+[01-25-2006 03:28:50] -!- SEAwolfx [n=mike@tor/session/x-5cc6d668bda4dd6a] has quit [Remote closed the connection]
+[01-25-2006 03:33:51] -!- SEAwolfx_ is now known as SEAwolfx
+[01-25-2006 04:25:28] -!- kore__ [n=lordhong@217.194.224.41] has quit [Read error: 104 (Connection reset by peer)]
+[01-25-2006 04:34:19] -!- kore__ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-25-2006 05:24:54] [#ezpublish] <y_sabal> #ezpublish is now known as #hardpublish
+[01-25-2006 05:27:21] [#ezpublish] <SEAwolfx> ;)
+[01-25-2006 05:30:11] [#ezpublish] <B-KiLLer`> :D
+[01-25-2006 06:18:46] -!- ordnas [n=ordnas@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-25-2006 07:07:22] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-25-2006 07:07:32] [#ezpublish] <Sulfur> w000t , guys :)
+[01-25-2006 07:08:53] [#ezpublish] <Sulfur> I was doing some user administration tasks on an eZ installation, and found something that struck me as redundant or potentially dangerous, but maybe it's due to my altered state ;)
+[01-25-2006 07:09:10] [#ezpublish] <Sulfur> I am referring do default "user" policies for anonymous users.
+[01-25-2006 07:09:40] [#ezpublish] <Sulfur> is there a need for it to be able to have unrestricted access to "user" module ?
+[01-25-2006 07:11:39] [#ezpublish] <Sulfur> I mean : selfedit, preferences ..... I think they are not needed for an user-which-is-not-an-user. and unrestricted "login" can be a problem, but this can be due to my usual way of escalating privileges (i.e. registered users have the anonymous privileges PLUS something else). so my "registered users" end up being able to log in into admin view .... agh!
+[01-25-2006 07:14:58] [#ezpublish] <Sulfur> any of eZ helping me out in understanding why are default anonymous user policies configured like this ? I can think that maybe the global login on all siteaccesses is needed to actually allow a non-logged-in user to see all siteaccesses and have a chance to enter login + pwd . but why the other "user" functions ?
+[01-25-2006 07:29:14] -!- kore__ [n=lordhong@217.194.224.41] has quit []
+[01-25-2006 07:56:07] [#ezpublish] <SEAwolfx> Sulfur: an anonymous user hasnt access to the admin site.
+[01-25-2006 07:58:02] [#ezpublish] <Sulfur> SEAwolfx: yes. it hasn't since he has no password. but why allowing anyone to modify the anonymous profile by default ?
+[01-25-2006 07:59:06] [#ezpublish] <Sulfur> plus, by using role inheritance, I gave all my logged-in users access to the admin, because anon user policies is set on "no limitation" :)
+[01-25-2006 07:59:32] [#ezpublish] <Sulfur> so : gotta not have reg users inheriot from anonymous
+[01-25-2006 07:59:38] [#ezpublish] <Sulfur> copy anon role
+[01-25-2006 07:59:44] [#ezpublish] <SEAwolfx> well, he cant do this due to the deny of administer his "acount"
+[01-25-2006 07:59:50] [#ezpublish] <Sulfur> modify it limiting user policies
+[01-25-2006 07:59:59] [#ezpublish] <Sulfur> and assign it to registered users
+[01-25-2006 08:08:54] [#ezpublish] <Sulfur> SEAwolfx: .... so an anon user cannot modify his "profile " ?
+[01-25-2006 08:11:33] -!- kore__ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-25-2006 08:15:03] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-25-2006 08:29:56] [#ezpublish] <Sulfur> another thing: is there a c00l way to restrict content access by siteaccess? :D e.g. I need to make a siteaccess which will only display 2 pages from an extension, but will use the same db of the main site (e.g. mainsite.mydomain.com and stats.mydomain.com) . both are publicly accessible. but I'd like to avoid that e.g. stats.mydomain.com/content/view/full/2 will display the same content as mainsite.mydomain.com/content/view/full/2
+[01-25-2006 08:30:45] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[01-25-2006 08:34:34] -!- ordnas [n=ordnas@popeye.ez.no] has joined #ezpublish
+[01-25-2006 08:36:50] -!- ordna1 [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-25-2006 08:37:33] -!- ordna1 [n=ordnas@stalker.ez.no] has quit [Client Quit]
+[01-25-2006 08:42:08] -!- qms2 [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-25-2006 08:42:42] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 113 (No route to host)]
+[01-25-2006 08:47:19] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-25-2006 08:48:41] -!- qms2 is now known as y_sabal
+[01-25-2006 08:51:25] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[01-25-2006 08:55:04] -!- ordnas [n=ordnas@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-25-2006 08:58:21] -!- tobyS_ [n=dotxp@dslb-084-061-132-108.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-25-2006 09:08:40] -!- y_sabal [n=ys@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-25-2006 09:18:11] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[01-25-2006 09:26:34] -!- ordnas [n=ordnas@stalker.ez.no] has joined #ezpublish
+[01-25-2006 09:27:26] [#ezpublish] <SEAwolfx> Sulfur<<<>SEAwolfx: .... so an anon user cannot modify his "profile " ? <- an anon user has no profile?!
+[01-25-2006 09:28:43] [#ezpublish] <Sulfur> SEAwolfx: if it hasn't it, it has no need for "preferences", "selfedit" and "password" privileges. this is what bugs me
+[01-25-2006 09:32:24] [#ezpublish] <SEAwolfx> so these rules are not valid as the user cant login by default. thus the mentioned rules are void or futile ;)
+[01-25-2006 09:45:02] [#ezpublish] <Sulfur> this I don't know, SEAwolfx ... but I can try. have you an eZ link for "modify own profile" ? I'll try it on my own installation
+[01-25-2006 09:45:30] [#ezpublish] <Sulfur> SEAwolfx: , actually, the anonymous user has a profile
+[01-25-2006 09:45:47] [#ezpublish] <Sulfur> try to delete user 10 and then tell me ;)
+[01-25-2006 09:55:34] -!- fh [n=fh@popeye.ez.no] has quit [Remote closed the connection]
+[01-25-2006 10:14:18] -!- ordnas [n=ordnas@stalker.ez.no] has left #ezpublish []
+[01-25-2006 10:15:28] [#ezpublish] <B-KiLLer`> hmmm... I'm doing an external module right now :)
+[01-25-2006 10:15:51] [#ezpublish] <B-KiLLer`> this module is accessing a custom database (not the ez one), with custom functions etc ...
+[01-25-2006 10:15:58] [#ezpublish] <Sulfur> aha
+[01-25-2006 10:16:01] [#ezpublish] <B-KiLLer`> i want to implement a gotopage function
+[01-25-2006 10:16:08] [#ezpublish] <Sulfur> hu?
+[01-25-2006 10:16:18] [#ezpublish] <B-KiLLer`> let's say I have 100 records in it
+[01-25-2006 10:16:29] [#ezpublish] <B-KiLLer`> and I want to have at the bottom: page: 1 2 3 4 and so on
+[01-25-2006 10:16:34] [#ezpublish] <B-KiLLer`> so go to the given page :)
+[01-25-2006 10:16:43] [#ezpublish] <B-KiLLer`> dunno the english word for that, if there is one :)
+[01-25-2006 10:16:52] [#ezpublish] <Sulfur> navigator.
+[01-25-2006 10:16:57] [#ezpublish] <Sulfur> or pager
+[01-25-2006 10:17:00] [#ezpublish] <B-KiLLer`> oh. OK :)
+[01-25-2006 10:17:05] [#ezpublish] <Sulfur> google.tpl will be your friend :)
+[01-25-2006 10:17:17] [#ezpublish] <Sulfur> no joke intended
+[01-25-2006 10:18:03] [#ezpublish] <B-KiLLer`> :)
+[01-25-2006 10:18:06] [#ezpublish] <B-KiLLer`> let's check that one
+[01-25-2006 10:18:11] [#ezpublish] <Sulfur> design:navigator/google.tpl
+[01-25-2006 10:18:13] [#ezpublish] <B-KiLLer`> yep
+[01-25-2006 10:19:03] [#ezpublish] <B-KiLLer`> but is it still possible to use those functionnalities, even if I'm completely out of the ez db ?
+[01-25-2006 10:19:13] [#ezpublish] <Sulfur> I actually do
+[01-25-2006 10:20:02] [#ezpublish] <Sulfur> it's not a problem of google.tpl, but of passing the right offset and limit to your own module view, which will extract the required records
+[01-25-2006 10:20:48] [#ezpublish] <Sulfur> the only stuff google.tpl does is marking in which page you are given a set of values you pass it, and producing some links with parameters to your page, which has to interpret those params to page results
+[01-25-2006 10:22:20] -!- y_sabal [n=ys@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 113 (No route to host)]
+[01-25-2006 10:22:33] [#ezpublish] <B-KiLLer`> hmm it doesn't seem that easy
+[01-25-2006 10:22:46] [#ezpublish] <B-KiLLer`> to implement, I mean
+[01-25-2006 10:22:47] -!- y_sabal [n=ys@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-25-2006 10:22:59] [#ezpublish] <Sulfur> let's say google.tpl is a controller
+[01-25-2006 10:23:39] [#ezpublish] <Sulfur> embedded in your "view" then your "model" receives the input from google.tpl and responds with a template which is filled with your data
+[01-25-2006 10:24:05] [#ezpublish] <Sulfur> you have to make a view which handles a limit and offset parameter
+[01-25-2006 10:24:28] [#ezpublish] <B-KiLLer`> so it has to return the values as well in the $Return ?
+[01-25-2006 10:24:34] [#ezpublish] <B-KiLLer`> err
+[01-25-2006 10:24:35] [#ezpublish] <B-KiLLer`> $Result
+[01-25-2006 10:24:35] [#ezpublish] <Sulfur> so you could (without the pager) just set how many records you can see by changing the url params
+[01-25-2006 10:25:34] [#ezpublish] <Sulfur> well...... if you ere using ezpublish's db, you'd use those view parameters to be passed to a fetch tpl operator, no?
+[01-25-2006 10:26:21] [#ezpublish] <Sulfur> as you're making a module, you have the choice of either narrowing your query in the [viewname].php file and passing the results to the tpl ....
+[01-25-2006 10:27:19] [#ezpublish] <Sulfur> ..... or making your external db "known" to ezp and thus making a fetch like $mydata = fetch(mymodule, myview, hash(......params....))
+[01-25-2006 10:27:34] [#ezpublish] <Sulfur> either way, it's not a 5-minute walk :)
+[01-25-2006 10:27:56] [#ezpublish] <Sulfur> but very helpful in understanding ez's internals.
+[01-25-2006 10:28:49] [#ezpublish] <B-KiLLer`> And I've got a deadline for that site on Friday :-x
+[01-25-2006 10:29:31] [#ezpublish] <Sulfur> well, once you know the hang of it - or have code which already does that from old projects -- you could
+[01-25-2006 10:30:03] [#ezpublish] <Sulfur> anyway. how are you interfacing to your db right now?
+[01-25-2006 10:30:43] [#ezpublish] <B-KiLLer`> it's a module which has not been made by me.. all the functions accessing to the DB are in the /classes/ of that module
+[01-25-2006 10:31:19] [#ezpublish] <B-KiLLer`> let's say that the module is called MyModule
+[01-25-2006 10:31:43] [#ezpublish] <B-KiLLer`> i have the /classes/mymodule.php, with the MyModule class containing all the functions which are working with the DB
+[01-25-2006 10:32:17] [#ezpublish] <B-KiLLer`> the the view.php, using all those functions
+[01-25-2006 10:32:51] [#ezpublish] <Sulfur> ok. but how are those classes like?
+[01-25-2006 10:33:21] [#ezpublish] <B-KiLLer`> it's just one class, with custom functions
+[01-25-2006 10:33:34] [#ezpublish] <Sulfur> if they extend eZPersistentObject, odds are that it ***can*** access the ext db like it were an eZ one (fetch ...)
+[01-25-2006 10:33:43] [#ezpublish] <B-KiLLer`> it's not extending :-/
+[01-25-2006 10:33:46] [#ezpublish] <Sulfur> ok.
+[01-25-2006 10:34:03] [#ezpublish] <B-KiLLer`> this thing was made a while ago, and was placed "in a hurry" in ez
+[01-25-2006 10:34:10] [#ezpublish] <Sulfur> so your best bet by now is to handle the params in the [moduleview].php file
+[01-25-2006 10:34:13] [#ezpublish] <B-KiLLer`> without using all the ez functionnalities I suppose
+[01-25-2006 10:34:21] [#ezpublish] <Sulfur> and returning an array to your tpl
+[01-25-2006 10:34:34] [#ezpublish] <Sulfur> then you loop through that array in your tpl, and bingo
+[01-25-2006 10:34:49] [#ezpublish] <B-KiLLer`> but what about the page param for instance ?
+[01-25-2006 10:35:01] [#ezpublish] <B-KiLLer`> all the data are currently displaying fine
+[01-25-2006 10:35:06] [#ezpublish] <B-KiLLer`> the only problem is that navigator
+[01-25-2006 10:35:38] [#ezpublish] <B-KiLLer`> I don't know if I *have to* use the view parameters of ez, or if I can go around this
+[01-25-2006 10:35:46] [#ezpublish] <Sulfur> yo have to pass params to the page like this : site..../mymodule/myview/(offset)/120/(limit)/10
+[01-25-2006 10:35:53] [#ezpublish] <Sulfur> well
+[01-25-2006 10:36:05] [#ezpublish] <Sulfur> you *could* use the ezHTTPTool
+[01-25-2006 10:36:18] [#ezpublish] <Sulfur> and have your params passed via POST or GET
+[01-25-2006 10:36:20] [#ezpublish] <Sulfur> it works
+[01-25-2006 10:36:28] [#ezpublish] <Sulfur> but better to keep it consistent
+[01-25-2006 10:36:46] [#ezpublish] <B-KiLLer`> that's what I tought
+[01-25-2006 10:37:00] [#ezpublish] <Sulfur> adding params to a view is a joke. just modify module.php
+[01-25-2006 10:37:17] [#ezpublish] <B-KiLLer`> yep, just have to know the syntax of it :)
+[01-25-2006 10:37:58] [#ezpublish] <Sulfur> check example module worldpay
+[01-25-2006 10:38:16] [#ezpublish] <Sulfur> and there are some examples on ez.no
+[01-25-2006 10:38:24] [#ezpublish] <Sulfur> sorry, gotta go back to my code
+[01-25-2006 10:39:34] [#ezpublish] <B-KiLLer`> thanks for your help
+[01-25-2006 10:40:25] [#ezpublish] <Sulfur> good luck ;)
+[01-25-2006 10:40:44] [#ezpublish] <B-KiLLer`> I really need of it :D
+[01-25-2006 10:42:29] [#ezpublish] <Sulfur> pray to the pagan gods and sacrifice a lot of dead ravens
+[01-25-2006 10:42:37] [#ezpublish] <Sulfur> ok back to my code
+[01-25-2006 10:42:41] [#ezpublish] <B-KiLLer`> huhu
+[01-25-2006 10:45:19] -!- kore__ [n=lordhong@217.194.224.41] has quit []
+[01-25-2006 11:07:05] -!- elephantMan [n=elephant@180.205.103-84.rev.gaoland.net] has quit [Read error: 113 (No route to host)]
+[01-25-2006 11:07:28] -!- elephantMan [n=elephant@252.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-25-2006 11:15:32] [#ezpublish] <B-KiLLer`> hey Sulfur
+[01-25-2006 11:15:41] [#ezpublish] <B-KiLLer`> thanks for you help, my nav is now working !
+[01-25-2006 11:15:58] [#ezpublish] <B-KiLLer`> view parameters is really quick to implement
+[01-25-2006 11:25:37] [#ezpublish] <Sulfur> yes they are
+[01-25-2006 11:25:57] [#ezpublish] <Sulfur> ok have an extra beer for me :)
+[01-25-2006 11:32:39] [#ezpublish] <Sulfur> night
+[01-25-2006 11:32:44] -!- Sulfur [n=mbariola@85.20.2.139] has left #ezpublish []
+[01-25-2006 11:45:28] -!- B-KiLLer` [n=me@217.31.64.170] has quit []
+[01-25-2006 11:57:07] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-25-2006 11:58:54] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[01-25-2006 12:13:18] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[01-25-2006 12:14:02] [#ezpublish] <zrg> cheers, zombies
+[01-25-2006 12:47:26] [#ezpublish] * y_sabal is going to fetch some food from the fridge before doing some add location to bed
+[01-25-2006 12:47:51] -!- y_sabal [n=ys@bzq-80-69-146.dsl.bezeqint.net] has quit ["eZ kernel is burning your hard dirve"]
+[01-25-2006 12:52:13] -!- fh [n=fh@33.80-202-59.nextgentel.com] has joined #ezpublish
+[01-25-2006 13:46:00] -!- ordnas [n=ordnas@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-25-2006 14:03:43] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-25-2006 14:12:33] -!- fh [n=fh@33.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[01-25-2006 14:26:24] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-25-2006 14:31:59] [#ezpublish] <zrg> how do i kill the notifications in queue?
+[01-25-2006 14:32:57] -!- tobyS [n=dotxp@dslb-084-060-026-169.pools.arcor-ip.net] has joined #ezpublish
+[01-25-2006 15:31:21] -!- ordnas [n=ordnas@217.80-202-59.nextgentel.com] has left #ezpublish []
+[01-25-2006 15:41:19] [#ezpublish] <zrg> found out, need to empty eznotificationevent table in db i think
+[01-25-2006 17:01:18] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[01-25-2006 17:09:46] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-25-2006 18:17:11] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-25-2006 18:27:26] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[01-25-2006 18:59:46] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-25-2006 20:45:22] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-25-2006 20:45:54] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-25-2006 21:44:58] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-25-2006 21:45:31] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish

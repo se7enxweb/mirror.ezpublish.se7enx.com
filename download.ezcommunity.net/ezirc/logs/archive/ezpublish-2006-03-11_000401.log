@@ -1,0 +1,123 @@
+[03-10-2006 01:27:20] -!- ordnas [n=ordnas@p549D4F2C.dip.t-dialin.net] has joined #ezpublish
+[03-10-2006 01:47:47] -!- fh [n=fh@85.19.74.66] has joined #ezpublish
+[03-10-2006 01:52:10] -!- DiGiTa|_ [n=guillaum@84.4.42.98] has joined #ezpublish
+[03-10-2006 02:15:09] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[03-10-2006 02:16:25] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-10-2006 02:38:47] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[03-10-2006 02:52:46] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-10-2006 02:52:57] [#ezpublish] <kalooni> 'lo
+[03-10-2006 03:02:32] [#ezpublish] <kracker> three letters (together) i loath most in this life, now, in the aftermath ... fbx
+[03-10-2006 03:03:53] [#ezpublish] <kracker> not personal against those who get caught in the cross fire but they stand for an acranim for the worst eZ publish partner on the planet ...
+[03-10-2006 03:04:19] [#ezpublish] <kracker> used to be called: firebox ... then rebranded to ...
+[03-10-2006 03:04:23] [#ezpublish] <kracker> dooooom
+[03-10-2006 03:05:35] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-10-2006 03:10:39] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[03-10-2006 03:21:11] -!- tobyS_ [n=dotxp@dslb-084-061-154-109.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[03-10-2006 03:21:13] -!- tobyS [n=dotxp@dslb-084-061-154-109.pools.arcor-ip.net] has joined #ezpublish
+[03-10-2006 03:23:02] -!- tobyS [n=dotxp@dslb-084-061-154-109.pools.arcor-ip.net] has quit [Client Quit]
+[03-10-2006 03:23:25] -!- tobyS [n=dotxp@dslb-084-061-154-109.pools.arcor-ip.net] has joined #ezpublish
+[03-10-2006 03:32:11] -!- Shai-Tan [n=shai-tan@203.129.151.105] has joined #ezpublish
+[03-10-2006 03:33:14] -!- puncept [n=diga@60.52.23.62] has joined #ezpublish
+[03-10-2006 03:33:20] [#ezpublish] <puncept> hi!
+[03-10-2006 03:33:35] [#ezpublish] <Shai-Tan> indeed
+[03-10-2006 03:33:36] [#ezpublish] <puncept> allo shaishai
+[03-10-2006 03:34:04] [#ezpublish] <puncept> so my main question is...
+[03-10-2006 03:34:09] [#ezpublish] <puncept> yah
+[03-10-2006 03:34:12] [#ezpublish] <puncept> i got this pretty design
+[03-10-2006 03:34:33] [#ezpublish] <puncept> how do i implement that into the ezpublish engine?
+[03-10-2006 03:35:31] [#ezpublish] <puncept> i'm reading the docs
+[03-10-2006 03:35:46] [#ezpublish] <puncept> still would be of great help if anyone can conceptually describe.
+[03-10-2006 03:37:03] [#ezpublish] <Shai-Tan> puncept: perhaps something here? -> http://www.sitepoint.com/article/ez-publish-3-1-take-spin/4
+[03-10-2006 03:37:23] [#ezpublish] <puncept> i am reading about node templates
+[03-10-2006 03:37:27] [#ezpublish] <puncept> *spinning*
+[03-10-2006 03:41:07] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[03-10-2006 04:07:06] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Remote closed the connection]
+[03-10-2006 04:20:33] [#ezpublish] <puncept> for some reason some of the folders in the siteaccess directory does not show up in the admin panel.
+[03-10-2006 04:20:39] [#ezpublish] <puncept> +pulldown
+[03-10-2006 04:21:23] [#ezpublish] <puncept> that tutorial assumes too much :(
+[03-10-2006 04:23:10] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-10-2006 04:27:25] -!- puncept [n=diga@60.52.23.62] has quit [Read error: 104 (Connection reset by peer)]
+[03-10-2006 04:27:44] -!- Shai-Tan [n=shai-tan@203.129.151.105] has left #ezpublish ["Leaving"]
+[03-10-2006 04:32:44] -!- puncepta [n=diga@60.52.23.62] has joined #ezpublish
+[03-10-2006 04:32:52] [#ezpublish] <puncepta> does expublish support worldpay?
+[03-10-2006 04:36:28] [#ezpublish] <xbit> yep
+[03-10-2006 04:36:58] [#ezpublish] <puncepta> cool
+[03-10-2006 04:37:25] [#ezpublish] <puncepta> Just wondering if it's worth it for me to learn how to use ezpublish.
+[03-10-2006 04:37:33] [#ezpublish] <xbit> http://ez.no/community/contribs/workflow/worldpay_payment_gateway_pubsvn
+[03-10-2006 04:39:02] [#ezpublish] <puncepta> only for the select junior i think
+[03-10-2006 04:47:59] [#ezpublish] <Sulfur> w00t to all :)
+[03-10-2006 04:52:54] [#ezpublish] <puncepta> w00t
+[03-10-2006 05:14:42] [#ezpublish] <DiGiTa|_> http://video.google.com/videoplay?docid=-13103281855281260&q=roll+joint
+[03-10-2006 05:36:57] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[03-10-2006 06:26:31] -!- puncepta [n=diga@60.52.23.62] has quit []
+[03-10-2006 06:45:36] -!- phretor [n=phretor@host206-209.pool872.interbusiness.it] has joined #ezpublish
+[03-10-2006 07:03:37] [#ezpublish] <phretor> hi ther
+[03-10-2006 07:04:02] [#ezpublish] <phretor> {$module_result.path|attribute} outputs nothing. Why?
+[03-10-2006 07:16:41] [#ezpublish] <Sulfur> because you lack the (show, x) part
+[03-10-2006 07:17:05] [#ezpublish] <tobmaster> phretor: {$module_result.path|attribute(show)} is also enough
+[03-10-2006 07:17:12] [#ezpublish] <tobmaster> for 1 level depth
+[03-10-2006 07:17:18] [#ezpublish] <phretor> let me try
+[03-10-2006 07:17:49] [#ezpublish] <phretor> by the way, where do I have to place my own implementation of 'path.tpl'?
+[03-10-2006 07:18:12] [#ezpublish] <phretor> design/mydesign/templates/parts/path.tpl?
+[03-10-2006 07:21:26] [#ezpublish] <tobmaster> phretor do you have an design extension?
+[03-10-2006 07:21:43] [#ezpublish] <phretor> tobmaster: an design extension?
+[03-10-2006 07:21:59] [#ezpublish] <tobmaster> yes. it is possible to have the designs in an extension
+[03-10-2006 07:22:07] [#ezpublish] <tobmaster> quite usefull :)
+[03-10-2006 07:23:26] [#ezpublish] <tobmaster> but templates/parts/path.tpl should work
+[03-10-2006 07:24:25] [#ezpublish] <phretor> tobmaster: I have my desing on my own subdirectory (design/plain)
+[03-10-2006 07:25:05] [#ezpublish] <phretor> tobmaster: if there's any good tool to speed up the development of my own design...please tell me :-)
+[03-10-2006 07:25:10] [#ezpublish] <phretor> It'd be great
+[03-10-2006 07:27:45] [#ezpublish] <tobmaster> phretor: its not an tool
+[03-10-2006 07:27:58] [#ezpublish] <tobmaster> only a way to make it much more seperated from the kernel
+[03-10-2006 07:28:05] [#ezpublish] <phretor> tobmaster: ok, an extension of the ezSystem
+[03-10-2006 07:28:11] [#ezpublish] <tobmaster> ah no
+[03-10-2006 07:28:20] [#ezpublish] <phretor> tobmaster: is there any demo out there?
+[03-10-2006 07:28:27] [#ezpublish] <tobmaster> instaead of having your design in ezpublish/design/
+[03-10-2006 07:28:40] [#ezpublish] <tobmaster> you can make an extension where your design is included
+[03-10-2006 07:30:07] [#ezpublish] <phretor> tobmaster: still not understanding, sorry. I'm perhaps too newbie for these topics
+[03-10-2006 07:37:30] -!- LottoKim [n=kim@195.28.172.4] has quit [Remote closed the connection]
+[03-10-2006 07:39:10] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[03-10-2006 07:42:32] [#ezpublish] <phretor> tobmaster: but mydesign/menu/sub_left.tpl is not working for me
+[03-10-2006 07:43:29] [#ezpublish] <phretor> tobmaster: sorry mydesign/templates/menu/sub_left.tpl is not working
+[03-10-2006 07:44:17] -!- LottoKim [n=kim@195.28.172.4] has quit [Remote closed the connection]
+[03-10-2006 07:56:49] -!- bOkO_ [i=martin@cecilias2.kansliM.lu.se] has joined #ezpublish
+[03-10-2006 07:59:55] -!- DiGiTa|_ [n=guillaum@84.4.42.98] has quit []
+[03-10-2006 08:04:10] -!- bOkO_ [i=martin@cecilias2.kansliM.lu.se] has left #ezpublish []
+[03-10-2006 08:13:28] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[03-10-2006 08:23:11] -!- fh is now known as fh[eZ]
+[03-10-2006 08:44:44] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[03-10-2006 08:46:07] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-10-2006 08:56:48] -!- ahernandez0802 [n=ahernand@70.89.34.86] has joined #ezpublish
+[03-10-2006 08:56:56] [#ezpublish] <ahernandez0802> good day everyone
+[03-10-2006 08:58:26] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-10-2006 09:02:25] -!- ah909090 [n=ahernand@70.89.34.86] has joined #ezpublish
+[03-10-2006 09:17:27] -!- ahernandez0802 [n=ahernand@70.89.34.86] has quit [Read error: 110 (Connection timed out)]
+[03-10-2006 09:23:55] -!- ah909090 [n=ahernand@70.89.34.86] has quit [Read error: 110 (Connection timed out)]
+[03-10-2006 09:42:35] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-10-2006 10:41:07] -!- __otnemem__ [n=andres@70.89.34.86] has joined #ezpublish
+[03-10-2006 10:46:15] [#ezpublish] <__otnemem__> hi
+[03-10-2006 10:46:21] [#ezpublish] <__otnemem__> anyone here able to help?
+[03-10-2006 10:50:51] -!- Sulfur [n=mbariola@85.20.2.139] has left #ezpublish []
+[03-10-2006 10:53:02] -!- kalooni [n=nicolas@fbx.internethic.net] has left #ezpublish ["Quitte"]
+[03-10-2006 11:20:39] -!- DiGiTa|_ [n=guillaum@84.4.42.98] has joined #ezpublish
+[03-10-2006 11:22:03] [#ezpublish] <polin8> __otnemem__: maybe
+[03-10-2006 11:23:27] -!- tobyS [n=dotxp@dslb-084-061-154-109.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[03-10-2006 11:30:27] -!- ordnas [n=ordnas@p549D4F2C.dip.t-dialin.net] has left #ezpublish []
+[03-10-2006 11:34:35] [#ezpublish] <__otnemem__> hi
+[03-10-2006 11:40:30] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-10-2006 11:44:57] [#ezpublish] <xbit> hei
+[03-10-2006 11:56:25] -!- DiGiTa|_ [n=guillaum@84.4.42.98] has quit [Read error: 110 (Connection timed out)]
+[03-10-2006 12:07:38] [#ezpublish] <__otnemem__> has anyone here played with the contact forms from ez publish?>
+[03-10-2006 12:25:59] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[03-10-2006 12:28:24] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-10-2006 12:54:27] -!- __otnemem__ [n=andres@70.89.34.86] has quit [Read error: 110 (Connection timed out)]
+[03-10-2006 13:40:14] -!- phretor [n=phretor@host206-209.pool872.interbusiness.it] has quit []
+[03-10-2006 13:41:43] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[03-10-2006 15:08:07] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-10-2006 15:12:50] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[03-10-2006 15:50:56] -!- Pyretic [i=typing@timor.zolder.org] has joined #ezpublish
+[03-10-2006 15:51:10] [#ezpublish] <Pyretic> can anyone assist me with an install problem ?
+[03-10-2006 15:53:26] [#ezpublish] <Pyretic> more specifically the setup page/wizard is rather foobared and  has the entire webrootdirectory before every href/link/img ?
+[03-10-2006 16:23:04] [#ezpublish] <Pyretic> bleh, old php version n/m
+[03-10-2006 16:43:28] -!- Pyretic [i=typing@timor.zolder.org] has left #ezpublish []
+[03-10-2006 17:23:02] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]

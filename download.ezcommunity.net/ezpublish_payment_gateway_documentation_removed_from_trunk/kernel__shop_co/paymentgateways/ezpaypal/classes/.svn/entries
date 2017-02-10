@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="7012"
+   name=""
+   committed-date="2004-07-05T11:04:20.036903Z"
+   url="http://pubsvn.ez.no/nextgen/trunk/kernel/shop/paymentgateways/ezpaypal/classes"
+   last-author="dl"
+   kind="dir"
+   uuid="a01eee8c-daba-0310-acae-fa49f3023285"
+   revision="7012"/>
+<entry
+   committed-rev="7012"
+   name="ezpaypalchecker.php"
+   text-time="2007-04-08T20:44:24.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="bc52d9bcbf921cf9076e672f39285295"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="ezpaypalgateway.php"
+   text-time="2007-04-08T20:44:24.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="c56c617aaf3af14d43fe34429e97e503"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:24.000000Z"/>
+</wc-entries>

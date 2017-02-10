@@ -1,0 +1,43 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.20.&nbsp; Class Type Hints in Function Parameters</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec19.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec21.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec20"></a><h3 class="docSection1Title">3.20. Class Type Hints in Function Parameters</h3>
+<p class="docText">Although PHP is not a strictly typed language in which you would need to declare what type your variables are, it does allow you (if you wish) to specify the class you are expecting in your function's or method's parameters.<a name="ch03index158"></a><a name="ch03index159"></a><a name="ch03index160"></a></p>
+<p class="docText">Here's the code of a typical PHP function, which accepts one function parameter and first checks if it belongs to the class it requires:</p>
+<pre>
+function onlyWantMyClassObjects($obj)
+{
+    if (!($obj instanceof MyClass)) {
+        die("Only objects of type MyClass can be sent to this function");
+    }
+    ...
+}
+</pre><br>
+<p class="docText">Writing code that verifies the object's type in each relevant function can be a lot of work. To save you time, PHP enables you to specify the class of the parameter in front of the parameter itself.</P>
+<p class="docText">Following is the same example using class type hints:</p>
+<pre>
+function onlyWantMyClassObjects(MyClass $obj)
+{
+    // ...
+}
+</pre><BR>
+<p class="docText">When the function is called, PHP automatically performs an <tt>instanceof</tt> check before the function's code starts executing. If it fails, it will abort with an error. Because the check is an <tt>instanceof</tt> check, it is legal to send any object that satisfies the is-a relationship with the class type. This feature is mainly useful during development, because it helps ensure that you aren't passing objects to functions which weren't designed to handle them.<a name="ch03index161"></a><a name="ch03index162"></a><a name="ch03index163"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec19.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec21.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

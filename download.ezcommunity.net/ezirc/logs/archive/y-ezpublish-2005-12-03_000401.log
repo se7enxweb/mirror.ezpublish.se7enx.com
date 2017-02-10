@@ -1,0 +1,244 @@
+[12-01-2005 00:16:14] -!- Bedlore [n=me@219-90-251-136.ip.adam.com.au] has quit []
+[12-01-2005 01:01:49] [#ezpublish] <_rappy_> hello
+[12-01-2005 01:01:57] -!- _rappy_ is now known as _Rappy_
+[12-01-2005 01:30:46] -!- cspectrum [n=darkspec@c-24-22-155-128.hsd1.wa.comcast.net] has joined #ezpublish
+[12-01-2005 01:34:28] [#ezpublish] <mcspectrum> I've got a contribution I want to make, it's a single class, abstract, that should only be included if another class needs to extend it. Should it be packaged like an extension (ie, with ini file settings at what not) or can it be packaged as a "put it in /kernel/shop/classes and include it when you need it"
+[12-01-2005 01:35:06] [#ezpublish] <kracker> what's up mc?
+[12-01-2005 01:35:25] [#ezpublish] <mcspectrum> the sky
+[12-01-2005 01:35:30] [#ezpublish] <mcspectrum> Now answer my question
+[12-01-2005 01:35:32] [#ezpublish] <mcspectrum> ;)
+[12-01-2005 01:36:07] [#ezpublish] <kracker> hey now ... wouldn't it be "more" correct to simply package your class as an extention (a true extention)
+[12-01-2005 01:37:19] [#ezpublish] <mcspectrum> well I don't know, it seems like unneseccary overhead and complexity, is there an easy way to do it? Because it's not really a true extension, it's just a class.
+[12-01-2005 01:37:56] [#ezpublish] <kracker> thought being, then it would be a true stand alone extention (proper separation as eZ publish was designed to provide and encourage) and simpler for people to enable or disable ... cleanly
+[12-01-2005 01:38:58] [#ezpublish] <mcspectrum> but it's not the type of thing that needs "enabling" or "disabling" because being abstract, the only time you would need to enable it would be when another class calls it.
+[12-01-2005 02:06:33] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-01-2005 02:21:16] [#ezpublish] <mcspectrum> Hey Katana, I've got a contrib I want to make, it's a single class, abstract, that should only be included if another class needs to extend it. What is the proper way to release it?
+[12-01-2005 02:22:50] [#ezpublish] <Katana`> what does it do ?
+[12-01-2005 02:23:10] [#ezpublish] <mcspectrum> It's a extension to eZpaymentgateway
+[12-01-2005 02:23:14] [#ezpublish] <mcspectrum> called eZCurlGateway
+[12-01-2005 02:23:47] [#ezpublish] <mcspectrum> so i'm wondering if I should tell people to install it with the other paymentgateway classes (ie eZredirectgateway)
+[12-01-2005 02:24:03] [#ezpublish] <mcspectrum> which would be in kernel/shop/classes
+[12-01-2005 02:24:25] [#ezpublish] <mcspectrum> or should it sit inside it's own extension directory
+[12-01-2005 02:27:32] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-01-2005 02:27:50] [#ezpublish] <_Rappy_> I like cookies
+[12-01-2005 02:30:29] [#ezpublish] <Katana`> hum, it would probably be a hack you can submit to the community section
+[12-01-2005 02:31:38] [#ezpublish] <mcspectrum> Yeah, it's not really a hack though.
+[12-01-2005 02:32:30] [#ezpublish] <mcspectrum> Because it extends the existing system allowing people to do cURL transactions when checking out (because right now you can old use payment gateways that redirect). It doesn't really overwrite anything.
+[12-01-2005 02:40:10] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 113 (No route to host)]
+[12-01-2005 02:41:40] [#ezpublish] <kracker> except that the point of the extention functionality is to allow for a complete upgrade or replacement of the kernel/ directorie without loosing any custom modifications, if your puting anything into kernel/  ... you are then kernel hacking, the abstraction exists for a real set of abstraction and separation reasons
+[12-01-2005 02:44:41] [#ezpublish] <mcspectrum> right so how would you properly add a single class, just put it in it's own extension directory?
+[12-01-2005 02:50:40] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[12-01-2005 03:37:34] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[12-01-2005 03:37:34] -!- hovik [n=hovik@popeye.ez.no] has quit [Read error: 104 (Connection reset by peer)]
+[12-01-2005 03:38:21] [#ezpublish] <kalooni> Hi there, is there anyone ,
+[12-01-2005 03:38:23] [#ezpublish] <kalooni> ?
+[12-01-2005 03:38:55] [#ezpublish] <buz> maybe
+[12-01-2005 03:39:14] [#ezpublish] <kalooni> hi buz
+[12-01-2005 03:39:36] [#ezpublish] <kalooni> I have some trouble with eZpublish admin interface while editing the root node, may be you could help?
+[12-01-2005 03:44:34] [#ezpublish] <buz> what happens
+[12-01-2005 03:47:39] [#ezpublish] <kalooni> Ok. When I edit the root node, I click the Publish button and then ... I got a Fatal Error
+[12-01-2005 03:47:49] [#ezpublish] <buz> are you using xmlarea?
+[12-01-2005 03:47:52] [#ezpublish] <kalooni> Fatal error: A database transaction in eZ publish failed.
+[12-01-2005 03:47:52] [#ezpublish] <kalooni> The current execution was stopped to prevent further problems.
+[12-01-2005 03:47:52] [#ezpublish] <kalooni> You should contact the System Administrator of this site with the information on this page.
+[12-01-2005 03:47:52] [#ezpublish] <kalooni> The current transaction ID is TRANSID-819819fd7fb7d7d77b2862f89cabeb3a and has been logged.
+[12-01-2005 03:47:52] [#ezpublish] <kalooni> Please include the transaction ID and the current URL when contacting the system administrator.
+[12-01-2005 03:47:55] [#ezpublish] <kalooni> yes I do
+[12-01-2005 03:48:03] [#ezpublish] <buz> its a known bug with it
+[12-01-2005 03:48:24] [#ezpublish] <kalooni> do you have any link to the bug report ?
+[12-01-2005 03:48:34] [#ezpublish] <buz> it's somewhere in the xmlarea thread in the forum
+[12-01-2005 03:48:41] [#ezpublish] <kalooni> ok
+[12-01-2005 03:48:46] [#ezpublish] <buz> it might be that the version from SVN works
+[12-01-2005 03:48:50] [#ezpublish] <buz> at least it did for me
+[12-01-2005 03:48:59] [#ezpublish] <kalooni> ok
+[12-01-2005 03:49:06] [#ezpublish] <kalooni> which file should I update then ?
+[12-01-2005 03:49:18] [#ezpublish] <buz> best to check out xmlarea-36 or whatever its name was
+[12-01-2005 03:49:44] [#ezpublish] <kalooni> I am using the 3.7.2 version of eZ
+[12-01-2005 03:49:53] [#ezpublish] <buz> try http://pubsvn.ez.no/websvn/listing.php?repname=community&path=%2Ftrunk%2Fextension%2Fxmlarea-for-36%2F&rev=0&sc=0
+[12-01-2005 03:50:24] [#ezpublish] <kalooni> ok thanks
+[12-01-2005 03:50:45] [#ezpublish] <kalooni> Did the bug was for the root node only or for others node ?
+[12-01-2005 03:52:21] [#ezpublish] <kalooni> finally I'm not sure I am using xmlarea ... does xmlarea is the Online Editor extension (ie ezdhtml ?)
+[12-01-2005 03:52:52] [#ezpublish] <buz> no
+[12-01-2005 03:53:12] [#ezpublish] <buz> online editor is a commercial product by ez
+[12-01-2005 03:53:22] [#ezpublish] <kalooni> ok so I do not use xmlarea
+[12-01-2005 03:53:24] [#ezpublish] <buz> if you're using that, contact ez's support
+[12-01-2005 03:53:32] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-01-2005 03:53:57] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-01-2005 03:53:58] -!- _Katana` is now known as Katana`
+[12-01-2005 03:54:06] [#ezpublish] <kalooni> ok
+[12-01-2005 04:16:38] -!- aya [n=yann@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[12-01-2005 04:16:42] [#ezpublish] <aya> hi
+[12-01-2005 04:16:50] [#ezpublish] <buz> hi
+[12-01-2005 04:19:47] [#ezpublish] <kalooni> hi
+[12-01-2005 04:35:15] [#ezpublish] <Katana`> hi
+[12-01-2005 04:36:12] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-01-2005 04:36:32] [#ezpublish] <Sulfur> morning
+[12-01-2005 04:39:51] [#ezpublish] <_Rappy_> Sulfur broke the chain
+[12-01-2005 04:48:56] [#ezpublish] <Katana`> damn why do days only have 24 hours :(
+[12-01-2005 04:48:59] [#ezpublish] <Katana`> fucking plaet
+[12-01-2005 04:49:00] [#ezpublish] <Katana`> planet
+[12-01-2005 04:50:41] [#ezpublish] <_Rappy_> days should have 96, and humans should not have ned for sleep. (or at least be able to slep with one half of the brain at the time)
+[12-01-2005 04:52:52] [#ezpublish] <Katana`> yay
+[12-01-2005 04:53:14] [#ezpublish] <Katana`> i should look into meditation or something, maybe i could reduce my sleep time to 1 hour
+[12-01-2005 04:54:57] [#ezpublish] <Proteque> well if no need for sleep then it would not matter
+[12-01-2005 04:58:46] [#ezpublish] <Katana`> sure :)
+[12-01-2005 05:27:13] [#ezpublish] <mcspectrum> You sound like you need the 28 hour day -- http://www.dbeat.com/28/
+[12-01-2005 05:30:09] [#ezpublish] <Katana`> and this is why sometimes you need PHP code instead of template code
+[12-01-2005 05:30:09] [#ezpublish] <Katana`> {set closed=and(
+[12-01-2005 05:30:09] [#ezpublish] <Katana`> $child.node_id|ne($currentNode),
+[12-01-2005 05:30:09] [#ezpublish] <Katana`> or(not(and(is_set($child.object.data_map.show_children), $child.object.data_map.show_children.content)), and($currentNode, $child.node_id|ne($currentNode)))
+[12-01-2005 05:30:09] [#ezpublish] <Katana`> )}
+[12-01-2005 05:32:36] [#ezpublish] <kracker> Does anyone know of an example of how to have an extention depend on another extention (which in turn provides) a needed class file ? I'm think that it might be a good idea to have this dependancy simply to require the extention which provides the class needed to be more than just an include (is this over kill, has anyone encountered this kind of multi extention dependancy)
+[12-01-2005 05:33:06] [#ezpublish] <Katana`> nope, never met that
+[12-01-2005 05:33:23] [#ezpublish] <Katana`> i think it's quite easy to list the extensions enabled for the siteaccess
+[12-01-2005 05:33:49] [#ezpublish] <kracker> nods, thats a great hint
+[12-01-2005 05:34:32] [#ezpublish] <kracker> would you think that might become a performance hit if that was checked upon each request to eZ publish
+[12-01-2005 05:35:25] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[12-01-2005 05:36:51] [#ezpublish] <mcspectrum> Is it kosher to just put the class in it's own extension directory, and just have the classes that need to use it include it with a static link, like include_once('extensions/ezcurlgateway/classes/ezcurlgateway.php')
+[12-01-2005 05:47:06] [#ezpublish] <kracker> i'll do some more reading up here in a little bit (preping ... still)
+[12-01-2005 05:48:39] [#ezpublish] <kracker> on the performance subject. I guess my first thought is that this might be done so far at the begining and so small it could be 'cacheable' or negligable hit on performance or none at all (i know i'm wrong i just don't know how wrong atm)
+[12-01-2005 06:02:41] [#ezpublish] <mcspectrum> but I mean what would you even add to "enable" an abstract class?
+[12-01-2005 06:14:36] [#ezpublish] <kracker> i hear where your comming from, for sure, it might seem like extra work for little results
+[12-01-2005 06:14:52] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-01-2005 06:16:56] [#ezpublish] <kracker> i think of it as ... I would rather have all the extensions in the extension directory documented and noted in eZ publish site.ini (.append.php) than have (unknown) directories just in the extention/ directory, the then that's just me, perhapse others think it is overkill as well :?
+[12-01-2005 06:21:31] [#ezpublish] <mcspectrum> Adding a line to the ini is not that much extra work, I just don't think it's a clean way to implement it, because it would be in the ini not doing anything.
+[12-01-2005 07:13:43] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-01-2005 09:00:51] [#ezpublish] <Katana`> fucking logic :)
+[12-01-2005 09:01:38] [#ezpublish] <zrg> thats an oxymoron :P
+[12-01-2005 09:03:13] [#ezpublish] <_Rappy_> does oxymoron and moron have anything in common?
+[12-01-2005 09:05:04] [#ezpublish] <Katana`> LOL
+[12-01-2005 09:05:10] [#ezpublish] <Katana`> it's a very energetic morron
+[12-01-2005 09:05:26] [#ezpublish] <Katana`> hoho is it me or there are 15 idlers here ? :)
+[12-01-2005 09:05:40] [#ezpublish] <kracker> it's not just you :D
+[12-01-2005 09:06:15] [#ezpublish] <kracker>    #kracker up2lateAgain
+[12-01-2005 09:06:54] [#ezpublish] <kracker> preping for the release of eZ Authorize ( Authorize.net ) payment gateway
+[12-01-2005 09:07:30] [#ezpublish] <Katana`> hoho :)
+[12-01-2005 09:07:44] [#ezpublish] <kracker> too excited to take a break, but way to tierd to be doing this, i'll crash in a few hours and think about release in the next day or so (ish ..)
+[12-01-2005 09:07:54] [#ezpublish] <Katana`> :)
+[12-01-2005 09:07:55] [#ezpublish] <kracker> yeah very exciting to finaly get to this point
+[12-01-2005 09:08:19] [#ezpublish] <Katana`> hum are you up early or have you been up all night ? :)
+[12-01-2005 09:08:22] [#ezpublish] <kracker> and many thanks again for all your help
+[12-01-2005 09:08:40] [#ezpublish] <kracker> yeah and i didn't get more than 5 hours yesterday  ...
+[12-01-2005 09:08:47] [#ezpublish] <Katana`> you freak :)
+[12-01-2005 09:08:56] [#ezpublish] <Katana`> my help ? or the channel's ?
+[12-01-2005 09:08:57] [#ezpublish] <kracker> it's been a ruff last 2 weeks, sadly the fr33kiest
+[12-01-2005 09:09:20] [#ezpublish] <zrg> did a month of below 5hr sleep per day once
+[12-01-2005 09:09:25] [#ezpublish] <kracker> both but i seem to remember you droping me a large chunk of hints a while back that really helped
+[12-01-2005 09:09:27] [#ezpublish] <zrg> almost blew up myself in end
+[12-01-2005 09:09:28] [#ezpublish] <kracker> ouch
+[12-01-2005 09:09:34] [#ezpublish] <zrg> literally
+[12-01-2005 09:09:41] [#ezpublish] <Katana`> my my, you're very welcome
+[12-01-2005 09:09:50] [#ezpublish] <kracker> hevens no not the blue wire, cut any wire but the blue wire :D
+[12-01-2005 09:09:53] [#ezpublish] <Katana`> i remember i had been VERY pissed off by the gateway mechanism :)
+[12-01-2005 09:10:17] [#ezpublish] <kracker> i'm very please with the solution that came from all the work so far
+[12-01-2005 09:10:38] [#ezpublish] <kracker> it supports the customer being able to choose to use paypal or authorize!!
+[12-01-2005 09:10:38] [#ezpublish] <zrg> tip: dont use old broken russian-made gas burning bathwater heater while near comatose
+[12-01-2005 09:10:57] [#ezpublish] <kracker> heh
+[12-01-2005 09:12:45] [#ezpublish] <kracker> still have to finish up screen shots, release docs, contrib docs, forum intro texts, press release text, standard montra for a release :)
+[12-01-2005 09:13:24] [#ezpublish] <kracker> i have a little market droid living inside me :\
+[12-01-2005 09:13:59] [#ezpublish] <kracker> every once in a while i have to throw him a freaking kracker and a water bottle to calm em down
+[12-01-2005 09:15:03] [#ezpublish] <zrg> muhaha :)
+[12-01-2005 09:19:03] [#ezpublish] <Katana`> wow the IE tab ext owns !
+[12-01-2005 09:19:13] [#ezpublish] <zrg> huh?
+[12-01-2005 09:19:21] [#ezpublish] <Katana`> on FF
+[12-01-2005 09:19:30] [#ezpublish] <Katana`> you can convert a firefox tab to an IE tab :)
+[12-01-2005 09:19:32] [#ezpublish] <Katana`> IE in Firefox :)
+[12-01-2005 09:19:41] [#ezpublish] <kracker> heh, ya its kewl
+[12-01-2005 09:22:27] [#ezpublish] <Katana`> measure it is cool to :)
+[12-01-2005 09:22:35] [#ezpublish] <Katana`> gives you a measuring area anywhere on a page
+[12-01-2005 09:22:41] [#ezpublish] <Katana`> quick, efficient
+[12-01-2005 09:24:08] [#ezpublish] <zrg> an idea just stroke me.. is there a input filter for IE to mangle incomind html in such a way it would look correctly in ie?
+[12-01-2005 09:38:57] [#ezpublish] <Sulfur> lol zrg
+[12-01-2005 09:39:19] [#ezpublish] <Sulfur> I think there is an IE-like skin for FF , zrg, if that will pay your bill! ;)
+[12-01-2005 09:40:19] [#ezpublish] <zrg> no, i mean the poor sobs who actually have to use ie..
+[12-01-2005 09:40:59] [#ezpublish] <zrg> to take the thought further, it should be possible to do the filter in javascript and plug it in any page
+[12-01-2005 09:41:14] [#ezpublish] <zrg> for the record: i hate js :)
+[12-01-2005 09:41:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-01-2005 09:42:15] [#ezpublish] <zrg> at least for most frequent, annoying bugs: peekaboo, doublemargins..
+[12-01-2005 09:42:49] [#ezpublish] <Sulfur> most guys use IE , unfortunately
+[12-01-2005 09:43:20] [#ezpublish] <Sulfur> at least -- most of the guys which "are used by" pcs ;)
+[12-01-2005 09:43:45] [#ezpublish] <Katana`> :)
+[12-01-2005 09:44:55] [#ezpublish] <Sulfur> zrg, there are some doctypes declarations which can be used to make IE behave ina a less-dummy mode
+[12-01-2005 09:45:10] [#ezpublish] <Katana`> doctype is for the weak
+[12-01-2005 09:45:14] [#ezpublish] <Sulfur> i.e. following box/block model a little more akin to standards ...
+[12-01-2005 09:45:52] [#ezpublish] <Sulfur> you say, Katana`? why and how would you help zrg ?
+[12-01-2005 09:46:01] [#ezpublish] <Katana`> i wouldn't :)
+[12-01-2005 09:46:04] [#ezpublish] <Katana`> you can go to hell :)
+[12-01-2005 09:46:30] [#ezpublish] <Sulfur> ooooh did I miss something in eZSoapUtiful? ;)
+[12-01-2005 09:46:31] [#ezpublish] <zrg> hail satan!
+[12-01-2005 09:51:22] [#ezpublish] <Katana`> * hi son *
+[12-01-2005 09:51:58] [#ezpublish] <buz> http://us.gizmodo.com/gadgets/gadgets/fake-beer-belly-gets-you-tanked-140140.php NEAT
+[12-01-2005 09:54:21] [#ezpublish] <Katana`> LOL !
+[12-01-2005 09:54:46] [#ezpublish] <buz> now if only i would go to sport matches
+[12-01-2005 09:54:52] [#ezpublish] <Katana`> :))
+[12-01-2005 09:55:00] [#ezpublish] <buz> but maybe i can use it on the couch
+[12-01-2005 09:55:11] [#ezpublish] <Katana`> probably yes :)
+[12-01-2005 09:55:16] [#ezpublish] <buz> it would have been perfekt for school
+[12-01-2005 09:55:25] [#ezpublish] <Katana`> haha
+[12-01-2005 09:55:40] [#ezpublish] <buz> otoh, there was a shop with beer right next to highschool so
+[12-01-2005 09:55:53] [#ezpublish] <zrg> nah, you would be caught at the gates
+[12-01-2005 09:56:09] [#ezpublish] <Sulfur> but beer on contact with your gut would get warn soon (I haven't read it thoroughly)
+[12-01-2005 09:56:14] [#ezpublish] <Sulfur> warm
+[12-01-2005 09:56:21] [#ezpublish] <buz> mhh point
+[12-01-2005 09:56:25] [#ezpublish] <buz> it supposedly is insulated though
+[12-01-2005 09:56:39] [#ezpublish] <buz> lets fill in whisky then
+[12-01-2005 09:56:41] [#ezpublish] <zrg> guys at big rock festival here used to have alcohol-smuggling container exhibition after event
+[12-01-2005 09:56:44] [#ezpublish] <buz> that's supposed to be enjoyed warm
+[12-01-2005 09:57:01] [#ezpublish] <buz> that's it. that's what i could use it for ;)
+[12-01-2005 09:57:05] [#ezpublish] <zrg> best idea from there was ethanol-filled wheelchair i think
+[12-01-2005 09:57:18] [#ezpublish] <buz> otoh, for 50$ you buy plenty of booze at the event still
+[12-01-2005 09:57:57] [#ezpublish] <kalooni> hi there
+[12-01-2005 09:58:05] [#ezpublish] <kalooni> quick question concerning the sections
+[12-01-2005 09:58:12] [#ezpublish] <Katana`> yup ?
+[12-01-2005 09:58:23] [#ezpublish] <kalooni> I do have a folder node in the standard section
+[12-01-2005 09:58:30] [#ezpublish] <zrg> the best way tho is to go a week before event and dig some bottles in ground :)
+[12-01-2005 09:58:34] [#ezpublish] <kalooni> this node contains other node in standard section
+[12-01-2005 09:58:42] [#ezpublish] <kalooni> and 1 node in a specific section
+[12-01-2005 09:59:35] [#ezpublish] <kalooni> when displaying the node (full view) the child folder which is not in standard section isn't listed ... Any idea why ?
+[12-01-2005 09:59:56] [#ezpublish] <buz> zrg: that only works for places where you can go to easily
+[12-01-2005 10:01:45] [#ezpublish] <zrg> true
+[12-01-2005 10:02:30] [#ezpublish] <zrg> and then there is treasure hunters who try to spot you and will dig out goods :P
+[12-01-2005 10:04:24] [#ezpublish] <Sulfur> kalooni: because the fetch takes into account the eprmissions of the user logged into the siteaccess which contains the tpl you're running.
+[12-01-2005 10:05:56] [#ezpublish] <kalooni> sulfur: right :) thx
+[12-01-2005 10:07:41] [#ezpublish] <buz> Katana`: didnt you want to solve that a while ago: http://ez.no/community/forum/developer/convert_text_block_xml_block
+[12-01-2005 10:11:04] [#ezpublish] <Katana`> yup i wanted to
+[12-01-2005 10:11:29] [#ezpublish] <Katana`> remember my question about why days only have 24 hours ? :)
+[12-01-2005 10:15:40] [#ezpublish] <buz> var newday=oldday/2
+[12-01-2005 10:15:46] [#ezpublish] <buz> there you are, 48h
+[12-01-2005 10:17:57] [#ezpublish] <Katana`> hmm isn't that 12 ?
+[12-01-2005 10:18:07] [#ezpublish] <Katana`> thanks for making my days even shorter buz :)
+[12-01-2005 10:50:55] -!- aya [n=yann@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[12-01-2005 11:02:00] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[12-01-2005 12:59:51] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[12-01-2005 13:01:46] [#ezpublish] <kalooni> does anybody knows if it is possible to copy classes ?
+[12-01-2005 13:02:13] [#ezpublish] <zrg> sure
+[12-01-2005 13:02:23] [#ezpublish] <zrg> click the copy button after class in admin :)
+[12-01-2005 13:02:49] [#ezpublish] <zrg> new class named "Copy of firstclass" is made
+[12-01-2005 13:03:03] [#ezpublish] <kalooni> damned ... so obvious :'
+[12-01-2005 13:03:07] [#ezpublish] <kalooni> thx zrg
+[12-01-2005 13:06:33] [#ezpublish] <zrg> :)
+[12-01-2005 13:07:07] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[12-01-2005 13:11:55] [#ezpublish] <buz> http://science.slashdot.org/article.pl?sid=05/12/01/1434240&from=rss i must be uber addict then
+[12-01-2005 13:42:16] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[12-01-2005 14:11:20] [#ezpublish] <buz> has anyone ever tried to use webdav to store ical files from sunbird?
+[12-01-2005 14:17:45] [#ezpublish] <kracker> hey lukas
+[12-01-2005 14:19:03] [#ezpublish] <kracker> buz, not in a very long time, and i think i gave up before i got very far into it, though i remember sunbird 11/2004 was feature rich with few bugs (and most people don't say that so ... *shrugs*)
+[12-01-2005 14:20:58] [#ezpublish] <buz> not sure if its a sunbird or ez problem, really
+[12-01-2005 14:21:17] [#ezpublish] <buz> it looks like i cant upload ical files to webdav with konqi either
+[12-01-2005 14:21:23] [#ezpublish] <buz> i can download files generated by the system though
+[12-01-2005 14:22:24] [#ezpublish] <kracker> hmm
+[12-01-2005 14:23:55] [#ezpublish] <kracker> ez publish has a bit of a history with some webdav compatablity  (in my experiance in the past, re: rename didn't work ... kinda flaky?)
+[12-01-2005 14:24:36] [#ezpublish] <buz> i can create folders but file uploads simply dont appear
+[12-01-2005 14:25:39] [#ezpublish] <buz> gets weirder
+[12-01-2005 14:25:44] [#ezpublish] <buz> jpegs work but not binary files
+[12-01-2005 14:26:07] [#ezpublish] <zrg> rename works now??
+[12-01-2005 14:37:52] [#ezpublish] <kracker> i don't think rename works , at least not that I've seen or heard of :\
+[12-01-2005 14:38:07] [#ezpublish] <kracker> buz, that is wierd
+[12-01-2005 14:38:37] [#ezpublish] * kracker crashing ... hard
+[12-01-2005 15:07:36] [#ezpublish] <zrg> uh..
+[12-01-2005 16:03:26] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit [Remote closed the connection]
+[12-01-2005 16:14:54] -!- mode/#ezpublish [-o fh[eZ]] by ChanServ
+[12-01-2005 16:34:54] [#ezpublish] <zrg> very strange
+[12-01-2005 16:35:30] [#ezpublish] <zrg> adding comment to not-main location of article generates kernel error
+[12-01-2005 16:36:08] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-01-2005 22:02:58] -!- zrg [n=zurgutt@roop.pri.ee] has left #ezpublish []

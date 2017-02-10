@@ -1,0 +1,584 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 16.2.&nbsp; PHP CLI Shell Scripts</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch16lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch16lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch16lev1sec2"></a><h3 class="docSection1Title">16.2. PHP CLI Shell Scripts</h3>
+<p class="docText">The CLI version of PHP is meant for writing standalone shell-scripts running independently from any web server. As of PHP 4.3.0, the CLI version of PHP is installed by default, alongside whatever web server interface you choose to install.<a name="ch16index05"></a><a name="ch16index06"></a></p>
+<p class="docText">It has been possible to write shell scripts using the CGI version of PHP since PHP 3.0, but a number of workarounds had to be added to make CGI better suited for this, such as the q option to silence headers. During PHP 4's development, it became apparent that a separate command-line version of PHP was needed to keep CGI clean, and CLI has been distributed since 4.2.0.</p>
+<p class="docText">This has not stopped people from writing PHP shell scripts, but CLI is more accessible (because it is always installed) and consistent (it's designed for this job).<a name="ch16index07"></a><a name="ch16index08"></a></p>
+<a name="ch16lev2sec1"></a><H4 class="docSection2Title">16.2.1. How CLI Differs From CGI</h4>
+<p class="docText">The CLI version of PHP is quite similar to the CGI version, upon which it was once based. The main difference lies in all the web server integration, which is really what CGI is about. With CLI, PHP is trimmed down to the very basics, and imports no GET or POST form variables, outputs no MIME headers in the output, and generally does none of the behind-the-scenes that other SAPI implementations do.<a name="ch16index09"></a><a name="ch16index10"></a></P>
+<p class="docText">The CLI version of PHP behaves like any other script parser, such as Perl or Python. The one remaining proof of PHP's web heritage is the fact that you still need to use the <tt>&lt;?php ?&gt;</tt> tags around code.</p>
+<a name="ch16lev3sec1"></a><H5 class="docSection3Title">16.2.1.1 Default Parameters</h5>
+<p class="docText">CLI has different default values for a few command-line options and <tt>php.ini</tt> settings, as shown in <a class="docLink" href="#ch16table01">Table 16.1</a>.<a name="ch16index11"></a><a name="ch16index12"></a><a name="ch16index13"></a></p>
+<a name="ch16table01"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 16.1. CLI Default Options</H5></caption><colgroup><col width="214.5"><col width="110"><col width="225.5"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Setting/Option</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">CLI</span><span class="docEmphStrong">/Default</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-q option</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Enabled</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Suppresses HTTP headers in output.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-C option</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Enabled</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">PHP does not change its working directory to that of the main script.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>html_errors</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Disabled</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Error messages from PHP will be in plain text rather than HTML.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>implicit _flush</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Enabled</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>register_argc_argv</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Enabled</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The <tt>$argc</tt> and <tt>$argv</tt> global variables are registered regardless of the <tt>register_argc _arg</tt> settings in <tt>php.ini.</tt></P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>max_execution_time</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">0</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The longest time (in seconds) PHP lets scripts execute; 0 means no limit.</p></td></tr></table></p><br>
+<p class="docText"><span class="docEmphStrong">CLI</span> <span class="docEmphStrong">DefaultDescription</span></p>
+<a name="ch16lev3sec2"></a><h5 class="docSection3Title">16.2.1.2 Extra Options</h5>
+<p class="docText">There are some command-line options in PHP CLI that CGI does not offer, as shown in <a class="docLink" href="#ch16table02">Table 16.2</a>.<a name="ch16index14"></a><a name="ch16index15"></a><a name="ch16index16"></a></P>
+<a name="ch16table02"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 16.2. Extra CLI Options</h5></caption><colgroup><col width="163.36633663366337"><col width="136.13861386138615"><col width="250.49504950495052"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Setting/Option</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">CLI</span> <span class="docEmphStrong">Default</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-r</tt> <span class="docEmphasis"><tt>code</tt></span></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">None</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Run <span class="docEmphasis"><tt>code</tt></span> as PHP code (no <tt>&lt;?php</tt> necessary).</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>-R</tt> <span class="docEmphasis"><tt>code</tt></span></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">None</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Run <span class="docEmphasis"><tt>code</tt></span> as for every line on stdin.</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>_B</tt> <span class="docEmphasis"><tt>code</tt></span></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">None</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Run <span class="docEmphasis"><tt>code</tt></span> before processing lines with <tt>-R</tt> or <tt>-F</tt>.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-E</tt> <span class="docEmphasis"><tt>code</tt></span></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">None</p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">Run <span class="docEmphasis"><tt>code</tt></span> after processing lines with <tt>-R</tt> or <tt>-F</tt>.</p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>_F</tt> <span class="docEmphasis"><tt>file</tt></span></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">None</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Execute <span class="docEmphasis"><tt>file</tt></span> for every input line.</P></td></TR></table></p><br>
+<p class="docText">These options can be used to quickly execute some PHP code from the command line; for example:</p>
+<pre>
+$ php r 'var_dump(urlencode("&oelig;&#248;&aring;"));'
+</pre><br>
+<p class="docText">When using <tt>r</tt>, <tt>-R</tt>, <tt>-B</tt>, and <tt>-E</tt>, make sure that your PHP code is complete with the final semicolon.</P>
+<a name="ch16lev3sec3"></a><H5 class="docSection3Title">16.2.1.3 php.ini Name and Location</h5>
+<p class="docText">On UNIX-like systems, PHP (with back-ends other than CLI) looks for php.ini in /usr/local/lib by default. To be more &quot;shell-ish,&quot; the CLI back-end looks for /etc/php-cli.ini by default, instead. This makes it possible to keep separate php.ini files for your web server and CLI/shell scripts, without having to specify the <tt>c</tt> option every time you run a PHP-driven script.<a name="ch16index17"></a><a name="ch16index18"></a><a name="ch16index19"></a></p>
+<p class="docText">Different UNIX/Linux distributions that bundle PHP often use their own default php.ini location; you can find the file used by your PHP executable with <tt>get_cfg_var("cfg_file_path")</tt>.</p>
+<a name="ch16lev3sec4"></a><h5 class="docSection3Title">16.2.1.4 Other Differences</H5>
+<p class="docText">When PHP is running inside a web server, functionality, such as <tt>fork()</tt> makes little sense, because it would duplicate the entire web-server process and not just PHP. This is bad because the web server process contains lots of code that is completely unrelated to PHP, possibly including other web-scripting modules, such as <tt>mod_perl</tt>. In a threaded environment, it would even duplicate all the threads in that process. If the purpose of your fork is to <tt>exec</tt> another program right away, this does not matter. But if you want to fork to keep running PHP code in the new process, having this extra baggage in the process can be really bad.<a name="ch16index20"></a><a name="ch16index21"></a></p>
+<p class="docText">For this reason, PHP's process control extension (<tt>pcntl</tt>) is only available in the CLI version, where a <tt>fork()</tt> call only makes a duplicate of PHP.</p>
+<a name="ch16lev2sec2"></a><H4 class="docSection2Title">16.2.2. The Shell-Scripting Environment</h4>
+<p class="docText">The CLI PHP script operates differently in its environment compared to its web-server embedded counterpart. Shell scripts are running in their own process, containing PHP and nothing else. Inside a web server, PHP shares the process with the web server itself and any other modules the web server may have loaded. The web server environment has many restrictions because of this. For example, who gets standard input? What about signals, and what happens if you fork (duplicate) the process? Usually all of these types of resources are managed by the hosting web server.<a name="ch16index22"></a><a name="ch16index23"></a><a name="ch16index24"></a></P>
+<a name="ch16lev3sec5"></a><h5 class="docSection3Title">16.2.2.1 User Input</h5>
+<p class="docText">If you need user input in a PHP shell script, you should use standard input, which is available in the PHP stream <tt>STDIN</tt> or the &quot;terminal typewriter&quot; device on UNIX flavors <tt>/dev/tty</tt>.<a name="ch16index25"></a><a name="ch16index26"></a><a name="ch16index27"></a></p>
+<pre>
+&lt;?php
+print "What is your one purpose in life? ";
+$purpose = trim(fgets(STDIN));
+?&gt;
+</pre><br>
+<p class="docText">If you are writing a script that needs to read from standard input as well as read user input from the terminal, you must use <tt>/dev/tty</tt> for user interaction. On Windows, you can't read from STDIN at the same time as when you reading from the terminal.</p>
+<a name="ch16lev3sec6"></a><h5 class="docSection3Title">16.2.2.2 Execution Lifetime</h5>
+<p class="docText">When embedded in a web server, PHP scripts usually do their job quickly and exit. This paradigm does not fit when using CLI; your scripts may run forever, or at least until the next power failure. For example, if you write a daemon (UNIX lingo for a server process running in the background), the script will typically hang around forever, waiting for some kind of input to process, a timer signal, or something similar.<a name="ch16index28"></a><a name="ch16index29"></a><a name="ch16index30"></a></p>
+<p class="docText">One of the practical consequences of this is that sloppy coding styles, which are relatively harmless in a short web-server request, have more of an impact in a long-running script. For example, when you open a file or database connection but don't explicitly close it, PHP closes it for you at the end of the request. But in a long-running script, &quot;at the end of the request&quot; is not until the script exits, which it does not even have to do.</p>
+<p class="docText">This does not have to be a problem, because PHP also frees resources when they are no longer referenced. But keep this in mind when programming scripts that are supposed to run for some time. If you are finished with a file, close the file descriptor. If you're finished with database operations, disconnect. If you don't need that big array anymore, empty it.</p>
+<a name="ch16lev3sec7"></a><h5 class="docSection3Title">16.2.2.3 Hash-Bang Whiz-Blam</h5>
+<p class="docText">On UNIX-like systems, if the first two characters of an executable file are &quot;#!&quot; (called hash-bang), the rest of the line is treated as the name of the program executing the file. The specified program is invoked with the script's name as the first parameter, followed by the parameters given to the script itself.<a name="ch16index31"></a><a name="ch16index32"></a><a name="ch16index33"></a><a name="ch16index34"></a></p>
+<p class="docText">Let's say you make a PHP script called &quot;myreport,&quot; which starts like this:</p>
+<pre>
+#!/usr/bin/php -Cq
+&lt;?php
+require_once "DB.php";
+$db = DB::connect("mysql://....
+</pre><br>
+<p class="docText">First, ensure that the script is executable, like this:</p>
+<pre>
+$ chmod +x myreport
+</pre><BR>
+<p class="docText">Then, when you run <tt>myreport traffic</tt>, your shell first searches for <tt>myreport</tt> in the directories listed in its <tt>PATH</tt> environment variablesay it is located in the <tt>/usr/local/bin</tt> directory.</P>
+<p class="docText">When the shell finds it there, it tells the operating system to execute this program. The OS then opens the file, discovers the <tt>#!</tt> characters, and re-executes the process as</p>
+<pre>
+/usr/bin/php -Cq /usr/local/bin/myreport traffic.
+</pre><br>
+<p class="docText">When PHP finally starts, it imports <tt>./myreport</tt> and <tt>TRaffic</tt> into the <tt>$argv</tt> array, and then executes your script.</p>
+<p class="docText">Note that because the shell searched your <tt>PATH</tt> to find the actual location of <tt>myreport</tt>, which the OS then used when executing PHP, <tt>$argv[0]</tt> will contain the full path to <tt>myreport</tt>. If you had specified a relative path, such as <tt>../bin/myreport</tt>, the shell would not have searched <tt>PATH</tt> and <tt>$argv[0]</tt> would also become <tt>../bin/myreport</tt>.<a name="ch16index35"></a><a name="ch16index36"></a><a name="ch16index37"></a><a name="ch16index38"></a></p>
+<a name="ch16lev2sec3"></a><h4 class="docSection2Title">16.2.3. Parsing Command-Line Options</h4>
+<p class="docText">Command-line options are used in UNIX to specify alternate behavior or additional parameters for commands. You spot them by the leading dash. Here are some examples:<a name="ch16index39"></a><a name="ch16index40"></a><a name="ch16index41"></a><a name="ch16index42"></a></p>
+<pre>
+$ ls ltr
+$ rm f junk
+</pre><br>
+<p class="docText">Usually, options are located before regular parameters (that do not start with a dash) on the command line. Some commands, such as <tt>cvs</tt> or <tt>pear</tt>, have additional subcommands accepting their own set of options. The PEAR installer is one such command.</P>
+<p class="docText">There is no <tt>getopt</tt> function built into PHP, but PEAR offers a package called <tt>Console_Getopt</tt> that supports both short and long (GNU-style) options. <tt>Console_Getopt</tt> is bundled with PHP and is installed by default unless you explicitly disable PEAR.</p>
+<p class="docText">Here is a command-line script accepting four short options: <tt>-v</tt> and <tt>q</tt> and increasing or decreasing verbosity level, <tt>-h</tt> for displaying help, or <tt>c</tt> for setting another configuration file:</P>
+<pre>
+#!/usr/bin/php
+&lt;?php
+
+require_once "Console/Getopt.php";
+
+$verbose = 1;
+$config_file = $_ENV['HOME'] . '/.myrc';
+$options = Console_Getopt::getopt($argv, 'hqvc:');
+foreach ($options[0] as $opt) {
+    switch ($opt[0]) {
+        case 'q':
+            $verbose--;
+            break;
+        case 'v':
+            $verbose++;
+            break;
+        case 'h':
+            usage();
+            exit;
+        case 'c':
+            $config_file = $opt[1];
+            break;
+    }
+}
+
+if ($verbose &gt; 1) {
+    print "Config file is \"$config_file\".\n";
+}
+
+// rest of the script code goes here
+
+function usage() {
+    $stderr = fopen("php://stderr", "w");
+    $progname = basename($GLOBALS['argv'][0]);
+    fwrite($stderr, "Usage: $progname [-qvh] [-c config-file]
+Options:
+   -q         be less verbose
+   -v         be more verbose
+   -h         display help
+   -c &lt;file&gt;  read configuration from &lt;file&gt;
+");
+    fclose($stderr);
+}
+
+?&gt;
+</pre><br>
+<p class="docText">First, the script includes the <tt>Console_Getopt</tt> class definition. After setting default values for <tt>$verbose</tt> and <tt>$config_file</tt>, the <tt>getopt()</tt> call is accomplished with the parameter list and a string specifying which options are accepted.<a name="ch16index43"></a><a name="ch16index44"></a><a name="ch16index45"></a><a name="ch16index46"></a><a name="ch16index47"></a><a name="ch16index48"></a></P>
+<p class="docText">Take a look at the option specification string. Each alphanumeric character in the option specification string is a valid option. If the option character is followed by a colon, the option is expected to have a value. In the previous example, <tt>c:</tt> says that the <tt>c</tt> option expects a parameter, which is the configuration file to use. The <tt>q</tt>, <tt>-v</tt>, and <tt>h</tt> options don't have any following special characters, so they are simple flag/toggle-type options.</p>
+<p class="docText">The <tt>getopt()</tt> method returns an array of the form <tt>array(array(option, value), ...)</tt>. The <tt>foreach</tt> loop iterates through this array, and <tt>$opt</tt> is assigned to the <tt>array(option, value)</tt>. For flag options, the value will always be <tt>NULL</tt> (no need to check because you already know which options are plain flags), while for options taking parameters, the second element in this array is the actual parameter. For example, <tt>-c foo</tt> would give <tt>array('c', 'foo')</tt> in <tt>$foo</tt>. It is possible to treat the same option as many times as needed. In this example, the verbosity level of the program increases by 1 each time the <tt>v</tt> option is used. If the user specifies <tt>-vvvvv</tt> to it, the verbosity level will be increased 5 times.</p>
+<p class="docText">It is also possible to specify that an option parameter is optional by using two colons instead of onefor example, <tt>c::</tt>. When encountering an option parameter that is not mandatory, <tt>Console_Getopt</tt> uses the remains of the option as the option parameter value. For example, if the <tt>c</tt> option was specified with <tt>c::</tt>, the option string <tt>-cfoo.cf</tt> would give the option parameter value <tt>foo.cf</tt>, but just <tt>-c</tt> would be allowed, too. However, when an option parameter becomes optional, <tt>-c foo</tt> is no longer allowed; it has to be <tt>-cfoo</tt>.</p>
+<p class="docText">Following is the same example supporting both short- and long-style options:<a name="ch16index49"></a><a name="ch16index50"></a><a name="ch16index51"></a><a name="ch16index52"></a></p>
+<pre>
+#!/usr/bin/php
+&lt;?php
+
+require_once "Console/Getopt.php";
+
+$verbose = 1;
+$config_file = $_ENV['HOME'] . '/.myrc';
+$options = Console_Getopt::getopt($argv, 'hqvc::',
+                                  array('help', 'quiet', 'verbose', 'config='));
+foreach ($options[0] as $opt) {
+    var_dump($opt);
+    switch ($opt[0]) {
+        case 'q': case '--quiet':
+            $verbose--;
+            break;
+        case 'v': case '--verbose':
+            $verbose++;
+            break;
+        case 'h': case '--help':
+            usage();
+            exit;
+        case 'c': case '--config':
+            $config_file = $opt[1];
+            break;
+    }
+}
+
+if ($verbose &gt; 1) {
+    print "Config file is \"$config_file\".\n";
+}
+
+// rest of the script code goes here
+
+function usage() {
+    $stderr = fopen("php://stderr", "w");
+    $progname = basename($GLOBALS['argv'][0]);
+    fwrite($stderr, "Usage: $progname [options]
+Options:
+   -q, --quiet                 be less verbose
+   -v, --verbose               be more verbose
+   -h, --help                  display help
+   -c &lt;file&gt;, --config=&lt;file&gt;  read configuration from &lt;file&gt;
+");
+    fclose($stderr);
+}
+
+?&gt;
+</pre><BR>
+<a name="ch16lev2sec4"></a><H4 class="docSection2Title">16.2.4. Good Practices</h4>
+<p class="docText">When writing shell scripts, you should follow some good practices to make life easier for yourself and others who will use your script.</p>
+<p class="docText">For example, most UNIX users expect their programs to respond to <tt>foo h</tt> or <tt>foo --help</tt> with a brief usage message, or that they print errors on standard error instead of standard output. This section lists some practices that the authors consider Good&#8482;.</p>
+<a name="ch16lev3sec8"></a><h5 class="docSection3Title">16.2.4.1 Usage Message</H5>
+<p class="docText">After using UNIX/Linux for a while, you get used to being able to type <tt>command help</tt> or <tt>command h</tt> for a brief description of a command's option and general usage. Most UNIX users expect their program to respond to these options.<a name="ch16index53"></a><a name="ch16index54"></a><a name="ch16index55"></a></p>
+<p class="docText">Display a usage message on standard error and exit with a non-0 code if the script is started without the expected parameters, or if it runs with the <tt>-h</tt> option (<tt>--help</tt> if you are using long options). The usage message should list all the required and optional parameters, and could look something like this:</p>
+<pre>
+Usage: myscript [options] &lt;file...&gt;
+Options:
+     -v, --version     Show myscript version
+     -h, --help        Display this help text
+     -d dsn, --dsn=dsn Connect to database "dsn"
+</pre><BR>
+<p class="docText">There is a standard notation for options and parameters as well:</p>
+<pre>
+[-c]              May have c.
+{-c foo}          Must have c with a parameter.
+[-abcdef]         May have any of a ... f.
+[-a | -b]         May have either a or b.
+{-a | -b}         Must have either a or b.
+&lt;file&gt;            Must have <span class="docEmphasis">file</span> as a parameter (not option).
+&lt;file...&gt;         Must have 1+ <span class="docEmphasis">file</span> parameters.
+[file...]         May have 1+ <span class="docEmphasis">file</span> parameters.
+</pre><BR>
+<p class="docText">If your program accepts only a few options, you should list them on the first line of the usage message, like this:<a name="ch16index56"></a><a name="ch16index57"></a><a name="ch16index58"></a></p>
+<pre>
+Usage: myscript [-vh] [-d dsn] &lt;file...&gt;
+Options:
+     -v, --version     Show myscript version
+     -h, --help        Display this help text
+     -d dsn, --dsn=dsn Connect to database "dsn"
+</pre><br>
+<a name="ch16lev3sec9"></a><h5 class="docSection3Title">16.2.4.2 Exit Code</h5>
+<p class="docText">If the script fails, exit with a non-0 code (except 255, which is reserved by PHP itself for compile/parse errors). If the script does not fail, exit with code 0.<a name="ch16index59"></a><a name="ch16index60"></a><a name="ch16index61"></a></p>
+<p class="docText">Be aware that earlier PHP versions (pre-4.2) had a bug in the exit code handling. Exiting in any other way than letting the script finish results in a &quot;non-true&quot; exit code.</p>
+<a name="ch16lev3sec10"></a><h5 class="docSection3Title">16.2.4.3 Error Messages</h5>
+<p class="docText">Prepend the script name to all error messages, so the user can see from which script the error originates. This is useful if the script is invoked from within other scripts or programs so you can see from which program the error originates.<a name="ch16index62"></a><a name="ch16index63"></a><a name="ch16index64"></a></p>
+<p class="docText">If you base your error messages on the PEAR error handling, you can set this up in fire-and-forget mode, like this:</p>
+<pre>
+$progname = basename($argv[0]);
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "$progname: %s\n");
+</pre><br>
+<p class="docText">Here, unless another error handler explicitly overrides the default one, all uncaught PEAR errors will cause the script to die after printing <tt>programname: error message</tt>. You can keep coding in the script, resting assured that if there is an error, the default handler will catch it, display the message, and exit, and you don't have to litter your code with error checks.</p>
+<a name="ch16lev2sec5"></a><h4 class="docSection2Title">16.2.5. Process Control</h4>
+<p class="docText">When running PHP scripts in CLI, the <tt>pcntl</tt> extension provides functions for controlling the PHP process. If PHP is embedded in a web server or somewhere else, process control is left to the embedding environment and <tt>pcntl</tt> is disabled.<a name="ch16index65"></a><a name="ch16index66"></a></p>
+<a name="ch16lev3sec11"></a><h5 class="docSection3Title">16.2.5.1 Processes</H5>
+<p class="docText">A <span class="docEmphStrong">process</span> is a piece of code executed by the operating system. On UNIX, processes consist of executable code, environment variables, stack memory, heap (dynamically allocated) memory, file descriptors, and security properties such as user id.<a name="ch16index67"></a><a name="ch16index68"></a><a name="ch16index69"></a></P>
+<p class="docText">When executing a PHP script, the <tt>php</tt> process's executable code is the php binary itself (for example, <tt>/usr/local/bin/php</tt>). The script is stored in heap memory, although both heap and stack memory are used during script execution.</p>
+<a name="ch16lev3sec12"></a><h5 class="docSection3Title">16.2.5.2 Forking</H5>
+<p class="docText"><span class="docEmphStrong">Forking</span> is UNIX lingo for making a new process by duplicating an existing one. The duplicate (child) process inherits code, environment, memory (copy on write), file descriptors, and everything from the parent process. Often, you either immediately replace the guts of the process by executing another executable program, or close inherited file descriptors and prepare the child process for its job:<a name="ch16index70"></a><a name="ch16index71"></a><a name="ch16index72"></a></p>
+<pre>
+&lt;?php
+
+$child_pid = pcntl_fork();
+if ($child_pid == -1) {
+    die("pcntl_fork() failed: $php_errorstr");
+} else if ($child_pid) {
+    printf("I am the parent, my pid is %d and my child's pid is %d.\n",
+           posix_getpid(), $child_pid);
+} else {
+    printf("I am the child, my pid is %d.\n", posix_getpid());
+}
+
+?&gt;
+</pre><br>
+<p class="docText">This example demonstrates forking, creating a duplicate of the initial process. Both processes continue running the current script from the line after the fork. The difference is that in the parent process, the fork call returned the process id of the child process, while in the child process the fork call returned 0. This is how you distinguish the creating and created processes.<a name="ch16index73"></a><a name="ch16index74"></a><a name="ch16index75"></a></p>
+<p class="docText">If <tt>pcntl_fork()</tt> returns <tt>1</tt>, an error occurred and no process was created.</p>
+<a name="ch16lev3sec13"></a><h5 class="docSection3Title">16.2.5.3 Exec</h5>
+<p class="docText">When one program runs another program, the execution of the second program is actually a two-step procedure. First, the calling process forks and makes a duplicate of itself, and then immediately does an exec call to replace the executable code and memory with that of the new program.<a name="ch16index76"></a><a name="ch16index77"></a><a name="ch16index78"></a></P>
+<p class="docText">If you just want to run a program and read the output <span class="docEmphasis">or</span> write to it, there are easier ways of doing it, such as <tt>popen()</tt>. But, if you must be able to both read and write to the program, you need to manually fork and exec from PHP, or use the <span class="docEmphStrong"><tt>proc_open() function</tt></span>.<a name="ch16index79"></a></p>
+<p class="docText">Following is an example that forks and execs an <tt>ls</tt> command:</P>
+<pre>
+&lt;?php
+
+$child_pid = pcntl_fork();
+if ($child_pid == 0) {
+    // replace php with "ls" command in child
+    pcntl_exec("/bin/ls", array("-la"));
+} elseif ($child_pid != -1) {
+    // wait for the "ls" process to exit
+    pcntl_waitpid($child_pid, $status, 0);
+}
+
+?&gt;
+</pre><br>
+<p class="docText">First, a child process is created. Then, in the process where <tt>$child_pid</tt> was returned as <tt>0</tt> (the child process), the <tt>ls</tt> command is executed. The output from <tt>ls</tt> will go to standard output. The parent process waits for the child to exit before it continues.</P>
+<p class="docText">Here is another example. PHP detaches itself from the terminal and continues running in the background (a technique known as <span class="docEmphStrong">daemonizing</span>):<a name="ch16index80"></a><a name="ch16index81"></a><a name="ch16index82"></a></p>
+<pre>
+&lt;?php
+
+$pid = pcntl_fork();
+if ($pid) {
+    exit(0);
+}
+
+// create new session, detach from shell's process group
+posix_setsid();
+
+// XXX if STD{IN,OUT,ERR} constants become available, these have
+// to be closed here.
+
+while (true) {
+    error_log("heartbeat\n", 3, "/tmp/test.log");
+    sleep(10);
+}
+
+?&gt;
+</pre><br>
+<p class="docText">First, this script forks and creates a second PHP process. The parent process then exits, and the child continues. Then, the child disconnects from the controlling terminal and creates its own session and process group with <tt>posix_setsid()</tt>. This makes sure that signals sent to the shell are not passed along to the child PHP process.<a name="ch16index83"></a><a name="ch16index84"></a><a name="ch16index85"></a></p>
+<a name="ch16lev3sec14"></a><h5 class="docSection3Title">16.2.5.4 Signals</H5>
+<p class="docText">In UNIX, <span class="docEmphStrong">signals</span> are a basic mechanism to pass messages between processes. They enable processes to tell each other that some type of event has just occurred. This type of event is the only information passed to basic UNIX signal handlers. There is another signal-handling mechanism called &quot;sigaction&quot; in which signal handlers receive more information, but PHP signals are based on the former, basic form. For example, if the user presses Ctrl-c to stop a command-line program, the program receives an interrupt signal, called <span class="docEmphStrong">SIGINT</span>.<a name="ch16index86"></a><a name="ch16index87"></a><a name="ch16index88"></a><a name="ch16index89"></a></P>
+<p class="docText">In PHP, you can set up a function to handle one or more signals with the <tt>pcntl_signal()</tt> function, like this:</p>
+<pre>
+&lt;?php
+
+function sigint_handler($signal) {
+     print "Interrupt!\n";
+     exit;
+}
+
+pcntl_signal(SIGINT, "sigint_handler");
+
+declare (ticks = 1) {
+while (sleep(1));
+}
+
+?&gt;
+</pre><br>
+<p class="docText">This script sleeps until you terminate it. If you do press Ctrl-c, it prints <tt>Interrupt!</tt> and exits. You could change this example to ignore Ctrl-c completely by changing the signal-handler function to the predefined <tt>SIG_IGN</tt>:<a name="ch16index90"></a><a name="ch16index91"></a><a name="ch16index92"></a></p>
+<pre>
+pcntl_signal(SIGINT, SIG_IGN);
+</pre><br>
+<p class="docText">You may change a signal handler anytime, including inside a signal-handling function. To revert to the default signal handler, use <tt>SIG_DFL</tt>:</P>
+<pre>
+pcntl_signal(SIGINT, SIG_DFL);
+</pre><br>
+<p class="docText">PHP probably supports all the signals your system supports. Try typing <tt>kill l</tt> in your shell to see some. <a class="docLink" href="#ch16table03">Table 16.3</a> lists of signals that may be useful from PHP, either catching and handling them, or sending them to (killing) other processes.</p>
+<a name="ch16table03"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 16.3. </H5></caption><colgroup><col width="137.5"><col width="412.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Signal</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGHUP</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Hangup. Used to notify when terminal connection is lost.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGINT</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Interrupt. Send when user hits the interrupt (Ctrl-c) key.</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGABRT</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Sent by the <tt>abort()</tt> C function; used by <tt>assert()</tt>.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGKILL</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Non-graceful termination of the process; cannot be caught.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGUSR1</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">User-defined signal 1.</p></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGSEGV</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Segmentation fault; in some operating systems, it's known as General Protection Failure.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGUSR2</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">User-defined signal 2.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGPIPE</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Sent when a pipe the process is reading closes unexpectedly.</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGALRM</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Sent when an alarm times out.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGTERM</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Terminate process normally.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGCHLD</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">A child process just died or changed status.</p></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGCONT</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Continue after stopping with <tt>SIGSTOP</tt>.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGSTOP</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Halt process; cannot be caught.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGTSTP</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Halt process; may be caught.</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGTTIN</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Process stopped due to tty input.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGTTOU</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Process stopped due to tty output.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGCXPU</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">CPU time limit exceeded.</p></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGXFSZ</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">File size limit exceeded.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>SIGBABY</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Passed when a baby is ready to change diapers, hungry, about to climb something dangerous or doing anything else that requires immediate attention from a parent PHP programmer.<a name="ch16index93"></a><a name="ch16index94"></a><a name="ch16index95"></a></p></td></tr></table></p><br>
+<a name="ch16lev2sec6"></a><h4 class="docSection2Title">16.2.6. Examples</h4>
+<p class="docText">Here are some examples of command-line tools written in PHP.</P>
+<a name="ch16lev3sec15"></a><H5 class="docSection3Title">16.2.6.1 PHP Filter Utility</h5>
+<p class="docText">This example includes a little tool for filtering line by line from standard input through a PHP function that returns a string:<a name="ch16index96"></a><a name="ch16index97"></a><a name="ch16index98"></a></p>
+<pre>
+#!/usr/bin/env php
+&lt;?php
+
+if (empty($argv[1])) {
+    die("Usage: phpfilter &lt;function&gt;\n");
+}
+
+$function = $argv[1];
+while ($line = fgets(STDIN)) {
+    $out = $function($line);
+    if (!preg_match('/\n\r*$/', $out)) {
+        $out .= "\n";
+    }
+    print $out;
+}
+</pre><BR>
+<a name="ch16lev4sec1"></a><h5 class="docSection4Title"><tt>phpfilter</tt></h5>
+<p class="docText">This example reads line by line from STDIN, which is a pre-defined file resource in PHP for standard input. An extra newline is added in case the PHP function stripped away the newline. Try it with <tt>base64_encode</tt>:<a name="ch16index99"></a><a name="ch16index100"></a><a name="ch16index101"></a></p>
+<pre>
+$ ls | phpfilter base64_encode
+QnVpbGRpbmdfUEVBUl9Db21wb25lbnRzLwkJICAgUGVyZm9ybWFuY2UvCg==
+Q2hhcHRlciAxMyAtIEJ1aWxkaW5nIFBFQVIgQ29tcG9uZW50cy56aXAgIHJldmlld3Mv g==
+RGF0YWJhc2VzLwkJCQkgICBTaGVsbF9TY3JpcHRpbmcvCg==
+RXJyb3JfSGFuZGxpbmcvCQkJCSAgIHRtcC8K
+SW1wb3J0YW50X1BFQVJfUGFja2FnZXMvCQkgICBVc2luZ19QRUFSLwo=
+</pre><br>
+<p class="docText">The final example is a simple chat server. It handles many simultaneous users, does buffering of input and output, may run as a daemon, and has three commands: <tt>/who</tt>, <tt>/quit</tt>, and <tt>/shutdown</tt>.</p>
+<p class="docText">Connect to it with a telnet program; it uses port 1234 by default. To log out, type <tt>/quit</tt>; to see what users are on type <tt>/who</tt>; type <tt>/shutdown</tt> to take the server down.</p>
+<p class="docText">You may change the port number with the <tt>p</tt> option, or the maximum number of simultaneous users with the <tt>m</tt> option. Try the <tt>h</tt> option for help:<a name="ch16index102"></a><a name="ch16index103"></a></P>
+<pre>
+&lt;?php
+
+error_reporting(E_ALL);
+
+require_once "PEAR.php";
+require_once "Console/Getopt.php";
+
+$DAEMON = false;
+$PORT = 1234;
+$MAX_USERS = 50;
+
+$progname = basename($argv[0]);
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "$progname: %s\n");
+
+$options = Console_Getopt::getopt($argv, "dp:m:h");
+
+foreach ($options[0] as $opt) {
+    switch ($opt[0]) {
+        case 'd':
+            $DAEMON = true;
+            break;
+        case 'p':
+            $PORT = $opt[1];
+            break;
+        case 'm':
+            $MAX_USERS = $opt[1];
+            break;
+        case 'h':
+        case '?':
+
+           fwrite(STDERR, "Usage: $progname [-dh] [-p port] [-m users]
+Options:
+    -d        detach into background (daemon mode)
+    -p port   set tcp port number
+    -m users  set max number of users
+    -h        this help message
+");
+            exit(1);
+    }
+}
+
+if ($DAEMON) {
+    $pid = pcntl_fork();
+    if ($pid) {
+        exit(0);
+    }
+    posix_setsid();
+}
+
+$sock = socket_create_listen($PORT);
+if (!$sock) {
+    exit(1);
+}
+
+$shutting_down = false;
+$connections = array();
+$usernames = array();
+$input = array();
+$output = array();
+$close = array();
+
+while (true) {
+    $readfds = array_merge($connections, array($sock));
+    $writefds = array();
+    reset($output);
+    while (list($i, $b) = each($output)) {
+        if (strlen($b) &gt; 0) {
+            $writefds[] = $connections[$i];
+        }
+    }
+    if (socket_select($readfds, $writefds, $e = null, 60)) {
+        foreach ($readfds as $rfd) {
+            if ($rfd == $sock) {
+                $newconn = socket_accept($sock);
+                $i = (int)$newconn;
+                $reject = '';
+                if (count($connections) &gt;= $MAX_USERS) {
+                    $reject = "Server full. Try again later.\n";
+                } elseif ($shutting_down) {
+                    $reject = "Server shutting down.\n";
+                }
+                $connections[$i] = $newconn;
+                $output[$i] = '';
+
+                if ($reject) {
+                    output($i, $reject);
+                    $close[$i] = true;
+                } else {
+                    output($i, "Welcome to the PHP Chat Server!\n");
+                    output($i, "Username: ");
+                }
+                $usernames[$i] = "";
+                $input[$i] = "";
+                continue;
+            }
+            $i = (int)$rfd;
+            $tmp = @socket_read($rfd, 2048, PHP_NORMAL_READ);
+            if (!$tmp) {
+                broadcast($usernames[$i] . " lost link.\n");
+                print "connection closed on socket $i\n";
+                close($i);
+                continue 2;
+            }
+            $input[$i] .= $tmp;
+            $tmp = substr($input[$i], -1);
+            if ($tmp != "\r" &amp;&amp; $tmp != "\n") {
+                // no end of line, more data coming
+                continue;
+            }
+            $line = trim($input[$i]);
+            $input[$i] = "";
+            if (empty($line)) {
+                continue;
+            }
+            if (empty($usernames[$i])) {
+                if (strlen($line) &lt; 2) {
+                    output($i, "Username must be at least two characters.\n");
+                } else {
+                    $user = substr($line, 0, 16);
+                    $f = array_search($user, $usernames);
+                    if ($f !== false) {
+                        output($i, "That user name is taken, try another.\n");
+                    } else {
+                        $usernames[$i] = $user;
+                        output($i, "You are now known as \"$user\".\n");
+                        broadcast("$user has logged on.\n", $i);
+                        continue;
+                    }
+                }
+            }
+            if (empty($usernames[$i])) {
+                output($i, "Username: ");
+            } else {
+                if (strtolower($line) == "/quit") {
+                    output($i, "Bye!\n");
+                    broadcast("$usernames[$i] has logged off.", $i);
+                    $close[$i] = true;
+                } elseif (strtolower($line) == "/shutdown") {
+                    $shutting_down = true;
+                    broadcast("Shutting down. See you later.\n");
+                } elseif (strtolower($line) == "/who") {
+                    output($i, "Current users:\n");
+                    foreach ($usernames as $u) {
+                        output($i, "$u\n");
+                    }
+                } else {
+                    $msg = '['.$usernames[$i].']: '.$line."\n";
+                    broadcast($msg, $i);
+                    output($i, "&gt;&gt;&gt; $line\n");
+                }
+            }
+        }
+        foreach ($writefds as $wfd) {
+            $i = (int)$wfd;
+            if (!empty($output[$i])) {
+                $w = socket_write($wfd, $output[$i]);
+                if ($w == strlen($output[$i])) {
+                    $output[$i] = "";
+                    if (isset($close[$i])) {
+                        close($i);
+                    }
+                } else {
+                    $output[$i] = substr($output[$i], $w);
+                }
+            }
+        }
+    }
+    if ($shutting_down) {
+        $may_shutdown = true;
+        foreach ($output as $i =&gt; $o) {
+            if (strlen($o) &gt; 0) {
+                print "shutdown: still data on fd $i\n";
+                $may_shutdown = false;
+                break;
+            }
+        }
+        if ($may_shutdown) {
+            print "shutdown complete\n";
+            socket_shutdown($sock);
+            socket_close($sock);
+            exit;
+        }
+    }
+}
+function output($user, $msg) {
+    global $output;
+    settype($user, "int");
+    $tmp = substr($msg, -2);
+    if ($tmp{1} == "\n" &amp;&amp; $tmp{0} != "\r") {
+        $msg = substr($msg, 0, -1) . "\r\n";
+    }
+    $output[$user] .= $msg;
+}
+
+function broadcast($msg, $except = null) {
+    global $output, $connections, $usernames;
+    foreach ($connections as $i =&gt; $r) {
+        if (empty($usernames[$i])) {
+            // don't send messages to users who have not logged on yet continue;
+        }
+        if (!$except || $except != $i) {
+            output($i, $msg);
+        }
+    }
+}
+
+function close($i) {
+    global $connections, $input, $output, $usernames, $close;
+    socket_shutdown($connections[$i]);
+    socket_close($connections[$i]);
+    unset($connections[$i]);
+    unset($input[$i]);
+    unset($output[$i]);
+    unset($usernames[$i]);
+    unset($close[$i]);
+}
+
+?&gt;
+</pre><br>
+<UL></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch16lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch16lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

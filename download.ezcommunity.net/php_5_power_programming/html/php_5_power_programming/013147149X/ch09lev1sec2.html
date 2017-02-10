@@ -1,0 +1,582 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 9.2.&nbsp; Files and Streams</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch09lev1sec2"></a><h3 class="docSection1Title">9.2. Files and Streams</h3>
+<p class="docText">Accessing files has changed drastically. Prior to PHP 4.3.0, each type of file (local, compressed, remote) had a different implementation. However, with the introduction of streams, every interaction with a file makes use of the <span class="docEmphStrong">streams layer</span>, a layer that abstracts access to the implementation details of a specific kind of &quot;file.&quot; The streams layer makes it possible to create a GD image object from an HTTP source with a URL stream, work with compressed files, or copy a file from one file to another. You can apply your own conversions during the copy process by implementing a user-stream or filter.<a name="ch09index01"></a><a name="ch09index02"></a><a name="ch09index03"></a><a name="ch09index04"></a><a name="ch09index05"></a></p>
+<a name="ch09lev2sec1"></a><h4 class="docSection2Title">9.2.1. File Access</h4>
+<p class="docText">Let's begin with the basic file-accessing functions. Originally, those functions only worked on normal files, so their names begin with &quot;f,&quot; but PHP extends this to almost everything. The most used functions for file access are<a name="ch09index06"></a><a name="ch09index07"></a><a name="ch09index08"></a></P>
+<ul><LI><p class="docText">
+<tt>fopen()</tt>. 
+Opens a handle to a local file, or a file from an URL<a name="ch09index09"></a><a name="ch09index10"></a></p></LI><li><p class="docText">
+<tt>fread()</tt>. 
+Reads a block of data from a file<a name="ch09index11"></a><a name="ch09index12"></a></p></li><li><p class="docText">
+<tt>fgets()</tt>. 
+Reads one single line from a file<a name="ch09index13"></a><a name="ch09index14"></a></P></LI><li><p class="docText">
+<tt>fwrite()</tt> <span class="docEmphRoman">/</span> <tt>fputs()</tt>. 
+Writes a block of data to a file<a name="ch09index15"></a><a name="ch09index16"></a><a name="ch09index17"></a><a name="ch09index18"></a></p></li><li><p class="docText">
+<tt>fclose()</tt>. 
+Closes the opened file handle<a name="ch09index19"></a><a name="ch09index20"></a></P></li><li><p class="docText">
+<tt>feof()</tt>. 
+Returns true when the end of the file has been reached<a name="ch09index21"></a><a name="ch09index22"></a></P></li></UL>
+<p class="docText">Working with files is easy, as the following example shows:</p>
+<pre>
+&lt;?php
+    /* Open a file */
+    $fp = fopen ('data.dat',  'r');
+    if (!$fp) {
+        die ("The file could not be opened.");
+    }
+
+    /* Read a line from the file */
+    $line = fgets($fp);
+
+    /* Close the file handle */
+    fclose($fp);
+?&gt;
+</pre><br>
+<p class="docText">In line 3, a file handle (<tt>$fp</tt>) is associated with the stream and the stream is associated with the <tt>counter.dat</tt> file that is on disk. The first parameter is the path to the file. The second parameter passed to <tt>fopen()</tt> is the mode. The mode specifies whether a stream is opened for reading, writing, both reading and writing, or appending. The following modes exist:<a name="ch09index23"></a><a name="ch09index24"></a><a name="ch09index25"></a><a name="ch09index26"></a></p>
+<ul><li><p class="docText">
+<tt>r</tt>. 
+Opens the stream in read-only mode. The file pointer is placed at the beginning of the stream.</p></li><li><p class="docText">
+<tt>r+</tt>. 
+Opens the stream for reading and writing. The file pointer is placed at the beginning of the stream.</p></li><li><p class="docText">
+<tt>w</tt>. 
+Opens the stream in write-only mode. The file is cleared and the file pointer is placed at the beginning of the stream. If the file does not exist, an attempt is made to create the file.</p></li><li><p class="docText">
+<tt>w+</tt>. 
+Opens the stream for reading and writing. The file is cleared and the file pointer is placed at the beginning of the stream. If the file does not exist, an attempt is made to create the file.</p></li><LI><p class="docText">
+<tt>a</tt>. 
+Opens in write-only mode. The file pointer is placed at the end of the stream. If the file does not exist, an attempt is made to create the file.</P></li><li><p class="docText">
+<tt>a+</tt>. 
+Opens for reading and writing. The file pointer is placed at the end of stream. If the file does not exist, an attempt is made to create it.</P></li></ul>
+<p class="docText">The <tt>b</tt> modifier can be used with the mode to specify that the file is binary. Windows systems differentiate between text and binary files; if you don't use the <tt>b</tt> modifier for binary files in Windows, your file may become corrupted. Consequently, to make your scripts portable to Windows, it's wise to always use the <tt>b</tt> modifier when you work on a binary file, even when you are developing code on an operating system that doesn't require it. On UNIX OSs (Linux, FreeBSD, MacOSX, and so on), the <tt>b</tt> modifier has no effect whatsoever.</p>
+<p class="docText">Here's another small example:</p>
+<pre>
+&lt;?php
+    /* Open a file in read/write mode and binary mode, and place
+     * the stream pointer at the beginning of the stream. */
+    $fp = fopen("/tmp/tempfile", "rb+");
+
+    /* Try to read a block of 4096 bytes from the file */
+    $block = fread($fp, 4096);
+
+    /* Write that same block of data to the stream again
+     * just after the first one */
+    fwrite($fp, $block);
+
+    /* Close the stream */
+    fclose($fp);
+?&gt;
+</pre><br>
+<p class="docText">A third optional parameter, <tt>true</tt>, is available for <tt>fopen()</tt> that tells PHP to look in your <tt>include</tt> path for the file. The following script first tries to open <tt>php.ini</tt> (in read-only mode) from <tt>/etc</tt>, then from <tt>/usr/local/etc</tt>, and finally from the current directory (the dot in the path specifies the current directory). Because <tt>php.ini</tt> is not a binary file, we do not use the <tt>b</tt> modifier for the mode:<a name="ch09index27"></a><a name="ch09index28"></a><a name="ch09index29"></a></P>
+<pre>
+&lt;?php
+    /* Set the include path */
+    ini_set('include_path', '/etc:/usr/local/etc:.');
+
+    /* Open handle to file */
+    $fp = fopen('php.ini', 'r', TRUE);
+
+    /* Read all lines and print them */
+    while (!feof($fp)) {
+        $line = trim(fgets($fp, 256));
+        echo "&gt;$line&lt;\n";
+    }
+    /* Close the stream handle */
+    fclose($fp);
+?&gt;
+</pre><br>
+<p class="docText">This script uses <tt>feof()</tt>, which is a function we haven't seen before. <tt>feof()</tt> tests whether the end of a file has been reached during the last <tt>fread()</tt> or <tt>fgets()</tt> call. We use <tt>fgets()</tt> here, with <tt>256</tt> as the second parameter. This number specifies the maximum length if the line that <tt>fgets()</tt> reads. It is important to choose this size carefully. PHP allocates this memory before reading, so if you use a value of 1,000,000, PHP allocates 1MB of memory, even if your line is only 12 characters long. The default is 1,024 bytes, which should be enough for almost all appliances.</P>
+<p class="docText">Try to decide whether you really need to load the entire file into memory when processing a file. Suppose you need to scan a text file for occurrences of a defined phrase with a regular expression. If you load the file into memory with the <tt>file_get_contents()</tt> function and then run the <tt>preg_match_all()</tt> function, you actively waste many resources. It would be more efficient to use a <tt>while (!feof($fp)) { $line = fgets($fp); }</tt> loop, which doesn't waste memory by loading the entire file into memory. It would speed up the regular expression matching as well.<a name="ch09index30"></a><a name="ch09index31"></a><a name="ch09index32"></a></p>
+<a name="ch09lev2sec2"></a><H4 class="docSection2Title">9.2.2. Program Input/Output</h4>
+<p class="docText">Much like UNIX has the paradigm &quot;All IO is a file,&quot; PHP has the paradigm &quot;All IO is a stream.&quot; Thus, when you want to work with the input and output of a program, you open a stream to that program. Because you need to open two channels to your programone for reading and one for writingyou use one of two special functions to open the streams: <tt>popen()</tt> or <tt>proc_open()</tt>.<a name="ch09index33"></a><a name="ch09index34"></a><a name="ch09index35"></a></p>
+<a name="ch09lev3sec1"></a><h5 class="docSection3Title">9.2.2.1 <tt>popen()</tt></h5>
+<p class="docText"><tt>popen()</tt> is the simpler function, providing only unidirectional IO to a program; you can only use <tt>w</tt> or <tt>r</tt> as the opening mode. When you open a stream to a program, also called a <span class="docEmphStrong">pipe</span> (hence the name <tt>popen()</tt>), you can use all the normal file functions to read or write from the pipe, and use (for example) <tt>feof()</tt> to check if there is no more input to read. Here is a small example that reads the output of <tt>ls l /</tt>:<a name="ch09index36"></a><a name="ch09index37"></a><a name="ch09index38"></a><a name="ch09index39"></a><a name="ch09index40"></a></P>
+<pre>
+&lt;?php
+$fp = popen('ls l /', 'r');
+while (!feof($fp)) {
+    echo fgets($fp);
+}
+pclose($fp);
+?&gt;
+</pre><BR>
+<a name="ch09lev3sec2"></a><h5 class="docSection3Title">9.2.2.2 <tt>proc_open()</tt></h5>
+<p class="docText"><tt>popen()</tt> is seldom useful because you cannot perform any interactive tasks with the opened process. But don't worryPHP has a function to provide the missing functionality: <tt>proc_open()</tt>. With <tt>proc_open()</tt>, you can link all the input and output handlers of a process to either a pipe from which you can read or a pipe to which you can write from your script, or a file. A pipe is treated as a file handle, except that you can never open a file handle for reading <span class="docEmphasis">and</span> writing at the same time.<a name="ch09index41"></a><a name="ch09index42"></a><a name="ch09index43"></a><a name="ch09index44"></a><a name="ch09index45"></a></p>
+<p class="docText"><tt>proc_open()</tt> requires three parameters:</p>
+<pre>
+resource proc_open ( string cmd, array descriptorspec, array pipes)
+</pre><BR>
+<p class="docText">The <tt>cmd</tt> parameter is the command to execute, such as <tt>/usr/local/bin/php</tt>. You don't need to specify the full path to the executable used by <tt>popen()</tt> if your executable is in the system path.</p>
+<p class="docText">The <tt>descriptorspec</tt> parameter is more complex. <tt>descriptorspec</tt> is an array with each element describing a file handler for input or output.</p>
+<a name="ch09lev3sec3"></a><H5 class="docSection3Title">9.2.2.3 File Descriptors</h5><a name="ch09index46"></a><a name="ch09index47"></a><a name="ch09index48"></a><a name="ch09index49"></a>
+<pre>
+&lt;?php
+    $fin = fopen("readfrom", "r");
+    $fout = fopen("writeto", "w");
+    $desc = array (0 =&gt; $fin, 1 =&gt; $fout);
+    $res = proc_open("php", $desc, $pipes);
+    if ($res) {
+        proc_close($res);
+    }
+?&gt;
+</pre><BR>
+<p class="docText">This script starts a PHP interpretera child process. It links the input for the child process to the file descriptor <tt>$fin</tt> (which is a file handler for the file <tt>"readfrom"</tt>) and the output of the child process to <tt>$fout</tt> (which is a file handler for the file <tt>"writeto"</tt>). The <tt>"readfrom"</tt> file contains<a name="ch09index50"></a><a name="ch09index51"></a><a name="ch09index52"></a><a name="ch09index53"></a></p>
+<pre>
+&lt;?php
+echo 'Hello you!';
+?&gt;
+</pre><br>
+<p class="docText">After the execution of the script, the file <tt>"writeto"</tt> contains</p>
+<pre>
+Hello you!
+</pre><br>
+<a name="ch09lev3sec4"></a><h5 class="docSection3Title">9.2.2.4 P<tt>|</tt>pes</h5>
+<p class="docText">Instead of using a file handler for input and output to the PHP child process, as shown in the script in the previous section, you can open pipes to the child process that allow you to control the spawned process from your script. The following script sends the <tt>&lt;?php echo 'Hello you!'; ?&gt;</tt> script from the script itself to the spawned PHP interpreter. The script writes the output of the <tt>echo</tt> statement to the standard output of the script, applying <tt>urlencode</tt> to the output text string <tt>"Hello you!"</tt>.</p>
+<pre>
+&lt;?php
+$descs = array(0 =&gt; array('pipe', 'r'), 1 =&gt; array('pipe', 'w'));
+$res = proc_open("php", $descs, $pipes);
+
+if (is_resource($res)) {
+     fputs($pipes[0], '&lt;?php echo "Hello you!\n"; ?&gt;');
+     fclose($pipes[0]);
+
+     while (!feof($pipes[1])) {
+           $line = fgets($pipes[1]);
+           echo urlencode($line);
+     }
+     proc_close($res);
+}
+?&gt;
+</pre><br>The output is<pre>
+Hello+you%21%0A
+</pre><br>
+<a name="ch09lev3sec5"></a><h5 class="docSection3Title">9.2.2.5 Files</h5>
+<p class="docText">You can pass a file as the handler for the file descriptors to your process, as shown in the following example:<a name="ch09index54"></a><a name="ch09index55"></a><a name="ch09index56"></a><a name="ch09index57"></a></p>
+<pre>
+&lt;?php
+$descs = array(
+    0 =&gt; array('pipe', 'r'),
+    1 =&gt; array('file', 'output', 'w'),
+    2 =&gt; array('file', 'errors', 'w')
+);
+$res = proc_open("php", $descs, $pipes);
+
+if (is_resource($res)) {
+    fputs($pipes[0], '&lt;?php echo "Hello you!\n"; ?&gt;');
+    fclose($pipes[0]);
+    proc_close($res);
+}
+?&gt;
+</pre><br>The output file now contains<pre>
+Hello you!
+</pre><br>
+<p class="docText">and the <tt>'errors'</tt> file is empty.</p>
+<p class="docText">In addition to the <tt>input pipe[0]</tt> and the <tt>output pipe[1]</tt> shown in the previous examples, you can use other pipes to redirect all file descriptors of the child process. In the preceding example, we redirect all error messages sent to the standard error descriptor (2) to <tt>pipe[2]</tt>, the file <tt>errors</tt>. The index of the <tt>$descs</tt> array is not limited to the indices 0-2, so that you can always fiddle with all file descriptors as suits you. However, those additional file descriptors, with an index larger than 2, do not work yet on Windows because PHP doesn't implement a way for the client process to attach to them. Perhaps this will be addressed as PHP develops.<a name="ch09index58"></a><a name="ch09index59"></a><a name="ch09index60"></a><a name="ch09index61"></a></p>
+<a name="ch09lev2sec3"></a><H4 class="docSection2Title">9.2.3. Input/Output Streams</H4>
+<p class="docText">With PHP, you can use <tt>stdin</tt>, <tt>stdout</tt>, and <tt>stderr</tt> as files. These &quot;files,&quot; linked with the <tt>stdin</tt>, <tt>stdout</tt>, and <tt>stderr</tt> stream of the PHP process, can be accessed by using a protocol specifier in the call to <tt>fopen()</tt>. For the program input and output streams, this specifier is <tt>php://</tt>. This feature is most useful when working with the Command Line Interface (CLI), which is explained in more detail in <a class="docLink" href="ch16.html#ch16">Chapter 16</a>, &quot;PHP Shell Scripting.&quot;<a name="ch09index62"></a><a name="ch09index63"></a><a name="ch09index64"></a></p>
+<p class="docText">Two more IO streams are available: <tt>php://input</tt> and <tt>php://output</tt>. With <tt>php://input</tt>, you can read raw POST data. You may want to do so when you need to process WebDAV requests or obtain data from the POST requests yourself, which can be useful when working with WebDAV, XML-RPC, or SOAP. The following example shows how to obtain form data from a form that has two fields with the same name:</p>
+<pre>
+form.html:
+
+
+&lt;html&gt;
+    &lt;form method="POST" action="process.php"&gt;
+        &lt;input type="text" name="example"&gt;
+        &lt;select name="example"&gt;
+            &lt;option value="1"&gt;Example line 1&lt;/option&gt;
+            &lt;option value="2"&gt;Example line 2&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;input type="submit"&gt;
+    &lt;/form&gt;
+&lt;/html&gt;
+
+process.php:
+
+
+     &lt;h1&gt;Dumping $_POST&lt;/h1&gt;
+     &lt;?php
+          var_dump ($_POST);
+     ?&gt;
+     &lt;h1&gt;Dumping php://input&lt;/h1&gt;
+     &lt;?php
+           $in = fopen ("php://input", "rb");
+           while (!feof($in)) {
+                 echo fread ($in, 128);
+           }
+     ?&gt;
+</pre><BR>
+<p class="docText">The first script contains only HTML code for a form. The form has two elements with the name <tt>"example"</tt>: a text field and a select list. When you submit the form by clicking the submit query button, the script <tt>process.php</tt> runs and displays the output shown in <a class="docLink" href="#ch09fig01">Figure 9.1</a>.<a name="ch09index65"></a><a name="ch09index66"></a><a name="ch09index67"></a></p>
+<a name="ch09fig01"></a><p><center><h5 class="docFigureTitle">Figure 9.1. <tt>php://input</tt> representation of POST data</h5>
+<p class="docText"><img border="0" alt="" width="350" height="177" SRC="images/013147149X/graphics/09fig01.gif;380137"></p></center></p><BR>
+<p class="docText">As you can see, only one elementthe selected value from the select listis displayed when you dump the <tt>$_POST</tt> array. However, the data from both fields shows up in the <tt>php://input</tt> stream. You can parse this raw data yourself. Although, raw data might not be particularly useful with simple POST data, it's useful to process WebDAV requests or to process requests initiated by other applications.</p>
+<p class="docText">The <tt>php://output</tt> stream can be used to write to PHP's output buffers, which is essentially the same as using <tt>echo</tt> or <tt>print()</tt>. <tt>php://stdin</tt> and <tt>php://input</tt> are read-only; <tt>php://stdout</tt>, <tt>php://stderr</tt>, and <tt>php://output</tt> are write-only.<a name="ch09index68"></a><a name="ch09index69"></a><a name="ch09index70"></a></P>
+<a name="ch09lev2sec4"></a><h4 class="docSection2Title">9.2.4. Compression Streams</H4>
+<p class="docText">PHP provides some wrappers around compression functions. Previously, you needed specialized functions for accessing gzip and bzip compressed files; you can now use the streaming support for those libraries. Reading from and writing to a gzipped or bzipped file works exactly the same as reading and writing a normal file. To use the compression methods, you need to compile PHP with <tt>--with-zlib</tt> to provide the <tt>compress.zlib://</tt> wrapper and <tt>--with-bz2</tt> to provide the <tt>compress.bzip2://</tt> wrapper. Of course, you need to have the zlib and/or bzip2 libraries installed before you can enable those extensions.<a name="ch09index71"></a><a name="ch09index72"></a><a name="ch09index73"></a></p>
+<p class="docText">Gzip streams support more mode specifiers then the standard <tt>r</tt>, <tt>w</tt>, <tt>a</tt>, <tt>b</tt>, and <tt>+</tt>. These additional modifiers include the compression level <tt>1</tt>-<tt>9</tt> and the compression methods <tt>f</tt> for filtered and <tt>h</tt> for huffman only compressing. These modifiers only make sense if you open the file for writing.</p>
+<p class="docText">In the following example, we demonstrate copying a file from a bzipped file to a gzipped file. We make use of the compression level specifier <tt>1</tt> to speed up compression, and the third parameter <tt>fopen()</tt>, to specify searching for the file in the <tt>include</tt> path. Be careful when using the <tt>include</tt> path parameter because it will have a performance impact on your script. PHP tries to find and open the file throughout the entire include path, which slows down your script because file operations are generally show operations on most operating systems.</p>
+<pre>
+&lt;?php
+ini_set ('include_path', '/var/log:/usr/var/log:.');
+
+$url = 'compress.bzip2://logfile.bz2';
+$fil = 'compress.zlib://foo1.gz';
+
+$fr = fopen($url, 'rb', true);
+$fw = fopen($fil, 'wb1');
+
+if (is_resource($fr) &amp;&amp; is_resource($fw)) {
+    while (!feof($fr)) {
+        $data = fread($fr, 1024);
+        fwrite($fw, $data);
+    }
+    fclose($fr);
+    fclose($fw);
+}
+?&gt;
+</pre><br>
+<p class="docText">This script first sets the include path to <tt>/var/log</tt>, <tt>/usr/var/log</tt>, and the current directory (.). Next, it tries to open the logfile.bz2 file from the <tt>include</tt> path and opens the foo1.gz file for writing with compression level <tt>1</tt>. If both streams are opened successfully, the script reads from the bzipped file until it reaches the end and writes the contents directly into the gzipped file. When the script finishes copying the contents, it closes the streams.</P>
+<a name="ch09note01"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">Another great aspect about streams is that you can nest wrappers. For example, you can open them from the following URL:<a name="ch09index74"></a><a name="ch09index75"></a> compress.zlib://http://www.example.com/foobar.gz</p></div><br>
+<a name="ch09lev2sec5"></a><h4 class="docSection2Title">9.2.5. User Streams</h4>
+<p class="docText">The streams layer in PHP 5 allows defining <span class="docEmphStrong">User Streams</span>stream wrappers implemented in PHP code. This User Stream is implemented by a class and, for every file operation (opening, reading, for instance), you need to implement a method. This section describes the methods that must be implemented.<a name="ch09index76"></a><a name="ch09index77"></a></P>
+<a name="ch09lev3sec6"></a><h5 class="docSection3Title">9.2.5.1 <tt>boolean stream_open ( string path, string mode, int options, string opened_path);</tt></h5>
+<p class="docText">This function is called when <tt>fopen()</tt> is called on this stream. The path is the full URL as specified in the <tt>fopen()</tt> call, which you need to interpret correctly. The <tt>parseurl()</tt> function helps for this. You also need to validate the mode yourself. The <tt>options</tt> parameter, set by the stream's API, is a bit field consisting of the following constants:<a name="ch09index78"></a><a name="ch09index79"></a><a name="ch09index80"></a></P>
+<ul><LI><p class="docText">
+<tt>STREAM_USE_PATH</tt>. 
+This constant is set in the bit field when <tt>trUE</tt> was passed as the <tt>use_include_path</tt> parameter to <tt>fopen()</tt>. It's up to you to do something with it if needed.</p></li><li><p class="docText">
+<tt>STREAM_REPORT_ERRORS</tt>. 
+If this constant is set, you need to handle trigger errors yourself with the <tt>trigger_error()</tt> function; if it's not set, you should not raise any errors yourself.</p></li></ul>
+<a name="ch09lev3sec7"></a><h5 class="docSection3Title">9.2.5.2 <tt>void stream_close ( void );</tt></h5>
+<p class="docText">The stream_close method is called when <tt>fclose()</tt> is called on the stream, or when PHP closes the stream resource during shutdown. You need to take care of releasing any resources that you might have locked or opened.<a name="ch09index81"></a><a name="ch09index82"></a><a name="ch09index83"></a></p>
+<a name="ch09lev3sec8"></a><h5 class="docSection3Title">9.2.5.3 <tt>string stream_read ( int count);</tt></h5>
+<p class="docText">When <tt>fgets()</tt> or <tt>fread()</tt> triggers a read request on the stream, the <tt>stream_read</tt> method is called in response. You should always try to return <tt>count</tt> bytes from the stream. If there is not much data available, just return as many bytes as you have left in the stream. If no data is available, return <tt>FALSE</tt> or an empty string. Do not forget to update the read/write position of the stream. This position is usually stored in the <tt>position</tt> property of your class.<a name="ch09index84"></a><a name="ch09index85"></a><a name="ch09index86"></a></p>
+<a name="ch09lev3sec9"></a><h5 class="docSection3Title">9.2.5.4 <tt>int stream_write ( string data);</tt></H5>
+<p class="docText">The <tt>stream_write</tt> method is called when <tt>fputs()</tt> or <tt>fwrite()</tt> is called on this stream. You should store as much of the data as possible, and return the number of bytes that actually were stored in the container. If no data could be stored, you should return <tt>0</tt>. You should also take care of updating the position pointer.<a name="ch09index87"></a><a name="ch09index88"></a><a name="ch09index89"></a></P>
+<a name="ch09lev3sec10"></a><h5 class="docSection3Title">9.2.5.5 <tt>boolean stream_eof ( void );</tt></h5>
+<p class="docText">This method is called when <tt>feof()</tt> is called on the stream. Return <tt>TRUE</tt> if the end of the stream is reached, or <tt>FALSE</tt> if the end has not been reached yet.<a name="ch09index90"></a><a name="ch09index91"></a><a name="ch09index92"></a></p>
+<a name="ch09lev3sec11"></a><h5 class="docSection3Title">9.2.5.6 <tt>int stream_tell ( void );</tt></h5>
+<p class="docText">The <tt>stream_tell()</tt> method is called on a <tt>ftell()</tt> request on the stream. You should return the value of the read/write position pointer.<a name="ch09index93"></a><a name="ch09index94"></a><a name="ch09index95"></a><a name="ch09index96"></a></p>
+<a name="ch09lev3sec12"></a><h5 class="docSection3Title">9.2.5.7 <tt>boolean stream_seek ( int offset, int whence);</tt></h5>
+<p class="docText"><tt>stream_seek</tt> is called when <tt>fseek()</tt> is applied on the stream handle. The <tt>offset</tt> is an integer value that moves the file pointer (seeking) back (on a negative number) or forward (on a positive number). The <tt>seek</tt> offset is calculated based on the second parameter, which has one of the following constants:<a name="ch09index97"></a><a name="ch09index98"></a><a name="ch09index99"></a></P>
+<ul><LI><p class="docText">
+<tt>SEEK_SET</tt>. 
+The offset passed to the function should be calculated from the beginning.</p></LI><li><p class="docText">
+<tt>SEEK_CUR</tt>. 
+The offset is relative to the current stream position.</p></li><li><p class="docText">
+<tt>SEEK_END</tt>. 
+The offset is relative to the end of the stream. Positions in the stream have a negative offset; positive offsets correspond with positions after the end of the stream.</P></LI></ul>
+<p class="docText">The function should implement the changing of the stream pointer and return <tt>trUE</tt> if the position could be changed, or <tt>FALSE</tt> if the seek could not be executed.</p>
+<a name="ch09lev3sec13"></a><h5 class="docSection3Title">9.2.5.8 <tt>boolean stream_flush ( void );</tt></H5>
+<p class="docText">Your user stream may cache data written to the stream for better performance. The <tt>stream_flush()</tt> method is called when the user commits all cached data with the <tt>fflush()</tt> function. If there was no cached data or all cached data could be written to the storage container (such as a file or a table in a database), the function should return <tt>trUE</tt>; if the cached data could not be committed to the storage container, it should return <tt>FALSE</tt>.<a name="ch09index100"></a><a name="ch09index101"></a><a name="ch09index102"></a></p>
+<a name="ch09lev2sec6"></a><H4 class="docSection2Title">9.2.6. URL Streams</h4>
+<p class="docText">The last category of streams is URL streams. <span class="docEmphStrong">URL streams</span> have a path that resemble a URL, such as <tt>http://example.com/index.php</tt> or <tt>ftp://user:password@ftp.example.com</tt>. In fact, all special wrappers use a URL-like path, such as <tt>compress.zlib://file.gz</tt>. However, only schemes that resemble a remote resource, such as a file on an FTP server or a document on a gopher server, fall into the category URL streams. The basic URL streams that PHP supports are<a name="ch09index103"></a><a name="ch09index104"></a></P>
+<ul><li><p class="docText">
+<tt>http://</tt>. 
+For files located on an HTTP server</p></li><li><p class="docText">
+<tt>https://</tt>. 
+For files located on an SSL enhanced HTTP server</p></li><li><p class="docText">
+<tt>ftp://</tt>. 
+For files on an FTP server</p></li><li><p class="docText">
+<tt>ftps://</tt>. 
+For files on an FTP server with SSL support</p></li></ul>
+<p class="docText">SSL support for HTTP and FTP is only available if you added OpenSSL by specifying <tt>--with-openssl</tt> when you configured PHP. For authentication to HTTP or FTP servers, you can prefix the hostname in the URL with <tt>username:password@</tt>, as in the following:<a name="ch09index105"></a><a name="ch09index106"></a><a name="ch09index107"></a><a name="ch09index108"></a></p>
+<pre>
+$fp = fopen ('ftp://derick:secret@ftp.php.net', 'wb');
+</pre><br>
+<p class="docText">The HTTP handler only supports the reading of files, so you need to specify the mode <tt>rb</tt>. (Strictly, the <tt>b</tt> is only needed on Windows, but it doesn't hurt to add it.) The FTP handler supports opening a stream only in either read or write mode, but not in both simultaneously. Also, if you try to open an existing file for writing, the connection fails, unless you set the <tt>'overwrite'</tt> context option (see <a class="docLink" href="#ch09fig02">Figure 9.2</a>):<a name="ch09index109"></a><a name="ch09index110"></a></P>
+<pre>
+&lt;?php
+    $context = stream_context_create (array('ftp' =&gt; array('overwrite' =&gt; true));
+    $fp = fopen('ftp://secret@ftp.php.net', 'wb', false, $context);
+?&gt;
+</pre><BR>
+<a name="ch09fig02"></a><p><center><h5 class="docFigureTitle">Figure 9.2. phpsuck in action.</H5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig02_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="204" SRC="images/013147149X/graphics/09fig02.jpg;380137"></p></center></p><br>
+<p class="docText">The following example demonstrates reading a file from an HTTP server and saving it into a compressed file. This example also introduces a fourth parameter to the <tt>fopen()</tt> call that specifies a context for the stream. By using the context parameter, you can set special options for a stream. For example, you can set a notifier. This notifier callback will be called on different events during the <tt>transaction</tt>:<a name="ch09index111"></a><a name="ch09index112"></a></p>
+<pre>
+#!/usr/local/bin/php
+&lt;?php
+
+/* Check for arguments */
+if ($argc &lt; 2) {
+    echo "Usage:\nphpsuck.php url [max kb/sec]\n\n";
+    exit(-1);
+}
+
+/* Url to fetch */
+$url = $argv[1];
+
+/* Bandwidth limiting */
+if ($argc == 3) {
+    $max_kb_sec = $argv[2];
+} else {
+    $max_kb_sec = 1000;
+}
+
+
+/* Cursor to column 1 for xterms */
+$term_sol = "\x1b[1G";
+$severity_map = array (
+    0 =&gt; 'info   ',
+    1 =&gt; 'warning',
+    2 =&gt; 'error  '
+);
+
+/* Callback function for stream events */
+function notifier($code, $severity, $msg, $xcode, $sofar, $max)
+{
+    global $term_sol, $severity_map, $max_kb_sec, $size;
+
+    /* Do not print status message prefix when the PROGRESS
+     * event is received. */
+    if ($code != STREAM_NOTIFY_PROGRESS) {
+        echo $severity_map[$severity]. ": ";
+    }
+
+    switch ($code) {
+        case STREAM_NOTIFY_CONNECT:
+            printf("Connected\n");
+            /* Set begin time for kb/sec calculation */
+            $GLOBALS['begin_time'] = time() - 0.001;
+            break;
+
+        case STREAM_NOTIFY_AUTH_REQUIRED:
+            printf("Authentication required: %s\n", trim($msg));
+            break;
+
+        case STREAM_NOTIFY_AUTH_RESULT:
+            printf("Logged in: %s\n", trim($msg));
+            break;
+
+        case STREAM_NOTIFY_MIME_TYPE_IS:
+            printf("Mime type: %s\n", $msg);
+            break;
+
+        case STREAM_NOTIFY_FILE_SIZE_IS:
+            printf("Downloading %d kb\n", $max / 1024);
+            /* Set the global size variable */
+            $size = $max;
+            break;
+
+        case STREAM_NOTIFY_REDIRECTED:
+            printf("Redirecting to %s...\n", $msg);
+            break;
+
+        case STREAM_NOTIFY_PROGRESS:
+            /* Calculate the number of stars and stripes */
+            if ($size) {
+                $stars = str_repeat ('*', $c = $sofar * 50 / $size);
+            } else {
+                $stars = '';
+            }
+            $stripe = str_repeat ('-', 50 - strlen($stars));
+
+            /* Calculate download speed in kb/sec */
+            $kb_sec = ($sofar / (time() - $GLOBALS['begin_time'])) / 1024;
+
+            /* Pause the script if we are above the maximum suck
+             * speed */
+            while ($kb_sec &gt; $max_kb_sec) {
+                usleep(1);
+                $kb_sec = ($sofar / (time() - $GLOBALS['begin_time'])) / 1024;
+            }
+
+            /* Display the progress bar */
+            printf("{$term_sol}[%s] %d kb %.1f kb/sec",
+                $stars.$stripe, $sofar / 1024, $kb_sec);
+            break;
+
+        case STREAM_NOTIFY_FAILURE:
+            printf("Failure: %s\n", $msg);
+            break;
+    }
+}
+
+/* Determine filename to save too */
+$url_data = parse_url($argv[1]);
+$file = basename($url_data['path']);
+if (empty($file)) {
+    $file = "index.html";
+}
+printf ("Saving to $file.gz\n");
+$fil = "compress.zlib://$file.gz";
+
+/* Create context and set the notifier callback */
+$context = stream_context_create();
+stream_context_set_params($context,
+array ("notification" =&gt;  "notifier"));
+
+/* Open the target URL */
+$fp = fopen($url, "rb", false, $context);
+if (is_resource($fp)) {
+    /* Open the local file */
+    $fs = fopen($fil, "wb9", false, $context);
+    if (is_resource($fs)) {
+        /* Read data from URL in blocks of 1024 bytes */
+        while (!feof($fp)) {
+            $data = fgets($fp, 1024);
+            fwrite($fs, $data);
+        }
+        /* Close local file */
+        fclose($fs);
+    }
+    /* Close remote file */
+    fclose($fp);
+
+    /* Display download information */
+    printf("{$term_sol}[%s] Download time: %ds\n",
+        str_repeat('*', 50), time() - $GLOBALS['begin_time']);
+}
+?&gt;
+
+</pre><br>
+<p class="docText"><a name="ch09index113"></a><a name="ch09index114"></a><a name="ch09index115"></a><a name="ch09index116"></a>Some events can be handled in the <tt>notify</tt> callback function. Although most are only useful for debug purposes (<tt>NOTIFY_CONNECT</tt>, <tt>NOTIFY_AUTH_REQUIRED</tt>, <tt>NOTIFY_AUTH_REQUEST</tt>), others can be used to perform some neat tricks, like the bandwidth limiting we do in the previous example. The following is a full list of all the different events.</P>
+<pre>
+STREAM_NOTIFY_CONNECT
+</pre><br>
+<p class="docText"><a name="ch09index117"></a>This event is fired when a connection with the resource has been established for example, when the script connected to a HTTP server.</P>
+<pre>
+STREAM_NOTIFY_AUTH_REQUIRED
+</pre><br>
+<p class="docText"><a name="ch09index118"></a>When a request for authorization is complete, this event is triggered by the stream's API.</P>
+<pre>
+STREAM_NOTIFY_AUTH_RESULT
+</pre><br>
+<p class="docText"><a name="ch09index119"></a>As soon as the authentication has finished, this event is triggered to tell you if there was a successful authentication or a failure.</p>
+<pre>
+STREAM_NOTIFY_MIME_TYPE_IS
+</pre><br>
+<p class="docText"><a name="ch09index120"></a>The HTTP stream wrapper (<tt>http:// and https://</tt>) fires this event when the <tt>Content-Type</tt> header is available in the response to the HTTP request.</p>
+<pre>
+STREAM_NOTIFY_FILE_SIZE_IS
+</pre><BR>
+<p class="docText"><a name="ch09index121"></a>This event is triggered when the FTP wrapper figures out the size of the file, or when an HTTP wrapper sees the <tt>Content-Length</tt> header.</P>
+<pre>
+STREAM_NOTIFY_REDIRECTED
+</pre><br>
+<p class="docText"><a name="ch09index122"></a>This event is triggered by the HTTP wrapper when it encounters a redirect request (<tt>Location:</tt> header).</p>
+<pre>
+STREAM_NOTIFY_PROGRESS
+</pre><br>
+<p class="docText"><a name="ch09index123"></a>This is one of the fancier events; it is used extensively in our example. It's sent as soon as a packet of data has arrived. In our example, we used this event to perform bandwidth limiting and display the progress bar.</p>
+<pre>
+STREAM_NOTIFY_FAILURE
+</pre><BR>
+<p class="docText"><a name="ch09index124"></a>When a failure occurs, such as the login credentials were wrong, the wrapper triggers this event.<a name="ch09index125"></a><a name="ch09index126"></a></p>
+<a name="ch09lev2sec7"></a><h4 class="docSection2Title">9.2.7. Locking</H4>
+<p class="docText">While writing to files that are possibly being read by other scripts at the same time, you will run into problems at some point because a write might not totally be completed while another script is reading the same file. The reading script will only see a partial file at that moment. Preventing this problem is not hard to do, and the method for this is called <span class="docEmphStrong">locking</span>.<a name="ch09index127"></a><a name="ch09index128"></a></p>
+<p class="docText">PHP can set locks on files with the <tt>flock()</tt> function. Locking a file prevents a reading script from reading a file when it is being written to by another script; the only prerequisites for this is that both scripts (the reader and the writer) implement the locking. A simple set of scripts may look like this:<a name="ch09index129"></a><a name="ch09index130"></a></P>
+<pre>
+&lt;?php /* writer */
+    while (true) {
+        $fp = fopen('testfile', 'w');
+        echo "Waiting for lock...";
+        flock($fp, LOCK_EX);
+        echo "OK\n";
+</pre><br>
+<p class="docText"><tt>flock($filepointer, LOCK_EX);</tt> tries to acquire an <span class="docEmphStrong">exclusive lock</span> on the file and blocks until this lock can be acquired. An exclusive lock will only be granted if there are no other locks on the file.<a name="ch09index131"></a><a name="ch09index132"></a><a name="ch09index133"></a><a name="ch09index134"></a></p>
+<pre>
+$date =  date("Y-m-d H:i:s\n");
+echo $date;
+fputs($fp, $date);
+sleep(1);
+
+
+echo "Releasing lock...";
+flock($fp, LOCK_UN);
+echo "OK\n";
+</pre><br>
+<p class="docText">After we write to the file, we can release the lock with <tt>flock($fp, LOCK_UN);</tt>:</p>
+<pre>
+fclose($fp);
+        usleep(1);
+    }
+?&gt;
+
+&lt;?php /* reader */
+    while (true) {
+        $fp = fopen('testfile', 'r');
+        echo "Waiting for lock...";
+        flock($fp, LOCK_SH);
+        echo "OK\n";
+</pre><br>
+<p class="docText">Here, we request a <span class="docEmphStrong">shared lock</span>. This lock will not be granted if there is an exclusive lock set on this file, but it will be granted if there is another shared lock, or no lock at all on this file. This means that it is possible to have multiple readers reading from the file at the same time, unless a writer process locks the file with its exclusive lock.<a name="ch09index135"></a><a name="ch09index136"></a><a name="ch09index137"></a><a name="ch09index138"></a></p>
+<pre>
+        echo fgets($fp, 2048);
+
+
+        echo "Releasing lock...";
+        flock($fp, LOCK_UN);
+        echo "OK\n";
+
+
+        fclose($fp);
+        sleep(1);
+    }
+?&gt;
+</pre><br>
+<p class="docText">At the end of the script, we sleep for 1 second so that we are not using 100 percent CPU time.<a name="ch09index139"></a><a name="ch09index140"></a></p>
+<a name="ch09lev2sec8"></a><h4 class="docSection2Title">9.2.8. Renaming and Removing Files</h4>
+<p class="docText">PHP provides the <tt>unlink()</tt> function for deleting a file, which &quot;unlinks&quot; the file from a directory. On a UNIX-like system the file will only be deleted if no programs have this file in use. This means that with the following script, the bytes associated with the file will only be released to the operating system after the <tt>fclose()</tt> is executed:<a name="ch09index141"></a><a name="ch09index142"></a><a name="ch09index143"></a><a name="ch09index144"></a><a name="ch09index145"></a><a name="ch09index146"></a></p>
+<pre>
+&lt;?php
+    $f = fopen("testfile", "w");
+    unlink("testfile");
+    sleep(60);
+    fclose($f);
+?&gt;
+</pre><br>
+<p class="docText">During execution, you will not see the file in the directory anymore after <tt>unlink()</tt> is run. But, <tt>lsof</tt> still shows the file as being in use, and you can still read from it and write to it:</p>
+<pre>
+$ sudo lsof | grep testfile
+php  14795  derick  3w  REG  3,10  0  39636 /unlink/testfile (deleted)
+</pre><br>
+<p class="docText">Moving a file in PHP with the <tt>rename()</tt> function is atomic if you move/rename the file to a place which is on the same file system. <span class="docEmphStrong">Atomic</span> means that nothing can interfere with this, and that it is always guaranteed not to be interrupted. In case you want to move a file to a different file system, it is safer to do it in two steps, like this:<a name="ch09index147"></a><a name="ch09index148"></a><a name="ch09index149"></a><a name="ch09index150"></a><a name="ch09index151"></a><a name="ch09index152"></a><a name="ch09index153"></a><a name="ch09index154"></a></p>
+<pre>
+&lt;?php
+      rename('/partition1/file.txt', '/partition2/.file.txt.tmp');
+      rename('/partition2/.file.txt.tmp', '/partition2/file.txt');
+?&gt;
+</pre><BR>
+<p class="docText">The renaming is still not atomic, but the file in the new location will never be there partially, because the renaming from <tt>.file.txt.tmp</tt> to <tt>file.txt</tt> is atomic as the rename is on the same file system.</P>
+<a name="ch09lev2sec9"></a><h4 class="docSection2Title">9.2.9. Temporary Files</h4>
+<p class="docText">In case you want to create a temporary file, the best way to do it is with the <tt>tmpfile()</tt> function. This function creates a temporary file with a unique random name in the current directory and opens this file for writing. This temporary file will be closed automatically when you close the file with <tt>fclose()</tt> or when the script ends:<a name="ch09index155"></a><a name="ch09index156"></a><a name="ch09index157"></a><a name="ch09index158"></a></P>
+<pre>
+&lt;?php
+      $fp = tmpfile();
+      fwrite($fp, 'temporary data');
+      fclose(fp);
+?&gt;
+</pre><br>
+<p class="docText">In case you want to have more control over where the temporary file is created and about its name, you can use the <tt>tempnam()</tt> function. On the contrary to the <tt>tmpfile()</tt> function, this file will not be removed automatically:</p>
+<pre>
+&lt;?php
+      $filename = tempnam('/tmp', 'p5pp');
+      $fp = fopen($filename, 'w');
+      fwrite($fp, 'temporary data');
+      fclose(fp);
+      unlink($filename);
+?&gt;
+</pre><br>
+<p class="docText">The first parameter to the function specifies the directory where the temporary file is created, and the second parameter is the prefix that will be added to the random file name.<a name="ch09index159"></a><a name="ch09index160"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

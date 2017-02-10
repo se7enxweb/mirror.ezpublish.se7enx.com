@@ -1,0 +1,159 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 10.3.&nbsp; Obtaining PEAR</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch10lev1sec3"></a><h3 class="docSection1Title" id="409768-889">10.3. Obtaining PEAR</h3>
+<p class="docText">In this section, you learn how to install PEAR on your platform from a PHP distribution or through the <a class="docLink" target="_blank" href="http://go-pear.org">go-pear.org</a> web site.</p>
+<a name="ch10lev2sec4"></a><h4 class="docSection2Title">10.3.1. Installing with UNIX / Linux PHP Distribution</h4>
+<p class="docText">This section describes PEAR installation and basic usage that is specific for UNIX or UNIX-like platforms, such as Linux and Darwin. The installation of the PEAR Installer itself is somewhat OS-dependent, and because most of what you need to know about installation is OS-specific, you find that here. Using the installer is more similar on different platforms, so that is described in the next section, with the occasional note about OS idiosyncrasies.<a name="ch10index26"></a><a name="ch10index27"></a><a name="ch10index28"></a><a name="ch10index29"></a></P>
+<p class="docText">As of PHP 4.3.0, PEAR with all its basic prerequisites is installed by default when you install PHP.</p>
+<p class="docText">If you build PHP from source, these <tt>configure</tt> options cause problems for PEAR:</P>
+<ul><LI><p class="docList"><tt>--disable-pear</tt>. <tt>make install</tt> will neither install the PEAR installer or any packages.</p></li><li><p class="docList"><tt>--disable-cli.</tt> The PEAR Installer depends on a standalone version of PHP installed.</p></LI><LI><p class="docList"><tt>--without-xml</tt>. PEAR requires the XML extension for parsing package information files.</p></li></ul>
+<a name="ch10lev3sec3"></a><h5 class="docSection3Title">10.3.1.1 Windows</H5>
+<p class="docText">This section shows how to install PEAR on a Windows PHP installation. Start by just installing a binary distribution of PHP from <a class="docLink" target="_blank" href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> (see <a class="docLink" href="#ch10fig01">Figure 10.1</a>). If you go with the defaults, your PHP install will end up in C:\PHP, which is what you will see in the forthcoming examples.<a name="ch10index30"></a><a name="ch10index31"></a><a name="ch10index32"></a><a name="ch10index33"></a></p>
+<a name="ch10fig01"></a><p><center><H5 class="docFigureTitle">Figure 10.1. PHP Welcome screen.</h5>
+<p class="docText"><img border="0" alt="" id="217066145005" width="500" height="369" SRC="images/013147149X/graphics/10fig01.jpg;380137"></P></center></p><br>
+<a name="ch10lev2sec5"></a><h4 class="docSection2Title">10.3.2. Installing with PHP Windows Installer</h4>
+<p class="docText">When you have PHP installed, you need to make sure that your <span class="docEmphStrong"><tt>include_path</tt></span> PHP setting is sensible. Some versions of the Windows PHP Installer use <span class="docEmphStrong"><tt>c:\php4\pear</tt></span> in the default include path, but this directory (<span class="docEmphStrong"><tt>c:\php4</tt></span>) is different from the one created by the PHP Windows Installer. So, edit your <span class="docEmphStrong"><tt>php.ini</tt></span> file (in c:\winnt or c:\windows, depending on your Windows version) and change this directory to <span class="docEmphStrong"><tt>c:\php\pear</tt></span> (see <a class="docLink" href="#ch10fig02">Figure 10.2</a>).<a name="ch10index34"></a><a name="ch10index35"></a><a name="ch10index36"></a></p>
+<a name="ch10fig02"></a><p><center><h5 class="docFigureTitle">Figure 10.2. Example php.ini modifications</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/10fig02_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="354" SRC="images/013147149X/graphics/10fig02.gif;380137"></p></center></p><br>
+<p class="docText">Now, you are ready to use go-pear.</p>
+<a name="ch10lev2sec6"></a><h4 class="docSection2Title">10.3.3. <a class="docLink" target="_blank" href="http://go-pear.org">go-pear.org</a></h4>
+<p class="docText"><a class="docLink" target="_blank" href="http://go-pear.org">go-pear.org</a> is a web site with a single PHP script that you can download and run to install the latest stable version of the PEAR Installer and the PHP Foundation Classes (PFC). go-pear is cross-platform and can be run from the command line and from your web server.<a name="ch10index37"></a><a name="ch10index38"></a><a name="ch10index39"></a></p>
+<p class="docText">PHP distributions bundle a particular release of the PEAR Installer; on the other hand, go-pear gives you the newest stable PEAR releases. However, go-pear does know your directory layout, but really contorts itself to figure it out, and will try adapting your PEAR Installation to that.</p>
+<p class="docText">In this section, you learn how to use go-pear from the command line and web server, and on UNIX and Windows.</P>
+<a name="ch10lev3sec4"></a><H5 class="docSection3Title">10.3.3.1 Prerequisites</h5>
+<p class="docText">Because go-pear is written in PHP, you need a CGI or CLI version of PHP to execute it outside the web server. By default, the CLI version is installed along with your web server PHP module. Try running <tt>php v</tt> to see if it is available to you:<a name="ch10index40"></a></p>
+<pre>
+PHP 5.0.0 (cli), Copyright (c) 1997-2004 The PHP Group
+Zend Engine v2.0, Copyright (c) 1998-2004 Zend Technologies
+</pre><BR>
+<p class="docText">By default, the <tt>php</tt> command is installed in the /usr/local/bin directory on UNIX, or c:\php on Windows. In Windows, the CLI version of PHP may also be called <tt>php-cli</tt>; in that case, you need to type <tt>php-cli</tt> for every example that says just <tt>php</tt>.<a name="ch10index41"></a><a name="ch10index42"></a><a name="ch10index43"></a></p>
+<a name="ch10lev3sec5"></a><h5 class="docSection3Title">10.3.3.2 Going PEAR</h5>
+<p class="docText">If your PHP install did not include PEAR, you can use go-pear as a universal PEAR bootstrapper. All you need is a CLI or CGI version of PHP installed somewhere.</p>
+<p class="docText">You can download the go-pear script and execute it, or run it all in one command, like this:</p>
+<pre>
+$ lynx source http://go-pear.org | php
+</pre><br>
+<p class="docText">This command simply takes the contents of <a class="docLink" target="_blank" href="http://go-pear.org">http://go-pear.org</a> and sends it to PHP for execution.</P>
+<p class="docText">If you do not have lynx available on your system, try an alternative way of executing <tt>go-pear</tt> directly:</p>
+<p class="docText">Using GNUS <tt>wget</tt>:</P>
+<pre>
+$ wget O- http://go-pear.org | php
+</pre><br>
+<p class="docText">Using <tt>fetch</tt> on FreeBSD:</P>
+<pre>
+$ fetch o  http://go-pear.org | php
+</pre><br>
+<p class="docText">Using Perl LWP's GET utility:</p>
+<pre>
+$ GET http://go-pear.org | php
+</pre><br>
+<p class="docText">On Windows, there is no &quot;fetch this URL&quot; tool, but you may be able to use PHP's URL streams (make sure that <tt>url_includes</tt> is not disabled in your <tt>php.ini</tt> file):</p>
+<pre>
+C:\&gt; php-cli r "include('http://go-pear.org');"
+</pre><BR>
+<p class="docText">If none of this works, open <a class="docLink" target="_blank" href="http://go-pear.org">http://go-pear.org</a> in your browser, save the contents as <tt>go-pear.php</tt> and simply run it from there:</P>
+<pre>
+C:\&gt; php go-pear.php
+</pre><br>
+<p class="docText">The output will look like this:<a name="ch10index44"></a><a name="ch10index45"></a><a name="ch10index46"></a></p>
+<pre>
+Welcome to go-pear!
+
+Go-pear will install the 'pear' command and all the files needed by 
+it. This command is your tool for PEAR installation and maintenance.
+Go-pear also lets you download and install the PEAR packages bundled 
+with PHP: DB, Net_Socket, Net_SMTP, Mail, XML_Parser, PHPUnit.
+If you wish to abort, press Control-C now, or press Enter to continue:
+</pre><br>
+<p class="docText">This greeting tells you what you are about to start. Press Enter for the first real question:</p>
+<pre>
+HTTP proxy (http://user:password@proxy.myhost.com:port), or Enter for 
+none:
+</pre><BR>
+<p class="docText"><tt>go-pear</tt> checks your <tt>http_proxy</tt> environment variable and presents the value of that as the default value if <tt>http_proxy</tt> is defined. If you want to use an HTTP proxy when downloading packages, enter the address of it here, or just press Enter for &quot;no proxy.&quot;</p>
+<p class="docText">Now, on to the interesting part:</p>
+<pre>
+Below is a suggested file layout for your new PEAR installation. To 
+change individual locations, type the number in front of the 
+directory. Type 'all' to change all of then, or simply press Enter to
+accept these locations.
+1.  Installation prefix          :/usr/local
+2.  Binaries directory           : $prefix/bin
+3.  PHP code directory           : $prefix/share/pear
+4.  Documentation base directory : $php_dir/docs
+5.  Data base directory          : $php_dir/data
+6.  Tests base directory         : $php_dir/tests
+1-6, 'all' or Enter to continue:
+</pre><BR>
+<p class="docText">Each setting is internally assigned to a variable (<tt>prefix</tt>, <tt>bin_dir</tt>, <tt>php_dir</tt>, <tt>doc_dir</tt>, <tt>data_dir</tt> and <tt>test_dir</tt>, respectively). You may refer to the value of other settings by referencing these variables, as shown previously. Let's take a look at each setting:<a name="ch10index47"></a><a name="ch10index48"></a><a name="ch10index49"></a></p>
+<UL><li><p class="docText">
+<span class="docEmphStrong">Installation prefix.</span> 
+The root directory of your PEAR installation. It has no other effect than serving as a root for the next five settings, using <tt>$prefix</tt>.<a name="ch10index50"></a><a name="ch10index51"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">Binaries directory.</span> 
+Where programs and PHP scripts from PEAR packages are installed. The <tt>pear</tt> executable ends up here. Remember to add this directory to your <tt>PATH</tt>.<a name="ch10index52"></a><a name="ch10index53"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">PHP code directory.</span> 
+Where PHP code is installed. This directory must be in your <tt>include_path</tt> when using the packages you install.<a name="ch10index54"></a><a name="ch10index55"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">Documentation base directory.</span> 
+The base directory for documentation. By default, it is <tt>$php_dir/doc</tt>, and the documentation files for each package are installed as <tt>$doc_dir/</tt><span class="docEmphasis"><tt>Package</tt></span><tt>/</tt><span class="docEmphasis"><tt>file</tt></span>.<a name="ch10index56"></a><a name="ch10index57"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">Database directory.</span> 
+Where the PEAR Installer stores data files. <span class="docEmphStrong">Data files</span> are just a catch-all category for anything that does not fit as PHP code, documentation, and so on. As with the documentation base directory, the package name is added to the path, so the data file <tt>convert.xsl</tt> in <tt>MyPackage</tt> would be installed as <tt>$data_dir/MyPackage/convert.xsl</tt>.<a name="ch10index58"></a><a name="ch10index59"></a><a name="ch10index60"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">Tests base directory.</span> 
+Where regression test scripts for the package are installed. The package name is also added to the directory.<a name="ch10index61"></a><a name="ch10index62"></a></P></LI></ul>
+<p class="docText">When you are satisfied with the directory layout, press Enter to proceed:</p>
+<pre>
+The following PEAR packages are bundled with PHP: DB, Net_Socket, 
+Net_SMTP,
+Mail, XML_Parser, PHPUnit2.
+Would you like to install these as well? [Y/n] :
+</pre><BR>
+<p class="docText">For your convenience, <tt>go-pear</tt> requests whether you want to install the PFC packages. Just install them (press Enter):<a name="ch10index63"></a><a name="ch10index64"></a><a name="ch10index65"></a></p>
+<pre>
+Loading zlib: ok
+Downloading package: PEAR.............ok
+Downloading package: Archive_Tar......ok
+Downloading package: Console_Getopt....ok
+Downloading package: XML_RPC..........ok
+Bootstrapping: PEAR...................(remote) ok
+Bootstrapping: Archive_Tar............(remote) ok
+Bootstrapping: Console_Getopt.........(remote) ok
+Downloading package: DB...............ok
+Downloading package: Net_Socket.......ok
+Downloading package: Net_SMTP.........ok
+Downloading package: Mail.............ok
+Downloading package: XML_Parser.......ok
+Downloading package: PHPUnit2.........ok
+Extracting installer..................ok
+install ok: PEAR 1.3.1
+install ok: Archive_Tar 1.2
+install ok: Console_Getopt 1.2
+install ok: XML_RPC 1.1.0
+install ok: DB 1.6.4
+install ok: Net_Socket 1.0.2
+install ok: Net_SMTP 1.2.6
+install ok: Mail 1.1.3
+install ok: XML_Parser 1.2.0
+install ok: PHPUnit2 2.0.0beta2
+
+The 'pear' command is now at your service at /usr/local/bin/pear
+</pre><br>
+<p class="docText"><a name="ch10index66"></a><a name="ch10index67"></a><a name="ch10index68"></a>Congratulations, you have just installed PEAR!</p>
+<ul></ul></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

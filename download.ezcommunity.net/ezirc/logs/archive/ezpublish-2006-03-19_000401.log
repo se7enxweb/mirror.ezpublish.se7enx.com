@@ -1,0 +1,116 @@
+[03-18-2006 01:33:29] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[03-18-2006 01:34:54] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_17_03_2006 | http://ez.no/community/forum/ez_components/webcast#msg93640
+[03-18-2006 03:00:19] -!- gukk_devel [n=chatzill@xdsl-84-44-175-252.netcologne.de] has joined #ezpublish
+[03-18-2006 03:05:34] -!- gukk_devel [n=chatzill@xdsl-84-44-175-252.netcologne.de] has left #ezpublish []
+[03-18-2006 03:24:42] -!- ordnas [n=ordnas@p549D7AB8.dip.t-dialin.net] has joined #ezpublish
+[03-18-2006 03:36:28] -!- ordnas [n=ordnas@p549D7AB8.dip.t-dialin.net] has left #ezpublish []
+[03-18-2006 03:55:48] -!- ordna1 [n=ordnas@p549D6B0E.dip.t-dialin.net] has joined #ezpublish
+[03-18-2006 04:07:13] -!- tobyS [n=dotxp@p54B1D7FA.dip.t-dialin.net] has joined #ezpublish
+[03-18-2006 04:15:27] -!- ordna1 [n=ordnas@p549D6B0E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-18-2006 05:49:58] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-18-2006 06:11:38] -!- phretor [n=phretor@host99-134.pool875.interbusiness.it] has joined #ezpublish
+[03-18-2006 06:12:03] [#ezpublish] <phretor> hi there
+[03-18-2006 06:24:17] [#ezpublish] <kracker> wassabe
+[03-18-2006 06:26:31] [#ezpublish] <phretor> kracker: I disabled the caching; however I still see no changes in my templates/overrides
+[03-18-2006 06:26:49] [#ezpublish] <phretor> kracker: got suggestions?
+[03-18-2006 06:27:17] [#ezpublish] <kracker> talk in the open
+[03-18-2006 06:27:31] [#ezpublish] <kracker> clear the cache via cmd line
+[03-18-2006 06:28:14] [#ezpublish] <kracker> standard stuff really, eZ publish really does work :D
+[03-18-2006 06:28:42] [#ezpublish] <phretor> kracker I cleared it via clearcache.sh
+[03-18-2006 06:29:04] [#ezpublish] <phretor> kracker: but nothing changes, line.tpl still used instead of my own override
+[03-18-2006 06:30:47] [#ezpublish] <phretor> kracker: I think the problem is in the overriding but I already defined a new override _two_ times (in case of error)
+[03-18-2006 06:33:04] [#ezpublish] <phretor> any suggestions?
+[03-18-2006 06:43:08] [#ezpublish] <kracker> did you use clearcache --clear-all
+[03-18-2006 06:43:12] [#ezpublish] <phretor> yes
+[03-18-2006 06:43:40] [#ezpublish] <kracker> you could always remove the cache by hand if you have a configurationproblem but it sounds like you have settings problem
+[03-18-2006 06:43:58] [#ezpublish] <kracker> you kno your line.tpl has to override it (come first)
+[03-18-2006 06:44:12] [#ezpublish] <kracker> order in the override ini file defineds precedence
+[03-18-2006 06:44:32] [#ezpublish] <kracker> gott put your overrides as first entries before the default onese
+[03-18-2006 06:44:46] [#ezpublish] <phretor> kracker: the upper, the most important?
+[03-18-2006 06:44:50] [#ezpublish] <kracker> yes
+[03-18-2006 06:45:06] [#ezpublish] <kracker> at least in my humble (laugh) experiance
+[03-18-2006 06:45:16] [#ezpublish] <phretor> kracker: in the file or in the order displayed within the frontend?
+[03-18-2006 06:45:31] [#ezpublish] <kracker> in the settings override.ini.php file
+[03-18-2006 06:45:52] [#ezpublish] <phretor> kracker: I've an append because of siteaccess
+[03-18-2006 06:45:57] [#ezpublish] <kracker> cause it seems right now your changes are not being recognissed ?
+[03-18-2006 06:46:04] [#ezpublish] <kracker> errum recognized/
+[03-18-2006 06:46:11] [#ezpublish] <phretor> yes
+[03-18-2006 06:46:50] [#ezpublish] <kracker> yeah
+[03-18-2006 06:46:56] [#ezpublish] <kracker> that's what i see
+[03-18-2006 06:47:01] [#ezpublish] <kracker> blind of course but ...
+[03-18-2006 06:50:34] [#ezpublish] <phretor> it doesn't work
+[03-18-2006 06:51:43] [#ezpublish] <kracker> sorry to vugue
+[03-18-2006 06:51:54] [#ezpublish] <kracker> are you using the admin or editing files by hand
+[03-18-2006 06:52:16] [#ezpublish] <kracker> have you overriden a file before
+[03-18-2006 06:52:30] [#ezpublish] <kracker> are you sure this is the file you need to override
+[03-18-2006 06:52:46] [#ezpublish] <kracker> sry man i'm tapping out
+[03-18-2006 06:53:00] [#ezpublish] <phretor> ok
+[03-18-2006 06:53:07] [#ezpublish] <phretor> kracker: http://rafb.net/paste/results/e7Zecx61.html
+[03-18-2006 06:53:17] [#ezpublish] <phretor> this is some information on my situation
+[03-18-2006 06:57:47] [#ezpublish] <kracker> nods
+[03-18-2006 06:58:57] [#ezpublish] <kracker> are you running in tpl debug mode
+[03-18-2006 06:59:10] [#ezpublish] <phretor> kracker: how do I check it?
+[03-18-2006 07:05:02] [#ezpublish] <kracker> that's gotta be in the docs man
+[03-18-2006 07:05:08] [#ezpublish] <kracker> srry but i'm going back to afk
+[03-18-2006 07:05:21] [#ezpublish] <phretor> ok
+[03-18-2006 07:05:21] [#ezpublish] <kracker> you'll figure it out
+[03-18-2006 07:05:27] [#ezpublish] <kracker> it's eZ
+[03-18-2006 07:08:46] [#ezpublish] <phretor> kracker: but do I have to enable it or not?
+[03-18-2006 07:44:03] -!- nnn1 [n=therion@195.204.221.183] has joined #ezpublish
+[03-18-2006 07:44:47] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[03-18-2006 08:04:42] -!- phretor [n=phretor@host99-134.pool875.interbusiness.it] has left #ezpublish []
+[03-18-2006 08:11:40] -!- tobyS [n=dotxp@p54B1D7FA.dip.t-dialin.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-18-2006 11:14:00] -!- tobmaster [n=tobmaste@dslb-084-061-048-178.pools.arcor-ip.net] has joined #ezpublish
+[03-18-2006 11:14:16] [#ezpublish] <tobmaster> hi
+[03-18-2006 13:24:17] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[03-18-2006 13:24:43] [#ezpublish] <Sulfur> yo guys .... needing a PHP help on eZpublish ... going nuts here
+[03-18-2006 13:24:51] [#ezpublish] <Sulfur> anyone up?
+[03-18-2006 13:39:23] [#ezpublish] <tobmaster> Sulfur: have no much time
+[03-18-2006 13:39:26] [#ezpublish] <tobmaster> Sulfur: whats up?
+[03-18-2006 13:46:04] [#ezpublish] <Sulfur> hi
+[03-18-2006 13:46:42] [#ezpublish] <Sulfur> how can I update the name of an already-published object using eZ functions?
+[03-18-2006 13:46:55] [#ezpublish] <Sulfur> tobmaster: how can I update the name of an already-published object using eZ functions?
+[03-18-2006 13:47:40] [#ezpublish] <tobmaster> change the name attribute?
+[03-18-2006 13:47:58] [#ezpublish] <tobmaster> first fetch the object
+[03-18-2006 13:48:10] [#ezpublish] <tobmaster> fetch the name attribute
+[03-18-2006 13:48:14] [#ezpublish] <Sulfur> tobmaster: I mean, I am trying tontentObject->setAttribute('name', 'newname'); $contentObject->store() , and the same for the node, plus calling eZOperationHandler:: publish but it does nothing
+[03-18-2006 13:48:19] [#ezpublish] <Sulfur> ok ....
+[03-18-2006 13:48:22] [#ezpublish] <Sulfur> and, tobmaster?
+[03-18-2006 13:48:30] [#ezpublish] <tobmaster> hmmm
+[03-18-2006 13:48:44] [#ezpublish] <tobmaster> have you stored the attribute?
+[03-18-2006 13:48:47] [#ezpublish] <Sulfur> wait, I pastebin my code ...
+[03-18-2006 13:50:23] [#ezpublish] <Sulfur> http://pastebin.com/609563 tobmaster
+[03-18-2006 13:51:22] [#ezpublish] <tobmaster> you must call setAttribute on the Attribute object not the content object
+[03-18-2006 13:51:53] [#ezpublish] <tobmaster> or i am currently missunderstanding you
+[03-18-2006 13:52:09] [#ezpublish] <Sulfur> well, I need to change the name of a batch of nodes
+[03-18-2006 13:52:43] [#ezpublish] <Sulfur> like, having in my content tree: from a node called foo to a node called foobar
+[03-18-2006 13:53:05] [#ezpublish] <Sulfur> so that the url for them will be from ...../foo to ..../foobar
+[03-18-2006 13:53:31] [#ezpublish] <Sulfur> I can set the name for the object with no problems if the object is new (tried it)
+[03-18-2006 13:53:45] [#ezpublish] <Sulfur> but I am unable to do it on an already-existing node
+[03-18-2006 13:53:58] [#ezpublish] <Sulfur> ops .. tobmaster . forgot your nick ..
+[03-18-2006 13:55:53] [#ezpublish] <tobmaster> do you make a new version?
+[03-18-2006 13:56:34] [#ezpublish] <Sulfur> nope ....
+[03-18-2006 13:56:41] [#ezpublish] <Sulfur> how can I?
+[03-18-2006 13:57:20] [#ezpublish] <Sulfur> I supposed that could be the way, but I thought that just modifying the existing version AND publishing it it would be ok  --- seems not
+[03-18-2006 13:57:30] [#ezpublish] <tobmaster> $newVersion =& $contentObject->createNewVersion();
+[03-18-2006 13:57:39] [#ezpublish] <Sulfur> aha .... and after that?
+[03-18-2006 13:57:53] [#ezpublish] <tobmaster> Sulfur: not sure if it works with the existend should normally also be possible
+[03-18-2006 13:58:19] [#ezpublish] <tobmaster> and you should set the attributes as follows
+[03-18-2006 13:58:21] [#ezpublish] <tobmaster> $dataMap =& $version->attribute( 'data_map' );
+[03-18-2006 13:58:45] [#ezpublish] <tobmaster> $dataMap['name']->setAttribute( 'data_text', 'newname');
+[03-18-2006 13:58:52] [#ezpublish] <Sulfur> aha ... I see that there seems to be the possibility of basing your new version on a copy of another
+[03-18-2006 13:58:54] [#ezpublish] <tobmaster> $dataMap['name']->store();
+[03-18-2006 13:58:59] [#ezpublish] <Sulfur> aha ....
+[03-18-2006 13:59:04] [#ezpublish] <Sulfur> and then publish it ...
+[03-18-2006 13:59:10] [#ezpublish] <Sulfur> (I suppose )
+[03-18-2006 13:59:24] [#ezpublish] <tobmaster> $contentobject->store(); and the publish it
+[03-18-2006 13:59:32] [#ezpublish] <tobmaster> was only quickly typed
+[03-18-2006 13:59:37] [#ezpublish] <Sulfur> what version number do I have to supply to the publish handler? I suppose it's somewhere in the new version
+[03-18-2006 13:59:54] [#ezpublish] <Sulfur> let's try it ...
+[03-18-2006 14:00:11] [#ezpublish] <tobmaster> $version->attribute( 'version' )
+[03-18-2006 14:00:19] [#ezpublish] <tobmaster> ok i also have to leave
+[03-18-2006 14:00:20] [#ezpublish] <tobmaster> bye
+[03-18-2006 14:00:38] -!- tobmaster [n=tobmaste@dslb-084-061-048-178.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[03-18-2006 15:34:54] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Leaving."]
+[03-18-2006 15:39:25] -!- tobyS [n=dotxp@dslb-084-061-181-194.pools.arcor-ip.net] has joined #ezpublish
+[03-18-2006 17:12:22] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]

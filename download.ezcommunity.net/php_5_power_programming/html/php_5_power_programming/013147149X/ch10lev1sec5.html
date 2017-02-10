@@ -1,0 +1,179 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 10.5.&nbsp; Configuration Parameters</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch10lev1sec5"></a><h3 class="docSection1Title" id="409768-911">10.5. Configuration Parameters</h3>
+<p class="docText">The different installer front-ends differ only in their user-interface specific parts; the core, executing part of each command, is shared between all front-ends. Their configuration parameters are also common; the documentation base directory used in the command-line installation is the same one used by the Gtk installer, and so on.</p>
+<p class="docText">The PEAR Installer has many configuration parameters, only some of which you need to worry about right now. Look at the <tt>PEAR main directory</tt> parameter and the other directory parameters first.<a name="ch10index121"></a><a name="ch10index122"></a></p>
+<p class="docText">Next is the complete list of configuration parameters in the PEAR Installer (see <a class="docLink" href="#ch10table04">Table 10.4</a>). This is close to what you see when running the <tt>pear config-show</tt> command.<a name="ch10index123"></a><a name="ch10index124"></a></p>
+<a name="ch10table04"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 10.4. PEAR Configuration Parameters</H5></caption><colgroup><col width="247.5"><col width="148.5"><col width="154"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Configuration Parameter</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Variable Name</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Example Value</span></p></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">PEAR main directory</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>php_dir</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">/usr/share/pear</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">PEAR executables directory</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>bin_dir</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">/usr/bin</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">PEAR documentation directory</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>doc_dir</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">/usr/share/pear/docs</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">PHP extension directory</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>ext_dir</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">/usr/lib/php/20010901</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">PEAR Installer cache directory</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>cache_dir</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">/tmp/pear/cache</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">PEAR data directory</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>data_dir</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">/usr/share/pear/data</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">PEAR test directory</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>test_dir</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">/usr/share/pear/tests</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText">Cache TimeToLive</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>cache_ttl</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">not set</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Preferred Package State</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>preferred_state</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">alpha</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText">UNIX file mask</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>umask</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">022</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Debug Log Level</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>verbose</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">1</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">HTTP Proxy Server Address</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>http_proxy</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">not set</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">PEAR server</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>master_server</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><a class="docLink" target="_blank" href="http://pear.php.net">pear.php.net</a></P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">PEAR password (for maintainers)</P></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>password</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">not set</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">PEAR user name (for maintainers)</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>username</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">not set</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Package Signature Type</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>sig_type</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">gpg</P></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Signature Handling Program</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>sig_bin</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">/usr/bin/gpg</P></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Signature Key Directory</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>sig_keydir</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">/usr/etc/pearkeys</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Signature Key Id</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>sig_keyid</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">not set</p></td></tr></table></p><br>
+<p class="docText">The various directory parameters are base directories for installation of different file types, such as PHP code, dynamically loadable extensions, documentation, scripts, programs, and regression tests. Some of these were mentioned in the previous <a class="docLink" href="ch10lev1sec3.html#ch10lev2sec6"><tt>go-pear</tt></a> section, but here is the full list:<a name="ch10index125"></a><a name="ch10index126"></a></p>
+<ul><li><p class="docText">
+<span class="docEmphStrong">PEAR main directory (php_dir).</span> 
+Directory where the PHP include files are stored, as well as PEAR's internal administration files to keep track of installed packages. If you change this configuration parameter, the installer will no longer &quot;find&quot; the packages you installed there. This feature makes it possible to maintain several PEAR installations on the same machine. The default value for this parameter is <tt>/usr/local/lib/php</tt>.<a name="ch10index127"></a><a name="ch10index128"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">PEAR executables directory (bin_dir).</span> 
+Directory where, executable scripts and programs are installed. For example, the <tt>pear</tt> command itself is installed here. The default value for this parameter is <tt>/usr/local/bin</tt>.<a name="ch10index129"></a><a name="ch10index130"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">PEAR documentation directory (doc_dir).</span> 
+Directory where documentation files are installed. Directly beneath the <tt>doc_dir</tt> is a directory named after the package, containing all the documentation files installed with the package. The default value of this parameter is <tt>/usr/local/lib/php/docs</tt>.<a name="ch10index131"></a><a name="ch10index132"></a></p></LI><LI><p class="docText">
+<span class="docEmphStrong">PHP extension directory (ext_dir).</span> 
+Directory where all PHP extensions that are built during install end up. Make sure you set <tt>extension_dir</tt> to this directory in your <tt>php.ini</tt> file. The default value for this parameter is <tt>/usr/local/lib/php/extensions/</tt><span class="docEmphasis"><tt>BUILDSPEC</tt></span>, where <span class="docEmphasis"><tt>BUILDSPEC</tt></span> is comprised of Zend's module API version and whether PHP was built with ZTS (Zend thread safety) and debugging. For example, <span class="docEmphasis"><tt>BUILDSPEC</tt></span> would be <span class="docEmphasis"><tt>20020429</tt></span> for the API released April 29, 2002, without ZTS and debug.<a name="ch10index133"></a><a name="ch10index134"></a></p></li><LI><p class="docText">
+<span class="docEmphStrong">PEAR installer cache directory (cache_dir).</span> 
+Directory where the installer may store caching data. This local caching is used to speed up repeated XML-RPC calls to the central server.<a name="ch10index135"></a><a name="ch10index136"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">PEAR data directory (data_dir).</span> 
+Directory that stores files that are neither code, regression tests, executables, nor documentation. Typical candidates for &quot;data files&quot; are DTD files, XSL stylesheets, offline template files, and so on.<a name="ch10index137"></a><a name="ch10index138"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">Cache TimeToLive (cache_ttl).</span> 
+The number of seconds cached XML-RPC calls should be stored before invalidated. Set this to a value larger than 0 to enable caching of XML-RPC method calls; this speeds up remote operations.<a name="ch10index139"></a></P></li><LI><p class="docText">
+<span class="docEmphStrong">Preferred Package Stage (preferred_state).</span> 
+Parameter that enables you to set the quality you expect from a package release before you even see it. There are five states to choose from: stable (production code), beta, alpha, snapshot, and devel. The installer perceives the quality of a release as highest with &quot;stable&quot; and lowest with &quot;devel,&quot; and shows you releases of the preferred state <span class="docEmphasis">or better</span>. This means that if you set your preferred state to &quot;stable,&quot; you only see stable releases when browsing the package database. However, if you set preferred state to &quot;alpha,&quot; you see alpha as well as beta and stable-state releases.<a name="ch10index140"></a></p></LI><li><p class="docText">
+<span class="docEmphStrong">Unix file mask (umask).</span> 
+Parameter used to determine the default file permissions for new files on UNIX-style systems. The <tt>umask</tt> tells which file permission bits will be masked <span class="docEmphasis">away</span>.<a name="ch10index141"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">Debug Log Level (verbose).</span> 
+The default debug log level that says how many <tt>-v</tt> command-line options are used by default. The recommended value is 1, which is informational. A value of 2 shows some details about what the installer is doing. A value of 3 or greater is for debugging the installer.<a name="ch10index142"></a></P></LI><li><p class="docText">
+<span class="docEmphStrong">HTTP Proxy Server (http_proxy).</span> 
+You can set this configuration parameter to make the PEAR Installer always use a web proxy. You specify the proxy as <span class="docEmphasis"><tt>host:port</tt></span> or <tt>http://</tt><span class="docEmphasis"><tt>host:port</tt></span>. If your proxy requires authorization, specify it as <tt>http://</tt><span class="docEmphasis"><tt>user:pw@host:port</tt></span>.<a name="ch10index143"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">PEAR Server (master_server).</span> 
+The hostname of the package registry server. Registry queries and downloads are all proxied through this server.<a name="ch10index144"></a></P></li><li><p class="docText">
+<span class="docEmphStrong">PEAR username / PEAR password (username / password).</span> 
+For commands that require authorization, you must log in first with the <tt>login</tt> command. When you log in, your username and password are stored in these two configuration parameters (maintainers only).<a name="ch10index145"></a></P></li><LI><p class="docText">
+<span class="docEmphStrong">Signature Type (sig_type).</span> 
+What type of signature tool to use when adding signing packages (maintainers only).<a name="ch10index146"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">Signature Handling Program (sig_bin).</span> 
+The path of the executable used to handle signatures (maintainers only).<a name="ch10index147"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">Signature Key Directory (sig_keydir).</span> 
+The directory where PHP/PEAR-specific public and private keys are stored (maintainers only).<a name="ch10index148"></a><a name="ch10index149"></a></p></li><li><p class="docText">
+<span class="docEmphStrong">Signature Key Id (sig_keyid).</span> 
+The key id that is used when signing packages. If this configuration parameter is not set, the default is left to the Signature Handling Program (maintainers only).<a name="ch10index150"></a><a name="ch10index151"></a><a name="ch10index152"></a></p></li></ul>
+<a name="ch10lev4sec12"></a><h4 class="docSection2Title"><tt>Configuration Layers</tt></h4>
+<p class="docText">Each configuration parameter may be defined in three locations, called <span class="docEmphStrong">layers</span>: a user's private configuration file (the <span class="docEmphStrong">user layer</span>), the system-wide configuration file (the <span class="docEmphStrong">system layer</span>), and built-in defaults (the <span class="docEmphStrong">default layer</span>). When you run the installer and it needs to look up some configuration parameter, it will check the user layer first. If the parameter is not user-defined, it checks the system layer. If it was not found in the system configuration either, the default layer is used. The default layer has a built-in default value for every configuration parameter.<a name="ch10index153"></a><a name="ch10index154"></a><a name="ch10index155"></a><a name="ch10index156"></a><a name="ch10index157"></a><a name="ch10index158"></a></p>
+<p class="docText">To see the value of a single configuration parameter, use the <tt>pear config-get</tt> command. Here is the built-in help text and some usage examples:</p>
+<pre>
+$ <span class="docEmphStrong">pear help config-get</span>
+pear config-get &lt;parameter&gt; [layer]
+Displays the value of one configuration parameter.  The first 
+argument is the name of the parameter, an otional second argument may 
+be used to tell which configuration layer to look in.  Valid 
+configuration layers are "user", "system" and "default".  If no layer 
+is specified, a value will be picked from the first layer that
+defines the parameter, in the order just specified.
+</pre><BR>
+<p class="docText">(When reading the first line of the <tt>pear help</tt> output, it's useful to know that <tt>&lt;foo&gt;</tt> means that <tt>foo</tt> is a required argument, while <tt>[bar]</tt> means <tt>bar</tt> is optional.)</P>
+<p class="docText">So, with <tt>config-get</tt> you may specify the layer. If you don't, it will pick the value from the highest-precedence layer that defines it. Now, for some examples:<a name="ch10index159"></a><a name="ch10index160"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear config-get verbose</span>
+verbose=1
+$ <span class="docEmphStrong">pear config-get verbose user</span>
+user.verbose=1
+$ <span class="docEmphStrong">pear config-get verbose system</span>
+system.verbose=
+$ <span class="docEmphStrong">pear config-get verbose default</span>
+default.verbose=1
+</pre><br>
+<p class="docText"><a name="ch10index161"></a><a name="ch10index162"></a>As you can see, the <tt>verbose</tt> configuration parameter is set both in the user and default layer. That means it is the user-specified parameter that takes effect. It is possible to clear a user- or system-specified value with the <tt>-u</tt> option to the installer:</P>
+<pre>
+$ <span class="docEmphStrong">pear u verbose -s</span>
+$ <span class="docEmphStrong">pear config-get verbose</span>
+verbose=1
+$ <span class="docEmphStrong">pear config-get verbose user</span>
+user.verbose=
+$ <span class="docEmphStrong">pear config-get verbose system</span>
+system.verbose=
+<span class="docEmphStrong">$ pear config-get verbose default</span>
+default.verbose=1
+</pre><br>
+<a name="ch10lev4sec13"></a><h4 class="docSection2Title"><tt>Changing the Configuration</tt></h4>
+<p class="docText">To change a configuration parameter, you can use either <tt>pear config-set</tt> or <tt>pear d</tt>. Here's the help text for <tt>config-set</tt>:<a name="ch10index163"></a><a name="ch10index164"></a><a name="ch10index165"></a><a name="ch10index166"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear help config-set</span> pear config-set &lt;parameter&gt; &lt;value&gt; [layer]
+Sets the value of one configuration parameter.  The first argument
+is the name of the parameter, the second argument is the new value.
+Some parameters are subject to validation, and the command will fail 
+with an error message if the new value does not make sense.  An 
+optional third argument may be used to specify which layer to set the 
+configuration parameter in.  The default layer is "user".
+</pre><br>
+<p class="docText">Actually, this command</p>
+<pre>
+$ <span class="docEmphStrong">pear config-set foo bar</span>
+</pre><BR>
+<p class="docText">is equivalent to</p>
+<pre>
+$ <span class="docEmphStrong">pear d foo=bar -s</span>
+</pre><BR>
+<p class="docText">The difference between <tt>pear config-set</tt> and <tt>pear d</tt> is that the effect of <tt>config-set</tt> applies permanently from the next command, while <tt>d</tt> applies only to the current command.</p>
+<a name="ch10note01"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">If you want to have parallel PEAR installations, (for instance, one in which to test-install your own packages), define a shell alias to something like <tt>pear c test-pear.conf</tt>, and set the different directory parameters in this configuration only.<a name="ch10index167"></a><a name="ch10index168"></a></p></div><br>
+<p class="docText">Before you change everything, you should be aware that the <tt>PEAR main directory</tt> configuration parameter (<tt>php_dir</tt>) has a special function. The list of installed packages database lives there in a subdirectory called <tt>.registry</tt>. If you change <tt>php_dir</tt>, you will not see the <a class="docLink" href="ch10lev1sec2.html#ch10lev2sec1">packages</a> installed in the old <tt>php_dir</tt> anymore. Here's an example:<a name="ch10index169"></a><a name="ch10index170"></a><a name="ch10index171"></a></p>
+<pre>
+$ pear config-get php_dir
+php_dir=/usr/local/lib/php
+$ pear list
+Installed packages:
+===============
+Package           Version    State
+Archive_Tar       0.9        stable
+Console_Getopt    1.0        stable
+DB                1.3        stable
+Mail              1.0.1      stable
+Net_SMTP          1.0        stable
+Net_Socket        1.0.1      stable
+PEAR              1.0b2      stable
+XML_Parser        1.0        stable
+XML_RPC           1.0.4      stable
+</pre><br>
+<p class="docText">So, PEAR PHP files are installed in /usr/local/lib/php, and you have just the core packages provided by the <tt>go-pear</tt> install. Now, try changing <tt>php_dir</tt>:<a name="ch10index172"></a><a name="ch10index173"></a><a name="ch10index174"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear config-set php_dir /usr/share/pear</span>
+$ <span class="docEmphStrong">pear list</span>
+(no packages installed)
+</pre><BR>
+<p class="docText">There's no reason to panicyour packages are still in /usr/local/lib/php, but the installer doesn't see them now. How do you get the old <tt>php_dir</tt> setting back? In addition to the <tt>pear config-set</tt> command, the <tt>pear</tt> command has some options where you can set individual configuration parameters only for one run, permanently, or unset a parameter in a specific layer.</p>
+<p class="docText">You may return to the old setting by setting it explicitly like this:</p>
+<pre>
+$ <span class="docEmphStrong">pear config-set php_dir /usr/local/lib/php</span>
+</pre><br>
+<p class="docText">But to demonstrate the flexibility of configuration layers, you can simply unset <tt>php_dir</tt> from the user configuration layer instead:</p>
+<pre>
+$ pear u php_dir s
+$ pear list
+Installed packages:
+===============
+Package           Version    State
+Archive_Tar       0.9        stable
+Console_Getopt    1.0        stable
+DB                1.3        stable
+Mail              1.0.1      stable
+Net_SMTP          1.0        stable
+Net_Socket        1.0.1      stable
+PEAR              1.0b2      stable
+XML_Parser        1.0        stable
+XML_RPC           1.0.4      stable
+</pre><BR>
+<p class="docText">Your packages are back! The <tt>-u php_dir</tt> option makes pear delete <tt>php_dir</tt> from the (u)ser layer for this run, while the <tt>-s</tt> option makes configuration changes to the user layer permanent. Effectively, this reverts <tt>php_dir</tt> to the value it has in the &quot;system&quot; layer.</p>
+<p class="docText">If you would just like to set a configuration value for a single run of the <tt>pear</tt> command, here is how:<a name="ch10index175"></a><a name="ch10index176"></a><a name="ch10index177"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear d preferred_state=alpha remote-lis</span>t
+</pre><BR>
+<p class="docText">This sets the <tt>preferred_state</tt> configuration parameter to <tt>alpha</tt> (in the user layer, if you care to know) for this command. What this command does is show you package and releases of stable, beta, and alpha quality from <a class="docLink" target="_blank" href="http://pear.php.net">pear.php.net</a>. By default, you will only see stable releases.<a name="ch10index178"></a></p>
+<p class="docText">There are three places where each configuration parameter may be defined. First, the installer looks at the user's local configuration <tt>(~/.pearrc</tt> on UNIX, <tt>pear.ini</tt> in the System directory on Windows). If the requested parameter was found in the user configuration, that value is returned. If not, the installer proceeds to the system-wide configuration file (<tt>/etc/pear.conf</tt> on UNIX, <tt>pearsys.ini</tt> in the System directory on Windows). If that fails as well, a default built-in value is used.</P>
+<p class="docText">For the two example settings in <a class="docLink" href="#ch10table05">Table 10.5</a>, <tt>php_dir</tt> and <tt>preferred_state</tt>, PEAR looks for a value starting on the first row (the user layer) going down until a value exists. In this example, the <tt>php_dir</tt> setting resolves to <tt>/usr/local/lib/php</tt>, which is the default. The <tt>preferred_state</tt> setting resolves to <tt>beta</tt>, because this is the value set in the user layer.</p>
+<a name="ch10table05"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 10.5. </h5></caption><colgroup><col width="115.5"><col width="209"><col width="225.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Config Layer</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong"><tt>php_dir</tt> setting</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong"><tt>preferred_state</tt> setting</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">User</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">(not set)</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>beta</tt></P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">System</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">(not set)</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">(not set)</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Default</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>/usr/local/lib/php</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>stable</tt></p></td></tr></table></P><br>
+<p class="docText">The content of the configuration files is serialized PHP data, which is not for the faint of heart to read or edit. If you edit it directly and make a mistake, you lose the entire layer upon saving it again, so stick to the <tt>pear</tt> command.<a name="ch10index179"></a><a name="ch10index180"></a><a name="ch10index181"></a></p>
+<UL></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

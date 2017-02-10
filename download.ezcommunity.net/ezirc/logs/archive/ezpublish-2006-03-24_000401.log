@@ -1,0 +1,255 @@
+[03-23-2006 00:31:52] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-23-2006 00:46:55] -!- DiGiTa|_ [n=guillaum@84.6.32.52] has joined #ezpublish
+[03-23-2006 01:22:14] -!- _xavier [n=xavier@epha-gw.xdsl.easynet.be] has joined #ezpublish
+[03-23-2006 01:30:42] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Remote closed the connection]
+[03-23-2006 01:47:51] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-23-2006 01:50:45] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-23-2006 01:52:14] -!- ordnas [n=ordnas@p549D53A3.dip.t-dialin.net] has joined #ezpublish
+[03-23-2006 01:52:19] -!- buz_ [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-23-2006 02:07:07] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-23-2006 02:08:20] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-23-2006 02:23:48] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-23-2006 02:25:01] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-23-2006 02:31:35] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[03-23-2006 02:37:36] [#ezpublish] <DiGiTa|_> is it possible to not save draft on editing ?
+[03-23-2006 02:49:37] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[03-23-2006 02:50:26] -!- _buz_ [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-23-2006 02:50:47] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-23-2006 02:55:58] [#ezpublish] <kris10an> DiGiTa|_: currently ezpublish allways makes a draft while editing, i know some people have created a patch for that, but i couldn't find it right now...
+[03-23-2006 02:56:13] [#ezpublish] <DiGiTa|_> ok
+[03-23-2006 02:56:46] [#ezpublish] <_buz_> kristof coomans had something about that on his blog
+[03-23-2006 02:57:12] [#ezpublish] <DiGiTa|_> because my clients don't really like the conflict problems when they go back with navigator
+[03-23-2006 02:59:14] [#ezpublish] <DiGiTa|_> http://pubsvn.ez.no/community/trunk/hacks/untoucheddrafts/
+[03-23-2006 03:02:10] [#ezpublish] <kris10an> DiGiTa|_: you can set EditDirtyObjectAction=usecurrent
+[03-23-2006 03:02:24] [#ezpublish] <kris10an> in site.ini.append
+[03-23-2006 03:02:29] [#ezpublish] <DiGiTa|_> oh
+[03-23-2006 03:02:34] [#ezpublish] <kris10an> [ContentSettings]
+[03-23-2006 03:02:35] [#ezpublish] <DiGiTa|_> i didn't know this one
+[03-23-2006 03:02:36] [#ezpublish] <DiGiTa|_> :)
+[03-23-2006 03:02:38] [#ezpublish] <DiGiTa|_> thanks
+[03-23-2006 03:02:45] [#ezpublish] <kris10an> Then you dont get the version-list allt the time..
+[03-23-2006 03:02:57] [#ezpublish] <DiGiTa|_> nice
+[03-23-2006 03:05:26] -!- buz_ [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[03-23-2006 03:06:06] [#ezpublish] <DiGiTa|_> yes
+[03-23-2006 03:06:18] [#ezpublish] <DiGiTa|_> works like a charm
+[03-23-2006 03:06:26] [#ezpublish] <DiGiTa|_> ;)
+[03-23-2006 03:07:13] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-23-2006 03:10:10] [#ezpublish] <zrg> yeah, that works
+[03-23-2006 03:10:26] [#ezpublish] <zrg> and you still have back versions if client screwa up big time
+[03-23-2006 03:13:00] [#ezpublish] <DiGiTa|_> http://blog.coomanskristof.be/2006/03/16/adding-class-attributes-with-ajax/
+[03-23-2006 03:13:04] [#ezpublish] <DiGiTa|_> ohoh
+[03-23-2006 03:13:06] [#ezpublish] <DiGiTa|_> nice
+[03-23-2006 03:13:07] [#ezpublish] <DiGiTa|_> :)
+[03-23-2006 03:23:38] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 110 (Connection timed out)]
+[03-23-2006 03:32:43] [#ezpublish] <_buz_> anyone wanna play alpha tester?
+[03-23-2006 03:32:59] [#ezpublish] <_buz_> http://triligon.org/triligon/blog/added_safehtml_to_xeditor
+[03-23-2006 03:43:23] [#ezpublish] <zrg> whats there?
+[03-23-2006 03:43:32] [#ezpublish] <_buz_> xmlarea++
+[03-23-2006 03:43:42] [#ezpublish] <_buz_> or maybe xhtmlarea fits it better
+[03-23-2006 03:44:11] [#ezpublish] <zrg> ok, need to login or what?
+[03-23-2006 03:44:31] [#ezpublish] <_buz_> useful test would be to install it on some site of your own ;)
+[03-23-2006 03:46:27] [#ezpublish] <zrg> ee.. :)
+[03-23-2006 03:46:38] [#ezpublish] <_buz_> it seems to work quite well now
+[03-23-2006 03:46:45] [#ezpublish] <_buz_> maybe i'll offer a test area
+[03-23-2006 03:46:46] [#ezpublish] <zrg> how do i see
+[03-23-2006 03:47:27] [#ezpublish] <_buz_> see what
+[03-23-2006 03:48:16] [#ezpublish] <zrg> that xeditor whatever it is
+[03-23-2006 03:52:52] [#ezpublish] <zrg> id like to test but would like to see in action first
+[03-23-2006 03:53:48] [#ezpublish] <_buz_> http://triligon.org/triligon/playground/xinhademoarea
+[03-23-2006 04:04:49] [#ezpublish] <zrg> hmm
+[03-23-2006 04:04:56] [#ezpublish] <_buz_> does it work?
+[03-23-2006 04:05:29] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-23-2006 04:06:33] -!- tobyS [n=dotxp@dslb-084-062-192-154.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-23-2006 04:08:06] [#ezpublish] <zrg> seems so, how does object/image insetrtion work
+[03-23-2006 04:08:56] [#ezpublish] <zrg> and whos the girl :)
+[03-23-2006 04:09:52] [#ezpublish] <zrg> shows all images from all galleries?
+[03-23-2006 04:10:00] [#ezpublish] <_buz_> yes
+[03-23-2006 04:10:03] [#ezpublish] <_buz_> my gf
+[03-23-2006 04:10:10] [#ezpublish] <_buz_> shows all images it finds
+[03-23-2006 04:10:16] [#ezpublish] <_buz_> which is why it is so slow on that site
+[03-23-2006 04:10:17] [#ezpublish] <zrg> anyway very interesting, throw me a package to test
+[03-23-2006 04:10:24] [#ezpublish] <_buz_> get it from svn
+[03-23-2006 04:10:36] [#ezpublish] <DiGiTa|_> doesn't work with ff on osx
+[03-23-2006 04:10:37] [#ezpublish] <DiGiTa|_> :)
+[03-23-2006 04:10:41] [#ezpublish] <DiGiTa|_> i cannot test
+[03-23-2006 04:10:43] [#ezpublish] <_buz_> that's weird
+[03-23-2006 04:10:48] [#ezpublish] <_buz_> what version of ff
+[03-23-2006 04:11:00] [#ezpublish] <zrg> fine on ff 1.5 on linux
+[03-23-2006 04:11:05] [#ezpublish] <zrg> seems fine that is
+[03-23-2006 04:11:06] [#ezpublish] <DiGiTa|_> 1.5.0.1
+[03-23-2006 04:11:27] [#ezpublish] <zrg> turn on javascript console?
+[03-23-2006 04:11:27] [#ezpublish] <_buz_> yeah fine on linux for me too
+[03-23-2006 04:11:36] [#ezpublish] <_buz_> i'll grab a mac later
+[03-23-2006 04:12:04] [#ezpublish] <zrg> send one for me to grab, too :P
+[03-23-2006 04:12:10] [#ezpublish] <_buz_> thats har
+[03-23-2006 04:12:16] [#ezpublish] <_buz_> there's one 5m away from me
+[03-23-2006 04:12:18] [#ezpublish] <_buz_> on my gf desks ;)
+[03-23-2006 04:13:18] [#ezpublish] <zrg> the sacred ground :P
+[03-23-2006 04:14:00] [#ezpublish] <zrg> non-image object insert?
+[03-23-2006 04:14:06] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-23-2006 04:14:21] [#ezpublish] <_buz_> not yet
+[03-23-2006 04:15:07] [#ezpublish] <zrg> well not that important, but some kind of browsing to pick images is
+[03-23-2006 04:16:00] [#ezpublish] <zrg> it does not break something in ez, like making content incompatible?
+[03-23-2006 04:16:03] [#ezpublish] <_buz_> i want to add some sort of ajax
+[03-23-2006 04:16:05] [#ezpublish] <_buz_> yes it does
+[03-23-2006 04:16:10] [#ezpublish] <_buz_> it uses straight xhtml
+[03-23-2006 04:17:31] [#ezpublish] <zrg> ah, crap
+[03-23-2006 04:18:30] [#ezpublish] <zrg> the xml is pain in ass but it also has useful stuff, keeping internal links valid etc
+[03-23-2006 04:19:17] [#ezpublish] <_buz> that i have added
+[03-23-2006 04:19:30] [#ezpublish] <_buz> its just not entirely compatible i think
+[03-23-2006 04:19:35] [#ezpublish] <_buz> but the functionality is there
+[03-23-2006 04:19:54] [#ezpublish] <_buz> try doing an internal link and look at the code it generates
+[03-23-2006 04:25:37] [#ezpublish] <zrg> mm yeah, seems so
+[03-23-2006 04:25:52] [#ezpublish] <_buz_> but for images it currently somehow gets screwed
+[03-23-2006 04:25:56] [#ezpublish] <_buz_> will fix that
+[03-23-2006 04:26:25] [#ezpublish] <zrg> strange, the girl thumb is linked to some trees..
+[03-23-2006 04:29:41] [#ezpublish] <zrg> the sleepyfaced  geek is you? ;)
+[03-23-2006 04:29:48] [#ezpublish] <_buz_> yes
+[03-23-2006 04:30:37] [#ezpublish] <zrg> made good pic a week ago
+[03-23-2006 04:30:49] [#ezpublish] <zrg> http://maru.gg.ee/~zurgutt/owlbw.jpg
+[03-23-2006 04:31:05] [#ezpublish] <_buz_> weird
+[03-23-2006 04:31:32] [#ezpublish] <zrg> just was there, in the middle of field, image of bird on snow
+[03-23-2006 04:32:58] [#ezpublish] <zrg> i have partner in crime who has been grumbling about not being able to do html in editor, ill install xinha for him to take in pieces :)
+[03-23-2006 04:37:31] -!- phretor [n=phretor@host149-155.pool874.interbusiness.it] has joined #ezpublish
+[03-23-2006 04:37:50] [#ezpublish] <nnn0> :)
+[03-23-2006 04:38:20] [#ezpublish] <nnn0> yeah you should be able to do all txt editing - tpl, html, css, whatever
+[03-23-2006 04:38:58] [#ezpublish] <nnn0> a simple general text editor - that can't be to much to ask
+[03-23-2006 04:39:33] [#ezpublish] <nnn0> instead of that wysiwyg stuff - you uses that anyway ;)
+[03-23-2006 04:39:34] [#ezpublish] <nnn0> :DDD
+[03-23-2006 04:39:40] [#ezpublish] <nnn0> ups
+[03-23-2006 04:39:46] [#ezpublish] <nnn0> s/you/who
+[03-23-2006 04:52:18] [#ezpublish] <phretor> hi
+[03-23-2006 04:52:52] [#ezpublish] <zrg> must be cold day in hell, several people awake :)
+[03-23-2006 04:53:41] [#ezpublish] <DiGiTa|_> i can eat outside today
+[03-23-2006 04:54:03] [#ezpublish] <DiGiTa|_> very nice weather
+[03-23-2006 04:55:28] [#ezpublish] <DiGiTa|_> it's spring
+[03-23-2006 04:56:49] [#ezpublish] <phretor> hi zrg
+[03-23-2006 05:07:36] [#ezpublish] <zrg> oh, indeed, its light outside, i just opened curtains :)
+[03-23-2006 05:10:26] [#ezpublish] <zrg> the evil daystar!
+[03-23-2006 05:11:03] [#ezpublish] <DiGiTa|_> lol
+[03-23-2006 05:11:11] [#ezpublish] <DiGiTa|_> crazy zrg  :)
+[03-23-2006 05:56:20] -!- elephantMan [n=elephant@88.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[03-23-2006 05:58:32] -!- elephantMan [n=elephant@88.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-23-2006 06:04:22] [#ezpublish] <kris10an> it burns, it buuuurns ;-)
+[03-23-2006 06:04:31] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-23-2006 06:07:01] [#ezpublish] <zrg> ohmygoditburns
+[03-23-2006 06:07:51] [#ezpublish] <zrg> i have heard you turn to ashes if exposed to it
+[03-23-2006 06:09:08] [#ezpublish] <kris10an> i heard you turn into stone
+[03-23-2006 06:09:23] [#ezpublish] <kris10an> scary thing
+[03-23-2006 06:13:38] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-23-2006 06:13:52] [#ezpublish] <zrg> yeah.. i say live healthy, no risks like that
+[03-23-2006 06:15:00] [#ezpublish] <zrg> legend goes Churchill was once asked for reason of his good health at advanced age, know the answer?
+[03-23-2006 06:19:32] [#ezpublish] <_buz_> that he doesnt drink water because of the nasty things fish do in it?
+[03-23-2006 06:21:29] [#ezpublish] <zrg> Good whiskey, good cigars, no sports.
+[03-23-2006 06:21:50] [#ezpublish] <_buz_> "lives too short to use slow computers, drink bad wine or fuck ugly women" - anonymous
+[03-23-2006 06:23:33] [#ezpublish] <zrg> I'd join that church.
+[03-23-2006 06:34:37] -!- kracker [n=kracker@66-169-180-136.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[03-23-2006 06:55:37] -!- tobiS [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-23-2006 06:55:47] -!- phretor [n=phretor@host149-155.pool874.interbusiness.it] has quit []
+[03-23-2006 06:57:12] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[03-23-2006 07:48:50] [#ezpublish] <_buz_> anyone got xajax_classattributes working?
+[03-23-2006 07:50:23] [#ezpublish] <zrg> hm?
+[03-23-2006 07:50:55] [#ezpublish] <_buz_> http://blog.coomanskristof.be/2006/03/16/adding-class-attributes-with-ajax/
+[03-23-2006 07:51:22] -!- _xavier [n=xavier@epha-gw.xdsl.easynet.be] has quit [Remote closed the connection]
+[03-23-2006 08:18:26] -!- tobyS [n=dotxp@vpn056.HRZ.uni-dortmund.de] has joined #ezpublish
+[03-23-2006 08:24:24] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-23-2006 08:24:31] -!- zrg [n=zurgutt@roop.pri.ee] has quit [Remote closed the connection]
+[03-23-2006 08:26:45] [#ezpublish] <kalooni> why I don't get a full url when using the ezurl template operator ?
+[03-23-2006 08:26:55] [#ezpublish] <_buz_> i wondered that often myself
+[03-23-2006 08:26:59] [#ezpublish] <_buz_> doc says you should get one
+[03-23-2006 08:27:22] [#ezpublish] <kalooni> hm ?
+[03-23-2006 08:27:36] [#ezpublish] <kalooni> how to retrieve the site host name then ?
+[03-23-2006 08:27:45] [#ezpublish] <kalooni> in order to build a complete url ?
+[03-23-2006 08:35:09] [#ezpublish] <DiGiTa|_> http://www.redalt.com/Tools/ilyc.php
+[03-23-2006 08:48:54] [#ezpublish] <DiGiTa|_> http://www.mollio.org/
+[03-23-2006 08:54:57] Disconnecting due to lack of a lag response (0.17736200 1143125637 != 0.17628400 1143125667)
+[03-23-2006 08:54:57] Diconnected. Sleeping for 2 second(s).
+[03-23-2006 08:54:59] >> Connecting to irc.freenode.net:6667
+[03-23-2006 08:55:05] >> Connected to irc.freenode.net:6667, registering...
+[03-23-2006 08:55:12] >> Attempting to join channels: #ezpublish
+[03-23-2006 08:55:57] >> Attempting to join channels: #ezpublish
+[03-23-2006 08:56:05] Disconnecting due to lack of a lag response (0.42048700 1143125705 != 0.07045000 1143125735)
+[03-23-2006 08:56:05] Diconnected. Sleeping for 2 second(s).
+[03-23-2006 08:56:07] >> Connecting to irc.freenode.net:6667
+[03-23-2006 08:56:11] >> Connected to irc.freenode.net:6667, registering...
+[03-23-2006 08:56:30] >> Successfully registered. Nick is: ezlog
+[03-23-2006 08:56:30] -!- There are 14499 listed and 14201 unlisted users on 22 servers
+[03-23-2006 08:56:30] -!- 36 flagged staff members
+[03-23-2006 08:56:30] -!- 11364 channels formed
+[03-23-2006 08:56:30] -!- I have 3979 clients and 0 servers
+[03-23-2006 08:56:30] -!- Current local  users: 3979  Max: 5573
+[03-23-2006 08:56:30] -!- Current global users: 28700  Max: 30484
+[03-23-2006 08:56:30] -!- Highest connection count: 5575 (5573 clients) (651725 since server was (re)started)
+[03-23-2006 08:56:30] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[03-23-2006 08:56:30] [notice(freenode-connect)] VERSION IQ 0.9.3
+[03-23-2006 08:56:42] >> Attempting to join channels: #ezpublish
+[03-23-2006 08:56:42] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[03-23-2006 08:56:42] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_17_03_2006 | http://ez.no/community/forum/ez_components/webcast#msg93640
+[03-23-2006 08:56:42] -!- Topic set by kracker [@] [Sat, 18 Mar 2006 01:52:12 -0600]
+[03-23-2006 09:01:24] [#ezpublish] <_buz_> mhh mollio looks neat
+[03-23-2006 09:01:46] [#ezpublish] <kalooni> yes nice ;)
+[03-23-2006 09:02:01] [#ezpublish] <kalooni> any idea on how to retrieve the hostname in a template?
+[03-23-2006 09:02:09] [#ezpublish] <_buz_> ezsys can do that i think
+[03-23-2006 09:02:27] [#ezpublish] <DiGiTa|_> http://pro.html.it/niftycube/
+[03-23-2006 09:02:30] [#ezpublish] <DiGiTa|_> this is nice too
+[03-23-2006 09:02:46] [#ezpublish] <kalooni> yes sure: ezsys ;)
+[03-23-2006 09:04:49] [#ezpublish] <_buz_> ez should look like that http://www.farcrycms.org/
+[03-23-2006 09:05:09] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-23-2006 09:05:14] [#ezpublish] <DiGiTa|_> :))
+[03-23-2006 09:05:27] [#ezpublish] <DiGiTa|_> but it doesn"t
+[03-23-2006 09:05:34] [#ezpublish] <_buz_> sadly
+[03-23-2006 09:05:43] [#ezpublish] <_buz_> the admin ui should be redesigned ;)
+[03-23-2006 09:07:44] [#ezpublish] <DiGiTa|_> http://docs.farcrycms.org:8080/confluence/download/attachments/435/dmnews01.png
+[03-23-2006 09:07:49] [#ezpublish] <DiGiTa|_> huhu
+[03-23-2006 09:08:10] [#ezpublish] <_buz_> dont you feel like redesign ez admin, DiGiTa|_  ;)=
+[03-23-2006 09:08:43] [#ezpublish] <DiGiTa|_> lol, badly i haven't time now :/
+[03-23-2006 09:08:54] [#ezpublish] <DiGiTa|_> but it should not be only redesigned
+[03-23-2006 09:09:04] [#ezpublish] <_buz_> yeah iknow
+[03-23-2006 09:09:07] [#ezpublish] <DiGiTa|_> it should be remodeled too
+[03-23-2006 09:09:09] [#ezpublish] <_buz_> but a fresh design would help
+[03-23-2006 09:10:28] [#ezpublish] <DiGiTa|_> http://web-graphics.com/mtarchive/ItalianMenu.html
+[03-23-2006 09:10:44] [#ezpublish] <DiGiTa|_> nice restaurant menu with css :)
+[03-23-2006 09:12:14] [#ezpublish] <DiGiTa|_> http://c82.net/samples/checklist-basic.html
+[03-23-2006 09:12:26] [#ezpublish] <DiGiTa|_> would be nice in the admin :)
+[03-23-2006 09:13:16] [#ezpublish] <_buz_> that should be easy no?
+[03-23-2006 09:13:22] [#ezpublish] <_buz_> wrap everything in a div, basically?
+[03-23-2006 09:13:50] [#ezpublish] <DiGiTa|_> yeah, it replace a selectbox
+[03-23-2006 09:13:53] [#ezpublish] <DiGiTa|_> select list
+[03-23-2006 09:19:05] [#ezpublish] <DiGiTa|_> http://www.positioniseverything.net/articles/pie-maker/pagemaker_form.php
+[03-23-2006 09:19:20] [#ezpublish] <_buz_> wtf
+[03-23-2006 09:19:26] [#ezpublish] <DiGiTa|_> lol
+[03-23-2006 09:19:27] [#ezpublish] <_buz_> now THAT is over the top
+[03-23-2006 09:19:36] [#ezpublish] <DiGiTa|_> yeah
+[03-23-2006 09:23:21] [#ezpublish] <DiGiTa|_> http://www.positioniseverything.net/articles/onetruelayout/
+[03-23-2006 10:26:52] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-23-2006 10:41:57] -!- tobiS [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-23-2006 10:44:39] -!- jota_ [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-23-2006 10:44:40] -!- jota_ [n=jota@cm216016.red83-165.mundo-r.com] has quit [Client Quit]
+[03-23-2006 10:44:44] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-23-2006 10:49:33] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-23-2006 11:39:51] -!- kore_ [n=lordhong@p50907599.dip.t-dialin.net] has joined #ezpublish
+[03-23-2006 11:50:07] -!- tobyS [n=dotxp@p50907599.dip.t-dialin.net] has joined #ezpublish
+[03-23-2006 12:16:58] -!- ordnas [n=ordnas@p549D53A3.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-23-2006 12:24:22] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[03-23-2006 12:39:20] -!- ordnas [n=ordnas@p549D53A3.dip.t-dialin.net] has joined #ezpublish
+[03-23-2006 14:31:41] -!- DiGiTa|__ [n=guillaum@84.5.139.79] has joined #ezpublish
+[03-23-2006 14:36:55] -!- DiGiTa|_ [n=guillaum@84.6.32.52] has quit [Read error: 104 (Connection reset by peer)]
+[03-23-2006 14:43:32] -!- nfrp [n=nfrp@187.8.98-84.rev.gaoland.net] has joined #ezpublish
+[03-23-2006 14:43:46] -!- nfrp [n=nfrp@187.8.98-84.rev.gaoland.net] has quit [Client Quit]
+[03-23-2006 14:56:52] -!- _buz_ [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-23-2006 14:59:58] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[03-23-2006 15:10:44] -!- ordna1 [n=ordnas@p549D4E43.dip.t-dialin.net] has joined #ezpublish
+[03-23-2006 15:28:33] -!- ordnas [n=ordnas@p549D53A3.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-23-2006 16:56:58] -!- tobyS [n=dotxp@p50907599.dip.t-dialin.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-23-2006 16:59:24] -!- tobyS [n=dotxp@p50907599.dip.t-dialin.net] has joined #ezpublish
+[03-23-2006 16:59:44] -!- tobyS [n=dotxp@p50907599.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-23-2006 17:01:19] -!- tobyS [n=dotxp@dslb-084-061-147-170.pools.arcor-ip.net] has joined #ezpublish
+[03-23-2006 17:01:42] -!- ordna1 [n=ordnas@p549D4E43.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-23-2006 17:30:36] -!- DiGiTa|__ [n=guillaum@84.5.139.79] has quit []
+[03-23-2006 17:51:04] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-23-2006 17:54:13] -!- tobyS [n=dotxp@dslb-084-061-147-170.pools.arcor-ip.net] has quit [Remote closed the connection]
+[03-23-2006 17:55:17] -!- kore_ [n=lordhong@p50907599.dip.t-dialin.net] has quit []
+[03-23-2006 18:29:51] -!- tobyS [n=dotxp@dslb-084-061-147-170.pools.arcor-ip.net] has joined #ezpublish
+[03-23-2006 18:35:10] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[03-23-2006 19:27:21] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-23-2006 19:28:37] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish

@@ -1,0 +1,169 @@
+[03-28-2006 00:09:04] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-28-2006 00:28:22] -!- phretor [n=phretor@host172-150.pool872.interbusiness.it] has joined #ezpublish
+[03-28-2006 00:31:20] -!- ordnas [n=ordnas@p549D7BF7.dip.t-dialin.net] has joined #ezpublish
+[03-28-2006 00:37:54] -!- DiGiTa|_ [n=guillaum@84.4.37.2] has joined #ezpublish
+[03-28-2006 00:40:59] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-28-2006 00:43:54] -!- phretor [n=phretor@host172-150.pool872.interbusiness.it] has quit []
+[03-28-2006 00:47:50] -!- awormus [n=aaron@p54B134B1.dip0.t-ipconnect.de] has joined #ezpublish
+[03-28-2006 00:53:25] [#ezpublish] <awormus> is there a simple way to share users between multiple sites?
+[03-28-2006 00:54:03] [#ezpublish] <awormus> it's mentioned on a page about the summer conference 2004, but says it's not implemented at the time
+[03-28-2006 00:57:10] [#ezpublish] <kracker> interesting ...
+[03-28-2006 01:03:28] [#ezpublish] <ordnas> awormus: sso per LDAP would be an option - but don't ask me about the details :)
+[03-28-2006 01:04:52] [#ezpublish] <ordnas> awormus: it also depends on what you mean with "multiple sites" - if it's just several siteaccesses in one eZ publish installation, then you use one DB for all siteaccesses and users are autom. "shared"
+[03-28-2006 01:05:16] [#ezpublish] <DiGiTa|_> hi evby
+[03-28-2006 01:05:22] [#ezpublish] <awormus> ordnas: thanks, that was the answer I was looking for :)
+[03-28-2006 01:07:57] [#ezpublish] <kracker> kewl
+[03-28-2006 01:08:09] [#ezpublish] <kracker> that's eZ
+[03-28-2006 01:08:54] [#ezpublish] <awormus> ordnas: I'm still going through the details of how siteaccesses are handled, essenitally I want to have several systems which are totally seperate except for the users
+[03-28-2006 01:09:56] [#ezpublish] <awormus> so I could have full administrational power over example.com/us/ but then people who signup on that site will also be able to puchase items in the shop at example.com/de/
+[03-28-2006 01:15:51] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-28-2006 01:19:45] [#ezpublish] <awormus> and another question: when it says that ezpublish only scales up to 250k objects, does this include user objects? I am looking at a site that already has over 140k registered users, so if this limitation applies to users as well the that might be a problem
+[03-28-2006 01:41:36] [#ezpublish] <awormus> When was the new templating system implemented?
+[03-28-2006 01:47:38] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-28-2006 02:27:27] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-28-2006 02:40:38] [#ezpublish] <ordnas> awormus: users included
+[03-28-2006 02:40:44] [#ezpublish] <ordnas> awormus: tpl system: 3.6.0
+[03-28-2006 02:41:28] [#ezpublish] <awormus> ordnas: thanks
+[03-28-2006 02:41:39] [#ezpublish] <ordnas> awormus: concerning users, maybe kris10an has some tips
+[03-28-2006 02:41:44] [#ezpublish] <awormus> do you have any idea what happens once you go over 250k objects?
+[03-28-2006 02:41:57] [#ezpublish] <ordnas> spontaneous combastion :)
+[03-28-2006 02:42:08] [#ezpublish] <ordnas> just kidding
+[03-28-2006 02:42:18] [#ezpublish] <awormus> congratulations! You are user number 250,001
+[03-28-2006 02:42:23] [#ezpublish] <ordnas> hehe
+[03-28-2006 02:43:15] [#ezpublish] <ordnas> there are ways how to deal with such large numbers of users, but that's something other guys know much better then me
+[03-28-2006 03:24:42] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-28-2006 03:44:21] [#ezpublish] * katana` waves
+[03-28-2006 03:47:36] [#ezpublish] <DiGiTa|_> heyo kalooni
+[03-28-2006 03:47:41] [#ezpublish] <DiGiTa|_> and k :)
+[03-28-2006 03:47:43] [#ezpublish] <DiGiTa|_> atana
+[03-28-2006 03:47:46] [#ezpublish] <DiGiTa|_> shit tab
+[03-28-2006 03:47:55] [#ezpublish] <DiGiTa|_> hi katana`:
+[03-28-2006 03:47:56] [#ezpublish] <katana`> shift tab ? :)
+[03-28-2006 03:47:58] [#ezpublish] <katana`> hi DiGiTa|_
+[03-28-2006 03:48:00] [#ezpublish] <DiGiTa|_> :)
+[03-28-2006 03:50:52] [#ezpublish] <kalooni> hello
+[03-28-2006 03:55:32] [#ezpublish] <DiGiTa|_> France powah :p
+[03-28-2006 03:57:11] [#ezpublish] <katana`> ;)
+[03-28-2006 03:57:16] [#ezpublish] <DiGiTa|_> ;)
+[03-28-2006 05:33:43] -!- DiGiTa|_ [n=guillaum@84.4.37.2] has quit []
+[03-28-2006 05:46:32] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[03-28-2006 05:49:55] -!- ordnas [n=ordnas@p549D7BF7.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-28-2006 05:52:23] -!- DiGiTa|_ [n=guillaum@84.4.37.2] has joined #ezpublish
+[03-28-2006 06:07:29] -!- DiGiTa|_ [n=guillaum@84.4.37.2] has quit []
+[03-28-2006 06:14:29] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has joined #ezpublish
+[03-28-2006 06:27:08] -!- ordnas [n=ordnas@p549D7BF7.dip.t-dialin.net] has joined #ezpublish
+[03-28-2006 06:41:39] [#ezpublish] <kris10an> "the french are notorious kidney thieves" :-)
+[03-28-2006 06:41:43] [#ezpublish] <phretor> hi there
+[03-28-2006 06:42:56] [#ezpublish] <phretor> kracker: "(1:13) a multi attribute datatype ... to define multiple objects per datatype ... genericly (to meet your needs)" do you know any already defined datatype where I can start from?
+[03-28-2006 06:45:03] [#ezpublish] <zrg> the "kracker: (1:13)", its like, the bible reference?
+[03-28-2006 06:51:26] -!- awormus_ [n=aaron@p54B11550.dip0.t-ipconnect.de] has joined #ezpublish
+[03-28-2006 06:53:04] [#ezpublish] <kalooni> Hi there I got a problem with the ezhttp operator
+[03-28-2006 06:53:22] [#ezpublish] <kalooni> works the first time when cache are cleared ... then after variables stays the same
+[03-28-2006 06:53:41] [#ezpublish] <kalooni> (retrieving POST variables)
+[03-28-2006 06:55:23] [#ezpublish] <kris10an> awormus: are they all the same kind of users? are you planning an advanced access-control structure?
+[03-28-2006 06:55:45] [#ezpublish] <awormus_> kris10an: no
+[03-28-2006 06:55:57] [#ezpublish] <awormus_> kris10an: yes, no
+[03-28-2006 06:56:47] [#ezpublish] <awormus_> We will have advanced structure for the handful of administrators, but the 100k users are all very simple with very basic permissions
+[03-28-2006 06:56:58] [#ezpublish] <kris10an> then an option is to create some basic users, and use a cusom login-handler to return one of the basic users if the users validate..
+[03-28-2006 06:57:18] -!- awormus [n=aaron@p54B134B1.dip0.t-ipconnect.de] has quit [Read error: 60 (Operation timed out)]
+[03-28-2006 06:58:26] -!- awormus_ is now known as awormus
+[03-28-2006 06:58:41] [#ezpublish] <awormus> that's interesting... I'll have to look at it a bit more
+[03-28-2006 07:00:12] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has quit []
+[03-28-2006 07:00:34] [#ezpublish] <awormus> kris10an: thanks, I'm still in the middle of all the tutorials... it seems that it's MUCH faster since 3.4
+[03-28-2006 07:03:59] [#ezpublish] <kris10an> awormus: you are using APC?
+[03-28-2006 07:04:08] [#ezpublish] <awormus> kris10an: no
+[03-28-2006 07:04:17] [#ezpublish] <awormus> oh, wait...
+[03-28-2006 07:04:35] [#ezpublish] <zrg> found accelerator on your server? :P
+[03-28-2006 07:04:47] [#ezpublish] <kris10an> if you don't.. please install it.. i would never run a ezpublish site without APC..
+[03-28-2006 07:05:10] [#ezpublish] <kris10an> it is actually going to be bundled with PHP6 :-)
+[03-28-2006 07:05:13] [#ezpublish] <awormus> heh, no actually I just unpacked an old PHP4 setup that I had... so i don't usually use a cache n devel...
+[03-28-2006 07:05:22] [#ezpublish] <kris10an> good for eZ 4.0
+[03-28-2006 07:05:42] [#ezpublish] <kris10an> i use it for devel aswell :-)
+[03-28-2006 07:05:42] [#ezpublish] <zrg> if you dont have heaps and heaps of memory i think eaccelerator fits better, apc only caches in memory
+[03-28-2006 07:06:16] [#ezpublish] <awormus> OK, so I did just fine eaccelerator :)
+[03-28-2006 07:06:20] [#ezpublish] <awormus> that explains it
+[03-28-2006 07:18:19] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has joined #ezpublish
+[03-28-2006 07:24:15] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-28-2006 07:25:37] [#ezpublish] <phretor> zrg: lol :-) it's <nick, (h:mm)> :-)
+[03-28-2006 07:25:55] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-28-2006 07:26:04] [#ezpublish] <zrg> sounded very epic :P
+[03-28-2006 07:26:18] [#ezpublish] <zrg> i want to be quoted like this, one day :)
+[03-28-2006 07:27:01] [#ezpublish] <phretor> zrg: by the way, have you read my post about the need of a new datatype? I ask for suggestions about ez.no/community/forum/developer/new_datatype_text_image_movie#msg97125
+[03-28-2006 07:27:27] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[03-28-2006 07:29:12] [#ezpublish] <zrg> understood on second reading i think.. why wont relations to single cardinality datatype do?
+[03-28-2006 07:36:34] [#ezpublish] <zrg> i feel you may have problems realizing datatype like this, the author type probably uses xml to keep all author lines in one database field, if it has a image file like you want you cant do that, i fear it may not be easy to have arbitrary number of binaries connected to node
+[03-28-2006 07:36:37] [#ezpublish] <phretor> zrg: I can't use relations :-\
+[03-28-2006 07:36:50] [#ezpublish] <zrg> all just guesswork of course
+[03-28-2006 07:37:09] [#ezpublish] <zrg> why not?
+[03-28-2006 07:37:45] [#ezpublish] <phretor> things must be published in one transaction and user must be unaware about relations
+[03-28-2006 07:39:52] [#ezpublish] <zrg> it may be easier to write code to create and publish binaries as related objects, withing existing ez framework, than to hack it to support type like you propose
+[03-28-2006 07:45:34] [#ezpublish] <katana`> you can create relations _ using a custom datatype _ without multiple user interactions
+[03-28-2006 07:45:55] [#ezpublish] <katana`> the ezobjectrelationlist we currently have has these buttons for specific reasons, in order to be generic, but relations can be stored in one go
+[03-28-2006 07:56:45] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-28-2006 07:57:53] [#ezpublish] <awormus> what permission do I have to assign to allow a user to access the admin siteaccess?
+[03-28-2006 07:59:20] [#ezpublish] <phretor> katana`: without user interaction? AFAIK the user must browse for existing objects and the creation of new objects in the right place is far from user friendlyness
+[03-28-2006 08:00:48] -!- ordnas [n=ordnas@p549D7BF7.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-28-2006 08:03:24] [#ezpublish] <awormus> figured it out
+[03-28-2006 08:05:50] [#ezpublish] <katana`> phretor: you can for instance propose objects the user can link to in a combo box
+[03-28-2006 08:06:27] [#ezpublish] <phretor> katana`: such objects must be created "on line" like you do for "Author(s)"
+[03-28-2006 08:06:54] [#ezpublish] <katana`> well, depends if you link to existing objects or want to create new objects...
+[03-28-2006 08:07:08] [#ezpublish] <katana`> you can perfectly create / remove the relations in the fetchObjectHTTPInput method of the datatype
+[03-28-2006 08:09:33] [#ezpublish] <phretor> as a side note, is it possible to know if the current object view is line or full?
+[03-28-2006 08:13:42] [#ezpublish] <kalooni> phretor: module_params() should return the current view
+[03-28-2006 08:21:43] [#ezpublish] <kalooni> does POST or GET variable can be accessed from a template ?
+[03-28-2006 08:21:55] [#ezpublish] <kalooni> kalooni: yes : with ezhttp template operator
+[03-28-2006 08:22:05] [#ezpublish] <kalooni> kalooni: thanks: but it doesn't work well :(
+[03-28-2006 08:24:12] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-28-2006 08:25:17] [#ezpublish] <kalooni> seems like POST vars are "cached"
+[03-28-2006 08:30:51] [#ezpublish] <awormus> can I set a default starting node for a siteaccess?
+[03-28-2006 08:31:11] [#ezpublish] <zrg> yes
+[03-28-2006 08:32:00] [#ezpublish] <zrg> there is two settings, default node and "first" node, look in site.ini
+[03-28-2006 08:32:31] [#ezpublish] <awormus> zrg: I was looking there, but there are no defaults
+[03-28-2006 08:36:06] [#ezpublish] <zrg> DefaultPage=/content/view/full/2/
+[03-28-2006 08:36:50] [#ezpublish] <zrg> but you probably want IndexPage=/content/view/full/2/
+[03-28-2006 08:42:13] [#ezpublish] <awormus> zrg: thanks
+[03-28-2006 08:43:05] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-28-2006 08:46:06] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-28-2006 08:47:47] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-28-2006 08:55:17] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-28-2006 09:02:47] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-28-2006 09:39:43] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-28-2006 10:08:00] -!- DiGiTa|_ [n=guillaum@84.4.37.2] has joined #ezpublish
+[03-28-2006 10:15:17] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 113 (No route to host)]
+[03-28-2006 10:17:04] [#ezpublish] <phretor> I am loop-ing into a {section and I'd like to print something on the first iteration and something different on the last one. Nothing particular must be printed for other elements
+[03-28-2006 10:17:08] [#ezpublish] <phretor> ideas?
+[03-28-2006 10:17:16] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[03-28-2006 10:48:26] -!- DiGiTa|_ [n=guillaum@84.4.37.2] has quit []
+[03-28-2006 11:00:43] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-28-2006 11:21:04] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has quit []
+[03-28-2006 11:50:36] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-28-2006 11:58:47] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[03-28-2006 12:04:16] -!- awormus_ [n=aaron@p54B11550.dip0.t-ipconnect.de] has joined #ezpublish
+[03-28-2006 12:16:41] -!- ordnas [n=ordnas@p549D7BF7.dip.t-dialin.net] has joined #ezpublish
+[03-28-2006 12:22:16] -!- awormus [n=aaron@p54B11550.dip0.t-ipconnect.de] has quit [Read error: 113 (No route to host)]
+[03-28-2006 12:40:17] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[03-28-2006 12:47:33] -!- ordnas [n=ordnas@p549D7BF7.dip.t-dialin.net] has left #ezpublish []
+[03-28-2006 13:02:20] -!- phretor [n=phretor@host139-161.pool874.interbusiness.it] has joined #ezpublish
+[03-28-2006 13:10:42] -!- awormus_ [n=aaron@p54B11550.dip0.t-ipconnect.de] has quit ["Leaving"]
+[03-28-2006 13:17:58] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-28-2006 13:20:07] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-28-2006 13:28:00] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[03-28-2006 13:40:12] -!- phretor_ [n=phretor@host139-161.pool874.interbusiness.it] has joined #ezpublish
+[03-28-2006 13:41:14] [#ezpublish] <phretor_> I need to display a shorten(250) of an ezxmldata: is there any way to do it using the default attribute_view_gui?
+[03-28-2006 13:45:53] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-28-2006 13:53:41] -!- phretor [n=phretor@host139-161.pool874.interbusiness.it] has quit [Read error: 110 (Connection timed out)]
+[03-28-2006 13:58:42] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[03-28-2006 13:58:55] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-28-2006 14:13:16] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[03-28-2006 14:13:54] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-28-2006 14:23:36] -!- tobyS [n=dotxp@dslb-084-061-144-118.pools.arcor-ip.net] has joined #ezpublish
+[03-28-2006 14:35:28] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-28-2006 15:02:47] [#ezpublish] <phretor_> "Fatal error: eZ publish did not finish its request" - suggestions?
+[03-28-2006 15:17:54] -!- phretor_ [n=phretor@host139-161.pool874.interbusiness.it] has quit []
+[03-28-2006 15:36:31] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[03-28-2006 15:50:13] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 104 (Connection reset by peer)]
+[03-28-2006 15:50:44] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-28-2006 17:25:05] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[03-28-2006 17:55:09] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[03-28-2006 23:30:50] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-28-2006 23:58:56] [#ezpublish] <kracker> hey any eZ crew / eZ pro licence knowlegeable people ... Are upgrades between major revision allowed (with / without upgrade option) between a eZ pro licence for 3.5.x app / instance and 3.6.x series (for a php4.3 server/client)

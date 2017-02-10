@@ -1,0 +1,95 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 5.6.&nbsp; Cookies</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch05lev1sec6"></a><h3 class="docSection1Title">5.6. Cookies</h3>
+<p class="docText">The simple registration we used earlier in this chapter does not make data persistent across requests. If you go to the next page (such as by clicking a link or by entering a different URL in your browser's address bar), the posted data is gone. One simple way to maintain data between the different pages in a web application is with cookies. <span class="docEmphStrong">Cookies</span> are sent by PHP through the web server with the <tt>setcookie()</tt> function and are stored in the browser. If a time-out is set for the cookie, the browser will even remember the cookie when you reset your computer; without the time-out set, the browser forgets the cookie as soon as the browser closes. You can also set a cookie to be valid only for a specific subdomain, rather than having the cookie sent by the browser to the script whenever the domain of the script is the same as the domain where the cookie was set (the default). In the next example, we set a cookie when a user has successfully logged in with the login form:<a name="ch05index160"></a><a name="ch05index161"></a><a name="ch05index162"></a></p>
+<pre>
+&lt;?php
+      ob_start();
+?&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Login&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+      if (isset ($_POST['login']) &amp;&amp; ($_POST['login'] == 'Log in') &amp;&amp;
+        ($uid = check_auth($_POST['email'], $_POST['password'])))
+      {
+        /* User successfully logged in, setting cookie */
+        setcookie('uid', $uid, time() + 14400, '/');
+        header('Location: http://kossu/crap/0x-examples/index.php');
+        exit();
+        } else {
+?&gt;
+        &lt;h1&gt;Log-in&lt;/h1&gt;
+        &lt;form method="post" action="login.php"&gt;
+            &lt;table&gt;
+            &lt;tr&gt;&lt;td&gt;E-mail address:&lt;/td&gt;
+            &lt;td&gt;&lt;input type='text' name='email'/&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Password:&lt;/td&gt;
+            &lt;td&gt;&lt;input type='password' name='password'/&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td colspan='2'&gt;
+            &lt;input type='submit' name='login' value='Log in'/&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/form&gt;
+&lt;?php
+        }
+?&gt;
+&lt;/body&gt;
+</pre><br>
+<p class="docText">The <tt>check_auth()</tt> function checks whether the username and password match with the stored data and returns either the user id that belongs to the user or 0 when an error occurred. The <tt>setcookie('uid', $uid, time() + 14400, '/');</tt> line tells the web server to add a cookie header to send to the browser. <tt>uid</tt> is the name of cookie to be set and <tt>$uid</tt> has the value of the <tt>uid</tt> cookie. The expression <tt>time() + 14400</tt> sets the expiry time of the cookie to the current time plus 14,400 seconds, which is 4 hours. The time on the server must be correct because the <tt>time()</tt> function is the base for calculating the expiry time. Notice that the <tt>ob_start()</tt> function is the first line of the script. <tt>ob_start()</tt> turns on output buffering, which is needed to send cookies (or other headers) after you output data. Without this call to <tt>ob_start()</tt>, the output to the browser would have started at the <tt>&lt;html&gt;</tt> line of the script, making it impossible to send any headers, and resulting in the following error when trying to add another header (with <tt>setcookie()</tt> or <tt>header()</tt>):<a name="ch05index163"></a><a name="ch05index164"></a><a name="ch05index165"></a></p>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/05inf01_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="29" SRC="images/013147149X/graphics/05inf01.gif;380137"></P>
+<p class="docText">Instead of using output buffering (which is memory-intensive), you can, of course, change your script so that data is not output until after you set any headers.</p>
+<p class="docText">Cookies are sent by the script/web server to the browser. The browser is then responsible for sending the cookie, via HTTP request headers, to all successive pages that belong to your web application. With the third and fourth parameters of the <tt>setcookie()</tt> function, you can control which sections of your web site receive the specific cookie headers. The third parameter is <tt>/</tt>, which means that all pages in the domain (the root and all subdirectories) should receive the cookie data. The fourth parameter controls which domains receive the cookie header. For instance, if you use <tt>.example.com</tt>, the cookie is available to all subdomains of example.com. Or, you could use <tt>admin.example.com</tt>, restricting the cookies to the admin part of your application. In this case, we did not specify a domain, so all pages in the web application receive the cookie.</P>
+<p class="docText">After the line with the <tt>setcookie()</tt> call, a line issues a redirect header to the browser. This header requires the full path to the destination page. After the header line, we terminate the script with <tt>exit()</tt> so that no headers can be set from later parts of the code. The browser redirects to the given URL by requesting the new page and discarding the content of the current one.<a name="ch05index166"></a></p>
+<p class="docText">On any web page requested after the script that called <tt>set_cookie()</tt>, the cookie data is available in your script in a manner similar to the <tt>GET</tt> and <tt>POST</tt> data. The superglobal to read cookies is <tt>$_COOKIE</tt>. The following <tt>index.php</tt> script shows the use of cookies to authenticate a user. The first line of the page checks whether the cookie with the user id is set. If it's set, we display our <tt>index.php</tt> page, echoing the user id set in the cookie. If it's not set, we redirect to the login page:</P>
+<pre>
+&lt;?php
+      if (isset ($_COOKIE['uid']) &amp;&amp; $_COOKIE['uid']) {
+?&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Index page&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+      Logged in with UID: &lt;?php echo $_COOKIE['uid']; ?&gt;&lt;br /&gt;
+      &lt;a href='logout.php'&gt;Log out&lt;/a&gt;.
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;?php
+      } else {
+           /* If no UID is in the cookie, we redirect to the login page */
+           header('Location: http://kossu/examples/login.php');
+      }
+?&gt;
+</pre><br>
+<p class="docText">Using this user id for important items, such as remembering authentication data (as we do in this script), is not wise, because it's easy to fake cookies. (For most browsers, it is enough to edit a simple text field.) A better solutionusing PHP sessionsfollows in a bit.</p>
+<p class="docText">Deleting a cookie is almost the same as setting one. To delete it, you use the same parameters that you used when you set the cookie, except for the value, which needs to be an empty string, and the expiry date, which needs to be set in the past. On our logout page, we delete the cookie this way:<a name="ch05index167"></a><a name="ch05index168"></a></p>
+<pre>
+&lt;?php
+      setcookie('uid', '', time() - 86400, '/');
+      header('Location: http://kossu/examples/login.php');
+?&gt;
+</pre><br>
+<p class="docText">The <tt>time() - 86400</tt> is exactly one day ago, which is sufficiently in the past for our browser to forget the cookie data.</P>
+<p class="docText"><a class="docLink" href="#ch05fig03">Figure 5.3</a> shows the way our scripts can be tied together.</P>
+<a name="ch05fig03"></a><p><center><h5 class="docFigureTitle">Figure 5.3. Scripts tied together.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/05fig03_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="371" SRC="images/013147149X/graphics/05fig03.gif;380137"></p></center></P><br>
+<p class="docText">As previously mentioned, putting authentication data into cookies (as we did in the previous examples) is not secure because cookies are so easily faked. PHP has, of course, a better solution: sessions.<a name="ch05index169"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

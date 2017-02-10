@@ -1,0 +1,227 @@
+[03-29-2006 00:00:48] [#ezpublish] <kracker> ahh, it seems the answere is prolly a ... no. weakness, still i understand why they do it. re: http://ez.no/products/licenses/licenses/license_definitions
+[03-29-2006 00:41:01] [#ezpublish] <kris10an> kracker: if you put that in a (better) form of a question, i'll send it to zak, the licence-mastah
+[03-29-2006 00:47:17] -!- ordnas [n=ordnas@80.187.150.99] has joined #ezpublish
+[03-29-2006 00:58:58] -!- bf [n=bf@85.19.74.66] has joined #ezpublish
+[03-29-2006 00:59:28] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-29-2006 00:59:42] [#ezpublish] <ls> hi there
+[03-29-2006 01:00:47] [#ezpublish] <bf> morning!
+[03-29-2006 01:03:19] [#ezpublish] <ordnas> moin bf
+[03-29-2006 01:07:08] [#ezpublish] <bf> Hi ordnas !
+[03-29-2006 01:11:58] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[03-29-2006 01:14:07] -!- DiGiTa|_ [n=guillaum@84.4.37.2] has joined #ezpublish
+[03-29-2006 01:17:12] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-29-2006 01:18:27] [#ezpublish] <DiGiTa|_> hi
+[03-29-2006 01:20:07] -!- katana` [n=Katana@ankh-morpork.net] has joined #ezpublish
+[03-29-2006 01:21:21] [#ezpublish] <kalooni> hi
+[03-29-2006 01:25:22] -!- awormus [n=aaron@p54B11550.dip0.t-ipconnect.de] has joined #ezpublish
+[03-29-2006 01:31:01] [#ezpublish] <kalooni> does anybody here tried to retrieve HTTP POST data inside a view template ?
+[03-29-2006 01:31:39] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-29-2006 01:32:19] [#ezpublish] <ls> ezhttp() operator
+[03-29-2006 01:34:35] [#ezpublish] <kalooni> ls: yes I did use ezhttp operator
+[03-29-2006 01:34:42] -!- ordnas [n=ordnas@80.187.150.99] has quit [Read error: 110 (Connection timed out)]
+[03-29-2006 01:35:12] [#ezpublish] <kalooni> I explain: I have several checkboxes on my template
+[03-29-2006 01:35:26] [#ezpublish] <kalooni> in order to select multiple "nodes" to be displayed
+[03-29-2006 01:35:44] [#ezpublish] <kalooni> all the checkboxes are named the same way selectedBox[]
+[03-29-2006 01:36:14] [#ezpublish] <kalooni> The first time I submit the form I can retrieve values of checked nodes using ezhttp('selectedBox')
+[03-29-2006 01:36:34] [#ezpublish] <ls> and second time are gone, right or are always the same?
+[03-29-2006 01:36:49] [#ezpublish] <kalooni> but the second time, if I change my node selection, the value of ezhttp('selectedBox') stay the same
+[03-29-2006 01:36:58] [#ezpublish] <kalooni> exactly, and I don't understand why
+[03-29-2006 01:37:01] [#ezpublish] <ls> this is view cache issue
+[03-29-2006 01:37:16] [#ezpublish] <kalooni> but in my settings, view cache is disabled
+[03-29-2006 01:37:28] [#ezpublish] <kalooni> (but will be enabled in production mode)
+[03-29-2006 01:37:29] [#ezpublish] <kris10an> kalooni: if you can, use view parameters
+[03-29-2006 01:37:46] [#ezpublish] <kris10an> they are handled by view-cache...
+[03-29-2006 01:38:07] [#ezpublish] <kalooni> kris10an: I don't think I can use view parameters as I want to retrieve an array
+[03-29-2006 01:42:08] [#ezpublish] <ls> put {set-block scope=root variable=cache_ttl}0{/set-block} in tpl where you retrive value and check if works
+[03-29-2006 01:42:21] [#ezpublish] <ls> then for rest use {cache-block} should solve the problem
+[03-29-2006 01:42:22] [#ezpublish] <kalooni> ls: I tried, it seems it does not
+[03-29-2006 01:43:22] [#ezpublish] <ls> do you have disabled tpl compilation?
+[03-29-2006 01:44:24] [#ezpublish] <kalooni> TemplateCompile=disabled
+[03-29-2006 01:44:49] [#ezpublish] <ls> http://ez.no/bugs/view/8034
+[03-29-2006 01:44:54] [#ezpublish] <ls> this might be related
+[03-29-2006 01:45:04] [#ezpublish] <ls> try enable it as see if works with your tpl
+[03-29-2006 01:46:42] [#ezpublish] <kalooni> ok i understand now ...
+[03-29-2006 01:46:52] [#ezpublish] <ls> works?
+[03-29-2006 01:46:56] -!- ordnas [n=ordnas@80.187.158.117] has joined #ezpublish
+[03-29-2006 01:47:17] [#ezpublish] <kalooni> ls: didn't try yet ... I will
+[03-29-2006 02:10:51] -!- ordnas [n=ordnas@80.187.158.117] has quit [Read error: 110 (Connection timed out)]
+[03-29-2006 02:11:57] [#ezpublish] <kalooni> for the moment I have resolved my problem (partially) by creating a kernel/content/compare.php + content/compare.tpl ... this way it works. .. .Will have to transform this as an extension
+[03-29-2006 02:13:37] [#ezpublish] <kalooni> I have another question: a part of my design (in pagelayout.tpl) need to be different if we are in the shop module ... how can I override it ?
+[03-29-2006 02:13:39] [#ezpublish] <katana`> kalooni: why are you using HTTP POST btw ?
+[03-29-2006 02:13:57] [#ezpublish] <katana`> kalooni: you can override pagelayout.tpl with any condition handled by the module you're using
+[03-29-2006 02:14:10] [#ezpublish] <katana`> e.g. if in content, section, class_identifier, etc etc
+[03-29-2006 02:15:37] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-29-2006 02:15:52] [#ezpublish] <kalooni> katana`: I know ... but there is nothing about the shop module in the override condition ... am I wrong?
+[03-29-2006 02:16:02] [#ezpublish] <ls> kalooni, how about enabled tpl compilation and ezhttp have u tried?
+[03-29-2006 02:16:21] [#ezpublish] <kalooni> I tried: didn't success
+[03-29-2006 02:16:25] [#ezpublish] <katana`> well, what view do you want to override pagelayout for ?
+[03-29-2006 02:16:27] [#ezpublish] <kalooni> using ezpublish 3.7.3
+[03-29-2006 02:17:21] [#ezpublish] <kalooni> I don't want to override pagelayout.tpl but a part of it ...let say the parts/path.tpl
+[03-29-2006 02:17:34] [#ezpublish] <kalooni> in basket, user/register, confirmorder, orderview ...
+[03-29-2006 02:17:53] [#ezpublish] <kalooni> in all page that are part of the shopping process indeed
+[03-29-2006 02:21:59] [#ezpublish] <kalooni> no ideas ?
+[03-29-2006 02:31:33] [#ezpublish] <kris10an> available override-conditions are described here: http://ez.no/doc/ez_publish/technical_manual/3_6/reference/template_override_conditions
+[03-29-2006 02:36:26] [#ezpublish] <kalooni> kris10an: and there is none for shop module, am I wrong?
+[03-29-2006 02:49:55] [#ezpublish] <kris10an> doesn't look like it...
+[03-29-2006 02:50:32] [#ezpublish] <kris10an> can you please write down the ones you think are needed, and add this as an bugreport?
+[03-29-2006 02:58:06] [#ezpublish] <kris10an> you can probably add the override-conditions yourself if you are confortable changing the kernel..
+[03-29-2006 03:00:58] -!- tobyS [n=dotxp@dslb-084-061-144-118.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-29-2006 03:01:33] [#ezpublish] <kracker> kris10an, alright many thanks (writing)
+[03-29-2006 03:10:30] [#ezpublish] <kalooni> kris10an : thanks for your help ... unfortunatly I don't think I am confortable enough to add override conditions in the kernel
+[03-29-2006 03:10:51] [#ezpublish] <kalooni> I have no idea where this is handle in the kernel
+[03-29-2006 03:14:59] [#ezpublish] <kris10an> i can tell you :-)
+[03-29-2006 03:15:16] [#ezpublish] <kris10an> but i have never tested this myself, so i cannot garantee that this will work..
+[03-29-2006 03:26:12] [#ezpublish] <kalooni> please tell me ;) I will probably don't do it, but at least I will know
+[03-29-2006 03:26:35] [#ezpublish] <kris10an>     include_once( 'kernel/common/eztemplatedesignresource.php' );
+[03-29-2006 03:26:35] [#ezpublish] <kris10an>     $res =& eZTemplateDesignResource::instance();
+[03-29-2006 03:26:35] [#ezpublish] <kris10an>     $res->setKeys( array( array( 'section', $searchSectionID ) ) );
+[03-29-2006 03:27:02] [#ezpublish] <kris10an> this is from kernel/content/advancedsearch.php
+[03-29-2006 03:27:32] [#ezpublish] <kris10an> which adds the rule described in http://ez.no/doc/ez_publish/technical_manual/3_6/reference/template_override_conditions
+[03-29-2006 03:27:43] [#ezpublish] <kris10an> for advanced search..
+[03-29-2006 03:28:06] [#ezpublish] <kris10an> so you need to add code like this for the views in kernel/shop/basket.php and so on..
+[03-29-2006 03:29:50] [#ezpublish] <kris10an> it should work, but as i said, i have not tested this
+[03-29-2006 03:31:16] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[03-29-2006 03:32:41] [#ezpublish] <kalooni> ok thanks kris10an
+[03-29-2006 03:33:50] [#ezpublish] <bf> anyone here have good experience with squid?
+[03-29-2006 03:45:47] [#ezpublish] * kris10an likes squid :-)
+[03-29-2006 03:46:00] [#ezpublish] <kris10an> with rice
+[03-29-2006 03:46:08] [#ezpublish] <kris10an> :-p
+[03-29-2006 03:54:29] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-29-2006 03:54:45] [#ezpublish] <kracker> ciao #ezpublish :)
+[03-29-2006 05:17:54] -!- phretor [n=phretor@host207-134.pool875.interbusiness.it] has joined #ezpublish
+[03-29-2006 05:17:57] [#ezpublish] <phretor> hi
+[03-29-2006 05:20:42] [#ezpublish] <phretor> I noticed that the cache is not well cleared, even with --clear-all. As a side effect override priority are not always respected. For example, I have overridden /content/datatype/view/ezbinaryfile.tpl with /content_view_ezbinaryfile.tpl (into my desing) and I raised its priority to '1'. Instead of *my* override, the one from the base design is used. Why?
+[03-29-2006 05:21:07] [#ezpublish] <_buz> if you want to clear everything, delete everything in var/*/cache
+[03-29-2006 05:23:04] [#ezpublish] <phretor> _buz: is it safe?
+[03-29-2006 05:23:13] [#ezpublish] <_buz> should be
+[03-29-2006 05:23:18] [#ezpublish] <phretor> :-)
+[03-29-2006 05:23:23] [#ezpublish] <_buz> never had any ill effects for me anyway
+[03-29-2006 05:24:14] [#ezpublish] <phretor> _buz: thanks
+[03-29-2006 05:25:05] [#ezpublish] <phretor> _buz: and what about var/cache?
+[03-29-2006 05:25:14] [#ezpublish] <_buz> you can clean that too
+[03-29-2006 05:25:19] [#ezpublish] <_buz> not sure if its indeed used
+[03-29-2006 05:25:32] [#ezpublish] <_buz> just dont delete the dir itself and it shouldnt affect anything
+[03-29-2006 05:25:40] [#ezpublish] <phretor> _buz: it's seems to be used for ini files
+[03-29-2006 05:25:43] [#ezpublish] <phretor> yes, of course
+[03-29-2006 05:25:52] [#ezpublish] <_buz> inis are cached as well
+[03-29-2006 05:25:57] [#ezpublish] <_buz> maybe those are there, yes
+[03-29-2006 05:26:27] [#ezpublish] <phretor> so I can clean all dirs within var/plain/cache/ (for example)?
+[03-29-2006 05:26:32] [#ezpublish] <ls> yes
+[03-29-2006 05:26:38] [#ezpublish] <ls> and var/cache
+[03-29-2006 05:26:47] [#ezpublish] <ls> dont delete storage dirs ;)
+[03-29-2006 05:27:05] [#ezpublish] <ls> there are all uploaded files images, files, media, etc
+[03-29-2006 05:27:17] [#ezpublish] <phretor> I was wandering why they didn't include this clearing procedures witin clearcache.sh
+[03-29-2006 05:27:32] [#ezpublish] <ls> AFAIK there is bug reported about this
+[03-29-2006 05:28:27] [#ezpublish] <phretor> ls: yes but it's quite old, I assumed they fixed clearcache.sh after that bug report
+[03-29-2006 05:29:03] [#ezpublish] <ls> I will check what can be done in that case ...
+[03-29-2006 05:29:29] [#ezpublish] <phretor> thanks ls ;-)
+[03-29-2006 05:30:05] [#ezpublish] <phretor> by the way, I've heard about an alternative way for providing a new design, that is using the extension mechanism. What about it?
+[03-29-2006 05:37:02] -!- katana` [n=Katana@ankh-morpork.net] has quit ["Peace and Protection 4.22"]
+[03-29-2006 06:39:45] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-29-2006 06:51:06] -!- awormus_ [n=aaron@p54B11275.dip0.t-ipconnect.de] has joined #ezpublish
+[03-29-2006 06:56:47] [#ezpublish] <phretor> after a successfull image (attribute) upload, only the original file is available instead of 'small', 'medium', 'large', 'original' set. Any ideas?
+[03-29-2006 06:58:26] [#ezpublish] <kris10an> the image-variants are created on demand...
+[03-29-2006 06:58:44] [#ezpublish] <phretor> kris10an: how do I state it?
+[03-29-2006 06:59:44] [#ezpublish] <kris10an> phretor: if you go into a page that loads the 'large' the large variant is created then..
+[03-29-2006 07:01:41] [#ezpublish] <phretor> kris10an: I understand. But this mechanism still doesn't work because {attribute_view_gui attribute=$node.data_map.myimage} displays the image only if I specify the 'original' variant, doesn't work with 'small' (for example)
+[03-29-2006 07:02:21] [#ezpublish] <kris10an> attribute_view_gui attribute=$node.data_map.myimage image_class='large'}
+[03-29-2006 07:04:53] [#ezpublish] <phretor> yes
+[03-29-2006 07:05:23] -!- elephantMan [n=elephant@149.202.99-84.rev.gaoland.net] has joined #ezpublish
+[03-29-2006 07:06:25] [#ezpublish] <phretor> kris10an: it's maybe due to ImageMagic, could I use something that is embedded into php instead?
+[03-29-2006 07:06:52] [#ezpublish] <kris10an> phretor: what do you mean?
+[03-29-2006 07:07:22] [#ezpublish] <phretor> kris10an: something like GD or whatever
+[03-29-2006 07:07:58] [#ezpublish] <kris10an> you can use GD.. look at image.ini
+[03-29-2006 07:08:06] [#ezpublish] <phretor> kris10an: great
+[03-29-2006 07:08:11] [#ezpublish] <DiGiTa|_> http://www.tekyo.com/show.php?PostID=12585
+[03-29-2006 07:08:35] -!- awormus [n=aaron@p54B11550.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[03-29-2006 07:13:26] [#ezpublish] <ls> phretor, do you have debug output enabled?
+[03-29-2006 07:13:40] [#ezpublish] <phretor> yep
+[03-29-2006 07:14:06] [#ezpublish] <ls> ok
+[03-29-2006 07:14:41] [#ezpublish] <phretor> ls: let me cut and paste it for ya
+[03-29-2006 07:15:23] [#ezpublish] <phretor> Failed executing: /usr/local/bin/convert '-quality' '75' '-geometry' '360x440> ...
+[03-29-2006 07:16:39] [#ezpublish] <phretor> well, it's fu**ing /opt/ ! :-)
+[03-29-2006 07:18:02] [#ezpublish] <kris10an> if it is in /opt, then specifiy it in image.ini :-)
+[03-29-2006 07:19:04] [#ezpublish] <ls> but via overrides settings/override/image.ini.append.php :)
+[03-29-2006 07:19:07] [#ezpublish] <kris10an> [ImageMagick]
+[03-29-2006 07:19:07] [#ezpublish] <kris10an> ExecutablePath=
+[03-29-2006 07:28:29] [#ezpublish] <phretor> kris10an: yep, it now works well
+[03-29-2006 07:28:36] [#ezpublish] <phretor> thanks, as usual to you all
+[03-29-2006 07:48:48] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-29-2006 08:13:41] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[03-29-2006 08:34:04] -!- bf [n=bf@85.19.74.66] has quit ["adios"]
+[03-29-2006 08:34:29] [#ezpublish] <_buz> has anyone ever used the keyword datatype?
+[03-29-2006 08:34:31] [#ezpublish] <_buz> is it good?
+[03-29-2006 08:42:11] [#ezpublish] <DiGiTa|_> dunno
+[03-29-2006 08:42:45] [#ezpublish] <DiGiTa|_> does someone know if it's possible to set "bold" a texttoimage font
+[03-29-2006 08:45:07] [#ezpublish] <DiGiTa|_> i should work with the bold font
+[03-29-2006 08:51:56] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[03-29-2006 09:08:26] -!- badi [n=badii07@host004.be.dedigate.com] has joined #ezpublish
+[03-29-2006 09:27:40] [#ezpublish] <DiGiTa|_> _buz: have you tested xinha on osx ?
+[03-29-2006 09:27:59] [#ezpublish] <zrg> hi folks
+[03-29-2006 09:28:05] [#ezpublish] <zrg> anyone from germany?
+[03-29-2006 09:28:12] [#ezpublish] <DiGiTa|_> no
+[03-29-2006 09:29:45] [#ezpublish] <B-KiLLer`> huhu, Digita|_ talking for the masses :p
+[03-29-2006 09:29:56] [#ezpublish] <_buz> no
+[03-29-2006 09:29:59] [#ezpublish] <_buz> but i can if you want
+[03-29-2006 09:30:06] [#ezpublish] <_buz> i know it wont work in safari
+[03-29-2006 09:30:18] [#ezpublish] <zrg> drinkbuddy needed in berlin :)
+[03-29-2006 09:30:44] [#ezpublish] <_buz> come to zurich and we can go drinking ;)
+[03-29-2006 09:30:45] [#ezpublish] <DiGiTa|_> B-KiLLer`: no i'm talking for me :)
+[03-29-2006 09:30:52] [#ezpublish] <_buz> DiGiTa|_: i'll check
+[03-29-2006 09:30:56] [#ezpublish] <_buz> will be back in 10 min
+[03-29-2006 09:30:59] [#ezpublish] <DiGiTa|_> ok
+[03-29-2006 09:31:02] [#ezpublish] <DiGiTa|_> thanks _buz
+[03-29-2006 09:42:54] [#ezpublish] <_buz> works on osx with ff 1.5.0.1
+[03-29-2006 10:13:38] -!- phretor [n=phretor@host207-134.pool875.interbusiness.it] has left #ezpublish []
+[03-29-2006 10:15:11] -!- elephantMan [n=elephant@149.202.99-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[03-29-2006 10:17:51] -!- elephantMan [n=elephant@149.202.99-84.rev.gaoland.net] has joined #ezpublish
+[03-29-2006 10:24:20] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-29-2006 10:25:23] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-29-2006 10:29:59] -!- badi [n=badii07@host004.be.dedigate.com] has quit []
+[03-29-2006 10:54:12] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[03-29-2006 12:40:31] -!- tobyS [n=dotxp@dslb-084-061-144-118.pools.arcor-ip.net] has joined #ezpublish
+[03-29-2006 12:53:46] -!- badi [n=badii07@host004.be.dedigate.com] has joined #ezpublish
+[03-29-2006 12:56:11] [#ezpublish] <badi> hello
+[03-29-2006 12:58:08] [#ezpublish] <badi> it is possible to generate pdf files  starting from an attribute eztext with tags HTML ?
+[03-29-2006 13:02:14] [#ezpublish] <badi> I have to add Wysiwyg HTML Editor in EZ which works with the attributes eztext and it work  but I had a problem with the generation of files pdf:  the generation of does not take into account the html tags
+[03-29-2006 13:04:12] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-29-2006 13:05:49] [#ezpublish] <badi> an idea?
+[03-29-2006 13:15:05] -!- tobyS_ [n=dotxp@dslb-084-061-134-127.pools.arcor-ip.net] has joined #ezpublish
+[03-29-2006 13:26:30] -!- _tobyS [n=dotxp@dslb-084-061-134-127.pools.arcor-ip.net] has joined #ezpublish
+[03-29-2006 13:26:32] -!- _tobyS [n=dotxp@dslb-084-061-134-127.pools.arcor-ip.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-29-2006 13:30:46] -!- tobyS [n=dotxp@dslb-084-061-144-118.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[03-29-2006 14:05:52] -!- phretor [n=phretor@host213-48.pool870.interbusiness.it] has joined #ezpublish
+[03-29-2006 14:06:12] [#ezpublish] <phretor> hi there
+[03-29-2006 14:07:12] [#ezpublish] <phretor> should {def $url='www.foo.com'} {$url|autolink()} work?
+[03-29-2006 14:22:20] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-29-2006 14:35:43] -!- DiGiTa|_ [n=guillaum@84.4.37.2] has quit []
+[03-29-2006 14:42:13] [#ezpublish] <phretor> hi ls
+[03-29-2006 14:42:26] [#ezpublish] <ls> hello
+[03-29-2006 14:42:30] [#ezpublish] <phretor> should {def $url='www.foo.com'} {$url|autolink()} work?
+[03-29-2006 14:42:46] [#ezpublish] <phretor> actually, it is not working for me
+[03-29-2006 14:43:38] [#ezpublish] <phretor> in other words, autolink seems to be unimplemented in 3.7.3
+[03-29-2006 14:43:44] [#ezpublish] <ls> http:// is mandatory
+[03-29-2006 14:44:29] [#ezpublish] <phretor> ls: it's not, according to the doc
+[03-29-2006 14:47:34] [#ezpublish] <ls> the is bug in doc or in autolink() tpl ;)
+[03-29-2006 14:47:41] [#ezpublish] <ls> try with http:// will work then
+[03-29-2006 14:48:53] [#ezpublish] <ls> imho in doc is mistake
+[03-29-2006 14:49:04] [#ezpublish] <phretor> ls: I just added a comment
+[03-29-2006 14:49:17] [#ezpublish] <ls> great, thanks
+[03-29-2006 14:51:09] [#ezpublish] <ls> phretor, how long do you use eZp?
+[03-29-2006 14:51:44] [#ezpublish] <phretor> ls: a couple of monts
+[03-29-2006 14:51:48] [#ezpublish] <phretor> months
+[03-29-2006 14:52:31] [#ezpublish] <phretor> ls: it's the only cms with a flexible content model
+[03-29-2006 14:52:39] [#ezpublish] <phretor> ls: didn't found anything far from it
+[03-29-2006 14:52:52] [#ezpublish] <phretor> near
+[03-29-2006 14:53:39] [#ezpublish] <ls> yes, creating custom content classes is so fun ;)
+[03-29-2006 14:56:41] [#ezpublish] <ls> is your website on-line?
+[03-29-2006 14:59:29] [#ezpublish] <phretor> ls: no
+[03-29-2006 15:02:48] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-29-2006 15:21:56] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[03-29-2006 15:22:59] -!- awormus_ [n=aaron@p54B11275.dip0.t-ipconnect.de] has quit ["Leaving"]
+[03-29-2006 15:33:46] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[03-29-2006 16:03:47] -!- badi [n=badii07@host004.be.dedigate.com] has quit [Read error: 110 (Connection timed out)]
+[03-29-2006 16:32:29] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[03-29-2006 17:07:57] -!- phretor [n=phretor@host213-48.pool870.interbusiness.it] has quit []
+[03-29-2006 23:08:22] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-29-2006 23:38:43] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish

@@ -1,0 +1,297 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 7.3.&nbsp; PEAR Errors</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch07lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch07lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch07lev1sec3"></a><h3 class="docSection1Title">7.3. PEAR Errors</h3>
+<p class="docText">PEAR has its own error-reporting mechanism based around the principle of errors as types, and the ability to pass around errors as values. Many extras were built around this principle, to the point where PEAR errors almost function like a poor man's (in this case, PHP 4 users') exception.<a name="ch07index157"></a><a name="ch07index158"></a></p>
+<p class="docText">Where PHP's built-in error mechanism typically displays a message and a function returns <tt>false</tt>, a function returning a PEAR error gives an object back that is an instance of <tt>PEAR_Error</tt> or a subclass:</p>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+
+$dbh = DB::connect('mysql://test@localhost/test');
+if (PEAR::isError($dbh)) {
+    die("DB::connect failed (" . $dbh-&gt;getMessage() . ")\n");
+}
+print "DB::connect ok!\n";
+
+?&gt;
+</pre><br>
+<p class="docText">In this introductory example, we try connecting to a MySQL database through PEAR DB. If the connection fails, <tt>DB::connect</tt> returns a PEAR error. The <tt>PEAR::isError()</tt> static method returns a boolean that tells whether a value is a PEAR error. If the return value from <tt>DB::connect</tt> is a PEAR error, the connection attempt has failed. In this case, we call <tt>getMethod()</tt> in the error object to retrieve the error message, print it, and abort.</P>
+<p class="docText">This is a simple example of how PEAR's error handling works. There are many ways of customizing it that we will look at later. First, we examine the different ways of raising and catching PEAR errors, and get an overview of the <tt>PEAR_Error</tt> class.<a name="ch07index159"></a><a name="ch07index160"></a></p>
+<a name="ch07lev3sec17"></a><H4 class="docSection2Title">7.3.0.1. Catching Errors</h4>
+<p class="docText">Unless an error handler that aborts execution is configured, the return value of a function failing with a PEAR error will be the error object. Depending on the error-handling setup, some kind of action may have been taken already, but there is no provided way of telling.<a name="ch07index161"></a><a name="ch07index162"></a><a name="ch07index163"></a><a name="ch07index164"></a></P>
+<p class="docText">One of the code design implications of this is that PEAR error-handling defaults should always be set by the <span class="docEmphStrong">driving script</span>, or the script that PHP started executing. If some included library starts setting up error-handling defaults or global resources such as INI entries, trouble awaits.</p>
+<a name="ch07lev3sec18"></a><h4 class="docSection2Title">7.3.0.2. <tt>PEAR::isError()</tt></h4>
+<p class="docText"><tt>bool PEAR::isError(mixed candidate)</tt></p>
+<p class="docText">This method returns <tt>TRue</tt> or <tt>false</tt> depending on whether <tt>candidate</tt> is a PEAR error. If <tt>candidate</tt> is an object that is an instance of <tt>PEAR_Error</tt> or a subclass, <tt>PEAR::isError()</tt> returns <tt>TRue</tt>.<a name="ch07index165"></a><a name="ch07index166"></a><a name="ch07index167"></a></p>
+<a name="ch07lev3sec19"></a><h4 class="docSection2Title">7.3.0.3. Raising Errors</h4>
+<p class="docText">In PEAR terminology, errors are &quot;raised,&quot; although the easiest way of raising a PEAR error is returning the return value from a method called <tt>throwError</tt>. This is simply because <tt>tHRowError</tt> is a simplified version of the original <tt>raiseError</tt> method. PEAR uses the term <span class="docEmphStrong">raising</span> to avoid confusion with PHP exceptions, which are thrown.<a name="ch07index168"></a><a name="ch07index169"></a><a name="ch07index170"></a><a name="ch07index171"></a><a name="ch07index172"></a><a name="ch07index173"></a><a name="ch07index174"></a></p>
+<p class="docText">The relative cost of raising a PEAR error compared to triggering a PHP error is high, because it involves object creation and several function calls. This means that you should use PEAR errors with carekeep them for failures that should not normally happen. Prefer using a simple Boolean return value for the normal cases. This same advice is given in regards to using exceptions in PHP, as well as C++, Java, or other languages.</p>
+<p class="docText">When you use PEAR packages in your code, you need to deal with errors raised by the package. You can do this in one of two ways: whether you are in an object context, and whether your current class inherits the PEAR class.</P>
+<p class="docText">If your code does not run in an object context, such as from the global scope, inside a regular function or in a static method you need to call the <tt>PEAR::throwError()</tt> static method:</p>
+<pre>
+&lt;?php
+
+require_once 'PEAR.php';
+
+if (PEAR::isError($e = lucky())) {
+    die($e-&gt;getMessage() . "\n");
+}
+
+print "You were lucky, this time.\n";
+function lucky() {
+    if (rand(0, 1) == 0) {
+        return PEAR::throwError('tough luck!');
+    }
+}
+
+?&gt;
+</pre><BR>
+<p class="docText">When errors are raised with static method calls, the defaults set with <tt>PEAR::setErrorHandling()</tt> are applied. The other way of raising errors is when your class has inherited PEAR, and your code is executed in an object context:<a name="ch07index175"></a><a name="ch07index176"></a><a name="ch07index177"></a><a name="ch07index178"></a></p>
+<pre>
+&lt;?php
+
+require_once 'PEAR.php';
+
+class Luck extends PEAR
+{
+    function testLuck() {
+        if (rand(0, 1) == 0) {
+            return $this-&gt;throwError('tough luck!');
+        }
+        return "lucky!";
+    }
+}
+
+$luck = new Luck;
+$test = $luck-&gt;testLuck();
+if (PEAR::isError($test)) {
+    die($test-&gt;getMessage() . "\n");
+}
+print "$test\n";
+
+?&gt;
+</pre><br>
+<p class="docText">When <tt>throwError()</tt> is called in an object context, defaults set in that object with <tt>$object-&gt;setErrorHandling()</tt> are applied first. If no defaults are set for the object, the global defaults apply, as with errors raised statically (like in the previous example).<a name="ch07index179"></a><a name="ch07index180"></a><a name="ch07index181"></a><a name="ch07index182"></a></p>
+<a name="ch07lev3sec20"></a><h4 class="docSection2Title">7.3.0.4. <tt>PEAR::throwError()</tt></h4>
+<p class="docText">(<tt>[object PEAR::throwError([string message]</tt>, <tt>[int code]</tt>, <tt>[string userinfo]</tt>)</p>
+<p class="docText">This method raises a PEAR error, applying default error-handling settings. Which defaults are actually applied depends on how the method is called. If <tt>throwError()</tt> is called statically, such as <tt>PEAR::throwError()</tt>, the <span class="docEmphStrong">global defaults</span> are applied. The global defaults are always set with <tt>PEAR::setErrorHandling()</tt> and called statically. When <tt>throwError()</tt> is called from an object context, such as <tt>$this-&gt;throwError()</tt>, the error-handling defaults of <tt>$this</tt> are applied first. If the defaults for <tt>$this</tt> are undefined, the global defaults are applied instead.<a name="ch07index183"></a><a name="ch07index184"></a><a name="ch07index185"></a><a name="ch07index186"></a><a name="ch07index187"></a></p>
+<p class="docText">If you are not intimate with the semantics of <tt>$this</tt> in PHP, you may be in for some surprises when using PEAR error defaults. If you call a method statically from within an object (where <tt>$this</tt> has a value), the value of <tt>$this</tt> will actually be defined inside the statically called method as well. This means that if you call <tt>PEAR::throwError()</tt> from inside an object, <tt>$this</tt> will be defined inside <tt>PEAR::throwError()</tt> and refer to the object from which you called <tt>PEAR::throwError()</tt>. In most cases, this has no effect, but if you start using PEAR's error-handling mechanism to its fullest, you should be aware of this so you are not surprised by the wrong error-handling defaults being applied.</p>
+<a name="ch07lev3sec21"></a><h4 class="docSection2Title">7.3.0.5. <tt>PEAR::raiseError()</tt></h4>
+<p class="docText"><tt>object PEAR::raiseError</tt>(<tt>[string message]</tt>, <tt>[int code]</tt>, <tt>[ int mode]</tt>, <tt>[mixed options]</tt>, <tt>[string userinfo]</tt>, <tt>[string error_class]</tt>, <tt>[bool skipmsg]</tt>)</p>
+<p class="docText">This method is equivalent to <tt>throwError()</tt> but with more parameters. Normally, you would not need all these extra options, but they may come in handy if you are making your own error system based on PEAR errors. <tt>message</tt>, <tt>code</tt>, and <tt>userinfo</tt> are equivalent to the same <tt>throwError()</tt> parameters. <tt>mode</tt> and <tt>options</tt> are equivalent to the same <tt>PEAR_Error</tt> constructor parameters (see the following <tt>PEAR_Error</tt> description). The two remaining parameters are <tt>error_class</tt> and <tt>skipmsg</tt>:<a name="ch07index188"></a><a name="ch07index189"></a><a name="ch07index190"></a></P>
+<pre>
+string $error_class (default "PEAR_Error")
+</pre><BR>
+<p class="docText">This class will be used for the error object. If you change this to something other than <tt>PEAR_Error</tt>, make sure that the class you are giving here extends <tt>PEAR_Error</tt>, or <tt>PEAR::isError()</tt> will not give correct results.</p>
+<pre>
+bool $skipmsg (default false)
+</pre><br>
+<p class="docText">This rather obscure parameter tells the <tt>raiseError()</tt> implementation to skip the <tt>message</tt> parameter completely, and simply pretend there is no such parameter. If <tt>skipmsg</tt> is <tt>TRue</tt>, the constructor of the error object is called with one less parameter, without <tt>message</tt> as the first parameter. This may be useful for extended error mechanisms that want to base everything on error codes.<a name="ch07index191"></a><a name="ch07index192"></a><a name="ch07index193"></a><a name="ch07index194"></a></p>
+<a name="ch07lev2sec6"></a><h4 class="docSection2Title">7.3.1. The PEAR_Error Class</h4>
+<p class="docText">The PEAR-Error class is PEAR's basic error-reporting class. You may extend and specialize it for your own purposes if you need, <tt>PEAR:isError()</tt> will still recognize it.</p>
+<a name="ch07lev3sec22"></a><h5 class="docSection3Title">7.3.1.1 PEAR_Error constructor</h5>
+<p class="docText"><tt>void PEAR_Error</tt>(<tt>[string message]</tt>, <tt>[int code]</tt>, <tt>[int mode]</tt>, <tt>[mixed options]</tt>, <tt>[string userinfo]</tt>)</P>
+<p class="docText">All PEAR_Error's constructor parameters are optional and default to the null value, except <tt>message</tt>, which defaults to unknown error. However, normally, you do not create PEAR errors with the new statement, but with a factory method such as <tt>PEAR::throwError()</tt> or <tt>PEAR::raiseError()</tt>.<a name="ch07index195"></a><a name="ch07index196"></a><a name="ch07index197"></a><a name="ch07index198"></a></p>
+<pre>
+string $message (default "unknown error")
+</pre><BR>
+<p class="docText">This is the error message that will be displayed. This parameter is optional, but you should always specify either <tt>$message</tt> or <tt>$code</tt>.</p>
+<pre>
+int $code (default 1)
+</pre><BR>
+<p class="docText">The error code is a simple integer value representing the nature of the error. Some PEAR error-based mechanisms (such as the one in PEAR DB) use this parameter as the primary way of describing the nature of errors, and leave the message for a plain code to text mapping. Error codes are also good in conjunction with localized error messages, because they provide a language-neutral description of errors.</p>
+<p class="docText">It is good practice to always specify an error code, if nothing else to allow for cleaner, more graceful error handling.</p>
+<pre>
+int $mode (default PEAR_ERROR_RETURN)
+</pre><br>
+<p class="docText">This is the error mode that will be applied to this error. It may have one of the following values:</p>
+<UL><LI><p class="docList"><tt>PEAR_ERROR_RETURN</tt></p></li><li><p class="docList"><tt>PEAR_ERROR_PRINT</tt></p></LI><li><p class="docList"><tt>PEAR_ERROR_DIE</tt></p></LI><li><p class="docList"><tt>PEAR_ERROR_TRIGGER</tt></P></li><li><p class="docList"><tt>PEAR_ERROR_CALLBACK</tt></p></li></ul>
+<p class="docText">The meaning of the different error modes is discussed in the following &quot;<a class="docLink" href="#ch07lev2sec7">Handling PEAR Errors</a>&quot; section.</p>
+<pre>
+mixed $options
+</pre><br>
+<p class="docText">This parameter is used differently depending on what error mode was specified:</p>
+<ul><li><p class="docList">For <tt>PEAR_ERROR_PRINT</tt> and <tt>PEAR_ERROR_DIE</tt>, the <tt>$options</tt> parameter contains a <tt>printf</tt> format string that is used when printing the error message.</p></li><li><p class="docList">For <tt>PEAR_ERROR_TRIGGER</tt>, it contains the PHP error level used when triggering the error. The default error level is <tt>E_USER_NOTICE</tt>, but it may also be set to <tt>E_USER_WARNING</tt> or <tt>E_USER_ERROR</tt>.</p></li><li><p class="docList">Finally, if <tt>$mode</tt> is <tt>PEAR_ERROR_CALLBACK</tt>, the <tt>$options</tt> parameter is the callable that will be given the error object as its only parameter. A <span class="docEmphStrong">callable</span> is either a string with a function name, an array of class name and method name (for static method calls), or an array with an object handle and method name (object method calls).</P></LI></ul>
+<pre>
+string $userinfo
+</pre><br>
+<p class="docText">This variable holds extra information about the error. An example of content would be the SQL query for failing database calls, or the filename for failing file operations. This member variable containing user info may be appended to with the <tt>addUserInfo()</tt> method.<a name="ch07index199"></a><a name="ch07index200"></a><a name="ch07index201"></a><a name="ch07index202"></a></P>
+<a name="ch07lev3sec23"></a><h5 class="docSection3Title">7.3.1.2 <tt>PEAR_Error::addUserInfo()</tt></h5>
+<pre>
+void addUserInfo(string info)
+</pre><br>
+<p class="docText">This variable appends <tt>info</tt> to the error's user info. It uses the character sequence &quot; ** &quot; to separate different user info entries.<a name="ch07index203"></a><a name="ch07index204"></a><a name="ch07index205"></a><a name="ch07index206"></a></p>
+<a name="ch07lev3sec24"></a><h5 class="docSection3Title">7.3.1.3 <tt>PEAR_Error::getBacktrace([frame])</tt></h5>
+<p class="docText">array <tt>getBacktrace([int frame])</tt></P>
+<p class="docText">This method returns a function call <tt>backtrace</tt> as returned by <tt>debug_backtrace()</tt> from the <tt>PEAR_Error</tt> constructor. Because <tt>PEAR_Error</tt> saves the <tt>backtrace</tt> before raising the error, using exceptions through PEAR errors will preserves the backtrace.<a name="ch07index207"></a><a name="ch07index208"></a><a name="ch07index209"></a><a name="ch07index210"></a></p>
+<p class="docText">The optional integer argument is used to select a single frame from the backtrace, with index 0 being the innermost frame (frame 0 will always be in the <tt>PEAR_Error</tt> class).</P>
+<a name="ch07lev3sec25"></a><h5 class="docSection3Title">7.3.1.4 <tt>PEAR_Error::getCallback()</tt></H5>
+<pre>
+mixed getCallback()
+</pre><br>
+<p class="docText">This method returns the "callable" used in the <tt>PEAR_ERROR_CALLBACK</tt> error mode.<a name="ch07index211"></a><a name="ch07index212"></a><a name="ch07index213"></a><a name="ch07index214"></a></p>
+<a name="ch07lev3sec26"></a><h5 class="docSection3Title">7.3.1.5 <tt>PEAR_Error::getCode()</tt></h5>
+<pre>
+int getCode()
+</pre><BR>
+<p class="docText">This method returns the error code.<a name="ch07index215"></a><a name="ch07index216"></a><a name="ch07index217"></a><a name="ch07index218"></a></P>
+<a name="ch07lev3sec27"></a><h5 class="docSection3Title">7.3.1.6 <tt>PEAR_Error::getMessage()</tt></h5>
+<p class="docText"><tt>string getMessage()</tt></p>
+<p class="docText">This method returns the error message.<a name="ch07index219"></a><a name="ch07index220"></a><a name="ch07index221"></a><a name="ch07index222"></a></p>
+<a name="ch07lev3sec28"></a><H5 class="docSection3Title">7.3.1.7 <tt>PEAR_Error::getMode()</tt></h5>
+<pre>
+int getMode()
+</pre><br>
+<p class="docText">This method returns the error mode (<tt>PEAR_ERROR_RETURN</tt> and so on).<a name="ch07index223"></a><a name="ch07index224"></a><a name="ch07index225"></a><a name="ch07index226"></a></P>
+<a name="ch07lev3sec29"></a><h5 class="docSection3Title">7.3.1.8 <tt>PEAR_Error::getType() string getType()</tt></H5>
+<p class="docText">This method returns the type of PEAR error, which is the lowercased class name of the error class. In most cases, the type will be <tt>pear_error</tt> (in lowercase), but it varies for packages that implement their own error-handling classes inheriting <tt>PEAR_Error</tt>.<a name="ch07index227"></a><a name="ch07index228"></a><a name="ch07index229"></a><a name="ch07index230"></a></p>
+<a name="ch07lev3sec30"></a><h5 class="docSection3Title">7.3.1.9 <tt>PEAR_Error::getUserInfo()</tt></h5>
+<pre>
+string getUserInfo()
+</pre><br>
+<p class="docText">This method returns the entire user info string. Different entries are separated with the string &quot; ** &quot; (space, two asterisks, space).<a name="ch07index231"></a><a name="ch07index232"></a><a name="ch07index233"></a><a name="ch07index234"></a></p>
+<a name="ch07lev2sec7"></a><h4 class="docSection2Title">7.3.2. Handling PEAR Errors</h4>
+<p class="docText">The default behavior for PEAR errors is to do nothing but return the object. However, it is possible to set an error mode that will be used for all consequent errors raised. The error mode is checked when the <tt>PEAR_Error</tt> object is created, and is expressed by a constant:<a name="ch07index235"></a><a name="ch07index236"></a><a name="ch07index237"></a></p>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "Aborting: %s\n");
+
+$dbh = DB::connect('mysql://test@localhost/test');
+print "DB::connect ok!\n";
+
+?&gt;
+</pre><br>
+<p class="docText">This previous example is simplified here by using a global default error handler that applies to <span class="docEmphasis">every</span> PEAR error that has no other error mode configured. In this case, we use <tt>PEAR_ERROR_DIE</tt>, which prints the error message using the parameter as <tt>printf</tt> format string, and then die. The advantage of this approach is that you can code without checking errors for everything. It is not very graceful, but as you will see later in the chapter, you may also apply temporary error modes during operations that need more graceful handling.<a name="ch07index238"></a><a name="ch07index239"></a></p>
+<a name="ch07lev3sec31"></a><h5 class="docSection3Title">7.3.2.1 <tt>PEAR::setErrorHandling()</tt></h5>
+<p class="docText"><tt>void PEAR::setErrorHandling</tt>(<tt>int mode</tt>, [<tt>mixed options]</tt>)</p>
+<p class="docText">This method sets up default error-handling parameters, globally or for individual objects. Called statically, it sets up global error handling defaults:<a name="ch07index240"></a><a name="ch07index241"></a><a name="ch07index242"></a></p>
+<pre>
+PEAR::setErrorHandling(PEAR_ERROR_TRIGGER);
+</pre><br>
+<p class="docText">Here, we set the global default error handling to <tt>PEAR_ERROR_TRIGGER</tt>, which makes all PEAR errors trigger PHP errors.</p>
+<p class="docText">Called when part of an object, this method sets up error-handling defaults for that object only:</P>
+<pre>
+$dbh-&gt;setErrorHandling(PEAR_ERROR_CALLBACK, 'my_error_handler');
+</pre><BR>
+<p class="docText">In this example, we set the defaults so every error object raised from within the <tt>$dbh</tt> object is passed as a parameter to <tt>my_error_handler()</tt>.</p>
+<a name="ch07lev2sec8"></a><h4 class="docSection2Title">7.3.3. PEAR Error Modes</H4>
+<a name="ch07lev3sec32"></a><h5 class="docSection3Title">7.3.3.1 <tt>PEAR_ERROR_RETURN</tt></h5>
+<p class="docText">This default error mode does nothing beyond creating the error object and returning it.</p>
+<a name="ch07lev3sec33"></a><h5 class="docSection3Title">7.3.3.2 <tt>PEAR_ERROR_PRINT</tt></h5>
+<p class="docText">In this mode, the error object automatically prints the error message to PHP's output stream. You may specify a <tt>printf</tt> format string as a parameter to this error mode; we will look at that later in this chapter.<a name="ch07index243"></a><a name="ch07index244"></a><a name="ch07index245"></a></p>
+<a name="ch07lev3sec34"></a><H5 class="docSection3Title">7.3.3.3 <tt>PEAR_ERROR_DIE</tt></h5>
+<p class="docText">This mode does the same thing as <tt>PEAR_ERROR_PRINT</tt>, except it exits after displaying the error message. The <tt>printf</tt> format string is still applied.<a name="ch07index246"></a><a name="ch07index247"></a><a name="ch07index248"></a></P>
+<a name="ch07lev3sec35"></a><h5 class="docSection3Title">7.3.3.4 <tt>PEAR_ERROR_TRIGGER</tt></H5>
+<p class="docText">The trigger mode passes the error message on to PHP's built-in <tt>trigger_error()</tt> function. This mode also takes an optional parameter which is the PHP error level used in the <tt>trigger_error()</tt> call (one of <tt>E_USER_NOTICE</tt>, <tt>E_USER_WARNING</tt> and <tt>E_USER_ERROR</tt>). Wrapping PHP errors inside PEAR errors may be useful, for example, if you want to exploit the flexibility of PEAR errors but all the different built-in logging capabilities of PHP's own error handling.<a name="ch07index249"></a><a name="ch07index250"></a><a name="ch07index251"></a></p>
+<a name="ch07lev3sec36"></a><h5 class="docSection3Title">7.3.3.5 <tt>PEAR_ERROR_CALLBACK</tt></H5>
+<p class="docText">Finally, if none of the preceding error modes suits your needs, you may set up an error-handling function and do the rest yourself.<a name="ch07index252"></a><a name="ch07index253"></a><a name="ch07index254"></a></P>
+<a name="ch07lev2sec9"></a><h4 class="docSection2Title">7.3.4. Graceful Handling</h4>
+<a name="ch07lev3sec37"></a><h5 class="docSection3Title">7.3.4.1 <tt>PEAR::pushErrorHandling()</tt></h5>
+<p class="docText"><tt>bool PEAR::pushErrorHandling</tt>(<tt>int mode</tt>, <tt>[mixed options]</tt>)</P>
+<p class="docText">This method pushes another error-handling mode on top of the default handler stack. This error mode will be used until <tt>popErrorHandling()</tt> is called.<a name="ch07index255"></a><a name="ch07index256"></a><a name="ch07index257"></a></p>
+<p class="docText">You may call this method statically or in an object context. As with other methods that have this duality, global defaults are used when called statically, and the object defaults when in an object context.</p>
+<p class="docText">Here is an extended version of the first example. After connecting, we insert some data into a table, and handle duplicate keys gracefully:</P>
+<pre>
+&lt;?php
+
+require_once 'PEAR.php';
+require_once 'DB.php';
+
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "Aborting: %s\n");
+
+$dbh = DB::connect('mysql://test@localhost/test');
+// temporarily set the global default error handler
+PEAR::pushErrorHandling(PEAR_ERROR_RETURN);
+
+$res = $dbh-&gt;query("INSERT INTO mytable VALUES(1, 2, 3)");
+
+// PEAR_ERROR_DIE is once again the active error handler
+PEAR::popErrorHandling();
+
+if (PEAR::isError($res)) {
+    // duplicate keys will return this error code in PEAR DB:
+    if ($res-&gt;getCode() == DB_ERROR_ALREADY_EXISTS) {
+        print "Duplicate record!\n";
+    } else {
+        PEAR::throwError($res);
+    }
+}
+
+?&gt;
+</pre><br>
+<p class="docText">First, we set up a default error handler that prints the error message and exits. After successfully connecting to the database (the default error handler will make the script exit if the connection fails), we push <tt>PEAR_ERROR_RETURN</tt> as the global default error mode while executing a query that <span class="docEmphasis">may</span> return an error. Once the query is done, we pop away the temporary error mode. If the query returned an error, we check the error code to see if it is a situation we know how to handle. If it was not, we re-throw the error, which causes the original global defaults (<tt>PEAR_ERROR_DIE</tt>) to apply.<a name="ch07index258"></a><a name="ch07index259"></a><a name="ch07index260"></a></P>
+<a name="ch07lev3sec38"></a><h5 class="docSection3Title">7.3.4.2 <tt>PEAR::popErrorHandling()</tt></h5>
+<pre>
+bool PEAR::popErrorHandling()
+</pre><br>
+<p class="docText">This is the complimentary method to <tt>PEAR::pushErrorHandling()</tt> and will pop (remove) the topmost mode from the error handling stack. It may be called statically or in an object context, as with <tt>pushErrorHandling()</tt>.<a name="ch07index261"></a><a name="ch07index262"></a><a name="ch07index263"></a></p>
+<a name="ch07lev3sec39"></a><h5 class="docSection3Title">7.3.4.3 <tt>PEAR::expectError()</tt></h5>
+<pre>
+int expectError(mixed expect)
+</pre><br>
+<p class="docText">This method is a more specific approach to the same problem that <tt>pushErrorHandling()</tt> tries to solve: making an exception (in the traditional sense of the word) for errors we want to handle differently. The <tt>expectError()</tt> approach is to look for one or more specified error codes or error messages, and force the error mode to <tt>PEAR_ERROR_RETURN</tt> for matching errors, thus disabling any handlers.<a name="ch07index264"></a><a name="ch07index265"></a><a name="ch07index266"></a></p>
+<p class="docText">If the <tt>expect</tt> parameter is an integer, it is compared to the error code of the raised error. If they match, any specified error handler is disabled, and the error object is silently returned.</p>
+<p class="docText">If <tt>expect</tt> is a string, the same thing is done with the error message, and as a special case the string &quot;*&quot; matches every error message. Thus, <tt>expectError('*')</tt> has the same effect as <tt>pushErrorHandling(PEAR_ERROR_RETURN)</tt>.</p>
+<p class="docText">Finally, if <tt>expect</tt> is an array, the previous rules are applied to each element, and if one matches, the error object is just silently returned.</p>
+<p class="docText">The return value is the new depth of the object's expect stack (or the global expect stack if called statically).</p>
+<p class="docText">Let's repeat the last example using <tt>expectError()</tt> instead of <tt>pushError Handling()</tt>:</p>
+<pre>
+&lt;?php
+
+require_once 'PEAR.php';
+require_once 'DB.php';
+
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "Aborting: %s\n");
+
+$dbh = DB::connect('mysql://test@localhost/test');
+
+// temporarily disable the default handler for this error code:
+$dbh-&gt;expectError(DB_ERROR_ALREADY_EXISTS);
+
+$res = $dbh-&gt;query("INSERT INTO mytable VALUES(1, 2, 3)");
+
+// back to PEAR_ERROR_DIE again:
+$dbh-&gt;popExpect();
+
+if (PEAR::isError($res) &amp;&amp; $res-&gt;getCode() == DB_ERROR_ALREADY_EXISTS) {
+    print "Duplicate record!\n";
+}
+
+?&gt;
+</pre><br>
+<p class="docText">In this example, we use the per-object default error handling in the <tt>$dbh</tt> object instead of the global default handler to implement our graceful duplicate handling. The main difference from the <tt>pushErrorHandling()</tt> approach is that we don't have to re-throw/raise the error because our &quot;duplicate handling code&quot; is called <span class="docEmphasis">only</span> if a duplicate error occurred, and not if <span class="docEmphasis">any</span> error occurred as would have been the case with <tt>pushErrorHandling()</tt>.<a name="ch07index267"></a><a name="ch07index268"></a><a name="ch07index269"></a></p>
+<a name="ch07lev3sec40"></a><H5 class="docSection3Title">7.3.4.4 <tt>PEAR::popExpect()</tt></H5>
+<pre>
+array popExpect()
+</pre><br>
+<p class="docText">This method compliments <tt>expectError()</tt>, and removes the topmost element in the expect stack. As with the other error-handling methods, it applies to object or global defaults depending on whether it is called statically or in an object context.<a name="ch07index270"></a><a name="ch07index271"></a><a name="ch07index272"></a></p>
+<p class="docText">The return value is an array with the expected error codes/messages that were popped off the expect stack.</P>
+<a name="ch07lev3sec41"></a><h5 class="docSection3Title">7.3.4.5 <tt>PEAR::delExpect()</tt></h5>
+<pre>
+bool delExpect(mixed error_code)
+</pre><br>
+<p class="docText">This method removes <tt>error_code</tt> from every level in the expect stack, returning <tt>true</tt> if anything was removed.<a name="ch07index273"></a><a name="ch07index274"></a><a name="ch07index275"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch07lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch07lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

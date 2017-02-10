@@ -1,0 +1,166 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.2.&nbsp; PEAR Standards</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec2"></a><h3 class="docSection1Title">12.2. PEAR Standards</h3>
+<p class="docText">PEAR's <span class="docEmphStrong">Coding Standard</span>, or <span class="docEmphStrong">PCS</span> for short, is primarily meant for developers of PEAR packages. Some of it is useful for those who just use PEAR packages as well, especially the section about how different types of symbols are named. Even if you are not planning to develop any PEAR packages yourself, it is a good idea to read the section on naming so you know what to expect when you use PEAR packages.<a name="ch12index01"></a><a name="ch12index02"></a></p>
+<a name="ch12lev2sec1"></a><h4 class="docSection2Title">12.2.1. Symbol Naming</h4>
+<p class="docText">Different types of symbols, such as function or variable names, have naming schemes designed to make each type of symbol stand out from each other.<a name="ch12index03"></a><a name="ch12index04"></a><a name="ch12index05"></a></P>
+<a name="ch12lev3sec1"></a><h5 class="docSection3Title">12.2.1.1 Constants</H5>
+<p class="docText">Constant names are all uppercase, with the (uppercased) package name as a prefix. Here are some examples:<a name="ch12index06"></a><a name="ch12index07"></a><a name="ch12index08"></a><a name="ch12index09"></a><a name="ch12index10"></a></p>
+<pre>
+PEAR_ERROR_DIE     (from PEAR package)
+AUTH_EXPIRED       (from Auth package, without namespaces)
+DB_DATAOBJECT_INT  (from DB_DataObject package)
+</pre><BR>
+<p class="docText">Optionally, if you do not care about PHP 4 compatibility, use <tt>class const</tt> variables. With <tt>class const</tt> variables, you must use the properly capitalized class name, and then the constant name in all uppercase:</p>
+<pre>
+PEAR_Error::DIE    (from PEAR package)
+Auth::EXPIRED      (from Auth package, without namespaces)
+DB_DataObject::INT (from DB_DataObject package)
+</pre><br>
+<a name="ch12lev3sec2"></a><h5 class="docSection3Title">12.2.1.2 Global Variables</h5>
+<p class="docText">With the advent of static class variables in PHP 5, there is little reason to use global variables in library code anymore. Packages that are PHP 4-compatible cannot use static class variables, of course. Here is PEAR's naming convention for globals:<a name="ch12index11"></a><a name="ch12index12"></a><a name="ch12index13"></a><a name="ch12index14"></a><a name="ch12index15"></a></P>
+<pre>
+$_Package_Name_variable
+</pre><BR>
+<p class="docText">The convention is <tt>$_{Package_Name}_{lowercased_variable_name}</tt>. The lowercasing is for clearly separating the package name part (which requires an initial capital letter in each underscore-separated element), and the variable name part.</p>
+<a name="ch12lev3sec3"></a><h5 class="docSection3Title">12.2.1.3 Functions</h5>
+<p class="docText">Functions are named simply with the package name prefixed as for constants. The package name has its case preserved; the part following the prefix is <tt>studlyCaps</tt> with an initial lowercase letter. Here is an example:<a name="ch12index16"></a><a name="ch12index17"></a><a name="ch12index18"></a><a name="ch12index19"></a><a name="ch12index20"></a></p>
+<pre>
+function Package_Name_functionName()
+{
+    print "R&ouml;yksopp&lt;br /&gt;\n";
+}
+</pre><BR>
+<p class="docText">If the function is &quot;private,&quot; which means that it is not intended for use outside the package that defines it, the name is prefixed with an underscore:</p>
+<pre>
+function _Package_Name_privateFunction()
+{
+    print "Dadafon&lt;br /&gt;\n";
+}
+</pre><br>
+<p class="docText">Note that this applies to functions, not methods.</P>
+<a name="ch12lev3sec4"></a><h5 class="docSection3Title">12.2.1.4 Classes</H5>
+<p class="docText">Class names are also prefixed with the package name, or may be the same as the package name. The rules for use of upper- and lowercase characters are the same for package names and class names. Here are some examples:<a name="ch12index21"></a><a name="ch12index22"></a><a name="ch12index23"></a><a name="ch12index24"></a><a name="ch12index25"></a></p>
+<pre>
+class Package_Name ...
+
+class Package_Name_OtherClass ...
+</pre><br>
+<p class="docText">There is one exception to the &quot;initial uppercase letter&quot; rule for classes: Objects returned by factory methods and such <span class="docEmphasis">may</span> have a class name where the generated part of the class name is all lowercase. The factory implementation may not always know the right capitalization, so if you always lowercase the variable part of the class name, you are safe.</p>
+<p class="docText">For example, the DB package uses this scheme for its driver classes, which are called <tt>DB_mysql</tt>, <tt>DB_oci8</tt>, and so on, rather than <tt>DB_MySQL</tt> and <tt>DB_OCI8</tt>.</p>
+<a name="ch12lev3sec5"></a><h5 class="docSection3Title">12.2.1.5 Methods</h5>
+<p class="docText">Methods are named with an initial lowercase letter and an uppercase letter at the start of every word or token after the first, just like Java. Acronyms and abbreviations that are normally written in all uppercase are kept in uppercase. Here are some examples:<a name="ch12index26"></a><a name="ch12index27"></a><a name="ch12index28"></a><a name="ch12index29"></a><a name="ch12index30"></a></p>
+<pre>
+class Foo
+{
+    function test() ...
+
+    function anotherTest() ...
+
+    function toHTML() ...
+}
+</pre><br>
+<p class="docText">For private methods, you have two options. If you care about PHP 4 compatibility, prefix the names of &quot;private&quot; methods with an underscore:</p>
+<pre>
+class Foo
+     {
+         function _privateMethod() ...
+     }
+</pre><br>
+<p class="docText">Note that in PHP 5, this method is actually public. The leading underscore is just a naming convention.</p>
+<p class="docText">If PHP 4 compatibility is not an issue, use <tt>private function</tt> without the underscore prefix:</p>
+<pre>
+class Foo
+     {
+         private function privateMethod() ...
+     }
+</pre><br>
+<a name="ch12lev3sec6"></a><h5 class="docSection3Title">12.2.1.6 Member Variables</h5>
+<p class="docText">The only requirement for member variables is that private members should be underscore-prefixed in PHP 4-compatible code. There is no notion of &quot;protected&quot; for PHP 4:<a name="ch12index31"></a><a name="ch12index32"></a><a name="ch12index33"></a><a name="ch12index34"></a><a name="ch12index35"></a><a name="ch12index36"></a></p>
+<pre>
+class Foo
+{
+    var $public_member;
+    var $_private_member;
+}
+</pre><BR>
+<p class="docText">For PHP 5-only code, use the <tt>private</tt>/<tt>protected</tt>/<tt>public</tt> modifiers properly:</P>
+<pre>
+class Foo
+{
+    public $member_variable;
+    protected $protected_member;
+    private $private_member;
+    static $static_classvar;
+    const CLASS_CONSTANT;
+}
+</pre><br>
+<a name="ch12lev2sec2"></a><h4 class="docSection2Title">12.2.2. Indentation</H4>
+<p class="docText">PEAR uses four-character indentation, with spaces only (no tabs!). This part of the PEAR coding standards alone has caused more controversy than any other part, so it deserves some explanation.<a name="ch12index37"></a><a name="ch12index38"></a></p>
+<p class="docText">Users expect the tab key in their editor to do some form of indentation. This may range from simply inserting a tab character into the file, or something clever like looking at the indentation of the previous line to figure out how to indent the current line. It does not have to insert a tab character into the source file.</p>
+<p class="docText">When someone views a source file with tab characters in it, it is up to the viewer program how they are rendered. Traditionally, from the old days of VT100 UNIX terminals and typewriters, tab characters were rendered by moving the cursor to the next multiple-of-eight column. The Emacs editor renders tabs as up to eight spaces by default; most Windows and Macintosh editors use four spaces. Most editors let you configure the tab width, which gives even more possibilities. The result is that if you put a tab character in a file, the reader of the file is likely to see different indentation than you intended, because his viewer program renders the tab differently from your editor.<a name="ch12index39"></a></p>
+<p class="docText">There are many examples of this, but rest assured that the <span class="docEmphasis">only</span> reliable way of rendering a certain amount of whitespace at the beginning of a line is using only space characters. For more rant on this issue, look at <a class="docLink" target="_blank" href="http://www.jwz.org/doc/tabs-vs-spaces.html">http://www.jwz.org/doc/tabs-vs-spaces.html</a>.</p>
+<p class="docText">Here is an example that demonstrates the PEAR indentation style:<a name="ch12index40"></a><a name="ch12index41"></a></p>
+<pre>
+&lt;?php
+
+class IndentExample
+{
+    static $tmpfiles = array();
+
+    function sampleMethod($dbh, $id)
+    {
+        $results = $dbh-&gt;getAll('SELECT * FROM bar WHERE id = ?',
+                                array($id));
+        if (PEAR::isError($results)) {
+            return $results;
+        }
+        foreach ($results as $row) {
+        switch ($row[0]) {
+            case 'foo':
+                print "A foo-style row&lt;br /&gt;\n";
+                break;
+            case 'bar':
+                print "A bar-style row&lt;br /&gt;\n";
+                break;
+            default:
+                print "Something else...&lt;br /&gt;\n";
+                break;
+            }
+        }
+    }
+}
+
+function clean_up()
+{
+    foreach (IndentExample::$tmpfiles as $tmpfile) {
+        if (file_exists($tmpfile)) {
+            unlink($tmpfile);
+        }
+    }
+    IndentExample::$tmpfiles = array();
+}
+
+
+?&gt;
+</pre><br>
+<UL></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

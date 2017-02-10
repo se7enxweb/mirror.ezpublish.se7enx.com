@@ -1,0 +1,170 @@
+[06-28-2006 00:14:46] -!- DiGiTa|_ [n=pet2poul@84.4.40.230] has joined #ezpublish
+[06-28-2006 00:40:05] -!- DiGiTa|__ [n=pet2poul@84.4.36.136] has joined #ezpublish
+[06-28-2006 00:40:46] -!- ordnas [n=ordnas@p549D6768.dip.t-dialin.net] has joined #ezpublish
+[06-28-2006 00:46:09] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[06-28-2006 00:52:40] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-28-2006 00:55:28] -!- DiGiTa|_ [n=pet2poul@84.4.40.230] has quit [Read error: 110 (Connection timed out)]
+[06-28-2006 00:59:01] -!- DiGiTa|__ [n=pet2poul@84.4.36.136] has quit []
+[06-28-2006 01:05:54] -!- SEAwolfx [n=SEAwolfx@p5493C06F.dip0.t-ipconnect.de] has joined #ezpublish
+[06-28-2006 01:32:23] -!- SEAwolfx [n=SEAwolfx@p5493C06F.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[06-28-2006 01:36:33] -!- awormus [n=aaron@p54B06615.dip.t-dialin.net] has joined #ezpublish
+[06-28-2006 01:59:49] -!- _hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[06-28-2006 02:08:24] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[06-28-2006 02:28:24] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-28-2006 02:47:13] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[06-28-2006 03:18:55] -!- SEAwolfx [n=SEAwolfx@p54939CC9.dip0.t-ipconnect.de] has joined #ezpublish
+[06-28-2006 03:25:21] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[06-28-2006 03:25:25] [#ezpublish] <philG> hi all
+[06-28-2006 03:25:51] [#ezpublish] <philG> i have a simple qst, what is the command to show the diffrent template wich is use in the page ?
+[06-28-2006 03:31:56] -!- SEAwolfx_ [n=SEAwolfx@p549393CC.dip0.t-ipconnect.de] has joined #ezpublish
+[06-28-2006 03:32:06] [#ezpublish] <kalooni> ShowUsedTemplates=enabled
+[06-28-2006 03:32:21] [#ezpublish] <kalooni> in [DebugSettings] with Debug=enabled
+[06-28-2006 03:32:24] [#ezpublish] <kalooni> I think
+[06-28-2006 03:34:05] [#ezpublish] <philG> ok thanks, i have just a litlle error sorry
+[06-28-2006 03:40:31] -!- SEAwolfx [n=SEAwolfx@p54939CC9.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[06-28-2006 03:45:52] -!- SEAwolfx_ is now known as SEAwolfx
+[06-28-2006 03:51:24] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[06-28-2006 04:37:09] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-28-2006 04:37:24] [#ezpublish] <zrg> resistance is useless!
+[06-28-2006 04:45:51] [#ezpublish] <kracker> uselessness is resilient
+[06-28-2006 04:46:10] [#ezpublish] <SEAwolfx> underground resistance can resist
+[06-28-2006 04:46:47] [#ezpublish] <zrg> uselessness is resistive?
+[06-28-2006 04:46:56] [#ezpublish] <zrg> and goodmorning :)
+[06-28-2006 05:51:08] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit [Remote closed the connection]
+[06-28-2006 05:58:33] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[06-28-2006 06:11:10] -!- awormus [n=aaron@p54B06615.dip.t-dialin.net] has quit ["Leaving"]
+[06-28-2006 06:24:27] [#ezpublish] <snowboarder04> mornin' all
+[06-28-2006 06:26:58] [#ezpublish] <zrg> hell-o
+[06-28-2006 06:40:03] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[06-28-2006 07:01:42] -!- SEAwolfx [n=SEAwolfx@p549393CC.dip0.t-ipconnect.de] has quit [Connection timed out]
+[06-28-2006 07:01:45] -!- SEAwolfx_ [n=SEAwolfx@p5493AAB3.dip0.t-ipconnect.de] has joined #ezpublish
+[06-28-2006 07:21:57] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-28-2006 07:28:47] -!- awormus [n=aaron@p54B06615.dip.t-dialin.net] has joined #ezpublish
+[06-28-2006 07:38:30] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[06-28-2006 07:38:43] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-28-2006 07:41:42] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[06-28-2006 07:55:30] -!- SEAwolfx [n=SEAwolfx@p5493BCBE.dip0.t-ipconnect.de] has joined #ezpublish
+[06-28-2006 08:10:27] -!- SEAwolfx_ [n=SEAwolfx@p5493AAB3.dip0.t-ipconnect.de] has quit [Connection timed out]
+[06-28-2006 08:24:25] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[06-28-2006 08:35:46] -!- SEAwolfx_ [n=SEAwolfx@p5493BF1D.dip0.t-ipconnect.de] has joined #ezpublish
+[06-28-2006 08:56:03] -!- SEAwolfx_ [n=SEAwolfx@p5493BF1D.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[06-28-2006 08:58:11] -!- SEAwolfx [n=SEAwolfx@p5493BCBE.dip0.t-ipconnect.de] has quit [Connection timed out]
+[06-28-2006 09:14:12] -!- Sulfur__ [n=Sulfur@85.20.2.139] has joined #ezpublish
+[06-28-2006 09:14:24] [#ezpublish] <Sulfur__> 'evening all
+[06-28-2006 09:14:40] [#ezpublish] <Sulfur__> and a special hi to all who attended eZ Conference :)
+[06-28-2006 09:16:15] [#ezpublish] <awormus> Hi :)
+[06-28-2006 09:16:33] [#ezpublish] <zrg> hullo sulfur
+[06-28-2006 09:20:45] [#ezpublish] <Sulfur__> hi zrg
+[06-28-2006 09:20:56] [#ezpublish] <Sulfur__> were you able to finally brew the beer, zrg ? ;)
+[06-28-2006 09:22:09] [#ezpublish] <Sulfur__> hi awormus
+[06-28-2006 09:22:25] [#ezpublish] <awormus> Sulfur__: don't know if we met in the conf... but I was there :)
+[06-28-2006 09:22:52] [#ezpublish] <Sulfur__> I don't know awormus, I am massimiliano bariola from italy
+[06-28-2006 09:24:26] [#ezpublish] <awormus> yeh, I think we talked once :)
+[06-28-2006 09:24:56] [#ezpublish] <zrg> nobody wanted my beer :(
+[06-28-2006 09:24:57] [#ezpublish] <Sulfur__> argh ... I just started today  a plain vanilla install of 3.8.1 on a dedicated server and I get total runtimes of 1 second but total script times of 14 seconds on backend and a terrible 21 secs runtime and 0.1 / 12 seconds on frontend. it never happened anything like that ... any ideas ?
+[06-28-2006 09:25:31] [#ezpublish] <Sulfur__> I'd have tried it zrg
+[06-28-2006 09:25:45] [#ezpublish] <Sulfur__> so you had to drink it all on your way back ? ;)
+[06-28-2006 09:25:57] [#ezpublish] <zrg> im still in oslo :)
+[06-28-2006 09:26:02] [#ezpublish] <Sulfur__> wow
+[06-28-2006 09:26:26] [#ezpublish] <Sulfur__> so grab some eZ developer by the ear and ask them why the hell do I get those figures ;)
+[06-28-2006 09:27:14] [#ezpublish] <zrg> drag them in here and we'll mob them :)
+[06-28-2006 09:27:40] [#ezpublish] <Sulfur__> there ain't none here, it seems :)
+[06-28-2006 09:28:13] [#ezpublish] <Sulfur__> hey, about Open Funding .... how much for a video of the eZ core developers singing silly drunken songs??? :)
+[06-28-2006 09:29:41] [#ezpublish] <zrg> nope, they definately are not here :P
+[06-28-2006 09:34:20] [#ezpublish] <zrg> where did you film them?
+[06-28-2006 09:34:57] [#ezpublish] <Sulfur__> leaving the bonfire to the pub, we did a stop and we amused ourselves by singing a little, it was great  time :)
+[06-28-2006 09:35:04] [#ezpublish] <Sulfur__> and no, we weren't drunk yet ... :)
+[06-28-2006 09:35:51] [#ezpublish] * awormus has a dvd of tobyS dancing... unfortunatly he's not drunk, and it's quite good
+[06-28-2006 09:36:24] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-28-2006 09:36:27] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[06-28-2006 09:41:34] [#ezpublish] <Sulfur__> cool :)
+[06-28-2006 09:42:30] -!- tChr [n=btd@grandpalace.trondheim.no.apario.net] has joined #ezpublish
+[06-28-2006 09:42:34] [#ezpublish] <tChr> hi all
+[06-28-2006 09:42:43] -!- tChr is now known as btd
+[06-28-2006 09:42:54] [#ezpublish] <Sulfur__> yup!
+[06-28-2006 09:44:09] [#ezpublish] <btd> Does anyone know wwhere i can find an unaltered version of Paul F's import example script?
+[06-28-2006 09:44:29] [#ezpublish] <Sulfur__> uh ... don't even know where to find the altered one :D
+[06-28-2006 09:44:36] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[06-28-2006 09:45:02] [#ezpublish] <btd> I've founds some altered versions, but there is too much to strip from them to get down to the basics :/
+[06-28-2006 09:45:48] [#ezpublish] <Sulfur__> huh .. I don't know , I found myself adding and adding and adding to them ... it's nt simple stuff
+[06-28-2006 09:45:51] [#ezpublish] <Sulfur__> not
+[06-28-2006 09:46:54] [#ezpublish] <btd> like this one: http://ez.no/community/forum/developer/importing_update_entry_if_it_already_exists
+[06-28-2006 09:47:02] [#ezpublish] <btd> seems to be an extention of the basic one
+[06-28-2006 09:47:33] [#ezpublish] <Sulfur__> I don't think you'll find any basic script, last time I had need, I had to browse the forums and found tidbits here and there (not in contribs)
+[06-28-2006 09:47:52] [#ezpublish] <btd> basically i need a cmd line script that will greate an object, and add it to a couple of places in the node tree.
+[06-28-2006 09:48:34] [#ezpublish] <btd> and I'll be happy XD I can cruft together the surrounding stuff myself, and its about adding an article from a remote location maybe 2-3 times a day..
+[06-28-2006 09:48:42] [#ezpublish] <btd> so effectivity is .. hmm.. not needed :)
+[06-28-2006 09:49:24] [#ezpublish] <Sulfur__> I have something like that but it's lousy coding - done in a hurry and patched on the go , I don't even remember where do I have to touch to configure it :)
+[06-28-2006 09:49:40] [#ezpublish] <Sulfur__> however if you badly need it, I could dig it out and send it to you on friday
+[06-28-2006 09:49:59] [#ezpublish] <Sulfur__> assuming that you didn't find anything better by that time ;)
+[06-28-2006 09:50:01] [#ezpublish] <btd> I thank you for the offer, but thats like a day to late.. I really nbeed this by tomorrow..
+[06-28-2006 09:50:24] [#ezpublish] <Sulfur__> hmm .... sorry, then I can't help you too much ... leaving in an hour and tomorrow not coming ..
+[06-28-2006 09:50:25] [#ezpublish] <btd> sometime ago I made a script that forces stuff directly into the eZ database, it works well enough, but is a tad brittle
+[06-28-2006 09:53:18] [#ezpublish] <awormus> so are there any eZpublish freelancers around?
+[06-28-2006 09:58:36] -!- ordnas [n=ordnas@p549D6768.dip.t-dialin.net] has left #ezpublish []
+[06-28-2006 10:02:09] [#ezpublish] <zrg> like me?
+[06-28-2006 10:04:53] -!- ordnas [n=ordnas@p549D6768.dip.t-dialin.net] has joined #ezpublish
+[06-28-2006 10:10:49] -!- _hovik [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[06-28-2006 10:11:09] [#ezpublish] <awormus> zrg: did you make it to the conf?
+[06-28-2006 10:15:46] -!- ordnas [n=ordnas@p549D6768.dip.t-dialin.net] has left #ezpublish []
+[06-28-2006 10:15:55] [#ezpublish] <tobmaster> alora
+[06-28-2006 10:16:39] [#ezpublish] <tobmaster> hi awormus
+[06-28-2006 10:16:51] [#ezpublish] <tobmaster> awormus: did you enjoy the conference?
+[06-28-2006 10:18:27] [#ezpublish] <awormus> tobmaster: totally :)
+[06-28-2006 10:18:56] [#ezpublish] <tobmaster> awormus: nice :)
+[06-28-2006 10:19:08] [#ezpublish] <tobmaster> awormus: when did you arrive?
+[06-28-2006 10:19:29] [#ezpublish] <awormus> I got back on monday
+[06-28-2006 10:25:28] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-28-2006 10:27:14] [#ezpublish] <philG> is it possible to delete an object to a section ?
+[06-28-2006 10:27:54] [#ezpublish] <philG> i understand how to add an object but how delete one ...
+[06-28-2006 10:33:16] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Read error: 110 (Connection timed out)]
+[06-28-2006 10:34:39] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[06-28-2006 10:36:57] [#ezpublish] <tobmaster> awormus: i meant when did you arrive at the conference
+[06-28-2006 10:37:02] [#ezpublish] <tobmaster> i have only seen you friday
+[06-28-2006 10:37:17] [#ezpublish] <tobmaster> but unfortunately was to busy to talk to you
+[06-28-2006 10:48:34] -!- Sulfur__ [n=Sulfur@85.20.2.139] has quit ["Trillian (http://www.ceruleanstudios.com"]
+[06-28-2006 10:49:54] [#ezpublish] <awormus> tobmaster: arrived in .no on wednesday, was in the hotel 3 nights then the school 2 nights
+[06-28-2006 11:08:29] [#ezpublish] <btd> anyone with FC4 experience?
+[06-28-2006 11:21:32] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[06-28-2006 11:35:16] -!- btd [n=btd@grandpalace.trondheim.no.apario.net] has quit ["Leaving"]
+[06-28-2006 11:43:31] [#ezpublish] <tobmaster> FC4?
+[06-28-2006 12:05:32] [#ezpublish] <awormus> Fedora Core 4
+[06-28-2006 12:26:45] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-28-2006 12:49:16] [#ezpublish] * snowboarder04 has FC4 experience
+[06-28-2006 13:07:44] -!- awormus [n=aaron@p54B06615.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-28-2006 13:12:12] -!- awormus [n=aaron@p54B04ED7.dip.t-dialin.net] has joined #ezpublish
+[06-28-2006 13:23:30] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[06-28-2006 13:29:11] -!- SunRayCafe [n=zztman@207.114.171.142] has joined #ezpublish
+[06-28-2006 13:42:54] -!- ls is now known as luke
+[06-28-2006 13:43:01] [#ezpublish] <luke> hi
+[06-28-2006 13:52:19] -!- DiGiTa|_ [n=pet2poul@84.4.43.55] has joined #ezpublish
+[06-28-2006 14:00:14] -!- DiGiTa|__ [n=pet2poul@84.4.70.198] has joined #ezpublish
+[06-28-2006 14:11:41] -!- DiGiTa|_ [n=pet2poul@84.4.43.55] has quit [Read error: 110 (Connection timed out)]
+[06-28-2006 14:19:02] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-28-2006 14:21:02] -!- DiGiTa|__ [n=pet2poul@84.4.70.198] has quit [Read error: 110 (Connection timed out)]
+[06-28-2006 14:23:45] -!- luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[06-28-2006 14:45:09] -!- TideJOBB [n=tidemann@ti132110a340-2652.bb.online.no] has joined #ezpublish
+[06-28-2006 14:51:26] -!- xigle1 [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-28-2006 15:36:52] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-28-2006 15:38:42] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-28-2006 15:39:28] [#ezpublish] <zrg> morning, mortals
+[06-28-2006 15:47:58] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-28-2006 16:02:22] [#ezpublish] <birger> god morgen
+[06-28-2006 16:11:37] [#ezpublish] <awormus> zrg: there?
+[06-28-2006 16:17:04] -!- SunRayCafe [n=zztman@207.114.171.142] has quit []
+[06-28-2006 16:17:16] [#ezpublish] <zrg> where??
+[06-28-2006 16:22:22] [#ezpublish] <zrg> wasup wormus? :)
+[06-28-2006 16:24:41] [#ezpublish] <awormus> you were talking about freelance ezpublish work..
+[06-28-2006 16:25:41] [#ezpublish] <zrg> ok?
+[06-28-2006 16:26:45] [#ezpublish] <awormus> I have an ecommerce project that I would like to deploy using eZpublish, I'm looking for a freelancer to work with me on it...
+[06-28-2006 16:36:34] [#ezpublish] <zrg> got private message, wormus?
+[06-28-2006 16:56:32] [#ezpublish] <awormus> sure
+[06-28-2006 16:56:52] [#ezpublish] <zrg> too sleepylogging out soon
+[06-28-2006 17:03:40] [#ezpublish] <awormus> zrg: if we can talk tomorrow that would be great :)
+[06-28-2006 17:03:46] [#ezpublish] * awormus is half asleep now
+[06-28-2006 17:07:17] [#ezpublish] <zrg> ok lets hit the hey
+[06-28-2006 17:07:29] [#ezpublish] <zrg> or was it hay?
+[06-28-2006 17:07:54] [#ezpublish] <zrg> definately gonna hit something
+[06-28-2006 17:08:35] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-28-2006 17:30:14] -!- awormus [n=aaron@p54B04ED7.dip.t-dialin.net] has quit ["Leaving"]
+[06-28-2006 20:46:50] [#ezpublish] <kracker> heh, http://www.razzledazzlerecipes.com/pie-recipes/ez-lemon-pie.htm

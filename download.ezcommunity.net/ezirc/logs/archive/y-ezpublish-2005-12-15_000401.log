@@ -1,0 +1,90 @@
+[12-13-2005 01:18:29] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-13-2005 02:01:17] -!- ordna1 [n=ordnas@p549D4F2C.dip.t-dialin.net] has joined #ezpublish
+[12-13-2005 02:07:06] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-13-2005 02:10:56] -!- SEAwolfx_ is now known as SEAwolfx
+[12-13-2005 02:13:18] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-13-2005 02:35:40] [#ezpublish] <thekracker> hey buz, sorry i missed your message a few days ago :\
+[12-13-2005 02:40:31] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-13-2005 02:55:21] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []
+[12-13-2005 03:03:27] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[12-13-2005 03:04:34] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-13-2005 03:21:40] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-13-2005 03:21:40] -!- _Katana` is now known as Katana`
+[12-13-2005 03:21:47] -!- DiGiTa|_ [n=guillaum@84.6.75.81] has joined #ezpublish
+[12-13-2005 03:21:54] [#ezpublish] <DiGiTa|_> hi
+[12-13-2005 03:22:11] [#ezpublish] <DiGiTa|_> does someone know how to createa a new design package ?
+[12-13-2005 03:22:22] [#ezpublish] <DiGiTa|_> -a
+[12-13-2005 03:25:27] [#ezpublish] <_Rappy_> no?
+[12-13-2005 03:25:53] [#ezpublish] <DiGiTa|_> :/
+[12-13-2005 03:29:10] [#ezpublish] <DiGiTa|_> ah i found it
+[12-13-2005 03:29:12] [#ezpublish] <DiGiTa|_> in the setup
+[12-13-2005 03:36:32] [#ezpublish] * Katana` had no idea
+[12-13-2005 03:46:45] [#ezpublish] <DiGiTa|_> well, now i'm searching how to set a default logo
+[12-13-2005 03:47:25] [#ezpublish] <DiGiTa|_> in the tpl there's something like that : $pagedesign.data_map.image.content[logo].full_path|ezroot
+[12-13-2005 03:47:37] [#ezpublish] <DiGiTa|_> let pagedesign=fetch_alias(by_identifier,hash(attr_id,sitestyle_identifier))
+[12-13-2005 04:47:36] [#ezpublish] <Katana`> has anyone tried http://ez.no/community/contribs/hacks/title_weighed_word_frequency_search_plugin ?
+[12-13-2005 04:52:10] -!- SEAwolfx [n=mike@DSL01.83.171.152.151.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[12-13-2005 05:46:57] -!- SEAwolfx [n=mike@DSL01.83.171.150.236.NEFkom.net] has joined #ezpublish
+[12-13-2005 06:02:12] -!- SEAwolfx [n=mike@DSL01.83.171.150.236.NEFkom.net] has quit ["leaving"]
+[12-13-2005 06:02:17] -!- SEAwolfx [n=mike@DSL01.83.171.150.236.NEFkom.net] has joined #ezpublish
+[12-13-2005 07:22:20] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-13-2005 07:27:51] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-13-2005 07:28:06] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-13-2005 07:36:43] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-13-2005 07:46:21] -!- _Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-13-2005 08:51:56] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[12-13-2005 09:02:39] [#ezpublish] <SEAwolfx> thekracker: hey.
+[12-13-2005 09:04:21] [#ezpublish] <SEAwolfx> or someone else here who can give the URL to krackers community site?
+[12-13-2005 09:40:06] [#ezpublish] <Katana`> ezcommunity.net
+[12-13-2005 09:42:20] -!- SEAwolfx [n=mike@DSL01.83.171.150.236.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[12-13-2005 10:52:50] [#ezpublish] <buz> can anyone comment on 1and1.com as registrar? 5.99$ for com net org including private listing is CHEAP
+[12-13-2005 10:53:00] [#ezpublish] <buz> and i just renewed 5 domains with godaddy :(
+[12-13-2005 11:07:48] -!- SEAwolfx [n=mike@DSL01.83.171.155.144.NEFkom.net] has joined #ezpublish
+[12-13-2005 11:23:22] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-13-2005 12:27:09] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-13-2005 12:27:37] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-13-2005 12:28:01] [#ezpublish] <Sulfur> guysssssss an emergency request .... how to set minimum password lenght ? I can find no ini setting
+[12-13-2005 12:29:43] [#ezpublish] <Katana`> ah no idea sorry...
+[12-13-2005 12:41:40] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-13-2005 12:41:42] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-13-2005 12:42:25] -!- _Katana` is now known as Katana`
+[12-13-2005 12:46:31] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-13-2005 12:48:02] [#ezpublish] <Sulfur> I am trying to look into the kernel but I cannot find where the check is made
+[12-13-2005 12:51:17] [#ezpublish] <Katana`> it should be in the datatype itself
+[12-13-2005 12:52:06] [#ezpublish] <Sulfur> so ezuser.php , but I can't find anything
+[12-13-2005 12:52:58] [#ezpublish] <Sulfur> well .... I asked on the forum ... let's hope someone will answer
+[12-13-2005 12:53:07] [#ezpublish] <Katana`> ezusertype
+[12-13-2005 12:53:20] [#ezpublish] <Katana`> should be in validateObjectAttributeHTTPInput
+[12-13-2005 12:53:21] [#ezpublish] <buz> http://ez.no/community/forum/install_configuration/how_to_set_minimum_length_of_user_passwords#msg89428
+[12-13-2005 12:53:38] [#ezpublish] <Katana`> line 151
+[12-13-2005 12:53:38] [#ezpublish] <Katana`> if ( strlen( $password ) < 3 )
+[12-13-2005 12:53:44] [#ezpublish] <Katana`> hardcoded
+[12-13-2005 12:53:44] [#ezpublish] <Katana`> bad
+[12-13-2005 12:53:53] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[12-13-2005 12:53:55] [#ezpublish] * Katana` is getting better at digging the source ;)
+[12-13-2005 12:54:09] [#ezpublish] <buz> easy patch
+[12-13-2005 12:54:13] [#ezpublish] <buz> make it an ini value
+[12-13-2005 12:54:34] [#ezpublish] <ls[eZ]> yo
+[12-13-2005 12:54:51] [#ezpublish] <Katana`> hey ls
+[12-13-2005 12:55:09] -!- ls[eZ] is now known as luke`
+[12-13-2005 13:14:03] -!- luke` [n=ls@unregister049205219081.c205.msk.pl] has quit [Remote closed the connection]
+[12-13-2005 13:23:35] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[12-13-2005 13:28:40] [#ezpublish] <Katana`> fh[eZ] or kris10an, is any of you alive ?
+[12-13-2005 13:42:51] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-13-2005 13:46:39] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-13-2005 14:19:25] -!- ordna1 [n=ordnas@p549D4F2C.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-13-2005 14:26:07] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 110 (Connection timed out)]
+[12-13-2005 14:29:23] [#ezpublish] <buz> yeah i just noticed the dynamic width feature, rocks
+[12-13-2005 14:44:08] [#ezpublish] <SEAwolfx> hallo @all.
+[12-13-2005 14:46:43] [#ezpublish] <SEAwolfx> how can i add functions to a class defined in the backend? Is there an apropriate documentation to this topic?
+[12-13-2005 14:55:58] [#ezpublish] <SEAwolfx> for instance that a class attribute should be set by such a function when an ezobject is instantiated
+[12-13-2005 15:21:11] [#ezpublish] <buz> workflow?
+[12-13-2005 15:38:50] [#ezpublish] <SEAwolfx> buz: i want to implement a push technique: when an article is published on a extern system this article should be send to the ezpublish site which includes the article_id what becomes a remote_article_id in the ezpublish site. so when its exported to the ezpublish-site the article should be automatically published and further the remote_article_id should be set as an object attribute of the new instantiated object within eZ-
+[12-13-2005 15:39:20] -!- kris10an^ [n=kh@216-70-24.0505.adsl.tele2.no] has joined #ezpublish
+[12-13-2005 15:39:38] [#ezpublish] * kris10an^ spanks kris10an 
+[12-13-2005 15:39:45] -!- kris10an^ [n=kh@216-70-24.0505.adsl.tele2.no] has left #ezpublish ["Konversation terminated!"]
+[12-13-2005 15:40:04] [#ezpublish] <SEAwolfx> spank him real good.
+[12-13-2005 16:06:17] -!- DiGiTa|_ [n=guillaum@84.6.75.81] has quit []
+[12-13-2005 21:49:08] -!- thekracker is now known as kracker
+[12-13-2005 23:40:26] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-13-2005 23:54:07] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish

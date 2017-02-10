@@ -1,0 +1,137 @@
+[11-26-2005 02:18:23] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-26-2005 02:26:01] [#ezpublish] <nnn0> puh - it worked :) it seems :D
+[11-26-2005 02:50:21] [#ezpublish] <_xiglet> how can I use url(image) in a stylesheet without a full url? Doesn't looks like I can use operators..
+[11-26-2005 02:50:24] -!- _xiglet is now known as xiglet
+[11-26-2005 02:51:28] [#ezpublish] <xiglet> I wanted to use |ezdesign in the url
+[11-26-2005 03:42:34] -!- ordnas [n=ordnas@p549DE4AC.dip.t-dialin.net] has joined #ezpublish
+[11-26-2005 03:45:12] [#ezpublish] <kracker> xiglet, are you trying to hide a url or just not have to specify a full url as a paramiter (variable base) or ... trying to understand
+[11-26-2005 03:47:34] [#ezpublish] <xiglet> that last one
+[11-26-2005 03:48:01] [#ezpublish] <xiglet> it's just so don't have to specify the full url
+[11-26-2005 03:48:08] [#ezpublish] <xiglet> like we do in templates
+[11-26-2005 03:48:26] [#ezpublish] <kracker> hmmm
+[11-26-2005 03:48:54] [#ezpublish] <kracker> i've ran into this one a little before and ... caved just to get through a milestone :\
+[11-26-2005 03:50:14] [#ezpublish] <kracker> but it's been a while got an example of a full url (base, not domain) needed for the operator to work?
+[11-26-2005 03:50:58] [#ezpublish] <kracker> or your saying that you need to specifiy a full url +protocol+domain+basepath and which is the variable which you want ot be dynamic?
+[11-26-2005 03:54:10] [#ezpublish] <xiglet> instead of url(http://domain.com/site/design/sitedesign/images/image.png)  i want something like url({image.png|ezdesign})
+[11-26-2005 03:54:21] [#ezpublish] <xiglet> shouln't that work?
+[11-26-2005 03:56:41] [#ezpublish] <xiglet> in a css override file that is
+[11-26-2005 04:04:07] [#ezpublish] <kracker> ahh yes, this unique problem i now understand
+[11-26-2005 04:04:15] [#ezpublish] <kracker> ok so what i say is this
+[11-26-2005 04:04:25] [#ezpublish] <kracker> the problem is that your css is "static"
+[11-26-2005 04:04:52] [#ezpublish] <kracker> and because it's static you run into problems when you desire a dynamic solution (course you know this ...)
+[11-26-2005 04:05:29] [#ezpublish] <kracker> why not have your css be created / cached dynamicly via php or eZ instead of using static css files?
+[11-26-2005 04:06:16] [#ezpublish] <kracker> then it would be simple to make key parts of your css dynamic in this way
+[11-26-2005 04:07:34] [#ezpublish] <kracker> i've done this before with php with good reasults, i've not done this using eZ publish yet but i do know that its' a topic that has been recommended by tony wood (and he would be someone who would have done this before, heh)
+[11-26-2005 04:09:00] [#ezpublish] <kracker> sounds like a good place for an extention to parse / generate / cache css using the existing eZ publish higherarchy (not exactly a solution atm)
+[11-26-2005 04:11:34] [#ezpublish] <kracker> if it was me i would just use php and mod_rewwrite to override your main css file, keeping the same url / uri ... but instead call a different file (php script) to output generated css) it would be really easy to do quickly
+[11-26-2005 04:12:24] [#ezpublish] <kracker> long term an extension for this would really be a beter way to go :\ but i'm not sure what the eZ way would be for handeling existing / stock css overrides ...:\
+[11-26-2005 04:12:53] [#ezpublish] <kracker> then if i think aobut this long enough i know i'm forgeting one thing that makes my ideas pointless :\
+[11-26-2005 04:13:19] [#ezpublish] <kracker> can't you use relative css uri syntax?
+[11-26-2005 04:51:52] [#ezpublish] <xiglet> yes I could, and I do. But wanted to do it the "correct way", if there is any...
+[11-26-2005 04:52:00] [#ezpublish] <xiglet> with ez operators
+[11-26-2005 05:09:22] [#ezpublish] <kracker> nods
+[11-26-2005 05:11:17] [#ezpublish] <kracker> i don't think any exist but it might be worth it to ask tony
+[11-26-2005 05:11:41] [#ezpublish] <kracker> errum reply to the thread on this subject (bring it back up in the forums)
+[11-26-2005 05:12:22] [#ezpublish] <kracker> i'd say it would be time to write up an extention to process a file in template syntax which stores and processes the tpl file and generates css as needed
+[11-26-2005 05:12:24] [#ezpublish] <kracker> hmm idea
+[11-26-2005 05:13:02] [#ezpublish] <kracker> create (basicly empty) dummy content object say article
+[11-26-2005 05:13:47] [#ezpublish] <kracker> then for that object create a set of template overrides so that your site-css.tpl file is used
+[11-26-2005 05:14:01] [#ezpublish] <kracker> this would let you use ez template language like your talking about
+[11-26-2005 05:14:38] [#ezpublish] <kracker> then you could just set your css includes in your other main templates to point to the dynamic css generator
+[11-26-2005 05:15:06] [#ezpublish] <kracker> the url of which would be the the dummy article
+[11-26-2005 05:16:21] [#ezpublish] <kracker> presto dynamic css using eZ publish and a little imagination, mix that with mod_rewrite to hide the actual url/uri, mix in more dummy articles for all kinds of css separation ...
+[11-26-2005 05:17:57] [#ezpublish] <kracker> eminem - stir crazy
+[11-26-2005 05:18:09] [#ezpublish] <kracker> just go crazy
+[11-26-2005 05:18:40] [#ezpublish] * kracker gets back to work before my next leap
+[11-26-2005 05:21:22] [#ezpublish] <nnn0> i just use the url relative to the stylesheet, like url(../images/banner.jpg)
+[11-26-2005 05:21:53] -!- ordnas [n=ordnas@p549DE4AC.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-26-2005 05:27:28] [#ezpublish] <xiglet> tnx a lot
+[11-26-2005 05:27:32] [#ezpublish] <xiglet> *restart*
+[11-26-2005 05:27:33] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[11-26-2005 05:45:35] [#ezpublish] <hovik> morning.
+[11-26-2005 05:51:17] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[11-26-2005 06:17:26] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [Remote closed the connection]
+[11-26-2005 06:23:16] [#ezpublish] <kracker> xiglet, really? or ...
+[11-26-2005 06:52:01] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[11-26-2005 07:04:06] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-26-2005 07:11:14] -!- elephantMan [n=elephant@217.167.222.224] has quit [Remote closed the connection]
+[11-26-2005 07:19:41] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[11-26-2005 07:57:08] [#ezpublish] <buz> ye gods
+[11-26-2005 07:57:17] [#ezpublish] <buz> phpicalendar code is a frigging mess
+[11-26-2005 07:57:32] [#ezpublish] <buz> it uses globals for variable passing between functions !!!!
+[11-26-2005 07:57:42] [#ezpublish] <buz> probably safer to try write my own....
+[11-26-2005 08:12:40] -!- ordnas [n=ordnas@p549DD315.dip.t-dialin.net] has joined #ezpublish
+[11-26-2005 08:21:50] -!- ordnas [n=ordnas@p549DD315.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-26-2005 08:31:47] [#ezpublish] <kracker> lol, globals ... honestly, in this day and age ...
+[11-26-2005 08:31:56] [#ezpublish] <buz> what
+[11-26-2005 08:32:00] [#ezpublish] <buz> ooh yeah
+[11-26-2005 08:32:03] [#ezpublish] <buz> stupidity abounds
+[11-26-2005 08:32:10] [#ezpublish] <buz> but the thing renders beautifully still
+[11-26-2005 08:32:22] [#ezpublish] <buz> but i think writing a calendar is beyond me
+[11-26-2005 08:32:27] [#ezpublish] <buz> time is a seriously fucked up data format
+[11-26-2005 08:33:05] [#ezpublish] <buz> i want something like kiko.com for ezp
+[11-26-2005 08:34:52] -!- ordnas [n=ordnas@p549DD315.dip.t-dialin.net] has joined #ezpublish
+[11-26-2005 08:36:38] -!- ordnas [n=ordnas@p549DD315.dip.t-dialin.net] has quit [Client Quit]
+[11-26-2005 08:36:48] -!- ordnas [n=ordnas@p549DD315.dip.t-dialin.net] has joined #ezpublish
+[11-26-2005 08:47:32] [#ezpublish] <kracker> yup, (i was at least trying to) say that last time we talked about calendars :\
+[11-26-2005 08:48:13] [#ezpublish] <buz> but looking at it, it will take a lot of skills
+[11-26-2005 08:48:14] [#ezpublish] <buz> and time
+[11-26-2005 08:49:09] [#ezpublish] <buz> ideally split it into two (at least) seperate projects
+[11-26-2005 08:49:23] [#ezpublish] <buz> one that does server side stuff and just delivers a xml list of events
+[11-26-2005 08:49:45] [#ezpublish] <buz> second one that takes the xml and does an ajax interface for it
+[11-26-2005 08:53:23] [#ezpublish] <buz> likely passing http://microformats.org/wiki/hcalendar#Introduction  between the client and the server
+[11-26-2005 09:26:18] -!- ordnas [n=ordnas@p549DD315.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-26-2005 10:03:50] -!- ordnas [n=ordnas@p549DD315.dip.t-dialin.net] has joined #ezpublish
+[11-26-2005 10:49:03] -!- ordnas [n=ordnas@p549DD315.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-26-2005 10:49:24] [#ezpublish] <xiglet> Really missing out-of-the-box calendar functionality in ezpublish 3
+[11-26-2005 10:49:59] -!- Straightliner [n=Straight@p509216EC.dip0.t-ipconnect.de] has joined #ezpublish
+[11-26-2005 10:50:08] [#ezpublish] <Straightliner> hi @all
+[11-26-2005 10:50:42] [#ezpublish] <Straightliner> can anyoane tell me how to move a parent node assignment?
+[11-26-2005 10:51:27] [#ezpublish] <Straightliner> I'm using the following to create the assignment:
+[11-26-2005 10:51:28] [#ezpublish] <Straightliner>       //assign new object to parent node
+[11-26-2005 10:51:28] [#ezpublish] <Straightliner>       $node_assignment =& eZNodeAssignment::create( array(
+[11-26-2005 10:51:28] [#ezpublish] <Straightliner>             'contentobject_id' => $AuktionObject->attribute( 'id' ),
+[11-26-2005 10:51:28] [#ezpublish] <Straightliner>             'contentobject_version' => $AuktionObject->attribute( 'current_version' ),
+[11-26-2005 10:51:28] [#ezpublish] <Straightliner>             'parent_node' => $new_parent_node_id,
+[11-26-2005 10:51:30] [#ezpublish] <Straightliner>             'is_main' => 1 ) );
+[11-26-2005 10:51:32] [#ezpublish] <Straightliner>       $node_assignment->store();
+[11-26-2005 10:51:47] [#ezpublish] <Straightliner> now I need to edit the assignment
+[11-26-2005 10:53:23] [#ezpublish] <Straightliner> an example would be nice...
+[11-26-2005 11:11:15] -!- BlueDragonPiper [n=BlueDrag@pcp09091287pcs.flint01.mi.comcast.net] has joined #ezpublish
+[11-26-2005 11:12:07] [#ezpublish] <BlueDragonPiper> Is this primarily a dev room?
+[11-26-2005 11:12:52] [#ezpublish] <BlueDragonPiper> Greetings all, BTW!
+[11-26-2005 11:20:34] [#ezpublish] <Straightliner> i think so...
+[11-26-2005 11:23:10] [#ezpublish] <BlueDragonPiper> Thanks for the reply, I am an beginner/intermediate CMS developer. Actually I was looking for help on another topic but since I use ezpub, thought I'd drop in.
+[11-26-2005 11:23:31] [#ezpublish] <buz> BlueDragonPiper: for the most part it is
+[11-26-2005 11:23:52] [#ezpublish] <buz> Straightliner: what do you mean by edit assignment
+[11-26-2005 11:40:25] -!- AIG|Straight [n=Straight@p5092134D.dip0.t-ipconnect.de] has joined #ezpublish
+[11-26-2005 11:40:37] [#ezpublish] <AIG|Straight> @buz
+[11-26-2005 11:40:54] [#ezpublish] <AIG|Straight> is there a function to delete all current assignments?
+[11-26-2005 11:41:11] [#ezpublish] <AIG|Straight> without fetching them before?
+[11-26-2005 11:57:04] -!- Straightliner [n=Straight@p509216EC.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[11-26-2005 12:32:54] [#ezpublish] <buz> i doubt it
+[11-26-2005 12:33:05] [#ezpublish] <buz> how's that supposed to work? deleting stuff without knowing it's there?
+[11-26-2005 12:45:48] [#ezpublish] <hovik> AIG|Straight: do you want it per version, or for all versions ?
+[11-26-2005 13:10:23] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-26-2005 13:24:34] [#ezpublish] <hovik> hi lukas.
+[11-26-2005 13:24:45] [#ezpublish] <ls[eZ]> hi kaare
+[11-26-2005 13:38:48] [#ezpublish] <buz> http://news.yahoo.com/s/nm/20051125/wr_nm/internet_domains_nodotcom_dc OMFG
+[11-26-2005 13:38:51] [#ezpublish] <buz> just what the net needed
+[11-26-2005 13:39:20] [#ezpublish] <buz> and 1000$ for something that wont even work reliably
+[11-26-2005 14:48:44] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-26-2005 16:08:27] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Remote closed the connection]
+[11-26-2005 17:37:45] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-26-2005 17:54:12] -!- BlueDragonPiper [n=BlueDrag@pcp09091287pcs.flint01.mi.comcast.net] has left #ezpublish ["Leaving"]
+[11-26-2005 22:52:00] -dmwaters:$*- {global notice} Hi all! in an hour and 10 minutes, we've got some major upgrades to 3 of our main boxes. If everything goes right, it won't take more then 15 minutes. If things go wrong, well, it could take a little longer.:)  2 main rotation servers, and a hub will be impacted by these upgrades, as well as www.freenode.net and services. I will try to make this as quick as possible. Thank you for your patience, and thank you for using freenode
+[11-26-2005 23:34:06] -dmwaters:$*- {global notice} This is a reminder that in about 25 minutes, 3 main servers will be rebooted for upgrades. This will not take long. Thank you for your patience, and thank you for using freenode!
+[11-26-2005 23:42:35] -dmwaters:$*- {global notice} FYI, those of you who are using join throttling may want to disable it briefly durring the server upgrades in order to avoid people landing in overflow channels durring the upgrades.
+[11-26-2005 23:56:04] -!- elephantMan [n=elephant@217.167.222.224] has quit [calvino.freenode.net irc.freenode.net]
+[11-26-2005 23:56:04] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [calvino.freenode.net irc.freenode.net]
+[11-26-2005 23:56:04] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[11-26-2005 23:56:04] -!- kh[eZ] [n=kh@popeye.ez.no] has quit [calvino.freenode.net irc.freenode.net]
+[11-26-2005 23:56:59] -!- kh[eZ] [n=kh@popeye.ez.no] has joined #ezpublish
+[11-26-2005 23:56:59] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[11-26-2005 23:56:59] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[11-26-2005 23:56:59] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-26-2005 23:56:59] -!- mode/#ezpublish [+o kh[eZ]] by irc.freenode.net
+[11-26-2005 23:56:59] -!- mode/#ezpublish [-o kh[eZ]] by ChanServ

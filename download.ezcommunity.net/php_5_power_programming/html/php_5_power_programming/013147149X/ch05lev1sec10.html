@@ -1,0 +1,26 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 5.10.&nbsp; Summary</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec9.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch06.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch05lev1sec10"></a><h3 class="docSection1Title" id="409768-873">5.10. Summary</h3>
+<p class="docText">PHP is easily embedded into HTML files, displaying HTML forms that collect data entered by users and files that users upload. Collecting information from users presents security issues for the web site and for any user information stored at the web site. For security, PHP should have <tt>register_globals</tt> set to <tt>Off</tt>. To attack your web site or steal your data, the bad guys use techniques like cross-site scripting (executing pieces of client side scripting on your site) and SQL injection (inserting malicious code into queries run on your database). To protect against attacks, you must distrust all data that originates from users. You need to carefully validate all data that you receive from users and test it carefully to be sure it is safe, not dangerous to your web site. You can protect your web site when users upload files by checking the file size and type of the uploaded file. In addition, you can protect the information that is visible in your browser address windowinformation passed in the URLby hashing it using one of several methods, including a PEAR class, called <tt>Crypt_HMAC</tt>, which was developed for hashing purposes. Hashing is also useful to protect passwords stored for the purpose of authenticating users. Another useful measure to protect your web site from user mistakes or bad-guy attacks is to develop your own error handler to recognize when something is not as it should be and to handle the problem.</p>
+<p class="docText">For a web application to be useful, the application data must be available to all the web pages in the application during a user session. One way to pass data from one web page to the next is by using cookies. When the user accesses the web page, a login page is displayed and the account and password entered by the user into the form are checked against the account and pass word that are stored for the user. If the user is authenticated, a cookie is set. The information in the cookie is automatically passed with any requested page. A second method of making data persistent across web pages is to use the PHP session features. Once you start a PHP session, you can store variables that are available to other scripts in the session.</p>
+<p class="docText">Once you know all the pieces you need for your web application, you need to organize them into a useful whole. One common method of organization is called &quot;one script serves all,&quot; which means that <tt>index.php</tt> handles all the requests for different pages. Another common organization is &quot;one script per function.&quot; A general principle is to separate layout from logic. After you organize the pieces into a comprehensive application, you're off to the races.</p>
+<UL></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec9.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch06.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

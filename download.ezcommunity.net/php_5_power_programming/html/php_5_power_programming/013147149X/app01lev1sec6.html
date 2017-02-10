@@ -1,0 +1,163 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section A.6.&nbsp; Database</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app01lev1sec6"></a><h3 class="docSection1Title">A.6. Database</h3>
+<a name="app01lev2sec22"></a><h4 class="docSection2Title">A.6.1. DB</h4><a name="app01index45"></a><a name="app01index46"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stig S&aelig;ther Bakken (developer) - Tomas V.V.Cox (developer) - Chuck Hagenbuch (helper) - Daniel Convissor (lead)</span></p>
+<p class="docText">Database Abstraction Layer</P>
+<a name="app01lev3sec23"></a><h5 class="docSection3Title">A.6.1.1 Description</H5>
+<p class="docText">DB is a database abstraction layer providing:</p>
+<UL><li><p class="docList">an OO-style query API</p></li><li><p class="docList">portability features that make programs written</P><UL><li><p class="docList">for one DBMS work with other DBMS's</p></li></ul></LI><li><p class="docList">a DSN (data source name) format for specifying</p><UL><li><p class="docList">database servers</P></li></ul></li><li><p class="docList">prepare/execute (bind) emulation for databases</p><ul><li><p class="docList">that don't support it natively</p></li></ul></li><li><p class="docList">a result object for each query response</p></li><li><p class="docList">portable error codes</p></LI><LI><p class="docList">sequence emulation</p></li><LI><p class="docList">sequential and non-sequential row fetching as</p><ul><li><p class="docList">well as bulk fetching</p></li></ul></LI><li><p class="docList">formats fetched rows as associative arrays,</P><ul><LI><p class="docList">ordered arrays or objects</p></li></ul></li><LI><p class="docList">row limit support</P></li><li><p class="docList">transactions support</p></li><LI><p class="docList">table information interface</p></li><LI><p class="docList">DocBook and PHPDoc API documentation</p></LI></ul>
+<p class="docText">DB layers itself on top of PHP's existing database extensions. The currently supported extensions are: dbase, fbsql, interbase, informix, msql, mssql, mysql, mysqli, oci8, odbc, pgsql, sqlite and sybase.</p>
+<p class="docText">DB is compatible with both PHP 4 and PHP 5.<a name="app01index47"></a><a name="app01index48"></a></p>
+<a name="app01lev2sec23"></a><h4 class="docSection2Title">A.6.2. DBA</h4><a name="app01index49"></a><a name="app01index50"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Brent Cook (lead)</span></p>
+<p class="docText">Berkely-style database abstraction class</p>
+<a name="app01lev3sec24"></a><h5 class="docSection3Title">A.6.2.1 Description</h5>
+<p class="docText">DBA is a wrapper for the php DBA functions. It includes a file-based emulator and provides a uniform, object-based interface for the Berkeley-style database systems.</p>
+<a name="app01lev2sec24"></a><h4 class="docSection2Title">A.6.3. DBA_Relational</h4><a name="app01index51"></a><a name="app01index52"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Brent Cook (lead)</span></p>
+<p class="docText">Berkely-style database abstraction class</p>
+<a name="app01lev3sec25"></a><h5 class="docSection3Title">A.6.3.1 Description</h5>
+<p class="docText">Table management extension to DBA</P>
+<a name="app01lev2sec25"></a><H4 class="docSection2Title">A.6.4. dbplus</h4><a name="app01index53"></a><a name="app01index54"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP License - By Hartmut Holzgraefe (lead)</span></p>
+<p class="docText">db++ database functions</P>
+<a name="app01lev3sec26"></a><h5 class="docSection3Title">A.6.4.1 Description</h5>
+<p class="docText">db++, made by the German company Concept asa, is a relational database system with high performance and low memory and disk usage in mind. While providing SQL as an additional language interface, it is not really a SQL database in the first place but provides its own AQL query language which is much more influenced by the relational algebra then SQL is.</p>
+<a name="app01lev2sec26"></a><h4 class="docSection2Title">A.6.5. DB_ado</h4><a name="app01index55"></a><a name="app01index56"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Alexios Fakos (lead)</span></p>
+<p class="docText">DB driver which use MS ADODB library</P>
+<a name="app01lev3sec27"></a><h5 class="docSection3Title">A.6.5.1 Description</H5>
+<p class="docText">DB_ado is a database independent query interface definition for Microsoft's ADODB library using PHP's COM extension.</p>
+<p class="docText">This class allows you to connect to different data sources like MS Access, MS SQL Server, Oracle and other RDBMS on a Win32 operating system. Moreover the possibility exists to use MS Excel spreadsheets, XML, text files and other not relational data as data source.</P>
+<a name="app01lev2sec27"></a><h4 class="docSection2Title">A.6.6. DB_DataObject</h4><a name="app01index57"></a><a name="app01index58"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Alan Knowles (lead)</span></p>
+<p class="docText">An SQL Builder, Object Interface to Database Tables</p>
+<a name="app01lev3sec28"></a><H5 class="docSection3Title">A.6.6.1 Description</H5>
+<p class="docText">DataObject performs 2 tasks:</p>
+<div style="font-weight:bold"><ol class="docList" type="1"><li><div style="font-weight:normal"><p class="docList">Builds SQL statements based on the objects vars and the builder methods.</p></div></li><LI><div style="font-weight:normal"><p class="docList">acts as a datastore for a table row.</p></div></li></ol></div>
+<p class="docText">The core class is designed to be extended for each of your tables so that you put the data logic inside the data classes. included is a Generator to make your configuration files and your base classes. nd</P>
+<a name="app01lev2sec28"></a><h4 class="docSection2Title">A.6.7. DB_DataObject_FormBuilder</H4><a name="app01index59"></a><a name="app01index60"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Markus Wolff (lead)</span></p>
+<p class="docText">Class to automatically build HTML_QuickForm objects from a DB_DataObject-derived class</p>
+<a name="app01lev3sec29"></a><h5 class="docSection3Title">A.6.7.1 Description</h5>
+<p class="docText">DB_DataObject_FormBuilder will aid you in rapid application development using the packages DB_DataObject and HTML_QuickForm. For having a quick but working prototype of your application, simply model the database, run DataObject&#180;s createTable script over it and write a script that passes one of the resulting objects to the FormBuilder class. The FormBuilder will automatically generate a simple but working HTML_QuickForm object that you can use to test your application. It also provides a processing method that will automatically detect if an insert() or update() command has to be executed after the form has been submitted. If you have set up DataObject&#180;s links.ini file correctly, it will also automatically detect if a table field is a foreign key and will populate a selectbox with the linked table&#180;s entries. There are many optional parameters that you can place in your DataObjects.ini or in the properties of your derived classes, that you can use to fine-tune the form-generation, gradually turning the prototypes into fully-featured forms, and you can take control at any stage of the process.</p>
+<a name="app01lev2sec29"></a><h4 class="docSection2Title">A.6.8. DB_ldap</h4><a name="app01index61"></a><a name="app01index62"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Ludovico Magnocavallo (lead) - Piotr Roszatycki (developer)</span></p>
+<p class="docText">DB interface to LDAP server</p>
+<a name="app01lev3sec30"></a><h5 class="docSection3Title">A.6.8.1 Description</h5>
+<p class="docText">The PEAR::DB_ldap class provides a DB compliant interface to LDAP servers</p>
+<a name="app01lev2sec30"></a><h4 class="docSection2Title">A.6.9. DB_ldap2</h4><a name="app01index63"></a><a name="app01index64"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Piotr Roszatycki (lead)</span></p>
+<p class="docText">DB drivers for LDAP v2 and v3 database</p>
+<a name="app01lev3sec31"></a><H5 class="docSection3Title">A.6.9.1 Description</H5>
+<p class="docText">DB_ldap2 and DB_ldap3 classes extend DB_common to provide DB compliant access to LDAP servers with protocol version 2 and 3. The drivers provide common DB interface as much as possible and support prepare/execute statements.</p>
+<a name="app01lev2sec31"></a><h4 class="docSection2Title">A.6.10. DB_NestedSet</H4><a name="app01index65"></a><a name="app01index66"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Daniel Khan (lead) - Jason Rust (developer) API to build and query nested sets</span></p>
+<a name="app01lev3sec32"></a><h5 class="docSection3Title">A.6.10.1 Description</h5>
+<p class="docText">DB_NestedSet let's you create trees with infinite depth inside a relational database.</p>
+<p class="docText">The package provides a way to</p>
+<ul><LI><p class="docList">create/update/delete nodes</p></LI><li><p class="docList">query nodes, trees and subtrees</P></li><li><p class="docList">copy (clone) nodes, trees and subtrees</p></li><LI><p class="docList">move nodes, trees and subtrees</P></li><li><p class="docList">Works with PEAR::DB and PEAR::MDB</p></li><LI><p class="docList">output the tree with</p></li><LI><p class="docList">PEAR::HTML_TreeMenu</p></LI><li><p class="docList">TigraMenu (<a class="docLink" target="_blank" href="http://www.softcomplex.com/products/tigra_menu/">http://www.softcomplex.com/products/tigra_menu/</a>)</p></li><li><p class="docList">CoolMenus (<a class="docLink" target="_blank" href="http://www.dhtmlcentral.com/projects/coolmenus/">http://www.dhtmlcentral.com/projects/coolmenus/</a>)</p></li><li><p class="docList">PEAR::Image_GraphViz (<a class="docLink" target="_blank" href="http://pear.php.net/package/Image_GraphViz">http://pear.php.net/package/Image_GraphViz</a>)</p></li><li><p class="docList">PEAR::HTML_Menu</p></li></ul>
+<a name="app01lev2sec32"></a><h4 class="docSection2Title">A.6.11. DB_Pager</h4><a name="app01index67"></a><a name="app01index68"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Tomas V.V.Cox (lead)</span></p>
+<p class="docText">Retrieve and return information of database result sets</P>
+<a name="app01lev3sec33"></a><H5 class="docSection3Title">A.6.11.1 Description</h5>
+<p class="docText">This class handles all the stuff needed for displaying paginated results from a database query of Pear DB. including fetching only the needed rows and giving extensive information for helping build an HTML or GTK query result display.</p>
+<a name="app01lev2sec33"></a><H4 class="docSection2Title">A.6.12. DB_QueryTool</h4><a name="app01index69"></a><a name="app01index70"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP - By Wolfram Kriesing (lead) - Lorenzo Alberton (lead)</span></p>
+<p class="docText">An OO-interface for easily retreiving and modifying data in a DB.</p>
+<a name="app01lev3sec34"></a><h5 class="docSection3Title">A.6.12.1 Description</h5>
+<p class="docText">This package is an OO-abstraction to the SQL-Query language, it provides methods such as setWhere, setOrder, setGroup, setJoin, etc. to easily build queries. It also provides an easy to learn interface that interacts nicely with HTML-forms using arrays that contain the column data, that shall be updated/added in a DB. This package bases on an SQL-Builder which lets you easily build SQL-Statements and execute them.</p>
+<a name="app01lev2sec34"></a><H4 class="docSection2Title">A.6.13. DB_Table</h4><a name="app01index71"></a><a name="app01index72"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Paul M. Jones (lead)</span></P>
+<p class="docText">Builds on PEAR DB to abstract datatypes and automate table creation, data validation, insert, update, delete, and select; combines these with PEAR HTML_QuickForm to automatically generate input forms that match the table column definitions.</p>
+<a name="app01lev2sec35"></a><H4 class="docSection2Title">A.6.14. Gtk_MDB_Designer</h4><a name="app01index73"></a><a name="app01index74"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Alan Knowles (lead)</span></p>
+<p class="docText">An Gtk Database schema designer</p>
+<a name="app01lev3sec35"></a><h5 class="docSection3Title">A.6.14.1 Description</H5>
+<p class="docText">A graphical database schema designer, based loosely around the MDB schema, it features</P>
+<ul><li><p class="docList">table boxes which are dragged around a window to layout your database</p></li><LI><p class="docList">add/delete tables</p></li><LI><p class="docList">add delete columns</p></LI><li><p class="docList">support for NotNull, Indexes, Sequences , Unique Indexes and defaults</p></li><li><p class="docList">works totally in non-connected mode (eg. no database or setting up required)</p></li><li><p class="docList">stores in MDB like xml file.</p></li><li><p class="docList">saves to any supported database SQL create tables files.</p></li><li><p class="docList">screenshots at <a class="docLink" target="_blank" href="http://devel.akbkhome.com/Gtk_MDB/">http://devel.akbkhome.com/Gtk_MDB/</a></p></li></ul>
+<p class="docText">Future enhancements:</P>
+<UL><li><p class="docList">real MDB schema exports</p></LI><li><p class="docList">relationships = with lines etc.</p></li></ul>
+<p class="docText">The primary aim is to generate SQL files, (so that I can get my work done) however it is eventually planned to support MDB schema's fully.. - just a matter of time..</p>
+<p class="docText">To use - just pear install and run gtkmdbdesigner</p>
+<a name="app01lev2sec36"></a><H4 class="docSection2Title">A.6.15. isis</h4><a name="app01index75"></a><a name="app01index76"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: BSD -</span></P>
+<p class="docText">PHP extension for reading CDS/ISIS databases.</p>
+<a name="app01lev3sec36"></a><H5 class="docSection3Title">A.6.15.1 Description</h5>
+<p class="docText">This extension adds functionality to PHP in order to read CDS/ISIS databases through the OpenIsis library.</p>
+<a name="app01lev2sec37"></a><h4 class="docSection2Title">A.6.16. MDB</h4><a name="app01index77"></a><a name="app01index78"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: BSD style - By Lukas Kahwe Smith (lead) - Christian Dickmann (contributor) - Paul Cooper (contributor) - Stig S&aelig;ther Bakken (contributor) - Tomas V.V.Cox (contributor) - Manuel Lemos (contributor) - Frank M. Kromann (contributor) - Lorenzo Alberton (contributor)</span></P>
+<p class="docText">database abstraction layer</P>
+<a name="app01lev3sec37"></a><h5 class="docSection3Title">A.6.16.1 Description</h5>
+<p class="docText">PEAR MDB is a merge of the PEAR DB and Metabase php database abstraction layers. It provides a common API for all support RDBMS. The main difference to most other DB abstraction packages is that MDB goes much further to ensure portability. Among other things MDB features:</p>
+<ul><LI><p class="docList">An OO-style query API</p></li><LI><p class="docList">A DSN (data source name) or array format for specifying database servers</p></LI><li><p class="docList">Datatype abstraction and on demand datatype conversion</p></li><li><p class="docList">Portable error codes</p></li><li><p class="docList">Sequential and non sequential row fetching as well as bulk fetching</p></li><li><p class="docList">Ordered array and associative array for the fetched rows</p></li><li><p class="docList">Prepare/execute (bind) emulation</p></li><li><p class="docList">Sequence emulation</P></LI><li><p class="docList">Replace emulation</p></LI><li><p class="docList">Limited Subselect emulation</p></li><li><p class="docList">Row limit support</p></li><LI><p class="docList">Transactions support</p></LI><li><p class="docList">Large Object support</P></li><li><p class="docList">Index/Unique support</p></li><LI><p class="docList">Module Framework to load advanced functionality on demand</P></li><li><p class="docList">Table information interface</p></li><LI><p class="docList">RDBMS management methods (creating, dropping, altering)</p></li><LI><p class="docList">RDBMS independent xml based schema definition management</p></LI><li><p class="docList">Altering of a DB from a changed xml schema</p></li><li><p class="docList">Reverse engineering of xml schemas from an existing DB (currently only MySQL)</p></li><li><p class="docList">Full integration into the PEAR Framework</p></li><li><p class="docList">Wrappers for the PEAR DB and Metabase APIs</p></li><li><p class="docList">PHPDoc API documentation</p></li></ul>
+<p class="docText">Currently supported RDBMS:</P>
+<UL><li><p class="docList">MySQL</p></LI><li><p class="docList">PostGreSQL</p></li><li><p class="docList">Oracle</p></li><LI><p class="docList">Frontbase</p></LI><li><p class="docList">Querysim</P></li><li><p class="docList">Interbase/Firebird</p></li><LI><p class="docList">MSSQL<a name="app01index79"></a><a name="app01index80"></a></P></li></ul>
+<a name="app01lev2sec38"></a><h4 class="docSection2Title">A.6.17. MDB2</h4><a name="app01index81"></a><a name="app01index82"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: BSD License - By Lukas Kahwe Smith (lead) - Paul Cooper (contributor) - Frank M. Kromann (contributor) - Lorenzo Alberton (contributor)</span></P>
+<p class="docText">database abstraction layer</p>
+<a name="app01lev3sec38"></a><h5 class="docSection3Title">A.6.17.1 Description</H5>
+<p class="docText">PEAR MDB2 is a merge of the PEAR DB and Metabase php database abstraction layers.</p>
+<p class="docText">It provides a common API for all support RDBMS. The main difference to most other DB abstraction packages is that MDB2 goes much further to ensure portability. Among other things MDB2 features:</P>
+<ul><li><p class="docList">An OO-style query API</p></li><li><p class="docList">A DSN (data source name) or array format for specifying database servers</p></li><li><p class="docList">Datatype abstraction and on demand datatype conversion</p></li><li><p class="docList">Portable error codes</p></li><li><p class="docList">Sequential and non sequential row fetching as well as bulk fetching</p></li><LI><p class="docList">Ability to make buffered and unbuffered queries</P></li><li><p class="docList">Ordered array and associative array for the fetched rows</P></li><li><p class="docList">Prepare/execute (bind) emulation</p></li><li><p class="docList">Sequence emulation</p></LI><li><p class="docList">Replace emulation</P></li><LI><p class="docList">Limited Subselect emulation</p></li><li><p class="docList">Row limit support</p></LI><LI><p class="docList">Transactions support</p></li><li><p class="docList">Large Object support</p></LI><li><p class="docList">Index/Unique support</p></LI><li><p class="docList">Module Framework to load advanced functionality on demand</P></li><li><p class="docList">Table information interface</p></li><li><p class="docList">RDBMS management methods (creating, dropping, altering)</p></li><li><p class="docList">RDBMS independent xml based schema definition management</p></li><li><p class="docList">Altering of a DB from a changed xml schema</p></li><li><p class="docList">Reverse engineering of xml schemas from an existing DB (currently only MySQL)</p></li><LI><p class="docList">Full integration into the PEAR Framework</P></li><li><p class="docList">PHPDoc API documentation</P></li></ul>
+<p class="docText">Currently supported RDBMS:</p>
+<ul><li><p class="docList">MySQL</p></LI><li><p class="docList">PostGreSQL</P></li><LI><p class="docList">Oracle</p></li><li><p class="docList">Frontbase</p></LI><LI><p class="docList">Querysim</p></li><li><p class="docList">Interbase/Firebird</p></LI><li><p class="docList">MSSQL</p></LI><li><p class="docList">SQLite</P></li></ul>
+<p class="docText">Other soon to follow.<a name="app01index83"></a><a name="app01index84"></a></p>
+<a name="app01lev2sec39"></a><h4 class="docSection2Title">A.6.18. mdbtools</h4><a name="app01index85"></a><a name="app01index86"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: LGPL - By Hartmut Holzgraefe (lead)</span></p>
+<p class="docText">MDB data file access library</p>
+<a name="app01lev3sec39"></a><h5 class="docSection3Title">A.6.18.1 Description</h5>
+<p class="docText">mdbtools provides read access to MDB data files as used by Microsoft Access and its underlying JetEngine.</p>
+<p class="docText">It is based on libmdb from the mdbtools package available at <a class="docLink" target="_blank" href="http://mdbtools.sourceforge.net/">http://mdbtools.sourceforge.net/</a></p>
+<a name="app01lev2sec40"></a><h4 class="docSection2Title">A.6.19. MDB_QueryTool</h4><a name="app01index87"></a><a name="app01index88"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP - By Lorenzo Alberton (lead)</span></p>
+<p class="docText">An OO-interface for easily retreiving and modifying data in a DB.</p>
+<a name="app01lev3sec40"></a><h5 class="docSection3Title">A.6.19.1 Description</H5>
+<p class="docText">This package is an OO-abstraction to the SQL-Query language, it provides methods such as setWhere, setOrder, setGroup, setJoin, etc. to easily build queries. It also provides an easy to learn interface that interacts nicely with HTML-forms using arrays that contain the column data, that shall be updated/added in a DB. This package bases on an SQL-Builder which lets you easily build SQL-Statements and execute them. NB: this is just a MDB porting from the original DB_QueryTool written by Wolfram Kriesing and Paolo Panto (vision:produktion, wk@visionp.de).</P>
+<a name="app01lev2sec41"></a><h4 class="docSection2Title">A.6.20. oci8</h4><a name="app01index89"></a><a name="app01index90"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP - By Antony Dovgal (developer) - Stig Bakken (developer) - Thies C. Arntzen (developer) - Andy Sautins (developer) - David Benson (developer) - Maxim Maletsky (developer) - Harald Radi (developer)</span></P>
+<p class="docText">Oracle Call Interface(OCI) wrapper</p>
+<a name="app01lev3sec41"></a><h5 class="docSection3Title">A.6.20.1 Description</h5>
+<p class="docText">This module allows you to access Oracle9/8/7 database.</p>
+<p class="docText">It wraps the Oracle Call Interface (OCI).</p>
+<a name="app01lev2sec42"></a><h4 class="docSection2Title">A.6.21. odbtp</H4><a name="app01index91"></a><a name="app01index92"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: LGPL -</span></p>
+<p class="docText">ODBTP client functions</P>
+<a name="app01lev3sec42"></a><h5 class="docSection3Title">A.6.21.1 Description</H5>
+<p class="docText">This extension provides a set of ODBTP, Open Database Transport Protocol, client functions. ODBTP allows any platform to remotely access Win32-based databases. Linux and UNIX clients can use this extension to access Win32 databases like MS SQL Server, MS Access and Visual FoxPro.</p>
+<a name="app01lev2sec43"></a><h4 class="docSection2Title">A.6.22. Paradox</h4><a name="app01index93"></a><a name="app01index94"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: PHP License -</span></p>
+<p class="docText">An extension to read Paradox files</P>
+<a name="app01lev3sec43"></a><H5 class="docSection3Title">A.6.22.1 Description</h5>
+<p class="docText">Paradox is an extension to read Paradox .DB and .PX files. It has experimental write support which should be handled with care.</p>
+<a name="app01lev2sec44"></a><h4 class="docSection2Title">A.6.23. SQLite</h4><a name="app01index95"></a><a name="app01index96"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP - By Wez Furlong (lead) - Tal Peer (developer) - Marcus B&ouml;rger (lead) - Ilia Alshanetsky (developer)</span></P>
+<p class="docText">SQLite database bindings</p>
+<a name="app01lev3sec44"></a><h5 class="docSection3Title">A.6.23.1 Description</H5>
+<p class="docText">SQLite is a C library that implements an embeddable SQL database engine. Programs that link with the SQLite library can have SQL database access without running a separate RDBMS process. This extension allows you to access SQLite databases from within PHP. Windows binary available from: <a class="docLink" target="_blank" href="http://snaps.php.net/win32/PECL_STABLE/php_sqlite.dll">http://snaps.php.net/win32/PECL_STABLE/php_sqlite.dll</a></p>
+<a name="app01lev2sec45"></a><H4 class="docSection2Title">A.6.24. SQL_Parser</h4><a name="app01index97"></a><a name="app01index98"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Brent Cook (lead)</span></p>
+<p class="docText">An SQL parser</p>
+<a name="app01lev3sec45"></a><h5 class="docSection3Title">A.6.24.1 Description</h5>
+<p class="docText">This class is primarily an SQL parser, written with influences from a variety of sources (mSQL, CPAN's SQL-Statement, mySQL). It also includes a tokenizer (lexer) class and a reimplementation of the ctype extension in PHP.</p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

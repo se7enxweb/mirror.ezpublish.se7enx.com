@@ -1,0 +1,65 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.17.&nbsp; __toString() Method</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec16.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec18.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec17"></a><h3 class="docSection1Title">3.17. <tt>__toString()</tt> Method</h3><a name="ch03index140"></a><a name="ch03index141"></a>
+<p class="docText">Consider the following code:</p>
+<pre>
+class Person {
+    function __construct($name)
+    {
+        $this-&gt;name = $name;
+    }
+
+    private $name;
+}
+
+$obj = new Person("Andi Gutmans");
+
+print $obj;
+</pre><br>It prints the following:<pre>
+Object id #1
+</pre><br>
+<p class="docText">Unlike most other data types, printing the object's id will usually not be interesting to you. Also, objects often refer to data that should have print semanticsfor example, it might make sense that when you print an object of a class representing a person, the person's information would be printed out.</P>
+<p class="docText">For this purpose, PHP enables you to implement a function called <tt>__toString()</tt>, which should return the string representation of the object, and when defined, the <tt>print</tt> command will call it and print the returned string.</p>
+<p class="docText">By using <tt>__toString()</tt>, the previous example can be modified to its more useful form:<a name="ch03index142"></a><a name="ch03index143"></a></P>
+<pre>
+class Person {
+    function __construct($name)
+    {
+        $this-&gt;name = $name;
+    }
+
+    function __toString()
+    {
+        return $this-&gt;name;
+    }
+
+    private $name;
+}
+
+$obj = new Person("Andi Gutmans");
+
+print $obj;
+</pre><br>It prints the following:<pre>
+Andi Gutmans
+</pre><BR>
+<p class="docText">The <tt>__toString()</tt> method is currently only called by the <tt>print</tt> and <tt>echo</tt> language constructs. In the future, they will probably also be called by common string operations, such as string concatenation and explicit casting to string.<a name="ch03index144"></a><a name="ch03index145"></a></p>
+<ul></ul></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec16.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec18.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

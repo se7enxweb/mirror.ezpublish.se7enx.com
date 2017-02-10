@@ -1,0 +1,559 @@
+[05-05-2005 00:09:53] [#ezpublish] <kracker> Slug & Murs : Anneurysm
+[05-05-2005 00:23:10] [#ezpublish] <kracker> hey
+[05-05-2005 00:23:22] [#ezpublish] <kracker> someone was talking to me the other day about translated content
+[05-05-2005 00:23:26] [#ezpublish] <SEAwolfx_> morning 7:23 AM
+[05-05-2005 00:23:33] [#ezpublish] <kracker> who was it?
+[05-05-2005 00:23:39] [#ezpublish] <kracker> night: 10:23p0m
+[05-05-2005 00:23:47] [#ezpublish] <kracker> s/p0m/pm
+[05-05-2005 00:23:55] [#ezpublish] <kracker> come on speak up ...
+[05-05-2005 00:24:26] [#ezpublish] <kracker> well, suffice to say i was a little hasty to say that you couldn't automate the listing of per page translations
+[05-05-2005 00:24:29] [#ezpublish] <kracker> by language
+[05-05-2005 00:24:43] [#ezpublish] <kracker> here is what i should have shown  you  ... http://www.ez.no/community/forum/developer/get_available_translated_content_for_object_in_php/re_get_available_translated_content_for_object
+[05-05-2005 00:24:54] [#ezpublish] <kracker> http://www.ez.no/community/forum/developer/get_available_translated_content_for_object_in_php
+[05-05-2005 00:31:59] [#ezpublish] <SEAwolfx_> RSSImport Slashdot: Could not find title map for : name
+[05-05-2005 00:31:59] [#ezpublish] <SEAwolfx_> RSSImport Slashdot: Could not find link map for :
+[05-05-2005 00:31:59] [#ezpublish] <SEAwolfx_> RSSImport Slashdot: Could not find description map for :
+[05-05-2005 00:32:03] [#ezpublish] <SEAwolfx_> RSSImport Slashdot: Object created; Gaming Hacks
+[05-05-2005 00:32:21] [#ezpublish] <SEAwolfx_> whats going on?
+[05-05-2005 00:32:50] [#ezpublish] <SEAwolfx_> this appears after a ./runcronjobs.php
+[05-05-2005 00:40:31] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-05-2005 01:25:39] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-05-2005 01:25:49] [#ezpublish] <kracker> hey SEAwolfx!
+[05-05-2005 01:25:52] [#ezpublish] <kracker> i replied
+[05-05-2005 01:26:14] [#ezpublish] <kracker> i'm didn't really take the time to understand it all but i hope it helps
+[05-05-2005 01:26:17] [#ezpublish] <SEAwolfx_> where u replied?
+[05-05-2005 01:26:33] [#ezpublish] <SEAwolfx_> my rss-feed prob?
+[05-05-2005 01:26:35] [#ezpublish] <kracker> http://www.ez.no/community/forum/setup_design/publish_article_to_multiple_nodes#msg74549
+[05-05-2005 01:26:39] [#ezpublish] <SEAwolfx_> its already solved
+[05-05-2005 01:26:41] [#ezpublish] <SEAwolfx_> ahhh
+[05-05-2005 01:26:51] -!- jota [~jota@fanzine.igalia.com] has joined #ezpublish
+[05-05-2005 01:27:40] [#ezpublish] <SEAwolfx_> why are  you avatars are changing all the time, is this done automatically?
+[05-05-2005 01:28:44] [#ezpublish] <kracker> cause i'm cool like that ...
+[05-05-2005 01:28:50] [#ezpublish] <kracker> zero:cool
+[05-05-2005 01:28:59] [#ezpublish] <kracker> i'm a cooler
+[05-05-2005 01:29:06] [#ezpublish] <kracker> kooler than you ... ;)
+[05-05-2005 01:29:11] [#ezpublish] <SEAwolfx_> ok ;)
+[05-05-2005 01:29:18] [#ezpublish] <kracker> i dunno, don't you think?
+[05-05-2005 01:29:35] [#ezpublish] <SEAwolfx_> yes for sure, i believe this ;D
+[05-05-2005 01:29:52] [#ezpublish] <kracker> people seem to like the change of pace / something new to look for on ez.no
+[05-05-2005 01:30:22] [#ezpublish] <kracker> i am the answere, the question is what is kracker saying today / lately
+[05-05-2005 01:30:40] [#ezpublish] <agentbob> kracker has his own tv show too, s'pretty cool
+[05-05-2005 01:30:43] [#ezpublish] <kracker> any new cool songs, quotes, lyrics, ideas, pictures ...
+[05-05-2005 01:30:53] [#ezpublish] <SEAwolfx_> tv show?
+[05-05-2005 01:30:54] [#ezpublish] <kracker> the kracker show ...
+[05-05-2005 01:31:14] [#ezpublish] <SEAwolfx_> yesterday, u talked about kermit the frog ;)
+[05-05-2005 01:31:25] [#ezpublish] <agentbob> yeah he talks mostly about deconstructing realities... or was that fish...
+[05-05-2005 01:31:26] [#ezpublish] <kracker> s/kracker/truman/
+[05-05-2005 01:31:30] [#ezpublish] <SEAwolfx_> he takes part in this show?
+[05-05-2005 01:31:44] [#ezpublish] <SEAwolfx_> hehe
+[05-05-2005 01:31:49] [#ezpublish] <kracker> lol, my life is the show
+[05-05-2005 01:31:55] [#ezpublish] <kracker> yo!
+[05-05-2005 01:31:59] [#ezpublish] * SEAwolfx_ is rolling a cigarette and smirks.
+[05-05-2005 01:32:02] [#ezpublish] <agentbob> over 500 movies and nothing to watch :| packratting sucks
+[05-05-2005 01:32:27] [#ezpublish] <SEAwolfx_> packratting?
+[05-05-2005 01:32:30] [#ezpublish] <kracker> agreed
+[05-05-2005 01:32:37] [#ezpublish] <kracker> been there
+[05-05-2005 01:32:42] [#ezpublish] <SEAwolfx_> whats that?
+[05-05-2005 01:32:50] [#ezpublish] <agentbob> seawolf: expression for people who never throw stuff away == pack rate
+[05-05-2005 01:32:54] [#ezpublish] <agentbob> rat, rather
+[05-05-2005 01:33:07] [#ezpublish] <SEAwolfx_> kracker .. u know the film "american splendor"?
+[05-05-2005 01:33:13] [#ezpublish] <kracker> we both have a large movie collection, and unfortunatly none of them interest me ...
+[05-05-2005 01:33:20] [#ezpublish] <kracker> hrmm... cross checking
+[05-05-2005 01:33:26] [#ezpublish] <SEAwolfx_> thx, agentbob ;)
+[05-05-2005 01:33:39] [#ezpublish] <kracker> hey SEAwolfx, i like your icon on ez.no
+[05-05-2005 01:34:06] [#ezpublish] <SEAwolfx_> well, thats me on the picture, no wonder.
+[05-05-2005 01:34:11] [#ezpublish] <SEAwolfx_> *duck*
+[05-05-2005 01:34:13] [#ezpublish] <agentbob> anyhow bedtime! 'night
+[05-05-2005 01:34:24] [#ezpublish] <SEAwolfx_> n8 agentbob
+[05-05-2005 01:34:33] [#ezpublish] <kracker> late
+[05-05-2005 01:34:39] [#ezpublish] <kracker> i haven't seen it ... yet
+[05-05-2005 01:34:44] [#ezpublish] <kracker> i'll have to take a look
+[05-05-2005 01:34:48] [#ezpublish] <kracker> find me a copy
+[05-05-2005 01:35:22] [#ezpublish] <kracker> of a copy of a copy of a copy , i know it's somewhere just outside the bounds of the time rift
+[05-05-2005 01:35:45] [#ezpublish] <SEAwolfx_> http://www.ez.no/var/ezno/storage/images/users/guest_accounts/seawolfx/218597-5-eng-GB/seawolfx_small.gif
+[05-05-2005 01:37:07] [#ezpublish] <kracker> yeah i collect everyone's icons
+[05-05-2005 01:37:13] [#ezpublish] <SEAwolfx_> hihi
+[05-05-2005 01:37:16] [#ezpublish] <kracker> thnx tho
+[05-05-2005 01:37:24] [#ezpublish] <kracker> who is it in the picture?>
+[05-05-2005 01:37:36] [#ezpublish] <SEAwolfx_> me, who else?
+[05-05-2005 01:38:22] [#ezpublish] <kracker> oh ok, misunderstood
+[05-05-2005 01:39:02] [#ezpublish] <SEAwolfx_> if u like comic, u shoudl see american splendor.
+[05-05-2005 01:39:22] [#ezpublish] <kracker> great trailer preview from : http://www.americansplendormovie.com/trailer_lg.mov
+[05-05-2005 01:39:37] [#ezpublish] * kracker kracker smirks ;)
+[05-05-2005 01:40:05] [#ezpublish] <kracker> i can't wait!
+[05-05-2005 01:40:15] [#ezpublish] <kracker> go go gadget netflix
+[05-05-2005 01:42:58] [#ezpublish] <kracker> cool! http://it.slashdot.org/article.pl?sid=05/05/04/2257229&tid=185&tid=218
+[05-05-2005 01:43:13] [#ezpublish] <kracker> ok i take it back, not-cool
+[05-05-2005 01:43:21] [#ezpublish] <kracker> still, interesting
+[05-05-2005 01:43:48] [#ezpublish] <kracker> reminds me of me working on ezpub.co.uk back in 5/2004
+[05-05-2005 01:43:49] [#ezpublish] <SEAwolfx_> hehe
+[05-05-2005 01:45:17] [#ezpublish] <SEAwolfx_> what is ezpub?
+[05-05-2005 01:45:56] [#ezpublish] <SEAwolfx_> ezpub.co.uk
+[05-05-2005 01:46:05] [#ezpublish] <SEAwolfx_> ur project?
+[05-05-2005 01:46:12] [#ezpublish] <kracker> yeah
+[05-05-2005 01:46:19] [#ezpublish] <kracker> the "eZ pub" was one of the first eZ publish (v3) community portals
+[05-05-2005 01:46:34] [#ezpublish] <kracker> it lived and died a quick death from lack of community support
+[05-05-2005 01:46:46] [#ezpublish] <SEAwolfx_> i could imagine
+[05-05-2005 01:47:08] [#ezpublish] <kracker> it did some good work, and reminded me a lot of my eZ publish 3 learning back in 2002
+[05-05-2005 01:47:10] [#ezpublish] <SEAwolfx_> a ez-wiki would also be nice.
+[05-05-2005 01:47:45] [#ezpublish] <kracker> i've since moved on to other eZ projects for the community, i'll clean up the mess i left very shortly
+[05-05-2005 01:47:53] [#ezpublish] <kracker> checkout http://snippets.ezpublishhosting.com/
+[05-05-2005 01:49:26] [#ezpublish] <kracker> one day i'll find someone to fund me ;)
+[05-05-2005 01:49:34] [#ezpublish] <kracker> errum s/fund/finance/
+[05-05-2005 01:50:18] [#ezpublish] <SEAwolfx_> ;)
+[05-05-2005 01:50:38] [#ezpublish] <kracker> i'm  planning to move the conent and solutions from ezpub into other beter branded applications with a lot more features, it's going to be cool
+[05-05-2005 01:50:48] [#ezpublish] <kracker> s/conent/content/
+[05-05-2005 01:52:26] [#ezpublish] <SEAwolfx_> cool, i am excited.
+[05-05-2005 01:52:35] [#ezpublish] <SEAwolfx_> when it will be finished?
+[05-05-2005 01:55:19] [#ezpublish] <kracker> eesh, hard to say when you have to run so hard to just pay for cost of living and doing nothing but eZ publish dev/doc/and more
+[05-05-2005 01:55:42] [#ezpublish] <SEAwolfx_> you are a freelancer?
+[05-05-2005 01:57:36] [#ezpublish] <kracker> yes
+[05-05-2005 01:57:50] [#ezpublish] <kracker> been doing eZ publish development since 1.0 (2001)
+[05-05-2005 01:58:07] [#ezpublish] <SEAwolfx_> at what company?
+[05-05-2005 01:58:28] [#ezpublish] <kracker> my own
+[05-05-2005 01:58:43] [#ezpublish] <SEAwolfx_> website?
+[05-05-2005 01:59:07] [#ezpublish] <kracker> http://www.brookinsconsulting.com/
+[05-05-2005 01:59:12] [#ezpublish] <kracker> brb
+[05-05-2005 02:03:27] [#ezpublish] <kracker> i'm back : eminem
+[05-05-2005 02:13:04] [#ezpublish] <SEAwolfx_> where do you stay, btw?
+[05-05-2005 02:13:05] -!- Bedlored [~me@dsl-203-113-237-79.SA.netspace.net.au] has quit [Read error: 131 (Connection reset by peer)]
+[05-05-2005 02:13:35] [#ezpublish] <kracker> did i scare ya off already?
+[05-05-2005 02:13:54] [#ezpublish] <SEAwolfx_> nahh ;) not really.
+[05-05-2005 02:14:40] [#ezpublish] <kracker> well, ... i'm in seattle right now, considering moving to a more populated area (I'm originaly from Anchorage Alaska if you can belive it)
+[05-05-2005 02:14:50] [#ezpublish] <kracker> i was the first eZ publish developer in Alaska!
+[05-05-2005 02:14:57] [#ezpublish] <kracker> but not the last :)
+[05-05-2005 02:15:07] [#ezpublish] <SEAwolfx_> lol
+[05-05-2005 02:15:52] [#ezpublish] <SEAwolfx_> ;) so where u want to settle?
+[05-05-2005 02:16:14] [#ezpublish] <kracker> wha?
+[05-05-2005 02:16:32] [#ezpublish] <SEAwolfx_> considering moving to a more populated area
+[05-05-2005 02:16:35] [#ezpublish] <kracker> "so where u want to seattle"? so where do i want to live seattle? is that what you ment
+[05-05-2005 02:16:51] [#ezpublish] <SEAwolfx_> or you settle to seatle because of "considering moving to a more populated area"
+[05-05-2005 02:17:16] [#ezpublish] <kracker> eayh i'm considering it, life is hecktick but i love getting out of alaska and seeing the world, i want to travel, i want to visit norway ;)
+[05-05-2005 02:17:17] [#ezpublish] <SEAwolfx_> settled!
+[05-05-2005 02:17:34] [#ezpublish] <SEAwolfx_> hehe
+[05-05-2005 02:18:04] [#ezpublish] <SEAwolfx_> i could imagine that seattle is quite cool enough to stay?!
+[05-05-2005 02:18:35] [#ezpublish] <kracker> that's why i don't really tell anyone what i really want to do cause ... It's such a dream of mine.
+[05-05-2005 02:19:21] [#ezpublish] <kracker> i don't want to visit norway, i want to work .... well you prolly get the idea just with the hints and sunami of me thrown around daily
+[05-05-2005 02:19:39] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-05-2005 02:20:06] [#ezpublish] <kracker> lol, hey it worked for some others in europe, and alaska is more like europe than the US
+[05-05-2005 02:20:34] [#ezpublish] <SEAwolfx_> the ezpublish crew should expand to US.
+[05-05-2005 02:20:51] [#ezpublish] <kracker> and buy my sole ...
+[05-05-2005 02:21:09] [#ezpublish] <kracker> true, i must keep my body tempature to a very cold tempateure .... i am my own victore freeze
+[05-05-2005 02:21:25] [#ezpublish] <SEAwolfx_> hehe
+[05-05-2005 02:22:37] [#ezpublish] <kracker> please belive, my subconsuous can't decieve my waking life, i morn a life with her, denied. my own private idaho
+[05-05-2005 02:24:14] [#ezpublish] <kracker> why i even try i'm not even sure that i even know any more ... i am not a person i am a nucular reactore core, after this what's left? i wish i really understood myself but i can't remember any more ...
+[05-05-2005 02:24:16] [#ezpublish] <SEAwolfx_> waking life?
+[05-05-2005 02:24:21] [#ezpublish] <kracker> it's a film
+[05-05-2005 02:24:25] [#ezpublish] <kracker> very very good
+[05-05-2005 02:24:32] [#ezpublish] <kracker> so is my own private idaho
+[05-05-2005 02:24:46] [#ezpublish] <SEAwolfx_> i know the film "private idaho"
+[05-05-2005 02:24:52] [#ezpublish] <kracker> but the latter is a little wierd vhs only release that will only make you all more confused ...
+[05-05-2005 02:25:22] [#ezpublish] <kracker> who know's what's still in store ...
+[05-05-2005 02:26:36] [#ezpublish] <SEAwolfx_> sometimes its hard for me to follow your words, because i am looser in english, btw.
+[05-05-2005 02:27:31] [#ezpublish] <kracker> attude like a solar flair, intensity, split second terror, horrorcore, failed realization, that tingling sensation, constant dejaeu vu, never ending story packed with anticipation
+[05-05-2005 02:27:39] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-05-2005 02:27:43] [#ezpublish] <kracker> hey luke
+[05-05-2005 02:27:52] [#ezpublish] <luke_> hey kracker
+[05-05-2005 02:27:53] [#ezpublish] <kracker> mornin'
+[05-05-2005 02:28:01] [#ezpublish] <SEAwolfx_> hi luke_
+[05-05-2005 02:28:08] [#ezpublish] <kracker> what do you think about yestday's forum activity, huh?
+[05-05-2005 02:28:08] [#ezpublish] <luke_> hi SEAwolfx_
+[05-05-2005 02:28:27] [#ezpublish] <luke_> you have won the first prize kracker ;)
+[05-05-2005 02:28:57] [#ezpublish] <kracker> SEAwolfx : sorry if i lost ya, i tend to get very lyrical at times, talking in abstracts, it's beautiful
+[05-05-2005 02:29:17] [#ezpublish] <kracker> hey it's not about who comes in first, its about all of us crossing the finish line together ...
+[05-05-2005 02:29:56] [#ezpublish] <kracker> am i turning any heads over at eZ ... yet?
+[05-05-2005 02:30:02] [#ezpublish] <SEAwolfx_> kracker: indeed, i love your melancholic daydreams ;)
+[05-05-2005 02:30:17] [#ezpublish] * kracker smirks
+[05-05-2005 02:32:59] [#ezpublish] <kracker> Luke :: sry, that last question was thrown in your direction :)
+[05-05-2005 02:35:46] [#ezpublish] <luke_> kracker: explain in english ;)
+[05-05-2005 02:36:00] [#ezpublish] <kracker> lol, it's ok, i can't expect everyone to understand
+[05-05-2005 02:37:16] [#ezpublish] <kracker> ok ok
+[05-05-2005 02:38:24] [#ezpublish] <SEAwolfx_> nah, its ok as i can follow the direction you are thinking ;)
+[05-05-2005 02:39:14] [#ezpublish] <kracker> Luke, I was wondering (just out of pure curiousity) if I the eZ crew notices me? I wonder at times just what they must think ... eh
+[05-05-2005 02:40:04] [#ezpublish] <SEAwolfx_> do u think they dont notices you? why u think that?
+[05-05-2005 02:41:09] [#ezpublish] <kracker> my default mindset, i'm the rogue
+[05-05-2005 02:41:33] [#ezpublish] <kracker> sometimes a bit of a fly on the wall, sometimes the fly in your soup
+[05-05-2005 02:42:04] [#ezpublish] <kracker> i dunno, i just wonder what they think, (sheesh, i need to get out ..)
+[05-05-2005 02:42:11] [#ezpublish] <SEAwolfx_> where i can set the templates for some new classes from the admin interface as i have done it everytime inside the filesystem?!
+[05-05-2005 02:42:15] [#ezpublish] <kracker> lol, when i hear the song i do thnk of me ... You're So Vain : Carly Simon
+[05-05-2005 02:42:47] [#ezpublish] <SEAwolfx_> good thing, gonna hear some music. good idea.
+[05-05-2005 02:43:10] [#ezpublish] <kracker> you have to use the template override system in the admin to override a class
+[05-05-2005 02:44:20] [#ezpublish] <kracker> perhapse i misunderstood
+[05-05-2005 02:44:56] [#ezpublish] * SEAwolfx_ np: http://download.freshmeat.net/backend/fm-releases-unix.xml
+[05-05-2005 02:45:08] [#ezpublish] <SEAwolfx_> something for my own melancholic daydreams.
+[05-05-2005 02:45:14] [#ezpublish] <SEAwolfx_> oops
+[05-05-2005 02:45:33] [#ezpublish] * SEAwolfx_ np: Slowdive - 01 Alison.mp3
+[05-05-2005 02:45:42] [#ezpublish] <SEAwolfx_> ;)
+[05-05-2005 02:45:58] [#ezpublish] <SEAwolfx_> <       kracker | >you have to use the template override system in the admin to override a class <-- where?
+[05-05-2005 02:46:23] [#ezpublish] <kracker> nods, i was lookin ;l
+[05-05-2005 02:46:33] [#ezpublish] <kracker> http://admindevel.ezpublish.no/visual/templatelist
+[05-05-2005 02:46:38] [#ezpublish] <kracker> http://admindevel.ezpublish.no/visual/templateview/node/view/full.tpl
+[05-05-2005 02:46:42] [#ezpublish] <kracker> http://admindevel.ezpublish.no/visual/templateview/node/view/line.tpl
+[05-05-2005 02:47:17] [#ezpublish] <SEAwolfx_> ahh over the design
+[05-05-2005 02:47:18] [#ezpublish] <kracker> you can create, edit and remove template overrides almost completely from the above administration GUI
+[05-05-2005 02:47:23] [#ezpublish] <SEAwolfx_> me idiot
+[05-05-2005 02:47:26] [#ezpublish] <kracker> sure, youcan do it per design
+[05-05-2005 02:47:29] [#ezpublish] <kracker> na
+[05-05-2005 02:47:36] [#ezpublish] <kracker> we all stumble
+[05-05-2005 02:47:51] [#ezpublish] <kracker> the quote about children from the film "Polly"
+[05-05-2005 02:48:07] [#ezpublish] * kracker wide eye grin
+[05-05-2005 02:49:59] [#ezpublish] <SEAwolfx_> u would bet that you hear shoegazing music?!
+[05-05-2005 02:50:12] [#ezpublish] <SEAwolfx_> s/u/I/
+[05-05-2005 02:51:27] [#ezpublish] <kracker> teee
+[05-05-2005 02:53:32] [#ezpublish] <kracker> searching archives for a copy to 'borrow'
+[05-05-2005 02:54:29] [#ezpublish] <SEAwolfx_> hmmm .. creating a new override template, for what is the node_id to be set?
+[05-05-2005 02:54:47] [#ezpublish] <SEAwolfx_> as an override key?
+[05-05-2005 02:56:16] [#ezpublish] <kracker> no
+[05-05-2005 02:56:33] [#ezpublish] <SEAwolfx_> i mean its an option for override keys.
+[05-05-2005 02:56:39] [#ezpublish] <kracker> the node_id is the id of the content object which you wish to overide the default template
+[05-05-2005 02:57:09] [#ezpublish] <kracker> if you mouse over an existing object in the 3.5+ admin menu you will get a js display (popup) of the menu item
+[05-05-2005 02:57:20] [#ezpublish] <SEAwolfx_> this should be called object_id
+[05-05-2005 02:57:55] [#ezpublish] <kracker> well ... it depends on the basis of the software's termenology.
+[05-05-2005 02:58:23] [#ezpublish] <kracker> hey i don't know if the ez.no docs have this yet but users could use an ... eZ publish Dictonary
+[05-05-2005 02:58:24] [#ezpublish] <SEAwolfx_> ez uses the terminoloy node_id and object_id
+[05-05-2005 02:58:47] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-05-2005 02:58:53] [#ezpublish] <SEAwolfx_> node_id is related to the content tree
+[05-05-2005 02:59:16] [#ezpublish] <kracker> a list of terms, in a big index
+[05-05-2005 02:59:35] [#ezpublish] <kracker> to explain the difference between the two
+[05-05-2005 02:59:44] [#ezpublish] <SEAwolfx_> i know it.
+[05-05-2005 03:00:07] [#ezpublish] <kracker> ok
+[05-05-2005 03:00:29] [#ezpublish] <SEAwolfx_> object_id is the id of the content object which can be assigned to a node_id within the content tree
+[05-05-2005 03:01:42] [#ezpublish] <kracker> ahh very ggod, no more searching fo me :)
+[05-05-2005 03:01:54] [#ezpublish] <SEAwolfx_> ;)
+[05-05-2005 03:02:55] [#ezpublish] <SEAwolfx_> so the node_id in this context implies that the template is used during displaying a part of the content tree which makes no sense for me.
+[05-05-2005 03:03:30] [#ezpublish] <SEAwolfx_> as the template is rather assigned to a content class.
+[05-05-2005 03:07:52] [#ezpublish] <kracker> templates can be assigned based on several different criteria, not just per class but also per individual content object (node_id)
+[05-05-2005 03:08:05] [#ezpublish] <kracker> also based on section
+[05-05-2005 03:08:11] [#ezpublish] <SEAwolfx_> yeah ... ok
+[05-05-2005 03:08:24] [#ezpublish] <SEAwolfx_> but a section_id would make more sense?!
+[05-05-2005 03:08:39] [#ezpublish] <kracker> they use a drop down select box instead of an id
+[05-05-2005 03:09:31] [#ezpublish] <SEAwolfx_> hmmm ... gonna check this out.
+[05-05-2005 03:09:32] [#ezpublish] <kracker> a node_id is an instanciated content object for a particular class, it's bad form to get fixated on object_id, it's not about objects, it's about nodes ...
+[05-05-2005 03:11:02] [#ezpublish] <SEAwolfx_> kracker | >a node_id is an instanciated content object for a particular class <- i would disagree. node_id is a part of the content tree with its nodes. but a content object is representated by a object_id, the instance.
+[05-05-2005 03:11:26] [#ezpublish] <SEAwolfx_> an content object might not be assigned to the content tree.
+[05-05-2005 03:12:29] [#ezpublish] <kracker> then it would not be an object
+[05-05-2005 03:12:38] [#ezpublish] <kracker> it would an UN-instanciated class
+[05-05-2005 03:13:04] [#ezpublish] <kracker> Rule of Thumb: all objects are classes but classes are not objects
+[05-05-2005 03:13:13] [#ezpublish] <SEAwolfx_> so why is a content object to more then one node_id assignable?
+[05-05-2005 03:13:29] [#ezpublish] <kracker> you can't have a content object that is not assigned to the content tree
+[05-05-2005 03:13:49] [#ezpublish] <kracker> unless perhapse in the case of a Draft of a content object (that might work as you describe)
+[05-05-2005 03:14:10] [#ezpublish] <SEAwolfx_> this is because its sorted in on creation to the content tree which is mandatory.
+[05-05-2005 03:14:19] [#ezpublish] <SEAwolfx_> but keep in mind we have a trash.
+[05-05-2005 03:14:57] [#ezpublish] <SEAwolfx_> yeah draft is another example for that.
+[05-05-2005 03:14:57] [#ezpublish] <kracker> because in several situations content objects should be allowed to existing in more than one location as a location is just a virtual link and there is nothing to prevent an object from being displayed in several locations inside thecontent structure
+[05-05-2005 03:15:38] [#ezpublish] <kracker> think of it like a gmail.com mail account
+[05-05-2005 03:15:42] [#ezpublish] <SEAwolfx_> yea this stresses what i am saying.
+[05-05-2005 03:16:04] [#ezpublish] <kracker> you can assign several different "lables" (aka locations) to a single email
+[05-05-2005 03:16:26] [#ezpublish] <kracker> it's the future, folders are depricated / dead ... labels / mulit-location is the future
+[05-05-2005 03:16:56] [#ezpublish] <SEAwolfx_> < SEAwolfx_>object_id is the id of the content object which can be assigned to a node_id within the content tree
+[05-05-2005 03:17:03] [#ezpublish] <SEAwolfx_> isnt that true?
+[05-05-2005 03:17:14] [#ezpublish] <kracker> it is ture
+[05-05-2005 03:17:17] [#ezpublish] <kracker> it is true
+[05-05-2005 03:17:38] [#ezpublish] <kracker> but for most cases users don't work with object_id only node_id
+[05-05-2005 03:18:02] [#ezpublish] <SEAwolfx_> so when we speak of a node_id its a unique place in the content tree.
+[05-05-2005 03:18:08] [#ezpublish] <kracker> like a developer would use object_id in custom development but users tend to only use node_id
+[05-05-2005 03:18:14] [#ezpublish] <kracker> yes
+[05-05-2005 03:18:35] [#ezpublish] <kracker> yes it is a unique id
+[05-05-2005 03:18:40] [#ezpublish] <SEAwolfx_> so when i write template i dont think of a unique place in the content tree.
+[05-05-2005 03:18:57] [#ezpublish] <kracker> oh?
+[05-05-2005 03:19:00] [#ezpublish] <SEAwolfx_> only a subtree or a section
+[05-05-2005 03:19:17] [#ezpublish] <SEAwolfx_> section = subtree
+[05-05-2005 03:20:00] [#ezpublish] <kracker> we are mincing words here, your subtree (which can be a section at the same time) would be a specific branch / part of the content structure
+[05-05-2005 03:20:11] [#ezpublish] <SEAwolfx_> yes.
+[05-05-2005 03:21:06] [#ezpublish] <kracker> i think you would need to at least to create at least one location in the content structure to store your content objects even if you hide it (per say) from the regualar user ...
+[05-05-2005 03:21:11] [#ezpublish] <SEAwolfx_> i would consider templates are related to more than one node in the tree.
+[05-05-2005 03:22:15] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-05-2005 03:22:55] [#ezpublish] <SEAwolfx_> back to my misunterstanding, why i can assign a template to a node_id (one node in content tree)
+[05-05-2005 03:22:59] [#ezpublish] <kracker> they can be, but it doesn't mean that they are unless you configure it that way :) very flexible
+[05-05-2005 03:23:12] [#ezpublish] <SEAwolfx_> ahhhh
+[05-05-2005 03:23:27] [#ezpublish] <SEAwolfx_> so its possible to envoke a template only for one node?
+[05-05-2005 03:23:38] [#ezpublish] <kracker> That feature provides you a way to override a single content object , for a single node_id
+[05-05-2005 03:23:47] [#ezpublish] <SEAwolfx_> AHHHHHHH
+[05-05-2005 03:23:58] [#ezpublish] <SEAwolfx_> this was the missing link.
+[05-05-2005 03:24:18] [#ezpublish] <SEAwolfx_> nice option.
+[05-05-2005 03:24:20] [#ezpublish] <kracker> if i wanted to change a template in a unique way for ONLY one object you would use nod_id
+[05-05-2005 03:24:29] [#ezpublish] <kracker> s/nod_id/node_id/
+[05-05-2005 03:24:36] [#ezpublish] <SEAwolfx_> indeed
+[05-05-2005 03:25:38] [#ezpublish] <kracker> sweet, wow
+[05-05-2005 03:25:41] [#ezpublish] <kracker> that was intense
+[05-05-2005 03:25:49] [#ezpublish] <SEAwolfx_> i love this.
+[05-05-2005 03:25:58] [#ezpublish] <SEAwolfx_> facts, facts, facts.
+[05-05-2005 03:26:11] [#ezpublish] <kracker> faqs, faqs, faqs
+[05-05-2005 03:26:19] [#ezpublish] <kracker> it's q not a g
+[05-05-2005 03:26:19] [#ezpublish] <SEAwolfx_> löl
+[05-05-2005 03:27:20] [#ezpublish] <SEAwolfx_> hope the log is stored to generate nice faqs ;)
+[05-05-2005 03:27:48] [#ezpublish] <kracker> yeah, and to keep everyone nice and honest ;)
+[05-05-2005 03:28:18] [#ezpublish] <SEAwolfx_> big brother is watching us.
+[05-05-2005 03:28:35] [#ezpublish] <kracker> ha
+[05-05-2005 03:28:47] [#ezpublish] <kracker> give him the finger
+[05-05-2005 03:28:59] [#ezpublish] <SEAwolfx_> i do.
+[05-05-2005 03:29:07] [#ezpublish] <kracker> yeah
+[05-05-2005 03:29:11] [#ezpublish] <SEAwolfx_> hi, B.B.
+[05-05-2005 03:29:32] [#ezpublish] <SEAwolfx_> parse me now!
+[05-05-2005 03:29:57] [#ezpublish] <kracker> hehe
+[05-05-2005 03:30:35] [#ezpublish] <SEAwolfx_> bring a faq bot into this channel.
+[05-05-2005 03:30:55] [#ezpublish] <kracker> see the ezlog user... that's the bot
+[05-05-2005 03:31:09] [#ezpublish] <kracker> these are the logs: http://download.ezpublishhosting.com/ezirc/logs/
+[05-05-2005 03:31:10] [#ezpublish] <SEAwolfx_> yea .. but only with loggin functions
+[05-05-2005 03:31:37] [#ezpublish] <kracker> i read them when i'm catching up on what i've missed
+[05-05-2005 03:31:53] xbit [xbit@pppoecl77187.minlos.no] requested CTCP VERSION: 
+[05-05-2005 03:31:53] [notice(xbit)] VERSION IQ 0.9.3
+[05-05-2005 03:32:24] [#ezpublish] <kracker> yeah well, i'd laugh at anyone willing to write a faq bot that created faq entries from #ezpublish without human interaction / editing ...
+[05-05-2005 03:32:41] [#ezpublish] <kracker> hello? calling sanity ... 1 to beam up
+[05-05-2005 03:33:22] [#ezpublish] <xbit> hehe
+[05-05-2005 03:33:26] [#ezpublish] <xbit> good morning
+[05-05-2005 03:33:31] [#ezpublish] <kracker> mornin'
+[05-05-2005 03:33:51] [#ezpublish] <SEAwolfx_> hi xbit
+[05-05-2005 03:33:52] [#ezpublish] <xbit> i guess seawolfx_ perhaps meant something like "!! this is that|
+[05-05-2005 03:34:10] [#ezpublish] <kracker> ahh and that is a very very good (and vaild point)
+[05-05-2005 03:34:25] [#ezpublish] <kracker> there is such an irc automated language which does exactly that!!
+[05-05-2005 03:34:42] [#ezpublish] <SEAwolfx_> !beer
+[05-05-2005 03:34:53] [#ezpublish] <kracker> while sorely forgoten, what you describe is a simply awsome idea
+[05-05-2005 03:35:09] [#ezpublish] <kracker> !beer|free as in ....
+[05-05-2005 03:35:21] [#ezpublish] <xbit> i'm not sure if you're beeing sarcastic or not, kracker :)
+[05-05-2005 03:35:24] [#ezpublish] <kracker> !beer|free as in free beer
+[05-05-2005 03:35:26] [#ezpublish] <SEAwolfx_> !start_faq templaes
+[05-05-2005 03:35:28] [#ezpublish] <kracker> i'm not
+[05-05-2005 03:35:31] [#ezpublish] <SEAwolfx_> !stop_faq templaes
+[05-05-2005 03:35:38] [#ezpublish] <kracker> i'm not being sarcastic , i'm 100% honest
+[05-05-2005 03:35:44] [#ezpublish] <xbit> okay
+[05-05-2005 03:36:25] [#ezpublish] <xbit> who runs the bot?
+[05-05-2005 03:36:32] [#ezpublish] <kracker> i do
+[05-05-2005 03:36:39] [#ezpublish] <xbit> aha
+[05-05-2005 03:36:47] [#ezpublish] <kracker> you ... for fun?
+[05-05-2005 03:37:05] [#ezpublish] <SEAwolfx_> i have some friend running a channel, i could ask them for tips on bots.
+[05-05-2005 03:37:10] [#ezpublish] <xbit> then there's probably some script or plugin to add that functionality to it?
+[05-05-2005 03:37:48] [#ezpublish] <kracker> ok found it
+[05-05-2005 03:37:53] [#ezpublish] <kracker> i'm always loosing links
+[05-05-2005 03:37:54] [#ezpublish] <kracker> http://inamidst.com/eph/noets
+[05-05-2005 03:37:58] [#ezpublish] <kracker> http://64.233.179.104/search?q=cache:6RBAHJDzDYkJ:inamidst.com/eph/noets+&hl=en
+[05-05-2005 03:38:22] [#ezpublish] <kracker> how about them apples ...
+[05-05-2005 03:38:47] [#ezpublish] <xbit> oh dear, iq is written in php :o
+[05-05-2005 03:38:50] [#ezpublish] * kracker slaps a sticky note on the glass ...
+[05-05-2005 03:39:11] [#ezpublish] <kracker> <grin>
+[05-05-2005 03:39:38] [#ezpublish] <xbit> may i suggest spurl.net? :)
+[05-05-2005 03:40:32] [#ezpublish] <xbit> hmm, noets sounds kinda nice but...
+[05-05-2005 03:42:37] [#ezpublish] <kracker> well, which was what i thought too
+[05-05-2005 03:42:52] [#ezpublish] <kracker> not really vital to the job (per say)
+[05-05-2005 03:44:43] [#ezpublish] <xbit> i was thinking something like this:
+[05-05-2005 03:44:46] [#ezpublish] <xbit> http://www.egghelp.org/tclhtml/3478-4-0-0-1-learn.htm
+[05-05-2005 03:46:12] [#ezpublish] <xbit> anyways, breakfast time
+[05-05-2005 03:46:33] [#ezpublish] <kracker> hmm, cheers
+[05-05-2005 03:54:04] [#ezpublish] <SEAwolfx_> need some help ... want to create a template for the new rss class. now i create a new override fo "/node/view/full.tpl", set the siteaccess, filename: "rss.tpl", override keys: class: rss; section: all sectios; node_id: -, base template on: empty file", pressed ok, then rss appears in "design/<siteaccess>/override/templates/rss.tpl". doesnt have it to be created in design/<siteaccess>/override/templates/full/ ?
+[05-05-2005 04:02:00] [#ezpublish] <kracker> .
+[05-05-2005 04:03:50] [#ezpublish] <SEAwolfx_> i followed http://ez.no/ez_publish/documentation/incoming/setting_up_rss_import
+[05-05-2005 04:04:11] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-05-2005 04:04:51] [#ezpublish] <kracker> no
+[05-05-2005 04:04:54] [#ezpublish] <kracker> it doesn't
+[05-05-2005 04:05:20] [#ezpublish] <kracker> that relationship is abstracted in the settings/siteaccess/siteName/override.ini.append.php
+[05-05-2005 04:05:30] [#ezpublish] <kracker> entries
+[05-05-2005 04:05:49] [#ezpublish] <kracker> it sounds like it created the file correctly
+[05-05-2005 04:06:48] [#ezpublish] <kracker> i am not entirely sure that the override keys were set correctly but it sounds basicly right ..
+[05-05-2005 04:07:16] [#ezpublish] <SEAwolfx_> i have a lack in understanding how the creation process, including all entries which are done
+[05-05-2005 04:07:38] [#ezpublish] <kracker> sure, it takes a while to grasp 100%
+[05-05-2005 04:07:53] [#ezpublish] <kracker> it's a very flexable and extensible system
+[05-05-2005 04:08:26] [#ezpublish] <kracker> which means there is usualy more than one way to the job
+[05-05-2005 04:09:13] [#ezpublish] <SEAwolfx_> how would u do it only on the basis of the filesystem
+[05-05-2005 04:09:16] [#ezpublish] <SEAwolfx_> ?
+[05-05-2005 04:09:32] [#ezpublish] <SEAwolfx_> concerning to the new rss class?
+[05-05-2005 04:09:45] [#ezpublish] <kracker> basicly the admin gui creates the entries needed to override settings needed (into ettings/siteaccess/siteName/override.ini.append.php) to override the default templates
+[05-05-2005 04:10:03] [#ezpublish] <kracker> no not really
+[05-05-2005 04:10:07] [#ezpublish] <kracker> hrm
+[05-05-2005 04:10:08] [#ezpublish] <SEAwolfx_> give some example entry, plz.
+[05-05-2005 04:10:18] [#ezpublish] <SEAwolfx_> i dont see any.
+[05-05-2005 04:10:35] [#ezpublish] <kracker> no?>
+[05-05-2005 04:10:51] [#ezpublish] <kracker> what is the name of your siteaccess and design your using?
+[05-05-2005 04:10:57] [#ezpublish] <SEAwolfx_> any related to templates.
+[05-05-2005 04:11:02] [#ezpublish] <kracker> is it a default siteaccess
+[05-05-2005 04:11:16] [#ezpublish] <SEAwolfx_> web
+[05-05-2005 04:11:38] [#ezpublish] <kracker> errum are you using a stock design (like copy / rename corporate) or are you starting from scratch
+[05-05-2005 04:11:56] [#ezpublish] <SEAwolfx_> i already know that there u can set the relation between the siteaccess and the deisgn
+[05-05-2005 04:12:06] [#ezpublish] <kracker> if your starting from scratch that would make sense but if your working from a copy of a default eZ tempaltes ?
+[05-05-2005 04:12:08] [#ezpublish] <SEAwolfx_> but thats all.
+[05-05-2005 04:12:21] [#ezpublish] <SEAwolfx_> this is already done.
+[05-05-2005 04:12:27] [#ezpublish] <kracker> right but ...
+[05-05-2005 04:12:30] [#ezpublish] <SEAwolfx_> i have a own design dir.
+[05-05-2005 04:12:37] [#ezpublish] <kracker> ok
+[05-05-2005 04:13:08] [#ezpublish] <kracker> so here comes an example ...
+[05-05-2005 04:13:35] [#ezpublish] <SEAwolfx_> i also have knowledge about the override templates in my design dir.
+[05-05-2005 04:14:08] [#ezpublish] <SEAwolfx_> i only dont understand where the relationship between the new class to the new template is set.
+[05-05-2005 04:14:22] [#ezpublish] <SEAwolfx_> i think of by name of the tpl-file
+[05-05-2005 04:22:46] [#ezpublish] <SEAwolfx_> these entry were done by using the process over the admin interface i guess.
+[05-05-2005 04:23:28] [#ezpublish] <kracker> the top  ones yes
+[05-05-2005 04:23:45] [#ezpublish] <kracker> the onese on the bottom (perhapse) it's hard to say for certain
+[05-05-2005 04:24:11] [#ezpublish] <SEAwolfx_> ok .. i understand
+[05-05-2005 04:24:26] [#ezpublish] <kracker> because i _prefer_ to create my templates 100% by hand as much as possible so I do not use the eZ publish admininistrator to create new template overrides ... i do it all by hand
+[05-05-2005 04:24:47] [#ezpublish] <SEAwolfx_> i would prefer this too ;)
+[05-05-2005 04:24:55] -!- syntetisk [~syntetisk@216-134-116.0502.adsl.tele2.no] has joined #ezpublish
+[05-05-2005 04:24:56] [#ezpublish] <kracker> you'll figure it out
+[05-05-2005 04:25:04] [#ezpublish] <syntetisk> hi all
+[05-05-2005 04:25:05] [#ezpublish] <kracker> it just takes a little practice
+[05-05-2005 04:25:12] [#ezpublish] <kracker> practice makes perfect
+[05-05-2005 04:25:31] [#ezpublish] <kracker> what say ye syntetisk?
+[05-05-2005 04:25:39] [#ezpublish] <xbit> heisann syntetisk
+[05-05-2005 04:25:55] [#ezpublish] <syntetisk> is it ok to ask n00b questions here? :P
+[05-05-2005 04:26:43] [#ezpublish] <kracker> if you have a little pacients with us :)
+[05-05-2005 04:26:48] [#ezpublish] <syntetisk> hehe
+[05-05-2005 04:26:59] [#ezpublish] <kracker> it's way too late for me to be trying to spell big words ... ug
+[05-05-2005 04:27:05] [#ezpublish] <SEAwolfx_> but a last question to this: what has to be overriden when inside of a folder the rss items should appear? i think the node/view/full.tpl
+[05-05-2005 04:27:11] [#ezpublish] * kracker has blury vision ...
+[05-05-2005 04:27:27] [#ezpublish] <xbit> syntetisk: fire at will, n00b questions are better than meta-questions imo :)
+[05-05-2005 04:27:42] [#ezpublish] <kracker> hehe
+[05-05-2005 04:27:44] [#ezpublish] <syntetisk> I'm sure i'm missing something fundamental about eZ, but I gotta ask anyway...
+[05-05-2005 04:27:52] [#ezpublish] <kracker> checking
+[05-05-2005 04:28:15] [#ezpublish] <syntetisk> how do I translate an eZ site to another language than english, ex. Norwegian
+[05-05-2005 04:28:28] [#ezpublish] <syntetisk> not the content, but everyting else
+[05-05-2005 04:29:00] [#ezpublish] <kracker> SEAWolf, wait a sec k
+[05-05-2005 04:29:07] [#ezpublish] <SEAwolfx_> np ;)
+[05-05-2005 04:29:12] [#ezpublish] <syntetisk> because now my site has norwegian articles, but the "framework" is in english
+[05-05-2005 04:30:05] [#ezpublish] <xbit> use to different design directories
+[05-05-2005 04:30:07] [#ezpublish] <xbit> i believe
+[05-05-2005 04:31:10] [#ezpublish] <xbit> err, TWO
+[05-05-2005 04:32:03] [#ezpublish] <syntetisk> i get that part, but do i then have to go through all the template files and manually translate??
+[05-05-2005 04:33:23] [#ezpublish] <xbit> yep, if you have content in your templates (which i don't see why you have) you probably have to do it that way :)
+[05-05-2005 04:34:15] [#ezpublish] <xbit> (well, i have content/text in some of my templates to but... :) )
+[05-05-2005 04:34:21] [#ezpublish] <syntetisk> hm... the site has just been set up. I chose norwegian as primary and english as additional
+[05-05-2005 04:34:36] [#ezpublish] <syntetisk> nothing has been "tampered" with
+[05-05-2005 04:35:28] [#ezpublish] <xbit> then everything should be in english, i thought...
+[05-05-2005 04:36:07] [#ezpublish] <syntetisk> that is right.. now i want it in norwegian. what do i do?`:-)
+[05-05-2005 04:37:20] [#ezpublish] <xbit> http://www.ez.no/ez_publish/documentation/configuration/configuration/language_and_charset/how_to_setup_a_multilingual_site
+[05-05-2005 04:37:23] [#ezpublish] <xbit> :)
+[05-05-2005 04:38:51] [#ezpublish] <kracker> you can use the eZ publish translation features to abstract the english language text content in templates using the translation system constructs which can be dynamicly (by eZ publish autmaticly) replace all english with norwegan instead
+[05-05-2005 04:38:59] [#ezpublish] <kracker> it is highly recomended
+[05-05-2005 04:39:45] [#ezpublish] <kracker> ok, guys i'm crashing hard , my imaginary boss has been on me to get more sleep (4 hours every 36 is just not enough even for the kracker
+[05-05-2005 04:39:56] [#ezpublish] <kracker> you know ...
+[05-05-2005 04:39:59] [#ezpublish] <xbit> hehe
+[05-05-2005 04:40:03] [#ezpublish] <kracker> erurm
+[05-05-2005 04:40:09] [#ezpublish] <kracker> do you know tyler durden ?
+[05-05-2005 04:40:23] [#ezpublish] <kracker> did you know tyler durden was a Project Manager?
+[05-05-2005 04:40:35] [#ezpublish] <xbit> yes and no
+[05-05-2005 04:40:45] [#ezpublish] <kracker> all my IT p.m. friends love that quote
+[05-05-2005 04:40:55] [#ezpublish] <syntetisk> kracker
+[05-05-2005 04:40:58] [#ezpublish] <kracker> yeah?
+[05-05-2005 04:41:14] [#ezpublish] <xbit> :)
+[05-05-2005 04:41:17] [#ezpublish] <syntetisk> where do i find this automatic translation thing?
+[05-05-2005 04:42:25] [#ezpublish] <kracker> do a google search for this set of keywords (change them to find more results): http://www.google.com/search?num=50&hl=en&lr=&safe=off&c2coff=1&q=site%3Aez.no+Translation+System&btnG=Search
+[05-05-2005 04:42:40] [#ezpublish] <kracker> might try multi-lingual keywords too
+[05-05-2005 04:42:52] [#ezpublish] <syntetisk> .
+[05-05-2005 04:43:24] [#ezpublish] <xbit> i wonder if i should upgrade from 3.5.0 to 3.5.2, in the hope of getting paypal working...
+[05-05-2005 04:43:41] [#ezpublish] <kracker> honestly i know it exists, and i've read in detail about it but it's just too late to dig up all of that right now, create a new forum question and post 3-5 times to it, read 2-4 hours a day for a week of ez.no and you too can be an eZ kungfoo master ...
+[05-05-2005 04:44:12] [#ezpublish] <kracker> i can only show you the door --morpheus
+[05-05-2005 04:44:26] [#ezpublish] <xbit> hihi
+[05-05-2005 04:45:08] [#ezpublish] <xbit> syntetisk: look in the translatsions dir, and look in template operators, on the docs at ez.no
+[05-05-2005 04:45:20] [#ezpublish] <xbit> you'll see
+[05-05-2005 04:49:12] [#ezpublish] <syntetisk> hmm.. mabye this is not so easy to figure out if you don't code
+[05-05-2005 04:50:25] [#ezpublish] <xbit> no, i don't think so
+[05-05-2005 04:50:44] [#ezpublish] <syntetisk> is the translation.ts the file where i'm supposed to do the translation?
+[05-05-2005 04:51:28] [#ezpublish] <xbit> sounds like you're close yeah :)
+[05-05-2005 04:51:40] [#ezpublish] <xbit> i haven't used it, so i'm not 100% sure
+[05-05-2005 04:52:20] [#ezpublish] <syntetisk> but there are a lot of thanslation here, but why doesn't it apply on the site?
+[05-05-2005 04:53:03] [#ezpublish] <xbit> i18n is the template operator...
+[05-05-2005 04:53:17] [#ezpublish] <xbit> maybe the text isn't piped through that in the templates?
+[05-05-2005 04:53:35] [#ezpublish] <xbit> maybe the siteaccess uses the wrong translation dir, or maybe you simply haven't cleared the cache?
+[05-05-2005 04:53:39] [#ezpublish] <xbit> i don't know...
+[05-05-2005 04:54:08] [#ezpublish] <syntetisk> hmm..
+[05-05-2005 04:55:12] [#ezpublish] <syntetisk> tnx for trying guys..
+[05-05-2005 04:55:21] -!- syntetisk [~syntetisk@216-134-116.0502.adsl.tele2.no] has quit []
+[05-05-2005 04:56:39] -!- Bedlore [~me@ppp249-157.lns2.adl2.internode.on.net] has quit []
+[05-05-2005 05:05:42] [#ezpublish] <SEAwolfx_> in my imported rss feed text is html-code embeded so ezpublish dont render them properly.
+[05-05-2005 05:09:16] [#ezpublish] <xbit> hmm, there shouldn't be html-code embedded in rss files? i thought?
+[05-05-2005 05:09:41] [#ezpublish] <SEAwolfx_> yes indeed, but slashdot does it, the lamers.
+[05-05-2005 05:09:52] [#ezpublish] <xbit> hehe
+[05-05-2005 05:15:19] [#ezpublish] <xbit> there's not much you can do about that i guess
+[05-05-2005 05:16:13] [#ezpublish] <SEAwolfx_> isnt there a reexpr-template operator?
+[05-05-2005 05:17:05] [#ezpublish] <xbit> hmm, maybe, can't remember one
+[05-05-2005 05:23:52] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2005 05:37:07] [#ezpublish] <danmiru> i have taken 3.5.2 version and install it from scratch
+[05-05-2005 05:38:31] [#ezpublish] <danmiru> it doesn't look like well when viewing frontend from internet explorer
+[05-05-2005 05:38:58] [#ezpublish] <danmiru> fonts are too large, paddings too
+[05-05-2005 05:39:07] [#ezpublish] <danmiru> is it my problem or some common bug?
+[05-05-2005 05:42:11] [#ezpublish] <SEAwolfx_> hmm .. seems that the css is not processed properly?
+[05-05-2005 06:06:59] [#ezpublish] <danmiru> fixed: font sise has been set to larger in IE.
+[05-05-2005 06:07:38] [#ezpublish] <xbit> :)
+[05-05-2005 06:10:21] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-05-2005 06:10:22] [#ezpublish] <kracker> so at the risk of starting a conversation (no i'm not really here, just my shaddow)
+[05-05-2005 06:11:18] [#ezpublish] <kracker> is it me or does Paul Forsyth dislike me? or is it people like me? lol or is it just everyone one else in his way ...
+[05-05-2005 06:11:42] [#ezpublish] <kracker> ha! ahh kracker your going to pay for that one day all too soon ...
+[05-05-2005 06:12:09] [#ezpublish] <xbit> we all love you.
+[05-05-2005 06:12:11] [#ezpublish] * kracker throws a rock at my own window ...
+[05-05-2005 06:12:19] [#ezpublish] <xbit> i don't read the forums too much =>
+[05-05-2005 06:12:33] [#ezpublish] <kracker> who are you any way xbit?
+[05-05-2005 06:12:41] [#ezpublish] <kracker> i always wonder
+[05-05-2005 06:12:54] [#ezpublish] <xbit> my realname is Stian
+[05-05-2005 06:13:14] [#ezpublish] <kracker> whew . . .at least your not paul (pannic attack)
+[05-05-2005 06:13:19] [#ezpublish] <xbit> hehehe
+[05-05-2005 06:13:25] [#ezpublish] <xbit> :]
+[05-05-2005 06:29:23] [#ezpublish] <kracker> Non-Prophets : The Cure ....
+[05-05-2005 06:31:36] [#ezpublish] <kracker> Goodnight #ezpublish, you princes of eZ publish, you Kings of enterprise web applications ...
+[05-05-2005 06:32:32] [#ezpublish] * kracker turns out the lights and hits floor ..
+[05-05-2005 06:36:16] -!- jota [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[05-05-2005 06:49:06] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[05-05-2005 06:53:42] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2005 07:28:14] -!- SEAwolfx [~mike@59def0acfcc2bd1f.node.tor] has joined #ezpublish
+[05-05-2005 07:28:18] [#ezpublish] <SEAwolfx> re
+[05-05-2005 07:30:43] [#ezpublish] <xbit> wb
+[05-05-2005 07:30:45] [#ezpublish] <xbit> :)
+[05-05-2005 07:35:54] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[05-05-2005 07:37:45] [#ezpublish] <SEAwolfx> ;)
+[05-05-2005 07:47:23] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-05-2005 08:24:34] [#ezpublish] <SEAwolfx> hmm ... when i upload an image to a gallery on the user siteaccess its not refreshed. how should i config viewcache.ini?
+[05-05-2005 08:32:41] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-05-2005 08:44:10] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-05-2005 09:52:32] -!- Tidemann_ [~SPAZ@ti132110a080-9569.bb.online.no] has quit [Read error: 131 (Connection reset by peer)]
+[05-05-2005 10:10:30] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-05-2005 10:16:07] -!- SEAwolfx_ [~mike@2d1d9731bc4730d9.node.tor] has quit [Ping timeout: 14400 seconds]
+[05-05-2005 10:32:47] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-05-2005 13:23:35] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-05-2005 13:32:12] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-05-2005 13:33:27] [#ezpublish] <buz> elsewhere.adactio.com/ impressive what you can do with JS these days
+[05-05-2005 13:34:48] [#ezpublish] <luke_> ajax
+[05-05-2005 13:34:50] [#ezpublish] <luke_> :)
+[05-05-2005 13:34:58] [#ezpublish] <buz> ajax is impressive stuff
+[05-05-2005 13:35:06] [#ezpublish] <buz> but painful to code
+[05-05-2005 13:35:24] [#ezpublish] <luke_> technology of this year ;)
+[05-05-2005 13:35:32] [#ezpublish] <buz> probably
+[05-05-2005 13:35:45] [#ezpublish] <buz> still trying to figure out something cool to do with it
+[05-05-2005 13:36:42] [#ezpublish] <luke_> http://www.modernmethod.com/sajax/
+[05-05-2005 13:36:53] [#ezpublish] <luke_> do you know this?
+[05-05-2005 13:37:02] [#ezpublish] <luke_> http://jpspan.sourceforge.net/wiki/doku.php
+[05-05-2005 13:37:37] [#ezpublish] <luke_> http://www.phparch.com/shop_product.php?itemid=94
+[05-05-2005 13:37:48] [#ezpublish] <buz> XUL would be a really nice tech if only it worked outside GECKO browsers
+[05-05-2005 13:37:56] [#ezpublish] <luke_> http://www.adaptivepath.com/publications/essays/archives/000385.php
+[05-05-2005 13:38:04] [#ezpublish] <luke_> here is nice explanation
+[05-05-2005 13:38:10] [#ezpublish] <buz> i know how ajax works :)
+[05-05-2005 13:38:18] [#ezpublish] <buz> i just dont like javascript ;)
+[05-05-2005 13:38:46] [#ezpublish] <luke_> not only you ;)
+[05-05-2005 13:39:43] [#ezpublish] <buz> mhh jpspan looks cool
+[05-05-2005 13:39:48] [#ezpublish] <buz> now if i had an idea what to do with it ;)
+[05-05-2005 13:43:03] [#ezpublish] <luke_> heh, jpspan is more powerful
+[05-05-2005 13:49:15] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit ["Fui embora"]
+[05-05-2005 14:32:55] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-05-2005 15:02:23] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has joined #ezpublish
+[05-05-2005 15:20:25] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2005 15:32:17] -!- yangoon [~mathiasb@J2336.j.pppool.de] has joined #ezpublish
+[05-05-2005 15:33:07] [#ezpublish] <agentbob> luke, thanks for ajax links! heard about jpspan not others
+[05-05-2005 15:34:08] [#ezpublish] <luke_> agentbob: np
+[05-05-2005 15:35:05] [#ezpublish] <luke_> http://www.baekdal.com/articles/Usability/XMLHttpRequest-guidelines/
+[05-05-2005 15:35:05] [#ezpublish] <agentbob> that elsewhere site is pretty nice too... does flickr support pulling their stuff and having it on your own site?
+[05-05-2005 15:35:18] [#ezpublish] <luke_> more about XMLHttpRequest.
+[05-05-2005 15:39:02] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[05-05-2005 15:39:11] [#ezpublish] <agentbob> tried it in any of your apps yet?
+[05-05-2005 15:40:32] [#ezpublish] <luke_> never,I also haven`t time to read all this articles ...
+[05-05-2005 15:41:19] [#ezpublish] <luke_> now I designing again ...
+[05-05-2005 15:41:33] [#ezpublish] <agentbob> lol ditto
+[05-05-2005 15:42:24] [#ezpublish] <luke_> and I`m stuck :)
+[05-05-2005 15:53:50] [#ezpublish] <agentbob> stuck on..?
+[05-05-2005 15:54:01] [#ezpublish] * agentbob finishes off his zywiec
+[05-05-2005 15:55:19] [#ezpublish] <luke_> agentbob: hehe, zywiec ;)
+[05-05-2005 15:57:02] -!- yangoon [~mathiasb@J2336.j.pppool.de] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-05-2005 16:00:47] [#ezpublish] <luke_> ok, it`s time go to bed
+[05-05-2005 16:00:58] [#ezpublish] <luke_> good night guys
+[05-05-2005 16:01:06] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-05-2005 16:33:05] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-05-2005 16:33:20] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-05-2005 17:26:03] -!- SEAwolfx [~mike@59def0acfcc2bd1f.node.tor] has quit [Ping timeout: 14400 seconds]
+[05-05-2005 17:43:08] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-05-2005 17:44:51] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-05-2005 18:32:03] -!- Katana` [~katana@ankh-morpork.net] has quit [No route to host]
+[05-05-2005 18:40:35] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-05-2005 22:47:48] -!- SachaS [~Sacha@12.44.147.178] has joined #ezpublish

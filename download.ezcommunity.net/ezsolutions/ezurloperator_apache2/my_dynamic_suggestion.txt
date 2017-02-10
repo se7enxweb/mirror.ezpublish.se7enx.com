@@ -1,0 +1,16 @@
+
+                          $server_software_version = $_SERVER["SERVER_SOFTWARE"];
+                          // author: kracker
+                          // Examples: Apache/2.0.46 (CentOS) or Apache/1.3.14 (Win32) or Apache/2.0.40 (Red Hat Linux)
+                          // echo ( $server_software_version );
+
+                          if( strstr( $server_software_version, "Apache/1" ) != "" )
+                          {
+                            echo "server: apache1";
+                            $url = htmlspecialchars( $url );
+                          }
+                          else
+                          {
+                            echo "server: apache2";
+                            $url = htmlspecialchars( $url ) . "/";
+                          }

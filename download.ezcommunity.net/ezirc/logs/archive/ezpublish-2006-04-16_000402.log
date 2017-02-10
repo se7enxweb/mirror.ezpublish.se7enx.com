@@ -1,0 +1,42 @@
+[04-15-2006 02:31:16] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-15-2006 06:21:42] -!- phretor [n=phretor@host155-139.pool875.interbusiness.it] has joined #ezpublish
+[04-15-2006 06:21:46] [#ezpublish] <phretor> hello folks
+[04-15-2006 06:24:07] [#ezpublish] <buz> phretor: i just committed some bug fixes for EOR
+[04-15-2006 06:24:15] [#ezpublish] <buz> not related to the required attribute stuff though
+[04-15-2006 06:24:50] [#ezpublish] <phretor> buz, anyway they're appreciated :-)
+[04-15-2006 06:25:09] [#ezpublish] <buz> it's now possible to create objects that contain EOR attributes too
+[04-15-2006 06:25:42] [#ezpublish] <phretor> buz, btw, so you do you definitely confirm that Required field flag is not currently supported. Right?
+[04-15-2006 06:25:53] [#ezpublish] <buz> seems like it
+[04-15-2006 06:26:00] [#ezpublish] <buz> i asked xavier about it but he's not around
+[04-15-2006 06:26:04] [#ezpublish] <phretor> buz, any workaround?
+[04-15-2006 06:26:05] [#ezpublish] <buz> i couldnt get it to work myself
+[04-15-2006 06:26:10] [#ezpublish] <phretor> me too
+[04-15-2006 06:26:10] [#ezpublish] <buz> yeah
+[04-15-2006 06:26:12] [#ezpublish] <buz> hack the code ;)
+[04-15-2006 06:26:15] [#ezpublish] <phretor> lol
+[04-15-2006 06:26:39] [#ezpublish] <phretor> buz, it'd be actually a solution :-)
+[04-15-2006 06:26:48] [#ezpublish] <buz> yeah
+[04-15-2006 06:27:05] [#ezpublish] <buz> workaround: educate the users
+[04-15-2006 06:27:10] [#ezpublish] <buz> but solving it is likely easier
+[04-15-2006 06:34:25] [#ezpublish] <phretor> buz, got suggestions?
+[04-15-2006 06:34:35] [#ezpublish] <buz> for what
+[04-15-2006 06:35:25] [#ezpublish] <phretor> buz, for a hack
+[04-15-2006 06:35:41] [#ezpublish] <buz> not really
+[04-15-2006 08:32:22] -!- elephantMan [n=elephant@43.202.99-84.rev.gaoland.net] has quit [Read error: 104 (Connection reset by peer)]
+[04-15-2006 08:56:33] -!- phretor [n=phretor@host155-139.pool875.interbusiness.it] has left #ezpublish ["Leaving"]
+[04-15-2006 09:00:33] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-15-2006 10:52:08] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-15-2006 11:03:26] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[04-15-2006 11:32:09] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[04-15-2006 11:43:48] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-15-2006 11:52:00] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-15-2006 11:53:33] -!- tobyS [n=dotxp@hartes-php.de] has quit [Read error: 104 (Connection reset by peer)]
+[04-15-2006 11:53:43] -!- tobyS [n=dotxp@hartes-php.de] has joined #ezpublish
+[04-15-2006 12:05:28] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[04-15-2006 12:06:00] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []
+[04-15-2006 12:08:27] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[04-15-2006 12:12:03] -!- DiGiTa|_ [n=guillaum@84.4.70.252] has joined #ezpublish
+[04-15-2006 12:14:29] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[04-15-2006 13:23:12] -!- DiGiTa|_ [n=guillaum@84.4.70.252] has quit []
+[04-15-2006 14:13:31] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit ["Jeppedipepp"]
+[04-15-2006 17:54:16] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]

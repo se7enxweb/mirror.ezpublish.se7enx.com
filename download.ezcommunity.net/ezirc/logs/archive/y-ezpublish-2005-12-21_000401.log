@@ -1,0 +1,424 @@
+[12-19-2005 00:07:25] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-19-2005 00:55:18] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[12-19-2005 01:54:22] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-19-2005 01:56:08] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[12-19-2005 02:00:47] -!- DiGiTa|_ [n=guillaum@84.5.139.19] has joined #ezpublish
+[12-19-2005 02:03:01] -!- DiGiTa|_ [n=guillaum@84.5.139.19] has quit [Remote closed the connection]
+[12-19-2005 02:05:06] -!- DiGiTa|_ [n=guillaum@84.5.139.19] has joined #ezpublish
+[12-19-2005 02:07:34] [#ezpublish] <kracker> anyone?
+[12-19-2005 02:08:41] [#ezpublish] <tobmaster> mon kracker
+[12-19-2005 02:08:49] [#ezpublish] <kracker> think of a automated content object translation extension? to create content transations for a user from one primary language to several other secondary transations
+[12-19-2005 02:10:28] [#ezpublish] <kracker> might be useful :? for people looking to provide content translation replication from one language to several other languges a site needs to provide but say for example they may not speak those languages or want to have people create these language translations themselves ?:\
+[12-19-2005 02:12:18] [#ezpublish] <kracker> example, the inital generation of secondary translations could be automated and once the site is released, these translations could then be pruned and edited to improve the content's translation (sentance structure, meaning) by other groups at a later time by hand as needed.
+[12-19-2005 02:12:42] [#ezpublish] <kracker> say for example where the translation is a real translation but the meaning had been mostly lost in translation ..
+[12-19-2005 02:34:27] -!- ordnas [n=ordnas@p549D4922.dip.t-dialin.net] has joined #ezpublish
+[12-19-2005 02:43:11] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[12-19-2005 02:43:30] -!- hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[12-19-2005 02:54:44] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-19-2005 02:56:20] [#ezpublish] <Katana`> hi guys
+[12-19-2005 03:10:44] [#ezpublish] <hovik> hi
+[12-19-2005 03:16:26] [#ezpublish] <Katana`> hi !
+[12-19-2005 03:23:03] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-19-2005 03:23:32] [#ezpublish] <Katana`> hi _kore
+[12-19-2005 03:34:34] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-19-2005 03:34:48] [#ezpublish] <Sulfur> 'morning everyone!
+[12-19-2005 03:35:26] [#ezpublish] <Sulfur> hovik: I suppose you're KHH, can you help me out with some stuff written on a bug report ?
+[12-19-2005 03:48:46] [#ezpublish] <Sulfur> argh ... guys, I have added a new test siteaccess to my site, but it's behaving a little strangely. it asks me to login even when its site.ini.append says require user login = false, and I cannot see it in the available siteaccesses in my admin site when building a policy . I did copy the design directory from site_user to site_user_test, and also the settings dir, keeping the var dir the same as the other 2 siteaccesses. have I forgotten some steps  ?
+[12-19-2005 03:48:55] [#ezpublish] <hovik> hi, I'm back
+[12-19-2005 03:49:14] [#ezpublish] <Katana`> is it listed in override/site.ini.append ?
+[12-19-2005 03:49:24] [#ezpublish] <Katana`> the admin probably doesn't know about it due to some missing setting
+[12-19-2005 03:50:30] [#ezpublish] <Sulfur> argh Katana`... it seems I wrote AvailableSiteAccesslist[] (note the lowercase L in list
+[12-19-2005 03:50:38] [#ezpublish] <Katana`> ah maybe :)
+[12-19-2005 03:50:50] [#ezpublish] <Sulfur> I think that could be
+[12-19-2005 03:51:05] [#ezpublish] <Sulfur> anyway I have both listed there and in HostMatchMapItems
+[12-19-2005 03:51:10] [#ezpublish] <Sulfur> let's see
+[12-19-2005 03:51:31] [#ezpublish] <Sulfur> hi hovik!
+[12-19-2005 03:52:19] [#ezpublish] <Sulfur> I think I need to understand better how cache works. I am pretty sure I found a "solution" for my cache problem, but I think I could do better if I understood what exactly any cache switch does
+[12-19-2005 03:56:19] [#ezpublish] <Sulfur> ... I thought that having viewcaching on it would , true, generate a cache for a node or better yet, an url ... but it thought it was a php file, so it would still contain logic allowing the page to behave on a set of condtions.
+[12-19-2005 03:56:59] [#ezpublish] <Sulfur> I am gettign the idea that viewcach creates a "static" file and the only difference wit hstatic caching is that the former are served through php, the latter are not
+[12-19-2005 03:57:20] [#ezpublish] <Katana`> viewcaching caches the module_result output
+[12-19-2005 03:57:26] [#ezpublish] <Katana`> but not the pagelayout
+[12-19-2005 03:57:39] [#ezpublish] <Sulfur> that meaning ... ?
+[12-19-2005 03:57:54] [#ezpublish] <Katana`> in your pagelayout, you have {$module_result.content}
+[12-19-2005 03:58:06] [#ezpublish] <Katana`> well, $module_result for that matter
+[12-19-2005 03:58:07] [#ezpublish] <Sulfur> yes
+[12-19-2005 03:58:13] [#ezpublish] <Katana`> that's the one viewcaching fills
+[12-19-2005 03:58:21] [#ezpublish] <Sulfur> ah ok
+[12-19-2005 03:58:23] [#ezpublish] <Sulfur> so:
+[12-19-2005 03:58:25] [#ezpublish] <Katana`> as far as i know :)
+[12-19-2005 03:58:47] [#ezpublish] <Katana`> so no you can't have any dynamic logic in your node view template when viewcaching is enabled
+[12-19-2005 03:58:51] [#ezpublish] <Sulfur> correct me if I am wrong TemplateCache is just an ENABLING switch for the other cache switches
+[12-19-2005 03:59:00] [#ezpublish] <Sulfur> yeah that's what I feared
+[12-19-2005 03:59:01] [#ezpublish] <Sulfur> then
+[12-19-2005 03:59:06] [#ezpublish] <Katana`> hmmm no
+[12-19-2005 03:59:11] [#ezpublish] <Katana`> it caches templates
+[12-19-2005 03:59:12] [#ezpublish] <Sulfur> no?
+[12-19-2005 03:59:42] [#ezpublish] <Sulfur> I thought it was the main switch for cache (I seem to recall that being said at eZ course ... I'll check)
+[12-19-2005 04:00:15] [#ezpublish] <Sulfur> "If you disable TemplateCache the template system will not do any caching at all. This includes cache-blocks and compiled templates."
+[12-19-2005 04:00:35] [#ezpublish] <Sulfur> this is what documentation says
+[12-19-2005 04:00:59] [#ezpublish] <Katana`> oh
+[12-19-2005 04:01:00] [#ezpublish] <Katana`> yes
+[12-19-2005 04:01:13] [#ezpublish] <Katana`> it disables every template related caching yes
+[12-19-2005 04:01:41] [#ezpublish] <Sulfur> yes ... maybe it does something more when on ... ok .... anyway, on with the switches .
+[12-19-2005 04:01:45] [#ezpublish] <Sulfur> then
+[12-19-2005 04:02:05] [#ezpublish] <Sulfur> TemplateCompile SHOULD transform a template into its corresponding PHP
+[12-19-2005 04:02:16] [#ezpublish] <Sulfur> while keeping it "dynamic"
+[12-19-2005 04:02:32] [#ezpublish] <Sulfur> am I right?
+[12-19-2005 04:03:32] [#ezpublish] <Sulfur> ... on this, we have the ViewCaching which, as Katana`said, turns something dynamic into something not dynamic (something akin to HTML it seems )
+[12-19-2005 04:04:00] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-19-2005 04:04:14] [#ezpublish] <Katana`> yep but updated when content is changed
+[12-19-2005 04:04:18] [#ezpublish] <Katana`> whoa 18 users
+[12-19-2005 04:04:42] [#ezpublish] <Sulfur> fh[eZ]: you're late as a dead raven! :)
+[12-19-2005 04:05:23] [#ezpublish] <Sulfur> ok ... so ... what is the purpose of cache-block in all this? especially when coupled with viewcaching?
+[12-19-2005 04:05:34] [#ezpublish] <Katana`> cache block is used in navigation and stuff
+[12-19-2005 04:05:39] [#ezpublish] <Katana`> e.g. page layout and includes
+[12-19-2005 04:05:44] [#ezpublish] <Katana`> and custom modules, maybe
+[12-19-2005 04:05:49] [#ezpublish] <fh[eZ]> Sulfur: pun intended I guess :)
+[12-19-2005 04:06:18] [#ezpublish] <Sulfur> fh[eZ]: of course ;)
+[12-19-2005 04:06:26] [#ezpublish] <Katana`> so you cache the moduleresult using view caching, and your navigation using cache blocks
+[12-19-2005 04:06:45] [#ezpublish] <Katana`> hi fh[eZ]
+[12-19-2005 04:08:00] [#ezpublish] <Sulfur> ok ... but this is only true when -- say -- my navigation is included into a pagelayout , while if I have links which are contextual to my full.tpl, they will get cached by viewcaching , and cache-block will not - say - discriminate based on its conditions, right?
+[12-19-2005 04:08:39] [#ezpublish] <Katana`> hum
+[12-19-2005 04:08:43] [#ezpublish] <Katana`> lemme read that again :)
+[12-19-2005 04:08:54] [#ezpublish] <Katana`> you can definitely use cache block from a node/view/full.tpl override
+[12-19-2005 04:09:08] [#ezpublish] <Sulfur> basically those questions are aimed at making me understand what modifications need I introduce into my tpls to stop a part of a template being cached
+[12-19-2005 04:09:13] [#ezpublish] <Katana`> but it would probably be useless :)
+[12-19-2005 04:09:20] [#ezpublish] <Katana`> ah
+[12-19-2005 04:10:05] [#ezpublish] <Sulfur> yes. I mean ..... let's suppose I am ViewCaching node 2. into its template I have a {cache-block (current user id} ... I suppose that viewcaching would disregard this cache-block stuff
+[12-19-2005 04:10:20] [#ezpublish] <Katana`> i don't think it would
+[12-19-2005 04:10:31] [#ezpublish] <Katana`> but why would you show the user from that node ??
+[12-19-2005 04:10:49] [#ezpublish] <Sulfur> becasue I have overridden it with a home page tpl :)
+[12-19-2005 04:11:16] [#ezpublish] <Sulfur> so I will not have ppl trying to hardlink to node 2 just because they know I use ezp
+[12-19-2005 04:11:24] [#ezpublish] <Sulfur> so
+[12-19-2005 04:11:38] [#ezpublish] <Sulfur> override full.tpl for node 2 does a lot of stuffs
+[12-19-2005 04:11:47] [#ezpublish] <Sulfur> it cycles, it fetches, it polls.
+[12-19-2005 04:11:56] [#ezpublish] <Sulfur> it cleans your house!! ;)
+[12-19-2005 04:12:10] [#ezpublish] <Sulfur> real example: http://www.ioscelgo.it
+[12-19-2005 04:12:18] [#ezpublish] <Sulfur> the homepage is the override for node 2
+[12-19-2005 04:12:29] [#ezpublish] <Sulfur> I want the poll part NOT be cached
+[12-19-2005 04:13:27] [#ezpublish] <Sulfur> ..... from what I  am gleaning here, it seems that my best option is to put the not-to-be-cached part into an auxiliary tpl and put a set cache_ttl 0 on its first line
+[12-19-2005 04:13:41] [#ezpublish] <Sulfur> this should allow the rest of HP to be cached
+[12-19-2005 04:15:33] [#ezpublish] <Sulfur> should it? :-P
+[12-19-2005 04:17:56] [#ezpublish] <Katana`> hum
+[12-19-2005 04:18:11] [#ezpublish] <Katana`> i'm not sure it has an influence on viewcaching
+[12-19-2005 04:18:14] [#ezpublish] <Katana`> i don't fully master it yet ;)
+[12-19-2005 04:19:22] [#ezpublish] <Sulfur> fh[eZ]: and hovik .... can you shed some light on this please?
+[12-19-2005 04:20:03] [#ezpublish] <Katana`> i'd appreciate too :)
+[12-19-2005 04:21:51] [#ezpublish] <hovik> is the poll part of the node/view/full.tpl override or pagelayout ?
+[12-19-2005 04:22:18] [#ezpublish] <Katana`> i'd say node/view/full.tpl since he says it's part of the override of node 2
+[12-19-2005 04:22:25] [#ezpublish] <Sulfur> node view full etc
+[12-19-2005 04:22:28] [#ezpublish] <Katana`> i don't think viewcaching can be used properly on that node then can it ?
+[12-19-2005 04:22:50] [#ezpublish] <Sulfur> I first of all would like to know what exactly viewcaching PRODUCES :D
+[12-19-2005 04:22:54] [#ezpublish] <Sulfur> an html file?
+[12-19-2005 04:23:04] [#ezpublish] <Sulfur> a php "static" file?
+[12-19-2005 04:23:10] [#ezpublish] <Katana`> grep ;)
+[12-19-2005 04:23:17] [#ezpublish] <Katana`> and you'll see
+[12-19-2005 04:23:31] [#ezpublish] <hovik> Sulfur: a static html file.
+[12-19-2005 04:23:50] [#ezpublish] <Sulfur> aw, would it hurt too much to have a couple lines more in the docs? :) I'll add them when I have it clear :)
+[12-19-2005 04:24:16] [#ezpublish] <Sulfur> aaah thanks hovik .... so; are cache-block statements which it contains ignored, I suppose ?
+[12-19-2005 04:24:59] [#ezpublish] <hovik> Sulfur: you can not use content cache on pages where you have dynamic content in the override for node/view/full.tpl. You can however set cache-ttl variable to 0, and use cache-blocks to optimize that override for  node/view/full.tpl.
+[12-19-2005 04:25:38] [#ezpublish] <Katana`> where do you set the cache-ttl variable ?
+[12-19-2005 04:26:24] [#ezpublish] <hovik> http://ez.no/products/ez_publish_cms/documentation/incoming/how_to_set_cache_expire_time_or_disable_cache_in_template
+[12-19-2005 04:26:33] [#ezpublish] <Katana`> hoho
+[12-19-2005 04:26:38] [#ezpublish] <Katana`> i'm gonna learn something today
+[12-19-2005 04:26:41] [#ezpublish] <Sulfur> yes I found that link
+[12-19-2005 04:26:58] [#ezpublish] <Katana`> that's not very english : If you want to all articles updated every 5 minutes, all folders updated every 10 minutes and no cache at all for all images, you can do like this
+[12-19-2005 04:27:59] [#ezpublish] <Katana`> i see
+[12-19-2005 04:28:01] [#ezpublish] <Katana`> useful :)
+[12-19-2005 04:28:22] [#ezpublish] <Sulfur> and last question then, hovik : there is only a small part of the homepage full.tpl override which I need not to be cached (the poll part). can I put this part in say hp_poll.tpl , set the cache_ttl *only in this file* to 0 , and then include it in my hp_full.tpl ?
+[12-19-2005 04:29:02] [#ezpublish] <Katana`> yep i think that's it
+[12-19-2005 04:29:08] [#ezpublish] <Sulfur> would doing so disable cache ONLY for that included tpl, and let the rest of hp_full.tpl be cached?
+[12-19-2005 04:29:29] [#ezpublish] <hovik> Sulfur: no. But you can encapsulate everyting else in cache-blocks ( make them as large as possible ), and leave the poll-tpl outside any cache-block.
+[12-19-2005 04:29:56] [#ezpublish] <Sulfur> yes I am getting to this ... and I am foreseeing a loooong commentary on documentation about this :) I suppose today ezlog will have a purpose ;)
+[12-19-2005 04:29:59] [#ezpublish] <Katana`> it would be useful ;)
+[12-19-2005 04:30:30] [#ezpublish] <Sulfur> hovik: but to make it work, that would mean to disable viewcaching for the entire site!
+[12-19-2005 04:30:45] [#ezpublish] <Sulfur> ... or it will be cached nonetheless.
+[12-19-2005 04:31:25] [#ezpublish] <Sulfur> and it will also mean me putting cache-block blocks directives on all of my tpls ...
+[12-19-2005 04:31:33] [#ezpublish] <hovik> no, if you set cache-ttl to 0 somewhere in the override for that page, it'll only disable content cache for that page.
+[12-19-2005 04:31:49] [#ezpublish] <Sulfur> ahhhhhhhhhhhhhhhh
+[12-19-2005 04:31:52] [#ezpublish] <Sulfur> so you say
+[12-19-2005 04:32:07] [#ezpublish] <hovik> meeting. back later.
+[12-19-2005 04:32:13] [#ezpublish] <Sulfur> put cache_ttl to 0 for my hp tpl so I disable caching for ALL hp_full.tpl
+[12-19-2005 04:32:17] [#ezpublish] <Sulfur> ok bye
+[12-19-2005 04:32:39] [#ezpublish] <Sulfur> and then reinstating caching again for all parts of it except poll ....
+[12-19-2005 04:32:46] [#ezpublish] <Sulfur> hum
+[12-19-2005 04:32:57] [#ezpublish] <Sulfur> "The Spoon Does Not Exist"
+[12-19-2005 04:33:39] [#ezpublish] <Sulfur> it might work ...
+[12-19-2005 04:34:46] [#ezpublish] <Sulfur> Katana`: another thing -- I am still not seeing my new siteaccess into the admin , and I am still having to log ..... syntax is correct ... is there anywhere else I should check which you recall?
+[12-19-2005 04:35:07] [#ezpublish] <Katana`> humm...
+[12-19-2005 04:35:19] [#ezpublish] <Katana`> not sure as of now
+[12-19-2005 04:37:33] [#ezpublish] <Sulfur> so it's only site.ini blah blah
+[12-19-2005 04:45:58] [#ezpublish] <Katana`> can i see your override/site.ini.append ? on ezpublish.pastebin.com for instance
+[12-19-2005 04:47:30] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[12-19-2005 04:47:31] [#ezpublish] <Sulfur> sure
+[12-19-2005 04:48:02] [#ezpublish] <DiGiTa|_> wow thereis an ezpublish pastebin :)
+[12-19-2005 04:48:10] [#ezpublish] <DiGiTa|_> hi all
+[12-19-2005 04:48:49] [#ezpublish] <Sulfur> http://ezpublish.pastebin.com/469928
+[12-19-2005 04:48:57] [#ezpublish] <Katana`> hey DiGiTa|_
+[12-19-2005 04:49:09] [#ezpublish] <Sulfur> yes there is ...... I don't know what that means but there is :P
+[12-19-2005 04:49:19] [#ezpublish] <Sulfur> anyway here you are Katana`
+[12-19-2005 04:50:19] [#ezpublish] <Katana`> you can use anything.pastebin.com ;)
+[12-19-2005 04:50:49] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-19-2005 04:50:58] [#ezpublish] <Katana`> so you're trying to give access to ioscelgo_user_test from ioscelgo_admin right ?
+[12-19-2005 04:51:11] [#ezpublish] <Sulfur> I wonder why they call it PRIVATE pastebin ... meh
+[12-19-2005 04:51:40] [#ezpublish] <Sulfur> no, I am trying first of all to not have the user need to login when typing testuser.ioscelgo.it
+[12-19-2005 04:52:12] [#ezpublish] <Katana`> but you can't see the siteaccess listed under roles and policies for user / login right ?
+[12-19-2005 04:52:19] [#ezpublish] <DiGiTa|_> the footer of the basic pagelayout is not an include, that's a shame
+[12-19-2005 04:52:32] [#ezpublish] <Katana`> why would it ?
+[12-19-2005 04:52:34] [#ezpublish] <Sulfur> you do it with RequireUserLogin=false . this is not working and it's strange ... so I tried to enable users via my admin, and I cannot see it, right (this second option is flawed in itself, but aw)
+[12-19-2005 04:52:38] [#ezpublish] <Katana`> it wouldn't be included from anywhere else :)
+[12-19-2005 04:52:51] [#ezpublish] <Sulfur> hi DiGiTa|_
+[12-19-2005 04:52:59] [#ezpublish] <Katana`> Sulfur: if anonymous doesn't have user / login policy for that siteaccess, it'll require login
+[12-19-2005 04:53:05] [#ezpublish] <DiGiTa|_> to be able to modify it unless modifying all the pagelayout
+[12-19-2005 04:53:23] [#ezpublish] <Katana`> yeah...
+[12-19-2005 04:53:35] [#ezpublish] <Katana`> usually you use include when you wanna use the codeblock from multiple templates
+[12-19-2005 04:53:38] [#ezpublish] <Sulfur> ok ..... so, we can restrict this to say  I cannot see that siteaccess in my admin
+[12-19-2005 04:54:02] [#ezpublish] <DiGiTa|_> well the page header is an include
+[12-19-2005 04:54:12] [#ezpublish] <Katana`> indeed :)
+[12-19-2005 04:54:26] [#ezpublish] <DiGiTa|_> h no
+[12-19-2005 04:54:28] [#ezpublish] <DiGiTa|_> ah no
+[12-19-2005 04:54:31] [#ezpublish] <DiGiTa|_> it's not
+[12-19-2005 04:54:38] [#ezpublish] <DiGiTa|_> well...
+[12-19-2005 04:54:42] [#ezpublish] <Sulfur> so now, Holmes, we are back to the initial finding (or better t osay, Un-finding )
+[12-19-2005 04:55:24] [#ezpublish] <Katana`> :)
+[12-19-2005 04:56:32] [#ezpublish] <Sulfur> .. tnd this puzzles me a lot
+[12-19-2005 04:59:52] [#ezpublish] <Sulfur> anywa, you can't find anything strange in my snippet Katana` ?
+[12-19-2005 05:00:49] [#ezpublish] <Katana`> not in that one no
+[12-19-2005 05:04:28] [#ezpublish] <Sulfur> have you ever used more than 2 siteaccesses for the same var/db ?
+[12-19-2005 05:06:22] [#ezpublish] <Katana`> yeah
+[12-19-2005 05:06:28] [#ezpublish] <Katana`> like 6 or 7 :)
+[12-19-2005 05:07:21] [#ezpublish] <Sulfur> so ... what files are needed to "do the magic" ?
+[12-19-2005 05:07:35] [#ezpublish] <Sulfur>  /override/site.ini ....
+[12-19-2005 05:07:52] [#ezpublish] <Sulfur>  /siteaccesses/mysiteaccess/site.ini ...
+[12-19-2005 05:08:18] [#ezpublish] <DiGiTa|_> .append.php
+[12-19-2005 05:08:20] [#ezpublish] <DiGiTa|_> :)
+[12-19-2005 05:08:50] [#ezpublish] <Sulfur> and that should be all
+[12-19-2005 05:09:01] [#ezpublish] <Sulfur> yes yes
+[12-19-2005 05:09:04] [#ezpublish] <DiGiTa|_> content.ini
+[12-19-2005 05:10:52] [#ezpublish] <Sulfur> that's ok , it has the new siteaccesses added ....
+[12-19-2005 05:15:40] [#ezpublish] <Katana`> i just modify site.ini as far as i'm concerned...
+[12-19-2005 05:17:55] [#ezpublish] <Sulfur> I CAN'T BELIEVE ITTTTTTTTTTTTTTTTTTTTTT
+[12-19-2005 05:18:02] [#ezpublish] <Sulfur> I found the problem
+[12-19-2005 05:18:26] [#ezpublish] <Sulfur> you cannot edit your old user / login policy for anon user
+[12-19-2005 05:18:33] [#ezpublish] <Katana`> ??
+[12-19-2005 05:18:36] [#ezpublish] <Sulfur> becasue it will always show the old siteaccesses
+[12-19-2005 05:18:37] [#ezpublish] <Katana`> really ?
+[12-19-2005 05:18:40] [#ezpublish] <Katana`> ah...
+[12-19-2005 05:18:46] [#ezpublish] <Sulfur> but if I try to build it anew from scratch
+[12-19-2005 05:18:57] [#ezpublish] <Sulfur> then it WILL show also the new site access
+[12-19-2005 05:19:17] [#ezpublish] <Sulfur> does this qualify as a bug ?
+[12-19-2005 05:20:06] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 104 (Connection reset by peer)]
+[12-19-2005 05:23:17] [#ezpublish] <Katana`> fucking embed
+[12-19-2005 05:23:34] [#ezpublish] <DiGiTa|_> lol
+[12-19-2005 05:24:11] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-19-2005 05:25:12] [#ezpublish] <Sulfur> fucking embead a dead raven
+[12-19-2005 05:25:14] [#ezpublish] <Sulfur> lol
+[12-19-2005 05:27:21] [#ezpublish] <Katana`> hummm...
+[12-19-2005 05:27:51] [#ezpublish] <Katana`> why isn't it using ezimage
+[12-19-2005 05:27:53] [#ezpublish] <Katana`> heh ?
+[12-19-2005 05:29:38] [#ezpublish] <Sulfur> hm?
+[12-19-2005 05:30:09] [#ezpublish] <Sulfur> any problems with that ? I seem to remember having struggled with embed and so on on an old project
+[12-19-2005 05:30:53] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 104 (Connection reset by peer)]
+[12-19-2005 05:32:30] [#ezpublish] <Katana`> it just shows the text when i use <embed /> on an image object...
+[12-19-2005 05:32:36] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-19-2005 05:32:44] [#ezpublish] <Katana`> i don't know if something's broken or if i'm doing it wrong
+[12-19-2005 05:32:51] [#ezpublish] <Katana`> the image appears in the admin, not in the user siteaccess
+[12-19-2005 05:35:14] [#ezpublish] <Katana`> damnit damnit damnit
+[12-19-2005 05:35:21] [#ezpublish] <DiGiTa|_> is it possible to access a siteaccess in host mode, unless using a subdomain ?
+[12-19-2005 05:35:38] [#ezpublish] <Katana`> yep
+[12-19-2005 05:35:43] [#ezpublish] <Katana`> even if it's the same thing...
+[12-19-2005 05:35:47] [#ezpublish] <Katana`> host = subdomain
+[12-19-2005 05:35:56] [#ezpublish] <Sulfur> ummm
+[12-19-2005 05:36:02] [#ezpublish] <DiGiTa|_> i need to access the admin
+[12-19-2005 05:36:25] [#ezpublish] <Sulfur> Katana`: it COULD be siteaccess/user permissions IIRC
+[12-19-2005 05:36:41] [#ezpublish] <DiGiTa|_> and i cant because the host is not created
+[12-19-2005 05:36:49] [#ezpublish] <Sulfur> anyway Katana` if you apstebin maybe I can recall something more
+[12-19-2005 05:36:53] [#ezpublish] <Sulfur> pastebin
+[12-19-2005 05:36:59] [#ezpublish] <DiGiTa|_> i tried : http://www.grande-bastide-provence.com/index/lgb_admin
+[12-19-2005 05:37:07] [#ezpublish] <Katana`> not much to paste...
+[12-19-2005 05:37:23] [#ezpublish] <Sulfur> are you using custom embed tpls ?
+[12-19-2005 05:37:42] [#ezpublish] <Sulfur> or attrivute_view_gui'ing stuff with embed?
+[12-19-2005 05:37:59] [#ezpublish] <Katana`> embed tag in ezxml
+[12-19-2005 05:38:05] [#ezpublish] <DiGiTa|_> btu i couldn't work
+[12-19-2005 05:38:09] [#ezpublish] <DiGiTa|_> it
+[12-19-2005 05:38:38] [#ezpublish] <Katana`> what couldn't work ?
+[12-19-2005 05:38:51] [#ezpublish] <Sulfur> mm
+[12-19-2005 05:38:57] [#ezpublish] <Sulfur> OE?
+[12-19-2005 05:39:01] [#ezpublish] <DiGiTa|_> i cannot access to my admin
+[12-19-2005 05:39:12] [#ezpublish] <Katana`> yes, OE
+[12-19-2005 05:39:21] [#ezpublish] <Katana`> maybe I should load the OE in my user siteaccess...
+[12-19-2005 05:39:26] [#ezpublish] <Sulfur> sorry, DiGiTa|_ ... never found in such a situation .
+[12-19-2005 05:39:38] [#ezpublish] <Sulfur> well
+[12-19-2005 05:39:51] [#ezpublish] <Sulfur> I did put it as  an extension in my override site ini
+[12-19-2005 05:40:09] [#ezpublish] <Katana`> yeah, i think that's it
+[12-19-2005 05:40:29] [#ezpublish] <Katana`> thinking about that cost my cat its life though
+[12-19-2005 05:40:31] [#ezpublish] <Katana`> rituals and stuff
+[12-19-2005 05:40:32] [#ezpublish] <Sulfur> but maybe you'll find that it's some bug like the one which showed &apos; only on IE
+[12-19-2005 05:40:43] [#ezpublish] <Sulfur> ahh poor cahouete
+[12-19-2005 05:40:47] [#ezpublish] <Katana`> :))
+[12-19-2005 05:40:54] [#ezpublish] <Katana`> you know her name ? that's cool :))
+[12-19-2005 05:40:57] [#ezpublish] <Sulfur> well
+[12-19-2005 05:41:01] [#ezpublish] <Sulfur> but cats have lots of lives
+[12-19-2005 05:41:05] [#ezpublish] <Katana`> yeah
+[12-19-2005 05:41:12] [#ezpublish] <Katana`> she'd better with me working on ezp
+[12-19-2005 05:41:38] [#ezpublish] <Sulfur> and if you end up her lives just dye her black and pretend it's a french raven ;)
+[12-19-2005 05:41:44] [#ezpublish] <Katana`> :)
+[12-19-2005 05:42:25] [#ezpublish] <Katana`> okay as far as I see it doesn't work much better ;)
+[12-19-2005 05:42:25] [#ezpublish] <Sulfur> well ... bug rep is in place .... I suppose I can merrily toy with cache now
+[12-19-2005 05:42:46] [#ezpublish] <Sulfur> is HTML spewed out right?
+[12-19-2005 05:42:53] [#ezpublish] <Sulfur> maybe it's a quoting problem?
+[12-19-2005 05:43:00] [#ezpublish] <Sulfur> and
+[12-19-2005 05:43:06] [#ezpublish] <Katana`> or maybe i'm just dumb
+[12-19-2005 05:43:15] [#ezpublish] <Sulfur> have you tried previewing the USER siteaccess from within the ADMIN ?
+[12-19-2005 05:43:16] [#ezpublish] <Katana`> no, i don't think that's it Sulfur
+[12-19-2005 05:43:23] [#ezpublish] <Katana`> won't work due to my setup ;)
+[12-19-2005 05:43:29] [#ezpublish] <Sulfur> haha
+[12-19-2005 05:43:36] [#ezpublish] <Katana`> but i could just login as an admin to my site, does the same
+[12-19-2005 05:43:42] [#ezpublish] <Sulfur> yes ..
+[12-19-2005 05:43:54] [#ezpublish] <Sulfur> at least that shoud say if it's some permission problem
+[12-19-2005 05:44:09] [#ezpublish] <Katana`> if the object shows as text it's not permissions related
+[12-19-2005 05:45:35] [#ezpublish] <Katana`> no differences with admin role
+[12-19-2005 05:46:34] [#ezpublish] <Katana`> it shows using design/admin/override/templates/embed_image.tpl in admin ...
+[12-19-2005 05:47:16] [#ezpublish] <Sulfur> could it be related to this ? http://ez.no/community/bugs/quote_in_headers_online_editor
+[12-19-2005 05:48:03] [#ezpublish] <Sulfur> I had a similar problem .... which didn't evaluate the html
+[12-19-2005 05:49:18] [#ezpublish] <Katana`> i don't think so, it remains correct when viewed from admin
+[12-19-2005 05:49:39] [#ezpublish] <Sulfur> ok
+[12-19-2005 05:49:54] [#ezpublish] <Sulfur> check difference from admin/override blah blah and your user / override ...
+[12-19-2005 05:51:40] [#ezpublish] <Katana`> well indeed the override is not here
+[12-19-2005 05:51:47] [#ezpublish] <Katana`> but why is it here on another site... i dunno :)
+[12-19-2005 05:53:18] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[12-19-2005 05:54:09] [#ezpublish] <Katana`> sob :(
+[12-19-2005 05:56:50] [#ezpublish] <Katana`> ok i was missing an override
+[12-19-2005 05:58:32] [#ezpublish] <DiGiTa|_> if i want to set a node that is in the node 2 as indexpage
+[12-19-2005 05:59:04] [#ezpublish] <DiGiTa|_> should i set it like that : IndexPage=/content/view/full/2/51/63 ?
+[12-19-2005 05:59:31] [#ezpublish] <DiGiTa|_> because if i set IndexPage=/content/view/full/63 it show the node 2
+[12-19-2005 06:03:02] [#ezpublish] <Sulfur> DiGiTa|_: IndexPage and Defaultpage
+[12-19-2005 06:03:07] [#ezpublish] <Sulfur> DefaultPage
+[12-19-2005 06:04:52] [#ezpublish] <DiGiTa|_> didn't change
+[12-19-2005 06:05:05] [#ezpublish] <DiGiTa|_> i get the content/view/full/2
+[12-19-2005 06:08:08] [#ezpublish] <Sulfur> cleared cache ? :P
+[12-19-2005 06:08:59] [#ezpublish] <DiGiTa|_> yeah of course
+[12-19-2005 06:09:29] [#ezpublish] <Sulfur> I have IndexPage=/content/view/full/2
+[12-19-2005 06:09:29] [#ezpublish] <Sulfur> DefaultPage=/content/view/full/2
+[12-19-2005 06:09:37] [#ezpublish] <Sulfur> in my override/site.ini.append.php
+[12-19-2005 06:09:49] [#ezpublish] <Sulfur> override for HP is set up?
+[12-19-2005 06:10:16] [#ezpublish] <DiGiTa|_> i have
+[12-19-2005 06:10:16] [#ezpublish] <DiGiTa|_> IndexPage=/content/view/full/61/
+[12-19-2005 06:10:16] [#ezpublish] <DiGiTa|_> DefaultPage=/content/view/full/61/
+[12-19-2005 06:10:33] [#ezpublish] <Sulfur> check if there are no conflicting settings in siteaccess site ini and overridde
+[12-19-2005 06:10:35] [#ezpublish] <DiGiTa|_> in my siteaccess settings
+[12-19-2005 06:10:45] [#ezpublish] <Sulfur> ah
+[12-19-2005 06:10:49] [#ezpublish] <DiGiTa|_> no there isn't
+[12-19-2005 06:10:52] [#ezpublish] <Sulfur> and try removing the trailing slash
+[12-19-2005 06:11:13] [#ezpublish] <DiGiTa|_> in site.ini there's a trailing slash
+[12-19-2005 06:11:24] [#ezpublish] <DiGiTa|_> IndexPage=/content/view/full/2/
+[12-19-2005 06:11:43] [#ezpublish] <DiGiTa|_> but well, i have tried with and without
+[12-19-2005 06:11:49] [#ezpublish] <DiGiTa|_> and it's the same
+[12-19-2005 06:11:58] [#ezpublish] <Sulfur> mh
+[12-19-2005 06:15:42] [#ezpublish] <DiGiTa|_> my indexpage is in node /2/59/63
+[12-19-2005 06:15:51] [#ezpublish] <DiGiTa|_> so perhaps it's a problem
+[12-19-2005 06:16:03] [#ezpublish] <DiGiTa|_> and i have a set a pathprefix
+[12-19-2005 06:19:13] [#ezpublish] <Sulfur> ... dunno :)
+[12-19-2005 06:21:18] [#ezpublish] <DiGiTa|_> well if i set a pathprefix, it didn't work
+[12-19-2005 06:25:25] [#ezpublish] <Sulfur> lunchtime guysssss
+[12-19-2005 06:25:28] [#ezpublish] <Sulfur> see yaaaaa
+[12-19-2005 06:25:34] [#ezpublish] <Sulfur>  brb
+[12-19-2005 07:03:08] -!- SEAwolfx [n=mike@tor/session/x-49e12fc1349a1f9b] has joined #ezpublish
+[12-19-2005 07:29:52] [#ezpublish] <Sulfur> back! :P
+[12-19-2005 07:43:04] Sulfur [n=mbariola@217.221.32.143] requested CTCP PING: 1134999702
+[12-19-2005 07:43:04] [notice(sulfur)] PING 1134999702
+[12-19-2005 07:43:04] (unmatched::raw505) :calvino.freenode.net 505 ezlog :Private messages from unregistered users are currently blocked due to spam problems, but you can always message a staffer. Please register! ( http://freenode.net/faq.shtml#privmsg )
+[12-19-2005 07:43:18] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[12-19-2005 07:43:39] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-19-2005 07:43:55] [#ezpublish] <Sulfur> argh damn network faultz
+[12-19-2005 07:43:56] -!- ordnas [n=ordnas@p549D4922.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-19-2005 07:43:59] -!- ordnas [n=ordnas@p549D7E36.dip.t-dialin.net] has joined #ezpublish
+[12-19-2005 07:53:59] [#ezpublish] <Sulfur> guys what are your plans for xmas and new year???
+[12-19-2005 07:54:14] [#ezpublish] <Sulfur> I'll definitely overwork my stomach with my family at xmas
+[12-19-2005 07:54:23] [#ezpublish] <Sulfur> and then will have a nice time in naples with friends
+[12-19-2005 08:04:19] -!- bOkO [i=martin@cecilias2.kansliM.lu.se] has joined #ezpublish
+[12-19-2005 08:11:39] [#ezpublish] <Katana`> i'm gonna spend xmas with my girlfriend's family
+[12-19-2005 08:11:48] [#ezpublish] <Katana`> and i don't know yet for new year
+[12-19-2005 08:24:46] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Remote closed the connection]
+[12-19-2005 08:52:37] -!- fh[eZ] [n=fh@238.80-202-59.nextgentel.com] has joined #ezpublish
+[12-19-2005 08:54:53] [#ezpublish] <Katana`> hmmmmm nice that object takes ages to publish
+[12-19-2005 08:55:00] [#ezpublish] <Katana`> it has been like 2 minutes and nothing
+[12-19-2005 08:56:13] [#ezpublish] <Katana`> ah cool :)
+[12-19-2005 08:56:14] [#ezpublish] <Katana`> Allowed memory size of 44040192 bytes exhausted
+[12-19-2005 08:56:41] [#ezpublish] <Sulfur> hehe
+[12-19-2005 08:58:15] [#ezpublish] <Katana`> i really wish I knew why that object takes so long to publish :(
+[12-19-2005 09:00:11] [#ezpublish] <Sulfur> publish world
+[12-19-2005 09:00:24] [#ezpublish] <Sulfur> eZBSD :P
+[12-19-2005 09:00:45] [#ezpublish] <Katana`> i have the same issue every time i publish the homepage or one of its children, it seems
+[12-19-2005 09:00:54] [#ezpublish] <Katana`> fatal error again :(
+[12-19-2005 09:01:01] [#ezpublish] <Katana`> this is REALLY annoying
+[12-19-2005 09:01:43] [#ezpublish] <Sulfur> yes indeed
+[12-19-2005 09:16:41] [#ezpublish] <Katana`> why why WHY ?
+[12-19-2005 09:17:05] [#ezpublish] <Katana`> sometimes things happen in the background and you really wish you knew what :)
+[12-19-2005 09:17:22] [#ezpublish] <Katana`> apache2 is eating my CPU and that's it
+[12-19-2005 09:18:25] [#ezpublish] <Katana`> and bam white page
+[12-19-2005 09:20:21] [#ezpublish] <DiGiTa|_> hop : http://ezpublish.pastebin.com/470185
+[12-19-2005 09:20:37] [#ezpublish] <DiGiTa|_> if that can help ;)
+[12-19-2005 09:21:23] [#ezpublish] <Katana`> fh[eZ], any idea maybe ?
+[12-19-2005 09:21:29] [#ezpublish] <Katana`> what could make eZ Publish crash like that ?
+[12-19-2005 09:21:45] [#ezpublish] <Katana`> i'm just publishing an object with 2 selection fields and a relation list
+[12-19-2005 09:22:03] [#ezpublish] <DiGiTa|_> how many attributes in your object ?
+[12-19-2005 09:22:05] [#ezpublish] <Katana`> i don't even have an error message...
+[12-19-2005 09:22:08] [#ezpublish] <Katana`> ...
+[12-19-2005 09:22:12] [#ezpublish] <DiGiTa|_> ah ok
+[12-19-2005 09:22:16] [#ezpublish] <Katana`> 2 selection fields + a relation list, that MAY be 3
+[12-19-2005 09:22:23] [#ezpublish] <Katana`> oh and a text field
+[12-19-2005 09:22:29] [#ezpublish] <Katana`> 4
+[12-19-2005 09:22:34] [#ezpublish] <DiGiTa|_> yeah that's not much
+[12-19-2005 09:22:44] [#ezpublish] <DiGiTa|_> custom datatype ?
+[12-19-2005 09:22:57] [#ezpublish] <Katana`> nope
+[12-19-2005 09:23:17] [#ezpublish] <Katana`> and it just does that when I link to a specific object i think...
+[12-19-2005 09:23:19] [#ezpublish] <DiGiTa|_> worflow proces s?
+[12-19-2005 09:23:27] [#ezpublish] <Katana`> yep
+[12-19-2005 09:23:36] [#ezpublish] <Sulfur> maybe a loop?
+[12-19-2005 09:23:36] [#ezpublish] <Katana`> yeah but it should not get triggered here
+[12-19-2005 09:23:50] [#ezpublish] <Katana`> i get a fucking white page how would I know ? :)
+[12-19-2005 09:23:51] [#ezpublish] <fh[eZ]> try turning on all debug output
+[12-19-2005 09:24:04] [#ezpublish] <Katana`> lemme try that
+[12-19-2005 09:24:24] [#ezpublish] <DiGiTa|_> DB fucked :)
+[12-19-2005 09:24:27] [#ezpublish] <Katana`> hmm confirmed... i have another one of these objects with 4 related objects, and it gets published in like 3 secds
+[12-19-2005 09:24:36] [#ezpublish] <Katana`> when I link to that specific object, it crashes
+[12-19-2005 09:25:37] [#ezpublish] <Katana`> hmm quick way to enable all debug fh ?
+[12-19-2005 09:25:47] [#ezpublish] <Katana`> i'm not gonna change everything in debug.ini.append ;)
+[12-19-2005 09:26:37] [#ezpublish] <kris10an> Katana`: using 4.4.1?
+[12-19-2005 09:26:42] [#ezpublish] <Katana`> nope, 4.3...
+[12-19-2005 09:26:50] [#ezpublish] <Sulfur> uh .. Katana` ... I usually keep ALL debug on , and then I only switch off the DebugOutput when I don't nned debug anymore :P
+[12-19-2005 09:26:52] [#ezpublish] <Katana`> nope, 4.3.11
+[12-19-2005 09:27:01] [#ezpublish] <Katana`> err by all I mean the 50 switches in debug.ini ;)
+[12-19-2005 09:27:16] [#ezpublish] <kris10an> k. 4.4.1 is broken... while (list  ) causes infinite loop
+[12-19-2005 09:27:19] [#ezpublish] <Katana`> with ezpublish 3.6.1 kris10an
+[12-19-2005 09:27:25] [#ezpublish] <Katana`> well that's not it i think ;)
+[12-19-2005 09:27:36] [#ezpublish] <Katana`> it just happens when i add a relation to a specific object... what's wrong damnit
+[12-19-2005 09:39:31] [#ezpublish] <Sulfur> have you tried the Windows Way? deleting the relation and remaking it? :P
+[12-19-2005 09:39:54] [#ezpublish] <Sulfur> maybe there is a circular relation ... just guessing?
+[12-19-2005 09:41:16] [#ezpublish] <Katana`> i was doing something like that
+[12-19-2005 10:04:56] -!- bOkO [i=martin@cecilias2.kansliM.lu.se] has quit ["bye"]
+[12-19-2005 11:01:49] -!- hovik [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[12-19-2005 11:04:26] -!- Katana` [n=katana@217.31.64.170] has quit []
+[12-19-2005 11:08:25] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[12-19-2005 11:32:41] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[12-19-2005 11:38:22] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[12-19-2005 11:38:25] [#ezpublish] <philG> hi all
+[12-19-2005 11:39:05] [#ezpublish] <philG> i have a simple qst, is possible to insert flash animation in a template, i have try quicly but my animation doesn't show
+[12-19-2005 11:41:18] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[12-19-2005 12:03:12] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[12-19-2005 12:19:27] -!- ordnas [n=ordnas@p549D7E36.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-19-2005 12:23:29] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-19-2005 13:13:11] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-19-2005 13:14:50] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-19-2005 13:29:08] -!- napkin [n=tan@Toronto-HSE-ppp3775810.sympatico.ca] has joined #ezpublish
+[12-19-2005 13:30:36] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[12-19-2005 13:34:32] -!- napkin [n=tan@Toronto-HSE-ppp3775810.sympatico.ca] has left #ezpublish ["Leaving"]
+[12-19-2005 15:07:14] -!- DiGiTa|_ [n=guillaum@84.5.139.19] has quit []
+[12-19-2005 15:16:29] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-19-2005 16:29:16] -!- tobyS [n=dotxp@dslb-084-061-153-030.pools.arcor-ip.net] has joined #ezpublish
+[12-19-2005 18:04:28] -!- SEAwolfx [n=mike@tor/session/x-49e12fc1349a1f9b] has quit [Remote closed the connection]
+[12-19-2005 18:05:04] -!- SEAwolfx [n=mike@tor/session/x-0861e3a2993f4908] has joined #ezpublish
+[12-19-2005 18:27:17] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 113 (No route to host)]
+[12-19-2005 22:11:44] -!- SEAwolfx_ [n=mike@tor/session/x-2f335afcdcda7e66] has joined #ezpublish
+[12-19-2005 22:34:06] -!- SEAwolfx [n=mike@tor/session/x-0861e3a2993f4908] has quit [Remote closed the connection]

@@ -1,0 +1,69 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section C.7.&nbsp; Running the Debugger</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app03lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app03lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app03lev1sec7"></a><h3 class="docSection1Title" id="409768-897">C.7. Running the Debugger</h3>
+<p class="docText">This section describes the procedure for running the Debugger.<a name="app03index45"></a><a name="app03index46"></a></p>
+<p class="docText">Zend Studio supports two debugging capabilities:</p>
+<ul><LI><p class="docText">
+<span class="docEmphStrong">Internal Debugger.</span> 
+Allows the developer to debug stand along PHP applications (requires only the Client installation).<a name="app03index47"></a></p></LI><li><p class="docText">
+<span class="docEmphStrong">Remote Debugger.</span> 
+Allows the developer to debug files using a remote web server.<a name="app03index48"></a></P></li><li><p class="docText">
+<span class="docEmphStrong">Debug URL.</span> 
+Allows you to run the debug procedure on pages currently mounted on the web site.<a name="app03index49"></a></p></li></UL>
+<p class="docText">The difference between internal and remote debugging is primarily in the initialization of the two procedures. Once the Remote Debugging session is running, the procedure is the same.</P>
+<a name="app03lev2sec7"></a><h4 class="docSection2Title">C.7.1. Internal Debugger</h4>
+<p class="docText">Use the &quot;Tip of the Day&quot; dialog box to access sample code and a short explanation on debugging:<a name="app03index50"></a><a name="app03index51"></a><a name="app03index52"></a></p>
+<a name="app03pr04"></a>
+
+
+
+
+
+
+
+
+
+
+<table border="0" class="docText"><tr><TD width="25" valign="top"><div class="docText"><b>1. </b></div></td><TD><div class="docText">Start Zend Studio Client; alternatively, select Help <span class="docEmphStrong">&gt;</span> <img border="0" alt="" id="217066145005" width="20" height="18" SRC="images/013147149X/graphics/ap03inl02.gif;380137">&quot;Tip of the Day&quot;.<br><BR></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>2. </b></div></td><td><div class="docText">From the "Tip of the Day" dialog box, click <img border="0" alt="" id="217066145005" width="100" height="31" SRC="images/013147149X/graphics/ap03inl03.gif;380137">. The file DebugDemo.php opens in the Editing window.<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>3. </b></div></td><td><div class="docText">In the Toolbar of the Zend Studio Client, click <img border="0" alt="" id="217066145005" width="20" height="28" SRC="images/013147149X/graphics/ap03inl04.gif;380137"> to start the Debugger. The <img border="0" alt="" id="217066145005" width="25" height="28" SRC="images/013147149X/graphics/ap03inl05.gif;380137"> icon appears while Zend Debug Server runs, and remains onscreen until the Debugger detects a breakpoint at Line 46.<BR><BR></div></td></tr><TR><td width="25" valign="top"><div class="docText"><b>4. </b></div></td><td><div class="docText">Click <img border="0" alt="" id="217066145005" width="20" height="18" SRC="images/013147149X/graphics/ap03inl06.gif;380137"> (Step Over) multiple times until the cursor arrives at Line 51.<br><br></div></TD></tr><TR><td width="25" valign="top"><div class="docText"><B>5. </b></div></td><td><div class="docText">Place and hold the cursor over <tt>$worker_name</tt>, <tt>$worker_address</tt>, and <span class="docEmphUl">$</span><tt>worker_phone</tt>. A ToolTip appears displaying the variable values.<br><br></div></TD></TR><tr><td width="25" valign="top"><div class="docText"><b>6. </b></div></td><TD><div class="docText">Click <img border="0" alt="" id="217066145005" width="15" height="16" SRC="images/013147149X/graphics/ap03inl07.gif;380137"> ( the Step Into button. The Debugger advances to Line 26.<br><br></div></TD></tr><TR><td width="25" valign="top"><div class="docText"><b>7. </b></div></td><td><div class="docText">In the Debug window, click the Stack tab and click the node to the right of row_color. The call stack tree expands displaying variable <tt>i</tt>.<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>8. </b></div></td><td><div class="docText">Click <img border="0" alt="" id="217066145005" width="15" height="16" SRC="images/013147149X/graphics/ap03inl08.gif;380137"> the Step Out button. The cursor arrives at Line 51.<br><br></div></td></TR><TR><td width="25" valign="top"><div class="docText"><b>9. </b></div></TD><td><div class="docText">Click <img border="0" alt="" id="217066145005" width="15" height="17" SRC="images/013147149X/graphics/ap03inl09.gif;380137"> the right arrow button). Output appears in the Output window; a Notice appears in the Debug Messages window.<br><br></div></td></tr><tr><TD width="25" valign="top"><div class="docText"><b>10. </b></div></TD><td><div class="docText">In the Debug Messages window, double-click on the Notice. The cursor jumps to Line 61 in the Editing window.<BR><br></div></td></tr><tr><TD width="25" valign="top"><div class="docText"><B>11. </b></div></td><td><div class="docText">Place the cursor in the Debug Output window, right-click and select Show in Browser from the shortcut menu. A browser window appears with the Output window contents.<a name="app03index53"></a><a name="app03index54"></a><a name="app03index55"></a><br><br></div></TD></tr></table>
+<a name="app03lev2sec8"></a><h4 class="docSection2Title">C.7.2. Remote Debugger</H4>
+<p class="docText">The <span class="docEmphStrong">Remote Debugger</span> is very similar in its features to the Internal Debugger, except the code is executed on a remote Web Server. If you want to debug a typical browser-based web application, refer to the &quot;<a class="docLink" href="#app03lev2sec9">Debug URL</a>&quot; section later in this appendix.<a name="app03index56"></a><a name="app03index57"></a><a name="app03index58"></a></p>
+<p class="docText">In order to use the Remote debugger, the Studio Client and server must be configured first.</P>
+<p class="docText">To configure a Zend Studio Server refer to the &quot;<a class="docLink" href="app03lev1sec8.html#app03lev1sec8">Configure Studio Server for Debugger and Profiling</a>&quot; section later in this appendix.</p>
+<p class="docText">To configure Studio Client:</p>
+<a name="app03pr05"></a>
+
+
+
+<table border="0" class="docText"><tr><td width="25" valign="top"><div class="docText"><b>1. </b></div></td><td><div class="docText">From the main menu, select Tools <span class="docEmphStrong">&gt;</span> Preferences. The Preferences window appears.<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>2. </b></div></td><td><div class="docText">Select the Debug tab.<BR><BR></div></td></tr><TR><td width="25" valign="top"><div class="docText"><b>3. </b></div></td><td><div class="docText">From the Debug Server Configuration area of the Debug tab, select a Debug Mode (Server/Internal).<br><br></div></TD></tr><TR><td width="25" valign="top"><div class="docText"><B>4. </b></div></td><td><div class="docText">Click OK.<br><br></div></TD></TR></table>
+<p class="docText">You can now debug the current file using the Remote Debugger.</p>
+<a name="app03note04"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">You can also enable/disable Remote Debugging from the Project Properties window. Typically, this is done at the time the project is created.<a name="app03index59"></a><a name="app03index60"></a><a name="app03index61"></a></p></div><br>
+<a name="app03lev2sec9"></a><H4 class="docSection2Title">C.7.3. Debug URL</h4>
+<p class="docText"><span class="docEmphStrong">Debug URL</span> allows you to run the debug procedure on pages currently mounted on the web site. You can initialize the debug session from the Studio Client by selecting the 'Debug URL' menu or Zend Browser Toolbar.<a name="app03index62"></a><a name="app03index63"></a><a name="app03index64"></a></p>
+<p class="docText">Zend Studio Server gives the files you are working on first priority when debugging. In order to achieve this, the Server application follows this hierarchy when it requests files:</P>
+<a name="app03pr06"></a>
+
+
+<table border="0" class="docText"><tr><TD width="25" valign="top"><div class="docText"><b>1. </b></div></td><td><div class="docText">Checks if the file called is currently open in the Zend Studio Client; if found, it uses this file.<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>2. </b></div></td><td><div class="docText">Searches for the file in the open project's path; if found, it uses this file.<br><br></div></td></tr><TR><TD width="25" valign="top"><div class="docText"><b>3. </b></div></td><TD><div class="docText">Searches for the file in the server path; if found, it uses this file.<br><br></div></td></tr></table>
+<p class="docText">Because of this hierarchy, you can often avoid uploading your latest revisions. For example, if you browse on your web site and find that one of the pages in the site is corrupted, you can initialize a debug session on that page directly from the browser with the Zend Browser toolbar. After finding and fixing the problems, you can initialize a new debug session on the same URL and use your browser to view the new result without first uploading the files that were changed.<a name="app03index65"></a><a name="app03index66"></a><a name="app03index67"></a></p>
+<ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app03lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app03lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

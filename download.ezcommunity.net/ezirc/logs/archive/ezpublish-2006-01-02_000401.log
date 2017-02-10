@@ -1,0 +1,466 @@
+[12-28-2005 00:10:31] -!- ordnas [n=ordnas@p549D6A40.dip.t-dialin.net] has joined #ezpublish
+[12-28-2005 01:45:18] -!- DiGiTa|_ [n=guillaum@84.6.35.111] has joined #ezpublish
+[12-28-2005 01:52:57] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-28-2005 01:58:17] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-28-2005 02:02:47] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-28-2005 02:08:31] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-28-2005 02:12:26] [#ezpublish] <Katana`> heya
+[12-28-2005 02:16:29] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[12-28-2005 02:31:39] [#ezpublish] <Shai_Tan> howdy kaa
+[12-28-2005 02:31:42] [#ezpublish] <Shai_Tan> Katana`:
+[12-28-2005 02:31:45] [#ezpublish] <Shai_Tan> damn kb
+[12-28-2005 02:39:04] [#ezpublish] <DiGiTa|_> hia ll
+[12-28-2005 02:41:50] [#ezpublish] <Shai_Tan> good <insert timeofday here>
+[12-28-2005 02:42:42] [#ezpublish] <Katana`> howdy shaa
+[12-28-2005 02:42:42] [#ezpublish] <Katana`> :)
+[12-28-2005 02:42:50] [#ezpublish] <Katana`> morning it is
+[12-28-2005 02:42:57] [#ezpublish] <Katana`> did you manage to run the wizard ?
+[12-28-2005 02:44:30] -!- SEAwolfx [n=mike@tor/session/x-dbad60d346790bc0] has quit [Nick collision from services.]
+[12-28-2005 02:45:20] -!- pire [n=kbot@phpugdo.de] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-28-2005 02:45:28] [#ezpublish] <Shai_Tan> Katana`:  yessir, took a little bit, had to install the db manually, but eventually made it
+[12-28-2005 02:45:52] -!- SEAwolfx2 is now known as SEAwolfx
+[12-28-2005 02:48:17] [#ezpublish] <Katana`> weird
+[12-28-2005 02:48:36] [#ezpublish] <Shai_Tan> I never liked setup wizards
+[12-28-2005 02:48:44] [#ezpublish] <Shai_Tan> or, they never liked me
+[12-28-2005 02:48:51] [#ezpublish] <Katana`> :))
+[12-28-2005 02:50:19] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[12-28-2005 03:14:43] [#ezpublish] <SEAwolfx> good morning.
+[12-28-2005 03:15:26] [#ezpublish] <buz> mhh they work perfectly for me
+[12-28-2005 03:15:36] [#ezpublish] <buz> except for the few known to be broken releases
+[12-28-2005 03:16:33] [#ezpublish] <Katana`> yeah, same here
+[12-28-2005 03:34:12] -!- hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[12-28-2005 03:34:59] [#ezpublish] <buz> Katana`: what do you think of http://triligon.org/triligon/blog/acl_datatype
+[12-28-2005 03:35:07] [#ezpublish] <Katana`> lemme read
+[12-28-2005 03:36:22] [#ezpublish] <Katana`> very nice
+[12-28-2005 03:36:54] [#ezpublish] <buz> http://triligon.org/triligon/blog/acl_datatype_base should help, too
+[12-28-2005 03:38:09] -!- thomas [n=thomas@62.134.232.253] has joined #ezpublish
+[12-28-2005 03:50:21] -!- DiGiTa|__ [n=guillaum@84.4.43.65] has joined #ezpublish
+[12-28-2005 03:55:41] -!- Katana` [n=katana@217.31.64.170] has left #ezpublish []
+[12-28-2005 03:55:55] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-28-2005 04:04:40] -!- DiGiTa|_ [n=guillaum@84.6.35.111] has quit [Read error: 110 (Connection timed out)]
+[12-28-2005 05:19:38] -!- Bedlore [n=me@ppp141-141.lns2.adl2.internode.on.net] has quit []
+[12-28-2005 05:26:34] -!- DiGiTa|__ [n=guillaum@84.4.43.65] has quit [Read error: 110 (Connection timed out)]
+[12-28-2005 05:48:17] -!- SEAwolfx_ [n=mike@tor/session/x-0ca6025eef259895] has joined #ezpublish
+[12-28-2005 05:58:00] -!- tobyS_ [n=dotxp@dslb-084-061-135-207.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[12-28-2005 05:58:01] -!- SEAwolfx [n=mike@tor/session/x-9c0c1625952b9b67] has quit [Nick collision from services.]
+[12-28-2005 05:58:05] -!- SEAwolfx_ is now known as SEAwolfx
+[12-28-2005 06:00:48] -!- thomas [n=thomas@62.134.232.253] has quit [Read error: 110 (Connection timed out)]
+[12-28-2005 06:39:31] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-28-2005 06:43:10] -!- thomas [n=thomas@62.134.233.72] has joined #ezpublish
+[12-28-2005 06:45:30] [#ezpublish] <SEAwolfx> at which place for instance the extension ezpaypal is recognized as a module by the ezsystem? There only have to be an entry in the Extensions-Array within the ini-settings and a module.php in the extension-dir to be a module?
+[12-28-2005 06:50:49] [#ezpublish] <Katana`> well ezpaypal is special
+[12-28-2005 06:50:56] [#ezpublish] <Katana`> not special but..
+[12-28-2005 06:51:12] [#ezpublish] <Katana`> it's both a workflow extension (it defines events) and a design extension
+[12-28-2005 06:51:22] [#ezpublish] <Katana`> workflow.ini.append and design.ini.append in the ext
+[12-28-2005 06:52:01] [#ezpublish] <Shai_Tan> hmm
+[12-28-2005 06:53:49] [#ezpublish] <SEAwolfx> so when i want to implement the edit action for a specific contentObject i must write into the kernel dir and register a module?
+[12-28-2005 06:54:06] [#ezpublish] <Katana`> humm... the action is already written isn't it ? :)
+[12-28-2005 06:54:13] [#ezpublish] <Katana`> what do you want to do exactly ?
+[12-28-2005 06:54:31] [#ezpublish] <Katana`> (usually, you just load a module in the siteaccess, and the ini files for the module itself define what the module provides
+[12-28-2005 06:54:32] [#ezpublish] <SEAwolfx> I dont want to touch the existing code for the edit.php action
+[12-28-2005 06:54:47] [#ezpublish] <Katana`> you should be able to add a custom action
+[12-28-2005 06:56:21] [#ezpublish] <SEAwolfx> bei altering the module.php and edit.php in kernel/content/? this means to change code of ez. therefor i would register a new module with my new functions in it?!
+[12-28-2005 06:56:50] [#ezpublish] <SEAwolfx> but how you would add a custom action then?
+[12-28-2005 06:57:25] [#ezpublish] <SEAwolfx> this would mean to alter the kernel/content/edit.php?!
+[12-28-2005 06:58:10] [#ezpublish] <Katana`> nope
+[12-28-2005 06:58:15] [#ezpublish] <Katana`> sec ;)
+[12-28-2005 06:59:29] [#ezpublish] <SEAwolfx> Katana` | >what do you want to do exactly ? I am implementing a webservice including new ezcontentClasses for contentObject with own functions, which i would implement by defining a module.
+[12-28-2005 07:00:13] [#ezpublish] <Katana`> you can add an action by using an action extension ;)
+[12-28-2005 07:00:49] [#ezpublish] * Shai_Tan reads template basics....
+[12-28-2005 07:00:59] [#ezpublish] <SEAwolfx> ah, are there web resources on this topic?
+[12-28-2005 07:01:04] [#ezpublish] <Katana`> feel free to ask questions Shai_Tan
+[12-28-2005 07:01:09] [#ezpublish] <Katana`> yeah, i do think so
+[12-28-2005 07:01:09] [#ezpublish] <Katana`> sec
+[12-28-2005 07:01:31] [#ezpublish] <Shai_Tan> Katana`:  will just rtfm and have a fiddle about, I am sure to have 209873487567 questions
+[12-28-2005 07:01:42] [#ezpublish] <SEAwolfx> hehe ;)
+[12-28-2005 07:01:44] [#ezpublish] <Shai_Tan> maybe some intelligent ones also
+[12-28-2005 07:02:07] [#ezpublish] <Katana`> damn maybe it's the only undocumented one ;)
+[12-28-2005 07:02:13] [#ezpublish] <xbit> hmm, what is the default username/password when doing a manual installation (http://ez.no/doc/ez_publish/technical_manual/3_6/installation/manual_installation/manual_configuration_of_ez_publish) ?
+[12-28-2005 07:02:20] [#ezpublish] <Katana`> the basics are here : http://ez.no/products/ez_publish_cms/documentation/development/extensions/introduction_to_extensions
+[12-28-2005 07:02:25] [#ezpublish] <Katana`> it talks about actions a bit
+[12-28-2005 07:02:39] [#ezpublish] <SEAwolfx> thank you, Katana` ;)
+[12-28-2005 07:03:20] [#ezpublish] <Katana`> basically
+[12-28-2005 07:03:26] [#ezpublish] <Katana`> content.ini.append in your ext
+[12-28-2005 07:03:29] [#ezpublish] <Katana`> [ActionSettings]
+[12-28-2005 07:03:37] [#ezpublish] <Katana`> ExtensionDirectories=yourext
+[12-28-2005 07:03:59] [#ezpublish] <Katana`> yourext/actionExtension/actions/content_actionhandler.php
+[12-28-2005 07:04:15] [#ezpublish] <Katana`> this one gets called if the requested action is not found in kernel/content/action.php
+[12-28-2005 07:04:17] [#ezpublish] <SEAwolfx> analouge to the ezpaypal extension.
+[12-28-2005 07:04:27] [#ezpublish] <Katana`> yep
+[12-28-2005 07:04:35] [#ezpublish] <SEAwolfx> ok ;)
+[12-28-2005 07:05:49] [#ezpublish] <Katana`> http://ez.no/products/ez_publish_cms/documentation/development/extensions/introduction_to_extensions
+[12-28-2005 07:05:50] [#ezpublish] <Katana`> oops
+[12-28-2005 07:05:52] [#ezpublish] <Katana`> http://ezpublish.pastebin.com/481450
+[12-28-2005 07:05:54] [#ezpublish] <SEAwolfx> but the missing link was the mentioned by you the content.ini.append
+[12-28-2005 07:05:54] [#ezpublish] <Katana`> this one
+[12-28-2005 07:07:01] [#ezpublish] * SEAwolfx is examining the content.ini.append
+[12-28-2005 07:09:11] [#ezpublish] <SEAwolfx> mhmmm .. doesnt get the role content.ini.append. i expexted to see here the relation between the contentObject-Type and the extension beeing triggered.
+[12-28-2005 07:09:53] [#ezpublish] <Katana`> hummm... no
+[12-28-2005 07:10:10] [#ezpublish] <Katana`> what content.ini.append does is just inform eZPublish that your extension defines an action handler
+[12-28-2005 07:10:16] [#ezpublish] <Katana`> you call an action using the button name
+[12-28-2005 07:10:32] [#ezpublish] <SEAwolfx> but ok, when i go the ezpaypal-way the module is triggered by .../index.php/<siteacces>/ezpaypal/edit/224
+[12-28-2005 07:10:51] [#ezpublish] <Katana`> <input name="ActionDoSomething" will automatically trigger your action
+[12-28-2005 07:11:08] [#ezpublish] <SEAwolfx> Katana` | >what content.ini.append does is just inform eZPublish that your extension defines an action  handler <- ahh ;)
+[12-28-2005 07:11:09] [#ezpublish] <Katana`> maybe there's an override for the edit template ?
+[12-28-2005 07:11:32] [#ezpublish] <Katana`> it's basically the same for every action type
+[12-28-2005 07:12:52] [#ezpublish] <SEAwolfx> ok I will have to rewrite my already written code to be an extension ;)
+[12-28-2005 07:13:02] [#ezpublish] <SEAwolfx> thank you, Katana`!
+[12-28-2005 07:13:34] [#ezpublish] <SEAwolfx> Katana`: is there another extension which is implemented this way?
+[12-28-2005 07:13:42] [#ezpublish] <Katana`> all of them ? :)
+[12-28-2005 07:13:47] [#ezpublish] <SEAwolfx> ?
+[12-28-2005 07:13:48] [#ezpublish] <Katana`> or do you mean a contrib ?
+[12-28-2005 07:13:55] [#ezpublish] <SEAwolfx> yes contribs.
+[12-28-2005 07:13:57] [#ezpublish] <Katana`> no idea
+[12-28-2005 07:14:02] [#ezpublish] <SEAwolfx> ok.
+[12-28-2005 07:14:31] [#ezpublish] <SEAwolfx> will check them out fast ;)
+[12-28-2005 07:14:38] [#ezpublish] <Katana`> i'm training for my future job ^^
+[12-28-2005 07:15:03] [#ezpublish] <SEAwolfx> how? ;)
+[12-28-2005 07:15:08] [#ezpublish] <Katana`> by helping you ^^
+[12-28-2005 07:15:53] [#ezpublish] <SEAwolfx> i am encouraging you to keep on going this way ;)
+[12-28-2005 07:16:05] [#ezpublish] <Katana`> :))
+[12-28-2005 07:16:16] [#ezpublish] <Katana`> only 3 days to go...
+[12-28-2005 07:16:58] [#ezpublish] <SEAwolfx> and then you will have a meeting with ez-peeps?
+[12-28-2005 07:17:25] [#ezpublish] <Katana`> then i will be an ez-peep :)
+[12-28-2005 07:17:25] [#ezpublish] <buz> sheesh, kristof is fast
+[12-28-2005 07:17:28] [#ezpublish] <buz> http://blog.coomanskristof.be/2005/12/28/first-version-of-the-customcheck-policy-limitation-hack/
+[12-28-2005 07:17:44] [#ezpublish] <Katana`> whoa
+[12-28-2005 07:21:39] [#ezpublish] <buz> now if we had read as well...
+[12-28-2005 07:22:26] [#ezpublish] <Katana`> ?
+[12-28-2005 07:23:49] [#ezpublish] <buz> customcheck for read, not just create/edit
+[12-28-2005 07:25:52] [#ezpublish] <Katana`> ah yes
+[12-28-2005 07:25:54] [#ezpublish] <Katana`> indeed
+[12-28-2005 07:35:39] -!- Shai_Tan [n=shai-tan@203.129.151.31] has quit [Read error: 113 (No route to host)]
+[12-28-2005 07:39:10] [#ezpublish] <Katana`> what the hell
+[12-28-2005 07:39:19] [#ezpublish] <Katana`> is the approval workflow broken or what ?
+[12-28-2005 07:41:53] [#ezpublish] <SEAwolfx> Katana` | >what content.ini.append does is just inform eZPublish that your extension defines an action handler <- but for a specific datatype. in my case i havent invented a new datatype rather a new contentObjectClass. this works as well for Classes?
+[12-28-2005 07:42:38] [#ezpublish] <Katana`> err yes, you can declare a new datatype in an extension of course
+[12-28-2005 07:43:01] [#ezpublish] <Katana`> same doc page url i gave before
+[12-28-2005 07:44:53] [#ezpublish] <SEAwolfx> .oO( isnt a class a componistion of datatypes? )
+[12-28-2005 07:45:23] [#ezpublish] <SEAwolfx> s/componistion/composition&
+[12-28-2005 07:46:09] [#ezpublish] <Katana`> it is
+[12-28-2005 07:48:40] [#ezpublish] <SEAwolfx> but as i mentioned before the myextension/modules/edit.php should be envoked when an object of a certain contentObjectClass defined by me is going to be edited. so the trigger must depent on the class the object is instantiated of.
+[12-28-2005 07:49:10] [#ezpublish] <Katana`> then you have to add an override template for content/edit/full.tpl for that specific content class
+[12-28-2005 07:49:14] [#ezpublish] <Katana`> and have it trigger your action
+[12-28-2005 07:49:43] [#ezpublish] <SEAwolfx> yaeh, this makes more sense for me now.
+[12-28-2005 07:50:28] [#ezpublish] <Katana`> you'll see, extensions make sense
+[12-28-2005 07:50:39] [#ezpublish] <Katana`> but what's your custom action supposed to do ? i'm not actually sure you need one
+[12-28-2005 07:51:52] [#ezpublish] <SEAwolfx> an custom action could be submit which actually sends a webservice message to an extern system for instance.
+[12-28-2005 07:52:22] [#ezpublish] <Katana`> and you want it triggered when you edit a contentclass that uses your custom datatype ?
+[12-28-2005 07:53:23] [#ezpublish] <SEAwolfx> now when the submit/button is pressed in the view_full.tpl for my certain contentObject
+[12-28-2005 07:53:40] [#ezpublish] <SEAwolfx> s/now/no, /
+[12-28-2005 07:55:38] -!- SEAwolfx_ [n=mike@tor/session/x-2d716acd0deffa75] has joined #ezpublish
+[12-28-2005 07:57:13] [#ezpublish] <SEAwolfx_> have i missed an answer? if so plz repeat.
+[12-28-2005 07:57:29] [#ezpublish] * SEAwolfx_ lost his connection.
+[12-28-2005 08:35:41] [#ezpublish] <Katana`> has any of you used the approval workflow ?
+[12-28-2005 08:37:23] -!- SEAwolfx_ [n=mike@tor/session/x-2d716acd0deffa75] has quit [Remote closed the connection]
+[12-28-2005 08:46:18] [#ezpublish] <Katana`> nice, the approval workflow uses a browse mode called SelectSingleUser and it doesn't exist :)
+[12-28-2005 08:46:40] -!- SEAwolfx_ [n=mike@tor/session/x-e0e4f321b68249ae] has joined #ezpublish
+[12-28-2005 08:47:33] [#ezpublish] <thomas> As far as I know you can only assign a group.
+[12-28-2005 08:48:01] [#ezpublish] <Katana`> for this workflow event you have to select users AND groups
+[12-28-2005 08:48:09] [#ezpublish] <Katana`> actually just users for that specific var
+[12-28-2005 08:48:39] [#ezpublish] <Katana`> i'm a little surprised a built-in workflow doesn't work :)
+[12-28-2005 08:48:39] [#ezpublish] <thomas> Sorry I think I'm wrong - I recognized while sending.
+[12-28-2005 08:48:51] [#ezpublish] <Katana`> you get an error when you click add user...
+[12-28-2005 08:49:00] [#ezpublish] <Katana`> and it prevents the event from working of course
+[12-28-2005 09:05:45] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[12-28-2005 09:07:25] [#ezpublish] <xiglet> I have set up webdav, and I can see all the folders but now able to create folders or upload images. The doc doesn't say anything about permission in ezpublish, but is this still the issue you think?
+[12-28-2005 09:16:39] [#ezpublish] <SEAwolfx_> hmm, permissions are implemnted with in the webdav-module
+[12-28-2005 09:17:03] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-28-2005 09:18:01] [#ezpublish] <SEAwolfx_> the webdav-protocol itself doeas support permissions therefor it has to be implemented explicitely.
+[12-28-2005 09:18:15] [#ezpublish] <SEAwolfx_> s/doeas/doesnt/
+[12-28-2005 09:18:24] [#ezpublish] <xiglet> ok
+[12-28-2005 09:18:41] [#ezpublish] <SEAwolfx_> @xiglet
+[12-28-2005 09:19:34] [#ezpublish] <xiglet> first if have to figure out the apache2 settings right
+[12-28-2005 09:21:39] [#ezpublish] <SEAwolfx_> yes
+[12-28-2005 09:22:40] [#ezpublish] <xiglet> i thought i got them, but the problem may be there somewhere :) .. God, I'm glad i choosed eZ and throwed plone out the window
+[12-28-2005 09:23:28] [#ezpublish] <SEAwolfx_> oops, why plone thrown out the window?
+[12-28-2005 09:23:41] [#ezpublish] <buz> plone is EVIL
+[12-28-2005 09:23:56] [#ezpublish] <Katana`> :))
+[12-28-2005 09:24:03] [#ezpublish] <buz> if ez is a 500pound gorilla then plone is a 10ton elephant
+[12-28-2005 09:24:14] [#ezpublish] <Katana`> 10 ton elephant
+[12-28-2005 09:24:22] [#ezpublish] <Katana`> they made a movie about plone lately
+[12-28-2005 09:24:26] [#ezpublish] <Katana`> fortunately it died at the end
+[12-28-2005 09:24:31] [#ezpublish] <xiglet> :) If I wanted to customize plone the way I wanted I had to spend a lot of time learning python. In eZ I belive I can do the same just by learning eZp and the template system
+[12-28-2005 09:24:35] [#ezpublish] <SEAwolfx_> btw, imho you dont need a apche with dav support as the ezsource reimplemnts the protocol.
+[12-28-2005 09:24:43] [#ezpublish] <Katana`> yep exactly
+[12-28-2005 09:24:56] [#ezpublish] <Katana`> eZ focuses on not requiring external apache / php modules
+[12-28-2005 09:25:07] [#ezpublish] <buz> which is both boon and bane
+[12-28-2005 09:25:12] [#ezpublish] <SEAwolfx_> yes.
+[12-28-2005 09:25:21] [#ezpublish] <buz> sometimes external modules would likely be faster
+[12-28-2005 09:25:24] [#ezpublish] <SEAwolfx_> python rules;)
+[12-28-2005 09:25:25] [#ezpublish] <Katana`> yeah
+[12-28-2005 09:25:34] [#ezpublish] <buz> python is a nice language
+[12-28-2005 09:25:37] [#ezpublish] <buz> but zope is a piece of shit
+[12-28-2005 09:25:40] [#ezpublish] <Katana`> but they limit adoption :(
+[12-28-2005 09:25:49] [#ezpublish] <xiglet> you mean it's enough to put webdav.localhost in /etc/hosts, fix webdav.ini in site.ini override and clear cache?
+[12-28-2005 09:25:55] [#ezpublish] <SEAwolfx_> hehe, never touched plone.
+[12-28-2005 09:25:58] [#ezpublish] <Katana`> yeah
+[12-28-2005 09:26:04] [#ezpublish] <SEAwolfx_> but how about using only zope?
+[12-28-2005 09:26:05] [#ezpublish] <buz> xiglet: you need some modrewrite trickery, too
+[12-28-2005 09:26:13] [#ezpublish] <buz> zope itself is worthless
+[12-28-2005 09:26:17] [#ezpublish] <Katana`> yeah
+[12-28-2005 09:26:20] [#ezpublish] <Katana`> as usually
+[12-28-2005 09:26:32] [#ezpublish] <buz> plone is of marginal use if you have shitloads of time
+[12-28-2005 09:26:48] [#ezpublish] <buz> or some crazy customer who insists on not using php, yeah whatever
+[12-28-2005 09:27:03] [#ezpublish] <SEAwolfx_> heeh, i would like to examine the contentObject-model of zope to campare it to ez.
+[12-28-2005 09:27:18] [#ezpublish] <buz> zope is a complete database
+[12-28-2005 09:27:33] [#ezpublish] <buz> it's kind of like the emacs of the cms world
+[12-28-2005 09:27:36] [#ezpublish] <buz> it does everything, somehow
+[12-28-2005 09:28:08] [#ezpublish] <SEAwolfx_> well, this is what is called objectoriented database.
+[12-28-2005 09:28:27] [#ezpublish] <buz> i call it useless
+[12-28-2005 09:28:41] [#ezpublish] <buz> it's so slow that people invariably end up caching the heck out of it or moving to RDBMS backend
+[12-28-2005 09:29:47] [#ezpublish] <SEAwolfx_> at the end all date are stored relational but the layer above could give the oo-features.
+[12-28-2005 09:30:06] [#ezpublish] <SEAwolfx_> s/date/pieces of data/
+[12-28-2005 09:30:17] [#ezpublish] <buz> not sure if that's how ZODB really works
+[12-28-2005 09:30:29] [#ezpublish] <buz> it seems like an arbitrary datastore to me
+[12-28-2005 09:30:50] [#ezpublish] <buz> the concept is neat, but i shiver when i remember using that incarnation of it
+[12-28-2005 09:31:24] [#ezpublish] <SEAwolfx_> hmm, or the data is stored in a structured way like in a XML-DB
+[12-28-2005 09:31:26] [#ezpublish] <buz> and to top it off, a bug in some obscure, hardly used script can crash the whole server whereas in php you'll only get fatal error for requests to that codepath
+[12-28-2005 09:32:15] [#ezpublish] <SEAwolfx_> hmm ... so Zope runs top on a application server, i doubt this.
+[12-28-2005 09:32:24] [#ezpublish] <buz> i've seen it happen many many times
+[12-28-2005 09:32:42] [#ezpublish] <buz> something would crash, and the application server would just sit there spewing out errors to all further request
+[12-28-2005 09:33:14] [#ezpublish] <SEAwolfx_> what kind of application server this is?
+[12-28-2005 09:33:28] [#ezpublish] <buz> zope IS the application server
+[12-28-2005 09:33:35] [#ezpublish] <SEAwolfx_> the python_module for apache?
+[12-28-2005 09:33:46] [#ezpublish] <buz> no thats just the interpreter for parts of it
+[12-28-2005 09:34:04] [#ezpublish] <buz> unless you consider mod_php as app server too
+[12-28-2005 09:34:18] [#ezpublish] <SEAwolfx_> and this runs above the python_module with apache.
+[12-28-2005 09:34:18] [#ezpublish] <SEAwolfx_> ok
+[12-28-2005 09:34:25] [#ezpublish] <SEAwolfx_> no, i wouldnt.
+[12-28-2005 09:34:30] [#ezpublish] <SEAwolfx_> ;)
+[12-28-2005 09:34:34] [#ezpublish] <buz> yeah neither would i ;)
+[12-28-2005 09:34:40] [#ezpublish] <buz> tomcat maybe
+[12-28-2005 09:34:43] [#ezpublish] <buz> jboss definitely
+[12-28-2005 09:35:19] [#ezpublish] <SEAwolfx_> for this it would lacks on functionality application server usaually have.
+[12-28-2005 09:36:25] [#ezpublish] <SEAwolfx_> but for the difference between tomcat and zope is that zope doesnt includes a webserver.
+[12-28-2005 09:36:32] [#ezpublish] <buz> actually it does
+[12-28-2005 09:36:49] [#ezpublish] <buz> it's just not recommended that you use it it's so awfully slow
+[12-28-2005 09:36:54] [#ezpublish] <SEAwolfx_> it does, so the python_module for apache isnt required?!
+[12-28-2005 09:37:05] [#ezpublish] <buz> you can do totally without apache
+[12-28-2005 09:37:33] [#ezpublish] <SEAwolfx_> ah, ok. ;)
+[12-28-2005 09:38:13] [#ezpublish] <SEAwolfx_> this clears things up for me.
+[12-28-2005 09:39:51] [#ezpublish] * SEAwolfx_ is going into the kitchen for dinner.
+[12-28-2005 09:42:49] [#ezpublish] <xiglet> I guess this is an apache question, but I would appreciate if someone could answer this. I read about "Setting up webdav" at ez.no. I enabled webdav with webdav.ini, cleared cache, added webdav.localhost.localdomain in /etc/hosts, configured apache2 (debian) as explained in step5 in the doc (created this entry in the file /etc/apache2/sites-available and created a symlink to sites-enabled, restarted apache2). Konqueror says webdav://webdav.local
+[12-28-2005 09:43:45] [#ezpublish] <xiglet> If I change from Virtualhost * to Virtualhost 127.0.0.1 in the apache2 file, webdav kind of works but all access to the site asks for webdav authentication
+[12-28-2005 09:45:00] [#ezpublish] <SEAwolfx_> re
+[12-28-2005 09:46:15] [#ezpublish] <SEAwolfx_> xiglet: if you have no dav-module enabled within apache this is the output of the ezwebdav module.
+[12-28-2005 09:47:44] [#ezpublish] <SEAwolfx_> access to the site asks for webdav authentication <- this is normal behavior when you are navigating into folders requireing the appropriate permissions.
+[12-28-2005 09:49:14] [#ezpublish] <SEAwolfx_> .oO( where is the question? )
+[12-28-2005 09:57:03] [#ezpublish] <xiglet> ok.. some food now and i'll look into it
+[12-28-2005 10:00:06] [#ezpublish] <buz> now wheres the champagne http://www.triligon.org/blog/end_of_an_era
+[12-28-2005 10:00:50] [#ezpublish] <Katana`> more eZ Publish for you then ? :)
+[12-28-2005 10:00:59] [#ezpublish] <buz> perhaps
+[12-28-2005 10:01:22] [#ezpublish] <buz> but first i need to dive into the venture capital scene
+[12-28-2005 10:01:46] [#ezpublish] <buz> i have plans for what would surely be the, by orders of magnitudes, biggest ez site
+[12-28-2005 10:01:47] [#ezpublish] <Katana`> :)
+[12-28-2005 10:01:55] [#ezpublish] <Katana`> hehehe cool :))
+[12-28-2005 10:02:21] [#ezpublish] <Katana`> beware, when waterproof.fr has been ported to eZ, you'll have a competitor ;)
+[12-28-2005 10:02:50] [#ezpublish] <buz> biggest includes much bigger than ez.no ;)
+[12-28-2005 10:03:39] [#ezpublish] <Katana`> like cnn ? :)
+[12-28-2005 10:04:28] [#ezpublish] <buz> think livejournal
+[12-28-2005 10:04:32] [#ezpublish] <Katana`> ah yes
+[12-28-2005 10:04:55] [#ezpublish] <buz> not sure if ez could cope with that, anyway
+[12-28-2005 10:08:19] -!- _thomas [n=thomas@62.134.233.72] has joined #ezpublish
+[12-28-2005 10:09:29] -!- _thomas [n=thomas@62.134.233.72] has left #ezpublish ["Konversation terminated!"]
+[12-28-2005 10:18:46] -!- kore_ [n=lordhong@217.194.224.41] has quit []
+[12-28-2005 10:23:15] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-28-2005 10:30:15] [#ezpublish] <xbit> when will planetezpublish.org be up again?
+[12-28-2005 10:35:19] [#ezpublish] <xbit> or...up :o
+[12-28-2005 10:40:06] [#ezpublish] <Katana`> :)
+[12-28-2005 10:40:16] [#ezpublish] <Katana`> buz, sure, with the correct hosting platform
+[12-28-2005 10:40:53] [#ezpublish] <xiglet> ezpub.co.uk did not survive eighter :(
+[12-28-2005 10:41:03] [#ezpublish] <Katana`> :(
+[12-28-2005 10:45:31] [#ezpublish] <xiglet> I have webdav up and working on another server here, but I haven't done anything speicial to enable webdav support in apache
+[12-28-2005 10:46:02] [#ezpublish] <SEAwolfx_> as I already said no apache web-dav support required.
+[12-28-2005 10:46:03] [#ezpublish] <xiglet> (what was really for SEAwolfx from a question some time ago :) )
+[12-28-2005 10:46:08] [#ezpublish] <xiglet> oh
+[12-28-2005 10:46:31] [#ezpublish] <buz> Katana`: yeah but does ez scale to 10mio objects?
+[12-28-2005 10:46:39] [#ezpublish] <Katana`> i'd say no :)
+[12-28-2005 10:46:40] [#ezpublish] <buz> even creation of 100000 takes hours
+[12-28-2005 10:46:58] [#ezpublish] <SEAwolfx_> [16:25:19]<SEAwolfx_>btw, imho you dont need a apche with dav support as the ezsource reimplemnts the protocol.
+[12-28-2005 10:47:08] [#ezpublish] <xiglet> ah :) by bad
+[12-28-2005 10:47:13] [#ezpublish] <buz> as long as the app scales sanely (i.e. linearly) i can always throw more hardware at it
+[12-28-2005 10:47:18] [#ezpublish] <SEAwolfx_> np ;)
+[12-28-2005 10:47:28] [#ezpublish] <Katana`> you'd have to check that with eZ
+[12-28-2005 10:47:38] [#ezpublish] <buz> i rather check myself
+[12-28-2005 10:47:43] [#ezpublish] <Katana`> :)
+[12-28-2005 10:47:50] [#ezpublish] <xiglet> I have about 10.000 mp3 files, my plan was to import id3 tags from all files into ezp objects (when I get better at this) ). Bad idea?
+[12-28-2005 10:47:58] [#ezpublish] <buz> i'd venture to guess ez doesnt really know either
+[12-28-2005 10:48:05] [#ezpublish] <Katana`> 10.000 is not huge
+[12-28-2005 10:48:07] [#ezpublish] <buz> xiglet: 100K objects works quite well
+[12-28-2005 10:48:11] [#ezpublish] <Katana`> well they'd probably have some insight
+[12-28-2005 10:48:12] [#ezpublish] <buz> just takes a while to get them in the db
+[12-28-2005 10:48:19] [#ezpublish] <xiglet> ok
+[12-28-2005 10:48:27] [#ezpublish] <buz> well 100K is no problem
+[12-28-2005 10:48:36] [#ezpublish] <buz> but 10 or 100times that might be one
+[12-28-2005 10:48:46] [#ezpublish] <Katana`> yep
+[12-28-2005 10:48:56] [#ezpublish] <xbit> is there a id3-importer? or do you plan to write that functionality yourself, xiglet ?
+[12-28-2005 10:49:08] -!- ordnas [n=ordnas@p549D6A40.dip.t-dialin.net] has left #ezpublish []
+[12-28-2005 10:49:13] [#ezpublish] <buz> and if it scales even slightly worse than linear you're bound to run into trouble eventually
+[12-28-2005 10:49:20] [#ezpublish] <SEAwolfx_> for ezp 2.0 i have made such a module ;)
+[12-28-2005 10:49:37] [#ezpublish] <xiglet> I haven't heard of anyone ... I guess I have to write something on my own, but i'm not nearly good enough
+[12-28-2005 10:49:45] [#ezpublish] <xbit> fancy SEAwolfx_ :)
+[12-28-2005 10:49:52] [#ezpublish] <buz> yeah you gotta write one yourself
+[12-28-2005 10:49:58] [#ezpublish] <Katana`> eZ Publish Network is for up to 250 000 objects
+[12-28-2005 10:50:06] [#ezpublish] <buz> point
+[12-28-2005 10:50:12] [#ezpublish] <xbit> there's some id3-php-classes so shouldn't be to hard
+[12-28-2005 10:50:26] [#ezpublish] <Katana`> yeah
+[12-28-2005 10:50:28] [#ezpublish] <SEAwolfx_> hehe, i based on a already implemented id3-tag-php-lib, nothing more.
+[12-28-2005 10:50:28] [#ezpublish] <xbit> but pretty slow i can imagine
+[12-28-2005 10:50:33] [#ezpublish] <Katana`> you can contact eZ for more though
+[12-28-2005 10:50:37] [#ezpublish] <SEAwolfx_> enough, imho ;)
+[12-28-2005 10:50:39] [#ezpublish] <buz> otoh, the limit could be pretty arbitrary
+[12-28-2005 10:50:53] [#ezpublish] <buz> for any halfway  normal site, 250K is more than enough
+[12-28-2005 10:50:55] [#ezpublish] <Katana`> i think there's indeed a limit in the algorithm used by the treenode system
+[12-28-2005 10:51:07] [#ezpublish] <xiglet> let me know when you have this id3-import-function ready folks ;-)
+[12-28-2005 10:51:15] [#ezpublish] <buz> yeah treenode is my main worry
+[12-28-2005 10:51:17] [#ezpublish] <Katana`> write it and make a contrib ;)
+[12-28-2005 10:51:18] [#ezpublish] <SEAwolfx_> lolz ;)
+[12-28-2005 10:51:32] [#ezpublish] <Katana`> it's not funny
+[12-28-2005 10:51:36] [#ezpublish] <Katana`> ;)
+[12-28-2005 10:51:38] [#ezpublish] <buz> its OSS
+[12-28-2005 10:51:41] [#ezpublish] <buz> do it yourself ;)
+[12-28-2005 10:51:44] [#ezpublish] <buz> use the source, luke
+[12-28-2005 10:51:58] [#ezpublish] <SEAwolfx_> ;)
+[12-28-2005 10:51:59] [#ezpublish] <xiglet> If I ever manage to make a function like that i'll sure give it away
+[12-28-2005 10:52:13] [#ezpublish] <buz> god damn dell bastards. their gorgeos 20" lcd costs 40% less in the us
+[12-28-2005 10:52:21] [#ezpublish] <xiglet> to bad i'm spending 99% of my time with windows servers ... yeah, it's my job
+[12-28-2005 10:52:26] [#ezpublish] <Katana`> it's not that hard xiglet
+[12-28-2005 10:52:34] [#ezpublish] <Katana`> have a look at somewhat similar contributions
+[12-28-2005 10:52:35] [#ezpublish] <xiglet> for you, it's not
+[12-28-2005 10:52:38] [#ezpublish] <Katana`> images import or something
+[12-28-2005 10:52:40] [#ezpublish] <Katana`> no i'm serious
+[12-28-2005 10:52:48] [#ezpublish] <buz> na it's not really that hard
+[12-28-2005 10:52:49] [#ezpublish] <Katana`> it'd really be a nice contrib
+[12-28-2005 10:53:13] [#ezpublish] <buz> plus points if it works on a wlan pd
+[12-28-2005 10:53:14] [#ezpublish] <buz> a
+[12-28-2005 10:53:16] [#ezpublish] <Katana`> hmm too bad the metadata extraction mechanism is just for images
+[12-28-2005 10:53:20] [#ezpublish] <Katana`> :))
+[12-28-2005 10:53:29] [#ezpublish] <xiglet> no idea how it's done .. First I have to learn the template system well.. I'm looking forward to the new book ez systems are working on
+[12-28-2005 10:53:36] [#ezpublish] <buz> http://pear.php.net/package/MP3_ID
+[12-28-2005 10:53:40] [#ezpublish] <xiglet> And I have to learn PHP I guess
+[12-28-2005 10:53:53] [#ezpublish] <Katana`> ah
+[12-28-2005 10:53:53] [#ezpublish] <Katana`> :)
+[12-28-2005 10:53:57] [#ezpublish] <xbit> hehe
+[12-28-2005 10:53:58] [#ezpublish] <buz> actually learning php would be more imporatnt than the template sytem for that job
+[12-28-2005 10:54:21] [#ezpublish] <xbit> i just need to double the number of hours in a day, and i could do it
+[12-28-2005 10:54:22] [#ezpublish] <xbit> :)
+[12-28-2005 10:54:35] [#ezpublish] <SEAwolfx_> the problem is rather how to get the webdav working to display these id3 attributes in the browser ;)
+[12-28-2005 10:54:44] [#ezpublish] <Katana`> ah yes
+[12-28-2005 10:54:50] [#ezpublish] <xiglet> I coded some stuff in turbo pascal 6 in the old days :)
+[12-28-2005 10:54:52] [#ezpublish] <Katana`> i have never found any doc about that...
+[12-28-2005 10:54:54] [#ezpublish] <SEAwolfx_> hihi
+[12-28-2005 10:55:05] [#ezpublish] <SEAwolfx_> Katana`: me either.
+[12-28-2005 10:55:12] [#ezpublish] <SEAwolfx_> +n
+[12-28-2005 10:55:15] [#ezpublish] <buz> i dont think that could work
+[12-28-2005 10:55:32] [#ezpublish] <buz> i dont think webdav has provisions to carry arbirtrary meta data
+[12-28-2005 10:55:55] [#ezpublish] <SEAwolfx_> its also a problem of the webdav-client.
+[12-28-2005 10:56:02] [#ezpublish] <buz> yeah exactly
+[12-28-2005 10:56:24] [#ezpublish] <SEAwolfx_> ;) explorer != konqueror
+[12-28-2005 10:56:41] [#ezpublish] <xiglet> http://webdav.localhost.localdomain/nvp/ works, but not with webdav://webdav.lo............... (
+[12-28-2005 10:56:46] [#ezpublish] <buz> konqueror >> $filemanager
+[12-28-2005 10:57:04] [#ezpublish] <SEAwolfx_> concerning webdav-support
+[12-28-2005 10:57:30] [#ezpublish] <xiglet> konqueror 3.5 ... yummy
+[12-28-2005 10:57:38] [#ezpublish] <SEAwolfx_> xiglet: this depends what client u are using.
+[12-28-2005 10:57:44] [#ezpublish] * buz is drooling over kde4
+[12-28-2005 10:57:48] [#ezpublish] <SEAwolfx_> hmm.
+[12-28-2005 10:58:17] [#ezpublish] <xiglet> no, there is something with my apache2 support .. going crazy here :'(
+[12-28-2005 10:58:30] [#ezpublish] <SEAwolfx_> xiglet: maybe u have to compile konqueror with webdav support?1
+[12-28-2005 10:59:17] [#ezpublish] <xiglet> no, it worked some time ago with this client .. I just don't know what I'm doing wrong with apache2
+[12-28-2005 10:59:38] [#ezpublish] <xiglet> I have a guy at jabber here, he could probably help me
+[12-28-2005 10:59:57] [#ezpublish] <SEAwolfx_> btw .. try cadaver;)
+[12-28-2005 11:00:57] [#ezpublish] <SEAwolfx_> its also a neat webdav-client for console.
+[12-28-2005 11:01:09] [#ezpublish] <xiglet> yeah, read about it now
+[12-28-2005 11:02:09] [#ezpublish] <xiglet> connection refused, somethink bad with my apache2 config
+[12-28-2005 11:02:54] [#ezpublish] <SEAwolfx_> hm?!?!?
+[12-28-2005 11:03:40] [#ezpublish] <xiglet> did some hacking on my apache2 virtualhost ... webdav works now (but nothing else, must take a look at that later)
+[12-28-2005 11:04:42] [#ezpublish] <SEAwolfx_> using webdav://webd.. the client have to interpret what protocol should be used for connection
+[12-28-2005 11:04:44] [#ezpublish] <xiglet> tried to upload a picture, but it created a "new folder" ... *lol*
+[12-28-2005 11:05:01] [#ezpublish] <xiglet> (with konqueror that is)
+[12-28-2005 11:05:08] [#ezpublish] <buz> actually i think OSX uses http:// for webdav
+[12-28-2005 11:05:14] [#ezpublish] <buz> yeah
+[12-28-2005 11:05:21] [#ezpublish] <buz> konqi doesnt quite work right with webdav in 3.6
+[12-28-2005 11:05:24] [#ezpublish] <buz> dunno why
+[12-28-2005 11:05:56] [#ezpublish] <xiglet> I belive this is 3.7
+[12-28-2005 11:06:03] [#ezpublish] <buz> not sure about that one
+[12-28-2005 11:06:20] [#ezpublish] <buz> ezwebdav  seems to have a somewhat weird interpretation of that spec
+[12-28-2005 11:07:46] [#ezpublish] <buz> http://ez.no/community/contribs/datatypes/regular_expression_textline that is neat
+[12-28-2005 11:08:31] [#ezpublish] <SEAwolfx_> ;)
+[12-28-2005 11:09:06] -!- _xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[12-28-2005 11:09:08] [#ezpublish] <SEAwolfx_> xiglet: imho the cadaver-client has the most webdav support in comparison the the other ones.
+[12-28-2005 11:09:14] [#ezpublish] <SEAwolfx_> xiglet: imho the cadaver-client has the most webdav support in comparison the the other ones.
+[12-28-2005 11:09:28] [#ezpublish] <_xiglet> ok
+[12-28-2005 11:09:48] -!- _xiglet is now known as xigle7
+[12-28-2005 11:09:54] [#ezpublish] <SEAwolfx_> for what a regEx datatype?
+[12-28-2005 11:10:23] [#ezpublish] <SEAwolfx_> for this would make sense of an additional attribute used for an element of a form.
+[12-28-2005 11:10:41] [#ezpublish] <SEAwolfx_> s/for/for me/
+[12-28-2005 11:10:59] [#ezpublish] <buz> i'd venture to guess that's the idea?
+[12-28-2005 11:11:03] [#ezpublish] <xigle7> you don't work for ez systems do you SEAwolfx?
+[12-28-2005 11:11:22] [#ezpublish] <SEAwolfx_> lol, no;)
+[12-28-2005 11:13:58] [#ezpublish] <SEAwolfx_> but here are others doing this.
+[12-28-2005 11:14:30] [#ezpublish] <xigle7> I wonder if there are any plans to make the same integration with word as they have with openoffice writer
+[12-28-2005 11:15:04] [#ezpublish] <buz> i doubt it
+[12-28-2005 11:15:07] [#ezpublish] <xigle7> after all, all of my customers are using msoffice
+[12-28-2005 11:15:17] [#ezpublish] <buz> i dont think its feasible
+[12-28-2005 11:15:26] [#ezpublish] <buz> doc is FUBAR
+[12-28-2005 11:15:36] [#ezpublish] <xigle7> maybe when they open up their format, the XML-think in the new version
+[12-28-2005 11:15:48] [#ezpublish] <buz> that xml looks totally insane
+[12-28-2005 11:15:50] [#ezpublish] <xigle7> s/think/thing
+[12-28-2005 11:16:04] [#ezpublish] <buz> i dont think anyone can parse that
+[12-28-2005 11:16:18] [#ezpublish] <xigle7> that bad?
+[12-28-2005 11:16:42] [#ezpublish] <xigle7> I guess it is to make it compatible backwards or something
+[12-28-2005 11:17:17] [#ezpublish] <buz> http://www.groklaw.net/article.php?story=20051125144611543
+[12-28-2005 11:17:33] [#ezpublish] <SEAwolfx_> when it is deterministic it is parseable ;)
+[12-28-2005 11:17:50] [#ezpublish] <buz> not even word itself can always parse its output
+[12-28-2005 11:18:09] [#ezpublish] <buz> will they force Katana` to use linux in ez france?
+[12-28-2005 11:18:10] [#ezpublish] <SEAwolfx_> hihi
+[12-28-2005 11:18:34] [#ezpublish] * SEAwolfx_ hopes so ;)
+[12-28-2005 11:18:50] [#ezpublish] <SEAwolfx_> who is eager to force K to use linux?
+[12-28-2005 11:19:21] [#ezpublish] <buz> watch out not to follow the stinking foot
+[12-28-2005 11:19:21] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-28-2005 11:19:22] [#ezpublish] <buz> it's evil
+[12-28-2005 11:20:27] [#ezpublish] * SEAwolfx_ dreams of docbook or TEI
+[12-28-2005 11:22:49] [#ezpublish] <SEAwolfx_> but to parse for instance a complex xml-structure like ms xml or docbook it shouldnt be that hard to abstract it to a less complex format.
+[12-28-2005 11:23:05] [#ezpublish] <SEAwolfx_> the other way is horror.
+[12-28-2005 11:27:18] [#ezpublish] <xigle7> the only reason I have to use webdav is to upload .jpg files. Is it necesarry to define mimeclassmap ?
+[12-28-2005 11:27:37] [#ezpublish] <buz> i think images are handled that way by default
+[12-28-2005 11:27:39] [#ezpublish] <buz> but i could be wrong
+[12-28-2005 11:28:05] [#ezpublish] <SEAwolfx_> no thats eight i would say, its handled by default.
+[12-28-2005 11:28:20] [#ezpublish] <SEAwolfx_> s/eight/right/
+[12-28-2005 11:31:20] [#ezpublish] <xigle7> When I create a folder under "Content" with konqueror I get "An unexpected erorr" ...I'll try the cli-client
+[12-28-2005 11:33:50] [#ezpublish] <SEAwolfx_> u could take a look on the webdav.log
+[12-28-2005 11:34:18] [#ezpublish] <SEAwolfx_> @xigle7
+[12-28-2005 11:42:24] [#ezpublish] <xigle7> Actually, I don't have that file
+[12-28-2005 11:47:37] [#ezpublish] <SEAwolfx_> ./var/log/webdav.log or ./var/plain/log/webdav.log ?
+[12-28-2005 11:47:48] [#ezpublish] <SEAwolfx_> @xigle7
+[12-28-2005 11:47:57] [#ezpublish] <xigle7> nope
+[12-28-2005 11:48:28] [#ezpublish] <xigle7> updatedb && locate webdav.log - nothing
+[12-28-2005 11:59:11] [#ezpublish] <SEAwolfx_> sorry for the long delay for answers.
+[12-28-2005 11:59:20] [#ezpublish] <SEAwolfx_> currently writing some code.
+[12-28-2005 11:59:58] [#ezpublish] <SEAwolfx_> you have to set the Loggin variables inside the webdav.ini to 'enabled'
+[12-28-2005 12:00:08] [#ezpublish] <SEAwolfx_> @xigle7
+[12-28-2005 12:00:36] [#ezpublish] <SEAwolfx_> s/variables/variable/
+[12-28-2005 12:03:06] -!- kore_ [n=lordhong@essn-d9bd48c9.pool.mediaWays.net] has joined #ezpublish
+[12-28-2005 12:08:41] [#ezpublish] <xigle7> how do you know this? I can't see it in the documentation at ez.no/doc
+[12-28-2005 12:23:22] [#ezpublish] <SEAwolfx_> xigle7: this simply belongs to the general settings for the webdav inside the webdav.ini
+[12-28-2005 12:23:50] [#ezpublish] <xigle7> I had to create it from scratch
+[12-28-2005 12:24:12] [#ezpublish] <SEAwolfx_> btw, there are more topics not documented on ez.no
+[12-28-2005 12:24:13] [#ezpublish] <SEAwolfx_> ;)
+[12-28-2005 12:29:03] [#ezpublish] <xigle7> tell me about it
+[12-28-2005 12:29:21] [#ezpublish] <xigle7> probably a way to force developers to join their courses ;-)
+[12-28-2005 12:44:15] [#ezpublish] <SEAwolfx_> ah, well. for instance how to add own actions to the content module, as Katana today explained me.
+[12-28-2005 12:45:05] [#ezpublish] <xigle7> :) "tell me about it" ... didn't really ment that you had to "tell me about it" .. :)
+[12-28-2005 12:45:09] [#ezpublish] <SEAwolfx_> search in the forums, this is q quite good repository of solutions and tips.
+[12-28-2005 12:45:18] [#ezpublish] <SEAwolfx_> s/q/q/
+[12-28-2005 12:45:23] [#ezpublish] <SEAwolfx_> doh
+[12-28-2005 12:45:26] [#ezpublish] <SEAwolfx_> s/q/a/
+[12-28-2005 12:45:27] [#ezpublish] <xigle7> :)
+[12-28-2005 12:45:33] [#ezpublish] <SEAwolfx_> ;)
+[12-28-2005 13:29:09] -!- tobmaster [n=tobmaste@dslb-084-061-033-055.pools.arcor-ip.net] has joined #ezpublish
+[12-28-2005 13:39:11] -!- tobmaster [n=tobmaste@dslb-084-061-033-055.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[12-28-2005 13:55:48] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-28-2005 13:55:56] -!- xigle7 [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[12-28-2005 15:04:17] -!- thomas [n=thomas@62.134.233.72] has left #ezpublish ["Konversation terminated!"]
+[12-28-2005 15:39:18] -!- Shai_tan [n=shai-tan@203.129.152.103] has joined #ezpublish
+[12-28-2005 15:39:46] -!- Shai_tan [n=shai-tan@203.129.152.103] has left #ezpublish ["Leaving"]
+[12-28-2005 15:39:59] -!- Shai_tan [n=shai-tan@203.129.152.103] has joined #ezpublish

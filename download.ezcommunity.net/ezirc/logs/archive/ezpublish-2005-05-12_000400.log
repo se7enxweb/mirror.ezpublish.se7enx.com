@@ -1,0 +1,185 @@
+[05-11-2005 00:16:05] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-11-2005 01:31:01] -!- jota_ [~jota@fanzine.igalia.com] has joined #ezpublish
+[05-11-2005 02:03:04] -!- ordna1 [~ordnas@p549DF8DE.dip.t-dialin.net] has joined #ezpublish
+[05-11-2005 02:07:57] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-11-2005 03:45:56] [#ezpublish] <danmiru> hello everyone
+[05-11-2005 03:45:57] -!- fh [~fh@stalker.ez.no] has quit [Read error: 104 (Connection reset by peer)]
+[05-11-2005 03:51:24] -!- ordna1 [~ordnas@p549DF8DE.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 04:00:40] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-11-2005 04:49:55] -!- ordna1 [~ordnas@p549DF8DE.dip.t-dialin.net] has joined #ezpublish
+[05-11-2005 04:58:35] -!- SEAwolfx [~mike@DSL01.212.114.236.2.NEFkom.net] has joined #ezpublish
+[05-11-2005 06:22:36] -!- awormus [~aaron@p54B10A54.dip0.t-ipconnect.de] has joined #ezpublish
+[05-11-2005 06:32:43] -!- jota_ [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[05-11-2005 06:56:51] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-11-2005 07:22:25] [#ezpublish] <kracker> now then ...
+[05-11-2005 07:28:47] -!- awormus [~aaron@p54B10A54.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 07:32:21] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[05-11-2005 07:32:33] [#ezpublish] <lucasr> hia ll
+[05-11-2005 07:33:47] [#ezpublish] <lucasr> one question: how do i fetch any child object from another object of a certain class? I mean a recursive search
+[05-11-2005 07:34:03] [#ezpublish] <lucasr> I have here a folder that have subfolders
+[05-11-2005 07:34:12] [#ezpublish] <lucasr> this subfolders have link objects
+[05-11-2005 07:34:37] [#ezpublish] <lucasr> I want to make to fetch all links that have a atribute value x
+[05-11-2005 07:34:56] [#ezpublish] <lucasr> any docs about it? i didn't find a example of this...
+[05-11-2005 07:45:51] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 07:48:29] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-11-2005 07:48:32] [#ezpublish] <kracker> haha, now, i said too much
+[05-11-2005 08:46:06] [#ezpublish] <kracker> luke!
+[05-11-2005 08:47:17] [#ezpublish] <kracker> i have a list of things that are bugging me about inconsistenes in the ez.no templates, inconsistances mostly. Is it even worth documenting these / submiting these to 'who' for review / repair?
+[05-11-2005 08:48:35] [#ezpublish] <kracker> Call me lazy I kinda don't life filling bug reports / enhancements if they are not ...
+[05-11-2005 08:56:49] [#ezpublish] <fh> kracker: send it to me
+[05-11-2005 08:57:14] [#ezpublish] <fh> I have a huge 4.0 document that is all about anoyances and inconsistencies
+[05-11-2005 09:02:03] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-11-2005 09:05:34] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-11-2005 09:39:45] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-11-2005 09:40:50] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-11-2005 09:45:13] -!- ordna1 [~ordnas@p549DF8DE.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 10:03:32] -!- fh [~fh@stalker.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[05-11-2005 10:05:33] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit ["Fui embora"]
+[05-11-2005 10:09:37] -!- ordnas [~ordnas@p549DD732.dip.t-dialin.net] has joined #ezpublish
+[05-11-2005 10:11:13] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-11-2005 10:18:26] -!- Bedlore [~me@ppp232-41.lns3.adl2.internode.on.net] has joined #ezpublish
+[05-11-2005 10:20:27] [#ezpublish] <Bedlore> sexy http://www.ratemynetworkdiagram.com
+[05-11-2005 10:42:07] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-11-2005 11:04:06] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-11-2005 11:17:01] -!- ordnas [~ordnas@p549DD732.dip.t-dialin.net] has left #ezpublish []
+[05-11-2005 11:22:35] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[05-11-2005 11:35:01] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 13:02:20] [#ezpublish] <SEAwolfx> lol ... ;)
+[05-11-2005 13:03:54] [#ezpublish] <SEAwolfx> hello, btw.
+[05-11-2005 13:04:18] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-11-2005 13:05:20] [#ezpublish] <kracker> without the text input var, the swf file says exactly what i knew it would ...
+[05-11-2005 13:08:50] [#ezpublish] <SEAwolfx> hi kracker.
+[05-11-2005 13:09:02] [#ezpublish] <SEAwolfx> still relaxed?
+[05-11-2005 13:18:16] [#ezpublish] <SEAwolfx> it seems so ..
+[05-11-2005 13:26:47] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 13:53:23] -!- fh [~fh@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-11-2005 14:09:00] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 14:29:23] -!- ordnas [~ordnas@p549DD732.dip.t-dialin.net] has joined #ezpublish
+[05-11-2005 14:44:17] -!- ordnas [~ordnas@p549DD732.dip.t-dialin.net] has left #ezpublish []
+[05-11-2005 14:53:40] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-11-2005 14:54:47] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-11-2005 15:05:38] -!- kracker [~kracker@24.0.43.159] has joined #ezpublish
+[05-11-2005 15:07:07] [#ezpublish] <kracker> E:\mp3-new\Hip Hop\sage_francis-sick_of_waiting_tables-ftd\01-sage_francis-iceland_radio_intro_-_vital_signs-ftd.mp3
+[05-11-2005 15:07:19] [#ezpublish] <kracker> FH: thank you for the invite
+[05-11-2005 15:07:31] [#ezpublish] <fh> invite?
+[05-11-2005 15:07:59] [#ezpublish] <kracker> i thought i might clarify (since i took the time to write up the document), i was talking out loud this morning about real bugs / inconsistenccies in the forum templates.
+[05-11-2005 15:08:17] [#ezpublish] <kracker> which i feel need to be addressed, which are different from people just bitching about the forums (in general)
+[05-11-2005 15:08:34] [#ezpublish] <kracker> tho, in honesty i tacked a little of that on at the very bottom
+[05-11-2005 15:09:38] [#ezpublish] <kracker> i got the impresssion from you that you thought i was talking about eZ publish 4.0 forum (source code) when i was really talking specificly about ez.no's forum templates which have all these little inconsistense between each view / template
+[05-11-2005 15:09:57] [#ezpublish] <kracker> i got disconnected before i saw your original responce
+[05-11-2005 15:11:49] [#ezpublish] <kracker> i guess what i was really trying to find out is if you understood my clearly
+[05-11-2005 15:12:03] [#ezpublish] <kracker> and if i should still send that document to you or another ...
+[05-11-2005 15:15:11] [#ezpublish] <kracker> i guess i wasn't clear enough earlier this morning ... for that I apologize
+[05-11-2005 15:15:38] [#ezpublish] <kracker> darn irc, kicks me so infrequently it is really hard to have a complete conversation
+[05-11-2005 15:24:54] [#ezpublish] <SEAwolfx> kracker: hmm ... what is the reason for frequent disconnect?
+[05-11-2005 15:25:22] [#ezpublish] <fh> ah, ok
+[05-11-2005 15:25:24] [#ezpublish] <SEAwolfx> isp or irc-server?
+[05-11-2005 15:25:27] [#ezpublish] <fh> yes, then i misunderstood
+[05-11-2005 15:25:47] [#ezpublish] <fh> I thought you were talking about eZ publish standard templates
+[05-11-2005 15:26:01] [#ezpublish] <fh> if you are talking about ez.no templates you should send your suggestions to ole (oh@ez.no)
+[05-11-2005 15:26:10] [#ezpublish] <fh> say hi from me :)
+[05-11-2005 15:42:27] -!- kracker [~kracker@24.0.43.159] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 15:45:18] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-11-2005 15:45:59] [#ezpublish] <kracker> grrr, seawolf, i don't know but if any one does this is killing me
+[05-11-2005 15:46:01] [#ezpublish] <kracker> inside
+[05-11-2005 15:46:45] [#ezpublish] <kracker> peace by piece like humor from the wall
+[05-11-2005 15:46:45] [#ezpublish] <SEAwolfx> kracker: hehe ... do u use linux or windows?
+[05-11-2005 15:46:53] [#ezpublish] <kracker> grrr, win
+[05-11-2005 15:47:02] [#ezpublish] <kracker> just recently
+[05-11-2005 15:47:32] [#ezpublish] <SEAwolfx> doh.
+[05-11-2005 15:47:46] [#ezpublish] <kracker> i have to get off windows so the fsf / gnu montra (duo) in my head will let me sleep well at night
+[05-11-2005 15:47:56] [#ezpublish] <SEAwolfx> hm, u have to figure out if the isp is responsible for that crap.
+[05-11-2005 15:48:17] [#ezpublish] <kracker> comcast cable ? very possible
+[05-11-2005 15:48:26] [#ezpublish] <SEAwolfx> yeah, just leave window behind you and never look back ;)
+[05-11-2005 15:48:31] [#ezpublish] <kracker> i'll find out later this month on my next business trip
+[05-11-2005 15:49:01] [#ezpublish] <kracker> it's just hard when you support windows clients (prt time) ... to cut it out at first ..
+[05-11-2005 15:49:12] [#ezpublish] <kracker> FH: thank and i will ..
+[05-11-2005 15:49:15] [#ezpublish] <kracker> FH: thanks and i will .
+[05-11-2005 15:50:12] [#ezpublish] <fh> good :)
+[05-11-2005 15:50:19] [#ezpublish] <kracker> tho honestly, i see lots of people get disconnected (timouts) like me so ... perhapse it could be the irc network (freenode does it more for me than anyother network)
+[05-11-2005 15:50:34] [#ezpublish] <kracker> FH: why does ez systems host #ezpublish with freenode?
+[05-11-2005 15:50:53] [#ezpublish] <kracker> or better yet, who hosts #ezpublish (who set it up ?)
+[05-11-2005 15:52:03] [#ezpublish] <fh> freenode is the old openprojects network (for open source projects)
+[05-11-2005 15:52:16] [#ezpublish] <fh> so we just used that a few years back
+[05-11-2005 15:52:18] [#ezpublish] <fh> and it stuck
+[05-11-2005 15:52:24] [#ezpublish] <fh> even if the network name changed
+[05-11-2005 15:53:08] [#ezpublish] <kracker> right... i'll have to write that up in my snippets
+[05-11-2005 15:53:10] [#ezpublish] <kracker> thnx
+[05-11-2005 15:53:32] [#ezpublish] <SEAwolfx> well ... have not so many connections like kracker.
+[05-11-2005 15:53:42] [#ezpublish] <SEAwolfx> +prblems
+[05-11-2005 15:53:42] [#ezpublish] <kracker> is it wrong to question the quality of the hosting? i mean in all fairness it could be my own damb fault but ...
+[05-11-2005 15:54:09] [#ezpublish] <SEAwolfx> just define a unique freenode server to connect to.
+[05-11-2005 15:55:51] [#ezpublish] <kracker> oh? sry i don't follow?
+[05-11-2005 15:56:14] [#ezpublish] <SEAwolfx> hmm .. it depends how u connect to the freenode network.
+[05-11-2005 15:56:19] [#ezpublish] <kracker> nods
+[05-11-2005 15:56:26] [#ezpublish] <kracker> mind if i ask how you do so?
+[05-11-2005 15:56:30] [#ezpublish] <SEAwolfx> what irc-client u are using?
+[05-11-2005 15:56:42] [#ezpublish] <kracker> special port, special dns name, (mIrc)
+[05-11-2005 15:56:45] [#ezpublish] <SEAwolfx> i use irssi to connect.
+[05-11-2005 15:57:12] [#ezpublish] <SEAwolfx> irc.eu.freenode.com port 6667 could be used.
+[05-11-2005 15:57:21] [#ezpublish] <kracker> nods
+[05-11-2005 15:57:26] [#ezpublish] <kracker> i'll give it a shot
+[05-11-2005 15:57:40] [#ezpublish] <kracker> hell, i'll give anything a shot at this point in time
+[05-11-2005 15:58:22] [#ezpublish] <SEAwolfx> i could define a separate network, like krackers_freenode and add the mentionend server to it.
+[05-11-2005 15:58:51] [#ezpublish] <kracker> oh? hey wait a sec? you admin some of freenode?
+[05-11-2005 15:59:58] [#ezpublish] <kracker> hmm, ok, interest, cool. i don't want you to go to that much effort (just yet) just for me. let me test this out and get back to you ...
+[05-11-2005 16:01:38] [#ezpublish] <SEAwolfx> k
+[05-11-2005 16:01:56] [#ezpublish] <SEAwolfx> no, i dont admin anything for freenode.
+[05-11-2005 16:03:33] [#ezpublish] <kracker> ok, my curiousity is peaked, who is : SEAwolfx ?
+[05-11-2005 16:04:04] [#ezpublish] <SEAwolfx> oops .. what u want to know about me? ;D
+[05-11-2005 16:04:26] [#ezpublish] <SEAwolfx> one of my hobbies is to produce music ;) heheh
+[05-11-2005 16:04:51] [#ezpublish] <kracker> oh yeah? perhapse i should get you to spin beats for me ;)
+[05-11-2005 16:05:43] [#ezpublish] <kracker> spoken word poetry is the future...
+[05-11-2005 16:05:55] [#ezpublish] <kracker> or was that the past comeback to haunt the future
+[05-11-2005 16:06:12] [#ezpublish] <kracker> back in the day to be a poet you had to be dead, these days ...
+[05-11-2005 16:06:30] [#ezpublish] <kracker> na, it's cool, i don't mind
+[05-11-2005 16:10:35] [#ezpublish] <kracker> silence ..
+[05-11-2005 16:10:39] [#ezpublish] <SEAwolfx> you do some raps you own?
+[05-11-2005 16:10:50] [#ezpublish] <SEAwolfx> plz use "SEAwolf:"
+[05-11-2005 16:11:02] [#ezpublish] <SEAwolfx> than a sound notifies me! ;)
+[05-11-2005 16:11:51] [#ezpublish] <kracker> SEAwolf: like this?
+[05-11-2005 16:13:08] [#ezpublish] <SEAwolfx> yeah, indeed ;)
+[05-11-2005 16:13:41] [#ezpublish] <SEAwolfx> a click sound is triggered with this.
+[05-11-2005 16:13:54] [#ezpublish] <kracker> SEAwolf: i used to write, it's been a while, these days i just say shh to a beat and i think it's beter tha anything i used to write.
+[05-11-2005 16:13:59] -!- fh [~fh@238.80-202-59.nextgentel.com] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[05-11-2005 16:14:44] [#ezpublish] <SEAwolfx> kracker: u have a ready to hear track with your lyrics?
+[05-11-2005 16:15:24] [#ezpublish] <kracker> SEAwolfx: usualy overwelming / confusing shh that is really cryptic. na not just now (burried in data yeah)
+[05-11-2005 16:15:49] [#ezpublish] <kracker> SEAwolfx: i'll throw one down just as soon as i get my next production release / migration completed
+[05-11-2005 16:16:03] [#ezpublish] <kracker> SEAwolfx: then i'll hit you up ...
+[05-11-2005 16:16:30] [#ezpublish] <SEAwolfx> kracker: ok ;)
+[05-11-2005 16:16:54] [#ezpublish] <kracker> SEAwolfx: then you can send it to bedlore and see what kind of ### sh*t he can turn it into (the: .au mixup ... revisited)
+[05-11-2005 16:17:48] [#ezpublish] <SEAwolfx> i do the some studio work by my own also.
+[05-11-2005 16:18:08] [#ezpublish] <SEAwolfx> but would be funny to setup an #ezpublish music project. hehe
+[05-11-2005 16:18:50] [#ezpublish] <SEAwolfx> picking up some uptodate bug requests surrounded with sounds. :D
+[05-11-2005 16:19:05] [#ezpublish] <SEAwolfx> kracker: ;)
+[05-11-2005 16:19:46] [#ezpublish] <kracker> that's jsut about as close as an example as i can give of my style these days, pulling push pins out of my forhead, making life worse for the kid in me .. i'm cold ..
+[05-11-2005 16:19:59] [#ezpublish] <kracker> word, i was doing that 2 weeks ago
+[05-11-2005 16:20:44] [#ezpublish] <kracker> talking about eZ publish issues durring the day as i worked, a slashdot radio kinda thing for eZ publish
+[05-11-2005 16:20:57] [#ezpublish] <kracker> http://www.google.com/search?hl=en&q=geeks+in+space+%2C+mp3&btnG=Google+Search
+[05-11-2005 16:21:21] [#ezpublish] <kracker> http://radio.slashdot.org/index.pl?section=radio
+[05-11-2005 16:29:47] [#ezpublish] <kracker> SEAWolf: a brief informal talk about eZ publish ever once and a while
+[05-11-2005 16:34:27] [#ezpublish] <kracker> SEAWolf: the primary public mirror of "Geeks in Space, Slashdot Radio" http://audio.textfiles.com/shows/geeksinspace/
+[05-11-2005 16:48:15] [#ezpublish] <SEAwolfx> ok ... i will check this out later, i have to go now, sorry.
+[05-11-2005 16:48:36] [#ezpublish] <SEAwolfx> friend is calling for me to setup vservers ;)
+[05-11-2005 16:49:40] [#ezpublish] <SEAwolfx> kracker:
+[05-11-2005 16:54:31] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[05-11-2005 17:05:48] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 17:38:32] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-11-2005 17:38:40] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Client Quit]
+[05-11-2005 17:38:43] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-11-2005 17:39:41] [#ezpublish] <kracker> well, here it goes ... testing 321
+[05-11-2005 17:59:26] [#ezpublish] <xbit> you can do it kracker
+[05-11-2005 17:59:33] [#ezpublish] <xbit> i believe in you!
+[05-11-2005 18:17:48] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 18:38:29] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-11-2005 18:38:35] [#ezpublish] <kracker> grrr, it didn't work
+[05-11-2005 18:38:53] [#ezpublish] <kracker> oh well
+[05-11-2005 19:02:18] -!- SEAwolfx [~mike@DSL01.212.114.236.2.NEFkom.net] has quit [Read error: 60 (Operation timed out)]
+[05-11-2005 19:09:09] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-11-2005 19:29:14] -!- SEAwolfx [~mike@DSL01.212.114.237.105.NEFkom.net] has joined #ezpublish
+[05-11-2005 20:04:24] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-11-2005 21:03:02] [#ezpublish] * kracker slaps kracker around a bit with a large trout
+[05-11-2005 22:37:29] [#ezpublish] * agentbob giggles in a fit of uncontrollable mirth
+[05-11-2005 22:45:56] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-11-2005 22:55:55] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-11-2005 23:03:10] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish

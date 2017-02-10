@@ -1,0 +1,101 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 5.7.&nbsp; Sessions</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch05lev1sec7"></a><h3 class="docSection1Title">5.7. Sessions</h3>
+<p class="docText">A <span class="docEmphStrong">PHP session</span> allows an application to store information for the current &quot;session,&quot; which can be defined as one user being logged in to your application. A session is identified by a unique session ID. PHP creates a session ID that is an MD5 hash of the remote IP address, the current time, and some extra randomness represented in a hexadecimal string. This session ID can be passed in a cookie or added to all URLs to navigate your application. For security reasons, it's better to force the user to have cookies enabled than to pass the session ID on the URL (which normally can be done manually by adding <tt>?PHP_SESSID=&lt;session_id&gt;</tt>, or by turning on <tt>session.use_trans_sid</tt> in <tt>php.ini</tt>) where it might end up in web server's logs as a <tt>HTTP_REFERER</tt> or be found by some evil person monitoring your traffic. That evil person can still see the session cookie data, of course, so you might want to use an SSL-enabled server to be really safe. But, to continue discussing sessions, we're going to rewrite the previous cookie example using sessions. We create a file called <tt>session.inc</tt> that sets some session values, as shown in the following example, and include this file at the beginning of any script that is part of the session:<a name="ch05index170"></a><a name="ch05index171"></a></p>
+<pre>
+&lt;?php
+    ini_set('session.use_cookies', 1);
+    ini_set('session.use_only_cookies', 1);
+    session_start();
+?&gt;
+</pre><br>
+<p class="docText">On the first line, the configuration parameter <tt>'session.use_cookies'</tt> is set to <tt>1</tt>, which means that cookies will be used for propagation of the session ID. On the second line, <tt>'session.use_only_cookies'</tt> is set to <tt>1</tt>, which means that a session ID passed in the URL to the script will be discarded. The second setting requires that users have cookies enabled to use sessions. If you cannot rely on people having cookies enabled, you can either remove this line, or you can change the value to <tt>0</tt>, which ensures that there is no global setting for this configuration parameter in <tt>php.ini</tt> or another place.<a name="ch05index172"></a><a name="ch05index173"></a></p>
+<a name="ch05note01"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">You can configure the place where PHP will store session files with the <tt>session.save_path</tt> configuration setting.</p></div><BR>
+<p class="docText">The <tt>session_start()</tt> function must come after any session-related settings are done with <tt>ini_set()</tt>. <tt>Session_start()</tt> initializes the session module, setting some headers (such as the session ID cookie and some caching-prevention headers), requiring its placement before any output has been sent to the browser. If no session ID is available at the time, <tt>session_start()</tt> is called, a new session ID is created, and the session is initialized with an empty <tt>$_SESSION</tt> array. Adding elements to the <tt>$_SESSION</tt> array is easy, as shown in the following example. This modified version of our login page shows the changed lines in bold:<a name="ch05index174"></a><a name="ch05index175"></a></p>
+<pre>
+&lt;?php
+     <span class="docEmphStrong">include 'session.inc';</span>
+
+     function check_auth() { return 4; }
+?&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Login&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+     if (isset ($_POST['login']) &amp;&amp; ($_POST['login'] == 'Log in') &amp;&amp;
+         ($uid = check_auth($_POST['email'], $_POST['password'])))
+     {
+         /* User successfully logged in, setting cookie */
+         <span class="docEmphStrong">$_SESSION['uid'] = $uid;</span>
+         header('Location: http://kossu/session/index.php');
+     } else {
+?&gt;
+/* HTML form comes here */
+&lt;?php
+    }
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><BR>
+<a name="ch05note02"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">You can call <tt>session_name('NAME')</tt> before calling <tt>session_start()</tt> in your script to change the default <tt>PHP_SESSID</tt> name of the session ID cookie.</p></div><br>
+<p class="docText">We first include our <tt>session.inc</tt> file. Adding the session variable <tt>'uid'</tt> to the session is done easily by setting the <tt>uid</tt> element of the <tt>$_SESSION</tt> superglobal to the value of <tt>$uid</tt>. Unsetting a session variable can be done with <tt>unset($_SESSION['uid'])</tt>.<a name="ch05index176"></a><a name="ch05index177"></a></p>
+<a name="ch05note03"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">If you need to process a lot of data after modifying your session variables, you might want to call <tt>session_write_close()</tt>, which is normally done automatically at the end of the script. This writes the session file to disk and unlocks the file from the operating system so that other scripts may use the session file. (You will notice that pages in a frame set might load serially if they use frames because the session file is locked by PHP.)<a name="ch05index178"></a><a name="ch05index179"></a></P></div><br>
+<a name="ch05note04"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">The locking described here will <span class="docEmphasis">not always</span> work on NFS, so scripts in a frame set might still get the old non-updated session data. Avoid using NFS to store session files.</p></div><br>
+<p class="docText">Logging out is the same as destroying the session and its associated data, as we see in the logout script:</P>
+<pre>
+&lt;?php
+     session_start();
+     $_SESSION = array();
+     session_destroy();
+     header('Location: http://kossu/session/login.php');
+?&gt;
+</pre><br>
+<p class="docText">We still need to initialize the session with <tt>session_start()</tt>, after which we can clear the session by setting the <tt>$_SESSION</tt> superglobal to an empty array. Then, we destroy the session and its associated data by calling <tt>session_destroy()</tt>.</p>
+<p class="docText">Session variables are accessed from the <tt>$_SESSION</tt> superglobal. Each element contains a session variable, using the session-variable name as key. In our <tt>index.php</tt> script, we moved the <tt>if</tt> statement that checks whether a user is logged in to a special function that we place in the <tt>session.inc</tt> file:<a name="ch05index180"></a><a name="ch05index181"></a><a name="ch05index182"></a><a name="ch05index183"></a></P>
+<pre>
+function check_login() {
+    if (!isset ($_SESSION['uid']) || !$_SESSION['uid']) {
+        /* If no UID is in the cookie, we redirect to the login page */
+        header('Location: http://kossu/session/login.php');
+    }
+}
+</pre><br>
+<p class="docText">In this function, we check whether the <tt>'uid'</tt> session variable exists and whether the value of the <tt>'uid'</tt> session variable is not <tt>0</tt>. If one of the checks fail, we redirect users to the login page; otherwise, we do nothing and let the calling script handle it from there. We call the <tt>check_login()</tt> function on every page where we require a user to be logged in. We need to make sure the <tt>session.inc</tt> file is included before any output is produced because it may need to send headers to the browser. Here is a snippet from the modified <tt>index.php</tt> script:<a name="ch05index184"></a><a name="ch05index185"></a></P>
+<pre>
+&lt;?php
+     include 'session.inc';
+
+     check_login();
+?&gt;
+&lt;html&gt;
+&lt;!-- rest of HTML follows here --&gt;
+</pre><br>
+<p class="docText">Using sessions can be as simple as what's shown here. Or, you can tweak some more parameters. Check out the <tt>php.ini-dist</tt> file that accompanies the PHP distributions.<a name="ch05index186"></a><a name="ch05index187"></a></p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

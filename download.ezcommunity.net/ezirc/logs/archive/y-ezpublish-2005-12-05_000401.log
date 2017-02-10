@@ -1,0 +1,47 @@
+[12-03-2005 02:08:38] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-03-2005 02:58:58] -!- DiGiTa|_ [n=guillaum@84.4.125.6] has joined #ezpublish
+[12-03-2005 04:01:02] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[12-03-2005 04:02:30] -!- DiGiTa|_ [n=guillaum@84.4.125.6] has quit []
+[12-03-2005 04:38:30] [#ezpublish] <buz> is there any way to achieve persistent cookies in ez sites? so i dont have to login again and again?
+[12-03-2005 04:38:56] [#ezpublish] <buz> wenn ich keine apps offen hab, geht kubuntu auch nicht viel länger
+[12-03-2005 04:39:01] [#ezpublish] <buz> ooooops wrong channel
+[12-03-2005 05:23:08] [#ezpublish] <ls[eZ]> buz
+[12-03-2005 05:23:13] -!- ls[eZ] is now known as luke`
+[12-03-2005 05:59:21] -!- ordna1 [n=ordnas@p549DC4D3.dip.t-dialin.net] has joined #ezpublish
+[12-03-2005 06:14:15] -!- ordna1 [n=ordnas@p549DC4D3.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-03-2005 06:14:19] [#ezpublish] <buz> what?
+[12-03-2005 06:20:26] -!- luke` [n=ls@unregister049205219081.c205.msk.pl] has quit [Remote closed the connection]
+[12-03-2005 07:28:18] [#ezpublish] <buz> the rss module seems kinda broken
+[12-03-2005 07:28:27] [#ezpublish] <buz> it does export stuff
+[12-03-2005 07:28:31] [#ezpublish] <buz> but not like one would expect
+[12-03-2005 08:41:11] [#ezpublish] <kracker> sadly
+[12-03-2005 08:56:02] -!- stainzed [n=stain@adsl-ull-144-83.51-151.net24.it] has joined #ezpublish
+[12-03-2005 08:56:09] [#ezpublish] <stainzed> hi guys
+[12-03-2005 09:17:23] [#ezpublish] <buz> hi
+[12-03-2005 10:20:13] -!- kalooni [n=nicolas@84.4.76.141] has joined #ezpublish
+[12-03-2005 10:24:59] -!- stainzed [n=stain@adsl-ull-144-83.51-151.net24.it] has left #ezpublish []
+[12-03-2005 10:37:11] -!- kalooni [n=nicolas@84.4.76.141] has quit ["Quitte"]
+[12-03-2005 11:31:25] -!- DiGiTa|_ [n=guillaum@84.4.125.6] has joined #ezpublish
+[12-03-2005 13:17:44] -!- buz changed the topic of #ezpublish to: eZ publish | cms | http://ez.no/community/news/community_newsletter_02_12_2005 |   http://ez.no/community/articles/an_introduction_to_ez_components | http://ez.no/company/news/ez_conference_2006_call_for_papers
+[12-03-2005 13:55:22] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[12-03-2005 13:57:52] [#ezpublish] <kracker> http://www.procata.com/blog/archives/2005/12/01/the-rumors-of-pears-demise-are-greatly-exaggerated/
+[12-03-2005 13:58:46] [#ezpublish] <buz> wtf
+[12-03-2005 13:59:01] [#ezpublish] <buz> any fucking idiot would notice that pear and ezcomponents/zend arent even in the same space
+[12-03-2005 14:00:49] [#ezpublish] <buz> does tobias work for ez
+[12-03-2005 14:03:07] [#ezpublish] <ls[eZ]> yes
+[12-03-2005 14:16:07] [#ezpublish] <buz> someone should proofread that
+[12-03-2005 14:16:20] [#ezpublish] <buz> it has shitload of spelling and grammar mistakes
+[12-03-2005 14:17:54] [#ezpublish] <ls[eZ]> proofread what?
+[12-03-2005 14:21:42] [#ezpublish] <buz> tobias post
+[12-03-2005 14:23:18] [#ezpublish] <kracker> on a personal blog?
+[12-03-2005 14:26:10] [#ezpublish] <ls[eZ]> lol
+[12-03-2005 14:27:45] [#ezpublish] <buz> weeeeell
+[12-03-2005 14:28:01] [#ezpublish] <buz> it seems more like ezpublish evangalization than personal blog entry
+[12-03-2005 14:28:02] [#ezpublish] <kracker> na, i hear ya buz
+[12-03-2005 14:28:12] [#ezpublish] <kracker> heh, what other kind is there :)
+[12-03-2005 14:28:24] [#ezpublish] <kracker> gotta put your best foot forward
+[12-03-2005 14:28:48] [#ezpublish] <kracker> i jsut mizpell sht all the tyme so i tend to defend the mistakes in art
+[12-03-2005 14:29:27] [#ezpublish] <buz> i'm no tnative speaker but even to me it's kinda disturbing
+[12-03-2005 15:31:08] -!- DiGiTa|_ [n=guillaum@84.4.125.6] has quit []
+[12-03-2005 16:25:08] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit [Remote closed the connection]
+[12-03-2005 16:25:27] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]

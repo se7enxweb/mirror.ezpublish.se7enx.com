@@ -1,0 +1,343 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 9.4.&nbsp; Date Handling</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch09lev1sec4"></a><h3 class="docSection1Title">9.4. Date Handling</h3>
+<p class="docText">PHP has a range of functions that handle date and time. Some of these functions work with a so-called <span class="docEmphStrong">UNIX timestamp</span>, which is the number of seconds since January 1, 1970 at 00:00:00 GMT, the beginning of the UNIX epoch. Because PHP only handles unsigned 32-bit integers and most operating systems don't support negative timestamps, the range in which most of the PHP date functions operate is January 1, 1970 to January 19, 2038. The <tt>PEAR::Date</tt> package handles dates outside this range and also in a platform-independent way.<a name="ch09index292"></a><a name="ch09index293"></a><a name="ch09index294"></a></p>
+<a name="ch09lev2sec12"></a><h4 class="docSection2Title">9.4.1. Retrieving Date and Time Information</h4>
+<p class="docText">The easiest way of obtaining the current time is with the <tt>time()</tt> function. It accepts no parameters and simply returns the current timestamp:<a name="ch09index295"></a><a name="ch09index296"></a><a name="ch09index297"></a><a name="ch09index298"></a></P>
+<pre>
+&lt;?php
+     echo time(); // Outputs something similar to "1077913162"
+?&gt;
+</pre><br>
+<p class="docText">The resolution is 1 second. If you want some more accuracy, you have two options: <tt>microtime()</tt> and <tt>gettimeofday()</tt>. The <tt>microtime()</tt> function has one annoying peculiarity: The return value is a floating-point number containing the decimal part of the timestamp and the number of seconds since the epoch, concatenated with a space. This makes it, of course, a bit hard to use for a timestamp with sub-second resolution:<a name="ch09index299"></a><a name="ch09index300"></a><a name="ch09index301"></a><a name="ch09index302"></a></P>
+<pre>
+&lt;?php
+     // Outputs something similar to "0.87395100 1078006447"
+     echo microtime();
+
+     $time = preg_replace('@^(.*)\s+(.*)$@e', '\\2 + \\1', microtime());
+     echo $time; // Outputs 1078006447.8741
+?&gt;
+</pre><br>
+<p class="docText">In putting the two parts back together, you lose some of the precision. The <tt>gettimeofday()</tt> function has a nicer interface. It returns an array with elements representing the timestamp and additional microseconds. Two more elements are included in this array, but you cannot really rely on them because the underlying system functionalityat least in Linuxis not working correctly:<a name="ch09index303"></a><a name="ch09index304"></a><a name="ch09index305"></a><a name="ch09index306"></a></P>
+<pre>
+&lt;?php
+     print_r(gettimeofday());
+?&gt;
+</pre><br>returns<pre>
+Array
+(
+     [sec] =&gt; 1078006910
+     [usec] =&gt; 339699
+     [minuteswest] =&gt; -60
+     [dsttime] =&gt; 0
+)
+</pre><br>
+<p class="docText"><tt>localtime()</tt> and <tt>getdate()</tt> both return an array. The elements contain information belonging to the (optional) timestamp passed to the function. The returned arrays are not exactly the same. <a class="docLink" href="#ch09table05">Table 9.5</a> shows what the elements in the arrays mean.</p>
+<a name="ch09table05"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 9.5. Elements in Arrays Returned by <tt>localtime()</tt> and <tt>getdate()</tt></h5></caption><colgroup><col width="99"><col width="165"><col width="132"><col width="154"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Meaning</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Index (</span><span class="docEmphasis"><tt>localtime()</tt></span><span class="docEmphStrong">)</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Index (</span><span class="docEmphasis"><tt>getdate(</tt></span>)<span class="docEmphStrong">)</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Remarks</span></P></th></tr></thead><TR><td class="docTableCell" align="left" valign="bottom"><p class="docText">Seconds</p></td><td class="docTableCell" align="left" valign="bottom"><p class="docText"><tt>tm_sec</tt></p></td><td class="docTableCell" align="left" valign="bottom"><p class="docText"><tt>seconds</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="bottom"><p class="docText">Minutes</p></td><TD class="docTableCell" align="left" valign="bottom"><p class="docText"><tt>tm_min</tt></P></td><td class="docTableCell" align="left" valign="bottom"><p class="docText"><tt>minutes</tt></P></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Hours</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>tm_hour</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>hours</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Day of month</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>tm_mday</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>mday</tt></p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Month</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>tm_mon</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>mon</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">For localtime: January=0; for getdate: January=1</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Year</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>tm_year</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>year</tt></p></td><TD class="docTableCell" align="left" valign="top">&nbsp;</td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Day of week</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>tm_wday</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>wday</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">With 0 being Sunday and 6 being Saturday</p></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Day of year</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>tm_yday</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>yday</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">With 0 being January 1st and 366 being December 32<sup>nd</sup></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">DST in effect</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>tm_isdst</tt></p></TD><TD class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">Set to <tt>TRue</tt> if Daylight Savings Time is in effect</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Textual day of week</p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>weekday</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">English name of the weekday</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Textual month</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>month</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">English name of the month</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Timestamp</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>0</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Number of seconds since 01-01-1970</p></td></tr></table></p><BR>
+<p class="docText">The <tt>tm_isdst</tt> element of <tt>localtime()</tt> is especially interesting. It's the only way in PHP to see whether the server is in DST. Also, note that the month number in the return array of <tt>localtime()</tt> starts with 0, not with 1, which makes December month 11. The first parameter for both functions is a time stamp, allowing the functions to return date information based on the time you pass them, rather than just on the current time. <tt>localtime()</tt> normally returns an array with numerical indices, rather than the indices as described in the previous table. To signal the function to return an associative array, you need to pass <tt>TRue</tt> as the second parameter. If you want to return this associative array with information about the current time, you need to pass the <tt>time()</tt> function as first parameter:<a name="ch09index307"></a><a name="ch09index308"></a><a name="ch09index309"></a><a name="ch09index310"></a><a name="ch09index311"></a><a name="ch09index312"></a></p>
+<pre>
+&lt;?php
+     print_r(localtime(time(), true));
+?&gt;
+
+</pre><br>
+<p class="docText">Two more date functions are available: <tt>gmmktime()</tt> and <tt>mktime()</tt>. Both functions create a timestamp based on parameters passed when the function is called. The difference between the two functions is that <tt>gmmktime()</tt> TReats the date/time parameters passed as a Greenwich Mean Time (GMT), while parameters passed to <tt>mktime()</tt> are treated as local time. The order of parameters is not very user friendly, as you can see in the prototype of the following function:<a name="ch09index313"></a><a name="ch09index314"></a><a name="ch09index315"></a><a name="ch09index316"></a></p>
+<pre>
+timestamp mktime ( [$hour [, $minute [, $second [, $month [, $day [,  $year [, $is_dst]]]]]]])
+</pre><br>
+<p class="docText">Note the particularly weird order of the parameters. All parameters are optional. If any parameter is not included, the &quot;current&quot; value is used, depending on the current date and time. The last parameter, <tt>is_dst</tt>, controls whether the date and time parameters that are passed to the function are DST-enabled or not. The default value for the parameter is <tt>-1</tt>, which signals PHP to determine for itself whether the date falls into the range when DST is observed. Here is an example:</p>
+<pre>
+&lt;?php
+  /* mktime with a date outside the DST range */
+  echo date("Ymd H:i:s", mktime(15, 16, 17, 1, 17, 2004)). "\n";
+  echo date("Ymd H:i:s", mktime(15, 16, 17, 1, 17, 2004, 0)). "\n";
+  echo date("Ymd H:i:s", mktime(15, 16, 17, 1, 17, 2004, 1)). "\n";
+
+
+  /* mktime with a date inside the DST range */
+  echo date("Ymd H:i:s", mktime(15, 16, 17, 6, 17, 2004)). "\n";
+  echo date("Ymd H:i:s", mktime(15, 16, 17, 6, 17, 2004, 0)). "\n";
+  echo date("Ymd H:i:s", mktime(15, 16, 17, 6, 17, 2004, 1)). "\n\n";
+?&gt;
+</pre><br>
+<p class="docText">The first three calls &quot;make&quot; a timestamp for January 17, in which no DST is observed. Therefore, setting the <tt>$is_dst</tt> parameter to <tt>0</tt> has no effect on the returned timestamp. If it's set to <tt>1</tt>, though, the timestamp will be one hour earlier, as the <tt>mktime()</tt> function converts the DST time (which is always one hour ahead of non-DST). For the second set of <tt>mktime()</tt> calls, we use June 17 in which DST is observed. Setting the <tt>$is_dst</tt> parameter to <tt>0</tt> now makes the function convert the time from non-DST to DST and, thus, the returned time-stamp will be one hour ahead of the result of the first and third calls. The output is<a name="ch09index317"></a><a name="ch09index318"></a><a name="ch09index319"></a><a name="ch09index320"></a></p>
+<pre>
+20040217 15:16:17
+20040217 15:16:17
+20040217 14:16:17
+
+20040617 15:16:17
+20040617 16:16:17
+20040617 15:16:17
+</pre><br>
+<p class="docText">It's best not to touch the <tt>$is_dst</tt> parameter, because PHP usually interprets the date and time correctly.</P>
+<p class="docText">If we replace all calls to <tt>mktime()</tt> by <tt>gmmktime()</tt>, the parameters passed to the function are treated as GMT time, with no time zones taken into account. With <tt>mktime()</tt>, the time zone that the server has configured is taken into account. For instance, if you are on Central European Time (CET), passing the same parameters as shown previously to <tt>gmmktime</tt> output times that are one hour &quot;later.&quot; Because the <tt>date</tt> function <span class="docEmphasis">does</span> take into account time zones, the generated GMT timestamp is treated as a CET time zone, resulting in times that are one hour for non-DST times and two hours for DST times (CEST is CET+1).<a name="ch09index321"></a><a name="ch09index322"></a><a name="ch09index323"></a><a name="ch09index324"></a><a name="ch09index325"></a><a name="ch09index326"></a></p>
+<a name="ch09lev2sec13"></a><H4 class="docSection2Title">9.4.2. Formatting Date and Time</h4>
+<p class="docText">Making a GMT date with <tt>gmmktime()</tt> and then showing it in the current time zone with the <tt>date()</tt> function doesn't make much sense. Thus, we also have two functions for formatting date/time: <tt>date()</tt> to format a local date/time, and <tt>gmdate()</tt> to format a GMT date/time.<a name="ch09index327"></a><a name="ch09index328"></a><a name="ch09index329"></a><a name="ch09index330"></a></P>
+<p class="docText">Both functions accept exactly the same parameters. The first parameter is a format string (more about that in a bit), and the second is an optional timestamp. If the timestamp parameter is not included, the current time is used in formatting the output. <tt>gmdate()</tt> and <tt>date()</tt> always format the date in English, not in the current &quot;locale&quot; that is set on your system. Two functions are provided to format local time/date according to locale settings: <tt>strftime()</tt> for local time and <tt>gmstrftime()</tt> for GMT times. <a class="docLink" href="#ch09table06">Table 9.6</a> describes formatting string characters for both functions. Note that the <tt>(gm)strftime()</tt> prefix to the formatting string options with a <tt>%</tt>.</p>
+<a name="ch09table06"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 9.6. Date Formatting Modifiers</h5></caption><colgroup><col width="126.5"><col width="104.5"><col width="121"><col width="198"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="bottom"><p class="docText"><span class="docEmphStrong">Description</span></P></th><th class="thead" scope="col" align="left" valign="bottom"><p class="docText"><span class="docEmphStrong">date / gmdate</span></p></th><th class="thead" scope="col" align="left" valign="bottom"><p class="docText"><span class="docEmphStrong">strftime / gmstrftime</span></p></th><th class="thead" scope="col" align="left" valign="bottom"><p class="docText"><span class="docEmphStrong">Remarks</span></p></th></tr></thead><TR><td class="docTableCell" align="left" valign="top"><p class="docText">AM/PM</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>A</tt></P></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">am/pm</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>a</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%p</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Either am or pm for the English locale. Other locales might have their replacements (for example, <tt>nl_NL</tt> has an empty string here).</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Century, numeric two digits</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%C</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Returns the century number <tt>20</tt> for 2004, and so on.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Character, literal <tt>%</tt></p></TD><TD class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%%</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Use this to place a literal character <tt>%</tt> inside the formatting string.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Character, newline</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%n</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Use this to place a newline character inside the formatting string.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Character, tab</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</TD><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>%t</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Use this to place a tab character inside the formatting string.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Day count in month</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>t</tt></P></td><TD class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">Number of days in the month defined by the timestamp.</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Day of month, leading spaces</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%e</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Current day in this month defined by the timestamp. A space is prepended when the day number is less than 10.</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Day of month, leading zeros</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>d</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%D</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Current day in this month defined by the timestamp. A zero is prepended when the day number is less than 10.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText">Day of month, without leading zeros</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>j</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">Current day in this month defined by the timestamp.</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Day of week, full textual</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>l</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>%A</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>For strftime()</tt>, the day is shown according to the names of the current locale.</p>
+
+<pre>
+&lt;?php
+setlocale(LC_ALL, 'C');
+echo strftime('%A ');
+setlocale(LC_ALL, 'no_NO');
+echo strftime('%A');
+?&gt;
+</pre><br>
+
+<p class="docText">shows</P>
+
+<pre>
+Monday mandag
+</pre><br>
+</td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Day of week, numeric (<tt>0</tt> = Sunday)</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>w</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%w</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The range is 06 with 0 being Sunday and 6 being Saturday.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Day of week, numeric (<tt>1</tt>= Monday)</p></td><TD class="docTableCell" align="left" valign="top">&nbsp;</TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%u</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The range is 17 with 1 being Monday and 7 being Sunday.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Day of week, short textual</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>D</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%a</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">For the <tt>(gm)strftime()</tt> function, the name is shown according to the locale; for <tt>(gm)date()</tt> it is the normal three letter abbreviation: Sun, Sat, Wed, and so on.</P></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Day of year, numeric with leading zeros</p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>%j</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The day number in a year, starting with <tt>001</tt> for January 1 to 365 or 366.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Day of year, numeric without leading zeros</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>z</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">The day number in a year, starting with 0 for January 1 to 364 or 365.</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText">DST active</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>I</tt> </p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns 1 if DST is active and 0 if DST is not active for the given timestamp.</P></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Formatted, <tt>%d/%m/%y</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>%D</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Gives the same result as using <tt>%d/%m/%y</tt>.</p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Formatted, <tt>%H:%M:%S</tt></P></td><TD class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%T</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Gives the same result as using <tt>%H:%M:%S</tt>.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Formatted, in 24-hour notation</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%R</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">The time in 24-hour notation without seconds.</p>
+
+<pre>
+&lt;?php
+echo strftime("%R\n"); //
+</pre><br>
+
+<p class="docText">shows</P>
+
+<pre>
+23:53
+?&gt;
+</pre><br>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Formatted, in a.m./p.m. notation</p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%r</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The time in 12-hour notation including seconds.</p>
+
+<pre>
+&lt;?php
+echo strftime("%r\n"); //
+</pre><br>
+
+<p class="docText">shows</P>
+
+<pre>
+11:53:47
+?&gt;
+</pre><BR>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Formatted, locale preferred date</P></td><td class="docTableCell" align="left" valign="top">&nbsp;</TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%x</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The date in preferred locale format.</p>
+
+<pre>
+&lt;?php
+setlocale(LC_ALL, 'iw_IL');
+echo strftime("%x\n"); // shows 29/02/04
+?&gt;
+</pre><br>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Formatted, locale preferred date and time</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%c</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The date and time in preferred locale format.</P>
+
+<pre>
+&lt;?php
+setlocale(LC_ALL, 'nl_NL');
+// shows zo 29 feb 2004 23:56:12 CET
+echo strftime("%c\n");
+?&gt;
+</pre><BR>
+</td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Formatted, locale preferred time</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%X</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The date in preferred locale format.</p>
+
+<pre>
+&lt;?php
+setlocale(LC_ALL, 'nl_NL');
+echo strftime("%x\n"); // shows 29-02-04
+?&gt;
+</pre><BR>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Hour, 12-hour format, leading zeros</P></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>h</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%I</tt></P></td><td class="docTableCell" align="left" valign="top">&nbsp;</TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Hour, 12-hour format, no leading zeros</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>g</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Hour,24-hour format, leading zeros</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>H</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%H</tt></p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Hour, 24-hour format, no leading zeros</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>G</tt></P></td><TD class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText">Internet time</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>B</tt></p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td><TD class="docTableCell" align="left" valign="top"><p class="docText">The swatch Internet time in which a day is divided into 1,000 units:</p>
+
+<pre>
+&lt;?php
+echo date('B'). "\n"; // shows 005
+?&gt;
+</pre><BR>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">ISO 8601</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>c</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">Shows the date in ISO 8601 format: <tt>2004-03-01T00:08:37+01:00</tt></p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Leap year</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>L</tt></P></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns 1 if the year represented by the timestamp is a leap year, or <tt>0</tt> otherwise.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Minutes, leading zeros</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>i</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%M</tt></P></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Month, full textual</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>F</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%B</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">For <tt>(gm)strftime()</tt>, the month name is the name in the language of the current locale.</p>
+
+<pre>
+&lt;?php
+setlocale(LC_ALL, 'iw_IL');
+echo strftime("%B\n"); // shows<img border="0" alt="" width="35" height="19" SRC="images/013147149X/graphics/09inl01.gif;380137">
+?&gt;
+</pre><br>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Month, numeric with leading zeros</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>M</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%m</tt></P></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Month, numeric without leading zeros</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>N</tt></p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</TD><td class="docTableCell" align="left" valign="top">&nbsp;</TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Month, short textual</p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>M</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%b, %h</tt></p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">RFC 2822</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>R</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns a RFC 2822 (mail) formatted text <tt>(Mon, 1 Mar 2004 00:13:34 +0100)</tt>.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Seconds since UNIX epoch</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>U</tt></P></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td><TD class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Seconds, numeric with leading zeros</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>s</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%S</tt></P></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText">Suffix for day of month, English ordinal</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>S</tt></p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td><TD class="docTableCell" align="left" valign="top"><p class="docText">Returns an English ordinal suffix for use with the j formatting option.</p>
+
+<pre>
+&lt;?php
+echo date("jS\n"); // returns 1<sup>st</sup>
+?&gt;
+</pre><BR>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Time zone, numeric (in seconds)</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the offset to GMT in seconds. For CET, this is <tt>3600</tt>; for EST, this is <tt>18000</tt>, for example.</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Time zone, numeric formatted</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>O</tt></P></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns a formatted offset to GMT. For CET, this is <tt>+0100</tt>; for EST, this is <tt>-0500</tt>, for example.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Time zone, textual</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>T</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%Z</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the current time zone name: CET, EST, and so on.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Week number, ISO 8601</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>W</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%V</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">In ISO 8601, week #1 is the first week in the year having four or more days. The range is 01 to 53, and you can use this in combination with <tt>%g</tt> or <tt>%G</tt> for the accompanying year.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Week number, the first Monday in a year is the start of week 1</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%W</tt></p></TD><TD class="docTableCell" align="left" valign="top">
+<pre>
+&lt;?php
+// shows 01
+echo strftime("%W",
+    strtotime("2001-01-01")),"\n";// shows 53
+echo strftime("%W",
+    strtotime("2001-12-31")),"\n";
+?&gt;
+</pre><br>
+</td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Week number, the first Sunday in a year is the start of week 1</p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>%U</tt></p></TD><td class="docTableCell" align="left" valign="top">
+<pre>
+&lt;?php
+// shows 00
+echo strftime("%U",
+    strtotime("2001-01- 01")),"\n";
+// shows 52
+echo strftime("%U",
+    strtotime("2001-12- 31")),"\n";
+?&gt;
+</pre><BR>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Year, numeric two digits with leading zeroes</P></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>y</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%y</tt></P></td><td class="docTableCell" align="left" valign="top">&nbsp;</TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Year, numeric two digits; year component for <tt>%W</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%g</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">This number might differ from the &quot;real year,&quot; as in ISO 8601; January 1 might still belong to week 53 of the year before. In that case, the year returned with this formatting option will be the one of the previous year, too.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Year, numeric four digits</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>Y</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>%Y</tt></P></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Year, numeric four digits; year component for %W</P></td><TD class="docTableCell" align="left" valign="top">&nbsp;</td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>%G</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">This number might differ from the &quot;real year,&quot; as in ISO 8601; January 1 might still belong to week 53 of the year before. In that case, the year returned with this formatting option will be the one of the previous year, too. <a name="ch09index331"></a><a name="ch09index332"></a><a name="ch09index333"></a><a name="ch09index334"></a></p></TD></TR></table></p><br>
+<a name="ch09lev3sec25"></a><h5 class="docSection3Title">9.4.2.1 Example 1: ISO 8601 Week Numbers</h5>
+<p class="docText">This example shows that the ISO 8601 year format option (<tt>%V</tt>) might differ from the normal year format option (<tt>%Y</tt>) if a year has less than four days:<a name="ch09index335"></a><a name="ch09index336"></a></P>
+<pre>
+&lt;?php
+    for ($i = 27; $i &lt;= 31; $i++) {
+        echo gmstrftime(
+                 "%Y-%m-%d (%V %G, %A)\n",
+                 gmmktime(0, 0, 0, 12, $i, 2004)
+            );
+    }
+    for ($i = 1; $i &lt;= 6; $i++) {
+        echo gmstrftime(
+                 "%Y-%m-%d (%V %G, %A)\n",
+                 gmmktime(0, 0, 0, 1, $i, 2005)
+            );
+    }
+?&gt;
+</pre><br>The script outputs<a name="ch09index337"></a><a name="ch09index338"></a><a name="ch09index339"></a><a name="ch09index340"></a><pre>
+2004-12-27 (53 2004, Monday)
+2004-12-28 (53 2004, Tuesday)
+2004-12-29 (53 2004, Wednesday)
+2004-12-30 (53 2004, Thursday)
+2004-12-31 (53 2004, Friday)
+2005-01-01 (53 2004, Saturday)
+2005-01-02 (53 2004, Sunday)
+2005-01-03 (01 2005, Monday)
+2005-01-04 (01 2005, Tuesday)
+2005-01-05 (01 2005, Wednesday)
+2005-01-06 (01 2005, Thursday)
+</pre><br>
+<p class="docText">As you can see, the ISO year is different for January 1 and 2, 2005, because the first week (Monday to Sunday) only has two days.</P>
+<a name="ch09lev3sec26"></a><h5 class="docSection3Title">9.4.2.2 Example 2: DST Issues</H5>
+<p class="docText">Every year around October, at least 1025 bugs are reported when a day is listed twice in somebody's overview. Actually, the day listed twice is the date on which DST ends, as you can see in this example:<a name="ch09index341"></a><a name="ch09index342"></a><a name="ch09index343"></a></p>
+<pre>
+&lt;?php
+    /* Start date for the loop is October 31th, 2004 */
+    $ts = mktime(0, 0, 0, 10, 31, 2004);
+
+    /* We loop for 4 days */
+    for ($i = 0; $i &lt; 4; $i++) {
+        echo date ("Y-m-d (H:i:s)\n", $ts);
+        $ts += (24 * 60 * 60); /* 24 hours */
+    }
+?&gt;
+</pre><br>When this script is run, you see the following output:<pre>
+2004-10-31 (00:00:00)
+2004-10-31 (23:00:00)
+2004-11-01 (23:00:00)
+2004-11-02 (23:00:00)
+</pre><br>
+<p class="docText">The 31st is listed twice because there are actually 25 hours between midnight, October 31 and November 1, not the 24 hours that were added in our loop. You can solve the problem in one of two ways. If you pick a different time of day, such as noon, the script will always have the correct date:<a name="ch09index344"></a><a name="ch09index345"></a><a name="ch09index346"></a><a name="ch09index347"></a></p>
+<pre>
+&lt;?php
+    /* Start date for the loop is October 29th, 2004 */
+    $ts = mktime(12, 0, 0, 10, 29, 2004);
+
+    /* We loop for 4 days */
+    for ($i = 0; $i &lt; 4; $i++) {
+        echo date ("Y-m-d (H:i:s)\n", $ts);
+        $ts += (24 * 60 * 60);
+    }
+?&gt;
+</pre><br>Its output is<pre>
+2004-10-29 (12:00:00)
+2004-10-30 (12:00:00)
+2004-10-31 (11:00:00)
+2004-11-01 (11:00:00)
+</pre><br>
+<p class="docText">However, there is still a difference in the time. A better solution is to abuse the <tt>mktime()</tt> function a little:</p>
+<pre>
+&lt;?php
+    /* We loop for 6 days */
+    for ($i = 0; $i &lt; 6; $i++) {
+        $ts = mktime(0, 0, 0, 10, 30 + $i, 2004);
+        echo date ("Y-m-d (H:i:s) T\n", $ts);
+    }
+?&gt;
+</pre><br>Its output is<pre>
+2004-10-30 (00:00:00) CEST
+2004-10-31 (00:00:00) CEST
+2004-11-01 (00:00:00) CET
+2004-11-02 (00:00:00) CET
+2004-11-03 (00:00:00) CET
+2004-11-04 (00:00:00) CET
+</pre><br>
+<p class="docText">We add the day offset to the <tt>mktime()</tt> parameter that describes the day of month. <tt>mktime()</tt> then correctly wraps into the next months and years and takes care of the DST hours, as you can see in the previous output.</p>
+<a name="ch09lev3sec27"></a><h5 class="docSection3Title">9.4.2.3 Example 3: Showing the Local Time in Other Time Zones</h5>
+<p class="docText">Sometimes, you want to show a formatted time in the current time zone and in other time zones as well. The following script shows a full textual date representation for the U.S., Norway, the Netherlands, and Israel:<a name="ch09index348"></a><a name="ch09index349"></a><a name="ch09index350"></a><a name="ch09index351"></a><a name="ch09index352"></a><a name="ch09index353"></a></p>
+<pre>
+&lt;?php
+    echo strftime("%c\n");
+
+    echo "\nEST in en_US:\n";
+    setlocale(LC_ALL, "en_US");
+    putenv("TZ=EST");
+    echo strftime("%c\n");
+
+    echo "\nMET in nl_NL:\n";
+    setlocale(LC_ALL, "nl_NL");
+    putenv("TZ=MET");
+    echo strftime("%c\n");
+
+    echo "\nMET in no_NO:\n";
+    setlocale(LC_ALL, "no_NO");
+    putenv("TZ=MET");
+    echo strftime("%c\n");
+
+    echo "\nIST in iw_IL:\n";
+    setlocale(LC_ALL, "iw_IL");
+    putenv("TZ=IST");
+    echo strftime("%c\n");
+?&gt;
+</pre><br>
+<p class="docText"><a class="docLink" href="#ch09fig04">Figure 9.4</a> shows its output.</p>
+<a name="ch09fig04"></a><p><center><H5 class="docFigureTitle">Figure 9.4. March 1 in different locales.</H5>
+<p class="docText"><img border="0" alt="" width="200" height="204" SRC="images/013147149X/graphics/09fig04.gif;380137"></p></center></p><BR>
+<a name="ch09note05"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">You need to have the locales and time-zone settings installed on your system before this will work. It is a system-dependent setting and not everything is always available on your system. If you're a Mac OS X user, have a look at <a class="docLink" target="_blank" href="http://www.macmax.org/locales/index_en.html">http://www.macmax.org/locales/index_en.html</a> to install locales.<a name="ch09index354"></a><a name="ch09index355"></a><a name="ch09index356"></a><a name="ch09index357"></a></p></div><br>
+<a name="ch09lev2sec14"></a><h4 class="docSection2Title">9.4.3. Parsing Date Formats</h4>
+<p class="docText">The opposite of formatting text is parsing a textual description of a date into a timestamp. The <tt>strtotime()</tt> function handles a many different formats. In addition to the formats listed at <a class="docLink" target="_blank" href="http://www.gnu.org/software/tar/manual/html_chapter/tar_7.html">http://www.gnu.org/software/tar/manual/html_chapter/tar_7.html</a>, PHP also supports some extra ISO 8601 formats (<a class="docLink" target="_blank" href="http://www.w3.org/TR/NOTE-datetime">http://www.w3.org/TR/NOTE-datetime</a>). <a class="docLink" href="#ch09table07">Table 9.7</a> contains a list of the most useful formats.<a name="ch09index358"></a><a name="ch09index359"></a><a name="ch09index360"></a></p>
+<a name="ch09table07"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 9.7. Date/Time Formats as Understood by <tt>strtotime()</tt></H5></caption><colgroup><col width="159.5"><col width="148.5"><col width="242"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Date String</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">GMT Formatted Date</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Remarks</span></p></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>1970-09-17</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">1970-09-16 23:00:00</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">ISO 8601 preferred date.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>9/17/72</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">1972-09-16 23:00:00</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Common U.S. way (d/m/yy).</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>24 September 1972</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">1972-09-23 23:00:00</p></td><TD class="docTableCell" align="left" valign="top" rowspan="3"><p class="docText">Without any specified time, 0:00 is used. Because the time zone is set to MET (GMT+1), the GMT formatted date is in the previous day.</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>24 Sep 1972</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">1972-09-23 23:00:00</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>Sep 24, 1972</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">1972-09-23 23:00:00</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>20:02:00</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-03-01 19:02:00</p></TD><td class="docTableCell" align="left" valign="top" rowspan="3"><p class="docText">Without any date specified, the current date is used.</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>20:02</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-03-01 19:02:00</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>8:02pm</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-03-01 19:02:00</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>20:02-0500</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-03-02 01:02:00</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">-0500 is the time zone (EST).</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>20:02 EST</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">2004-03-02 01:02:00</P></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>Thursday 1 Thursday this Thursday</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-03-03 23:00:00</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">A day name advances to the first available day with this name. In case the current day has this name, the current day is used.</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>2 Thursday 19:00</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-03-11 18:00:00</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>2</tt> is the second Thursday from now.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>next Thursday 7pm</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-03-11 18:00:00</p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">Next means the next available day with this name <span class="docEmphasis">after</span> the first available day, and thus is the same as 2.</p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>last Thursday 19:34</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-02-26 18:34:00</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The Thursday before the current day. If the name of the day is the same as the current day, the time-stamp of the previous day is used.</P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>1 year 2 days ago</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">2003-02-27 21:25:44</P></td><td class="docTableCell" align="left" valign="top" rowspan="6"><p class="docText">The current time is used to calculate the relative displacement with. The  sign is needed before every displacement unit; if it's not used, <tt>+</tt> is assumed. If &quot;ago&quot; is postfixed, the meaning of <tt>+</tt> and <tt>-</tt> is reversed. Other possible units are second, minute, hour, week, Month, and fortnight (14 days).</p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-1 year -2 days</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">2003-02-27 21:25:44</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>-1 year 2 days</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2003-03-03 21:25:44</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>1 year -2 days</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2005-02-27 21:25:44</P></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>tomorrow</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-03-02 21:25:44</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>yesterday</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">2004-02-29 21:25:44</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>20040301T00:00:00+1900</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-02-29 05:00:00</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Used for WDDX parsing.</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>2004W021</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-01-04 23:00:00</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Midnight of the first day of ISO week 21 in 2004.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>2004122 0915</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">2004-12-22 08:15:00</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Only numbers in the form yyyymmdd hhmm.</P></td></tr></table></P><br>
+<p class="docText">Using the <tt>strtotime()</tt> function is easy. It accepts two parameters: the string to parse to a timestamp and an optional timestamp. If the timestamp is included, the time is converted relative to the timestamp; if it's not included, the current time is used. The relative calculations are only written with <tt>yesterday</tt>, <tt>tomorrow</tt>, and the <tt>1 year 2 days (ago)</tt> format strings.<a name="ch09index361"></a><a name="ch09index362"></a><a name="ch09index363"></a><a name="ch09index364"></a><a name="ch09index365"></a></p>
+<p class="docText"><tt>strtotime()</tt> parsing is always done with the current time zone, unless a different time zone is specified in the string that is parsed:</p>
+<pre>
+&lt;?php
+echo date("H:i T\n", strtotime("09:22"));       // shows 09:22 CET
+echo date("H:i T\n\n", strtotime("09:22 GMT")); // shows 10:22 CET
+
+echo gmdate("H:i T\n", strtotime("09:22"));     // shows 08:22 GMT
+echo gmdate("H:i T\n", strtotime("09:22 GMT")); // shows 09:22 GMT
+?&gt;
+</pre><br>
+<p class="docText">For more information on time zones, times, and calendars, see the excellent web site at <a class="docLink" target="_blank" href="http://www.timeanddate.com/">http://www.timeanddate.com/</a>.<a name="ch09index366"></a><a name="ch09index367"></a><a name="ch09index368"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

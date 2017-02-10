@@ -1,0 +1,37 @@
+[03-12-2006 00:28:27] -!- tobyS [n=dotxp@dslb-084-061-137-028.pools.arcor-ip.net] has joined #ezpublish
+[03-12-2006 02:32:56] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-12-2006 04:03:56] -!- ordnas [n=ordnas@p549D584B.dip.t-dialin.net] has joined #ezpublish
+[03-12-2006 05:18:57] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_10_03_2006 | http://ez.no/community/forum/ez_components/webcast#msg93640
+[03-12-2006 05:34:29] -!- ordnas [n=ordnas@p549D584B.dip.t-dialin.net] has left #ezpublish []
+[03-12-2006 07:09:03] -!- Woody4u [i=woodwork@gentoo.woody4u.com] has joined #ezpublish
+[03-12-2006 07:09:43] -!- Woody4u [i=woodwork@gentoo.woody4u.com] has left #ezpublish []
+[03-12-2006 08:42:47] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[03-12-2006 09:44:23] -!- tobmaster [n=tobmaste@dslb-084-061-007-107.pools.arcor-ip.net] has joined #ezpublish
+[03-12-2006 10:13:39] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-12-2006 12:38:44] -!- tobmaster [n=tobmaste@dslb-084-061-007-107.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[03-12-2006 12:59:30] -!- ordnas [n=ordnas@p549D584B.dip.t-dialin.net] has joined #ezpublish
+[03-12-2006 13:23:51] -!- LottoKim [n=kim@195.28.172.4] has left #ezpublish []
+[03-12-2006 13:37:37] -!- ordnas [n=ordnas@p549D584B.dip.t-dialin.net] has left #ezpublish []
+[03-12-2006 14:36:19] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[03-12-2006 14:37:12] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[03-12-2006 14:49:36] -lilo:$*- [Global Notice] Hi all. In a moment we're going to be performing some quick maintenance. About 4,000 users on a main rotation server will be detached from the network and reconnected. Please bear with us.
+[03-12-2006 14:52:42] -lilo:$calvino.freenode.net- [Server Notice] here goes....
+[03-12-2006 14:53:07] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [calvino.freenode.net irc.freenode.net]
+[03-12-2006 14:53:07] -!- xbit [i=birger@ritchie.ping.uio.no] has quit [calvino.freenode.net irc.freenode.net]
+[03-12-2006 14:53:07] -!- nnn0 [n=therion@195.204.221.183] has quit [calvino.freenode.net irc.freenode.net]
+[03-12-2006 14:53:07] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [calvino.freenode.net irc.freenode.net]
+[03-12-2006 14:53:07] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[03-12-2006 14:53:07] -!- tobyS [n=dotxp@dslb-084-061-137-028.pools.arcor-ip.net] has quit [calvino.freenode.net irc.freenode.net]
+[03-12-2006 14:53:07] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has quit [calvino.freenode.net irc.freenode.net]
+[03-12-2006 14:53:07] -!- fh[eZ] [n=fh@85.19.74.66] has quit [calvino.freenode.net irc.freenode.net]
+[03-12-2006 14:53:28] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[03-12-2006 14:53:28] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-12-2006 14:53:28] -!- tobyS [n=dotxp@dslb-084-061-137-028.pools.arcor-ip.net] has joined #ezpublish
+[03-12-2006 14:53:28] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-12-2006 14:53:28] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-12-2006 14:53:28] -!- fh[eZ] [n=fh@85.19.74.66] has joined #ezpublish
+[03-12-2006 14:53:28] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[03-12-2006 14:53:28] -!- xbit [i=birger@ritchie.ping.uio.no] has joined #ezpublish
+[03-12-2006 14:56:14] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[03-12-2006 14:56:14] [notice(freenode-connect)] VERSION IQ 0.9.3
+[03-12-2006 14:56:14] (unmatched::raw477) :calvin

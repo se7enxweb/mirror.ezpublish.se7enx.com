@@ -1,0 +1,518 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 15.2.&nbsp; Quickstart</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch15lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch15lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch15lev1sec2"></a><h3 class="docSection1Title">15.2. Quickstart</h3>
+<p class="docText">Instead of slowly explaining some of the building blocks of the scripting engine, this section dives into coding an extension, so do not worry if you don't see the whole picture right away.</p>
+<p class="docText">Imagine you are writing a web site but need a function, which will repeat a string <span class="docEmphasis">n</span> times. Writing this in PHP is simple:<a name="ch15index05"></a><a name="ch15index06"></a><a name="ch15index07"></a></p>
+<pre>
+function self_concat($string, $n)
+{
+    $result = "";
+
+    for ($i = 0; $i &lt; $n; $i++) {
+        $result .= $string;
+    }
+    return $result;
+}
+</pre><br>
+<p class="docText"><BR><tt>self_concat("One", 3)</tt>&nbsp;returns&nbsp;<tt>"OneOneOne"</tt>.<br><tt>self_concat("One", 1)</tt>&nbsp;returns&nbsp;<tt>"One"</tt>.<BR></p>
+<p class="docText">Imagine that for some odd reason, you need to call this function often, with very long strings and large values of <span class="docEmphasis">n</span>. This means that you'd have a huge amount of concatenation and memory reallocation going on in your script, which could significantly slow things down. It would be much faster to have a function that allocates a large enough string to hold the resulting string and then repeat <tt>$string</tt> <span class="docEmphasis">n</span> times, not needing to reallocate memory every loop iteration.</P>
+<p class="docText">The first step in creating an extension for your function is to write the function definition file for the functions you want your extension to have. In this case, the file will have only one line with the prototype of the function <tt>self_concat()</tt>:<a name="ch15index08"></a><a name="ch15index09"></a><a name="ch15index10"></a><a name="ch15index11"></a><a name="ch15index12"></a></p>
+<pre>
+string self_concat(string str, int n)
+</pre><br>
+<p class="docText">The general format of the function definition file is one function per line. You can specify optional parameters and a wide variety of PHP types, including <tt>bool</tt>, <tt>float</tt>, <tt>int</tt>, <tt>array</tt>, and others.</p>
+<p class="docText">Save the file as <tt>myfunctions.def</tt> in the ext/ directory under the PHP's source tree.</p>
+<p class="docText">Now it's time to run it through the extension skeleton creator. The script is called <tt>ext_skel</tt> and sits in the ext/ directory of the PHP source tree (more information can be found in the <tt>README.EXT_SKEL</tt> file under the main PHP source directory). Assuming you saved your function definitions in a file called <tt>myfunctions.def</tt> and you would like the extension to be called <tt>myfunctions</tt>, you would use the following line to create your skeleton extension:</P>
+<pre>
+./ext_skel --extname=myfunctions --proto=myfunctions.def
+</pre><BR>
+<p class="docText">This creates a directory <tt>myfunctions/</tt> under the ext/ directory. First thing you'd probably want to do is get the skeleton to compile so that you're ready for actually writing and testing your C code. There are two ways to compile the extension:<a name="ch15index13"></a><a name="ch15index14"></a><a name="ch15index15"></a></p>
+<ul><li><p class="docList">As a loadable module or DSO (dynamically shared object)<a name="ch15index16"></a><a name="ch15index17"></a></p></LI><li><p class="docList">Build it statically into PHP</p></LI></ul>
+<p class="docText">This chapter uses the second method because it's slightly easier to begin with. If you're interested in building your extension as a loadable module, you should read the <tt>README.SELF-CONTAINED_EXTENSIONS</tt> file in the PHP source tree's root directory. To get the extension to compile, you need to edit its <tt>config.m4</tt> file, which can be found in ext/myfunctions/. As your extension does not wrap any external C libraries, you will want to add support of the <tt>--enable-myfunctions</tt> configure switch to PHP's build system (the <tt>with-extension</tt> switch is used for extensions that need to allow the user to specify a path to the relevant C library). You can enable the switch by uncommenting the following two auto-generated lines:</P>
+<pre>
+PHP_ARG_ENABLE(myfunctions, whether to enable myfunctions support,
+[  --enable-myfunctions                 Include myfunctions support])
+</pre><br>
+<p class="docText">Now all that's left to do is to run <tt>./buildconf</tt> in the root of the PHP source tree, which will create a new <tt>configure</tt> script. You can check that your new configure option made it into configure by finding it in the output of <tt>./configure --help</tt>. Now, reconfigure PHP with all of your favorite switches and include the <tt>--enable-myfunctions</tt> switch. Last but not least, rebuild PHP by running <tt>make</tt>.<a name="ch15index18"></a><a name="ch15index19"></a><a name="ch15index20"></a><a name="ch15index21"></a></p>
+<p class="docText"><tt>ext_skel</tt> should have added two PHP functions to your skeleton extension: <tt>self_concat()</tt> which is the function you want to implement, and <tt>confirm_myfunctions_compiled()</tt>, which can be called to check that you properly enabled the <tt>myfunctions</tt> extension in your build of PHP. After you finish developing your PHP extension, remove the latter function.</p>
+<pre>
+&lt;?php
+
+    print confirm_myfunctions_compiled("myextension");
+
+?&gt;
+</pre><br>
+<p class="docText">Running this script would result in something similar to the following being printed:</p>
+<pre>
+"Congratulations! You have successfully modified ext/myfunctions
+config.m4. Module myfunctions is now compiled into PHP."
+</pre><br>
+<p class="docText">In addition, the <tt>ext_skel</tt> script creates a <tt>myfunctions.php</tt> script that you can also run to verify that your extension was successfully built into PHP. It shows you a list of functions that your extension supports.</p>
+<p class="docText">Now that you've managed to build PHP with your extension, it's time to actually start hacking at the <tt>self_concat()</tt> function.<a name="ch15index22"></a><a name="ch15index23"></a><a name="ch15index24"></a></p>
+<p class="docText">The following is the skeleton that the <tt>ext_skel</tt> script created:</p>
+<pre>
+/* {{{ proto string self_concat(string str, int n)
+    */
+PHP_FUNCTION(self_concat)
+}
+    char *str = NULL;
+    int argc = ZEND_NUM_ARGS();
+    int str_len;
+    long n;
+
+    if (zend_parse_parameters(argc TSRMLS_CC, "sl", &amp;str, &amp;str_len, &amp;n) == FAILURE)
+        return;
+
+    php_error(E_WARNING, "self_concat: not yet implemented");
+}
+/* }}} */
+</pre><br>
+<p class="docText">The auto-generated PHP function includes comments around the function declaration which are used for self-documentation and code-folding in editors such as vi and Emacs. The function itself is defined by using the <tt>PHP_FUNCTION()</tt> macro, which creates a function prototype suitable for the Zend Engine. The logic itself is divided into semantic parts, the first where you retrieve your function arguments and the latter the logic itself.</p>
+<p class="docText">To retrieve the parameters passed to your function, you'll want to use the <tt>zend_parse_parameters()</tt> API function which has the following prototype:<a name="ch15index25"></a><a name="ch15index26"></a><a name="ch15index27"></a></p>
+<pre>
+zend_parse_parameters(int num_args TSRMLS_DC, char *type_spec, ...);
+</pre><br>
+<p class="docText">The first argument is the number of arguments that were passed to your function. You will usually pass it <tt>ZEND_NUM_ARGS()</tt>, which is a macro that equals the amount of parameters passed to your PHP function. The second argument is for thread-safety purposes, and you should always pass it the <tt>TSRMLS_CC</tt> macro, which is explained later. The third argument is a string specifying what types of parameters you are expecting, followed by a list of variables that should be updated with the parameters' values. Because of PHP's loose and dynamic typing, when it makes sense, the parameters will convert to the requested types if they are different. For example, if the user sends an integer and you request a floating-point number, <tt>zend_parse_parameters()</tt> automatically converts the integer to the corresponding floating-point number. If the actual value cannot be converted to the expected type (for example, integer to array), a warning is triggered.<a name="ch15index28"></a><a name="ch15index29"></a></p>
+<p class="docText"><a class="docLink" href="#ch15table01">Table 15.1</a> lists types you can specify. For completeness, some types that we haven't discussed yet are included.<a name="ch15index30"></a><a name="ch15index31"></a><a name="ch15index32"></a></p>
+<a name="ch15table01"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 15.1. Type Specifiers</H5></caption><colgroup><col width="137.5"><col width="137.5"><col width="275"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Type Specifier</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Corresponding C Type</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">l</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>long</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Signed integer.</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">d</P></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>double</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Floating-point number.</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">s</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>char *, int</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Binary string including length.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">b</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>zend_bool</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Boolean value (1 or 0).</P></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">r</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>zval *</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Resource (file pointer, database connection, and so on).</P></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">a</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>zval *</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">Associative array.</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">o</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>zval *</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Object of any type.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">O</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>zval *</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Object of a specific type. This requires you to also pass the class type you want to retrieve.</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">z</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>zval *</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The <tt>zval</tt> without any manipulation.</p></td></tr></table></p><BR>
+<p class="docText">To understand the last few options, you need to know that a <tt>zval</tt> is the Zend Engine's value container. Whether the value is a Boolean, a string, or any other type, its information is contained in the <tt>zval</tt> union. We will not access <tt>zval</tt>'s directly in this chapter, except through some accessor macros, but the following is more or less what a <tt>zval</tt> value looks like in C, so that you can get a better idea of what's going on:<a name="ch15index35"></a><a name="ch15index36"></a><a name="ch15index37"></a></p>
+<pre>
+typedef union _zval {
+    long lval;
+    double dval;
+    struct {
+        char *val;
+        int len;
+    } str;
+    HashTable *ht;
+    zend_object_value obj;
+} zval;
+</pre><BR>
+<p class="docText">In our examples, we use <tt>zend_parse_parameters()</tt> with basic types, receiving their values as native C types and not as <tt>zval</tt> containers.</p>
+<p class="docText">For <tt>zend_parse_parameters()</tt> to be able to change the arguments that are supposed to return the function parameters, you need to send them by reference. Take a closer look at <tt>self_concat()</tt>:</P>
+<pre>
+if (zend_parse_parameters(argc TSRMLS_CC, "sl", &amp;str, &amp;str_len, &amp;n) == FAILURE)
+        return;
+</pre><br>
+<p class="docText">Notice that the generated code checks for the return value <tt>FAILURE</tt> (<tt>SUCCESS</tt> in case of success) to see if the function has succeeded. If not, it just returns because, as previously mentioned, <tt>zend_parse_parameters()</tt> takes care of triggering warnings. Because your function wants to retrieve a string <tt>str</tt> and an integer <tt>n</tt>, it specifies <tt>"sl"</tt> as its type specifier string. <tt>s</tt> requires two arguments, so we send references to both a <tt>char *</tt> and an <tt>int</tt> (<tt>str</tt> and <tt>str_len</tt>) to the <tt>zend_parse_parameters()</tt> function. Whenever possible, always use the string's length <tt>str_len</tt> in your source code to make sure your functions are binary safe. Don't use functions such as <tt>strlen()</tt> and <tt>strcpy()</tt> unless you don't mind if your functions don't work for binary string. <span class="docEmphStrong">Binary strings</span> are strings that can contain nulls. Binary formats include image files, compressed files, executable files, and more. <tt>"l"</tt> just requires one argument, so we pass it the reference of <tt>n</tt>. Although for clarity's sake, the skeleton script creates C variable names that are identical to the argument names in your specified function prototype; there's no need to do so, although it is recommended practice.<a name="ch15index38"></a><a name="ch15index39"></a><a name="ch15index40"></a><a name="ch15index41"></a><a name="ch15index42"></a></p>
+<p class="docText">Back to conversion rules. All the three following calls to <tt>self_concat()</tt> result in the same values being stored in <tt>str</tt>, <tt>str_len</tt>, and <tt>n</tt>:</p>
+<pre>
+self_concat("321", 5);
+self_concat(321, "5");
+self_concat("321", "5");
+</pre><br>
+<p class="docText"><tt>str</tt> points to the string "<tt>321</tt>", <tt>str_len</tt> equals 3, and <tt>n</tt> equals 5.</P>
+<p class="docText">Before we write the code that creates the concatenated string and returns it to PHP, we need to cover two important issues: memory management and the API for returning values from internal PHP functions.<a name="ch15index43"></a><a name="ch15index44"></a><a name="ch15index45"></a></P>
+<a name="ch15lev2sec1"></a><h4 class="docSection2Title">15.2.1. Memory Management</h4>
+<p class="docText">PHP's API for allocating memory from the heap is almost identical to the standard C API. When writing extensions, use the following API functions that correspond to their C counterparts (and therefore are not explained):<a name="ch15index46"></a><a name="ch15index47"></a><a name="ch15index48"></a></p>
+<pre>
+emalloc(size_t size);
+efree(void *ptr);
+ecalloc(size_t nmemb, size_t size);
+erealloc(void *ptr, size_t size);
+estrdup(const char *s);
+estrndup(const char *s, unsigned int length);
+</pre><br>
+<p class="docText">At this point, any experienced C developer should be thinking something like, "What? <tt>strndup()</tt> doesn't exist in standard C?" Well, that is correct because it is a GNU extension typically available on Linux. <tt>estrndup()</tt> is the only function that is special to PHP. It behaves like <tt>estrdup()</tt>, but you can specify the length of the string you want to duplicate (without the terminating null) and is, therefore, binary safe. This is recommended over <tt>estrdup()</tt>.</P>
+<p class="docText">Under almost all circumstances, you should use these allocation functions. There are some cases where extensions need to create memory that will be persistent in between requests where regular <tt>malloc()</tt> has to be used, but unless you know what you are doing, you should always use these functions. PHP will crash if you return values into the scripting engine that are not allocated with these functions, but with their standard C counterparts.</p>
+<p class="docText">Advantages of these functions are that any such allocated memory that is accidentally not freed will be released at the end of a request. Therefore, it can't cause real memory leaks. However, don't rely on this, and make sure you free memory when you are supposed toboth for debugging and performance reasons. Other advantages include improved performance in multi-threaded environments, detection of memory corruption in debug mode, and more.</p>
+<p class="docText">Another important point to mention is that you don't have to check the return values of the memory allocation functions for null. When memory allocation fails, they will bail out with an <tt>E_ERROR</tt> and will, therefore, never return.<a name="ch15index49"></a><a name="ch15index50"></a><a name="ch15index51"></a></P>
+<a name="ch15lev2sec2"></a><h4 class="docSection2Title">15.2.2. Returning Values from PHP Functions</H4>
+<p class="docText">The extension API includes a rich collection of macros that allows you to return values from your functions. These macros come in two main flavors. The first is of the form <tt>RETVAL_type()</tt>, which sets the return value but your C code keeps on executing. This is usually used if you still want to do some cleaning up before returning control over to the scripting engine. You will then need to use the C return statement <tt>"return;"</tt> to return to PHP. The latter, which are the more popular macros, are of the form <tt>RETURN_type()</tt>, which set the return type and return control back to PHP. <a class="docLink" href="#ch15table02">Table 15.2</a> explains most of the existing macros.<a name="ch15index52"></a><a name="ch15index53"></a><a name="ch15index54"></a><a name="ch15index55"></a><a name="ch15index56"></a><a name="ch15index57"></a></p>
+<a name="ch15table02"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 15.2. Return Values Macros</h5></caption><colgroup><col width="143"><col width="214.5"><col width="192.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="bottom"><p class="docText"><span class="docEmphStrong">Setting the Return Value and Ending the Function</span></p></th><th class="thead" scope="col" align="left" valign="bottom"><p class="docText"><span class="docEmphStrong">Setting the Return Value</span></p></th><th class="thead" scope="col" align="left" valign="bottom"><p class="docText"><span class="docEmphStrong">Macro Return Type and Parameters</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETURN_LONG(l)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETVAL_LONG(l)</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Integer.</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETURN_BOOL(b)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETVAL_BOOL(b)</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Boolean (1 or 0).</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETURN_NULL()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETVAL_NULL()</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Null.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETURN_DOUBLE(d)</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETVAL_DOUBLE(d)</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Floating point.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETURN_STRING(s, dup)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETVAL_STRING(s, dup)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">String. If <tt>dup</tt> is <tt>1,</tt> the engine will duplicate <tt>s</tt> using <tt>estrdup()</tt> and will use the copy. If <tt>dup</tt> is <tt>0</tt>, it will use <tt>s</tt>.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETURN_STRINGL(s, l, dup)</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETVAL_STRINGL(s, l, dup)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">String value of length <tt>l.</tt> Same as the previous entry, but faster when duplicating because the length of <tt>s</tt> is specified by you in the macro.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETURN_TRUE</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETVAL_TRUE</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the Boolean value <tt>true.</tt> Note that this macro doesn't have braces.</P></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETURN_FALSE</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETVAL_FALSE</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Returns the Boolean value <tt>TRue.</tt> Note that this macro doesn't have braces.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETURN_RESOURCE(r)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>RETVAL_RESOURCE(r)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Resource handle.</p></td></tr></table></p><br>
+<a name="ch15lev2sec3"></a><H4 class="docSection2Title">15.2.3. Completing <tt>self_concat()</tt></H4>
+<p class="docText">Now that you have learned how to allocate memory and return values from PHP extension functions, we can complete the code for <tt>self_concat()</tt>:<a name="ch15index58"></a><a name="ch15index59"></a><a name="ch15index60"></a></p>
+<pre><a name="PLID12"></a><div class="v1"><a href="ch15lev1sec2.html#PLID12">[View full width]</a></div>
+/* {{{ proto string self_concat(string str, int n)
+    */
+PHP_FUNCTION(self_concat)
+}
+    char *str = NULL;
+    int argc = ZEND_NUM_ARGS();
+    int str_len;
+    long n;
+    char *result; /* Points to resulting string */
+    char *ptr;  /* Points at the next location we want to copy to */
+    int result_length; /* Length of resulting string */
+
+    if (zend_parse_parameters(argc TSRMLS_CC, "sl", &amp;str, &amp;str_len, &amp;n) == FAILURE)
+        return;
+
+    /* Calculate length of result */
+    result_length = (str_len * n);
+
+    /* Allocate memory for result */
+    result = (char *) emalloc(result_length + 1);
+
+    /* Point at the beginning of the result */
+    ptr = result;
+
+    while (n--) {
+        /* Copy str to the result */
+        memcpy(ptr, str, str_len);
+        /* Increment ptr to point at the next position we want to write to */
+        ptr += str_len;
+    }
+    /* Null terminate the result. Always null-terminate your strings even if they are
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> binary strings */
+    *ptr = '\0';
+
+    /* Return result to the scripting engine without duplicating it */
+    RETURN_STRINGL(result, result_length, 0);
+}
+/* }}} */
+</pre><br>
+<p class="docText">All you need to do now is to recompile PHP, and you've written your first PHP function.</P>
+<p class="docText">Let's check and see if it really works. Run the following script in your freshly compiled PHP tree:<a name="ch15index61"></a><a name="ch15index62"></a><a name="ch15index63"></a></p>
+<pre>
+&lt;?php
+
+        for ($i = 1; $i &lt;= 3; $i++) {
+                print self_concat("ThisIsUseless", $i);
+                print "\n";
+        }
+?&gt;
+</pre><br>
+<p class="docText">You should get the following result:<a name="ch15index64"></a><a name="ch15index65"></a><a name="ch15index66"></a></p>
+<pre>
+ThisIsUseless
+ThisIsUselessThisIsUseless
+ThisIsUselessThisIsUselessThisIsUseless
+</pre><br>
+<a name="ch15lev2sec4"></a><h4 class="docSection2Title">15.2.4. Summary of Example</h4>
+<p class="docText">You have learned how to write a simple PHP function. Going back to the beginning of this chapter, we mentioned two main motivations for writing PHP functionality in C. The first was to write some of your algorithms in C for performance or for functionality reasons. The previous example should allow you to quickly get started with these kind of extensions. The second motivation was for wrapping third-party libraries. We will discuss this next.</P>
+<a name="ch15lev2sec5"></a><h4 class="docSection2Title">15.2.5. Wrapping Third-Party Extensions</H4>
+<p class="docText">In this section, you learn how to write a more useful and complete extension. It wraps a C library and explains how to write an extension with various PHP functions that work together.<a name="ch15index67"></a><a name="ch15index68"></a><a name="ch15index69"></a></p>
+<a name="ch15lev3sec1"></a><H5 class="docSection3Title">15.2.5.1 Motivation</h5>
+<p class="docText">Probably the most common PHP extension is one which wraps a third party C library. This may include database server libraries, such as MySQL or Oracle, XML technology libraries, such as libxml2 or expat, graphics manipulation libraries, such as ImageMagick or GD, and lots more.<a name="ch15index70"></a><a name="ch15index71"></a></p>
+<p class="docText">In this section, we write such an extension from scratch, yet again using the script for creating skeleton extensions, which saves us much work. This extension wraps the standard C functions <tt>fopen()</tt>, <tt>fclose()</tt>, <tt>fread()</tt>, <tt>fwrite()</tt>, and <tt>feof()</tt>.</p>
+<p class="docText">The extension uses an abstract datatype called <tt>resource</tt> to represent the opened file <tt>FILE *</tt>. You will notice that most PHP extensions that deal with datatypes, such as database connections and file handles, use resources because the engine itself can't "understand" them directly.</p>
+<p class="docText">The list of C APIs we want to implement in our PHP extension include</P>
+<pre>
+FILE *fopen(const char *path, const char *mode);
+int fclose(FILE *stream);
+size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
+size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
+int feof(FILE *stream);
+</pre><BR>
+<p class="docText">We implement these functions in a way that fits the PHP spirit both in naming conventions and simplicity of the API. If you ever contribute your code to the PHP community, you will be expected to follow the agreed-upon conventions and not necessarily follow the C library's API, as is. Some of the conventions, but not all, are documented in the <tt>CODING_STANDARDS</tt> file in the PHP source tree. That being said, this functionality has already been present in PHP from its early days with an API similar to the C library's API. Your PHP installation already supports <tt>fopen()</tt>, <tt>fclose()</tt>, and more PHP functions.<a name="ch15index72"></a><a name="ch15index73"></a></p>
+<p class="docText">So, here's what our PHP spirited API would look like:<a name="ch15index74"></a></p>
+<pre><a name="PLID16"></a><div class="v1"><a href="ch15lev1sec2.html#PLID16">[View full width]</a></div>
+<span class="docEmphStrong">resource file_open(string filename, string mode)</span>
+file_open() accepts two strings (filename and mode) and returns a resource handle to the file.
+
+<span class="docEmphStrong">bool file_close(resource filehandle)</span>
+file_close() receives a resource handle and returns true/false if the operation succeeded.
+
+<span class="docEmphStrong">string file_read(resource filehandle, int size)</span>
+file_read() receives a resource handle and the amount of bytes to read. It returns the
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> read string.
+
+<span class="docEmphStrong">bool file_write(resource filehandle, string buffer)</span>
+file_write() receives a resource handle and the string to write. It returns true/false if
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> the operation succeeded.
+
+<span class="docEmphStrong">bool file_eof(resource filehandle)</span>
+file_eof() receives a resource handle and returns true/false if end of-file has been reached.
+</pre><br>
+<p class="docText">Therefore, our function definition file, which we'll save in the <tt>ext/</tt> directory as <tt>myfile.def</tt> will look as follows:<a name="ch15index75"></a><a name="ch15index76"></a></p>
+<pre>
+resource file_open(string filename, string mode)
+bool file_close(resource filehandle)
+string file_read(resource filehandle, int size)
+bool file_write(resource filehandle, string buffer)
+bool file_eof(resource filehandle)
+</pre><BR>
+<p class="docText">Next, run it through the <tt>ext_skel</tt> script with the following command inside the <tt>ext/</tt> directory of the source tree:</p>
+<pre>
+./ext_skel --extname=myfile --proto=myfile.def
+</pre><br>
+<p class="docText">Then, follow the instructions from the previous example on how to build your newly created extension. You will receive some compile errors on lines that include the FETCH_RESOURCE() macro, which the skeleton script can't complete on its own. To get your skeleton extension to build, you can just comment them out for now.<a name="ch15index77"></a><a name="ch15index78"></a></P>
+<a name="ch15lev3sec2"></a><h5 class="docSection3Title">15.2.5.2 Resources</H5>
+<p class="docText">A <span class="docEmphStrong">resource</span> is an abstract value that can hold any kind of information. As previously mentioned, this information often consists of data such as file handles, database connection structures, and other complex types.<a name="ch15index79"></a><a name="ch15index80"></a><a name="ch15index81"></a></p>
+<p class="docText">The main reason for using resources is that they are managed via a centralized list that automatically destroys the resource in case the PHP developer hasn't done so explicitly in his script.</p>
+<p class="docText">For instance, consider writing a script that opens a MySQL connection via the call <tt>mysql_connect()</tt>, but doesn't call <tt>mysql_close()</tt> to close it once the database connection resource isn't in use anymore. In PHP, the resource mechanism detects when this resource should be destroyed, and will destroy it (at the latest) at the end of the current request and often much earlier. This gives a bulletproof mechanism for eliminating the possibility for resource leaks. Without such a mechanism, after a few web requests, the web server could be potentially leaking a lot of resources, which could lead to server crashes or malfunction.<a name="ch15index82"></a><a name="ch15index83"></a><a name="ch15index84"></a></p>
+<a name="ch15lev3sec3"></a><h5 class="docSection3Title">15.2.5.3 Registering Resources Types</h5>
+<p class="docText">How do you use resources?</p>
+<p class="docText">The Zend Engine has made it relatively easy to work with resources. The first thing you have to do is register your resource type with the engine.<a name="ch15index85"></a><a name="ch15index86"></a><a name="ch15index87"></a><a name="ch15index88"></a><a name="ch15index89"></a></p>
+<p class="docText">The API function to use is</p>
+<pre><a name="PLID19"></a><div class="v1"><a href="ch15lev1sec2.html#PLID19">[View full width]</a></div>
+int zend_register_list_destructors_ex(rsrc_dtor_func_t ld, rsrc_dtor_func_t pld, char
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> *type_name, int module_number)
+</pre><br>
+<p class="docText"><a name="ch15index90"></a>The function returns a resource type id, which should be saved by the extension in a global variable and will be passed to other resource API calls when necessary. <tt>ld</tt>, the destructor function, should be called for this resource. <tt>pld</tt> is used for persistent resources that can survive in between requests and won't be covered in this chapter. <tt>type_name</tt> is a string with a descriptive name for the type. <tt>module_number</tt> is used internally by the engine, and when we call this function, we will just pass through an already defined <tt>module_number</tt> variable.<a name="ch15index91"></a></p>
+<p class="docText">Back to our example: We will add the following code to our <tt>myfile.c</tt> source file. It includes the definition for the destructor function that is passed to the <tt>zend_register_list_destructors_ex()</tt> registration function (it should be added early in the file so that it's defined by the time you make the <tt>zend_register_list_destructors_ex()</tt> call):</p>
+<pre>
+static void myfile_dtor(zend_rsrc_list_entry *rsrc TSRMLS_DC)
+{
+       FILE *fp = (FILE *) rsrc-&gt;ptr;
+
+       fclose(fp);
+}
+</pre><br>
+<p class="docText">After adding the registration line to your auto-generated <tt>PHP_MINIT_FUNCTION()</tt> function, it should look similar to the following:<a name="ch15index92"></a><a name="ch15index93"></a><a name="ch15index94"></a><a name="ch15index95"></a><a name="ch15index96"></a><a name="ch15index97"></a></p>
+<pre><a name="PLID21"></a><div class="v1"><a href="ch15lev1sec2.html#PLID21">[View full width]</a></div>
+PHP_MINIT_FUNCTION(myfile)
+{
+       /* If you have INI entries, uncomment these lines
+       ZEND_INIT_MODULE_GLOBALS(myfile, php_myfile_init_globals, NULL);
+       REGISTER_INI_ENTRIES();
+       */
+       le_myfile = zend_register_list_destructors_ex(myfile_dtor, NULL,"standard-c-file",
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> module_number);
+       return SUCCESS;
+}
+</pre><br>
+<p class="docText">* Note that <tt>le_myfile</tt> is a global variable that is already defined by the <tt>ext_skel</tt> script.</p>
+<p class="docText"><tt>PHP_MINIT_FUNCTION()</tt> is the per-module (extension) startup function that is part of the API exposed to your extension. <a class="docLink" href="#ch15table03">Table 15.3</a> gives you a short overview of the available functions and how you can use them.<a name="ch15index98"></a><a name="ch15index99"></a><a name="ch15index100"></a><a name="ch15index101"></a></p>
+<a name="ch15table03"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 15.3. Function Declaration Macros</h5></caption><colgroup><col width="209"><col width="341"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Function Declaration Macro</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Semantics</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_MINIT_FUNCTION()</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The module startup function is called by the engine when PHP loads and allows it to do necessary one-time initializations, such as registering resource types, registering INI values, and more.</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_MSHUTDOWN_FUNCTION()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The module shutdown function is called by the engine when PHP shuts down completely and is usually used for unregistering INI entries.</P></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_RINIT_FUNCTION()</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The per-request startup function is called at the beginning of each request served by PHP, and it is used to manage per-request logic.</p></TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_RSHUTDOWN_FUNCTION()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The per-request shutdown function is called at the end of each request served by PHP, and it is most often used to clean up the per-request startup function's logic.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>PHP_MINFO_FUNCTION()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The module info function is called during the PHP <tt>phpinfo()</tt> function and prints out this modules information.</p></td></tr></table></p><BR>
+<a name="ch15lev3sec4"></a><H5 class="docSection3Title">15.2.5.4 Creating and Registering New Resources</h5>
+<p class="docText">We are about to implement the <tt>file_open()</tt> function. After we open the file and receive a <tt>FILE *</tt>, we need to register it with the resource mechanism. The main macro to achieve this is<a name="ch15index104"></a><a name="ch15index105"></a><a name="ch15index106"></a><a name="ch15index107"></a></p>
+<pre>
+ZEND_REGISTER_RESOURCE(rsrc_result, rsrc_pointer, rsrc_type);
+</pre><BR>
+<p class="docText">See <a class="docLink" href="#ch15table04">Table 15.4</a> for an explanation of the macro's arguments.</p>
+<a name="ch15table04"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 15.4. <tt>ZEND_REGISTER_RESOURCE</tt> Macro Arguments</h5></caption><colgroup><col width="132"><col width="418"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Macro Argument</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Parameter Type</span></P></th></tr></thead><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>rsrc_result</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>zval *,</tt> which should be set with the registered resource information.</p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>rsrc_pointer</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Pointer to our resource data.</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>rsrc_type</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The resource id obtained when registering the resource type.</p></td></tr></table></p><br>
+<a name="ch15lev3sec5"></a><h5 class="docSection3Title">15.2.5.5 File Functions</h5>
+<p class="docText">Now that you know how to use the <tt>ZEND_REGISTER_ RESOURCE()</tt> macro, you're almost ready to write <tt>file_open()</tt>. There's only one more subject we need to cover.<a name="ch15index109"></a><a name="ch15index110"></a><a name="ch15index111"></a><a name="ch15index112"></a></p>
+<p class="docText">As PHP also runs under multi-threaded servers, you cannot use the standard C file access functions. This is because a running PHP script in one thread might change the current working directory, thus leading an <tt>fopen()</tt> call using a relative path in another thread failing to open the intended file. To prevent such problems, the PHP framework provides <span class="docEmphStrong">VCWD</span> (virtual current working directory) macros that should be used instead of any file access functions that rely on the current working directory. (<a class="docLink" href="#ch15table05">Table 15.5</a> lists the available macros.) The macros behave the same as the functions they replace, and everything is handled for you transparently. Standard C library functions that are not available on certain platforms are, therefore, not supported by the VCWD framework. For example, <tt>chown()</tt>, which doesn't exist on Win32, won't have a corresponding <tt>VCWD_CHOWN()</tt> macro defined.<a name="ch15index113"></a><a name="ch15index114"></a></p>
+<a name="ch15table05"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 15.5. List of VCWD Macros</h5></caption><colgroup><col width="130.6930693069307"><col width="157.92079207920793"><col width="261.3861386138614"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Standard C Library</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">VCWD Macro</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Comment</span></P></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>getcwd()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_GETCWD()</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</TD></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>fopen()</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_FOPEN()</tt></p></td><TD class="docTableCell" align="left" valign="top">&nbsp;</TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>open()</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_OPEN()</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Used for the two-parameter version.</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>open()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_OPEN_MODE()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Used for the three-parameter version of <tt>open().</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>creat()</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_CREAT()</tt></p></td><TD class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>chdir()</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_CHDIR()</tt></p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>getwd()</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_GETWD()</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>realpath()</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_REALPATH()</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>rename()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_RENAME()</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>stat()</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_STAT()</tt></P></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>lstat()</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_LSTAT()</tt></p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>unlink()</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_UNLINK()</tt></p></td><TD class="docTableCell" align="left" valign="top">&nbsp;</td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>mkdir()</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_MKDIR()</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>rmdir()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_RMDIR()</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>opendir()</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_OPENDIR()</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>popen()</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_POPEN()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"></p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>access()</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_ACCESS()</tt></p></td><TD class="docTableCell" align="left" valign="top">&nbsp;</td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>utime()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_UTIME()</tt></p></td><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>chmod()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_CHMOD()</tt></p></TD><TD class="docTableCell" align="left" valign="top">&nbsp;</td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>chown()</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>VCWD_CHOWN()</tt></p></td><TD class="docTableCell" align="left" valign="top">&nbsp;</td></TR></table></p><BR>
+<a name="ch15lev3sec6"></a><h5 class="docSection3Title">15.2.5.6 Writing Your First Resource-Enabled PHP Function</h5>
+<p class="docText">Implementing <tt>file_open()</tt> should now be easy, and it should look as follows:<a name="ch15index116"></a><a name="ch15index117"></a><a name="ch15index118"></a></p>
+<pre><a name="PLID23"></a><div class="v1"><a href="ch15lev1sec2.html#PLID23">[View full width]</a></div>
+PHP_FUNCTION(file_open)
+{
+       char *filename = NULL;
+       char *mode = NULL;
+       int argc = ZEND_NUM_ARGS();
+       int filename_len;
+       int mode_len;
+       FILE *fp;
+
+       if (zend_parse_parameters(argc TSRMLS_CC, "ss", &amp;filename, &amp;filename_len, &amp;mode,
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> &amp;mode_len) == FAILURE) {
+          return;
+       }
+
+       fp = VCWD_FOPEN(filename, mode);
+       if (fp == NULL) {
+           RETURN_FALSE;
+       }
+
+       ZEND_REGISTER_RESOURCE(return_value, fp, le_myfile);
+}
+</pre><br>
+<p class="docText">You might notice that the first argument to the resource registration macro is a variable called <tt>return_value</tt>, which has appeared out of nowhere. This variable is automatically defined by the extension framework and is a <tt>zval *</tt> to the function's return value. The previously discussed macros, which affect the return value such as <tt>RETURN_LONG()</tt> and <tt>RETVAL_BOOL()</tt>, actually change the value of <tt>return_value</tt>. Therefore, it is easy to guess that the code registers our acquired file pointer <tt>fp</tt> and sets the <tt>return_value</tt> to the registered resource.<a name="ch15index119"></a><a name="ch15index120"></a><a name="ch15index121"></a></P>
+<a name="ch15lev3sec7"></a><H5 class="docSection3Title">15.2.5.7 Accessing a Resource</h5>
+<p class="docText">To access a resource, you need to use the following macro (see <a class="docLink" href="#ch15table06">Table 15.6</a> for an explanation of its arguments):<a name="ch15index122"></a><a name="ch15index123"></a><a name="ch15index124"></a></p>
+<pre><a name="PLID24"></a><div class="v1"><a href="ch15lev1sec2.html#PLID24">[View full width]</a></div>
+ZEND_FETCH_RESOURCE(rsrc, rsrc_type, passed_id, default_id, resource_type_name,
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> resource_type);
+</pre><br>
+<a name="ch15table06"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 15.6. <tt>ZEND_FETCH_RESOURCE</tt> Macro Arguments</h5></caption><colgroup><col width="143"><col width="407"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Parameter</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Meaning</span></p></th></TR></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>rsrc</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Variable that is assigned the resource value. It has to be of the same type as the resource.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>rsrc_type</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Type of <tt>rsrc</tt> that will be used to cast the resource internally to the correct type.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>passed_id</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The resource value to look for (as a <tt>zval **</tt>).</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>default_id</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">If this value is not <tt>1</tt>, this id is taken. It is used for implementing a default for the resource.</P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>resource_type_name</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">A short type name for your resource which is used in error messages.</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>resource_type</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The resource type id of the registered resource.</P></td></TR></table></p><br>
+<p class="docText">Using this macro, we can now implement <tt>file_eof()</tt>:</p>
+<pre>
+PHP_FUNCTION(file_eof)
+{
+        int argc = ZEND_NUM_ARGS();
+        zval *filehandle = NULL;
+        FILE *fp;
+
+        if (zend_parse_parameters(argc TSRMLS_CC, "r", &amp;filehandle) ==FAILURE) {
+                return;
+        }
+
+        ZEND_FETCH_RESOURCE(fp, FILE *, &amp;filehandle, -1, "standard-c file",le_myfile);
+        if (fp == NULL) {
+                RETURN_FALSE;
+        }
+
+        if (feof(fp) &lt;= 0) {
+                /* Return eof also if there was an error */
+                RETURN_TRUE;
+        }
+        RETURN_FALSE;
+}
+</pre><br>
+<a name="ch15lev3sec8"></a><h5 class="docSection3Title">15.2.5.8 Removing a Resource</h5>
+<p class="docText"><a name="ch15index127"></a><a name="ch15index128"></a><a name="ch15index129"></a>To remove a resource, you usually want to use the following macro:<a name="ch15index130"></a><a name="ch15index131"></a><a name="ch15index132"></a></p>
+<pre>
+int zend_list_delete(int id)
+</pre><br>
+<p class="docText">The macro is passed the id of the resource, and returns either <tt>SUCCESS</tt> or <tt>FAILURE</tt>. If the resource exists, prior to removing it from the Zend resource list, it will call the registered destructor for the resource type. Therefore, in our example, you don't have to obtain the file pointer and <tt>fclose()</tt> it before removing the resource, but you can just go ahead and delete it.</p>
+<p class="docText">Using this macro, we can now implement <tt>file_close()</tt>:</p>
+<pre>
+PHP_FUNCTION(file_close)
+{
+        int argc = ZEND_NUM_ARGS();
+        zval *filehandle = NULL;
+
+        if (zend_parse_parameters(argc TSRMLS_CC, "r", &amp;filehandle) == FAILURE) {
+           return;
+        }
+
+        if (zend_list_delete(Z_RESVAL_P(filehandle)) == FAILURE) {
+           RETURN_FALSE;
+        }
+        RETURN_TRUE;
+}
+</pre><br>
+<p class="docText">You must be asking yourself what <tt>Z_RESVAL_P()</tt> does. When we retrieve the resource from the argument list using <tt>zend_parse_parameters()</tt>, we receive it in the form of a <tt>zval</tt>. To access the resource id, we use the <tt>Z_RESVAL_P()</tt> macro, and then pass it to <tt>zend_list_delete()</tt>.<a name="ch15index133"></a></p>
+<p class="docText">A whole family of macros aid in accessing values stored in <tt>zval</tt> values (see <a class="docLink" href="#ch15table07">Table 15.7</a> for a list of macros). Although <tt>zend_parse_parameters()</tt> in most cases returns the values as the corresponding C type, you might want to deal with a <tt>zval</tt> directly, including in the case of resources.<a name="ch15index134"></a><a name="ch15index135"></a><a name="ch15index136"></a></p>
+<a name="ch15table07"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 15.7. <tt>zval</tt> Accessor Macros</h5></caption><colgroup><col width="181.5"><col width="137.5"><col width="231"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Macros</span></P></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Used to Access</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">C Type</span></p></th></TR></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_LVAL, Z_LVAL_P, Z_LVAL_PP</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Integer value</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Long</tt></P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_BVAL, Z_BVAL_P, Z_BVAL_PP</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Boolean value</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>zend_bool</tt></p></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_DVAL, Z_DVAL_P, Z_DVAL_PP</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Floating-point value</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>double</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_STRVAL, Z_STRVAL_P, Z_STRVAL_PP</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">String value</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>char *</tt></p></td></TR><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_STRLEN, Z_STRLEN_P, Z_STRLEN_PP</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">String length</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>int</tt></p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_RESVAL, Z_RESVAL_P, Z_RESVAL_PP</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Resource value</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Long</tt></P></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_ARRVAL, Z_ARRVAL_P, Z_ARRVAL_PP</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Associative array</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>HashTable *</tt></P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_TYPE, Z_TYPE_P, Z_TYPE_PP</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The <tt>zval's</tt> type</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Enumeration <tt>(IS_NULL, IS_LONG, IS_DOUBLE, IS_STRING, IS_ARRAY, IS_OBJECT, IS_BOOL, IS_RESOURCE)</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_OBJPROP, Z_OBJPROP_P, Z_OBJPROP_PP</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">The object's properties hash (won't be covered in this chapter).</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>HashTable *</tt></p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Z_OBJCE, Z_OBJCE_P, Z_OBJCE_PP</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The object's class information (won't be covered in this chapter).</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>zend_class_entry</tt></p></td></tr></table></p><BR>
+<a name="ch15lev3sec9"></a><H5 class="docSection3Title">15.2.5.9 Macros Used to Access <tt>zval</tt> Values</h5>
+<p class="docText">All macros have three forms: one that accepts <tt>zval</tt>s, another one for <tt>zval *</tt>s, and finally one for <tt>zval **</tt>s. The difference in their names is that the first has no suffix, the <tt>zval *</tt> has a suffix of <tt>_P</tt> (as in one pointer), and the latter, <tt>zval **</tt>, has a suffix of <tt>_PP</tt> (two pointers).<a name="ch15index139"></a><a name="ch15index140"></a><a name="ch15index141"></a></p>
+<p class="docText">Now, you have enough information to complete the <tt>file_read()</tt> and <tt>file_write()</tt> functions on your own. Here's a possible implementation:</p>
+<pre><a name="PLID28"></a><div class="v1"><a href="ch15lev1sec2.html#PLID28">[View full width]</a></div>
+PHP_FUNCTION(file_read)
+{
+    int argc = ZEND_NUM_ARGS();
+    long size;
+    zval *filehandle = NULL;
+    FILE *fp;
+    char *result;
+    size_t bytes_read;
+
+    if (zend_parse_parameters(argc TSRMLS_CC, "rl", &amp;filehandle, &amp;size) == FAILURE) {
+        return;
+    }
+
+    ZEND_FETCH_RESOURCE(fp, FILE *, &amp;filehandle, -1, "standard-c file", le_myfile);
+
+    result = (char *) emalloc(size+1);
+    bytes_read = fread(result, 1, size, fp);
+    result[bytes_read] = '\0';
+    RETURN_STRING(result, 0);
+}
+
+PHP_FUNCTION(file_write)
+{
+    char *buffer = NULL;
+    int argc = ZEND_NUM_ARGS();
+    int buffer_len;
+    zval *filehandle = NULL;
+    FILE *fp;
+if (zend_parse_parameters(argc TSRMLS_CC, "rs", &amp;filehandle, &amp;buffer, &amp;buffer_len) ==
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> FAILURE) {
+        return;
+    }
+
+    ZEND_FETCH_RESOURCE(fp, FILE *, &amp;filehandle, -1, "standard-c file", le_myfile);
+
+    if (fwrite(buffer, 1, buffer_len, fp) != buffer_len) {
+        RETURN_FALSE;
+    }
+    RETURN_TRUE;
+}
+</pre><br>
+<a name="ch15lev3sec10"></a><H5 class="docSection3Title">15.2.5.10 Testing the Extension</h5>
+<p class="docText"><a name="ch15index142"></a><a name="ch15index143"></a><a name="ch15index144"></a>You are now ready to write a test script to check that the extension works. Here's a sample script that opens a file <tt>test.txt</tt>, prints its contents to the standard output, and creates a copy of the file as <tt>test.txt.new</tt>:<a name="ch15index145"></a><a name="ch15index146"></a></p>
+<pre>
+&lt;?php
+    $fp_in = file_open("test.txt", "r") or die("Unable to open input file\n");
+    $fp_out = file_open("test.txt.new", "w") or die("Unable to open output file\n");
+    while (!file_eof($fp_in)) {
+        $str = file_read($fp_in, 1024);
+        print($str);
+        file_write($fp_out, $str);
+    }
+    file_close($fp_in);
+    file_close($fp_out);
+?&gt;
+</pre><BR>
+<a name="ch15lev2sec6"></a><h4 class="docSection2Title">15.2.6. Global Variables</H4>
+<p class="docText">You might want to use global C variables in your extension, either for your own internal use or for receiving php.ini values of your extension's registered INI directives (INI is discussed in the next section). As PHP is designed to run in multi-threaded environments, you shouldn't define global variables on your own. PHP supplies a mechanism that creates global variables for you, which can be used both in threaded and non-threaded environments. You should <span class="docEmphasis">always</span> use this mechanism and not define your own global variables. These global variables are then accessed via a macro and used just as if they are regular global variables.<a name="ch15index147"></a><a name="ch15index148"></a><a name="ch15index149"></a></p>
+<p class="docText">The <tt>ext_skel</tt> script that created your skeleton myfile project created the necessary code to support global variables. By examining <tt>php_myfile.h</tt>, you should see a commented section similar to the following:</p>
+<pre>
+ZEND_BEGIN_MODULE_GLOBALS(myfile)
+    int global_value;
+    char *global_string;
+ZEND_END_MODULE_GLOBALS(myfile)
+</pre><br>
+<p class="docText">You can uncomment this section and add any global variables you'd like in between the two macros. A few lines down in the file, you'll see that the skeleton script automatically defined a <tt>MYFILE_G(v)</tt> macro. This macro should be used all over your source code to access these global variables. It will make sure that if you're in a multi-threaded environment, it will access a per-thread copy of these globals. No mutual exclusion is required by you.</p>
+<p class="docText">The last thing you need to do in order for the global variables to work is to uncomment the following line in <tt>myfile.c</tt>:<a name="ch15index150"></a><a name="ch15index151"></a></p>
+<pre>
+ZEND_DECLARE_MODULE_GLOBALS(myfile)
+</pre><br>
+<p class="docText">You might want to initialize your global variables to a default value at the beginning of each PHP request. In addition, if for example, the global variables point to allocated memory, you might also want to free the memory at the end of each request. For this purpose, the global variable mechanism supports a special macro that allows you to register a constructor and destructor function for your global variables (see <a class="docLink" href="#ch15table08">Table 15.8</a> for an explanation of its parameters):</p>
+<pre>
+ZEND_INIT_MODULE_GLOBALS(module_name, globals_ctor, globals_dtor)
+</pre><br>
+<a name="ch15table08"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 15.8. <tt>ZEND_INIT_MODULE_GLOBALS</tt> Macro Parameters</h5></caption><colgroup><col width="121"><col width="429"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Parameter</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Meaning</span></p></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>module_name</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The name of your extension as passed to the <tt>ZEND_BEGIN_MODULE_GLOBALS()</tt> macro. In our case, <tt>myfile</tt>.</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>globals_ctor</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The constructor function pointer. In the <tt>myfile</tt> extension, the function prototype would be something like</p>
+<p class="docText"><tt>void php_myfile_init_globals(zend_myfile_globals *myfile_globals)</tt></P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>globals_dtor</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The destruction function pointer. For example,</P>
+<p class="docText"><tt>void php_myfile_init_globals(zend_myfile_globals *myfile_globals)</tt></p></td></tr></table></p><BR>
+<p class="docText">You can see an example of the constructor function and use of the <tt>ZEND_INIT_MODULE_GLOBALS()</tt> macro in <tt>myfile.c</tt>.<a name="ch15index154"></a><a name="ch15index155"></a></p>
+<a name="ch15lev2sec7"></a><h4 class="docSection2Title">15.2.7. Adding Custom INI Directives</H4>
+<p class="docText">The INI file (<tt>php.ini</tt>) implementation allows PHP extensions to register and listen to their own custom INI entries. If these INI entries are assigned a value either by <tt>php.ini</tt>, Apache's .htaccess, or other configuration methods, the registered INI variable will always be updated with the correct value. This whole INI framework has many different options and allows for a lot of flexibility. We cover the basics (which gives you a good start) and, with the help of the other material in this chapter, allows you to do most of what you'll need for your day-to-day job.<a name="ch15index156"></a><a name="ch15index157"></a><a name="ch15index158"></a></p>
+<p class="docText">PHP INI directives are registered with the <tt>STD_PHP_INI_ENTRY()</tt> macro in between the <tt>PHP_INI_BEGIN()/PHP_INI_END()</tt> macros. For example, in <tt>myfile.c</tt> you should see something like the following:</P>
+<pre><a name="PLID33"></a><div class="v1"><a href="ch15lev1sec2.html#PLID33">[View full width]</a></div>
+PHP_INI_BEGIN()
+    STD_PHP_INI_ENTRY("myfile.global_value",      "42", PHP_INI_ALL, OnUpdateInt,
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> global_value, zend_myfile_globals, myfile_globals)
+    STD_PHP_INI_ENTRY("myfile.global_string", "foobar", PHP_INI_ALL, OnUpdateString,
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> global_string, zend_myfile_globals, myfile_globals)
+PHP_INI_END()
+</pre><br>
+<p class="docText">Other macros besides <tt>STD_PHP_INI_ENTRY()</tt> can be used, but this one is the most common and should be sufficient for almost all needs (see <a class="docLink" href="#ch15table09">Table 15.9</a> for more information about its parameters):</p>
+<pre><a name="PLID34"></a><div class="v1"><a href="ch15lev1sec2.html#PLID34">[View full width]</a></div>
+STD_PHP_INI_ENTRY(name, default_value, modifiable, on_modify, property_name, struct_type,
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> struct_ptr)
+</pre><br>
+<a name="ch15table09"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 15.9. <tt>STD_PHP_INI_ENTRY</tt> Macro Parameters</h5></caption><colgroup><col width="115.5"><col width="434.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Parameter</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Meaning</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>name</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Name of the INI entry.</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>default_value</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The default value, if not specified in the INI file. The default value is always specified as a string.</p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>modifiable</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">A bit field specifying under what circumstances the INI entry can be changed. Possible values are</P>
+<ul><li><p class="docList"><tt>PHP_INI_SYSTEM. Values can be changed in system files such as php.ini or httpd.conf.</tt></p></li><LI><p class="docList"><tt>PHP_INI_PERDIR. Values can be changed by .htaccess.</tt></P></li><li><p class="docList"><tt>PHP_INI_USER. Values can be changed by user scripts.</tt></p></li><LI><p class="docList"><tt>PHP_INI_ALL. Values can be changed from everywhere</tt></p></li></UL></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>on_modify</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Callback function that handles the modification for this INI entry. Usually, you will not write your own handlers and will use some of the provided ones. These include</p>
+<ul><li><p class="docList"><tt>OnUpdateInt</tt></p></li><li><p class="docList"><tt>OnUpdateString</tt></p></li><li><p class="docList"><tt>OnUpdateBool</tt></p></li><LI><p class="docList"><tt>OnUpdateStringUnempty</tt></P></li><li><p class="docList"><tt>OnUpdateReal</tt></P></li></ul></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>property_name</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Name of the variable that should be updated.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>struct_type</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">Type of the structure the variables resides in. You will usually use the global variables mechanism, so the type is usually automatically defined and will be something like <tt>zend_myfile_globals.</tt></p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>struct_ptr</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The name of the globals structure. By using the global variables mechanism, this would be <tt>myfile_globals.</tt></p></TD></tr></table></p><br>
+<p class="docText">Finally, to make the INI mechanism work correctly with your INI entries, you need to uncomment the <tt>REGISTER_INI_ENTRIES()</tt> call in <tt>PHP_MINIT_FUNCTION(myfile)</tt> and uncomment the <tt>UNREGISTER_INI_ENTRIES()</tt> call in <tt>PHP_MSHUTDOWN_FUNCTION(myfile)</tt>.</p>
+<p class="docText">Accessing one of the two sample global variables is as simple as writing <tt>MYFILE_G(global_value)</tt> and <tt>MYFILE_G(global_string)</tt> from anywhere in your extension.<a name="ch15index164"></a><a name="ch15index165"></a><a name="ch15index166"></a></p>
+<p class="docText">If you'd put the following lines in your <tt>php.ini</tt>, the value of <tt>MYFILE_G (global_value)</tt> would change accordingly to <tt>99</tt>:</p>
+<pre>
+; php.ini  The following line sets the INI entry myfile.global_value to 99.
+myfile.global_value = 99
+</pre><br>
+<a name="ch15lev2sec8"></a><h4 class="docSection2Title">15.2.8. Thread-Safe Resource Manager Macros</h4>
+<p class="docText">By now, you must have noticed the use of macros here and there starting with <span class="docEmphStrong">TSRM</span>, which stands for Thread-Safe Resource Manager. These macros give your extension the possibility of having its own global variables, as previously mentioned.<a name="ch15index167"></a><a name="ch15index168"></a><a name="ch15index169"></a><a name="ch15index170"></a></p>
+<p class="docText">When writing a PHP extension, whether in a multi-process or a multi-threaded environment, you access your extension's global variables via this mechanism. If you want to use global variable accessor macros (such as the <tt>MYFILE_G()</tt> macro), you need to make sure that the TSRM context information is present in your current function. For performance reasons, the Zend Engine tries to pass around this context as a parameter as much as possible, including to your <tt>PHP_FUNCTION()</tt> definition. For this reason, when writing code that uses the accessor macro (such as <tt>MYFILE_G()</tt>) in the scope of <tt>PHP_FUNCTION(),</tt> you don't have to make any special declarations. However, if your PHP function calls other C functions that need access to the global variables, you must either pass that context to the C function as an extra parameter or you must fetch the context that is slower.</p>
+<p class="docText">To fetch the context, you can just use the <tt>TSRMLS_FETCH()</tt> at the beginning of a code block in which you need access to the global variables. For example:</p>
+<pre>
+void myfunc()
+{
+    TSRMLS_FETCH();
+
+    MYFILE_G(myglobal) = 2;
+}
+</pre><br>
+<p class="docText">If you want your code to be more optimized, it is better to pass the context to your function directly (as mentioned before, it is automatically available to you in <tt>PHP_FUNCTION()</tt>'s scope). You can do this by using the <tt>TSRMLS_C</tt> (<tt>C</tt> for call) and <tt>TSRMLS_CC</tt> (<tt>CC</tt> for call and comma) macros. The former should be used when the context is the only parameter, and the latter when it is part of a function that accepts more than one argument. In the latter's case, it may not be the first argument because it places a comma before the context, hence its name.<a name="ch15index171"></a><a name="ch15index172"></a></p>
+<p class="docText">In the function's prototype, you will respectively use the <tt>TSRMLS_D</tt> and <tt>TSRMLS_DC</tt> macros to declare that you're receiving the context.</p>
+<p class="docText">Here's the previous example re-written to take advantage of passing the context by parameter:</p>
+<pre>
+void myfunc(TSRMLS_D)
+{
+    MYFILE_G(myglobal) = 2;
+}
+
+PHP_FUNCTION(my_php_function)
+{
+    ...
+    myfunc(TSRMLS_C);
+    ...
+}<a name="ch15index173"></a><a name="ch15index174"></a>
+</pre><BR>
+<UL></ul></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch15lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch15lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

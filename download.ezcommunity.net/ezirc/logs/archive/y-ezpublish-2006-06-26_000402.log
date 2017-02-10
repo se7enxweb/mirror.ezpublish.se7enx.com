@@ -1,0 +1,89 @@
+[06-24-2006 00:51:22] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-24-2006 01:15:05] -!- kore_ [n=lordhong@194.95.66.31] has joined #ezpublish
+[06-24-2006 01:59:45] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-24-2006 02:16:30] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 03:47:19] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 04:16:47] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-24-2006 04:20:51] -!- alvaro- [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit []
+[06-24-2006 04:38:20] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 05:14:51] -!- ordnas [n=ordnas@213.160.240.34] has joined #ezpublish
+[06-24-2006 05:22:44] -!- ordnas [n=ordnas@213.160.240.34] has left #ezpublish []
+[06-24-2006 05:44:31] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-24-2006 05:53:14] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-24-2006 05:54:14] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-24-2006 05:55:01] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[06-24-2006 06:05:16] -!- kris10an [n=kh@193.213.26.204] has joined #ezpublish
+[06-24-2006 06:07:42] -!- zrg [n=zurgutt@193.213.26.204] has joined #ezpublish
+[06-24-2006 06:26:31] -!- zrg [n=zurgutt@193.213.26.204] has quit [Read error: 104 (Connection reset by peer)]
+[06-24-2006 07:25:06] -!- _ls [n=ls@85.19.74.66] has joined #ezpublish
+[06-24-2006 08:15:09] -!- berthy [n=berthy@81.56.223.143] has joined #ezpublish
+[06-24-2006 08:15:52] [#ezpublish] <berthy> lo
+[06-24-2006 08:23:22] [#ezpublish] <_ls> hi
+[06-24-2006 08:26:45] [#ezpublish] <berthy> I'm trying to configure dynamic top menu because I've some errors "No such attribute for array(5): menu_label Choose one of following: name, short_name, short_description, description, show_children" and I don't knaow how to set these. any help ?
+[06-24-2006 08:27:09] [#ezpublish] <berthy> _ls: hi
+[06-24-2006 08:34:46] [#ezpublish] <Tideman> hi
+[06-24-2006 08:50:10] [#ezpublish] <Tideman> kris10an: hoi!
+[06-24-2006 08:51:37] -!- _ls [n=ls@85.19.74.66] has quit [Remote closed the connection]
+[06-24-2006 09:09:50] -!- kris10an [n=kh@193.213.26.204] has quit [Remote closed the connection]
+[06-24-2006 09:11:04] [#ezpublish] <Tideman> dammit
+[06-24-2006 09:56:08] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-24-2006 10:04:47] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 10:21:18] -!- ordnas [n=ordnas@80.187.158.112] has joined #ezpublish
+[06-24-2006 10:49:45] -!- ordnas [n=ordnas@80.187.158.112] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 11:00:27] -!- DiGiTa|_ [n=pet2poul@84.4.36.28] has joined #ezpublish
+[06-24-2006 11:42:27] -!- DiGiTa|_ [n=pet2poul@84.4.36.28] has quit [Read error: 104 (Connection reset by peer)]
+[06-24-2006 11:42:51] -!- zrg [n=zrg@80.239.107.210] has joined #ezpublish
+[06-24-2006 11:42:58] [#ezpublish] <zrg> yo!
+[06-24-2006 11:46:31] -!- DiGiTa|_ [n=pet2poul@84.4.42.170] has joined #ezpublish
+[06-24-2006 11:51:46] -!- zrg [n=zrg@80.239.107.210] has quit [Read error: 104 (Connection reset by peer)]
+[06-24-2006 13:15:21] -!- zrg [n=zurgutt@85.19.74.66] has joined #ezpublish
+[06-24-2006 13:15:35] [#ezpublish] <zrg> woohoo!
+[06-24-2006 13:15:42] [#ezpublish] <zrg> any alivers?
+[06-24-2006 13:27:06] -!- DiGiTa|__ [n=pet2poul@84.5.139.10] has joined #ezpublish
+[06-24-2006 13:29:27] [#ezpublish] <zrg> corpses..
+[06-24-2006 13:43:14] -!- DiGiTa|_ [n=pet2poul@84.4.42.170] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 13:53:07] -!- DiGiTa|__ [n=pet2poul@84.5.139.10] has quit [Read error: 104 (Connection reset by peer)]
+[06-24-2006 13:53:53] -!- DiGiTa|_ [n=pet2poul@84.6.32.74] has joined #ezpublish
+[06-24-2006 14:23:55] -!- ls [n=ls@137.80-202-59.nextgentel.com] has joined #ezpublish
+[06-24-2006 14:24:19] -!- ls is now known as luke_
+[06-24-2006 15:07:25] -!- DiGiTa|__ [n=pet2poul@84.4.41.216] has joined #ezpublish
+[06-24-2006 15:16:49] -!- berthy [n=berthy@81.56.223.143] has left #ezpublish ["a+ les gens"]
+[06-24-2006 15:19:41] -!- DiGiTa|_ [n=pet2poul@84.6.32.74] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 15:31:37] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-24-2006 15:33:09] -!- DiGiTa|_ [n=pet2poul@84.5.141.206] has joined #ezpublish
+[06-24-2006 15:46:25] -!- DiGiTa|__ [n=pet2poul@84.4.41.216] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 16:00:30] -!- DiGiTa|__ [n=pet2poul@84.4.40.116] has joined #ezpublish
+[06-24-2006 16:08:47] -!- tobmaster [n=tobmaste@113.80-202-59.nextgentel.com] has joined #ezpublish
+[06-24-2006 16:09:36] -!- DiGiTa|_1 [n=pet2poul@84.4.124.128] has joined #ezpublish
+[06-24-2006 16:16:33] -!- DiGiTa|_ [n=pet2poul@84.5.141.206] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 16:21:49] -!- DiGiTa|__ [n=pet2poul@84.4.40.116] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 16:24:00] -!- waba_ [n=waba@143.159-201-80.adsl.skynet.be] has quit [Read error: 110 (Connection timed out)]
+[06-24-2006 16:25:40] -!- luke_ [n=ls@137.80-202-59.nextgentel.com] has quit [Remote closed the connection]
+[06-24-2006 16:26:26] -!- zrg [n=zurgutt@85.19.74.66] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-24-2006 16:28:41] -!- DiGiTa|_1 [n=pet2poul@84.4.124.128] has quit []
+[06-24-2006 16:50:36] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has joined #ezpublish
+[06-24-2006 16:53:17] -!- tobmaster [n=tobmaste@113.80-202-59.nextgentel.com] has quit ["Thx 4 all the fisch"]
+[06-24-2006 17:16:09] -!- CoderForLife [n=Miranda@cpe-65-185-12-34.cinci.res.rr.com] has quit [" “Fly, you fools!” he cried, and was gone."]
+[06-24-2006 17:19:11] -!- kore_ [n=lordhong@194.95.66.31] has quit []
+[06-24-2006 22:04:54] -ratbert:$*- [Global notice] I am a fat asshole, who loves abuse, die
+[06-24-2006 22:05:05] -ratbert:$*- DCC SEND YOUAREALLJUDENLOL
+[06-24-2006 22:08:26] -!- LottoKim [n=kim@195.28.172.4] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:08:36] -!- aya_ [n=aya@fbx.internethic.net] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:08:36] -!- birger [i=birger@ritchie.ping.uio.no] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:08:49] -!- Tideman [i=Tidemann@062249180208.customer.alfanett.no] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:08:49] -!- tobyS [i=dotxp@hartes-php.de] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:13:13] -!- pire [n=kbot@phpugdo.de] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:13:13] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:13:13] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:13:13] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:13:13] -!- snowboarder04 [n=snow04@snowboarder04.be] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:13:13] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [calvino.freenode.net irc.freenode.net]
+[06-24-2006 22:13:23] -!- snowboarder04 [n=snow04@snowboarder04.be] has joined #ezpublish
+[06-24-2006 22:13:24] -!- tobyS [i=dotxp@hartes-php.de] has joined #ezpublish
+[06-24-2006 23:24:52] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[06-24-2006 23:24:52] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-24-2006 23:24:52] -!- birger [i=birger@ritchie.ping.uio.no] has joined #ezpublish
+[06-24-2006 23:24:52] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[06-24-2006 23:24:52] -!- nnn0 [n=nnn0@ti541110a080-2027.bb.online.no] has joined #ezpublish
+[06-24-2006 23:28:21] -lilo:$*- [Global Notice] Hi all. As you may be aware, freenode has experienced a crack attack and we're working on tracking down the details. At this point, we cannot guarantee that more problems will not occur.
+[06-24-2006 23:29:53] -lilo:$*- [Global Notice] Once again I want to take the opportunity to mention that freenode could use more of its own hardware resources and more server hosting resources. If you'd like to help, please email staff@pdpc.us .... Thanks.

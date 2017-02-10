@@ -1,0 +1,114 @@
+[04-27-2005 01:00:25] -!- SachaS [~Sacha@ip68-14-111-175.no.no.cox.net] has joined #ezpublish
+[04-27-2005 01:01:26] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[04-27-2005 01:06:20] -!- SachaS [~Sacha@ip68-14-111-175.no.no.cox.net] has left #ezpublish ["Client exiting"]
+[04-27-2005 01:12:47] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[04-27-2005 01:32:57] [#ezpublish] <Bedlore> how can I get around the menu breaking when viewing http://mysite.com/users/ ?
+[04-27-2005 01:33:53] -!- mode/#ezpublish [+o fh] by ChanServ
+[04-27-2005 01:33:56] [#ezpublish] <Bedlore> clear
+[04-27-2005 01:34:14] [#ezpublish] <@fh> Bedlore: breaking? what do you mean?
+[04-27-2005 01:35:11] [#ezpublish] <Bedlore> menu works fine, but when on public side if you go to view a user, ie something not in the main content tree then the menu freaks out displays no info
+[04-27-2005 01:35:38] [#ezpublish] <Bedlore> this use to also happen when shown search results some time back but ez fixed this
+[04-27-2005 01:36:18] [#ezpublish] <Bedlore> because you are not technically in any specific area of the content tree I guess so $module_result is no longer accurate or something
+[04-27-2005 01:39:17] [#ezpublish] <Bedlore> fh: check your private msg window to see what I mean
+[04-27-2005 01:51:34] [#ezpublish] <danmiru> how can i get current layout in template?
+[04-27-2005 01:52:19] [#ezpublish] <danmiru> or give me any clue on overriding print view template for content/view
+[04-27-2005 02:08:00] [#ezpublish] <danmiru> found, works: $DesignKeys:used.layout
+[04-27-2005 02:14:28] [#ezpublish] <danmiru> if someone know how to set up an override template for print vew, please tell me
+[04-27-2005 02:15:17] [#ezpublish] <Bedlore> I would assume its the same way as normal danmiru
+[04-27-2005 02:34:39] -!- jota_ [~jota@fanzine.igalia.com] has joined #ezpublish
+[04-27-2005 02:59:27] -!- Bedlore [~me@dsl-203-113-238-81.SA.netspace.net.au] has quit []
+[04-27-2005 05:50:34] Disconnecting due to lack of a lag response (0.08590400 1114606174 != 0.06586900 1114606204)
+[04-27-2005 05:50:34] Diconnected. Sleeping for 10 second(s).
+[04-27-2005 05:50:44] >> Connecting to irc.freenode.net:6667
+[04-27-2005 05:50:54] >> Warning: fsockopen(): php_hostconnect: connect failed in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[04-27-2005 05:50:54] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/users/webadmin/dev.firebright.com/ezpublish-3.5.0/extension/ezircbot/copy/iq/include/class.IQBot.php (line 323)
+[04-27-2005 05:50:54] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-27-2005 05:51:04] >> Connecting to irc.freenode.net:6667
+[04-27-2005 05:51:04] >> Connected to irc.freenode.net:6667, registering...
+[04-27-2005 05:51:04] >> Attempting to join channels: #ezpublish
+[04-27-2005 05:51:07] >> Primary nickname in use, trying alternate.
+[04-27-2005 05:51:07] (unmatched::raw451) :tolkien.freenode.net 451 * JOIN :Register first.
+[04-27-2005 05:51:07] >> Successfully registered. Nick is: ezpublishlog
+[04-27-2005 05:51:07] -!- There are 10445 victims and 11527 hiding on 26 servers
+[04-27-2005 05:51:07] -!- 30 flagged staff members
+[04-27-2005 05:51:07] -!- 7805 channels formed
+[04-27-2005 05:51:07] -!- I have 2680 clients and 0 servers
+[04-27-2005 05:51:07] -!- Current local  users: 2680  Max: 4153
+[04-27-2005 05:51:07] -!- Current global users: 21972  Max: 24623
+[04-27-2005 05:51:07] -!- Highest connection count: 4154 (4153 clients) (535434 since server was (re)started)
+[04-27-2005 05:51:49] >> Attempting to join channels: #ezpublish
+[04-27-2005 05:51:49] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[04-27-2005 05:51:49] -!- Topic for #ezpublish: http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn
+[04-27-2005 05:51:49] -!- Topic set by fh [@] [Sun, 24 Apr 2005 23:12:38 -0700]
+[04-27-2005 05:51:49] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Read error: 54 (Connection reset by peer)]
+[04-27-2005 05:51:51] -!- ezpublishlog is now known as ezlog
+[04-27-2005 05:51:51] My new nick is ezlog
+[04-27-2005 06:11:15] -!- fh [~fh@stalker.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[04-27-2005 06:18:19] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[04-27-2005 06:21:43] -!- fh [~fh@stalker.ez.no] has quit [Client Quit]
+[04-27-2005 06:28:46] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[04-27-2005 06:40:35] -!- jota_ [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[04-27-2005 07:20:56] -!- Proteque is now known as prottelotte
+[04-27-2005 07:21:26] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[04-27-2005 08:12:38] -!- ez [~sbin@202.155.147.191] has joined #ezpublish
+[04-27-2005 08:13:47] [#ezpublish] <ez> is there any newbie tutorial installing ez publishing script?
+[04-27-2005 08:14:29] [#ezpublish] <xbit> of course
+[04-27-2005 08:14:45] [#ezpublish] <xbit> www.ez.no/ez_publish/documentation
+[04-27-2005 08:15:03] [#ezpublish] <xbit> in your case, specifically "Installation" :)
+[04-27-2005 08:15:12] [#ezpublish] <ez> ahh thx xbit
+[04-27-2005 08:15:13] [#ezpublish] <ez> :)
+[04-27-2005 08:15:18] [#ezpublish] <xbit> np :)
+[04-27-2005 08:15:38] -!- ez is now known as ez4newbie
+[04-27-2005 08:19:44] [#ezpublish] <prottelotte> xbit: hey sxy :)
+[04-27-2005 08:20:47] [#ezpublish] <xbit> hello handsome
+[04-27-2005 08:20:51] [#ezpublish] <xbit> what's up?
+[04-27-2005 08:21:15] [#ezpublish] <prottelotte> not much. bored to death at work. only two more days left and are ending all projects here.
+[04-27-2005 08:23:09] [#ezpublish] <xbit> that's sad, so what are you gonna do?
+[04-27-2005 08:24:54] [#ezpublish] <prottelotte> new job perhabs.
+[04-27-2005 08:25:06] [#ezpublish] <prottelotte> or just run my own buisness
+[04-27-2005 08:54:17] [#ezpublish] <xbit> yeah, go for the last option :)
+[04-27-2005 08:54:26] -!- ez4newbie [~sbin@202.155.147.191] has quit [Read error: 131 (Connection reset by peer)]
+[04-27-2005 09:22:04] -!- fh [~fh@stalker.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[04-27-2005 09:55:44] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[04-27-2005 12:11:45] -!- CMaster383 [~chatzilla@205.245.87.10] has joined #ezpublish
+[04-27-2005 12:12:25] -!- CMaster383 [~chatzilla@205.245.87.10] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[04-27-2005 13:21:17] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[04-27-2005 13:21:24] [#ezpublish] <_luke> hi
+[04-27-2005 13:34:21] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[04-27-2005 13:34:29] [#ezpublish] <lucasr> hi all
+[04-27-2005 13:34:35] [#ezpublish] <lucasr> how da i use the feedback form?
+[04-27-2005 13:34:49] [#ezpublish] <lucasr> I added it to the content tree
+[04-27-2005 14:22:24] -!- SEAwolfx [~mike@ad9415e669293f2f.node.tor] has joined #ezpublish
+[04-27-2005 14:36:50] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[04-27-2005 15:29:24] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-27-2005 15:54:14] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit ["Fui embora"]
+[04-27-2005 18:13:54] -!- SEAwolfx [~mike@ad9415e669293f2f.node.tor] has quit [Remote closed the connection]
+[04-27-2005 18:23:16] -!- SEAwolfx [adam@blade.rsc.cx] has joined #ezpublish
+[04-27-2005 18:30:55] -!- lucasr [~lucasr@201.19.231.182] has joined #ezpublish
+[04-27-2005 18:45:54] -!- SEAwolfx_ [debian-tor@f46b3caf3adc15cc.node.tor] has joined #ezpublish
+[04-27-2005 19:02:44] -!- SEAwolfx [adam@blade.rsc.cx] has quit [Remote closed the connection]
+[04-27-2005 19:52:26] -!- lucasr [~lucasr@201.19.231.182] has quit ["Leaving"]
+[04-27-2005 20:26:45] -!- CoderForLife [~mirc@nr17-66-117-211-149.fuse.net] has joined #ezpublish
+[04-27-2005 21:11:38] -!- Tidemann [~SPAZ@ti132110a080-9569.bb.online.no] has quit [tolkien.freenode.net irc.freenode.net]
+[04-27-2005 21:13:07] -!- Tidemann [~SPAZ@ti132110a080-9569.bb.online.no] has joined #ezpublish
+[04-27-2005 21:18:10] -dmwaters:$*- {global notice} Hi all! We have one large split coming up so that i can fix some routing problems. This will not take long, Please sit back and enjoy your flight, and thank you for using freenode!
+[04-27-2005 21:19:49] -!- Tidemann [~SPAZ@ti132110a080-9569.bb.online.no] has quit [tolkien.freenode.net irc.freenode.net]
+[04-27-2005 21:20:27] -!- Tidemann [~SPAZ@ti132110a080-9569.bb.online.no] has joined #ezpublish
+[04-27-2005 21:21:34] -!- prottelotte [fantaprod@polarboing.nvg.ntnu.no] has quit [tolkien.freenode.net irc.freenode.net]
+[04-27-2005 21:21:34] -!- Tidemann [~SPAZ@ti132110a080-9569.bb.online.no] has quit [tolkien.freenode.net irc.freenode.net]
+[04-27-2005 21:21:34] -!- SEAwolfx_ [debian-tor@f46b3caf3adc15cc.node.tor] has quit [tolkien.freenode.net irc.freenode.net]
+[04-27-2005 21:21:34] -!- CoderForLife [~mirc@nr17-66-117-211-149.fuse.net] has quit [tolkien.freenode.net irc.freenode.net]
+[04-27-2005 21:21:34] -!- agentbob [~dan@216.130.216.30] has quit [tolkien.freenode.net irc.freenode.net]
+[04-27-2005 21:21:34] -!- Frekko [~larson@238.80-202-59.nextgentel.com] has quit [tolkien.freenode.net irc.freenode.net]
+[04-27-2005 21:21:34] -!- xbit [xbit@pppoecl77187.minlos.no] has quit [tolkien.freenode.net irc.freenode.net]
+[04-27-2005 21:22:00] -!- agentbob [~dan@216.130.216.30] has joined #ezpublish
+[04-27-2005 21:22:00] -!- xbit [xbit@pppoecl77187.minlos.no] has joined #ezpublish
+[04-27-2005 21:22:00] -!- prottelotte [fantaprod@polarboing.nvg.ntnu.no] has joined #ezpublish
+[04-27-2005 21:22:00] -!- Frekko [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[04-27-2005 21:22:00] -!- CoderForLife [~mirc@nr17-66-117-211-149.fuse.net] has joined #ezpublish
+[04-27-2005 21:22:04] -!- SEAwolfx_ [debian-tor@f46b3caf3adc15cc.node.tor] has joined #ezpublish
+[04-27-2005 21:25:13] -dmwaters:$*- {global notice} Hi all! All done now. Sorry for the bumpy ride there, we had a bit of unexpected routing trouble that I fixed while I was at it. Thank you for your patience, and thank you for flying freenode!
+[04-27-2005 23:52:39] -!- krckr [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[04-27-2005 23:52:50] [#ezpublish] <krckr> does anyone know of a very reliable irc netowrk
+[04-27-2005 23:53:16] [#ezpublish] <krckr> i have been using freenode and it just keeps having a horrible time staying connected to #ezpublish
+[04-27-2005 23:53:31] -!- krckr is now known as kracker

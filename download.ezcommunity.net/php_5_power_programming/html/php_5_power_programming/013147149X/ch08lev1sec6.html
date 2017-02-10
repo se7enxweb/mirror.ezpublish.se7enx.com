@@ -1,0 +1,154 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 8.6.&nbsp; Converting XML</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch08lev1sec6"></a><h3 class="docSection1Title">8.6. Converting XML</h3>
+<p class="docText">You might want to convert an XML document into something else, such as an HTML document, a text file, or an XML file in a different format. The standard method for converting an XML document to another format is by using <span class="docEmphStrong">XSLT</span> (eXtensible Stylesheet Language Transformations). XSLT is complex, so we are not going over all the details of the XML vocabulary. If you to learn more about XSLT, you can find the full specification at <a class="docLink" target="_blank" href="http://www.w3.org/TR/xslt">http://www.w3.org/TR/xslt</a>.<a name="ch08index129"></a><a name="ch08index130"></a><a name="ch08index131"></a><a name="ch08index132"></a></p>
+<p class="docText">If XSLT doesn't do what you want, you might need to resort to other solutions. The <tt>XML_Transformer</tt> PEAR class is one possible solution. With <tt>XML_Transformer</tt>, you can do XML transformations with PHP without the need for XSLT or external libraries.</p>
+<a name="ch08lev2sec8"></a><h4 class="docSection2Title">8.6.1. XSLT</H4>
+<p class="docText">To use the XSLT functions in PHP, you need to install the latest version of the libxslt library, which implements the necessary functions for transformations. If you use Windows, you can copy the libxslt.dll file from the dlls directory of the PHP distribution to a location on your path (for example, c:\winnt\system32). Enabling the extension on UNIX is done by adding <tt>--with-xsl</tt> to your configure line and recompiling. Windows users can uncomment the <tt>extension=php_xsl.dll</tt> line in the <tt>php.ini</tt> file.<a name="ch08index133"></a><a name="ch08index134"></a><a name="ch08index135"></a><a name="ch08index136"></a></p>
+<p class="docText">As explained earlier, you can use XSLT to transform your XML documents into another format. We're going to transform a file similar to our RSS file into an X(HT)ML file by applying stylesheets to the XML document. <span class="docEmphStrong">Stylesheets</span> are used for all transformations done with XSLT to map the elements in the source XML file with a template for each element. The first part of the XSL stylesheet contains options for input and output. We want to output the result as an HTML document with <tt>mime-type 'text/html/'</tt> in the ISO-8859-1 encoding. The namespace for the XSL declaration is defined as <tt>xsl</tt>, meaning that every element related to XSL has the prefix <tt>xsl:</tt> in front of the tag name (for example, <tt>xsl:output</tt>):<a name="ch08index137"></a></P>
+<pre>
+&lt;?xml version="1.0"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL Transform"&gt;
+&lt;xsl:output encoding='ISO-8859-1'/&gt;
+&lt;xsl:output method='html' indent='yes' media-type='text/xhtml'/&gt;
+</pre><br>
+<p class="docText">The templates follow the leader section shown earlier. The match attribute of the <tt>xsl:template</tt> element is used to select elements in the document. In the first template, all "<tt>rdf</tt>" elements in the document will be matched. Because this is the root element of our document, the template is only applied once. When an element is matched by a template, the contents of the <tt>xsl:template</tt> are copied to the output document, with the exception of elements belonging to the XSL namespace that have a special meaning:<a name="ch08index138"></a><a name="ch08index139"></a></P>
+<pre>
+&lt;xsl:template match="rdf"&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;&lt;xsl:value-of select="channel/title"/&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;xsl:apply-templates/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/xsl:template&gt;
+</pre><br>
+<p class="docText">The <tt>&lt;xsl:value-of /&gt;</tt> tag &quot;returns&quot; the value of an element or attribute specified in the <tt>select</tt> attribute. In the template shown here, the contents of the title child of the channel element is inserted into the <tt>&lt;title /&gt;</tt> tag in the output document. References are usually relative to the element that has been matched.</p>
+<p class="docText">If you want to include the contents of an attribute, rather than an element, you need to add the <tt>@</tt> as prefix; for example, to select the "<tt>href</tt>" attribute in <tt>&lt;a href="http://www.example.org"&gt;&lt;/a&gt;</tt>, you can use <tt>&lt;xsl:value-of select="@href"/&gt;</tt> (providing the element that is matched by the template is the "<tt>a</tt>" element).</p>
+<p class="docText">Another special tag in the previous snippetthe <tt>&lt;xsl:apply-templates /&gt;</tt> tagtells the XSL processor to continue processing child elements.<a name="ch08index140"></a><a name="ch08index141"></a></P>
+<pre>
+&lt;xsl:template match="channel"&gt;
+  &lt;h1&gt;&lt;xsl:value-of select="title"/&gt;&lt;/h1&gt;
+  &lt;p&gt;&lt;xsl:value-of select="description"/&gt;&lt;/p&gt;
+  &lt;xsl:apply-templates select="items"/&gt;
+&lt;/xsl:template&gt;
+</pre><BR>
+<p class="docText">If you don't want to process all elements of the current matched element, you can select an element to process with the <tt>select</tt> attribute of the <tt>&lt;xsl:apply-templates /&gt;</tt> tag, similar to the <tt>match</tt> attribute of the <tt>&lt;xsl:template /&gt;</tt> tag. In the previous template, we continue processing child elements of the type "<tt>items</tt>" only, skipping "<tt>title</tt>", "<tt>link,</tt>" and "<tt>description</tt>".</p>
+<pre>
+&lt;xsl:template match="Seq"&gt;
+  &lt;ul&gt;
+    &lt;xsl:apply-templates /&gt;
+  &lt;/ul&gt;
+&lt;/xsl:template&gt;
+
+&lt;xsl:key name="l" match="item" use="@about"/&gt;
+
+&lt;xsl:template match="li"&gt;
+  &lt;li&gt;
+    &lt;a href="#{generate-id(key('l',@resource))}"&gt;
+      &lt;xsl:value-of select="key('l',@resource)/title"/&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/xsl:template&gt;
+
+&lt;xsl:template match="item"&gt;
+  &lt;hr /&gt;
+  &lt;a name="{generate-id()}"&gt;
+  &lt;h2&gt;&lt;xsl:value-of select="title"/&gt;&lt;/h2&gt;
+  &lt;p&gt;
+    &lt;xsl:value-of select="description"/&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;xsl:element name="a"&gt;
+      &lt;xsl:attribute name="href"&gt;&lt;xsl:value-of select="link"/&gt;&lt;/xsl:attribute&gt;
+      &lt;xsl:text&gt;[more]&lt;/xsl:text&gt;
+    &lt;/xsl:element&gt;
+  &lt;/p&gt;
+&lt;/a&gt;
+&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+</pre><br>
+<p class="docText">The rest of the stylesheet makes a crosslink between the <tt>li</tt> childs of the "<tt>items</tt>" tag with the <tt>&lt;item/&gt;</tt>s. The XSLT magic used is beyond the scope of this chapter. Other interesting XSL elements in the template for "<tt>item</tt>" are <tt>&lt;xsl:element/&gt;</tt> and <tt>&lt;xsl:attribute/&gt;</tt>, which enable you to use the content of a value as an attribute for an output element. <tt>&lt;a href="&lt;xsl:value-of select="link"/&gt;</tt> would not be valid. XML and XSL files are just forms of XML documents. Instead, you need to create an element in the output document with <tt>&lt;xsl:element name="a"/&gt;</tt> and add the attributes with <tt>&lt;xsl:attribute name="href"/&gt;</tt>, as shown in the previous template.<a name="ch08index142"></a><a name="ch08index143"></a></p>
+<p class="docText">The modified RSS file is included here with all the namespace modifiers removed, which would have made the example unnecessarily complex:</p>
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rdf&gt;
+&lt;channel about="http://www.php.net/"&gt;
+  &lt;title&gt;PHP: Hypertext Preprocessor&lt;/title&gt;
+  &lt;link&gt;http://www.php.net/&lt;/link&gt;
+  &lt;description&gt;The PHP scripting language web site&lt;/description&gt;
+  &lt;items&gt;
+    &lt;Seq&gt;
+      &lt;li resource="http://qa.php.net/" /&gt;
+      &lt;li resource="http://www.php.net/news.rss" /&gt;
+    &lt;/Seq&gt;
+  &lt;/items&gt;
+&lt;/channel&gt;
+
+&lt;item about="http://qa.php.net/"&gt;
+  &lt;title&gt;PHP 4.3.0RC4 Released&lt;/title&gt;
+  &lt;link&gt;http://qa.php.net/&lt;/link&gt;
+  &lt;description&gt;
+    Despite our best efforts, it was necessary to make one more 
+    release candidate, hence PHP 4.3.0RC4.
+  &lt;/description&gt;
+&lt;/item&gt;
+
+&lt;item about="http://www.php.net/news.rss"&gt;
+  &lt;title&gt;PHP news feed available&lt;/title&gt;
+  &lt;link&gt;http://www.php.net/news.rss&lt;/link&gt;
+  &lt;description&gt;
+    The news of PHP.net is available now in RSS 1.0 format via our 
+    new news.rss file.
+  &lt;/description&gt;
+&lt;/item&gt;
+&lt;/rdf&gt;
+</pre><BR>
+<p class="docText">Now that we have both the stylesheet and the XML source file, we can use PHP to apply the stylesheet to the XML document. We use the XSLT functions with the files <tt>php.net.xsl</tt> and <tt>php.net-stripped.rss</tt>, and echo the output to screen:<a name="ch08index144"></a><a name="ch08index145"></a></p>
+<pre>
+&lt;?php
+$dom = new domDocument();
+$dom-&gt;load("php.net.xsl");
+$proc = new xsltprocessor;
+$xsl = $proc-&gt;importStylesheet($dom);
+
+$xml = new domDocument();
+$xml-&gt;load('php.net-stripped.rss');
+$string = $proc-&gt;transformToXml($xml);
+echo $string;
+?&gt;
+</pre><br>
+<a name="ch08note01"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">You can use the same loaded XSLT stylesheet from <tt>$dom-&gt;load()</tt> for the transformation of multiple XML documents (such as <tt>$proc-&gt;transformToXml($xml)</tt> ). This saves the overhead of parsing the XSLT stylesheet.</p></div><BR>
+<p class="docText">When you call this script through your browser, the result is something like what is displayed in <a class="docLink" href="#ch08fig02">Figure 8.2</a>.<a name="ch08index146"></a><a name="ch08index147"></a></p>
+<a name="ch08fig02"></a><p><center><h5 class="docFigureTitle">Figure 8.2. Output of the XSLT transformation.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/08fig02_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" width="500" height="550" SRC="images/013147149X/graphics/08fig02.jpg;380137"></p></center></p><br>
+<p class="docText">In addition to the <tt>transformToXml()</tt> method, two more XSLT processing functions are available to convert documents: <tt>transformToDoc()</tt> and <tt>transformToUrl()</tt>. <tt>transformToDoc()</tt> outputs a <tt>DomDocument</tt> that can then be processed further with the standard DOM functions described earlier. <tt>transformToUri()</tt> renders to a URI, given as the second parameter to the function, as shown here:<a name="ch08index148"></a><a name="ch08index149"></a></p>
+<pre>
+&lt;?php
+$proc-&gt;transformToUri($xml, "/tmp/crap.html");
+?&gt;
+</pre><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></TD></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

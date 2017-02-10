@@ -1,0 +1,206 @@
+[11-30-2005 00:02:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-30-2005 00:28:06] Disconnecting due to lack of a lag response (0.19627800 1133332026 != 0.16039000 1133332056)
+[11-30-2005 00:28:06] Diconnected. Sleeping for 2 second(s).
+[11-30-2005 00:28:08] >> Connecting to irc.freenode.net:6667
+[11-30-2005 00:28:12] >> Connected to irc.freenode.net:6667, registering...
+[11-30-2005 00:28:12] >> Successfully registered. Nick is: ezlog
+[11-30-2005 00:28:12] -!- There are 10568 listed and 12172 unlisted users on 23 servers
+[11-30-2005 00:28:12] -!- 38 flagged staff members
+[11-30-2005 00:28:12] -!- 9613 channels formed
+[11-30-2005 00:28:12] -!- I have 2955 clients and 0 servers
+[11-30-2005 00:28:12] -!- Current local  users: 2955  Max: 3351
+[11-30-2005 00:28:12] -!- Current global users: 22740  Max: 27663
+[11-30-2005 00:28:12] -!- Highest connection count: 3352 (3351 clients) (44738 since server was (re)started)
+[11-30-2005 00:28:13] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[11-30-2005 00:28:13] [notice(freenode-connect)] VERSION IQ 0.9.3
+[11-30-2005 00:28:36] >> Attempting to join channels: #ezpublish
+[11-30-2005 00:28:36] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[11-30-2005 00:28:36] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/articles/an_introduction_to_ez_components | http://ez.no/company/news/ez_conference_2006_call_for_papers
+[11-30-2005 00:28:36] -!- Topic set by kracker [@] [Mon, 28 Nov 2005 08:35:45 -0600]
+[11-30-2005 00:28:36] (unmatched::raw477) :herbert.freenode.net 477 ezlog #ezpublish :[freenode-info] Private messages from unregistered users are currently blocked, except to network staff, to services (NickServ, etc.), and to registered users who have unblocked them. Please see the freenode website for more information: http://freenode.net/faq.shtml#privmsg
+[11-30-2005 02:02:14] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-30-2005 02:03:56] -!- ordnas [n=ordnas@p549DE16D.dip.t-dialin.net] has joined #ezpublish
+[11-30-2005 02:05:46] [#ezpublish] <Katana`> hi
+[11-30-2005 02:07:55] [#ezpublish] <_Rappy_> hihi
+[11-30-2005 02:13:24] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[11-30-2005 02:21:29] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[11-30-2005 02:23:17] -!- hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[11-30-2005 02:30:51] [#ezpublish] <Katana`> hi kore :)
+[11-30-2005 02:34:23] [#ezpublish] <hovik> hi
+[11-30-2005 02:35:34] [#ezpublish] <Katana`> may I ask you a question hovik ? I seem you are the person I need
+[11-30-2005 02:35:39] [#ezpublish] <Katana`> it seems...
+[11-30-2005 02:35:53] [#ezpublish] <hovik> go ahead
+[11-30-2005 02:36:53] [#ezpublish] <Katana`> what would you do if you were asked to implement content staging, in a setup where you have a dev server (cms only, not used by visitors) and a public server (public site only, cms is not used) ?
+[11-30-2005 02:36:57] [#ezpublish] <Katana`> hang yourself ?
+[11-30-2005 02:37:21] [#ezpublish] <Katana`> basically, our client wants to have a "button" he can click in order to have object X published to public server
+[11-30-2005 02:37:47] [#ezpublish] <Katana`> i saw that you were directing those who wanted staging to packages, but I'm not really sure in that situation... suggestions ?
+[11-30-2005 02:38:25] [#ezpublish] <Katana`> (if it was you i'm not actually sure ^^)
+[11-30-2005 02:39:31] [#ezpublish] <hovik> Do you only want to stage content, or other types of settings as well ? ( design, settings, etc )
+[11-30-2005 02:40:28] [#ezpublish] <Katana`> only content, they won't be using anything else
+[11-30-2005 02:40:36] [#ezpublish] <Katana`> we'll figure out by hand for the rest ;)
+[11-30-2005 02:41:31] [#ezpublish] <Katana`> (by the way there are 2 public servers but they're using a MySQL cluster...
+[11-30-2005 02:42:03] [#ezpublish] <hovik> You can almost use the content packages for this. There are however 2 problems.
+[11-30-2005 02:42:13] [#ezpublish] <hovik> Not all datatypes are supported.
+[11-30-2005 02:42:58] [#ezpublish] <hovik> When resending the same object in a package, you'll get a copy of the object in the destination server, not a new version.
+[11-30-2005 02:43:21] [#ezpublish] <hovik> This is something we've been wanting to fix for a long time, but have not had the resources.
+[11-30-2005 02:43:49] [#ezpublish] <hovik> There is also a problem when exporting f.eks 1000 objects, as the packages does not scale very well.
+[11-30-2005 02:45:03] [#ezpublish] <Katana`> 1000 objects wouldn't happen I think
+[11-30-2005 02:45:14] [#ezpublish] <Katana`> I had thought about the resending an object, and this IS gonna occur
+[11-30-2005 02:45:30] [#ezpublish] <hovik> We could fix these things if you asked for it on support though.
+[11-30-2005 02:45:39] [#ezpublish] <Katana`> i'm gonna :)
+[11-30-2005 02:46:01] [#ezpublish] <Katana`> i won't have time to finish that before i leave
+[11-30-2005 02:46:19] [#ezpublish] <Katana`> email support ?
+[11-30-2005 02:49:37] [#ezpublish] <hovik> http://ez.no/services/support
+[11-30-2005 02:50:28] [#ezpublish] <hovik> but send an email to : support@ez.no , with some description of what you want to do, and we'll can give an estimate for it.
+[11-30-2005 02:51:25] [#ezpublish] <Katana`> okay great
+[11-30-2005 02:51:31] [#ezpublish] <Katana`> we still have some support credit :)
+[11-30-2005 03:19:20] -!- nfrp [n=nfrp@popeye.ez.no] has joined #ezpublish
+[11-30-2005 03:20:04] -!- nfrp [n=nfrp@popeye.ez.no] has left #ezpublish ["Leaving"]
+[11-30-2005 03:20:44] -!- nfrp [n=nfrp@popeye.ez.no] has joined #ezpublish
+[11-30-2005 03:24:48] [#ezpublish] <Katana`> hi !
+[11-30-2005 03:31:29] [#ezpublish] <nfrp>  /msg NickServ IDENTIFY cawerks
+[11-30-2005 03:34:20] -!- nfrp [n=nfrp@popeye.ez.no] has quit ["Leaving"]
+[11-30-2005 03:34:41] [#ezpublish] <_Rappy_> hehe
+[11-30-2005 03:34:51] -!- nfrp_ [n=nfrp@popeye.ez.no] has joined #ezpublish
+[11-30-2005 03:35:08] [#ezpublish] <Katana`> nfrp_, issues with your keyboard ? :)
+[11-30-2005 03:35:10] [#ezpublish] <_Rappy_> never do commands in channel windows, is the lession we can learn from this :)
+[11-30-2005 03:35:15] [#ezpublish] <Katana`> lol
+[11-30-2005 03:35:22] [#ezpublish] <Katana`> or use an irc client that does it for you ;)
+[11-30-2005 03:35:31] [#ezpublish] <nfrp_> ( yes, it's more like issues w/ my brain today.. )
+[11-30-2005 03:36:17] [#ezpublish] <Katana`> lol :)
+[11-30-2005 03:43:55] -!- nfrp_ [n=nfrp@popeye.ez.no] has left #ezpublish ["Leaving"]
+[11-30-2005 03:44:34] -!- nfrp [n=nfrp@popeye.ez.no] has joined #ezpublish
+[11-30-2005 03:48:26] [#ezpublish] <nnn0> :D
+[11-30-2005 03:52:20] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-30-2005 03:52:20] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[11-30-2005 03:52:40] -!- _Katana` is now known as Katana`
+[11-30-2005 03:56:04] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-30-2005 04:04:03] [#ezpublish] <_Rappy_> Mr. Gynt is evil
+[11-30-2005 04:10:27] [#ezpublish] <Katana`> who ?
+[11-30-2005 04:12:53] [#ezpublish] <_Rappy_> Peer
+[11-30-2005 04:13:06] [#ezpublish] <_Rappy_> Peer Gynt is a character in a play
+[11-30-2005 04:16:05] [#ezpublish] <_Rappy_> never heard of Ibsen?
+[11-30-2005 04:16:10] [#ezpublish] <Katana`> nope
+[11-30-2005 04:16:14] [#ezpublish] <kracker> nada
+[11-30-2005 04:18:13] [#ezpublish] <_Rappy_> Henrik Ibsen was one of the great writers in Norwegian litterature (or so they say *sigh*), and he should be well known all over the world
+[11-30-2005 04:18:22] [#ezpublish] <Katana`> well...
+[11-30-2005 04:18:30] [#ezpublish] <Katana`> my culture is limited ;)
+[11-30-2005 04:21:22] [#ezpublish] <buz> never heard of him
+[11-30-2005 04:21:28] [#ezpublish] <buz> i only now about the opera
+[11-30-2005 04:21:38] [#ezpublish] <buz> (or whatever the music for peer gynt comes from)
+[11-30-2005 04:22:10] [#ezpublish] <buz> "the dawn" from peer gynt is actually a very popular classical piece
+[11-30-2005 04:28:21] [#ezpublish] <_Rappy_> ah, that must be "Morgenstemning"
+[11-30-2005 04:28:46] [#ezpublish] <buz> yeah (considering what morgenstimmung in german means)
+[11-30-2005 04:28:49] [#ezpublish] <_Rappy_> composed by Edvard Grieg
+[11-30-2005 04:28:54] [#ezpublish] <buz> exactly
+[11-30-2005 04:30:11] [#ezpublish] <buz> classical music lends itself to coding i've found
+[11-30-2005 04:34:13] [#ezpublish] <_Rappy_> how's that you figure?
+[11-30-2005 04:43:59] [#ezpublish] <buz> unlike metal it's generally not as aggressive
+[11-30-2005 04:44:05] [#ezpublish] <buz> hiphop i cant stand
+[11-30-2005 04:44:12] [#ezpublish] <buz> and lack of vocals help with concentration
+[11-30-2005 04:45:38] [#ezpublish] <Katana`> trip hop is good for working
+[11-30-2005 05:05:23] [#ezpublish] <buz> too nervous for me
+[11-30-2005 05:07:43] -!- ordnas [n=ordnas@p549DE16D.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-30-2005 05:22:40] -!- ordnas [n=ordnas@p549DC9B5.dip.t-dialin.net] has joined #ezpublish
+[11-30-2005 05:41:03] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-30-2005 06:43:17] [#ezpublish] <nnn0> i program to trance music :)
+[11-30-2005 06:43:24] [#ezpublish] <nnn0> keeps me hoing
+[11-30-2005 06:43:27] [#ezpublish] <nnn0> going even
+[11-30-2005 06:43:36] [#ezpublish] <buz> would keep me running
+[11-30-2005 06:43:38] [#ezpublish] <buz> away
+[11-30-2005 06:43:40] [#ezpublish] <buz> that is
+[11-30-2005 06:43:41] [#ezpublish] <nnn0> :)
+[11-30-2005 06:43:47] [#ezpublish] <nnn0> have to keep the beat
+[11-30-2005 06:44:06] [#ezpublish] <nnn0> it's not like i'm listening - it just makes me think faster
+[11-30-2005 06:44:22] [#ezpublish] <nnn0> the beat gives me momentum
+[11-30-2005 06:44:28] [#ezpublish] <nnn0> hehe
+[11-30-2005 06:50:11] [#ezpublish] <nfrp> The John Butler Trio at the moment here :) quiet funky folk tunes
+[11-30-2005 06:59:55] -!- saraujo [n=asdfokoa@201.48.79.121] has joined #ezpublish
+[11-30-2005 07:14:07] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-30-2005 08:29:29] -!- _Rappy_ is now known as _rappy_
+[11-30-2005 08:29:35] [#ezpublish] <_rappy_> adio peeps
+[11-30-2005 08:48:32] -!- nfrp [n=nfrp@popeye.ez.no] has quit ["Leaving"]
+[11-30-2005 09:30:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[11-30-2005 09:34:06] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-30-2005 09:46:42] -!- saraujo [n=asdfokoa@201.48.79.121] has quit ["Leaving"]
+[11-30-2005 10:40:15] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[11-30-2005 11:23:04] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[11-30-2005 12:24:36] -!- ordnas [n=ordnas@p549DC9B5.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-30-2005 13:20:58] -!- _xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[11-30-2005 13:28:16] -!- _xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[11-30-2005 13:28:26] -!- _xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[11-30-2005 13:28:45] -!- _xiglet is now known as xigleth
+[11-30-2005 14:42:37] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-30-2005 14:42:56] [#ezpublish] <buz> hi
+[11-30-2005 14:45:37] [#ezpublish] <Katana`> evening
+[11-30-2005 14:45:39] [#ezpublish] <Katana`> my main PC died :(
+[11-30-2005 14:45:52] [#ezpublish] <Katana`> main HD out of order...
+[11-30-2005 14:46:34] [#ezpublish] <buz> thats what you have raid
+[11-30-2005 14:46:36] [#ezpublish] <buz> why
+[11-30-2005 14:46:49] [#ezpublish] <buz> i had a lot of machines dying on me this year
+[11-30-2005 14:46:56] [#ezpublish] <buz> until i went and bought a new one ;)
+[11-30-2005 14:47:10] [#ezpublish] <buz> you do have backups right?
+[11-30-2005 15:00:25] [#ezpublish] <buz> anybody know anything about hifi speaker?
+[11-30-2005 15:00:38] [#ezpublish] <Proteque> I do.
+[11-30-2005 15:00:53] [#ezpublish] <buz> what to buy in the <300? range
+[11-30-2005 15:01:03] [#ezpublish] <Proteque> what currency is that?
+[11-30-2005 15:01:09] [#ezpublish] <buz> EURO
+[11-30-2005 15:01:12] [#ezpublish] <Proteque> I only know norwegian prices
+[11-30-2005 15:01:30] [#ezpublish] <buz> anything reasonably cheap you can recommend?
+[11-30-2005 15:01:50] [#ezpublish] <Proteque> well if you want something cheap but descent I would recomend Dali.
+[11-30-2005 15:02:47] [#ezpublish] <buz> doesnt look like such are being sold in switzerland
+[11-30-2005 15:03:25] [#ezpublish] <Proteque> oh... well.
+[11-30-2005 15:03:42] [#ezpublish] <Proteque> B&W is nice. dont know what they cost there
+[11-30-2005 15:04:01] [#ezpublish] <buz> i got two of those already http://www.eltax.com/eltax/index.php?item=10&id=1831
+[11-30-2005 15:04:03] [#ezpublish] <buz> might get another two
+[11-30-2005 15:04:12] [#ezpublish] <buz> they sure provide nice bass
+[11-30-2005 15:04:51] [#ezpublish] <Proteque> I dont know those
+[11-30-2005 15:05:05] [#ezpublish] <buz> not very high quality
+[11-30-2005 15:05:15] [#ezpublish] <buz> but 2*25cm woofers ;)
+[11-30-2005 15:07:16] [#ezpublish] <Proteque> I have Bowers & Wilkins CM4
+[11-30-2005 15:08:47] [#ezpublish] <buz> sounds like overkill to listen to mp3 ;)
+[11-30-2005 15:09:40] [#ezpublish] <Proteque> hehe yeah
+[11-30-2005 15:09:47] [#ezpublish] <Katana`> buz: what do you want to use those HP for ?
+[11-30-2005 15:09:49] [#ezpublish] <Proteque> but if you find dali that is great value
+[11-30-2005 15:10:15] [#ezpublish] <buz> HP?
+[11-30-2005 15:12:10] [#ezpublish] <buz> oh i found dalis
+[11-30-2005 15:12:17] [#ezpublish] <buz> pricey
+[11-30-2005 15:13:23] [#ezpublish] <Proteque> buz: 5005LE is suitable and in the right price.
+[11-30-2005 15:13:32] [#ezpublish] <buz> can only get 6006
+[11-30-2005 15:14:16] [#ezpublish] <Proteque> that is about 100 euros more
+[11-30-2005 15:14:25] [#ezpublish] <buz> the 5005 is only 2way it seems
+[11-30-2005 15:14:59] [#ezpublish] <Proteque> yes
+[11-30-2005 15:15:45] [#ezpublish] <buz> maybe i'll just get sennheiser headphones
+[11-30-2005 15:15:49] [#ezpublish] <Proteque> but find the 5005LE
+[11-30-2005 15:15:52] [#ezpublish] <buz> but that doesnt let you fell the bass
+[11-30-2005 15:15:56] [#ezpublish] <Proteque> it is a lot better than the normal 5005
+[11-30-2005 15:15:57] [#ezpublish] <buz> yeah i just found it
+[11-30-2005 15:16:05] [#ezpublish] <Proteque> but at the same price
+[11-30-2005 15:16:39] [#ezpublish] <Proteque> if bass is all you care about and soundquality doesnt matter you should go for cerwin vega :D
+[11-30-2005 15:17:14] [#ezpublish] <buz> i dont want a subwoofer ;)
+[11-30-2005 15:17:24] [#ezpublish] <buz> besides the eltax monsters provide plenty of push
+[11-30-2005 15:17:40] [#ezpublish] <buz> (they actually pump noticeable amounts of air out the bass reflex canal)
+[11-30-2005 15:18:21] [#ezpublish] <buz> as home cinema setup, you can easily forgo any subwoofer with those ;)
+[11-30-2005 15:32:39] [#ezpublish] * Katana` has Logitech Z-680 in the living room and they're amazing
+[11-30-2005 15:33:06] [#ezpublish] <Katana`> and they're just below EUR 300 :)
+[11-30-2005 15:33:11] [#ezpublish] <Katana`> well, the new model, Z-5500
+[11-30-2005 15:44:12] -!- nfrp [n=nfrp@252.80-203-132.nextgentel.com] has joined #ezpublish
+[11-30-2005 15:48:55] -!- ordna1 [n=ordnas@p549DC9B5.dip.t-dialin.net] has joined #ezpublish
+[11-30-2005 15:49:42] [#ezpublish] <buz> that's play toys ;)
+[11-30-2005 15:50:02] [#ezpublish] * buz goes off to bed
+[11-30-2005 15:50:04] [#ezpublish] <buz> nite
+[11-30-2005 15:50:04] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[11-30-2005 15:50:23] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-30-2005 16:03:08] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-30-2005 16:03:08] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-30-2005 16:03:36] -!- _Katana` is now known as Katana`
+[11-30-2005 16:03:42] -!- Katana` [n=katana@ankh-morpork.net] has quit [Client Quit]
+[11-30-2005 16:41:09] -!- nfrp [n=nfrp@252.80-203-132.nextgentel.com] has quit ["Leaving"]
+[11-30-2005 16:56:29] -!- ordna1 [n=ordnas@p549DC9B5.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-30-2005 17:10:39] -!- xigleth [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 113 (No route to host)]
+[11-30-2005 20:56:39] -!- Bedlore [n=me@219-90-251-136.ip.adam.com.au] has joined #ezpublish
+[11-30-2005 20:57:18] -!- mode/#ezpublish [+o fh[eZ]] by ChanServ
+[11-30-2005 21:54:47] -!- sonicGB- [n=Miranda@138.25.71.124] has joined #ezpublish
+[11-30-2005 21:58:38] [#ezpublish] <sonicGB-> hi folks, is it ok to just launch in and ask a n00b question here?
+[11-30-2005 22:01:24] [#ezpublish] <sonicGB-> ezpublish 3.72, mysql, gentoo/2.6xx, gd, firefox browser. Tinkering with the default 'shop' site. Added a couple of 'folders' under products, and I want to change the display order for those sub folders on the 'products' page and the left menu. howto pls?
+[11-30-2005 22:30:26] -!- sonicGB- [n=Miranda@138.25.71.124] has left #ezpublish []

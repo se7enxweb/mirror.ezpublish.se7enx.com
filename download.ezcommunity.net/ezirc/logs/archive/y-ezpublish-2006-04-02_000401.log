@@ -1,0 +1,218 @@
+[03-31-2006 00:01:38] [#ezpublish] <kracker> doh
+[03-31-2006 00:53:52] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-31-2006 00:57:55] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-31-2006 01:13:45] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-31-2006 01:15:20] -!- DiGiTa|_ [n=guillaum@84.5.136.113] has joined #ezpublish
+[03-31-2006 01:34:34] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-31-2006 01:46:31] [#ezpublish] <DiGiTa|_> hi all
+[03-31-2006 01:57:35] [#ezpublish] <kris10an> hi!
+[03-31-2006 02:10:48] -!- ordnas [n=ordnas@110-5-169-81.wlan.proximus.be] has joined #ezpublish
+[03-31-2006 02:17:31] [#ezpublish] <kris10an> hi ls! how are you doing this morning=
+[03-31-2006 02:17:33] [#ezpublish] <kris10an> ?
+[03-31-2006 02:18:24] [#ezpublish] <ls> hi kris10an, i'm fine thanks, and you?
+[03-31-2006 02:19:57] [#ezpublish] <kris10an> good, good...
+[03-31-2006 02:25:00] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-31-2006 02:34:37] [#ezpublish] <tobmaster> kracker: upgrade services?
+[03-31-2006 02:34:40] [#ezpublish] <tobmaster> which?
+[03-31-2006 02:58:49] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-31-2006 03:02:05] [#ezpublish] <_buz> whats up with the planet anyway?
+[03-31-2006 03:07:49] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-31-2006 03:09:54] -!- awormus_ is now known as awormus
+[03-31-2006 03:10:53] [#ezpublish] <ls> _buz, works from here
+[03-31-2006 03:11:21] [#ezpublish] <_buz> the rss stream seems broken for me
+[03-31-2006 03:16:42] -!- _buz is now known as recover
+[03-31-2006 03:16:46] -!- recover is now known as release
+[03-31-2006 03:17:27] -!- release is now known as buz
+[03-31-2006 03:17:29] [#ezpublish] <DiGiTa|_> exttoimage cannot be used since the following ImageGD functions are missing: ImageTTFBBox, ImageCreate, ImageColorAllocate, ImageColorAllocate, ImageTTFText, ImagePNG, ImageJPEG, ImageDestroy
+[03-31-2006 03:18:02] [#ezpublish] <DiGiTa|_> i don't know how to compile GD on darwin
+[03-31-2006 03:18:26] [#ezpublish] <buz> mhh fink?
+[03-31-2006 03:19:33] [#ezpublish] <DiGiTa|_> yeah
+[03-31-2006 03:19:39] [#ezpublish] <DiGiTa|_> it's installed
+[03-31-2006 03:19:50] [#ezpublish] <DiGiTa|_> and i compile it with make
+[03-31-2006 03:20:21] -!- ordnas [n=ordnas@110-5-169-81.wlan.proximus.be] has quit [Read error: 110 (Connection timed out)]
+[03-31-2006 03:21:09] [#ezpublish] <DiGiTa|_> ./configure --with-zlib-dir=/usr/local --with-jpeg-dir=/sw --with-tiff-dir=/sw --with-png-dir=/sw --with-gd --with-pgsql=/usr/local --with-mysql=/usr/local/mysql --with-xml --with-dom=/sw --with-apxs2
+[03-31-2006 03:30:36] [#ezpublish] <ls> buz, you are right, working on it ...
+[03-31-2006 04:17:05] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-31-2006 04:46:20] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has quit [Remote closed the connection]
+[03-31-2006 05:11:53] -!- niooi [n=niooi@linagora.net8.nerim.net] has joined #ezpublish
+[03-31-2006 05:13:16] [#ezpublish] <niooi> hi
+[03-31-2006 05:16:00] [#ezpublish] <niooi> We're having a difficulty with the workflow process: We would like to have users able to join objects, add articles, etc in a folder they have just created. The problem is that the user is not able to add anything to an object until this object is validated and published.
+[03-31-2006 05:16:57] [#ezpublish] <niooi> How could we allow users to add subelements to an object they've just created if that object isn't published yet?
+[03-31-2006 05:49:34] [#ezpublish] * buz hails firebug
+[03-31-2006 05:50:23] [#ezpublish] <niooi> buz, what do you mean?
+[03-31-2006 05:50:27] [#ezpublish] <buz> https://addons.mozilla.org/extensions/moreinfo.php?application=firefox&id=1843
+[03-31-2006 05:50:46] [#ezpublish] <buz> finally i can see where my css comes from and what my ajax is doing
+[03-31-2006 06:33:55] [#ezpublish] <B-KiLLer`> hey buz!
+[03-31-2006 06:34:00] [#ezpublish] <buz> what
+[03-31-2006 06:34:05] [#ezpublish] <B-KiLLer`> this extension is just amazing :D
+[03-31-2006 06:34:09] [#ezpublish] <B-KiLLer`> thanks for the tip !
+[03-31-2006 06:34:15] [#ezpublish] <buz> you're welcome
+[03-31-2006 06:40:50] [#ezpublish] <DiGiTa|_> http://www.axentric.com/aside/fat/
+[03-31-2006 06:40:54] [#ezpublish] <DiGiTa|_> fun
+[03-31-2006 06:42:05] [#ezpublish] <buz> axo
+[03-31-2006 06:42:08] [#ezpublish] <buz> oops
+[03-31-2006 06:42:09] [#ezpublish] <buz> wrong window
+[03-31-2006 06:45:55] [#ezpublish] <DiGiTa|_> your extension rocks buz
+[03-31-2006 06:46:06] [#ezpublish] <DiGiTa|_> well this...
+[03-31-2006 06:46:09] [#ezpublish] <buz> it aint mine ;)
+[03-31-2006 06:46:16] [#ezpublish] <buz> but it does rock i agree
+[03-31-2006 06:51:04] -!- awormus_ [n=aaron@p54B14087.dip0.t-ipconnect.de] has joined #ezpublish
+[03-31-2006 06:54:35] [#ezpublish] <niooi> How could we allow users to add subelements to an object they've just created if that object isn't published yet?
+[03-31-2006 07:02:21] [#ezpublish] <tobmaster> niooi: must that be generally?
+[03-31-2006 07:02:37] [#ezpublish] <tobmaster> niooi: because you maybe can allow the users to create folders without workflow
+[03-31-2006 07:05:33] [#ezpublish] <niooi> hi sorry on the phone
+[03-31-2006 07:05:58] [#ezpublish] <niooi> yes that must be generally
+[03-31-2006 07:06:26] [#ezpublish] <niooi> even for article
+[03-31-2006 07:07:59] -!- awormus [n=aaron@p54B12FE3.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[03-31-2006 07:08:48] [#ezpublish] <niooi> The scope goes beyond folders, we need the user to create any class and to attach object under a class, but the problem is that until the object is not published the user cannot add any subelement
+[03-31-2006 07:09:17] [#ezpublish] <buz> why does it have to be a subelement?
+[03-31-2006 07:11:43] [#ezpublish] <tobmaster> niooi: one thing i have in mind. seperate the editors area and the frontpage ( i guess its a webpage )
+[03-31-2006 07:11:59] [#ezpublish] <tobmaster> then allow the users to publish imediately in editorial area
+[03-31-2006 07:12:21] [#ezpublish] <tobmaster> oh no not working ... sorry
+[03-31-2006 07:12:26] [#ezpublish] <niooi> let me explain :(wait I'll type the rest)
+[03-31-2006 07:14:10] [#ezpublish] <niooi> We've created several object classes (links, forms, galleries, articles, etc.) and we need the user to be able to attached as many elements as possible to an article
+[03-31-2006 07:14:33] [#ezpublish] <tobmaster> what means attach?
+[03-31-2006 07:14:39] [#ezpublish] <tobmaster> cant you use object relations?
+[03-31-2006 07:14:44] [#ezpublish] <niooi> but until the article is not published/validated by an adminsitrator the user won't be able to attach any elements to that parent article"
+[03-31-2006 07:14:59] [#ezpublish] <niooi> no subelements
+[03-31-2006 07:15:23] [#ezpublish] <tobmaster> hmmmm
+[03-31-2006 07:15:30] [#ezpublish] <niooi> those are not related objects but sub-elements (maybe we did a mistake in our design)
+[03-31-2006 07:17:45] [#ezpublish] <niooi> we've realized this limitation one week before finish the site... and we are quite stuck with it
+[03-31-2006 07:18:26] [#ezpublish] <buz> stuck like why
+[03-31-2006 07:21:26] [#ezpublish] <niooi> stuck in the workflow works let me explain
+[03-31-2006 07:24:25] [#ezpublish] <niooi> The user is supposed to create an, for example, an article and to attach sub-elements to it like images, other articles, videos, etc. This is what we called a "dossier".  But the way eZ Publish works, or as far as we understand how it works, it requires a validation/publish of the parent article (the first one) to be able to add subelements. As far as the parent article "dossier" is not published by an administrator the user does not have the ri
+[03-31-2006 07:24:25] [#ezpublish] <niooi> ghts to add any elements to it.
+[03-31-2006 07:25:17] [#ezpublish] <niooi> that where the problem lies
+[03-31-2006 07:28:57] [#ezpublish] <niooi> We'd like the user to create a 'dossier' full of elements to be validated by the administrator in a single row. Now the dossier would have to be created step by step: first the parent article (created and then published), next step whern the parent article has been published by an adminsitratorthe user add new elements to that parents
+[03-31-2006 07:29:19] [#ezpublish] <niooi> I hope I was clear enough
+[03-31-2006 07:37:49] [#ezpublish] <buz> ah well
+[03-31-2006 07:38:00] [#ezpublish] <buz> thats probably really best done with children
+[03-31-2006 07:41:55] [#ezpublish] <niooi> So this is what we were scared about: to change the whole design. So you mean we should use related object?
+[03-31-2006 07:42:12] [#ezpublish] <buz> not sure if your intended workflow would make sense with it
+[03-31-2006 07:42:17] [#ezpublish] <buz> what you could do:
+[03-31-2006 07:42:32] [#ezpublish] <buz> publish the objects immediately but under a section thats not public ?
+[03-31-2006 07:42:49] [#ezpublish] <buz> then have the admin change sections when he gives the ok for public view?
+[03-31-2006 07:45:50] [#ezpublish] <Tidemann> doesn't ez support setting discount for a group on a subtree?
+[03-31-2006 07:47:11] [#ezpublish] <niooi> That's what I thought
+[03-31-2006 07:49:12] [#ezpublish] <niooi> Tidemann, I don't know
+[03-31-2006 07:57:59] -!- DiGiTa|_ [n=guillaum@84.5.136.113] has quit []
+[03-31-2006 08:02:41] -!- niooi [n=niooi@linagora.net8.nerim.net] has quit [Remote closed the connection]
+[03-31-2006 08:06:55] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[03-31-2006 08:47:56] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-31-2006 08:49:50] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has left #ezpublish ["Leaving"]
+[03-31-2006 08:50:13] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-31-2006 09:07:02] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-31-2006 09:14:50] -!- awormus_ [n=aaron@p54B14087.dip0.t-ipconnect.de] has quit ["Leaving"]
+[03-31-2006 09:32:41] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-31-2006 09:33:01] -!- tobyS [n=dotxp@dslb-084-061-180-223.pools.arcor-ip.net] has joined #ezpublish
+[03-31-2006 09:34:50] -!- B-KiLLer` [n=me@217.31.64.170] has quit []
+[03-31-2006 09:48:51] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Read error: 110 (Connection timed out)]
+[03-31-2006 09:59:32] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-31-2006 10:02:56] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-31-2006 10:13:50] -!- elephantMan [n=elephant@149.202.99-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[03-31-2006 10:16:08] -!- elephantMan [n=elephant@149.202.99-84.rev.gaoland.net] has joined #ezpublish
+[03-31-2006 11:08:40] [#ezpublish] <buz> is there any simple way to have the node_list toolbar widget sort ascending, not descending? (descending makes sense for sorting on published but less so for name)
+[03-31-2006 11:21:45] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[03-31-2006 11:32:11] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-31-2006 11:35:59] [#ezpublish] <ls> buz, have you been on drink station ;)
+[03-31-2006 11:36:17] [#ezpublish] <buz> bought a box of beer yesterday ;)
+[03-31-2006 11:37:42] [#ezpublish] <ls> hahah
+[03-31-2006 11:37:54] [#ezpublish] <ls> so you are prepared :)
+[03-31-2006 11:37:57] [#ezpublish] <buz> yes
+[03-31-2006 11:38:03] [#ezpublish] <buz> i'm hacking the toolbar
+[03-31-2006 11:38:20] [#ezpublish] <ls> which one?
+[03-31-2006 11:38:24] [#ezpublish] <ls> toolbars in ez?
+[03-31-2006 11:38:26] [#ezpublish] <buz> design -> toolbar
+[03-31-2006 11:38:27] [#ezpublish] <buz> yes
+[03-31-2006 11:38:36] [#ezpublish] <ls> yeah, powerfull stuff
+[03-31-2006 11:39:12] [#ezpublish] <ls> I did some time ago homepage base on tools only, all blocks on home page you can add from admin
+[03-31-2006 11:39:16] [#ezpublish] <buz> neat
+[03-31-2006 11:39:24] [#ezpublish] <ls> one toolbar fro node id 2
+[03-31-2006 11:39:49] [#ezpublish] <ls> but one thing is missing imho
+[03-31-2006 11:39:56] [#ezpublish] <ls> all tools are loaded from PHP code
+[03-31-2006 11:39:59] [#ezpublish] <ls> directly
+[03-31-2006 11:40:21] [#ezpublish] <ls> would be nice to have it loaded via tpl then I could add some logic for them
+[03-31-2006 11:41:02] [#ezpublish] <ls> I'm installing eztrackback now on my blog
+[03-31-2006 11:42:04] [#ezpublish] <buz> eztrackback is too complicated for me ;)
+[03-31-2006 11:42:08] [#ezpublish] <buz> i dont touch workflows
+[03-31-2006 11:42:51] [#ezpublish] <ls> haha
+[03-31-2006 11:43:10] [#ezpublish] <ls> it is not that bad
+[03-31-2006 11:45:58] [#ezpublish] <buz> are my mails to sdk-public coming through?
+[03-31-2006 11:46:03] [#ezpublish] <buz> i dont seem to get a copy myself
+[03-31-2006 11:47:09] [#ezpublish] <ls> do you send from account which is registered?
+[03-31-2006 11:47:11] [#ezpublish] <buz> wtf for some reason mail delivery was disabled
+[03-31-2006 11:47:12] [#ezpublish] <buz> yes
+[03-31-2006 11:47:28] [#ezpublish] <ls> I don't see any mails from u
+[03-31-2006 11:47:46] [#ezpublish] <buz> lemme try again
+[03-31-2006 11:48:51] [#ezpublish] <buz> still nothing?
+[03-31-2006 11:49:22] [#ezpublish] <ls> it usualy takes some 3 -5 min
+[03-31-2006 11:49:23] [#ezpublish] <buz> doesnt bounce, either???
+[03-31-2006 11:49:25] [#ezpublish] <ls> but nothing yet
+[03-31-2006 11:49:29] [#ezpublish] <buz> ok let's wait
+[03-31-2006 11:50:19] [#ezpublish] <kracker> hmm, so (heh, still) 'm wondering someone might ask as a support service fee (as an example / reference) to upgrade a medium sized eZ publish 3.5.2 to 3.6.7 aka how much might this be worth in USD$
+[03-31-2006 11:50:35] [#ezpublish] <buz> mail shows up in archive
+[03-31-2006 11:50:37] [#ezpublish] <buz> but not in my mailbox
+[03-31-2006 11:51:10] [#ezpublish] <buz> ah now
+[03-31-2006 11:51:12] [#ezpublish] <buz> twice ;)
+[03-31-2006 11:52:13] [#ezpublish] <ls> not twice :)
+[03-31-2006 11:52:15] [#ezpublish] <ls> I see 3
+[03-31-2006 11:52:19] [#ezpublish] <ls> hi kracker
+[03-31-2006 11:52:44] [#ezpublish] <kracker> i guess i was trying to weigh others thoughts on the subject against what i've estimated/proposed to the client already ($600 + docs + testing+ ... )
+[03-31-2006 11:52:51] [#ezpublish] <buz> that explains why i never got any miail
+[03-31-2006 11:52:53] [#ezpublish] <buz> wtf
+[03-31-2006 11:53:13] [#ezpublish] <buz> kracker: is it a standard site?
+[03-31-2006 11:53:16] [#ezpublish] <ls> kracker,
+[03-31-2006 11:53:27] [#ezpublish] <ls> wait 1 second
+[03-31-2006 11:53:30] [#ezpublish] <kracker> basicly customized medium to large site
+[03-31-2006 11:53:32] [#ezpublish] <kracker> k
+[03-31-2006 11:53:37] [#ezpublish] <buz> 600$ is too little then
+[03-31-2006 11:53:55] [#ezpublish] <kracker> hmm
+[03-31-2006 11:54:17] [#ezpublish] <ls> come on your in USA :) ask for more
+[03-31-2006 11:55:09] [#ezpublish] <kracker> erumm one install of many sites
+[03-31-2006 11:55:56] -!- ls is now known as ls[eZ]
+[03-31-2006 11:56:17] [#ezpublish] <kracker> hmm but then, how much more by margin should i have looked for ;\
+[03-31-2006 11:56:47] [#ezpublish] <kracker> i did it really quickly (perhapse i'm that good :? or eZ is that ... simple to upgrade)
+[03-31-2006 12:00:58] [#ezpublish] <buz> well thats a problem
+[03-31-2006 12:01:09] [#ezpublish] <buz> if you do it too quickly client wont pay much ;)
+[03-31-2006 12:01:24] [#ezpublish] <buz> for some stuff that's trivial if you know how its better to delay it a while ;)
+[03-31-2006 12:01:47] [#ezpublish] <buz> can someone look at my toolbar patch? thoughts?
+[03-31-2006 12:02:35] [#ezpublish] <ls[eZ]> it is checkbox, cool, should work and easy to set sroting order
+[03-31-2006 12:02:48] [#ezpublish] <buz> it works on 3.6 as well i just checked it on my own site
+[03-31-2006 12:02:57] [#ezpublish] <buz> i'll do another one soon
+[03-31-2006 12:03:21] [#ezpublish] <buz> i rather submit them now so they get included
+[03-31-2006 12:03:30] [#ezpublish] <buz> instead of having even more extnesions ;)
+[03-31-2006 12:03:48] [#ezpublish] <ls[eZ]> haha
+[03-31-2006 12:04:00] [#ezpublish] <kracker> hmm
+[03-31-2006 12:04:07] [#ezpublish] <buz> writing extensions for something like that takes longer than to develop the feature
+[03-31-2006 12:05:18] [#ezpublish] <kracker> i did slow it down to keep it from being same day, to 4 or so days to also write the 10 pages of text written to go along with the upgrade 'project'
+[03-31-2006 12:05:36] [#ezpublish] <buz> then more than 600 is surely ok
+[03-31-2006 12:07:00] [#ezpublish] <kracker> alright, this is good to know to help keep me ballanced/from selling myself out so low. do you think that 2x (as an example of order of magnitude) is in turn too much :!
+[03-31-2006 12:10:09] [#ezpublish] <buz> thats harder ;)
+[03-31-2006 12:10:13] [#ezpublish] <buz> i hate writing estimates
+[03-31-2006 12:10:40] [#ezpublish] <buz> it also depends whether you want to keep them as customer
+[03-31-2006 12:20:03] [#ezpublish] <kracker> i hear you
+[03-31-2006 12:20:58] [#ezpublish] <kracker> in this case i want to bring them on as a customer for development and support ...aka do more than just the upgrade they contacted me about this week :\
+[03-31-2006 12:21:12] [#ezpublish] <buz> ok then keep pricing reasonable
+[03-31-2006 12:21:27] [#ezpublish] <kracker> nods
+[03-31-2006 12:21:55] [#ezpublish] <kracker> heh, hense my 4-7 hour estimate
+[03-31-2006 12:22:00] [#ezpublish] <buz> yeah
+[03-31-2006 12:22:06] [#ezpublish] <buz> half a day sounds right in that case
+[03-31-2006 12:22:37] [#ezpublish] <kracker> but i'll have to bump it up a little (time) to cover more of the incidentals that seem to creap in a project ;)
+[03-31-2006 12:24:22] [#ezpublish] <kracker> great advice guys, manny thanks all around
+[03-31-2006 13:12:22] [#ezpublish] <buz> oh joy
+[03-31-2006 13:12:29] [#ezpublish] <buz> i have the cache deactivated in my template
+[03-31-2006 13:12:43] [#ezpublish] <buz> first time i load a node after cache clearing everything works
+[03-31-2006 13:12:56] [#ezpublish] <buz> if i hit reload, it doesnt show me any of my stuff anymore
+[03-31-2006 13:17:09] -!- tobyS_ [n=dotxp@dslb-084-061-181-244.pools.arcor-ip.net] has joined #ezpublish
+[03-31-2006 13:22:37] [#ezpublish] <buz> ah
+[03-31-2006 13:22:42] [#ezpublish] <buz> thats some toolbar weirdness ;)
+[03-31-2006 13:32:37] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_31_03_2006 | http://ez.no/community/forum/ez_components/webcast#msg93640
+[03-31-2006 13:32:54] -!- tobyS [n=dotxp@dslb-084-061-180-223.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[03-31-2006 13:52:16] [#ezpublish] <buz> just submitted another toolbox patch
+[03-31-2006 14:20:02] -!- DiGiTa|_ [n=guillaum@84.5.136.113] has joined #ezpublish
+[03-31-2006 14:25:30] -!- DiGiTa|_ [n=guillaum@84.5.136.113] has quit []
+[03-31-2006 15:12:10] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 113 (No route to host)]
+[03-31-2006 15:52:42] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-31-2006 15:58:40] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-31-2006 16:15:07] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[03-31-2006 16:34:11] -!- ls[eZ] [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]

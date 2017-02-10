@@ -1,0 +1,99 @@
+[06-20-2006 00:57:00] -!- _kore [n=lordhong@137.80-202-59.nextgentel.com] has joined #ezpublish
+[06-20-2006 01:01:00] -!- _kore [n=lordhong@137.80-202-59.nextgentel.com] has quit [Client Quit]
+[06-20-2006 01:09:28] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-20-2006 01:28:24] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[06-20-2006 01:30:18] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[06-20-2006 01:31:35] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[06-20-2006 01:43:58] -!- awormus [n=aaron@84.176.83.16] has joined #ezpublish
+[06-20-2006 02:18:36] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-20-2006 02:56:05] -!- hovik [n=hovik@85.19.74.66] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-20-2006 02:56:10] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[06-20-2006 02:57:08] -!- awormus_ [n=aaron@p54B06EA7.dip.t-dialin.net] has joined #ezpublish
+[06-20-2006 02:58:38] -!- aaronw [n=aaron@p54B04E7A.dip.t-dialin.net] has joined #ezpublish
+[06-20-2006 03:03:15] -!- awormus_ [n=aaron@p54B06EA7.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[06-20-2006 03:05:12] -!- hovik [n=hovik@85.19.74.66] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-20-2006 03:06:10] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[06-20-2006 03:06:11] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit []
+[06-20-2006 03:14:00] -!- awormus [n=aaron@84.176.83.16] has quit [Read error: 110 (Connection timed out)]
+[06-20-2006 03:18:58] -!- aaronw [n=aaron@p54B04E7A.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-20-2006 04:48:45] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-20-2006 04:48:52] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[06-20-2006 04:50:09] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[06-20-2006 05:22:00] -!- nnn0 [n=nnn0@ti541110a080-5051.bb.online.no] has joined #ezpublish
+[06-20-2006 05:23:23] -!- awormus [n=aaron@84.176.105.203] has joined #ezpublish
+[06-20-2006 05:28:03] -!- buz [n=buz@dhcp-202-10-vpn.unizh.ch] has joined #ezpublish
+[06-20-2006 05:37:00] [#ezpublish] <jeremiah> why EZP rename my links and put a letter in uppercase?
+[06-20-2006 05:57:37] -!- buz [n=buz@dhcp-202-10-vpn.unizh.ch] has quit [Read error: 110 (Connection timed out)]
+[06-20-2006 06:10:35] -!- awormus [n=aaron@84.176.105.203] has quit [Connection timed out]
+[06-20-2006 07:59:42] [#ezpublish] <nnn0> and why dows it brake my logo png
+[06-20-2006 07:59:46] [#ezpublish] <nnn0> does
+[06-20-2006 08:03:14] [#ezpublish] <nnn0> got it :)
+[06-20-2006 08:16:30] [#ezpublish] <nnn0> and where did my linebreaks go ?
+[06-20-2006 08:26:42] [#ezpublish] <nnn0> aarrg - why do i get linebreaks in the admin view, but not one the site
+[06-20-2006 08:26:53] [#ezpublish] <nnn0> and how do i get linebreaks in there ?
+[06-20-2006 08:28:02] [#ezpublish] <nnn0> i've set [paragraph] AllowEmpty=true in content.ini.append.php, but with no result
+[06-20-2006 08:29:06] [#ezpublish] <nnn0> and both <br /> or <p> doesn't seem to work
+[06-20-2006 08:29:16] [#ezpublish] * nnn0 pulls out some of his hair
+[06-20-2006 08:31:58] [#ezpublish] <nnn0> omg !
+[06-20-2006 08:32:14] [#ezpublish] <nnn0> you can do it the old way
+[06-20-2006 08:32:31] [#ezpublish] <nnn0> just add breaks with the Enter key
+[06-20-2006 08:32:55] [#ezpublish] <nnn0> %]
+[06-20-2006 08:33:47] [#ezpublish] <nnn0> or at least sometimes
+[06-20-2006 08:34:18] [#ezpublish] <nnn0> well between the Short Description and Description
+[06-20-2006 08:34:26] [#ezpublish] <nnn0> not within Description
+[06-20-2006 08:34:40] [#ezpublish] * nnn0 pulls the rest of his hair out
+[06-20-2006 08:35:39] [#ezpublish] <nnn0> arg
+[06-20-2006 08:36:15] [#ezpublish] <nnn0> hæstrævsaktig
+[06-20-2006 08:43:43] [#ezpublish] <nnn0> i actually had to make an empty <p></p>, that can't be right ? is it suppose to be like that or are there other solutions ?
+[06-20-2006 08:46:15] [#ezpublish] <nnn0> or three carriage returns maybe
+[06-20-2006 08:46:30] [#ezpublish] <nnn0> real clever setup this
+[06-20-2006 08:46:32] [#ezpublish] <nnn0> :)
+[06-20-2006 08:55:13] -!- awormus [n=aaron@p54B07E47.dip.t-dialin.net] has joined #ezpublish
+[06-20-2006 09:07:35] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[06-20-2006 09:07:44] [#ezpublish] <philG> hi all
+[06-20-2006 09:08:09] [#ezpublish] <philG> i have a simple qst, i have a site with ezp 3.7.3, i want upgrade to ezp 3.8
+[06-20-2006 09:08:51] [#ezpublish] <philG> i have make a dump of my old bdd to my new base and i have copy /settings and /design but it's not work correctly, any idea ?
+[06-20-2006 09:19:41] [#ezpublish] <philG> i can see that the database is differents ... it's a problem
+[06-20-2006 09:23:34] -!- awormus_ [n=aaron@p54B04793.dip.t-dialin.net] has joined #ezpublish
+[06-20-2006 09:25:56] -!- aaronw [n=aaron@p54B076FC.dip.t-dialin.net] has joined #ezpublish
+[06-20-2006 09:30:47] -!- awormus_ [n=aaron@p54B04793.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[06-20-2006 09:40:14] -!- awormus [n=aaron@p54B07E47.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-20-2006 09:42:04] -!- aaronw is now known as awormus
+[06-20-2006 09:56:19] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-20-2006 10:06:17] [#ezpublish] <nnn0> did you upgrade the database ?
+[06-20-2006 10:07:50] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-20-2006 10:08:31] [#ezpublish] <nnn0> in the folder /update/database you will find .sql scripts for updating your databse
+[06-20-2006 10:09:01] [#ezpublish] <nnn0> structure
+[06-20-2006 10:14:21] [#ezpublish] <philG> ho thanks nnn0
+[06-20-2006 10:14:40] [#ezpublish] <philG> it's certainly the good solution to my problem
+[06-20-2006 10:15:42] [#ezpublish] <philG> dbupdate-3.6.0-to-3.8.0.sql
+[06-20-2006 10:15:48] [#ezpublish] <philG> but i have 3.7.3 ....
+[06-20-2006 10:16:16] [#ezpublish] <philG> i will test that tomorow
+[06-20-2006 10:17:29] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Connection timed out]
+[06-20-2006 10:18:17] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-20-2006 10:27:15] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[06-20-2006 11:11:50] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-20-2006 11:12:12] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-20-2006 11:12:18] [#ezpublish] <zrg> it lives!
+[06-20-2006 11:18:42] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[06-20-2006 11:50:29] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[06-20-2006 11:56:45] [#ezpublish] * zrg is in Oslo, anyone wanna buy him beer? :D
+[06-20-2006 12:09:50] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-20-2006 12:41:18] -!- awormus [n=aaron@p54B076FC.dip.t-dialin.net] has quit [Connection timed out]
+[06-20-2006 13:10:26] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-20-2006 13:44:50] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has joined #ezpublish
+[06-20-2006 13:49:33] -!- awormus [n=aaron@p54B07F79.dip.t-dialin.net] has joined #ezpublish
+[06-20-2006 13:59:56] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 110 (Connection timed out)]
+[06-20-2006 14:13:49] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-20-2006 14:24:44] -!- awormus_ [n=aaron@p54B0664B.dip.t-dialin.net] has joined #ezpublish
+[06-20-2006 14:24:51] -!- awormus_ [n=aaron@p54B0664B.dip.t-dialin.net] has quit [Read error: 54 (Connection reset by peer)]
+[06-20-2006 14:41:51] -!- awormus [n=aaron@p54B07F79.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-20-2006 15:36:30] -!- _kore [n=lordhong@137.80-202-59.nextgentel.com] has joined #ezpublish
+[06-20-2006 16:26:10] -!- _kore [n=lordhong@137.80-202-59.nextgentel.com] has quit []
+[06-20-2006 17:27:24] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[06-20-2006 18:59:59] [#ezpublish] <Paleo> Is it possible to integrate only the calendar into an existing website ?
+[06-20-2006 19:36:13] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-20-2006 21:39:42] -!- de_wizze [n=vc@ACA2E0B5.ipt.aol.com] has joined #ezpublish
+[06-20-2006 22:15:44] -!- de_wizze [n=vc@ACA2E0B5.ipt.aol.com] has left #ezpublish []
+[06-20-2006 22:59:55] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-20-2006 23:37:42] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]

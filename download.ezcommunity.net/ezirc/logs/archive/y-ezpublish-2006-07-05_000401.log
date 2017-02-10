@@ -1,0 +1,101 @@
+[07-03-2006 00:31:02] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[07-03-2006 00:36:02] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[07-03-2006 01:06:22] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[07-03-2006 01:17:57] -!- DiGiTa|_ [n=pet2poul@84.4.124.116] has joined #ezpublish
+[07-03-2006 01:23:27] -!- DiGiTa|__ [n=pet2poul@84.6.36.178] has joined #ezpublish
+[07-03-2006 01:24:12] -!- ordnas [n=ordnas@p549D5FEB.dip.t-dialin.net] has joined #ezpublish
+[07-03-2006 01:29:14] -!- SEAwolfx [n=SEAwolfx@p54939060.dip0.t-ipconnect.de] has left #ezpublish []
+[07-03-2006 01:39:29] -!- DiGiTa|_ [n=pet2poul@84.4.124.116] has quit [Read error: 110 (Connection timed out)]
+[07-03-2006 01:41:07] -!- DiGiTa|_ [n=pet2poul@84.5.140.128] has joined #ezpublish
+[07-03-2006 01:53:50] -!- DiGiTa|__ [n=pet2poul@84.6.36.178] has quit [Read error: 110 (Connection timed out)]
+[07-03-2006 02:14:31] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[07-03-2006 02:19:37] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[07-03-2006 02:23:07] -!- DiGiTa|__ [n=pet2poul@84.4.43.21] has joined #ezpublish
+[07-03-2006 02:35:54] -!- DiGiTa|_ [n=pet2poul@84.5.140.128] has quit [Read error: 110 (Connection timed out)]
+[07-03-2006 03:01:54] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-03-2006 03:05:22] [#ezpublish] <philG> i have problem to show the image that i add in a document
+[07-03-2006 03:19:28] -!- zrg [n=zurgutt@80-235-54-231-dsl.kjj.estpak.ee] has joined #ezpublish
+[07-03-2006 03:19:49] [#ezpublish] <philG> the template is call but no image
+[07-03-2006 03:20:07] [#ezpublish] <philG> design/intranet/override/templates/embed/image.tpl
+[07-03-2006 03:34:14] -!- zrg [n=zurgutt@80-235-54-231-dsl.kjj.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[07-03-2006 03:38:47] [#ezpublish] <philG> the problem is that the templat parapgraph is call more than one time
+[07-03-2006 03:39:19] [#ezpublish] <philG> in the first, no problem with the image, in the second, no image
+[07-03-2006 03:42:09] [#ezpublish] <philG> no idea ?
+[07-03-2006 03:49:21] -!- koni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-03-2006 03:49:48] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Read error: 104 (Connection reset by peer)]
+[07-03-2006 03:58:58] -!- DiGiTa|__ [n=pet2poul@84.4.43.21] has quit [Read error: 110 (Connection timed out)]
+[07-03-2006 04:03:19] [#ezpublish] <philG> nobody have idea to resolve my problem ?
+[07-03-2006 04:03:59] [#ezpublish] <philG> i resume my porblem: one article, 2 paragraph .. one pics by parapgraph, only the fist is shown in public site
+[07-03-2006 04:04:19] [#ezpublish] <koni> have you checked the permission for the media section ?
+[07-03-2006 04:04:46] [#ezpublish] <koni> ok if one is displayed this should not be the problem
+[07-03-2006 04:06:59] [#ezpublish] <philG> i am admin for test
+[07-03-2006 04:07:44] [#ezpublish] <philG> it's really strange, the system create a link in my pics when i use the previex in the admin
+[07-03-2006 04:08:30] [#ezpublish] <philG> i show my pics when i edit my article .
+[07-03-2006 04:12:13] [#ezpublish] <koni> which ezpublish version ?
+[07-03-2006 04:12:16] [#ezpublish] <koni> 3.8 ?
+[07-03-2006 04:12:33] [#ezpublish] <koni> check you did not use the embed-inline view ... it could be the reason
+[07-03-2006 04:13:00] [#ezpublish] <philG> 3.7.3
+[07-03-2006 04:17:34] [#ezpublish] <philG> i have a link two line up .... and in the previw, the link for the image is the same but in the code no link ....
+[07-03-2006 04:17:37] [#ezpublish] <philG> <li><link href='http://www.trekmag.com/cachemire/osc_appel_2.doc' target='_self'>Imprimez, copiez, faites suivre cet appel. Diffusez-le autour de vous</link> à l’occasion de toute manifestation montagnarde cet hiver, dans vos clubs, vos entreprises, etc.</li>
+[07-03-2006 04:17:58] [#ezpublish] <philG> texte ................. <embed href='ezobject://417' size='medium' align='left' />
+[07-03-2006 04:18:04] [#ezpublish] <philG> i don't understand
+[07-03-2006 04:18:59] [#ezpublish] <philG> why the systme tranform my code to add a link ...
+[07-03-2006 04:19:01] [#ezpublish] <koni> try replacing the embed view by line view
+[07-03-2006 04:19:16] [#ezpublish] <koni> phil: you speak french don't you ?
+[07-03-2006 04:19:23] [#ezpublish] <koni> let's talk on ezpublish-fr
+[07-03-2006 04:19:30] [#ezpublish] <koni> it will be easier for me to understand your pb
+[07-03-2006 04:20:00] [#ezpublish] <philG> yep
+[07-03-2006 04:40:36] -!- nnn0 [n=nnn0@ti541110a080-2027.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[07-03-2006 04:45:19] -!- awormus [n=aaron@p54B05B22.dip.t-dialin.net] has quit ["Leaving"]
+[07-03-2006 04:54:52] -!- awormus [n=aaron@p54B05B22.dip.t-dialin.net] has joined #ezpublish
+[07-03-2006 06:46:23] -!- koni [n=nicolas@fbx.internethic.net] has quit [Read error: 110 (Connection timed out)]
+[07-03-2006 06:46:40] -!- koni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-03-2006 07:06:53] [#ezpublish] <philG> someone have already problem with glossary module and ezp 3.7 ?
+[07-03-2006 07:20:23] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-03-2006 07:29:49] [#ezpublish] <philG> nobody have problem with link and pics in the same artcile ?
+[07-03-2006 07:37:19] -!- criz [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-03-2006 07:37:45] -!- koni [n=nicolas@fbx.internethic.net] has quit [Read error: 104 (Connection reset by peer)]
+[07-03-2006 08:44:48] -!- BjoernDieding [n=BjoernDi@a81-14-224-150.net-htp.de] has joined #ezpublish
+[07-03-2006 08:47:14] [#ezpublish] <BjoernDieding> ping sandro
+[07-03-2006 08:48:34] [#ezpublish] <BjoernDieding> da issa ja
+[07-03-2006 08:51:23] -!- BjoernDieding [n=BjoernDi@a81-14-224-150.net-htp.de] has left #ezpublish []
+[07-03-2006 10:10:16] [#ezpublish] <tobmaster> ez rules!
+[07-03-2006 10:10:19] [#ezpublish] <tobmaster> :)
+[07-03-2006 10:18:41] -!- criz [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[07-03-2006 10:30:59] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[07-03-2006 10:43:47] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit [Remote closed the connection]
+[07-03-2006 11:26:09] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[07-03-2006 11:30:20] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[07-03-2006 11:32:29] -!- DiGiTa|_ [n=pet2poul@84.5.137.0] has joined #ezpublish
+[07-03-2006 11:47:28] -!- awormus [n=aaron@p54B05B22.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[07-03-2006 11:59:08] -!- awormus [n=aaron@p54B05B22.dip.t-dialin.net] has joined #ezpublish
+[07-03-2006 11:59:18] -!- DiGiTa|__ [n=pet2poul@84.4.42.192] has joined #ezpublish
+[07-03-2006 12:09:27] -!- ordnas [n=ordnas@p549D5FEB.dip.t-dialin.net] has left #ezpublish []
+[07-03-2006 12:09:52] -!- DiGiTa|_1 [n=pet2poul@84.4.69.117] has joined #ezpublish
+[07-03-2006 12:12:12] -!- DiGiTa|__ [n=pet2poul@84.4.42.192] has quit [Read error: 104 (Connection reset by peer)]
+[07-03-2006 12:12:42] -!- DiGiTa|__ [n=pet2poul@84.6.74.6] has joined #ezpublish
+[07-03-2006 12:15:15] -!- DiGiTa|_ [n=pet2poul@84.5.137.0] has quit [Read error: 110 (Connection timed out)]
+[07-03-2006 12:16:04] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[07-03-2006 12:16:41] -!- ls is now known as luke
+[07-03-2006 12:17:13] -!- DiGiTa|__ [n=pet2poul@84.6.74.6] has quit [Read error: 104 (Connection reset by peer)]
+[07-03-2006 12:18:11] -!- DiGiTa|_ [n=pet2poul@84.6.38.166] has joined #ezpublish
+[07-03-2006 12:22:09] -!- DiGiTa|__ [n=pet2poul@84.6.33.33] has joined #ezpublish
+[07-03-2006 12:22:09] -!- DiGiTa|_ [n=pet2poul@84.6.38.166] has quit [Read error: 104 (Connection reset by peer)]
+[07-03-2006 12:23:09] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[07-03-2006 12:28:15] -!- DiGiTa|_1 [n=pet2poul@84.4.69.117] has quit [Read error: 110 (Connection timed out)]
+[07-03-2006 12:52:46] -!- _ls [n=ls@85.19.74.66] has joined #ezpublish
+[07-03-2006 12:53:57] -!- awormus_ [n=aaron@p54B05253.dip.t-dialin.net] has joined #ezpublish
+[07-03-2006 13:00:23] -!- luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Nick collision from services.]
+[07-03-2006 13:01:00] -!- awormus [n=aaron@p54B05B22.dip.t-dialin.net] has quit [Read error: 145 (Connection timed out)]
+[07-03-2006 13:23:28] -!- DiGiTa|__ [n=pet2poul@84.6.33.33] has quit [Read error: 104 (Connection reset by peer)]
+[07-03-2006 13:27:33] -!- DiGiTa|_ [n=pet2poul@84.6.33.5] has joined #ezpublish
+[07-03-2006 13:35:00] -!- DiGiTa|__ [n=pet2poul@84.5.142.231] has joined #ezpublish
+[07-03-2006 13:48:25] -!- DiGiTa|_ [n=pet2poul@84.6.33.5] has quit [Read error: 110 (Connection timed out)]
+[07-03-2006 14:09:57] -!- DiGiTa|_ [n=pet2poul@84.4.124.242] has joined #ezpublish
+[07-03-2006 14:22:10] -!- DiGiTa|_ [n=pet2poul@84.4.124.242] has quit []
+[07-03-2006 14:26:01] -!- DiGiTa|__ [n=pet2poul@84.5.142.231] has quit [Read error: 110 (Connection timed out)]
+[07-03-2006 15:21:26] -!- xigle1 [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[07-03-2006 15:25:29] -!- awormus_ [n=aaron@p54B05253.dip.t-dialin.net] has quit ["Leaving"]
+[07-03-2006 15:31:56] -!- _ls [n=ls@85.19.74.66] has quit [Remote closed the connection]
+[07-03-2006 15:49:05] -!- xigle1 [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[07-03-2006 16:02:43] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]

@@ -1,0 +1,208 @@
+[03-21-2006 00:23:41] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[03-21-2006 00:39:26] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has quit [Read error: 110 (Connection timed out)]
+[03-21-2006 00:51:34] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 113 (No route to host)]
+[03-21-2006 00:52:32] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[03-21-2006 01:06:56] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-21-2006 01:22:59] -!- ordnas [n=ordnas@p549D73D7.dip.t-dialin.net] has joined #ezpublish
+[03-21-2006 01:36:36] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has joined #ezpublish
+[03-21-2006 01:59:12] -!- ordna1 [n=ordnas@p549D4CE6.dip.t-dialin.net] has joined #ezpublish
+[03-21-2006 02:02:44] -!- Bedlore [n=me@ppp208-61.lns1.adl2.internode.on.net] has joined #ezpublish
+[03-21-2006 02:02:57] [#ezpublish] <Bedlore> hi guys
+[03-21-2006 02:04:46] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-21-2006 02:07:16] [#ezpublish] <Bedlore> has anyone got any ideas why an ezp version 2 installation doesn't follow urls, I mean the url appears in the browser i.e. /article/articleview/655/1/25/ but I only ever get the home page
+[03-21-2006 02:07:41] [#ezpublish] <Bedlore> I suspect the apache installation simply because thats what we've been screwing with, however ezp 3.x seems to work fine in this regard
+[03-21-2006 02:07:48] [#ezpublish] <Bedlore> any ideas what to check?
+[03-21-2006 02:17:00] -!- ordnas [n=ordnas@p549D73D7.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-21-2006 02:33:17] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-21-2006 02:46:17] -!- badi [n=badii07@host004.be.dedigate.com] has quit [Read error: 104 (Connection reset by peer)]
+[03-21-2006 03:01:47] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-21-2006 03:52:59] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-21-2006 04:22:09] -!- Tiny_Toon [n=bla@217.115.193.102] has joined #ezpublish
+[03-21-2006 04:22:17] [#ezpublish] <Tiny_Toon> hi all
+[03-21-2006 04:22:50] [#ezpublish] <Tiny_Toon> i want to upgrade my current ezpublish version to the latest 3.7
+[03-21-2006 04:23:11] [#ezpublish] <Tiny_Toon> how can i determine which version i'm using?
+[03-21-2006 04:23:22] [#ezpublish] <Tiny_Toon> and which db version..
+[03-21-2006 04:29:42] [#ezpublish] <Tiny_Toon> help..
+[03-21-2006 04:39:22] [#ezpublish] <kris10an> Tiny_Toon: run the following command in your database: "select * from ezsite_data; " also check the version is in lib/version.php
+[03-21-2006 04:42:22] [#ezpublish] <Tiny_Toon> hi kris10an,ok thanks..
+[03-21-2006 04:50:10] [#ezpublish] <Tiny_Toon> kris10an: is it possible to upgrade to the latest version at once, without doing the updates come out in the meanwhile?
+[03-21-2006 05:19:57] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[03-21-2006 05:39:34] -!- elephantMan [n=elephant@88.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-21-2006 05:44:51] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[03-21-2006 05:53:23] [#ezpublish] <kris10an> Tiny_Toon: http://ez.no/products/ez_publish/documentation/installation/upgrading/upgrading_ez_publish_from_3_a_b_to_3_x_y
+[03-21-2006 05:53:32] [#ezpublish] <kris10an> Tiny_Toon: which version are you running?
+[03-21-2006 06:23:35] [#ezpublish] <Tiny_Toon> sorry
+[03-21-2006 06:23:46] [#ezpublish] <Tiny_Toon> version 3.3 release 5
+[03-21-2006 06:24:11] [#ezpublish] <Tiny_Toon> i want to upgrade it to 3.6 of 3.7
+[03-21-2006 06:24:14] [#ezpublish] <Tiny_Toon> i want to upgrade it to 3.6 or 3.7
+[03-21-2006 06:30:22] [#ezpublish] <zrg> its the same thing
+[03-21-2006 06:30:54] [#ezpublish] <zrg> ah, ok, TO 3.6 or 3.7, not from-to, sorry
+[03-21-2006 06:31:58] [#ezpublish] <zrg> did you find upgrade instructions on ez.no ?
+[03-21-2006 06:32:50] [#ezpublish] <Tiny_Toon> yes.. but it only had instructions on upgrading from a previous version
+[03-21-2006 06:33:00] [#ezpublish] <Tiny_Toon> for eg from 3.6 to 3.7
+[03-21-2006 06:33:56] [#ezpublish] <zrg> you had 3.3? that is from previous, no?
+[03-21-2006 06:34:18] [#ezpublish] <Tiny_Toon> i have 3.3.5
+[03-21-2006 06:34:51] [#ezpublish] <zrg> give me the url, have to remember
+[03-21-2006 06:35:19] [#ezpublish] <Tiny_Toon> http://ez.no/products/ez_publish/documentation/installation/upgrading
+[03-21-2006 06:36:09] [#ezpublish] <Tiny_Toon> http://ez.no/doc/ez_publish/technical_manual/3_6/installation/upgrading
+[03-21-2006 06:41:31] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[03-21-2006 06:46:39] [#ezpublish] <kris10an> Tiny_Toon: you need to do the upgrades sequencialy, 3.3 -> 3.5 -> 3.6 -> 3.7. i recommend you to use 3.7.x (which requires PHP 4.4)
+[03-21-2006 06:46:53] [#ezpublish] <zrg> well yes that should work, backup everything including the db, then unpack new version over the old, run all the database scripts from old to new version and then go through scripts in update/common/scripts and find out which ones you need to run
+[03-21-2006 06:48:02] [#ezpublish] <zrg> i recommend to use 3.6 and php 4.3, if you have it installed anyway
+[03-21-2006 06:48:51] [#ezpublish] <zrg> 3.7 wont give anything extra but needs php upgrade which may break something, no need to make things complex
+[03-21-2006 06:50:19] [#ezpublish] <zrg> also manually delete all caches before trying out upgraded version, delete var/cache and each var/siteaccess/cache
+[03-21-2006 06:55:41] [#ezpublish] <kris10an> zrg: depends on your hardware/machine... if you get crashes randomly, you are affected by the referencebug in PHP 4.3. The only way to make sure you are not affected by that bug is to use 3.7
+[03-21-2006 07:01:08] [#ezpublish] <zrg> yes, thats another matter
+[03-21-2006 07:05:41] [#ezpublish] <Tiny_Toon> kris10an and zrg thanks!!
+[03-21-2006 07:05:50] [#ezpublish] <Tiny_Toon> i'll give it a try, wish me luck :)
+[03-21-2006 07:11:31] [#ezpublish] <zrg> thumbsup
+[03-21-2006 07:16:29] [#ezpublish] <Tiny_Toon> :)
+[03-21-2006 07:24:07] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-21-2006 07:40:06] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[03-21-2006 07:50:35] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-21-2006 08:10:44] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-21-2006 08:21:36] -!- Tiny_Toon [n=bla@217.115.193.102] has quit []
+[03-21-2006 08:29:59] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has joined #ezpublish
+[03-21-2006 08:53:21] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-21-2006 09:09:26] -!- _hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[03-21-2006 09:17:10] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-21-2006 09:22:23] -!- tobyS [n=dotxp@dslb-084-062-194-073.pools.arcor-ip.net] has joined #ezpublish
+[03-21-2006 09:29:25] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-21-2006 09:54:45] Disconnecting due to lack of a lag response (0.05387200 1142956425 != 0.06299200 1142956455)
+[03-21-2006 09:54:45] Diconnected. Sleeping for 2 second(s).
+[03-21-2006 09:54:47] >> Connecting to irc.freenode.net:6667
+[03-21-2006 09:54:51] >> Connected to irc.freenode.net:6667, registering...
+[03-21-2006 09:55:09] >> Attempting to join channels: #ezpublish
+[03-21-2006 09:55:51] Disconnecting due to lack of a lag response (0.54716900 1142956491 != 0.19605400 1142956521)
+[03-21-2006 09:55:51] Diconnected. Sleeping for 2 second(s).
+[03-21-2006 09:55:53] >> Connecting to irc.freenode.net:6667
+[03-21-2006 09:55:57] >> Connected to irc.freenode.net:6667, registering...
+[03-21-2006 09:55:57] >> Attempting to join channels: #ezpublish
+[03-21-2006 09:56:13] >> Successfully registered. Nick is: ezlog
+[03-21-2006 09:56:13] -!- There are 14670 listed and 14371 unlisted users on 22 servers
+[03-21-2006 09:56:13] -!- 38 flagged staff members
+[03-21-2006 09:56:13] -!- 11164 channels formed
+[03-21-2006 09:56:13] -!- I have 4266 clients and 0 servers
+[03-21-2006 09:56:13] -!- Current local  users: 4266  Max: 5573
+[03-21-2006 09:56:13] -!- Current global users: 29041  Max: 30240
+[03-21-2006 09:56:13] -!- Highest connection count: 5575 (5573 clients) (636488 since server was (re)started)
+[03-21-2006 09:56:13] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[03-21-2006 09:56:13] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_17_03_2006 | http://ez.no/community/forum/ez_components/webcast#msg93640
+[03-21-2006 09:56:13] -!- Topic set by kracker [@] [Sat, 18 Mar 2006 01:52:12 -0600]
+[03-21-2006 09:56:14] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[03-21-2006 09:56:14] [notice(freenode-connect)] VERSION IQ 0.9.3
+[03-21-2006 09:56:14] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#privmsg
+[03-21-2006 09:56:14] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[03-21-2006 09:56:14] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] if you're at a conference and other people are having trouble connecting, please mention it to staff: http://freenode.net/faq.shtml#gettinghelp
+[03-21-2006 10:49:43] -!- badi [n=badii07@host004.be.dedigate.com] has joined #ezpublish
+[03-21-2006 10:51:10] [#ezpublish] <badi> hello
+[03-21-2006 11:06:14] [#ezpublish] <badi> whow i can affect the result of a fetch function to variable ?
+[03-21-2006 11:06:35] [#ezpublish] <badi> {let larticleList=fetch( 'content', 'list',
+[03-21-2006 11:06:35] [#ezpublish] <badi>  hash( 'parent_node_id',291,
+[03-21-2006 11:06:35] [#ezpublish] <badi>        'limit', 1,
+[03-21-2006 11:06:35] [#ezpublish] <badi>       'sort_by', array('attribute', true() ,'article_dossier/date_publication_dossier') ) )}
+[03-21-2006 11:06:35] [#ezpublish] <badi>  {foreach $larticleList as $object}
+[03-21-2006 11:06:35] [#ezpublish] <badi> {attribute_view_gui attribute=$object.data_map.date_publication_dossier}
+[03-21-2006 11:06:37] [#ezpublish] <badi> {$object|attribute(show)}
+[03-21-2006 11:06:39] [#ezpublish] <badi> {/foreach}
+[03-21-2006 11:06:41] [#ezpublish] <badi> {/let}
+[03-21-2006 11:07:32] [#ezpublish] <badi> i dont wan to view the "date_publication_dossier"  variable
+[03-21-2006 11:08:22] [#ezpublish] <badi> but affect is to a variable  for make a test
+[03-21-2006 11:15:39] -!- badi [n=badii07@host004.be.dedigate.com] has quit []
+[03-21-2006 11:18:09] -!- yassine21 [n=yassine2@196.203.32.162] has joined #ezpublish
+[03-21-2006 11:18:15] [#ezpublish] <yassine21> hello
+[03-21-2006 11:18:27] [#ezpublish] <yassine21> Can anybody help me ?
+[03-21-2006 11:19:02] [#ezpublish] <yassine21> I want to make tests on the dates stored in the database, and i only can show these datas
+[03-21-2006 11:19:14] [#ezpublish] <yassine21> I can't put it into a variable or anything else :(
+[03-21-2006 11:23:03] [#ezpublish] <yassine21> is anybody here ?
+[03-21-2006 11:23:50] -!- yassine21 [n=yassine2@196.203.32.162] has quit ["-=SysReset 2.53=-"]
+[03-21-2006 12:27:08] -!- badi [n=badii07@host004.be.dedigate.com] has joined #ezpublish
+[03-21-2006 12:36:38] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[03-21-2006 12:38:51] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-21-2006 13:24:28] -!- tobyS_ [n=dotxp@dslb-084-061-147-045.pools.arcor-ip.net] has joined #ezpublish
+[03-21-2006 13:26:33] -!- tobyS [n=dotxp@dslb-084-062-194-073.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[03-21-2006 13:26:51] -!- badi [n=badii07@host004.be.dedigate.com] has quit []
+[03-21-2006 14:32:59] -!- phretor [n=phretor@host188-57.pool870.interbusiness.it] has joined #ezpublish
+[03-21-2006 14:33:02] [#ezpublish] <phretor> hello there
+[03-21-2006 14:37:48] [#ezpublish] <phretor> I noticed that the default (standard + base) templates make use the so called "presentational markup" (i.e., dirty html with a lot of presentational stuff, like "align" and so on); I was wandering if someone has produced a cleanest version of such templates with neither presentational stuff nor stylesheets. It would be better for who prefers clean/semantic markup. Any suggestion/link/pointer/idea? Thanks.
+[03-21-2006 14:54:46] -!- ordna1 [n=ordnas@p549D4CE6.dip.t-dialin.net] has left #ezpublish []
+[03-21-2006 15:11:28] -!- ordnas [n=ordnas@p549D636E.dip.t-dialin.net] has joined #ezpublish
+[03-21-2006 15:14:53] -!- ordnas [n=ordnas@p549D636E.dip.t-dialin.net] has left #ezpublish []
+[03-21-2006 15:22:18] -!- ordnas [n=ordnas@p549D636E.dip.t-dialin.net] has joined #ezpublish
+[03-21-2006 15:27:15] [#ezpublish] <phretor> nobody there?
+[03-21-2006 16:03:25] -!- Bedlore [n=me@ppp208-61.lns1.adl2.internode.on.net] has quit [Read error: 113 (No route to host)]
+[03-21-2006 16:27:51] -!- ordnas [n=ordnas@p549D636E.dip.t-dialin.net] has left #ezpublish []
+[03-21-2006 17:08:06] [#ezpublish] <kracker> heh
+[03-21-2006 17:08:17] [#ezpublish] <kracker> phretor, yes for pay i think
+[03-21-2006 17:08:44] [#ezpublish] <kracker> i know that Xrow is part of a template firm/project
+[03-21-2006 17:08:44] [#ezpublish] <phretor> kracker: re
+[03-21-2006 17:09:04] [#ezpublish] <kracker> but your not the only one who has noticed this issue
+[03-21-2006 17:09:15] [#ezpublish] <kracker> infact the list is fairly long these days
+[03-21-2006 17:09:41] [#ezpublish] <phretor> kracker: and what's the best practice along this problem/issue? I mean, how do you cope wht that, for instance
+[03-21-2006 17:10:05] [#ezpublish] <kracker> i think in general they say it's good/ok to use out of the box but then also say pros should create their own designs from scratch using the plain sitedesign
+[03-21-2006 17:10:25] [#ezpublish] <kracker> yeah ... cope (ahh the stories ...)
+[03-21-2006 17:11:10] [#ezpublish] <kracker> i'd say start from scratch implimenting your desired design using the plain sitedesign, it seems like it's a big hit but long term it provides the best results posible really
+[03-21-2006 17:11:22] [#ezpublish] <phretor> kracker: the PRO is definitely the possibility of using an out-of-the-box design, no doubts. But what about those, like me, preferring custom/clean markup? :-(
+[03-21-2006 17:13:07] [#ezpublish] <phretor> kracker: my hands are quite dirty inside all that amount of template/code but the results is not satisfactory; there are too much things/templates to take into account that one can't be sure to have finished. This is my main problem: "is there any other template I didn't take into account?"
+[03-21-2006 17:13:49] [#ezpublish] <phretor> it's an amazing journey inside the overriding-hell
+[03-21-2006 17:27:10] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[03-21-2006 18:55:03] [#ezpublish] <phretor> is it possible to remove unrequired modules?
+[03-21-2006 19:11:11] [#ezpublish] <kracker> oops sry, so distracted :\
+[03-21-2006 19:11:47] [#ezpublish] <kracker> i so fully hear whatcha sayin
+[03-21-2006 19:12:38] [#ezpublish] <kracker> you gain more disk space by removing uneeded transations, i think i remember reading -20MB!
+[03-21-2006 19:13:15] [#ezpublish] * kracker bounces off into mobuzz.com 
+[03-21-2006 19:13:16] [#ezpublish] <phretor> kracker: is there something about this out there?
+[03-21-2006 19:13:33] [#ezpublish] <kracker> hrrm in the forums prolly
+[03-21-2006 19:13:50] [#ezpublish] <kracker> but where i could not say, could google site:ez.no for it
+[03-21-2006 19:16:49] [#ezpublish] <phretor> kracker: by the way, it something happens that changes in the templates are not immediately visible, even if I clear all cache. Suggestions?
+[03-21-2006 19:25:03] [#ezpublish] <kracker> hrm, well we talked about this before
+[03-21-2006 19:25:20] [#ezpublish] <kracker> it depends on the situation
+[03-21-2006 19:25:38] [#ezpublish] <kracker> changes to existing files already proven to accept changes
+[03-21-2006 19:25:52] [#ezpublish] <kracker> than i'd look to cache
+[03-21-2006 19:26:49] [#ezpublish] <kracker> if it's a new file overide, i would closly check that the override is correct syntax (node/id/etc)
+[03-21-2006 19:27:36] [#ezpublish] <kracker> those used to throw me a lot aswell, lots of little things / details / ins an outs to that subsystem :?
+[03-21-2006 19:28:13] [#ezpublish] <phretor> kracker: ok but I checked with an empty override template and the -old- unempty one is still displayed instead of the empty one...
+[03-21-2006 19:28:24] [#ezpublish] <kracker> an i had to invest the time into learning it all, damn but all the free beer does not help keep it if you arn't using it often
+[03-21-2006 19:30:13] [#ezpublish] <kracker> are you override.ini at the top before any other instances? are you overriding an existing template, are you doing so properly ... sounds like it is not being overriden (like sry man, duhh you said that ..)
+[03-21-2006 19:30:28] [#ezpublish] <kracker> what file are you trying to override?
+[03-21-2006 19:31:16] [#ezpublish] <kracker> some times (gasp) i'll hack in a template first to prove it's the right one then revert my changes (version control, eh) ... then go create an override
+[03-21-2006 19:32:33] [#ezpublish] <kracker> some templates are a nightmare to override differently in different situations (logic) but then that is in part (guess) why you can impliment templates in different ways (options) ignoring some of the limitation (i've hit but sigh can't recall)
+[03-21-2006 19:33:52] [#ezpublish] <phretor> kracker: the situation is really simple man, not so complicated. I include a file into pagelayout.tpl - and, apparently randomly, it change its view when I change the file and sometimes not
+[03-21-2006 19:34:29] [#ezpublish] <kracker> heh, yeah i think i've seen that one
+[03-21-2006 19:34:55] [#ezpublish] <phretor> kracker: and how do you solve it?
+[03-21-2006 19:35:06] [#ezpublish] <phretor> kracker: it sometimes require the system to be restarted
+[03-21-2006 19:35:43] [#ezpublish] <kracker> sry man those experiances (of mine) were well over 9 months ago :\ my brain is a bit to dusty to recall
+[03-21-2006 19:35:59] [#ezpublish] <kracker> tho restarting is crazyness
+[03-21-2006 19:36:39] [#ezpublish] <phretor> kracker: :\
+[03-21-2006 19:37:03] [#ezpublish] <kracker> if your including a file (staticly) that should not (persay) require an override.ini setting (hell, might even conflict ?)
+[03-21-2006 19:37:44] [#ezpublish] <kracker> i could be way off, just sounds like something is missing (i'm so on my way out ... right now)
+[03-21-2006 19:38:51] [#ezpublish] <kracker> i would consider writing out a very clear statment of what exactly your doing (code examples plus) 3 - 4 paragraphs tops and posting a thread on ez.no to see what others might say in passing while you sleep *shrugs* helps keep movement while your fsckin
+[03-21-2006 19:39:15] [#ezpublish] <phretor> kracker: http://pastebin.com/615454
+[03-21-2006 19:42:22] [#ezpublish] <kracker> uhh, well i would recommend tracer bullets (numbers on each line?) (sure you prolly tried this, just in case the logic is in play)
+[03-21-2006 19:42:42] [#ezpublish] <kracker> looks like if you can also remove (var) you wouldn't notice a difference
+[03-21-2006 19:43:01] [#ezpublish] <phretor> kracker: yes
+[03-21-2006 19:43:05] [#ezpublish] <kracker> i'd also show your pagelayout.tpl snippet of the include
+[03-21-2006 19:43:20] [#ezpublish] <phretor> kracker: let me paste it please
+[03-21-2006 19:43:21] [#ezpublish] <kracker> and mention what view your hitting
+[03-21-2006 19:43:25] [#ezpublish] <kracker> nw
+[03-21-2006 19:43:56] [#ezpublish] <phretor> kracker: ok, it was a temporary effect
+[03-21-2006 19:44:13] [#ezpublish] <phretor> I cleaned the cache (via command line) three times and it solved the problem :-)
+[03-21-2006 19:44:14] [#ezpublish] <kracker> so but like on some views it doesn't include the file but in others it does (seeminly random)
+[03-21-2006 19:44:16] [#ezpublish] <phretor> sorry man
+[03-21-2006 19:44:56] [#ezpublish] <kracker> ouch, yeah me to but ... i'm down, i've been there, i really have, i was so #ezpublish back in the day
+[03-21-2006 19:45:31] [#ezpublish] <phretor> kracker: I also found that you can selectively disable/enable modules via [SiteAccessRules]
+[03-21-2006 19:46:27] [#ezpublish] <kracker> i'm not as leet as i was back then and far to rusty to be much more than a sounding board, but then that can be some what usefull (in a way, some times)
+[03-21-2006 19:46:30] [#ezpublish] <kracker> neat
+[03-21-2006 19:47:07] [#ezpublish] <kracker> so you working on your first eZ app ?
+[03-21-2006 19:47:21] [#ezpublish] <kracker> you been trailing eZ for long?
+[03-21-2006 19:48:03] [#ezpublish] <phretor> kracker: I'm just a webdesigner, I found eZ just a couple of months ago
+[03-21-2006 19:48:40] [#ezpublish] <kracker> i think the new 3.8 (?) develoment mode (for templates) will help with these kind of issues (checks tpl modification dates)
+[03-21-2006 19:49:05] [#ezpublish] <kracker> i think i got this from the mailling list or changelog (fyi)
+[03-21-2006 19:49:10] [#ezpublish] <kracker> right on
+[03-21-2006 19:49:31] [#ezpublish] <kracker> ok well i have gotta crash, running on to little sleep :\
+[03-21-2006 19:49:40] [#ezpublish] <kracker> catch ya on the flip side
+[03-21-2006 19:49:49] [#ezpublish] <kracker> ciao
+[03-21-2006 19:49:56] [#ezpublish] <kracker> waddata :D
+[03-21-2006 19:53:16] [#ezpublish] <phretor> kracker: ciao!
+[03-21-2006 20:01:40] -!- phretor [n=phretor@host188-57.pool870.interbusiness.it] has quit []
+[03-21-2006 20:57:55] -!- Bedlore [n=me@ppp146-40.lns3.adl2.internode.on.net] has joined #ezpublish

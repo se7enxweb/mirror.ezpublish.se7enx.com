@@ -1,0 +1,70 @@
+[04-08-2006 01:54:53] -!- Bedlore [n=me@ppp155-170.lns3.adl2.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[04-08-2006 03:05:26] -!- buz [n=buz@217.162.130.177] has joined #ezpublish
+[04-08-2006 03:12:15] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-08-2006 03:30:52] -!- buz [n=buz@217.162.130.177] has quit [Read error: 110 (Connection timed out)]
+[04-08-2006 04:53:50] -!- phretor [n=phretor@host238-145.pool875.interbusiness.it] has joined #ezpublish
+[04-08-2006 04:53:55] [#ezpublish] <phretor> hello there
+[04-08-2006 04:54:01] [#ezpublish] <phretor> hi kracker
+[04-08-2006 05:07:54] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-08-2006 05:12:17] [#ezpublish] <phretor> re bux
+[04-08-2006 05:12:18] [#ezpublish] <phretor> buz
+[04-08-2006 05:12:32] [#ezpublish] <buz> hi
+[04-08-2006 05:18:26] [#ezpublish] <phretor> buz: do you know how the loading of extension files works?
+[04-08-2006 05:18:40] [#ezpublish] <buz> not entirely
+[04-08-2006 05:24:48] [#ezpublish] <phretor> buz: I created a new 'extension/myext/lib/.../originalfilename.php' but originalfilename.php into /lib/.../ is not overridden :-\
+[04-08-2006 05:25:10] [#ezpublish] <buz> i dont think it works that way necessarily
+[04-08-2006 05:29:46] [#ezpublish] <phretor> buz: tips?
+[04-08-2006 06:39:33] -!- ordnas [n=ordnas@p549D789A.dip.t-dialin.net] has joined #ezpublish
+[04-08-2006 06:48:11] [#ezpublish] <phretor> I've made a post about this problem, if someone can have a look it would be appreciated: http://ez.no/community/forum/developer/the_simplest_extension - thanks in advance
+[04-08-2006 06:53:07] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[04-08-2006 06:53:12] [#ezpublish] <buz> i dont think the idea is that you can override random files in lib in your extension, really
+[04-08-2006 07:01:55] [#ezpublish] <phretor> buz: so what can I do?
+[04-08-2006 07:02:22] [#ezpublish] <phretor> buz: I'm not providing datatypes or something like that - I simply need a patched version of wash
+[04-08-2006 07:02:37] [#ezpublish] <buz> why dont you just write a custom template operator?
+[04-08-2006 07:02:43] [#ezpublish] <buz> that is straightforward
+[04-08-2006 07:03:37] [#ezpublish] <phretor> buz: where could I find a template of that?
+[04-08-2006 07:03:40] [#ezpublish] <buz> uhm
+[04-08-2006 07:03:43] [#ezpublish] <buz> go to setup -> rad
+[04-08-2006 07:03:47] [#ezpublish] <buz> and click yourself thru
+[04-08-2006 07:04:30] [#ezpublish] <phretor> buz: anyway, wash('textism') was cool to call :-)
+[04-08-2006 07:08:18] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-08-2006 07:08:49] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[04-08-2006 07:14:35] [#ezpublish] <buz> what should it do?
+[04-08-2006 07:25:50] [#ezpublish] <phretor> buz: thanks for your RAD tip: I solved my problem :-)
+[04-08-2006 07:35:12] -!- Oldtimer [n=pborgerm@ip-213-49-184-111.dsl.scarlet.be] has joined #ezpublish
+[04-08-2006 08:15:36] -!- Oldtimer [n=pborgerm@ip-213-49-184-111.dsl.scarlet.be] has quit [Read error: 113 (No route to host)]
+[04-08-2006 09:38:38] -!- phretor [n=phretor@host238-145.pool875.interbusiness.it] has quit []
+[04-08-2006 12:28:18] -!- ordnas [n=ordnas@p549D789A.dip.t-dialin.net] has left #ezpublish []
+[04-08-2006 12:29:29] -!- phretor [n=phretor@host238-145.pool875.interbusiness.it] has joined #ezpublish
+[04-08-2006 12:32:20] -!- phretor [n=phretor@host238-145.pool875.interbusiness.it] has quit [Client Quit]
+[04-08-2006 12:39:09] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[04-08-2006 13:09:00] [#ezpublish] <xbit_> hepp
+[04-08-2006 13:10:13] [#ezpublish] <xbit_> is it a bad idea to use the same database user and password on several different siteaccesses?
+[04-08-2006 13:10:37] -!- xbit_ is now known as xbit
+[04-08-2006 13:10:38] [#ezpublish] <buz> uhm
+[04-08-2006 13:10:44] [#ezpublish] <buz> isnt that what we normally do?
+[04-08-2006 13:10:48] [#ezpublish] <buz> for user and admin access?
+[04-08-2006 13:11:12] [#ezpublish] <xbit> yeah, i mean, for several sites
+[04-08-2006 13:11:17] [#ezpublish] <buz> weeeeeell
+[04-08-2006 13:11:30] [#ezpublish] <buz> would be better to give em isolated accounts of course
+[04-08-2006 13:11:40] [#ezpublish] <xbit> why? :)
+[04-08-2006 13:11:58] [#ezpublish] <buz> so that one hacked instance doesnt mean other data is at risk per se
+[04-08-2006 13:12:04] [#ezpublish] <buz> (of course they likely all have the same bug)
+[04-08-2006 13:12:27] [#ezpublish] <xbit> yeah, i'm running with just one installation as well so
+[04-08-2006 13:12:41] [#ezpublish] <xbit> so then i'd be f*cked anyways i guess ;)
+[04-08-2006 13:15:18] [#ezpublish] <buz> likely
+[04-08-2006 13:15:30] [#ezpublish] <buz> but it would still be better of course ;)
+[04-08-2006 13:16:06] [#ezpublish] <xbit> hmm
+[04-08-2006 13:16:42] [#ezpublish] <buz> ls -l
+[04-08-2006 13:16:46] [#ezpublish] <buz> oops wrong window
+[04-08-2006 13:16:51] [#ezpublish] <xbit> hihi ;)
+[04-08-2006 13:38:22] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Remote closed the connection]
+[04-08-2006 13:40:31] -lilo:$*- [Global Notice] Hi all. The network is currently not accepting new connections while we work through some cloaking issues. Thanks!
+[04-08-2006 14:03:26] -lilo:$*- [Global Notice] Hi all. In regard our connect problems, we'll periodically reopen connections for just a moment in order to make sure you aren't shut out. Thanks!
+[04-08-2006 14:50:01] -lilo:$*- [Global Notice] almost there, thanks for your patience....we should be back up continuously in just a bit
+[04-08-2006 15:06:06] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[04-08-2006 16:05:53] -lilo:$*- [Global Notice] Hi all. To recap, we're currently working on resolving an issue with a missing server and some channel attacks. New connects are closed and are being opened only intermittently. Please bear with us.
+[04-08-2006 17:02:02] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-08-2006 17:54:43] -lilo:$*- [Global Notice] Hi all. It looks as if we've managed to find our problems. We were experiencing difficulties in labeling attacking bots, and for that reason we had to turn off incoming connections and just turn them on intermittently. We believe we've resolved the issues.
+[04-08-2006 17:55:44] -lilo:$*- [Global Notice] We may still have occasional cases during the morning where we block new connections for two or three minutes at a time, but we think we've solved most of the related issues. Additional detail on wallops if you're interested. Thank you for your patience, and thank you for using freenode!
+[04-08-2006 19:02:46] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]

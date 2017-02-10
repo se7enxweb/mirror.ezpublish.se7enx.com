@@ -1,0 +1,176 @@
+[03-24-2006 00:12:08] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-24-2006 01:18:27] -!- DiGiTa|_ [n=guillaum@84.5.139.79] has joined #ezpublish
+[03-24-2006 01:39:56] -!- ordnas [n=ordnas@p549D4E43.dip.t-dialin.net] has joined #ezpublish
+[03-24-2006 02:06:18] -!- _hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[03-24-2006 02:17:53] [#ezpublish] <kris10an> zrg is not here now... just when i fixed a bug of his and wanted to tell him....
+[03-24-2006 02:34:48] [#ezpublish] <_buz> he'll be here eventually
+[03-24-2006 02:36:34] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-24-2006 02:38:47] -!- buz_ [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-24-2006 02:46:42] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-24-2006 02:53:34] -!- buz_ [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-24-2006 02:54:28] -!- awormus [n=aaron@p54B10C1B.dip0.t-ipconnect.de] has joined #ezpublish
+[03-24-2006 02:54:54] [#ezpublish] <awormus> I have some questions about the generation of static content with ezpublish
+[03-24-2006 02:55:36] [#ezpublish] <awormus> I am working with a team who has a very large system already set up, they don't want to change the system but want to use a CMS to manage it
+[03-24-2006 02:57:10] [#ezpublish] <awormus> would it be possible to use ezpublish to manage the content (articles etc) but then create templates so that ezpubish will generate the static html files (which sometimes will include PHP code) and will fit into the existing system
+[03-24-2006 02:58:22] [#ezpublish] <awormus> so essentially add the user management and workflow from ezpublish and then push the generated pages statically into the existing system
+[03-24-2006 03:10:39] -!- elephantMan [n=elephant@88.205.103-84.rev.gaoland.net] has quit [Remote closed the connection]
+[03-24-2006 03:11:12] -!- katana` [n=Katana_@ankh-morpork.net] has joined #ezpublish
+[03-24-2006 03:13:13] -!- elephantMan [n=elephant@88.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-24-2006 03:13:25] [#ezpublish] <kris10an> awormus: ez publish can generate static pages from the content
+[03-24-2006 03:13:31] [#ezpublish] <katana`> hi guys
+[03-24-2006 03:13:50] [#ezpublish] <kris10an> but those will not contain any PHP
+[03-24-2006 03:14:00] [#ezpublish] <kris10an> morning señor
+[03-24-2006 03:28:19] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-24-2006 03:28:40] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-24-2006 03:30:17] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-24-2006 03:41:39] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-24-2006 04:47:46] -!- katana` [n=Katana_@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-24-2006 04:50:50] [#ezpublish] <DiGiTa|_> is it better to have one 30" screen or two 24" screen ?
+[03-24-2006 05:16:18] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-24-2006 05:21:42] [#ezpublish] <kris10an> DiGiTa|_: i want one 30"
+[03-24-2006 05:22:16] [#ezpublish] <kris10an> that sounds expensive...
+[03-24-2006 05:37:19] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[03-24-2006 05:39:04] [#ezpublish] <DiGiTa|_> the dell is not so expensive
+[03-24-2006 05:39:08] [#ezpublish] <DiGiTa|_> 1700 euros
+[03-24-2006 05:39:24] [#ezpublish] <DiGiTa|_> the apple is expensive
+[03-24-2006 05:39:27] [#ezpublish] <DiGiTa|_> 2600 euros
+[03-24-2006 05:43:25] [#ezpublish] <zrg> ugh
+[03-24-2006 05:52:13] [#ezpublish] <kris10an> hey zrg! i fixed one of your bugs now :-)
+[03-24-2006 05:52:33] [#ezpublish] <zrg> i am now bug-free? :)
+[03-24-2006 05:52:52] [#ezpublish] <kris10an> sadly i only fixed one...
+[03-24-2006 05:53:08] [#ezpublish] <kris10an> but if you only had one.. then yes..
+[03-24-2006 05:53:35] [#ezpublish] <zrg> noo, i am bug-riddled all through, stark hopping mad :)
+[03-24-2006 05:53:52] [#ezpublish] <zrg> which bug?
+[03-24-2006 05:54:40] [#ezpublish] <kris10an> 7349
+[03-24-2006 05:55:54] -!- elephantMan [n=elephant@88.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[03-24-2006 05:56:05] [#ezpublish] <zrg> cool
+[03-24-2006 05:56:22] [#ezpublish] <zrg> thought it was all in me mind as usual :P
+[03-24-2006 05:56:29] -!- badi [i=badi@196.203.32.164] has joined #ezpublish
+[03-24-2006 05:57:42] [#ezpublish] <kris10an> it got into my mind aswell (though a request), so i had to do some exorsism..
+[03-24-2006 05:58:19] -!- elephantMan [n=elephant@88.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-24-2006 05:59:27] [#ezpublish] <zrg> well done
+[03-24-2006 06:12:22] [#ezpublish] <kris10an> thank the people who payed for the exorsism..
+[03-24-2006 06:12:25] [#ezpublish] <kris10an> :-)
+[03-24-2006 06:14:06] [#ezpublish] <zrg> yeah, could use few of those right now..
+[03-24-2006 06:24:28] [#ezpublish] <kris10an> you are that haunted... :-s
+[03-24-2006 06:26:18] -!- DiGiTa|_ [n=guillaum@84.5.139.79] has quit []
+[03-24-2006 06:27:44] [#ezpublish] <zrg> nah, just jobless :)
+[03-24-2006 06:40:34] [#ezpublish] <zrg> some great news tho, im coming to this years camp :)
+[03-24-2006 06:42:25] [#ezpublish] <kris10an> yes.. those people are nice...
+[03-24-2006 06:42:48] [#ezpublish] <kris10an> see you at the camp then .-)
+[03-24-2006 06:48:37] [#ezpublish] <zrg> yeah :)
+[03-24-2006 06:58:47] [#ezpublish] <zrg> must start pleasing the gods for good weather
+[03-24-2006 07:01:31] -!- katana` [n=Katana_@ankh-morpork.net] has joined #ezpublish
+[03-24-2006 07:27:55] -!- badi [i=badi@196.203.32.164] has quit []
+[03-24-2006 07:35:15] [#ezpublish] <kris10an> the wether is perfect here, so no need to pease them just yet...
+[03-24-2006 07:49:37] [#ezpublish] <zrg> cold?
+[03-24-2006 07:56:35] -!- katana` [n=Katana_@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-24-2006 08:04:22] [#ezpublish] <kris10an> the window is open, and the sun shining on my head.. it feels pretty warm to me..
+[03-24-2006 08:05:08] -!- katana` [n=Katana@ankh-morpork.net] has joined #ezpublish
+[03-24-2006 08:14:58] [#ezpublish] <_buz> its half raining her
+[03-24-2006 08:15:00] [#ezpublish] <_buz> e
+[03-24-2006 08:51:53] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-24-2006 08:51:53] -!- katana` [n=Katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-24-2006 08:54:37] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[03-24-2006 08:57:57] -!- hovik [n=hovik@85.19.74.66] has quit [Remote closed the connection]
+[03-24-2006 08:58:44] [#ezpublish] <kris10an> _buz: then i like this place better than yours :-)
+[03-24-2006 08:58:54] [#ezpublish] <_buz> point
+[03-24-2006 09:01:57] [#ezpublish] <_buz> switzerland has things going for it.
+[03-24-2006 09:02:00] [#ezpublish] <_buz> but not the weather
+[03-24-2006 09:08:47] [#ezpublish] <zrg> blessed be the cheesemakers
+[03-24-2006 09:37:57] -!- katana` [n=Katana@ankh-morpork.net] has joined #ezpublish
+[03-24-2006 10:08:01] -!- ordnas [n=ordnas@p549D4E43.dip.t-dialin.net] has left #ezpublish []
+[03-24-2006 10:21:48] [#ezpublish] <_buz> we also make chocolate
+[03-24-2006 10:21:50] [#ezpublish] <_buz> and watches
+[03-24-2006 10:31:54] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-24-2006 10:51:47] -!- _buz is now known as buz
+[03-24-2006 12:08:58] [#ezpublish] <zrg> ok who did not know the cheesemakers quote? :)
+[03-24-2006 12:13:14] [#ezpublish] <buz> me
+[03-24-2006 12:13:48] [#ezpublish] <zrg> life of brian
+[03-24-2006 12:14:01] [#ezpublish] <buz> havent seen it in a looong time
+[03-24-2006 12:14:14] [#ezpublish] <zrg> gap in your education
+[03-24-2006 12:14:22] [#ezpublish] <buz> didnt say i haven't seen it
+[03-24-2006 12:14:27] [#ezpublish] <buz> just not recently
+[03-24-2006 12:14:39] [#ezpublish] <buz> i find meaning of life funnier
+[03-24-2006 12:14:47] [#ezpublish] <zrg> i understood :)
+[03-24-2006 12:15:32] [#ezpublish] <zrg> perhaps but its not a one whole like life of brian
+[03-24-2006 12:15:44] [#ezpublish] <buz> true
+[03-24-2006 12:15:51] [#ezpublish] <zrg> i fing i an amazing feat that film like this got made at all
+[03-24-2006 12:15:59] [#ezpublish] <zrg> find it
+[03-24-2006 12:16:11] [#ezpublish] <buz> yeah it's like the full opposite of the passion
+[03-24-2006 12:16:18] [#ezpublish] <buz> which is pure crap
+[03-24-2006 12:16:42] [#ezpublish] <zrg> there is one gap i will not fill :P
+[03-24-2006 12:17:07] [#ezpublish] <buz> not even as torture flick it is any good
+[03-24-2006 12:17:30] [#ezpublish] <zrg> i will be in berlin next weekend, anyone here from around there?
+[03-24-2006 12:18:25] -!- fh [n=fh@208.80-202-59.nextgentel.com] has joined #ezpublish
+[03-24-2006 12:18:44] [#ezpublish] <zrg> all hail fh ;)
+[03-24-2006 12:20:52] -!- awormus [n=aaron@p54B10C1B.dip0.t-ipconnect.de] has quit [Read error: 145 (Connection timed out)]
+[03-24-2006 12:44:43] [#ezpublish] <katana`> hey hey fh
+[03-24-2006 12:44:44] [#ezpublish] <katana`> wassup ?
+[03-24-2006 13:08:17] -!- katana` [n=Katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-24-2006 13:29:23] -!- tobyS_ [n=dotxp@dslb-084-061-190-147.pools.arcor-ip.net] has joined #ezpublish
+[03-24-2006 13:31:49] -!- tobyS [n=dotxp@dslb-084-061-147-170.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[03-24-2006 14:01:24] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[03-24-2006 14:47:09] [#ezpublish] <buz> ROTFL http://www.centos.org/modules/news/article.php?storyid=127
+[03-24-2006 14:47:13] [#ezpublish] <buz> just how stupid can lusers get
+[03-24-2006 14:57:06] [#ezpublish] <zrg> is it for real?
+[03-24-2006 15:00:01] [#ezpublish] <buz> i think so
+[03-24-2006 15:00:07] [#ezpublish] <buz> found it at the reg
+[03-24-2006 15:00:17] [#ezpublish] <buz> well that can give one some doubts
+[03-24-2006 15:00:27] [#ezpublish] <buz> but still, it's well within what could happen
+[03-24-2006 15:00:37] [#ezpublish] <buz> anyway i'm gonna go to sleep
+[03-24-2006 15:00:50] [#ezpublish] <zrg> actually, i have long ago ceased to wonder about limits of human stupidity
+[03-24-2006 15:01:01] [#ezpublish] <buz> agreed very much
+[03-24-2006 15:01:05] [#ezpublish] <buz> there are no limits
+[03-24-2006 15:01:44] [#ezpublish] <buz> i've given up thinking "it cant get anymore stupid than XY" cause sure as hell, i'll be proven wrong shortly thereafter
+[03-24-2006 15:02:33] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-24-2006 15:23:57] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[03-24-2006 15:41:47] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-24-2006 17:30:10] -!- _kh [n=kh@85.19.74.66] has joined #ezpublish
+[03-24-2006 17:31:32] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[03-24-2006 17:41:35] -!- kris10an [n=kh@85.19.74.66] has quit [Read error: 110 (Connection timed out)]
+[03-24-2006 17:55:24] -!- pgimeno [n=pgimeno@124.Red-80-59-211.staticIP.rima-tde.net] has joined #ezpublish
+[03-24-2006 17:57:36] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_24_03_2006 | http://ez.no/community/news/community_newsletter_17_03_2006 | http://ez.no/community/forum/ez_components/webcast#msg93640
+[03-24-2006 18:01:34] [#ezpublish] <pgimeno> I have just set up eZpublish using manual configuration but I can't get any content to be displayed to anonymous users without logging in. How would I (or where can I learn about) change that?
+[03-24-2006 18:06:38] [#ezpublish] <kracker> sounds like permissions for your anonymous user (role) are set incorrectly, ie: not set to allow 'read' access to content objects
+[03-24-2006 18:08:01] [#ezpublish] <kracker> http://ez.no/doc/ez_publish/technical_manual/3_6/concepts_and_basics/access_control
+[03-24-2006 18:09:18] [#ezpublish] <kracker> i've found what you describe on occasion when upgrading eZ publish or moving eZ publish between hosts ;
+[03-24-2006 18:09:21] [#ezpublish] <kracker> :\
+[03-24-2006 18:09:28] [#ezpublish] <kracker> but not on installation
+[03-24-2006 18:10:27] [#ezpublish] <pgimeno> please consider that I'm an absolute newbie with eZpublish, I'm just trying to evaluate it to see if it fits my needs
+[03-24-2006 18:10:48] [#ezpublish] <pgimeno> so please bear with me if I've not read the documentation thorougly, just the basic setup steps
+[03-24-2006 18:12:17] [#ezpublish] <pgimeno> when I go to "Edit <content/read> policy for <Anonymous> role" it says: "Module: content; Function: read; Function limitations: Class: any; Section: any; Owner: any; Nodes: 0"
+[03-24-2006 18:19:30] [#ezpublish] <kracker> nw
+[03-24-2006 18:19:35] [#ezpublish] <kracker> no worries
+[03-24-2006 18:19:58] [#ezpublish] <kracker> if you wish to evalute eZ publish I would consider trying one of the online demos
+[03-24-2006 18:20:58] [#ezpublish] <kracker> http://ez.no/products/ez_publish/demo
+[03-24-2006 18:21:16] [#ezpublish] <kracker> hmm
+[03-24-2006 18:21:25] [#ezpublish] <kracker> well your doing beter than most
+[03-24-2006 18:21:36] [#ezpublish] <kracker> you listed the right information right quick
+[03-24-2006 18:21:46] [#ezpublish] <kracker> an it looks ok at a glance
+[03-24-2006 18:23:43] [#ezpublish] <kracker> i took a look at the demo, http://demo.ezpublish.no:83/corporate_admin/role/policyedit/333
+[03-24-2006 18:24:18] [#ezpublish] <kracker> what version have you installed (eZ publish / Apache)
+[03-24-2006 18:24:42] [#ezpublish] <kracker> my thought was to compare the settings in the demo against your own
+[03-24-2006 18:24:46] [#ezpublish] <pgimeno> eZ 3.7.4; Apache 2.0.55
+[03-24-2006 18:24:53] [#ezpublish] <kracker> great
+[03-24-2006 18:25:20] [#ezpublish] <pgimeno> I've found that RequireUserLogin was set to True in [SiteAccessSettings] in settings/site.ini, but setting it to False and clearing the ini cache has not helped
+[03-24-2006 18:25:40] [#ezpublish] <kracker> hmm, well i would clear all cache to be certain
+[03-24-2006 18:25:53] [#ezpublish] <pgimeno> I've done that too to no avail...
+[03-24-2006 18:25:54] [#ezpublish] <kracker> that setting could be the culpret
+[03-24-2006 18:25:58] [#ezpublish] <kracker> hmm
+[03-24-2006 18:27:50] [#ezpublish] <pgimeno> oh, forgot to say: I'm using PHP 4.4.2
+[03-24-2006 18:28:28] [#ezpublish] <kracker> nods
+[03-24-2006 18:28:30] [#ezpublish] <pgimeno> oh, hold a sec, maybe I can now run the system check wizard (I couldn't do that with 3.6)
+[03-24-2006 18:29:03] [#ezpublish] <kracker> nods
+[03-24-2006 18:37:59] [#ezpublish] <kracker> well man i wish you best of luck i have to get back to rebuilding my resume and wrapping up the day, cheers ;) eZ publish rocks, has never been better and is only going to get much better
+[03-24-2006 18:38:04] [#ezpublish] <kracker> ciao
+[03-24-2006 18:38:18] [#ezpublish] <pgimeno> ok, thanks :)
+[03-24-2006 18:38:47] [#ezpublish] <pgimeno> I'm still running the wizard, maybe something was broken in config
+[03-24-2006 18:39:39] [#ezpublish] <pgimeno> thanks for the help anyway
+[03-24-2006 18:40:22] [#ezpublish] <kracker> np, i try to help out when i can (i'm not great, prolly just beter than a dead silence)
+[03-24-2006 18:49:35] [#ezpublish] <pgimeno> kracker: now things looks quite different! it seems that the manual installation instructions may lack some important aspect because running the wizard has worked charmfully! in any case thank you very much for your help
+[03-24-2006 18:51:14] [#ezpublish] * pgimeno is now the happy user of an up-and-running eZpublish
+[03-24-2006 19:19:18] [#ezpublish] <kracker> sweet
+[03-24-2006 20:33:22] -!- fh [n=fh@208.80-202-59.nextgentel.com] has quit [Remote closed the connection]
+[03-24-2006 20:54:22] [#ezpublish] <pgimeno> this is looking really good, only if I knew how to add overrides for the stylesheets...
+[03-24-2006 21:05:28] -!- pgimeno [n=pgimeno@124.Red-80-59-211.staticIP.rima-tde.net] has left #ezpublish ["sleep"]

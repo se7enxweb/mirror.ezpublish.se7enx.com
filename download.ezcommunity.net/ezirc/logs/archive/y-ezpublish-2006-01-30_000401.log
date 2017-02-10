@@ -1,0 +1,242 @@
+[01-29-2006 01:16:49] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-29-2006 01:32:20] -!- SEAwolfx_ [n=mike@tor/session/x-d30e5c1ca67c1cd9] has joined #ezpublish
+[01-29-2006 02:30:20] -!- SEAwolfx [n=mike@tor/session/x-f8bae892127266e1] has quit [Remote closed the connection]
+[01-29-2006 04:04:30] -!- SEAwolfx_ is now known as SEAwolfx
+[01-29-2006 04:05:52] [#ezpublish] <SEAwolfx> hello
+[01-29-2006 04:09:15] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-29-2006 05:02:04] -!- ordnas [n=ordnas@p549D74B9.dip.t-dialin.net] has joined #ezpublish
+[01-29-2006 05:17:45] [#ezpublish] <SEAwolfx> is it possible to restrict the class-container by defining certain classes residing within that container? the other way is possible by setting a policy defining the parent-class of a certain class of the create-function. I want to be able to set the types of classes which can be subitems of a specific class.
+[01-29-2006 05:19:53] [#ezpublish] <SEAwolfx> a composition.
+[01-29-2006 05:22:50] [#ezpublish] <SEAwolfx> hi ordnas, so read the new forum entry on ezpublish.de?
+[01-29-2006 05:44:36] [#ezpublish] <ordnas> SEAwolfx: which one?
+[01-29-2006 05:47:20] [#ezpublish] <SEAwolfx> ordnas: http://ezpublish.de/forum/und_los_gehts#msg148
+[01-29-2006 05:50:14] [#ezpublish] <y_sabal> hi, how can I get the "last modified" attribute of an eZ content object throught somephp code ?
+[01-29-2006 05:53:12] [#ezpublish] <SEAwolfx> y_sabal: you could go through the contentAttributes of the 'content_version' attribute of a contentObject
+[01-29-2006 05:54:03] [#ezpublish] <SEAwolfx> y_sabal: but i am not sure of there is the 'last modified' information.
+[01-29-2006 05:57:42] [#ezpublish] <SEAwolfx> s/of/if/
+[01-29-2006 06:13:39] [#ezpublish] <ordnas> SEAwolfx: yeah, very good, the website can definitely be enhanced ;)
+[01-29-2006 06:14:47] [#ezpublish] <SEAwolfx> ordnas: indeed ;)
+[01-29-2006 06:18:17] [#ezpublish] <SEAwolfx> ordnas: btw, you have an idea to my previously asked question?
+[01-29-2006 06:58:05] [#ezpublish] <ordnas> SEAwolfx: will think tomorrow :)
+[01-29-2006 07:02:04] -!- kalooni [n=nicolas@84.5.80.117] has joined #ezpublish
+[01-29-2006 07:02:19] [#ezpublish] <SEAwolfx> ordnas: ok, no problem. there is also other work for me to do ;)
+[01-29-2006 07:03:31] [#ezpublish] <kalooni> hello
+[01-29-2006 07:04:10] [#ezpublish] <SEAwolfx> y_sabal: its a property of the contentObject-Object -> 'Modified'
+[01-29-2006 07:04:15] [#ezpublish] <SEAwolfx> hi kalooni
+[01-29-2006 07:04:31] [#ezpublish] <kalooni> hi SEAwolfx
+[01-29-2006 07:04:58] [#ezpublish] <kalooni> SEAwolfx: are you a member of the ez crew ?
+[01-29-2006 07:05:08] [#ezpublish] <SEAwolfx> kalooni: no
+[01-29-2006 07:05:14] [#ezpublish] <kalooni> ok
+[01-29-2006 07:05:31] [#ezpublish] <kalooni> how long are you working on ezpublish ?
+[01-29-2006 07:05:50] [#ezpublish] <SEAwolfx> since 2.2 i think
+[01-29-2006 07:06:18] [#ezpublish] <SEAwolfx> why you are asking?
+[01-29-2006 07:06:22] [#ezpublish] <kalooni> so you might be an expert ;)
+[01-29-2006 07:06:39] [#ezpublish] <SEAwolfx> uhm, hard to say.
+[01-29-2006 07:06:44] [#ezpublish] <kalooni> curiosity ;)
+[01-29-2006 07:06:55] [#ezpublish] <SEAwolfx> ok ;)
+[01-29-2006 07:07:14] [#ezpublish] <kalooni> I am working on it since about 2 months, and I have still a lot to learn ;)
+[01-29-2006 07:07:30] [#ezpublish] <SEAwolfx> yeah, for me either.
+[01-29-2006 07:08:15] [#ezpublish] <SEAwolfx> +too
+[01-29-2006 07:09:03] [#ezpublish] <kalooni> have you ever worked on the shop part ? Did you ever develop an extension ?
+[01-29-2006 07:09:48] [#ezpublish] <SEAwolfx> yes, i have developed extensions.
+[01-29-2006 07:10:08] [#ezpublish] <kalooni> may be then you could give me some ideas on how to develop one.
+[01-29-2006 07:10:08] [#ezpublish] <SEAwolfx> but never were into the shop deeply.
+[01-29-2006 07:10:34] [#ezpublish] <kalooni> I found the eurofxref example on the ez.no site. I think I understood it quite well, but it is very basics
+[01-29-2006 07:10:38] [#ezpublish] <SEAwolfx> hm, i think there are tutorials available on ez.no
+[01-29-2006 07:10:40] [#ezpublish] <kalooni> I need to extend the shop
+[01-29-2006 07:10:51] [#ezpublish] <SEAwolfx> ah, ok.
+[01-29-2006 07:11:25] [#ezpublish] <kalooni> and I need to extend the ezorder and I don't find anything on how to do this. The eurofxref is to create a module ... but I want to extend the shop module, and I don't know how to do this
+[01-29-2006 07:11:52] [#ezpublish] <kalooni> Here are some stuff I want to develop: tracking number for orders. And vouchers system.
+[01-29-2006 07:12:47] [#ezpublish] <SEAwolfx> you should do this by difining a new extension an intervent by custom actions
+[01-29-2006 07:13:03] [#ezpublish] <SEAwolfx> *defining
+[01-29-2006 07:13:19] [#ezpublish] <kalooni> I did the tracking stuff, badly, by modifying the kernel... I now want to do this the right way, i.e with extensions ... Do you know an extension that extend a module ?
+[01-29-2006 07:13:45] [#ezpublish] <SEAwolfx> *looking*
+[01-29-2006 07:15:00] [#ezpublish] <SEAwolfx> currently i havent checked out all extension, therefor i can not search.
+[01-29-2006 07:15:04] [#ezpublish] <SEAwolfx> +s
+[01-29-2006 07:15:38] [#ezpublish] <SEAwolfx> just look into each extension and search for an 'actions'-dir
+[01-29-2006 07:15:50] [#ezpublish] <kalooni> ok i will
+[01-29-2006 07:16:33] [#ezpublish] <SEAwolfx> kalooni: i have to set in your module ./actions/content_actionhandler.php
+[01-29-2006 07:16:48] [#ezpublish] <SEAwolfx> look into ./kernel/content/action.php for code.
+[01-29-2006 07:17:32] [#ezpublish] <SEAwolfx> also you have to override content.ini by extension/settings/content.ini.append
+[01-29-2006 07:17:48] [#ezpublish] <SEAwolfx> [ActionSettings]
+[01-29-2006 07:18:02] [#ezpublish] <SEAwolfx> ExtensionDirectories[]=yourextensionname
+[01-29-2006 07:18:34] [#ezpublish] <SEAwolfx> in the concerning templates you have to set a form-part
+[01-29-2006 07:18:40] [#ezpublish] <SEAwolfx> <form method="post" action="content/action">
+[01-29-2006 07:19:19] [#ezpublish] <SEAwolfx> <input name="ContentObjectID" type="hidden" value="{$node.object.id}" />
+[01-29-2006 07:19:46] [#ezpublish] <SEAwolfx> <input type="submit" name="yourNewAction" value="LaLa" />
+[01-29-2006 07:19:57] [#ezpublish] <SEAwolfx> hope this helps.
+[01-29-2006 07:20:34] [#ezpublish] <kalooni> yes it definitively do
+[01-29-2006 07:20:43] [#ezpublish] <SEAwolfx> ;)
+[01-29-2006 07:23:27] [#ezpublish] <SEAwolfx> dont touch the kernel, think of updates. you would have to merge the code manually, which is quite sucking.
+[01-29-2006 07:28:10] [#ezpublish] <kalooni> that's why I want to develop an extension
+[01-29-2006 07:28:20] [#ezpublish] <kalooni> thanks for your precious help ...
+[01-29-2006 07:29:22] [#ezpublish] <kalooni> Concerning the tracking I have to create a new DB table to. Is it doable in an extension ... Does it make problems in case of update ?
+[01-29-2006 07:41:33] [#ezpublish] <SEAwolfx> re
+[01-29-2006 07:41:41] [#ezpublish] <kalooni> re
+[01-29-2006 07:41:58] [#ezpublish] <SEAwolfx> was under the shower ...
+[01-29-2006 07:43:28] [#ezpublish] <SEAwolfx> kalooni: you can use the ezDB instance.
+[01-29-2006 07:43:43] [#ezpublish] <SEAwolfx> normal procedure.
+[01-29-2006 07:45:05] [#ezpublish] <kalooni> ok you mean that my extension installation should have a script that will create the table using ezDB ? Is that correct ?
+[01-29-2006 07:45:28] [#ezpublish] <SEAwolfx> ah, you want to dynamically create ne tables?
+[01-29-2006 07:45:38] [#ezpublish] <SEAwolfx> +
+[01-29-2006 07:45:41] [#ezpublish] <SEAwolfx> w
+[01-29-2006 07:46:58] [#ezpublish] <SEAwolfx> why you want to do this? db-normalization should do the job imo?!
+[01-29-2006 07:47:02] [#ezpublish] <kalooni> not really. But I want to store tracking information in the DB. So I plan to create a new table ezorder_track which will contain the tracking number and the order id
+[01-29-2006 07:47:41] [#ezpublish] <kalooni> Or add a field track_nr to the ezorder table (which is not a good solution regarding updates)
+[01-29-2006 07:48:30] [#ezpublish] <SEAwolfx> .oO(stored procedures would do that job?)
+[01-29-2006 07:49:01] [#ezpublish] <SEAwolfx> but this would be a database issue.
+[01-29-2006 07:49:22] [#ezpublish] <SEAwolfx> heavly depending on the database in use.
+[01-29-2006 07:50:47] [#ezpublish] <kalooni> you mean pb concerning mysql or postgres?
+[01-29-2006 07:52:03] [#ezpublish] <SEAwolfx> yes. i am not sure about mysql 4.* feature according stored procedure.
+[01-29-2006 07:52:50] [#ezpublish] <kalooni> I know nothing about stored procedure ... I can't see why I should use this ...
+[01-29-2006 07:54:15] [#ezpublish] <SEAwolfx> hmm, you could trigger on update of the ez_order table starting the stored procedure to copy values from the new insert to your introduced table.
+[01-29-2006 07:55:16] [#ezpublish] <SEAwolfx> or you have to dispose this to the application layer by managing this with your extension.
+[01-29-2006 07:55:25] [#ezpublish] <kalooni> sounds like chinese to me ;à
+[01-29-2006 07:55:26] [#ezpublish] <kalooni> ;)
+[01-29-2006 07:55:34] [#ezpublish] <kalooni> my idea is:
+[01-29-2006 07:55:40] [#ezpublish] <kalooni> create a new table ezorder_tracking
+[01-29-2006 07:55:43] [#ezpublish] <kalooni> with 2 fields
+[01-29-2006 07:55:50] [#ezpublish] <kalooni> track_nr / order_id
+[01-29-2006 07:56:08] [#ezpublish] <kalooni> in the admin interface, modifying the orderview
+[01-29-2006 07:56:23] [#ezpublish] <kalooni> by adding a form which contain a field tracking
+[01-29-2006 07:56:42] [#ezpublish] <kalooni> when this form is submitted the tracking number is registered in the ezorder_tracking table
+[01-29-2006 07:58:04] [#ezpublish] <kalooni> so to be the more efficient as possible, I think I should create a kind of new "orderview" template
+[01-29-2006 07:58:14] [#ezpublish] <SEAwolfx> hmm .. so you would depend on the order-objects which could be deleted by the application, which results in offending data integrety.
+[01-29-2006 07:58:33] [#ezpublish] <SEAwolfx> .. when its for instance deleted.
+[01-29-2006 07:59:09] [#ezpublish] <kalooni> I didn't think about this. But the tracking number is added only when the order status is set to delivered ...
+[01-29-2006 07:59:18] [#ezpublish] <kalooni> So there is no reason the order objects to be deleted ?
+[01-29-2006 08:00:41] [#ezpublish] <SEAwolfx> when i would introduce a table for historical information, i store all concerning information into it. redundancies are wished here.
+[01-29-2006 08:00:56] [#ezpublish] <SEAwolfx>  kalooni | >So there is no reason the order objects to be
+[01-29-2006 08:01:03] [#ezpublish] <SEAwolfx> ... oops
+[01-29-2006 08:01:38] [#ezpublish] <SEAwolfx> kalooni | >So there is no reason the order objects to be deleted ? <-- when s.o. in the admin interface deletes an order.
+[01-29-2006 08:02:01] [#ezpublish] <kalooni> what do you mean by s.o. ?
+[01-29-2006 08:02:06] [#ezpublish] <SEAwolfx> someone
+[01-29-2006 08:02:12] [#ezpublish] <kalooni> ;) ok
+[01-29-2006 08:02:18] [#ezpublish] <SEAwolfx> ;)
+[01-29-2006 08:02:50] [#ezpublish] <kalooni> innoDB (Delete on cascade ?)
+[01-29-2006 08:03:15] [#ezpublish] <SEAwolfx> this is trigger on cascade.
+[01-29-2006 08:03:27] [#ezpublish] <SEAwolfx> +a
+[01-29-2006 08:03:54] [#ezpublish] <SEAwolfx> this assumes that the forein-keys are explicitely defined in the db-schema.
+[01-29-2006 08:04:01] [#ezpublish] <kalooni> yes
+[01-29-2006 08:04:11] [#ezpublish] <SEAwolfx> imho, this isnt the case of ez-db-schema.
+[01-29-2006 08:05:34] [#ezpublish] <kalooni> it seems it is not the case
+[01-29-2006 08:05:46] [#ezpublish] <SEAwolfx> unforunatley.
+[01-29-2006 08:05:52] [#ezpublish] <SEAwolfx> +t
+[01-29-2006 08:07:00] [#ezpublish] <kalooni> So, in order to keep data integrity, I should do a trigger on the delete order action, that will also delete the tracking number ...
+[01-29-2006 08:07:43] [#ezpublish] <SEAwolfx> yeah, you will have to keep it on the application layer.
+[01-29-2006 08:09:33] [#ezpublish] <kalooni> I just created my ezorder_tracking table
+[01-29-2006 08:09:38] [#ezpublish] <SEAwolfx> but this would not make sense due to the task of your new table, which is actually a log table.
+[01-29-2006 08:10:02] [#ezpublish] <kalooni> I added a relation between ezorder_tracking.order and ezorder.id
+[01-29-2006 08:11:12] [#ezpublish] <kalooni> as it would not make sense to delete from the db an order that has been set to delivered status ;)
+[01-29-2006 08:11:47] [#ezpublish] <kalooni> SEAwolfx ... where are you coming from ? I am from France
+[01-29-2006 08:12:01] [#ezpublish] <SEAwolfx> is it possible in the admin interface to delete an order?
+[01-29-2006 08:12:18] [#ezpublish] <SEAwolfx> kalooni: i am located in germany.
+[01-29-2006 08:12:26] [#ezpublish] <kalooni> ok
+[01-29-2006 08:12:33] [#ezpublish] <kalooni> your english is great ;)
+[01-29-2006 08:12:38] [#ezpublish] <SEAwolfx> this explains my bad english ;)
+[01-29-2006 08:12:38] [#ezpublish] <kalooni> where you in dortmund ?
+[01-29-2006 08:12:55] [#ezpublish] <SEAwolfx> ah, no. more in the south - bavaria.
+[01-29-2006 08:13:15] [#ezpublish] <kalooni> I meant where you at the ez partner meeting in Dortmund ?
+[01-29-2006 08:13:23] [#ezpublish] <kalooni> in -> at ?
+[01-29-2006 08:14:04] [#ezpublish] <SEAwolfx> no, this only concerned the administration of an ez-site.
+[01-29-2006 08:14:23] [#ezpublish] <SEAwolfx> it would be more interessting when the ez_components are presented.
+[01-29-2006 08:14:39] [#ezpublish] <SEAwolfx> s/would/will/ in march.
+[01-29-2006 08:14:43] [#ezpublish] <kalooni> I didn't really focused on ez component yet ;)
+[01-29-2006 08:14:56] [#ezpublish] <kalooni> So I assume you are a developer ? right ?
+[01-29-2006 08:15:08] [#ezpublish] <kalooni> Are you working for an ez partner ?
+[01-29-2006 08:15:12] [#ezpublish] <SEAwolfx> yeah, it seems.
+[01-29-2006 08:15:16] [#ezpublish] <SEAwolfx> ;)
+[01-29-2006 08:15:32] [#ezpublish] <SEAwolfx> no, i am not working for an ez partner.
+[01-29-2006 08:15:39] [#ezpublish] <SEAwolfx> do you?
+[01-29-2006 08:15:47] [#ezpublish] <kalooni> more or less ;)
+[01-29-2006 08:15:59] [#ezpublish] <kalooni> but as you can see, I have a lot to learn ...
+[01-29-2006 08:16:01] [#ezpublish] <SEAwolfx> ah ;)
+[01-29-2006 08:16:13] [#ezpublish] <SEAwolfx> you are not alone.
+[01-29-2006 08:16:25] [#ezpublish] <kalooni> and I am the only developer ... this is why I am looking for help in this channel
+[01-29-2006 08:16:33] [#ezpublish] <SEAwolfx> hehe
+[01-29-2006 08:16:51] [#ezpublish] <SEAwolfx> hope you are well paid ;)
+[01-29-2006 08:16:59] [#ezpublish] <kalooni> not really ;)
+[01-29-2006 08:17:02] [#ezpublish] <kalooni> are you ?
+[01-29-2006 08:17:19] [#ezpublish] <SEAwolfx> i cant complain ;)
+[01-29-2006 08:17:32] [#ezpublish] <kalooni> this is why you do work on sunday ;)
+[01-29-2006 08:18:22] [#ezpublish] <SEAwolfx> haha, i "work" nearly everday ;) i am computer addicted.. hehe
+[01-29-2006 08:18:30] [#ezpublish] <kalooni> as i am ;)
+[01-29-2006 08:18:41] -!- kalooni is now known as kalooni|pause
+[01-29-2006 08:18:43] [#ezpublish] <SEAwolfx> hehe
+[01-29-2006 08:18:50] [#ezpublish] <kalooni|pause> coming back in 10 min
+[01-29-2006 08:19:08] [#ezpublish] <SEAwolfx> yeah, got to grab some food now.
+[01-29-2006 08:25:36] [#ezpublish] <kalooni|pause> ok
+[01-29-2006 08:25:54] [#ezpublish] <kalooni|pause> thx for this interesting discussion
+[01-29-2006 08:29:52] -!- kalooni|pause is now known as kalooni
+[01-29-2006 08:51:49] -!- zrg [n=zurgutt@80-235-50-151-dsl.kjj.estpak.ee] has joined #ezpublish
+[01-29-2006 08:52:19] [#ezpublish] <zrg> fun messages in terminal: "Unpacking cadaver.." :)
+[01-29-2006 08:57:32] [#ezpublish] <SEAwolfx> :P
+[01-29-2006 08:57:41] [#ezpublish] <SEAwolfx> hehe
+[01-29-2006 08:58:12] [#ezpublish] <SEAwolfx> unholy app-name
+[01-29-2006 08:59:04] [#ezpublish] <SEAwolfx> the more this application rocks
+[01-29-2006 08:59:21] [#ezpublish] <zrg> its just another ftp..
+[01-29-2006 08:59:48] [#ezpublish] <buz> mhh dead ravens make for cadavers no?
+[01-29-2006 09:00:16] [#ezpublish] <zrg> cadavirii :)
+[01-29-2006 09:01:04] [#ezpublish] <zrg> met hundreds of invisible undead ravens other day
+[01-29-2006 09:01:48] [#ezpublish] <SEAwolfx> it just another webdav console client :X
+[01-29-2006 09:02:05] [#ezpublish] <zrg> from the sound and trashing around the tree was full of them but nothing to see
+[01-29-2006 09:06:15] [#ezpublish] <SEAwolfx> .oO(miam, falafel also rocks)
+[01-29-2006 09:07:33] [#ezpublish] <zrg> mi-was?
+[01-29-2006 09:08:35] [#ezpublish] <SEAwolfx> s/miam/mhmmmmm/
+[01-29-2006 09:08:57] [#ezpublish] <zrg> falafel?
+[01-29-2006 09:09:05] [#ezpublish] <SEAwolfx> yes
+[01-29-2006 09:09:15] [#ezpublish] <SEAwolfx> some kind of food
+[01-29-2006 09:10:12] [#ezpublish] <SEAwolfx> http://de.wikipedia.org/wiki/Falafel
+[01-29-2006 09:16:53] -!- tobyS [n=dotxp@dslb-084-060-028-059.pools.arcor-ip.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-29-2006 09:17:42] [#ezpublish] <zrg> no meat? suspicious..
+[01-29-2006 09:18:15] [#ezpublish] <SEAwolfx> hehe .. no meat at all.
+[01-29-2006 09:19:34] -!- tobyS [n=dotxp@dslb-084-060-024-071.pools.arcor-ip.net] has joined #ezpublish
+[01-29-2006 09:20:11] [#ezpublish] <zrg> ok.. kind of like alcohol-free beer or phone sex then :P
+[01-29-2006 09:20:53] [#ezpublish] <SEAwolfx> lol
+[01-29-2006 09:25:18] [#ezpublish] <zrg> well a joke. got recipe?
+[01-29-2006 09:39:12] [#ezpublish] * zrg pokes seawolf with the standard-issue 10ft stick
+[01-29-2006 09:39:32] [#ezpublish] <buz> it's like kebab without meat
+[01-29-2006 09:39:42] [#ezpublish] <buz> disgusting stuff if you ask me
+[01-29-2006 09:39:53] [#ezpublish] <zrg> onion?
+[01-29-2006 09:39:59] [#ezpublish] <buz> meat is substituted with some sort of bean balls
+[01-29-2006 09:41:22] [#ezpublish] <buz> whats the point in phone sex, really?
+[01-29-2006 09:41:24] [#ezpublish] <zrg> disgusting has wide borders, some folks here actually eat marmite :P
+[01-29-2006 09:41:32] [#ezpublish] <buz> marmite?
+[01-29-2006 09:41:52] [#ezpublish] <buz> http://en.wikipedia.org/wiki/Marmite
+[01-29-2006 09:41:55] [#ezpublish] <zrg> oh, an innocent one :P
+[01-29-2006 09:41:58] [#ezpublish] <buz> mhh byproduct of beer brewing?  cant be all bad
+[01-29-2006 09:43:43] [#ezpublish] <zrg> i have eaten one thing in my life thats worse
+[01-29-2006 09:44:46] [#ezpublish] <buz> which is?
+[01-29-2006 10:00:04] [#ezpublish] <zrg> some national dessert..  marmite just is very revolting, the other one caused explosive vomiting :P
+[01-29-2006 10:03:39] -!- kalooni [n=nicolas@84.5.80.117] has quit ["Quitte"]
+[01-29-2006 10:35:10] -!- kalooni [n=nicolas@84.5.80.117] has joined #ezpublish
+[01-29-2006 11:02:11] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[01-29-2006 11:04:45] -!- ordna1 [n=ordnas@p549D7A27.dip.t-dialin.net] has joined #ezpublish
+[01-29-2006 11:19:42] -!- ordnas [n=ordnas@p549D74B9.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-29-2006 11:58:49] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-29-2006 11:58:49] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[01-29-2006 12:40:42] -!- zrg [n=zurgutt@80-235-50-151-dsl.kjj.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-29-2006 12:44:37] -!- ordna1 [n=ordnas@p549D7A27.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-29-2006 12:48:59] -!- kalooni [n=nicolas@84.5.80.117] has left #ezpublish ["Quitte"]
+[01-29-2006 12:56:24] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit ["snooze mode"]
+[01-29-2006 13:38:28] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[01-29-2006 13:38:44] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-29-2006 13:39:13] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[01-29-2006 13:40:26] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-29-2006 13:41:22] -!- ordnas [n=ordnas@p549D7A27.dip.t-dialin.net] has joined #ezpublish
+[01-29-2006 13:41:25] -!- ordnas [n=ordnas@p549D7A27.dip.t-dialin.net] has quit [Remote closed the connection]
+[01-29-2006 13:42:07] [#ezpublish] <SEAwolfx> arghh
+[01-29-2006 13:43:24] [#ezpublish] <SEAwolfx> i want to split the "create new"-process for a new created class into several pages. how would you do that?
+[01-29-2006 14:26:38] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[01-29-2006 14:27:34] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-29-2006 14:42:49] [#ezpublish] <SEAwolfx> http://ez.no/community/forum/setup_design/splitting_up_the_create_here_process#msg92833 <- help
+[01-29-2006 15:40:16] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-29-2006 16:11:13] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-29-2006 16:12:32] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-29-2006 16:53:10] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-29-2006 16:53:15] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-29-2006 17:11:14] -!- tobyS [n=dotxp@dslb-084-060-024-071.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-29-2006 17:13:23] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-29-2006 17:17:12] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-29-2006 18:20:34] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 113 (No route to host)]
+[01-29-2006 23:41:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish

@@ -1,0 +1,38 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.5.&nbsp; Fundamentals</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec5"></a><h3 class="docSection1Title" id="409768-850">12.5. Fundamentals</h3>
+<p class="docText">In this section, you learn some fundamentals and principles that you should apply to PEAR packages that you plan to release.</p>
+<a name="ch12lev2sec3"></a><h4 class="docSection2Title">12.5.1. When and How to Include Files</h4>
+<p class="docText">You can save yourself from some potential trouble by including files wisely. You should follow three principles on including files:<a name="ch12index59"></a><a name="ch12index60"></a><a name="ch12index61"></a></P>
+<div style="font-weight:bold"><ol class="docList" type="1"><li><div style="font-weight:normal"><p class="docList">Only use <tt>include_once</tt> or <tt>require_once</tt>. Rule number one is to always use <tt>require_once</tt> or <tt>include_once</tt> to include PEAR code. If you use <tt>require</tt>, your script will likely die because of redefinition errors (or it will die sometime in the future).<a name="ch12index62"></a><a name="ch12index63"></a></P></div></li><LI><div style="font-weight:normal"><p class="docList">Determine the correlation between class and file names. PEAR uses the one-class-per-file principle, with the intention that it should be trivial to generate the required file name from the class name. Replace underscores with the directory separator character, append .php, and you're finished. Here are some examples:</p><pre>
+<span class="docEmphStrong">Class Name                File Name</span>
+PEAR                      PEAR.php
+XML_Parser                XML/Parser.php
+HTML_Quickform_textarea   HTML/QuickForm/textarea.php
+</pre><br><p class="docList">Case is significant here because UNIX file systems are case-sensitive.</p></div></li><LI><div style="font-weight:normal"><p class="docList">Encapsulate includes. Each file should use includes to express clearly which classes it depends on from other packages.<a name="ch12index64"></a><a name="ch12index65"></a><a name="ch12index66"></a></P></div></li></ol></div>
+<p class="docText">As an example, consider you're Package A, and Packages B and C provide classes with the same name. Your class, A, extends B, which in turn extends C. You do not maintain the B and C packages. See <a class="docLink" href="#ch12fig01">Figure 12.1</a>.</p>
+<a name="ch12fig01"></a><p><center><h5 class="docFigureTitle">Figure 12.1. Nested dependencies.</H5>
+<p class="docText"><img border="0" alt="" id="217066145005" width="500" height="59" SRC="images/013147149X/graphics/12fig01.gif;380137"></p></center></p><BR>
+<p class="docText">The only symbol directly referenced in A.php is B from B.php. It does not reference class C at all. In fact, you should assume that A.php is completely unaware that C.php even exists. By following this principle, you do not make assumptions about the internals of the B package that may change later. This makes your package more robust against changes in other packages.<a name="ch12index67"></a><a name="ch12index68"></a><a name="ch12index69"></a></p>
+<a name="ch12lev2sec4"></a><H4 class="docSection2Title">12.5.2. Error Handling</h4>
+<p class="docText">PEAR code reports and catches errors through PEAR's error-handling API. This API is detailed in <a class="docLink" href="ch07.html#ch07">Chapter 7</a>, &quot;<a class="docLink" href="#ch12lev2sec4">Error Handling</a>.&quot;<a name="ch12index70"></a><a name="ch12index71"></a></p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

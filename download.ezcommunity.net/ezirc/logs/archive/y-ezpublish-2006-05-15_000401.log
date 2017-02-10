@@ -1,0 +1,270 @@
+[05-13-2006 00:08:51] -!- awormus_ [n=aaron@p54B13E14.dip0.t-ipconnect.de] has joined #ezpublish
+[05-13-2006 00:09:38] -!- awormus [n=aaron@84.177.62.20] has quit [Read error: 104 (Connection reset by peer)]
+[05-13-2006 00:26:38] -!- aaronw [n=aaron@p54B12A5E.dip0.t-ipconnect.de] has joined #ezpublish
+[05-13-2006 00:43:23] -!- awormus_ [n=aaron@p54B13E14.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-13-2006 01:42:41] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-13-2006 02:25:32] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-13-2006 02:30:21] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-13-2006 02:45:23] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-13-2006 02:56:55] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-13-2006 03:27:57] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-13-2006 03:50:29] -!- aaronw [n=aaron@p54B12A5E.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[05-13-2006 04:05:34] -!- pire [n=kbot@phpugdo.de] has quit [Remote closed the connection]
+[05-13-2006 04:07:46] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[05-13-2006 04:53:31] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-13-2006 05:05:39] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[05-13-2006 05:06:59] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-13-2006 05:23:01] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-13-2006 05:51:34] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-13-2006 06:12:46] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-13-2006 06:20:34] -!- norbs999 [i=norbs999@Ed4d8.e.pppool.de] has joined #ezpublish
+[05-13-2006 06:48:13] -!- norbs999 [i=norbs999@Ed4d8.e.pppool.de] has quit [Read error: 110 (Connection timed out)]
+[05-13-2006 06:57:55] [#ezpublish] <nnn0> hm
+[05-13-2006 06:58:21] [#ezpublish] <nnn0> where did that page in the setup where you could choose different "modules" go
+[05-13-2006 06:58:45] [#ezpublish] <nnn0> you know the one after you select Corporate, Gallery, Blog etc.
+[05-13-2006 06:59:00] -!- norbs999 [i=norbs999@Ed7e6.e.pppool.de] has joined #ezpublish
+[05-13-2006 07:00:03] [#ezpublish] <norbs999> hello, I'm ez-beginner, I would like to know how to add a new design to my existing site.
+[05-13-2006 07:00:44] [#ezpublish] <norbs999> But I'm getting an error: "Error ocurred using URI: /mydesign"
+[05-13-2006 07:00:56] [#ezpublish] <norbs999> What am I doing wrong?
+[05-13-2006 07:00:57] [#ezpublish] <nnn0> what did you do ?
+[05-13-2006 07:01:19] [#ezpublish] <norbs999> I've copied the folders in site access.
+[05-13-2006 07:01:26] [#ezpublish] <norbs999> plain -> mydesign
+[05-13-2006 07:01:40] [#ezpublish] <nnn0> okey
+[05-13-2006 07:01:44] [#ezpublish] <norbs999> and plain_admin -> mydesign_admin
+[05-13-2006 07:01:49] [#ezpublish] <nnn0> i guess you have some reading to do
+[05-13-2006 07:01:52] [#ezpublish] <nnn0> hehe
+[05-13-2006 07:02:16] [#ezpublish] <norbs999> I'm reading all the time...
+[05-13-2006 07:02:35] [#ezpublish] <norbs999> ok, I've edited the ini's in the copied folders
+[05-13-2006 07:02:47] [#ezpublish] <nnn0> k
+[05-13-2006 07:02:47] [#ezpublish] <norbs999> Sitename, SiteDesign=
+[05-13-2006 07:02:51] [#ezpublish] <nnn0> yes
+[05-13-2006 07:03:03] [#ezpublish] <norbs999> then the override.
+[05-13-2006 07:03:20] [#ezpublish] <norbs999> SiteList[]=mydesign
+[05-13-2006 07:03:29] [#ezpublish] <norbs999> right?
+[05-13-2006 07:03:39] [#ezpublish] <norbs999> AvailableSiteAccessList[]=mydesign
+[05-13-2006 07:03:39] [#ezpublish] <norbs999> AvailableSiteAccessList[]=mydesign_admin
+[05-13-2006 07:03:41] [#ezpublish] <nnn0> yes i think so
+[05-13-2006 07:03:54] [#ezpublish] <buz> i believe thats right, yes
+[05-13-2006 07:04:05] [#ezpublish] <buz> did you clear all caches
+[05-13-2006 07:04:07] [#ezpublish] <norbs999> k, the var settings I did too.
+[05-13-2006 07:04:33] [#ezpublish] <norbs999> VarDir=var/mydesign
+[05-13-2006 07:04:41] [#ezpublish] <norbs999> ( in acess-ini )
+[05-13-2006 07:05:44] [#ezpublish] <norbs999> the vars, they're created automatically, as I've read.
+[05-13-2006 07:06:01] [#ezpublish] <norbs999> well, of course I've created a new folder in ./design
+[05-13-2006 07:06:49] [#ezpublish] <nnn0> hm there was some examples at ez.no from the old docs, but it's gone now
+[05-13-2006 07:06:52] [#ezpublish] <norbs999> may ./design/mydesign filled with sth meaningfull? or should I just copy an old design=
+[05-13-2006 07:07:17] [#ezpublish] <norbs999> called "Building an eZ publish site" ?
+[05-13-2006 07:07:24] [#ezpublish] <norbs999> with chess mates?
+[05-13-2006 07:07:31] [#ezpublish] <nnn0> yes
+[05-13-2006 07:07:36] [#ezpublish] <nnn0> and i found it
+[05-13-2006 07:07:41] [#ezpublish] <nnn0> and you have read it :D
+[05-13-2006 07:07:43] [#ezpublish] <norbs999> It's like that what im trying.
+[05-13-2006 07:07:50] [#ezpublish] <nnn0> heh
+[05-13-2006 07:07:54] [#ezpublish] <nnn0> k
+[05-13-2006 07:07:55] [#ezpublish] <norbs999> yep
+[05-13-2006 07:08:14] [#ezpublish] <norbs999> and - it still doesn't work.
+[05-13-2006 07:08:39] [#ezpublish] <norbs999> I've enabled debugging.
+[05-13-2006 07:08:50] [#ezpublish] <norbs999> so it says:
+[05-13-2006 07:08:53] [#ezpublish] <norbs999> Module start 'content'
+[05-13-2006 07:08:59] [#ezpublish] <norbs999> Error ocurred using URI: /mydesign
+[05-13-2006 07:09:04] [#ezpublish] <norbs999> Module end 'error'
+[05-13-2006 07:09:15] [#ezpublish] <buz> you did clear all caches didnt you
+[05-13-2006 07:09:33] [#ezpublish] <buz> when in doubt clear the cache
+[05-13-2006 07:09:47] [#ezpublish] <norbs999> k, I'll try
+[05-13-2006 07:09:54] -!- buz changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_05_05_2006
+[05-13-2006 07:11:51] -!- ordnas [n=ordnas@p549D5251.dip.t-dialin.net] has joined #ezpublish
+[05-13-2006 07:11:59] -!- ordnas [n=ordnas@p549D5251.dip.t-dialin.net] has quit [Client Quit]
+[05-13-2006 07:14:03] [#ezpublish] <norbs999> still nothing...I'm confused.
+[05-13-2006 07:14:41] [#ezpublish] <norbs999> maybe to confused after six hours.
+[05-13-2006 07:15:31] [#ezpublish] <norbs999> does it matter if I write:
+[05-13-2006 07:15:38] [#ezpublish] <norbs999> http://localhost/index.php/mydesign
+[05-13-2006 07:15:40] [#ezpublish] <norbs999> or
+[05-13-2006 07:15:45] [#ezpublish] <norbs999> http://localhost/mydesign
+[05-13-2006 07:16:08] [#ezpublish] <norbs999> with default settings it should not, should it?
+[05-13-2006 07:17:30] [#ezpublish] <nnn0> have you edited the settings/override/site.ini.append.php ?
+[05-13-2006 07:17:45] [#ezpublish] <nnn0> yes
+[05-13-2006 07:18:15] [#ezpublish] <nnn0> the default .htaccess doesn't allow you using just the domain name, like http://test.com/
+[05-13-2006 07:18:29] [#ezpublish] <norbs999> oh.
+[05-13-2006 07:18:31] [#ezpublish] <nnn0> you have to write http://test.com/index.php
+[05-13-2006 07:18:40] [#ezpublish] <nnn0> or you have to write http://test.com/index.php/mydesign
+[05-13-2006 07:19:01] [#ezpublish] <nnn0> you can change the .htaccess though, by just uncomment a couple of lines
+[05-13-2006 07:19:13] [#ezpublish] <nnn0> it's all explained in the .htaccess
+[05-13-2006 07:19:18] [#ezpublish] <buz> only that on some servers, that will result in server errors
+[05-13-2006 07:19:26] [#ezpublish] <buz> if you stumble accross that, just comment the lines, again
+[05-13-2006 07:19:35] [#ezpublish] <norbs999> so, no result when using 'localhost'?
+[05-13-2006 07:19:49] [#ezpublish] <nnn0> try localhost/index.php
+[05-13-2006 07:19:50] [#ezpublish] <buz> should show the default page
+[05-13-2006 07:20:00] [#ezpublish] <buz> (if directoryindex is setup correctly)
+[05-13-2006 07:22:20] [#ezpublish] <norbs999> http://localhost/index.php   says me "Welcome to eZ publish"
+[05-13-2006 07:22:23] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-13-2006 07:22:28] [#ezpublish] <norbs999> so far it works.
+[05-13-2006 07:22:34] [#ezpublish] <nnn0> :)
+[05-13-2006 07:23:04] [#ezpublish] <norbs999> http://localhost/index.php/mydesign  say "not allowed..." and a login mask.
+[05-13-2006 07:24:26] [#ezpublish] <norbs999> ohh....hey!
+[05-13-2006 07:24:54] [#ezpublish] <norbs999> I've just noticed, that I can log in there with my admin account.
+[05-13-2006 07:25:21] [#ezpublish] <buz> so basically it works ;)
+[05-13-2006 07:25:33] [#ezpublish] <norbs999> and I'm getting the nice "Welcome to eZ publish" titled with "My own Site Design"
+[05-13-2006 07:25:46] [#ezpublish] <buz> congrats ;)
+[05-13-2006 07:25:47] [#ezpublish] <norbs999> well sth about permissions
+[05-13-2006 07:25:53] [#ezpublish] <nnn0> :)
+[05-13-2006 07:25:55] [#ezpublish] <norbs999> thx
+[05-13-2006 07:26:27] [#ezpublish] <norbs999> I need so set that everyone is allowed to see the site.
+[05-13-2006 07:26:44] [#ezpublish] <norbs999> thinking...
+[05-13-2006 07:27:06] [#ezpublish] <norbs999> CheckValidity=false
+[05-13-2006 07:27:23] [#ezpublish] <buz> that is rather wrongly named
+[05-13-2006 07:27:32] [#ezpublish] <buz> it really means that the setup gets started when true
+[05-13-2006 07:27:47] [#ezpublish] <norbs999> ok.
+[05-13-2006 07:28:31] [#ezpublish] <norbs999> it's alredy RequireUserLogin=false
+[05-13-2006 07:29:02] [#ezpublish] <norbs999> in siteacces/mydesign/site.ini.append
+[05-13-2006 07:29:16] [#ezpublish] <norbs999> strange.
+[05-13-2006 07:34:33] [#ezpublish] <norbs999> what is about the content.ini.append.php
+[05-13-2006 07:34:50] [#ezpublish] <norbs999> i've nothing edited there still now.
+[05-13-2006 07:34:55] [#ezpublish] <norbs999> Do I have to?
+[05-13-2006 07:35:16] [#ezpublish] <norbs999> it's currently:
+[05-13-2006 07:35:21] [#ezpublish] <norbs999> <?php /* #?ini charset="iso-8859-1"?
+[05-13-2006 07:35:21] [#ezpublish] <norbs999> [VersionView]
+[05-13-2006 07:35:21] [#ezpublish] <norbs999> AvailableSiteDesignList[]
+[05-13-2006 07:35:21] [#ezpublish] <norbs999> AvailableSiteDesignList[]=plain
+[05-13-2006 07:35:21] [#ezpublish] <norbs999> AvailableSiteDesignList[]=admin
+[05-13-2006 07:35:21] [#ezpublish] <norbs999> DefaultPreviewDesign=plain
+[05-13-2006 07:35:23] [#ezpublish] <norbs999> AllowChangeButtons=disabled
+[05-13-2006 07:35:25] [#ezpublish] <norbs999> AllowVersionsButton=disabled
+[05-13-2006 07:35:27] [#ezpublish] <norbs999> */ ?>
+[05-13-2006 07:50:27] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-13-2006 07:51:36] [#ezpublish] <norbs999> I've got it!
+[05-13-2006 07:51:47] [#ezpublish] <norbs999> and you left.
+[05-13-2006 07:51:57] [#ezpublish] <buz> no i didnt
+[05-13-2006 07:51:58] [#ezpublish] <buz> my laptop did
+[05-13-2006 07:52:31] [#ezpublish] <buz> maybe your rules don't allow anonymous users to view the site?
+[05-13-2006 07:53:45] [#ezpublish] <norbs999> haha.
+[05-13-2006 07:53:57] [#ezpublish] <norbs999> yes! excactly.
+[05-13-2006 07:54:11] [#ezpublish] <norbs999> now they do.
+[05-13-2006 07:54:37] [#ezpublish] <norbs999> may I configure this via INI too?
+[05-13-2006 07:54:41] [#ezpublish] <buz> no
+[05-13-2006 07:54:49] [#ezpublish] <buz> in admin interface -user -> roles
+[05-13-2006 07:54:53] [#ezpublish] <norbs999> ok.
+[05-13-2006 07:54:59] [#ezpublish] <norbs999> already done.
+[05-13-2006 07:55:28] [#ezpublish] <norbs999> It made me beeing happy today!
+[05-13-2006 07:56:41] [#ezpublish] <norbs999> Well, nice that you've helped me! Thank you!
+[05-13-2006 07:57:07] [#ezpublish] <buz> you're welcome
+[05-13-2006 07:57:18] [#ezpublish] <norbs999> know, let me grab some food, after that many hours.
+[05-13-2006 07:57:34] [#ezpublish] <norbs999> see you again!
+[05-13-2006 07:58:24] [#ezpublish] <norbs999> *leaving*
+[05-13-2006 07:59:23] [#ezpublish] <buz> bye
+[05-13-2006 08:01:59] -!- phretor [n=phretor@host228-202.pool872.interbusiness.it] has joined #ezpublish
+[05-13-2006 08:02:16] [#ezpublish] <phretor> hi there
+[05-13-2006 08:02:58] [#ezpublish] <phretor> who is using Enhanced Object Relation (EOR) and have experienced an "Unknown validation error" on on-the-fly created object?
+[05-13-2006 08:07:35] [#ezpublish] <buz> are you using the svn version?
+[05-13-2006 08:10:05] [#ezpublish] <phretor> buz: I'm gonna update it
+[05-13-2006 08:10:20] [#ezpublish] <phretor> I've read some comments about a possible bugfix, thanks
+[05-13-2006 08:11:21] [#ezpublish] <phretor> buz: wow! is it AJAX?
+[05-13-2006 08:11:28] [#ezpublish] <buz> no
+[05-13-2006 08:11:33] [#ezpublish] <buz> it might become some day
+[05-13-2006 08:11:48] [#ezpublish] <phretor> buz: Fatal error: Call to a member function on a non-object in /var/www/airlab/AirLabNew/kernel/content/ezcontentoperationcollection.php on line 378
+[05-13-2006 08:11:59] [#ezpublish] <buz> mhh i never had that
+[05-13-2006 08:12:07] [#ezpublish] <buz> what kind of object are you trying to create on the fly
+[05-13-2006 08:12:18] [#ezpublish] <phretor> buz: my own
+[05-13-2006 08:12:31] [#ezpublish] <buz> can you describe it
+[05-13-2006 08:12:40] [#ezpublish] <phretor> buz: it has a couple of textfields and a title
+[05-13-2006 08:12:55] [#ezpublish] <buz> mhh should work then
+[05-13-2006 08:13:07] [#ezpublish] <buz> some people report issues with images
+[05-13-2006 08:13:11] [#ezpublish] <buz> but i cant reproduce them
+[05-13-2006 08:13:22] [#ezpublish] <phretor> what should I enter in the (only) field that appear when I push the "create now" button?
+[05-13-2006 08:13:45] [#ezpublish] <buz> mhh if only one field appears something is wrong
+[05-13-2006 08:13:57] [#ezpublish] <buz> all fields required for the object should load
+[05-13-2006 08:14:20] -!- buz changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_12_05_2006
+[05-13-2006 08:14:27] [#ezpublish] <phretor> buz: it has only one required field
+[05-13-2006 08:14:43] [#ezpublish] <buz> still it should display the whole object
+[05-13-2006 08:15:33] [#ezpublish] <phretor> buz: lemme give a couple of screenshots
+[05-13-2006 08:16:18] [#ezpublish] <phretor> buz: before, http://img54.imageshack.us/my.php?image=picture15ua.png
+[05-13-2006 08:16:58] [#ezpublish] <phretor> buz: after, http://img54.imageshack.us/my.php?image=picture27wv.png
+[05-13-2006 08:17:27] [#ezpublish] <phretor> buz: I'll give you the class definition
+[05-13-2006 08:17:33] [#ezpublish] <buz> mhh picture wont load
+[05-13-2006 08:18:04] -!- norbs999 [i=norbs999@Ed7e6.e.pppool.de] has quit [Read error: 110 (Connection timed out)]
+[05-13-2006 08:19:04] [#ezpublish] <phretor> buz: w8, it should
+[05-13-2006 08:19:40] [#ezpublish] <buz> does not for me
+[05-13-2006 08:19:52] [#ezpublish] <phretor> http://img54.imageshack.us/img54/11/picture27wv.png
+[05-13-2006 08:20:19] [#ezpublish] <phretor> http://img54.imageshack.us/img54/2924/picture15ua.png
+[05-13-2006 08:21:01] [#ezpublish] <buz> ah now
+[05-13-2006 08:21:14] [#ezpublish] <buz> hm and what exactly is the issue now?
+[05-13-2006 08:21:45] [#ezpublish] <phretor> this is the relation attribute: http://img54.imageshack.us/img54/4562/picture45ek.png
+[05-13-2006 08:22:23] [#ezpublish] <phretor> and this is the class http://img232.imageshack.us/img232/6255/picture61hf.png
+[05-13-2006 08:22:46] [#ezpublish] <phretor> only one field is showing up after a click on"create new"
+[05-13-2006 08:23:08] [#ezpublish] <buz> that's weird
+[05-13-2006 08:23:13] [#ezpublish] <buz> cleared the cache and all that?
+[05-13-2006 08:24:12] [#ezpublish] <buz> uuhm wait
+[05-13-2006 08:24:17] [#ezpublish] <buz> xavier added new features it seems
+[05-13-2006 08:25:14] [#ezpublish] <phretor> buz: lemme clean *all* the cache via command line
+[05-13-2006 08:25:25] [#ezpublish] <buz> there is in fact a new template i dont know what it does
+[05-13-2006 08:25:59] [#ezpublish] <phretor> buz: I still get that fatal error
+[05-13-2006 08:26:08] [#ezpublish] <buz> mhh xavier changed soemething
+[05-13-2006 08:26:10] [#ezpublish] <buz> "The new related object is created upon the validation of the containing object, not when creating it"
+[05-13-2006 08:26:22] [#ezpublish] <buz> i'll have to do some testing
+[05-13-2006 08:26:33] [#ezpublish] <phretor> buz: can I disable that feature?
+[05-13-2006 08:26:45] [#ezpublish] <buz> try a svn revision pre 1100
+[05-13-2006 08:27:23] [#ezpublish] <phretor> buz: and what if I want a relation without the "Create now" feature?
+[05-13-2006 08:27:32] [#ezpublish] <phretor> buz: and just one
+[05-13-2006 08:27:33] [#ezpublish] <buz> click remove default placement node
+[05-13-2006 08:28:03] [#ezpublish] <phretor> buz: by the way, AJAX could give a lot of help :)
+[05-13-2006 08:28:09] [#ezpublish] <buz> i know
+[05-13-2006 08:28:13] [#ezpublish] <buz> i just dont find the time
+[05-13-2006 08:28:32] [#ezpublish] <phretor> buz: I can understand you bro'
+[05-13-2006 08:29:05] -!- DiGiTa|_ [n=pet2poul@84.4.36.88] has joined #ezpublish
+[05-13-2006 08:30:27] [#ezpublish] <phretor> buz: have you (two) fixed the issues for required attributes? I found some attribute to be validated unless they were required
+[05-13-2006 08:30:40] [#ezpublish] <buz> i didnt fix it
+[05-13-2006 08:30:44] [#ezpublish] <phretor> buz: okie
+[05-13-2006 08:30:47] [#ezpublish] <buz> but xavier did some work i dont entirely understand
+[05-13-2006 08:32:37] -!- DiGiTa|_ [n=pet2poul@84.4.36.88] has quit [Client Quit]
+[05-13-2006 08:36:23] [#ezpublish] <phretor> buz: :-D
+[05-13-2006 08:39:25] [#ezpublish] <buz> ok the fact that you see only one line is somehow caused by a new template
+[05-13-2006 08:41:00] [#ezpublish] <phretor> buz: of course, but using Javascript in that way doesn't seem so "safe", IMHO
+[05-13-2006 08:41:10] [#ezpublish] <buz> he is using javascript?
+[05-13-2006 08:41:25] [#ezpublish] <buz> lemme see
+[05-13-2006 08:41:31] [#ezpublish] <nnn0> hm i miss that page in setup where you choose which "types" to handle (gallery, forum, blog etc.) how do i add a forum for instance afterwards - i never had to do this "manually" before :)
+[05-13-2006 08:41:46] [#ezpublish] <buz> yeah i cant figure out where that one did go to
+[05-13-2006 08:41:53] [#ezpublish] <phretor> buz: to hide/reveal fields
+[05-13-2006 08:41:56] [#ezpublish] <buz> you can export the forum stuff from an existing site and importit as package
+[05-13-2006 08:42:10] [#ezpublish] <nnn0> k
+[05-13-2006 08:43:32] [#ezpublish] <nnn0> ah okey - i found it :)
+[05-13-2006 08:44:25] [#ezpublish] <nnn0> http://ez.no/download/ez_publish/ez_publish_3_stable_releases/3_8/packages
+[05-13-2006 08:44:26] [#ezpublish] <nnn0> :)
+[05-13-2006 08:44:57] [#ezpublish] <phretor> guys, shouldn't this http://rafb.net/paste/results/02ybae60.html fetch all children of type "Floated Image" (id: floated_image)?
+[05-13-2006 08:45:09] [#ezpublish] <phretor> (and only those kind of objects)
+[05-13-2006 08:45:46] [#ezpublish] <buz> yeah that javascript is highly problematical
+[05-13-2006 08:47:01] [#ezpublish] <buz> i dont like those changes, at all
+[05-13-2006 08:48:24] [#ezpublish] <phretor> fetch('content', 'list' does not properly fetch... :\
+[05-13-2006 08:51:49] [#ezpublish] <nnn0> not 'content','list'  ,but just content,list i think
+[05-13-2006 08:52:08] [#ezpublish] <phretor> nnn0: no
+[05-13-2006 08:52:16] [#ezpublish] <phretor> http://ez.no/doc/ez_publish/technical_manual/3_7/reference/modules/content/fetch_functions/list
+[05-13-2006 08:52:40] [#ezpublish] <nnn0> hm
+[05-13-2006 08:52:55] [#ezpublish] <nnn0> i've used it without the quotes :D
+[05-13-2006 08:53:04] [#ezpublish] <nnn0> i guess it doesn't matter
+[05-13-2006 08:53:47] [#ezpublish] <phretor> ok, I found the bug
+[05-13-2006 09:06:37] -!- phretor [n=phretor@host228-202.pool872.interbusiness.it] has quit []
+[05-13-2006 09:12:33] [#ezpublish] <nnn0> fuck - i'm having a hard time setting up 3.8
+[05-13-2006 09:13:11] [#ezpublish] <nnn0> i should have stucked with the 3.7.5 :D
+[05-13-2006 11:18:01] -!- phretor [n=phretor@host119-131.pool878.interbusiness.it] has joined #ezpublish
+[05-13-2006 11:20:46] [#ezpublish] <phretor> hi guys
+[05-13-2006 11:21:54] [#ezpublish] <phretor> someone alive?
+[05-13-2006 11:22:29] [#ezpublish] <phretor> can you help me with that? it doesn't filter the fetched content, instead it fetches *all* children: http://rafb.net/paste/results/pkL9BA42.html why?
+[05-13-2006 11:29:17] [#ezpublish] <buz> looks correct to me
+[05-13-2006 11:29:48] [#ezpublish] <phretor> buz: it doesn't filter at all
+[05-13-2006 11:30:39] [#ezpublish] <buz> that's because of
+[05-13-2006 11:30:40] [#ezpublish] <buz> class_filter_type  	string  	The type of class filtering (include/exclude).  	No.
+[05-13-2006 11:30:40] [#ezpublish] <buz> class_filter_array 	array 	The classes that should be filtered. 	No.
+[05-13-2006 11:31:32] [#ezpublish] <phretor> No?
+[05-13-2006 11:31:55] [#ezpublish] <phretor> buz: I need to fetch 'floated_image' objects only
+[05-13-2006 11:32:03] [#ezpublish] <buz> yes
+[05-13-2006 11:32:07] [#ezpublish] <buz> compare the lines above to your code ;)
+[05-13-2006 11:32:16] [#ezpublish] <phretor> uh! :(
+[05-13-2006 11:32:40] -!- awormus [n=aaron@p54B1231A.dip0.t-ipconnect.de] has joined #ezpublish
+[05-13-2006 11:53:04] [#ezpublish] <phretor> buz: is there any 1-line solution for getting the *content* of the selected value of a field of type "Selection"?
+[05-13-2006 13:03:03] -!- phretor [n=phretor@host119-131.pool878.interbusiness.it] has quit []
+[05-13-2006 13:43:26] -!- DiGiTa|_ [n=pet2poul@84.4.36.88] has joined #ezpublish
+[05-13-2006 14:18:28] [#ezpublish] <alvaro-> i have readen the ez.no tutorial, i was reading the phppoint tutorial but it seems old version, exist another advanced tutorial by example?
+[05-13-2006 16:19:54] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[05-13-2006 16:23:51] -!- DiGiTa|_ [n=pet2poul@84.4.36.88] has quit []
+[05-13-2006 16:37:29] -!- awormus [n=aaron@p54B1231A.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[05-13-2006 16:39:27] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-13-2006 19:57:50] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[05-13-2006 19:58:18] -!- nnn0 [n=nnn0@ti541110a080-1273.bb.online.no] has joined #ezpublish

@@ -1,0 +1,100 @@
+[02-01-2006 00:21:04] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []
+[02-01-2006 01:19:35] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[02-01-2006 01:22:02] -!- B-KiLLer` [n=me@217.31.64.170] has joined #ezpublish
+[02-01-2006 01:32:30] -!- ordnas [n=ordnas@p549D7E61.dip.t-dialin.net] has joined #ezpublish
+[02-01-2006 01:42:09] -!- ordna1 [n=ordnas@p549D7E61.dip.t-dialin.net] has joined #ezpublish
+[02-01-2006 01:56:34] -!- DiGiTa|_ [n=guillaum@84.4.36.48] has joined #ezpublish
+[02-01-2006 01:56:44] -!- SEAwolfx_ [n=mike@tor/session/x-390a86b4e60a7efb] has joined #ezpublish
+[02-01-2006 02:00:15] -!- _kore [n=lordhong@217.194.224.41] has joined #ezpublish
+[02-01-2006 02:00:26] -!- ordnas [n=ordnas@p549D7E61.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[02-01-2006 02:04:24] [#ezpublish] <SEAwolfx_> morning
+[02-01-2006 02:07:07] [#ezpublish] <B-KiLLer`> 'lo
+[02-01-2006 02:09:49] -!- SEAwolfx [n=mike@tor/session/x-4d848c549a60e1f4] has quit [Remote closed the connection]
+[02-01-2006 02:09:57] -!- SEAwolfx_ is now known as SEAwolfx
+[02-01-2006 02:18:15] -!- tobyS_ [n=dotxp@dslb-084-061-136-030.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[02-01-2006 02:40:24] -!- ordna1 [n=ordnas@p549D7E61.dip.t-dialin.net] has left #ezpublish []
+[02-01-2006 02:44:24] -!- ordnas [n=ordnas@p549D7E61.dip.t-dialin.net] has joined #ezpublish
+[02-01-2006 02:45:19] -lilo:$*- [Global Notice] Hi all. Apologies for not getting back with you on that main rotation server split. We're looking at the problem. Meanwhile, US donor tax receipts for paypal donations have been sent to your paypal email address. If you need a receipt and haven't received one, please message me. Thanks!
+[02-01-2006 02:46:53] -lilo:$*- [Global Notice] Those are the 2005 tax receipts. We're about to start our 2006-2007 fundraiser for PDPC, so if you would like to help get us going a bit early, please take a look at the freenode website ( http://freenode.net/pdpc_donations.shtml ). Thanks, and have a great morning!
+[02-01-2006 02:57:56] -!- ordnas [n=ordnas@p549D7E61.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[02-01-2006 02:58:08] -!- ordnas [n=ordnas@p549D7E61.dip.t-dialin.net] has joined #ezpublish
+[02-01-2006 03:49:49] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[02-01-2006 03:49:55] [#ezpublish] <Sulfur> morning everybody
+[02-01-2006 04:09:07] [#ezpublish] <SEAwolfx> hi Sulfur
+[02-01-2006 04:13:38] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[02-01-2006 04:15:14] -!- _kore [n=lordhong@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[02-01-2006 04:20:19] -!- korE__ [n=korE@pool-151-199-125-79.roa.east.verizon.net] has joined #ezpublish
+[02-01-2006 04:20:25] [#ezpublish] <korE__> Hey korE_.
+[02-01-2006 04:20:34] [#ezpublish] <korE__> Please stop using my nick.
+[02-01-2006 04:20:41] -!- kore_ [n=lordhong@217.194.224.41] has quit [Nick collision from services.]
+[02-01-2006 04:20:49] -!- korE__ is now known as korE_
+[02-01-2006 04:20:58] -!- korE_ [n=korE@pool-151-199-125-79.roa.east.verizon.net] has left #ezpublish []
+[02-01-2006 04:21:31] -!- kore__ [n=lordhong@217.194.224.41] has joined #ezpublish
+[02-01-2006 04:22:16] [#ezpublish] <Sulfur> ( "kore" wars :)) )
+[02-01-2006 04:24:17] [#ezpublish] <Sulfur> I have just written to ez-sdk a mail regarding (IMO) needed improvements to admin interface when dealing with large amounts of objects. specifically, multiple move / update / hide objects and search in content structure while adding related objects. having facilities for that would be a huge timesaver. how do guys here handle that ?
+[02-01-2006 04:27:06] -!- kore__ is now known as _kore
+[02-01-2006 05:16:09] -!- tobyS [n=dotxp@vpn142.hrz.uni-dortmund.de] has joined #ezpublish
+[02-01-2006 05:27:45] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[02-01-2006 05:46:21] -!- tobyS [n=dotxp@vpn142.hrz.uni-dortmund.de] has quit ["Plant your channel to pearadise.net!"]
+[02-01-2006 06:03:13] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[02-01-2006 06:09:00] -!- tobyS [n=dotxp@217.194.224.41] has joined #ezpublish
+[02-01-2006 07:23:58] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[02-01-2006 07:39:46] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[02-01-2006 08:13:43] [#ezpublish] <ordnas> kracker: I will answer your good suggestions concerning the article section ASAP
+[02-01-2006 08:14:23] [#ezpublish] <ordnas> kracker: ... including something very concrete ;)
+[02-01-2006 08:26:47] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[02-01-2006 08:46:51] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[02-01-2006 08:47:38] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[02-01-2006 09:11:12] -!- DiGiTa|__ [n=guillaum@84.6.79.85] has joined #ezpublish
+[02-01-2006 09:22:12] -!- DiGiTa|_ [n=guillaum@84.4.36.48] has quit [Read error: 110 (Connection timed out)]
+[02-01-2006 09:24:15] [#ezpublish] <DiGiTa|__> what do you think about this design :
+[02-01-2006 09:24:24] [#ezpublish] <DiGiTa|__> it's a bed and breakfast : http://www.coquelicot-prod.com/temp/interface.jpg
+[02-01-2006 09:46:11] [#ezpublish] <buz> very good
+[02-01-2006 09:46:22] [#ezpublish] <buz> ok the pattern outside might not be the best idea
+[02-01-2006 10:04:09] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[02-01-2006 10:04:11] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[02-01-2006 10:04:15] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[02-01-2006 10:04:37] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[02-01-2006 10:07:49] -!- fh [n=fh@popeye.ez.no] has quit [Read error: 104 (Connection reset by peer)]
+[02-01-2006 10:08:27] -!- tobyS [n=dotxp@217.194.224.41] has quit ["Plant your channel to pearadise.net!"]
+[02-01-2006 10:09:51] -!- _kore [n=lordhong@217.194.224.41] has quit []
+[02-01-2006 10:16:51] -!- seasonfive is now known as season|away
+[02-01-2006 10:23:21] -!- fh [n=fh@popeye.ez.no] has joined #ezpublish
+[02-01-2006 10:36:18] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[02-01-2006 11:03:22] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Isn't Gaim a cool program ? :-)"]
+[02-01-2006 11:04:29] -!- ordna1 [n=ordnas@p549D59C7.dip.t-dialin.net] has joined #ezpublish
+[02-01-2006 11:21:24] -!- ordnas [n=ordnas@p549D7E61.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[02-01-2006 11:47:24] -!- lucasr [n=lucasr@20150173118.user.veloxzone.com.br] has joined #ezpublish
+[02-01-2006 11:47:35] [#ezpublish] <lucasr> is it possible to run ezpublish with pgsql8?
+[02-01-2006 11:57:10] -!- lucasr [n=lucasr@20150173118.user.veloxzone.com.br] has left #ezpublish ["Fui embora"]
+[02-01-2006 12:06:08] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Remote closed the connection]
+[02-01-2006 12:23:37] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[02-01-2006 13:54:12] -!- ordna1 [n=ordnas@p549D59C7.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[02-01-2006 13:56:17] -!- tobmaster [n=tobmaste@dslb-084-061-043-254.pools.arcor-ip.net] has joined #ezpublish
+[02-01-2006 13:58:49] -!- tobmaster [n=tobmaste@dslb-084-061-043-254.pools.arcor-ip.net] has quit [Client Quit]
+[02-01-2006 14:00:50] -!- SEAwolfx_ [i=debian-t@tor/session/x-b4bd3edb456241f9] has joined #ezpublish
+[02-01-2006 14:01:19] -!- ordnas [n=ordnas@p549D59C7.dip.t-dialin.net] has joined #ezpublish
+[02-01-2006 14:01:36] -!- ordnas [n=ordnas@p549D59C7.dip.t-dialin.net] has left #ezpublish []
+[02-01-2006 14:02:52] -!- SEAwolfx [n=mike@tor/session/x-390a86b4e60a7efb] has quit [Remote closed the connection]
+[02-01-2006 14:22:34] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[02-01-2006 14:30:42] -!- DiGiTa|__ [n=guillaum@84.6.79.85] has quit []
+[02-01-2006 16:01:24] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[02-01-2006 16:40:52] -!- tobyS [n=dotxp@dslb-084-060-010-008.pools.arcor-ip.net] has joined #ezpublish
+[02-01-2006 16:56:46] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[02-01-2006 18:19:13] [#ezpublish] <kracker> thanks ordnas :)
+[02-01-2006 18:19:28] [#ezpublish] <kracker> looking forward to the rockyness of it all
+[02-01-2006 20:32:56] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 104 (Connection reset by peer)]
+[02-01-2006 20:37:52] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[02-01-2006 20:42:34] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Remote closed the connection]
+[02-01-2006 21:56:40] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[02-01-2006 22:43:31] -!- Bedlore [n=me@219-90-254-157.ip.adam.com.au] has joined #ezpublish
+[02-01-2006 22:43:35] [#ezpublish] <Bedlore> hi guys
+[02-01-2006 22:45:18] [#ezpublish] <Bedlore> Anyone have ImageMagick 6.2.6 installed? I want someone to confirm if this is an ezp bug
+[02-01-2006 22:47:04] -!- mode/#ezpublish [+o fh] by ChanServ
+[02-01-2006 22:47:09] [#ezpublish] <Bedlore> anyone?
+[02-01-2006 22:50:52] [#ezpublish] <kracker> sry, i don't (i think i was hovering around 6.0.7)
+[02-01-2006 22:52:02] [#ezpublish] <Bedlore> shame, it appears that the image datatype no longer works with imagemagick, very strange though but its all I can think of that changed at the moment
+[02-01-2006 22:52:29] [#ezpublish] <Bedlore> you can still upload images related resize etc, but not use the image datatype
+[02-01-2006 22:52:45] [#ezpublish] <Bedlore> guess I'll just report it as a bug and see if it gets confirmed
+[02-01-2006 23:02:42] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/strong_growth_of_the_ez_community
+[02-01-2006 23:02:57] [#ezpublish] <kracker> odd

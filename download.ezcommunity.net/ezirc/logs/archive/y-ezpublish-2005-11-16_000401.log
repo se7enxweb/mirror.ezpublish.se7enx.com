@@ -1,0 +1,408 @@
+[11-15-2005 01:07:39] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[11-15-2005 01:24:56] -!- DiGiTa|_ [n=guillaum@80.125.104.29] has joined #ezpublish
+[11-15-2005 01:27:00] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-15-2005 01:30:21] [#ezpublish] <LottoKim> i cant see the "Foggy trees" picture, what could be wrong?
+[11-15-2005 01:43:07] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-15-2005 01:58:56] -!- ordnas [n=ordnas@p549DC57D.dip.t-dialin.net] has joined #ezpublish
+[11-15-2005 02:05:51] -!- DiGiTa|__ [n=guillaum@84.4.188.22] has joined #ezpublish
+[11-15-2005 02:07:21] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-15-2005 02:12:33] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-15-2005 02:22:11] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-15-2005 02:23:42] -!- DiGiTa|_ [n=guillaum@80.125.104.29] has quit [Read error: 110 (Connection timed out)]
+[11-15-2005 02:36:33] [#ezpublish] <_Rappy_> wake up!
+[11-15-2005 02:42:07] -!- DiGiTa|__ [n=guillaum@84.4.188.22] has left #ezpublish []
+[11-15-2005 02:44:03] [#ezpublish] <Katana`> okay, back to my workflow event ...
+[11-15-2005 02:59:21] -!- SEAwolfx [n=mike@DSL01.83.171.154.186.NEFkom.net] has joined #ezpublish
+[11-15-2005 02:59:40] [#ezpublish] <SEAwolfx> hallo  @all.
+[11-15-2005 03:01:40] [#ezpublish] <_Rappy_> we don't want to order anything!
+[11-15-2005 03:01:52] [#ezpublish] <SEAwolfx> so what?
+[11-15-2005 03:02:00] [#ezpublish] <SEAwolfx> no pizza?
+[11-15-2005 03:04:30] [#ezpublish] <_Rappy_> only with pineapple and goatcheese
+[11-15-2005 03:06:49] [#ezpublish] <Katana`> err goat cheese
+[11-15-2005 03:06:54] [#ezpublish] <SEAwolfx> ;)
+[11-15-2005 03:07:30] [#ezpublish] <_Rappy_> I want one with chocolate, cheese, chips and ham
+[11-15-2005 03:07:53] [#ezpublish] <Katana`> i'll have a chocolate / coffee beans pizza
+[11-15-2005 03:07:59] [#ezpublish] <Katana`> with orange slices
+[11-15-2005 03:12:55] [#ezpublish] <_Rappy_> why is a orange called a orange, but a lemon not called a yellow?
+[11-15-2005 03:14:45] [#ezpublish] <Katana`> :)
+[11-15-2005 03:37:24] [#ezpublish] <@fh[eZ]> not enough colors
+[11-15-2005 03:37:27] [#ezpublish] <@fh[eZ]> probably
+[11-15-2005 03:42:55] [#ezpublish] <Katana`> hey fh
+[11-15-2005 04:01:39] [#ezpublish] <Katana`> ah, great, on publish workflow event are not passed the node id
+[11-15-2005 04:01:41] [#ezpublish] <Katana`> amazing :)
+[11-15-2005 04:12:49] -!- fh[eZ] [n=fh@80.239.98.162] has quit ["using sirc version 2.211+KSIRC/1.3.12"]
+[11-15-2005 04:38:28] [#ezpublish] <Katana`> hummm maybe i should do that with a cronjob actually ...
+[11-15-2005 04:38:34] [#ezpublish] <Katana`> or not ...
+[11-15-2005 06:07:03] -!- SEAwolfx [n=mike@DSL01.83.171.154.186.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[11-15-2005 06:34:57] -!- fh[eZ] [n=fh@213.236.139.146] has joined #ezpublish
+[11-15-2005 06:39:39] [#ezpublish] <kracker> omg, now the other developer writing the client to recieve the cc information from eZ publish wants ...
+[11-15-2005 06:40:18] [#ezpublish] <kracker> get this, for me to send unencrypted gpg phasephrase, un encrypt the credit card infomration and send it back to the client software
+[11-15-2005 06:40:33] [#ezpublish] <_Rappy_> o.0
+[11-15-2005 06:40:34] [#ezpublish] <kracker> says i should `trust` ssl encryption to be enough :?
+[11-15-2005 06:41:11] [#ezpublish] <_Rappy_> "never trust, never enough" is a moto I just made up and will incorporate from now on
+[11-15-2005 06:41:12] [#ezpublish] <_Rappy_> :)
+[11-15-2005 06:41:25] [#ezpublish] <kracker> not forgeting that it's not like one credit card info at at time here and there it's a batch of many sets at a time :\
+[11-15-2005 06:42:19] [#ezpublish] <kracker> now i have to play the, not my problem, your cop'ing out, i'm not going to help you and you can't do it yourself and i'm not going to help you anymore aka the dick
+[11-15-2005 06:43:30] [#ezpublish] <kracker> role, it will be funny to see just how this plays out, come friday, i can just imagine the stalling this guy is going to be doing to get me to just givin which i (thankfully) do not have to do, i got paid already for my part in this project :D
+[11-15-2005 06:47:02] [#ezpublish] <kracker> sad when they try to use technical limitations as a outlet / excuse to give up on doing the work to create a complete & secure solution and try to sell (me|you) on the worst way to do it with a ... no other alternative as the reasoning.
+[11-15-2005 06:47:47] [#ezpublish] * kracker diggs in to a bowl of `lucky charms` and crashing ...
+[11-15-2005 07:07:44] [#ezpublish] <Katana`> hum funny one on the mailing list ...
+[11-15-2005 07:07:45] [#ezpublish] <Katana`> does somebody knows if a wap/wml interface for ezpublish has been developed
+[11-15-2005 07:07:45] [#ezpublish] <Katana`> allready ?
+[11-15-2005 07:08:00] [#ezpublish] <Katana`> i seriously doubt that :)
+[11-15-2005 07:08:25] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-15-2005 07:17:19] [#ezpublish] <Katana`> has any of you used eZNodeAssignment::create() ?
+[11-15-2005 07:17:41] [#ezpublish] <_Rappy_> nop
+[11-15-2005 08:26:24] -!- fh[eZ] [n=fh@213.236.139.146] has quit [Remote closed the connection]
+[11-15-2005 09:01:26] -!- ordnas [n=ordnas@p549DC57D.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-15-2005 09:01:29] [#ezpublish] <_Rappy_> bye peeps, c ya tomorrow
+[11-15-2005 09:01:57] -!- _Rappy_ is now known as _rappy_
+[11-15-2005 09:19:24] [#ezpublish] <kracker> Katana`, heh
+[11-15-2005 09:19:31] [#ezpublish] <kracker> i just saw that one and smiled
+[11-15-2005 09:19:41] [#ezpublish] <kracker> wap/wml is so pre 2001
+[11-15-2005 09:20:01] [#ezpublish] <kracker> still more ezpublish in any form the better :)
+[11-15-2005 09:20:23] [#ezpublish] <kracker> i wonder though, who (which client and .... why :D) is asking ez systems for it now
+[11-15-2005 09:29:30] -!- xbit [n=stian@gprs-ggsn5-nat.mobil.telenor.no] has joined #ezpublish
+[11-15-2005 09:36:02] -!- ordna1 [n=ordnas@p549DC57D.dip.t-dialin.net] has joined #ezpublish
+[11-15-2005 09:37:42] [#ezpublish] <Katana`> yep /[[
+[11-15-2005 09:37:56] [#ezpublish] <Katana`> that would be a smiley
+[11-15-2005 09:47:20] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-15-2005 10:07:59] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-15-2005 10:08:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-15-2005 10:33:01] [#ezpublish] <Katana`> could this channel BE more dead ?
+[11-15-2005 10:33:13] [#ezpublish] <Katana`> with Chandler's voice
+[11-15-2005 10:34:07] [#ezpublish] <xbit> i guess we could try
+[11-15-2005 10:34:10] [#ezpublish] <xbit> :)
+[11-15-2005 10:36:06] -!- ordnas [n=ordnas@p549DFC8E.dip.t-dialin.net] has joined #ezpublish
+[11-15-2005 10:36:32] -!- ordna1 [n=ordnas@p549DC57D.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-15-2005 10:48:55] [#ezpublish] <Katana`> YAY it works !!
+[11-15-2005 10:49:01] [#ezpublish] * Katana` dances
+[11-15-2005 10:58:23] [#ezpublish] <kracker> lol
+[11-15-2005 10:59:00] [#ezpublish] <buz> as long as it's not the developers dance all is fine
+[11-15-2005 11:01:18] [#ezpublish] <Katana`> cya :)
+[11-15-2005 11:11:38] -!- xbit [n=stian@gprs-ggsn5-nat.mobil.telenor.no] has quit [Read error: 110 (Connection timed out)]
+[11-15-2005 11:22:46] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[11-15-2005 11:23:11] [#ezpublish] <kracker> i found it !
+[11-15-2005 11:23:23] [#ezpublish] <kracker> i can't belive i found it! :D !!!
+[11-15-2005 11:23:30] [#ezpublish] <kracker> ok so i'll .... post it!
+[11-15-2005 11:24:42] [#ezpublish] <kracker> i was talking yesterday )or so( about my modfied set of ezpublish build from svn scripts
+[11-15-2005 11:26:27] [#ezpublish] <kracker> and i was working (again, finaly) on cleaning up 1.7 TB of data across 15+ disks and reorganizing the content for my own sanity :D (ha!)
+[11-15-2005 11:26:44] [#ezpublish] <kracker> and i stumbeled upon them and a bunch of other clean backups i thought i had lost
+[11-15-2005 11:26:47] [#ezpublish] <kracker> http://download.ezcommunity.net/ezbuild.tar.gz
+[11-15-2005 11:26:52] [#ezpublish] <kracker> http://download.ezcommunity.net/ezbuild
+[11-15-2005 11:28:08] [#ezpublish] <kracker>  i need to find out exactly if seawolfx was really trying to build from svn or what but with a user and a more clear idea of what is needed, i'll go ahead and pickup this subproject again
+[11-15-2005 11:29:04] [#ezpublish] <kracker> i need to test the whole scripts again and do (i wager) a bit more abstraction, cleanup, review of some of the spur of the moment code changes i made and refine them to work for other users in a more *sane* way
+[11-15-2005 11:29:51] [#ezpublish] <kracker> with any luck i'll be able to return a clean set of patches to eZ systems and the community to allow us all to (at least for development) build from svn
+[11-15-2005 11:30:16] [#ezpublish] <kracker> maybe then i'll be cool again ... or just piss people even more *sigh*
+[11-15-2005 11:30:42] [#ezpublish] <kracker> piss (even more) people off (even more)
+[11-15-2005 11:31:26] [#ezpublish] <kracker> not the goal just a possible side affect of kracker existing :\
+[11-15-2005 11:33:56] [#ezpublish] <kracker> life as a role playing game (where `means well` is a -2000 point move)
+[11-15-2005 11:41:07] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[11-15-2005 11:53:45] [#ezpublish] <kracker> heh, cause by default ... they don't apear to work anymore (not that i even remember finishing them), funny
+[11-15-2005 11:54:03] -!- ordnas [n=ordnas@p549DFC8E.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-15-2005 12:02:21] [#ezpublish] <kracker> oops nope it still works (at first glance), heh if you use the correct cmd line arguments (order is important, must be in order (for some reason) )
+[11-15-2005 12:02:42] [#ezpublish] <kracker> anyone else care for this functionality :?
+[11-15-2005 12:31:31] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-15-2005 13:07:13] [#ezpublish] <kracker>  <grin>
+[11-15-2005 13:20:08] [#ezpublish] <buz> what functionality?
+[11-15-2005 13:32:41] -!- SEAwolfx [n=mike@DSL01.83.171.158.69.NEFkom.net] has joined #ezpublish
+[11-15-2005 13:32:45] [#ezpublish] <kracker> buz, an updated version of the ./bin/shell/makedist.sh script in eZ publish to allow (in a simple way without hacking it to get it to work/build) external users / contributors the ablity (for dev/testing/not-production) to checkout and build eZ publish trunk from svn
+[11-15-2005 13:32:49] [#ezpublish] <kracker> hey SEAwolfx !
+[11-15-2005 13:33:01] [#ezpublish] <buz> build? for what?
+[11-15-2005 13:33:02] [#ezpublish] <SEAwolfx> hey kracker ;)
+[11-15-2005 13:33:03] [#ezpublish] <buz> it works out of svn
+[11-15-2005 13:33:07] [#ezpublish] <SEAwolfx> waht?
+[11-15-2005 13:33:09] [#ezpublish] <kracker> i was talking about building from svn sources again
+[11-15-2005 13:33:16] [#ezpublish] <SEAwolfx> to the right time ;)
+[11-15-2005 13:33:35] [#ezpublish] <kracker> SEAwolfx, check the log : http://download.ezcommunity.net/ezirc/logs/ezpublish.log
+[11-15-2005 13:33:40] [#ezpublish] <SEAwolfx> u saw my last entry in ur blog?
+[11-15-2005 13:33:51] [#ezpublish] <kracker> i think so
+[11-15-2005 13:34:16] [#ezpublish] <kracker> buz, have ever used the eZ publish (script) ./bin/shell/makedist.sh
+[11-15-2005 13:34:36] [#ezpublish] <buz> i haven
+[11-15-2005 13:34:37] [#ezpublish] <buz> t
+[11-15-2005 13:34:40] [#ezpublish] <kracker> nods
+[11-15-2005 13:34:40] [#ezpublish] <buz> never seen any need
+[11-15-2005 13:34:41] [#ezpublish] <SEAwolfx> hehe
+[11-15-2005 13:34:57] [#ezpublish] <SEAwolfx> http://snippets.ezcommunity.net/ezpublish_community_incomming_sort
+[11-15-2005 13:35:04] [#ezpublish] <kracker> those who have would know just why i'm talking about this subject :)
+[11-15-2005 13:35:14] [#ezpublish] <SEAwolfx> better this -> http://ez.no/community/bugs/while_setup_packages_list_can_not_be_displayed
+[11-15-2005 13:35:17] [#ezpublish] <kracker> hehe, talking about it again :)
+[11-15-2005 13:41:14] [#ezpublish] <kracker> SEAwolfx, i just added my build script modifications (extensive) to snippets (a brief description + links to the package), http://snippets.ezcommunity.net/ezpublish_community_incomming_sort
+[11-15-2005 13:43:27] [#ezpublish] <SEAwolfx> on the other side the trick to alter 'kernel/setup/steps/ezstep_site_templates.php' following 'http://ez.no/community/bugs/while_setup_packages_list_can_not_be_displayed' didnt succeeded.
+[11-15-2005 13:47:19] [#ezpublish] * Katana` finally got his workflow event to work
+[11-15-2005 13:47:27] [#ezpublish] <Katana`> now i think i need some heavy profiling ...
+[11-15-2005 13:47:30] [#ezpublish] <SEAwolfx> ;) congrats
+[11-15-2005 13:48:21] [#ezpublish] <Katana`> i wonder if a workflow that sometime creates more than 10 node assignments is bad :)
+[11-15-2005 13:52:10] [#ezpublish] <kracker> heh, it's not bad, it's called elite / advanced
+[11-15-2005 13:52:14] [#ezpublish] <Katana`> :)
+[11-15-2005 13:52:23] [#ezpublish] <kracker> i said it
+[11-15-2005 13:52:31] [#ezpublish] <Katana`> i've just noticed that publishing one of those takes time...
+[11-15-2005 13:52:42] [#ezpublish] <Katana`> but i'll do some profiling tomorrow, i'm sure i can optimize stuff
+[11-15-2005 13:52:49] [#ezpublish] <kracker> heh, ya think ;)
+[11-15-2005 13:52:54] [#ezpublish] <Katana`> that site is gonna rock
+[11-15-2005 13:53:01] [#ezpublish] <kracker> DJ Jazzy Jeff feat. Eminem - When To Stand Up
+[11-15-2005 13:53:05] [#ezpublish] <kracker> you know it
+[11-15-2005 13:53:25] [#ezpublish] <Katana`> err no
+[11-15-2005 13:54:37] [#ezpublish] <kracker> lol
+[11-15-2005 13:54:58] [#ezpublish] <Katana`> i usually listen to more system of a down like music ;)
+[11-15-2005 13:55:38] [#ezpublish] <kracker> i sample drops from em all 600GB+ and growing (in the flintones chewable vitamins comercial sound)
+[11-15-2005 13:57:55] [#ezpublish] <kracker> thinking of eZ publish (on a bad day) : System Of A Down - Toxicity - 01 - Prison Song
+[11-15-2005 13:58:04] [#ezpublish] <Katana`> lol
+[11-15-2005 13:58:29] [#ezpublish] <SEAwolfx> hehe
+[11-15-2005 13:58:29] [#ezpublish] <Katana`> the one i'm pissed with is the workflow system :)
+[11-15-2005 13:58:47] [#ezpublish] <Katana`> there are really not enough pluggable events so far, and i really dislike hacking the core just for that ...
+[11-15-2005 13:59:24] [#ezpublish] <kracker> ehh, graham's the drone, kracker's the through the looking glass - clone, never trust anyone on the phone
+[11-15-2005 14:00:13] [#ezpublish] <kracker> Katana`, you and mcspectrum :D, (he's pissed as all get out that it's simpler to build a payment workflow than a true payment gateway with stock eZ publish ....)
+[11-15-2005 14:00:26] [#ezpublish] <Katana`> it's true :))
+[11-15-2005 14:00:34] [#ezpublish] <Katana`> maybe it would be easier with SOME doc about gateways
+[11-15-2005 14:00:38] [#ezpublish] <kracker> re: eZ authorize / eZ authorize.net
+[11-15-2005 14:00:44] [#ezpublish] <Katana`> we have built one but it was all reverse engineering...
+[11-15-2005 14:00:52] [#ezpublish] <kracker> true dat
+[11-15-2005 14:00:58] [#ezpublish] <buz> you mean there's like docs for workflows?
+[11-15-2005 14:01:00] [#ezpublish] <kracker> is it a really gateway?
+[11-15-2005 14:01:00] [#ezpublish] <Katana`> and there's NO info about that
+[11-15-2005 14:01:03] [#ezpublish] <Katana`> yep
+[11-15-2005 14:01:08] [#ezpublish] <Katana`> registered as one
+[11-15-2005 14:01:18] [#ezpublish] <Katana`> add Payment Gateway, select our gateway, it works:)
+[11-15-2005 14:01:22] [#ezpublish] <kracker> wow, you gone to share or is it propriatary :\
+[11-15-2005 14:01:27] [#ezpublish] <Katana`> humm...
+[11-15-2005 14:01:36] [#ezpublish] <kracker> yah :|
+[11-15-2005 14:01:41] [#ezpublish] <Katana`> we could share it, i guess, but since it's for a payment provider in luxembourg...
+[11-15-2005 14:01:58] [#ezpublish] <Katana`> if it just depends on me i could email it to your right away :)
+[11-15-2005 14:02:09] [#ezpublish] <Katana`> on the other hand since i leave in 6 weeks... :)
+[11-15-2005 14:02:49] [#ezpublish] <SEAwolfx> is there a documentation which leads through the makedist.sh distri-building process?
+[11-15-2005 14:02:53] [#ezpublish] <kracker> well if it makes any difference i don't really want your code (per say) since i'm in the usa, but i am working on a payment workflow / gateway project for authorize.net (major usa provider of verification info)
+[11-15-2005 14:02:59] -!- nnn0 is now known as [o_0]
+[11-15-2005 14:03:01] [#ezpublish] <kracker> SEAwolfx, not a chance
+[11-15-2005 14:03:08] -!- [o_0] is now known as nnn0
+[11-15-2005 14:03:13] [#ezpublish] <SEAwolfx> urghs.
+[11-15-2005 14:03:36] [#ezpublish] <kracker> Katana`, ok here is my email address (if you please)
+[11-15-2005 14:03:36] [#ezpublish] <Katana`> i can probably do something for your kracker
+[11-15-2005 14:04:16] [#ezpublish] <kracker> Katana`, you get my personal message + email
+[11-15-2005 14:04:24] [#ezpublish] <Katana`> email i got
+[11-15-2005 14:04:44] [#ezpublish] <Katana`> comments are in french though ...
+[11-15-2005 14:05:19] [#ezpublish] <kracker> i would be most apreciated of any and all information / code you might be able to drop me in the mail, and will credit you when I release eZ authorize(.net)
+[11-15-2005 14:05:51] [#ezpublish] <kracker> still working on the name, should i cut the .net out of authorize.net or not, pondering :\
+[11-15-2005 14:06:39] [#ezpublish] <kracker> i was leaning towards droping .net but thinking more and more that it would reduce confusion if i did not drop .net (uncertain on trademark on that call though)
+[11-15-2005 14:06:48] [#ezpublish] <Katana`> well, the issue is that my main job in that extension was just "consulting"
+[11-15-2005 14:06:58] [#ezpublish] <Katana`> e.g. hacking around the code to get my coworker to do the job
+[11-15-2005 14:07:02] [#ezpublish] <kracker> heh
+[11-15-2005 14:07:06] [#ezpublish] <Katana`> and it was back 3 month agop
+[11-15-2005 14:07:07] [#ezpublish] <Katana`> -p
+[11-15-2005 14:07:30] [#ezpublish] <kracker> i don't mind if comments were in french, the code alone will answere the breakdowns we were getting into :\
+[11-15-2005 14:08:30] [#ezpublish] <kracker> SEAwolfx, not to forget that the makedist.sh script is very very (horribly) complex and poorly abstracted, lots of room for bash functions and imporovement (i am not chastizing ez, just stating the obvios from a no nothing view point like mine :D)
+[11-15-2005 14:09:37] [#ezpublish] <SEAwolfx> atm, i fail in this step: "Checking db update version numbersPassword for 'root':"
+[11-15-2005 14:09:40] [#ezpublish] <SEAwolfx> damn.
+[11-15-2005 14:10:20] [#ezpublish] <Katana`> sent, kracker
+[11-15-2005 14:11:38] [#ezpublish] <Katana`> but gateways really, really require doc...
+[11-15-2005 14:11:39] [#ezpublish] <kracker> Katana`, wow, a big thank you, here's hoping (dido - thank you) ...
+[11-15-2005 14:11:47] [#ezpublish] <kracker> Katana`, ?
+[11-15-2005 14:11:52] [#ezpublish] <Katana`> yes ?
+[11-15-2005 14:13:48] [#ezpublish] <kracker> oh, never mind, i understand now
+[11-15-2005 14:14:00] [#ezpublish] <kracker> and i, concure
+[11-15-2005 14:16:12] [#ezpublish] <kracker> i think want killed me up till now was trying to do a real payment gateway (not workflow) but be able to have a cc card info form from eZ publish (no redirecting the user to the payment provider) and using backend code to authorize without redirecting the user to the provider to input the cc info, rather using ezpublish inside the existing hook system back to itself for the form and then back into the checkout process upon success
+[11-15-2005 14:16:12] [#ezpublish] <kracker> or returning to the form for error handeling
+[11-15-2005 14:16:36] [#ezpublish] <Katana`> as far as i know the payment gateway you can buy from ez implements both
+[11-15-2005 14:16:43] [#ezpublish] <Katana`> and the PG system allows both
+[11-15-2005 14:16:47] [#ezpublish] <Katana`> e.g. direct and the other one
+[11-15-2005 14:16:49] [#ezpublish] <kracker> course it does :)
+[11-15-2005 14:17:00] [#ezpublish] <kracker> but no docs for us (hits myself in the face)
+[11-15-2005 14:35:22] -!- SEAwolfx [n=mike@DSL01.83.171.158.69.NEFkom.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-15-2005 14:58:28] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-15-2005 15:30:15] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-15-2005 15:42:57] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-15-2005 17:09:01] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-15-2005 17:09:18] [#ezpublish] <zr1> it lives!
+[11-15-2005 17:13:24] [#ezpublish] <kracker> heh
+[11-15-2005 17:26:48] [#ezpublish] <kracker> doh! svn checkout from pubsvn is still broken for me, how about you?
+[11-15-2005 17:26:50] [#ezpublish] <kracker>  date; svn checkout http://pubsvn.ez.no/nextgen/stable/3.6; date
+[11-15-2005 17:26:50] [#ezpublish] <kracker> Tue Nov 15 17:16:54 CST 2005
+[11-15-2005 17:26:50] [#ezpublish] <kracker> svn: REPORT request failed on '/nextgen/!svn/vcc/default'
+[11-15-2005 17:26:50] [#ezpublish] <kracker> svn: REPORT of '/nextgen/!svn/vcc/default': Response exceeded maximum number of header fields. (http://pubsvn.ez.no)
+[11-15-2005 17:26:50] [#ezpublish] <kracker> Tue Nov 15 17:21:22 CST 2005
+[11-15-2005 17:54:33] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-15-2005 18:00:06] -!- _Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[11-15-2005 18:00:25] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-15-2005 18:12:21] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[11-15-2005 18:25:24] -!- _Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-15-2005 18:54:37] -!- climber [n=climber@200.175.67.11.adsl.gvt.net.br] has joined #ezpublish
+[11-15-2005 18:54:41] [#ezpublish] <climber> hi
+[11-15-2005 18:54:56] [#ezpublish] <climber> I having problems with web wizard
+[11-15-2005 18:55:03] [#ezpublish] <climber> anyone help-me?
+[11-15-2005 18:55:22] [#ezpublish] <nnn0> :)
+[11-15-2005 18:55:31] [#ezpublish] <climber> Warning: main(lib/ezutils/classes/ezsys.php): failed to open stream: No such file or directory in (installation-path)
+[11-15-2005 18:55:48] [#ezpublish] <nnn0> hm
+[11-15-2005 18:55:53] [#ezpublish] <climber> apache2+php4
+[11-15-2005 18:55:57] [#ezpublish] <nnn0> never seen that
+[11-15-2005 18:55:59] [#ezpublish] <nnn0> sorry
+[11-15-2005 18:56:10] [#ezpublish] <nnn0> your sure the file is present ?
+[11-15-2005 18:56:15] [#ezpublish] <nnn0> ezsys.php
+[11-15-2005 18:56:18] [#ezpublish] <climber> yes
+[11-15-2005 18:56:23] [#ezpublish] <climber> and chmod-it
+[11-15-2005 18:56:26] [#ezpublish] <nnn0> k
+[11-15-2005 18:57:11] [#ezpublish] <nnn0> and the domane name is correctly set up
+[11-15-2005 18:57:14] [#ezpublish] <nnn0> ?
+[11-15-2005 18:57:34] [#ezpublish] <nnn0> hm shouldn't have anything to say really
+[11-15-2005 18:57:42] [#ezpublish] <nnn0> it should just forward then
+[11-15-2005 18:57:48] [#ezpublish] <climber> I using http://localhost/ezpublish
+[11-15-2005 18:57:52] [#ezpublish] <nnn0> k
+[11-15-2005 18:58:06] [#ezpublish] <nnn0> on windows
+[11-15-2005 18:58:08] [#ezpublish] <nnn0> ?
+[11-15-2005 18:58:14] [#ezpublish] <climber> Linux
+[11-15-2005 18:58:16] [#ezpublish] <climber> Suse 10
+[11-15-2005 18:58:23] [#ezpublish] <nnn0> hm
+[11-15-2005 18:59:15] [#ezpublish] <climber> I only extracted files from tar.gz and move this directory to apache DocumentRoot
+[11-15-2005 18:59:56] [#ezpublish] <nnn0> ok
+[11-15-2005 19:00:12] [#ezpublish] <climber> I installed ezpulish in old versions and don´t have problem
+[11-15-2005 19:00:22] [#ezpublish] <nnn0> and then you have run http://localhost/index.php ?
+[11-15-2005 19:00:29] [#ezpublish] <nnn0> no
+[11-15-2005 19:00:30] [#ezpublish] <climber> no
+[11-15-2005 19:00:38] [#ezpublish] <nnn0> and then you have run http://localhost/ezpublish/index.php ?
+[11-15-2005 19:00:40] [#ezpublish] <nnn0> k
+[11-15-2005 19:01:25] [#ezpublish] <nnn0> hm what version of php do you use
+[11-15-2005 19:03:30] [#ezpublish] <nnn0> you could make a test.php in the www-root which says:
+[11-15-2005 19:03:33] [#ezpublish] <nnn0> <?
+[11-15-2005 19:03:39] [#ezpublish] <nnn0> phpinfo();
+[11-15-2005 19:03:43] [#ezpublish] <nnn0> ?>
+[11-15-2005 19:03:53] [#ezpublish] <nnn0> and then look in the browser
+[11-15-2005 19:04:03] [#ezpublish] <nnn0> http://localhost/test.php
+[11-15-2005 19:05:13] [#ezpublish] <climber> 4.4.0
+[11-15-2005 19:05:16] [#ezpublish] <nnn0> k
+[11-15-2005 19:05:27] [#ezpublish] <nnn0> and you use ez v3.7.x ?
+[11-15-2005 19:06:05] [#ezpublish] <climber> yes
+[11-15-2005 19:06:14] [#ezpublish] <climber> 3.7.0
+[11-15-2005 19:06:25] [#ezpublish] <nnn0> hm
+[11-15-2005 19:06:35] [#ezpublish] <nnn0> i'm abit lost here
+[11-15-2005 19:06:44] [#ezpublish] <nnn0> i'm not an expert on any of this
+[11-15-2005 19:06:46] [#ezpublish] <nnn0> :)
+[11-15-2005 19:07:05] [#ezpublish] <nnn0> maybe you'll have to wait until the experts wake up :D
+[11-15-2005 19:07:12] [#ezpublish] <zr1> its failing to exec some external program it seams
+[11-15-2005 19:07:15] [#ezpublish] <nnn0> hm
+[11-15-2005 19:07:18] [#ezpublish] <nnn0> yeah
+[11-15-2005 19:07:45] [#ezpublish] <nnn0> strange
+[11-15-2005 19:08:05] [#ezpublish] <zr1> is it writing log at install time? anything in var/log/error.log ?
+[11-15-2005 19:08:39] [#ezpublish] <climber> i look
+[11-15-2005 19:10:08] [#ezpublish] <climber> nothing
+[11-15-2005 19:10:53] [#ezpublish] <climber> I try to begin the web wizard setup and ...
+[11-15-2005 19:14:35] [#ezpublish] <zr1> have a good look ata php.ini
+[11-15-2005 19:14:59] [#ezpublish] <zr1> for safe mode turned on or somesuch.. own pc or hosting?
+[11-15-2005 19:15:11] [#ezpublish] <climber> my pc
+[11-15-2005 19:15:17] [#ezpublish] <climber> I try to change
+[11-15-2005 19:15:52] [#ezpublish] <nnn0> try turning safe mode off
+[11-15-2005 19:15:57] [#ezpublish] <nnn0> safe_mode = 0
+[11-15-2005 19:16:29] [#ezpublish] <nnn0> k
+[11-15-2005 19:16:31] [#ezpublish] <nnn0> :Dhehe
+[11-15-2005 19:16:36] [#ezpublish] <climber> Off
+[11-15-2005 19:17:03] [#ezpublish] <climber> safe_mode is off, i didn´t change
+[11-15-2005 19:17:47] [#ezpublish] <zr1> you get this error on screen when trying to access install at very first step?
+[11-15-2005 19:19:04] [#ezpublish] <climber> yes
+[11-15-2005 19:19:22] [#ezpublish] <climber> Warning: main(lib/ezutils/classes/ezsys.php): failed to open stream: No such file or directory in /srv/www/htdocs/ezpublish/lib/ezutils/classes/ezdebug.php on line 84
+[11-15-2005 19:19:26] [#ezpublish] <climber> complete error
+[11-15-2005 19:20:57] [#ezpublish] <zr1> thats better, always give complete error :P
+[11-15-2005 19:21:38] [#ezpublish] <climber> On the first access to my web wizard
+[11-15-2005 19:22:31] [#ezpublish] <nnn0> at least it runs ezsys.php it seams
+[11-15-2005 19:22:42] [#ezpublish] <nnn0> seems
+[11-15-2005 19:22:47] [#ezpublish] <zr1> okay, if you look at that line you see it tries to include file
+[11-15-2005 19:22:51] [#ezpublish] <climber> On ezpublish-old-versions, I just put http://localhost/ezpublish and have the web wizard fine
+[11-15-2005 19:23:02] [#ezpublish] <climber> yes
+[11-15-2005 19:23:20] [#ezpublish] <climber> I installed php with all modules
+[11-15-2005 19:24:06] [#ezpublish] <nnn0> and ezdebug.php exisit also yes ?
+[11-15-2005 19:24:28] [#ezpublish] <zr1> it is the very first file included in index.php
+[11-15-2005 19:24:37] [#ezpublish] <climber> yes
+[11-15-2005 19:24:46] [#ezpublish] <nnn0> k
+[11-15-2005 19:24:51] [#ezpublish] <climber> I try to look this file with vi
+[11-15-2005 19:25:17] [#ezpublish] <climber> and I have the include
+[11-15-2005 19:26:50] [#ezpublish] <zr1> strangely enough very first include succeeds, hm.. what does include_once think its root is?
+[11-15-2005 19:28:18] [#ezpublish] <climber> I try to put the complete path
+[11-15-2005 19:28:45] [#ezpublish] <zr1> put complete in ezdebug as test
+[11-15-2005 19:29:47] [#ezpublish] <climber> GOAL
+[11-15-2005 19:30:21] [#ezpublish] <climber> I try to find what file defines the correct PATH
+[11-15-2005 19:32:07] [#ezpublish] <climber> GOAL
+[11-15-2005 19:32:21] [#ezpublish] <climber> I change one-per-one
+[11-15-2005 19:32:55] [#ezpublish] <zr1> muh?
+[11-15-2005 19:33:11] [#ezpublish] <zr1> just change one, if error moves its the include path
+[11-15-2005 19:33:46] [#ezpublish] <zr1> include paths should be relative to calling scripts directory
+[11-15-2005 19:34:39] [#ezpublish] <climber> the include_path from php.ini?
+[11-15-2005 19:35:24] [#ezpublish] <zr1> http://ee.php.net/manual/en/function.include.php
+[11-15-2005 19:35:39] [#ezpublish] <zr1> tried full path?
+[11-15-2005 19:36:56] [#ezpublish] <climber> yes
+[11-15-2005 19:37:18] [#ezpublish] <climber> but I have more and more errors
+[11-15-2005 19:37:27] [#ezpublish] <zr1> yes helps me little, did error move?
+[11-15-2005 19:37:59] [#ezpublish] <climber> I need config the correct path in one file
+[11-15-2005 19:38:08] [#ezpublish] <climber> yes
+[11-15-2005 19:40:06] [#ezpublish] <zr1> what include_path= you have in php.ini ?
+[11-15-2005 19:40:35] [#ezpublish] <climber> /usr/share/php
+[11-15-2005 19:40:41] [#ezpublish] <zr1> whole line
+[11-15-2005 19:40:47] [#ezpublish] <climber> change to ezpublish?
+[11-15-2005 19:40:58] [#ezpublish] <climber> the ezpublish path?
+[11-15-2005 19:41:04] [#ezpublish] <zr1> gimme whole line
+[11-15-2005 19:41:36] [#ezpublish] <climber> 413
+[11-15-2005 19:41:39] [#ezpublish] <climber> include_path = "/usr/share/php"
+[11-15-2005 19:41:39] [#ezpublish] <zr1> have you changed it from original?
+[11-15-2005 19:41:44] [#ezpublish] <climber> no
+[11-15-2005 19:42:01] [#ezpublish] <zr1> set to
+[11-15-2005 19:42:01] [#ezpublish] <zr1> include_path=".:/usr/share/php"
+[11-15-2005 19:42:33] [#ezpublish] <zr1> you dont have current directory in include path, of course includes wont work :)
+[11-15-2005 19:43:01] [#ezpublish] <climber> GREATTTTTTTTTTTTTTTTTT
+[11-15-2005 19:43:18] [#ezpublish] <nnn0> :D
+[11-15-2005 19:43:59] [#ezpublish] <nnn0> is that a bug then ?
+[11-15-2005 19:44:01] [#ezpublish] <zr1> kill the one who changed it, send me a pizza :)
+[11-15-2005 19:44:11] [#ezpublish] <nnn0> :)
+[11-15-2005 19:44:40] [#ezpublish] <zr1> try to find out what changed it, i suppose vanilla php.ini has the . in
+[11-15-2005 19:45:27] [#ezpublish] <zr1> BUT, this could be detected in install, if you go to community page and file a suggestion there you will help others, a nice thing to do
+[11-15-2005 19:46:20] [#ezpublish] <climber> yes
+[11-15-2005 19:46:27] [#ezpublish] <climber> There´s a bug
+[11-15-2005 19:46:39] [#ezpublish] <climber> I don´t change the php.ini
+[11-15-2005 19:47:45] [#ezpublish] <zr1> probably bug in some suse package then
+[11-15-2005 19:48:31] [#ezpublish] <zr1> how to find out: do "ls /usr/share/php", tell me few first lines
+[11-15-2005 19:49:35] [#ezpublish] <climber> I have the error in the web wizard to
+[11-15-2005 19:50:03] [#ezpublish] <climber> error for inclusion ('usr/share/php')
+[11-15-2005 19:50:12] [#ezpublish] <zr1> what error?
+[11-15-2005 19:50:15] [#ezpublish] <climber> I try to find this error
+[11-15-2005 19:53:33] [#ezpublish] <zr1> what error do you have in web wizard??
+[11-15-2005 19:53:45] [#ezpublish] <climber> error with includes
+[11-15-2005 19:54:07] [#ezpublish] <climber> and ('usr/share/php')
+[11-15-2005 19:54:24] [#ezpublish] <nnn0> think he means the error itself ;)
+[11-15-2005 19:54:48] [#ezpublish] <zr1> of course i mean error itself, not a imterpretation in verse :)
+[11-15-2005 19:54:56] [#ezpublish] <climber> I try to find the complete error with the "inclusion ('/usr/share/php') error
+[11-15-2005 19:54:58] [#ezpublish] <nnn0> :)
+[11-15-2005 19:55:07] [#ezpublish] <nnn0> :D
+[11-15-2005 19:55:08] [#ezpublish] <nnn0> heh
+[11-15-2005 19:55:18] [#ezpublish] <zr1> copypaste here what you get in browser
+[11-15-2005 19:56:10] [#ezpublish] <climber> Warning: main(): Failed opening 'lib/ezutils/classes/ezdebug.php' for inclusion (include_path='/usr/share/php') in /srv/www/htdocs/ezpublish/lib/ezutils/classes/ezini.php on line 76
+[11-15-2005 19:56:23] [#ezpublish] <nnn0> it's the old path
+[11-15-2005 19:56:27] [#ezpublish] <nnn0> isn't it
+[11-15-2005 19:56:46] [#ezpublish] <zr1> did you restart httpd after fixing php.ini?
+[11-15-2005 19:57:01] [#ezpublish] <climber> ok... you solve the problem
+[11-15-2005 19:57:15] [#ezpublish] <climber> I´m the setup wizard
+[11-15-2005 19:57:28] [#ezpublish] <nnn0> :)
+[11-15-2005 19:57:35] [#ezpublish] <zr1> I'm the white hat :P
+[11-15-2005 19:57:47] [#ezpublish] <climber> I don´t understand your text
+[11-15-2005 19:57:48] [#ezpublish] <climber> sorry
+[11-15-2005 19:58:07] [#ezpublish] <climber> brazilian speak english is excellent... hehehe
+[11-15-2005 19:58:09] [#ezpublish] <zr1> heh just a joke, you probably meant you are IN the setup wizard
+[11-15-2005 19:59:13] [#ezpublish] <climber> looking at finetune
+[11-15-2005 19:59:21] [#ezpublish] <nnn0> :)
+[11-15-2005 19:59:36] [#ezpublish] <nnn0> and i learned something too :D
+[11-15-2005 19:59:52] [#ezpublish] <zr1> dont eat the yellow snow?
+[11-15-2005 20:00:03] [#ezpublish] <nnn0> HOW DID YOU NOW
+[11-15-2005 20:00:06] [#ezpublish] <nnn0> NOOOOOOOOOOOOO
+[11-15-2005 20:00:07] [#ezpublish] <nnn0> :D
+[11-15-2005 20:00:13] [#ezpublish] <nnn0> shit
+[11-15-2005 20:00:18] [#ezpublish] <nnn0> know it should read
+[11-15-2005 20:00:20] [#ezpublish] <climber> yellow snow?
+[11-15-2005 20:00:20] [#ezpublish] <nnn0> :D
+[11-15-2005 20:00:21] [#ezpublish] <nnn0> hehe
+[11-15-2005 20:00:32] [#ezpublish] <zr1> im psychic
+[11-15-2005 20:00:44] [#ezpublish] <nnn0> climber you don't have snow in your parts ? :D
+[11-15-2005 20:00:53] [#ezpublish] <climber> no
+[11-15-2005 20:01:00] [#ezpublish] <nnn0> ehehehe
+[11-15-2005 20:01:01] [#ezpublish] <climber> Brazil - Summer
+[11-15-2005 20:01:18] [#ezpublish] <nnn0> well - yellow snow means that someone has taken a leak there :D
+[11-15-2005 20:02:31] [#ezpublish] <climber> humm
+[11-15-2005 20:02:57] [#ezpublish] <nnn0> :)
+[11-15-2005 21:18:17] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit [Read error: 110 (Connection timed out)]
+[11-15-2005 21:20:56] -!- climber [n=climber@200.175.67.11.adsl.gvt.net.br] has left #ezpublish ["Leaving"]
+[11-15-2005 23:58:37] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[11-15-2005 23:58:37] -!- nnn0 [n=therion@195.204.221.183] has quit [calvino.freenode.net irc.freenode.net]
+[11-15-2005 23:58:37] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [calvino.freenode.net irc.freenode.net]

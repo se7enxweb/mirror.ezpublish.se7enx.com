@@ -1,0 +1,62 @@
+[05-02-2006 00:54:39] -!- awormus [n=aaron@p54B119A8.dip0.t-ipconnect.de] has joined #ezpublish
+[05-02-2006 01:26:43] -!- ordnas [n=ordnas@p549D5819.dip.t-dialin.net] has joined #ezpublish
+[05-02-2006 01:43:51] -!- DiGiTa|_ [n=pet2poul@84.4.36.77] has joined #ezpublish
+[05-02-2006 01:45:54] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-02-2006 02:08:03] [#ezpublish] <DiGiTa|_> yo all
+[05-02-2006 02:08:42] [#ezpublish] <zrg> yoyo
+[05-02-2006 02:09:56] [#ezpublish] <awormus> yo
+[05-02-2006 02:10:20] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-02-2006 03:12:15] [#ezpublish] <kalooni> Hi there
+[05-02-2006 03:12:42] [#ezpublish] <kalooni> I am developping a new site in 3 languages. I plan to use the 3.8 for this
+[05-02-2006 03:12:51] [#ezpublish] <kalooni> how should I process ? One siteacess per language ?
+[05-02-2006 03:16:21] [#ezpublish] <zrg> afaik there is no other way, unfortunately :P
+[05-02-2006 03:20:59] [#ezpublish] <kalooni> ok thanks
+[05-02-2006 03:24:57] [#ezpublish] <zrg> what i do though is make siteaccess settings directories and softlink all files from main siteaccess dir into them, only individual one each has is site.ini with minimal settings
+[05-02-2006 03:26:09] [#ezpublish] <zrg> this way you will have same overrides working in all languages and wont get bughs because differing settings
+[05-02-2006 03:26:50] [#ezpublish] <kalooni> interesting
+[05-02-2006 03:26:58] [#ezpublish] <kalooni> thanks for the tip
+[05-02-2006 03:33:53] -!- DiGiTa|__ [n=pet2poul@84.4.189.3] has joined #ezpublish
+[05-02-2006 03:47:10] -!- DiGiTa|_ [n=pet2poul@84.4.36.77] has quit [Read error: 110 (Connection timed out)]
+[05-02-2006 04:00:05] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-02-2006 04:00:58] -!- ordna1 [n=ordnas@p549D6334.dip.t-dialin.net] has joined #ezpublish
+[05-02-2006 04:18:55] -!- ordnas [n=ordnas@p549D5819.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2006 07:15:25] -!- Sulfur__ [n=Sulfur@85.20.2.139] has joined #ezpublish
+[05-02-2006 07:15:47] [#ezpublish] <Sulfur__> hiya! :)
+[05-02-2006 07:17:49] [#ezpublish] <Sulfur__> question to all .... regarding fetch (content, SEARCH). has anyone tried to pass an array of class_attribute_id's to it? documentation seems to say that it is not possible, but only way to know is to try, unfortunately now I cannot code a sample page and try. anyone tried?
+[05-02-2006 08:12:02] [#ezpublish] <Sulfur__> ok, I was able to code it into another install .. it works :)
+[05-02-2006 08:49:58] -!- ordnas [n=ordnas@p549D5CC4.dip.t-dialin.net] has joined #ezpublish
+[05-02-2006 08:59:21] [#ezpublish] <kracker> lol
+[05-02-2006 08:59:44] [#ezpublish] <kracker> i saw this today on slashdot and thought of my _original_ thoughts on eZ publish v3.0
+[05-02-2006 08:59:44] [#ezpublish] <kracker> http://slashdot.org/articles/06/05/02/1138259.shtml
+[05-02-2006 09:07:20] -!- ordna1 [n=ordnas@p549D6334.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2006 09:27:49] [#ezpublish] <kalooni> is there a way to retrieve the hostname in a template?
+[05-02-2006 09:31:11] [#ezpublish] <Sulfur__> kalooni there is a contribution which gives you the full servervars
+[05-02-2006 09:32:18] [#ezpublish] <kalooni> ok but I think I will use ezini to retrieve SiteURL value in site.ini
+[05-02-2006 09:40:01] [#ezpublish] <kalooni> another question
+[05-02-2006 09:40:15] [#ezpublish] <kalooni> I am developping a multilanguage site with 3 languages
+[05-02-2006 09:42:04] [#ezpublish] <kalooni> I want to add a toolbar which will allow to switch from one language to another (like it is done on ez.no for example). What could be the best way to do this ? (ie fetching all languages)
+[05-02-2006 10:18:43] -!- Sulfur__ [n=Sulfur@85.20.2.139] has left #ezpublish []
+[05-02-2006 10:39:32] -!- ordnas [n=ordnas@p549D5CC4.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-02-2006 11:21:08] [#ezpublish] <kracker> #/join #php
+[05-02-2006 11:21:10] [#ezpublish] <kracker> doh
+[05-02-2006 11:45:29] -!- ordnas [n=ordnas@p549D5CC4.dip.t-dialin.net] has joined #ezpublish
+[05-02-2006 12:17:57] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-02-2006 14:10:11] [#ezpublish] <Tidemann> humm..
+[05-02-2006 14:17:28] [#ezpublish] <Tidemann> Added support for "embed-inline" tag.
+[05-02-2006 14:17:33] [#ezpublish] <Tidemann> what's that exactly?
+[05-02-2006 15:07:49] -!- PaulBorgermans [n=pborgerm@ip-213-49-229-3.dsl.scarlet.be] has joined #ezpublish
+[05-02-2006 15:09:47] [#ezpublish] <PaulBorgermans> its been a long time, and still quiet here
+[05-02-2006 15:10:03] -!- DiGiTa|__ [n=pet2poul@84.4.189.3] has quit []
+[05-02-2006 15:18:53] [#ezpublish] <PaulBorgermans> so bye again
+[05-02-2006 15:18:57] -!- PaulBorgermans [n=pborgerm@ip-213-49-229-3.dsl.scarlet.be] has quit []
+[05-02-2006 15:56:27] -lilo:$*- [Global Notice] Hi all. In about 8.5 hours, we'll be rehubbing our European servers ( http://freenode.net/news.shtml ). This will affect all of our users; it'll be pretty noisy. It should be finished very quickly, though.
+[05-02-2006 15:56:47] -lilo:$*- [Global Notice] Thanks in advance for your patience and support, and thank you for using freenode. Have a great night!
+[05-02-2006 16:42:08] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[05-02-2006 16:44:16] -!- ordnas [n=ordnas@p549D5CC4.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-02-2006 17:48:00] -!- awormus [n=aaron@p54B119A8.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-02-2006 19:03:50] [#ezpublish] <kracker> aww
+[05-02-2006 19:03:53] [#ezpublish] <kracker> sniff
+[05-02-2006 19:57:38] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Remote closed the connection]
+[05-02-2006 23:10:02] -!- nnn0_ [n=nnn0@ti541110a080-1273.bb.online.no] has joined #ezpublish
+[05-02-2006 23:16:04] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[05-02-2006 23:17:12] -!- nnn0_ is now known as nnn0

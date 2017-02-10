@@ -1,0 +1,88 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 13.7.&nbsp; Other Compatibility Problems</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch13lev1sec7"></a><h3 class="docSection1Title" id="409768-949">13.7. Other Compatibility Problems</h3>
+<p class="docText">In addition to the problems discussed so far that relate to migrating OO code to PHP 5, some other changes break backward compatibility. Most of them are harmless, but it's better to be aware of them.</p>
+<a name="ch13lev2sec10"></a><h4 class="docSection2Title">13.7.1. Command-Line Interface</h4>
+<p class="docText">The name of the CGI binary file for Windows has changed. This change has no effect on scripts, but rather on the setup of a Windows server running the CGI version of PHP. The CGI executable is now called <tt>php-cgi.exe</tt> rather than <tt>php.exe</tt>.<a name="ch13index79"></a><a name="ch13index80"></a><a name="ch13index81"></a></P>
+<p class="docText">In addition, the location of the CLI executable changed. It was previously located in the CLI subdirectory in the distribution (<tt>cli/php.exe</tt>), but it's now located in the main directory, the same directory with <tt>php-cgi.exe</tt>.</p>
+<p class="docText">Besides this name change, the CLI interface will always have the <tt>$argc</tt> and <tt>$argv</tt> variables available.</P>
+<a name="ch13lev2sec11"></a><h4 class="docSection2Title">13.7.2. Comment Tokens</H4>
+<p class="docText">The PHP parser changed the way comments in scripts are parsed. The change allows the parsing of PHPDoc(umentor) comments (<tt>/** */</tt>).<a name="ch13index82"></a><a name="ch13index83"></a></p>
+<p class="docText">The singleline (<tt>//</tt>) and multiline (<tt>/* .. */</tt>) comments generate the <tt>T_COMMENT</tt> token in both PHP 4 and PHP 5. The new PHPDoc style comments in PHP 5 generate the <tt>T_DOC_COMMENT</tt>. In PHP 4, the <tt>T_ML_COMMENT</tt> token was defined, but never used; the <tt>T_ML_COMMENT</tt> is not defined in PHP 5. See this piece of code for an example of the tokenizer running on PHP 5:</p>
+<pre>
+<span class="docEmphStrong">comment.php</span>
+
+&lt;?php
+    // Single line
+
+
+    /* Multi
+     * line
+     */
+
+
+    /**
+     * PHP Documentor style
+     */
+?&gt;
+
+<span class="docEmphStrong">tokenize.php</span>
+
+
+&lt;?php
+    $script = file_get_contents('comment.php');
+
+
+    foreach (token_get_all($script) as $token) {
+        if (count($token) == 2) {
+            printf ("%-25s [%s]\n", token_name($token[0]), $token[1]);
+        } else {
+            printf ("%-25s [%s]\n", "", $token[0]);
+        }
+    }
+?&gt;
+</pre><br>
+<p class="docText">Here is the output of <tt>php tokenize.php</tt> (reformatted for clarity):<a name="ch13index84"></a><a name="ch13index85"></a></p>
+<pre>
+T_OPEN_TAG                [&lt;?php<span class="docEmphasis">\n</span>]
+T_WHITESPACE              [     ]
+T_COMMENT                 [// Single line<span class="docEmphasis">\n</span>]
+T_WHITESPACE              [<span class="docEmphasis">\n</span>        ]
+T_COMMENT                 [/* Mult
+                            * line
+                            */]
+T_WHITESPACE              [<span class="docEmphasis">\n\n</span>]
+T_DOC_COMMENT             [/**
+                            * PHP Documentor style
+                            */]
+T_WHITESPACE              [<span class="docEmphasis">\n</span>]
+T_CLOSE_TAG               [?&gt;\<span class="docEmphasis">n</span>]
+</pre><BR>
+<a name="ch13lev2sec12"></a><H4 class="docSection2Title">13.7.3. MySQL</h4>
+<p class="docText">The MySQL client library is no longer bundled in PHP 5. MySQL is still supported, of course. You will need to use an external library, which was recommended for PHP 4 anyway. You can use either the &quot;old&quot; libmysql 3.23 version, which can only be used for MySQL 3.23 and MySQL 4.0.x, or the new libmysql 4.1 version of the library, which can be used for MySQL 3.23 and MySQL 4. You might ask why not always use the new version? Well, because this library is licensed under the GPL, while the old 3.23 version is licensed under the LGPL. The new license might cause problems for you if you are distributing your PHP application. If you want to use the MySQLi extension, you can only use the new 4.1 version of the MySQL client library. You can use this new extension alongside the old MySQL extension, but only when you use the same (4.1 version) library for both extensions. A sample configure line to do this is<a name="ch13index86"></a><a name="ch13index87"></a></p>
+<pre>
+./configure --with-mysql=/usr --with-mysqli=/usr/bin/mysql_config
+</pre><br>
+<a name="ch13note04"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">See <a class="docLink" target="_blank" href="http://www.php.net/manual/en/faq.databases.php#faq.databases">http://www.php.net/manual/en/faq.databases.php#faq.databases</a>. mysql.php5 for some reasons why PHP no longer bundles the library.</P></div><br>
+<ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

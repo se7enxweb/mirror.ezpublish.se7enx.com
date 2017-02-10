@@ -1,0 +1,111 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.9.&nbsp; Polymorphism</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec10.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec9"></a><h3 class="docSection1Title">3.9. Polymorphism</h3>
+<p class="docText">The subject of polymorphism is probably the most important in OOP. Using classes and inheritance makes it easy to describe a real-life situation as opposed to just a collection of functions and data. They also make it much easier to grow projects by reusing code mainly via inheritance. Also, to write robust and extensible code, you usually want to have as few as possible flow-control statements (such as <tt>if()</tt> statements). Polymorphism answers all these needs and more.<a name="ch03index82"></a><a name="ch03index83"></a></p>
+<p class="docText">Consider the following code:</p>
+<pre>
+class Cat {
+    function miau()
+    {
+        print "miau";
+    }
+}
+
+class Dog {
+    function wuff()
+    {
+        print "wuff";
+    }
+}
+
+function printTheRightSound($obj)
+{
+    if ($obj instanceof Cat) {
+        $obj-&gt;miau();
+    } else if ($obj instanceof Dog) {
+        $obj-&gt;wuff();
+    } else {
+        print "Error: Passed wrong kind of object";
+    }
+    print "\n";
+}
+
+printTheRightSound(new Cat());
+printTheRightSound(new Dog());
+</pre><br>The output is<pre>
+miau
+wuff
+</pre><BR>
+<p class="docText">You can easily see that this example is not extensible. Say that you want to extend it by adding the sounds of three more animals. You would have to add another three <tt>else if</tt> blocks to <tt>printTheRightSound()</tt> so you check that the object you have is an instance of one of those new animals, and then you have to add the code to call each sound method.<a name="ch03index84"></a><a name="ch03index85"></a></p>
+<p class="docText">Polymorphism using inheritance solves this problem. It enables you to inherit from a parent class, inheriting all its methods and properties and thus creating an is-a relationship.</P>
+<p class="docText">Taking the previous example, we will create a new class called <tt>Animal</tt> from which all other animal kinds will inherit, thus creating is-a relationships from the specific kinds, such as <tt>Dog</tt>, to the parent (or ancestor) <tt>Animal.</tt></p>
+<p class="docText">Inheritance is performed by using the <tt>extends</tt> keyword:</P>
+<pre>
+class Child extends Parent {
+    ...
+}
+</pre><br>
+<p class="docText">This is how you would rewrite the previous example using inheritance:<a name="ch03index86"></a><a name="ch03index87"></a><a name="ch03index88"></a></p>
+<pre>
+class Animal {
+    function makeSound()
+    {
+        print "Error: This method should be re-implemented in the children";
+    }
+}
+
+class Cat extends Animal {
+    function makeSound()
+    {
+        print "miau";
+    }
+}
+
+class Dog extends Animal {
+    function makeSound()
+    {
+        print "wuff";
+    }
+}
+
+function printTheRightSound($obj)
+{
+    if ($obj instanceof Animal) {
+        $obj-&gt;makeSound();
+    } else {
+        print "Error: Passed wrong kind of object";
+    }
+    print "\n";
+}
+
+printTheRightSound(new Cat());
+printTheRightSound(new Dog());
+</pre><br>The output is<pre>
+miau
+wuff
+</pre><br>
+<p class="docText">You can see that no matter how many animal types you add to this example, you will not have to make any changes to <tt>printTheRightSound()</tt> because the <tt>instanceof Animal</tt> check covers all of them, and the <tt>$obj-&gt;makeSound()</tt> call will do so, too.</P>
+<p class="docText">This example can still be improved upon. Certain modifiers available to you in PHP can give you more control over the inheritance process. They are covered in detail later in this chapter. For example, the class <tt>Animal</tt> and its method <tt>makeSound()</tt> can be marked as being <tt>abstract</tt>, which not only means that you don't have to give some meaningless implementation for the <tt>makeSound()</tt> definition in the <tt>Animal</tt> class, but also forcing any inheriting classes to implement it. Additionally, we could specify access modifiers to the <tt>makeSound()</tt> method, such as the public modifier, meaning that it can be called anywhere in your code.<a name="ch03index89"></a><a name="ch03index90"></a></P>
+<a name="ch03note06"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">PHP does not support multiple inheritance like C++ does. It supplies a different solution for creating more than one is-a relationship for a given class by using Java-like interfaces, which are covered later in this chapter.<a name="ch03index91"></a><a name="ch03index92"></a></p></div><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec10.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

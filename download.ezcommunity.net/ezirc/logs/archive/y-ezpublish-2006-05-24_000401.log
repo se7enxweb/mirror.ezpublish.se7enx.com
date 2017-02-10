@@ -1,0 +1,324 @@
+[05-22-2006 00:03:07] -!- ordnas [n=ordnas@p549D48CF.dip.t-dialin.net] has joined #ezpublish
+[05-22-2006 00:42:12] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[05-22-2006 00:50:04] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 110 (Connection timed out)]
+[05-22-2006 00:57:53] -!- DiGiTa|_ [n=pet2poul@84.4.189.109] has joined #ezpublish
+[05-22-2006 00:58:47] -!- hovik [n=hovik@stalker.ez.no] has quit [Read error: 104 (Connection reset by peer)]
+[05-22-2006 00:59:22] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[05-22-2006 01:07:58] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[05-22-2006 01:11:06] Disconnecting due to lack of a lag response (0.13600600 1148278206 != 0.06700300 1148278236)
+[05-22-2006 01:11:06] Diconnected. Sleeping for 2 second(s).
+[05-22-2006 01:11:08] >> Connecting to irc.freenode.net:6667
+[05-22-2006 01:11:12] >> Connected to irc.freenode.net:6667, registering...
+[05-22-2006 01:11:15] >> Attempting to join channels: #ezpublish
+[05-22-2006 01:11:15] >> Primary nickname in use, trying alternate.
+[05-22-2006 01:11:15] (unmatched::raw451) :kornbluth.freenode.net 451 * JOIN :Register first.
+[05-22-2006 01:11:16] >> Successfully registered. Nick is: ezpublishlog
+[05-22-2006 01:11:16] -!- There are 11998 listed and 13230 unlisted users on 18 servers
+[05-22-2006 01:11:16] -!- 47 flagged staff members
+[05-22-2006 01:11:16] -!- 10775 channels formed
+[05-22-2006 01:11:16] -!- I have 5353 clients and 0 servers
+[05-22-2006 01:11:16] -!- Current local  users: 5353  Max: 7429
+[05-22-2006 01:11:16] -!- Current global users: 25228  Max: 31376
+[05-22-2006 01:11:16] -!- Highest connection count: 7430 (7429 clients) (777010 since server was (re)started)
+[05-22-2006 01:11:16] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-22-2006 01:11:16] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-22-2006 01:12:00] >> Attempting to join channels: #ezpublish
+[05-22-2006 01:12:00] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-22-2006 01:12:00] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[05-22-2006 01:12:00] -!- Topic set by ls [@] [Fri, 19 May 2006 10:51:35 -0500]
+[05-22-2006 01:14:16] (ezpublishlog) Attempting to gain back primary nickname
+[05-22-2006 01:14:16] -!- ezpublishlog is now known as ezlog
+[05-22-2006 01:14:16] My new nick is ezlog
+[05-22-2006 01:37:33] -!- hovik [n=hovik@stalker.ez.no] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-22-2006 01:41:06] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[05-22-2006 01:42:09] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-22-2006 01:44:25] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-22-2006 01:45:27] [#ezpublish] <tobmaster> moin
+[05-22-2006 01:50:20] -!- Tidemann [n=tidemann@ti132110a340-3091.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[05-22-2006 02:02:25] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-22-2006 02:18:25] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-22-2006 02:33:38] -!- xigletjobb [n=Miranda@62.92.35.139] has joined #ezpublish
+[05-22-2006 02:57:40] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-22-2006 03:19:12] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[05-22-2006 03:35:04] -!- Tidemann [n=tidemann@ti132110a340-3091.bb.online.no] has joined #ezpublish
+[05-22-2006 03:51:27] [#ezpublish] <kalooni> one of my client wants to be able to colorize some part of text in the Online Editor ... How would you do this ?
+[05-22-2006 03:54:32] [#ezpublish] <katana`> colorize as in... ?
+[05-22-2006 03:54:34] [#ezpublish] <katana`> show with colors ?
+[05-22-2006 03:54:39] [#ezpublish] <katana`> or set colors...
+[05-22-2006 03:55:40] [#ezpublish] <kalooni> set colors
+[05-22-2006 03:56:25] [#ezpublish] <kalooni> I figure that the goal is to generate a kind of <span style="color:#colhex">...</span> ...
+[05-22-2006 03:56:36] [#ezpublish] <katana`> ah
+[05-22-2006 03:56:43] [#ezpublish] <katana`> maybe with literal tags ?
+[05-22-2006 03:57:24] [#ezpublish] <kalooni> didn't think about this solution
+[05-22-2006 03:58:45] [#ezpublish] <kalooni> but will be hard to explain to my client ...
+[05-22-2006 04:01:16] [#ezpublish] <katana`> might be yes...
+[05-22-2006 04:01:22] [#ezpublish] <katana`> with a custom tag maybe ?
+[05-22-2006 04:02:13] [#ezpublish] <kalooni> yes, but custom tag seems not very usable for this kind of stuff
+[05-22-2006 04:03:01] [#ezpublish] <kalooni> I think I will use custom tags for the moment and will make a suggestion, to add a new button to the OE, that will allow user to change text color
+[05-22-2006 04:19:52] [#ezpublish] <Tidemann> *shivers*
+[05-22-2006 04:21:08] [#ezpublish] <Tidemann> If that button is added to OE I would never upgrade
+[05-22-2006 04:21:58] [#ezpublish] <kalooni> why?
+[05-22-2006 04:22:03] [#ezpublish] <Tidemann> _maybe_ if I could set a predefined set of colors...
+[05-22-2006 04:23:14] [#ezpublish] <Tidemann> because I know content editors would make the site look horrible....
+[05-22-2006 04:24:03] [#ezpublish] <kalooni> yes you are right, but sometimes you have to make your client happy with stupid things
+[05-22-2006 04:25:33] [#ezpublish] <katana`> hehe...
+[05-22-2006 04:25:36] [#ezpublish] <katana`> sometimes ? :)
+[05-22-2006 04:25:41] [#ezpublish] <Tidemann> I know.... belive me.. I know
+[05-22-2006 04:25:53] [#ezpublish] * katana` knows too
+[05-22-2006 05:06:25] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[05-22-2006 05:45:52] -!- hovik [n=hovik@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[05-22-2006 05:46:55] [#ezpublish] <kalooni> damn ... I'm looking for the data model of ez ... I know there is one on ez.no, but I can't find it
+[05-22-2006 05:48:37] [#ezpublish] <zrg> image resembled big spiderweb?
+[05-22-2006 05:50:05] [#ezpublish] <zrg> one of these maybe ;)
+[05-22-2006 05:50:05] [#ezpublish] <zrg> http://www.trinity.edu/jdunn/spiderdrugs.htm
+[05-22-2006 05:50:53] [#ezpublish] <kalooni> lol
+[05-22-2006 06:09:30] [#ezpublish] <buz> my head feels kinda similar to that
+[05-22-2006 06:09:35] [#ezpublish] <buz> stupid cold
+[05-22-2006 06:10:25] [#ezpublish] <zrg> i just got a headache too..
+[05-22-2006 06:11:05] [#ezpublish] <zrg> not sure if coffee im drinking will improve things
+[05-22-2006 06:11:15] [#ezpublish] <buz> mhh cant live without coffee
+[05-22-2006 06:11:19] [#ezpublish] <buz> so that risk i have to take
+[05-22-2006 06:11:31] [#ezpublish] <buz> wont do much productive today anyhow
+[05-22-2006 06:27:31] [#ezpublish] <katana`> kalooni: http://ez.no/var/ezno/storage/images-versioned/324759/1-eng-GB/database_diagram_031.gif
+[05-22-2006 06:27:34] [#ezpublish] <katana`> but it seems screwed :)
+[05-22-2006 06:29:08] [#ezpublish] <zrg> mescaline, i'd say
+[05-22-2006 06:29:36] [#ezpublish] <zrg> but thanks, will need that scheme sometime, bookmarking
+[05-22-2006 06:30:00] [#ezpublish] <katana`> np
+[05-22-2006 06:43:16] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-22-2006 06:47:35] [#ezpublish] <zrg> hangover without party preceding it, thats unfair
+[05-22-2006 07:05:37] -!- kore__ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[05-22-2006 07:08:20] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[05-22-2006 07:44:26] -!- nfrp [n=nfrp@ATuileries-153-1-23-158.w82-123.abo.wanadoo.fr] has joined #ezpublish
+[05-22-2006 07:46:35] [#ezpublish] <kris10an> katana`: Ohh my god, did you eat all that acid?
+[05-22-2006 07:53:00] [#ezpublish] <katana`> ?
+[05-22-2006 07:56:42] [#ezpublish] <nfrp> lol. how about you Kris?
+[05-22-2006 07:57:47] -!- awormus [n=aaron@84.177.17.10] has joined #ezpublish
+[05-22-2006 08:00:45] [#ezpublish] <kris10an> katana`: Quote from "Fear and loathing in Las Vegas"
+[05-22-2006 08:01:14] [#ezpublish] <kris10an> Ohh my god, did you eat all that acid? You'd better hope there's some mescaline in there, or you're in big fucking trouble..
+[05-22-2006 08:01:34] [#ezpublish] <kris10an> nfrp: no, i didn't eat all that acid..
+[05-22-2006 08:02:49] [#ezpublish] <nfrp> sorry, missed the reference :P
+[05-22-2006 08:09:03] [#ezpublish] <kris10an> hehe.. well.. now you almost have it...
+[05-22-2006 08:11:04] [#ezpublish] <kris10an> nfrp: we have worked on your baby (helsedialog)
+[05-22-2006 08:11:45] [#ezpublish] <nfrp> saw the svn logs :) was the baby healthy enough ? (had not fed him for a while)
+[05-22-2006 08:15:04] -!- DiGiTa|_ [n=pet2poul@84.4.189.109] has quit []
+[05-22-2006 08:15:12] [#ezpublish] <kris10an> the baby is good, even without your supervision...
+[05-22-2006 08:15:25] [#ezpublish] <kris10an> it just wants some new clothes..
+[05-22-2006 08:16:05] [#ezpublish] <nfrp> ok. i'll send over summer clothes, embellished by climbing attributes :) it'll be allright.
+[05-22-2006 08:17:47] [#ezpublish] * katana` pokes nfrp and kris10an
+[05-22-2006 08:18:44] [#ezpublish] <nfrp> here they come : $rope, $harness, $carabiner, $kalk....
+[05-22-2006 08:19:22] [#ezpublish] <katana`> :)
+[05-22-2006 08:19:40] [#ezpublish] <nfrp> $action_man
+[05-22-2006 08:19:41] [#ezpublish] <nfrp> :P
+[05-22-2006 08:20:01] [#ezpublish] <katana`> ^^
+[05-22-2006 08:20:05] [#ezpublish] <zrg> ok it is some metaphorical baby?
+[05-22-2006 08:21:03] [#ezpublish] <nfrp> an eZbaby yes.
+[05-22-2006 08:21:22] [#ezpublish] <zrg> thank god, im pretty sick of hearing about real ones :P
+[05-22-2006 08:23:03] [#ezpublish] <zrg> does anyone have pics of this years campsite?
+[05-22-2006 08:27:45] [#ezpublish] <kris10an> the "campsite" is the city of skien...
+[05-22-2006 08:27:59] [#ezpublish] <kris10an> i'm sure there is pictures of that somewhere
+[05-22-2006 08:29:36] [#ezpublish] <zrg> so its like hotel in middle of city? :(
+[05-22-2006 08:30:56] [#ezpublish] <katana`> yep nothing like last year... looks like people didn't like the 2 hours drive to get there
+[05-22-2006 08:31:07] [#ezpublish] <katana`> we almost got our car eaten by a bear. Or a swede, not sure.
+[05-22-2006 08:32:21] [#ezpublish] <kris10an> zrg: you wanna use your tent?
+[05-22-2006 08:32:48] [#ezpublish] <zrg> jesus what people have become, 2 hours drive is too much :P
+[05-22-2006 08:33:19] [#ezpublish] <zrg> i will have to drive like 12 to get there this year
+[05-22-2006 08:33:58] [#ezpublish] <zrg> no fun tenting on concrete, i will come with my battlewagon.
+[05-22-2006 08:34:19] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 104 (Connection reset by peer)]
+[05-22-2006 08:38:02] [#ezpublish] <kris10an> hehe.. battlewagon :-D
+[05-22-2006 08:42:23] [#ezpublish] * zrg thinks: . o O This is no moon.. O o .
+[05-22-2006 08:49:06] [#ezpublish] <kris10an> . o O There is no spoon.. O o .
+[05-22-2006 08:49:14] [#ezpublish] <kris10an> it even rhymes
+[05-22-2006 08:50:02] [#ezpublish] <zrg> great bumper sticker for really beaten up, out of proportion car :D
+[05-22-2006 08:53:53] -!- alvaro- [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[05-22-2006 08:58:47] -!- awormus [n=aaron@84.177.17.10] has quit [Read error: 145 (Connection timed out)]
+[05-22-2006 09:32:03] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[05-22-2006 09:42:59] -!- nfrp [n=nfrp@ATuileries-153-1-23-158.w82-123.abo.wanadoo.fr] has quit ["Leaving"]
+[05-22-2006 09:53:50] -!- hovik [n=hovik@stalker.ez.no] has quit [Read error: 113 (No route to host)]
+[05-22-2006 09:57:26] -!- nfrp [n=nicolas@ATuileries-153-1-23-158.w82-123.abo.wanadoo.fr] has joined #ezpublish
+[05-22-2006 09:58:00] -!- nfrp [n=nicolas@ATuileries-153-1-23-158.w82-123.abo.wanadoo.fr] has left #ezpublish []
+[05-22-2006 10:01:40] -!- awormus [n=aaron@84.177.6.131] has joined #ezpublish
+[05-22-2006 10:42:54] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-22-2006 11:03:03] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-22-2006 11:03:37] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[05-22-2006 11:17:01] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 104 (Connection reset by peer)]
+[05-22-2006 11:27:12] Disconnecting due to lack of a lag response (0.01608900 1148315172 != 0.19805600 1148315202)
+[05-22-2006 11:27:12] Diconnected. Sleeping for 2 second(s).
+[05-22-2006 11:27:14] >> Connecting to irc.freenode.net:6667
+[05-22-2006 11:27:18] >> Connected to irc.freenode.net:6667, registering...
+[05-22-2006 11:27:20] >> Primary nickname in use, trying alternate.
+[05-22-2006 11:27:20] >> Successfully registered. Nick is: ezpublishlog
+[05-22-2006 11:27:20] -!- There are 15419 listed and 14528 unlisted users on 18 servers
+[05-22-2006 11:27:20] -!- 49 flagged staff members
+[05-22-2006 11:27:20] -!- 11227 channels formed
+[05-22-2006 11:27:20] -!- I have 4329 clients and 0 servers
+[05-22-2006 11:27:20] -!- Current local  users: 4329  Max: 4347
+[05-22-2006 11:27:20] -!- Current global users: 29947  Max: 29962
+[05-22-2006 11:27:20] -!- Highest connection count: 4348 (4347 clients) (26108 since server was (re)started)
+[05-22-2006 11:27:20] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-22-2006 11:27:20] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-22-2006 11:27:45] >> Attempting to join channels: #ezpublish
+[05-22-2006 11:27:45] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-22-2006 11:27:45] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[05-22-2006 11:27:45] -!- Topic set by ls [@] [Fri, 19 May 2006 10:51:35 -0500]
+[05-22-2006 11:27:45] (unmatched::raw477) :brown.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#privmsg
+[05-22-2006 11:30:20] (ezpublishlog) Attempting to gain back primary nickname
+[05-22-2006 11:30:20] -!- ezpublishlog is now known as ezlog
+[05-22-2006 11:30:20] My new nick is ezlog
+[05-22-2006 11:41:29] -!- awormus [n=aaron@84.177.6.131] has quit [brown.freenode.net irc.freenode.net]
+[05-22-2006 11:41:29] -!- alvaro- [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [brown.freenode.net irc.freenode.net]
+[05-22-2006 11:41:29] -!- ordnas [n=ordnas@p549D48CF.dip.t-dialin.net] has quit [brown.freenode.net irc.freenode.net]
+[05-22-2006 11:41:29] -!- kris10an [n=kh@85.19.74.66] has quit [brown.freenode.net irc.freenode.net]
+[05-22-2006 11:41:45] -!- awormus [n=aaron@84.177.6.131] has joined #ezpublish
+[05-22-2006 11:41:45] -!- alvaro- [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[05-22-2006 11:41:45] -!- ordnas [n=ordnas@p549D48CF.dip.t-dialin.net] has joined #ezpublish
+[05-22-2006 11:41:45] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[05-22-2006 11:45:36] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-22-2006 12:26:01] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-22-2006 12:38:09] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-22-2006 12:55:16] -!- ordnas [n=ordnas@p549D48CF.dip.t-dialin.net] has left #ezpublish []
+[05-22-2006 13:31:27] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[05-22-2006 13:43:53] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[05-22-2006 13:46:13] [#ezpublish] <xiglet> I'we done a $keys=fetch....., then foreach $keys as $key....  then {section show=$key.object.data_map.<checkbox-attribute>.is_empty|not} test {/section}. Shouldn't this work? It should print "test" if the checkbox is checked
+[05-22-2006 13:49:16] [#ezpublish] <xiglet> i'll try to find the "new" way anyway ...
+[05-22-2006 14:08:06] [#ezpublish] <ls> this is not a good idea to mix old and new syntax, use {if key.object.data_map.<checkbox-attribute>.data_int} should be suficient
+[05-22-2006 14:08:46] [#ezpublish] <ls> you should follow one style in your templates
+[05-22-2006 14:11:08] [#ezpublish] <xiglet> Yeah I know, but as a part of my learning process I look at some existing templates .. and unfortunately there is a lot of old syntaxes in ezpublish still :(
+[05-22-2006 14:11:37] [#ezpublish] <xiglet> I talked to Allman today, he said the book would be released this summer :) yippi!
+[05-22-2006 14:13:15] [#ezpublish] <ls> this is good :)
+[05-22-2006 14:13:29] [#ezpublish] <xiglet> very much so :)
+[05-22-2006 14:23:51] -!- Allman [n=allman@ti132110a340-3716.bb.online.no] has joined #ezpublish
+[05-22-2006 14:39:33] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[05-22-2006 14:43:15] -!- DiGiTa|_ [n=pet2poul@84.4.189.109] has joined #ezpublish
+[05-22-2006 14:50:32] [#ezpublish] <xiglet> ls: speaking about the devil :)
+[05-22-2006 14:50:56] [#ezpublish] <ls> huh?
+[05-22-2006 14:51:05] [#ezpublish] <xiglet> Allman in the house ?
+[05-22-2006 14:51:11] [#ezpublish] <xiglet> If it's the same person that is
+[05-22-2006 14:51:31] [#ezpublish] <ls> ah, Allman is here, hi
+[05-22-2006 14:51:34] [#ezpublish] <zrg> We are not worty :)
+[05-22-2006 14:51:38] [#ezpublish] <Allman> hi man, yeah its me.. at home now, sorrym no free support :)
+[05-22-2006 14:51:45] [#ezpublish] <zrg> h :P
+[05-22-2006 14:52:13] [#ezpublish] <xiglet> Allman: just talked about you (Jeg er Frode du mailet med før i dag ;-) )
+[05-22-2006 14:53:06] [#ezpublish] <xiglet> ls: I can see you have used some old syntax in your intranet solution :)
+[05-22-2006 14:54:10] [#ezpublish] <ls> yeah might be, perhaps old habits, using eZp since 3.2, you know
+[05-22-2006 14:54:32] [#ezpublish] <xiglet> :) forgiven ;-)
+[05-22-2006 14:54:43] [#ezpublish] <ls> it is beta so i'm allowed :P
+[05-22-2006 14:54:43] [#ezpublish] <Allman> jupp, hello hello.. :) bbl..
+[05-22-2006 14:55:21] [#ezpublish] <xiglet> I posted some feature requests in the forums at ez.no today :)
+[05-22-2006 14:55:57] [#ezpublish] <ls> yes, I saw, didn't have time to reply, I will check it out tomorrow again
+[05-22-2006 14:56:17] [#ezpublish] <ls> thanks for feedback
+[05-22-2006 14:57:16] [#ezpublish] <xiglet> np :) I will be more active at the forums in the future .. both asking and answering (when I learn this shit better)
+[05-22-2006 14:58:00] [#ezpublish] <ls> this is great, we need more ppl like you :P
+[05-22-2006 15:02:40] [#ezpublish] <xiglet> :) I hope that I can be able to help people as well in the future .. And I hope people can help me now when I'm learning this. If I feel that I have learned enough to deliver sites to costumers at the end of this year, we'll become a eZ partner
+[05-22-2006 15:04:31] -!- DiGiTa|_ [n=pet2poul@84.4.189.109] has quit []
+[05-22-2006 15:05:15] [#ezpublish] <ls> great, there is a lot of very useful information on the forum just you need to be patient and search
+[05-22-2006 15:06:09] [#ezpublish] <xiglet> yes, have done it already
+[05-22-2006 15:06:20] [#ezpublish] <xiglet> will spend a lot of time there in the future I guess :)
+[05-22-2006 15:08:03] [#ezpublish] <Allman> so, are you guys coming to the summer conference?
+[05-22-2006 15:08:16] [#ezpublish] <Allman> you should, even Pet Shop Boys are coming to town...
+[05-22-2006 15:08:33] [#ezpublish] <Allman> they'll probably stay at the same hotel as the eZ conf. attendees :)
+[05-22-2006 15:08:50] [#ezpublish] <xiglet> I wish
+[05-22-2006 15:10:02] [#ezpublish] <xiglet> cool! I asked my boss but he had to say no .. we had to make some money with ez publish soon he said .. :)
+[05-22-2006 15:10:16] [#ezpublish] <xiglet> some cash in too, not only cash out
+[05-22-2006 15:10:47] [#ezpublish] <xiglet> I guess the only costs is the course that you hold Allman .. A very good one if I may say ;-)
+[05-22-2006 15:11:12] [#ezpublish] * zrg is driving his battlewagon to conference :)
+[05-22-2006 15:12:01] -!- alvaro- [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit []
+[05-22-2006 15:12:04] [#ezpublish] <Allman> good to hear man, thanks.. hope you learned something :)
+[05-22-2006 15:13:00] [#ezpublish] <xiglet> I certainly did, me and Truls .. But we spend a lot of time making layout (xhtml/css) look nice in all browsers :) Should have a dedicated designer
+[05-22-2006 15:13:19] [#ezpublish] <Allman> ah yes, that's what ppl usually spend time on..
+[05-22-2006 15:13:23] [#ezpublish] <xiglet> We were the first course at your new locates in Oslo
+[05-22-2006 15:13:34] [#ezpublish] * awormus is coming!!!
+[05-22-2006 15:13:37] [#ezpublish] <Allman> yep yep, I remember the faces :)
+[05-22-2006 15:14:08] [#ezpublish] <xiglet> ok .. :) I'm the cute one, Truls is the big guy, looks like a monkey
+[05-22-2006 15:14:14] [#ezpublish] <xiglet> lol
+[05-22-2006 15:14:20] [#ezpublish] <ls> :)
+[05-22-2006 15:14:52] [#ezpublish] <Allman> haha
+[05-22-2006 15:15:20] [#ezpublish] <zrg> muhahah ;)
+[05-22-2006 15:15:40] [#ezpublish] <xiglet> Allman: I also wrote to the Farstad brothers and said that this was probably the best course we've participated in
+[05-22-2006 15:15:50] [#ezpublish] <Allman> cool :)
+[05-22-2006 15:16:19] [#ezpublish] <ls> powered by Allman :)
+[05-22-2006 15:16:27] [#ezpublish] <xiglet> :)
+[05-22-2006 15:17:04] [#ezpublish] <xiglet> only one annoying thing was that guy that thought he ruled the world
+[05-22-2006 15:17:33] [#ezpublish] <xiglet> we used half of the time answering his irrelevant questions .. :)
+[05-22-2006 15:17:55] [#ezpublish] <Allman> ah, yeah.. there is always at least one such guy.. :)
+[05-22-2006 15:18:00] [#ezpublish] <Allman> you just have to ignore him..
+[05-22-2006 15:18:19] [#ezpublish] <Allman> problem is the WoT factor (waste of time)
+[05-22-2006 15:20:27] [#ezpublish] <xiglet> absolutely :) well, done is done .. should have put something in his coffee but it's too late now :)
+[05-22-2006 15:21:53] [#ezpublish] <ls> what that guy did?
+[05-22-2006 15:22:08] [#ezpublish] <zrg> is there anyplace where i can get a rough idea what do these courses go through?
+[05-22-2006 15:22:34] [#ezpublish] <xiglet> it looked like he just asked "complex questions" to point out his intelligence  or something
+[05-22-2006 15:22:50] [#ezpublish] <Allman> hehe, yeap.. cool guy :)
+[05-22-2006 15:23:06] [#ezpublish] <xiglet> you remenber him Allman ?
+[05-22-2006 15:23:26] [#ezpublish] <ls> lol :)
+[05-22-2006 15:23:28] [#ezpublish] <xiglet> or , if I don't remember wrong you knew him before that course
+[05-22-2006 15:23:30] [#ezpublish] <Allman> zrg: there is some info on ez.no... but you can ask for more (mailto:info@ez.no)..
+[05-22-2006 15:23:36] [#ezpublish] <ls> zrg: I think you can look http://ez.no/services
+[05-22-2006 15:23:46] [#ezpublish] <Allman> xiglet: yeah, now that you mention it.. but only vaugely..
+[05-22-2006 15:26:48] [#ezpublish] <xiglet> I'm looking forward to become a ez partner
+[05-22-2006 15:36:28] [#ezpublish] <xiglet> ah, my mother is about to buy a 25" boat at Mjøsa (the biggest lake in Norway).. Will anyone join me when I'm about to kill myself on wakeboard after this thing? :)
+[05-22-2006 15:37:34] [#ezpublish] <xiglet> I have no idea how big 25" is though
+[05-22-2006 15:37:41] [#ezpublish] <zrg> me! me!
+[05-22-2006 15:37:49] [#ezpublish] <zrg> big enough :P
+[05-22-2006 15:39:59] [#ezpublish] <xiglet> nice :) are you norwegian?
+[05-22-2006 15:40:26] [#ezpublish] <zrg> something a bit smaller than this i assume ;)
+[05-22-2006 15:40:26] [#ezpublish] <zrg> http://lodi.ee/main.html?menu=pildid&cat=36
+[05-22-2006 15:40:45] [#ezpublish] <zrg> me? no :)
+[05-22-2006 15:41:00] [#ezpublish] <xiglet> lol
+[05-22-2006 15:42:02] [#ezpublish] <xiglet> Are you finnish?
+[05-22-2006 15:42:07] [#ezpublish] <zrg> 12 by 7 meters, 15 tonnes
+[05-22-2006 15:42:12] [#ezpublish] <zrg> nope :D
+[05-22-2006 15:44:43] [#ezpublish] <zrg> jeg er ikke norsk og en ole suomalainen myoskin ;)
+[05-22-2006 15:45:33] [#ezpublish] <xiglet> hm :) ikke svenskefaen?
+[05-22-2006 15:45:38] [#ezpublish] <xiglet> zurgutt
+[05-22-2006 15:46:30] [#ezpublish] <xiglet> using Gaim ? :-|
+[05-22-2006 15:46:43] [#ezpublish] <xiglet> russian
+[05-22-2006 15:46:44] [#ezpublish] <zrg> mhmh
+[05-22-2006 15:46:47] [#ezpublish] <zrg> nope
+[05-22-2006 15:46:51] [#ezpublish] <zrg> come on..
+[05-22-2006 15:47:01] [#ezpublish] <xiglet> i'm using Gaim as well .. a crappy irc client but ...
+[05-22-2006 15:47:23] [#ezpublish] <xiglet> Estonia
+[05-22-2006 15:47:30] [#ezpublish] <zrg> yes but i have never liked irc anyway and it has it all, msn and friends
+[05-22-2006 15:47:48] [#ezpublish] <zrg> yeah, guess you looked at url above :P
+[05-22-2006 15:47:58] [#ezpublish] <zrg> you werent at last camp?
+[05-22-2006 15:48:04] [#ezpublish] <xiglet> actually not, didn't see it before right now
+[05-22-2006 15:48:16] [#ezpublish] <xiglet> I did a /whois on you and saw something about .ee :)
+[05-22-2006 15:48:47] [#ezpublish] <xiglet> Never been there
+[05-22-2006 15:49:21] [#ezpublish] <zrg> worth coming, 1 hour of flight from oslo, dirt cheap, nice country with good beer :)
+[05-22-2006 15:49:47] [#ezpublish] <zrg> you get roundtrip ticket for like 1000 nok
+[05-22-2006 15:49:47] [#ezpublish] <xiglet> :) Oslo is NOT cheap
+[05-22-2006 15:49:54] [#ezpublish] <xiglet> oh
+[05-22-2006 15:50:02] [#ezpublish] <zrg> believe me i know its not :P
+[05-22-2006 15:50:17] [#ezpublish] <xiglet> 1000 nok is a bad night out in oslo
+[05-22-2006 15:50:21] [#ezpublish] <xiglet> you can't even get drunk
+[05-22-2006 15:51:00] [#ezpublish] <zrg> well its plane ticket, beers are about 10, bottle of vodka 20
+[05-22-2006 15:51:18] [#ezpublish] <xiglet> that's why all norwegians drink tons of liquor BEFORE going out
+[05-22-2006 15:51:30] [#ezpublish] <zrg> ferry from tallinn to stockholm is quite a view, full of drunk swedes ;)
+[05-22-2006 15:51:57] [#ezpublish] <xiglet> swede chicks are great
+[05-22-2006 15:51:58] [#ezpublish] <zrg> well you all have moonshine sills.. gotta have at those prices.
+[05-22-2006 15:53:15] [#ezpublish] <zrg> estonian are prettiest all my friends tell, im not complaining either :)
+[05-22-2006 15:54:24] [#ezpublish] <xiglet> We went to Budapest two months ago .. pretty cheap there as well
+[05-22-2006 15:55:21] [#ezpublish] <xiglet> the only time I see someone from Estonia, it's every year at EuroVision ... but I don't really watch that anymore
+[05-22-2006 15:55:23] [#ezpublish] <zrg> guess so
+[05-22-2006 15:55:34] [#ezpublish] <zrg> not this year thank god :P
+[05-22-2006 15:56:11] [#ezpublish] <xiglet> Monsters won this year I heard :)
+[05-22-2006 15:56:29] [#ezpublish] <xiglet> What do Finland have? Monters, Linus and Nokia
+[05-22-2006 15:56:38] [#ezpublish] <zrg> lithuanians had great song - group of guys in suits standing and chanting: "We are the winners of eurovision! Vote!"
+[05-22-2006 15:56:58] [#ezpublish] <zrg> that was all the lyrics
+[05-22-2006 15:57:08] [#ezpublish] <zrg> they were 4th i think :D
+[05-22-2006 15:58:03] [#ezpublish] <xiglet> lol, I saw them!
+[05-22-2006 15:58:17] [#ezpublish] <xiglet> one of them totally crazy
+[05-22-2006 15:58:26] [#ezpublish] <xiglet> 4th or 5th yes :)
+[05-22-2006 15:58:47] [#ezpublish] <zrg> that happens when you let people vote ;)
+[05-22-2006 16:02:16] [#ezpublish] <xiglet> :)
+[05-22-2006 16:14:07] -!- kore__ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[05-22-2006 16:15:00] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-22-2006 16:27:25] -!- Allman [n=allman@ti132110a340-3716.bb.online.no] has quit []
+[05-22-2006 16:43:00] -!- xigletjobb [n=Miranda@62.92.35.139] has quit [Read error: 104 (Connection reset by peer)]
+[05-22-2006 16:45:06] -!- kracker [n=kracker@ip23.131.realtime.net] has joined #ezpublish
+[05-22-2006 16:48:03] -!- awormus [n=aaron@84.177.6.131] has quit [Read error: 104 (Connection reset by peer)]
+[05-22-2006 19:50:05] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit [Read error: 110 (Connection timed out)]
+[05-22-2006 20:13:13] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[05-22-2006 22:59:24] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Remote closed the connection]
+[05-22-2006 23:24:20] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has joined #ezpublish
+[05-22-2006 23:25:09] -!- ordnas [n=ordnas@p549D71DB.dip.t-dialin.net] has joined #ezpublish
+[05-22-2006 23:32:08] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Remote closed the connection]
+[05-22-2006 23:37:15] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has joined #ezpublish

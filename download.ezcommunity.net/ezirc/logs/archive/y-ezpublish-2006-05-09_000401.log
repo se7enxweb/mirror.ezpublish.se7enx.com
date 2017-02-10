@@ -1,0 +1,41 @@
+[05-07-2006 01:49:19] [#ezpublish] <SEAwolfx> good morning
+[05-07-2006 02:14:21] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-07-2006 02:17:37] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-07-2006 03:09:11] -!- SEAwolfx [n=SEAwolf@p5493AC3E.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-07-2006 03:14:55] -!- SEAwolfx [n=SEAwolf@p54939838.dip0.t-ipconnect.de] has joined #ezpublish
+[05-07-2006 03:36:03] [#ezpublish] <buz> is there a way to put a link into the leftmenu that directly jumps to the target url?
+[05-07-2006 03:36:10] [#ezpublish] <buz> not to link object first?
+[05-07-2006 03:43:23] [#ezpublish] <_kore> Give the class you use for the navigation an extra attribute like 'external_url' and, if set, use this as the URL in the navigation
+[05-07-2006 03:43:45] [#ezpublish] <buz> well that still means i have to hack the menu template yes?
+[05-07-2006 03:44:01] [#ezpublish] <buz> i could simply put the url in there myself then (it's static)
+[05-07-2006 03:44:19] [#ezpublish] <buz> i want to put a link to user/login in the tree menu
+[05-07-2006 03:44:28] [#ezpublish] <_kore> You could add a rewrite rule...
+[05-07-2006 03:44:53] [#ezpublish] <buz> i rather just change the template then ;)
+[05-07-2006 03:46:20] [#ezpublish] <buz> or maybe i hack the treemenu to use a new node view treemenu...
+[05-07-2006 03:46:29] [#ezpublish] <buz> that would have it advantages anyway
+[05-07-2006 03:49:09] -!- awormus [n=aaron@p54B14298.dip0.t-ipconnect.de] has joined #ezpublish
+[05-07-2006 04:45:10] -!- DiGiTa|_ [n=pet2poul@84.4.188.171] has joined #ezpublish
+[05-07-2006 06:08:42] [#ezpublish] <buz> http://dabbledb.com/utr/ NEAT
+[05-07-2006 07:43:05] [#ezpublish] <Tidemann> how sweet it would have been if data import in ez was that easy..
+[05-07-2006 08:59:54] [#ezpublish] <Tidemann> hello?
+[05-07-2006 09:00:07] [#ezpublish] <buz> what?
+[05-07-2006 09:00:32] [#ezpublish] <Tidemann> uhm.. I'm having a charset problem
+[05-07-2006 09:00:45] [#ezpublish] <buz> oh i have no clue how those work myself
+[05-07-2006 09:00:54] [#ezpublish] <Tidemann> ah
+[05-07-2006 13:10:29] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-07-2006 13:26:36] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-07-2006 13:41:36] -!- awormus [n=aaron@p54B14298.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-07-2006 13:50:24] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[05-07-2006 13:50:44] [#ezpublish] <zrg> hullo
+[05-07-2006 14:28:19] -!- awormus [n=aaron@p54B14298.dip0.t-ipconnect.de] has joined #ezpublish
+[05-07-2006 15:19:09] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-07-2006 15:53:32] -!- DiGiTa|_ [n=pet2poul@84.4.188.171] has quit []
+[05-07-2006 15:55:51] -!- DiGiTa|_ [n=pet2poul@84.4.188.171] has joined #ezpublish
+[05-07-2006 15:59:53] -!- DiGiTa|_ [n=pet2poul@84.4.188.171] has quit [Client Quit]
+[05-07-2006 16:13:17] -!- awormus [n=aaron@p54B14298.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-07-2006 16:57:01] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[05-07-2006 17:22:21] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-07-2006 20:52:50] -!- SEAwolfx [n=SEAwolf@p54939838.dip0.t-ipconnect.de] has quit []
+[05-07-2006 23:23:22] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-07-2006 23:44:27] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-07-2006 23:59:31] -!- awormus [n=aaron@p54B10B90.dip0.t-ipconnect.de] has joined #ezpublish

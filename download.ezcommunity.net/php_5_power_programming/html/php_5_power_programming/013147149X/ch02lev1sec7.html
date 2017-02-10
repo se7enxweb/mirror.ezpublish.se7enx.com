@@ -1,0 +1,282 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 2.7.&nbsp; Control Structures</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch02lev1sec7"></a><h3 class="docSection1Title">2.7. Control Structures</h3>
+<p class="docText">PHP supports a variety of the most common control structures available in other programming languages. They can be basically divided into two groups: <span class="docEmphStrong">conditional control structures</span> and <span class="docEmphStrong">loop control structures</span>. The conditional control structures affect the flow of the program and execute or skip certain code according to certain criteria, whereas loop control structures execute certain code an arbitrary number of times according to specified criteria.<a name="ch02index202"></a></p>
+<a name="ch02lev2sec23"></a><h4 class="docSection2Title">2.7.1. Conditional Control Structures</h4><a name="ch02index203"></a><a name="ch02index204"></a>
+<p class="docText">Conditional control structures are crucial in allowing your program to take different execution paths based on decisions it makes at runtime. PHP supports both the <tt>if</tt> and <tt>switch</tt> conditional control structures.</P>
+<a name="ch02lev3sec24"></a><h5 class="docSection3Title">2.7.1.1 <tt>if</tt> Statements</H5><a name="ch02index205"></a><a name="ch02index206"></a><a name="ch02index207"></a>
+<p><table cellspacing="0" FRAME="void" RULES="none" cellpadding="5"><colgroup><col width="264"><col width="286"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement List</span></p></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top">
+<pre>
+if (<span class="docEmphasis">expr</span>)
+       Statement
+elseif (<span class="docEmphasis">expr</span>)
+       Statement
+elseif (<span class="docEmphasis">expr</span>)
+       Statement
+...
+else
+       Statement
+</pre><BR>
+</td><td class="docTableCell" align="left" valign="top">
+<pre>
+if (<span class="docEmphasis">expr</span>):
+       statement list
+elseif (<span class="docEmphasis">expr</span>):
+       statement list
+elseif (<span class="docEmphasis">expr</span>):
+       statement list
+...
+else:
+       statement list
+endif;
+</pre><br>
+</td></TR></table></p><br>
+<p class="docText"><tt>if</tt> statements are the most common conditional constructs, and they exist in most programming languages. The expression in the <tt>if</tt> statement is referred to as the <span class="docEmphStrong">truth expression</span>. If the truth expression evaluates to <tt>TRue</tt>, the statement or statement list following it are executed; otherwise, they're not.</p>
+<p class="docText">You can add an <tt>else</tt> branch to an <tt>if</tt> statement to execute code only if all the truth expressions in the if statement evaluated to <tt>false</tt>:</P>
+<pre>
+if ($var &gt;= 50) {
+       print '$var is in range';
+} else {
+       print '$var is invalid';
+}
+</pre><br>
+<p class="docText">Notice the braces that delimit the statements following <tt>if</tt> and <tt>else</tt>, which make these statements a statement block. In this particular case, you can omit the braces because both blocks contain only one statement in them. It is good practice to write these braces even if they're not syntactically required. Doing so improves readability, and it's easier to add more statements to the <tt>if</tt> block later (for example, during debugging).</p>
+<p class="docText">The <tt>elseif</tt> construct can be used to conduct a series of conditional checks and only execute the code following the first condition that is met.<a name="ch02index208"></a><a name="ch02index209"></a><a name="ch02index210"></a></p>
+<p class="docText">For example:</p>
+<pre>
+if ($num &lt; 0) {
+       print '$num is negative';
+
+} elseif ($num == 0) {
+       print '$num is zero';
+} elseif ($num &gt; 0) {
+       print '$num is positive';
+}
+</pre><br>
+<p class="docText">The last <tt>elseif</tt> could be substituted with an <tt>else</tt> because, if <tt>$num</tt> is not negative and not zero, it must be positive.</p>
+<a name="ch02note09"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">It's common practice by PHP developers to use C-style <tt>else if</tt> notation instead of <tt>elseif</tt>.</p></div><br>
+<p class="docText">Both styles of the <tt>if</tt> construct behave in the same way. While the statement style is probably more readable and convenient for use inside PHP code blocks, the statement list style extends readability when used to conditionally display HTML blocks. Here's an alternative way to implement the previous example using HTML blocks instead of <tt>print</tt>:</p>
+<pre>
+&lt;?php if ($num &lt; 0): ?&gt;
+&lt;h1&gt;$num is negative&lt;/h1&gt;
+&lt;?php elseif($num == 0): ?&gt;
+&lt;h1&gt;$num is zero&lt;/h1&gt;
+&lt;?php elseif($num &gt; 0): ?&gt;
+&lt;h1&gt;$num is positive&lt;/h1&gt;
+&lt;?php endif; ?&gt;
+</pre><br>
+<p class="docText">As you can see, HTML blocks can be used just like any other statement. Here, only one of the HTML blocks are displayed, depending on the value of $num.<a name="ch02index211"></a><a name="ch02index212"></a><a name="ch02index213"></a></p>
+<a name="ch02note10"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">No variable substitution is performed in the HTML blocks. They are always printed as is.</p></div><br>
+<a name="ch02lev3sec25"></a><h5 class="docSection3Title">2.7.1.2 <tt>switch</tt> Statements</H5><a name="ch02index214"></a><a name="ch02index215"></a><a name="ch02index216"></a>
+<P><table cellspacing="0" FRAME="void" RULES="none" cellpadding="5"><colgroup><col width="258.5"><col width="291.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement List</span></P></th></tr></thead><tr><td class="docTableCell" align="left" valign="top">
+<pre>
+switch (<span class="docEmphasis">expr</span>){
+     case <span class="docEmphasis">expr</span>:
+          statement list
+     case <span class="docEmphasis">expr</span>:
+          statement list
+     ...
+     default:
+          statement list
+}
+</pre><br>
+</td><td class="docTableCell" align="left" valign="top">
+<pre>
+switch (<span class="docEmphasis">expr</span>):
+     Case <span class="docEmphasis">expr</span>:
+          statement list
+     case <span class="docEmphasis">expr</span>:
+          statement list
+     ...
+     default:
+          statement list
+endswitch;
+</pre><BR>
+</td></TR></table></p><BR>
+<p class="docText">You can use the <tt>switch</tt> construct to elegantly replace certain lengthy <tt>if/elseif</tt> constructs. It is given an expression and compares it to all possible case expressions listed in its body. When there's a successful match, the following code is executed, ignoring any further <tt>case</tt> lines (execution does not stop when the next <tt>case</tt> is reached). The match is done internally using the regular equality operator (<tt>==</tt>), not the identical operator (<tt>===</tt>). You can use the <tt>break</tt> statement to end execution and skip to the code following the <tt>switch</tt> construct. Usually, <tt>break</tt> statements appear at the end of a case statement list, although it is not mandatory. If no <tt>case</tt> expression is met and the <tt>switch</tt> construct contains <tt>default</tt>, the <tt>default</tt> statement list is executed. Note that the <tt>default</tt> case must appear last in the list of cases or not appear at all:<a name="ch02index217"></a><a name="ch02index218"></a><a name="ch02index219"></a></p>
+<pre>
+switch ($answer) {
+    case 'y':
+    case 'Y':
+        print "The answer was yes\n";
+        break;
+    case 'n':
+    case 'N':
+        print "The answer was no\n";
+        break;
+    default:
+        print "Error: $answer is not a valid answer\n";
+        break;
+}<a name="ch02index220"></a><a name="ch02index221"></a><a name="ch02index222"></a>
+</pre><br>
+<a name="ch02lev2sec24"></a><h4 class="docSection2Title">2.7.2. Loop Control Structures</h4>
+<p class="docText">Loop control structures are used for repeating certain tasks in your program, such as iterating over a database query result set.</P>
+<a name="ch02lev3sec26"></a><H5 class="docSection3Title">2.7.2.1 <tt>while</tt> loops</h5><a name="ch02index223"></a><a name="ch02index224"></a><a name="ch02index225"></a>
+<p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><colgroup><col width="280.5"><col width="269.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement List</span></P></th></tr></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">while&nbsp;(<span class="docEmphasis">expr</span>)<br>statement<BR></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">while&nbsp;<span class="docEmphasis">expr</span>):<br>statement&nbsp;list<br>endwhile;<br></p></td></tr></table></p><br>
+<p class="docText"><tt>while</tt> <span class="docEmphStrong">loops</span> are the simplest kind of loops. In the beginning of each iteration, the while's truth expression is evaluated. If it evaluates to <tt>true</tt>, the loop keeps on running and the statements inside it are executed. If it evaluates to <tt>false</tt>, the loop ends and the statement(s) inside the loop is skipped. For example, here's one possible implementation of factorial, using a <tt>while</tt> loop (assuming <tt>$n</tt> contains the number for which we want to calculate the factorial):</p>
+<pre>
+$result = 1;
+while ($n &gt; 0) {
+    $result *= $n--;
+}
+print "The result is $result";
+</pre><br>
+<a name="ch02lev3sec27"></a><h5 class="docSection3Title">2.7.2.2 Loop Control: <tt>break</tt> and <tt>continue</tt></h5><a name="ch02index226"></a><a name="ch02index227"></a><a name="ch02index228"></a><a name="ch02index229"></a>
+<pre>
+break
+break <span class="docEmphasis">expr</span>
+continue
+continue <span class="docEmphasis">expr</span>
+</pre><BR>
+<p class="docText">Sometimes, you want to terminate the execution of a loop in the middle of an iteration. For this purpose, PHP provides the <tt>break</tt> statement. If <tt>break</tt> appears alone, as in</P>
+<pre>
+break;
+</pre><br>
+<p class="docText">the innermost loop is stopped. <tt>break</tt> accepts an optional argument of the amount of nesting levels to break out of,</p>
+<pre>
+break <span class="docEmphasis">n</span>
+</pre><BR>
+<p class="docText">which will break from the <tt>n</tt> innermost loops (<tt>break 1</tt>; is identical to <tt>break</tt>;). <tt>n</tt> can be any valid expression.</p>
+<p class="docText">In other cases, you may want to stop the execution of a specific loop iteration and begin executing the next one. Complimentary to <tt>break</tt>, <tt>continue</tt> provides this functionality. <tt>continue</tt> alone stops the execution of the innermost loop iteration and continues executing the next iteration of that loop. <tt>continue n</tt> can be used to stop execution of the <tt>n</tt> innermost loop iterations. PHP goes on executing the next iteration of the outermost loop.</p>
+<p class="docText">As the <tt>switch</tt> statement also supports <tt>break</tt>, it is counted as a loop when you want to break out of a series of loops with <tt>break n</tt>.</p>
+<a name="ch02lev3sec28"></a><h5 class="docSection3Title">2.7.2.3 <tt>do...while</tt> Loops</h5><a name="ch02index230"></a><a name="ch02index231"></a><a name="ch02index232"></a>
+<pre>
+do
+    <span class="docEmphasis">statement</span>
+while (<span class="docEmphasis">expr</span>);
+</pre><br>
+<p class="docText">The <tt>do...while</tt> loop is similar to the previous <tt>while</tt> loop, except that the truth expression is checked at the end of each iteration instead of at the beginning. This means that the loop always runs at least once.</P>
+<p class="docText"><tt>do...while</tt> loops are often used as an elegant solution for easily breaking out of a code block if a certain condition is met. Consider the following example:</p>
+<pre>
+do {
+    <span class="docEmphasis">statement list</span>
+    if ($error) {
+        break;
+    }
+    <span class="docEmphasis">statement list</span>
+} while (false);
+</pre><BR>
+<p class="docText">Because <tt>do...while</tt> loops always iterate at least one time, the statements inside the loop are executed once, and only once. The truth expression is always <tt>false</tt>. However, inside the loop body, you can use the <tt>break</tt> statement to stop the execution of the statements at any point, which is convenient. Of course, <tt>do...while</tt> loops are also often used for regular iterating purposes.<a name="ch02index233"></a><a name="ch02index234"></a><a name="ch02index235"></a></p>
+<a name="ch02lev3sec29"></a><H5 class="docSection3Title">2.7.2.4 <tt>for</tt> Loops</h5><a name="ch02index236"></a><a name="ch02index237"></a><a name="ch02index238"></a>
+<p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><colgroup><col width="264"><col width="286"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement List</span></P></th></TR></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">for&nbsp;(expr,&nbsp;expr,&nbsp;&#8230;;&nbsp;expr,&nbsp;expr,&nbsp;&#8230;;&nbsp;expr,&nbsp;expr,&nbsp;&#8230;)<br>statement<br></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">for&nbsp;(expr,&nbsp;expr,&nbsp;&#8230;;&nbsp;expr,&nbsp;expr,&nbsp;&#8230;;&nbsp;expr,&nbsp;expr,&nbsp;&#8230;):<BR>statement&nbsp;list<br>endfor;<BR></p></td></tr></table></p><br>
+<p class="docText">PHP provides C-style <tt>for</tt> loops. The <tt>for</tt> loop accepts three arguments:</p>
+<pre>
+for (start_expressions; truth_expressions; increment_expressions)
+</pre><br>
+<p class="docText">Most commonly, <tt>for</tt> loops are used with only one expression for each of the start, truth, and increment expressions, which would make the previous syntax table look slightly more familiar.</p>
+<p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><colgroup><col width="275"><col width="275"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Statement List</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">for&nbsp;(expr;&nbsp;expr;&nbsp;expr)<br>statement</P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">for&nbsp;(expr;&nbsp;expr;&nbsp;expr):<br>statement&nbsp;list<BR>endfor;</p></td></tr></table></p><br>
+<p class="docText">The start expression is evaluated only once when the loop is reached. Usually it is used to initialize the loop control variable. The truth expression is evaluated in the beginning of every loop iteration. If <tt>true</tt>, the statements inside the loop will be executed; if <tt>false</tt>, the loop ends. The increment expression is evaluated at the end of every iteration before the truth expression is evaluated. Usually, it is used to increment the loop control variable, but it can be used for any other purpose as well. Both <tt>break</tt> and <tt>continue</tt> behave the same way as they do with <tt>while</tt> loops. <tt>continue</tt> causes evaluation of the increment expression before it re-evaluates the truth expression.</P>
+<p class="docText">Here's an example:<a name="ch02index239"></a><a name="ch02index240"></a><a name="ch02index241"></a></p>
+<pre>
+for ($i = 0; $i &lt; 10; $i++) {
+    print "The square of $i is " . $i*$i . "\n";
+}
+</pre><BR>
+<p class="docText">The result of running this code is</p>
+<pre>
+The square of 0 is 0
+The square of 1 is 1
+...
+The square of 9 is 81
+</pre><BR>
+<p class="docText">Like in C, it is possible to supply more than one expression for each of the three arguments by using commas to delimit them. The value of each argument is the value of the rightmost expression.</p>
+<p class="docText">Alternatively, it is also possible not to supply an expression with one or more of the arguments. The value of such an empty argument will be <tt>true</tt>. For example, the following is an infinite loop:</p>
+<pre>
+for (;;) {
+       print "I'm infinite\n";
+}
+</pre><br>
+<a name="ch02note11"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">PHP doesn't know how to optimize many kinds of loop invariants. For example, in the following <tt>for</tt> loop, <tt>count($array)</tt> will not be optimized to run only once.</P>
+<pre>
+for ($i = 0; $i &lt;= count($array); $i++) {
+}
+</pre><br>It should be rewritten as<pre>
+$count = count($array);
+for ($i = 0; $i &lt;= $count; $i++) {
+}
+</pre><br>
+<p class="docText">This ensures that you get the best performance during the execution of the loop.<a name="ch02index242"></a><a name="ch02index243"></a><a name="ch02index244"></a></p></div><br>
+<a name="ch02lev2sec25"></a><H4 class="docSection2Title">2.7.3. Code Inclusion Control Structures</h4>
+<p class="docText">Code inclusion control structures are crucial for organizing a program's source code. Not only will they allow you to structure your program into building blocks, but you will probably find that some of these building blocks can later be reused in other programs.</p>
+<a name="ch02lev3sec30"></a><H5 class="docSection3Title">2.7.3.1 <tt>include</tt> Statement and Friends</h5><a name="ch02index245"></a><a name="ch02index246"></a><a name="ch02index247"></a>
+<p class="docText">As in other languages, PHP allows for splitting source code into multiple files using the <tt>include</tt> statement. Splitting your code into many files is usually helpful for code reuse (being able to include the same source code from various scripts) or just in helping keep the code more maintainable. When an <tt>include</tt> statement is executed, PHP reads the file, compiles it into intermediate code, and then executes the included code. Unlike C/C++, the <tt>include</tt> statement behaves somewhat like a function (although it isn't a function but a built-in language construct) and can return a value using the <tt>return</tt> statement. Also, the included file runs in the same variable scope as the including script (except for the execution of included functions which run with their their own variable scope).</P>
+<p class="docText">The prototype of <tt>include</tt> is</p>
+<pre>
+include file_name;
+</pre><br>
+<p class="docText">Here are two examples for using <tt>include</tt>:</p>
+<ul><li><p class="docList">error_codes.php</p><pre>
+&lt;?php
+
+    $MY_OK = 0;
+    $MY_ERROR = 1;
+?&gt;
+</pre><br></li><li><p class="docList">test.php</p><pre>
+&lt;?php
+
+    include "error_codes.php";
+
+    print ('The value of $MY_OK is ' . "$MY_OK\n");
+?&gt;
+</pre><br>This prints as<pre>
+The value of $MY_OK is 0
+</pre><br></li></ul>
+<p class="docText">You can use both relative and absolute paths as the file name. Many developers like using absolute path names and create it by concatenating the server's document root and the relative path name. This allows them great flexibility when moving their PHP application among different servers and PHP installations. For example:<a name="ch02index248"></a><a name="ch02index249"></a><a name="ch02index250"></a></p>
+<pre>
+include $_SERVER["DOCUMENT_ROOT"] . "/myscript.php";
+</pre><br>
+<p class="docText">In addition, if the INI directive, <tt>allow_url_fopen</tt>, is enabled in your PHP configuration (the default), you can also include URLs. This method is not recommended for performance reasons because PHP must first download the source code to be included before it runs it. So, use this option only when it's really necessary. Here's an example:</P>
+<pre>
+include "http://www.example.org/example.php";
+</pre><BR>
+<p class="docText">The included URL must return a valid PHP script and not a web page which is HTML (possibly created by PHP). You can also use other protocols besides HTTP, such as FTP.</p>
+<p class="docText">When the included file or URL doesn't exist, <tt>include</tt> emits a PHP warning but does not halt execution. If you want PHP to error out in such a case (usually, this is a fatal condition, so that's what you'd probably want), you can use the <tt>require</tt> statement, which is otherwise identical to <tt>include</tt>.</p>
+<p class="docText">There are two additional variants of <tt>include/require,</tt> which are probably the most useful. <tt>include_once/require_once</tt> which behave exactly like their <tt>include/require</tt> counterparts, except that they &quot;remember&quot; what files have been included, and if you try and <tt>include_once/require_once</tt> the same file again, it is just ignored. This behavior is similar to the C workaround for not including the same header files more than once. For the C developers among you, here's pretty much the <tt>require_once</tt> equivalent in C:<a name="ch02index251"></a><a name="ch02index252"></a><a name="ch02index253"></a><a name="ch02index254"></a></P>
+<pre>
+my_header.h:
+
+#ifndef MY_HEADER_H
+#define MY_HEADER_H 1
+
+... /* The file's code */
+
+#endif
+</pre><br>
+<a name="ch02lev3sec31"></a><h5 class="docSection3Title">2.7.3.2 <tt>eval()</tt></h5><a name="ch02index255"></a><a name="ch02index256"></a><a name="ch02index257"></a>
+<p class="docText"><tt>eval()</tt> is similar to <tt>include,</tt> but instead of compiling and executing code that comes from a file, it accepts the code as a string. This can be useful for running dynamically created code or retrieving code from an external data source manually (for example, a database) and then executing it. As the use of <tt>eval()</tt> is much less efficient than writing the code as part of your PHP code, we encourage you not to use it unless you can't do without:</p>
+<pre>
+$str = '$var = 5;';
+eval($str);
+print $var;
+</pre><br>This prints as<pre>
+5
+</pre><br>
+<a name="ch02note12"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">Variables that are based on user input should never be directly passed to <tt>eval()</tt> because this might allow the user to execute arbitrary code.</p></div><BR>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

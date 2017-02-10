@@ -1,0 +1,178 @@
+[05-20-2006 00:54:22] -!- awormus [n=aaron@p54B113B8.dip0.t-ipconnect.de] has joined #ezpublish
+[05-20-2006 02:23:19] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-20-2006 03:08:58] -!- ordnas [n=ordnas@p549D7B2B.dip.t-dialin.net] has joined #ezpublish
+[05-20-2006 03:23:05] -!- DiGiTa|_ [n=pet2poul@84.4.71.203] has joined #ezpublish
+[05-20-2006 03:31:36] -!- DiGiTa|_ [n=pet2poul@84.4.71.203] has quit []
+[05-20-2006 03:33:37] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-20-2006 03:53:23] -!- awormus [n=aaron@p54B113B8.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-20-2006 04:37:45] -!- ordnas [n=ordnas@p549D7B2B.dip.t-dialin.net] has left #ezpublish []
+[05-20-2006 06:51:19] -!- zrg [n=zurgutt@80-235-53-41-dsl.kjj.estpak.ee] has joined #ezpublish
+[05-20-2006 06:51:30] [#ezpublish] <zrg> it livers!
+[05-20-2006 06:51:40] [#ezpublish] <zrg> ewr..
+[05-20-2006 06:51:44] [#ezpublish] <zrg> lives
+[05-20-2006 06:56:16] [#ezpublish] <xbit> livers...lives...whatever ;)
+[05-20-2006 07:16:21] [#ezpublish] <zrg> wanna buy my liver?
+[05-20-2006 07:19:34] [#ezpublish] <xbit> no thanks, still got my two intact :)
+[05-20-2006 07:19:51] [#ezpublish] <Tidemann> well well well
+[05-20-2006 07:20:04] [#ezpublish] <xbit> yeye, kind of at least :p
+[05-20-2006 07:21:14] [#ezpublish] <Tidemann> xbit: var nachspielet pÂ gulltaggen sÂ jÊvli kjedli som atle antonsen skulle ha det til? ;)
+[05-20-2006 07:21:25] [#ezpublish] <Tidemann> ¯h.. ikke gulltaggen.. gullruten
+[05-20-2006 07:22:20] [#ezpublish] <xbit> fikk ikke med meg hva han sa, men det var dritkjedelig ja
+[05-20-2006 07:22:36] [#ezpublish] <Tidemann> xbit: last ned siste podcast av kommisjonen
+[05-20-2006 07:22:40] [#ezpublish] <xbit> vi stakk p√• byen og diverse andre nachspiel etterhvert :)
+[05-20-2006 07:22:47] [#ezpublish] <xbit> will do!
+[05-20-2006 07:23:04] [#ezpublish] <xbit> vi fikk faen ikke gratis √∏l engang, da kunne vi jo likegjerne v√¶re et annet sted
+[05-20-2006 07:23:09] [#ezpublish] <Tidemann> xbit: forresten.. fikk dere hver deres gullrute?
+[05-20-2006 07:23:14] [#ezpublish] <xbit> istedet for √• st√• √• mingle med alle hippe og trendy kjendisene
+[05-20-2006 07:23:16] [#ezpublish] <xbit> nei :(
+[05-20-2006 07:23:20] [#ezpublish] <Tidemann> kjipt
+[05-20-2006 07:23:42] [#ezpublish] <xbit> hadde v√¶rt staselig det
+[05-20-2006 07:23:59] [#ezpublish] <Tidemann> du har et charset-problem btw ;)
+[05-20-2006 07:24:04] [#ezpublish] <xbit> nesj
+[05-20-2006 07:24:09] [#ezpublish] <xbit> jeg har bare konvertert til utf-8 :)
+[05-20-2006 07:24:16] [#ezpublish] <xbit> p√• tide dere ogs√• gj√∏r det
+[05-20-2006 07:24:17] [#ezpublish] <xbit> hihi
+[05-20-2006 07:24:38] [#ezpublish] <xbit> utf-8 er hot
+[05-20-2006 07:25:14] [#ezpublish] <Tidemann> hehe.. jeg kj¯rer utf-8 i ez jeg... men fÂr ikke default charset til Â funke sÂ jeg mÂ kaste inn {*?template charset=utf-8?*} i toppen av hver template
+[05-20-2006 07:25:15] [#ezpublish] <zrg> no on jama
+[05-20-2006 07:25:57] [#ezpublish] <zrg> and tidemann is right about charset
+[05-20-2006 07:26:28] [#ezpublish] <xbit> about what? that it's not working properly in ez? :o
+[05-20-2006 07:26:56] [#ezpublish] <zrg> no its not working properly here
+[05-20-2006 07:27:03] [#ezpublish] <xbit> tide: jeg finner faen ikke url til kommisjonen, er det ikke nrk.no/podkast ?
+[05-20-2006 07:27:14] [#ezpublish] <Tidemann> xbit: kommisjonen er pÂ kanal 24
+[05-20-2006 07:27:24] [#ezpublish] <xbit> Tidemann: √•√• :)
+[05-20-2006 07:28:02] [#ezpublish] <xbit> i'm still using iso-8859-1 in ez so i wouldn't know
+[05-20-2006 07:28:30] [#ezpublish] <xbit> hmm, now that's a nice project for the day
+[05-20-2006 07:28:53] [#ezpublish] <Tidemann> utf-8?
+[05-20-2006 07:29:16] [#ezpublish] <zrg> here comes the pain :P
+[05-20-2006 07:29:27] [#ezpublish] <Tidemann> pain? what pain?
+[05-20-2006 07:29:56] [#ezpublish] <zrg> converting to utf pain
+[05-20-2006 07:30:00] [#ezpublish] <Tidemann> ah
+[05-20-2006 07:31:50] [#ezpublish] <xbit> hehe
+[05-20-2006 07:32:26] [#ezpublish] <zrg> if you are real lucky you will have content in database that is entered both in utf and iso charset
+[05-20-2006 07:32:35] [#ezpublish] <zrg> like i did
+[05-20-2006 07:34:49] [#ezpublish] <xbit> wonderful
+[05-20-2006 07:40:37] [#ezpublish] <xbit> han har s√• rett :)
+[05-20-2006 07:40:45] [#ezpublish] <xbit> atle antonsen :)
+[05-20-2006 07:41:08] [#ezpublish] <Tidemann> hehe
+[05-20-2006 07:44:18] [#ezpublish] <xiglet> er det plutselig norsk her n√• da :)
+[05-20-2006 07:45:10] [#ezpublish] <xbit> litt kjekt av og til det √≥g
+[05-20-2006 07:45:20] [#ezpublish] <Tidemann> tja.. men bare jeg som kan skrive Ê¯Â∆ÿ≈
+[05-20-2006 07:45:29] [#ezpublish] <xbit> p√∏h :p
+[05-20-2006 07:45:38] [#ezpublish] <xiglet> √ò√Ü√Ö
+[05-20-2006 07:45:46] [#ezpublish] <xiglet> jeg bruker utf-8 tror jeg
+[05-20-2006 07:45:49] [#ezpublish] <xiglet> m√• jo det
+[05-20-2006 08:04:48] -!- zrg [n=zurgutt@80-235-53-41-dsl.kjj.estpak.ee] has left #ezpublish []
+[05-20-2006 08:20:52] [#ezpublish] <Tidemann> xbit: hvordan gÂr det med hovedoppgaven?
+[05-20-2006 08:21:14] [#ezpublish] <xbit> jo, t√•lig stabilt
+[05-20-2006 08:21:38] [#ezpublish] <xbit> tror nok vi skal komme i m√•l, men blir nok endel jobbing de neste to ukene
+[05-20-2006 08:21:41] [#ezpublish] <xbit> :)
+[05-20-2006 08:38:10] [#ezpublish] <Tidemann> skippertak er tingen
+[05-20-2006 08:46:28] [#ezpublish] <xbit> mmh :)
+[05-20-2006 10:16:54] [#ezpublish] <buz> where is the switch to turn off/on registration again?
+[05-20-2006 10:23:03] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-20-2006 10:23:44] [#ezpublish] <buz> maybe you can tell me
+[05-20-2006 10:23:46] [#ezpublish] <buz> where is the switch to turn off/on registration again?
+[05-20-2006 10:34:11] [#ezpublish] <ls> site.ini PolicyOmitList[]=user/register
+[05-20-2006 10:36:51] [#ezpublish] <xbit>  what about
+[05-20-2006 10:36:53] [#ezpublish] <xbit> RequireUserLogin=true
+[05-20-2006 10:36:53] [#ezpublish] <xbit> ?
+[05-20-2006 10:38:12] [#ezpublish] <buz> thx
+[05-20-2006 10:40:28] [#ezpublish] <ls> RequireUserLogin will display login page, if I understand buz, he wants to disable registration, right?
+[05-20-2006 10:40:39] [#ezpublish] <buz> exactly
+[05-20-2006 10:40:58] [#ezpublish] <xbit> ah
+[05-20-2006 10:40:59] [#ezpublish] <xbit> :)
+[05-20-2006 10:41:38] [#ezpublish] <ls> :)
+[05-20-2006 10:45:46] [#ezpublish] <buz> weird it's still deactivated
+[05-20-2006 10:47:49] [#ezpublish] <buz> oh siteaccessrules is the culprit
+[05-20-2006 10:49:29] [#ezpublish] <buz> now it works
+[05-20-2006 10:49:29] [#ezpublish] <buz> hehehe
+[05-20-2006 10:50:05] [#ezpublish] <xbit> it usually is. that or caching :o
+[05-20-2006 11:49:56] -!- ordnas [n=ordnas@p549D7B2B.dip.t-dialin.net] has joined #ezpublish
+[05-20-2006 12:54:20] -!- tobmaster [n=tobmaste@dslb-084-061-060-223.pools.arcor-ip.net] has joined #ezpublish
+[05-20-2006 12:55:53] -!- tobmaster [n=tobmaste@dslb-084-061-060-223.pools.arcor-ip.net] has quit [Client Quit]
+[05-20-2006 13:04:35] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-20-2006 14:33:44] -!- ordnas [n=ordnas@p549D7B2B.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-20-2006 14:42:21] [#ezpublish] <buz> i think there's something wrong with the caching on ez.no
+[05-20-2006 14:42:32] [#ezpublish] <buz> content/new shows a new post by paul borgermans for http://ez.no/community/forum/install_configuration/apache_2_0_support_official#msg100861 but i cant see it
+[05-20-2006 15:17:45] -!- DiGiTa|_ [n=pet2poul@84.4.71.203] has joined #ezpublish
+[05-20-2006 16:32:13] -!- DiGiTa|_ [n=pet2poul@84.4.71.203] has quit []
+[05-20-2006 16:53:51] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-20-2006 17:01:24] [#ezpublish] <nnn0> ehehhehehehehehehehehehehehe
+[05-20-2006 17:01:28] [#ezpublish] <nnn0> Lordi !!!
+[05-20-2006 17:01:30] [#ezpublish] <nnn0> rofl
+[05-20-2006 17:01:40] [#ezpublish] <nnn0> a friend just told me
+[05-20-2006 17:01:56] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[05-20-2006 21:44:41] Disconnecting due to lack of a lag response (0.15274900 1148179421 != 0.03622300 1148179451)
+[05-20-2006 21:44:41] Diconnected. Sleeping for 2 second(s).
+[05-20-2006 21:44:43] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:44:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-20-2006 21:44:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-20-2006 21:45:07] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:45:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-20-2006 21:45:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-20-2006 21:45:27] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:45:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-20-2006 21:45:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-20-2006 21:45:47] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:46:01] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-20-2006 21:46:01] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-20-2006 21:46:11] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:46:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-20-2006 21:46:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-20-2006 21:46:31] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:46:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-20-2006 21:46:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-20-2006 21:46:51] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:47:05] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-20-2006 21:47:05] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-20-2006 21:47:15] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:47:25] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-20-2006 21:47:25] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-20-2006 21:47:35] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:47:45] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-20-2006 21:47:45] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-20-2006 21:47:55] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:48:00] >> Connected to irc.freenode.net:6667, registering...
+[05-20-2006 21:48:00] >> Attempting to join channels: #ezpublish
+[05-20-2006 21:48:07] >> Primary nickname in use, trying alternate.
+[05-20-2006 21:48:07] (unmatched::raw451) :calvino.freenode.net 451 * JOIN :Register first.
+[05-20-2006 21:48:07] >> Successfully registered. Nick is: ezpublishlog
+[05-20-2006 21:48:07] -!- There are 2980 listed and 2347 unlisted users on 17 servers
+[05-20-2006 21:48:07] -!- 18 flagged staff members
+[05-20-2006 21:48:07] -!- 6404 channels formed
+[05-20-2006 21:48:07] -!- I have 2789 clients and 0 servers
+[05-20-2006 21:48:07] -!- Current local  users: 2789  Max: 6290
+[05-20-2006 21:48:07] -!- Current global users: 5327  Max: 31376
+[05-20-2006 21:48:07] -!- Highest connection count: 6292 (6290 clients) (1273908 since server was (re)started)
+[05-20-2006 21:48:45] >> Attempting to join channels: #ezpublish
+[05-20-2006 21:48:45] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-20-2006 21:48:45] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[05-20-2006 21:48:45] -!- Topic set by ls [@] [Fri, 19 May 2006 10:51:35 -0500]
+[05-20-2006 21:50:25] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-20-2006 21:50:25] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-20-2006 21:51:07] (ezpublishlog) Attempting to gain back primary nickname
+[05-20-2006 21:51:07] -!- ezpublishlog is now known as ezlog
+[05-20-2006 21:51:07] My new nick is ezlog
+[05-20-2006 21:55:00] Disconnecting due to lack of a lag response (0.03034900 1148180040 != 0.10402500 1148180070)
+[05-20-2006 21:55:00] Diconnected. Sleeping for 2 second(s).
+[05-20-2006 21:55:02] >> Connecting to irc.freenode.net:6667
+[05-20-2006 21:55:06] >> Connected to irc.freenode.net:6667, registering...
+[05-20-2006 21:55:10] >> Primary nickname in use, trying alternate.
+[05-20-2006 21:55:10] >> Successfully registered. Nick is: ezpublishlog
+[05-20-2006 21:55:10] -!- There are 12189 listed and 13487 unlisted users on 17 servers
+[05-20-2006 21:55:10] -!- 46 flagged staff members
+[05-20-2006 21:55:10] -!- 10558 channels formed
+[05-20-2006 21:55:10] -!- I have 5888 clients and 0 servers
+[05-20-2006 21:55:10] -!- Current local  users: 5888  Max: 7994
+[05-20-2006 21:55:10] -!- Current global users: 25676  Max: 31377
+[05-20-2006 21:55:10] -!- Highest connection count: 7995 (7994 clients) (991314 since server was (re)started)
+[05-20-2006 21:55:10] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-20-2006 21:55:10] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-20-2006 21:55:30] >> Attempting to join channels: #ezpublish
+[05-20-2006 21:55:30] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-20-2006 21:55:30] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[05-20-2006 21:55:30] -!- Topic set by ls [@] [Fri, 19 May 2006 10:51:35 -0500]
+[05-20-2006 21:55:58] -!- ezlog [n=IQ@209.144.224.222] has quit [Remote closed the connection]
+[05-20-2006 21:55:58] -!- ezpublishlog is now known as ezlog
+[05-20-2006 21:55:58] My new nick is ezlog

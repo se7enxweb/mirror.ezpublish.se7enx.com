@@ -1,0 +1,531 @@
+[11-17-2005 00:55:49] -!- _rappy_ is now known as _Rappy_
+[11-17-2005 00:55:53] [#ezpublish] <_Rappy_> good morning peppes
+[11-17-2005 00:55:57] [#ezpublish] <_Rappy_> *peeps
+[11-17-2005 00:56:35] [#ezpublish] <nnn0> :)
+[11-17-2005 00:56:51] [#ezpublish] <nnn0> good moaning :)
+[11-17-2005 01:00:37] [#ezpublish] <_Rappy_> why are you moaning? :P
+[11-17-2005 01:02:04] [#ezpublish] <nnn0> i've been struggling all night long with this Remove button :)
+[11-17-2005 01:02:23] [#ezpublish] <nnn0> can't get it to work
+[11-17-2005 01:02:41] [#ezpublish] <nnn0> i guess there is something i just don't grasp :D
+[11-17-2005 01:03:21] [#ezpublish] <nnn0> as usual :D
+[11-17-2005 01:03:55] [#ezpublish] <nnn0> i think the problem has something to do with the ContentObjectID
+[11-17-2005 01:04:05] [#ezpublish] <nnn0> what is that anyway ? ;)
+[11-17-2005 01:09:07] [#ezpublish] <_Rappy_> erm
+[11-17-2005 01:09:28] [#ezpublish] <_Rappy_> and ObjectID is a ID for an spesific object
+[11-17-2005 01:09:37] [#ezpublish] <nnn0> :)
+[11-17-2005 01:09:39] [#ezpublish] <nnn0> k
+[11-17-2005 01:09:40] [#ezpublish] <_Rappy_> in this case some kind of content on your site
+[11-17-2005 01:09:54] [#ezpublish] <_Rappy_> an object is reffred to by one or more nodes
+[11-17-2005 01:10:22] [#ezpublish] <_Rappy_> objects contain the actual information, a node is just the reference
+[11-17-2005 01:10:26] [#ezpublish] <nnn0> because this remove button relies on both the ContentObjectId and the ContentNodeID
+[11-17-2005 01:10:59] [#ezpublish] <_Rappy_> yeah, red the connectin between node and object
+[11-17-2005 01:11:03] [#ezpublish] <nnn0> ans as far as i can see - i recognize the node id, but where does the object id come from ?
+[11-17-2005 01:11:28] [#ezpublish] <nnn0> k
+[11-17-2005 01:11:30] [#ezpublish] <nnn0> hm
+[11-17-2005 01:12:02] [#ezpublish] <nnn0> i've been google'ing half the night, and i eve got the Book :D
+[11-17-2005 01:12:06] [#ezpublish] <nnn0> even
+[11-17-2005 01:13:39] [#ezpublish] <nnn0> and there is this example, but when i press the remove button i just get Module not found
+[11-17-2005 01:13:54] [#ezpublish] <nnn0> i get the node id from $node.main_node_id
+[11-17-2005 01:14:17] [#ezpublish] <nnn0> and the object id from $node.contentobject_id
+[11-17-2005 01:14:28] [#ezpublish] <nnn0> but still :)
+[11-17-2005 01:14:30] [#ezpublish] <nnn0> heh
+[11-17-2005 01:15:32] [#ezpublish] <nnn0> i'm starting to think this example is fucked up, but there is no comment suggestion so :) hehe
+[11-17-2005 01:15:51] [#ezpublish] <_Rappy_> the books is written by techinicians for technicians, and not very good
+[11-17-2005 01:15:58] [#ezpublish] <nnn0> :)
+[11-17-2005 01:16:32] [#ezpublish] <_Rappy_> main_node_id?
+[11-17-2005 01:17:05] [#ezpublish] <nnn0> hm yes
+[11-17-2005 01:17:09] [#ezpublish] <nnn0> this is the one http://ez.no/products/ez_publish_cms/documentation/customization/tips_tricks/adding_a_remove_button_image
+[11-17-2005 01:17:17] [#ezpublish] <nnn0> i'm trying to implement
+[11-17-2005 01:18:52] [#ezpublish] <nnn0> i think they use the main_node_id in case the node has several locations
+[11-17-2005 01:18:54] [#ezpublish] <_Rappy_> $node.object.id  <-- it says that in the example,
+[11-17-2005 01:19:02] [#ezpublish] <nnn0> yes tried that to
+[11-17-2005 01:19:03] [#ezpublish] <_Rappy_> yes, I remembered
+[11-17-2005 01:19:08] [#ezpublish] <nnn0> o
+[11-17-2005 01:19:11] [#ezpublish] <nnn0> :)
+[11-17-2005 01:19:17] [#ezpublish] <nnn0> itæs the same
+[11-17-2005 01:19:35] [#ezpublish] <nnn0> and i can se the ID when i view source on the page
+[11-17-2005 01:19:38] [#ezpublish] <_Rappy_> well
+[11-17-2005 01:20:05] [#ezpublish] <_Rappy_> are you logged in at the site with an user taht has a role taht can remove nodes? (dumb question)
+[11-17-2005 01:20:18] [#ezpublish] <nnn0> i even tried it as admin
+[11-17-2005 01:22:17] [#ezpublish] <nnn0> so...
+[11-17-2005 01:22:18] [#ezpublish] <nnn0> now you know why i'm moaning :D
+[11-17-2005 01:22:23] [#ezpublish] <nnn0> heh
+[11-17-2005 01:23:19] [#ezpublish] <nnn0> but it's not as bad as it sounds, because when i get this to work, i'm finished with all that tricky stuff - and it's just the stylesheets left to go :D
+[11-17-2005 01:23:31] [#ezpublish] <_Rappy_> nice
+[11-17-2005 01:23:35] [#ezpublish] <nnn0> :)
+[11-17-2005 01:23:45] [#ezpublish] <nnn0> so i'm kind of happy anyway :D
+[11-17-2005 01:24:00] [#ezpublish] <_Rappy_> kracker *tries to wake up*
+[11-17-2005 01:25:44] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-17-2005 01:34:53] -!- DiGiTa|_ [n=guillaum@84.4.37.232] has joined #ezpublish
+[11-17-2005 01:35:00] -!- kk[eZ] [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[11-17-2005 01:44:24] [#ezpublish] <_Rappy_> nnn0, those two *points to buz and DiGiTa|_* might know better than me what might be wrong
+[11-17-2005 01:44:34] [#ezpublish] <_Rappy_> theyve saved me more than once ;D
+[11-17-2005 01:45:07] [#ezpublish] <DiGiTa|_> hi _rappy_  :)
+[11-17-2005 01:45:17] [#ezpublish] <_Rappy_> hello DiGiTa|_ :)
+[11-17-2005 01:45:22] [#ezpublish] <nnn0> :D
+[11-17-2005 01:45:57] [#ezpublish] * nnn0 nnn0 smiles to buz and DiGiTa|_
+[11-17-2005 01:46:11] [#ezpublish] <nnn0> eh
+[11-17-2005 01:47:43] [#ezpublish] <nnn0> i'm trying to implement this remove button, and i've followed this example both in the book and on the web, but when i press the button - i just get "Module not found"
+[11-17-2005 01:48:12] [#ezpublish] <nnn0> does any of you have any code i could take a look at or something ? :)
+[11-17-2005 01:49:04] [#ezpublish] <nnn0> this is the code : http://ez.no/products/ez_publish_cms/documentation/customization/tips_tricks/adding_a_remove_button_image
+[11-17-2005 01:50:36] [#ezpublish] <DiGiTa|_> are you using OE ?
+[11-17-2005 01:50:51] [#ezpublish] <nnn0> OE ?
+[11-17-2005 01:50:57] [#ezpublish] <DiGiTa|_> online editor
+[11-17-2005 01:51:00] [#ezpublish] <nnn0> no
+[11-17-2005 01:51:10] [#ezpublish] <DiGiTa|_> ok
+[11-17-2005 01:51:27] [#ezpublish] <nnn0> i'm just using ez 3.6.2
+[11-17-2005 01:51:28] [#ezpublish] <DiGiTa|_> where did you put this code ?
+[11-17-2005 01:52:10] [#ezpublish] <nnn0> i got this 'product' class - and i've made and full override for that class
+[11-17-2005 01:52:23] [#ezpublish] <nnn0> and it is in that override
+[11-17-2005 01:52:43] [#ezpublish] <nnn0> and=a
+[11-17-2005 01:53:47] [#ezpublish] <nnn0> i have in the same tpl both an edit button and a button to add an image to the product - and both work fine
+[11-17-2005 01:54:01] [#ezpublish] <nnn0> it's just the remove button which misbehave
+[11-17-2005 01:54:31] [#ezpublish] <nnn0> who
+[11-17-2005 01:54:39] [#ezpublish] <nnn0> pardon my english :)
+[11-17-2005 01:55:12] [#ezpublish] <DiGiTa|_> wel i think this code cannot work for a class attribute
+[11-17-2005 01:55:51] [#ezpublish] <nnn0> eh - i want to remove the node completely
+[11-17-2005 01:56:01] [#ezpublish] <nnn0> when the button is pressed
+[11-17-2005 01:56:09] [#ezpublish] <nnn0> with subitems
+[11-17-2005 01:56:32] [#ezpublish] <DiGiTa|_> hmm your system looks strange
+[11-17-2005 01:56:38] [#ezpublish] <DiGiTa|_> ezp didn't work like that
+[11-17-2005 01:56:42] [#ezpublish] <nnn0> :D
+[11-17-2005 01:57:38] [#ezpublish] <DiGiTa|_> while doing complicated when it's basically simple
+[11-17-2005 02:00:19] -!- ordna1 [n=ordnas@p549DC675.dip.t-dialin.net] has joined #ezpublish
+[11-17-2005 02:01:34] [#ezpublish] <DiGiTa|_> nnn0: look into /design/standard/templates/content/datatype/edit/ezimage.tpl
+[11-17-2005 02:01:54] [#ezpublish] <DiGiTa|_> you will find how to remove an image
+[11-17-2005 02:02:44] [#ezpublish] <DiGiTa|_> <input class="button" type="submit" name="CustomActionButton[{$attribute.id}_delete_image]" value="{'Remove image'|i18n( 'design/standard/content/datatype' )}" />
+[11-17-2005 02:03:54] [#ezpublish] <nnn0> hm
+[11-17-2005 02:05:29] [#ezpublish] <nnn0> i'll have to meditate abit on that
+[11-17-2005 02:05:31] [#ezpublish] <nnn0> thx man :)
+[11-17-2005 02:13:08] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-17-2005 02:15:21] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-17-2005 02:15:38] -!- heathd [n=heathd@82.152.159.125] has joined #ezpublish
+[11-17-2005 02:22:18] [#ezpublish] <nnn0> christ !!!!! :DDDDD - it was a freaking typo ! :DDDDDD
+[11-17-2005 02:22:25] [#ezpublish] <nnn0> aaaaaarg
+[11-17-2005 02:22:58] [#ezpublish] <nnn0> i had written ezzurl instead of ezurl - no wonder it couldn't find the module
+[11-17-2005 02:23:18] [#ezpublish] <nnn0> thx again for your time guys
+[11-17-2005 02:23:21] [#ezpublish] <nnn0> :)
+[11-17-2005 02:23:28] [#ezpublish] <nnn0> sry about that
+[11-17-2005 02:23:30] [#ezpublish] <nnn0> :D
+[11-17-2005 02:23:37] [#ezpublish] <nnn0> omg
+[11-17-2005 02:23:43] [#ezpublish] * nnn0 is a happe webmaster
+[11-17-2005 02:23:48] [#ezpublish] <nnn0> happy even
+[11-17-2005 03:09:06] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-17-2005 03:09:17] [#ezpublish] <Sulfur> beep!
+[11-17-2005 03:15:30] [#ezpublish] <Sulfur> anyone of you trying the 3.7.x versions?
+[11-17-2005 03:20:59] [#ezpublish] <Sulfur> the title of the pages seems not to be generated ... it displays only the site title.
+[11-17-2005 03:48:31] [#ezpublish] <ordna1> hi heathd
+[11-17-2005 03:50:27] [#ezpublish] <_Rappy_> I'm using 3.7.0
+[11-17-2005 03:50:38] [#ezpublish] <_Rappy_> and the title generates just fine
+[11-17-2005 04:07:01] [#ezpublish] <Sulfur> mine doesn't on 3.7.2
+[11-17-2005 04:07:17] [#ezpublish] <_Rappy_> evil
+[11-17-2005 04:14:27] [#ezpublish] * nnn0 are still at 3.6.2 :)
+[11-17-2005 04:17:27] -!- ordna1 [n=ordnas@p549DC675.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-17-2005 04:21:22] -!- ordnas [n=ordnas@p549DC675.dip.t-dialin.net] has joined #ezpublish
+[11-17-2005 04:26:36] [#ezpublish] * DiGiTa|_ on 3.6.2 too
+[11-17-2005 04:34:52] [#ezpublish] <nnn0> hm i made a translation, but the anonymous user just get Access Denied when he tries to view it - sound familiar anyone ? :) any suggestions :)
+[11-17-2005 04:36:38] [#ezpublish] <nnn0> i use the siteaccess and site.ini settings to cofigure it
+[11-17-2005 04:41:40] [#ezpublish] <_Rappy_> sounds like a role-thing
+[11-17-2005 04:42:10] [#ezpublish] <nnn0> i guess
+[11-17-2005 04:42:27] [#ezpublish] <nnn0> but what has that to do with translations ?
+[11-17-2005 04:44:10] [#ezpublish] <nnn0> i tried do give the anonymous user content,translate, no limitation
+[11-17-2005 04:44:15] [#ezpublish] <nnn0> but it didn't help
+[11-17-2005 04:44:23] [#ezpublish] <_Rappy_> well, a role has one or more policies that git it access to one or more sections/functions. So, maybe the trenslateion is in a diffrent section taht standard. Although that souds strange. I have not word much with translations...
+[11-17-2005 04:44:37] [#ezpublish] <nnn0> k
+[11-17-2005 04:44:55] [#ezpublish] <nnn0> maybe it has something to do with siteaccess
+[11-17-2005 04:45:01] [#ezpublish] <nnn0> *thinking*
+[11-17-2005 04:45:02] [#ezpublish] <nnn0> :)
+[11-17-2005 04:46:42] [#ezpublish] <nnn0> *reading*
+[11-17-2005 04:46:43] [#ezpublish] <nnn0> :)
+[11-17-2005 04:48:05] [#ezpublish] <_Rappy_> what do you have in your site.ini.append.php?
+[11-17-2005 04:48:13] [#ezpublish] <_Rappy_> on translation
+[11-17-2005 04:48:41] [#ezpublish] <nnn0> eh just a minut
+[11-17-2005 04:48:42] [#ezpublish] <nnn0> e
+[11-17-2005 04:51:05] [#ezpublish] <nnn0> arg - it's to slow this server :)
+[11-17-2005 04:52:29] [#ezpublish] <nnn0> eh do you mean the override or the siteaccess ?
+[11-17-2005 04:52:35] [#ezpublish] <nnn0> or both maybe
+[11-17-2005 04:52:36] [#ezpublish] <nnn0> :)
+[11-17-2005 04:54:41] [#ezpublish] <nnn0> in the siteaccess i have (the new one is called 'no' for norwegian)
+[11-17-2005 04:54:54] [#ezpublish] <nnn0> under [SiteSettings]
+[11-17-2005 04:55:27] [#ezpublish] <nnn0> SiteURL=<mysite>/index.php/no
+[11-17-2005 04:55:48] [#ezpublish] <nnn0> under [DesignSettings]
+[11-17-2005 04:55:56] [#ezpublish] <nnn0> SiteDesign=no
+[11-17-2005 04:56:19] [#ezpublish] <nnn0> under [RegionalSettings]
+[11-17-2005 04:56:29] [#ezpublish] <nnn0> Locale=nor-NO
+[11-17-2005 04:56:45] [#ezpublish] <nnn0> ContentObjectLocale=nor-NO
+[11-17-2005 04:58:27] [#ezpublish] <nnn0> in the override i got
+[11-17-2005 04:58:49] [#ezpublish] <nnn0> [SiteSettings]
+[11-17-2005 04:59:00] [#ezpublish] <nnn0> DefaultAccess=nm
+[11-17-2005 04:59:09] [#ezpublish] <nnn0> SiteList[]=nm
+[11-17-2005 04:59:12] [#ezpublish] <nnn0> SiteList[]=no
+[11-17-2005 04:59:33] [#ezpublish] <nnn0> [SiteAccessSettings]
+[11-17-2005 04:59:56] [#ezpublish] <nnn0> AvailableSiteAccessList[]=nm
+[11-17-2005 04:59:58] [#ezpublish] <nnn0> AvailableSiteAccessList[]=no
+[11-17-2005 05:00:01] [#ezpublish] <nnn0> AvailableSiteAccessList[]=admin
+[11-17-2005 05:00:16] [#ezpublish] <nnn0> SiteAccessList[]=nm
+[11-17-2005 05:00:18] [#ezpublish] <nnn0> SiteAccessList[]=no
+[11-17-2005 05:00:35] [#ezpublish] <nnn0> [ContentSettings]
+[11-17-2005 05:00:56] [#ezpublish] <nnn0> TranslationList=eng-GB;nor-NO
+[11-17-2005 05:01:00] [#ezpublish] <nnn0> :)
+[11-17-2005 05:01:16] [#ezpublish] <nnn0> that the one i have changed :)
+[11-17-2005 05:01:54] [#ezpublish] <nnn0> nm is the default language (eng-GB)
+[11-17-2005 05:04:20] [#ezpublish] <nnn0> and i've commented out in the settings/site.ini - under [RegionalSettings], the Locale, HTTPLocale and ContentObjectLocale
+[11-17-2005 05:06:12] [#ezpublish] <nnn0> ehehe now at least i get the error in the right language
+[11-17-2005 05:06:18] [#ezpublish] <nnn0> i think it is as you say
+[11-17-2005 05:06:25] [#ezpublish] <nnn0> it's  i role problem
+[11-17-2005 05:06:28] [#ezpublish] <nnn0> a
+[11-17-2005 05:06:47] [#ezpublish] <nnn0> :)
+[11-17-2005 05:12:14] [#ezpublish] <_Rappy_> you should not do anything with the site.ini file in the settigs dir
+[11-17-2005 05:12:49] [#ezpublish] <_Rappy_> always do the stuff that needs to be sone in the settings/siteaccess/yoursite/site.ini.append.php
+[11-17-2005 05:13:05] [#ezpublish] <nnn0> yes i seem that if the Locale in the site.ini is set to eng-GB - it will disable translations
+[11-17-2005 05:13:44] [#ezpublish] <nnn0> so i commented it out - and set it in the siteaccess/no/site.ini.append
+[11-17-2005 05:13:54] [#ezpublish] <LottoKim> Where can i find database settings? (username, password, dbname, host)
+[11-17-2005 05:14:11] [#ezpublish] <_Rappy_> you don't need to comment out anything you type in the siteaccess. it will override
+[11-17-2005 05:14:22] [#ezpublish] <nnn0> i read it on ez.no
+[11-17-2005 05:14:28] [#ezpublish] <nnn0> wait a minute
+[11-17-2005 05:14:35] [#ezpublish] <_Rappy_> LottoKim, those you have to know for yourself, or ask the server /database admin
+[11-17-2005 05:14:46] [#ezpublish] <_Rappy_> if you're talking about setup
+[11-17-2005 05:15:12] [#ezpublish] <_Rappy_> otherwise, all that lies in settings/siteacces/sitename/site.ini.apend.php
+[11-17-2005 05:15:37] [#ezpublish] <LottoKim> _Rappy_: yeah, found it with grep
+[11-17-2005 05:15:57] [#ezpublish] <nnn0> _Rappy_
+[11-17-2005 05:15:59] [#ezpublish] <nnn0> Text translation is automatically disabled when the Locale is set to eng-GB in settings/site.ini. Since we will need text translation, we have to change these variable settings in the settings/site.ini (otherwise the above work will not take effect). In settings/override/site.ini.append(.php) you can't override Locale, HTTPLocale and ContentObjectLocale; these are set in the siteaccess ini files. So first, in the settings/site.ini file, we comment out
+[11-17-2005 05:15:59] [#ezpublish] <nnn0> the following parts (with the '#' mark):
+[11-17-2005 05:16:14] [#ezpublish] <nnn0> on this page http://ez.no/products/ez_publish_cms/documentation/configuration/configuration/language_and_charset/how_to_setup_a_multilingual_site
+[11-17-2005 05:17:04] [#ezpublish] <nnn0> i also think it sounded abit wierd, but i don't think it does any damage
+[11-17-2005 05:18:29] [#ezpublish] <nnn0> but maybe that's an old article
+[11-17-2005 05:19:33] [#ezpublish] <_Rappy_> hum
+[11-17-2005 05:19:56] [#ezpublish] <_Rappy_> I've never touched anything in site.ini, but as I said, not worked much with translatoins :p
+[11-17-2005 05:20:13] [#ezpublish] <nnn0> i guess i figure it out in the end :D
+[11-17-2005 05:21:09] [#ezpublish] <_Rappy_> because (as far I as remember) eZ first reads site.ini, then alle the siteaccess (site.ini.appen.php, override.ini.append.php etc) files, then everything in settings/override
+[11-17-2005 05:21:27] [#ezpublish] <_Rappy_> I'm sure you will :)
+[11-17-2005 05:21:51] [#ezpublish] <nnn0> :DDDDD
+[11-17-2005 05:21:56] [#ezpublish] <nnn0> i think i just did
+[11-17-2005 05:21:59] [#ezpublish] <_Rappy_> so are you developing for your own company or a client? :)
+[11-17-2005 05:22:00] [#ezpublish] <_Rappy_> nice
+[11-17-2005 05:22:16] [#ezpublish] <_Rappy_> I see you're from norway on the translataion, I am too :p
+[11-17-2005 05:22:26] [#ezpublish] <nnn0> i had to specify the spesific node in the role setup - i could not use 'Any'
+[11-17-2005 05:22:42] [#ezpublish] <_Rappy_> ah
+[11-17-2005 05:22:42] [#ezpublish] <nnn0> k
+[11-17-2005 05:22:57] [#ezpublish] <nnn0> jeg sitter oppi i vesterålen å plages :)
+[11-17-2005 05:24:25] [#ezpublish] <nnn0> i have my own company -  sort of - but on this site i've been hired in by another webdesigner
+[11-17-2005 05:24:46] [#ezpublish] <nnn0> so i don't do the design - just the system
+[11-17-2005 05:25:03] [#ezpublish] <_Rappy_> vesterÃ¥len?
+[11-17-2005 05:25:05] [#ezpublish] <nnn0> well - i guess i have to implement the design from the prototype
+[11-17-2005 05:25:08] [#ezpublish] <nnn0> jepp
+[11-17-2005 05:25:12] [#ezpublish] <_Rappy_> ah, I do a little bit of both
+[11-17-2005 05:25:13] [#ezpublish] <nnn0> outside Sortland :)
+[11-17-2005 05:25:24] [#ezpublish] <_Rappy_> I'm from lofoten, currently based in bodÃ¸
+[11-17-2005 05:25:29] [#ezpublish] <nnn0> ehehehe
+[11-17-2005 05:25:46] [#ezpublish] <nnn0> å her sætt vi å prata engelsk :D
+[11-17-2005 05:25:52] [#ezpublish] <nnn0> ja vi må vel det kanskje :)
+[11-17-2005 05:26:37] [#ezpublish] <nnn0> my brother lives in bodø
+[11-17-2005 05:27:00] [#ezpublish] <nnn0> or som kilometers east og it i guess
+[11-17-2005 05:27:04] [#ezpublish] <nnn0> of
+[11-17-2005 05:27:15] [#ezpublish] <nnn0> don't remember the name
+[11-17-2005 05:28:11] [#ezpublish] <nnn0> where in lofoten are you from ?
+[11-17-2005 05:28:21] [#ezpublish] <_Rappy_> yeah, it's best to stick to one language here as there are users from all over the worl
+[11-17-2005 05:28:23] [#ezpublish] <_Rappy_> d
+[11-17-2005 05:28:25] [#ezpublish] <_Rappy_> ballstad
+[11-17-2005 05:28:38] [#ezpublish] <nnn0> k - i've been there actually :D
+[11-17-2005 05:29:29] [#ezpublish] <nnn0> at least i think so - when i did my service, i was - eh - you know - sessjonsassisten
+[11-17-2005 05:29:47] [#ezpublish] <nnn0> so when we where in Gravdal, we took a trip to Ballstad
+[11-17-2005 05:29:54] [#ezpublish] <_Rappy_> ok :)
+[11-17-2005 05:29:58] [#ezpublish] <nnn0> it's not far from there is it ?
+[11-17-2005 05:30:13] [#ezpublish] <_Rappy_> about 6km
+[11-17-2005 05:30:23] [#ezpublish] <nnn0> then i remember :)
+[11-17-2005 05:30:52] [#ezpublish] <nnn0> beautiful fishing village - or what i should call it in english :D
+[11-17-2005 05:31:12] [#ezpublish] <nnn0> this is like 15 years ago :)
+[11-17-2005 05:31:16] [#ezpublish] <_Rappy_> haha, yes, that's the word, although it sounds so small in english terms
+[11-17-2005 05:31:24] [#ezpublish] <nnn0> :)
+[11-17-2005 05:31:31] [#ezpublish] <nnn0> yes
+[11-17-2005 05:31:32] [#ezpublish] <nnn0> hehe
+[11-17-2005 05:32:28] [#ezpublish] <nnn0> :) i got to get me som food :)
+[11-17-2005 05:32:30] [#ezpublish] <nnn0> bbl
+[11-17-2005 05:32:37] [#ezpublish] <nnn0> :)
+[11-17-2005 05:32:47] [#ezpublish] <nnn0> see you around
+[11-17-2005 05:32:51] [#ezpublish] <nnn0> :)
+[11-17-2005 05:33:58] [#ezpublish] <_Rappy_> laters
+[11-17-2005 05:34:42] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-17-2005 05:35:08] [#ezpublish] <zr1> made new embed tag work in xmlarea :)
+[11-17-2005 05:38:36] [#ezpublish] <_Rappy_> ;D
+[11-17-2005 06:47:53] -!- SEAwolfx [n=mike@DSL01.83.171.167.97.NEFkom.net] has joined #ezpublish
+[11-17-2005 06:48:20] [#ezpublish] <SEAwolfx> re
+[11-17-2005 06:48:46] [#ezpublish] <_Rappy_> er
+[11-17-2005 06:54:09] [#ezpublish] <SEAwolfx> _yppaR_ ;)
+[11-17-2005 06:55:07] -!- heathd [n=heathd@82.152.159.125] has quit ["Leaving"]
+[11-17-2005 06:56:50] [#ezpublish] <_Rappy_> xflowAES
+[11-17-2005 07:18:35] [#ezpublish] * kracker rubs eyes, my head hurts, 12 + hours of sleep and I can't wait for the next nap :\
+[11-17-2005 07:19:06] [#ezpublish] <kracker> eZ publish partner payment sent (thanks paypal you saved my A**)
+[11-17-2005 07:20:00] [#ezpublish] <kracker> anyone trying to buy from ez.no in the usa or having payment problems, paypal.com is a great alternative, i'd be mailing checks (ewww, mail is icky) without paypal
+[11-17-2005 07:20:04] [#ezpublish] <zr1> what does one get for it?
+[11-17-2005 07:20:16] [#ezpublish] <kracker> i should totaly post a thread on this in the forums
+[11-17-2005 07:20:33] [#ezpublish] <kracker> free air :! best free air money can buy :D
+[11-17-2005 07:20:42] [#ezpublish] <kracker> na, lots of great stuff
+[11-17-2005 07:21:38] [#ezpublish] <kracker> a news post in partner news, a listing in the partner list, lots of great oportunties to earn kudos points just for contributing to the community (in quantifiable ways)
+[11-17-2005 07:21:58] [#ezpublish] <kracker> it's great, i'm hella stoked
+[11-17-2005 07:30:00] [#ezpublish] * zr1 goes and switches on the teaboiler 3th time
+[11-17-2005 07:32:50] [#ezpublish] <_Rappy_> VISA is all I need
+[11-17-2005 07:33:04] [#ezpublish] <_Rappy_> welcome to the partner-club, kracker ;D
+[11-17-2005 07:35:35] [#ezpublish] <nnn0> how much to be a partner ?
+[11-17-2005 07:36:00] [#ezpublish] <_Rappy_> depends on which programme
+[11-17-2005 07:36:08] [#ezpublish] <nnn0> ah
+[11-17-2005 07:36:09] [#ezpublish] <_Rappy_> got bronze, silver, gold and platinum
+[11-17-2005 07:36:13] [#ezpublish] <nnn0> k
+[11-17-2005 07:36:14] [#ezpublish] <nnn0> :)
+[11-17-2005 07:36:23] [#ezpublish] <nnn0> i'll check it out then
+[11-17-2005 07:36:52] [#ezpublish] <kracker> all eZ publish partners start at bronze and work their way up (is what they told me)
+[11-17-2005 07:37:09] [#ezpublish] <kracker> it was like $ 362.00 USD for me
+[11-17-2005 07:37:17] [#ezpublish] <kracker> not to shabby i say
+[11-17-2005 07:37:33] [#ezpublish] <_Rappy_> http://ez.no/partner/ez_publish_partner_program
+[11-17-2005 07:37:35] [#ezpublish] <kracker> _Rappy_, are you in the USA, do you bank with wells fargo?
+[11-17-2005 07:37:38] [#ezpublish] <nnn0> okey
+[11-17-2005 07:37:44] [#ezpublish] <_Rappy_> I'm in norway :p
+[11-17-2005 07:37:56] [#ezpublish] <nnn0> :)
+[11-17-2005 07:38:00] [#ezpublish] <kracker> _Rappy_, cause i do and I got kicked around :\
+[11-17-2005 07:38:17] [#ezpublish] <kracker> _Rappy_, and my situation is much the same of most USA peoples :\
+[11-17-2005 07:38:39] [#ezpublish] <kracker> zr1 : i tried to get your previous paste but it was gone: http://pastebin.com/431644
+[11-17-2005 07:39:06] [#ezpublish] <zr1> kracker: asshole for president, dummkopfs for fellow citizens?
+[11-17-2005 07:39:07] [#ezpublish] <kracker> can you repost that to http://ezpublish.pastebin.com ? i was going to add it to snippets
+[11-17-2005 07:39:43] [#ezpublish] <zr1> i have been trying to find place to reset password for last few minutes :P
+[11-17-2005 07:40:14] [#ezpublish] <zr1> i found the "yeah, its possible now!" note so far ;)
+[11-17-2005 07:40:19] [#ezpublish] <kracker> zr1, look i just was using the same payment mentods of 70%+ of all the other people in this godforsaken country, it was the best we have, deal
+[11-17-2005 07:40:35] [#ezpublish] <kracker> yeah its a little abstracted
+[11-17-2005 07:41:01] [#ezpublish] <kracker> just register again with your same name and username and it will reset the password
+[11-17-2005 07:41:45] [#ezpublish] <kracker> http://snippets.ezcommunity.net/?do=register
+[11-17-2005 07:42:51] [#ezpublish] <kracker> as talked on ; http://snippets.ezcommunity.net/introduction
+[11-17-2005 07:43:11] [#ezpublish] <kracker> errum : http://snippets.ezcommunity.net/introduction#a_word_on_passwords_on_snippets
+[11-17-2005 07:46:14] [#ezpublish] <kracker> or i can just reset if for you it its too hard, but then you don't even have to use snippets, i was going to post it for you
+[11-17-2005 08:08:34] [#ezpublish] <kracker> zr1, ?
+[11-17-2005 08:15:23] [#ezpublish] <zr1> what are my nick, name and email in there?
+[11-17-2005 08:49:46] [#ezpublish] <zr1> 123
+[11-17-2005 08:56:07] [#ezpublish] <kracker> checking
+[11-17-2005 08:59:51] -!- _Rappy_ is now known as _rappy_
+[11-17-2005 08:59:53] [#ezpublish] <_rappy_> adios
+[11-17-2005 09:06:03] [#ezpublish] <kracker> zr1, you get my personal messages with the requested info?
+[11-17-2005 09:06:18] [#ezpublish] <zr1> yes, replied too
+[11-17-2005 09:08:12] [#ezpublish] <zr1> hello?
+[11-17-2005 09:08:49] [#ezpublish] <kracker> hmm i did not get your reply (that i could see) sorry :(
+[11-17-2005 09:09:07] [#ezpublish] <zr1> got any now?
+[11-17-2005 09:09:15] [#ezpublish] <kracker> that's odd i don't think so ..
+[11-17-2005 09:09:36] [#ezpublish] <zr1> i see you, you not me?
+[11-17-2005 09:10:00] [#ezpublish] <zr1> seems you get zip
+[11-17-2005 09:10:04] [#ezpublish] * kracker confused
+[11-17-2005 09:10:08] [#ezpublish] <kracker> very odd
+[11-17-2005 09:10:42] [#ezpublish] <zr1> basicly i tried to get new password, but get error about user already existing
+[11-17-2005 09:10:52] [#ezpublish] <kracker> ok i'll look at it now
+[11-17-2005 09:20:50] [#ezpublish] <kracker> ok i get the same errors so something broke and i need to look at it all again :(
+[11-17-2005 09:21:01] [#ezpublish] <kracker> zr1, i reset your password for you
+[11-17-2005 09:21:50] [#ezpublish] <kracker> and i have set it in a pm to you, i kept it simple
+[11-17-2005 09:22:14] [#ezpublish] <kracker> you can of course reset it if you need to once logged it (i know for certain that functionality is still working)
+[11-17-2005 09:25:30] [#ezpublish] <kracker> let me know if you can login, i could :\
+[11-17-2005 09:28:27] [#ezpublish] <kracker> you can change your password once logged via : http://snippets.ezcommunity.net/start?do=profile
+[11-17-2005 09:33:27] -!- ordnas [n=ordnas@p549DC675.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-17-2005 09:34:46] -!- ordnas [n=ordnas@p549DF0AF.dip.t-dialin.net] has joined #ezpublish
+[11-17-2005 09:48:40] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-17-2005 09:50:43] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-17-2005 09:58:32] [#ezpublish] <kracker> zr1, can you login
+[11-17-2005 09:59:10] [#ezpublish] <kracker> i'm hacking the code now to add a new simple way to reset password (the old ways was one not simple and 2 lost in the last upgrade and now depricated :(
+[11-17-2005 09:59:35] [#ezpublish] <zr1> i have some suggestions too, editing the post now
+[11-17-2005 10:04:14] [#ezpublish] <zr1> there, added and some explanation too
+[11-17-2005 10:06:14] [#ezpublish] <kracker> http://snippets.ezcommunity.net/start?do=resendpwd
+[11-17-2005 10:06:43] [#ezpublish] <kracker> the new code has been installed to simply reset passwords, should make life much simpler from now on :)
+[11-17-2005 10:07:10] [#ezpublish] <kracker> i'm gong to update the design templates and the page talking how users should reset passowrds
+[11-17-2005 10:07:59] [#ezpublish] <Sulfur> hey, is that site mainly for eZ2.2 ?
+[11-17-2005 10:08:26] [#ezpublish] <Sulfur> (with snippets also for 3, but still 2.x - centered?)
+[11-17-2005 10:11:01] [#ezpublish] <zr1> i have major problems with this site usability wise.. i understand it may be just me but in case you are interested kracker i have a long rant ready here ;)
+[11-17-2005 10:11:51] [#ezpublish] * Sulfur puts on Rant Goggles (tm)
+[11-17-2005 10:12:13] [#ezpublish] * Sulfur puts on lead-lined Rant Shield
+[11-17-2005 10:12:27] [#ezpublish] <kracker> sure ... post it
+[11-17-2005 10:12:31] [#ezpublish] <kracker> or email me
+[11-17-2005 10:12:33] [#ezpublish] * Sulfur digs out his huge box of Rant Popcorn
+[11-17-2005 10:12:35] [#ezpublish] <kracker> or say it now
+[11-17-2005 10:12:40] [#ezpublish] <Sulfur> gringo
+[11-17-2005 10:13:00] [#ezpublish] <kracker> or just pickup a pistol with silener and kill me in my sleep
+[11-17-2005 10:13:05] [#ezpublish] <kracker> i'm ready to die
+[11-17-2005 10:13:10] [#ezpublish] <buz> kracker: wtf does an ezcommunity site use ?do=action crap?
+[11-17-2005 10:13:13] [#ezpublish] <Sulfur> who isn't
+[11-17-2005 10:13:38] [#ezpublish] <zr1> kill in sleep? wheres the fun in that+
+[11-17-2005 10:14:11] [#ezpublish] <kracker> yes every one i do use other tools for conveniance, i'm one guy
+[11-17-2005 10:14:18] [#ezpublish] <kracker> buz,
+[11-17-2005 10:15:22] [#ezpublish] <kracker> Sulfur, ezcommunity is in general for everything eZ publish centric, for right now ezcommunity is all eZ publish 2, but i needed a place to put my v3 work as well so i am borrowing the domain name
+[11-17-2005 10:15:44] [#ezpublish] <kracker> snippets is targeted for v3
+[11-17-2005 10:16:04] [#ezpublish] <kracker> downloads.ezcommunity.net is for anything eZ publish
+[11-17-2005 10:16:25] [#ezpublish] <kracker> ezcommunity.net (and the rest of the subdomains) are mostly for v2
+[11-17-2005 10:17:45] [#ezpublish] <kracker> zr1, weeel? i am listening just can't seem to recieve personal messages from you :( only open messages (you sure your sending them to `kracker` all lower case no quotes?)
+[11-17-2005 10:18:22] [#ezpublish] <Sulfur> ok kracker
+[11-17-2005 10:20:35] [#ezpublish] <zr1> sulfur you got message?
+[11-17-2005 10:21:39] [#ezpublish] <zr1> lead poisoning, probably
+[11-17-2005 10:22:30] [#ezpublish] <kracker> i'm trying to collect useful solutions as gleemed from my experiances and the forums and put them into a book of usefull tips, ideas, solutions and example source code.
+[11-17-2005 10:24:15] [#ezpublish] <kracker> yes i would like to use eZ publish to do this instead, am I at a point where I can do that myself right now ... no. what is the goal again? oh collecting information and code, well this suites _my_ needs right now. When I have a years worth of funds in the bank and can spend a few months on my own projects for fun without selling out to the man aka lame clients for rent ...
+[11-17-2005 10:25:43] [#ezpublish] <kracker> I will untill then, i have to make some compromises. other than me who else is even trying anymore? i am not the ` dummkopfs ` the masses would like to play me off as
+[11-17-2005 10:26:43] [#ezpublish] <kracker> zr1, thank you for your post/contribution, i see it now and edit a little
+[11-17-2005 10:27:41] [#ezpublish] <zr1> no problem. as a very first thing usabilitywise, you should have a entry form: title, description, code
+[11-17-2005 10:28:26] [#ezpublish] <kracker> zr1, as for usablity problems, it's you. i'm open to your `rant` cause i might be able to improve some of them, as I have with your continued suggestions on reseting user passwords. you have been the first of few to really post on snippets, very much apreciated
+[11-17-2005 10:29:33] [#ezpublish] <zr1> make it very simple to post and we'll get lots of snippets
+[11-17-2005 10:31:06] -!- DiGiTa|_ [n=guillaum@84.4.37.232] has quit [Read error: 110 (Connection timed out)]
+[11-17-2005 10:31:09] [#ezpublish] <kracker> snippets is an open book wiki, a blank page. content has to be organized (title, description, code) by the editor using the duko wiki syntax, the applciation is not customized to this end, it's just a wiki not an eZ publish app. I would think that this would be something I would like to do in an eZ publish port using the wiki and code highlighting extentions ...
+[11-17-2005 10:32:05] [#ezpublish] <kracker> it's just not that hard to (fake) a format by looking how others are organizing content and doing something similar, it's just not
+[11-17-2005 10:33:31] [#ezpublish] <zr1> ok
+[11-17-2005 10:34:24] -!- DiGiTa|_ [n=guillaum@84.6.33.175] has joined #ezpublish
+[11-17-2005 10:35:19] [#ezpublish] <Sulfur> zr1: no I didn't get any msg
+[11-17-2005 10:35:28] [#ezpublish] <zr1> bad, bad gaim!
+[11-17-2005 10:36:25] [#ezpublish] <kracker> zr1, yeah i think your gaim is the reason why no one is getting pm's from you
+[11-17-2005 10:36:56] [#ezpublish] <Sulfur> oh ... hes ... I have to remove zr1 from my bot-ignore-list  .... ;)
+[11-17-2005 10:37:04] [#ezpublish] <Sulfur> zr1: did you get mine ?
+[11-17-2005 10:37:11] [#ezpublish] <zr1> yeah
+[11-17-2005 10:37:25] [#ezpublish] <Sulfur> and you tried to answer
+[11-17-2005 10:37:46] [#ezpublish] <kracker> zr1, if people just tell me to post stuff and or just post it to incomming i'll clean it up, it's like i'll edit the content for people, i'm just out here asking for content :?
+[11-17-2005 10:40:18] [#ezpublish] <Sulfur> kracker: , I just learnt of this site, but I'll bookmark it and if I can escape the smothering self-criticism on the quality and novelty of my code, I'll contrib something :)
+[11-17-2005 10:48:42] [#ezpublish] <kracker> i say any eZ publish user contributed code is good code , heh, sepecialy code that works :D
+[11-17-2005 10:48:50] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-17-2005 10:49:08] [#ezpublish] <ls[eZ]> hi
+[11-17-2005 10:49:30] [#ezpublish] <zr1> ho ho ho
+[11-17-2005 12:12:33] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit [Read error: 110 (Connection timed out)]
+[11-17-2005 12:14:44] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-17-2005 12:18:42] [#ezpublish] <zr1> +1 karma for me
+[11-17-2005 12:18:54] [#ezpublish] <Sulfur> ?
+[11-17-2005 12:24:58] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-17-2005 12:35:25] -!- xbit [i=stian@gnomade166.grm.hia.no] has joined #ezpublish
+[11-17-2005 12:35:47] [#ezpublish] <xbit> hi
+[11-17-2005 12:35:55] [#ezpublish] <xbit> here's an easy one for you
+[11-17-2005 12:37:23] [#ezpublish] <xbit> how/when will ezpublish determine when it needs to render new html with viewcaching=enabled?
+[11-17-2005 12:38:49] [#ezpublish] <xbit> or in other words, "my site is not updating after adding new content!"
+[11-17-2005 12:48:20] [#ezpublish] <zr1> rofl, easy one
+[11-17-2005 12:49:01] [#ezpublish] <zr1> let me guess, forum page?
+[11-17-2005 12:52:06] [#ezpublish] <xbit> no, it's not a forum page, i guess that makes no difference for ez, content is content
+[11-17-2005 13:01:25] -!- jota_ [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-17-2005 13:01:45] [#ezpublish] <zr1> afaik by default updating content updates pages one level above and below that page
+[11-17-2005 13:05:14] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-17-2005 13:10:49] [#ezpublish] <kracker> woot!
+[11-17-2005 13:10:51] [#ezpublish] <kracker> http://ez.no/partner/news/new_partner_brookins_consulting
+[11-17-2005 13:11:01] [#ezpublish] <kracker> http://ez.no/partner/worldwide_ez_publish_partners/brookins_consulting
+[11-17-2005 13:11:17] [#ezpublish] <kracker> so very proud :)
+[11-17-2005 13:11:45] [#ezpublish] <kracker> zr1, thanks for the additional post to snippets :D
+[11-17-2005 13:18:35] [#ezpublish] <buz> kracker: there IS a wiki for ezpublish
+[11-17-2005 13:18:38] [#ezpublish] <buz> i must know, i wrote it ;)
+[11-17-2005 13:19:04] [#ezpublish] <buz> it can even do diff's between different versions of the same content
+[11-17-2005 13:19:34] [#ezpublish] <buz> the forum caching is thoroughly broken
+[11-17-2005 13:19:48] [#ezpublish] <buz> even with zr1's hack, the forum line still doesnt work right
+[11-17-2005 13:27:23] [#ezpublish] <kracker> buz, sweet deal, i know i had heard of an extention or something? but i have not yet tested it out, but i would rather use eZ publish for a lot of reasons, time just hasn't been on my side yet :(
+[11-17-2005 13:27:42] [#ezpublish] <buz> check triligon.org
+[11-17-2005 13:27:46] [#ezpublish] <kracker> buz, nods
+[11-17-2005 13:27:51] [#ezpublish] <buz> it should be in the svn too
+[11-17-2005 13:29:12] [#ezpublish] <kracker> hey this is cool, is triligon your playground?
+[11-17-2005 13:29:53] [#ezpublish] <buz> yes
+[11-17-2005 13:30:14] [#ezpublish] <buz> it also houses a few email accounts for friends and associates
+[11-17-2005 13:30:26] [#ezpublish] <buz> (people who  keep trashing their own mailservers ;)
+[11-17-2005 13:31:22] [#ezpublish] <kracker> heh
+[11-17-2005 13:32:02] [#ezpublish] <kracker> yeah well yer site encourages me to aim to a higher standard that's for sure, you have a lot of neat examples
+[11-17-2005 13:34:32] [#ezpublish] <buz> if i ever get the time (somewhere between writing stupid mini papers for uni) i want to do some work on the forum
+[11-17-2005 13:36:22] [#ezpublish] <buz> but these days, i'm brainstorming with friends as to how to make money with web 2.0
+[11-17-2005 13:37:46] [#ezpublish] <buz> i should probably get a large bag of grass one of these days and the ideas would start rollin
+[11-17-2005 13:38:14] [#ezpublish] <kracker> rofl
+[11-17-2005 13:38:22] [#ezpublish] <buz> no really
+[11-17-2005 13:38:32] [#ezpublish] <buz> back in the days when i smoked a lot i had all sorts of neat ideas
+[11-17-2005 13:38:44] [#ezpublish] <buz> many of whom some people got rich with a few months later
+[11-17-2005 13:38:49] [#ezpublish] <buz> like those shuttle XPCs
+[11-17-2005 13:38:58] [#ezpublish] <buz> i had a similar concept on my desk a few months before shuttle launched theirs
+[11-17-2005 13:39:05] [#ezpublish] <buz> nobody would believe me that people would buy this
+[11-17-2005 13:40:50] [#ezpublish] <buz> shuttle sold theirs like hotcakes
+[11-17-2005 13:40:51] [#ezpublish] <buz> still does
+[11-17-2005 13:41:51] [#ezpublish] <zr1> dang, got brainstorming material but noone to storm with
+[11-17-2005 13:42:20] [#ezpublish] <buz> what areas
+[11-17-2005 13:42:44] [#ezpublish] <buz> i got plenty of ideas in the "we need 50mio $ venture capital first" area
+[11-17-2005 13:42:57] [#ezpublish] <buz> but not very many in the "all we have is time" area
+[11-17-2005 13:44:24] -!- xbit [i=stian@gnomade166.grm.hia.no] has quit [Read error: 110 (Connection timed out)]
+[11-17-2005 13:46:08] [#ezpublish] <kracker> totaly :\
+[11-17-2005 13:47:01] [#ezpublish] <buz> totally what
+[11-17-2005 13:48:08] [#ezpublish] <zr1> kracker is getting into the mood ;)
+[11-17-2005 13:49:41] [#ezpublish] <buz> sleep deprivation is really bad for u u know
+[11-17-2005 13:50:18] [#ezpublish] <zr1> money deprivation too :)
+[11-17-2005 13:50:28] [#ezpublish] <buz> true
+[11-17-2005 13:53:33] -!- SEAwolfx [n=mike@DSL01.83.171.167.97.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[11-17-2005 13:58:54] [#ezpublish] <kracker> heh
+[11-17-2005 13:59:09] [#ezpublish] <kracker> sry, distracted cross posting new news <grin />
+[11-17-2005 13:59:23] [#ezpublish] <kracker> and yes, i'm lacking sleep again
+[11-17-2005 13:59:48] [#ezpublish] <kracker> need to train another monkey to run errands for me
+[11-17-2005 14:00:45] [#ezpublish] <kracker> hey now, and i'm not dissing monkeys either. i like moneys especialy cartoon ones, kinda funy in light hearted way
+[11-17-2005 14:04:21] [#ezpublish] <zr1> monkeys have good attitude to life
+[11-17-2005 14:06:08] [#ezpublish] <zr1> same healthy attitude as the cats from one discworld book.. im trying to follow that too, anyone remembers it?
+[11-17-2005 14:09:10] [#ezpublish] <zr1> Basicly, cats divide all objects in the world to four:
+[11-17-2005 14:09:10] [#ezpublish] <zr1> 1. things to run away from
+[11-17-2005 14:09:10] [#ezpublish] <zr1> 2. things to eat
+[11-17-2005 14:09:10] [#ezpublish] <zr1> 3. things to mate with
+[11-17-2005 14:09:10] [#ezpublish] <zr1> 4. stones
+[11-17-2005 14:25:44] [#ezpublish] <buz> lol
+[11-17-2005 14:27:11] [#ezpublish] <zr1> like i said, healthy
+[11-17-2005 14:30:43] [#ezpublish] <kracker> heh, i dunno ... my ezkitty has an extra category called : 5. things to ignore with an atitude | no joke, it has this attitude like huh?`oh, you ...` and walks by the chaos
+[11-17-2005 14:30:55] [#ezpublish] <kracker> don't know where it learned that one ...
+[11-17-2005 14:31:41] [#ezpublish] <zr1> look again at 4. - that was the whole point of the joke :)
+[11-17-2005 14:45:50] [#ezpublish] <zr1> folks.. i really need to find out how to force all images on site to regenerate sized versions
+[11-17-2005 14:51:22] [#ezpublish] * zr1 pulls the Gatling gun out of his back pocket
+[11-17-2005 14:52:32] [#ezpublish] <buz> delete the variations
+[11-17-2005 14:52:37] [#ezpublish] <buz> on next load they should get regenerated
+[11-17-2005 15:07:36] [#ezpublish] <zr1> files? no doesnt work
+[11-17-2005 15:07:44] [#ezpublish] <buz> no?
+[11-17-2005 15:07:55] [#ezpublish] <buz> maybe there's db stuff for it, too
+[11-17-2005 15:09:58] [#ezpublish] <zr1> seems to be, there is ezimagefile where is record for each variation file, deleted, did not work
+[11-17-2005 15:10:18] [#ezpublish] <buz> i know that they get created on the fly if they dont exist
+[11-17-2005 15:10:25] [#ezpublish] <buz> no idea what is considered in existant though
+[11-17-2005 15:10:37] [#ezpublish] <zr1> then there is ezimagevariation which strangely enough is empty, altho theres 38000 images in system
+[11-17-2005 15:10:59] [#ezpublish] <buz> 38K?
+[11-17-2005 15:11:03] [#ezpublish] <buz> how's that holding up?
+[11-17-2005 15:12:26] [#ezpublish] <zr1> seems to ok
+[11-17-2005 15:12:45] [#ezpublish] <buz> one of these days i want to benchmark a 1mio object site
+[11-17-2005 15:12:46] [#ezpublish] <zr1> even searches are ok and server is pretty shabby at that
+[11-17-2005 15:12:52] [#ezpublish] <buz> what hardware
+[11-17-2005 15:13:14] [#ezpublish] <zr1> some p2.5, 512M
+[11-17-2005 15:13:23] [#ezpublish] <buz> not THAT shabby
+[11-17-2005 15:13:36] [#ezpublish] <zr1> well ok, tens of sites on it too :P
+[11-17-2005 15:13:41] [#ezpublish] <buz> ok
+[11-17-2005 15:17:40] -!- jota_ [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-17-2005 15:26:30] -!- ordnas [n=ordnas@p549DF0AF.dip.t-dialin.net] has left #ezpublish []
+[11-17-2005 16:16:31] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-17-2005 16:31:44] [#ezpublish] <zr1> what the fuck??
+[11-17-2005 16:32:09] [#ezpublish] <zr1> ez is actually regenerating images EVERY TIME they are called in template
+[11-17-2005 16:33:00] -!- DiGiTa|_ [n=guillaum@84.6.33.175] has quit []
+[11-17-2005 17:01:02] [#ezpublish] <kracker> zr1, i don't think it does regenerate images everytime by default unless you have cache disabled (wince)
+[11-17-2005 17:06:32] [#ezpublish] <zr1> it does a rather strange thing.. im writing in forum
+[11-17-2005 17:13:13] [#ezpublish] <zr1> have a look.. http://ez.no/community/forum/developer/3_5_how_can_i_recreated_image_variations
+[11-17-2005 17:19:45] [#ezpublish] <zr1> intentional, strangeness, bug?
+[11-17-2005 17:19:47] [#ezpublish] <fh[eZ]> lift me up... I want you to lift me up... singing
+[11-17-2005 17:19:51] [#ezpublish] <zr1> undocumented anyway
+[11-17-2005 17:20:01] [#ezpublish] <zr1> fh, shine some light..
+[11-17-2005 17:20:13] [#ezpublish] <zr1> link above, last post
+[11-17-2005 17:21:34] [#ezpublish] <zr1> ok, that was probably unconcious reflexes on fh part.. like a frob leg on the hook..
+[11-17-2005 17:21:50] [#ezpublish] * zr1 looks at fh and says "bug"
+[11-17-2005 17:22:18] [#ezpublish] <fh[eZ]> looks like a bug
+[11-17-2005 17:22:28] [#ezpublish] <fh[eZ]> report it
+[11-17-2005 17:22:35] [#ezpublish] <zr1> now, DONT FIX IT!!
+[11-17-2005 17:22:41] [#ezpublish] <fh[eZ]> uh?
+[11-17-2005 17:22:54] [#ezpublish] <zr1> i want to be able to recreate variants :P
+[11-17-2005 17:24:31] [#ezpublish] <fh[eZ]> yeah, that should definately be possible
+[11-17-2005 17:24:37] [#ezpublish] <fh[eZ]> you can mention that in the bug report as well
+[11-17-2005 17:25:37] [#ezpublish] <zr1> sigh.. ok, but this is mostly documentation issue and those bugreports never get acted on
+[11-17-2005 17:25:46] [#ezpublish] <zr1> but ill file anyway of course
+[11-17-2005 17:33:08] [#ezpublish] <fh[eZ]> hm... we really are doing a good job on bug reports lately
+[11-17-2005 17:33:16] [#ezpublish] <fh[eZ]> fixing double the amount that are being reported
+[11-17-2005 17:33:34] [#ezpublish] <fh[eZ]> maybe you have been unlucky
+[11-17-2005 17:35:45] [#ezpublish] <zr1> perhaps :)
+[11-17-2005 17:35:53] [#ezpublish] <zr1> get in a good amount of them too?
+[11-17-2005 17:45:56] [#ezpublish] <fh[eZ]> zr1: about reading the forums.. we try to read them from time to time.. but it is hard to read and follow up on everything
+[11-17-2005 17:46:40] [#ezpublish] <fh[eZ]> basically, I think the image variations are invalidated using some magic (don't know what exactly)
+[11-17-2005 17:46:49] [#ezpublish] <fh[eZ]> since deleting all the files would take way to long
+[11-17-2005 17:47:45] [#ezpublish] <zr1> i expected there to be script for this, this is not something that is done everyday, i even think including it in "all cache" is not right
+[11-17-2005 17:49:00] [#ezpublish] <zr1> like i said earlier, got site with 30000 images, suppose variants have been created by long use use then someone clears all caches and bummer, there goes it all
+[11-17-2005 17:49:27] [#ezpublish] <fh[eZ]> well, it is a cache
+[11-17-2005 17:49:34] [#ezpublish] <fh[eZ]> so all caches really should delete it
+[11-17-2005 17:49:46] [#ezpublish] <fh[eZ]> but we might consider giving some HUGE warnings
+[11-17-2005 17:49:59] [#ezpublish] <fh[eZ]> anyway, sleep now
+[11-17-2005 17:52:00] [#ezpublish] <zr1> commence endless loop - good night :)
+[11-17-2005 19:02:41] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit [calvino.freenode.net irc.freenode.net]
+[11-17-2005 19:02:41] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[11-17-2005 19:02:41] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [calvino.freenode.net irc.freenode.net]
+[11-17-2005 19:02:41] -!- nnn0 [n=therion@195.204.221.183] has quit [calvino.freenode.net irc.freenode.net]
+[11-17-2005 19:03:22] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-17-2005 19:03:22] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[11-17-2005 19:03:22] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-17-2005 19:03:22] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-17-2005 19:05:41] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[11-17-2005 19:05:41] [notice(freenode-connect)] VERSION IQ 0.9.3
+[11-17-2005 23:02:21] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []

@@ -1,0 +1,45 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.7.&nbsp; Class Constants</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec7"></a><h3 class="docSection1Title">3.7. Class Constants</h3>
+<p class="docText">Global constants have existed in PHP for a long time. These could be defined using the <tt>define()</tt> function, which was described in <a class="docLink" href="ch02.html#ch02">Chapter 2</a>, &quot;PHP 5 Basic Language.&quot; With improved encapsulation support in PHP 5, you can now define constants inside classes. Similar to static members, they belong to the class and not to instances of the class. Class constants are always case-sensitive. The declaration syntax is intuitive, and accessing constants is similar to accessing static members:</p>
+<pre>
+class MyColorEnumClass {
+    const RED = "Red";
+    const GREEN = "Green";
+    const BLUE = "Blue";
+
+    function printBlue()
+    {
+        print self::BLUE;
+    }
+}
+
+print MyColorEnumClass::RED;
+$obj = new MyColorEnumClass();
+$obj-&gt;printBlue();
+</pre><br>
+<p class="docText">This code prints <tt>"Red"</tt> followed by <tt>"Blue"</tt>. It demonstrates the ability of accessing the constant both from inside a class method with the <tt>self</tt> keyword and via the class name <tt>"MyColorEnumClass"</tt>.</p>
+<p class="docText">As their name implies, constants are constant and can be neither changed nor removed after they are defined. Common uses for constants are defining enumerations such as in the previous example or some configuration value such as the database username, which you wouldn't want the application to be able to change.<a name="ch03index75"></a></P>
+<a name="ch03note04"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">As with global constants, you should write constant names in uppercase letters, because this is a common practice.</P></div><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec6.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec8.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

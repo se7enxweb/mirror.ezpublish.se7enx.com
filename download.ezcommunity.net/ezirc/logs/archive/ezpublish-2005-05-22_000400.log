@@ -1,0 +1,173 @@
+[05-21-2005 00:03:25] [#ezpublish] <kracker> he thinks i'm a sucka
+[05-21-2005 00:03:33] [#ezpublish] <kracker> sometimes it really tends to make me wonda
+[05-21-2005 00:04:09] [#ezpublish] <kracker> everyone in my mind rolls their eyes and wispers oh brotha when they turn to look at anotha
+[05-21-2005 00:04:20] [#ezpublish] <kracker> parking lot flows ...
+[05-21-2005 00:04:47] [#ezpublish] <agentbob> i know you don't care... but man... this pasta i had ealier today is producting antichrist farts
+[05-21-2005 00:06:15] [#ezpublish] <kracker> http://audio.kracker.org:8088/our_way/buck_65-this_right_here_is-advance-2005-jce/02-buck_65-b.sc.-jce.mp3
+[05-21-2005 00:06:58] [#ezpublish] <kracker> been there, makes me feel bad for being mean to a coworker who had no controll and at the time i though he did it on perpous i had a very small cubical space with him.
+[05-21-2005 00:07:15] [#ezpublish] <kracker> short story, he got let go
+[05-21-2005 00:07:52] [#ezpublish] <kracker> na, its not like that we got past it and he passed it on to me (eww?confusing)
+[05-21-2005 00:08:16] [#ezpublish] <kracker> then he turned inside (you can always tell when they turn...sometimes before they even know themselves)
+[05-21-2005 00:09:15] [#ezpublish] <kracker> but hey!
+[05-21-2005 00:09:59] [#ezpublish] <kracker> don't diss on pasta, its the best meal to streach into a year long diet (starving to death and loving being able to hate it as it molded me, 2001-2002)
+[05-21-2005 00:12:58] [#ezpublish] <kracker> mario? mario's a psyco ... --super mario brothers
+[05-21-2005 00:14:27] [#ezpublish] <agentbob> good gawd, they look so gawd same like the same person
+[05-21-2005 00:16:42] [#ezpublish] <kracker> hrm
+[05-21-2005 00:16:56] [#ezpublish] <kracker> ever had eZ publish (moving an install) say this as a die error ...
+[05-21-2005 00:17:09] [#ezpublish] <kracker> subject: mb_strlen() ... Fatal error: Call to undefined function: mb_strlen() in
+[05-21-2005 00:17:20] [#ezpublish] <kracker> html/var/news/cache/template/compiled/newtoolbar-a8c31c966ad8f51dbacbc69933f0a6dd.php on line 78
+[05-21-2005 00:17:25] [#ezpublish] <kracker> Fatal error: eZ publish did not finish its request
+[05-21-2005 00:17:39] [#ezpublish] <kracker> that seems kinda fatal, eek
+[05-21-2005 00:18:54] [#ezpublish] <kracker> interesting ..
+[05-21-2005 00:27:05] [#ezpublish] <kracker> prolly my most frustrating frustration with it? if you move it afterwards it had beter be perfect or your going to be in it deep wading through it , its so porsilin in this regard
+[05-21-2005 00:27:26] [#ezpublish] <kracker> it's not .. it's me, it's not .. it's me ...
+[05-21-2005 00:29:20] [#ezpublish] <agentbob> lol
+[05-21-2005 00:29:38] [#ezpublish] <agentbob> http://ca.php.net/mb_strlen
+[05-21-2005 00:29:45] [#ezpublish] <agentbob> php 4 >= 4.06
+[05-21-2005 00:29:46] [#ezpublish] <kracker> i really did look first
+[05-21-2005 00:30:10] [#ezpublish] <kracker> i'm in the clear with php -v 4.3.4
+[05-21-2005 00:30:31] [#ezpublish] <kracker> i know i'm evil cause i like apache2 (more like i'm such a fool)
+[05-21-2005 00:30:53] [#ezpublish] <agentbob> ditto, apache2/php5 babyyyyyyyy
+[05-21-2005 00:30:57] [#ezpublish] <agentbob> bleedin edge
+[05-21-2005 00:31:00] [#ezpublish] <agentbob> and oh do i bleed
+[05-21-2005 00:31:15] [#ezpublish] <kracker> it took me a whle to get there ...
+[05-21-2005 00:31:27] [#ezpublish] <kracker> are we not human, do we not ....
+[05-21-2005 00:31:45] [#ezpublish] <kracker> rolls eyes, no ... i'm not a cutter
+[05-21-2005 00:31:51] [#ezpublish] <agentbob> hehehehe
+[05-21-2005 00:32:30] [#ezpublish] <kracker> bash, kernel, apache, bind, perl, etc it's funny what you stick with first and formost when you have nottin
+[05-21-2005 00:33:26] [#ezpublish] <kracker> not so much the perl part sadly
+[05-21-2005 00:33:45] [#ezpublish] <kracker> i got side verted by a devorak php3 sysadmin
+[05-21-2005 00:34:04] [#ezpublish] <agentbob> dvorak?
+[05-21-2005 00:34:13] [#ezpublish] <kracker> errum yeah
+[05-21-2005 00:34:49] [#ezpublish] <kracker> he tried to tell me how it kept his box more secure (physical security, cause no one else could use his box that way ...)
+[05-21-2005 00:35:23] [#ezpublish] <agentbob> php was supposed to make web programming easier... now there's 200 frameworks that are supposed to make php easier...... too much choice
+[05-21-2005 00:35:29] [#ezpublish] <agentbob> need apple programming language that just works
+[05-21-2005 00:36:58] [#ezpublish] <kracker> so true
+[05-21-2005 00:37:41] [#ezpublish] <kracker> but what works is so circumstancial and subject to the flux, once you agree someone smarter has already eclipsed your monument to the folly of man
+[05-21-2005 00:37:42] [#ezpublish] <agentbob> ONE LANGUAGE TO RULE THEM ALL
+[05-21-2005 00:37:47] [#ezpublish] <agentbob> or framework, whatever
+[05-21-2005 00:37:54] [#ezpublish] <kracker> <smirk>
+[05-21-2005 00:38:04] [#ezpublish] <agentbob> yeah.. :|
+[05-21-2005 00:39:15] [#ezpublish] <kracker> sadly, sniff, i miss 2002
+[05-21-2005 00:39:49] [#ezpublish] <kracker> it was already too late but i was doing so much beter at not looking into the sun back then
+[05-21-2005 00:40:16] [#ezpublish] <agentbob> heh, soon you're gonna have to drill a hole in your head!
+[05-21-2005 00:40:56] [#ezpublish] <kracker> sometimes i seem to remember doing that already and forgetting that i already won ...
+[05-21-2005 00:41:59] [#ezpublish] <agentbob> yes well... i need to drift off to never never land.. and no not mikey's place!
+[05-21-2005 00:42:27] [#ezpublish] <agentbob> 'night
+[05-21-2005 00:42:33] [#ezpublish] <kracker> sheesh at least you know, the rest of them ..ehh, cheers
+[05-21-2005 00:42:55] [#ezpublish] <agentbob> get more than 4h tongiht man!!#
+[05-21-2005 00:44:27] [#ezpublish] <kracker> i can't but ... one day
+[05-21-2005 00:44:49] [#ezpublish] <kracker> my own fdd training day
+[05-21-2005 00:48:10] [#ezpublish] <kracker> if i'm manic, i don't want to know. how much money you would make if i was diagnosed --sole
+[05-21-2005 00:50:01] [#ezpublish] <kracker> ... here (pause) everything is perfect (pause)?!
+[05-21-2005 00:53:11] [#ezpublish] <kracker> funny, irealized about 10pm that i only got about 1.5 hours before she threatened and screamed @ me untill i got up and didn't realize before it was too late
+[05-21-2005 00:57:12] [#ezpublish] <kracker> http://audio.kracker.org:8088/our_way/Sole/Selling%20Live%20Water/10-Pawn%20in%20the%20Game%20Pt.%201.mp3
+[05-21-2005 01:21:06] [#ezpublish] <kracker> it doesn't mater who you vote for ... the government will always get IN
+[05-21-2005 03:12:47] [#ezpublish] <kracker> it must be, you were hopin' to fight with me ...
+[05-21-2005 03:46:48] [#ezpublish] <Frekko> good morning
+[05-21-2005 03:48:01] [#ezpublish] <kracker> sup
+[05-21-2005 03:48:22] [#ezpublish] <kracker> i'm just a pawn in the game ... man, i'm just a pawn
+[05-21-2005 03:48:24] [#ezpublish] <kracker> http://audio.kracker.org:8088/our_way/Sole/Selling%20Live%20Water/11-Pawn%20in%20the%20Game%20Pt.%202.mp3
+[05-21-2005 03:49:50] [#ezpublish] <Frekko> kracker: you give yourself too much credit :)
+[05-21-2005 03:50:01] [#ezpublish] <Frekko> there are only sixteen pawns in a game
+[05-21-2005 03:50:09] [#ezpublish] <kracker> chuckles
+[05-21-2005 03:50:10] [#ezpublish] <Frekko> I'm nowhere close to a pawn
+[05-21-2005 03:50:20] [#ezpublish] <kracker> can i be a leaf?
+[05-21-2005 03:50:31] [#ezpublish] <Frekko> I'm more like dust in the corner of the playfield
+[05-21-2005 03:50:56] [#ezpublish] <Frekko> sure, you can be a leaf :)
+[05-21-2005 03:50:57] [#ezpublish] <kracker> wow, i don't even know how to top that
+[05-21-2005 03:51:06] [#ezpublish] <kracker> i'm a joke
+[05-21-2005 03:51:51] [#ezpublish] <kracker> i didn't write that horrible email, it's not my style, it's hipocritical and full of shit (for who ever reads support)
+[05-21-2005 03:52:39] [#ezpublish] <Frekko> kracker: he.. what did you write (I don't read support.. I only get forwarded techical questions)
+[05-21-2005 03:53:02] [#ezpublish] <kracker> it makes me sound like we never talked about giving ez a break when asking for their help
+[05-21-2005 03:53:40] [#ezpublish] <kracker> being nice, poliet ... eh, some support ticket for my retainer
+[05-21-2005 03:54:49] [#ezpublish] <kracker> i hope you'll understand if i don't say who, i don't need more of a bad rep by being known as their gumshoe
+[05-21-2005 03:56:06] [#ezpublish] <kracker> at one point i thought i could say it and be proud, i had stepped up, it's been a hell of a week
+[05-21-2005 03:57:26] [#ezpublish] <kracker> help
+[05-21-2005 03:57:32] [#ezpublish] <kracker> srry, wrong window
+[05-21-2005 03:57:59] [#ezpublish] <Frekko> I'm off... helping out the guys in hvittingfoss to clean the paraglider start
+[05-21-2005 03:58:10] [#ezpublish] <kracker> sweet, sounds like fun
+[05-21-2005 03:58:29] [#ezpublish] <kracker> ciao
+[05-21-2005 03:59:25] [#ezpublish] <Frekko> yep
+[05-21-2005 03:59:34] [#ezpublish] <Frekko> afterwords... this: http://hezt.net/~larson/photos/index.php?album=images%2Fholidays%2F2001_grotterud%2F&pic=elvenhoyt.png
+[05-21-2005 04:02:30] [#ezpublish] <kracker> cool
+[05-21-2005 04:02:43] [#ezpublish] <kracker> that has to be freeing
+[05-21-2005 04:11:08] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-21-2005 04:11:09] [#ezpublish] <kracker> reminds me a little of home, only a little brighter
+[05-21-2005 04:11:50] [#ezpublish] <kracker> man, the list of people who just don't really get me gets a +1, see ya buz
+[05-21-2005 04:14:36] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-21-2005 04:39:21] [#ezpublish] <kracker> so hey buz, did you think my post really sounded like a daranged crazy person or were you refering to someone else ?
+[05-21-2005 04:40:45] [#ezpublish] <buz> it sounded pretty crazy
+[05-21-2005 04:40:52] [#ezpublish] <buz> like "pleeeeease let me help you"
+[05-21-2005 05:22:31] -!- Frekko [~larson@238.80-202-59.nextgentel.com] has quit [Remote closed the connection]
+[05-21-2005 06:02:53] [#ezpublish] <SEAwolfx> re
+[05-21-2005 08:17:08] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-21-2005 10:38:30] -!- CoderForLife [~mirc@nr17-66-161-248-129.fuse.net] has joined #ezpublish
+[05-21-2005 11:05:10] -!- SEAwolfx [~mike@3d1f80fd7e5956e7.session.tor] has quit [Remote closed the connection]
+[05-21-2005 11:53:15] -!- SEAwolfx [~mike@ba8ae190faec646f.session.tor] has joined #ezpublish
+[05-21-2005 13:27:34] -deedra:$*- {global notice} Hi all! In a little more then 12 hours, I will begin major maintenence  on the network. For more information, please see 'http://www.freenode.net/news.shtml' Thank you for your patience, and thank you for using freenode!
+[05-21-2005 13:59:09] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-21-2005 13:59:54] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-21-2005 15:09:35] [#ezpublish] <kracker> i guess "pleeeeeass don't violate the spirit of the gpl, let me help you do the 'ethical thing' and help you help the community, new users, and others by contribute your changes back to the community" is fairly crazy, a lot of people bash rms@gnu.org too, (i'm not special, unique or very good, but that doesn't mean it doesn't make sense if you understand the reason, the meaning, behind my exaspirated efforts to see this MAJOR breakdown in the ezcommuni
+[05-21-2005 15:10:25] [#ezpublish] <CoderForLife> wrong channel?
+[05-21-2005 15:10:33] [#ezpublish] <kracker> i mean seriously, that's a whole lot of work when fact is he prolly laughs and closes the thread ...
+[05-21-2005 15:10:50] [#ezpublish] <kracker> ya'd think if you didn't really know
+[05-21-2005 15:12:01] [#ezpublish] <CoderForLife> am I only seeing one side of a conversation?
+[05-21-2005 15:12:37] [#ezpublish] <kracker> oh
+[05-21-2005 15:12:42] [#ezpublish] <kracker> yeah, kinda
+[05-21-2005 15:13:10] [#ezpublish] <kracker> see i pickup where ever i leave off and only the logs keep me from seeming more soo off my rocking chair
+[05-21-2005 15:13:19] [#ezpublish] <kracker> http://download.ezpublishhosting.com/ezirc/logs/
+[05-21-2005 15:14:17] [#ezpublish] <kracker> and (*sigh*) all too often include the forum threads on /community into the accepted background of a far too much of what i say ..
+[05-21-2005 15:14:57] [#ezpublish] <kracker> it ends up you have to read everything posted or in the ezcommunity (publicly) to get it all ...
+[05-21-2005 15:15:58] [#ezpublish] <CoderForLife> oh OK, seemed kinda strange to "enter the room talking"
+[05-21-2005 15:16:07] [#ezpublish] <kracker> i guess i just get used to talking about it so much i forget other people might not really have the same investment in it to be quite so obsessive about it all, ugg i do sound crazy lately
+[05-21-2005 15:16:29] [#ezpublish] <kracker> i was replying to buz we have been having a rolling 24 hour off and on conversation
+[05-21-2005 15:17:06] [#ezpublish] <kracker> back in the day we'd call it subject jumping and we'd only be as good as we could keep up ;)
+[05-21-2005 15:17:23] [#ezpublish] <CoderForLife> I'm just casually monitoring this channel because I have some intentions toward using ezPublish in a new web site for content management.  Looks like I walked into a war zone.
+[05-21-2005 15:18:19] [#ezpublish] <kracker> wow, now feel like a freek ... it's like talking to your best friend when your best friend when you try to include the worlds patrons into the conversation?
+[05-21-2005 15:18:41] [#ezpublish] <buz> kracker: what are you smoking????
+[05-21-2005 15:18:54] [#ezpublish] <kracker> all apologies ...
+[05-21-2005 15:19:05] [#ezpublish] <buz> i want some of that
+[05-21-2005 15:19:12] [#ezpublish] <buz> no actually, i'm not sure if i dare try it
+[05-21-2005 15:19:35] [#ezpublish] <kracker> i respect that, i really do
+[05-21-2005 15:19:58] [#ezpublish] <buz> actually, it's quite peacefully
+[05-21-2005 15:20:13] [#ezpublish] <buz> except for a few people writing uhm weird stuff idont entirely understand
+[05-21-2005 15:20:33] [#ezpublish] <kracker> i really do undestand how bad it can seem at times
+[05-21-2005 15:20:49] [#ezpublish] <kracker> if it means anything, it's not true but ...
+[05-21-2005 15:21:08] [#ezpublish] <buz> did you ever think about becoming professor?
+[05-21-2005 15:21:32] [#ezpublish] <buz> you can tell incomprehendable stuff all day, people are forced to listen to you and you make a bundle while youre at it
+[05-21-2005 15:22:19] [#ezpublish] <kracker> or a lawyer
+[05-21-2005 15:23:07] [#ezpublish] <buz> professors is probably more relaxed
+[05-21-2005 15:23:12] [#ezpublish] <buz> i dont think they do much all day
+[05-21-2005 15:23:17] [#ezpublish] <buz> and law is soooo boring
+[05-21-2005 15:23:27] [#ezpublish] * buz hates all lawyers
+[05-21-2005 15:24:07] [#ezpublish] <kracker> na, i dispize the education system the world has dumbed down into what americans live within, and i'm still not sure if all the doctors were right about the learning disablities they say is why i have so much trouble conforming ...
+[05-21-2005 15:24:28] [#ezpublish] <buz> leave the us
+[05-21-2005 15:24:30] [#ezpublish] <CoderForLife> what about Americans
+[05-21-2005 15:24:34] [#ezpublish] <buz> in other places its not quite so bad
+[05-21-2005 15:24:39] [#ezpublish] <kracker> i tried higher education, it ... didn't work out
+[05-21-2005 15:24:44] [#ezpublish] <buz> and in academia, you actually meet some sane people at times
+[05-21-2005 15:24:53] [#ezpublish] <buz> tho the nutjobs are the majority like everyhwere
+[05-21-2005 15:24:55] [#ezpublish] <CoderForLife> excuse me
+[05-21-2005 15:25:11] [#ezpublish] <kracker> self taught was so much more of a sane choice back in '99
+[05-21-2005 15:25:30] [#ezpublish] <buz> had i been 20 in 95 id be riiiich now
+[05-21-2005 15:25:41] [#ezpublish] <buz> but alas, i was too young to ride the wave
+[05-21-2005 15:25:53] -!- CoderForLife [~mirc@nr17-66-161-248-129.fuse.net] has left #ezpublish []
+[05-21-2005 15:25:59] [#ezpublish] <kracker> ehh, i don't care for most of america much anymore, i have a list of gripes
+[05-21-2005 15:26:15] [#ezpublish] <buz> mhh bush is near the top of the list in my case
+[05-21-2005 15:26:45] [#ezpublish] <kracker> funny being an american citizen and relating to all those who artists / geniouses that left war torn germany in the world wars ...
+[05-21-2005 15:27:24] [#ezpublish] <kracker> you love a thing, while it keeps using you and your kind as a pincooshin
+[05-21-2005 15:28:35] [#ezpublish] <kracker> the contradiction reprized, alaskan born are more free in all the oposite ways as long as you disavoy / suceed from the motherland (usa) ....
+[05-21-2005 15:29:55] [#ezpublish] <kracker> yet you can't without dissing the rest of the good that still exists in as system that won't let you have it without giving them your hand for staming (barcode / RFID)
+[05-21-2005 15:30:15] [#ezpublish] <kracker> s/staming/stamping/
+[05-21-2005 15:33:04] [#ezpublish] <buz> yeah i wonder when the braindrain starts to work in the other direction
+[05-21-2005 15:34:17] [#ezpublish] <kracker> i like that statement
+[05-21-2005 15:36:44] -!- CoderForLife [~mirc@nr17-66-161-248-129.fuse.net] has joined #ezpublish
+[05-21-2005 15:39:29] -lilo:$*- [Global Notice] Hi all. As reported previously, we're going to have major downtime in about 11 hours.... for an update on the downtime and on fundraising, please take a look at http://freenode.net/news.shtml .... thank you for your patience, and thank you for using freenode!
+[05-21-2005 15:40:04] [#ezpublish] <buz> already it seems us universities don't get nearly as many applications from abroad than a few years ago
+[05-21-2005 15:50:26] -!- SEAwolfx [~mike@ba8ae190faec646f.session.tor] has quit [Remote closed the connection]
+[05-21-2005 15:50:32] -!- SEAwolfx [~mike@2f92e509aa630127.session.tor] has joined #ezpublish
+[05-21-2005 16:56:18] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-21-2005 19:06:33] -!- seasonfive_ [~Yannick@AGrenoble-152-1-50-113.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[05-21-2005 19:12:06] -!- seasonfive [~Yannick@AGrenoble-152-1-35-182.w82-122.abo.wanadoo.fr] has quit [Read error: 110 (Connection timed out)]
+[05-21-2005 20:32:07] -deedra:$*- {global notice} Hi all! in 5.5 hours, I'm going to begin the maintenence on the network. This will affect about half the network. For more information, please see 'http://www.freenode.net/news.shtml' Thank you for your patience, and thank you for using freenode!

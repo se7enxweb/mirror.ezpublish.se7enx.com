@@ -1,0 +1,94 @@
+[12-26-2005 02:01:44] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-26-2005 02:24:04] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-26-2005 02:32:20] -!- seasonfive_ [n=seasonfi@AGrenoble-152-1-40-24.w82-122.abo.wanadoo.fr] has quit [Read error: 110 (Connection timed out)]
+[12-26-2005 03:54:44] -!- seasonfive [n=seasonfi@AGrenoble-152-1-56-188.w83-201.abo.wanadoo.fr] has joined #ezpublish
+[12-26-2005 04:27:54] [#ezpublish] <SEAwolfx_> hello @all.
+[12-26-2005 04:29:42] -!- SEAwolfx [n=mike@tor/session/x-cc30fb851704ca87] has quit [Nick collision from services.]
+[12-26-2005 04:30:34] -!- SEAwolfx_ is now known as SEAwolfx
+[12-26-2005 04:53:11] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-26-2005 05:19:21] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-26-2005 05:20:06] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Client Quit]
+[12-26-2005 05:39:57] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-26-2005 05:47:22] -!- SEAwolfx_ [n=mike@tor/session/x-e08aa25e03bc2c52] has joined #ezpublish
+[12-26-2005 05:52:27] -!- SEAwolfx [n=mike@tor/session/x-aecd0a1f8e9ecfbd] has quit [Nick collision from services.]
+[12-26-2005 05:52:37] -!- SEAwolfx_ is now known as SEAwolfx
+[12-26-2005 07:42:16] -!- kore_ [n=lordhong@essn-d9bd4e89.pool.mediaWays.net] has joined #ezpublish
+[12-26-2005 09:09:59] -!- illie [i=Bjorn@s01i40-0249.no.powertech.net] has joined #ezpublish
+[12-26-2005 10:09:40] -!- illie [i=Bjorn@s01i40-0249.no.powertech.net] has quit []
+[12-26-2005 11:30:35] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-26-2005 12:46:00] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-26-2005 12:48:57] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[12-26-2005 12:49:12] [#ezpublish] <zrg> it lives!
+[12-26-2005 12:49:23] [#ezpublish] <buz> sure?
+[12-26-2005 12:49:58] [#ezpublish] * zrg pokes it with a stick
+[12-26-2005 12:50:19] [#ezpublish] <buz> doesnt seem to react
+[12-26-2005 12:51:21] [#ezpublish] <zrg> they sure are sneaky
+[12-26-2005 13:18:59] -!- tobyS [n=dotxp@dslb-084-061-136-145.pools.arcor-ip.net] has joined #ezpublish
+[12-26-2005 13:35:48] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-26-2005 15:55:56] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-26-2005 16:24:44] -!- Proteque_ [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-26-2005 16:25:08] -!- Proteque [n=gjorans@213.184.199.245] has quit [Read error: 113 (No route to host)]
+[12-26-2005 16:30:26] -!- SEAwolfx_ [n=mike@tor/session/x-cb4740aebd1fb9ab] has joined #ezpublish
+[12-26-2005 16:40:40] -!- SEAwolfx [n=mike@tor/session/x-e08aa25e03bc2c52] has quit [Remote closed the connection]
+[12-26-2005 17:14:35] -!- kore_ [n=lordhong@essn-d9bd4e89.pool.mediaWays.net] has quit []
+[12-26-2005 17:25:37] [#ezpublish] <zrg> how to switch contentobject cache off in code?
+[12-26-2005 17:57:21] [#ezpublish] <zrg> ezContentObject::clearCache();
+[12-26-2005 18:02:11] [#ezpublish] <zrg> CARRAMBA!
+[12-26-2005 18:45:24] -!- foobar [n=shai-tan@203.129.152.172] has joined #ezpublish
+[12-26-2005 18:45:49] [#ezpublish] <foobar> hi kids, anybody here?
+[12-26-2005 18:47:17] [#ezpublish] <foobar> $this =& eZDebug::instance();
+[12-26-2005 18:47:26] [#ezpublish] <foobar> trying to re-assign $this ??
+[12-26-2005 18:49:17] [#ezpublish] <zrg> hm
+[12-26-2005 18:49:36] -!- foobar is now known as Shai_Tan
+[12-26-2005 18:49:52] [#ezpublish] <zrg> i have only used $this = NULL;
+[12-26-2005 18:50:32] [#ezpublish] <zrg> but essentially why not, you could use external function to instantiate object i guess.. ?
+[12-26-2005 18:51:35] [#ezpublish] <Shai_Tan> Fatal error: Cannot re-assign $this in /home/kevin/html/Photon/lib/ezutils/classes/ezdebug.php on line 192
+[12-26-2005 18:51:45] [#ezpublish] <Shai_Tan> is that a good error?
+[12-26-2005 18:51:56] [#ezpublish] <Shai_Tan> nm, will look at 3.7.2
+[12-26-2005 18:52:37] [#ezpublish] <zrg> you have correct php/ez versions?
+[12-26-2005 18:53:16] [#ezpublish] <Shai_Tan> downloading latest stable ez now
+[12-26-2005 18:53:34] [#ezpublish] <zrg> and have php 4.4 ?
+[12-26-2005 18:53:47] [#ezpublish] <Shai_Tan> 5.1.2
+[12-26-2005 18:53:56] [#ezpublish] <zrg> php5 wont work
+[12-26-2005 18:54:11] [#ezpublish] <Shai_Tan> wont work???
+[12-26-2005 18:54:20] [#ezpublish] <Shai_Tan> why not?
+[12-26-2005 18:54:41] [#ezpublish] <zrg> because ez is made for php4 i think ;)
+[12-26-2005 18:55:01] [#ezpublish] <Shai_Tan> 5.* should be bc
+[12-26-2005 18:55:56] [#ezpublish] <zrg> http://ez.no/products/ez_publish_cms/info/requirements_for_ez_publish
+[12-26-2005 18:56:30] [#ezpublish] <zrg> nothing ever is, really, anyhow its specificly said, php4 only
+[12-26-2005 18:57:22] [#ezpublish] <zrg> ez 3.7 series is for php 4.4, ez 3.6 and lower is for 4.3 and lower
+[12-26-2005 18:58:10] [#ezpublish] <zrg> latest 3.6 and 3.7 should be nearly identical otherwise
+[12-26-2005 18:59:04] [#ezpublish] <Shai_Tan> Z publish does not work with PHP 5
+[12-26-2005 18:59:04] [#ezpublish] <Shai_Tan> gosh
+[12-26-2005 18:59:31] [#ezpublish] <Shai_Tan> this is nasty
+[12-26-2005 18:59:32] [#ezpublish] <zrg> it is designed for php4
+[12-26-2005 18:59:43] [#ezpublish] <Shai_Tan> indeed
+[12-26-2005 18:59:54] [#ezpublish] <Shai_Tan> no pdo, no sqlite, no exceptions
+[12-26-2005 19:00:15] [#ezpublish] <zrg> it is no fault of ez, obviously php5 is not completely backwards compatible, which is how it should be
+[12-26-2005 19:00:42] [#ezpublish] <Shai_Tan> I dont see why it does not work though
+[12-26-2005 19:00:44] [#ezpublish] <zrg> you can easily install 4 and 5 in parallel i guess
+[12-26-2005 19:01:22] [#ezpublish] <zrg> i have not looked up why not, there must be good reason tho
+[12-26-2005 19:01:41] [#ezpublish] <Shai_Tan> and php6 is in devel
+[12-26-2005 19:02:07] [#ezpublish] <zrg> sigh
+[12-26-2005 19:06:12] [#ezpublish] <Shai_Tan> downloading 4..4.1 :/
+[12-26-2005 19:12:59] -!- birger [i=birger@ritchie.ping.uio.no] has joined #ezpublish
+[12-26-2005 20:07:10] [#ezpublish] <Shai_Tan> think I might try centOS
+[12-26-2005 20:15:26] [#ezpublish] <zrg> huh?
+[12-26-2005 20:48:03] [#ezpublish] <Shai_Tan> [Tue Dec 27 13:19:18 2005] [notice] child pid 23990 exit signal Segmentation fault (11)
+[12-26-2005 20:48:09] [#ezpublish] <Shai_Tan> is this a good error?
+[12-26-2005 20:50:00] -!- Bedlore [n=me@ppp136-239.lns2.adl2.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[12-26-2005 21:01:04] [#ezpublish] <zrg> what on earth is good error? :)
+[12-26-2005 21:01:41] [#ezpublish] <Shai_Tan> :)
+[12-26-2005 21:01:48] [#ezpublish] <Shai_Tan> Derick would know
+[12-26-2005 21:02:00] [#ezpublish] <Shai_Tan> usually I find them in the php source
+[12-26-2005 21:03:58] [#ezpublish] <Shai_Tan> http://www.zend.com/zend/week/week253.php#Heading11
+[12-26-2005 21:04:02] [#ezpublish] <Shai_Tan> like that
+[12-26-2005 21:08:42] [#ezpublish] <zrg> whats your environment?
+[12-26-2005 21:08:52] [#ezpublish] <zrg> server setup i mean
+[12-26-2005 21:23:32] [#ezpublish] <Shai_Tan> apache2, php 5.1.2, mysql5
+[12-26-2005 21:25:12] [#ezpublish] <zrg> personal server i assume
+[12-26-2005 21:25:28] [#ezpublish] <Shai_Tan> yessir, my own
+[12-26-2005 21:25:37] [#ezpublish] <zrg> you need to downgrade php
+[12-26-2005 21:33:49] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-26-2005 22:29:41] -!- tobyS_ [n=dotxp@dslb-084-061-131-164.pools.arcor-ip.net] has joined #ezpublish
+[12-26-2005 22:31:44] -!- tobyS [n=dotxp@dslb-084-061-136-145.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]

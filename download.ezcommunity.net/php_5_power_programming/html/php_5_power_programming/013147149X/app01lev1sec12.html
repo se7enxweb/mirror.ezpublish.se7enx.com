@@ -1,0 +1,196 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section A.12.&nbsp; HTML</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec11.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec13.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app01lev1sec12"></a><h3 class="docSection1Title">A.12. HTML</h3>
+<a name="app01lev2sec79"></a><h4 class="docSection2Title">A.12.1. HTML_BBCodeParser</h4><a name="app01index165"></a><a name="app01index166"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stijn de Reede (lead)</span></p>
+<p class="docText">This is a parser to replace UBB style tags with their html equivalents.</P>
+<a name="app01lev3sec77"></a><h5 class="docSection3Title">A.12.1.1 Description</H5>
+<p class="docText">This is a parser to replace UBB style tags with their html equivalents. It does not simply do some regex calls, but is complete stack based parse engine. This ensures that all tags are properly nested, if not, extra tags are added to maintain the nesting. This parser should only produce xhtml 1.0 compliant code. All tags are validated and so are all their attributes. It should be easy to extend this parser with your own tags.</p>
+<a name="app01lev2sec80"></a><H4 class="docSection2Title">A.12.2. HTML_Common</h4><a name="app01index167"></a><a name="app01index168"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Adam Daniel (lead) - Bertrand Mansion (lead)</span></p>
+<p class="docText">PEAR::HTML_Common is a base class for other HTML classes.</p>
+<a name="app01lev3sec78"></a><h5 class="docSection3Title">A.12.2.1 Description</H5>
+<p class="docText">The PEAR::HTML_Common package provides methods for html code display and attributes handling.</P>
+<ul><li><p class="docList">Methods to set, remove, update html attributes.</p></li><LI><p class="docList">Handles comments in HTML code.</p></li><LI><p class="docList">Handles layout, tabs, line endings for nicer HTML code.</p></LI></ul>
+<a name="app01lev2sec81"></a><h4 class="docSection2Title">A.12.3. HTML_Crypt</h4><a name="app01index169"></a><a name="app01index170"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: PHP License -</span></p>
+<p class="docText">Encrypts text which is later decoded using javascript on the client side</p>
+<a name="app01lev3sec79"></a><h5 class="docSection3Title">A.12.3.1 Description</h5>
+<p class="docText">The PEAR::HTML_Crypt provides methods to encrypt text, which can be later be decrypted using JavaScript on the client side This is very useful to prevent spam robots collecting email addresses from your site, included is a method to add mailto links to the text being generated.</p>
+<a name="app01lev2sec82"></a><h4 class="docSection2Title">A.12.4. HTML_CSS</h4><a name="app01index171"></a><a name="app01index172"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License 3.0 - By Klaus Guenther (lead) - Laurent Laville (developer)</span></p>
+<p class="docText">HTML_CSS is a class for generating CSS declarations.</p>
+<a name="app01lev3sec80"></a><h5 class="docSection3Title">A.12.4.1 Description</h5>
+<p class="docText">HTML_CSS provides a simple interface for generating a stylesheet declaration. It is completely standards compliant, and has some great features:</p>
+<ul><LI><p class="docList">Simple OO interface to CSS definitions</P></li><li><p class="docList">Can parse existing CSS (string or file)</P></li><li><p class="docList">Output to</p><ul><li><p class="docList">Inline stylesheet declarations</p></LI><li><p class="docList">Document internal stylesheet declarations</P></li><LI><p class="docList">Standalone stylesheet declarations</p></li><li><p class="docList">Array of definitions</p></LI><LI><p class="docList">File</p></li></ul></li></UL>
+<p class="docText">In addition, it shares the following with HTML_Common based classes:</p>
+<ul><LI><p class="docList">Indent style support</p></LI><li><p class="docList">Line ending style</p></li></ul>
+<a name="app01lev2sec83"></a><h4 class="docSection2Title">A.12.5. HTML_Form</h4><a name="app01index173"></a><a name="app01index174"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stig S&aelig;ther Bakken (lead)</span></p>
+<p class="docText">Simple HTML form package</p>
+<a name="app01lev3sec81"></a><h5 class="docSection3Title">A.12.5.1 Description</h5>
+<p class="docText">This is a simple HTML form generator. It supports all the HTML form element types including file uploads, may return or print the form, just individual form elements or the full form in &quot;table mode&quot; with a fixed layout.</p>
+<a name="app01lev2sec84"></a><h4 class="docSection2Title">A.12.6. HTML_Javascript</h4><a name="app01index175"></a><a name="app01index176"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP 3.0 - By Tal Peer (lead) - Pierre-Alain Joye (lead)</span></p>
+<p class="docText">Provides an interface for creating simple JS scripts.</p>
+<a name="app01lev3sec82"></a><h5 class="docSection3Title">A.12.6.1 Description</H5>
+<p class="docText">Provides two classes:</P>
+<ul><li><p class="docList">HTML_Javascript for performing basic JS operations.</P></li><li><p class="docList">HTML_Javascript_Convert for converting variables</p></li></ul>
+<p class="docText">Allow output data to a file, to the standart output(print), or return</p>
+<a name="app01lev2sec85"></a><H4 class="docSection2Title">A.12.7. HTML_Menu</h4><a name="app01index177"></a><a name="app01index178"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Ulf Wendel (lead) - Alexey Borzov (lead)</span></P>
+<p class="docText">Generates HTML menus from multidimensional hashes.</p>
+<a name="app01lev3sec83"></a><H5 class="docSection3Title">A.12.7.1 Description</h5>
+<p class="docText">With the HTML_Menu class one can easily create and maintain a navigation structure for websites, configuring it via a multidimensional hash structure. Different modes for the HTML output are supported.</p>
+<a name="app01lev2sec86"></a><h4 class="docSection2Title">A.12.8. HTML_Page</h4><a name="app01index179"></a><a name="app01index180"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License 3.0 - By Klaus Guenther (lead) - Adam Daniel (lead)</span></P>
+<p class="docText">PEAR::HTML_Page is a base class for XHTML page generation.</P>
+<a name="app01lev3sec84"></a><h5 class="docSection3Title">A.12.8.1 Description</h5>
+<p class="docText">The PEAR::HTML_Page package provides a simple interface for generating an XHTML compliant page.</p>
+<ul><LI><p class="docList">supports virtually all HTML doctypes, from HTML 2.0 through XHTML 1.1 and XHTML Basic 1.0</p></li></UL>
+<p class="docText">plus preliminary support for XHTML 2.0</p>
+<UL><li><p class="docList">namespace support</p></li><li><p class="docList">global language declaration for the document</p></li><li><p class="docList">line ending styles</p></li><li><p class="docList">full META tag support</p></li><li><p class="docList">support for stylesheet declaration in the head section</p></li><li><p class="docList">support for linked stylesheets and scripts</P></LI><li><p class="docList">body can be a string, object with toHtml or toString methods or an array (can be combined)</p></LI></ul>
+<a name="app01lev2sec87"></a><h4 class="docSection2Title">A.12.9. html_parse</h4><a name="app01index181"></a><a name="app01index182"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP License - By Hartmut Holzgraefe (lead)</span></p>
+<p class="docText">HTML parser extenion</p>
+<a name="app01lev3sec85"></a><h5 class="docSection3Title">A.12.9.1 Description</H5>
+<p class="docText">HTML parser extension based on the ekhtml library (<a class="docLink" target="_blank" href="http://ekhtml.sourceforge.net/">http://ekhtml.sourceforge.net/</a>)</p>
+<a name="app01lev2sec88"></a><H4 class="docSection2Title">A.12.10. HTML_Progress</h4><a name="app01index183"></a><a name="app01index184"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License 3.0 - By Laurent Laville (lead) - Stefan Neufeind (contributor) - Christian Wenz (helper)</span></P>
+<p class="docText">How to include a loading bar in your XHTML documents quickly and easily.</p>
+<a name="app01lev3sec86"></a><h5 class="docSection3Title">A.12.10.1 Description</h5>
+<p class="docText">This package provides a way to add a loading bar fully customizable in existing XHTML documents.</p>
+<p class="docText">Your browser should accept DHTML feature.</P>
+<p class="docText">Features:</P>
+<ul><li><p class="docList">create horizontal, vertival bar and also circle, ellipse and polygons (square, rectangle)</p></li><LI><p class="docList">allows usage of an existing external StyleSheet and/or JavaScript</p></li><LI><p class="docList">all elements (progress, cells, string) are customizable by their html properties</p></LI><li><p class="docList">percent/string is floating all around the progress bar</p></li><li><p class="docList">compliant with all CSS/XHMTL standards</p></li><li><p class="docList">integration with all template engines is very easy</p></li><li><p class="docList">implements a Observer design pattern. It is possible to add Listeners.</p></li><li><p class="docList">adds a customizable UI monitor pattern to display a progress bar.</p></li><li><p class="docList">User-end can abort progress at any time.</P></LI><li><p class="docList">Look and feel can be sets by internal API or external config file.</p></LI><li><p class="docList">Allows many progress bar on same page without uses of iframe solution.</p></li><li><p class="docList">Since release 1.1 you may upload your files with ftp and display an indeterminate progress bar during operation.</p></li></UL>
+<a name="app01lev2sec89"></a><h4 class="docSection2Title">A.12.11. HTML_QuickForm</H4><a name="app01index185"></a><a name="app01index186"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Bertrand Mansion (lead) - Adam Daniel (lead) - Alexey Borzov (lead) - Jason Rust (developer) - Thomas Schulz (developer)</span></p>
+<p class="docText">The PEAR::HTML_QuickForm package provides methods for creating, validating, processing HTML forms.</P>
+<a name="app01lev3sec87"></a><h5 class="docSection3Title">A.12.11.1 Description</h5>
+<p class="docText">The HTML_QuickForm package provides methods for dynamically create, validate and render HTML forms.</p>
+<p class="docText">Features:</p>
+<UL><LI><p class="docList">More than 20 ready-to-use form elements.</p></li><li><p class="docList">XHTML compliant generated code.</p></LI><li><p class="docList">Numerous mixable and extendable validation rules.</p></LI><li><p class="docList">Automatic server-side validation and filtering.</P></li><li><p class="docList">On request javascript code generation for client-side validation.</p></li><li><p class="docList">File uploads support.</p></li><li><p class="docList">Total customization of form rendering.</p></li><li><p class="docList">Support for external template engines (ITX, Sigma, Flexy, Smarty).</p></li><li><p class="docList">Pluggable elements, rules and renderers extensions.</p></li></UL>
+<a name="app01lev2sec90"></a><H4 class="docSection2Title">A.12.12. HTML_QuickForm_Controller</h4><a name="app01index187"></a><a name="app01index188"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Alexey Borzov (lead) - Bertrand Mansion (developer)</span></p>
+<p class="docText">The add-on to HTML_QuickForm package that allows building of multipage forms</P>
+<a name="app01lev3sec88"></a><h5 class="docSection3Title">A.12.12.1 Description</h5>
+<p class="docText">The package is essentially an implementation of a PageController pattern.</p>
+<p class="docText">Architecture:</p>
+<ul><li><p class="docList">Controller class that examines HTTP requests and manages form values persistence across requests.</P></li><LI><p class="docList">Page class (subclass of QuickForm) representing a single page of the form.</p></LI><li><p class="docList">Business logic is contained in subclasses of Action class.</p></li></ul>
+<p class="docText">Cool features:</P>
+<UL><li><p class="docList">Includes several default Actions that allow easy building of multipage forms.</p></li><li><p class="docList">Includes usage examples for common usage cases (single-page form, wizard, tabbed form).</P></li></ul>
+<a name="app01lev2sec91"></a><H4 class="docSection2Title">A.12.13. HTML_Select</h4><a name="app01index189"></a><a name="app01index190"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Klaus Guenther (lead) - Adam Daniel (lead)</span></P>
+<p class="docText">HTML_Select is a class for generating HTML form select elements.</p>
+<a name="app01lev3sec89"></a><h5 class="docSection3Title">A.12.13.1 Description</h5>
+<p class="docText">HTML_Select provides an OOP way of generating HTML form select elements.</p>
+<a name="app01lev2sec92"></a><h4 class="docSection2Title">A.12.14. HTML_Select_Common</h4><a name="app01index191"></a><a name="app01index192"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: BSD - By Derick Rethans (lead) - Richard Heyes (lead)</span></p>
+<p class="docText">Some small classes to handle common &lt;select&gt; lists</p>
+<a name="app01lev3sec90"></a><h5 class="docSection3Title">A.12.14.1 Description</h5>
+<p class="docText">Provides &amp;lt;select&amp;gt; lists for:</p>
+<ul><li><p class="docList">Country</p></li><li><p class="docList">UK counties</P></LI><li><p class="docList">US States</p></LI><li><p class="docList">FR Departements</p></li></ul>
+<a name="app01lev2sec93"></a><h4 class="docSection2Title">A.12.15. HTML_Table</h4><a name="app01index193"></a><a name="app01index194"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Bertrand Mansion (lead) - Adam Daniel (lead)</span></P>
+<p class="docText">PEAR::HTML_Table makes the design of HTML tables easy, flexible, reusable and efficient.</p>
+<a name="app01lev3sec91"></a><H5 class="docSection3Title">A.12.15.1 Description</h5>
+<p class="docText">The PEAR::HTML_Table package provides methods for easy and efficient design of HTML tables.</P>
+<ul><li><p class="docList">Lots of customization options.</p></li><LI><p class="docList">Tables can be modified at any time.</P></li><li><p class="docList">The logic is the same as standard HTML editors.</p></li><LI><p class="docList">Handles col and rowspans.</p></li><LI><p class="docList">PHP code is shorter, easier to read and to maintain.</p></LI><li><p class="docList">Tables options can be reused.</p></li></ul>
+<a name="app01lev2sec94"></a><h4 class="docSection2Title">A.12.16. HTML_Table_Matrix</h4><a name="app01index195"></a><a name="app01index196"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License v3.0 - By Ian Eure (lead)</span></p>
+<p class="docText">Autofill a table with data</p>
+<a name="app01lev3sec92"></a><h5 class="docSection3Title">A.12.16.1 Description</h5>
+<p class="docText">HTML_Table_Matrix is an extension to HTML_Table which allows you to easily fill up a table with data.</p>
+<p class="docText">Features:</p>
+<ul><li><p class="docList">It uses Filler classes to determine how the data gets filled in the table. With a custom Filler, you can fill data in up, down, forwards, backwards, diagonally, randomly or any other way you like.</p></li><LI><p class="docList">Comes with Fillers to fill left-to-right-top-to-bottom and right-to-left-top-to-bottom.</P></li><li><p class="docList">Abstract Filler methods keep the code clean &amp; easy to understand.</P></li><li><p class="docList">Table height or width may be omitted, and it will figure out the correct table size based on the data you provide.</p></li><li><p class="docList">It integrates handily with Pager to create pleasant pageable table layouts, such as for an image gallery. Just specify a height or width, Filler, and feed it the data returned from Pager.</p></LI><li><p class="docList">Table may be constrained to a specific height or width, and excess data will be ignored.</P></li><LI><p class="docList">Fill offset may be specified, to leave room for a table header, or other elements in the table.</p></li><li><p class="docList">Fully documented with PHPDoc.</p></LI><LI><p class="docList">Includes fully functional example code.</p></li></ul>
+<a name="app01lev2sec95"></a><h4 class="docSection2Title">A.12.17. HTML_Table_Sortable</H4><a name="app01index197"></a><a name="app01index198"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: PHP License -</span></p>
+<p class="docText">A class to build sortable tables.</p>
+<a name="app01lev3sec93"></a><H5 class="docSection3Title">A.12.17.1 Description</h5>
+<p class="docText">For the JavaScript-enabled clients it uses Javascript as the frontend and for the other clients it will be sortable thru clicking on the heading and refreshing the page.</P>
+<p class="docText">There are 4 built in supported sort types:</p>
+<ul><li><p class="docList">String</p></li><li><p class="docList">Case insensitive string</p></li><li><p class="docList">Number</p></li><li><p class="docList">Date</p></li></ul>
+<a name="app01lev2sec96"></a><h4 class="docSection2Title">A.12.18. HTML_Template_Flexy</H4><a name="app01index199"></a><a name="app01index200"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Alan Knowles (lead)</span></P>
+<p class="docText">An extremely powerful Tokenizer driven Template engine</p>
+<a name="app01lev3sec94"></a><h5 class="docSection3Title">A.12.18.1 Description</H5>
+<p class="docText">HTML_Template_Flexy started it's life as a simplification of HTML_Template_Xipe, however in Version 0.2, It became one of the first template engine to use a real Lexer, rather than regex'es, making it possible to do things like ASP.net or Cold Fusion tags.</p>
+<p class="docText">However, it still has a very simple set of goals.</p>
+<ul><li><p class="docList">Very Simple API,</p><ul><LI><p class="docList">easy to learn...</p></LI><li><p class="docList">prevents to much logic going in templates</P></li></ul></li><li><p class="docList">Easy to write document'able code</P><UL><li><p class="docList">By using object vars for a template rather than 'assign', you can use phpdoc comments to list what variable you use.</p></li></ul></LI><li><p class="docList">Editable in WYSIWYG editors</p><UL><li><p class="docList">you can create full featured templates, that doesnt get broken every time you edit with Dreamweaver(tm) or Mozzila editor</P></li><li><p class="docList">Uses namespaced attributes to add looping/conditionals</p></li></ul></li><li><p class="docList">Extremely Fast,</p><ul><li><p class="docList">runtime is at least 4 time smaller than most other template engines (eg. Smarty)</p></li><li><p class="docList">uses compiled templates, as a result it is many times faster on blocks and loops than than Regex templates (eg. IT/phplib)</p></li></ul></LI><LI><p class="docList">Safer (for cross site scripting attacks)</p><ul><LI><p class="docList">All variables default to be output as HTML escaped (overridden with the :h modifier)</p></li></ul></li><li><p class="docList">Multilanguage support</p><UL><li><p class="docList">Parses strings out of template, so you can build translation tools</P></li><LI><p class="docList">Compiles language specific templates (so translation is only done once, not on every request)</p></li></ul></li><LI><p class="docList">Full dynamic element support (like ASP.NET), so you can pick elements to replace at runtime</P></li></ul>
+<p class="docText">Features:</p>
+<ul><LI><p class="docList">{variable} to echo $object-&gt;variable</p></li><LI><p class="docList">{method()} to echo $object-&gt;method();</p></LI><li><p class="docList">{foreach:var,key,value} to PHP foreach loops</p></li><li><p class="docList">tag attributes FLEXY:FOREACH, FLEXY:IF for looping and conditional HTML inclusion</p></li><li><p class="docList">{if:variable} to PHP If statement</p></li><li><p class="docList">{if:method()} to PHP If statement</p></li><li><p class="docList">{else:} and {end:} to close or alternate If statements</p></li><li><p class="docList">FORM to HTML_Template_Flexy_Element's</P></LI><li><p class="docList">replacement of INPUT, TEXTAREA and SELECT tags with HTML_Template_Flexy_Element code use FLEXY:IGNORE (inherited) and FLEXY:IGNOREONLY (single) to prevent replacements</p></LI><li><p class="docList">FLEXY:START/FLEXY:STARTCHILDREN tags to define where template starts/finishes</p></li><li><p class="docList">support for urlencoded braces {} in HTML attributes.</p></li><LI><p class="docList">documentation in the pear manual<a name="app01index201"></a><a name="app01index202"></a></p></LI><li><p class="docList">examples at <a class="docLink" target="_blank" href="http://cvs.php.net/cvs.php/pear/HTML_Template_Flexy/tests/">http://cvs.php.net/cvs.php/pear/HTML_Template_Flexy/tests/</a></P></li></ul>
+<a name="app01lev2sec97"></a><h4 class="docSection2Title">A.12.19. HTML_Template_IT</h4><a name="app01index203"></a><a name="app01index204"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Ulf Wendel (lead) - Pierre-Alain Joye (lead)</span></P>
+<p class="docText">Integrated Templates</P>
+<a name="app01lev3sec95"></a><h5 class="docSection3Title">A.12.19.1 Description</h5>
+<p class="docText">HTML_Template_IT:</p>
+<p class="docText">Simple template API.</p>
+<p class="docText">The Isotemplate API is somewhat tricky for a beginner although it is the best one you can build. template::parse() [phplib template = Isotemplate] requests you to name a source and a target where the current block gets parsed into. Source and target can be block names or even handler names. This API gives you a maximum of fexibility but you always have to know what you do which is quite unusual for php skripter like me.</P>
+<p class="docText">I noticed that I do not any control on which block gets parsed into which one. If all blocks are within one file, the script knows how they are nested and in which way you have to parse them. IT knows that inner1 is a child of block2, there's no need to tell him about this.</p>
+<p class="docText">Features :</p>
+<UL><li><p class="docList">Nested blocks</P></li><li><p class="docList">Include external file</p></li><li><p class="docList">Custom tags format (default {mytag})</p></li></ul>
+<p class="docText">HTML_Template_ITX :</p>
+<p class="docText">With this class you get the full power of the phplib template class. You may have one file with blocks in it but you have as well one main file and multiple files one for each block. This is quite usefull when you have user configurable websites. Using blocks not in the main template allows you to modify some parts of your layout easily.</p>
+<a name="app01lev2sec98"></a><h4 class="docSection2Title">A.12.20. HTML_Template_PHPLIB</h4><a name="app01index205"></a><a name="app01index206"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: LGPL - By Bj&ouml;rn Schotte (lead)</span></p>
+<p class="docText">preg_* based template system.</p>
+<a name="app01lev3sec96"></a><h5 class="docSection3Title">A.12.20.1 Description</h5>
+<p class="docText">The popular Template system from PHPLIB ported to PEAR. It has some features that can't be found currently in the original version like fallback paths. It has minor improvements and cleanup in the code as well as some speed improvements.</P>
+<a name="app01lev2sec99"></a><H4 class="docSection2Title">A.12.21. HTML_Template_Sigma</h4><a name="app01index207"></a><a name="app01index208"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Alexey Borzov (lead)</span></p>
+<p class="docText">An implementation of Integrated Templates API with template 'compilation' added</P>
+<a name="app01lev3sec97"></a><h5 class="docSection3Title">A.12.21.1 Description</h5>
+<p class="docText">HTML_Template_Sigma implements Integrated Templates API designed by Ulf Wendel.</p>
+<p class="docText">Features:</p>
+<ul><li><p class="docList">Nested blocks. Nesting is controlled by the engine.</P></li><LI><p class="docList">Ability to include files from within template: &amp;lt;!-- INCLUDE --&amp;gt;</p></LI><li><p class="docList">Automatic removal of empty blocks and unknown variables (methods to manually tweak/override this are also available)</p></li><li><p class="docList">Methods for runtime addition and replacement of blocks in templates</P></LI><li><p class="docList">Ability to insert simple function calls into templates: func_uppercase('Hello world!') and to define callback functions for these</p></li><li><p class="docList">'Compiled' templates: the engine has to parse a template file using regular expressions to find all the blocks and variable placeholders. This is a very &quot;expensive&quot; operation and is an overkill to do on every page request: templates seldom change on production websites. Thus this feature: an internal representation of the template structure is saved into a file and this file gets loaded instead of the source one on subsequent requests (unless the source changes)</P></li><li><p class="docList">PHPUnit-based tests to define correct behaviour</P></li><LI><p class="docList">Usage examples for most of the features are available, look in the docs/ directory</p></li></ul>
+<a name="app01lev2sec100"></a><h4 class="docSection2Title">A.12.22. HTML_Template_Xipe</h4><a name="app01index209"></a><a name="app01index210"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Wolfram Kriesing (lead)</span></p>
+<p class="docText">A simple, fast and powerful template engine.</p>
+<a name="app01lev3sec98"></a><h5 class="docSection3Title">A.12.22.1 Description</h5>
+<p class="docText">The template engine is a compiling engine, all templates are compiled into PHP-files. This will make the delivery of the files faster on the next request, since the template doesn't need to be compiled again. If the template changes it will be recompiled.</p>
+<p class="docText">There is no new template language to learn. Beside the default mode, there is a set of constructs since version 1.6 which allow you to edit your templates with WYSIWYG editors.</p>
+<p class="docText">By default the template engine uses indention for building blocks (you can turn that off). This feature was inspired by Python and by the need I felt to force myself to write proper HTML-code, using proper indentions, to make the code better readable.</p>
+<p class="docText">Every template is customizable in multiple ways. You can configure each template or an entire directory to use different delimiters, caching parameters, etc. via either an XML-file or a XML-chunk which you simply write anywhere inside the tpl-code.</p>
+<p class="docText">Using the Cache the final file can also be cached (i.e. a resulting HTML-file). The caching options can be customized as needed. The cache can reduce the server load by very much, since the entire php-file doesn't need to be processed again, the resulting client-readable data are simply delivered right from the cache (the data are saved using php's output buffering).</p>
+<p class="docText">The template engine is prepared to be used for multi-language applications too. If you i.e. use the PEAR::I18N for translating the template, the compiled templates need to be saved under a different name for each language. The template engine is prepared for that too, it saves the compiled template including the language code if required (i.e. a compiled index.tpl which is saved for english gets the filename index.tpl.en.php).</p>
+<a name="app01lev2sec101"></a><h4 class="docSection2Title">A.12.23. HTML_TreeMenu</H4><a name="app01index211"></a><a name="app01index212"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: BSD - By Richard Heyes (lead)</span></P>
+<p class="docText">Provides an api to create a HTML tree</p>
+<a name="app01lev3sec99"></a><h5 class="docSection3Title">A.12.23.1 Description</H5>
+<p class="docText">PHP Based api creates a tree structure using a couple of small PHP classes. This can then be converted to javascript using the printMenu() method. The tree is dynamic in IE 4 or higher, NN6/Mozilla and Opera 7, and maintains state (the collapsed/expanded status of the branches) by using cookies. Other browsers display the tree fully expanded. Each node can have an optional link and icon. New API in 1.1 with many changes (see CVS for changelog) and new features, of which most came from Chip Chapin (<a class="docLink" target="_blank" href="http://www.chipchapin.com">http://www.chipchapin.com</a>).</p>
+<a name="app01lev2sec102"></a><h4 class="docSection2Title">A.12.24. Pager</h4><a name="app01index213"></a><a name="app01index214"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Lorenzo Alberton (lead) - Richard Heyes (lead)</span></p>
+<p class="docText">Data paging class</p>
+<a name="app01lev3sec100"></a><h5 class="docSection3Title">A.12.24.1 Description</H5>
+<p class="docText">It takes an array of data as input and page it according to various parameters. It also builds links within a specified range, and allows complete customization of the output (it even works with mod_rewrite). Two modes available: &quot;Jumping&quot; and &quot;Sliding&quot; window style.</p>
+<a name="app01lev2sec103"></a><H4 class="docSection2Title">A.12.25. Pager_Sliding</h4><a name="app01index215"></a><a name="app01index216"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Lorenzo Alberton (lead)</span></P>
+<p class="docText">Sliding Window Pager.</p>
+<a name="app01lev3sec101"></a><h5 class="docSection3Title">A.12.25.1 Description</h5>
+<p class="docText">It takes an array of data as input and page it according to various parameters. It also builds links within a specified range, and allows complete customization of the output (it even works with mod_rewrite). It is compatible with PEAR::Pager's API.</p>
+<p class="docText">[Deprecated]Use PEAR::Pager v2.x with $mode = 'Sliding' instead</P>
+<a name="app01lev2sec104"></a><H4 class="docSection2Title">A.12.26. tidy</h4><a name="app01index217"></a><a name="app01index218"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP - By John Coggeshall (lead) - Ilia Alshanetsky (developer)</span></p>
+<p class="docText">Tidy HTML Repairing and Parsing</p>
+<a name="app01lev3sec102"></a><h5 class="docSection3Title">A.12.26.1 Description</H5>
+<p class="docText">Tidy is a binding for the Tidy HTML clean and repair utility which allows you to not only clean and otherwise manipluate HTML documents, but also traverse the document tree using the Zend Engine 2 OO semantics.</p>
+<ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec11.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec13.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

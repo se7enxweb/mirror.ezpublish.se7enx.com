@@ -1,0 +1,150 @@
+[03-22-2006 00:25:42] -!- ordnas [n=ordnas@p549D636E.dip.t-dialin.net] has joined #ezpublish
+[03-22-2006 00:34:11] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-22-2006 00:45:32] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-22-2006 01:29:04] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-22-2006 02:30:46] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-22-2006 02:45:55] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[03-22-2006 03:00:34] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-22-2006 03:04:10] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-22-2006 03:49:12] -!- DiGiTa|_ [n=guillaum@84.6.32.52] has joined #ezpublish
+[03-22-2006 03:49:21] [#ezpublish] <DiGiTa|_> hi
+[03-22-2006 03:50:29] [#ezpublish] <DiGiTa|_> does someone know why ez display an ? instead of €
+[03-22-2006 03:57:44] [#ezpublish] <DiGiTa|_> i ofund the solution
+[03-22-2006 03:57:50] [#ezpublish] <DiGiTa|_> charset prob
+[03-22-2006 03:58:21] [#ezpublish] <DiGiTa|_> iso-8859-15
+[03-22-2006 04:06:13] [#ezpublish] <_Rappy_> UTF-8 is your firend
+[03-22-2006 04:06:52] -!- tobyS_ [n=dotxp@dslb-084-061-147-045.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-22-2006 04:17:47] -!- _buz is now known as buz
+[03-22-2006 04:49:17] -!- jota_ [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-22-2006 04:50:51] -!- tobyS [n=dotxp@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-22-2006 04:51:30] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit [Read error: 110 (Connection timed out)]
+[03-22-2006 05:05:28] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-22-2006 05:19:18] -!- phretor [n=phretor@host44-155.pool874.interbusiness.it] has joined #ezpublish
+[03-22-2006 05:19:20] [#ezpublish] <phretor> hi
+[03-22-2006 05:19:28] [#ezpublish] <phretor> re kracker
+[03-22-2006 05:20:18] [#ezpublish] <phretor> I was wandering that it is possible to fetch user beloging to the current user group *but* I found no way for fetching users within a *given* group. Any help^
+[03-22-2006 05:20:21] [#ezpublish] <phretor> ?
+[03-22-2006 05:37:03] [#ezpublish] <kracker> wow you caught me, impressed
+[03-22-2006 05:37:54] [#ezpublish] <kracker> say again:?
+[03-22-2006 05:38:08] [#ezpublish] <kracker> get a user group, find a specific user?
+[03-22-2006 05:38:34] [#ezpublish] <kracker> do you kno the user, group, both ... what are you starting with, what do you know
+[03-22-2006 05:39:04] [#ezpublish] <kracker> doh, i'm late
+[03-22-2006 05:39:09] [#ezpublish] <phretor> kracker: I only know the group (id/name)
+[03-22-2006 05:39:29] [#ezpublish] <kracker> ok and say there are 10 yusers in the group
+[03-22-2006 05:39:40] [#ezpublish] <phretor> kracker: yep
+[03-22-2006 05:39:41] [#ezpublish] <kracker> which do you want (all, one, ?)
+[03-22-2006 05:39:48] [#ezpublish] <phretor> kracker: all
+[03-22-2006 05:39:48] [#ezpublish] <kracker> user that is ..
+[03-22-2006 05:39:51] [#ezpublish] <kracker> nods
+[03-22-2006 05:39:58] [#ezpublish] <phretor> :-\
+[03-22-2006 05:40:17] [#ezpublish] <phretor> kracker: I'm going to lunch but my client will log all down all your ideas ;-) thanks as usual
+[03-22-2006 05:40:19] [#ezpublish] <kracker> you dugg into pubsvn.ez.no doxygen docs before :\
+[03-22-2006 05:40:25] [#ezpublish] <kracker> nods
+[03-22-2006 05:42:42] [#ezpublish] <kracker> last ditch you could always grab all the users and loop to find the once in the group (but that seems like the hard way)
+[03-22-2006 05:48:35] [#ezpublish] <kracker> hrm, not seeing this through google
+[03-22-2006 05:49:57] [#ezpublish] <kracker> well, think i would say groups are not really called groups in eZ
+[03-22-2006 05:50:11] [#ezpublish] <kracker> (breaks bottle over forhead)
+[03-22-2006 05:50:22] [#ezpublish] <kracker> they are called `roles`
+[03-22-2006 05:51:04] [#ezpublish] <kracker> heh, i guess it helps to google for the right / applicable keywords
+[03-22-2006 05:56:31] [#ezpublish] <kracker> hrm, sry i don't see this laying around already, this should be a tpl extension
+[03-22-2006 05:56:40] [#ezpublish] <kracker> or perhapse it's built in and i'm just missing it
+[03-22-2006 05:56:55] [#ezpublish] <kracker> doesn't seem like it would take too much to write tho
+[03-22-2006 05:57:20] [#ezpublish] <kracker> might want to throw a specifcly worded question into the forum (*shrugs*)
+[03-22-2006 06:12:30] [#ezpublish] <kris10an> phretor: if you want to get all the users in a group, just do a normal fetch
+[03-22-2006 06:13:44] [#ezpublish] <buz> any JS wizards around?
+[03-22-2006 06:14:01] [#ezpublish] <buz> how in hell do you implement sleep(n seconds) in js??
+[03-22-2006 06:14:43] [#ezpublish] <buz> and one for the flash lovers: anyone knows of open source flash slideshow thingies?
+[03-22-2006 06:14:59] [#ezpublish] <buz> with neat effects and all that
+[03-22-2006 06:18:51] [#ezpublish] <kracker> thnx kris10an
+[03-22-2006 06:19:06] [#ezpublish] <kracker> lol, flash lovers
+[03-22-2006 06:19:19] [#ezpublish] <buz> ?
+[03-22-2006 06:19:56] [#ezpublish] <buz> what so funny about that
+[03-22-2006 06:20:03] [#ezpublish] <buz> (yeah there are people who like flash ;)
+[03-22-2006 06:20:44] [#ezpublish] <buz> +§§§§§§
+[03-22-2006 06:20:47] [#ezpublish] <buz> oops
+[03-22-2006 06:20:51] [#ezpublish] <phretor> kris10an: normal fetch? node fetch?
+[03-22-2006 06:21:09] [#ezpublish] <kris10an> are you doing this from PHP or the templates?
+[03-22-2006 06:21:57] [#ezpublish] <phretor> kracker: note that 'roles' and 'groups' must not be confused!
+[03-22-2006 06:23:12] [#ezpublish] <phretor> kris10an: from template
+[03-22-2006 06:24:59] [#ezpublish] <kris10an> hmm.. are you trying to fetch all users belonging to a user-group or to a specific role?
+[03-22-2006 06:25:09] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[03-22-2006 06:27:45] [#ezpublish] <phretor> kris10an: group
+[03-22-2006 06:29:09] [#ezpublish] <Sulfur> w00t guys :)
+[03-22-2006 06:29:09] [#ezpublish] <kris10an> then just do: {def $users=fetch('content','list',hash('parent_node_id', YOURFOLDERID ) ) }
+[03-22-2006 06:29:28] [#ezpublish] <kris10an> and add a classfilter for "users"
+[03-22-2006 06:30:02] [#ezpublish] <kris10an> http://ez.no/doc/ez_publish/technical_manual/3_6/reference/modules/content/fetch_functions/list
+[03-22-2006 06:35:13] [#ezpublish] <buz> is there an xml schema for ezxml??
+[03-22-2006 06:37:59] -!- ordnas [n=ordnas@p549D636E.dip.t-dialin.net] has left #ezpublish []
+[03-22-2006 06:41:38] [#ezpublish] <phretor> kris10an: my user group "Researchers" has NodeID: 91 is that the folder id?
+[03-22-2006 06:42:48] [#ezpublish] <kris10an> phretor: sorry.. i wrote it wrong.. i ment NODEID instead of folderid
+[03-22-2006 06:42:59] [#ezpublish] <phretor> kris10an: okie
+[03-22-2006 06:44:06] -!- DiGiTa|_ [n=guillaum@84.6.32.52] has quit []
+[03-22-2006 06:46:04] [#ezpublish] <kris10an> {def $users=fetch('content','list', hash( 'parent_node_id', 128,
+[03-22-2006 06:46:04] [#ezpublish] <kris10an>                                           'class_filter_type', 'include'
+[03-22-2006 06:46:04] [#ezpublish] <kris10an>                                           'class_filter_array', array( 'user' )))}
+[03-22-2006 06:46:12] [#ezpublish] <kris10an> this is the kind of fetch you want
+[03-22-2006 06:55:58] [#ezpublish] <kracker> heh, that's one for the doc wiki ;)
+[03-22-2006 06:57:49] [#ezpublish] <buz> did anyone setup one now?
+[03-22-2006 07:10:01] [#ezpublish] <phretor> kris10an: it made it more robust: I first fetch all the groups and then I get the id of the group named 'Researchers' to be used for a further list fetch of users ;-)
+[03-22-2006 07:40:13] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-22-2006 07:52:32] -!- phretor [n=phretor@host44-155.pool874.interbusiness.it] has quit []
+[03-22-2006 08:43:37] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[03-22-2006 09:01:29] -!- Bedlore [n=me@ppp146-40.lns3.adl2.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[03-22-2006 09:15:10] -!- tobyS [n=dotxp@F0-EZSYSTEMS.customer.getit.de] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-22-2006 09:16:18] -!- phretor [n=phretor@host196-57.pool870.interbusiness.it] has joined #ezpublish
+[03-22-2006 09:43:09] -!- katana` [n=Katana_@194.51.100.246] has joined #ezpublish
+[03-22-2006 09:47:51] [#ezpublish] <katana`> hellow :)
+[03-22-2006 09:53:56] [#ezpublish] <phretor> I noticed that *layout.tpl templates are full of thoseÂ {cache-block}(s): are they so necessary for performance?
+[03-22-2006 09:54:52] [#ezpublish] <kracker> they say so
+[03-22-2006 09:58:31] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[03-22-2006 09:59:14] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-22-2006 10:00:33] [#ezpublish] <phretor> kracker: and what about those like "{cache-block keys=array($uri_string, $current_user.role_id_list|implode( ',' ), $current_user.limited_assignment_value_list|implode( ',' ))}"?
+[03-22-2006 10:00:52] [#ezpublish] <phretor> will I experience problems with users if removing?
+[03-22-2006 10:01:16] [#ezpublish] <kracker> sry man i'm slammed today no time :\
+[03-22-2006 10:01:49] [#ezpublish] <phretor> :-)
+[03-22-2006 10:31:36] -!- katana` [n=Katana_@194.51.100.246] has quit [Read error: 104 (Connection reset by peer)]
+[03-22-2006 10:33:02] -!- katana` [n=Katana_@194.51.100.246] has joined #ezpublish
+[03-22-2006 10:36:00] -!- katana` [n=Katana_@194.51.100.246] has quit [Read error: 104 (Connection reset by peer)]
+[03-22-2006 10:37:35] -!- katana` [n=Katana_@194.51.100.246] has joined #ezpublish
+[03-22-2006 10:54:08] -!- katana` [n=Katana_@194.51.100.246] has quit [Read error: 104 (Connection reset by peer)]
+[03-22-2006 10:56:07] -!- katana` [n=Katana_@194.51.100.246] has joined #ezpublish
+[03-22-2006 10:59:51] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-22-2006 11:08:42] -!- jota__ [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-22-2006 11:10:53] -!- jota_ [n=jota@cm216016.red83-165.mundo-r.com] has quit [Read error: 110 (Connection timed out)]
+[03-22-2006 11:23:46] -!- DiGiTa|_ [n=guillaum@84.6.32.52] has joined #ezpublish
+[03-22-2006 11:27:56] -!- phretor [n=phretor@host196-57.pool870.interbusiness.it] has quit []
+[03-22-2006 11:48:17] -!- jota__ [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[03-22-2006 11:55:06] -!- katana` [n=Katana_@194.51.100.246] has quit [Read error: 110 (Connection timed out)]
+[03-22-2006 12:15:57] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Leaving."]
+[03-22-2006 12:46:44] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-22-2006 12:47:59] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-22-2006 13:03:18] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-22-2006 13:12:06] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[03-22-2006 13:13:03] [#ezpublish] <zrg> boo
+[03-22-2006 13:13:31] -!- tobyS [n=dotxp@dslb-084-062-192-154.pools.arcor-ip.net] has joined #ezpublish
+[03-22-2006 13:43:02] -!- ordnas [n=ordnas@p549D636E.dip.t-dialin.net] has joined #ezpublish
+[03-22-2006 13:55:41] -!- phretor [n=phretor@host143-130.pool875.interbusiness.it] has joined #ezpublish
+[03-22-2006 14:22:45] -!- phretor [n=phretor@host143-130.pool875.interbusiness.it] has quit [Read error: 110 (Connection timed out)]
+[03-22-2006 15:10:16] -!- ordnas [n=ordnas@p549D636E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-22-2006 15:12:59] -!- DiGiTa|_ [n=guillaum@84.6.32.52] has quit []
+[03-22-2006 15:35:40] -!- VZT [n=VZT@193.91.141.228] has joined #ezpublish
+[03-22-2006 15:53:26] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-22-2006 16:00:10] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-22-2006 16:37:56] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[03-22-2006 16:45:29] -!- VZT [n=VZT@193.91.141.228] has left #ezpublish []
+[03-22-2006 17:05:10] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[03-22-2006 17:43:32] -!- phretor [n=phretor@host143-130.pool875.interbusiness.it] has joined #ezpublish
+[03-22-2006 17:44:04] [#ezpublish] <phretor> hi there
+[03-22-2006 17:44:18] [#ezpublish] <phretor> hi kracker, kris10an
+[03-22-2006 17:56:14] -!- elephantMan [n=elephant@88.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[03-22-2006 17:58:39] -!- elephantMan [n=elephant@88.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-22-2006 18:22:20] [#ezpublish] <phretor> wtf is that google.tpl?
+[03-22-2006 18:38:57] [#ezpublish] <kracker> l0ol
+[03-22-2006 18:39:10] [#ezpublish] <kracker> it's a navigation `thingy`
+[03-22-2006 18:39:38] [#ezpublish] <kracker> arg too long, for pagnation :\
+[03-22-2006 18:40:50] [#ezpublish] <kracker> say like search results return 50k+ result items, separating those out into pages of 100 an navigation between pages the 1 2 3 4 5 6 >
+[03-22-2006 18:59:27] [#ezpublish] <phretor> kracker: oh, got it
+[03-22-2006 19:00:57] [#ezpublish] <phretor> kracker: so I have to include it into all "folder like" templates, isn't it?
+[03-22-2006 19:04:19] [#ezpublish] <phretor> kracker: is that "navigation mode" enabled by default?
+[03-22-2006 19:16:16] -!- phretor [n=phretor@host143-130.pool875.interbusiness.it] has quit []
+[03-22-2006 20:02:51] [#ezpublish] <kracker> woot:?

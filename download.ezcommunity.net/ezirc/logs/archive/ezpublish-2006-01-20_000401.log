@@ -1,0 +1,160 @@
+[01-19-2006 00:39:49] -!- ordnas [n=ordnas@p549D5634.dip.t-dialin.net] has joined #ezpublish
+[01-19-2006 00:59:51] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-19-2006 01:06:02] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-19-2006 01:13:36] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-19-2006 01:29:39] -!- tobyS [n=dotxp@popeye.ez.no] has joined #ezpublish
+[01-19-2006 01:40:33] -!- B-KiLLer` [n=me@217.31.64.170] has joined #ezpublish
+[01-19-2006 01:40:53] -!- ordna1 [n=ordnas@p549D7409.dip.t-dialin.net] has joined #ezpublish
+[01-19-2006 01:42:11] [#ezpublish] <B-KiLLer`> hi
+[01-19-2006 01:42:35] -!- ordnas [n=ordnas@p549D5634.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-19-2006 01:56:49] -!- ordna1 [n=ordnas@p549D7409.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-19-2006 02:48:55] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-19-2006 03:34:10] -!- SEAwolfx [i=debian-t@tor/session/x-0eec4c1ca7190914] has joined #ezpublish
+[01-19-2006 03:34:23] [#ezpublish] <SEAwolfx> re
+[01-19-2006 03:53:56] -!- SEAwolfx [i=debian-t@tor/session/x-0eec4c1ca7190914] has quit [Remote closed the connection]
+[01-19-2006 03:54:07] -!- SEAwolfx [n=mike@tor/session/x-b2ffcdaf1305da1a] has joined #ezpublish
+[01-19-2006 03:54:32] -!- B-KiLLer` [n=me@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[01-19-2006 04:25:30] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-19-2006 04:42:20] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[01-19-2006 05:22:45] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-19-2006 05:41:22] -!- Jens [n=jens@trac.codes-concepts.de] has joined #ezpublish
+[01-19-2006 06:58:11] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[01-19-2006 07:52:40] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[01-19-2006 07:55:05] [#ezpublish] <kalooni> hi there
+[01-19-2006 07:57:56] [#ezpublish] <kalooni> A simple question for you probably: If i do IndexPage=/content/view/full/540 it works but if I do IndexPage=/accueil (my node name) it doesn't ? Why ?
+[01-19-2006 08:08:39] -!- tobiS [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-19-2006 08:09:39] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-19-2006 08:11:59] -!- tobyS [n=dotxp@popeye.ez.no] has quit ["Plant your channel to pearadise.net!"]
+[01-19-2006 08:20:23] -!- tobyS [n=dotxp@popeye.ez.no] has joined #ezpublish
+[01-19-2006 08:27:54] [#ezpublish] <kalooni> Why does nice url doesn't work when trying to define the index page ? according to the documentation it should ?
+[01-19-2006 09:02:37] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-19-2006 09:57:18] -!- tobyS [n=dotxp@popeye.ez.no] has quit ["Plant your channel to pearadise.net!"]
+[01-19-2006 10:09:39] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-19-2006 10:23:59] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-19-2006 11:04:09] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[01-19-2006 11:34:48] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[01-19-2006 12:23:35] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-19-2006 12:25:21] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-19-2006 12:58:04] -!- OOzy [i=OOzy@82.147.217.57] has joined #ezpublish
+[01-19-2006 12:58:13] [#ezpublish] <OOzy> Hi
+[01-19-2006 12:59:15] [#ezpublish] <OOzy> I have a question?
+[01-19-2006 13:08:40] [#ezpublish] <buz> about what
+[01-19-2006 13:09:22] [#ezpublish] <OOzy> I planning to take the expublish course in Norway
+[01-19-2006 13:09:26] [#ezpublish] <OOzy> what do you think?
+[01-19-2006 13:09:30] [#ezpublish] <OOzy> is it helpful
+[01-19-2006 13:09:31] [#ezpublish] <buz> no idea
+[01-19-2006 13:09:47] [#ezpublish] <buz> it would definitely depend on your current knowledge i'd guess
+[01-19-2006 13:10:01] [#ezpublish] <OOzy> I am just starting
+[01-19-2006 13:10:11] [#ezpublish] <OOzy> what do you recommend for me?
+[01-19-2006 13:10:49] -!- technocrat [i=sniegeli@hst-250-241.splius.lt] has joined #ezpublish
+[01-19-2006 13:11:13] [#ezpublish] <OOzy> Are you guys in this room considered the ezpublish gurus?
+[01-19-2006 13:13:48] [#ezpublish] <OOzy> Ok thanks
+[01-19-2006 13:13:55] [#ezpublish] <OOzy> Enjoy
+[01-19-2006 13:15:00] [#ezpublish] <buz> well since i never took the course i cant really comment
+[01-19-2006 13:15:13] [#ezpublish] <buz> whatever happened to katana anyway?
+[01-19-2006 13:15:31] [#ezpublish] <buz> does ez france not let him in here
+[01-19-2006 13:15:32] [#ezpublish] <buz> ?
+[01-19-2006 13:15:45] -!- OOzy [i=OOzy@82.147.217.57] has quit []
+[01-19-2006 13:16:20] [#ezpublish] <technocrat> anybody worked with components?
+[01-19-2006 13:16:38] [#ezpublish] <technocrat> i need a little help with database package :)
+[01-19-2006 13:16:46] [#ezpublish] <technocrat> m?
+[01-19-2006 13:19:24] [#ezpublish] <technocrat> this is pretty funny :) but.. howto get the results after i call sql statment? :)
+[01-19-2006 13:19:35] [#ezpublish] <technocrat> i can't find any method for that purpose
+[01-19-2006 13:19:52] [#ezpublish] <technocrat> for two days ! :) ..
+[01-19-2006 13:20:09] [#ezpublish] <buz> better ask in the forum i believe
+[01-19-2006 13:20:21] [#ezpublish] <technocrat> i wondering now, exist some kinda :)
+[01-19-2006 13:20:31] [#ezpublish] <buz> if it's so hard to find out (i dont know, havent used the components so far) others will have the issue, too
+[01-19-2006 13:21:25] [#ezpublish] <technocrat> maybe i'am unlucky man ;))
+[01-19-2006 13:21:30] [#ezpublish] <technocrat> xexe
+[01-19-2006 13:27:28] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[01-19-2006 13:33:37] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-19-2006 13:37:24] -!- ordnas [n=ordnas@p549D7409.dip.t-dialin.net] has joined #ezpublish
+[01-19-2006 13:43:14] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-19-2006 13:48:46] -!- Jens [n=jens@trac.codes-concepts.de] has quit [Nick collision from services.]
+[01-19-2006 13:49:19] -!- _Jens [n=jens@trac.codes-concepts.de] has joined #ezpublish
+[01-19-2006 14:01:22] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-19-2006 14:03:30] [#ezpublish] <technocrat> so anybody can help with components?
+[01-19-2006 14:07:14] -!- ordnas [n=ordnas@p549D7409.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-19-2006 14:10:48] -!- ordnas [n=ordnas@p549D7409.dip.t-dialin.net] has joined #ezpublish
+[01-19-2006 14:12:08] -!- ordnas [n=ordnas@p549D7409.dip.t-dialin.net] has quit [Client Quit]
+[01-19-2006 15:17:02] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[01-19-2006 15:17:27] [#ezpublish] <zrg> anyone kicking?
+[01-19-2006 15:25:23] [#ezpublish] <zrg> all producs in system use same price options, is it possible somehow to set defaults so there is no need to fill out every single one by hand (thousands) ?
+[01-19-2006 15:38:40] -!- technocrat [i=sniegeli@hst-250-241.splius.lt] has quit ["dirbam tyliai"]
+[01-19-2006 15:57:26] -!- kore_ [n=lordhong@217.194.224.41] has quit []
+[01-19-2006 15:57:44] -!- tobiS [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-19-2006 16:19:40] [#ezpublish] <_kore> Why not just overwrite the template? ... but for a lot of attributes you can set default values in the class definition - I don't know if this is possible for price options, too
+[01-19-2006 16:21:12] [#ezpublish] <zrg> it isnt, thats the problem
+[01-19-2006 16:22:13] [#ezpublish] <zrg> overwrite template, how do you mean? its posters and they can be ordered in different sizes, the shop module must actually understand which size was ordered.
+[01-19-2006 16:22:52] -!- pire [n=kbot@phpugdo.de] has quit [Read error: 104 (Connection reset by peer)]
+[01-19-2006 16:23:14] [#ezpublish] <zrg> if the given product does not actually contain the option you choose on form, i dont thing it will work.. ?
+[01-19-2006 16:23:16] [#ezpublish] <_kore> Overwrite the template (create a new one, in you design extension) for the attribute_view_gui of the option
+[01-19-2006 16:23:48] [#ezpublish] <_kore> It may be a bit tricky, if this view_gui is used for other classes, too
+[01-19-2006 16:31:51] [#ezpublish] <zrg> ok i see what you mean, you think that just having the fields if form will be enough?
+[01-19-2006 17:30:19] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[01-19-2006 18:33:25] -!- _Jens is now known as Jens
+[01-19-2006 20:15:54] -!- Jens is now known as _Jens
+[01-19-2006 20:43:34] -!- Bedlore [n=me@219.90.255.86] has joined #ezpublish
+[01-19-2006 20:44:11] -!- mode/#ezpublish [+o fh] by ChanServ
+[01-19-2006 20:45:00] [#ezpublish] <Bedlore> anyone here symlink a single ezpublish base in order to run mutliple instances of ezpublish?
+[01-19-2006 20:46:57] [#ezpublish] <kracker> sounds dangerious with the db / file concurency issues :(?
+[01-19-2006 20:47:30] [#ezpublish] <kracker> why not make your changes as a design extension which you can reuse :?
+[01-19-2006 20:47:44] [#ezpublish] <kracker> ez.no is just an extension + stock (from what i've seen recently)
+[01-19-2006 20:47:46] [#ezpublish] <Bedlore> I think thats how a few of the ez hosting partners are doing it
+[01-19-2006 20:47:52] [#ezpublish] <kracker> nods
+[01-19-2006 20:48:02] [#ezpublish] <Bedlore> I'm playing around with the idea
+[01-19-2006 20:48:06] [#ezpublish] <kracker> whats your core goal
+[01-19-2006 20:48:15] [#ezpublish] <kracker> with the multi site sharing
+[01-19-2006 20:48:22] [#ezpublish] <Bedlore> but wondering what the best way to handle directories like design is
+[01-19-2006 20:48:34] [#ezpublish] <Bedlore> probably cant symlink them very well
+[01-19-2006 20:48:59] [#ezpublish] <kracker> sure, which was why i was asking what your most important goal was so I didn't diatribe down the wrong path
+[01-19-2006 20:49:42] [#ezpublish] <Bedlore> indeed, 1. conserve disk space 2. Simplify ezp upgrades
+[01-19-2006 20:51:18] [#ezpublish] <kracker> if it's just design +site (configuration) sharing i say go with an extension, if your trying to save database disk space (ugg, i say not worth it), if your trying to save on similar configuration i say go with extension
+[01-19-2006 20:52:04] [#ezpublish] <Bedlore> good suggestion for me to ponder
+[01-19-2006 20:52:54] [#ezpublish] <Bedlore> so are you saying run individual sites (seperate domains) as an extension in a common install
+[01-19-2006 20:53:05] [#ezpublish] <kracker> (rambling) i just think you can run a lot of different sites using a single insallation (what with the ini system allowing different var/ storage, databases, and enabled extensions)
+[01-19-2006 20:53:59] [#ezpublish] <kracker> i could be over simplifying :\ though i think symlinking is dirty in the case you describe ....
+[01-19-2006 20:54:05] [#ezpublish] <Bedlore> my first approach was just to ln -s /common_ezp_base new-site
+[01-19-2006 20:54:11] [#ezpublish] <kracker> i guess you could use the symlink method
+[01-19-2006 20:54:27] [#ezpublish] <Bedlore> more testing required :)
+[01-19-2006 20:55:09] [#ezpublish] <kracker> you would want to use the ini system to have a separate var / db per site
+[01-19-2006 20:55:37] [#ezpublish] <kracker> and when i say site, i mean different eZ ini vhost + design configuration
+[01-19-2006 20:56:00] [#ezpublish] <kracker> nods
+[01-19-2006 20:56:07] [#ezpublish] <Bedlore> so far I don't think its necessary though, it appears that newly added files to new-site are not visible in the base install, thus not common to all sites
+[01-19-2006 20:57:51] [#ezpublish] <kracker> hmm
+[01-19-2006 20:58:44] [#ezpublish] <Bedlore> actually thats wrong
+[01-19-2006 20:59:02] [#ezpublish] <Bedlore> gets messier
+[01-19-2006 20:59:42] [#ezpublish] <kracker> nods, yeah ... i was afraid of some of that :(
+[01-19-2006 21:00:05] [#ezpublish] <Bedlore> means I'd have to exclude common direcotires like design / extensions / settings etc
+[01-19-2006 21:00:32] [#ezpublish] <kracker> ugg
+[01-19-2006 21:00:39] [#ezpublish] <Bedlore> which then doesn't make upgradding easy anymore..  back to the drawing board
+[01-19-2006 21:01:52] [#ezpublish] <kracker> it's dead simple to make a design extension (off the top of my head / blind)
+[01-19-2006 21:02:10] [#ezpublish] <kracker> the rest is a little ini / var setup
+[01-19-2006 21:03:08] [#ezpublish] <Bedlore> yes your right
+[01-19-2006 21:03:37] [#ezpublish] <Bedlore> just doesn't seem right somehow running whole sites as an extension, but its just a mindset I guess
+[01-19-2006 21:05:16] [#ezpublish] <kracker> well eZ publish template system does the looking through the template order (they have docs on this workflow (old once)) ... anyway , i mean regardless. so it isn't a performance hit to use them (that i've seen)
+[01-19-2006 21:05:54] [#ezpublish] <kracker> sigh, wow i sound convoluted as all get out
+[01-19-2006 21:06:51] [#ezpublish] <kracker> i don't think it's a bastardization, i think it might even be faster , as extension design templates have the highest priortiy in the inclusion workflow order ...
+[01-19-2006 21:07:37] [#ezpublish] <kracker> just waiting to be wrong of course but ... hey i have made how much using what i think i know about eZ publish
+[01-19-2006 21:08:31] [#ezpublish] <Bedlore> interesting point
+[01-19-2006 21:08:46] [#ezpublish] <kracker> i used to not understand how people could do it (run as extension) once i started to try it out / figure it out, i was sold on the idea
+[01-19-2006 21:10:05] [#ezpublish] <Bedlore> you still need to mention it in /settings/override/site.ini though so not 100% isolated
+[01-19-2006 21:10:24] [#ezpublish] <kracker> ahh but there in lies the fun part
+[01-19-2006 21:10:33] [#ezpublish] <Bedlore> :)
+[01-19-2006 21:11:05] [#ezpublish] <kracker> so you need to point (example) 3 domains (apache vhosts) to the eZ publish dir in question ...
+[01-19-2006 21:11:43] [#ezpublish] <kracker> then you need the ini setting to make eZ publish to respond to those domains
+[01-19-2006 21:12:12] [#ezpublish] <Bedlore> yup
+[01-19-2006 21:12:18] [#ezpublish] <Bedlore> think I'll test that concept
+[01-19-2006 21:12:20] [#ezpublish] <kracker> but ... only the domains (vhosts) that apache poin to that dir will trigger the ini settings so the `other` ini settings are basicly ignored
+[01-19-2006 21:12:24] [#ezpublish] <kracker> now i remember
+[01-19-2006 21:12:31] [#ezpublish] <Bedlore> could be a good approach
+[01-19-2006 21:12:43] [#ezpublish] <kracker> i did all of this for a client back in summer / 2005
+[01-19-2006 21:13:32] [#ezpublish] <kracker> serverfire.com, firriebright.com, ezpublishhosting.com, and two other domains i can't quite remember ( i think i still have copies of that code somewhere)
+[01-19-2006 21:14:15] [#ezpublish] <Bedlore> you needed code?
+[01-19-2006 21:14:31] [#ezpublish] <Bedlore> default ezp should be able to handle that I would think
+[01-19-2006 21:14:40] [#ezpublish] <kracker> huh, no
+[01-19-2006 21:15:00] [#ezpublish] <kracker> i said i have the project source code i used on disk
+[01-19-2006 21:15:04] [#ezpublish] <kracker> not that i'm very proud of allowing myself to be conn'd by that fucking predator jonathan@firirebright (i never did make anymoney working for him)
+[01-19-2006 21:15:15] [#ezpublish] <Bedlore> :\
+[01-19-2006 22:39:17] [#ezpublish] <Bedlore> ezpublish gets confused by having lots of symlinks around the place, it doesn't seem to know where its root is, should have a RootDir= setting in site.ini I reckon
+[01-19-2006 23:09:36] -!- Bedlore [n=me@219.90.255.86] has quit []

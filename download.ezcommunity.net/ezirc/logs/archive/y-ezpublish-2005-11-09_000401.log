@@ -1,0 +1,184 @@
+[11-07-2005 00:02:19] [#ezpublish] <kracker> grrr, like wth was wrong with the log :?
+[11-07-2005 00:02:26] [#ezpublish] * kracker moving on ...
+[11-07-2005 00:35:00] -!- ordna1 [n=ordnas@p549DDEA2.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-07-2005 00:53:21] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-07-2005 02:02:42] -!- straight [i=Straight@p50926D4C.dip.t-dialin.net] has joined #ezpublish
+[11-07-2005 02:02:44] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-07-2005 02:13:32] -!- fh[eZ] [n=fh@80.239.98.162] has joined #ezpublish
+[11-07-2005 02:13:36] -!- DiGiTa|_ [n=guillaum@84.4.69.86] has joined #ezpublish
+[11-07-2005 02:20:47] -!- DiGiTa|__ [n=guillaum@84.4.188.73] has joined #ezpublish
+[11-07-2005 02:34:07] -!- DiGiTa|_ [n=guillaum@84.4.69.86] has quit [Read error: 110 (Connection timed out)]
+[11-07-2005 02:35:46] [#ezpublish] <DiGiTa|__> ok
+[11-07-2005 02:35:56] [#ezpublish] <DiGiTa|__> Hi evby
+[11-07-2005 02:36:01] [#ezpublish] <straight> hi
+[11-07-2005 02:36:46] [#ezpublish] <_Rappy_> hll ll
+[11-07-2005 02:38:27] [#ezpublish] <Katana`> hi
+[11-07-2005 02:43:29] [#ezpublish] <DiGiTa|__> http://206.145.80.239/zbc/attachment.php?attachmentid=19880
+[11-07-2005 02:48:20] [#ezpublish] <Katana`> is that 3D ?
+[11-07-2005 02:48:36] [#ezpublish] <DiGiTa|__> yes
+[11-07-2005 02:48:42] [#ezpublish] <DiGiTa|__> not from me but it's 3D
+[11-07-2005 02:48:42] [#ezpublish] <DiGiTa|__> :)
+[11-07-2005 02:51:03] [#ezpublish] <Katana`> very impressive
+[11-07-2005 02:51:37] [#ezpublish] <_Rappy_> well, actually it's 2D, as you can't see 3D other IRL :p but it's CG modeling?
+[11-07-2005 02:52:07] [#ezpublish] <DiGiTa|__> http://206.145.80.239/zbc/attachment.php?attachmentid=19881
+[11-07-2005 02:52:10] [#ezpublish] <DiGiTa|__> 3D :)
+[11-07-2005 02:52:17] [#ezpublish] <DiGiTa|__> cg modeling yes
+[11-07-2005 02:52:50] [#ezpublish] <DiGiTa|__> http://206.145.80.239/zbc/attachment.php?attachmentid=19886
+[11-07-2005 02:53:25] [#ezpublish] <DiGiTa|__> Katana`: look at my pv please
+[11-07-2005 03:01:20] [#ezpublish] <Katana`> I don't see a PV
+[11-07-2005 03:05:57] [#ezpublish] <DiGiTa|__> hu ?
+[11-07-2005 03:12:39] [#ezpublish] <Katana`> i swear
+[11-07-2005 03:25:44] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-07-2005 03:35:52] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-07-2005 03:39:07] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[11-07-2005 03:39:07] -!- _Katana` is now known as Katana`
+[11-07-2005 03:45:36] -!- DiGiTa|__ [n=guillaum@84.4.188.73] has quit []
+[11-07-2005 04:06:28] [#ezpublish] <kracker> heh
+[11-07-2005 04:06:40] [#ezpublish] <kracker> anyone ever heard of opml?
+[11-07-2005 04:07:34] [#ezpublish] <kracker> i'd been warned but i just wasn't thinking again, this time with distructive results :\
+[11-07-2005 04:07:36] [#ezpublish] <kracker> http://ez.no/community/forum/suggestions/ez_publish_opml
+[11-07-2005 04:17:39] [#ezpublish] <_Rappy_> I've never heard of it
+[11-07-2005 05:06:13] -!- deadraven [n=kakemons@80.239.98.162] has joined #ezpublish
+[11-07-2005 05:56:44] [#ezpublish] <_Rappy_> DIE IE DIE!
+[11-07-2005 06:03:16] [#ezpublish] <kracker> _Rappy_, yeah i get that a lot :\
+[11-07-2005 06:03:49] [#ezpublish] <_Rappy_> though
+[11-07-2005 06:03:56] [#ezpublish] <_Rappy_> I just found an JS-lib
+[11-07-2005 06:04:05] [#ezpublish] <_Rappy_> that takes care of all suchs thigs for me
+[11-07-2005 06:04:35] [#ezpublish] <kracker> oh?
+[11-07-2005 06:04:47] [#ezpublish] <_Rappy_> it rewites the CSS where neccicary
+[11-07-2005 06:05:01] [#ezpublish] <_Rappy_> http://dean.edwards.name/IE7/notes/
+[11-07-2005 06:05:01] [#ezpublish] <kracker> neat
+[11-07-2005 06:06:12] [#ezpublish] <kracker> ahh, i've heard of that toolkit before
+[11-07-2005 06:06:57] [#ezpublish] * deadraven is flying around trying to get into fh[eZ] s code
+[11-07-2005 06:07:34] [#ezpublish] <_Rappy_> "into"?
+[11-07-2005 06:08:58] [#ezpublish] <kracker> heh
+[11-07-2005 06:09:25] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-07-2005 06:09:39] [#ezpublish] <Sulfur> hiya guyas
+[11-07-2005 06:09:44] [#ezpublish] <Sulfur> deadraven: ?
+[11-07-2005 06:09:53] [#ezpublish] <Sulfur> omg
+[11-07-2005 06:09:56] [#ezpublish] <kracker> heh
+[11-07-2005 06:10:26] [#ezpublish] * kracker bounces off into oblivion, it's way to late for this ... 
+[11-07-2005 06:10:39] [#ezpublish] <deadraven> maybe this joke is abit over-used now....
+[11-07-2005 06:10:49] -!- deadraven is now known as kh[eZ]
+[11-07-2005 06:11:12] [#ezpublish] * kracker says ... everyone stay tuned for the new eZ partner coming soon! :D 
+[11-07-2005 06:11:27] [#ezpublish] <fh[eZ]> kracker: :D
+[11-07-2005 06:11:34] [#ezpublish] <Sulfur> I would have guessed that
+[11-07-2005 06:11:38] [#ezpublish] <fh[eZ]> I'm tuned in E
+[11-07-2005 06:12:15] [#ezpublish] <kracker> ehh, it's late, i'm a little flat :\
+[11-07-2005 06:12:57] [#ezpublish] <kracker> anyone think an eZ publish payment gateway for authorize.net would be of any use to the eZ publish people out there?
+[11-07-2005 06:13:08] [#ezpublish] <fh[eZ]> all payment gateways are useful
+[11-07-2005 06:13:26] [#ezpublish] <kracker> fh[eZ], nods, nuff said then
+[11-07-2005 06:13:37] [#ezpublish] <fh[eZ]> :)
+[11-07-2005 06:13:44] [#ezpublish] <Sulfur> can anyone explain me why $parentContentObjectTreeNode = eZContentObjectTreeNode::fetch(69) returns an array instead of an object??? :S
+[11-07-2005 06:13:46] [#ezpublish] * kracker yells down the hall, mc.. make it so ...
+[11-07-2005 06:14:03] [#ezpublish] * kracker is really n/a now (sry guys, have a good morning)
+[11-07-2005 06:14:43] [#ezpublish] <Sulfur> the funny thing is .... it didn't , some time ago ;)
+[11-07-2005 06:29:37] [#ezpublish] <Sulfur> fh[eZ]: I found something which could maybe be a serious flaw, or maybe not ... may I discuss it with you?
+[11-07-2005 06:30:03] [#ezpublish] <fh[eZ]> of course
+[11-07-2005 06:30:29] [#ezpublish] <Sulfur> ok just a minute I want to triple-check it ...
+[11-07-2005 06:30:44] [#ezpublish] <fh[eZ]> I'll be here
+[11-07-2005 06:51:15] -!- bskahan [n=bskahan@host248.digitalpulp.com] has quit ["Leaving"]
+[11-07-2005 06:57:00] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-07-2005 06:58:25] [#ezpublish] <zrg> boo
+[11-07-2005 06:59:30] [#ezpublish] <zrg> is there parameter for attribute_view_gui image to link result to big version?
+[11-07-2005 07:00:21] [#ezpublish] <Sulfur> it should be size  , zrg
+[11-07-2005 07:02:01] [#ezpublish] <zrg> show size, LINK to big
+[11-07-2005 07:03:23] [#ezpublish] <Sulfur> ahhhh
+[11-07-2005 07:03:34] [#ezpublish] <zrg> like any sensible gallery would do
+[11-07-2005 07:03:35] [#ezpublish] <Sulfur> I think not zrg :)
+[11-07-2005 07:03:54] [#ezpublish] <Sulfur> I can tell you how I did it, zrg, but in a few minutes
+[11-07-2005 07:04:28] [#ezpublish] <zrg> embed tag has "link to original" parameter
+[11-07-2005 07:04:56] [#ezpublish] <zrg> but i cant find out what template does view_gui use
+[11-07-2005 07:06:23] [#ezpublish] <zrg> actually who cares, i can set it to use embed instead :P
+[11-07-2005 07:06:40] [#ezpublish] <zrg> no i cant
+[11-07-2005 07:16:05] [#ezpublish] <Katana`> hum
+[11-07-2005 07:16:06] [#ezpublish] <Katana`> (FireHorse): anyone know much about using mirc to generate php code?
+[11-07-2005 07:19:52] [#ezpublish] <fh[eZ]> who gave this poor guy the mushrooms?
+[11-07-2005 07:20:17] [#ezpublish] <Sulfur> hehe
+[11-07-2005 07:20:25] [#ezpublish] <Sulfur> well, maybe with a specific bot ...
+[11-07-2005 07:20:38] [#ezpublish] <Sulfur> and if php code mustn't really work ...
+[11-07-2005 07:20:56] [#ezpublish] <zrg> {attribute_view_gui attribute=$node.object.data_map.image image_class=imagelarge link_to_image=true() target=_blank}
+[11-07-2005 07:21:32] [#ezpublish] <zrg> the link_to_image parameter is of course happily undocumented as every useful thing should be
+[11-07-2005 07:21:48] [#ezpublish] * zrg is in especially rotten mood :|
+[11-07-2005 07:28:15] [#ezpublish] <zrg> using hive mind thru mirc to write php, hm
+[11-07-2005 07:32:46] -!- Sulfur is now known as Sulfur_food
+[11-07-2005 07:36:40] -!- ordnas [n=ordnas@dslwms022.workdsl.de] has joined #ezpublish
+[11-07-2005 07:40:17] -!- ordnas [n=ordnas@dslwms022.workdsl.de] has quit [Read error: 104 (Connection reset by peer)]
+[11-07-2005 07:44:19] -!- straight [i=Straight@p50926D4C.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-07-2005 08:11:44] [#ezpublish] <_Rappy_> WLAN
+[11-07-2005 08:11:45] [#ezpublish] <_Rappy_> must
+[11-07-2005 08:11:46] [#ezpublish] <_Rappy_> die
+[11-07-2005 08:18:48] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit [Read error: 110 (Connection timed out)]
+[11-07-2005 08:44:39] [#ezpublish] <fh[eZ]> promote yourself at the summer conf next year gusy
+[11-07-2005 08:44:42] [#ezpublish] <fh[eZ]> http://ez.no/company/news/ez_conference_2006_call_for_papers
+[11-07-2005 08:44:47] -!- fh[eZ] changed the topic of #ezpublish to: eZ publish | cms | http://ez.no/community/blog/components_from_svn_tutorial | http://ez.no/company/news/ez_conference_2006_call_for_papers
+[11-07-2005 09:06:08] -!- _Rappy_ is now known as _rappy_
+[11-07-2005 09:06:12] [#ezpublish] <_rappy_> adio peeps
+[11-07-2005 09:06:20] [#ezpublish] <_rappy_> a hard days work is over
+[11-07-2005 09:09:12] [#ezpublish] <Sulfur_food> not if we glue your butt to your chair ;)
+[11-07-2005 09:26:27] -!- DiGiTa|_ [n=guillaum@84.4.188.73] has joined #ezpublish
+[11-07-2005 09:26:29] [#ezpublish] <DiGiTa|_> hi
+[11-07-2005 09:30:04] -!- ordna1 [n=ordnas@dslwms022.workdsl.de] has joined #ezpublish
+[11-07-2005 09:31:07] [#ezpublish] <Sulfur_food> well fh[eZ] .... regarding the problem of before, I was unable to solution it. the best I could do was to move the offending code at the very last part of the script, so that eZ will not have to revert again to its db instance. I don't know whether it will have any side-effetc, though ...
+[11-07-2005 09:32:08] [#ezpublish] <DiGiTa|_> how can i add to basket from code ?
+[11-07-2005 09:33:04] [#ezpublish] <fh[eZ]> Sulfur_food: weird...
+[11-07-2005 09:40:03] [#ezpublish] <Sulfur_food> definitely, fh[eZ] ... but I suppose that that main DB instance will not be saved between page requests (i.e. in session) right ? I mean, it can get corrupted but it will be lost anyway, or is it stored between page requests?
+[11-07-2005 09:40:09] -!- Sulfur_food is now known as Sulfur
+[11-07-2005 09:41:23] [#ezpublish] <Katana`> http://www.google.com/apis/download.html <= check the API file size...
+[11-07-2005 09:41:51] -!- straight [n=Straight@p50927D8A.dip.t-dialin.net] has joined #ezpublish
+[11-07-2005 09:43:22] [#ezpublish] <Sulfur> (an en passant, does anyone know how to preg_replace on letters numbers and a single space? will /[^a-zA-Z0-9 ]/    <<== note the space after 9  --- be enough ? :)
+[11-07-2005 09:43:47] [#ezpublish] <Sulfur> ow Katana` ... they are REALLY cometing with uncle Bill
+[11-07-2005 09:43:51] [#ezpublish] <Sulfur> competing
+[11-07-2005 09:43:54] [#ezpublish] <Katana`> ;)
+[11-07-2005 09:46:21] [#ezpublish] <DiGiTa|_> i found how to add to basket from code : eZOperationHandler::execute( 'shop', 'addtobasket', array( 'basket_id' => $basket->attribute( 'id' ),
+[11-07-2005 09:46:24] [#ezpublish] <DiGiTa|_>                                                                               'object_id' => $ObjectID,
+[11-07-2005 09:46:28] [#ezpublish] <DiGiTa|_>                                                                               'option_list' => $OptionList ) );
+[11-07-2005 09:49:14] [#ezpublish] <Sulfur> .. why doesn't php manual have a handy reference for regexps *grumble*
+[11-07-2005 09:52:28] [#ezpublish] * DiGiTa|_ create an ajax basket
+[11-07-2005 09:52:45] [#ezpublish] <Katana`> it doesn't ?
+[11-07-2005 09:53:03] [#ezpublish] <Sulfur> I was unable to find it Katana`
+[11-07-2005 09:59:24] [#ezpublish] <Sulfur> but I am rather positive -- asked my fella too
+[11-07-2005 10:00:23] [#ezpublish] <Sulfur> on a totally unrelated off-topic subject ..... what do you all think of motorola mobiles? v3x is coming out and I could have it for 99 € .... never had a motorola tho', so I just wonder ..
+[11-07-2005 10:02:13] -!- ordna1 [n=ordnas@dslwms022.workdsl.de] has quit [Read error: 110 (Connection timed out)]
+[11-07-2005 10:02:48] [#ezpublish] <fh[eZ]> Sulfur: correct, it is not saved between requests (nothing is)
+[11-07-2005 10:03:31] [#ezpublish] <Sulfur> great fh[eZ] ... I wouldn't have wanted db resource to persist over requests
+[11-07-2005 10:04:39] -!- ordnas [n=ordnas@dslwms022.workdsl.de] has joined #ezpublish
+[11-07-2005 10:30:54] -!- straight [n=Straight@p50927D8A.dip.t-dialin.net] has quit []
+[11-07-2005 10:32:07] -!- ordnas [n=ordnas@dslwms022.workdsl.de] has quit [Read error: 104 (Connection reset by peer)]
+[11-07-2005 10:52:25] [#ezpublish] <kh[eZ]> good evening crowd!
+[11-07-2005 10:53:10] [#ezpublish] <Sulfur> good evening ravend!!
+[11-07-2005 10:53:26] [#ezpublish] <kh[eZ]> hehe :-)
+[11-07-2005 10:54:36] [#ezpublish] <Katana`> hey kh[eZ]
+[11-07-2005 11:04:26] -!- ordnas [n=ordnas@dslwms022.workdsl.de] has joined #ezpublish
+[11-07-2005 11:22:56] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[11-07-2005 11:43:34] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-07-2005 11:52:51] -!- ordnas [n=ordnas@dslwms022.workdsl.de] has quit [Read error: 104 (Connection reset by peer)]
+[11-07-2005 12:15:48] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-07-2005 13:20:52] [#ezpublish] <kracker> weak sausage mcbiscut
+[11-07-2005 13:26:04] [#ezpublish] <kracker> it just can't be that it is this hard to accept a credit card payment from a bellow average american
+[11-07-2005 13:28:11] [#ezpublish] <kracker> why say you accept visa credit cards but (fail to mention or advertize) just not from americans
+[11-07-2005 13:29:12] [#ezpublish] <kracker> i know, i know because if who i am inside and my perminant record but is it that much fun to mess with americans in this way, i just don't get it
+[11-07-2005 13:39:44] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-07-2005 13:43:43] -!- luke_ [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-07-2005 13:45:05] -!- luke_ is now known as ls[eZ]
+[11-07-2005 13:47:27] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit [Client Quit]
+[11-07-2005 13:48:06] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-07-2005 14:26:36] [#ezpublish] <kracker> PAKTOFONIKA___CHWILE_ULOTNE
+[11-07-2005 14:33:38] [#ezpublish] <ls[eZ]> hehe ;)
+[11-07-2005 14:33:50] [#ezpublish] <ls[eZ]> chwile ultone chytam niczym satelita ;)
+[11-07-2005 14:38:05] [#ezpublish] <kracker> <smirk />
+[11-07-2005 14:42:41] [#ezpublish] <kracker> ls[eZ], "Moments nothing satellite ultone chytam "?
+[11-07-2005 14:52:28] [#ezpublish] <kracker> separated from understanding your drops, by a world of other people's power mongering capitalistic empires, profiting from keeping powerfull language translation from man worldwide
+[11-07-2005 15:09:48] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-07-2005 15:56:33] [#ezpublish] <kracker> sum 41 - heart attack (no wakup call more power full than your god throwing a fckin (brick) wall of china in front of you)
+[11-07-2005 17:34:45] -!- DiGiTa|_ [n=guillaum@84.4.188.73] has quit []
+[11-07-2005 18:05:10] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[11-07-2005 18:08:35] [#ezpublish] <kracker> sum 41 - Rythm
+[11-07-2005 22:34:41] [#ezpublish] <kracker> hmmm, fun with payment gateways
+[11-07-2005 22:34:48] [#ezpublish] <kracker> makes me wonder
+[11-07-2005 22:37:29] [#ezpublish] <kracker> has anyone worked with a true payment gateway or are they all workflows :\
+[11-07-2005 22:38:22] [#ezpublish] <kracker> seems most of them redirect to a server instead of asking for the required user input and transmiting the input to the payment gateway service
+[11-07-2005 22:39:09] [#ezpublish] <kracker> like ezpaypal :/ ,
+[11-07-2005 22:42:17] [#ezpublish] <kracker> i was thinking that one would create a master workflow which would get called by the before checkout trigger and based on an if statement check for a passed hidden variable to signify if it is to display user input form, process user input form, or execute / submit payment details to service an awaite for return code (error vs success) then continues to the next steps ... etc
+[11-07-2005 23:05:23] -!- Proteque_ [n=gjorans@213.184.199.245] has joined #ezpublish
+[11-07-2005 23:05:33] -!- Proteque [n=gjorans@213.184.199.245] has quit [Read error: 104 (Connection reset by peer)]

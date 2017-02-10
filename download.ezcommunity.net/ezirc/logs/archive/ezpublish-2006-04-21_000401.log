@@ -1,0 +1,140 @@
+[04-20-2006 01:05:02] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-20-2006 01:10:18] -!- ordnas [n=ordnas@p549D6FBB.dip.t-dialin.net] has joined #ezpublish
+[04-20-2006 02:02:34] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-20-2006 02:22:14] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-20-2006 02:24:41] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-20-2006 02:24:54] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-20-2006 02:28:43] -!- DiGiTa|_ [n=guillaum@84.4.39.247] has joined #ezpublish
+[04-20-2006 03:07:22] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[04-20-2006 03:46:25] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[04-20-2006 03:58:00] -!- unti78 [n=munti@fpark173.fm.uit.no] has joined #ezpublish
+[04-20-2006 03:58:06] [#ezpublish] <munti78> Hi, anyone here?
+[04-20-2006 04:20:34] -!- Bedlore [n=me@ppp221-173.lns2.adl4.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[04-20-2006 04:24:14] -!- ordnas [n=ordnas@p549D6FBB.dip.t-dialin.net] has left #ezpublish []
+[04-20-2006 04:31:26] -!- phretor [n=phretor@host219-148.pool875.interbusiness.it] has joined #ezpublish
+[04-20-2006 04:31:31] [#ezpublish] <phretor> hi there
+[04-20-2006 04:40:19] [#ezpublish] <kalooni> hi phretor
+[04-20-2006 04:41:01] [#ezpublish] <phretor> can someone explain me why the same codeline takes 46sec to complete on a dual Xeon with 2G of RAM and 15sec on my poor powerbook?
+[04-20-2006 04:41:35] [#ezpublish] <phretor> both have php4.4.2/64M/60sec but the powerbook have apache1 while the dual Xeon uses apache2
+[04-20-2006 04:44:12] [#ezpublish] <kalooni> no idea
+[04-20-2006 04:55:41] [#ezpublish] <phretor> kalooni: where should I have a look at?
+[04-20-2006 04:56:43] [#ezpublish] <kalooni> APACHE<->PHP config (CGI or module ?)
+[04-20-2006 04:56:55] [#ezpublish] <phretor> kalooni: module
+[04-20-2006 04:57:03] [#ezpublish] <kalooni> both ?
+[04-20-2006 05:02:21] [#ezpublish] <phretor> kalooni: yes, both
+[04-20-2006 05:02:46] [#ezpublish] <phretor> kalooni: the environment is slightly similar
+[04-20-2006 05:03:22] [#ezpublish] <kalooni> except web server version ;)
+[04-20-2006 05:03:42] [#ezpublish] <kalooni> and OS
+[04-20-2006 05:04:28] [#ezpublish] <kalooni> sorry but I am not helpful at all in that field
+[04-20-2006 05:04:46] [#ezpublish] <kalooni> btw there is few fields where I could be helpful
+[04-20-2006 05:04:48] [#ezpublish] <phretor> kalooni: Debian GNU/Linux on the dual Xeon, that should perform better than Mac OS X (Panther) of the powerbook
+[04-20-2006 05:05:26] [#ezpublish] <kalooni> yes clear, that should be
+[04-20-2006 05:06:09] [#ezpublish] <phretor> Mac OS X is the most unefficient UNIX on the planet :-D
+[04-20-2006 05:06:18] [#ezpublish] <phretor> but the most usable one, too
+[04-20-2006 05:07:22] [#ezpublish] <kalooni> to my point of view the problem is coming from apache 2 ... have you tried to install apache1 on your PowerBook and do the comparison ?
+[04-20-2006 05:08:07] [#ezpublish] <kalooni> but as I said before I am not an expert
+[04-20-2006 05:08:14] [#ezpublish] <kalooni> but this is the kind of test I would do
+[04-20-2006 05:30:58] -!- kalooni is now known as _kalooni
+[04-20-2006 05:40:55] -!- ordnas [n=ordnas@p5080BA0C.dip0.t-ipconnect.de] has joined #ezpublish
+[04-20-2006 05:50:42] -!- phretor [n=phretor@host219-148.pool875.interbusiness.it] has quit []
+[04-20-2006 06:22:16] [#ezpublish] * DiGiTa|_ is on OS X
+[04-20-2006 06:24:19] Disconnecting due to lack of a lag response (0.10763300 1145532199 != 0.01976200 1145532229)
+[04-20-2006 06:24:19] Diconnected. Sleeping for 2 second(s).
+[04-20-2006 06:24:21] >> Connecting to irc.freenode.net:6667
+[04-20-2006 06:24:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-20-2006 06:24:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-20-2006 06:24:47] >> Connecting to irc.freenode.net:6667
+[04-20-2006 06:24:57] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-20-2006 06:24:57] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-20-2006 06:25:07] >> Connecting to irc.freenode.net:6667
+[04-20-2006 06:25:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-20-2006 06:25:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-20-2006 06:25:27] >> Connecting to irc.freenode.net:6667
+[04-20-2006 06:25:41] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-20-2006 06:25:41] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-20-2006 06:25:51] >> Connecting to irc.freenode.net:6667
+[04-20-2006 06:26:01] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-20-2006 06:26:01] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-20-2006 06:26:11] >> Connecting to irc.freenode.net:6667
+[04-20-2006 06:26:21] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-20-2006 06:26:21] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-20-2006 06:26:31] >> Connecting to irc.freenode.net:6667
+[04-20-2006 06:26:44] >> Connected to irc.freenode.net:6667, registering...
+[04-20-2006 06:26:44] >> Attempting to join channels: #ezpublish
+[04-20-2006 06:26:45] >> Successfully registered. Nick is: ezlog
+[04-20-2006 06:26:45] -!- There are 13536 listed and 13960 unlisted users on 20 servers
+[04-20-2006 06:26:45] -!- 42 flagged staff members
+[04-20-2006 06:26:45] -!- 12047 channels formed
+[04-20-2006 06:26:45] -!- I have 5617 clients and 0 servers
+[04-20-2006 06:26:45] -!- Current local  users: 5617  Max: 6055
+[04-20-2006 06:26:45] -!- Current global users: 27496  Max: 30795
+[04-20-2006 06:26:45] -!- Highest connection count: 6057 (6055 clients) (940142 since server was (re)started)
+[04-20-2006 06:26:45] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-20-2006 06:26:45] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-20-2006 06:26:45] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-20-2006 06:26:45] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-20-2006 06:26:45] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-20-2006 06:38:11] -!- unti78 [n=munti@fpark173.fm.uit.no] has quit ["Leaving"]
+[04-20-2006 06:42:59] -lilo:$*- [Global Notice] Hi all. We'll be restarting services in just a moment. There will be a brief delay, and we hope to have upgraded services online pretty quickly. Thanks.
+[04-20-2006 08:05:14] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[04-20-2006 08:30:25] -!- ordnas [n=ordnas@p5080BA0C.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[04-20-2006 08:46:24] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-20-2006 08:53:11] -!- DiGiTa|_ [n=guillaum@84.4.39.247] has quit [Read error: 104 (Connection reset by peer)]
+[04-20-2006 08:54:08] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has joined #ezpublish
+[04-20-2006 08:54:33] [#ezpublish] <phretor> hi there
+[04-20-2006 08:54:43] [#ezpublish] <phretor> new uploaded images are not readable by the webserver due to apache's umask 755
+[04-20-2006 08:55:04] [#ezpublish] <phretor> can any setting change this behavior?
+[04-20-2006 08:55:18] [#ezpublish] <phretor> Note that, I have no access to the web server configuration
+[04-20-2006 08:57:16] -!- DiGiTa|_ [n=guillaum@84.5.140.208] has joined #ezpublish
+[04-20-2006 09:06:10] [#ezpublish] <phretor> DiGiTa|_: hi
+[04-20-2006 09:07:20] -!- nnn0 is now known as goog
+[04-20-2006 09:07:39] -!- goog is now known as gogl
+[04-20-2006 09:08:03] -!- gogl is now known as nnn0
+[04-20-2006 09:13:14] Disconnecting due to lack of a lag response (0.17810900 1145542334 != 0.03563900 1145542364)
+[04-20-2006 09:13:14] Diconnected. Sleeping for 2 second(s).
+[04-20-2006 09:13:16] >> Connecting to irc.freenode.net:6667
+[04-20-2006 09:13:18] >> Connected to irc.freenode.net:6667, registering...
+[04-20-2006 09:13:18] >> Primary nickname in use, trying alternate.
+[04-20-2006 09:13:19] >> Successfully registered. Nick is: ezpublishlog
+[04-20-2006 09:13:19] -!- There are 14568 listed and 14412 unlisted users on 20 servers
+[04-20-2006 09:13:19] -!- 42 flagged staff members
+[04-20-2006 09:13:19] -!- 9826 channels formed
+[04-20-2006 09:13:19] -!- I have 5860 clients and 0 servers
+[04-20-2006 09:13:19] -!- Current local  users: 5860  Max: 6055
+[04-20-2006 09:13:19] -!- Current global users: 28980  Max: 30795
+[04-20-2006 09:13:19] -!- Highest connection count: 6057 (6055 clients) (942184 since server was (re)started)
+[04-20-2006 09:13:19] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-20-2006 09:13:19] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-20-2006 09:13:59] >> Attempting to join channels: #ezpublish
+[04-20-2006 09:13:59] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-20-2006 09:13:59] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-20-2006 09:13:59] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-20-2006 09:16:19] (ezpublishlog) Attempting to gain back primary nickname
+[04-20-2006 09:16:19] -!- ezpublishlog is now known as ezlog
+[04-20-2006 09:16:19] My new nick is ezlog
+[04-20-2006 09:39:30] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-20-2006 09:39:43] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-20-2006 09:41:21] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-20-2006 09:51:25] [#ezpublish] <phretor> hi buz
+[04-20-2006 09:51:36] [#ezpublish] <buz> hi
+[04-20-2006 09:53:13] [#ezpublish] <phretor> buz: having in mind the edit interface of Author, is there any way to prevent a default field to appear? Users are getting confused by that
+[04-20-2006 09:53:27] [#ezpublish] <buz> no idea
+[04-20-2006 10:36:21] [#ezpublish] <phretor>  /setup/info does not tell the true about some php settings
+[04-20-2006 10:37:58] [#ezpublish] <phretor> memory limit is actually set to 64M - it says it's 42M
+[04-20-2006 11:08:42] -!- DiGiTa|__ [n=guillaum@84.4.189.49] has joined #ezpublish
+[04-20-2006 11:15:41] -!- ordnas [n=ordnas@p5080BA0C.dip0.t-ipconnect.de] has joined #ezpublish
+[04-20-2006 11:21:35] -!- DiGiTa|_ [n=guillaum@84.5.140.208] has quit [Read error: 110 (Connection timed out)]
+[04-20-2006 11:27:44] -!- Sulfur [n=mbariola@85.20.2.139] has left #ezpublish []
+[04-20-2006 11:38:24] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has quit [Read error: 110 (Connection timed out)]
+[04-20-2006 11:44:43] -!- _kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-20-2006 13:17:01] -!- ordnas [n=ordnas@p5080BA0C.dip0.t-ipconnect.de] has left #ezpublish []
+[04-20-2006 13:42:45] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-20-2006 15:37:46] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[04-20-2006 16:00:30] -!- DiGiTa|__ [n=guillaum@84.4.189.49] has quit []
+[04-20-2006 16:07:01] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[04-20-2006 16:11:46] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[04-20-2006 16:15:33] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-20-2006 17:44:00] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[04-20-2006 23:13:11] -!- zrg [n=zurgutt@217-159-195-210-dsl.est.estpak.ee] has joined #ezpublish
+[04-20-2006 23:13:23] [#ezpublish] <zrg> koff, koff
+[04-20-2006 23:30:22] -!- agentbob [n=agentbob@216.130.216.30] has quit [Read error: 104 (Connection reset by peer)]

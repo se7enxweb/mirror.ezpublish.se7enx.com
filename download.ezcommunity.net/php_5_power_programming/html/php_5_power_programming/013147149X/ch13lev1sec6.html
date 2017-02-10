@@ -1,0 +1,90 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 13.6.&nbsp; E_STRICT</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch13lev1sec6"></a><h3 class="docSection1Title">13.6. <tt>E_STRICT</tt></h3>
+<p class="docText">Besides the real backward-compatibility breaks previously discussed, there are also a number of &quot;<a class="docLink" href="app02lev1sec3.html#app02lev2sec6">deprecated</a>&quot; features. Deprecated features emit an <tt>E_STRICT</tt> error, which is <span class="docEmphasis">not</span> part of the <tt>E_ALL</tt> error setting. To see those deprecated issues in PHP 4 code, you need to set error reporting to <tt>E_ALL | E_STRICT</tt>.<a name="ch13index53"></a><a name="ch13index54"></a></p>
+<a name="ch13note03"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">Because PHP 4 does not understand the <tt>E_STRICT</tt> constant, you might want to use the numerical version to make the scripts run with both PHP 4 and PHP 5. The numerical value for <tt>E_STRICT</tt> is <tt>2048</tt>. To show all errors (<tt>E_ALL</tt> and <tt>E_STRICT</tt>), you need to use the value <tt>4095</tt> for either the <tt>error_reporting()</tt> function or as <tt>php.ini</tt> setting.</p></div><BR>
+<a name="ch13lev2sec5"></a><h4 class="docSection2Title">13.6.1. Automagically Creating Objects</H4>
+<p class="docText">In PHP 4, the following code would automagically create an object <tt>$person</tt> of class <tt>StdClass</tt>:<a name="ch13index55"></a><a name="ch13index56"></a><a name="ch13index57"></a></p>
+<pre>
+&lt;?php
+     $person-&gt;name = "Derick";
+?&gt;
+</pre><BR>
+<p class="docText">PHP 5 still allows this, but throws the <tt>E_STRICT</tt> error <tt>Creating default object from empty value</tt>. To prevent this error, use <tt>$person = new StdClass;</tt> before the <tt>property-assignment</tt>. This also works with PHP 4.</p>
+<a name="ch13lev2sec6"></a><h4 class="docSection2Title">13.6.2. <tt>var</tt> and <tt>public</tt></h4>
+<p class="docText">Using <tt>var</tt> to specify a property of an object is now deprecated. Using <tt>public</tt> is recommended. Using <tt>var</tt> rather than <tt>public</tt> throws the <tt>E_STRICT</tt> error <tt>var: Deprecated. Please use the public/private/protected modifiers</tt>. If your code also needs to run on PHP 4, you can safely ignore this &quot;error.&quot;<a name="ch13index58"></a><a name="ch13index59"></a><a name="ch13index60"></a><a name="ch13index61"></a><a name="ch13index62"></a><a name="ch13index63"></a></P>
+<a name="ch13lev2sec7"></a><H4 class="docSection2Title">13.6.3. Constructors</h4>
+<p class="docText">With PHP 5, a new style of &quot;unified&quot; constructor is introduced: <tt>__construct()</tt>. If you are migrating existing PHP 4 code that uses <tt>__construct()</tt> as a method name, you can get unexpected results. If both the PHP 4 style constructor (<tt>classname()</tt>) and the PHP 5 style constructor (<tt>__construct()</tt>) are defined, an <tt>E_STRICT</tt> error is thrown: Redefining already defined constructor for class <tt>&lt;classname&gt;</tt>, as you can see in the output of the following example:<a name="ch13index64"></a><a name="ch13index65"></a><a name="ch13index66"></a></p>
+<pre>
+&lt;?php
+     class person {
+           var $name;
+
+           function __construct($name)
+           {
+                 echo __FUNCTION__, "\n";
+                 $this-&gt;name = $name;
+           }
+
+           function person($name)
+           {
+                 echo __FUNCTION__, "\n";
+                 $this-&gt;name = $name;
+           }
+     }
+
+     $person = new person('Derick');
+?&gt;
+</pre><br>
+<p class="docText">Only the PHP 5 style constructor is used, no matter which is declared first in the class.<a name="ch13index67"></a><a name="ch13index68"></a><a name="ch13index69"></a></p>
+<a name="ch13lev2sec8"></a><H4 class="docSection2Title">13.6.4. Inherited Methods</h4>
+<p class="docText">Consider the following example:<a name="ch13index70"></a><a name="ch13index71"></a><a name="ch13index72"></a></p>
+<pre>
+&lt;?php
+     class magazine {
+           var $title;
+
+           function getTitle() {
+                 return $this-&gt;title;
+           }
+}
+
+     class issues extends magazine {
+           var $issues;
+
+           function getTitle($nr) {
+                 return ($this-&gt;title. ' - '. $this-&gt;issues[$nr]);
+           }
+     }
+        $mag = new issues;
+        $mag-&gt;title = "Time";
+        $mag-&gt;issues = array (1 =&gt; 'Jan 2003', 2 =&gt; 'Feb 2003');
+
+        echo $mag-&gt;getTitle(2);
+        ?&gt;
+</pre><BR>
+<p class="docText">The signature of the <tt>getTitle()</tt> method is different in the inherited class. It accepts an additional parameter (<tt>$nr</tt>). Because this violates the OO contracts, PHP 5 throws an <tt>E_STRICT</tt> error: Declaration of <tt>issues::getTitle()</tt> must be compatible with that of <tt>magazine::getTitle()</tt>. Adding a dummy argument to the <tt>magazine::getTitle()</tt> method, such as <tt>function getTitle($dummy)</tt>, is a simple workaround.<a name="ch13index73"></a><a name="ch13index74"></a><a name="ch13index75"></a></p>
+<a name="ch13lev2sec9"></a><H4 class="docSection2Title">13.6.5. Define Classes Before Usage</h4>
+<p class="docText">It's a good idea to declare your classes in your code before you start using themfor example, in an include file. Although it's not always necessary, you need to declare the class before using it when you work with the more advanced OO features of PHP 5, such as interfaces.<a name="ch13index76"></a><a name="ch13index77"></a><a name="ch13index78"></a></p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

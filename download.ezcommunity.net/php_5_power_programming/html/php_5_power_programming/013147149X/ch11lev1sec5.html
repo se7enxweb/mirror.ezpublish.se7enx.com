@@ -1,0 +1,49 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 11.5.&nbsp; Form Handling</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch11lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch11lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch11lev1sec5"></a><h3 class="docSection1Title">11.5. Form Handling</h3>
+<p class="docText">Building HTML forms by hand is straightforward, but as your demands grow and you need to do input validation, forms that span across multiple pages, or want to use templates, you are better off using a form generator.<a name="ch11index162"></a><a name="ch11index163"></a></p>
+<p class="docText"><tt>HTML_QuickForm</tt> is a PEAR package that offers form handling. <tt>HTML_QuickForm</tt> lets you set up validation rules that are executed on the client or server side, and it integrates with several template systems.</p>
+<a name="ch11lev2sec10"></a><h4 class="docSection2Title">11.5.1. <tt>HTML_QuickForm</tt></H4>
+<p class="docText">One of the most common reasons for starting to use a web-scripting language such as PHP is to be able to process online forms. A lot has happened since the <tt>&lt;ISINDEX&gt;</tt> and <tt>&lt;FORM&gt;</tt> tags. With form builders such as <tt>HTML_QuickForm</tt>, managing sites that use forms extensively becomes much easier.<a name="ch11index164"></a><a name="ch11index165"></a><a name="ch11index166"></a></p>
+<p class="docText"><tt>HTML_QuickForm</tt> represents each element in the form as an object. For each form element object, you may set client or server validation rules that will be executed automatically.</P>
+<a name="ch11lev2sec11"></a><h4 class="docSection2Title">11.5.2. Example: Login Form</H4>
+<p class="docText">Here is part of a previous example that you may recognize. This piece of code uses <tt>HTML_QuickForm</tt> to implement a login form:<a name="ch11index167"></a><a name="ch11index168"></a><a name="ch11index169"></a></p>
+<pre>
+$form = new HTML_QuickForm('login', 'POST');
+$form-&gt;addElement('text', 'username', 'User name:', 'size="10"');
+$form-&gt;addRule('username', 'Please enter your user name!',  'required',
+               null, 'client');
+$form-&gt;addElement('password', 'password', 'Password:');
+$form-&gt;addElement('submit', 'submit', 'Log In!');
+$form-&gt;display();
+</pre><br>
+<p class="docText">Here, the form is called <tt>login</tt> and uses a <tt>POST</tt> request. There are two input elements: <tt>username</tt> and <tt>password</tt>. In addition, a client-side &quot;required&quot; validation rule is applied to the username field. A &quot;required&quot; rule makes sure the element is not empty; in this case, a piece of JavaScript code will prevent you from submitting the form until there is something in the &quot;username&quot; field.<a name="ch11index170"></a><a name="ch11index171"></a><a name="ch11index172"></a></p>
+<a name="ch11lev2sec12"></a><h4 class="docSection2Title">11.5.3. Receiving Data</H4>
+<p class="docText">When the <tt>POST</tt> is submitted, the receiving <tt>HTML_QuickForm</tt> object automatically loads the <tt>POST</tt> data. By calling the <tt>validate()</tt> method, you can ensure that data was posted to the form and that all the validation rules passed. <tt>validate()</tt> returns <tt>TRue</tt> if there is data, and it is valid:<a name="ch11index173"></a><a name="ch11index174"></a><a name="ch11index175"></a></p>
+<pre>
+if ($form-&gt;validate()) {
+    $dbh-&gt;query("UPDATE users SET lastvisit = ? ".
+                "WHERE userid = ?",
+                array(time(), $_POST["username"]));
+}
+</pre><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch11lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch11lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

@@ -1,0 +1,252 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 4.5.&nbsp; Reflection</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch04lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch04lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch04lev1sec5"></a><h3 class="docSection1Title">4.5. Reflection</h3>
+<a name="ch04lev2sec7"></a><h4 class="docSection2Title">4.5.1. Introduction</h4>
+<p class="docText">New to PHP 5 are its <span class="docEmphStrong">reflection</span> capabilities (also referred to as <span class="docEmphStrong">introspection</span>). These features enable you to gather information about your script at runtime; specifically, you can examine your functions, classes, and more. It also enables you to access such language objects by using the available meta-data. In many cases, the fact that PHP enables you to call functions indirectly (using <tt>$func(...)</tt>) or instantiate classes directly (new <tt>$classname(...)</tt>) is sufficient. However, in this section, you see that the provided reflection API is more powerful and gives you a rich set of tools to work directly with your application.<a name="ch04index105"></a><a name="ch04index106"></a></p>
+<a name="ch04lev2sec8"></a><H4 class="docSection2Title">4.5.2. Reflection API</h4>
+<p class="docText">The reflection API consists of numerous classes that you can use to introspect your application.The following is a list of these items. The next section gives examples of how to use them.<a name="ch04index107"></a><a name="ch04index108"></a><a name="ch04index109"></a></P>
+<pre>
+<span class="docEmphStrong">interface Reflector</span>
+static export(...)
+
+<span class="docEmphStrong">class ReflectionFunction implements Reflector</span>
+__construct(string $name)
+string __toString()
+static mixed export(string $name [,bool $return = false])
+bool isInternal()
+bool isUserDefined()
+string getName()
+string getFileName()
+int getStartLine()
+int getEndLine()
+string getDocComment()
+mixed[] getStaticVariables()
+mixed invoke(mixed arg0, mixed arg1, ...)
+bool returnsReference()
+ReflectionParameter[] getParameters()
+
+<span class="docEmphStrong">class ReflectionMethod extends ReflectionFunction implements Reflector</span>
+bool isPublic()
+bool isPrivate()
+bool isProtected()
+bool isAbstract()
+bool isFinal()
+bool isStatic()
+bool isConstructor()
+bool isDestructor()
+int getModifiers()
+ReflectionClass getDeclaringClass()
+
+<span class="docEmphStrong">class ReflectionClass implements Reflector</span>
+string __toString()
+static mixed export(string $name [,bool $return = false])
+string getName()
+bool isInternal()
+bool isUserDefined()
+bool isInstantiable()
+string getFileName()
+int getStartLine()
+int getEndLine()
+string getDocComment()
+ReflectionMethod getConstructor()
+ReflectionMethod getMethod(string $name)
+ReflectionMethod[] getMethods(int $filter)
+ReflectionProperty getProperty(string $name)
+ReflectionProperty[] getProperties(int $filter)
+mixed[] getConstants()
+mixed getConstant(string $name)
+ReflectionClass[] getInterfaces()
+bool isInterface()
+bool isAbstract()
+bool isFinal()<a name="ch04index110"></a><a name="ch04index111"></a><a name="ch04index112"></a>
+int getModifiers()
+bool isInstance($obj)
+object newInstance(mixed arg0, arg1, ...)
+ReflectionClass getParentClass()
+bool isSubclassOf(string $class)
+bool isSubclassOf(ReflectionClass $class)
+mixed[] getStaticProperties()
+mixed[] getDefaultProperties()
+bool isIterateable()
+bool implementsInterface(string $ifc)
+bool implementsInterface(ReflectionClass $ifc)
+ReflectionExtension getExtension()
+string getExtensionName()
+
+<span class="docEmphStrong">class ReflectionParameter implements Reflector</span>
+static mixed export(mixed func, int/string $param [,bool $return = false])
+__construct(mixed func, int/string $param [,bool $return = false])
+string __toString()
+string getName()
+bool isPassedByReference()
+ReflectionClass getClass()
+bool allowsNull()
+
+<span class="docEmphStrong">class ReflectionExtension implements Reflector</span>
+static export(string $ext [,bool $return = false])
+__construct(string $name)
+string __toString()
+string getName()
+string getVersion()
+ReflectionFunction[] getFunctions()
+mixed[] getConstants()
+mixed[] getINIEntries()
+ReflectionClass[] getClasses()
+String[] getClassNames()<a name="ch04index113"></a><a name="ch04index114"></a><a name="ch04index115"></a>
+
+<span class="docEmphStrong">class ReflectionProperty implements Reflector</span>
+static export(string/object $class, string $name, [,bool $return = false])
+__construct(string/object $class, string $name)
+string getName()
+mixed getValue($object)
+setValue($object, mixed $value)
+bool isPublic()
+bool isPrivate()
+bool isProtected()
+bool isStatic()
+bool isDefault()
+int getModifiers()
+ReflectionClass getDeclaringClass()
+
+<span class="docEmphStrong">class Reflection</span>
+static mixed export(Reflector $r [, bool $return = 0])
+static array getModifierNames(int $modifier_value)
+
+<span class="docEmphStrong">class ReflectionException extends Exception</span><a name="ch04index116"></a><a name="ch04index117"></a><a name="ch04index118"></a>
+</pre><br>
+<a name="ch04lev2sec9"></a><H4 class="docSection2Title">4.5.3. Reflection Examples</h4>
+<p class="docText">As you may have noticed, the reflection API is extremely rich and allows you to retrieve a large amount of information from your scripts. There are many situations where reflection could come in handy, and realizing this potential requires you to play around with the API on your own and use your imagination. In the meanwhile, we demonstrate two different ways you can use the reflection API. One is to give you runtime information of a PHP class (in this case an intrernal class), and the second is to implement a delegation model using the reflection API.</p>
+<a name="ch04lev3sec1"></a><h5 class="docSection3Title">4.5.3.1 Simple Example</h5>
+<p class="docText">The following code shows a simple example of using the <tt>ReflectionClass::export()</tt> static method to extract information about the class <tt>ReflectionParameter</tt>. It can be used to extract information of any PHP class:<a name="ch04index119"></a></P>
+<pre>
+ReflectionClass::export("ReflectionParameter");
+</pre><BR>The result is<pre>
+Class [ &lt;internal&gt; class ReflectionProperty implements Reflector ] {
+
+  - Constants [0] {
+  }
+
+  - Static properties [0] {
+  }
+
+  - Static methods [1] {
+    Method [ &lt;internal&gt; static public method export ] {
+    }
+  }
+
+  - Properties [0] {
+  }
+
+  - Methods [13] {
+    Method [ &lt;internal&gt; final private method __clone ] {
+    }
+
+    Method [ &lt;internal&gt; &lt;ctor&gt; public method __construct ] {
+    }
+
+    Method [ &lt;internal&gt; public method __toString ] {
+    }
+
+    Method [ &lt;internal&gt; public method getName ] {
+    }
+    Method [ &lt;internal&gt; public method getValue ] {
+    }
+
+    Method [ &lt;internal&gt; public method setValue ] {
+    }
+
+    Method [ &lt;internal&gt; public method isPublic ] {
+    }
+
+    Method [ &lt;internal&gt; public method isPrivate ] {
+    }
+
+    Method [ &lt;internal&gt; public method isProtected ] {
+    }<a name="ch04index120"></a>
+
+    Method [ &lt;internal&gt; public method isStatic ] {
+    }
+
+    Method [ &lt;internal&gt; public method isDefault ] {
+    }
+
+    Method [ &lt;internal&gt; public method getModifiers ] {
+    }
+
+    Method [ &lt;internal&gt; public method getDeclaringClass ] {
+    }
+  }
+}
+
+</pre><br>
+<p class="docText">As you can see, this function lists all necessary information about the class, such as methods and their signatures, properties, and constants.<a name="ch04index121"></a></p>
+<a name="ch04lev2sec10"></a><h4 class="docSection2Title">4.5.4. Implementing the Delegation Pattern Using Reflection</h4>
+<p class="docText">Times arise where a class (<tt>One</tt>) is supposed to do everything another class (<tt>Two</tt>) does and more. The preliminary temptation would be for class <tt>One</tt> to extend class <tt>Two</tt>, and thereby inheriting all of its functionality. However, there are times when this is the wrong thing to do, either because there isn't a clear semantic is-a relationship between classes <tt>One</tt> and <tt>Two</tt>, or class <tt>One</tt> is already extending another class, and inheritance cannot be used. Under such circumstances, it is useful to use a delegation model (via the <span class="docEmphStrong">delegation design pattern</span>), where method calls that class <tt>One</tt> can't handle are redirected to class <tt>Two</tt>. In some cases, you may even want to chain a larger number of objects where the first one in the list has highest priority.<a name="ch04index122"></a><a name="ch04index123"></a><a name="ch04index124"></a><a name="ch04index125"></a><a name="ch04index126"></a></P>
+<p class="docText">The following example creates such a delegator called <tt>ClassOneDelegator</tt> that first checks if the method exists and is accessible in <tt>ClassOne</tt>; if not, it tries all other objects that are registered with it. The application can register additional objects that should be delegated to by using the <tt>addObject($obj)</tt> method. The order of adding the objects is the order of precedence when <tt>Class OneDelegator</tt> searches for an object that can satisfy the request:</p>
+<pre>
+class ClassOne {
+    function callClassOne() {
+        print "In Class One\n";
+    }
+}
+
+class ClassTwo {
+    function callClassTwo() {
+        print "In Class Two\n";
+    }
+}
+
+class ClassOneDelegator {
+    private $targets;
+
+    function __construct() {
+        $this-&gt;target[] = new ClassOne();
+    }
+
+    function addObject($obj) {
+        $this-&gt;target[] = $obj;
+    }
+
+    function __call($name, $args) {
+        foreach ($this-&gt;target as $obj) {
+            $r = new ReflectionClass($obj);
+
+            if ($method = $r-&gt;getMethod($name)) {
+                if ($method-&gt;isPublic() &amp;&amp; !$method-&gt;isAbstract()) {
+                    return $method-&gt;invoke($obj, $args);
+                }
+            }
+        }
+    }
+}
+<a name="ch04index127"></a><a name="ch04index128"></a><a name="ch04index129"></a><a name="ch04index130"></a>
+$obj = new ClassOneDelegator();
+$obj-&gt;addObject(new ClassTwo());
+$obj-&gt;callClassOne();
+$obj-&gt;callClassTwo();
+</pre><br>Running this code results in the following output:<pre>
+In Class One
+In Class Two
+</pre><BR>
+<p class="docText">You can see that this example uses the previously described feature of overloading method calls using the special <tt>__call()</tt> method. After the call is intercepted, <tt>__call()</tt> uses the reflection API to search for an object that can satisfy the request. Such an object is defined as an object that has a method with the same name, which is publicly accessible and is not an abstract method.<a name="ch04index131"></a></p>
+<p class="docText">Currently, the code does nothing if no satisfying function is found. You may want to call <tt>ClassOne</tt> by default, so that you make PHP error out with a nice error message, and in case <tt>ClassOne</tt> has itself defined a <tt>__call()</tt> method, it would be called. It is up to you to implement the default case in a way that suits your needs.<a name="ch04index132"></a><a name="ch04index133"></a><a name="ch04index134"></a><a name="ch04index135"></a></P>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch04lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch04lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

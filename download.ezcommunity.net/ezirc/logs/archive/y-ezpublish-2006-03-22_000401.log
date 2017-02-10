@@ -1,0 +1,253 @@
+[03-20-2006 00:00:58] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has quit [Remote closed the connection]
+[03-20-2006 00:34:59] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-20-2006 00:52:56] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-20-2006 01:18:52] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[03-20-2006 01:41:37] -!- ordnas [n=ordnas@p549D55DC.dip.t-dialin.net] has joined #ezpublish
+[03-20-2006 01:54:04] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-20-2006 02:00:50] -!- ordna1 [n=ordnas@p549D73D7.dip.t-dialin.net] has joined #ezpublish
+[03-20-2006 02:09:05] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-20-2006 02:10:24] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[03-20-2006 02:11:04] -!- ordnas [n=ordnas@p549D55DC.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[03-20-2006 02:11:28] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-20-2006 02:11:29] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[03-20-2006 02:13:17] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-20-2006 02:25:31] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[03-20-2006 02:55:04] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-20-2006 03:00:40] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-20-2006 03:54:00] -!- _thomas [n=thomas@c-134-226-52.d.dsl.de.ignite.net] has joined #ezpublish
+[03-20-2006 04:15:12] [#ezpublish] <buz> has anyone got gallery templates with user selectable number of images per page / image size?
+[03-20-2006 04:25:57] [#ezpublish] <zrg> no sorry
+[03-20-2006 04:26:17] [#ezpublish] <zrg> where would the choices save?
+[03-20-2006 04:26:27] [#ezpublish] <buz> ezpreference
+[03-20-2006 04:28:15] [#ezpublish] <buz> it's really a rather trivial change but i'm lazy ;)
+[03-20-2006 04:28:17] [#ezpublish] <zrg> think i have heard it mentioned, easy to use?
+[03-20-2006 04:28:34] [#ezpublish] <buz> yes
+[03-20-2006 04:28:44] [#ezpublish] <buz> very simple really
+[03-20-2006 04:29:07] [#ezpublish] <buz> of course, caching can bite you but you can take care of that
+[03-20-2006 04:29:56] [#ezpublish] <buz> http://triligon.org/triligon/playground/test_3_forum_object_id_467 makes use of it to let the user chose the layout of threads
+[03-20-2006 04:30:02] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has joined #ezpublish
+[03-20-2006 04:31:35] [#ezpublish] <buz> ok i'm gonna hack that into my gallery ;)
+[03-20-2006 04:31:49] [#ezpublish] <buz> 10 thumbs is kinda little on a big screen
+[03-20-2006 04:36:54] [#ezpublish] <zrg> do you know of some forum templateset that actually looks good and works well?
+[03-20-2006 04:43:00] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-20-2006 04:47:27] [#ezpublish] <buz> zrg: http://ez.no/products/ez_publish/documentation/reference/template_operators/data_extraction/ezpreference
+[03-20-2006 04:47:35] [#ezpublish] <buz> refreshingly simple ;)
+[03-20-2006 04:48:37] [#ezpublish] <zrg> how about anonymous?
+[03-20-2006 04:48:44] [#ezpublish] <buz> stored in session ithink
+[03-20-2006 04:49:09] [#ezpublish] <zrg> ok so changes will work but not save?
+[03-20-2006 04:49:31] [#ezpublish] <buz> well will stay as long as he's on the site
+[03-20-2006 04:49:40] [#ezpublish] <buz> just not be persisted for the next visit i guess
+[03-20-2006 04:49:44] [#ezpublish] <zrg> what about defaults?
+[03-20-2006 04:49:54] [#ezpublish] <buz> that i'm currently trying to figure out ;)
+[03-20-2006 04:50:26] [#ezpublish] <zrg> looking at this would be nice if you can say in conf taht in case user has it not set, the value comes from THAT user
+[03-20-2006 04:51:03] [#ezpublish] <zrg> otherwise you would have to manage defaults in every instance, which is stupid
+[03-20-2006 04:51:14] [#ezpublish] <buz> seems like one has to do that
+[03-20-2006 04:51:24] [#ezpublish] <zrg> blah :P
+[03-20-2006 04:51:40] [#ezpublish] <zrg> not quite there, as usual ;)
+[03-20-2006 04:52:41] [#ezpublish] <buz> yeah i'm currently wrestling with default
+[03-20-2006 04:52:53] [#ezpublish] <buz> a default of 0 is kinda dangerous for the limit of a big gallery ;)
+[03-20-2006 04:53:09] [#ezpublish] <zrg> lotsa pages :P
+[03-20-2006 04:53:13] [#ezpublish] <buz> no
+[03-20-2006 04:53:18] [#ezpublish] <buz> lots of images on ONE page
+[03-20-2006 04:53:28] [#ezpublish] <buz> which means lots of image rescaling on first visit
+[03-20-2006 04:53:30] [#ezpublish] <zrg> well divide number of images by 0 . aiieeee!
+[03-20-2006 04:53:45] [#ezpublish] <buz> or maybe default is NULL
+[03-20-2006 04:53:48] [#ezpublish] * zrg bursts into flames
+[03-20-2006 05:38:11] -!- ren0r [n=rd@195.227.33.18] has joined #ezpublish
+[03-20-2006 05:38:29] -!- ren0r [n=rd@195.227.33.18] has left #ezpublish []
+[03-20-2006 05:44:51] -!- _thomas [n=thomas@c-134-226-52.d.dsl.de.ignite.net] has quit [Remote closed the connection]
+[03-20-2006 05:56:41] -!- _thomas [n=thomas@c-134-226-52.d.dsl.de.ignite.net] has joined #ezpublish
+[03-20-2006 07:02:45] -!- bOkO_ [i=martin@cecilias2.kansliM.lu.se] has joined #ezpublish
+[03-20-2006 07:04:02] [#ezpublish] <bOkO_> Question to ppl who have upgraded Online Editor:
+[03-20-2006 07:04:38] [#ezpublish] <bOkO_> We just upgraded to OE 4.0.2 from 2.0 and realized that the Name-attribute of the upload-new form is no longer present.
+[03-20-2006 07:06:01] [#ezpublish] <bOkO_> Have you:
+[03-20-2006 07:06:02] [#ezpublish] <bOkO_> Experieced this?
+[03-20-2006 07:06:02] [#ezpublish] <bOkO_> knowledge of any reason or feature backing this up?
+[03-20-2006 07:06:02] [#ezpublish] <bOkO_> Know how to get it back?
+[03-20-2006 07:08:47] [#ezpublish] <buz> anyone get any idea why the following template code does not what it should:
+[03-20-2006 07:08:49] [#ezpublish] <buz>         {let page_limit=ezpreference("imagesperpage")}
+[03-20-2006 07:08:53] [#ezpublish] <buz> 
+[03-20-2006 07:08:57] [#ezpublish] <buz>             {if gt($page_limit, 50)}
+[03-20-2006 07:09:01] [#ezpublish] <buz>                 {set page_limit=50}
+[03-20-2006 07:09:05] [#ezpublish] <buz>             {/if}
+[03-20-2006 07:09:09] [#ezpublish] <buz> 
+[03-20-2006 07:09:13] [#ezpublish] <buz>             {if lt($page_limit, 4)}
+[03-20-2006 07:09:17] [#ezpublish] <buz>                 {set page_limit=8}
+[03-20-2006 07:09:18] [#ezpublish] <buz>             {/if}
+[03-20-2006 07:09:18] [#ezpublish] <buz> i often get page_limit=8 when it should be left alone???
+[03-20-2006 07:12:41] [#ezpublish] <bOkO_> what´s the value of $page_limit in these cases?
+[03-20-2006 07:12:51] [#ezpublish] <buz> in between 4 and 50
+[03-20-2006 07:12:55] [#ezpublish] <buz> its a weird bug i think
+[03-20-2006 07:13:16] [#ezpublish] <bOkO_> weird indeed
+[03-20-2006 07:13:45] [#ezpublish] <buz> could be a caching bug
+[03-20-2006 07:13:59] [#ezpublish] <bOkO_> thats the only thing i could think of
+[03-20-2006 07:14:32] [#ezpublish] <bOkO_> the code itself seems failsafe
+[03-20-2006 07:14:37] [#ezpublish] <buz> yeah
+[03-20-2006 07:14:42] [#ezpublish] <buz> yet weird things happen
+[03-20-2006 07:15:20] [#ezpublish] <buz> mhh
+[03-20-2006 07:15:31] [#ezpublish] <buz> looks like  {cache-block keys=array($node.node_id, ezpreference("imagesperpage"))} wont work
+[03-20-2006 07:15:42] [#ezpublish] <buz> no that works
+[03-20-2006 07:15:46] [#ezpublish] <buz> but only using $node doesnt
+[03-20-2006 07:15:51] [#ezpublish] <buz> ah well at least it works now ;)
+[03-20-2006 07:16:22] [#ezpublish] <bOkO_> yea, $node can be tricky in case of cache
+[03-20-2006 07:16:44] [#ezpublish] <bOkO_> what about using $node_result
+[03-20-2006 07:16:59] [#ezpublish] <buz> it's a full template
+[03-20-2006 07:17:04] [#ezpublish] <buz> $node should be exactly that
+[03-20-2006 07:17:20] [#ezpublish] <buz> but it might be some reference weirdness with $node as a composite object
+[03-20-2006 07:17:29] [#ezpublish] <buz> node_id is leaner anyway
+[03-20-2006 07:17:35] [#ezpublish] <bOkO_> ok (and $module_result whas what i meant of cause)
+[03-20-2006 07:18:07] [#ezpublish] <bOkO_> buz: yuo´re using Online editor?
+[03-20-2006 07:24:11] [#ezpublish] <buz> no
+[03-20-2006 07:24:33] [#ezpublish] <bOkO_> ok
+[03-20-2006 09:03:45] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-20-2006 09:15:42] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-20-2006 09:25:33] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-20-2006 09:29:16] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-20-2006 09:36:57] [#ezpublish] <bOkO_> _hovik: We just upgraded to OE 4.0.2 from 2.0 and realized that the Name-attribute of the OE upload-new form is no longer present. What is the reason for this, and can we have it back in some way?
+[03-20-2006 09:41:01] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-20-2006 09:42:13] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has quit [Client Quit]
+[03-20-2006 09:42:33] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-20-2006 09:46:29] [#ezpublish] <_hovik> bOkO_: I don't know. Try asking on the forum or through support.
+[03-20-2006 09:47:08] [#ezpublish] <bOkO_> I have, in a couple of instances.
+[03-20-2006 09:47:36] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-20-2006 09:48:41] [#ezpublish] <bOkO_> _hovik: you´re not by any chance Kåre "Rai Rai" Køhler Høvik at ez.no? was hoping for that :)
+[03-20-2006 09:49:47] [#ezpublish] <_hovik> bOkO_: yes I am, but I'm not involved in OE development.
+[03-20-2006 09:50:53] [#ezpublish] <bOkO_> ok i see.
+[03-20-2006 09:54:16] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [calvino.freenode.net irc.freenode.net]
+[03-20-2006 09:54:16] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has quit [calvino.freenode.net irc.freenode.net]
+[03-20-2006 09:54:16] -!- _hovik [n=hovik@85.19.74.66] has quit [calvino.freenode.net irc.freenode.net]
+[03-20-2006 09:54:16] -!- kris10an [n=kh@85.19.74.66] has quit [calvino.freenode.net irc.freenode.net]
+[03-20-2006 09:54:29] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-20-2006 09:54:29] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has joined #ezpublish
+[03-20-2006 09:54:29] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-20-2006 09:54:29] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[03-20-2006 09:55:49] [#ezpublish] <bOkO_> kris10an: you´re not OE-involved either i guess?
+[03-20-2006 10:27:59] [#ezpublish] <zrg> i am using xmlarea
+[03-20-2006 10:42:23] -!- bOkO_ [i=martin@cecilias2.kansliM.lu.se] has quit ["bye"]
+[03-20-2006 10:51:27] -!- _hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[03-20-2006 10:55:16] -!- _thomas [n=thomas@c-134-226-52.d.dsl.de.ignite.net] has quit [Remote closed the connection]
+[03-20-2006 10:59:01] -!- _thomas [n=thomas@c-134-226-52.d.dsl.de.ignite.net] has joined #ezpublish
+[03-20-2006 11:12:32] -!- _thomas [n=thomas@c-134-226-52.d.dsl.de.ignite.net] has quit [Remote closed the connection]
+[03-20-2006 11:13:57] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-20-2006 11:50:18] -!- ordna1 [n=ordnas@p549D73D7.dip.t-dialin.net] has left #ezpublish []
+[03-20-2006 12:08:58] -!- badi [n=badii07@host004.be.dedigate.com] has joined #ezpublish
+[03-20-2006 12:17:05] [#ezpublish] <badi> hello
+[03-20-2006 12:17:25] [#ezpublish] <badi> it s possible to add a 'img' Tag
+[03-20-2006 12:17:47] [#ezpublish] <badi> in a ezxmltext  or eztext  template ?
+[03-20-2006 12:18:18] [#ezpublish] <zrg> what do you mean
+[03-20-2006 12:18:39] [#ezpublish] <zrg> eztext is just text, can have anything in it
+[03-20-2006 12:19:27] [#ezpublish] <badi> i have insert HTMLArea editor in ez admin
+[03-20-2006 12:19:43] [#ezpublish] <badi> for textearea
+[03-20-2006 12:20:33] [#ezpublish] <badi> and mcImageManager for uploading pic
+[03-20-2006 12:20:51] [#ezpublish] <badi> it s oki for HTMLArea
+[03-20-2006 12:20:54] [#ezpublish] <badi> it work
+[03-20-2006 12:22:40] [#ezpublish] <zrg> htmlarea wont work
+[03-20-2006 12:22:58] [#ezpublish] <badi> but when i upload pict with  mcImageManager
+[03-20-2006 12:23:06] [#ezpublish] <zrg> there is modification of it called xmlarea under contribs that works
+[03-20-2006 12:23:06] [#ezpublish] <badi> i have a error message
+[03-20-2006 12:23:21] [#ezpublish] <zrg> htmlarea wont work, period
+[03-20-2006 12:23:31] [#ezpublish] <badi> yes it work
+[03-20-2006 12:23:35] [#ezpublish] <badi> for eztext
+[03-20-2006 12:23:43] [#ezpublish] <badi> not for ezxmltext
+[03-20-2006 12:24:04] [#ezpublish] <zrg> well ok for that but whats the point?
+[03-20-2006 12:25:11] [#ezpublish] <badi> i can t upload a pict
+[03-20-2006 12:25:24] [#ezpublish] <zrg> no wonder
+[03-20-2006 12:26:01] [#ezpublish] <zrg> use the xmlarea
+[03-20-2006 12:39:34] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[03-20-2006 13:50:32] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has quit [Remote closed the connection]
+[03-20-2006 13:51:44] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-20-2006 15:19:15] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-20-2006 15:35:48] -!- phretor [n=phretor@host174-37.pool870.interbusiness.it] has joined #ezpublish
+[03-20-2006 15:36:23] [#ezpublish] <phretor> hi there
+[03-20-2006 15:36:52] [#ezpublish] <phretor> how do I force self-registered accounts to be *disabled* by default?
+[03-20-2006 15:43:54] [#ezpublish] <zrg> disable access to registration in site.ini
+[03-20-2006 15:44:00] [#ezpublish] <zrg> 2 locations in there
+[03-20-2006 15:44:40] [#ezpublish] <phretor> zrg: I don't want to prevent registrations
+[03-20-2006 15:45:11] [#ezpublish] <phretor> I want new user accounts to be disabled (they will need further activation)
+[03-20-2006 15:45:27] [#ezpublish] <zrg> oh
+[03-20-2006 15:46:17] [#ezpublish] <zrg> they are disabled until confirmed by url in mail sent to user, if you switch off the mail thats it?
+[03-20-2006 15:46:28] [#ezpublish] <phretor> zrg: no
+[03-20-2006 15:47:01] [#ezpublish] <phretor> zrg: oh well, yes but...is there a clean way?
+[03-20-2006 15:49:11] [#ezpublish] <phretor> zrg: as a side question; is it possible to redirect users to the admin site(access) after they log in?
+[03-20-2006 15:58:12] [#ezpublish] <zrg> huh? what for?
+[03-20-2006 15:58:55] [#ezpublish] <zrg> as to setting disabled, read thru inifiles carefully, many settings for new users there, but i dont know from head sorry
+[03-20-2006 16:32:59] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[03-20-2006 16:59:30] [#ezpublish] <phretor> zrg: still there?
+[03-20-2006 17:00:07] [#ezpublish] <zrg> mhmh
+[03-20-2006 17:01:08] [#ezpublish] <phretor> zrg: http://img146.imageshack.us/my.php?image=pic0bm.jpg how could this happend? <input fields are not displayed at all! :-(
+[03-20-2006 17:02:18] [#ezpublish] <zrg> dont know what you mean
+[03-20-2006 17:02:27] [#ezpublish] <phretor> zrg: have you looked at the page
+[03-20-2006 17:02:27] [#ezpublish] <phretor> ?
+[03-20-2006 17:02:32] [#ezpublish] <zrg> sure
+[03-20-2006 17:02:43] [#ezpublish] <phretor> zrg: that should be the default registration page for new users
+[03-20-2006 17:03:04] [#ezpublish] <phretor> zrg: it sometimes shows <input> fields but sometimes no
+[03-20-2006 17:04:35] [#ezpublish] <phretor> zrg: imagine this (http://ez.no/user/register) without <input> fields; it's exactly what is happening to me
+[03-20-2006 17:05:08] [#ezpublish] <zrg> no idea
+[03-20-2006 17:05:19] [#ezpublish] <zrg> look if they are in source, look in debug
+[03-20-2006 17:05:44] [#ezpublish] <phretor> zrg: they are not in HTML source
+[03-20-2006 17:07:33] [#ezpublish] <phretor> zrg: never happened before
+[03-20-2006 17:08:05] [#ezpublish] <phretor> zrg: beside caching, is there something I could do for "resetting" the system or something like that?
+[03-20-2006 17:10:41] [#ezpublish] <zrg> clear all caches done?
+[03-20-2006 17:11:20] [#ezpublish] <zrg> turn on debug, look for errors
+[03-20-2006 17:11:50] [#ezpublish] <phretor> zrg: no errors
+[03-20-2006 17:12:05] [#ezpublish] <phretor> zrg: it's maybe due to the ViewCaching=disabled
+[03-20-2006 17:12:28] [#ezpublish] <zrg> disabling viewcache makes everything work better
+[03-20-2006 17:14:09] [#ezpublish] <phretor> zrg: suppose that you would change the default loginpagelayout.tpl; do you override or create a new mydesign/templates/loginpagelayout.tpl?
+[03-20-2006 17:17:10] [#ezpublish] <zrg> always override, never change default templates
+[03-20-2006 17:18:24] [#ezpublish] <phretor> zrg: not changing the default template
+[03-20-2006 17:19:18] [#ezpublish] <phretor> zrg: the default template remains into design/standard/templates/loginpagelayout.tpl; I'll define a new design/mydesign/templates/loginpagelayout.tpl
+[03-20-2006 17:19:45] [#ezpublish] <zrg> oh, i have never done that
+[03-20-2006 17:20:32] [#ezpublish] <zrg> always have done override, clearer in my opinion
+[03-20-2006 17:21:33] [#ezpublish] <zrg> only have "addon" templates in mydesign/templates, which do not have analog in standard set
+[03-20-2006 17:22:17] [#ezpublish] <phretor> zrg: there is a basic problem with eZpublish itself
+[03-20-2006 17:22:28] [#ezpublish] <zrg> ?
+[03-20-2006 17:24:34] [#ezpublish] <phretor> zrg: I don't like the two sites to be so independent; I'd prefer the 'admin' site to be left for administrative/editing purposes only - i.e., a user should not be able to login into the 'public' site...did you get what I mean? It's maybe a little complicated
+[03-20-2006 17:25:03] [#ezpublish] <zrg> you dont like the user to go to admin to edit?
+[03-20-2006 17:25:19] [#ezpublish] <phretor> zrg: no, the contrary
+[03-20-2006 17:25:41] [#ezpublish] <phretor> zrg: I'd like to keep the public site for view only and the admin site for editing/admin only
+[03-20-2006 17:25:58] [#ezpublish] <zrg> ok so whats the problem?
+[03-20-2006 17:26:22] [#ezpublish] <phretor> zrg: I don't like to user to be able to, for example, log in into the 'public' site
+[03-20-2006 17:26:32] [#ezpublish] <phretor> zrg: but it's just an example
+[03-20-2006 17:29:06] [#ezpublish] <phretor> zrg: did you get the idea?
+[03-20-2006 17:29:10] [#ezpublish] <zrg> if you want no logins in public siteaccess, turn them off in permissioins
+[03-20-2006 17:30:49] [#ezpublish] <phretor> zrg: yes, I know, but it's not a matter of login/logout - it's a more high-level concept; I'd prefer to _completely_ separate the two aspects; admin is for logged user only, public is for not-logged in users only
+[03-20-2006 17:38:04] [#ezpublish] <zrg> well i dont get it, describe in more earthly terms then :P
+[03-20-2006 17:38:18] [#ezpublish] <zrg> i dont let my users into admin at all.
+[03-20-2006 17:39:02] [#ezpublish] <phretor> zrg: how do you allow them to edit?
+[03-20-2006 17:40:10] [#ezpublish] <zrg> no problem there, just stick in edit button, it almost all works as well in public layout
+[03-20-2006 17:40:43] [#ezpublish] <phretor> zrg: and do you need big changes in the default way/templates?
+[03-20-2006 17:40:46] [#ezpublish] <zrg> and much easier for simple users
+[03-20-2006 17:40:54] [#ezpublish] <zrg> not at all
+[03-20-2006 17:41:07] [#ezpublish] <phretor> zrg: I'll check it out, thanks man
+[03-20-2006 17:41:49] [#ezpublish] <phretor> zrg: and what if a user want to add a new, say, Article?
+[03-20-2006 17:42:07] [#ezpublish] <zrg> want a template that does it all?
+[03-20-2006 17:42:30] [#ezpublish] <phretor> zrg: I want the easiest way
+[03-20-2006 17:42:46] [#ezpublish] <phretor> :-)
+[03-20-2006 17:45:36] [#ezpublish] <zrg> http://pastebin.com/613458
+[03-20-2006 17:46:27] [#ezpublish] <phretor> zrg: moreover, I'd love to have a more rapid way to edit policies/roles :-( it's amazingly boring
+[03-20-2006 17:47:17] [#ezpublish] <zrg> save in mydesign/templates/quickedit.tpl
+[03-20-2006 17:47:41] [#ezpublish] <phretor> ok, then?
+[03-20-2006 17:47:58] [#ezpublish] <zrg> put into pagelayout:
+[03-20-2006 17:47:59] [#ezpublish] <zrg> {include uri='design:quickedit.tpl'}
+[03-20-2006 17:47:59] [#ezpublish] <zrg>  <div class="break"></div>
+[03-20-2006 17:47:59] [#ezpublish] <zrg>         {$module_result.content}
+[03-20-2006 17:48:04] [#ezpublish] <zrg> thats it
+[03-20-2006 17:48:29] [#ezpublish] <phretor> zrg: will it work for logged in users only?
+[03-20-2006 17:48:52] [#ezpublish] <zrg> yes
+[03-20-2006 17:49:07] [#ezpublish] <phretor> how about speeding up the policy editing task?
+[03-20-2006 17:49:30] [#ezpublish] <zrg> one extra goodie in there, look at portion which has ezini( 'PerGroupClassLimits', concat('ClassLimit_', $user_group_id, '_', $class.id), 'limits.ini' )
+[03-20-2006 17:50:05] [#ezpublish] <phretor> ok, so that?
+[03-20-2006 17:50:24] [#ezpublish] <zrg> you can have limit for each user there, how many objects of given class he can have
+[03-20-2006 17:51:10] [#ezpublish] <zrg> for example set it 1 for guest users and blog class, so each guest can only create 1 blog
+[03-20-2006 17:52:33] [#ezpublish] <zrg> policy editing is tedious but you only have to do it once
+[03-20-2006 17:54:05] [#ezpublish] <phretor> zrg: my policies are very simple but I'm not so expert :-( basically I have three kinds of roles: (1) admin (everything, all siteaccess), (2) researchers (editing/creating  only in public siteaccess onlye), (3) studends (editing only in public siteaccess only)
+[03-20-2006 17:58:21] [#ezpublish] <zrg> these are user groups, roles are at more lower level
+[03-20-2006 17:59:03] [#ezpublish] <phretor> zrg: roles are the way to edit/assign policies, isn't it?
+[03-20-2006 17:59:51] [#ezpublish] <zrg> like blog user, forum user, forum moderator, content editor
+[03-20-2006 18:00:32] [#ezpublish] <zrg> and then assign these roles to groups, with additional limitations
+[03-20-2006 18:00:32] [#ezpublish] <phretor> zrg: ok man, I gotta go
+[03-20-2006 18:01:15] [#ezpublish] <phretor> zrg: thanks for your help
+[03-20-2006 18:01:29] [#ezpublish] <zrg> sure
+[03-20-2006 18:01:33] [#ezpublish] <zrg> come back :)
+[03-20-2006 18:01:43] -!- phretor [n=phretor@host174-37.pool870.interbusiness.it] has quit []
+[03-20-2006 20:59:21] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []

@@ -1,0 +1,56 @@
+[05-03-2006 00:06:35] -!- DiGiTa|_ [n=pet2poul@84.4.189.3] has joined #ezpublish
+[05-03-2006 00:33:15] -!- tobyS [n=dotxp@hartes-php.de] has quit [calvino.freenode.net irc.freenode.net]
+[05-03-2006 00:33:15] -!- nnn0 [n=nnn0@ti541110a080-1273.bb.online.no] has quit [calvino.freenode.net irc.freenode.net]
+[05-03-2006 00:33:15] -!- xbit [i=birger@ritchie.ping.uio.no] has quit [calvino.freenode.net irc.freenode.net]
+[05-03-2006 00:33:15] -!- pire [n=kbot@phpugdo.de] has quit [calvino.freenode.net irc.freenode.net]
+[05-03-2006 00:34:00] -!- nnn0 [n=nnn0@ti541110a080-1273.bb.online.no] has joined #ezpublish
+[05-03-2006 00:34:00] -!- tobyS [n=dotxp@hartes-php.de] has joined #ezpublish
+[05-03-2006 00:34:00] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[05-03-2006 00:34:00] -!- xbit [i=birger@ritchie.ping.uio.no] has joined #ezpublish
+[05-03-2006 00:36:45] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-03-2006 00:36:45] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-03-2006 00:36:45] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#privmsg
+[05-03-2006 00:38:24] -!- nnn0 [n=nnn0@ti541110a080-1273.bb.online.no] has quit ["Leaving"]
+[05-03-2006 00:40:00] -!- nnn0 [n=nnn0@ti541110a080-1273.bb.online.no] has joined #ezpublish
+[05-03-2006 01:18:08] [#ezpublish] <Tidemann> mornin
+[05-03-2006 01:24:58] -!- ordnas [n=ordnas@p549D5CC4.dip.t-dialin.net] has joined #ezpublish
+[05-03-2006 02:01:12] -!- ordnas [n=ordnas@p549D5CC4.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-03-2006 02:01:57] -!- ordnas [n=ordnas@p549D5CC4.dip.t-dialin.net] has joined #ezpublish
+[05-03-2006 02:02:54] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-03-2006 02:06:33] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-03-2006 02:15:43] -!- awormus [n=aaron@p54B128A4.dip0.t-ipconnect.de] has joined #ezpublish
+[05-03-2006 02:21:27] -!- elephantMan [n=elephant@190.205.103-84.rev.gaoland.net] has quit [calvino.freenode.net irc.freenode.net]
+[05-03-2006 02:34:19] -!- elephantMan [n=elephant@190.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-03-2006 02:37:41] -lilo:$*- [Global Notice] Hi all. One of our sponsors requested that their server be removed from main rotation for some work, and it appears that the server was taken offline a bit earlier than anticipated. Apologies for the inconvenience.
+[05-03-2006 02:56:56] [#ezpublish] <Tidemann> uhm.. if I wanna upgrade the database from 3.7.5 to 3.8.0 ... should I just use dbupdate-3.6.0-to-3.8.0.sql?
+[05-03-2006 02:57:16] [#ezpublish] <Tidemann> can't find dbupdate-3.7.5-to-3.8.0.sql
+[05-03-2006 03:19:29] [#ezpublish] <Tidemann> nevermind :)
+[05-03-2006 03:29:17] [#ezpublish] <ordnas> you read this? http://ez.no/download/ez_publish/changelogs/ez_publish_3_8/upgrading
+[05-03-2006 03:44:48] -!- awormus_ [n=aaron@p54B11B42.dip0.t-ipconnect.de] has joined #ezpublish
+[05-03-2006 03:58:03] -!- awormus [n=aaron@p54B128A4.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-03-2006 04:05:23] -!- awormus_ is now known as awormus
+[05-03-2006 05:26:54] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[05-03-2006 06:09:17] [#ezpublish] <Tidemann> ordnas: yup.. try first.. eventually: read manual ;)
+[05-03-2006 07:17:21] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[05-03-2006 07:17:28] [#ezpublish] <B-KiLLer`> hi all
+[05-03-2006 07:18:02] [#ezpublish] <B-KiLLer`> a quick one for you: is there any possibility to retrieve all the entered (text) content in a specified language, in the CMS, as a complete file
+[05-03-2006 07:18:26] [#ezpublish] <B-KiLLer`> this file is meant to be given to a company who would translate the content to other languages...
+[05-03-2006 07:19:02] [#ezpublish] <B-KiLLer`> Is there any built-in feature like this, or does it have to be developed ?
+[05-03-2006 07:22:12] -!- tobmaster [n=tobmaste@dslb-084-061-070-101.pools.arcor-ip.net] has joined #ezpublish
+[05-03-2006 07:37:57] -!- awormus_ [n=aaron@p54B11B42.dip0.t-ipconnect.de] has joined #ezpublish
+[05-03-2006 07:37:59] -!- awormus_ [n=aaron@p54B11B42.dip0.t-ipconnect.de] has quit [Client Quit]
+[05-03-2006 07:47:54] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-03-2006 08:30:16] -!- tobmaster [n=tobmaste@dslb-084-061-070-101.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[05-03-2006 08:47:37] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[05-03-2006 08:49:06] -!- ordna1 [n=ordnas@p549D6BDA.dip.t-dialin.net] has joined #ezpublish
+[05-03-2006 09:06:31] -!- ordnas [n=ordnas@p549D5CC4.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2006 09:33:32] -!- ordna1 [n=ordnas@p549D6BDA.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-03-2006 11:18:40] -!- kracker [n=kracker@ip23.131.realtime.net] has joined #ezpublish
+[05-03-2006 14:06:45] -!- awormus [n=aaron@p54B11B42.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-03-2006 15:21:43] -!- DiGiTa|_ [n=pet2poul@84.4.189.3] has quit []
+[05-03-2006 16:55:25] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[05-03-2006 20:39:02] [#ezpublish] <kracker> sniff, i love you eZ publish, i miss you even when i'm away ..
+[05-03-2006 20:39:05] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[05-03-2006 22:29:20] -!- nnn0_ [n=nnn0@ti541110a080-1273.bb.online.no] has joined #ezpublish
+[05-03-2006 22:29:55] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[05-03-2006 23:35:51] -!- awormus [n=aaron@p54B10F47.dip0.t-ipconnect.de] has joined #ezpublish

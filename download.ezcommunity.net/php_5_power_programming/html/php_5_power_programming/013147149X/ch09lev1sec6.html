@@ -1,0 +1,424 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 9.6.&nbsp; Multi-Byte Strings and Character Sets</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch09lev1sec6"></a><h3 class="docSection1Title">9.6. Multi-Byte Strings and Character Sets</h3>
+<p class="docText">Not all languages use the same character set, not even in the western world. For example, the <img src=images/ent/U0160.GIF border=0> is only part of ISO-8859-2, not of ISO-8859-1. Because these character sets only have 8 bits to use, that only makes 256 different combinations. 8 bits is a problem for languages such as Chinese that have thousands of letters but 8 bits only support 256 characters. That's why the Chinese (and also other Asian scripts) have to use another encoding for their characters, such as BIG5 or GB2312. The Japanse use other encodings for their characters: EUC-JP, JIS, SJIS, and so on. All those different character sets are a problem to work with because some map the same character number to a different character (such as &#169; and <img src=images/ent/U2265.GIF border=0> which caused our problem at the end of the preceding section). That's one of the reasons the Unicode project was started.<a name="ch09index512"></a><a name="ch09index513"></a></p>
+<p class="docText"><span class="docEmphStrong">Unicode</span> solves the problem by assigning a number to every unique character, just like the ISO 10646 standard. This standard reserves 31 bits for characters, which should be more than enough room for every script out there (including &quot;fictional&quot; scripts like Tolkien's Tengwar and the Egyptian hieroglyphs). The characters that fit in the range 0-127 are the same as the good old ASCII standard, and the range 0-255 is the same as iso-8859-1 (Latin 1). All &quot;normal&quot; scripts characters are encoded in the range 0-65533a subset called the <span class="docEmphStrong">Basic Multilingual Plane</span> (BMP). Although Unicode only assigns numbers to characters, it is usually not used to store text. The simplest ways of encoding are UCS-2 and UCS-4, which store characters as 2- or 4-byte sequences. UCS-2 and UCS-4 are not really useful because there is a possibility of NULL bytes in the text or because the text would use too much space, even when the characters are only in the ASCII range. UTF-8, which solves these problems, is used more often. Characters in an UTF-8 encoded string can be 1 to 6 bytes long and can represent all 2<sup>31</sup> characters from UCS. This section of the chapter deals mainly with UTF-8 and conversions to other encodings (such as iso-8859-1).<a name="ch09index514"></a><a name="ch09index515"></a><a name="ch09index516"></a><a name="ch09index517"></a></p>
+<a name="ch09note10"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">For more information on Unicode, see the excellent FAQ at <a class="docLink" target="_blank" href="http://www.cl.cam.ac.uk/~mgk25/unicode.html">http://www.cl.cam.ac.uk/~mgk25/unicode.html</a>.</P></div><br>
+<a name="ch09lev2sec18"></a><H4 class="docSection2Title">9.6.1. Character Set Conversions</h4>
+<p class="docText">PHP 5 has support for character encoding and multi-byte issues in two extensions: <tt>iconv</tt> and <tt>mbstring</tt>. The main difference between the two is that <tt>iconv</tt> makes use of an external library (or the C library functions, if available), while the <tt>mbstring</tt> extension has the library bundled with PHP. Although <tt>iconv</tt> (at least in recent Linux distributions) supports much more encodings, <tt>mbstring</tt> might be the better choice for a script that has to be more portable. In addition to character encoding conversions, the <tt>mbstring</tt> extension includes a multi-byte regular expression library. The <tt>mbstring</tt> extension is enabled with the <tt>--enable-mbstring</tt> option. The additional regular expression support is enabled by default when <tt>mbstring</tt> is enabled, but it can be turned of with <tt>--disable-mbregex</tt>. The <tt>iconv</tt> extension is enabled with the <tt>--with-iconv</tt> switch. In <a class="docLink" href="#ch09fig13">Figures 9.13</a> and <a class="docLink" href="#ch09fig14">9.14</a>, you find the corresponding sections in <tt>phpinfo()</tt> for <tt>mbstring</tt> and <tt>iconv</tt>. The examples cover both extensions, whenever possible, and the character set used in the example scripts and output is in ISO-8859-15, unless otherwise noted.<a name="ch09index518"></a><a name="ch09index519"></a><a name="ch09index520"></a><a name="ch09index521"></a></P>
+<a name="ch09fig13"></a><p><center><h5 class="docFigureTitle">Figure 9.13. <tt>mbstring phpinfo()</tt> output.</h5><a name="ch09index522"></a>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig13_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="280" SRC="images/013147149X/graphics/09fig13.gif;380137"></p></center></P><BR>
+<a name="ch09fig14"></a><p><center><h5 class="docFigureTitle">Figure 9.14. <tt>iconv phpinfo()</tt> output.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig14_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="150" SRC="images/013147149X/graphics/09fig14.gif;380137"></p></center></P><br>
+<a name="ch09note11"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">Some of these examples require OS support for the used character set. If something is not supported, you might see a different output for the example scripts.</P></div><br>
+<p class="docText">In the first example, we convert ISO-8859-15 (Latin 9) text to UTF-8:<a name="ch09index523"></a><a name="ch09index524"></a></P>
+<pre>
+&lt;?php
+    $string = "Kan De v&aelig;re s&aring; vennlig &aring; hjelpe meg?\n\n";
+    echo "ISO-8859-15: $string";
+
+    echo 'UTF-8: '. mb_convert_encoding($string, 'UTF-8', 'ISO-8859-15');
+    echo 'UTF-8: '. iconv('ISO-8859-15', 'UTF-8', $string);
+?&gt;
+</pre><br>When the script runs, the output looks like this:<pre>
+ISO-8859-15: Kan De v&aelig;re s&aring; vennlig &aring; hjelpe meg?
+
+UTF-8: Kan De v&Atilde; re s&Atilde;&#165; vennlig &Atilde;&#165; hjelpe meg?
+
+UTF-8: Kan De v&Atilde; re s&Atilde;&#165; vennlig &Atilde;&#165; hjelpe meg?
+</pre><br>
+<p class="docText">Sometimes, it's not possible to convert text from one encoding to another, as shown in the following example:<a name="ch09index525"></a><a name="ch09index526"></a></p>
+<pre>
+&lt;?php
+    error_reporting(E_ALL &amp; ~E_NOTICE);
+    $from = 'ISO-8859-1'; // Latin 1: West European
+    $to =   'ISO-8859-2'; // Latin 2: Central and East European
+    $string = "Denna text &auml;r p&aring; svenska.";
+    echo "$from: $string\n\n";
+
+    echo "$to: ". mb_convert_encoding($string, $to, $from). "\n\n";
+    echo "$to: ". iconv($from, $to, $string). "\n\n";
+    echo "$to: ". iconv($from, "$to//TRANSLIT", $string). "\n\n";
+?&gt;
+</pre><br>
+<p class="docText">We try to convert the text <tt>Denna text &auml;r p&aring; svenska</tt>. from ISO-8859-1 to ISO-8859-2, but the &quot;&aring;&quot; does not exist in ISO-8859-2. <tt>mb_convert_encoding()</tt> handles replaces the offending character (by default) with a &quot;?&quot;, whereas <tt>iconv()</tt> just aborts the conversion at that point. However, you can add the <tt>//trANSLIT</tt> modifier to the <tt>to</tt> encoding parameter to tell <tt>iconv()</tt> to replace the offending character by a &quot;?&quot;. The <tt>//trANSLIT</tt> also tries to convert to a representation of a character, such as converting &quot;&#169;&quot; to &quot;(C)&quot;, while converting from ISO-8859-1 to ISO-8859-2. You can use the <tt>mb_substitute_character()</tt> function to tell the <tt>mbstring</tt> extension to do something different with an offending character, as shown here:<a name="ch09index527"></a><a name="ch09index528"></a><a name="ch09index529"></a><a name="ch09index530"></a></p>
+<pre>
+&lt;?php
+    error_reporting(E_ALL &amp; ~E_NOTICE);
+    $from = 'ISO-8859-1'; // Latin 1: West European
+    $to =   'ISO-8859-4'; // Latin 4: Scandinavian/Baltic
+    $string = "Ce texte est en fran&ccedil;ais.";
+    echo "$from: $string\n\n";
+
+    // Default
+    echo "$to: ". mb_convert_encoding($string, $to, $from). "\n";
+
+    // no output for offending characters:
+    mb_substitute_character('none');
+    echo "$to: ". mb_convert_encoding($string, $to, $from). "\n";
+
+    // Unicode value output for offending characters:
+    mb_substitute_character('long');
+    echo "$to: ". mb_convert_encoding($string, $to, $from). "\n";
+?&gt;
+</pre><br>
+<p class="docText">outputs<a name="ch09index531"></a><a name="ch09index532"></a></p>
+<pre>
+ISO-8859-1: Ce texte est en fran&ccedil;ais.
+
+ISO-8859-4: Ce texte est en fran?ais.
+ISO-8859-4: Ce texte est en franais.
+ISO-8859-4: Ce texte est en franU+E7ais.
+
+</pre><br>
+<a name="ch09note12"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">The web site <a class="docLink" target="_blank" href="http://www.eki.ee/letter/">http://www.eki.ee/letter/</a> is a useful tool that shows you what happens during character conversions. It provides lists of special characters needed to write a certain language, including a list of encodings that support this set.</p></div><br>
+<p class="docText"><tt>mbstring()</tt> also features a non-encoding encoding <tt>html</tt> which might be useful in some cases:<a name="ch09index533"></a><a name="ch09index534"></a></p>
+<pre>
+&lt;?php
+    error_reporting(E_ALL &amp; ~E_NOTICE);
+    $from = 'ISO-8859-1'; // Latin 1: West European
+    $to =   'html'; // Pseudo encoding
+    $string = "Esto texto es Espa&ntilde;ol.";
+    echo "$from: $string\n";
+
+    echo "$to: ". mb_convert_encoding($string, $to, $from). "\n";
+?&gt;
+</pre><br>outputs<pre>
+ISO-8859-1: Esto texto es Espa&ntilde;ol.
+html: Esto texto es Espa&amp;ntilde;ol.
+</pre><br>
+<p class="docText">The third parameter to the <tt>mb_convert_encoding()</tt> function is optional and defaults to the &quot;internal encoding&quot; that you can set with the function <tt>mb_internal_encoding()</tt>. If there is a parameter, the function returns either <tt>TRUE</tt>, if the encoding is supported, or <tt>FALSE</tt> and a warning if the encoding is not supported. If no parameters are passed, the function simply returns the current setting:<a name="ch09index535"></a><a name="ch09index536"></a><a name="ch09index537"></a><a name="ch09index538"></a></P>
+<pre>
+&lt;?php
+    echo mb_internal_encoding(). "\n";
+    if (@mb_internal_encoding('UTF-8')) {
+        echo mb_internal_encoding(). "\n";
+    }
+    if (@mb_internal_encoding('ISO-8859-17')) {
+        echo mb_internal_encoding(). "\n";
+    }
+    echo mb_internal_encoding(). "\n";
+?&gt;
+</pre><br>outputs<pre>
+ISO-8859-1
+UTF-8
+UTF-8
+</pre><br>
+<a name="ch09note13"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">You can see a list with supported encodings by using the function <tt>mb_get_encodings()</tt>.</p></div><br>
+<p class="docText">The <tt>iconv</tt> extension has similar possibilities. The function <tt>iconv_set_encoding()</tt> can be used to set the internal encoding and the output encoding:<a name="ch09index539"></a><a name="ch09index540"></a><a name="ch09index541"></a><a name="ch09index542"></a></p>
+<pre>
+&lt;?php
+iconv_set_encoding('internal_encoding', 'UTF-8');
+iconv_set_encoding('output_encoding', 'ISO-8859-1');
+
+echo iconv_get_encoding('internal_encoding'). "\n";
+echo iconv_get_encoding('output_encoding'). "\n";
+?&gt;
+</pre><br>outputs<pre>
+UTF-8
+ISO-8859-1
+</pre><br>
+<p class="docText">The internal encoding setting has an effect on a couple of functions (which we cover in a bit) dealing with strings. The output encoding option doesn't have any effect on those options, but can be used in combination with the <tt>ob_iconv_handler</tt> output buffering handler. With this enabled, PHP will automatically convert the text output to the browser from internal encoding to output encoding. It adjusts the <tt>Content-type</tt> header if it wasn't set in the script, and the current <tt>Content-type</tt> starts with <tt>text/</tt>.</p>
+<p class="docText">This example changes the output encoding to <tt>UTF-8</tt> and activates the output handler. The result is an UTF-8 encoded output page (see <a class="docLink" href="#ch09fig15">Figure 9.15</a>):<a name="ch09index543"></a><a name="ch09index544"></a></P>
+<pre>
+&lt;?php
+    ob_start("ob_iconv_handler");
+    iconv_set_encoding("internal_encoding", "ISO-8859-1");
+    iconv_set_encoding("output_encoding", "UTF-8");
+
+    $text = &lt;&lt;&lt;END
+PHP, est un acronyme r&eacute;cursif, qui signifie "PHP: Hypertext 
+Preprocessor": c'est un langage de script HTML, ex&eacute;cut&eacute; cot&eacute; serveur. 
+L'essentiel de sa syntaxe est emprunt&eacute; aux langages C, Java et Perl,
+avec des am&eacute;liorations sp&eacute;cifiques. L'objet de ce langage est de 
+permettre aux d&eacute;veloppeurs web d'&eacute;crire des pages dynamiques 
+rapidement.
+
+END;
+
+    echo $text;
+?&gt;
+</pre><br>
+<a name="ch09fig15"></a><P><center><h5 class="docFigureTitle">Figure 9.15. UTF-8 encoded output.</H5><a name="ch09index545"></a>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig15_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="324" SRC="images/013147149X/graphics/09fig15.jpg;380137"></p></center></p><br>
+<p class="docText">The other way around is a bit more useful. It makes more sense to store all of your data in UTF-8 (for example, in a database) and convert to the correct encoding for the language you're currently serving.<a name="ch09index546"></a><a name="ch09index547"></a></p>
+<a name="ch09lev2sec19"></a><H4 class="docSection2Title">9.6.2. Extra Functions Dealing with Multi-Byte Character Sets</H4>
+<p class="docText">A couple of extra functions in both the <tt>mbstring</tt> and <tt>iconv</tt> extension are surrogates for some of the string functions. For example, <tt>iconv_strlen</tt> (and <tt>mb_strlen</tt>) returns the number of &quot;characters&quot; (not bytes) in the strings passed to the function:<a name="ch09index548"></a><a name="ch09index549"></a><a name="ch09index550"></a><a name="ch09index551"></a></p>
+<pre>
+&lt;?php
+    $string = "M&aring; jeg bytte tog?";
+    $from   = 'iso-8859-1';
+    $to     = 'utf-8';
+
+    iconv_set_encoding('internal_encoding', $to);
+
+    echo $string."\n";
+    echo "strlen:       ". strlen($string). "\n";
+
+    $string = iconv($from, $to, $string);
+
+    echo $string."\n";
+    echo "strlen:       ". strlen($string). "\n";
+    echo "iconv_strlen: ". iconv_strlen($string). "\n";
+?&gt;
+</pre><br>
+<p class="docText">outputs</p>
+<pre>
+M&aring; jeg bytte tog?
+strlen:       17
+M&Atilde;&#165; jeg bytte tog?
+strlen:       18
+iconv_strlen: 17
+</pre><br>
+<p class="docText">The <tt>iconv_strlen()</tt> takes into account the multi-byte character &Atilde;&#165; (which is UTF-8 for &quot;&aring;&quot;). Replacement functions for <tt>strpos()</tt> and <tt>strrpos()</tt> also exist. With these and the replacement for <tt>substr()</tt>, you can safely find a multi-byte string inside another multi-byte string. While trying to come up with an example for these functions that shows why it is important to use the multi-byte variants of those functions, we realized that it does not matter at all if UTF-8 is used as the encoding. The common problem that we are trying to illustrate was that a uni-byte character (like ") could also be a part of a multi-byte character in the same string. However, for UTF-8 encoded strings this is not possible, because all bytes of a multi-byte character have ordinal values of 128 or greater, while single-byte characters are always less than the ordinal value 128. <tt>iconv_substr()</tt> is still useful for a multi-byte version of a &quot;shorten&quot; function, which in the example adds dieresis if a string is longer than a given set of characters (not bytes!).<a name="ch09index552"></a><a name="ch09index553"></a><a name="ch09index554"></a><a name="ch09index555"></a><a name="ch09index556"></a><a name="ch09index557"></a></P>
+<pre>
+&lt;?php
+    header("Content-type: text/html; encoding: UTF-8");
+    iconv_set_encoding('internal_encoding', 'utf-8');
+
+    $text = "Ceci est un texte en fran&ccedil;ais, il n'a pas de sense si ce
+    n'est celui de vous montrez comment nous pouvons utiliser ces
+    fonctions afin de r&eacute;duire ce texte &agrave; une taille acceptable.";
+
+    echo "&lt;p&gt;$text&lt;/p&gt;\n";
+
+    echo '&lt;p&gt;'. substr($text, 0, 26). "...&lt;/p&gt;\n";
+    echo '&lt;p&gt;'. iconv_substr($text, 0, 26). "...&lt;/p&gt;\n";
+?&gt;
+</pre><br>
+<a name="ch09note14"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">The character set in which this example is shown is UTF-8 and not ISO-8859-15.</P></div><br>
+<p class="docText">When this script is run, the output in a browser will be similar to <a class="docLink" href="#ch09fig16">Figure 9.16</a>.<a name="ch09index558"></a><a name="ch09index559"></a><a name="ch09index560"></a><a name="ch09index561"></a></P>
+<a name="ch09fig16"></a><p><center><h5 class="docFigureTitle">Figure 9.16. Broken UTF-8 characters.</h5><a name="ch09index562"></a><a name="ch09index563"></a>
+<p class="docText"><img border="0" alt="" id="217066145005" width="350" height="250" SRC="images/013147149X/graphics/09fig16.gif;380137"></p></center></p><br>
+<p class="docText">As you can see, the normal <tt>substr()</tt> function doesn't care about character sets. It chops the &quot;&ccedil;&quot; into two bytes, generating an invalid UTF-8 character which is rendered as the black square with the question mark in it. <tt>iconv_substr()</tt> does a much better job. It &quot;knows&quot; that the &quot;&ccedil;&quot; is a multi-byte character and counts it as one. For this to work, the internal encoding needs to be set to &quot;UTF-8.&quot;<a name="ch09index564"></a><a name="ch09index565"></a></p>
+<p class="docText">To demonstrate the use of <tt>iconv_strpos()</tt>, we use UCS-2BE (which actually doesn't encode anything, but simply stores the least significant bits of a UCS character), rather than UTF-8. The following script shows why you need to use <tt>iconv_strpos()</tt> and cannot simply use <tt>strpos()</tt>:<a name="ch09index566"></a><a name="ch09index567"></a></p>
+<pre>
+&lt;pre&gt;
+&lt;?php
+    $internal = 'UCS-2BE';
+    $output   = 'UTF-8';
+    $space = ' ';
+    $text = iconv('iso-8859-15', $internal, ' <img border="0" alt="" width="15" height="16" SRC="images/013147149X/graphics/cent.gif;380137"> 12.50');
+</pre><br>
+<p class="docText">Because there is no way to create UCS-2BE encoded texts, we &quot;create&quot; a UCS-2BE encoded text from an ISO-8859-15 encoded string consisting of the Euro sign, a space, and the text <tt>12.50</tt>. The Euro sign is especially interesting, because the UCS-2 encoding is <tt>0x20 0xac</tt> (in hexadecimal). A single space in any ISO-8859-* encoding is assigned the same code <tt>0x20</tt>. In <a class="docLink" href="#ch09fig17">Figure 9.17</a>, you see the hexadecimal representation of the UCS-2 encoded string after <tt>Original</tt>.</p>
+<pre>
+    /* Initialize the output buffering mechanism */
+    iconv_set_encoding('output_encoding', $output);
+    ob_start('ob_iconv_handler');
+    echo "Original:             ", bin2hex($text), "\n";
+</pre><br>
+<a name="ch09fig17"></a><p><center><h5 class="docFigureTitle">Figure 9.17. Problems without <tt>iconv_strops()</tt>.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/09fig17_alt.jpg;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="218" SRC="images/013147149X/graphics/09fig17.gif;380137"></p></center></p><BR>
+<p class="docText">We initialize the output buffer and set the output encoding to UTF-8. Then, we output the hexadecimal representation of our string, which will be converted to UTF-8 by the output buffer mechanism.</P>
+<pre>
+    /* The "wrong" way */
+    $amount = substr($text, strpos($text, $space) + 1);
+</pre><br>
+<p class="docText">With <tt>strpos()</tt>, we locate the first space in the string. Then with <tt>substr()</tt>, we obtain everything following this first space and assign it to the <tt>$amount</tt> variable. However, this code doesn't do what we expected.<a name="ch09index568"></a><a name="ch09index569"></a></p>
+<pre>
+    echo "After substr():         ", bin2hex($amount), "\n";
+    ob_flush();
+</pre><BR>
+<p class="docText">We print the hexadecimal representation of the new string and flush the output buffer. The flush is needed so that all data in the buffer is send to the <tt>iconv</tt> output handler and we can reset the internal encoding to UCS-2BE. Without this flush, the output handler does not correctly encode the output (because it normally operates in blocks of 4096 bytes only). As you can see in <a class="docLink" href="#ch09fig17">Figure 9.17</a>, following <tt>After substr():</tt> the &quot;space&quot; was matched in the wrong location. The normal <tt>substr()</tt> function doesn't know a thing about character sets, and thus the <tt>$amount</tt> variable does not contain valid UCS-2BE encoded text.</p>
+<pre>
+    iconv_set_encoding('internal_encoding', $internal);
+    echo $amount;
+    ob_flush();
+</pre><br>
+<p class="docText">We need to set the internal <tt>iconv</tt> encoding to <tt>UCS-2BE</tt>, echo the (broken) <tt>$amount</tt> string, and flush the output buffer so that we can change the internal encoding again.<a name="ch09index570"></a><a name="ch09index571"></a></p>
+<pre>
+    /* Convert space character to UCS-2BE and match again */
+    $space = iconv('iso-8859-1', $internal, $space);
+    $amount = iconv_substr($text, iconv_strpos($text, $space) + 1);
+</pre><br>
+<p class="docText">Now, we convert our space character into UCS-2BE too, so that we can use <tt>iconv_strpos()</tt> to find the first (real) occurrence in the string. <tt>iconv_strpos()</tt> uses the internal encoding setting to determine if a character is found inside the string. Just like the normal <tt>strpos()</tt>, it returns the position where the needle was found, or <tt>false</tt> if it wasn't found. Therefore, because <tt>0</tt> can be returned if the needle was found in the first position, you need to compare with <tt>=== false</tt> to see whether the needle was actually found. In our example, it doesn't matter if the needle is found at position 0 or not at all, because the <tt>iconv_substr()</tt> will copy the string starting from position 0 (<tt>false</tt> evaluates to <tt>0</tt>) anyway.<a name="ch09index572"></a><a name="ch09index573"></a></p>
+<pre>
+    iconv_set_encoding('internal_encoding', 'iso-8859-1');
+    echo "\nAfter iconv_substr():         ", bin2hex($amount), "\n";
+    ob_flush();
+</pre><br>
+<p class="docText">We temporarily set the internal encoding to ISO-8859-1 so that we can safely output the hexadecimal representation of the string. We flush the output buffer because we next want to output the <tt>$amount</tt> variable, which is encoded in UCS-2BE.</P>
+<pre>
+    iconv_set_encoding('internal_encoding', $internal);
+    echo $amount;
+?&gt;
+</pre><br>
+<p class="docText">With these final statements, the full output is displayed, as shown in <a class="docLink" href="#ch09fig14">Figure 9.14</a>. Notice that the first match (space = <tt>0x20</tt>) is wrong. After the second one, the correct <tt>0x0020</tt> was found and the string chopped up accordingly (see <a class="docLink" href="#ch09fig17">Figure 9.17</a>).<a name="ch09index574"></a><a name="ch09index575"></a></P>
+<a name="ch09lev2sec20"></a><h4 class="docSection2Title">9.6.3. Locales</H4>
+<p class="docText">The <tt>mbstring</tt> extension has similar functions: <tt>mb_substr()</tt>and <tt>mb_strpos()</tt>.<a name="ch09index576"></a><a name="ch09index577"></a><a name="ch09index578"></a><a name="ch09index579"></a></p>
+<p class="docText">In addition, it has functions that can be used instead of the standard PHP functions <span class="docEmphasis"><tt>strtoupper()</tt></span> and <span class="docEmphasis"><tt>strtolower()</tt></span> (respectively, <span class="docEmphasis"><tt>mb_strtoupper()</tt></span> and <span class="docEmphasis"><tt>mb_strtolower()</tt></span>). The <span class="docEmphasis"><tt>mbstring</tt></span> functions take into account Unicode properties so that they correctly change the string to upper- or lowercase characters for any supported character. But you don't have to use the <tt>mbstring</tt> functions to do this for you because your operating system's standard function library should support this by default. Information on how to upper- or lowercase a character is stored in a language's locale. A <span class="docEmphStrong">locale</span> is a collection of information defining the properties of language-dependent settings, such as the date/time formats, number formats, and also which uppercase character correspondents to a lowercase character and vice versa. In PHP, you can use the <span class="docEmphasis"><tt>setlocale()</tt></span> function to set a new locale or query the current locale. There are a few different &quot;types&quot; of locales; each type is meant to control a different type of language-dependent property. The different types are shown in <a class="docLink" href="#ch09table09">Table 9.9</a>.</p>
+<a name="ch09table09"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 9.9. Locale Types</H5></caption><colgroup><col width="126.5"><col width="143"><col width="280.5"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Type</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Example(s)</span></p></th></tr></thead><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>LC_COLLATE</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Determines the meaning of the <tt>\w</tt> and other classes for regular expressions, and shows how comparing strings works.</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">This setting has no effect on the standard PHP function to compare strings: <tt>strcmp()</tt>. Instead of using this function, you need to use the <tt>strcoll()</tt> function to compare strings according to the locale:</p>
+
+<pre>
+&lt;?php
+    /* Setting the standard "C" locale */
+    setlocale(LC_COLLATE, 'C');
+    echo strcoll('&aring;tte', '&aelig;re'), "\n";
+
+
+    /* Setting the "Norwegian" locale */
+    setlocale(LC_COLLATE, 'no_NO');
+    echo strcoll('&aring;tte', '&aelig;re'), "\n";
+?&gt;
+</pre><br>
+
+<p class="docText">In Norwegian, the letter "&aelig;" comes before the "&aring;", but in the standard "C" locale, the "&aring;" comes after the "" because its ordinal value is higher (230 versus 229). The output is therefore</p>
+
+<pre>
+-1
+2
+</pre><br>
+</td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>LC_CTYPE</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Determines how strings are compared, character conversion is performed and upper- and lowercasing is handled.</p></td><td class="docTableCell" align="left" valign="top">
+<pre>
+&lt;?php
+    /* Setting the standard "C" locale */
+    setlocale(LC_CTYPE, 'C');
+    echo strtoupper('&aring;tte'), "\n";
+
+
+    /* Setting the "Norwegian" locale */
+    setlocale(LC_CTYPE, 'no_NO');
+    echo strtoupper('&aring;tte'), "\n";
+?&gt;
+</pre><BR>
+
+<p class="docText">In the standard "C" locale, there is no "&aring;" defined, so there is no uppercase value of it. In Norwegian, the uppercase value is "&Aring;," so the output of this script is</P>
+
+<pre>
+&aring;TTE
+&Aring;TTE
+</pre><br>
+</td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>LC_TIME</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Determines formatting of date and time values.</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">This locale type affects the <tt>strftime()</tt> function. We already showed you the different modifiers for the <tt>strftime()</tt> function when dealing with the date and time handling functions, so here is a short example to show how the locale affects the output of the <tt>strftime()</tt> function (the <tt>%c</tt> modifier returns the preferred date/time format defined by the locale):</P>
+
+<pre>
+&lt;?php
+    setlocale(LC_TIME, 'en_US');
+    echo strftime('%c'), "\n";
+    setlocale(LC_TIME, 'nl_NL');
+    echo strftime('%c'), "\n";
+    setlocale(LC_TIME, 'no_NO');
+    echo strftime('%c'), "\n";
+?&gt;
+</pre><br>
+
+<p class="docText">This outputs</P>
+
+<pre>
+Fri 09 Apr 2004 11:13:52 AM CEST
+vr 09 apr 2004 11:13:52 CEST
+fre 09-04-2004 11:13:52 CEST
+</pre><br>
+</td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>LC_MESSAGES</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Determines the language in which application's messages appear. This has no influence on PHP's messages or errors, only on applications that you might start from PHP.</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">Because <tt>setlocale()</tt> only has effect on the current program, we need to use the <tt>putenv()</tt> function in this example to set the <tt>LC_MESSAGES</tt> locale to a different one:</p>
+
+<pre>
+&lt;?php
+    /* Setting the standard "C" locale */
+    putenv('LC_MESSAGES=C');
+    echo exec('cat nothere');
+
+
+    /* Setting the "Norwegian" locale */
+    putenv('LC_MESSAGES=no_NO');
+    echo exec('cat nothere');
+?&gt;
+</pre><br>
+
+<p class="docText">This outputs</P>
+
+<pre>
+cat: nothere: No such file or directory
+cat: nothere: Ingen slik fil eller filkatalog
+</pre><br>
+</TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>LC_MONETARY</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Determines the formatof monetary information, such as prices.</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">In PHP, these locale types affect the <tt>localeconv()</tt> function that returns information on how numbers and currency should be formatted according to a locale's properties:</p>
+
+<pre>
+&lt;?php
+function return_money($amount)
+{
+  $li = localeconv();
+  $number = number_format($amount,
+    $li['frac_digits'],
+    $li['mon_decimal_point'],
+    $li['mon_thousands_sep']);
+
+  if ($amount &gt; 0) {
+    $sign_placement = $li['p_sign_posn'];
+    $cs_placement = $li['p_cs_precedes'];
+    $space = $li['p_sep_by_space'] ? ' ' : '';
+    $sign = $li['positive_sign'];
+  } else {
+    $sign_placement = $li['n_sign_posn'];
+    $cs_placement = $li['n_cs_precedes'];
+    $space = $li['n_sep_by_space'] ? ' ' : '';
+    $sign = $li['negative_sign'];
+  }
+
+  switch ($li['p_sign_posn']) {
+    case 0:
+      $format = ($sign_placement) ?
+        '(%3$s%4$s%1$s)' :
+        '(%1$s%4$s%3$s)';
+      break;
+    case 1:
+      $format = ($sign_placement) ?
+        '%2$s %3$s%4$s%1$s' :
+        '%2$s %1$s%4$s%3$s';
+      break;
+    case 2:
+      $format = ($sign_placement) ?
+        '%3$s%4$s%1$s %2$s' :
+        '%1$s%4$s%3$s %2$s';
+      break;
+    case 3:
+      $format = ($sign_placement) ?
+        '%2$s %3$s%4$s%1$s' :
+        '%1$s%4$s%2$s %3$s';
+      break;
+    case 4:
+      $format = ($sign_placement) ?
+        '%3$s %2$s%4$s%1$s' :
+        '%1$s%4$s%3$s %2$s';
+      break;
+  }
+  return sprintf($format. "\n",
+    abs($amount), $li['currency_symbol'],
+    $sign, $space);
+}
+
+setlocale(LC_ALL, 'nl_NL');
+echo return_money(-1291.81);
+echo return_money(1291.81);
+?&gt;
+</pre><br>
+
+<p class="docText">As you can see, we need a lot of code if we want to format numerical information correctly according to the locale; unfortunately, PHP does not have a built-in function for this.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>LC_NUMERIC</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">Determines the format of numbers, such as the decimal point and thousands separator.</p></TD><td class="docTableCell" align="left" valign="top">&nbsp;</td></tr></table></p><br>
+<ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch09lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch09lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

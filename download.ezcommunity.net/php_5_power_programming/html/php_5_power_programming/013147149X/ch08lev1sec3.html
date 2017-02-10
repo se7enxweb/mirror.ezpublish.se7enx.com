@@ -1,0 +1,356 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 8.3.&nbsp; Parsing XML</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch08lev1sec3"></a><h3 class="docSection1Title">8.3. Parsing XML</h3>
+<p class="docText">Two techniques are used for parsing XML documents in PHP: <span class="docEmphStrong">SAX</span> (Simple API for XML) and <span class="docEmphStrong">DOM</span> (Document Object Model). By using SAX, the parser goes through your document and fires events for every start and stop tag or other element found in your XML document. You decide how to deal with the generated events. By using DOM, the whole XML file is parsed into a tree that you can walk through using functions from PHP. PHP 5 provides another way of parsing XML: the SimpleXML extension. But first, we explore the two mainstream methods.<a name="ch08index20"></a><a name="ch08index21"></a><a name="ch08index22"></a><a name="ch08index23"></a><a name="ch08index24"></a><a name="ch08index25"></a><a name="ch08index26"></a><a name="ch08index27"></a><a name="ch08index28"></a></p>
+<a name="ch08lev2sec1"></a><h4 class="docSection2Title">8.3.1. SAX</h4>
+<p class="docText">We now leave the somewhat boring theory behind and start with an example. Here, we're parsing the example XHTML file we saw earlier. We do that by using the XML functions available in PHP (<a class="docLink" target="_blank" href="http://php.net/xml">http://php.net/xml</a>). First, we create a parser object:<a name="ch08index29"></a><a name="ch08index30"></a><a name="ch08index31"></a></P>
+<pre>
+$xml = xml_parser_create('UTF-8');
+</pre><br>
+<p class="docText">The optional parameter, <tt>'UTF-8'</tt>, denotes the encoding to use while parsing. When this function executes successfully, it returns an XML parser handle for use with all the other XML parsing functions.</P>
+<p class="docText">Because SAX works by handling events, you need to set up the handlers. In this basic example, we focus on the two most important handlers: one for start and end tags, and one for character data (content):</p>
+<pre>
+xml_set_element_handler($xml, 'start_handler', 'end_handler');
+xml_set_character_data_handler($xml, 'character_handler');
+</pre><BR>
+<p class="docText">These statements set up the handlers, but they must be implemented before any actions occur. Let's look at how the handler functions should be implemented.</p>
+<p class="docText">In the previous statement, the <tt>start_handler</tt> is passed three parameters: the XML parser object, the name of the tag, and an associative array containing the attributes defined for the tag.<a name="ch08index32"></a><a name="ch08index33"></a><a name="ch08index34"></a></p>
+<pre>
+function start_handler ($xml, $tag, $attributes)
+{
+    global $level;
+
+    echo "\n". str_repeat('  ', $level). "&gt;&gt;&gt;$tag";
+    foreach ($attributes as $key =&gt; $value) {
+        echo " $key $value";
+    }
+    $level++;
+}
+</pre><br>
+<p class="docText">The tag name is passed with all characters uppercased if case folding is enabled (the default). You can turn off this behavior by setting an option on the XML parser object, as follows:</p>
+<pre>
+xml_parser_set_option($xml, XML_OPTION_CASE_FOLDING, false);
+</pre><BR>
+<p class="docText">The end handler is not passed the attributes array, only the XML parser object and the tag name:</P>
+<pre>
+function end_handler ($xml, $tag)
+{
+    global $level;
+
+    $level--;
+    echo str_repeat('  ', $level, '  '). "&lt;&lt;&lt;$tag;
+}
+</pre><br>
+<p class="docText">To make our test script work, we need to implement the character handler to show all content. We wrap the text in this handler so that it fits nicely on our terminal screen:<a name="ch08index35"></a><a name="ch08index36"></a><a name="ch08index37"></a></p>
+<pre>
+function character_handler ($xml, $data)
+{
+    global $level;
+
+    $data = split("\n", wordwrap($data, 76  ($level * 2)));
+    foreach ($data as $line) {
+        echo str_repeat(($level + 1), '  '). $line. "\n";
+    }
+}
+</pre><br>
+<p class="docText">After we implement all the handlers, we can start parsing our XML file:</p>
+<pre>
+xml_parse($xml, file_get_contents('test1.xhtml'));
+</pre><BR>
+<p class="docText">The first part of the output of our script looks like this:</p>
+<pre>
+&gt;&gt;&gt;HTML XMLNS='http://www.w3.org/1999/xhtml' XML:LANG='en' LANG='en'
+    ||
+    ||
+
+    |  |
+
+  &gt;&gt;&gt;HEAD
+      ||
+      ||
+
+      |    |
+
+    &gt;&gt;&gt;TITLE
+        |XML Example|
+
+    &lt;&lt;&lt;TITLE
+</pre><br>
+<p class="docText">It doesn't look very pretty. There's a lot of whitespace because the character data handler is called for every bit of data. We can improve the results by putting all data in a buffer, and only outputting the data when the tag closes or when another tag starts. The new script looks like this:<a name="ch08index38"></a><a name="ch08index39"></a><a name="ch08index40"></a></P>
+<pre>
+&lt;?php
+    /* Initialize variables */
+    $level = 0;
+    $char_data = '';
+
+    /* Create the parser handle */
+    $xml = xml_parser_create('UTF-8');
+
+    /* Set the handlers */
+    xml_set_element_handler($xml, 'start_handler', 'end_handler');
+    xml_set_character_data_handler($xml, 'character_handler');
+
+    /* Start parsing the whole file in one run */
+    xml_parse($xml, file_get_contents('test1.xhtml'));
+
+    /****************************************************************
+     * Functions
+     */
+
+    /*
+     * Flushes collected data from the character handler
+     */
+    function flush_data ()
+    {
+        global $level, $char_data;
+        /* Trim data and dump it when there is data */
+        $char_data = trim($char_data);
+        if (strlen($char_data) &gt; 0) {
+            echo "\n";
+            // Wrap it nicely, so that it fits on a terminal screen
+            $data = split("\n", wordwrap($char_data, 76-($level *2)));
+            foreach ($data as $line) {
+                echo str_repeat('  ', ($level +1))."[".$line."]\n";
+            }
+        }
+        /* Clear the data in the buffer */
+        $char_data = '';
+    }
+
+    /*
+     * Handler for start tags
+     */
+    function start_handler ($xml, $tag, $attributes)
+    {
+        global $level;
+
+        /* Flush collected data from the character handler */
+        flush_data();
+        /* Dump attributes as a string */
+        echo "\n". str_repeat('  ', $level). "$tag";
+        foreach ($attributes as $key =&gt; $value) {
+            echo " $key='$value'";
+        }
+        /* Increase indentation level */
+        $level++;
+    }
+
+    function end_handler ($xml, $tag)
+    {
+        global $level;
+
+        /* Flush collected data from the character handler */
+        flush_data();
+        /* Decrease indentation level and print end tag */
+        $level--;
+        echo "\n". str_repeat('  ', $level). "/$tag";
+    }
+
+    function character_handler ($xml, $data)
+    {
+        global $level, $char_data;
+
+        /* Add the character data to the buffer */
+        $char_data .= ' '. $data;
+    }
+?&gt;
+</pre><br><a name="ch08index41"></a><a name="ch08index42"></a><a name="ch08index43"></a>The output looks more decent, of course:<a name="ch08index44"></a><a name="ch08index45"></a><a name="ch08index46"></a><pre>
+HTML XMLNS='http://www.w3.org/1999/xhtml' XML:LANG='en' LANG='en'
+  HEAD
+    TITLE
+        [XML Example]
+
+    /TITLE
+  /HEAD
+  BODY BACKGROUND='bg.png'
+    P
+        [Moved to]
+
+      A HREF='http://example.org/'
+          [example.org]
+
+      /A
+        [.]
+
+      BR
+      /BR
+        [foo  &amp;  bar]
+
+    /P
+  /BODY
+/HTML
+</pre><BR>
+<a name="ch08lev2sec2"></a><h4 class="docSection2Title">8.3.2. DOM</h4>
+<p class="docText">Parsing a simple X(HT)ML file with a SAX parser is a lot of work. Using the DOM (<a class="docLink" target="_blank" href="http://www.w3.org/TR/DOM-Level-3-Core/">http://www.w3.org/TR/DOM-Level-3-Core/</a>) method is much easier, but you pay a pricememory usage. Although it might not be noticeable in our small example, it's definitely noticeable when you parse a 20MB XML file with the DOM method. Rather than firing events for every element in the XML file, DOM creates a tree in memory containing your XML file. <a class="docLink" href="#ch08fig01">Figure 8.1</a> shows the DOM tree that represents the file from the previous section.<a name="ch08index47"></a><a name="ch08index48"></a><a name="ch08index49"></a></p>
+<a name="ch08fig01"></a><p><center><h5 class="docFigureTitle">Figure 8.1. DOM tree.</h5>
+<p class="docText"><img border="0" alt="" width="500" height="538" SRC="images/013147149X/graphics/08fig01.gif;380137"></p></center></p><br>
+<p class="docText">We can show all the content without tags by walking through the tree of objects. We do so in this example by recursively going over all node children:<a name="ch08index50"></a><a name="ch08index51"></a><a name="ch08index52"></a></p>
+<pre>
+ 1 &lt;?php
+ 2   $dom = new DomDocument();
+ 3   $dom-&gt;load('test2.xml');
+ 4   $root = $dom-&gt;documentElement;
+ 5
+ 6   process_children($root);
+ 7
+ 8   function process_children($node)
+ 9   {
+10         $children = $node-&gt;childNodes;
+11
+12         foreach ($children as $elem) {
+13               if ($elem-&gt;nodeType == XML_TEXT_NODE) {
+14                     if (strlen(trim($elem-&gt;nodeValue))) {
+15                            echo trim($elem-&gt;nodeValue)."\n";
+16               }
+17               } else if ($elem-&gt;nodeType == XML_ELEMENT_NODE) {
+18                     process_children($elem);
+19               }
+20         }
+21     }
+22 ?&gt;
+</pre><br>The output is the following:<pre>
+XML Example
+Moved to
+example.org
+.
+foo &amp; bar
+</pre><br>
+<p class="docText">The example shows some very simple DOM processing. We only read attributes of elements and do not call any methods. In line 4, we retrieve the root element of the DOM document that was loaded in line 3. For every element we encounter, we call <tt>process_children()</tt> (in lines 6 and 18), which iterates over the list of child nodes (line 12). If the node is a text node, we echo its value (lines 1316) and if it's an element, we call <tt>process_children</tt> recursively (lines 1718). The DOM extension is more powerful than what is shown in this example. It implements almost all the functionality described in the DOM2 specification.<a name="ch08index53"></a><a name="ch08index54"></a><a name="ch08index55"></a><a name="ch08index56"></a><a name="ch08index57"></a></p>
+<p class="docText">The following example uses the <tt>getAttribute()</tt> methods of the <tt>DomElement</tt> class to return the background attribute of the <tt>body</tt> tag:<a name="ch08index58"></a><a name="ch08index59"></a></p>
+<pre>
+ 1 &lt;?php
+ 2      $dom = new DomDocument();
+ 3      $dom-&gt;load('test2.xml');
+ 4      $root = $dom-&gt;documentElement;
+ 5
+ 6      process_children($root);
+ 7
+ 8      function process_children($node)
+ 9      {
+10          $children = $node-&gt;childNodes;
+11
+12          foreach ($children as $elem) {
+13              if ($elem-&gt;nodeType == XML_ELEMENT_NODE) {
+14                  if ($elem-&gt;nodeName == 'body') {
+15                      echo $elem-&gt;getAttributeNode('background') -&gt;value. "\n";
+16                  }
+17                  process_children($elem);
+18              }
+19          }
+20      }
+21 ?&gt;
+</pre><br>
+<p class="docText">We still need to recursively search through the tree to find the correct element, but because we know about the structure of the document, we can simplify the example:<a name="ch08index60"></a><a name="ch08index61"></a><a name="ch08index62"></a></p>
+<pre>
+1 &lt;?php
+2     $dom = new DomDocument();
+3     $dom-&gt;load('test2.xml');
+4     $body = $dom-&gt;documentElement-&gt;getElementsByTagName('body') -&gt;item(0);
+5     echo $body-&gt;getAttributeNode('background')-&gt;value. "\n";
+6 ?&gt;
+</pre><BR>
+<p class="docText">Line 4 is the main processing line. First, we request the <tt>documentElement</tt> of the DOM document, which is the root node of the DOM tree. From that element, we request all child elements with tag name <tt>body</tt> by using <tt>getElementsByTagName</tt>. Then, we want the first item in the list (because we know that it is the first <tt>body</tt> tag in the file is the correct one). In line 5, we request the <tt>background</tt> attribute with <tt>getAttributeNode,</tt> and display its value by reading the <tt>value</tt> property.<a name="ch08index63"></a><a name="ch08index64"></a><a name="ch08index65"></a></P>
+<a name="ch08lev3sec1"></a><h5 class="docSection3Title">8.3.2.1 Using XPath</h5>
+<p class="docText">By using XPath, we can further simplify the previous example. <span class="docEmphStrong">XPath</span> is a query language for XML documents, and it is also used in XSLT for matching nodes. We can use XPath to query a DOM document for certain nodes and attributes, similar to using SQL to query a database:<a name="ch08index66"></a><a name="ch08index67"></a></P>
+<pre>
+1 &lt;?php
+2     $dom = new DomDocument();
+3     $dom-&gt;load('test2.xml');
+4     $xpath = new DomXPath($dom);
+5     $nodes = $xpath-&gt;query("*[local-name()='body']", $dom -&gt;documentElement);
+6     echo $nodes-&gt;item(0)-&gt;getAttributeNode('background')-&gt;value.
+      "\n";
+7 ?&gt;
+</pre><br>
+<a name="ch08lev3sec2"></a><h5 class="docSection3Title">8.3.2.2 Creating a DOM Tree</h5>
+<p class="docText">The DOM extension can do more than parse XML. It can create an XML document from scratch. In your script, you can build a tree of objects that you can dump to disk as an XML file. This ideal way to write XML files is not easy to do from within a script, but we're going to do it anyway. In this example, we create a file with content similar to that shown in the example XML file we used in the previous section. We cannot guarantee that the file will be exactly the same because the DOM extension might not handle the whitespace in the XML file as cleanly as a human would. Let's start by creating the DOM object and the root node:<a name="ch08index68"></a><a name="ch08index69"></a><a name="ch08index70"></a></p>
+<pre>
+&lt;?php
+    $dom = new DomDocument();
+
+
+    $html = $dom-&gt;createElement('html');
+    $html-&gt;setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+    $html-&gt;setAttribute("xml:lang", "en");
+    $html-&gt;setAttribute("lang", "en");
+    $dom-&gt;appendChild($html);
+</pre><br>
+<p class="docText">First, a <tt>DomDocument</tt> class is created with <tt>new DomDocument()</tt>. All elements are created by calling the <tt>createElement()</tt> method of the <tt>DomDocument</tt> class or <tt>createTextNode()</tt> for text nodes. The name of the elementin this case, <tt>html</tt>is passed to the method, and an object of the type <tt>DomElement</tt> is returned. The returned object is used to add attributes to the element. After the <tt>DomElement</tt> has been created, we add it to the <tt>DomDocument</tt> by calling the <tt>appendChild()</tt> method. Then, we add the head to the <tt>html</tt> element and a <tt>title</tt> element to the <tt>head</tt> element:<a name="ch08index71"></a><a name="ch08index72"></a><a name="ch08index73"></a></p>
+<pre>
+$head = $dom-&gt;createElement('head');
+$html-&gt;appendChild($head);
+
+$title = $dom-&gt;createElement('title');
+$title-&gt;appendChild($dom-&gt;createTextNode("XML Example"));
+$head-&gt;appendChild($title);
+</pre><BR>
+<p class="docText">As before, we first create a <tt>DomElement</tt> object (for example, head) by calling the <tt>createElement()</tt> method of the <tt>DomDocument</tt> object, and then we add the newly created object to the existing <tt>DomElement</tt> object (for example, <tt>$html</tt>) with <tt>appendChild()</tt>. We then add the body element with its <tt>background</tt> attribute. Then, we add the <tt>'p'</tt> element, which contains the main content of our X(HT)ML document, as a child of the body element:</p>
+<pre>
+/* Create the body element */
+$body = $dom-&gt;createElement('body');
+$body-&gt;setAttribute("backgound", "bg.png");
+$html-&gt;appendChild($body);
+
+/* Create the p element */
+$p = $dom-&gt;createElement('p');
+$body-&gt;appendChild($p);
+</pre><BR>
+<p class="docText">The contents of our <tt>&lt;p&gt;</tt> element are more complicated. It consists (in order) of a text element (<tt>"Moved to "</tt>), an <tt>&lt;a&gt;</tt> element, another text element (our dot), the <tt>&lt;br&gt;</tt> element, and finally, a third text element (<tt>"foo &amp; bar"</tt>):<a name="ch08index74"></a><a name="ch08index75"></a><a name="ch08index76"></a></p>
+<pre>
+/* Add the "Moved to" */
+$text = $dom-&gt;createTextNode("Moved to ");
+$p-&gt;appendChild($text);
+
+/* Add the a */
+$a = $dom-&gt;createelement('a');
+$a-&gt;setAttribute("href", "http://example.org/");
+$a-&gt;appendChild($dom-&gt;createTextNode("example.org"));
+$p-&gt;append_child($a);
+
+/* Add the ".", br and "foo &amp; bar" */
+$text = $dom-&gt;createTextNode(".");
+$p-&gt;appendChild($text);
+
+$br = $dom-&gt;createElement('br');
+$p-&gt;appendChild($br);
+
+$text = $dom-&gt;createTextNode("foo &amp; bar");
+$p-&gt;appendChild($text);
+</pre><BR>
+<p class="docText">When we're finished creating the DOM of our X(HT)ML document, we echo it to the screen:<a name="ch08index77"></a><a name="ch08index78"></a><a name="ch08index79"></a></p>
+<pre>
+    echo $dom-&gt;saveXML();
+?&gt;
+</pre><br>
+<p class="docText">The output resembles our original document, but without some of the whitespace (which is added here for readability):<a name="ch08index80"></a><a name="ch08index81"></a><a name="ch08index82"></a></p>
+<pre>
+&lt;?xml version="1.0"?&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;XML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body background="bg.png"&gt;
+    &lt;p&gt;Moved to &lt;a href="http://example.org/"&gt;example.org&lt;/a&gt;. &lt;br&gt;foo &amp;amp; bar&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><UL></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

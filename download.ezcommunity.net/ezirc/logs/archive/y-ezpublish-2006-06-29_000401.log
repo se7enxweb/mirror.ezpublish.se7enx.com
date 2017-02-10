@@ -1,0 +1,183 @@
+[06-27-2006 00:12:28] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[06-27-2006 00:12:31] [#ezpublish] <philG> hi all
+[06-27-2006 00:43:55] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-27-2006 00:50:08] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-27-2006 00:56:16] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-27-2006 01:12:49] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[06-27-2006 01:16:11] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-27-2006 01:17:45] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 01:23:02] -!- SEAwolfx [n=SEAwolfx@p5493B4C6.dip0.t-ipconnect.de] has joined #ezpublish
+[06-27-2006 01:24:01] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[06-27-2006 01:28:43] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[06-27-2006 01:30:58] -!- ordnas [n=ordnas@p549D5150.dip.t-dialin.net] has joined #ezpublish
+[06-27-2006 01:33:08] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[06-27-2006 01:37:18] -!- _hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[06-27-2006 01:38:53] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[06-27-2006 01:39:16] -!- ls is now known as luke
+[06-27-2006 01:40:32] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 01:49:06] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-27-2006 01:54:42] -!- DiGiTa|_ [n=pet2poul@84.4.41.82] has joined #ezpublish
+[06-27-2006 02:04:57] -!- TideJOBB [n=tidemann@ti132110a340-2652.bb.online.no] has joined #ezpublish
+[06-27-2006 02:05:24] -!- luke changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_1_includes_gpl_online_editor || New Article: http://ez.no/community/articles/new_features_in_ez_publish_3_8
+[06-27-2006 02:06:00] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 02:06:20] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 02:06:47] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-27-2006 02:20:08] -!- awormus [n=aaron@p54B0715D.dip.t-dialin.net] has joined #ezpublish
+[06-27-2006 02:31:37] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-27-2006 03:39:28] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 03:39:49] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-27-2006 04:25:52] -!- SEAwolfx_ [n=SEAwolfx@p54938B27.dip0.t-ipconnect.de] has joined #ezpublish
+[06-27-2006 04:44:06] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[06-27-2006 04:50:50] -!- SEAwolfx [n=SEAwolfx@p5493B4C6.dip0.t-ipconnect.de] has quit [Connection timed out]
+[06-27-2006 04:52:34] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 04:52:53] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-27-2006 05:41:35] -!- TideJOBB [n=tidemann@ti132110a340-2652.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-27-2006 05:44:23] -!- luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[06-27-2006 06:08:46] -!- _ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[06-27-2006 06:11:54] -!- SEAwolfx [n=SEAwolfx@p5493BE32.dip0.t-ipconnect.de] has joined #ezpublish
+[06-27-2006 06:16:14] [#ezpublish] <yper> Hi all, I seem to have stumbled on a bug in the gallery
+[06-27-2006 06:17:13] [#ezpublish] <yper> when looking at big images it skips the second to last image and shows the last image when pressing the next image
+[06-27-2006 06:17:25] -!- SEAwolfx [n=SEAwolfx@p5493BE32.dip0.t-ipconnect.de] has quit [Nick collision from services.]
+[06-27-2006 06:17:49] [#ezpublish] <yper> it also skips it when pressing previous
+[06-27-2006 06:19:48] -!- SEAwolfx [n=SEAwolfx@p5493B6F2.dip0.t-ipconnect.de] has joined #ezpublish
+[06-27-2006 06:26:19] -!- _hovik [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[06-27-2006 06:26:20] -!- SEAwolfx_ [n=SEAwolfx@p54938B27.dip0.t-ipconnect.de] has quit [Connection timed out]
+[06-27-2006 06:38:11] -!- DiGiTa|_ [n=pet2poul@84.4.41.82] has quit []
+[06-27-2006 06:59:35] -!- SEAwolfx [n=SEAwolfx@p5493B6F2.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[06-27-2006 07:00:22] -!- SEAwolfx [n=SEAwolfx@p5493B6F2.dip0.t-ipconnect.de] has joined #ezpublish
+[06-27-2006 07:02:13] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has joined #ezpublish
+[06-27-2006 07:02:51] [#ezpublish] <zrg> hi folks!
+[06-27-2006 07:04:07] [#ezpublish] <ordnas> zrg is back in da house :)
+[06-27-2006 07:04:18] [#ezpublish] <zrg> ayea :)
+[06-27-2006 07:04:24] [#ezpublish] <yper> cool
+[06-27-2006 07:04:31] [#ezpublish] <yper> :)
+[06-27-2006 07:04:44] [#ezpublish] <zrg> network at conference sucked balls, just could not get connected
+[06-27-2006 07:05:02] [#ezpublish] <ordnas> hehe, you talk like a rapper :)
+[06-27-2006 07:05:15] [#ezpublish] <zrg> my weak attempt to suound dirty :P
+[06-27-2006 07:05:22] [#ezpublish] <ordnas> LOL
+[06-27-2006 07:05:39] [#ezpublish] <zrg> anyhow: anyone has idea how to implement "change password at first login" thing?
+[06-27-2006 07:07:07] -!- iBxr [n=eyeindus@151.8.12.234] has joined #ezpublish
+[06-27-2006 07:07:11] [#ezpublish] <zrg> not builtin way i assume, and from user datatype i dont see last login date, is it possible to get it?
+[06-27-2006 07:07:15] [#ezpublish] <iBxr> hi zurgutt
+[06-27-2006 07:07:17] [#ezpublish] <iBxr> it's max :D
+[06-27-2006 07:07:26] [#ezpublish] <zrg> woohoo
+[06-27-2006 07:07:45] [#ezpublish] <iBxr> i feel pretty tunneled but i managed to get online hihi
+[06-27-2006 07:07:53] [#ezpublish] <zrg> to you too maX: anyone has idea how to implement "change password at first login" thing?
+[06-27-2006 07:08:09] [#ezpublish] <iBxr> mmmm
+[06-27-2006 07:08:11] [#ezpublish] <iBxr> let me check
+[06-27-2006 07:08:43] [#ezpublish] <zrg> not builtin way i assume, and from user datatype i dont see last login date, is it possible to get it?  also could be useful to show "posts since last login" in forums
+[06-27-2006 07:09:10] [#ezpublish] <zrg> which any quarter-decent forum should have..
+[06-27-2006 07:09:17] [#ezpublish] <iBxr> hmmm i guess this requires some non-out-of-the-box magic with ez
+[06-27-2006 07:09:18] -!- cphp [n=ciccio@ip-185-127.sn2.eutelia.it] has joined #ezpublish
+[06-27-2006 07:09:23] [#ezpublish] <iBxr> hi francesco
+[06-27-2006 07:09:34] [#ezpublish] <_ls> look on content/new module
+[06-27-2006 07:09:56] [#ezpublish] <zrg> looking.. looks hairy :)
+[06-27-2006 07:10:05] [#ezpublish] <iBxr> ...hairy? :D
+[06-27-2006 07:10:36] [#ezpublish] <zrg> where is the file for it anyway, hmm..
+[06-27-2006 07:10:52] [#ezpublish] <_ls> kernel/content/newcontent.php
+[06-27-2006 07:11:03] [#ezpublish] <cphp> Hi
+[06-27-2006 07:11:35] [#ezpublish] <_ls> and templates should be in the design/standard/templates/content/newcontent.tpl
+[06-27-2006 07:11:57] [#ezpublish] <zrg> $user->lastVisit()
+[06-27-2006 07:12:11] [#ezpublish] <zrg> undocumented?
+[06-27-2006 07:12:34] [#ezpublish] <zrg> no, its method, these are not in docs anyway. thanks!
+[06-27-2006 07:12:39] [#ezpublish] <_ls> undocumented what?
+[06-27-2006 07:12:41] [#ezpublish] <_ls> yes it is
+[06-27-2006 07:12:52] [#ezpublish] <_ls> you are welcome
+[06-27-2006 07:12:57] [#ezpublish] <zrg> i assume NULL at first login?
+[06-27-2006 07:14:06] [#ezpublish] <_ls> I did not look on code, but this should be set when account is enabled
+[06-27-2006 07:14:29] [#ezpublish] <_ls> check source
+[06-27-2006 07:16:03] [#ezpublish] <iBxr> sorry guys... a meeting awaits 4 me :(
+[06-27-2006 07:16:04] [#ezpublish] <zrg> actually, setting a "not changed password yet" checkbox on user class should do the trick easies, did not think of that, that can be detected in template and redirect done
+[06-27-2006 07:16:05] [#ezpublish] <iBxr> see u l8r
+[06-27-2006 07:16:21] [#ezpublish] <zrg> the force be with you max
+[06-27-2006 07:16:30] [#ezpublish] <iBxr> with you too zurgutt!
+[06-27-2006 07:16:38] [#ezpublish] <iBxr> and don't icebath too much -,- or you'll get a flu! :P
+[06-27-2006 07:17:13] [#ezpublish] <zrg> no way :)
+[06-27-2006 07:17:20] [#ezpublish] <iBxr> lol
+[06-27-2006 07:17:21] [#ezpublish] <iBxr> byeee
+[06-27-2006 07:17:24] -!- iBxr [n=eyeindus@151.8.12.234] has quit []
+[06-27-2006 07:17:31] [#ezpublish] <cphp> bye bye iBxr
+[06-27-2006 07:19:01] [#ezpublish] <_ls> zrg: that can work as well
+[06-27-2006 07:19:06] -!- _ls is now known as luje
+[06-27-2006 07:19:16] -!- luje is now known as _luke
+[06-27-2006 07:23:23] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-27-2006 07:26:44] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 07:27:18] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-27-2006 07:27:28] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 07:33:09] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-27-2006 07:50:13] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-27-2006 08:10:02] [#ezpublish] <kalooni> how to avoid <p>&nbsp;</p> generated in 3.8 ?
+[06-27-2006 08:10:16] [#ezpublish] <katana`> anyone seen digital lately ?
+[06-27-2006 08:10:27] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[06-27-2006 08:10:31] [#ezpublish] <kalooni> hi katana
+[06-27-2006 08:10:43] [#ezpublish] <kalooni> digital was here earlier today
+[06-27-2006 08:11:18] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-27-2006 08:11:47] [#ezpublish] <katana`> okay so he's just out for the afternoon
+[06-27-2006 08:11:48] [#ezpublish] <katana`> goodie :)
+[06-27-2006 08:12:06] [#ezpublish] <kalooni> given the weather here ... probably ;)
+[06-27-2006 08:12:08] -!- oms [n=oms@stalker.ez.no] has joined #ezpublish
+[06-27-2006 08:15:38] -!- oms [n=oms@stalker.ez.no] has left #ezpublish []
+[06-27-2006 08:26:53] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[06-27-2006 08:26:58] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-27-2006 08:33:09] -!- _luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[06-27-2006 08:35:34] -!- gdm [n=michael@mgdm.net] has joined #ezpublish
+[06-27-2006 08:37:43] -!- Beltza [n=Beltza@162.Red-80-25-116.staticIP.rima-tde.net] has joined #ezpublish
+[06-27-2006 08:42:51] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[06-27-2006 08:50:59] -!- sa__ [n=sa@Pushin.TeNeT.Odessa.UA] has joined #ezpublish
+[06-27-2006 08:53:05] -!- sa__ [n=sa@Pushin.TeNeT.Odessa.UA] has left #ezpublish ["Leaving"]
+[06-27-2006 08:57:47] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[06-27-2006 09:03:39] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-27-2006 09:04:58] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-27-2006 09:19:55] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-27-2006 09:45:13] -!- ordnas [n=ordnas@p549D5150.dip.t-dialin.net] has left #ezpublish []
+[06-27-2006 10:08:31] -!- cphp [n=ciccio@ip-185-127.sn2.eutelia.it] has quit ["Leaving"]
+[06-27-2006 10:23:18] -!- SEAwolfx_ [n=SEAwolfx@p5493C279.dip0.t-ipconnect.de] has joined #ezpublish
+[06-27-2006 10:24:16] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-27-2006 10:37:37] -!- DiGiTa|_ [n=pet2poul@84.4.68.100] has joined #ezpublish
+[06-27-2006 10:38:19] -!- SEAwolfx [n=SEAwolfx@p5493B6F2.dip0.t-ipconnect.de] has quit [Connection timed out]
+[06-27-2006 10:38:30] -!- DiGiTa|_ [n=pet2poul@84.4.68.100] has quit [Client Quit]
+[06-27-2006 10:42:04] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 10:51:26] -!- gdm [n=michael@mgdm.net] has quit ["leaving"]
+[06-27-2006 11:05:53] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Peace and Protection 4.22"]
+[06-27-2006 11:33:36] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-27-2006 11:47:25] -!- SEAwolfx [n=SEAwolfx@p5493AC22.dip0.t-ipconnect.de] has joined #ezpublish
+[06-27-2006 12:04:12] -!- SEAwolfx_ [n=SEAwolfx@p5493C279.dip0.t-ipconnect.de] has quit [Connection timed out]
+[06-27-2006 12:16:05] -!- SEAwolfx [n=SEAwolfx@p5493AC22.dip0.t-ipconnect.de] has quit [Connection timed out]
+[06-27-2006 12:22:03] -!- Beltza [n=Beltza@162.Red-80-25-116.staticIP.rima-tde.net] has quit ["Have a nice day!"]
+[06-27-2006 12:35:14] -!- SiwVZT [n=SiwVZT@193.91.130.13] has joined #ezpublish
+[06-27-2006 12:37:22] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-27-2006 12:51:14] -!- awormus_ [n=aaron@p54B06615.dip.t-dialin.net] has joined #ezpublish
+[06-27-2006 12:51:25] [#ezpublish] <zrg> wurmus :)
+[06-27-2006 12:51:41] [#ezpublish] <xiglet> "eZ publish basics" is pretty good!
+[06-27-2006 12:51:55] -!- SEAwolfx [n=SEAwolfx@p54939FA7.dip0.t-ipconnect.de] has joined #ezpublish
+[06-27-2006 12:52:04] [#ezpublish] <zrg> give a frindly kick to ammar for me :D
+[06-27-2006 12:59:22] -!- SiwVZT [n=SiwVZT@193.91.130.13] has left #ezpublish []
+[06-27-2006 13:02:51] -!- aaronw [n=aaron@p54B06615.dip.t-dialin.net] has joined #ezpublish
+[06-27-2006 13:05:55] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-27-2006 13:07:15] -!- awormus [n=aaron@p54B0715D.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 13:10:18] -!- awormus_ [n=aaron@p54B06615.dip.t-dialin.net] has quit [Read error: 145 (Connection timed out)]
+[06-27-2006 13:25:30] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[06-27-2006 13:59:52] -!- aaronw [n=aaron@p54B06615.dip.t-dialin.net] has quit ["Leaving"]
+[06-27-2006 14:01:54] [#ezpublish] <kracker> heh
+[06-27-2006 14:02:16] [#ezpublish] <zrg> hih? :)
+[06-27-2006 14:06:09] [#ezpublish] <kracker> huh? :D
+[06-27-2006 14:06:47] [#ezpublish] <zrg> cue scene from beginning of space odyssey 2001, with stoneage people :P
+[06-27-2006 15:12:55] [#ezpublish] <kracker> Kottonmouth Kings - People Come,People Go
+[06-27-2006 15:30:35] [#ezpublish] <jeremiah> ooohh, spain has lost
+[06-27-2006 15:30:38] [#ezpublish] <jeremiah> :(
+[06-27-2006 15:37:53] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-27-2006 15:38:33] -!- DiGiTa|_ [n=pet2poul@84.4.40.245] has joined #ezpublish
+[06-27-2006 15:44:30] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-27-2006 15:45:54] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-27-2006 15:45:55] -!- ordnas [n=ordnas@p549D5150.dip.t-dialin.net] has joined #ezpublish
+[06-27-2006 15:53:05] -!- DiGiTa|__ [n=pet2poul@84.4.37.159] has joined #ezpublish
+[06-27-2006 15:54:16] -!- DiGiTa|_ [n=pet2poul@84.4.40.245] has quit [Read error: 104 (Connection reset by peer)]
+[06-27-2006 15:57:03] -!- SEAwolfx [n=SEAwolfx@p54939FA7.dip0.t-ipconnect.de] has quit [Success]
+[06-27-2006 16:04:58] -!- ordna1 [n=ordnas@p549D5150.dip.t-dialin.net] has joined #ezpublish
+[06-27-2006 16:07:47] -!- ordna1 [n=ordnas@p549D5150.dip.t-dialin.net] has left #ezpublish []
+[06-27-2006 16:13:21] -!- DiGiTa|__ [n=pet2poul@84.4.37.159] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 16:20:51] -!- ordnas [n=ordnas@p549D5150.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-27-2006 18:22:50] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Connection reset by peer]
+[06-27-2006 19:59:17] -!- zrg [n=zurgutt@216-2-30.0512.adsl.tele2.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-27-2006 22:25:30] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-27-2006 22:26:50] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish

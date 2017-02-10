@@ -1,0 +1,231 @@
+[03-27-2006 00:21:15] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-27-2006 00:47:39] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[03-27-2006 00:49:06] -!- ordnas [n=ordnas@p549D65AD.dip.t-dialin.net] has joined #ezpublish
+[03-27-2006 00:58:54] -!- fh [n=fh@208.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[03-27-2006 00:59:09] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 113 (No route to host)]
+[03-27-2006 01:16:02] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[03-27-2006 01:47:35] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-27-2006 01:49:51] -!- _kh is now known as kris10an
+[03-27-2006 01:55:06] -!- awormus [n=aaron@p54B12B95.dip0.t-ipconnect.de] has joined #ezpublish
+[03-27-2006 01:58:58] [#ezpublish] <awormus> ordnas: do you have a direct link to the report that this page is based on?
+[03-27-2006 01:58:59] [#ezpublish] <awormus> http://ez.no/company/news/the_blue_chips_of_enterprise_content_management_ez_systems_rated_third
+[03-27-2006 02:00:28] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-27-2006 02:00:47] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-27-2006 02:02:31] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-27-2006 02:02:44] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-27-2006 02:03:59] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-27-2006 02:23:15] [#ezpublish] <ordnas> awormus: wait...
+[03-27-2006 02:27:55] [#ezpublish] <ordnas> awormus: cannot find it myself anymore, must have been removed/restructured
+[03-27-2006 02:28:21] [#ezpublish] <ordnas> awormus: we'll contact them and see if they can provide the page again
+[03-27-2006 02:28:48] [#ezpublish] <buz> i'm beginning to think this is a bug: http://ez.no/community/forum/developer/entities_are_always_escaped_in_ezxml#msg97006
+[03-27-2006 02:28:52] [#ezpublish] <buz> should i report it
+[03-27-2006 02:28:56] [#ezpublish] <ordnas> awormus: feel free to contact them, they will surely send the document to you: http://www.jdk.de/deutsch/kontakt/
+[03-27-2006 02:29:18] -!- tobyS [n=dotxp@dslb-084-061-159-144.pools.arcor-ip.net] has joined #ezpublish
+[03-27-2006 02:29:32] [#ezpublish] <awormus> ordnas: thanks, I'll contact them
+[03-27-2006 02:53:07] -!- ristio [n=risto@cm-80.111.22.156.chello.no] has joined #ezpublish
+[03-27-2006 02:53:20] [#ezpublish] <ristio> morning
+[03-27-2006 02:53:49] [#ezpublish] <ristio> anyone here have any experiance with ajax extention?
+[03-27-2006 02:53:56] [#ezpublish] <buz> depends
+[03-27-2006 02:54:27] [#ezpublish] <ristio> Im trying to get it up on ez 3.6.6
+[03-27-2006 02:54:39] [#ezpublish] <ristio> but nothing is displayd
+[03-27-2006 02:55:48] [#ezpublish] <buz> what ajax extension
+[03-27-2006 03:11:20] [#ezpublish] <ristio> AJAX-TreeMenu
+[03-27-2006 03:11:29] [#ezpublish] <buz> did you clear the cache
+[03-27-2006 03:11:33] [#ezpublish] <ristio> yes
+[03-27-2006 03:11:36] [#ezpublish] <ristio> ;-)
+[03-27-2006 03:11:48] [#ezpublish] <buz> should work then
+[03-27-2006 03:11:52] [#ezpublish] <ristio> lol
+[03-27-2006 03:12:00] [#ezpublish] <ristio> well id dosen't
+[03-27-2006 03:12:34] [#ezpublish] <ristio> i set ActiveExtensions[]=ezodcsm i site.ini.appen.php
+[03-27-2006 03:12:43] [#ezpublish] <ristio> and DynamicTreeEnabled=false
+[03-27-2006 03:13:36] [#ezpublish] <buz> did you edit mod_rewrite config?
+[03-27-2006 03:13:37] [#ezpublish] <ristio> have you tyed it?
+[03-27-2006 03:13:49] [#ezpublish] <ristio> no
+[03-27-2006 03:13:56] [#ezpublish] <ristio> is that needed?
+[03-27-2006 03:13:58] [#ezpublish] <buz> then that's probably the reason
+[03-27-2006 03:14:13] [#ezpublish] <buz> the client will likely not be able to access data this way
+[03-27-2006 03:14:15] [#ezpublish] <ristio> what doo i need to doo then?
+[03-27-2006 03:14:49] [#ezpublish] <buz> for me, adding
+[03-27-2006 03:14:49] [#ezpublish] <buz>         Rewriterule ^/extension/ezodcsm/.* - [L]
+[03-27-2006 03:14:50] [#ezpublish] <buz> helped
+[03-27-2006 03:16:14] [#ezpublish] <ristio> and this is done where?
+[03-27-2006 03:16:24] [#ezpublish] <buz> apache.conf
+[03-27-2006 03:17:06] [#ezpublish] <ristio> hmm..
+[03-27-2006 03:19:33] [#ezpublish] <ristio> what dos the [L] mean
+[03-27-2006 03:19:36] [#ezpublish] <ristio> ?
+[03-27-2006 03:19:40] [#ezpublish] <buz> dunno
+[03-27-2006 03:25:33] [#ezpublish] <ristio> whould you mind showing the hole thing?
+[03-27-2006 03:25:43] [#ezpublish] <awormus> ristio: LAST
+[03-27-2006 03:25:56] [#ezpublish] <awormus> stops processing rules after that (IIRC
+[03-27-2006 03:26:42] [#ezpublish] <buz> http://pastebin.com/624680
+[03-27-2006 03:32:50] [#ezpublish] <ristio> thanx Ill try this out then
+[03-27-2006 03:32:54] [#ezpublish] <ristio> ;-)
+[03-27-2006 03:36:04] -!- awormus [n=aaron@p54B12B95.dip0.t-ipconnect.de] has quit ["Leaving"]
+[03-27-2006 03:59:24] -!- B-KiLLer` [n=me@217.31.64.170] has joined #ezpublish
+[03-27-2006 03:59:37] [#ezpublish] <B-KiLLer`> hi all
+[03-27-2006 03:59:52] [#ezpublish] <B-KiLLer`> just a quick question about the search engine of ezPublish ... where does it exactly search ? :)
+[03-27-2006 04:00:18] [#ezpublish] <B-KiLLer`> one of our customer wants a description of the capabilities of the search engine
+[03-27-2006 04:00:43] [#ezpublish] <B-KiLLer`> so we should answer him like (to summarize): in the db, in the templates, ...
+[03-27-2006 04:01:05] [#ezpublish] <B-KiLLer`> is there any page explaining this on the ez.no site? (didn't find any, on my side :-/ )
+[03-27-2006 04:03:54] [#ezpublish] <_kore> You mark attributes of contentobjects searchable, they will be indexed, and then you can search them
+[03-27-2006 04:04:37] [#ezpublish] <_kore> http://ez.no/doc/ez_publish/technical_manual/3_6/features/search_engine
+[03-27-2006 04:07:44] [#ezpublish] <B-KiLLer`> so, if by any "chance", it appears to exist some "content" directly inside a template for instance, then it's not searched at all ?
+[03-27-2006 04:08:07] [#ezpublish] <_kore> There shouldn't be any content in templates ;)
+[03-27-2006 04:08:16] [#ezpublish] <B-KiLLer`> yep, that's what I answered as well :D
+[03-27-2006 04:08:37] [#ezpublish] <B-KiLLer`> and about PDF files ?
+[03-27-2006 04:08:52] [#ezpublish] <_kore> ezPublish has a static cache, so there is really no reason for content in templates
+[03-27-2006 04:08:53] [#ezpublish] <B-KiLLer`> or content uploaded
+[03-27-2006 04:09:19] [#ezpublish] <_kore> I don't really know, but I remember it is indexed, too
+[03-27-2006 04:09:29] [#ezpublish] * _kore pokes kris10an 
+[03-27-2006 04:10:16] [#ezpublish] <B-KiLLer`> "The search engine don't search inside files .pdf. Is this behavior a normal one ?
+[03-27-2006 04:10:16] [#ezpublish] <B-KiLLer`> Thanks you.
+[03-27-2006 04:10:19] [#ezpublish] <B-KiLLer`> ;)
+[03-27-2006 04:10:32] [#ezpublish] <B-KiLLer`> it was the first (and only one) comment at the bottom of the search engine page :)
+[03-27-2006 04:12:25] [#ezpublish] <B-KiLLer`> and I found this as well
+[03-27-2006 04:12:26] [#ezpublish] <B-KiLLer`> http://ez.no/products/ez_publish/documentation/configuration/configuration/search_engine/configuring_binary_file_indexing
+[03-27-2006 04:18:18] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[03-27-2006 04:20:11] [#ezpublish] <buz> impressive
+[03-27-2006 04:20:29] [#ezpublish] <buz> i have installed ezp 3.7.4 on a generic virtual server and get 0.35s page generation times
+[03-27-2006 04:23:07] [#ezpublish] <nnn0> :)
+[03-27-2006 04:23:22] [#ezpublish] <nnn0> virtual seconds :DDD
+[03-27-2006 04:23:54] [#ezpublish] <buz> but if i try to use the .htaccess file supplied with ez i get internal server error
+[03-27-2006 04:23:56] [#ezpublish] <buz> thats weird
+[03-27-2006 04:24:17] [#ezpublish] <nnn0> heh
+[03-27-2006 04:24:45] [#ezpublish] <buz> ah now it works
+[03-27-2006 04:24:46] [#ezpublish] <buz> nice
+[03-27-2006 04:24:58] [#ezpublish] <buz> or maybe not
+[03-27-2006 04:30:44] [#ezpublish] <kris10an> _kore: poking me, eyh?
+[03-27-2006 04:31:57] [#ezpublish] <kris10an> what is up\
+[03-27-2006 04:32:01] [#ezpublish] <_kore> nevermind .. resolved ;)
+[03-27-2006 04:32:18] [#ezpublish] <_kore> but .. greets to norway :)
+[03-27-2006 04:32:21] [#ezpublish] <kris10an> so unpoke me then... :-)
+[03-27-2006 04:32:32] [#ezpublish] * _kore unpokes kracker :)
+[03-27-2006 04:32:50] [#ezpublish] <kris10an> hehe...
+[03-27-2006 04:32:51] [#ezpublish] <kris10an> greets to germany aswell
+[03-27-2006 05:28:12] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[03-27-2006 05:30:29] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 113 (No route to host)]
+[03-27-2006 05:33:21] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[03-27-2006 06:13:58] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-27-2006 06:47:38] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-27-2006 06:47:44] -!- tobyS [n=dotxp@dslb-084-061-159-144.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-27-2006 06:48:23] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Client Quit]
+[03-27-2006 06:53:07] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-27-2006 06:53:25] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Client Quit]
+[03-27-2006 07:02:10] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-27-2006 07:04:08] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[03-27-2006 07:10:11] -!- Enur [n=asd@83.84-48-58.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[03-27-2006 07:17:38] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-27-2006 07:29:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-27-2006 07:31:40] -!- tobyS [n=dotxp@ip130.167.1211H-CUD12K-01.ish.de] has joined #ezpublish
+[03-27-2006 07:36:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-27-2006 07:42:00] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-27-2006 07:49:23] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-27-2006 08:29:07] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[03-27-2006 08:51:15] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Leaving"]
+[03-27-2006 08:54:04] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[03-27-2006 08:54:11] [#ezpublish] <Sulfur> w00000t guys :P
+[03-27-2006 08:54:14] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-27-2006 08:54:19] [#ezpublish] <buz> hi
+[03-27-2006 08:54:20] [#ezpublish] <Sulfur> hi katana`
+[03-27-2006 08:54:28] [#ezpublish] <Sulfur> finished with your move katana`?
+[03-27-2006 08:54:29] [#ezpublish] <Sulfur> ciao buz
+[03-27-2006 08:56:04] [#ezpublish] <Sulfur> hey, quick question -- is there a setting to disallow user registration to a siteaccess? the "register" button in admin is buzzing me off, and I also found some users trying to subscribe to the user siteaccess where they should not
+[03-27-2006 08:56:26] [#ezpublish] <katana`> sure Sulfur :)
+[03-27-2006 08:56:30] [#ezpublish] <katana`> i'm even in our offices now
+[03-27-2006 08:56:37] [#ezpublish] <katana`> wanna see the place I live in ??
+[03-27-2006 08:56:49] [#ezpublish] <Sulfur> sure katana`
+[03-27-2006 08:57:04] [#ezpublish] <Sulfur> wanna see cahouete naked hahaah
+[03-27-2006 08:57:38] [#ezpublish] <Sulfur> so guys, no setting ?
+[03-27-2006 08:58:02] [#ezpublish] <katana`> :)
+[03-27-2006 08:58:19] [#ezpublish] <katana`> here you are Sulfur : http://www.katana-inc.com/galleries/our_appartment
+[03-27-2006 08:58:22] [#ezpublish] <katana`> and anyone else curious ;)
+[03-27-2006 08:59:46] [#ezpublish] <buz> dont you think those thumbs are rather small?
+[03-27-2006 09:00:00] [#ezpublish] * katana` stares at buz
+[03-27-2006 09:00:03] [#ezpublish] <katana`> i don't know the CMS that well, that's why :)
+[03-27-2006 09:00:24] [#ezpublish] <buz> see http://triligon.org/triligon/galleries/sri_lanka for how galleries should be done
+[03-27-2006 09:00:45] [#ezpublish] <buz> is that a raw stone wall? neat
+[03-27-2006 09:00:51] [#ezpublish] <katana`> yeah it is
+[03-27-2006 09:01:08] [#ezpublish] <katana`> these appartments are ancient silk workers workshops
+[03-27-2006 09:01:17] [#ezpublish] <buz> oh mine is something similar
+[03-27-2006 09:01:20] [#ezpublish] <buz> very high for the machinery
+[03-27-2006 09:01:26] [#ezpublish] <katana`> yep exactly
+[03-27-2006 09:01:33] [#ezpublish] <buz> some weaving of some sort
+[03-27-2006 09:01:53] [#ezpublish] <katana`> that's it
+[03-27-2006 09:02:32] [#ezpublish] <katana`> i'll take care of the thumbs one day buz ;)
+[03-27-2006 09:02:51] [#ezpublish] <buz> maybe i should publish my gallery templates
+[03-27-2006 09:03:07] [#ezpublish] <katana`> maybe yes !
+[03-27-2006 09:03:18] [#ezpublish] <katana`> anyway my site really has a crappy design, but I suck at design...
+[03-27-2006 09:05:09] [#ezpublish] <buz> lol mine has the bog standard template
+[03-27-2006 09:05:58] [#ezpublish] * Sulfur assumes that there is no way do disallow user registration in eZ publish grumblegrumblegrumblegrumblegrumble
+[03-27-2006 09:06:09] [#ezpublish] <buz> o i think theres a setting for that
+[03-27-2006 09:06:10] [#ezpublish] <buz> no?
+[03-27-2006 09:07:16] [#ezpublish] <Sulfur> I think so but I cannot find it
+[03-27-2006 09:07:24] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [SendQ exceeded]
+[03-27-2006 09:07:49] [#ezpublish] <buz> maybe disallowing access to user module?
+[03-27-2006 09:08:04] [#ezpublish] <buz> mhh that could lock out everyone though
+[03-27-2006 09:08:24] [#ezpublish] <Sulfur> maybe ...... but I seem to recall there was a setting but can't find it ... um maybe user.ini (duh) ... let's check
+[03-27-2006 09:13:54] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-27-2006 09:15:46] [#ezpublish] <katana`> oh, B-KiLLer`
+[03-27-2006 09:15:48] [#ezpublish] <katana`> got lost ? :)
+[03-27-2006 09:15:55] [#ezpublish] <B-KiLLer`> huhu
+[03-27-2006 09:23:19] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-27-2006 09:28:36] [#ezpublish] * Sulfur cannot find that damn setting
+[03-27-2006 09:32:41] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Leaving"]
+[03-27-2006 09:33:24] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[03-27-2006 09:36:08] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[03-27-2006 09:38:37] [#ezpublish] <_buz> http://www.orau.org/ptp/collection/quackcures/toothpaste.htm OMFG
+[03-27-2006 09:48:33] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[03-27-2006 09:55:27] -!- ristio [n=risto@cm-80.111.22.156.chello.no] has quit []
+[03-27-2006 10:28:51] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Leaving"]
+[03-27-2006 10:38:45] -!- Sulfur [n=mbariola@85.20.2.139] has left #ezpublish []
+[03-27-2006 10:49:28] [#ezpublish] <_buz> any kphotoalbum users?
+[03-27-2006 10:53:06] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[03-27-2006 10:55:13] [#ezpublish] <_buz> katana`: maybe we should go steal designs from http://www.oswd.org/
+[03-27-2006 11:19:09] [#ezpublish] <xbit_> open source web desigaha
+[03-27-2006 11:19:29] [#ezpublish] <_buz> could be useful for the design challenged like myself
+[03-27-2006 11:20:45] [#ezpublish] <xbit_> i wonder how many of those images are copyrighted...
+[03-27-2006 11:20:52] [#ezpublish] <_buz> yeah that's the question
+[03-27-2006 11:20:56] [#ezpublish] <_buz> then again
+[03-27-2006 11:21:03] [#ezpublish] <_buz> images are there for replacement
+[03-27-2006 11:21:45] [#ezpublish] <xbit_> yep
+[03-27-2006 11:22:36] [#ezpublish] <xbit_> it's kinda weird to call it open source though, since all webpages are inheritely "open source"
+[03-27-2006 11:22:46] [#ezpublish] <_buz> yeah well you are supposed to steal
+[03-27-2006 11:22:51] [#ezpublish] <_buz> as opposed to you can steal ;)
+[03-27-2006 11:23:28] [#ezpublish] <xbit_> yeah :)
+[03-27-2006 11:24:16] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 110 (Connection timed out)]
+[03-27-2006 11:24:53] -!- DiGiTa|_ [n=guillaum@84.6.75.157] has joined #ezpublish
+[03-27-2006 11:25:16] -!- ordnas [n=ordnas@p549D65AD.dip.t-dialin.net] has left #ezpublish []
+[03-27-2006 12:05:46] [#ezpublish] <kracker> huh?
+[03-27-2006 12:05:48] [#ezpublish] <kracker> oh ...
+[03-27-2006 12:06:03] [#ezpublish] <_buz> what
+[03-27-2006 12:06:09] [#ezpublish] <kracker> sry, i must have died in my sleep ...
+[03-27-2006 12:06:20] [#ezpublish] <kracker> hard to notice all the poking an proding ..
+[03-27-2006 12:23:10] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[03-27-2006 13:39:46] -!- DiGiTa|_ [n=guillaum@84.6.75.157] has quit []
+[03-27-2006 14:24:08] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[03-27-2006 14:41:18] -!- phretor [n=phretor@host7-130.pool875.interbusiness.it] has joined #ezpublish
+[03-27-2006 14:41:24] [#ezpublish] <phretor> hi there
+[03-27-2006 14:41:30] [#ezpublish] <phretor> kracker re
+[03-27-2006 14:41:43] [#ezpublish] <phretor> kris10an re
+[03-27-2006 14:46:20] [#ezpublish] <phretor> I am going to write an extension in order to provide a new datatype for attributes but I don't want to reinvent the wheel so I ask for suggestions. I need a multi-field datatype (like "Author", that has "Name", "Mail") with arbitrary cardinality (like "Author", where you can specify "Add author" and add how may authors you need). I may call my new datatype "TextWithImageAndMovie" because an attribute of such type must be a collectio
+[03-27-2006 14:48:29] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [SendQ exceeded]
+[03-27-2006 14:49:16] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[03-27-2006 15:25:47] -!- ristio [n=risto@cm-80.111.22.156.chello.no] has joined #ezpublish
+[03-27-2006 16:00:56] [#ezpublish] <phretor> hi ristio
+[03-27-2006 16:08:34] [#ezpublish] <kracker> phretor, hey
+[03-27-2006 16:08:47] [#ezpublish] <kracker> your last message was cut off at "attribute of such type must be a collecti"
+[03-27-2006 16:09:07] [#ezpublish] <phretor> kracker: http://ez.no/community/forum/developer/new_datatype_text_image_movie#msg97125
+[03-27-2006 16:09:11] [#ezpublish] <phretor> I posted it
+[03-27-2006 16:09:13] [#ezpublish] <kracker> nods, good call
+[03-27-2006 16:40:47] [#ezpublish] <phretor> kracker: it doesn't seem to be a trivial task :-\
+[03-27-2006 16:49:36] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[03-27-2006 16:51:47] [#ezpublish] <kracker> great
+[03-27-2006 16:52:38] [#ezpublish] <kracker> i didn't quite gather what the end result would provide :\ maybee that's just me
+[03-27-2006 16:54:28] [#ezpublish] <kracker> a multi attribute datatype ... to define multiple objects per datatype ... genericly (to meet your needs) or just the end result of TextWithImageAndMovie ...
+[03-27-2006 16:55:06] [#ezpublish] <kracker> heh, the name kinda reminds me of a tv show in the states ... dinner and a movie ;)
+[03-27-2006 16:56:22] [#ezpublish] <kracker> doesn't seem to complicated though :) the end results are fairly straight forward
+[03-27-2006 17:18:21] -!- phretor [n=phretor@host7-130.pool875.interbusiness.it] has quit []
+[03-27-2006 20:19:58] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit ["ehehe ;"]
+[03-27-2006 23:28:13] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-27-2006 23:38:41] -!- ristio [n=risto@cm-80.111.22.156.chello.no] has quit []
+[03-27-2006 23:50:59] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish

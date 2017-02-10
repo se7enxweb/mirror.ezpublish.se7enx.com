@@ -1,0 +1,28 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.3.&nbsp; Release Versioning</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec3"></a><h3 class="docSection1Title">12.3. Release Versioning</h3>
+<p class="docText">This section assumes that you have read the &quot;<a class="docLink" href="ch10lev1sec2.html#ch10lev2sec3">Version Numbers</a>&quot; section in <a class="docLink" href="ch10.html#ch10">Chapter 10</a>.</p>
+<p class="docText">The first rule defines the version number of the first stable release:<a name="ch12index42"></a><a name="ch12index43"></a></p>
+<ul><LI><p class="docList">The first stable release of a package must use the version number 1.0.0.</p></LI><li><p class="docList">Releases prior to the first stable release must use a 0.x version number, and must not be stable.</P></li><li><p class="docList">Backward compatibility may be broken arbitrarily between 0.x releases.</p><p class="docList">After the first stable release, some more rules start kicking in:</p></LI><LI><p class="docList">Release 1.N must be compatible with 1.M where N &gt; M. For example, 1.3 must be compatible with 1.2.</p></li><li><p class="docList">Release N.x may break compatibility with M.x where N &gt; M. For example, 3.0 may break compatibility with 2.4.</p></LI><li><p class="docList">New features require that the minor version increases (for example, 1.2 to 1.3 or 1.2.5 to 1.3.0).</p></LI><li><p class="docList">The patch level is used only for bug-fix releases (for example, 1.2 to 1.2.1, or 1.2.0 to 1.2.1).</P></li></ul>
+<p class="docText">In this context, backward compatibility means that code written using one version of a package keeps working correctly with a newer version. When the major version number increases and the new major version is incompatible with the previous major version, the package name has to change by appending the new major version. For example, if you have Foo version 1.9.0 and Foo 2.0.0, and Foo 2.0.0 is not backward compatible, the package is renamed to Foo2. The release still uses the same version number (for example, Foo2-2.0). If for some reason, this scheme does not fit with the package name (for example, if the last character in the package name is already a digit), two alternative forms are accepted: Foov2 and Foo_v2.<a name="ch12index44"></a></p>
+<p class="docText">The reference implementation for comparing version numbers is PHP's <tt>version_compare()</tt> function.<a name="ch12index45"></a><a name="ch12index46"></a><a name="ch12index47"></a><a name="ch12index48"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

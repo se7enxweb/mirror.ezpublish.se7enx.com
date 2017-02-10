@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="7012"
+   name=""
+   committed-date="2004-07-05T11:04:20.036903Z"
+   url="http://pubsvn.ez.no/nextgen/trunk/kernel/shop/classes/doc/examples/paypal"
+   last-author="dl"
+   kind="dir"
+   uuid="a01eee8c-daba-0310-acae-fa49f3023285"
+   revision="7012"/>
+<entry
+   committed-rev="7012"
+   name="testinggateway.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="da3916a43d23d1e888b3b719d65a39d4"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="extensionfiles.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="7a4ca93d7c8c4867763c5b42ee925a96"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="testaccounts.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="616a046f7f0e82c58597124776c2e572"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="gatewayclass.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="68eae06244b19132101a70add97dfb86"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="paypalgateway.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="68cff78d0bfbefafef37e4decb9b0998"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="handlecallback.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="c74f9c4202ec2aef6deb28a5bc33a053"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+</wc-entries>

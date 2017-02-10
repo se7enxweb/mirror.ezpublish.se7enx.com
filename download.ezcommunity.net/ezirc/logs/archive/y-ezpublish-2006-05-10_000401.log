@@ -1,0 +1,87 @@
+[05-08-2006 00:48:13] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-08-2006 01:17:07] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-08-2006 01:26:37] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[05-08-2006 01:30:59] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-08-2006 01:36:41] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-08-2006 01:36:47] -!- ordnas [n=ordnas@p549D663E.dip.t-dialin.net] has joined #ezpublish
+[05-08-2006 02:21:42] -!- SEAwolfx [n=SEAwolf@p5493A56F.dip0.t-ipconnect.de] has joined #ezpublish
+[05-08-2006 02:21:50] [#ezpublish] <SEAwolfx> good morning
+[05-08-2006 02:44:07] -!- DiGiTa|_ [n=pet2poul@84.4.70.240] has joined #ezpublish
+[05-08-2006 02:59:53] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-08-2006 03:00:04] -!- DiGiTa|_ [n=pet2poul@84.4.70.240] has quit []
+[05-08-2006 03:06:08] -!- ordna1 [n=ordnas@p549D5353.dip.t-dialin.net] has joined #ezpublish
+[05-08-2006 03:23:30] -!- ordnas [n=ordnas@p549D663E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-08-2006 03:36:10] -!- SEAwolfx [n=SEAwolf@p5493A56F.dip0.t-ipconnect.de] has quit [Connection timed out]
+[05-08-2006 03:37:10] -!- SEAwolfx [n=SEAwolf@p5493B4F1.dip0.t-ipconnect.de] has joined #ezpublish
+[05-08-2006 04:07:50] -!- awormus [n=aaron@p54B10B90.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-08-2006 04:15:05] -!- awormus [n=aaron@p54B10B90.dip0.t-ipconnect.de] has joined #ezpublish
+[05-08-2006 05:13:13] -!- SEAwolfx [n=SEAwolf@p5493B4F1.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-08-2006 06:21:40] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[05-08-2006 07:12:15] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-08-2006 07:24:51] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-08-2006 07:27:45] -!- _buz [n=buz@dhcp-203-136-vpn.unizh.ch] has joined #ezpublish
+[05-08-2006 07:28:15] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[05-08-2006 07:28:19] [#ezpublish] <y_sabal> plop
+[05-08-2006 07:28:20] [#ezpublish] <y_sabal> hi
+[05-08-2006 07:29:26] [#ezpublish] <y_sabal> question : which template should I overide to have control over the graphical design of the login page ?
+[05-08-2006 07:42:16] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-08-2006 08:12:45] -!- kh [n=kh@85.19.74.66] has joined #ezpublish
+[05-08-2006 08:14:07] -!- kh is now known as kris10an
+[05-08-2006 08:22:39] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-08-2006 08:36:25] -!- _buz [n=buz@dhcp-203-136-vpn.unizh.ch] has quit [Read error: 113 (No route to host)]
+[05-08-2006 08:39:40] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[05-08-2006 09:00:21] -!- elephantMan [n=elephant@32.202.99-84.rev.gaoland.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-08-2006 09:07:24] -!- elephantMan [n=elephant@32.202.99-84.rev.gaoland.net] has joined #ezpublish
+[05-08-2006 09:28:02] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[05-08-2006 09:34:18] -!- elephantMan [n=elephant@32.202.99-84.rev.gaoland.net] has quit [Remote closed the connection]
+[05-08-2006 09:35:08] -!- elephantMan [n=elephant@32.202.99-84.rev.gaoland.net] has joined #ezpublish
+[05-08-2006 10:12:45] -!- _buz [n=buz@dhcp-202-54-vpn.unizh.ch] has joined #ezpublish
+[05-08-2006 10:29:52] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-08-2006 10:34:23] -!- _buz is now known as buz
+[05-08-2006 11:24:17] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-08-2006 11:33:58] -!- DiGiTa|_ [n=pet2poul@84.6.79.49] has joined #ezpublish
+[05-08-2006 12:22:18] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-08-2006 12:22:20] -!- _buz is now known as buz_note
+[05-08-2006 12:23:37] -!- ordna1 [n=ordnas@p549D5353.dip.t-dialin.net] has left #ezpublish []
+[05-08-2006 12:27:08] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-08-2006 12:41:02] -!- buz [n=buz@dhcp-202-54-vpn.unizh.ch] has quit [Read error: 110 (Connection timed out)]
+[05-08-2006 13:15:19] -!- buz_note [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-08-2006 13:43:34] -!- SEAwolfx [n=SEAwolf@p549398C5.dip0.t-ipconnect.de] has joined #ezpublish
+[05-08-2006 13:43:40] [#ezpublish] <SEAwolfx> hi
+[05-08-2006 13:47:33] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-08-2006 14:02:35] [#ezpublish] <ls> hi
+[05-08-2006 14:06:26] [#ezpublish] <awormus> hi
+[05-08-2006 14:17:36] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-08-2006 14:28:32] -!- _buz is now known as buz
+[05-08-2006 14:36:34] Disconnecting due to lack of a lag response (0.04320900 1147116934 != 0.12287700 1147116964)
+[05-08-2006 14:36:34] Diconnected. Sleeping for 2 second(s).
+[05-08-2006 14:36:36] >> Connecting to irc.freenode.net:6667
+[05-08-2006 14:36:41] >> Connected to irc.freenode.net:6667, registering...
+[05-08-2006 14:36:42] >> Primary nickname in use, trying alternate.
+[05-08-2006 14:36:42] >> Successfully registered. Nick is: ezpublishlog
+[05-08-2006 14:36:42] -!- There are 15846 listed and 15204 unlisted users on 19 servers
+[05-08-2006 14:36:42] -!- 46 flagged staff members
+[05-08-2006 14:36:42] -!- 10747 channels formed
+[05-08-2006 14:36:42] -!- I have 5671 clients and 0 servers
+[05-08-2006 14:36:42] -!- Current local  users: 5671  Max: 6202
+[05-08-2006 14:36:42] -!- Current global users: 31050  Max: 31093
+[05-08-2006 14:36:42] -!- Highest connection count: 6204 (6202 clients) (1129118 since server was (re)started)
+[05-08-2006 14:36:43] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-08-2006 14:36:43] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-08-2006 14:37:04] >> Attempting to join channels: #ezpublish
+[05-08-2006 14:37:04] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-08-2006 14:37:04] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_05_05_2006
+[05-08-2006 14:37:04] -!- Topic set by buz [@] [Sat,  6 May 2006 03:48:07 -0500]
+[05-08-2006 14:37:05] (unmatched::raw477) :calvino.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#privmsg
+[05-08-2006 14:38:34] -!- DiGiTa|_ [n=pet2poul@84.6.79.49] has quit []
+[05-08-2006 14:39:42] (ezpublishlog) Attempting to gain back primary nickname
+[05-08-2006 14:39:42] -!- ezpublishlog is now known as ezlog
+[05-08-2006 14:39:42] My new nick is ezlog
+[05-08-2006 15:40:46] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[05-08-2006 15:54:12] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-08-2006 16:23:05] -!- awormus [n=aaron@p54B10B90.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-08-2006 16:36:16] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[05-08-2006 20:50:26] -!- SEAwolfx [n=SEAwolf@p549398C5.dip0.t-ipconnect.de] has quit []
+[05-08-2006 20:53:24] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[05-08-2006 21:29:41] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[05-08-2006 23:41:07] -!- awormus [n=aaron@p54B122EC.dip0.t-ipconnect.de] has joined #ezpublish

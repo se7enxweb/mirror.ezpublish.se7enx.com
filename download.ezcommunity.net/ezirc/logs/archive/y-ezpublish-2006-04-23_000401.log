@@ -1,0 +1,60 @@
+[04-21-2006 00:44:50] -!- zrg [n=zurgutt@217-159-195-210-dsl.est.estpak.ee] has quit [Remote closed the connection]
+[04-21-2006 01:37:12] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-21-2006 01:38:16] -!- ordnas [n=ordnas@p549D6B55.dip.t-dialin.net] has joined #ezpublish
+[04-21-2006 02:05:11] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-21-2006 02:07:15] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-21-2006 02:09:17] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-21-2006 02:17:44] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-21-2006 02:34:09] [#ezpublish] <kalooni> hi there
+[04-21-2006 02:46:08] -!- gluegadget [n=amir@213.207.240.231] has joined #ezpublish
+[04-21-2006 02:47:24] -!- DiGiTa|_ [n=guillaum@84.4.189.49] has joined #ezpublish
+[04-21-2006 02:47:38] -!- gluegadget [n=amir@213.207.240.231] has quit ["Leaving"]
+[04-21-2006 02:48:25] -!- gluegadget [n=amir@213.207.240.231] has joined #ezpublish
+[04-21-2006 02:50:05] [#ezpublish] <gluegadget> how's the process to becomaing a partner ?
+[04-21-2006 02:50:58] -!- gluegadget [n=amir@213.207.240.231] has left #ezpublish ["Leaving"]
+[04-21-2006 02:51:21] [#ezpublish] <DiGiTa|_> hi
+[04-21-2006 02:51:54] [#ezpublish] <DiGiTa|_> Hi, does someone know why the " is not accepted in ezoption field
+[04-21-2006 02:52:13] [#ezpublish] <DiGiTa|_> 2 times hi
+[04-21-2006 02:52:14] [#ezpublish] <DiGiTa|_> :p
+[04-21-2006 02:53:38] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 110 (Connection timed out)]
+[04-21-2006 03:00:18] [#ezpublish] <kalooni> it might be escaped I think ?
+[04-21-2006 03:00:31] [#ezpublish] <DiGiTa|_> yes but why in this field
+[04-21-2006 03:02:29] [#ezpublish] <kalooni> don't know
+[04-21-2006 03:02:37] [#ezpublish] <kalooni> It was just an intuition
+[04-21-2006 03:02:42] [#ezpublish] <kalooni> never encountered this issue
+[04-21-2006 03:06:41] [#ezpublish] <DiGiTa|_> my client want to set inches
+[04-21-2006 03:06:44] [#ezpublish] <DiGiTa|_> with "
+[04-21-2006 03:45:26] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[04-21-2006 03:57:55] -!- rza [i=rza@todellisuus.net] has joined #ezpublish
+[04-21-2006 03:59:17] -!- rza [i=rza@todellisuus.net] has left #ezpublish []
+[04-21-2006 04:18:27] -!- hovik [n=hovik@stalker.ez.no] has quit [Remote closed the connection]
+[04-21-2006 04:21:51] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[04-21-2006 04:26:13] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-21-2006 04:39:17] -!- gluegadget [n=amir@213.207.240.231] has joined #ezpublish
+[04-21-2006 05:19:55] -!- hovik [n=hovik@stalker.ez.no] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-21-2006 06:09:43] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Peace and Protection 4.22"]
+[04-21-2006 06:23:56] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-21-2006 09:24:33] -!- DiGiTa|_ [n=guillaum@84.4.189.49] has quit []
+[04-21-2006 09:56:09] -!- gluegadget [n=amir@213.207.240.231] has left #ezpublish ["Leaving"]
+[04-21-2006 10:09:06] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []
+[04-21-2006 10:20:09] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[04-21-2006 10:20:43] -!- ordnas [n=ordnas@p549D6B55.dip.t-dialin.net] has left #ezpublish []
+[04-21-2006 10:36:29] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-21-2006 10:42:32] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-21-2006 10:50:41] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-21-2006 11:05:57] -!- kracker [n=kracker@ip23.131.realtime.net] has joined #ezpublish
+[04-21-2006 11:18:51] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-21-2006 11:22:32] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-21-2006 11:22:43] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-21-2006 13:25:12] -!- kore_ [n=lordhong@dslb-084-058-013-209.pools.arcor-ip.net] has joined #ezpublish
+[04-21-2006 14:00:57] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-21-2006 14:01:08] [#ezpublish] <ls> hi
+[04-21-2006 14:01:16] -!- ls is now known as luke
+[04-21-2006 14:01:20] [#ezpublish] <luke> .clear
+[04-21-2006 15:04:18] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-21-2006 15:25:46] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-21-2006 17:05:32] -!- luke [n=ls@unregister049029239087.c29.msk.pl] has quit [Read error: 110 (Connection timed out)]
+[04-21-2006 17:16:41] -!- kore__ [n=lordhong@dslb-084-058-023-082.pools.arcor-ip.net] has joined #ezpublish
+[04-21-2006 17:18:53] -!- kore_ [n=lordhong@dslb-084-058-013-209.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[04-21-2006 19:55:30] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[04-21-2006 21:29:39] -!- kore__ [n=lordhong@dslb-084-058-023-082.pools.arcor-ip.net] has quit []

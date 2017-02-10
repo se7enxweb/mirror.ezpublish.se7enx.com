@@ -1,0 +1,154 @@
+[05-12-2005 01:52:57] -!- ordna1 [~ordnas@p549DD732.dip.t-dialin.net] has joined #ezpublish
+[05-12-2005 02:10:57] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2005 02:12:05] -!- Bedlore [~me@ppp232-41.lns3.adl2.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2005 02:18:13] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-12-2005 02:22:15] -!- ordna1 [~ordnas@p549DD732.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-12-2005 02:23:33] -!- ordna1 [~ordnas@p549DD732.dip.t-dialin.net] has joined #ezpublish
+[05-12-2005 02:36:31] [#ezpublish] <SEAwolfx> good morning.
+[05-12-2005 02:36:38] [#ezpublish] <_buz> morning
+[05-12-2005 02:36:45] [#ezpublish] <_buz> north korean kindergarten game: http://story.news.yahoo.com/photo/050509/photos_pl/mdf555006
+[05-12-2005 02:37:07] [#ezpublish] <SEAwolfx> ;) hehe
+[05-12-2005 03:03:19] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-12-2005 03:16:37] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-12-2005 03:34:49] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2005 05:03:23] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-12-2005 06:02:59] -!- ordna1 [~ordnas@p549DD732.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2005 06:11:29] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 148 (No route to host)]
+[05-12-2005 06:20:08] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2005 06:23:22] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[05-12-2005 06:41:40] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-12-2005 07:00:13] -!- ordna1 [~ordnas@p549DD732.dip.t-dialin.net] has joined #ezpublish
+[05-12-2005 07:03:32] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-12-2005 07:05:50] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-12-2005 07:25:57] -!- danmiru [~chatzilla@80.94.225.138] has quit [Read error: 104 (Connection reset by peer)]
+[05-12-2005 07:26:12] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-12-2005 07:31:44] [#ezpublish] <lucasr> the override definitions don't reside on database, do it?
+[05-12-2005 07:32:01] [#ezpublish] <lucasr> I resides on siteaccess, doesn't it?
+[05-12-2005 07:43:32] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2005 07:50:39] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-12-2005 08:05:30] [#ezpublish] <SEAwolfx> lucasr: what kind of overrides u could imagine concerning to the database?
+[05-12-2005 08:14:25] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-12-2005 08:33:29] -!- SEAwolfx [~mike@DSL01.212.114.237.105.NEFkom.net] has quit [Read error: 54 (Connection reset by peer)]
+[05-12-2005 09:05:42] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-12-2005 09:07:51] [#ezpublish] * kracker rubs eyes ...
+[05-12-2005 09:34:07] -!- ordna1 [~ordnas@p549DD732.dip.t-dialin.net] has quit [Read error: 145 (Connection timed out)]
+[05-12-2005 09:35:36] -!- ordna1 [~ordnas@p549DE7BB.dip.t-dialin.net] has joined #ezpublish
+[05-12-2005 09:50:35] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2005 09:51:40] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit ["Fui embora"]
+[05-12-2005 09:54:43] -!- SEAwolfx [~mike@969edc8bf76d6082.node.tor] has joined #ezpublish
+[05-12-2005 10:08:08] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-12-2005 11:04:24] -!- ordna1 [~ordnas@p549DE7BB.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-12-2005 11:08:07] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-12-2005 11:13:26] -!- ordna1 [~ordnas@p549DE7BB.dip.t-dialin.net] has joined #ezpublish
+[05-12-2005 11:14:26] -!- ordna1 [~ordnas@p549DE7BB.dip.t-dialin.net] has left #ezpublish []
+[05-12-2005 11:22:50] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[05-12-2005 11:30:41] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2005 11:47:36] [#ezpublish] <SEAwolfx> ARGHHHHHH ... "ERROR 1016: Can't open file: 'ezsession.MYI'. (errno: 145)"
+[05-12-2005 11:47:39] [#ezpublish] <SEAwolfx> pffffffffffffffffffff
+[05-12-2005 11:47:58] [#ezpublish] <SEAwolfx> this crunches my balls.
+[05-12-2005 11:49:18] [#ezpublish] <SEAwolfx> is it important to have entries in this table?
+[05-12-2005 12:28:53] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-12-2005 13:03:57] -!- SachaS [~Sacha@216.138.89.5] has joined #ezpublish
+[05-12-2005 13:04:23] -!- SachaS [~Sacha@216.138.89.5] has left #ezpublish ["Client exiting"]
+[05-12-2005 13:17:40] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-12-2005 13:20:15] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Client Quit]
+[05-12-2005 13:20:17] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-12-2005 13:53:31] -!- _Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-12-2005 13:53:32] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-12-2005 13:53:53] -!- _Katana` is now known as Katana`
+[05-12-2005 14:03:33] -!- kracker_ [~root@216.218.247.230] has joined #ezpublish
+[05-12-2005 14:04:07] [#ezpublish] <kracker_> kickin
+[05-12-2005 14:04:25] [#ezpublish] <kracker_> so i think i figured it out last night
+[05-12-2005 14:05:14] [#ezpublish] <kracker_> i was talking to a member of out netops team and he says that it's basicly NAT deviced that are responsible for my constant disconnects
+[05-12-2005 14:05:31] [#ezpublish] <kracker_> errum s/deviced/devices/
+[05-12-2005 14:05:40] [#ezpublish] <_buz> what kind of device have you got
+[05-12-2005 14:05:46] [#ezpublish] <_buz> or is it at their side?
+[05-12-2005 14:06:08] [#ezpublish] <_buz> if you need a router, get the linksys wrt54g
+[05-12-2005 14:06:19] [#ezpublish] <_buz> runs on linux and has got a wide range of custom firmwares available
+[05-12-2005 14:06:21] [#ezpublish] <kracker_> so i'm avaoiding connecting through them by using ssh as a tunnel to another server (thus avoiding irc through NAT problems)
+[05-12-2005 14:06:28] [#ezpublish] <_buz> or asus wl500 which even comes with an usb port
+[05-12-2005 14:06:33] [#ezpublish] <kracker_> seems ssh is not affected like irc through NAT
+[05-12-2005 14:06:38] [#ezpublish] <_buz> mhh that's weird
+[05-12-2005 14:06:44] [#ezpublish] <_buz> normally nat doesn't affect irc at all
+[05-12-2005 14:06:46] [#ezpublish] <kracker_> i'm using two residential devices
+[05-12-2005 14:07:40] [#ezpublish] <kracker_> ummm, a really really old netgear dumb 802.11b (house) and mine ( another more recent and popular netgear 802.11g
+[05-12-2005 14:08:01] [#ezpublish] <_buz> mhh the netgear disconnects after a few minutes of inactivity
+[05-12-2005 14:08:13] [#ezpublish] <kracker_> it seems like he was saying that nat lets the connection drop out after a few min of inactivity
+[05-12-2005 14:09:11] [#ezpublish] <kracker_> an the 'router' (not really a router, tho) doesn't support a paramiter to override / controll this behavior (none of them do really ...)
+[05-12-2005 14:09:36] [#ezpublish] <kracker_> tho, i'd almost wager that its a bit vendor specific (per say?)
+[05-12-2005 14:09:59] [#ezpublish] <kracker_> anyway bollix to localhost mIRC, say hello to server-side bItch'ing
+[05-12-2005 14:10:04] [#ezpublish] <kracker_> errum , BitchX
+[05-12-2005 14:10:34] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2005 14:10:36] [#ezpublish] <kracker_> i'll keep that sugestion in mind _buz
+[05-12-2005 14:11:03] [#ezpublish] <_buz> yeah
+[05-12-2005 14:11:07] [#ezpublish] <kracker_> :)
+[05-12-2005 14:11:12] [#ezpublish] <_buz> my linksys doesn't seem to drop nat connections
+[05-12-2005 14:11:17] [#ezpublish] <_buz> neither did freebsd based routers
+[05-12-2005 14:11:19] [#ezpublish] <_buz> the netgear did
+[05-12-2005 14:11:28] [#ezpublish] <_buz> but if you can have it generate ping signals, it's fine
+[05-12-2005 14:11:48] [#ezpublish] <kracker_> and i don't remember my linksys doing it either but it's been a while since i dusted it off, when i move again i'll put it into degraded production for testing
+[05-12-2005 14:12:09] [#ezpublish] <kracker_> interesting
+[05-12-2005 14:13:08] -!- kracker_ is now known as kracker
+[05-12-2005 14:23:38] [#ezpublish] <kracker> .
+[05-12-2005 14:30:13] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-12-2005 14:31:52] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 148 (No route to host)]
+[05-12-2005 14:46:12] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-12-2005 15:19:53] -!- SEAwolfx [~mike@969edc8bf76d6082.node.tor] has quit [Remote closed the connection]
+[05-12-2005 15:20:00] -!- SEAwolfx [~mike@d640c5e3b3350bc7.node.tor] has joined #ezpublish
+[05-12-2005 15:48:01] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-12-2005 16:23:12] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-12-2005 16:31:19] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 148 (No route to host)]
+[05-12-2005 20:14:09] [#ezpublish] <kracker> hey hey hey
+[05-12-2005 20:14:49] [#ezpublish] <kracker> users
+[05-12-2005 20:21:49] [#ezpublish] <kracker> who
+[05-12-2005 20:21:54] [#ezpublish] <kracker> knew
+[05-12-2005 20:22:10] [#ezpublish] <kracker> sweet, bitchX is cool
+[05-12-2005 20:24:30] [#ezpublish] <kracker> but i'm not :)
+[05-12-2005 20:24:45] [#ezpublish] * kracker runs off to "break something" ...
+[05-12-2005 20:57:36] -!- kracker [~root@216.218.247.230] has quit ["My damn controlling terminal disappeared!"]
+[05-12-2005 22:04:44] -!- Bedlore [~me@dsl-203-113-239-27.SA.netspace.net.au] has joined #ezpublish
+[05-12-2005 22:05:20] -!- Bedlore changed the topic of #ezpublish to: http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_rc1
+[05-12-2005 22:05:29] [#ezpublish] <Bedlore> hi ppl
+[05-12-2005 22:15:27] -!- kracker [~kracker@216.218.247.230] has joined #ezpublish
+[05-12-2005 22:16:11] [#ezpublish] <kracker> oh yeah!
+[05-12-2005 22:29:11] [#ezpublish] <kracker> so anyone ever been in legal battle over an eZ publish application / project?
+[05-12-2005 22:29:28] [#ezpublish] <kracker> the crowd laughs
+[05-12-2005 22:30:32] [#ezpublish] <kracker> i was checking my voice mail today for the first time in a about 4 days (plane trip + fedex shipment of forgotten cell phone) and ...
+[05-12-2005 22:31:39] [#ezpublish] <kracker> i get this call from a client from a former project (not the greatest client in terms of their love for all things outside our signed scope of work / contract)
+[05-12-2005 22:32:17] [#ezpublish] <kracker> turns out they think that negligence on their part (deleteing a system / admin account)
+[05-12-2005 22:32:36] [#ezpublish] <kracker> falls under their lawyers radar to sue me
+[05-12-2005 22:32:46] [#ezpublish] <kracker> it's funny really :P
+[05-12-2005 22:33:37] [#ezpublish] <kracker> i tried to sell them on a fair training / documentation / support / maintinence contract for the past 10 months ...
+[05-12-2005 22:34:23] [#ezpublish] <kracker> they wouldn't negotiate, just wanted the app (pure dev contract) so they got it
+[05-12-2005 22:34:47] [#ezpublish] <kracker> now they are nashing their teeth
+[05-12-2005 22:35:05] [#ezpublish] <kracker> sad, i used to be such a nice guy
+[05-12-2005 22:35:18] [#ezpublish] * kracker laughs, used to be ... 
+[05-12-2005 22:36:28] [#ezpublish] <kracker> i've never seen a client so upset that i warned them that development was only part of the picture in a web application long term life span
+[05-12-2005 22:37:12] [#ezpublish] <kracker> i even restored the application (at no cost) within 10 hours of their foolish clicking
+[05-12-2005 22:37:37] [#ezpublish] <kracker> but now, i'm the son of a bitch
+[05-12-2005 22:37:55] [#ezpublish] <kracker> i mean, sure, i know what your thinking
+[05-12-2005 22:38:09] [#ezpublish] <kracker> and i'm not disagreeing with you either
+[05-12-2005 22:39:50] [#ezpublish] <kracker> it's just, you have to address and deal with these issues before hand with planning or be prepared to accept the possiblity that your on your own when you do something foolish
+[05-12-2005 22:40:14] [#ezpublish] <kracker> you can't stick your head in the sand and blame people for your own problems, man up!
+[05-12-2005 22:42:15] [#ezpublish] <kracker> life's a bitch, ya can't fuck it for free -- everlast|life's a bitch
+[05-12-2005 22:42:31] [#ezpublish] <kracker> ok ok enough with the profanity
+[05-12-2005 22:42:38] [#ezpublish] <kracker> this is (was) a family show
+[05-12-2005 22:43:40] [#ezpublish] <kracker> so ... anyone else laughing "with me"?
+[05-12-2005 22:44:38] [#ezpublish] <kracker> cause otherwise i think i need try some SHHHH, (dr.evil,apimm2)
+[05-12-2005 22:45:12] [#ezpublish] <kracker> any takers? i got a whole bag of shhhhh
+[05-12-2005 22:45:36] [#ezpublish] <kracker> no not though (rolls eyes), i'm talking about silence...it's a joke you ...
+[05-12-2005 22:45:48] [#ezpublish] <kracker> s/though/that/
+[05-12-2005 22:46:46] [#ezpublish] <kracker> cheers guys! heres hoping you all have a calmer afternoon than i
+[05-12-2005 22:49:16] [#ezpublish] * kracker says to jack, seriously kid ... ever considered you ... 'might' bring it on yourself?
+[05-12-2005 23:16:17] -!- SEAwolfx_ [~mike@39a2eec40403fa90.node.tor] has joined #ezpublish
+[05-12-2005 23:20:04] -!- SEAwolfx [~mike@d640c5e3b3350bc7.node.tor] has quit [Remote closed the connection]
+[05-12-2005 23:22:22] [#ezpublish] <kracker> weak
+[05-12-2005 23:22:39] -!- kracker [~kracker@216.218.247.230] has quit ["oh well, caredeum"]
+[05-12-2005 23:27:00] -!- kracker [~kracker@216.218.247.230] has joined #ezpublish
+[05-12-2005 23:32:16] -!- kracker [~kracker@216.218.247.230] has quit ["brb"]
+[05-12-2005 23:37:13] -!- kracker [~kracker@216.218.247.230] has joined #ezpublish
+[05-12-2005 23:37:15] -!- kracker [~kracker@216.218.247.230] has quit [Remote closed the connection]
+[05-12-2005 23:38:04] -!- kracker [~kracker@216.218.247.230] has joined #ezpublish
+[05-12-2005 23:38:31] [#ezpublish] <kracker> cool, now i should be sorta set ... for a little while
+[05-12-2005 23:59:53] -!- SEAwolfx_ [~mike@39a2eec40403fa90.node.tor] has quit [Remote closed the connection]
+[05-12-2005 23:59:58] -!- SEAwolfx [~mike@d676dc8b11ec4a93.node.tor] has joined #ezpublish

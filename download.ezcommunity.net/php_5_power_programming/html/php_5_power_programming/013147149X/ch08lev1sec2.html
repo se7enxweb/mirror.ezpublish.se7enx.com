@@ -1,0 +1,67 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 8.2.&nbsp; Vocabulary</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch08lev1sec2"></a><h3 class="docSection1Title">8.2. Vocabulary</h3>
+<p class="docText">When working with XML documents, you will encounter several terms that might be unfamiliar. The following example shows an XML document that is an XHTML document:<a name="ch08index01"></a><a name="ch08index02"></a></p>
+<pre>
+&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
+&lt;!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;XML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body background="bg.png"&gt;
+    &lt;p&gt;
+      Moved to &lt;a href="http://example.org/"&gt;example.org&lt;/a&gt;.
+      &lt;br /&gt;
+      foo &amp;amp; bar
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">The first line is the XML declaration; it specifies the XML version and the XML file encoding. Notice that the line starts with <tt>&lt;?</tt>. This combination of characters can cause a problem if you use this file as a PHP script. If you have the PHP setting short open tags enabled (the default), PHP sees the tag <tt>&lt;?</tt> as the opening tag of a PHP section. If you work with XML in combination with PHP, change the <tt>short_open_tag</tt> setting in the <tt>php.ini</tt> file to <tt>Off</tt>.<a name="ch08index03"></a><a name="ch08index04"></a></p>
+<p class="docText">After the XML declaration, you'll find the <tt>DOCTYPE</tt> declaration on three lines, enclosed by <tt>&lt;</tt> and <tt>&gt;</tt>. In this case, the <tt>DOCTYPE</tt> statement specifies that the root tag in the XML document is <tt>html</tt>, that the document type is <tt>PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"</tt>, and that a DTD (Document Type Definition) for this type of document can be found at <a class="docLink" target="_blank" href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</a>. A <span class="docEmphStrong">DTD</span> <span class="docEmphStrong">file</span> describes the structure of a document type. Validating parsers can use the DTD file to see whether the XML file being parsed is a valid XML file in relation to the given DTD. Not all parsers are validating parsers; some only care that the document is well-formed. A <span class="docEmphStrong">well-formed document</span> conforms to the XML standard (for example, all elements in the document follow the XML specifications). A <span class="docEmphStrong">valid XML document</span> conforms to the DTD associated with the document type, as well as to the XML specifications. To check whether an XHTML (and HTML) document type is valid according to the specified document type, you can use the validator available online at <a class="docLink" target="_blank" href="http://validator.w3.org">http://validator.w3.org</a>.<a name="ch08index05"></a><a name="ch08index06"></a><a name="ch08index07"></a></P>
+<p class="docText">The rest of the document consists of the content itself, starting with the <span class="docEmphStrong">root element</span> (also called <span class="docEmphStrong">root node</span>):<a name="ch08index08"></a><a name="ch08index09"></a></p>
+<pre>
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
+</pre><BR>
+<p class="docText">According to the XHTML 1.0 Transitional DTD, the root element (<tt>html</tt>) must contain an <tt>xmlns</tt> declaration for the XHTML namespace. A <span class="docEmphStrong">namespace</span> provides a means of mixing two separate document types into one XML document, such as embedding MathML into XHTML.<a name="ch08index10"></a></p>
+<p class="docText">The child elements of the root node follow:</P>
+<pre>
+&lt;head&gt;
+  &lt;title&gt;XML Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body background="bg.png"&gt;
+  &lt;p&gt;
+    Moved to &lt;a href="http://example.org/"&gt;example.org&lt;/a&gt;.
+    &lt;br /&gt;
+    foo &amp;amp; bar
+  &lt;/p&gt;
+&lt;/body&gt;
+</pre><br>
+<p class="docText">The <span class="docEmphStrong">head tags</span> (<tt>&lt;head&gt;</tt> and <tt>&lt;/head&gt;</tt>) enclose the nested title tag that specify the title XML Example.<a name="ch08index11"></a></p>
+<p class="docText">The <span class="docEmphStrong">body tag</span> includes the background attribute. <span class="docEmphStrong">Attributes</span> contain extra information about a specific tag. XML standards require all attributes to have a value. Values for attributes must be enclosed with single or double quotes. Using one quoting style throughout your document is recommended but not required. In this case, <tt>background</tt> specifies a background picture to be found in the file bg.png. Another correct attribute is <tt>&lt;option selected="true"&gt;&lt;/option&gt;</tt>. Specifying an option with the code <tt>&lt;option selected&gt;&lt;/option&gt;</tt> is incorrect by XML standards because the <tt>selected</tt> attribute has no value.<a name="ch08index12"></a><a name="ch08index13"></a></p>
+<p class="docText">All opening tags, such as <tt>&lt;p&gt;</tt>, need a matching closing tag, such as <tt>&lt;/p&gt;</tt>. For elements that have no content, you can merge the opening and closing tag. Instead of using <tt>&lt;br&gt;&lt;/br&gt;</tt> in your document, you can use <tt>&lt;br/&gt;</tt>. Because some browsers may have problems parsing <tt>&lt;br/&gt;</tt>, add a space before the <tt>/</tt>, so that the resulting tag is <tt>&lt;br /&gt;</tt>.<a name="ch08index14"></a><a name="ch08index15"></a><a name="ch08index16"></a><a name="ch08index17"></a></p>
+<p class="docText">Some special characters cause problems in XML documents. For example, <tt>&lt;</tt> and <tt>&gt;</tt> are used for tags, so if you use <tt>&lt;</tt> or <tt>&gt;</tt> in an XML document, the character is treated as a tag. <span class="docEmphStrong">Entities</span> were developed to enable you to use special characters in your document without using confusing XML. Entities are character combinations, beginning with an ampersand (<tt>&amp;</tt>) and ending with a semicolon (<tt>;</tt> ), that you can use in your document instead of special characters. The entity is recognized correctly and not treated as a special character. For instance, you can use <tt>&amp;lt;</tt> to represent <tt>&lt;</tt> and <tt>&amp;gt;</tt> to represent <tt>&gt;</tt>. When you use the entities, the characters are included in your document correctly and not treated as tags. Entities are also used to input non-ASCII characters into your XML file, for example, &euml; or <img border="0" alt="" width="15" height="16" SRC="images/013147149X/graphics/cent.gif;380137">. The entities for these two symbols are <tt>&amp;euml;</tt> and <tt>&amp;euro;</tt>. For a fairly complete list of entities, see <a class="docLink" target="_blank" href="http://www.w3.org/TR/REC-html40/sgml/entities.html">http://www.w3.org/TR/REC-html40/sgml/entities.html</a>. If you want to use the <tt>&amp;</tt> character itself, of course, you need to use an entity<tt>&amp;amp;</tt>, as shown in the example XML file.<a name="ch08index18"></a><a name="ch08index19"></a></P>
+<UL></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch08lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch08lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

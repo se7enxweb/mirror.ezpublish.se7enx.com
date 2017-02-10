@@ -1,0 +1,137 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 10.4.&nbsp; Installing Packages</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch10lev1sec4"></a><h3 class="docSection1Title" id="409768-995">10.4. Installing Packages</h3>
+<p class="docText">This section covers how to maintain your collection of installed packages. The following examples all assume that you have the PEAR Installer installed and configured.</p>
+<p class="docText">The PEAR Installer comes with different user interfaces, called <span class="docEmphStrong">front-ends</span>. The default front-end that is installed by <tt>go-pear</tt> along with PHP is the command-line (CLI) front-end. You will see a presentation of two graphical front-ends too, one that is browser-based and one that is Gtk-based.<a name="ch10index69"></a><a name="ch10index70"></a><a name="ch10index71"></a><a name="ch10index72"></a><a name="ch10index73"></a></p>
+<a name="ch10lev2sec7"></a><h4 class="docSection2Title">10.4.1. Using the <tt>pear</tt> Command</H4>
+<p class="docText">The <tt>pear</tt> command is the main installation tool for PEAR. It has several sub-commands, such as <tt>install</tt> and <tt>upgrade</tt>, and runs on all platforms PEAR supports: UNIX, Windows, and Darwin.<a name="ch10index74"></a><a name="ch10index75"></a><a name="ch10index76"></a><a name="ch10index77"></a><a name="ch10index78"></a></p>
+<p class="docText">The first subcommand you should be familiar with is <tt>help</tt>. <tt>pear help</tt> <span class="docEmphasis"><tt>sub-command</tt></span> will display a short help text and lists all the command-line options for that subcommand. <tt>pear help</tt> displays a list of subcommands. This is what the output looks like:<a name="ch10index79"></a><a name="ch10index80"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear help</span>
+Usage: pear [options] command [command-options] &lt;parameters&gt;
+Type "pear help options" to list all options.
+Type "pear help &lt;command&gt;" to get the help for the specified command.
+Commands:
+build                  Build an Extension From C Source 
+bundle                 Unpacks a PECL package
+clear-cache            Clear XML-RPC Cache
+config-get             Show One Setting
+config-help            Show Information About Setting
+config-set             Change Setting
+config-show            Show All Settings
+cvsdiff                Run a "cvs diff" for all files in a package
+cvstag                 Set CVS Release Tag
+download               Download Package
+download-all           Downloads every package from {config master_server}
+info                   Display information about a package
+install                Install Package
+list                   List Installed Packages
+list-all               List All Packages
+list-upgrades          List Available Upgrades
+login                  Connects and authenticates to remote server
+logout                 Logs out from the remote server
+makerpm                Builds an RPM package from a PEAR package
+package                Build Package
+package-dependencies   Show package dependencies
+package-validate       Validate Package Consistency
+remote-info            Information About Remote Packages
+remote-list            List Remote Packages
+run-tests              Run Regression Tests
+search                 Search remote package database
+shell-test             Shell Script Test
+sign                   Sign a package distribution file
+uninstall              Un-install Package
+upgrade                Upgrade Package
+upgrade-all            Upgrade All Packages
+</pre><br>
+<a name="ch10lev3sec6"></a><H5 class="docSection3Title">10.4.1.1 Options</h5>
+<p class="docText"><a name="ch10index81"></a>Command-line options (such as <tt>n</tt> or <tt>--nodeps</tt>) may be specified to both the <tt>pear</tt> command itself, and to the subcommand. The syntax is like this:<a name="ch10index82"></a><a name="ch10index83"></a><a name="ch10index84"></a><a name="ch10index85"></a><a name="ch10index86"></a></p>
+<pre>
+pear [options] sub-command [sub-command options] [sub-command arguments]
+</pre><br>
+<p class="docText">To list the options for the <tt>pear</tt> command itself (<tt>[options]</tt> as shown earlier), type <span class="docEmphStrong"><tt>pear help options</tt></span>:<a name="ch10index87"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear help options</span>
+Options:
+     -v         increase verbosity level (default 1)
+     -q         be quiet, decrease verbosity level
+     -c file    find user configuration in 'file'
+     -C file    find system configuration in 'file'
+     -d foo=bar set user config variable 'foo' to 'bar'
+     -D foo=bar set system config variable 'foo' to 'bar'
+     -G         start in graphical (Gtk) mode
+     -s         store user configuration
+     -S         store system configuration
+     -u foo     unset 'foo' in the user configuration
+     -h, -?     display help/usage (this message)
+     -V         version information
+</pre><BR>
+<p class="docText">All these options are optional and may always be specified regardless of what subcommand is used. Let's go through them one by one.<a name="ch10index88"></a><a name="ch10index89"></a><a name="ch10index90"></a><a name="ch10index91"></a><a name="ch10index92"></a></P>
+<a name="ch10lev4sec3"></a><h5 class="docSection4Title">Option: -V</h5>
+<p class="docText">&quot;V&quot; is for &quot;verbose.&quot; This option increases the installer's verbosity level for this command. The verbosity level is stored in the <tt>verbose</tt> configuration parameter, so unless you specify the <tt>s</tt> option, the verbosity is increased only for this execution. The PEAR Installer has four verbosity levels:<a name="ch10index93"></a><a name="ch10index94"></a></p>
+<ul><LI><p class="docList"><span class="docEmphStrong">0</span>. Really silent.</p></li><LI><p class="docList"><span class="docEmphStrong">1</span>. Informational messages.</p></LI><li><p class="docList"><span class="docEmphStrong">2</span>. Trace messages.</p></li><li><p class="docList"><span class="docEmphStrong">3</span>. Debug output.</p></li></ul>
+<p class="docText">Here's an example:</p>
+<pre>
+$ <span class="docEmphStrong">pear v install Auth</span>
++ tmp dir created at /tmp/tmpAR6ABu
+downloading Auth-1.1.1.tgz ...
+...done: 11,005 bytes
++ tmp dir created at /tmp/tmp4BPB6x
+installed: /usr/share/pear/Auth/Auth.php
+installed: /usr/share/pear/Auth/Container.php
++ create dir /usr/share/pear/docs/Auth
+installed: /usr/share/pear/docs/Auth/README.Auth
++ create dir /usr/share/pear/Auth/Container
+installed: /usr/share/pear/Auth/Container/DB.php
+installed: /usr/share/pear/Auth/Container/File.php
+installed: /usr/share/pear/Auth/Container/LDAP.php
+install ok: Auth 1.1.1
+</pre><br>
+<p class="docText">This option may be repeated to increase the verbosity even more.<a name="ch10index95"></a><a name="ch10index96"></a><a name="ch10index97"></a><a name="ch10index98"></a><a name="ch10index99"></a></p>
+<a name="ch10lev4sec4"></a><h5 class="docSection4Title"><tt>Option: -q</tt></h5>
+<p class="docText">&quot;Q&quot; is for &quot;quiet.&quot; This option is just like the <tt>v</tt> option except that it <span class="docEmphasis">reduces</span> the verbosity level.<a name="ch10index100"></a></p>
+<a name="ch10lev4sec5"></a><h5 class="docSection4Title"><tt>Option: -c / -C</tt></h5>
+<p class="docText">&quot;C&quot; is for &quot;configuration file.&quot; This option is used to specify the configuration file to use for the <tt>user</tt> configuration layer. Configuration layers are described in the &quot;<a class="docLink" href="ch10lev1sec5.html#ch10lev1sec5">Configuration Parameters</a>&quot; section. The <tt>C</tt> option does the same thing for the <tt>system</tt> configuration layer.<a name="ch10index101"></a><a name="ch10index102"></a></p>
+<p class="docText">This option can be useful, for example, if you want to maintain a test area for PEAR packages by having separate directories for <tt>php_dir &amp; company</tt>, and simply switching configurations by using the <tt>c</tt> option.</P>
+<p class="docText">Here's an example:</P>
+<pre>
+$ <span class="docEmphStrong">pear c ~/.pearrc.test list</span>
+</pre><br>
+<p class="docText">If combined with the <tt>s</tt> or <tt>S</tt> options, the configuration will be saved to the file specified with the <tt>c</tt> or <tt>C</tt> option.</p>
+<a name="ch10lev4sec6"></a><H5 class="docSection4Title"><tt>Option: -d / -D</tt></h5>
+<p class="docText">&quot;D&quot; is for &quot;define.&quot; The <tt>d</tt> option sets a configuration parameter for this command. This is a volatile configuration change; the change only applies to the current command. The <tt>D</tt> variation does the same thing, except it changes the system configuration layer (more on layers in the next section). Here's an example:<a name="ch10index103"></a><a name="ch10index104"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear d http_proxy=proxy.example.com:3128 remote-list</span>
+</pre><br>
+<p class="docText">Again, combined with the <tt>s</tt> option, the configuration parameter changed with the <tt>d</tt> option is stored and becomes permanent, as will the <tt>S</tt> option for configuration parameters changed with the <tt>D</tt> option.</p>
+<a name="ch10lev4sec7"></a><h5 class="docSection4Title"><tt>Option: -G</tt></h5>
+<p class="docText">&quot;G&quot; is for &quot;Gtk&quot; or &quot;graphical,&quot; if you prefer. This option starts the PEAR Installer with the Gtk front-end. You need to have <tt>php-gtk</tt> and the <tt>PEAR_Frontend_Gtk</tt> packages installed. You can try that out later in this chapter.<a name="ch10index105"></a><a name="ch10index106"></a><a name="ch10index107"></a><a name="ch10index108"></a><a name="ch10index109"></a><a name="ch10index110"></a></P>
+<a name="ch10lev4sec8"></a><h5 class="docSection4Title"><tt>Option: -s / -S</tt></H5>
+<p class="docText">&quot;S&quot; is for &quot;store configuration,&quot; and causes the <tt>pear</tt> command to store any volatile configuration changes you made with the <tt>d</tt> option. The uppercase and lowercase versions of this option have the same function but for different configuration layers. You learn about configuration layers in the next section; until then, keep in mind that the <tt>s</tt> option is for the <tt>user</tt> layer, and the <tt>S</tt> option is for the <tt>system</tt> layer. <span class="docEmphasis">All</span> configuration changes are stored, including verbosity level if you changed that with the <tt>v</tt> or <tt>q</tt> option.<a name="ch10index111"></a><a name="ch10index112"></a></p>
+<a name="ch10lev4sec9"></a><H5 class="docSection4Title"><tt>Option: -u</tt></h5>
+<p class="docText">&quot;U&quot; is for &quot;unset.&quot; This option is for removing the definition of a configuration parameter from the <tt>user</tt> configuration layer. The purpose of this is to revert that parameter to the system-specified value easily. You do not have to worry about what the old value was, unless the system layer has changed in the meantime; it will still be there, and will be used when the user configuration is unset.<a name="ch10index113"></a></p>
+<p class="docText">By default, the effect of this option lasts only for one execution; combine it with the <tt>s</tt> option to make it permanent.</p>
+<a name="ch10lev4sec10"></a><h5 class="docSection4Title"><tt>Option: -h</tt></H5>
+<p class="docText">&quot;H&quot; is for &quot;help.&quot; It does the same thing as both <tt>pear help</tt> or just <tt>pear</tt>.<a name="ch10index114"></a></P>
+<a name="ch10lev4sec11"></a><h5 class="docSection4Title"><tt>Option: -V</tt></h5>
+<p class="docText">&quot;V&quot; is for &quot;version.&quot; This option makes the <tt>pear</tt> command just display version information and exit.<a name="ch10index115"></a><a name="ch10index116"></a><a name="ch10index117"></a><a name="ch10index118"></a><a name="ch10index119"></a><a name="ch10index120"></a></p>
+<ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

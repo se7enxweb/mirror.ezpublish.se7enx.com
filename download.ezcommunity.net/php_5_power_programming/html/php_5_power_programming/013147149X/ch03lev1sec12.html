@@ -1,0 +1,59 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.12.&nbsp; Abstract Methods and Classes</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec11.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec13.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec12"></a><h3 class="docSection1Title" id="409768-843">3.12. Abstract Methods and Classes</h3>
+<p class="docText">When designing class hierarchies, you might want to partially leave certain methods for inheriting classes to implement. For example, say you have the class hierarchy shown in <a class="docLink" href="#ch03fig02">Figure 3.2</a>.<a name="ch03index111"></a><a name="ch03index112"></a><a name="ch03index113"></a><a name="ch03index114"></a></p>
+<a name="ch03fig02"></a><p><center><h5 class="docFigureTitle">Figure 3.2. Class hierarchy.</H5>
+<p class="docText"><img border="0" alt="" id="217066145005" width="450" height="408" SRC="images/013147149X/graphics/03fig02.gif;380137"></p></center></P><br>
+<p class="docText">It might make sense to implement <tt>setCenter($x, $y)</tt> in class <tt>Shape</tt> and leave the implementation of the <tt>draw()</tt> methods to the concrete classes <tt>Square</tt> and <tt>Circle</tt>. You would have to declare the <tt>draw()</tt> method as an <tt>abstract</tt> method so that PHP knows you are intentionally not implementing it in class <tt>Shape</tt>. The class <tt>Shape</tt> would then be called an <tt>abstract</tt> class, meaning that it's not a class with complete functionality and is only meant to be inherited from. You cannot instantiate an <tt>abstract</tt> class. You can define any number of methods as <tt>abstract</tt>, but once at least one method of a class is defined as <tt>abstract</tt>, the entire class needs to be declared as <tt>abstract</tt>, too. This double definition exists to give you the option to define a class <tt>abstract</tt> even if it doesn't have any <tt>abstract</tt> methods, and to force you to define a class with <tt>abstract</tt> methods as <tt>abstract</tt> so that it is clear to others what you had in mind.<a name="ch03index115"></a><a name="ch03index116"></a></P>
+<p class="docText">The previous class diagram would translate into PHP code that's similar to the following:<a name="ch03index117"></a><a name="ch03index118"></a><a name="ch03index119"></a><a name="ch03index120"></a></p>
+<pre>
+abstract class Shape {
+    function setCenter($x, $y) {
+        $this-&gt;x = $x;
+        $this-&gt;y = $y;
+    }
+
+    abstract function draw();
+    protected $x, $y;
+}
+
+class Square extends Shape {
+    function draw()
+    {
+        // Here goes the code which draws the Square
+        ...
+    }
+}
+
+class Circle extends Shape {
+    function draw()
+    {
+        // Here goes the code which draws the Circle
+        ...
+    }
+}
+</pre><br>
+<p class="docText">You can see that the <tt>draw()</tt> abstract method does not contain any code.<a name="ch03index121"></a><a name="ch03index122"></a></p>
+<a name="ch03note08"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">Unlike some other languages, you cannot define an <tt>abstract</tt> method with a default implementation. In PHP, a method is either <tt>abstract</tt> (without code) or it's fully defined.<a name="ch03index123"></a><a name="ch03index124"></a><a name="ch03index125"></a><a name="ch03index126"></a></P></div><BR>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec11.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec13.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

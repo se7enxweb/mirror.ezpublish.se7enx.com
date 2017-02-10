@@ -1,0 +1,123 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 2.4.&nbsp; Variables</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch02lev1sec4"></a><h3 class="docSection1Title" id="409768-856">2.4. Variables</h3>
+<p class="docText">Variables in PHP are quite different from compiled languages such as C and Java. This is because their weakly typed nature, which in short means you don't need to declare variables before using them, you don't need to declare their type and, as a result, a variable can change the type of its value as much as you want.<a name="ch02index13"></a></p>
+<p class="docText">Variables in PHP are preceded with a <tt>$</tt> sign, and similar to most modern languages, they can start with a letter (A-Za-z) or _ (underscore) and can then contain as many alphanumeric characters and underscores as you like.</p>
+<p class="docText">Examples of legal variable names include</p>
+<pre>
+$count
+$_Obj
+$A123
+</pre><BR>
+<p class="docText">Example of illegal variable names include</p>
+<pre>
+$123
+$*ABC
+</pre><BR>
+<p class="docText">As previously mentioned, you don't need to declare variables or their type before using them in PHP. The following code example uses variables:</p>
+<pre>
+$PI = 3.14;
+$radius = 5;
+$circumference = $PI * 2 * $radius; // Circumference = <font face="symbol">p</font> * d
+</pre><BR>
+<p class="docText">You can see that none of the variables are declared before they are used. Also, the fact that <tt>$PI</tt> is a floating-point number, and <tt>$radius</tt> (an integer) is not declared before they are initialized.<a name="ch02index14"></a><a name="ch02index15"></a></p>
+<p class="docText">PHP does not support global variables like many other programming languages (except for some special pre-defined variables, which we discuss later). Variables are local to their scope, and if created in a function, they are only available for the lifetime of the function. Variables that are created in the main script (not within a function) aren't global variables; you cannot see them inside functions, but you can access them by using a special array <tt>$GLOBALS[]</tt>, using the variable's name as the string offset. The previous example can be rewritten the following way:</p>
+<pre>
+$PI = 3.14;
+$radius = 5;
+$circumference = $GLOBALS["PI"] * 2 * $GLOBALS["radius"]; // Circumference = <font face="symbol">p</font> * d
+</pre><br>
+<p class="docText">You might have realized that even though all this code is in the main scope (we didn't make use of functions), you are still free to use <tt>$GLOBALS[]</tt>, although in this case, it gives you no advantage.<a name="ch02index16"></a><a name="ch02index17"></a></p>
+<a name="ch02lev2sec1"></a><H4 class="docSection2Title">2.4.1. Indirect References to Variables</H4>
+<p class="docText">An extremely useful feature of PHP is that you can access variables by using indirect references, or to put it simply, you can create and access variables by name at runtime.<a name="ch02index18"></a><a name="ch02index19"></a></p>
+<p class="docText">Consider the following example:</p>
+<pre>
+$name = "John";
+<span class="docEmphStrong">$$name = "Registered user";</span>
+print $John;
+</pre><br>
+<p class="docText">This code results in the printing of "<tt>Registered user</tt>."</p>
+<p class="docText">The bold line uses an additional <tt>$</tt> to access the variable with name specified by the value of <tt>$name</tt> (<tt>"John"</tt>) and changing its value to "<tt>Registered user</tt>". Therefore, a variable called <tt>$John</tt> is created.</P>
+<p class="docText">You can use as many levels of indirections as you want by adding additional <tt>$</tt> signs in front of a variable.<a name="ch02index20"></a><a name="ch02index21"></a></p>
+<a name="ch02lev2sec2"></a><h4 class="docSection2Title">2.4.2. Managing Variables</H4>
+<p class="docText">Three language constructs are used to manage variables. They enable you to check if certain variables exist, remove variables, and check variables' truth values.<a name="ch02index22"></a><a name="ch02index23"></a><a name="ch02index24"></a></p>
+<a name="ch02lev3sec1"></a><H5 class="docSection3Title">2.4.2.1 <tt>isset()</tt></h5>
+<p class="docText"><tt>isset()</tt> determines whether a certain variable has already been declared by PHP. It returns a boolean value <tt>true</tt> if the variable has already been set, and <tt>false</tt> otherwise, or if the variable is set to the value <tt>NULL</tt>. Consider the following script:</p>
+<pre>
+if (isset($first_name)) {
+    print '$first_name is set';
+}
+</pre><br>
+<p class="docText">This code snippet checks whether the variable <tt>$first_name</tt> is defined. If <tt>$first_name</tt> is defined, <tt>isset()</tt> returns <tt>true</tt>, which will display '<tt>$first_name is set.</tt>' If it isn't, no output is generated.</p>
+<p class="docText"><tt>isset()</tt> can also be used on array elements (discussed in a later section) and object properties. Here are examples for the relevant syntax, which you can refer to later:</p>
+<ul><li><p class="docList">Checking an array element:</p><pre>
+if (isset($arr["offset"])) {
+    ...
+}
+</pre><br></li><li><p class="docList">Checking an object property:</p><pre>
+if (isset($obj-&gt;property)) {
+    ...
+}
+</pre><br></li></UL>
+<p class="docText">Note that in both examples, we didn't check if <tt>$arr</tt> or <tt>$obj</tt> are set (before we checked the offset or property, respectively). The <tt>isset()</tt> construct returns <tt>false</tt> automatically if they are not set.</P>
+<p class="docText"><tt>isset()</tt> is the only one of the three language constructs that accepts an arbitrary amount of parameters. Its accurate prototype is as follows:</p>
+<pre>
+isset($var1, $var2, $var3, ...);
+</pre><br>
+<p class="docText">It only returns <tt>TRue</tt> if all the variables have been defined; otherwise, it returns <tt>false</tt>. This is useful when you want to check if the required input variables for your script have really been sent by the client, saving you a series of single <tt>isset()</tt> checks.<a name="ch02index25"></a><a name="ch02index26"></a><a name="ch02index27"></a></p>
+<a name="ch02lev3sec2"></a><h5 class="docSection3Title">2.4.2.2 <tt>unset()</tt></h5>
+<p class="docText"><tt>unset()</tt> &quot;undeclares&quot; a previously set variable, and frees any memory that was used by it if no other variable references its value. A call to <tt>isset()</tt> on a variable that has been <tt>unset()</tt> returns <tt>false</tt>.<a name="ch02index28"></a><a name="ch02index29"></a><a name="ch02index30"></a></p>
+<p class="docText">For example:</p>
+<pre>
+$name = "John Doe";
+unset($name);
+if (isset($name)) {
+    print '$name is set';
+}
+
+</pre><br>
+<p class="docText">This example will not generate any output, because <tt>isset()</tt> returns <tt>false</tt>.</P>
+<p class="docText"><tt>unset()</tt> can also be used on array elements and object properties similar to <tt>isset()</tt>.<a name="ch02index31"></a><a name="ch02index32"></a><a name="ch02index33"></a></p>
+<a name="ch02lev3sec3"></a><H5 class="docSection3Title">2.4.2.3 <tt>empty()</tt></h5>
+<p class="docText"><tt>empty()</tt> may be used to check if a variable has not been declared or its value is <tt>false</tt>. This language construct is usually used to check if a form variable has not been sent or does not contain data. When checking a variable's truth value, its value is first converted to a Boolean according to the rules in the following section, and then it is checked for <tt>TRue/false</tt>.<a name="ch02index34"></a><a name="ch02index35"></a><a name="ch02index36"></a></p>
+<p class="docText">For example:</p>
+<pre>
+if (empty($name)) {
+    print 'Error: Forgot to specify a value for $name';
+}
+</pre><br>
+<p class="docText">This code prints an error message if <tt>$name</tt> doesn't contain a value that evaluates to true.</p>
+<a name="ch02lev2sec3"></a><H4 class="docSection2Title">2.4.3. Superglobals</H4>
+<p class="docText">As a general rule, PHP does not support global variables (variables that can automatically be accessed from any scope). However, certain special internal variables behave like global variables similar to other languages. These variables are called <span class="docEmphStrong">superglobals</span> and are predefined by PHP for you to use. Some examples of these superglobals are<a name="ch02index37"></a><a name="ch02index38"></a></p>
+<ul><li><p class="docText">
+<tt>$_GET[]</tt>. 
+An array that includes all the <tt>GET</tt> variables that PHP received from the client browser.</p></LI><li><p class="docText">
+<tt>$_POST[]</tt>. 
+An array that includes all the <tt>POST</tt> variables that PHP received from the client browser.</p></LI><li><p class="docText">
+<tt>$_COOKIE[]</tt>. 
+An array that includes all the cookies that PHP received from the client browser.</P></li><li><p class="docText">
+<tt>$_ENV[]</tt>. 
+An array with the environment variables.</p></li><li><p class="docText">
+<tt>$_SERVER[]</tt>. 
+An array with the values of the web-server variables.</p></li></ul>
+<p class="docText">These superglobals and others are detailed in <a class="docLink" href="ch05.html#ch05">Chapter 5</a>, &quot;How to Write a Web Application with PHP.&quot; On a language level, it is important to know that you can access these variables anywhere in your script whether function, method, or global scope. You don't have to use the <tt>$GLOBALS[]</tt> array, which allows for accessing global variables without having to predeclare them or using the deprecated <tt>globals</tt> keyword.<a name="ch02index39"></a><a name="ch02index40"></a></p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

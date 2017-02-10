@@ -1,0 +1,196 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 2.8.&nbsp; Functions</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch02lev1sec8"></a><h3 class="docSection1Title">2.8. Functions</h3>
+<p class="docText">A function in PHP can be built-in or user-defined; however, they are both called the same way.<a name="ch02index258"></a></p>
+<p class="docText">The general form of a function call is</p>
+<pre>
+func(arg1,arg2,...)
+</pre><br>
+<p class="docText">The number of arguments varies from one function to another. Each argument can be any valid expression, including other function calls.</P>
+<p class="docText">Here is a simple example of a predefined function:</p>
+<pre>
+$length = strlen("John");
+</pre><BR>
+<p class="docText"><tt>strlen</tt> is a standard PHP function that returns the length of a string. Therefore, <tt>$length</tt> is assigned the length of the string <tt>"John"</tt>: four.<a name="ch02index259"></a><a name="ch02index260"></a></p>
+<p class="docText">Here's an example of a function call being used as a function argument:</P>
+<pre>
+$length = strlen(strlen("John"));
+</pre><br>
+<p class="docText">You probably already guessed the result of this example. First, the inner <tt>strlen("John")</tt> is executed, which results in the integer 4. So, the code simplifies to</p>
+<pre>
+$length = strlen(4);
+</pre><br>
+<p class="docText"><tt>strlen()</tt> expects a string, and therefore (due to PHP's magical auto-conversion between types) converts the integer <tt>4</tt> to the string <tt>"4",</tt> and thus, the resulting value of <tt>$length</tt> is <tt>1</tt>, the length of <tt>"4"</tt>.</p>
+<a name="ch02lev2sec26"></a><H4 class="docSection2Title">2.8.1. User-Defined Functions</H4>
+<p class="docText">The general way of defining a function is<a name="ch02index261"></a><a name="ch02index262"></a></p>
+<pre>
+function <span class="docEmphasis">function</span>_<span class="docEmphasis">name</span> (<span class="docEmphasis">arg1, arg2, arg3</span>, ...)
+{
+    <span class="docEmphasis">statement list</span>
+}
+</pre><br>
+<p class="docText">To return a value from a function, you need to make a call to <tt>return expr</tt> inside your function. This stops execution of the function and returns <tt>expr</tt> as the function's value.</p>
+<p class="docText">The following example function accepts one argument, <tt>$x</tt>, and returns its square:</p>
+<pre>
+function square ($x)
+{
+    return $x*$x;
+}
+</pre><BR>
+<p class="docText">After defining this function, it can be used as an expression wherever you desire.<a name="ch02index263"></a><a name="ch02index264"></a></p>
+<p class="docText">For example:</p>
+<pre>
+print 'The square of 5 is ' . square(5);
+</pre><BR>
+<a name="ch02lev2sec27"></a><h4 class="docSection2Title">2.8.2. Function Scope</H4>
+<p class="docText">Every function has its own set of variables. Any variables used outside the function's definition are not accessible from within the function by default. When a function starts, its function parameters are defined. When you use new variables inside a function, they are defined within the function only and don't hang around after the function call ends. In the following example, the variable <tt>$var</tt> is not changed by the function call:<a name="ch02index265"></a><a name="ch02index266"></a></p>
+<pre>
+function func ()
+{
+    $var = 2;
+}
+$var = 1;
+func();
+print $var;
+</pre><br>
+<p class="docText">When the function <tt>func</tt> is called, the variable <tt>$var,</tt> which is assigned <tt>2,</tt> is only in the scope of the function and thus does not change <tt>$var</tt> outside the function. The code snippet prints out <tt>1</tt>.</p>
+<p class="docText">Now what if you actually do want to access and/or change <tt>$var</tt> on the outside? As mentioned in the &quot;Variables&quot; section, you can use the built-in <tt>$GLOBALS[]</tt> array to access variables in the global scope of the script.</p>
+<p class="docText">Rewrite the previous script the following way:<a name="ch02index267"></a><a name="ch02index268"></a></p>
+<pre>
+function func ()
+{
+    $GLOBALS["var"] = 2;
+}
+$var = 1;
+func();
+print $var;
+</pre><br>
+<p class="docText">It prints the value <tt>2</tt>.</p>
+<p class="docText">A <tt>global</tt> keyword also enables you to declare what global variables you want to access, causing them to be imported into the function's scope. However, using this keyword is not recommended for various reasons, such as misbehaving with assigning values by reference, not supporting <tt>unset(),</tt> and so on.</p>
+<p class="docText">Here's a short description of itbut please, don't use it!</p>
+<p class="docText">The syntax is</p>
+<pre>
+global $var1, $var2, ...;
+</pre><br>
+<p class="docText">Adding a global line for the previous example results in the following:</p>
+<pre>
+function func()
+{
+    global $var;
+    $var = 2;
+}
+$var = 1;
+func();
+print $var;
+</pre><br>
+<p class="docText">This way of writing the example also prints the number <tt>2</tt>.<a name="ch02index269"></a><a name="ch02index270"></a></p>
+<a name="ch02lev2sec28"></a><h4 class="docSection2Title">2.8.3. Returning Values By Value</h4>
+<p class="docText">You can tell from the previous example that the <tt>return</tt> statement is used to return values from functions. The <tt>return</tt> statement returns values <span class="docEmphStrong">by value</span>, which means that a copy of the value is created and is returned to the caller of the function. For example:<a name="ch02index271"></a><a name="ch02index272"></a><a name="ch02index273"></a></P>
+<pre>
+function get_global_variable_value($name)
+{
+    return $GLOBALS[$name];
+}
+
+$num = 10;
+$value = get_global_variable_value("num");
+print $value;
+</pre><BR>
+<p class="docText">This code prints the number <tt>10</tt>. However, making changes to <tt>$value</tt> before the <tt>print</tt> statement only affects <tt>$value</tt> and not the global variable <tt>$num</tt>. This is because its value was returned by the <tt>get_global_variable_value()</tt> by value and not by reference.</p>
+<a name="ch02lev2sec29"></a><h4 class="docSection2Title">2.8.4. Returning Values By Reference</H4>
+<p class="docText">PHP also allows you to return variables <span class="docEmphStrong">by reference</span>. This means that you're not returning a copy to the variable, but you're returning the address of your variable instead, which enables you to change it from the calling scope. To return a variable by-reference, you need to define the function as such by placing an <tt>&amp;</tt> sign in front of the function's name and in the caller's code, assigning the return value by reference to <tt>$value</tt>:<a name="ch02index274"></a><a name="ch02index275"></a><a name="ch02index276"></a></p>
+<pre>
+function &amp;get_global_variable($name)
+{
+    return $GLOBALS[$name];
+}
+
+$num = 10;
+$value =&amp; get_global_variable("num");
+print $value . "\n";
+$value = 20;
+print $num;
+</pre><br>The previous code prints as<pre>
+10
+20
+</pre><br>
+<p class="docText">You can see that <tt>$num</tt> was successfully modified by modifying <tt>$value</tt>, because it is a reference to the global variable <tt>$num</tt>.</p>
+<p class="docText">You won't need to use this returning method often. When you do, use it with care, because forgetting to assign by reference the by-reference returned value can lead to bugs that are difficult to track down.<a name="ch02index277"></a><a name="ch02index278"></a><a name="ch02index279"></a></p>
+<a name="ch02lev2sec30"></a><h4 class="docSection2Title">2.8.5. Declaring Function Parameters</H4>
+<p class="docText">As previously mentioned, you can pass an arbitrary amount of arguments to a function. There are two different ways of passing these arguments. The first is the most common, which is called <span class="docEmphStrong">passing by value</span>, and the second is called <span class="docEmphStrong">passing by reference</span>. Which kind of argument passing you would like is specified in the function definition itself and not during the function call.<a name="ch02index280"></a><a name="ch02index281"></a><a name="ch02index282"></a><a name="ch02index283"></a><a name="ch02index284"></a><a name="ch02index285"></a></p>
+<a name="ch02lev3sec32"></a><H5 class="docSection3Title">2.8.5.1 By-Value Parameters</h5><a name="ch02index286"></a><a name="ch02index287"></a><a name="ch02index288"></a><a name="ch02index289"></a><a name="ch02index290"></a>
+<p class="docText">Here, the argument can be any valid expression, the expression is evaluated, and its value is assigned to the corresponding variable in the function. For example, here, <tt>$x</tt> is assigned the value <tt>8</tt> and <tt>$y</tt> is assigned the value of <tt>$c</tt>:</P>
+<pre>
+function pow($x, $y)
+{
+    ...
+}
+pow(2*4, $c);
+</pre><br>
+<a name="ch02lev3sec33"></a><h5 class="docSection3Title">2.8.5.2 By-Reference Parameters</h5>
+<p class="docText">Passing by-reference requires the argument to be a variable. Instead of the variable's value being passed, the corresponding variable in the function directly refers to the passed variable whenever used. Thus, if you change it inside the function, it affects the sent variable in the outer scope as well:<a name="ch02index291"></a><a name="ch02index292"></a><a name="ch02index293"></a><a name="ch02index294"></a><a name="ch02index295"></a></p>
+<pre>
+function square(&amp;$n)
+{
+    $n = $n*$n;
+}
+
+$number = 4;
+square($number);
+print $number;
+</pre><BR>
+<p class="docText">The <tt>&amp;</tt> sign that proceeds <tt>$n</tt> in the function parameters tells PHP to pass it by-reference, and the result of the function call is <tt>$number</tt> squared; thus, this code would print <tt>16</tt>.</P>
+<a name="ch02lev3sec34"></a><h5 class="docSection3Title">2.8.5.3 Default Parameters</h5>
+<p class="docText">Default parameters like C++ are supported by PHP. <span class="docEmphStrong">Default parameters</span> enable you to specify a default value for function parameters that aren't passed to the function during the function call. The default values you specify must be a constant value, such as a scalar, array with scalar values, or constant.<a name="ch02index296"></a><a name="ch02index297"></a><a name="ch02index298"></a><a name="ch02index299"></a><a name="ch02index300"></a></p>
+<p class="docText">The following is an example for using default parameters:</p>
+<pre>
+function increment(&amp;$num, $increment = 1)
+{
+    $num += $increment;
+}
+
+$num = 4;
+increment($num);
+increment($num, 3);
+</pre><BR>
+<p class="docText">This code results in <tt>$num</tt> being incremented to <tt>8</tt>. First, it is incremented by <tt>1</tt> by the first call to <tt>increment</tt>, where the default increment size of <tt>1</tt> is used, and second, it is incremented by <tt>3</tt>, altogether by <tt>4</tt>.</p>
+<a name="ch02note13"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">When you a call a function with default arguments, after you omit a default function argument, you must emit any following arguments. This also means that following a default argument in the function's definition, all other arguments must also be declared as default arguments.</P></div><br>
+<a name="ch02lev2sec31"></a><H4 class="docSection2Title">2.8.6. Static Variables</h4>
+<p class="docText">Like C, PHP supports declaring local function variables as static. These kind of variables remain in tact in between function calls, but are still only accessible from within the function they are declared. Static variables can be initialized, and this initialization only takes place the first time the <tt>static</tt> declaration is reached.<a name="ch02index301"></a><a name="ch02index302"></a><a name="ch02index303"></a></p>
+<p class="docText">Here's an example for the use of <tt>static</tt> that runs initialization code the first time (and only the first time) the function is run:</p>
+<pre>
+function do_something()
+{
+    static first_time = true;
+
+    if (first_time) {
+        // Execute this code only the first time the function is called
+        ...
+    }
+
+    // Execute the function's main logic every time the function is called
+    ...
+}
+</pre><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

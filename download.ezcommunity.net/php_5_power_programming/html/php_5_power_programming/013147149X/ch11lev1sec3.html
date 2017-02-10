@@ -1,0 +1,276 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 11.3.&nbsp; Template Systems</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch11lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch11lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch11lev1sec3"></a><h3 class="docSection1Title" id="409768-911">11.3. Template Systems</h3>
+<p class="docText"><span class="docEmphStrong">Template systems</span> are PHP components that let you separate application logic from display logic, and offer a simpler template format than PHP itself.<a name="ch11index01"></a></p>
+<p class="docText">It is ironic that PHP, which essentially started out as a template language, is used to implement template systems. But, there are good reasons for doing this besides the code/presentation separation, such as giving web designers a simpler markup format they can use in their page authoring tools, and developers greater control over page generation. For example, a template system can automatically translate text snippets to another language, or fill in a form with default values.</p>
+<p class="docText">A vast number of template systems are available for PHP. This is caused by the fact that along with database abstraction layers, template systems are one of the PHP components that arouse the strongest feelings and little will for compromise in developers. As a result, many people have written their own template system, resulting in a wonderful diversity and lack of standardization.</p>
+<a name="ch11lev2sec1"></a><H4 class="docSection2Title">11.3.1. Template Terminology</h4>
+<p class="docText">Before you dive into the various template systems, you may want to familiarize yourself with the template lingo (see <a class="docLink" href="#ch11table01">Table 11.1</a>).<a name="ch11index02"></a></P>
+<a name="ch11table01"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><H5 class="docTableTitle">Table 11.1. Template Glossary</h5></caption><colgroup><col width="170.5"><col width="379.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Word</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Meaning</span></p></th></TR></thead><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Template</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The output blueprint; contains placeholders and blocks.</P></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">Compile</P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Transforming a template to PHP code.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Placeholder</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Delimited string that is replaced during execution.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Block or Section</p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText">Part of a template that may be repeated with different data.</p></td></TR></table></p><br>
+<a name="ch11lev2sec2"></a><h4 class="docSection2Title">11.3.2. <tt>HTML_Template_IT</tt></h4>
+<p class="docText">The first PEAR template system you will familiarize yourself with is <tt>HTML_Template_IT</tt>, or just <span class="docEmphStrong">IT</span>. This is the most popular PEAR template package, but it is also the slowest because it parses templates on every request and does not compile them into PHP code.<a name="ch11index08"></a><a name="ch11index09"></a><a name="ch11index10"></a></p>
+<a name="ch11note01"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">The <tt>HTML_Template_Sigma</tt> package provides an API that is compatible with <tt>HTML_Template_IT</tt>, but compiles templates into PHP code.</P></div><br>
+<a name="ch11lev3sec1"></a><H5 class="docSection3Title">11.3.2.1 Placeholder Syntax</h5>
+<p class="docText">IT uses curly braces as placeholder delimiters, like this:<a name="ch11index11"></a><a name="ch11index12"></a><a name="ch11index13"></a></P>
+<pre>
+4
+&lt;head&gt;&lt;title&gt;{PageTitle}&lt;/title&gt;&lt;/head&gt;
+</pre><br>
+<p class="docText">This is the most common placeholder syntax, so chances are a template using only placeholders will actually work with different template packages.</p>
+<a name="ch11lev3sec2"></a><h5 class="docSection3Title">11.3.2.2 Example: Basic IT Template</h5>
+<p class="docText">This example is &quot;Hello World&quot; with <tt>HTML_Template_IT</tt>:<a name="ch11index14"></a><a name="ch11index15"></a><a name="ch11index16"></a></P>
+<pre>
+&lt;?php
+
+require_once "HTML/Template/IT.php";
+
+$tpl = new HTML_Template_IT('./templates');
+$tpl-&gt;loadTemplateFile('hello.tpl');
+$tpl-&gt;setVariable('title', 'Hello, World!');
+$tpl-&gt;setVariable('body', 'This is a test of HTML_Template_IT!');
+$tpl-&gt;show();
+</pre><BR>
+<p class="docText">First, you create an <tt>HTML_Template_IT</tt> object, passing the template directory as a parameter. Next, the template file is loaded and some variables are set. The variable names correspond to placeholders in the template file, so the <tt>{title}</tt> template placeholder is replaced with the value of the <tt>"title"</tt> variable. Finally, the <tt>show()</tt> method does all the substitutions and displays the template output.</p>
+<p class="docText">This template file is used in this example:</p>
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;{title}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;{title}&lt;/h1&gt;
+    &lt;p&gt;{body}&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText"><a class="docLink" href="#ch11fig01">Figure 11.1</a> shows the result.<a name="ch11index17"></a><a name="ch11index18"></a><a name="ch11index19"></a></p>
+<a name="ch11fig01"></a><P><center><h5 class="docFigureTitle">Figure 11.1. Basic IT template output.</h5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/11fig01_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="304" SRC="images/013147149X/graphics/11fig01.gif;380137"></P></center></p><BR>
+<a name="ch11lev3sec3"></a><h5 class="docSection3Title">11.3.2.3 Block Syntax</h5>
+<p class="docText">For blocks, IT uses HTML begin/end comments like this:</p>
+<pre>
+&lt;!-- BEGIN blockname --&gt;
+ &lt;li&gt;{listitem}
+&lt;!-- END blockname --&gt;
+</pre><br>
+<p class="docText">Blocks may be nested, but it is important that you start processing at the innermost block and work your way out.<a name="ch11index20"></a><a name="ch11index21"></a><a name="ch11index22"></a><a name="ch11index23"></a></p>
+<a name="ch11lev3sec4"></a><h5 class="docSection3Title">11.3.2.4 Example: IT With Blocks</h5>
+<p class="docText">First, install <tt>HTML_Template_IT</tt>:<a name="ch11index24"></a><a name="ch11index25"></a><a name="ch11index26"></a><a name="ch11index27"></a></p>
+<pre>
+$ pear install HTML_Template_IT
+downloading HTML_Template_IT-1.1.tgz ...
+Starting to download HTML_Template_IT-1.1.tgz (18,563 bytes)
+......done: 18,563 bytes
+install ok: HTML_Template_IT 1.1
+</pre><br>
+<p class="docText">This example uses blocks to implement a simple <tt>foreach</tt>-like loop in the template:</p>
+<pre>
+&lt;?php
+
+require_once "HTML/Template/IT.php";
+
+$list_items = array(
+    'Computer Science',
+    'Nuclear Physics',
+    'Rocket Science',
+    );
+$tpl = new HTML_Template_IT('./templates');
+$tpl-&gt;loadTemplateFile('it_list.tpl');
+$tpl-&gt;setVariable('title', 'IT List Example');
+foreach ($list_items as $item) {
+    $tpl-&gt;setCurrentBlock("listentry");
+    $tpl-&gt;setVariable("entry_text", $item);
+    $tpl-&gt;parseCurrentBlock("cell");
+
+}
+$tpl-&gt;show();
+</pre><br>
+<p class="docText">This example sets up the IT object like the previous one, but calls <tt>setCurrentBlock()</tt> that specifies to which block the following <tt>setVariable()</tt> call applies. When <tt>parseCurrentBlock()</tt> is called, the block is parsed, placeholders are substituted, and the result is buffered until the template is displayed.<a name="ch11index28"></a></p>
+<p class="docText">This is how the block template appears<a name="ch11index29"></a><a name="ch11index30"></a><a name="ch11index31"></a><a name="ch11index32"></a></p>
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;{title}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;{title}&lt;/h1&gt;
+    &lt;ul&gt;
+&lt;!-- BEGIN listentry --&gt;
+      &lt;li&gt;{entry_text}&lt;/li&gt;
+&lt;!-- END listentry --&gt;
+    &lt;/ul&gt;
+    (End of list)
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText"><a class="docLink" href="#ch11fig02">Figure 11.2</a> shows the results.</p>
+<a name="ch11fig02"></a><p><center><H5 class="docFigureTitle">Figure 11.2. IT with blocks output.</H5>
+<p class="docText"><div class="v1"><a target="_self" href="images/013147149X/graphics/11fig02_alt.gif;380137">[View full size image]</a></div><img border="0" alt="" id="217066145005" width="500" height="328" SRC="images/013147149X/graphics/11fig02.gif;380137"></p></center></p><BR>
+<p class="docText">Finally, IT lets you include other template files anywhere in your template, like this:<a name="ch11index33"></a><a name="ch11index34"></a><a name="ch11index35"></a><a name="ch11index36"></a></p>
+<pre>
+&lt;!-- INCLUDE otherfile.tpl --&gt;
+</pre><br>
+<p class="docText">In this block example, you could substitute the block contents with just an include tag, and <tt>HTML_Template_IT</tt> would include that file for every iteration of the block.</p>
+<p class="docText">By using includes carefully, you can structure your templates so you obtain reusable sub-templates.<a name="ch11index37"></a><a name="ch11index38"></a><a name="ch11index39"></a><a name="ch11index40"></a></p>
+<a name="ch11lev2sec3"></a><h4 class="docSection2Title">11.3.3. <tt>HTML_Template_Flexy</tt></h4>
+<p class="docText">The next template package is <tt>HTML_Template_Flexy</tt>, or just <span class="docEmphStrong">Flexy</span>. Even though pure placeholder templates written for IT will work out-of-the-box with Flexy, these two template packages are very different.<a name="ch11index41"></a><a name="ch11index42"></a><a name="ch11index43"></a></P>
+<p class="docText">First, Flexy operates on objects and object member variables instead of variables that are in turn stored in associative arrays as with IT. This is not a big difference in itself, but Flexy has the advantage that you can give it any object, of any class, and your template can access its public member variables.</p>
+<a name="ch11lev3sec5"></a><H5 class="docSection3Title">11.3.3.1 Example: Basic Flexy Template</h5>
+<p class="docText">Here is a &quot;Hello, World!&quot; example with Flexy:<a name="ch11index44"></a><a name="ch11index45"></a><a name="ch11index46"></a></P>
+<pre>
+&lt;?php
+
+require_once 'HTML/Template/Flexy.php';
+$tpldir = 'templates';
+$tpl = new HTML_Template_Flexy(array(
+    'templateDir' =&gt; 'templates',
+    'compileDir'  =&gt; 'compiled',
+    ));
+$tpl-&gt;compile('hello.tpl');
+
+$view = new StdClass;
+$view-&gt;title = 'Hello, World!';
+$view-&gt;body = 'This is a test of HTML_Template_Flexy';
+$tpl-&gt;outputObject($view);
+</pre><br>
+<p class="docText">A little more code is required to set up Flexy because you need to specify both the template directory and compile directory. The <span class="docEmphStrong">compile directory</span> is where the compiled template files are stored. This directory must be writable by the web server. By default, the compile directory is relative to the template directory.<a name="ch11index47"></a><a name="ch11index48"></a></p>
+<p class="docText">Next, the <tt>hello.tpl</tt> template is compiled. You should notice that this is the same template as in the first IT example; this works because the template contains only two simple placeholders.</p>
+<p class="docText">Compilation is time-consuming, but is done only once or whenever the template file changes. As a result, you will notice that the first time you load this page, it takes a long time. Subsequent page loads are much faster.</p>
+<p class="docText">When a template is compiled, the compiled version is placed in <tt>compileDir</tt>. In the previous example, this is the &quot;compiled&quot; directory relative to the current directory. This directory must be writable by the web server, because templates will be compiled on demand by PHP when a user hits the page.</P>
+<p class="docText">Finally, an object holding view data is created and passed to the <tt>outputObject()</tt> method, which executes the template and prints the output.<a name="ch11index49"></a><a name="ch11index50"></a><a name="ch11index51"></a><a name="ch11index52"></a><a name="ch11index53"></a></P>
+<a name="ch11lev3sec6"></a><h5 class="docSection3Title">11.3.3.2 Example: Flexy with Blocks</h5>
+<p class="docText">This example corresponds to the &quot;IT with Blocks&quot; example:<a name="ch11index54"></a><a name="ch11index55"></a><a name="ch11index56"></a><a name="ch11index57"></a></p>
+<pre>
+&lt;?php
+
+require_once 'HTML/Template/Flexy.php';
+
+$tpldir = 'templates';
+$tpl = new HTML_Template_Flexy(array(
+    'templateDir' =&gt; 'templates',
+    'compileDir'  =&gt; 'compiled',
+    ));
+$tpl-&gt;compile('flexy_list.tpl');
+
+$view = new StdClass;
+$view-&gt;title = 'Flexy Foreach Example';
+$view-&gt;list_entries = array(
+    'Computer Science',
+    'Nuclear Physics',
+    'Rocket Science',
+    );
+$tpl-&gt;outputObject($view);
+</pre><br>
+<p class="docText">This time, the template file is different because it is using more than just placeholders and is no longer compatible with IT:<a name="ch11index58"></a><a name="ch11index59"></a><a name="ch11index60"></a><a name="ch11index61"></a></P>
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;{title}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;{title}&lt;/h1&gt;
+    &lt;ul&gt;
+      {foreach:list_entries,entry_text}
+        &lt;li&gt;{entry_text}
+      {end:}
+    &lt;/ul&gt;
+    (End of list)
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">If you compare the PHP code in this example with the corresponding IT example, you see that all the hassle of parsing blocks is gone. This is because the template is compiled; instead of dealing with flow-control on its own, Flexy leaves this to PHP's executor. Look at the PHP file generated by the Flexy compiler:<a name="ch11index62"></a><a name="ch11index63"></a><a name="ch11index64"></a><a name="ch11index65"></a><a name="ch11index66"></a><a name="ch11index67"></a><a name="ch11index68"></a><a name="ch11index69"></a></p>
+<pre><a name="PLID11"></a><div class="v1"><a href="ch11lev1sec3.html#PLID11">[View full width]</a></div>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;&lt;?php echo htmlspecialchars($t-&gt;title);?&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;&lt;?php echo htmlspecialchars($t-&gt;title);?&gt;&lt;/h1&gt;
+    &lt;ul&gt;
+      &lt;?php if (is_array($t-&gt;list_entries)  || is_object($t &gt;list_entries)) foreach
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif">($t-&gt;list_entries as $entry_text) {?&gt;
+        &lt;li&gt;&lt;?php echo htmlspecialchars($entry_text);?&gt;
+      &lt;?php }?&gt;
+    &lt;/ul&gt;
+    (End of list)
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><BR>
+<a name="ch11lev3sec7"></a><h5 class="docSection3Title">11.3.3.3 Flexy Markup Format</H5>
+<p class="docText">So far, you have seen examples of placeholders and the <tt>{foreach:}</tt> construct in Flexy. <a class="docLink" href="#ch11table02">Table 11.2</a> gives a full list of the constructs that Flexy supports.<a name="ch11index70"></a><a name="ch11index71"></a><a name="ch11index72"></a><a name="ch11index73"></a></p>
+<a name="ch11table02"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 11.2. Flexy Markup Tags</h5></caption><colgroup><col width="159.5"><col width="390.5"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Tag</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>{variable} {variable:h} {variable:u}</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">This is the regular placeholder. By default, placeholders are encoded by <tt>htmlspecialchars().</tt> The <tt>:h</tt> modifier disables this to pass the raw value through, while the <tt>:u</tt> modifier encodes with <tt>urlencode()</tt> instead.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>{method()} {method():h} {method():u}</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">This tag calls a method in the <tt>view</tt> object and uses the return value. As with variables, <tt>htmlspecialchars()</tt> is used by default, and you can use the <tt>:h</tt> and <tt>:u</tt> modifiers.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>{if:variable} {if:method()} {if:!variable} {if:!method()}</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>If</tt> statements are available, but only with Boolean tests no arbitrarily complex logic. <tt>ifs</tt> are limited to variables, method calls, and negation.</P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>{else:}</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The <tt>else</tt> tag must be used with <tt>{If:}.</tt></P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>{end:}</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The <tt>{end:}</tt> tag is used to finish both <tt>{foreach:}</tt> and <tt>{If:}.</tt></P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>{foreach:arr,val} {foreach:arr,ind,val}</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Corresponds to PHP's <tt>foreach</tt>. The first variation iterates over <tt>arr</tt> and assigns each element in turn to <tt>val.</tt> The second variation assigns the array index to <tt>ind</tt> as well.</p></td></tr></table></p><br>
+<a name="ch11lev3sec8"></a><h5 class="docSection3Title">11.3.3.4 Flexy HTML Attribute Handling</h5>
+<p class="docText">One of the interesting things about Flexy is how it handles HTML/XML elements and attributes in the template. To give you an example, here is the last example again with the template changed to use a Flexy HTML/XML attribute for controlling a block:<a name="ch11index75"></a><a name="ch11index76"></a><a name="ch11index77"></a><a name="ch11index78"></a></p>
+<pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;{title}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;{title}&lt;/h1&gt;
+    &lt;ul&gt;
+      &lt;li flexy:foreach="list_entries,text"&gt;{text}&lt;/li&gt;
+    &lt;/ul&gt;
+    (End of list)
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">The <tt>{foreach:}</tt> construct is gone; it is replaced by an attribute to the element that is being repeated: <tt>&lt;li&gt;</tt>. This looks a bit like XML namespaces, but it is not; the Flexy compiler removes the <tt>flexy:foreach</tt> attribute during compilation, and generates the same PHP code as the <tt>{foreach:}</tt> variant. The compiled version of this template looks like this:<a name="ch11index79"></a><a name="ch11index80"></a><a name="ch11index81"></a><a name="ch11index82"></a></p>
+<pre><a name="PLID13"></a><div class="v1"><a href="ch11lev1sec3.html#PLID13">[View full width]</a></div>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;&lt;?php echo htmlspecialchars($t-&gt;title);?&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;&lt;?php echo htmlspecialchars($t-&gt;title);?&gt;&lt;/h1&gt;
+    &lt;ul&gt;
+      &lt;?php if (is_array($t-&gt;list_entries)  || is_object($t- &gt;list_entries)) foreach
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif">($t-&gt;list_entries as $entry_text)  {?&gt;&lt;li&gt;&lt;?php echo htmlspecialchars($entry_text);?&gt;&lt;
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif">/li&gt;&lt;?php  }?&gt;
+    &lt;/ul&gt;
+    (End of list)
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">The XML/HTML attributes supported by Flexy are outlined in <a class="docLink" href="#ch11table03">Table 11.3</a>.<a name="ch11index83"></a><a name="ch11index84"></a><a name="ch11index85"></a><a name="ch11index86"></a><a name="ch11index87"></a></P>
+<a name="ch11table03"></a><P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><caption><h5 class="docTableTitle">Table 11.3. Flexy HTML/XML Attributes</h5></caption><colgroup><col width="159.5"><col width="390.5"></colgroup><thead><TR><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Attribute</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>Flexy:if="variable" flexy:if="method()" flexy:if="!variable" flexy:if="!method()"</tt></p></TD><td class="docTableCell" align="left" valign="top"><p class="docText">This is a simplified <tt>{if:}</tt>. The condition applies to the XML/HTML element and its subelements, and there is no <tt>{else:}</tt>. If the test is false, the current element and all its child elements are ignored.</P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>flexy:start="here"</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The <tt>flexy:start</tt> attribute can be used to ignore everything outside the current element. This is useful if you have sub-templates but still want to be able to view or edit them as complete HTML files.</P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>flexy:startchildren="here"</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">Similar to <tt>flexy:start</tt>, but ignores everything to and including the current element.</P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>flexy:ignore="yes"</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Ignores the current element and all child elements. It's useful to put mock-up data in templates that are edited with some visual web-design tool.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>flexy:ignoreonly="yes"</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">Ignores all child elements, but not the current element.</p></td></tr></table></P><BR>
+<a name="ch11lev3sec9"></a><h5 class="docSection3Title">11.3.3.5 Flexy HTML Element Handling</h5>
+<p class="docText">Finally, Flexy can parse HTML form elements and fill them in with correct data. This makes it easy to create a form template in some web-design tool without having to dissect the template before using it on your site.<a name="ch11index88"></a><a name="ch11index89"></a><a name="ch11index90"></a><a name="ch11index91"></a></P>
+<p class="docText">Flexy handles the following four HTML elements (see <a class="docLink" href="#ch11table04">Table 11.4</a>).</p>
+<a name="ch11table04"></a><p><table cellspacing="0" class="allBorders" border="1" RULES="rows" cellpadding="4"><caption><h5 class="docTableTitle">Table 11.4. HTML Elements</h5></caption><colgroup><col width="550"></colgroup><thead></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;form name="xxx"&gt;</tt></P></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;input name="xxx"&gt;</tt></p></td></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;select name="xxx"&gt;</tt></P></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>&lt;textarea name="xxx"&gt;</tt></P></td></tr></table></P><br>
+<p class="docText">When Flexy finds any of these HTML elements in the template, the element is replaced by PHP code that outputs the element with the right attributes:</P>
+<pre>
+&lt;html&gt;
+ &lt;head&gt;&lt;title&gt;{title}&lt;/title&gt;&lt;/head&gt;
+ &lt;body bgcolor=white&gt;
+  &lt;form name="myform"&gt;
+   {user_label} &lt;input type="text" name="user"&gt;
+   &lt;br&gt;
+   {pw_label} &lt;input type="password" name="pw"&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">In this template, the <tt>&lt;form&gt;</tt> and <tt>&lt;input&gt;</tt> elements will be replaced by Flexy, with parameters filled in.<a name="ch11index92"></a><a name="ch11index93"></a><a name="ch11index94"></a><a name="ch11index95"></a></p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch11lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch11lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

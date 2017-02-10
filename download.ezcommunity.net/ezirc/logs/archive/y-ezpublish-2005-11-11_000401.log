@@ -1,0 +1,152 @@
+[11-09-2005 00:25:58] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-09-2005 00:58:50] -!- DiGiTa|_ [n=guillaum@80.125.104.180] has joined #ezpublish
+[11-09-2005 02:03:54] -!- WizeGuy [i=jorge@nfsd.linpro.no] has joined #ezpublish
+[11-09-2005 02:08:40] -!- fh[eZ] [n=fh@80.239.98.162] has joined #ezpublish
+[11-09-2005 02:28:42] -!- _rappy_ is now known as _Rappy_
+[11-09-2005 02:43:24] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-09-2005 03:12:06] [#ezpublish] <kracker> morning evera body!
+[11-09-2005 03:12:25] [#ezpublish] <_Rappy_> hello all
+[11-09-2005 03:23:41] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-09-2005 03:23:58] [#ezpublish] <Sulfur> morning all
+[11-09-2005 03:24:18] [#ezpublish] <_Rappy_> you're late
+[11-09-2005 03:24:20] [#ezpublish] <_Rappy_> :P
+[11-09-2005 03:24:36] [#ezpublish] <Sulfur> no really, it's one of my earliet appearances ;)
+[11-09-2005 03:24:40] [#ezpublish] <Sulfur> earliest
+[11-09-2005 03:25:13] [#ezpublish] <_Rappy_> anyone have any experience with epiphany (webbrowser) and CSS or know of any good freenode channels where they might?
+[11-09-2005 03:25:36] [#ezpublish] <Sulfur> nope ..
+[11-09-2005 03:27:00] [#ezpublish] <_Rappy_> the width of an div (sat in em) is narrower than in all otehr browers. Normally I would not bother with it, but my boss uses just that browser and he wants it right
+[11-09-2005 03:29:46] [#ezpublish] <Sulfur> fire your boss :P
+[11-09-2005 03:30:03] [#ezpublish] <_Rappy_> hahaha
+[11-09-2005 03:38:50] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-09-2005 03:42:27] [#ezpublish] <kracker> ha!
+[11-09-2005 03:42:43] [#ezpublish] <kracker> out of a canon and into lathe
+[11-09-2005 03:44:03] [#ezpublish] * kracker sighs ...
+[11-09-2005 03:44:47] [#ezpublish] <kracker> a heck of a late night
+[11-09-2005 03:45:18] [#ezpublish] <kracker> spec'in out a new base class, db schema, and action files for new functionality
+[11-09-2005 03:46:02] [#ezpublish] <kracker> eztrade/classes/ezorderpayment.php
+[11-09-2005 03:52:38] [#ezpublish] <Sulfur> hey guys, how is the tipafriend url formed ? :)
+[11-09-2005 03:52:50] [#ezpublish] <Sulfur> any of you used it?
+[11-09-2005 03:53:25] [#ezpublish] <Sulfur> I am trying www.mysite.com/content/tipafriend/my/node/url_alias
+[11-09-2005 03:53:34] [#ezpublish] <Sulfur> but maybe it's not the correct way
+[11-09-2005 04:00:40] [#ezpublish] <kracker> eh, i'm no help on that one :P sry, last i paid attention to that tidbit of functionality was how to dissable it via settings / ini
+[11-09-2005 04:06:10] [#ezpublish] <Sulfur> heh :) and no docs at all
+[11-09-2005 04:06:42] [#ezpublish] * Sulfur tips kh[eZ] with a dead raven 
+[11-09-2005 04:08:29] [#ezpublish] <fh[eZ]> I think I will get a dead raven for the next summer conference
+[11-09-2005 04:11:11] [#ezpublish] <Sulfur> I hope for you it'll be a pelouche one
+[11-09-2005 04:11:24] [#ezpublish] <Sulfur> Alberto left Sot under a tree there in gaustablikk
+[11-09-2005 04:11:36] [#ezpublish] <Sulfur> I suppose it will be a clump of moss and mushrooms by now
+[11-09-2005 04:11:49] [#ezpublish] <Sulfur> Sot was his pet pelouche urchin
+[11-09-2005 04:16:02] [#ezpublish] <Sulfur> I'll take advantage of fh[eZ] being "here" .... how to change automated tipafriend email subjects without kernel hacking? and can email templates be overridden?
+[11-09-2005 04:17:19] [#ezpublish] <fh[eZ]> Sulfur: 1. Don't know, you need to check if the tipafriend functionality checks for some variable in the e-mail template. 2. yes
+[11-09-2005 04:22:15] [#ezpublish] <Sulfur> yay, found it
+[11-09-2005 04:24:34] [#ezpublish] * Sulfur wants a pelouche Allman for all the comments he is leaving in docs
+[11-09-2005 04:25:00] [#ezpublish] <Sulfur> on second thought, i DON'T want it
+[11-09-2005 04:34:17] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-09-2005 04:38:27] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[11-09-2005 04:40:52] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-09-2005 04:51:35] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-09-2005 04:56:50] -!- _Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-09-2005 05:23:29] [#ezpublish] <Sulfur> anyone alive? I think there has been a split
+[11-09-2005 05:30:54] [#ezpublish] <_Rappy_> I live but have no life
+[11-09-2005 05:35:46] [#ezpublish] <Sulfur> haha
+[11-09-2005 05:36:09] [#ezpublish] * Sulfur pats his _Rappy_ fella on the back
+[11-09-2005 05:36:21] [#ezpublish] <_Rappy_> :)
+[11-09-2005 06:24:02] [#ezpublish] * buz still hasnt found the shop that sells the fabled real life
+[11-09-2005 06:24:40] -!- WizeGuy [i=jorge@nfsd.linpro.no] has left #ezpublish []
+[11-09-2005 07:43:40] [#ezpublish] <Sulfur> hum ...
+[11-09-2005 07:43:48] [#ezpublish] <Sulfur> can translation files be overridden????
+[11-09-2005 08:03:06] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-09-2005 08:05:08] [#ezpublish] <_Rappy_> hello. I know an artivle can be published automatically on a certain time, but can it be removed too?
+[11-09-2005 08:07:12] [#ezpublish] <Katana`> yep
+[11-09-2005 08:07:20] [#ezpublish] <Katana`> unpublish_on_date attribute or something like that
+[11-09-2005 08:09:02] [#ezpublish] <_Rappy_> tnx
+[11-09-2005 08:10:35] [#ezpublish] <Katana`> the name is unpublish_date
+[11-09-2005 08:11:02] [#ezpublish] <Katana`> and it has to be referenced in content.ini [UnpublishSettings] ClassList[]
+[11-09-2005 08:11:21] [#ezpublish] <Katana`> and the node to scan has to be referenced in content.ini [UnpublishSettings] RootNodeList[]
+[11-09-2005 08:14:18] [#ezpublish] <kh[eZ]> try /tipafriend/2
+[11-09-2005 08:14:49] [#ezpublish] <Sulfur> fh[eZ]: and kh[eZ] ... what policies must an user have to use the "insert link" button with OE ?
+[11-09-2005 08:15:05] [#ezpublish] <Sulfur> kh[eZ]: yes I managed it and put a comment on doc :)
+[11-09-2005 08:16:06] [#ezpublish] <Sulfur> as for now, my editors can create an object, but when they press the insert link button, the popup shows a permission error (Kernel 1)
+[11-09-2005 08:17:02] [#ezpublish] <kh[eZ]> add access to ezdhtml module for your editors
+[11-09-2005 08:19:26] [#ezpublish] <Sulfur> why can my editor access the OE even before having the permission for it, kh[eZ] ?
+[11-09-2005 08:19:47] [#ezpublish] <Katana`> showing OE itself doesn't require permissions
+[11-09-2005 08:19:53] [#ezpublish] <Katana`> using the OE module / views requires them
+[11-09-2005 08:20:03] [#ezpublish] <Katana`> e.g. anything that opens a popup, basically
+[11-09-2005 08:20:25] [#ezpublish] <Sulfur> that does not strike me as coherent. this means that I have to enable it for all content-wielding users '
+[11-09-2005 08:20:27] [#ezpublish] <Sulfur> ?
+[11-09-2005 08:20:40] [#ezpublish] <Katana`> for all those who should be able to access OE yes ..
+[11-09-2005 08:20:57] [#ezpublish] <Katana`> showing the OE itself only requires templating
+[11-09-2005 08:21:01] [#ezpublish] <Katana`> and there are no permissions on that
+[11-09-2005 08:21:28] [#ezpublish] <Sulfur> hm.
+[11-09-2005 08:21:37] [#ezpublish] <Katana`> stop me if i'm wrong kh[eZ]
+[11-09-2005 08:22:16] [#ezpublish] <Sulfur> no, Katana`, it seems to me that you are right, yet it does not feel "right" .
+[11-09-2005 08:22:24] [#ezpublish] <Sulfur> anyway, now that I know ...
+[11-09-2005 08:22:41] [#ezpublish] <Katana`> handling more than that will be for really really later on i think :)
+[11-09-2005 08:31:35] [#ezpublish] <Sulfur> kh[eZ]: I see that this policy requirement  is not mentioned in install / FAQ of OE
+[11-09-2005 08:32:15] [#ezpublish] <Sulfur> it should be ..
+[11-09-2005 08:33:55] [#ezpublish] <Katana`> indeed...
+[11-09-2005 08:39:04] [#ezpublish] <Sulfur> filing an enhancement request about that
+[11-09-2005 08:47:10] [#ezpublish] <Sulfur> done
+[11-09-2005 08:47:17] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[11-09-2005 08:48:13] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-09-2005 08:59:41] [#ezpublish] <DiGiTa|_> http://img177.imageshack.us/img177/818/cnn3as.jpg
+[11-09-2005 08:59:42] [#ezpublish] <DiGiTa|_> ahah
+[11-09-2005 09:18:11] [#ezpublish] <Katana`> that's a nice map of france :)
+[11-09-2005 09:18:35] [#ezpublish] <Katana`> especially for toulouse
+[11-09-2005 09:22:25] [#ezpublish] <Katana`> buz lives in toulouse :)
+[11-09-2005 09:27:28] [#ezpublish] <DiGiTa|_> lol
+[11-09-2005 09:27:29] [#ezpublish] <DiGiTa|_> :)
+[11-09-2005 09:27:58] [#ezpublish] <DiGiTa|_> time to sign for my apartment
+[11-09-2005 09:28:00] [#ezpublish] <DiGiTa|_> :p
+[11-09-2005 09:28:04] [#ezpublish] <DiGiTa|_> see you all
+[11-09-2005 09:29:09] [#ezpublish] <Katana`> good luck :)
+[11-09-2005 09:33:42] [#ezpublish] <Sulfur> see ya
+[11-09-2005 09:36:22] [#ezpublish] <buz> WTF would i live in toulouse?
+[11-09-2005 09:36:31] [#ezpublish] <Katana`> check that map...
+[11-09-2005 09:36:38] [#ezpublish] <Katana`> DiGiTa|_'s
+[11-09-2005 09:36:54] [#ezpublish] <buz> aaaah lol
+[11-09-2005 09:37:05] [#ezpublish] <buz> well at least they didnt call it toolose
+[11-09-2005 09:37:18] [#ezpublish] <Katana`> lol
+[11-09-2005 10:05:39] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-09-2005 10:19:25] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-09-2005 10:19:25] -!- _Katana` is now known as Katana`
+[11-09-2005 11:25:38] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[11-09-2005 12:29:39] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-09-2005 12:54:09] -!- dc|z0ink [n=dc_z0ink@63.205.162.114] has joined #ezpublish
+[11-09-2005 12:55:44] [#ezpublish] <dc|z0ink> quick question, is there a title caps string filtering function? i know there's the "upword" function, just curious if somebody has written something (or i'm missing something) that can do title caps
+[11-09-2005 13:23:58] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-09-2005 13:24:08] [#ezpublish] <zrg> grr
+[11-09-2005 13:24:29] [#ezpublish] <zrg> anyone tried to package some content from one site and import to other?
+[11-09-2005 13:28:57] [#ezpublish] <buz> yeah with simple stuff it worked
+[11-09-2005 13:29:01] [#ezpublish] <buz> wiki for example
+[11-09-2005 13:30:22] [#ezpublish] <zrg> never worked for me, usually crashes
+[11-09-2005 13:31:05] [#ezpublish] <zrg> second try i picked objects only, no classes or templates, now it says its installed, no content in view tho
+[11-09-2005 13:37:22] [#ezpublish] <buz> mhh the stuff i had used in the wiki worked nicely
+[11-09-2005 13:39:33] -!- dc|z0ink [n=dc_z0ink@63.205.162.114] has quit [Read error: 104 (Connection reset by peer)]
+[11-09-2005 14:07:50] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-09-2005 14:22:09] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-09-2005 14:28:21] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-09-2005 15:26:49] -!- DiGiTa|_ [n=guillaum@80.125.104.180] has quit []
+[11-09-2005 15:34:37] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-09-2005 15:53:13] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-09-2005 17:16:18] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-09-2005 17:25:15] [#ezpublish] <kracker> lil flip - game over (dirty)
+[11-09-2005 17:25:45] [#ezpublish] <kracker> zrg, it always crashes on me as well
+[11-09-2005 17:26:09] [#ezpublish] <kracker> zrg, that or i would get insaine huge package files if it didn't crash
+[11-09-2005 17:26:21] [#ezpublish] <kracker> zrg, i gave up trying to use it :(
+[11-09-2005 17:27:16] [#ezpublish] <kracker> oh now i get it, yeah i did find that simple objects would work but not content structures :\
+[11-09-2005 17:27:23] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[11-09-2005 17:27:28] [#ezpublish] <kracker> i'm sure it was user error though :P
+[11-09-2005 17:27:33] [#ezpublish] <kracker> on my part
+[11-09-2005 17:30:41] [#ezpublish] <zrg> what do you meansimple object
+[11-09-2005 17:41:35] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-09-2005 17:41:42] -!- _Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[11-09-2005 18:16:18] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[11-09-2005 19:43:36] [#ezpublish] <kracker> zrg, i think (was a while ago) when i tried to use those features, i had serious problems with exporing anything but object classes
+[11-09-2005 19:44:00] [#ezpublish] <kracker> i *may* have had problems with very large objects, it's been to long
+[11-09-2005 19:44:24] [#ezpublish] <kracker> to remember offhand :\, again i'm sure it was just me :\
+[11-09-2005 20:28:42] -!- Bedlore [n=me@219-90-238-58.ip.adam.com.au] has joined #ezpublish
+[11-09-2005 20:30:17] -!- mode/#ezpublish [+oo fh[eZ] kh[eZ]] by ChanServ
+[11-09-2005 23:31:58] -!- DiGiTa|_ [n=guillaum@80.125.104.180] has joined #ezpublish
+[11-09-2005 23:54:38] -!- DiGiTa|_ [n=guillaum@80.125.104.180] has quit []
+[11-09-2005 23:55:54] -!- DiGiTa|_ [n=guillaum@80.125.104.180] has joined #ezpublish

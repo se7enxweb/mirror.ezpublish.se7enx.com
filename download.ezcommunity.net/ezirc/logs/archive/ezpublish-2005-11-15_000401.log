@@ -1,0 +1,599 @@
+[11-14-2005 00:06:22] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-14-2005 01:44:42] -!- DiGiTa|_ [n=guillaum@84.5.143.20] has joined #ezpublish
+[11-14-2005 01:44:50] [#ezpublish] <DiGiTa|_> hi eby
+[11-14-2005 01:44:53] -!- DiGiTa|_ [n=guillaum@84.5.143.20] has left #ezpublish []
+[11-14-2005 01:45:00] -!- DiGiTa|_ [n=guillaum@84.5.143.20] has joined #ezpublish
+[11-14-2005 01:47:50] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-14-2005 01:59:13] -!- ordna1 [n=ordnas@p549DFE5B.dip.t-dialin.net] has joined #ezpublish
+[11-14-2005 02:18:42] -!- fh[eZ] [n=fh@80.239.98.162] has joined #ezpublish
+[11-14-2005 02:28:40] -!- DiGiTa|__ [n=guillaum@80.125.104.29] has joined #ezpublish
+[11-14-2005 02:34:34] -!- mode/#ezpublish [+o fh[eZ]] by ChanServ
+[11-14-2005 02:35:31] -!- Bedlore [n=me@219-90-238-58.ip.adam.com.au] has quit []
+[11-14-2005 02:42:49] -!- DiGiTa|_ [n=guillaum@84.5.143.20] has quit [Read error: 110 (Connection timed out)]
+[11-14-2005 02:57:48] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-14-2005 03:01:24] -!- DiGiTa|__ [n=guillaum@80.125.104.29] has left #ezpublish []
+[11-14-2005 03:57:46] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-14-2005 03:57:49] [#ezpublish] <Sulfur> woo!
+[11-14-2005 04:01:50] [#ezpublish] <Katana`> woot Sulfur
+[11-14-2005 04:04:54] [#ezpublish] <Sulfur> my boss presented me an interesting question ..... how to avoid having an eZ site contents ripped by any script kiddie, when eZ responds to urls like /content/full/number ?
+[11-14-2005 04:05:20] [#ezpublish] <Sulfur> the only direction I think can yield a result is some regexp disallowing those calls from outside localhost ..
+[11-14-2005 04:06:16] [#ezpublish] <Katana`> why would it get ripped ?
+[11-14-2005 04:11:23] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[11-14-2005 04:11:26] [#ezpublish] <philG> hi all
+[11-14-2005 04:12:49] [#ezpublish] <philG> i have a litlle qst with runcronjobs, i think it's a serveur problem and not a ezp problem, i have this error message when i do the php call in scheel :
+[11-14-2005 04:12:50] [#ezpublish] <philG> Fatal error: eZ publish did not finish its request
+[11-14-2005 04:12:50] [#ezpublish] <philG> The execution of eZ publish was abruptly ended, the debug output is present below.
+[11-14-2005 04:14:39] [#ezpublish] <Sulfur> Katana`: I have learned not to ask questions like "why concerning about a kiddie downloading it all in a batch instead of just navigating the site?" ;)
+[11-14-2005 04:15:15] -!- SEAwolfx [n=mike@DSL01.83.171.151.0.NEFkom.net] has joined #ezpublish
+[11-14-2005 04:15:25] [#ezpublish] <Sulfur> business individuals have their own view of the world, but I concede that having the *public* info on some of our sites ripped and sold packaged on one cd is a loss of profit
+[11-14-2005 04:15:36] [#ezpublish] <philG> any idea ? and for information i have install many ezp instance with diffrent BD in my serveur and it's the same error for all of them
+[11-14-2005 04:15:49] [#ezpublish] <Sulfur> (apart from a spike of activity on the server)
+[11-14-2005 04:15:58] [#ezpublish] <SEAwolfx> hello.
+[11-14-2005 04:16:19] [#ezpublish] <Sulfur> philG: and what is the debug output like?
+[11-14-2005 04:16:40] [#ezpublish] <philG> the debug outpout is off Sulfur
+[11-14-2005 04:17:51] [#ezpublish] <Sulfur> hum philG ... dificult to debug then ... maybe a timeout or memory overflow?
+[11-14-2005 04:17:54] -!- fh[eZ] [n=fh@80.239.98.162] has quit [Read error: 113 (No route to host)]
+[11-14-2005 04:18:18] [#ezpublish] <philG> perhpas Sulfur but it strange that there is a same error in all sites
+[11-14-2005 04:19:50] [#ezpublish] <Sulfur> philG: you're running it from console right?
+[11-14-2005 04:22:17] [#ezpublish] <philG> php runcronjobs.php Sulfur
+[11-14-2005 04:22:45] [#ezpublish] <philG> at the / of my site Sulfur
+[11-14-2005 04:22:56] [#ezpublish] <philG> where the script is
+[11-14-2005 04:23:24] [#ezpublish] <Sulfur> error.log and so on report anything?
+[11-14-2005 04:28:08] [#ezpublish] <philG> no error
+[11-14-2005 04:29:44] [#ezpublish] <Sulfur> php_error ?
+[11-14-2005 04:29:49] [#ezpublish] <philG> in debug and error log, no new log when i exceute the script
+[11-14-2005 04:30:30] [#ezpublish] <philG> where are the logs of php ?
+[11-14-2005 04:31:23] [#ezpublish] <Sulfur> it depends on how your server is setup
+[11-14-2005 04:32:20] [#ezpublish] <philG> no new line in error log of apache
+[11-14-2005 04:35:22] [#ezpublish] <Sulfur> I'll add my new question - I think Katana` can answer -- I am toying now with the search capability. I see that there is both a fetch and maybe a module for searching, but docs for the search view of content module send me to the fetch function ....
+[11-14-2005 04:35:41] [#ezpublish] <Katana`> actually the fetch function is new
+[11-14-2005 04:35:50] [#ezpublish] <Katana`> the module just implements the function
+[11-14-2005 04:35:59] [#ezpublish] <Katana`> you can call content/search anywhere in your code
+[11-14-2005 04:36:52] [#ezpublish] <Sulfur> is there a docpage for it, Katana`? I'd like to peruse it well instead of dumbly copy/pasting the form structure from eZ site pages
+[11-14-2005 04:37:06] [#ezpublish] <Katana`> hum yes i believe there is
+[11-14-2005 04:37:12] [#ezpublish] <Katana`> ;)
+[11-14-2005 04:38:03] [#ezpublish] <Sulfur> yes I know you answered to my question ;)
+[11-14-2005 04:38:22] [#ezpublish] <Sulfur> let's do that next tiny little step together ;)
+[11-14-2005 04:39:33] [#ezpublish] <Sulfur> searching eZ for the content / search : "he following words were excluded from the search:content"
+[11-14-2005 04:39:37] [#ezpublish] <Sulfur> wooooow
+[11-14-2005 04:39:48] [#ezpublish] <Sulfur> no wonder I get 2421 matches
+[11-14-2005 04:40:07] -!- fh[eZ] [n=fh@80.239.98.162] has joined #ezpublish
+[11-14-2005 04:42:43] [#ezpublish] <philG> no idea to resolve my problem ....
+[11-14-2005 04:44:18] [#ezpublish] <Sulfur> I am sorry philG :-/
+[11-14-2005 04:44:37] [#ezpublish] <philG> no problem Sulfur thanks for your help
+[11-14-2005 04:51:49] [#ezpublish] <SEAwolfx> in settings/override/site.ini.append.php i added into to the SiteList- and AvailableSiteAccesList-Array "admin". also the folder settings/siteaccess/admin dir exists. why i get "Module not found" when i try to access it by using "*/index.php/admin"?
+[11-14-2005 04:52:05] [#ezpublish] <Katana`> hey fh[eZ]
+[11-14-2005 04:52:05] [#ezpublish] <SEAwolfx> using 3.7 stable
+[11-14-2005 04:52:37] [#ezpublish] <Katana`> can you paste your site.ini.append to http://ezpublish.pastebin.com ?
+[11-14-2005 04:52:51] [#ezpublish] <SEAwolfx> w8
+[11-14-2005 04:53:04] [#ezpublish] <Katana`> remove the passwords if any;)
+[11-14-2005 04:53:42] [#ezpublish] <SEAwolfx> http://ezpublish.pastebin.com/428848
+[11-14-2005 04:54:10] [#ezpublish] <SEAwolfx> line 15: MatchOrder=uri
+[11-14-2005 04:55:10] [#ezpublish] <SEAwolfx> the only way to access the admin-siteaccess is to set the DefaultAccess to "admin"
+[11-14-2005 04:57:06] [#ezpublish] <Katana`> hum I never use uri matching ...
+[11-14-2005 04:57:39] [#ezpublish] <SEAwolfx> so u use hostmatching
+[11-14-2005 04:58:08] [#ezpublish] <Katana`> yep always
+[11-14-2005 04:58:25] -!- kh[eZ] [n=kakemons@80.239.98.162] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[11-14-2005 04:59:44] [#ezpublish] <SEAwolfx> also an access-error is detected in the debug output: "Unknown access match:"
+[11-14-2005 05:03:09] [#ezpublish] <SEAwolfx> btw ... i altered the "access.php" in line 227: from "eZDebug::writeError( "Unknown access match: $match", "access" );" to "eZDebug::writeError( "Unknown access match: $match_type", "access" );"
+[11-14-2005 05:11:46] [#ezpublish] <SEAwolfx> i got it;)
+[11-14-2005 05:12:06] [#ezpublish] <SEAwolfx> there was an space after the "MatchOrder=uri" ;)
+[11-14-2005 05:12:11] [#ezpublish] <SEAwolfx> s/an/a/
+[11-14-2005 05:14:40] [#ezpublish] <SEAwolfx> thanks anyway, Katana. ;)
+[11-14-2005 05:23:30] [#ezpublish] <Katana`> sorry i was busy :)
+[11-14-2005 05:29:06] [#ezpublish] <SEAwolfx> np
+[11-14-2005 05:31:11] [#ezpublish] <SEAwolfx> i did a manual installation. how can i install the packages like 'forum', 'contact' manually, too? this seems to be tricky
+[11-14-2005 05:32:04] [#ezpublish] <Katana`> i've never found a way tell me if you do :)
+[11-14-2005 05:32:32] [#ezpublish] <SEAwolfx> heheh ... i could imagine to manage this with a normal package install.
+[11-14-2005 05:32:55] [#ezpublish] <SEAwolfx> but i have the svn-checkout and ./packages is empty
+[11-14-2005 05:33:30] [#ezpublish] <SEAwolfx> i have a look into the regular distribution.
+[11-14-2005 05:34:48] [#ezpublish] <Katana`> it's indeed done with packages, but uncompressed ones as far as i can see...
+[11-14-2005 05:35:04] [#ezpublish] <SEAwolfx> where do they reside?
+[11-14-2005 05:35:19] [#ezpublish] <SEAwolfx> in ./packages there are just the installed ones.
+[11-14-2005 05:35:28] [#ezpublish] <Katana`> packages/addons ....
+[11-14-2005 05:35:32] [#ezpublish] <SEAwolfx> yes.
+[11-14-2005 05:35:42] [#ezpublish] <Katana`> i have them in 3.6
+[11-14-2005 05:35:49] [#ezpublish] <Katana`> contact_us, news, etc
+[11-14-2005 05:36:01] [#ezpublish] <SEAwolfx> i have them too in the 3.7.1 distribution
+[11-14-2005 05:36:12] [#ezpublish] <Katana`> $package = eZPackage::fetch( $packageName, 'packages/addons' );
+[11-14-2005 05:36:32] [#ezpublish] <Katana`> check kernel/setup/steps/ezstep_create_sites.php, line 598
+[11-14-2005 05:36:37] [#ezpublish] <SEAwolfx> in which file u found this ... installer?
+[11-14-2005 05:36:38] [#ezpublish] <Katana`> that's how they do it
+[11-14-2005 05:36:48] [#ezpublish] <Katana`> kernel/setup contains what the installer uses
+[11-14-2005 05:37:05] [#ezpublish] <SEAwolfx> yeah, thanks.
+[11-14-2005 05:37:14] [#ezpublish] <Katana`> in ezstep_site_packages.php the packages names are selected and persistently stored, and finally used in ezstep_create_sites.php
+[11-14-2005 05:38:30] [#ezpublish] <SEAwolfx> with the svn checkout there are problems to install packages, so i had to make manually ;(
+[11-14-2005 05:39:54] [#ezpublish] <SEAwolfx> so the suggested to use: bin/shell/makedist.sh IMHO
+[11-14-2005 05:40:00] [#ezpublish] <SEAwolfx> s/the/they/
+[11-14-2005 05:40:33] [#ezpublish] <Katana`> ah
+[11-14-2005 05:45:25] [#ezpublish] * Sulfur would like to add another mantra to "when in doubt, clear the cache" .... it goes like "when in doubt, make an extension"
+[11-14-2005 05:45:54] [#ezpublish] <SEAwolfx> ;)
+[11-14-2005 05:45:56] [#ezpublish] <Katana`> :))
+[11-14-2005 05:45:57] [#ezpublish] <Katana`> extensions own
+[11-14-2005 05:46:08] [#ezpublish] <Katana`> i ALWAYS make an extension for a site
+[11-14-2005 05:46:15] [#ezpublish] <Sulfur> yes but I end up making lotsa extensions
+[11-14-2005 05:46:16] [#ezpublish] <Katana`> site, siteadmin and sitecommon
+[11-14-2005 05:46:18] [#ezpublish] <Katana`> or similar
+[11-14-2005 05:46:19] [#ezpublish] <Katana`> :)
+[11-14-2005 05:47:01] [#ezpublish] <Sulfur> I have, like , 7 extensions (just counting the ones which are core) for this project
+[11-14-2005 05:47:11] [#ezpublish] <Katana`> it's not that much
+[11-14-2005 05:47:13] [#ezpublish] <Sulfur> I am not talking about views :)
+[11-14-2005 05:47:23] [#ezpublish] <Katana`> but you can have multiple modules per extension you know ?
+[11-14-2005 05:47:39] [#ezpublish] <Sulfur> well, it would be another way of grouping them
+[11-14-2005 05:48:07] [#ezpublish] <Sulfur> I remember you asked about that last week , you were having problems grouping them ... so , how did you solve it?
+[11-14-2005 05:48:16] [#ezpublish] <Katana`> they work
+[11-14-2005 05:48:22] [#ezpublish] <Katana`> i just can't set permissions correctly :))
+[11-14-2005 05:48:28] [#ezpublish] <Sulfur> lol :D
+[11-14-2005 05:48:50] [#ezpublish] <Sulfur> so I think I'll just keep them separated for now ;)
+[11-14-2005 05:49:15] [#ezpublish] <Katana`> :)))
+[11-14-2005 05:49:22] [#ezpublish] <Katana`> i'll figure out why
+[11-14-2005 05:56:42] [#ezpublish] <SEAwolfx> btw .. what is ezlupdate
+[11-14-2005 05:56:51] [#ezpublish] <SEAwolfx> ?
+[11-14-2005 05:56:59] [#ezpublish] <Katana`> the tool that generates the translation file for a multilingual website
+[11-14-2005 05:57:20] [#ezpublish] <Katana`> it will parse your templates and php scripts for i18n operators and create a XML file you can later on translate with qtlinguist
+[11-14-2005 05:57:23] [#ezpublish] <SEAwolfx> hmm, i cant compile it. i have no qmake?
+[11-14-2005 05:57:24] [#ezpublish] <SEAwolfx> hmmm
+[11-14-2005 05:57:40] [#ezpublish] <Katana`> too bad, really :)
+[11-14-2005 05:58:05] [#ezpublish] <SEAwolfx> in what package it is included?
+[11-14-2005 05:59:12] [#ezpublish] <SEAwolfx> qt is the package.
+[11-14-2005 06:05:25] [#ezpublish] <kracker> yeah it can be a pain to get the dependancies installed to use ezlupdate
+[11-14-2005 06:05:37] [#ezpublish] <kracker> it is very possible but it is a big pain the first time around
+[11-14-2005 06:05:45] [#ezpublish] <kracker> not to mention confusing as all get out :\
+[11-14-2005 06:13:16] [#ezpublish] <SEAwolfx> kracker ;) heyheyhey
+[11-14-2005 06:13:33] [#ezpublish] <SEAwolfx> i found out that qmake wasnt in my $PATH.
+[11-14-2005 06:14:11] [#ezpublish] <SEAwolfx> but the compilation still fails: it seems that a library is missed.
+[11-14-2005 06:14:15] [#ezpublish] <SEAwolfx> damn ..
+[11-14-2005 06:16:18] [#ezpublish] <kracker> you can do it, it will just take half a day :\ and head thrashing
+[11-14-2005 06:16:39] [#ezpublish] <kracker> the program works really well too :) after it's installed
+[11-14-2005 06:16:53] [#ezpublish] <kracker> i still think that they should use a different build process though :\
+[11-14-2005 06:17:16] [#ezpublish] <kracker> or at least support a more widely available one but then it's been so long since i've looked it it all ....
+[11-14-2005 06:17:21] [#ezpublish] <kracker> what do i know :\ notthin
+[11-14-2005 06:17:25] [#ezpublish] <SEAwolfx> hehe ... ez wrote a wrong include-path for gcc
+[11-14-2005 06:18:35] [#ezpublish] <kracker> hmm, wrong for you or blatently wrong :?
+[11-14-2005 06:19:23] [#ezpublish] <kracker> could submit a patch to the bug system :\ ( guilty cause it was on a list of things i started but did not finish enough for others to use ...)
+[11-14-2005 06:20:22] [#ezpublish] <SEAwolfx> ahh ... now, the comppilation worx for me. after a little patching ;)
+[11-14-2005 06:20:31] [#ezpublish] <kracker> props
+[11-14-2005 06:20:46] [#ezpublish] <SEAwolfx> i had the set a right QTDIR in my environment on the shell.
+[11-14-2005 06:21:07] [#ezpublish] <SEAwolfx> the path was wrong, so not really a patch ;)
+[11-14-2005 06:21:24] [#ezpublish] <kracker> nods, still documentation worthy, IMHO
+[11-14-2005 06:22:13] [#ezpublish] <SEAwolfx> hmm.. not really, the installation of the qt-libs must be right, which is a requirement for makedist.sh.
+[11-14-2005 06:23:39] [#ezpublish] <kracker> right but you had the same problem i did and so a list of common user problems might point out common breakdowns for the users more quickly than them having ot read a lot of docs to figure out where they went wrong :\
+[11-14-2005 06:24:31] [#ezpublish] <SEAwolfx> yeah.
+[11-14-2005 06:25:34] [#ezpublish] <SEAwolfx> so there is still no robot here in the irc-channel to create some faqs *duck* ;)
+[11-14-2005 06:26:08] [#ezpublish] <kracker> ha, i remember that subject
+[11-14-2005 06:26:19] [#ezpublish] <SEAwolfx> hihi ;) yeah, me too.
+[11-14-2005 06:26:26] [#ezpublish] <kracker> i'll leave that one to somone smarter than me
+[11-14-2005 06:26:37] [#ezpublish] <SEAwolfx> like it were yesterday ;)
+[11-14-2005 06:27:03] [#ezpublish] <kracker> too long for me :\ i went through hell and more since then
+[11-14-2005 06:27:12] [#ezpublish] <kracker> but i just started a little entry at: http://snippets.ezcommunity.net/ezpublish_community_incomming_sort
+[11-14-2005 06:27:50] [#ezpublish] <SEAwolfx> i would like to add a comment to it.
+[11-14-2005 06:28:16] [#ezpublish] <kracker> sign up for an account, it's eZ
+[11-14-2005 06:28:28] [#ezpublish] <SEAwolfx> ;) ok
+[11-14-2005 06:31:49] [#ezpublish] <SEAwolfx> i got now an account.
+[11-14-2005 06:32:13] [#ezpublish] <SEAwolfx> "Currently locked by: kracker"
+[11-14-2005 06:32:19] [#ezpublish] <SEAwolfx> what this means?
+[11-14-2005 06:32:26] [#ezpublish] <SEAwolfx> :D
+[11-14-2005 06:33:14] [#ezpublish] <kracker> i just finished edit
+[11-14-2005 06:33:18] [#ezpublish] <kracker> try again
+[11-14-2005 06:33:50] [#ezpublish] <SEAwolfx> ok, yeah.
+[11-14-2005 06:34:14] [#ezpublish] <SEAwolfx> the next thing is to set the right REPOSITORY_BRANCH_PATH, what fails.
+[11-14-2005 06:34:51] [#ezpublish] <kracker> nods, see i know i wrote up some of this but don't know where i saved my notes (heh, if i don't publish i'm certain they are burried)
+[11-14-2005 06:35:06] [#ezpublish] <SEAwolfx> ;))
+[11-14-2005 06:36:15] [#ezpublish] <SEAwolfx> do i have to set the paths to pubsvn instead to svn.ez.no ... i think so?!
+[11-14-2005 06:36:53] [#ezpublish] <kracker> dunno offhand
+[11-14-2005 06:37:12] [#ezpublish] <SEAwolfx> just look in to the bin/shell/commons.sh
+[11-14-2005 06:37:30] [#ezpublish] <SEAwolfx> my vars:
+[11-14-2005 06:37:32] [#ezpublish] <SEAwolfx> REPOSITORY_BASE_URL="http://pubsvn.ez.no/svn/ezpublish"
+[11-14-2005 06:37:36] [#ezpublish] <SEAwolfx> TR_REPOSITORY_BASE_URL="http://pubsvn.ez.no/svn/translations"
+[11-14-2005 06:37:39] [#ezpublish] <SEAwolfx> REPOSITORY_BRANCH_PATH="http://pubsvn.ez.no/svn/nextgen/stable/3.7"
+[11-14-2005 06:38:50] [#ezpublish] <SEAwolfx> wrong paths.
+[11-14-2005 06:40:09] [#ezpublish] <kracker> nods
+[11-14-2005 06:40:13] [#ezpublish] <kracker> good to know
+[11-14-2005 06:40:41] [#ezpublish] <kracker> i did a little digging and found a semi-lost copy of this older document: http://download.ezcommunity.net/ezideas/building_ezpublish_from_svn_sources_v1-3.txt
+[11-14-2005 06:41:00] [#ezpublish] <SEAwolfx> thx,kracker.
+[11-14-2005 06:41:23] [#ezpublish] <kracker> it mentions a little about ezlupdate
+[11-14-2005 06:48:45] [#ezpublish] <SEAwolfx> made an edit.
+[11-14-2005 06:48:52] [#ezpublish] <kracker> hey thanks , i just refreshed
+[11-14-2005 06:48:56] [#ezpublish] <SEAwolfx> nothing special ;)
+[11-14-2005 06:49:05] [#ezpublish] <kracker> and for adding the link (i was going to do that :))
+[11-14-2005 06:50:10] [#ezpublish] <SEAwolfx> ;)
+[11-14-2005 06:50:18] [#ezpublish] <Proteque_> aa3a
+[11-14-2005 06:53:29] [#ezpublish] <kracker> say what?
+[11-14-2005 06:59:34] [#ezpublish] <SEAwolfx> damn where is the public TR_REPOSITORY_BASE_URL?
+[11-14-2005 07:07:44] [#ezpublish] <kracker> heh, fond memories
+[11-14-2005 07:07:48] [#ezpublish] <kracker> hey SEAwolfx
+[11-14-2005 07:07:57] [#ezpublish] <SEAwolfx> hey
+[11-14-2005 07:08:01] [#ezpublish] <kracker> you know the recommend against doing what your doing right (re eZ)
+[11-14-2005 07:08:12] [#ezpublish] <kracker> not that that stoped me either ;)
+[11-14-2005 07:08:28] [#ezpublish] <kracker> but getting the thing to build from svn is a real pain
+[11-14-2005 07:08:36] [#ezpublish] <SEAwolfx> indeed.
+[11-14-2005 07:09:05] [#ezpublish] <kracker> they normaly say copy the parts yourself (don't rely on the build to do that for you) (thanks tony wood??)
+[11-14-2005 07:09:08] [#ezpublish] <SEAwolfx> there original problem is to use an svn installation and to install the addons.
+[11-14-2005 07:09:22] [#ezpublish] <kracker> or use eZ publish packaged releases
+[11-14-2005 07:09:27] [#ezpublish] <SEAwolfx> arghs.
+[11-14-2005 07:09:46] [#ezpublish] <kracker> yeah firebirght had me trying to get the exact same thing once
+[11-14-2005 07:09:55] [#ezpublish] <SEAwolfx> ;)
+[11-14-2005 07:09:58] [#ezpublish] <SEAwolfx> :P
+[11-14-2005 07:10:49] [#ezpublish] <kracker> i only figured out his dirty little secret a few days afterwards and droped everything and bolted ... never finished or got copies of my work
+[11-14-2005 07:11:32] [#ezpublish] <kracker> i almost had it building too :\ with paches to send bacak :\ whole thing sucks
+[11-14-2005 07:11:35] [#ezpublish] <SEAwolfx> hmm .. i wonder why its not simply possible to copy ./packages from a distribution into the working copy and install them with the installer.
+[11-14-2005 07:15:41] [#ezpublish] <philG> re
+[11-14-2005 07:16:28] [#ezpublish] <kracker> sup
+[11-14-2005 07:20:39] [#ezpublish] <philG> new people so i can re ask my qst, i have a same error in differnt ezp's site on the same serveur when i try to execute the runcronjobs script : Fatal error: eZ publish did not finish its request
+[11-14-2005 07:20:39] [#ezpublish] <philG> The execution of eZ publish was abruptly ended, the debug output is present below. any idea ?
+[11-14-2005 07:21:33] [#ezpublish] <kracker> turn on full debuging in settings variables
+[11-14-2005 07:25:28] [#ezpublish] <philG> i havn't full debug option in my admin panel ...
+[11-14-2005 07:26:07] [#ezpublish] <philG> Debug Output Debug By IP Debug Redirection that's all
+[11-14-2005 07:28:16] [#ezpublish] <kracker> i did not mean "full" literaly, just in general, .... turn on all debuging options (as needed)
+[11-14-2005 07:28:55] [#ezpublish] <philG> ok kracker
+[11-14-2005 07:30:21] [#ezpublish] <kracker> nw
+[11-14-2005 07:30:21] [#ezpublish] <philG> with all debug at one, same error
+[11-14-2005 07:30:51] [#ezpublish] <kracker> sure but you should get more information now on the errors before the fatal error?
+[11-14-2005 07:30:59] [#ezpublish] <kracker> oh ,, cronjobs, doh never mind
+[11-14-2005 07:31:12] [#ezpublish] * kracker backs up slowly 
+[11-14-2005 07:32:42] [#ezpublish] <philG> no more error kracker i execute the runcronjobs with php commande in scheel
+[11-14-2005 07:33:12] [#ezpublish] <kracker> i understand, i was mistaken about the question, my appologies
+[11-14-2005 07:33:31] [#ezpublish] <philG> no problems kracker
+[11-14-2005 07:33:41] [#ezpublish] <kracker> sorry i wasn't more help :\
+[11-14-2005 07:37:03] [#ezpublish] <kracker> tho it seems that your using php and not php-cli
+[11-14-2005 07:37:26] [#ezpublish] <kracker> or running a custom crontab that is just dying / taking to long :?
+[11-14-2005 07:38:10] [#ezpublish] <kracker> but then those kinds of comments are kinda like ... duh, hense the question :\ sry
+[11-14-2005 07:38:36] [#ezpublish] <SEAwolfx> try to increase the exection time in php.ini?!
+[11-14-2005 07:38:38] [#ezpublish] <SEAwolfx> philG:
+[11-14-2005 07:38:40] [#ezpublish] <Katana`> who wants to work on an AJAX admin interface for eZ based on http://qooxdoo.oss.schlund.de/demo/dev/public/test/user/Window_1.html ? :)
+[11-14-2005 07:38:56] [#ezpublish] <Katana`> php-cli has no max execution time
+[11-14-2005 07:38:58] [#ezpublish] <Katana`> cgi has
+[11-14-2005 07:39:07] [#ezpublish] <kracker> solid points
+[11-14-2005 07:41:54] [#ezpublish] <philG> so Katana` ? i have to change the php config ?
+[11-14-2005 07:42:52] [#ezpublish] <SEAwolfx> in php-cli the max_execution_time is set to 0 (unlimited)
+[11-14-2005 07:43:53] [#ezpublish] <philG> ok in my php.ini : max_execution_time = 30
+[11-14-2005 07:45:10] [#ezpublish] <SEAwolfx> if the skript is started on the shell the max_execution_time has no relevance, as Katana already mentioned.
+[11-14-2005 07:45:31] [#ezpublish] <kracker> philG, are you using php cli (command line) or via a web browser
+[11-14-2005 07:45:36] [#ezpublish] <Katana`> well it is relevant if you're running php cgi
+[11-14-2005 07:45:39] [#ezpublish] <Katana`> php cli is different
+[11-14-2005 07:45:43] [#ezpublish] <SEAwolfx> this is the basic question.
+[11-14-2005 07:45:46] [#ezpublish] <Katana`> type php -v and see what version it shows
+[11-14-2005 07:45:46] [#ezpublish] <SEAwolfx> "Due to endless possibilities of using PHP in shell environments, the maximum execution time has been set to unlimited. Whereas applications written for the web are often executed very quickly, shell application tend to have a much longer execution time."
+[11-14-2005 07:45:50] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-14-2005 07:45:51] [#ezpublish] <philG> i use php runcronjobs
+[11-14-2005 07:46:03] [#ezpublish] <SEAwolfx> from shell ... this means php-cli
+[11-14-2005 07:46:05] [#ezpublish] <Katana`> well, type php -v and see what version it shows ...
+[11-14-2005 07:46:09] [#ezpublish] <Katana`> no it doesn't
+[11-14-2005 07:46:11] [#ezpublish] <philG> yes SEAwolfx
+[11-14-2005 07:46:12] [#ezpublish] <Katana`> type php -v
+[11-14-2005 07:46:12] [#ezpublish] <SEAwolfx> ahh.
+[11-14-2005 07:46:26] [#ezpublish] <Katana`> it could be php-cgi
+[11-14-2005 07:46:28] [#ezpublish] <philG> PHP 4.3.10-15 (cli)
+[11-14-2005 07:46:31] [#ezpublish] <Katana`> okay :)
+[11-14-2005 07:46:32] [#ezpublish] <kracker> yes, please make sure your using php (cli)
+[11-14-2005 07:46:35] [#ezpublish] <kracker> great!
+[11-14-2005 07:46:48] [#ezpublish] <kracker> just checking
+[11-14-2005 07:46:52] [#ezpublish] <philG> so i use the good version of PHP
+[11-14-2005 07:46:57] [#ezpublish] <kracker> ;)
+[11-14-2005 07:47:09] [#ezpublish] <philG> so the problem is not with this
+[11-14-2005 07:47:11] [#ezpublish] <philG> ...
+[11-14-2005 07:47:34] [#ezpublish] <kracker> prolly not
+[11-14-2005 07:47:52] [#ezpublish] <SEAwolfx> u have to figure out in what loop the shell executes with the error-message.
+[11-14-2005 07:47:57] [#ezpublish] <kracker> if (cli) does not have execution timout as katana mentions
+[11-14-2005 07:48:57] [#ezpublish] <SEAwolfx> the execution time is set to "unlimited" to be exactly with php-cli. ;)
+[11-14-2005 07:49:10] [#ezpublish] <philG> the error is directly afetr the begin of the programm... no line are write, just the error, direcly after the call
+[11-14-2005 07:49:40] [#ezpublish] <kracker> hmm
+[11-14-2005 07:49:57] [#ezpublish] <SEAwolfx> this might be overkilled: try to strace it.
+[11-14-2005 07:50:03] [#ezpublish] <SEAwolfx> :D
+[11-14-2005 07:50:16] [#ezpublish] <Katana`> WHY is my override not working on just ONE item
+[11-14-2005 07:50:25] [#ezpublish] <Katana`> but works on every other item in the same conditions
+[11-14-2005 07:50:27] [#ezpublish] <Katana`> hummm...
+[11-14-2005 07:50:31] [#ezpublish] <Katana`> * kill kill *
+[11-14-2005 07:50:45] [#ezpublish] <SEAwolfx> outsch ;)
+[11-14-2005 07:52:07] [#ezpublish] <nnn0> hm i got this server with php safe mode enabled, and i'm writing this mail to the person in charge of it to please turn it off. does any of you have any experience with this safe_mode ?
+[11-14-2005 07:52:43] [#ezpublish] <kracker> it's not a good idea to run with it off in production? (wince)
+[11-14-2005 07:53:01] [#ezpublish] <kracker> i think eZ publish can run just fine with safe mode enabled (but not certain on that )
+[11-14-2005 07:53:10] [#ezpublish] <Katana`> i'm almost sure it won't
+[11-14-2005 07:53:11] [#ezpublish] <philG> in my syslog i have :
+[11-14-2005 07:53:16] [#ezpublish] <philG> Nov 14 14:53:01 portable /USR/SBIN/CRON[28271]: (root) CMD (^Icd /var/www/ezpublish; /usr/bin/php4 runcronjobs.php)
+[11-14-2005 07:53:23] [#ezpublish] <philG> and
+[11-14-2005 07:53:32] [#ezpublish] <philG> Nov 14 14:53:01 portable /USR/SBIN/CRON[28272]: (root) CMD (   cd /var/www/ezpublish; ./bin/shell/clearcache.sh --clear-tpl-block)
+[11-14-2005 07:54:00] [#ezpublish] <kracker> nods, good to know but nothing too out of the ordanary there
+[11-14-2005 07:54:26] [#ezpublish] <nnn0> ez complains in the Finetune, you know when you start the installation, that safe_mode is on
+[11-14-2005 07:54:30] [#ezpublish] <kracker> if you can't run it by hand cron/syslogs are going to be even less helful
+[11-14-2005 07:54:41] [#ezpublish] <kracker> nnn0, lame :\
+[11-14-2005 07:54:51] [#ezpublish] <kracker> nnn0, using shared hosting ?
+[11-14-2005 07:55:16] [#ezpublish] <kracker> i've become desensitized with my own server  :P
+[11-14-2005 07:55:38] [#ezpublish] <nnn0> it says that some part of cronjob will not work, that it will not be able to work with files correctly and that i will not be able to upload files thru the interface
+[11-14-2005 07:55:43] [#ezpublish] <nnn0> yes shared server
+[11-14-2005 07:56:16] [#ezpublish] <nnn0> it says it recommend to turn it off
+[11-14-2005 07:56:40] [#ezpublish] <kracker> i'd google the forums for options / suggestions :\ this is a fairly old topic
+[11-14-2005 07:56:54] [#ezpublish] <kracker> someone who knew must have covered it
+[11-14-2005 07:56:58] [#ezpublish] <nnn0> yes i read some, just wanted to ask :)
+[11-14-2005 07:57:28] [#ezpublish] <nnn0> it seems that using php safe mode to strengthen security is a fast and easy way to do it
+[11-14-2005 07:57:35] [#ezpublish] <nnn0> it should be done with chroot()
+[11-14-2005 07:57:48] [#ezpublish] <nnn0> then you can have safe_mode off, no problem
+[11-14-2005 07:57:54] [#ezpublish] <philG> i have add mysql extension ...
+[11-14-2005 07:58:41] [#ezpublish] <philG> and it's better
+[11-14-2005 07:58:50] [#ezpublish] <philG> the script start
+[11-14-2005 07:59:24] [#ezpublish] <kracker> ahh! hehe
+[11-14-2005 07:59:32] [#ezpublish] <kracker> re: philG , congrats
+[11-14-2005 07:59:51] [#ezpublish] <philG> no readable error ...
+[11-14-2005 08:01:39] [#ezpublish] <philG> i have to upgrade the memry limit to 20 Mo...
+[11-14-2005 08:02:03] [#ezpublish] <kracker> smart move,  i'd try 32  or 64 though
+[11-14-2005 08:02:18] [#ezpublish] <philG> it's not enought arghhh
+[11-14-2005 08:02:31] [#ezpublish] <Katana`> err 64 is a minimum
+[11-14-2005 08:02:34] [#ezpublish] <Katana`> 128 is a good bet :)
+[11-14-2005 08:02:36] [#ezpublish] <kracker> nods
+[11-14-2005 08:02:44] [#ezpublish] <Katana`> i think ez.no uses 256
+[11-14-2005 08:03:04] [#ezpublish] <philG> 256 !!!
+[11-14-2005 08:03:28] [#ezpublish] <philG> ok with 64 is ok
+[11-14-2005 08:03:30] [#ezpublish] <Katana`> but the system usually doesn't consume that
+[11-14-2005 08:03:38] [#ezpublish] <Katana`> just on peak (generation, etc)
+[11-14-2005 08:05:06] [#ezpublish] <philG> ok ok
+[11-14-2005 08:05:26] [#ezpublish] <philG> i note that it's good to set 64 Mo in the php.ini
+[11-14-2005 08:06:48] [#ezpublish] <kracker> hehe, it's always fun when having to relearn the little things :)
+[11-14-2005 08:08:40] [#ezpublish] <philG> but i think that a little error message in this configuration was a good idea ...
+[11-14-2005 08:15:48] [#ezpublish] <kracker> you talking about adding one or an existing one ?
+[11-14-2005 08:18:24] [#ezpublish] <philG> i think ading one will be a good idea.. because with no error it's difficult to find the error
+[11-14-2005 08:19:23] [#ezpublish] <nnn0> :D
+[11-14-2005 08:19:26] [#ezpublish] <nnn0> word
+[11-14-2005 08:19:47] [#ezpublish] <nnn0> no error is the most difficult to find :D
+[11-14-2005 08:20:01] [#ezpublish] <nnn0> ;)
+[11-14-2005 08:21:19] [#ezpublish] <kracker> heh, and i'm ready to take flack for thinking, eZ publish could seriously be improved if a pass through the whole system based on common user mistakes and added beter error messages :\
+[11-14-2005 08:21:49] [#ezpublish] <Katana`> hummmm funny issue...
+[11-14-2005 08:22:45] [#ezpublish] <philG> i have add a post to ez.no formum
+[11-14-2005 08:22:48] [#ezpublish] <philG> forum
+[11-14-2005 08:22:51] [#ezpublish] <kracker> nice
+[11-14-2005 08:23:21] [#ezpublish] <philG> perhaps it will can help someone who have the same error ...
+[11-14-2005 08:23:58] [#ezpublish] <kracker> linkage?
+[11-14-2005 08:27:06] [#ezpublish] <philG> http://ez.no/community/bugs/runcronjobs_did_not_finish_its_request
+[11-14-2005 08:27:21] [#ezpublish] <philG> i don't if it's the better place to add my solution
+[11-14-2005 08:30:58] [#ezpublish] <kracker> i wonder what the true miniumum memory requirement is for ezpublish runcronjobs :? if it really is 64mb or close, wouldn't it be simple to add a php.ini check  in the script?
+[11-14-2005 08:31:54] [#ezpublish] <Katana`> CLI doesn't have a memory limit either afaik
+[11-14-2005 08:32:19] [#ezpublish] <buz> kracker: i dont think you can actually define a hard limit
+[11-14-2005 08:32:26] [#ezpublish] <buz> it highly depends on the size of the site i'd say
+[11-14-2005 08:32:26] [#ezpublish] <kracker> hi my name is kracker and i don't know what the heck i'm talking about any more :\
+[11-14-2005 08:32:46] [#ezpublish] <buz> i was suspecting THAT all along
+[11-14-2005 08:33:04] [#ezpublish] <kracker> hey i was just trying to talk through it :\
+[11-14-2005 08:33:35] [#ezpublish] <kracker> i wonder why when he set 64m in his php.ini it started working (if php (cli) doesn't have a hard memory limit)
+[11-14-2005 08:34:32] [#ezpublish] <kracker> and i wasn't saying add a hard limit, just check to see if php.ini has a memory limit that is more than the minumum required by runcronjobs script and add an information warning instead of cryptic error later ...
+[11-14-2005 08:34:50] [#ezpublish] <kracker> someone has got to see that, even if i'm totaly wrong
+[11-14-2005 08:38:18] [#ezpublish] <philG> i don't know who are righ but for mee .; i have just the memory_limit and the script is ok
+[11-14-2005 08:39:12] [#ezpublish] <SEAwolfx> kracker: u want to analyze the memory usage of a php-process to examine the potenial memory limit?
+[11-14-2005 08:46:12] [#ezpublish] <kracker> SEAwolfx, i'm sure that's the `right way to completely address the problem`, i was thinking some kind of error message at least hinting at the memory limit might be useful
+[11-14-2005 08:46:27] [#ezpublish] <kracker> but then that's right back to it's not memory at all? shrugs
+[11-14-2005 09:10:35] [#ezpublish] <Katana`> why, WHY did they make ezurl automatically add "" :)
+[11-14-2005 09:10:45] [#ezpublish] <buz> you can deactivate that you know
+[11-14-2005 09:10:51] [#ezpublish] <Katana`> can i ?
+[11-14-2005 09:11:00] [#ezpublish] <buz> yes
+[11-14-2005 09:11:14] [#ezpublish] <buz> it takes params for that
+[11-14-2005 09:11:15] [#ezpublish] <Sulfur> yes Katana`
+[11-14-2005 09:11:16] [#ezpublish] <Katana`> ah yes
+[11-14-2005 09:11:18] [#ezpublish] <Katana`> quote('no')
+[11-14-2005 09:11:45] [#ezpublish] <Katana`> apologies :)
+[11-14-2005 09:11:50] [#ezpublish] <Sulfur> woo, I know something that Katana`doesn't. a momentuous day!
+[11-14-2005 09:12:14] [#ezpublish] <Katana`> looool
+[11-14-2005 09:12:41] [#ezpublish] <Katana`> gnééé
+[11-14-2005 09:12:41] [#ezpublish] <Katana`> Firefox has detected that the server is redirecting the request for this address in a way that will never complete.
+[11-14-2005 09:12:50] [#ezpublish] <Sulfur> haha
+[11-14-2005 09:12:52] [#ezpublish] <nnn0> :D
+[11-14-2005 09:13:06] [#ezpublish] <Sulfur> is your firefox depressed ? ;)
+[11-14-2005 09:13:11] [#ezpublish] <Katana`> what do you know silly browser ??
+[11-14-2005 09:13:24] [#ezpublish] <buz> is that 1.5 speak for redirection limit exceeded?
+[11-14-2005 09:13:55] [#ezpublish] <Katana`> okay maybe i'm redirecting to the same page
+[11-14-2005 09:13:56] [#ezpublish] <Katana`> MAYBE
+[11-14-2005 09:14:30] [#ezpublish] <Sulfur> why can't I redirect from one page to another with a <script language="JavaScript"> document.location.href="http://myurl"; </script> ? :-?
+[11-14-2005 09:14:43] [#ezpublish] <Katana`> no reason
+[11-14-2005 09:14:52] [#ezpublish] <Katana`> what makes you think you can't ?
+[11-14-2005 09:15:55] [#ezpublish] <Katana`> ok gotcha bitch
+[11-14-2005 09:16:21] [#ezpublish] <Sulfur> becaue my browser doesn't :)
+[11-14-2005 09:16:26] [#ezpublish] <Katana`> almost ...
+[11-14-2005 09:16:28] [#ezpublish] <Katana`> gargh
+[11-14-2005 09:17:12] [#ezpublish] <Sulfur> umph ... I really can't get it
+[11-14-2005 09:18:15] [#ezpublish] <Sulfur> rather funny
+[11-14-2005 09:18:28] [#ezpublish] <Katana`> really ?
+[11-14-2005 09:20:11] [#ezpublish] <Sulfur> really
+[11-14-2005 09:20:31] [#ezpublish] <Sulfur> it should work from anywhere in the page, and there are no js errors ...
+[11-14-2005 09:21:30] [#ezpublish] <Sulfur> and yes, JS is enabled :P
+[11-14-2005 09:24:17] [#ezpublish] <Katana`> indeed it should :)
+[11-14-2005 09:26:20] [#ezpublish] <nnn0> eh - try location.replace("http://yoururl")
+[11-14-2005 09:26:42] [#ezpublish] <nnn0> instead of document.location
+[11-14-2005 09:28:15] [#ezpublish] <nnn0> if the browser doesn't has support for JS, you could use <meta http-equiv="refresh" content="1;http://yoururl/"> in the <head>
+[11-14-2005 09:28:20] [#ezpublish] <nnn0> i usually use both
+[11-14-2005 09:28:21] [#ezpublish] <nnn0> :)
+[11-14-2005 09:28:51] [#ezpublish] <nnn0> maybe i misunderstood ?
+[11-14-2005 09:32:28] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[11-14-2005 09:33:13] -!- SEAwolfx [n=mike@DSL01.83.171.151.0.NEFkom.net] has quit ["Lost terminal"]
+[11-14-2005 09:33:21] [#ezpublish] <LottoKim> Hi, got a litle problem trying to install ezpbulish, " The PHP upload directory /home/sites/tmp does not exists or is not accessible", but it is, if i make a uploadscript, i can upload files
+[11-14-2005 09:33:27] [#ezpublish] <LottoKim> what could be wrong?
+[11-14-2005 09:33:59] [#ezpublish] <nnn0> just make it
+[11-14-2005 09:34:32] [#ezpublish] <LottoKim> it exist, and i can use my homemade script to upload stuff to the flder
+[11-14-2005 09:34:35] [#ezpublish] <nnn0> ah
+[11-14-2005 09:34:36] [#ezpublish] <nnn0> k
+[11-14-2005 09:34:38] [#ezpublish] <nnn0> sry
+[11-14-2005 09:34:51] [#ezpublish] <nnn0> how about permissions
+[11-14-2005 09:34:53] [#ezpublish] <Sulfur> nnn0: I tried them all, then I decided not to spend more time on it and brutally sent a header() from php :)
+[11-14-2005 09:35:02] [#ezpublish] <nnn0> :) hehe
+[11-14-2005 09:35:06] [#ezpublish] <Sulfur> I would have liked to do it from tpl. ah well.
+[11-14-2005 09:35:09] [#ezpublish] <LottoKim> nnn0: 777
+[11-14-2005 09:35:16] [#ezpublish] <nnn0> hm
+[11-14-2005 09:35:20] [#ezpublish] <buz> Katana`: any idea why synergy stops working after a while?
+[11-14-2005 09:35:34] [#ezpublish] <LottoKim> nnn0: and the folder exist in open_basedir
+[11-14-2005 09:36:13] [#ezpublish] <nnn0> hm all i can think of is php safe_mode
+[11-14-2005 09:36:25] [#ezpublish] <nnn0> maybe that restrict you access
+[11-14-2005 09:36:34] [#ezpublish] <nnn0> but i really don't know much about it
+[11-14-2005 09:36:50] [#ezpublish] <nnn0> is thid in the Finetune page ?
+[11-14-2005 09:36:53] [#ezpublish] <nnn0> this
+[11-14-2005 09:36:55] [#ezpublish] <LottoKim> safe_mode off
+[11-14-2005 09:36:58] [#ezpublish] <nnn0> k
+[11-14-2005 09:37:09] [#ezpublish] <LottoKim> yes, in the finetune page
+[11-14-2005 09:40:07] [#ezpublish] <nnn0> donno
+[11-14-2005 09:40:15] [#ezpublish] <nnn0> you just have to google :)
+[11-14-2005 09:41:12] [#ezpublish] <nnn0> http://ez.no/community/forum/install_configuration/cannot_setup_ezpublish_on_my_host_windows_based_server
+[11-14-2005 09:41:23] [#ezpublish] <LottoKim> its not windows
+[11-14-2005 09:43:10] [#ezpublish] <nnn0> ah okey
+[11-14-2005 09:45:48] [#ezpublish] <nnn0> maybe you have to specify the tmp dir in the php.ini
+[11-14-2005 09:45:57] [#ezpublish] <LottoKim> done it
+[11-14-2005 09:46:01] [#ezpublish] <nnn0> k
+[11-14-2005 09:46:02] [#ezpublish] <nnn0> :)
+[11-14-2005 09:47:38] [#ezpublish] <Katana`> nope buz, works for hours here
+[11-14-2005 09:48:13] [#ezpublish] <buz> weird
+[11-14-2005 09:48:17] [#ezpublish] <buz> maybe the wlan is at fault
+[11-14-2005 09:49:27] [#ezpublish] <Katana`> i avoid using it over wlan
+[11-14-2005 09:49:37] [#ezpublish] <buz> i'm lazy
+[11-14-2005 09:49:45] [#ezpublish] <buz> i dont want to plug any more cable than i have to
+[11-14-2005 09:49:52] [#ezpublish] <Katana`> :)
+[11-14-2005 09:53:08] [#ezpublish] <LottoKim> hmm, found a litle "bug", in finetune i got "AcceptPathInfo disabled", ez recomand apache 1.3, but acceptpathinfo is only supported in apache2
+[11-14-2005 09:53:44] [#ezpublish] <nnn0> :)
+[11-14-2005 09:54:00] [#ezpublish] <Katana`> lol
+[11-14-2005 09:56:07] [#ezpublish] <LottoKim> should i report it?
+[11-14-2005 09:56:31] [#ezpublish] <Sulfur> browse the bug db and if you don't find it , report it
+[11-14-2005 09:57:46] [#ezpublish] <Katana`> it has been reported i think
+[11-14-2005 09:57:46] [#ezpublish] <Katana`> a lot
+[11-14-2005 10:00:44] [#ezpublish] <Sulfur> arrrrrgh ... correct me if I am wrong ... sometime ago, I added to a tpl, an {include uri="extensiontemplate.tpl"} and I found it being actually included and computed ... I was very happy. now I am trying it again and it says that the tpl I am trying to add doesn't exist in any design. was I hallucinating when it worked, or I am doing something wrong now?
+[11-14-2005 10:02:18] [#ezpublish] <Katana`> design:exte...
+[11-14-2005 10:02:24] [#ezpublish] <Katana`> not just the template
+[11-14-2005 10:02:29] [#ezpublish] <Katana`> dunno why it was working :)
+[11-14-2005 10:04:17] [#ezpublish] <Sulfur> {include uri="design:utils/provaaddfuncts.tpl"}
+[11-14-2005 10:05:29] [#ezpublish] <Katana`> yep, relative to the templates folder it sits in
+[11-14-2005 10:06:47] [#ezpublish] <Sulfur> well, it now does include it, but does not run the associated PHP .... hmmm
+[11-14-2005 10:07:04] [#ezpublish] <Sulfur> I was so happy and thought that eZ did it cleverly .... :'(
+[11-14-2005 10:07:18] [#ezpublish] <Katana`> uh ?
+[11-14-2005 10:07:27] [#ezpublish] <Katana`> how did you associate PHP code to it ??
+[11-14-2005 10:08:42] [#ezpublish] <Sulfur> I explain it better. you can write and url like www.my.site/myext/myview right? it will run the php file associated with myview which will, in turn, load a tmeplate, assign tpl variables and display it. right?
+[11-14-2005 10:12:12] [#ezpublish] <buz> yes
+[11-14-2005 10:17:57] [#ezpublish] <Katana`> it will load a template if you request it yes
+[11-14-2005 10:18:01] [#ezpublish] <Katana`> it's not mandatory at all
+[11-14-2005 10:18:09] [#ezpublish] <Katana`> but since it's a view it usually does :)
+[11-14-2005 10:18:24] [#ezpublish] <buz> mhh for some stuff i just output hardcoded data
+[11-14-2005 10:18:36] [#ezpublish] <buz> if you need to export xml theres no point in loading the template stuff
+[11-14-2005 10:18:38] [#ezpublish] <Katana`> you can do that as well
+[11-14-2005 10:18:43] [#ezpublish] <Katana`> yep definitely
+[11-14-2005 10:18:45] [#ezpublish] <Katana`> same if you use ajax
+[11-14-2005 10:18:50] [#ezpublish] <buz> it was for ajax ;)
+[11-14-2005 10:19:05] [#ezpublish] <buz> but if you use ajax with innerhtml, it's borderline
+[11-14-2005 10:19:57] [#ezpublish] <Katana`> indeed :))
+[11-14-2005 10:20:19] [#ezpublish] <Katana`> when using ajax with smarty, i was using smarty::fetch to get the HTML output then i was using the ajax lib to insert that in the XML
+[11-14-2005 10:20:35] [#ezpublish] <Sulfur> ok. I needed to display an extension template within another extension tpl, so I made a simple test and did this: {include uri="design:utils/myexttpl.tpl"} and I was overjoyed to see that not only it loaded, but computed (meaning: the correct PHP file was loaded and the tpl variables correctly filled)
+[11-14-2005 10:20:46] [#ezpublish] <Sulfur> but now it seems I cannot do it again :'(
+[11-14-2005 10:20:56] [#ezpublish] <buz> what does debug say
+[11-14-2005 10:20:59] [#ezpublish] <buz> also, clear the cache
+[11-14-2005 10:21:44] [#ezpublish] <Sulfur> debug says only Unknown template variable 'myvar' in namespace ''
+[11-14-2005 10:23:03] [#ezpublish] <Sulfur> var is set like this: $tpl->setVariable('myvar', rand(10000000));
+[11-14-2005 10:25:09] [#ezpublish] <Katana`> should be defined then
+[11-14-2005 10:25:45] [#ezpublish] <Sulfur> yes, it would if I called it in the proper "way" ... i.e. my.site/myext/myview
+[11-14-2005 10:26:33] [#ezpublish] <Katana`> lol
+[11-14-2005 10:26:35] [#ezpublish] <Katana`> and you don't ?
+[11-14-2005 10:27:42] [#ezpublish] <Sulfur> no, as I told you, I am directly including the TPL file . there is an association going from PHP to tpl, but --- maybe misled --- I tried to include directly the tpl and found it working :) but not now
+[11-14-2005 10:27:51] [#ezpublish] <Katana`> ah
+[11-14-2005 10:27:52] [#ezpublish] <Sulfur> maybe I can't explain myself clearly
+[11-14-2005 10:27:53] [#ezpublish] <Katana`> i'm lost
+[11-14-2005 10:27:57] [#ezpublish] <Sulfur> ok
+[11-14-2005 10:28:03] [#ezpublish] <Katana`> maybe i can't understand clearly what you explain :)
+[11-14-2005 10:28:24] [#ezpublish] <buz> if you include a template, it wont execute any php outside the template operators etc you call in it
+[11-14-2005 10:28:34] [#ezpublish] <buz> everything else is a bug
+[11-14-2005 10:28:37] [#ezpublish] <buz> and a bad one
+[11-14-2005 10:29:26] [#ezpublish] <Sulfur> tpl a.tpl : {...} someHTML {...} someotherHTML {....} {include uri="design:myext/mytpl.tpl" } produced the result of having mytpl.tpl 's output being calculated and embedded into a.tpl's output. but I cannot reproduce it anymore :)
+[11-14-2005 10:30:18] [#ezpublish] <Sulfur> I don't think it's a bug, sometimes it can be damn useful. I wanted to use it to add steps to my login phase
+[11-14-2005 10:30:43] [#ezpublish] <buz> it would mean there are side effects
+[11-14-2005 10:30:46] [#ezpublish] <buz> side effects are evil
+[11-14-2005 10:30:57] [#ezpublish] <buz> a template language with side effects would be truly broken
+[11-14-2005 10:32:01] [#ezpublish] <Sulfur> I don't see an effect like including a tpl within another to be a side effect. If a.tpl 's output depends on its underlying PHP code, I expect it to be run.
+[11-14-2005 10:32:56] [#ezpublish] <Sulfur> but maybe I was hallucinating ... still, now then I have the issue of how to include an extension view's output within another view tpl's output
+[11-14-2005 10:33:48] -!- ordna1 [n=ordnas@p549DFE5B.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-14-2005 10:35:04] -!- ordnas [n=ordnas@p549DC57D.dip.t-dialin.net] has joined #ezpublish
+[11-14-2005 10:38:50] [#ezpublish] <Sulfur> aw shucks ...
+[11-14-2005 10:39:37] [#ezpublish] <LottoKim> "The setup wizard was not able to complete the creation of your selected sites. EZSW-004 Failed inserting data to mysql Table 'ezapprove_items' already exists, EZSW-040 Failed to initialize site package corporate" i got this when i try to install ez, after send registration
+[11-14-2005 10:40:33] [#ezpublish] <nnn0> your started with an empty database ?
+[11-14-2005 10:40:39] [#ezpublish] <LottoKim> yes
+[11-14-2005 10:40:48] [#ezpublish] <nnn0> strange
+[11-14-2005 10:40:51] [#ezpublish] <LottoKim> if i delete them, and press retry
+[11-14-2005 10:41:00] [#ezpublish] <LottoKim> ez create thems, and give me the same error message
+[11-14-2005 10:41:06] [#ezpublish] <Katana`> ah, autopublish is a workflow... damnti
+[11-14-2005 10:41:07] [#ezpublish] <Katana`> crap
+[11-14-2005 10:42:25] [#ezpublish] <LottoKim> hmm.. is it possible to fix this?
+[11-14-2005 10:42:40] [#ezpublish] <Sulfur> :P
+[11-14-2005 10:42:54] [#ezpublish] <LottoKim> or, how can i fix it? :P
+[11-14-2005 10:43:23] [#ezpublish] <Katana`> okay can I filter attributes on date ...
+[11-14-2005 10:43:35] [#ezpublish] <Katana`> i can
+[11-14-2005 10:43:36] [#ezpublish] <Katana`> good
+[11-14-2005 10:44:05] [#ezpublish] <Sulfur> Katana` and buz ... now I have to resort to something else to propagate the user data to other systems like a blog and a forum at subscription time ... :) have you ever tried doing that?
+[11-14-2005 10:44:23] [#ezpublish] <buz> ?
+[11-14-2005 10:44:32] [#ezpublish] <Katana`> i'd say workflow event
+[11-14-2005 10:44:37] [#ezpublish] <Katana`> that pushes data somewhere or something
+[11-14-2005 10:44:41] [#ezpublish] <buz> yes
+[11-14-2005 10:44:52] [#ezpublish] <buz> or if you absolutely want to hack, template operator
+[11-14-2005 10:45:05] [#ezpublish] <Sulfur> my poor little brain tangles itself when thinking about that.
+[11-14-2005 10:45:13] [#ezpublish] <Katana`> POST using CURL, or XML uploaded somewhere... the ways are plenty :)
+[11-14-2005 10:45:29] [#ezpublish] <Sulfur> I will definitely write a tpl operator which will does something taboo like WRITING to an object
+[11-14-2005 10:45:36] [#ezpublish] <Katana`> good :)
+[11-14-2005 10:45:45] [#ezpublish] <buz> that is the hack way ;)
+[11-14-2005 10:45:57] [#ezpublish] <Sulfur> oh, not really .....
+[11-14-2005 10:46:13] [#ezpublish] <Sulfur> I have to do that to update polls
+[11-14-2005 10:46:14] [#ezpublish] <Katana`> hax sux
+[11-14-2005 10:46:14] [#ezpublish] <buz> sure
+[11-14-2005 10:46:23] [#ezpublish] <buz> it's violates MVC pretty badly
+[11-14-2005 10:46:33] [#ezpublish] <buz> it makes the view become the controller
+[11-14-2005 10:46:40] [#ezpublish] <Katana`> yeah
+[11-14-2005 10:46:44] [#ezpublish] <Sulfur> ah, ok , hack on that level
+[11-14-2005 10:47:04] [#ezpublish] <Katana`> it would be good if eZ could define exactly what extension type is to be used for what operation ;)
+[11-14-2005 10:47:04] [#ezpublish] <buz> just use ez forums and blog and be fine
+[11-14-2005 10:47:08] [#ezpublish] <Sulfur> I thought you meant it's a hack as intended when we speak of ezp (i.e. hacking the kernel)
+[11-14-2005 10:47:19] [#ezpublish] <Katana`> i guess an action should be used to write stuff but it's not clear...
+[11-14-2005 10:47:30] [#ezpublish] <Sulfur> buz: I cannot choose what to use, they want to use wordpress and vbulletin :)
+[11-14-2005 10:47:43] [#ezpublish] <buz> vbulletin at least has a point but wordpress? piece of shit
+[11-14-2005 10:48:07] [#ezpublish] <Sulfur> diplomatica as ever ;)
+[11-14-2005 10:48:28] [#ezpublish] <Sulfur> anyway -- let's suppose I do it witha workflow.
+[11-14-2005 10:48:49] [#ezpublish] <Sulfur> what event would that be?
+[11-14-2005 10:48:59] [#ezpublish] <Sulfur> a publish on users?
+[11-14-2005 10:49:15] [#ezpublish] <buz> "if you look at GDP, MS prices in Vietnam are the equivalent, for local people, of charging just shy of $50,000 for a Windows XP license in the US"
+[11-14-2005 10:49:22] [#ezpublish] <Katana`> yeah, post publish
+[11-14-2005 10:49:29] [#ezpublish] <Katana`> but if it requires activation you're annoyed :))
+[11-14-2005 10:49:44] [#ezpublish] <Sulfur> well buz , that's enlightened politics. they don't want vietnamese to use m$ ;)
+[11-14-2005 10:49:57] [#ezpublish] <buz> sure, it's from slashdot ;)
+[11-14-2005 10:50:01] [#ezpublish] <Sulfur> I will require it. and password would be lost as it is hashed.
+[11-14-2005 10:50:08] [#ezpublish] <buz> (it's a somewhat flawed comparison though)
+[11-14-2005 10:50:19] [#ezpublish] <buz> just using the gdp as factor is bad
+[11-14-2005 10:50:21] [#ezpublish] <Katana`> :))
+[11-14-2005 10:50:22] [#ezpublish] <Sulfur> damn ..
+[11-14-2005 10:50:42] [#ezpublish] <Sulfur> I have to get out of this somehow
+[11-14-2005 10:50:49] [#ezpublish] <buz> but to get the point across, even a margin of error of 50% would be good enough
+[11-14-2005 10:51:11] [#ezpublish] <Sulfur> if only wfs were a little more documented, I would avoid losing tons of time just to know if they'll cut the cheese
+[11-14-2005 10:52:06] [#ezpublish] <buz> they can do whatever you want
+[11-14-2005 10:52:18] [#ezpublish] <buz> essentially they are overcomplicated hooks
+[11-14-2005 10:52:24] [#ezpublish] <buz> callbacks if you want
+[11-14-2005 10:53:22] [#ezpublish] <Sulfur> yeah ,  overcomplicated  is the magic word. I think I'll need to make a pre-publish one (whatever that would mean for a user obj) and a post-publish one
+[11-14-2005 10:54:18] [#ezpublish] <Sulfur> or I will just make those 2 damn operators and use the tpl as bridge between 2 internals of eZ ;)
+[11-14-2005 10:54:54] [#ezpublish] <Katana`> :))
+[11-14-2005 10:55:34] [#ezpublish] <Sulfur> I hate having to weave my way around software
+[11-14-2005 10:55:46] [#ezpublish] <Sulfur> good exercise for the brain though
+[11-14-2005 10:57:34] [#ezpublish] <Katana`> working with ez is probably one of the most exhausting task i have performed so far
+[11-14-2005 10:57:40] [#ezpublish] <Katana`> but one of the funniest as well :)
+[11-14-2005 10:59:55] [#ezpublish] <Sulfur> yes of course, I keep grumbling on and on, but I concede it is fun, and eZ crew is helpful
+[11-14-2005 11:00:29] [#ezpublish] <Sulfur> what ain't fun is having the boss pacing nervously behind you and polling me with the same question over and over "have you found a way?" ;)
+[11-14-2005 11:02:42] [#ezpublish] <Katana`> i have that problem
+[11-14-2005 11:02:52] [#ezpublish] <Katana`> have had it for a month :)
+[11-14-2005 11:04:02] [#ezpublish] <Katana`> cya dudes
+[11-14-2005 11:06:38] [#ezpublish] <LottoKim>     *  EZSW-040Failed to initialize site package corporate
+[11-14-2005 11:06:39] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[11-14-2005 11:21:57] [#ezpublish] <Sulfur> and then what happened Katana`? you kille d your boss and smuggled it as a banlieue victim ;) :))
+[11-14-2005 11:25:09] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-14-2005 12:02:38] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-14-2005 13:22:28] -!- ordnas [n=ordnas@p549DC57D.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-14-2005 13:22:48] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-14-2005 13:51:36] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-14-2005 14:53:08] [#ezpublish] <buz> so THAT was the banlieu dead
+[11-14-2005 15:28:52] -!- agentbob [n=dan@216.130.216.30] has joined #ezpublish
+[11-14-2005 15:29:47] [#ezpublish] <agentbob> anyone here ever have problems with ezpub 3.5.0 mysteriously randomly bringing back old cached objects?
+[11-14-2005 15:30:11] [#ezpublish] <agentbob> i've tried deleting the /var directory, clearing cache in browser and with the .sh file.. but its still happening on certain pages sometimes
+[11-14-2005 15:30:15] [#ezpublish] <agentbob> anyonw know what might be up?
+[11-14-2005 15:53:53] [#ezpublish] <agentbob> it's somehow pulling up a version that doesn't/shouldn't exist anymore becuase i've removed previous versions and its still doing it
+[11-14-2005 15:54:13] [#ezpublish] <agentbob> it's pulling version 12, and all but 16 have been deleted....
+[11-14-2005 15:58:15] [#ezpublish] <nnn0> clear cache ?
+[11-14-2005 15:58:19] [#ezpublish] <nnn0> i donno
+[11-14-2005 15:58:20] [#ezpublish] <nnn0> :)
+[11-14-2005 16:06:49] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-14-2005 16:21:46] -!- agentbob [n=dan@216.130.216.30] has left #ezpublish []
+[11-14-2005 18:35:38] [#ezpublish] <nnn0> hm
+[11-14-2005 18:48:06] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-14-2005 20:02:51] -!- Bedlore [n=me@219-90-238-58.ip.adam.com.au] has joined #ezpublish
+[11-14-2005 21:42:29] -!- Bedlore [n=me@219-90-238-58.ip.adam.com.au] has quit [Read error: 110 (Connection timed out)]
+[11-14-2005 22:43:06] -!- Bedlore [n=me@219-90-182-248.ip.adam.com.au] has joined #ezpublish
+[11-14-2005 22:56:01] -!- mode/#ezpublish [+o fh[eZ]] by ChanServ
+[11-14-2005 22:56:43] -!- Bedlore [n=me@219-90-182-248.ip.adam.com.au] has quit []

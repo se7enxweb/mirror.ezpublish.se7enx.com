@@ -1,0 +1,79 @@
+[07-04-2006 00:19:34] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-04-2006 00:30:51] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[07-04-2006 00:33:17] -!- DiGiTa|_ [n=pet2poul@84.4.69.146] has joined #ezpublish
+[07-04-2006 01:20:25] -!- awormus [n=aaron@p54B05868.dip.t-dialin.net] has joined #ezpublish
+[07-04-2006 01:21:42] -!- ordnas [n=ordnas@p549D67DA.dip.t-dialin.net] has joined #ezpublish
+[07-04-2006 01:24:44] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[07-04-2006 01:55:40] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[07-04-2006 02:04:26] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[07-04-2006 02:15:04] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-04-2006 02:36:32] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has joined #ezpublish
+[07-04-2006 02:37:54] -!- DiGiTa|_ [n=pet2poul@84.4.69.146] has quit []
+[07-04-2006 04:43:11] -!- nfrp [n=nfrp@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-04-2006 04:48:03] -!- zurgutt [n=zurgutt@155.80-202-173.nextgentel.com] has joined #ezpublish
+[07-04-2006 05:09:01] -!- gdm [n=michael@mgdm.net] has joined #ezpublish
+[07-04-2006 05:11:36] [#ezpublish] <mgdm> Hi, does anyone know if it's possible to get eZ publish 3.6 to behave with PHP in safe mode? We're moving it to a new server and the sysadmins categorically won't switch it off
+[07-04-2006 05:26:23] -!- awormus_ [n=aaron@p54B063DD.dip.t-dialin.net] has joined #ezpublish
+[07-04-2006 05:31:30] -!- awormus [n=aaron@p54B05868.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[07-04-2006 05:31:36] -!- awormus_ is now known as awormus
+[07-04-2006 05:36:13] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[07-04-2006 05:38:05] -!- gdm [n=michael@mgdm.net] has quit ["leaving"]
+[07-04-2006 06:11:26] -!- awormus [n=aaron@p54B063DD.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[07-04-2006 07:18:31] -!- awormus [n=aaron@p54B063DD.dip.t-dialin.net] has joined #ezpublish
+[07-04-2006 07:19:41] -!- nfrp [n=nfrp@nat-multimedia.presidence.uhp-nancy.fr] has quit ["Leaving"]
+[07-04-2006 07:26:13] -!- awormus [n=aaron@p54B063DD.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[07-04-2006 07:27:58] -!- nfrp [n=nfrp@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-04-2006 07:32:53] -!- nfrp [n=nfrp@nat-multimedia.presidence.uhp-nancy.fr] has quit [Client Quit]
+[07-04-2006 07:40:07] -!- nfrp [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-04-2006 07:49:40] -!- nfrp [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has quit ["Miranda IM! Smaller, Faster, Easier. http://miranda-im.org"]
+[07-04-2006 07:53:29] -!- P [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-04-2006 07:54:39] -!- fabio [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-04-2006 07:54:59] -!- nfrp [n=nfrp@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-04-2006 07:56:54] -!- P [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has quit [Client Quit]
+[07-04-2006 07:57:38] -!- Pti [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-04-2006 07:57:51] -!- fabio [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has left #ezpublish []
+[07-04-2006 07:58:24] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[07-04-2006 08:28:35] -!- nfrp [n=nfrp@nat-multimedia.presidence.uhp-nancy.fr] has quit ["Leaving"]
+[07-04-2006 10:13:33] -!- awormus [n=aaron@p54B06BCF.dip.t-dialin.net] has joined #ezpublish
+[07-04-2006 10:32:54] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[07-04-2006 10:34:57] -!- awormus [n=aaron@p54B06BCF.dip.t-dialin.net] has quit [Read error: 145 (Connection timed out)]
+[07-04-2006 10:36:25] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-04-2006 10:36:28] [#ezpublish] <kalooni> Hi
+[07-04-2006 10:52:27] [#ezpublish] <birger> hi
+[07-04-2006 10:58:53] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[07-04-2006 11:01:07] -!- Pti [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has quit ["Miranda IM! Smaller, Faster, Easier. http://miranda-im.org"]
+[07-04-2006 11:24:30] -!- SEAwolfx [n=SEAwolfx@p54938F99.dip0.t-ipconnect.de] has joined #ezpublish
+[07-04-2006 11:38:56] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[07-04-2006 11:41:23] -!- ordnas [n=ordnas@p549D67DA.dip.t-dialin.net] has left #ezpublish []
+[07-04-2006 12:09:40] [#ezpublish] <birger> hmm, the site-package (plain) seems to not be imported at all when i install 3.8.1
+[07-04-2006 12:09:48] [#ezpublish] <birger> no files under the default siteaccess
+[07-04-2006 12:09:54] [#ezpublish] <birger> anyone else experienced this?
+[07-04-2006 12:10:05] [#ezpublish] <birger> or is it "expected" ?
+[07-04-2006 12:31:42] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[07-04-2006 12:31:52] [#ezpublish] <ls> hi
+[07-04-2006 12:36:21] [#ezpublish] <birger> evening luke :)
+[07-04-2006 12:37:50] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[07-04-2006 12:44:03] [#ezpublish] <ls> evening :)
+[07-04-2006 12:44:10] -!- ls is now known as luke_
+[07-04-2006 12:44:27] [#ezpublish] <luke_> whats up? :)
+[07-04-2006 12:44:37] [#ezpublish] <luke_> are you going to watch the match
+[07-04-2006 12:45:23] [#ezpublish] <birger> nah, booring
+[07-04-2006 12:45:36] [#ezpublish] <birger> i don't even know whos playing
+[07-04-2006 12:46:54] [#ezpublish] <luke_> :) Italy vs. Germany
+[07-04-2006 12:47:15] [#ezpublish] <birger> yeah :)
+[07-04-2006 12:47:31] [#ezpublish] <birger> damn...i just realized that "plain" really IS plain in this ezp release
+[07-04-2006 12:47:55] [#ezpublish] <birger> the thumbnail is a bit misleading :(
+[07-04-2006 12:48:18] [#ezpublish] <birger> i mean, no sitestyle
+[07-04-2006 13:02:34] [#ezpublish] <luke_> :)
+[07-04-2006 13:02:41] [#ezpublish] <luke_> yeah it was change since 3,7
+[07-04-2006 13:02:59] [#ezpublish] <luke_> it is really "plain"
+[07-04-2006 13:03:24] [#ezpublish] <luke_> It can be shock
+[07-04-2006 13:06:16] [#ezpublish] <luke_> I'm going to watch the match, cheers
+[07-04-2006 13:07:10] -!- luke_ [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[07-04-2006 14:07:22] -!- awormus [n=aaron@p54B06BCF.dip.t-dialin.net] has joined #ezpublish
+[07-04-2006 15:58:52] -!- awormus [n=aaron@p54B06BCF.dip.t-dialin.net] has quit ["Leaving"]
+[07-04-2006 16:00:33] -!- zurgutt [n=zurgutt@155.80-202-173.nextgentel.com] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[07-04-2006 16:29:21] -!- yper [i=yper@c-eb4472d5.024-2014-67626714.cust.bredbandsbolaget.se] has left #ezpublish []
+[07-04-2006 16:43:39] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[07-04-2006 18:20:41] -!- SEAwolfx [n=SEAwolfx@p54938F99.dip0.t-ipconnect.de] has left #ezpublish []
+[07-04-2006 23:37:09] -!- awormus [n=aaron@p54B06BCF.dip.t-dialin.net] has joined #ezpublish

@@ -1,0 +1,98 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 14.3.&nbsp; Benchmarking</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch14lev1sec3"></a><h3 class="docSection1Title">14.3. Benchmarking</h3>
+<p class="docText">What matters in the end is how your site performs overall. An effective way of testing designs and detecting bottlenecks is to benchmark your site by simulating production traffic.<a name="ch14index77"></a><a name="ch14index78"></a></p>
+<p class="docText">This section briefly introduces two tools for site benchmarking: ApacheBench and Siege.</p>
+<a name="ch14lev2sec4"></a><h4 class="docSection2Title">14.3.1. Using ApacheBench</H4>
+<p class="docText">One benchmarking tool is <span class="docEmphStrong">ab</span> (which stands for <span class="docEmphStrong">Apache Benchmarking tool</span>) which is bundled with the Apache web server and is most likely installed on your system already if you are running Apache. ab works by simulating a number of clients sending requests to your web server with a specified delay, hammering away on the same URL.<a name="ch14index79"></a><a name="ch14index80"></a><a name="ch14index81"></a><a name="ch14index82"></a></p>
+<p class="docText">Here's an example:</P>
+<pre>
+$ ab -n 10000 -c 10 http://localhost/test.php
+</pre><br>
+<p class="docText">The <tt>n</tt> option specifies the number of requests, and the <tt>c</tt> option specifies the number of concurrent clients. This code will fire off 10,000 queries requesting /test.php from localhost, 10 at a time. When all requests have finished, ab prints a summary:</P>
+<pre>
+[...skipping first part of output...]
+
+Document Path:          /test.php
+Document Length:        3037 bytes
+
+Concurrency Level:      10
+Time taken for tests:   15.875129 seconds
+Complete requests:      10000
+Failed requests:        0
+Write errors:           0
+Total transferred:      32080000 bytes
+HTML transferred:       30370000 bytes
+Requests per second:    629.92 [#/sec] (mean)
+Time per request:       15.875 [ms] (mean)
+Time per request:       1.588 [ms] (mean, across all concurrent requests)
+Transfer rate:          1973.40 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0      11
+Processing:     1   14  19.2     13     404
+Waiting:        0   10  14.8     10     403
+Total:          1   14  19.2     13     405
+
+Percentage of the requests served within a certain time (ms)
+  50%     13
+  66%     14
+  75%     15
+  80%     15
+  90%     17
+  95%     26
+  98%     62
+  99%    110
+ 100%    405 (longest request)
+</pre><br>
+<p class="docText">The interesting numbers here are the throughput (requests per second and time per request), and the percentiles at the end. In this case, 80 percent of the requests finished in 17ms or less, and 99 percent finished in less than 110ms.<a name="ch14index83"></a><a name="ch14index84"></a><a name="ch14index85"></a><a name="ch14index86"></a></p>
+<p class="docText">For more information, run just ab to get a full list of options</p>
+<a name="ch14lev2sec5"></a><h4 class="docSection2Title">14.3.2. Using Siege</H4>
+<p class="docText">The major weakness of ab is that it does not let you simulate a more realistic request distributionfor example, by letting you specify a list of request URLs to rotate between.<a name="ch14index87"></a><a name="ch14index88"></a><a name="ch14index89"></a></P>
+<p class="docText">One benchmarking tool that provides this feature is <span class="docEmphStrong">Siege</span>. You can find more information about Siege at <a class="docLink" target="_blank" href="http://www.joedog.org/siege/">http://www.joedog.org/siege/</a>.</p>
+<p class="docText">Siege lets you specify a file with full URLs, and picks a random URL for each request. Here's an example:</p>
+<pre>
+$ siege -i -t 10S -f urls.txt
+** Siege 2.59
+** Preparing 15 concurrent users for battle.
+The server is now under siege...
+HTTP/1.1 200   0.02 secs:     131 bytes ==&gt; /test.php
+[...skipping...]
+
+Lifting the server siege...\done.
+Transactions:                     29 hits
+Availability:                 100.00 %
+Elapsed time:                   1.98 secs
+Data transferred:              64825 bytes
+Response time:                  0.01 secs
+Transaction rate:              14.65 trans/sec
+Throughput:                 32739.90 bytes/sec
+Concurrency:                    0.19
+Successful transactions:          29
+Failed transactions:               0
+</pre><br>
+<p class="docText">Although Siege does not print a percentile summary, you can create one yourself by processing the requests printed on standard output. Again, run <tt>siege</tt> without parameters or <tt>man siege</tt> for more details.<a name="ch14index90"></a><a name="ch14index91"></a><a name="ch14index92"></a></p>
+<a name="ch14lev2sec6"></a><H4 class="docSection2Title">14.3.3. Testing Versus Real Traffic</h4>
+<p class="docText">The danger of running a test like this is that it does not really simulate real-world traffic. Real traffic includes web browsers behind slow modems that cause requests to take a long time, as well as search engine crawlers and other weird things that can affect your site's performance and are difficult to simulate with a benchmarking tool.<a name="ch14index93"></a><a name="ch14index94"></a><a name="ch14index95"></a></p>
+<p class="docText">You can approach this by carefully creating your benchmarking requests file, preferably basing it on real traffic logs, or at least by making a realistic estimate.</P>
+<ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

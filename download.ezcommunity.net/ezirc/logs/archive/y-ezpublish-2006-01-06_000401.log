@@ -1,0 +1,273 @@
+[01-04-2006 00:53:36] -!- _thomas [n=thomas@c-134-177-7.d.dsl.de.ignite.net] has joined #ezpublish
+[01-04-2006 00:59:51] -!- _thomas is now known as help
+[01-04-2006 01:04:33] -!- help is now known as _thomas
+[01-04-2006 01:37:11] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[01-04-2006 02:04:33] -!- _kore [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-04-2006 02:05:21] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[01-04-2006 02:08:32] [#ezpublish] <kris10an> mornin publishers
+[01-04-2006 02:27:16] -!- tobyS_ [n=dotxp@dslb-084-060-003-250.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[01-04-2006 02:33:42] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-04-2006 03:04:07] -!- technocrat [i=tuscia@hst-250-241.splius.lt] has joined #ezpublish
+[01-04-2006 03:17:01] -!- hovik__ [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 03:17:20] -!- hovik__ [n=hovik@popeye.ez.no] has joined #ezpublish
+[01-04-2006 03:26:10] -!- technocrat [i=tuscia@hst-250-241.splius.lt] has quit []
+[01-04-2006 03:34:10] [#ezpublish] <SEAwolfx> morning.
+[01-04-2006 04:12:24] -!- DiGiTa|_ [n=guillaum@84.5.140.232] has joined #ezpublish
+[01-04-2006 04:16:50] [#ezpublish] <DiGiTa|_> hi
+[01-04-2006 04:17:17] [#ezpublish] <DiGiTa|_> does someone know why i get those errors
+[01-04-2006 04:17:18] [#ezpublish] <DiGiTa|_> http://www.grande-bastide-provence.com/
+[01-04-2006 04:17:30] [#ezpublish] <DiGiTa|_> i 've only change my pagelayout.tpl
+[01-04-2006 04:20:58] -!- ordnas [n=ordnas@p549D6F8F.dip.t-dialin.net] has joined #ezpublish
+[01-04-2006 04:21:00] [#ezpublish] <DiGiTa|_> and i bacome crazy
+[01-04-2006 04:21:04] [#ezpublish] <DiGiTa|_> be
+[01-04-2006 04:40:42] -!- SEAwolfx1 [n=mike@tor/session/x-753c01da2d8033a9] has joined #ezpublish
+[01-04-2006 04:44:05] [#ezpublish] <SEAwolfx> DiGiTa|_: what errors?
+[01-04-2006 04:44:08] -!- SEAwolfx [n=mike@tor/session/x-2bf4c600a75ac65a] has quit [Remote closed the connection]
+[01-04-2006 04:44:38] [#ezpublish] <DiGiTa|_> i correct them
+[01-04-2006 04:44:52] [#ezpublish] <DiGiTa|_> it was a template syntax error
+[01-04-2006 04:44:53] [#ezpublish] <SEAwolfx1> ah ;)
+[01-04-2006 04:47:00] [#ezpublish] <DiGiTa|_> i'm using the same pagelayout for two sites
+[01-04-2006 04:47:17] [#ezpublish] <DiGiTa|_> www.grande-bastide.com and www.chambresdhotesprovence.com
+[01-04-2006 04:47:30] [#ezpublish] <DiGiTa|_> only the css isn't the same :)
+[01-04-2006 04:48:12] [#ezpublish] <DiGiTa|_> not www.grande-bastide.com but www.grande-bastide-provence.com
+[01-04-2006 04:53:13] [#ezpublish] <SEAwolfx1> .oO( indeed, the eZDOM-Classmodel is convincing ;)
+[01-04-2006 04:56:47] [#ezpublish] <seasonfive> hi all :)
+[01-04-2006 04:57:31] [#ezpublish] <DiGiTa|_> i have created a custom datatype, then i added it to a class as non-translatable, and my problem is that it doesn't show when i'm on the english siteaccess
+[01-04-2006 04:57:34] [#ezpublish] <seasonfive> i have pages which i want to remove from my main menu, is there any user flag ?
+[01-04-2006 04:57:58] [#ezpublish] <DiGiTa|_> you can hide the nodes
+[01-04-2006 04:58:15] [#ezpublish] <seasonfive> ah ?
+[01-04-2006 04:58:26] [#ezpublish] <DiGiTa|_> look into admin
+[01-04-2006 04:58:32] [#ezpublish] <DiGiTa|_> right click on icon
+[01-04-2006 04:58:35] [#ezpublish] <DiGiTa|_> and hide node
+[01-04-2006 04:59:13] [#ezpublish] <seasonfive> yes but the content is hidden too :-/
+[01-04-2006 04:59:33] [#ezpublish] <seasonfive> i want keep it visible everywhere but not in my main menu
+[01-04-2006 05:00:10] [#ezpublish] <seasonfive> i just don't want this page name in the menu
+[01-04-2006 05:00:13] [#ezpublish] <DiGiTa|_> you can create a custom class for this content
+[01-04-2006 05:00:24] [#ezpublish] <seasonfive> is there a user flag which i can set and then check with fetch function ?
+[01-04-2006 05:00:39] [#ezpublish] <DiGiTa|_> or you can fetch hidden nodes
+[01-04-2006 05:01:39] [#ezpublish] <seasonfive> hmmm
+[01-04-2006 05:01:42] [#ezpublish] <DiGiTa|_> fetch( 'content', 'list', hash( 'parent_node_id', $node.node_id, 'ignore_visibility',         ignore_visibility
+[01-04-2006 05:01:52] [#ezpublish] <DiGiTa|_> should set to true or false
+[01-04-2006 05:01:59] [#ezpublish] <seasonfive> i could create a MyFolder class and copy Folder. Then add a "Show in main menu" check box
+[01-04-2006 05:02:27] [#ezpublish] <DiGiTa|_> oh
+[01-04-2006 05:02:38] [#ezpublish] <DiGiTa|_> yes you can do like that
+[01-04-2006 05:02:48] [#ezpublish] <seasonfive> which seems cleaner to you ?
+[01-04-2006 05:03:30] [#ezpublish] <seasonfive> its sad ezpublish doesn't manage class inheritance yet :p
+[01-04-2006 05:03:33] [#ezpublish] <DiGiTa|_> if you create a custom class it will not be visible into the menu
+[01-04-2006 05:04:06] [#ezpublish] <DiGiTa|_> only if you specify this custom class into the menu.ini
+[01-04-2006 05:04:47] [#ezpublish] <seasonfive> i build my menu by hand
+[01-04-2006 05:05:02] [#ezpublish] <seasonfive> i think i'm not using menu.ini
+[01-04-2006 05:05:10] [#ezpublish] <DiGiTa|_> bad :/
+[01-04-2006 05:05:23] [#ezpublish] <seasonfive> seems yes
+[01-04-2006 05:05:34] [#ezpublish] <seasonfive> i'll read doc about how menu should be managed
+[01-04-2006 05:06:02] [#ezpublish] <seasonfive> i just do fetching from root node and then <a href={$menu.url_alias|ezurl} class="menu">{$menu.object.name}</a>
+[01-04-2006 05:07:22] [#ezpublish] <DiGiTa|_> you can do if ne(menu.node_id, id) .... {/if}
+[01-04-2006 05:08:09] [#ezpublish] <seasonfive> yes
+[01-04-2006 05:08:19] [#ezpublish] <seasonfive> but then its hardcoded ...
+[01-04-2006 05:08:33] [#ezpublish] <seasonfive> and publisher can't choose if an item should appear in menu or not
+[01-04-2006 05:08:54] [#ezpublish] <DiGiTa|_> well, you can set those node id in a ini file
+[01-04-2006 05:09:03] [#ezpublish] <DiGiTa|_> and read the ini
+[01-04-2006 05:09:04] [#ezpublish] <seasonfive> oh
+[01-04-2006 05:09:10] [#ezpublish] <seasonfive> i didn't thought about that !
+[01-04-2006 05:09:20] [#ezpublish] <seasonfive> good idea :)
+[01-04-2006 05:09:24] [#ezpublish] <DiGiTa|_> eheh
+[01-04-2006 05:10:10] [#ezpublish] <seasonfive> i'll think about that. Now time for good eat =]. Thanks :)
+[01-04-2006 05:10:54] [#ezpublish] <DiGiTa|_> yes time to lunch
+[01-04-2006 05:10:55] [#ezpublish] <DiGiTa|_> :)
+[01-04-2006 05:17:48] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-04-2006 05:18:11] [#ezpublish] <tobmaster> hi
+[01-04-2006 05:33:34] -!- ordnas [n=ordnas@p549D6F8F.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 05:38:03] [#ezpublish] <SEAwolfx1> hi tobmaster
+[01-04-2006 05:44:00] [#ezpublish] <tobmaster> hi SEAwolfx1
+[01-04-2006 05:48:45] -!- SEAwolfx1 [n=mike@tor/session/x-753c01da2d8033a9] has quit [Read error: 104 (Connection reset by peer)]
+[01-04-2006 05:54:07] -!- SEAwolfx [n=mike@tor/session/x-1a6093b3b887f9f7] has joined #ezpublish
+[01-04-2006 05:59:10] -!- SEAwolfx1 [n=mike@tor/session/x-ee17a0939bb5b106] has joined #ezpublish
+[01-04-2006 06:04:30] -!- jota [n=jota@fanzine.igalia.com] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 06:16:15] [#ezpublish] <seasonfive> how to align text in content editor ?
+[01-04-2006 07:30:09] -!- _buz_ [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-04-2006 07:31:31] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-04-2006 07:31:59] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[01-04-2006 07:35:31] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-04-2006 07:45:37] -!- ordnas [n=ordnas@p549D6F8F.dip.t-dialin.net] has joined #ezpublish
+[01-04-2006 08:09:03] [#ezpublish] <DiGiTa|_> The InfoWorld Test Center Staff awarded Mac OS X Tiger the “Best Client Operating System” and Mac OS X Server Tiger the “Best Server Operating System” of 2006. Additionally, the Power Mac G5 Quad earned the title as the “Best Workstation.”
+[01-04-2006 08:10:00] -!- technocrat [i=tuscia@hst-250-241.splius.lt] has joined #ezpublish
+[01-04-2006 08:10:34] -!- ordnas [n=ordnas@p549D6F8F.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 08:12:26] -!- _thomas [n=thomas@c-134-177-7.d.dsl.de.ignite.net] has quit [Remote closed the connection]
+[01-04-2006 08:22:20] [#ezpublish] <technocrat> hello, is here Graham Brookins?
+[01-04-2006 08:22:37] [#ezpublish] <DiGiTa|_> hm ?
+[01-04-2006 08:24:00] [#ezpublish] <buz> id think mailing someone might be easier?
+[01-04-2006 08:24:37] [#ezpublish] <technocrat> i found article on ezcommunity site about upgrade ez 2.x to php 5 and wanna talk with this person :)
+[01-04-2006 08:25:11] [#ezpublish] <buz> oh that's kracker i think
+[01-04-2006 08:25:14] [#ezpublish] <buz> not here
+[01-04-2006 08:25:48] [#ezpublish] <buz> i guess he'd be sleeping this time of the day
+[01-04-2006 08:26:07] [#ezpublish] <DiGiTa|_> lol
+[01-04-2006 08:26:27] [#ezpublish] <DiGiTa|_> he s american ?
+[01-04-2006 08:26:30] [#ezpublish] <buz> i think so
+[01-04-2006 08:26:31] [#ezpublish] <technocrat> donno ;) i'am from Europe
+[01-04-2006 08:26:32] [#ezpublish] <DiGiTa|_> is he
+[01-04-2006 08:26:39] [#ezpublish] <DiGiTa|_> k
+[01-04-2006 08:26:40] [#ezpublish] <buz> but he's online at weird times anyhow
+[01-04-2006 08:26:52] [#ezpublish] <buz> technocrat: afaik, ezcommunity is his site
+[01-04-2006 08:26:56] [#ezpublish] <buz> try contacting him there
+[01-04-2006 08:27:23] [#ezpublish] <technocrat> jup...
+[01-04-2006 08:28:19] [#ezpublish] <DiGiTa|_> hey buz, i created two different layout with the same pagelayout
+[01-04-2006 08:28:36] [#ezpublish] <DiGiTa|_> is want you asked to me sometimes ago
+[01-04-2006 08:28:39] [#ezpublish] <DiGiTa|_> what
+[01-04-2006 08:32:37] [#ezpublish] <buz> with just css you mean?
+[01-04-2006 08:32:44] [#ezpublish] <DiGiTa|_> yup
+[01-04-2006 08:32:48] [#ezpublish] <buz> url?
+[01-04-2006 08:33:29] [#ezpublish] <DiGiTa|_> www.grande-bastide-provence.com & www.chambresdhotesprovence.com (in construction)
+[01-04-2006 08:34:49] [#ezpublish] <buz> neat
+[01-04-2006 09:25:50] -!- ordnas [n=ordnas@p549D6F8F.dip.t-dialin.net] has joined #ezpublish
+[01-04-2006 09:37:36] [#ezpublish] <buz> http://video.google.com/videoplay?docid=515642196227308929&q=russian HOLY CRAP
+[01-04-2006 09:58:31] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-04-2006 09:58:48] [#ezpublish] <Sulfur> w00t :P
+[01-04-2006 09:58:53] -!- DiGiTa|_ [n=guillaum@84.5.140.232] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 09:59:14] [#ezpublish] * Sulfur has a new eZ project and, as usual, it cannot be vanilla :)) 
+[01-04-2006 10:06:20] -!- ordnas [n=ordnas@p549D6F8F.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 10:10:29] -!- napkin [n=tan@Toronto-HSE-ppp3787256.sympatico.ca] has joined #ezpublish
+[01-04-2006 10:13:15] [#ezpublish] <tobmaster> wasn das ? Currently, the playback feature of Google Video isn't available in your country.
+[01-04-2006 10:13:15] [#ezpublish] <tobmaster> We hope to make this feature available more widely in the future, and we really appreciate your patience.
+[01-04-2006 10:20:18] -!- Sulfur [n=mbariola@85.20.2.139] has left #ezpublish []
+[01-04-2006 10:22:42] -!- _kore [n=lordhong@217.194.224.41] has quit []
+[01-04-2006 10:57:23] -!- hovik__ [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-04-2006 10:58:09] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[01-04-2006 10:59:59] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-04-2006 11:24:36] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-04-2006 11:52:09] -!- elephantMan [n=elephant@52.202.99-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 11:53:59] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-04-2006 11:55:08] -!- elephantMan [n=elephant@52.202.99-84.rev.gaoland.net] has joined #ezpublish
+[01-04-2006 11:59:02] -!- napkin [n=tan@Toronto-HSE-ppp3787256.sympatico.ca] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 12:56:07] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 12:59:49] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[01-04-2006 13:02:29] [#ezpublish] <xiglet> is runcronjobs.php just a way to run all jobs in the cronjobs/ directory?
+[01-04-2006 13:14:40] [#ezpublish] <buz> i think so
+[01-04-2006 13:35:03] [#ezpublish] <SEAwolfx1> hmm, why setting up webdav fails? hmm
+[01-04-2006 13:35:05] [#ezpublish] <SEAwolfx1> re
+[01-04-2006 13:44:21] [#ezpublish] <SEAwolfx1> webdav.log -> no valid site was found.. [CS:currentSitePath]
+[01-04-2006 13:45:07] [#ezpublish] <SEAwolfx1> thats strange as the siteaccess is listed in the SiteList-Array in site.ini.append
+[01-04-2006 13:49:05] [#ezpublish] <SEAwolfx1> hm, also the rewrite-rule seems to be correct.
+[01-04-2006 13:54:42] [#ezpublish] <SEAwolfx1> hmm, when I add the admin siteaccess to the mentioned list i see it in the webdav browser. also i can authentificate to browse into it. but when i try to access on folder i get the previos error message.
+[01-04-2006 13:55:35] [#ezpublish] <SEAwolfx1> is there any option to be set with in the backend to set the flag for webdav-use?
+[01-04-2006 13:55:44] [#ezpublish] <SEAwolfx1> i guess not?!?!
+[01-04-2006 14:01:51] [#ezpublish] <SEAwolfx1> like this: http://ez.no/community/forum/install_configuration/webdavenabled
+[01-04-2006 14:12:03] [#ezpublish] <SEAwolfx1> hm ... there seems to be a bug in ./kernel/classes/webdav/ezwebdavcontentserver.php <- it assumes that the a SiteSetting-Section is located in webdav.ini which normaly is defined in the site.ini file
+[01-04-2006 14:13:08] [#ezpublish] <SEAwolfx1> propably this section has to be defined twice. :/
+[01-04-2006 14:13:13] -!- SEAwolfx [n=mike@tor/session/x-1a6093b3b887f9f7] has quit [SendQ exceeded]
+[01-04-2006 14:27:18] -!- elephantMan [n=elephant@52.202.99-84.rev.gaoland.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-04-2006 14:34:32] -!- ordnas [n=ordnas@p549D7E79.dip.t-dialin.net] has joined #ezpublish
+[01-04-2006 14:47:14] -!- elephantMan [n=elephant@15.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-04-2006 14:49:30] [#ezpublish] <SEAwolfx1> fixed it. someone who has setup webdav on his site?
+[01-04-2006 14:51:45] [#ezpublish] <SEAwolfx1> buz: ?
+[01-04-2006 14:51:58] [#ezpublish] <buz> mhh not in production
+[01-04-2006 14:52:19] [#ezpublish] <SEAwolfx1> and in ur testing environment?
+[01-04-2006 14:52:26] [#ezpublish] <SEAwolfx1> ;D
+[01-04-2006 14:53:08] [#ezpublish] <SEAwolfx1> i had to fix only one regular expression.
+[01-04-2006 14:54:42] [#ezpublish] <SEAwolfx1> lets test the svn blame function ;)
+[01-04-2006 14:58:41] [#ezpublish] <xiglet> shouln't "php -C cronjobs/rssimport.php" give any debug info if it's not successful ?
+[01-04-2006 14:58:58] [#ezpublish] <xiglet> can't see anything in the var/log/* eighter
+[01-04-2006 15:02:32] [#ezpublish] <SEAwolfx1> xiglet: otherwise u could check if contentObject are stored into DB. Are these objects are published?
+[01-04-2006 15:02:55] [#ezpublish] <SEAwolfx1> s/are//
+[01-04-2006 15:04:39] [#ezpublish] <xiglet> rssimport.php doesn't do anything. I doesn't create any articles at all
+[01-04-2006 15:04:53] [#ezpublish] <xiglet> and it takes about .5 seconds to run the script
+[01-04-2006 15:05:43] [#ezpublish] <SEAwolfx1> so the webresource isnt available for the script?
+[01-04-2006 15:06:20] [#ezpublish] <xiglet> how would I know?
+[01-04-2006 15:06:51] [#ezpublish] <xiglet> I can access it by webget so I know I can reach the site
+[01-04-2006 15:06:56] [#ezpublish] <SEAwolfx1> xiglet: u could use echo or print to prove this?
+[01-04-2006 15:07:19] [#ezpublish] <xiglet> change the rssimport.php script?
+[01-04-2006 15:08:08] [#ezpublish] <xiglet> oh ... php -C cronjobs/rssimport.php did not work, however cd cronjobs && php -C rssimport.php gave me some output
+[01-04-2006 15:08:34] [#ezpublish] <SEAwolfx1> xiglet | >change the rssimport.php script? <- yes
+[01-04-2006 15:09:33] [#ezpublish] <SEAwolfx1> shouldnt scripts been run from the root?
+[01-04-2006 15:09:42] [#ezpublish] <SEAwolfx1> ./bin/shell/..
+[01-04-2006 15:13:47] [#ezpublish] <xiglet> it have to be run from root because the php script refers to kernel/xxx etc ...
+[01-04-2006 15:14:06] [#ezpublish] <xiglet> I can see that now :)
+[01-04-2006 15:14:07] [#ezpublish] <SEAwolfx1> yeah.
+[01-04-2006 15:14:39] -!- technocrat [i=tuscia@hst-250-241.splius.lt] has quit []
+[01-04-2006 15:26:34] -!- ordnas [n=ordnas@p549D7E79.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-04-2006 15:42:50] [#ezpublish] <xiglet> I have 3.6.4 on a debian sarge box with apache2 and php4 and runcronjobs works fine. That's not the case on my laptop with a 3.7.2 installation. That one is running kubuntu. What could be the issue? this is the error message:
+[01-04-2006 15:43:04] [#ezpublish] <xiglet> Fatal error: eZ publish did not finish its request
+[01-04-2006 15:43:04] [#ezpublish] <xiglet> The execution of eZ publish was abruptly ended, the debug output is present below.
+[01-04-2006 15:43:15] [#ezpublish] <xiglet> but no debug info :(
+[01-04-2006 15:43:48] [#ezpublish] <SEAwolfx1> because the request was ended
+[01-04-2006 15:44:21] [#ezpublish] <SEAwolfx1> set up the execution time
+[01-04-2006 15:44:36] [#ezpublish] <xiglet> I don't know php (yet)
+[01-04-2006 15:44:49] [#ezpublish] <xbit> vi c:/windows/php.ini :)
+[01-04-2006 15:44:57] [#ezpublish] <xiglet> and now you are thinking... "what are you doing here?" :)
+[01-04-2006 15:45:00] [#ezpublish] <xbit> oh, you said ubuntu
+[01-04-2006 15:45:05] [#ezpublish] <xbit> :)
+[01-04-2006 15:45:12] [#ezpublish] <SEAwolfx1> :P
+[01-04-2006 15:45:17] [#ezpublish] <xiglet> or kubuntu to be more correct
+[01-04-2006 15:45:23] [#ezpublish] <xbit> mmh
+[01-04-2006 15:45:29] [#ezpublish] <xbit> abolutely
+[01-04-2006 15:45:35] [#ezpublish] <xiglet> best distro ever ;-)
+[01-04-2006 15:45:40] [#ezpublish] <SEAwolfx1> xiglet: locate php.ini
+[01-04-2006 15:45:52] [#ezpublish] <SEAwolfx1> xiglet: locate php.ini| grep apache2
+[01-04-2006 15:45:53] [#ezpublish] <xbit> i prefer gnome :)
+[01-04-2006 15:45:54] [#ezpublish] <xiglet> I know where php.ini is :)
+[01-04-2006 15:46:00] [#ezpublish] <xbit> good
+[01-04-2006 15:46:03] [#ezpublish] <xbit> no problem then
+[01-04-2006 15:46:10] [#ezpublish] <SEAwolfx1> max_execution_time
+[01-04-2006 15:46:17] [#ezpublish] <xiglet> oh
+[01-04-2006 15:47:43] [#ezpublish] <xiglet> it sais 30 second, should be enough... it doesn't even run for more than 1 second
+[01-04-2006 15:47:51] [#ezpublish] <xbit> not enough by far
+[01-04-2006 15:47:56] [#ezpublish] <xbit> pull it up to 120 or so
+[01-04-2006 15:47:59] [#ezpublish] <xbit> at least
+[01-04-2006 15:48:06] [#ezpublish] <xiglet> ok
+[01-04-2006 15:48:09] [#ezpublish] <xbit> it's just your laptop, no need to be restrictive :)
+[01-04-2006 15:48:29] [#ezpublish] <xbit> pull up the memory-limit to above 100M while you're at it
+[01-04-2006 15:48:29] [#ezpublish] <SEAwolfx1> .. it doesn't even run for more than 1 second <--- hmm :/
+[01-04-2006 15:49:22] [#ezpublish] <xbit> hmm, what?
+[01-04-2006 15:50:03] [#ezpublish] <SEAwolfx1> .. it doesn't even run for more than 1 second <- this might an indicator that setting up the max_exec_time does fit here
+[01-04-2006 15:50:09] [#ezpublish] <SEAwolfx1> +be
+[01-04-2006 15:50:38] [#ezpublish] <xiglet> 120 didn't make any different
+[01-04-2006 15:50:40] [#ezpublish] <xbit> oh, didn't notice he said that :)
+[01-04-2006 15:50:43] [#ezpublish] <SEAwolfx1> doesnt
+[01-04-2006 15:50:48] [#ezpublish] <xbit> sorry
+[01-04-2006 15:51:28] [#ezpublish] <xbit> look in the logs xiglet, any more information there?
+[01-04-2006 15:51:37] [#ezpublish] <xbit> var/log/
+[01-04-2006 15:51:42] [#ezpublish] <xiglet> var/log/* don't say anything
+[01-04-2006 15:52:08] [#ezpublish] <SEAwolfx1> /var/log/apache2/error.log
+[01-04-2006 15:52:14] [#ezpublish] <SEAwolfx1>  /var/log/apache2/error.log
+[01-04-2006 15:52:47] [#ezpublish] <xbit> i was thinking more about the ezpublish-rootdir/var/log
+[01-04-2006 15:52:57] [#ezpublish] <xiglet> neighter
+[01-04-2006 15:53:15] [#ezpublish] <xiglet> it's correct to type "php -C cronjobs/rssimport.php" right?
+[01-04-2006 15:53:28] [#ezpublish] <xiglet> I installed php4-cli
+[01-04-2006 15:54:08] [#ezpublish] <SEAwolfx1> php -C ./cronjobs/rssimport.php
+[01-04-2006 15:54:19] [#ezpublish] <SEAwolfx1> but this should be the same.
+[01-04-2006 15:54:57] [#ezpublish] <xiglet> yes ... this command don't prompt anything, but php -C runcronjobs.php gives me the error message i pasted
+[01-04-2006 15:55:34] [#ezpublish] <SEAwolfx1> hmm ..  and shell u should have a max execution time
+[01-04-2006 15:55:39] [#ezpublish] <xiglet> could it be something about my [php/apache/ezp]-version? it works on my debian server...
+[01-04-2006 15:55:43] [#ezpublish] <SEAwolfx1> its set to 00
+[01-04-2006 15:56:16] [#ezpublish] <xbit> you're using php 4.4.x with the 3.7.2 install and 4.3.x with 3.6.4 ?
+[01-04-2006 15:56:22] [#ezpublish] <xiglet> I could move the entire site to my debian server
+[01-04-2006 15:56:39] [#ezpublish] <SEAwolfx1> i mean its set to infinit
+[01-04-2006 15:56:48] [#ezpublish] <xiglet> yes (not really sure about php version on the 3.6.4 server)
+[01-04-2006 15:57:21] [#ezpublish] <xbit> must just be kubuntu that sucks :p
+[01-04-2006 15:57:28] [#ezpublish] <xiglet> :)
+[01-04-2006 15:57:40] [#ezpublish] <xiglet> it's a bit bleeding edge
+[01-04-2006 15:58:07] [#ezpublish] <xiglet> yes, the php version was 4.3.10-16 on the debian server (ezp 3.6.4)
+[01-04-2006 15:58:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[01-04-2006 16:04:52] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-04-2006 16:07:35] [#ezpublish] <xiglet> it worked on my debian server
+[01-04-2006 16:07:39] [#ezpublish] <xiglet> the same site
+[01-04-2006 16:09:21] [#ezpublish] <xbit> that's weird
+[01-04-2006 16:09:52] [#ezpublish] <xbit> but without anymore debug information i guess it's impossible to solve it...
+[01-04-2006 16:12:20] [#ezpublish] <xiglet> yeah, for me it is ..
+[01-04-2006 16:13:58] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-04-2006 16:29:00] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[01-04-2006 16:30:02] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[01-04-2006 16:34:08] [#ezpublish] <zrg> another year
+[01-04-2006 16:34:34] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[01-04-2006 17:05:31] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []
+[01-04-2006 17:13:16] -!- napkin [n=tan@Toronto-HSE-ppp3787256.sympatico.ca] has joined #ezpublish
+[01-04-2006 17:17:41] -!- SEAwolfx_ [n=mike@tor/session/x-f0af8fe23265af69] has quit [Connection reset by peer]
+[01-04-2006 17:41:06] -!- napkin [n=tan@Toronto-HSE-ppp3787256.sympatico.ca] has quit [Read error: 110 (Connection timed out)]
+[01-04-2006 17:58:24] -!- SEAwolfx [n=mike@64.90.191.90.nyinternet.net] has joined #ezpublish
+[01-04-2006 18:12:22] [#ezpublish] <SEAwolfx> re
+[01-04-2006 18:20:46] [#ezpublish] <hovik> hi
+[01-04-2006 18:38:05] [#ezpublish] <SEAwolfx> hi
+[01-04-2006 18:57:12] [#ezpublish] <hovik> working late ?
+[01-04-2006 19:10:18] [#ezpublish] <SEAwolfx> yeah ;)
+[01-04-2006 20:24:47] -!- napkin [n=tan@Toronto-HSE-ppp3787256.sympatico.ca] has joined #ezpublish
+[01-04-2006 21:43:38] -!- napkin [n=tan@Toronto-HSE-ppp3787256.sympatico.ca] has quit [Remote closed the connection]
+[01-04-2006 23:12:01] -!- SEAwolfx1 [n=mike@tor/session/x-ee17a0939bb5b106] has quit [SendQ exceeded]

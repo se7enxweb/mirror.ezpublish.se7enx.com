@@ -1,0 +1,361 @@
+[04-23-2006 02:36:44] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-23-2006 03:06:16] -!- kore_ [n=lordhong@dslb-084-058-019-029.pools.arcor-ip.net] has joined #ezpublish
+[04-23-2006 06:03:33] -!- hovik [n=hovik@79.84-48-105.nextgentel.com] has joined #ezpublish
+[04-23-2006 07:44:14] Disconnecting due to lack of a lag response (0.13989200 1145796194 != 0.13272400 1145796224)
+[04-23-2006 07:44:14] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:44:16] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:44:49] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:44:49] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:45:09] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:45:11] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:45:26] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 07:45:26] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 07:45:36] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:45:48] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 07:45:48] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 07:45:58] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:46:12] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:46:12] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:46:42] >> Successfully registered. Nick is: ezlog
+[04-23-2006 07:46:42] -!- There are 13373 listed and 13969 unlisted users on 20 servers
+[04-23-2006 07:46:42] -!- 43 flagged staff members
+[04-23-2006 07:46:42] -!- 10736 channels formed
+[04-23-2006 07:46:42] -!- I have 4585 clients and 0 servers
+[04-23-2006 07:46:42] -!- Current local  users: 4585  Max: 6134
+[04-23-2006 07:46:42] -!- Current global users: 27342  Max: 30795
+[04-23-2006 07:46:43] -!- Highest connection count: 6136 (6134 clie
+[04-23-2006 07:46:43] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-23-2006 07:46:43] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#m
+[04-23-2006 07:46:43] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-23-2006 07:46:47] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-23-2006 07:46:47] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-23-2006 07:46:47] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#privmsg
+[04-23-2006 07:47:12] Disconnecting due to lack of a lag response (0.50123100 1145796372 != 0.16943000 1145796402)
+[04-23-2006 07:47:12] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:47:14] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:47:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 07:47:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 07:47:46] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:48:28] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:48:28] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:48:59] >> Primary nickname in use, trying alternate.
+[04-23-2006 07:48:59] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:49:01] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:49:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 07:49:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 07:49:27] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:49:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 07:49:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 07:49:57] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:50:06] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:50:06] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:50:36] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:50:38] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:51:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 07:51:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 07:51:25] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:51:36] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:51:36] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:52:21] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:52:36] Disconnecting due to lack of a lag response (0.11964300 1145796696 != 0.16640600 1145796726)
+[04-23-2006 07:52:36] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:52:38] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:53:29] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 07:53:29] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 07:53:39] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:54:02] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 07:54:02] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 07:54:12] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:54:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 07:54:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 07:54:32] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:54:35] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:54:35] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:55:18] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:55:20] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:55:47] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:55:47] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:55:47] >> Successfully registered. Nick is: ezlog
+[04-23-2006 07:55:47] -!- There are 13397 listed and 13980 unlisted users on 20 servers
+[04-23-2006 07:55:47] -!- 43 flagged staff members
+[04-23-2006 07:55:47] -!- 10748 channels formed
+[04-23-2006 07:55:47] -!- I have 4582 clients and 0 servers
+[04-23-2006 07:55:47] -!- Current local  users: 4582  Max: 6134
+[04-23-2006 07:55:47] -!- Current global users: 27377  Max: 30795
+[04-23-2006 07:55:48] -!- Highest connection count: 6136 (6134 clients) (968762 since server was (re)started)
+[04-23-2006 07:55:48] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-23-2006 07:55:48] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-23-2006 07:55:48] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-23-2006 07:55:48] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-23-2006 07:55:48] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-23-2006 07:57:17] Disconnecting due to lack of a lag response (0.11786500 1145796977 != 0.09844100 1145797007)
+[04-23-2006 07:57:17] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:57:19] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:57:37] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:57:57] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:57:59] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:58:09] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:58:09] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:58:10] >> Primary nickname in use, trying alternate.
+[04-23-2006 07:58:29] (unmatched::raw451) :calvino.freenode.net 451 * JOIN :Register first.
+[04-23-2006 07:58:29] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 07:58:31] >> Connecting to irc.freenode.net:6667
+[04-23-2006 07:59:00] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 07:59:00] >> Attempting to join channels: #ezpublish
+[04-23-2006 07:59:03] >> Successfully registered. Nick is: ezlog
+[04-23-2006 07:59:03] -!- There are 13395 listed and 13974 unlisted users on 20 servers
+[04-23-2006 07:59:03] -!- 43 flagged staff members
+[04-23-2006 07:59:03] -!- 10756 channels formed
+[04-23-2006 07:59:03] -!- I have 4580 clients and 0 servers
+[04-23-2006 07:59:03] -!- Current local  users: 4580  Max: 6134
+[04-23-2006 07:59:03] -!- Current global users: 27369  Max: 30795
+[04-23-2006 07:59:04] -!- Highest connection count: 6136 (6134 clie
+[04-23-2006 07:59:05] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-23-2006 07:59:05] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#m
+[04-23-2006 07:59:08] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-23-2006 07:59:08] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-23-2006 07:59:08] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-23-2006 08:00:30] Disconnecting due to lack of a lag response (0.00946400 1145797170 != 0.01436200 1145797200)
+[04-23-2006 08:00:30] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:00:32] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:00:42] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:01:02] >> Primary nickname in use, trying alternate.
+[04-23-2006 08:01:02] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:01:04] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:01:09] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:01:15] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:01:32] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:01:34] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:01:44] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:02:00] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:02:05] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:02:07] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:02:23] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:02:45] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:03:23] Disconnecting due to lack of a lag response (0.78296100 1145797343 != 0.02722900 1145797373)
+[04-23-2006 08:03:23] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:03:25] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:03:55] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:03:55] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:04:05] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:04:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:04:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:04:25] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:04:26] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:04:26] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:05:01] >> Successfully registered. Nick is: ezlog
+[04-23-2006 08:05:01] -!- There are 13408 listed and 13980 unlisted users on 20 servers
+[04-23-2006 08:05:01] -!- 43 flagged staff members
+[04-23-2006 08:05:01] -!- 10753 channels formed
+[04-23-2006 08:05:01] -!- I have 4576 clients and 0 servers
+[04-23-2006 08:05:01] -!- Current local  users: 4576  Max: 6134
+[04-23-2006 08:05:01] -!- Current global users: 27388  Max: 30795
+[04-23-2006 08:05:01] -!- Highest connection count: 6136 (6134 clients) (968845 since server was (re)started)
+[04-23-2006 08:05:11] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:05:11] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-23-2006 08:05:11] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-23-2006 08:05:11] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-23-2006 08:05:11] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-23-2006 08:05:11] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-23-2006 08:11:56] Disconnecting due to lack of a lag response (0.00439400 1145797856 != 0.08111700 1145797886)
+[04-23-2006 08:11:56] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:11:58] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:12:17] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:12:17] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:12:27] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:12:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:12:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:12:47] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:12:51] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:12:51] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:13:36] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:13:51] Disconnecting due to lack of a lag response (0.02279700 1145797971 != 0.06252200 1145798001)
+[04-23-2006 08:13:51] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:13:53] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:14:13] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:14:13] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:14:23] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:14:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:14:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:14:43] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:14:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:14:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:15:03] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:15:23] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:15:23] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:15:43] >> Primary nickname in use, trying alternate.
+[04-23-2006 08:15:43] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:15:45] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:15:55] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:15:55] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:16:05] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:16:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:16:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:16:25] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:16:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:16:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:16:45] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:17:13] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:17:13] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:17:23] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:17:33] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:17:33] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:17:43] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:17:53] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:17:53] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:18:03] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:18:22] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:18:22] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:18:32] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:18:42] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:18:42] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:18:52] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:19:02] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:19:02] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:19:12] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:19:38] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:19:38] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:19:48] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:19:58] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:19:58] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:20:08] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:20:18] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:20:18] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:20:28] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:21:09] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:21:09] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:21:54] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:22:09] Disconnecting due to lack of a lag response (0.29046200 1145798469 != 0.13236000 1145798499)
+[04-23-2006 08:22:09] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:22:11] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:22:41] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:22:41] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:23:10] >> Successfully registered. Nick is: ezlog
+[04-23-2006 08:23:10] -!- There are 13447 listed and 13984 unlisted users on 20 servers
+[04-23-2006 08:23:10] -!- 43 flagged staff members
+[04-23-2006 08:23:10] -!- 10745 channels formed
+[04-23-2006 08:23:10] -!- I have 4591 clients and 0 servers
+[04-23-2006 08:23:10] -!- Current local  users: 4591  Max: 6134
+[04-23-2006 08:23:10] -!- Current global users: 27431  Max: 30795
+[04-23-2006 08:23:10] -!- Highest connection count: 6136 (6134 clients) (968996 since server was (re)started)
+[04-23-2006 08:23:10] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-23-2006 08:23:10] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-23-2006 08:23:10] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-23-2006 08:23:10] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-23-2006 08:23:10] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-23-2006 08:25:41] Disconnecting due to lack of a lag response (0.16279300 1145798681 != 0.00898900 1145798711)
+[04-23-2006 08:25:41] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:25:43] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:26:03] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:26:03] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:26:13] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:26:31] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:26:31] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:26:54] >> Primary nickname in use, trying alternate.
+[04-23-2006 08:26:54] (unmatched::raw451) :calvino.freenode.net 451 * JOIN :Register first.
+[04-23-2006 08:26:54] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:26:56] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:26:56] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:27:16] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:27:21] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:27:23] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:27:48] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:28:01] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:28:01] >> Successfully registered. Nick is: ezlog
+[04-23-2006 08:28:01] -!- There are 13506 listed and 14009 unlisted users on 20 servers
+[04-23-2006 08:28:01] -!- 43 flagged staff members
+[04-23-2006 08:28:01] -!- 10761 channels formed
+[04-23-2006 08:28:01] -!- I have 4610 clients and 0 servers
+[04-23-2006 08:28:01] -!- Current local  users: 4610  Max: 6134
+[04-23-2006 08:28:01] -!- Current global users: 27515  Max: 30795
+[04-23-2006 08:28:01] -!- Highest connection count: 6136 (6134 clients) (969056 since server was (re)started)
+[04-23-2006 08:28:22] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-23-2006 08:28:22] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-23-2006 08:28:46] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:28:48] Disconnecting due to lack of a lag response (0.30195700 1145798868 != 0.12249500 1145798898)
+[04-23-2006 08:28:48] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:28:50] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:29:05] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:29:31] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:29:39] >> Primary nickname in use, trying alternate.
+[04-23-2006 08:29:39] (unmatched::raw451) :calvino.freenode.net 451 * JOIN :Register first.
+[04-23-2006 08:29:39] (unmatched::raw451) :calvino.freenode.net 451 * PRIVMSG :Register first.
+[04-23-2006 08:29:39] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:29:41] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:29:46] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:30:07] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:30:09] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:30:13] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:30:16] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:30:34] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:30:36] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:30:46] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:30:46] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:30:56] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:31:18] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:31:18] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:31:28] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:31:39] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:31:39] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:32:24] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:32:39] Disconnecting due to lack of a lag response (0.36179000 1145799099 != 0.00097400 1145799129)
+[04-23-2006 08:32:39] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:32:41] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:32:46] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:33:09] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:33:17] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:33:19] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:33:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:33:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:33:47] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:34:00] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:34:01] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:34:22] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:34:24] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:34:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:34:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:34:46] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:34:49] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:34:49] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:35:20] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:35:22] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:35:31] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:35:34] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:36:02] Diconnected. Sleeping for 2 second(s).
+[04-23-2006 08:36:04] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:36:24] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:36:24] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:36:34] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:36:44] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-23-2006 08:36:44] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-23-2006 08:36:54] >> Connecting to irc.freenode.net:6667
+[04-23-2006 08:37:04] >> Connected to irc.freenode.net:6667, registering...
+[04-23-2006 08:37:04] >> Attempting to join channels: #ezpublish
+[04-23-2006 08:37:10] >> Successfully registered. Nick is: ezlog
+[04-23-2006 08:37:10] -!- There are 13561 listed and 14016 unlisted users on 20 servers
+[04-23-2006 08:37:10] -!- 43 flagged staff members
+[04-23-2006 08:37:10] -!- 10762 channels formed
+[04-23-2006 08:37:10] -!- I have 4639 clients and 0 servers
+[04-23-2006 08:37:10] -!- Current local  users: 4639  Max: 6134
+[04-23-2006 08:37:10] -!- Current global users: 27577  Max: 30795
+[04-23-2006 08:37:10] -!- Highest connection count: 6136 (6134 clients) (969157 since server was (re)started)
+[04-23-2006 08:37:10] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-23-2006 08:37:10] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-23-2006 08:37:10] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-23-2006 08:37:10] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-23-2006 08:37:10] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-23-2006 11:26:32] -!- kracker [n=kracker@ip23.131.realtime.net] has joined #ezpublish
+[04-23-2006 12:41:53] -lilo:$*- [Global Notice] Hi all. As you know, Google's official Summer of Code channel has moved to slashnet this year. With that in mind, we're opening up an unofficial channel for freenode participants in Soc 2006: ##googlesummer .... if you're involved with mentoring or you're submitting a project, please stop by! As always, be as courteous as you can. Thanks. :)
+[04-23-2006 12:55:56] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-23-2006 13:33:33] -!- tobmaster [n=tobmaste@dslb-084-061-028-036.pools.arcor-ip.net] has joined #ezpublish
+[04-23-2006 15:07:04] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-23-2006 15:25:39] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 145 (Connection timed out)]
+[04-23-2006 15:41:51] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[04-23-2006 15:44:51] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[04-23-2006 16:02:12] -!- tobmaster [n=tobmaste@dslb-084-061-028-036.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[04-23-2006 16:10:56] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[04-23-2006 16:11:37] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[04-23-2006 16:53:08] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[04-23-2006 17:34:30] -!- hovik [n=hovik@79.84-48-105.nextgentel.com] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-23-2006 23:20:29] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-23-2006 23:34:41] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]

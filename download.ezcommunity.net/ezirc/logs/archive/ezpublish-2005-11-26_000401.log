@@ -1,0 +1,299 @@
+[11-25-2005 00:35:22] [#ezpublish] <nnn0> fesk! now they have upgraded the server php to 4.4.1 - and i who was off to bed :(
+[11-25-2005 01:07:57] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-25-2005 01:44:16] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-25-2005 01:46:28] [#ezpublish] <buz> dumbest fitness device ever: http://www.engadget.com/entry/1234000500069573/
+[11-25-2005 01:49:26] [#ezpublish] <Katana`> hi :)
+[11-25-2005 01:49:42] [#ezpublish] <Katana`> lool
+[11-25-2005 02:05:42] -!- ordna1 [n=ordnas@p549DC5CA.dip.t-dialin.net] has joined #ezpublish
+[11-25-2005 02:08:46] -!- st_ [n=st@popeye.ez.no] has joined #ezpublish
+[11-25-2005 02:09:16] [#ezpublish] <@kh[eZ]> php 4.4.1 is broken.. list doesnt work... (will give you infinite loops...)
+[11-25-2005 02:09:24] [#ezpublish] <@kh[eZ]> goodm moning btw
+[11-25-2005 02:09:58] [#ezpublish] <@kh[eZ]> or "good morning" as we usually call it
+[11-25-2005 02:12:33] [#ezpublish] <@kh[eZ]> buz: hahah.. that looks like a good exercise for the balance ;-)
+[11-25-2005 02:12:33] [#ezpublish] <Katana`> hey kh[eZ]
+[11-25-2005 02:12:53] [#ezpublish] <buz> i dont believe in good mornings
+[11-25-2005 02:12:58] [#ezpublish] <buz> good mornings are spent asleep
+[11-25-2005 02:13:53] [#ezpublish] <Katana`> :))
+[11-25-2005 02:13:59] [#ezpublish] <Katana`> i like 'morning' better
+[11-25-2005 02:14:10] [#ezpublish] <Katana`> as in "yes, it's morning, i'm talking, it sucks"
+[11-25-2005 02:14:31] [#ezpublish] <buz> thats why i use 'morning' yes
+[11-25-2005 02:14:36] [#ezpublish] <Katana`> :))
+[11-25-2005 02:24:34] -!- ordna1 [n=ordnas@p549DC5CA.dip.t-dialin.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-25-2005 02:24:44] -!- ordnas [n=ordnas@p549DC5CA.dip.t-dialin.net] has joined #ezpublish
+[11-25-2005 02:44:09] [#ezpublish] <@kh[eZ]> i choose to use good morning, since its friday....
+[11-25-2005 02:44:21] [#ezpublish] <@kh[eZ]> otherwise it would be 'morning'
+[11-25-2005 02:44:26] [#ezpublish] <@kh[eZ]> :-)
+[11-25-2005 02:55:41] [#ezpublish] <Katana`> lol
+[11-25-2005 02:55:56] [#ezpublish] * Katana` has started implementing the remove function on his ajax interface
+[11-25-2005 03:55:45] [#ezpublish] <buz> http://ez.no/community/news/ez_systems_contributes_to_php_6_development yet it still wont work on php5 LOL
+[11-25-2005 03:56:03] [#ezpublish] <buz> kh[eZ]: what do you say on monday morning? BAD morning?
+[11-25-2005 03:56:12] [#ezpublish] <Katana`> "mumpf"
+[11-25-2005 03:56:19] [#ezpublish] <buz> sounds like it
+[11-25-2005 03:56:34] [#ezpublish] <Katana`> :)
+[11-25-2005 04:12:51] [#ezpublish] <_rappy_> hello all
+[11-25-2005 04:12:58] -!- _rappy_ is now known as _Rappy_
+[11-25-2005 04:13:00] [#ezpublish] <_Rappy_> 7away
+[11-25-2005 04:13:02] [#ezpublish] <_Rappy_> hmm
+[11-25-2005 04:26:45] [#ezpublish] <Katana`> hey
+[11-25-2005 05:40:49] [#ezpublish] <kracker> Katana`, sry about yesterday :\ i was trying to place a positive comment
+[11-25-2005 05:51:32] -!- ordnas [n=ordnas@p549DC5CA.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-25-2005 05:52:46] [#ezpublish] <@kh[eZ]> buz: PHP5 is to crappy.. we need to fix stuff before we will use it ;-)
+[11-25-2005 05:55:31] [#ezpublish] <_Rappy_> someone told me that there is a major upgrade of ez comming spring 2006, that will have support for php5 :p
+[11-25-2005 05:55:56] [#ezpublish] <Bedlore> anyone ever seen the situation where a mysql database site behaves differently to the original?
+[11-25-2005 06:07:36] [#ezpublish] <@kh[eZ]> _Rappy_: http://ez.no/community/developer/roadmap
+[11-25-2005 06:08:32] -!- ordnas [n=ordnas@p549DE4AC.dip.t-dialin.net] has joined #ezpublish
+[11-25-2005 06:09:41] -!- CoderForLife [n=CoderFor@nr24-66-161-205-62.fuse.net] has joined #ezpublish
+[11-25-2005 06:43:03] [#ezpublish] <buz> improved clustering support (all site data in database)
+[11-25-2005 06:43:10] [#ezpublish] <buz> does that mean images and the like as well? that would rock
+[11-25-2005 06:43:14] [#ezpublish] <buz> also templates etc?
+[11-25-2005 06:47:48] [#ezpublish] <Katana`> kracker: that's what i had determined :)
+[11-25-2005 06:47:58] [#ezpublish] <Katana`> i had to check on urbandictionnary.com though ^^
+[11-25-2005 06:49:50] [#ezpublish] <Katana`> yay new beta of PHPEdit 2
+[11-25-2005 07:10:25] [#ezpublish] <buz> but no ajax demo i take it?
+[11-25-2005 07:13:22] [#ezpublish] <buz> "This is an appartment we have visited last week end in Lyon, and we really hope we're gonna get it. Really good looking ..."
+[11-25-2005 07:13:27] [#ezpublish] <buz> much opposed to the pics i take it
+[11-25-2005 07:23:33] [#ezpublish] <Katana`> the camera was misconfigured ;)
+[11-25-2005 07:23:41] [#ezpublish] <Katana`> buz: i have published a demo yesterday...
+[11-25-2005 07:23:49] [#ezpublish] <Katana`> http://ajax.katana-inc.com user irc pass freenode
+[11-25-2005 07:23:58] [#ezpublish] <buz> woohooo
+[11-25-2005 07:24:03] [#ezpublish] <Katana`> and yes the appartment is really good looking ;)
+[11-25-2005 07:24:10] [#ezpublish] <Katana`> (not many features yet)
+[11-25-2005 07:25:28] [#ezpublish] <buz> ok i can navigate the tree
+[11-25-2005 07:25:30] [#ezpublish] <buz> but nothing else?
+[11-25-2005 07:25:46] [#ezpublish] <buz> o i must doubleclick
+[11-25-2005 07:25:53] [#ezpublish] <Katana`> yes doubleclick should work as well
+[11-25-2005 07:26:04] [#ezpublish] <Katana`> i've added the contextual menu on my version
+[11-25-2005 07:26:11] [#ezpublish] <Katana`> view works, same as doubleclick, and i'm working on remove
+[11-25-2005 07:26:11] [#ezpublish] <buz> neat
+[11-25-2005 07:26:24] [#ezpublish] <buz> toolbar would be cool
+[11-25-2005 07:26:24] [#ezpublish] <Katana`> i'm also gonna try something for that logon screen
+[11-25-2005 07:26:33] [#ezpublish] <Katana`> what would you put in there ?
+[11-25-2005 07:26:39] [#ezpublish] <Katana`> (toolbar or menubar ?)
+[11-25-2005 07:26:44] [#ezpublish] <buz> something aking to whats currently in the top menu
+[11-25-2005 07:26:46] [#ezpublish] <buz> but DYNAMIC
+[11-25-2005 07:26:53] [#ezpublish] <buz> not that current overly weird crap
+[11-25-2005 07:26:54] [#ezpublish] <Katana`> :)
+[11-25-2005 07:27:13] [#ezpublish] <buz> really, it's beyond understanding what that's supposed to do
+[11-25-2005 07:27:15] [#ezpublish] <Katana`> which one do you mean ? content / settings / shop, etc or preview, locations ... ?
+[11-25-2005 07:27:21] [#ezpublish] <buz> content etc
+[11-25-2005 07:27:25] [#ezpublish] <Katana`> ah
+[11-25-2005 07:27:36] [#ezpublish] <Katana`> sounds pretty standard to me ... they're supposed to be tabs i think :)
+[11-25-2005 07:27:39] [#ezpublish] <buz> yeah
+[11-25-2005 07:27:43] [#ezpublish] <buz> but did you ever look under the hood?
+[11-25-2005 07:27:48] [#ezpublish] <buz> that's where the weirdness resides
+[11-25-2005 07:28:02] [#ezpublish] <Katana`> a bit yes... it's indeed beyond human comprehension :)
+[11-25-2005 07:28:12] [#ezpublish] <Katana`> tons of ini settings and nothing i change has any impact :)
+[11-25-2005 07:28:16] [#ezpublish] <buz> yeah
+[11-25-2005 07:28:22] [#ezpublish] <buz> and hacking code has weird impact
+[11-25-2005 07:28:39] [#ezpublish] <Katana`> :))
+[11-25-2005 07:28:48] [#ezpublish] <Katana`> i was planning on adding a menu bar
+[11-25-2005 07:28:54] [#ezpublish] <buz> the menu done as proper dropdown menu would rock
+[11-25-2005 07:28:58] [#ezpublish] <Katana`> but i'm not sure what i'd put in here :)
+[11-25-2005 07:29:13] [#ezpublish] <buz> the stuff that gets listed in the left menu for setup etc
+[11-25-2005 07:29:23] [#ezpublish] <buz> i.e. shortcuts
+[11-25-2005 07:29:27] [#ezpublish] <buz> i had it once
+[11-25-2005 07:29:31] [#ezpublish] <buz> but it looked ugly as hell
+[11-25-2005 07:31:20] [#ezpublish] <Katana`> http://qooxdoo.oss.schlund.de/demo/release/public/test/user/Menubar_1.html ?
+[11-25-2005 07:32:37] [#ezpublish] <buz> mhh the font after double click is fugly on linux
+[11-25-2005 07:33:12] [#ezpublish] <buz> yeah like that
+[11-25-2005 08:17:20] [#ezpublish] <buz> Katana`: did you try displaying many wigets? how's the speed on that?
+[11-25-2005 08:17:32] [#ezpublish] <Katana`> no idea yet :)
+[11-25-2005 08:17:53] [#ezpublish] <Katana`> the tree already has quite a few of them
+[11-25-2005 08:17:53] [#ezpublish] <buz> maybe i could use qooxdoo to build a calendar ;)
+[11-25-2005 08:18:00] [#ezpublish] <Katana`> hehe maybe yes :)
+[11-25-2005 08:18:05] [#ezpublish] <Katana`> their JS api is REALLY nice
+[11-25-2005 08:18:15] [#ezpublish] <buz> or is there already an ajax widget for that SOMEWHERE
+[11-25-2005 08:18:19] [#ezpublish] <Katana`> you can extend classes, add properties (and it automatically adds the setters and getters) ...
+[11-25-2005 08:18:26] [#ezpublish] <buz> (ok zimbra obviously got one but that thing is gigantic)
+[11-25-2005 08:18:38] [#ezpublish] <Katana`> it seems that you can download the package and extract the JS part
+[11-25-2005 08:18:48] [#ezpublish] <Katana`> it's distinct and should even be released as an opensource component sooner or later
+[11-25-2005 08:36:25] [#ezpublish] <buz> i'd really prefer a calendar that works in konqi and safari tho
+[11-25-2005 08:41:30] -!- DiGiTa|_ [n=guillaum@84.4.68.179] has joined #ezpublish
+[11-25-2005 08:41:37] [#ezpublish] <DiGiTa|_> hi
+[11-25-2005 08:41:54] [#ezpublish] <DiGiTa|_> does someone know if it's possible for an anonymous user to save a cart
+[11-25-2005 08:42:34] [#ezpublish] <DiGiTa|_> because if i close my browser, i didn't get the cart items back
+[11-25-2005 08:44:27] [#ezpublish] <_Rappy_> erm, php n00b here wondering how to see what version of php is installed :p
+[11-25-2005 08:44:47] [#ezpublish] <DiGiTa|_> php -v ?
+[11-25-2005 08:45:03] [#ezpublish] <_Rappy_> :)
+[11-25-2005 08:46:07] [#ezpublish] <DiGiTa|_> PHP 4.3.11 (cgi) (built: Jul 27 2005 16:56:33)
+[11-25-2005 08:46:07] [#ezpublish] <DiGiTa|_> Copyright (c) 1997-2004 The PHP Group
+[11-25-2005 08:46:07] [#ezpublish] <DiGiTa|_> Zend Engine v1.3.0, Copyright (c) 1998-2004 Zend Technologies
+[11-25-2005 08:46:07] [#ezpublish] <DiGiTa|_>     with the ionCube PHP Loader v2.5, Copyright (c) 2002-2004, by ionCube Ltd., and
+[11-25-2005 08:46:09] [#ezpublish] <DiGiTa|_>     with eAccelerator v0.9.3, Copyright (c) 2004-2005 eAccelerator, by eAccelerator
+[11-25-2005 08:46:19] [#ezpublish] <DiGiTa|_> :p
+[11-25-2005 08:46:24] [#ezpublish] <buz> cgi with eaccelerator????
+[11-25-2005 08:46:53] [#ezpublish] <DiGiTa|_> of course
+[11-25-2005 08:47:09] [#ezpublish] <_Rappy_> wonder when eaccelerator will release the new code
+[11-25-2005 08:48:27] [#ezpublish] <_Rappy_> and when I'll get time to translate the rest of their webiste
+[11-25-2005 08:49:12] [#ezpublish] <DiGiTa|_> no idea for my cart problem ?
+[11-25-2005 08:49:45] [#ezpublish] <_Rappy_> well
+[11-25-2005 08:50:36] [#ezpublish] <_Rappy_> I don't think he's allowed to do that w/o configuring his roles... but then agian, I might be wrong
+[11-25-2005 08:51:32] [#ezpublish] <DiGiTa|_> anonymous have all rights on shop module
+[11-25-2005 08:52:40] [#ezpublish] <_Rappy_> is this just while developing you want this function?
+[11-25-2005 08:53:01] [#ezpublish] <buz> htf could a anon user save his cart???
+[11-25-2005 08:53:13] [#ezpublish] <buz> you wouldhave to save the complete cart into the cookie
+[11-25-2005 08:53:18] [#ezpublish] <buz> a persistant one, even
+[11-25-2005 08:53:29] [#ezpublish] <buz> which many browser even allow
+[11-25-2005 08:55:02] [#ezpublish] <buz> http://www.php.net/ChangeLog-5.php#5.1.0
+[11-25-2005 08:56:23] [#ezpublish] <DiGiTa|_> buz it's not exactly a cart but "my selection"
+[11-25-2005 08:56:45] [#ezpublish] <DiGiTa|_> so when the user comeback he can get his selection
+[11-25-2005 08:56:55] [#ezpublish] <buz> i dont think that can really be done
+[11-25-2005 08:57:12] [#ezpublish] <buz> you could do an extension likely
+[11-25-2005 08:57:37] [#ezpublish] <buz> saving the cart as cookie on the users machine and reloading it from there
+[11-25-2005 08:57:51] [#ezpublish] <buz> but i'm not sure if that is even th ebest idea
+[11-25-2005 08:58:03] [#ezpublish] <buz> personally, i'd state "please register if you want to have persistant carts"
+[11-25-2005 08:58:14] [#ezpublish] <buz> so people have a benefit for registering
+[11-25-2005 08:58:19] [#ezpublish] <DiGiTa|_> well
+[11-25-2005 08:58:26] [#ezpublish] <DiGiTa|_> it's not in the account :)
+[11-25-2005 09:05:36] [#ezpublish] <buz> ?
+[11-25-2005 09:25:11] [#ezpublish] <@kh[eZ]> cookies for everyone!
+[11-25-2005 09:25:23] [#ezpublish] * @kh[eZ] hands out
+[11-25-2005 09:25:56] [#ezpublish] * CoderForLife gets in line
+[11-25-2005 09:29:24] [#ezpublish] * Katana` gets in line too
+[11-25-2005 09:34:24] [#ezpublish] <_Rappy_> I got safaricookies with chokolate ;D
+[11-25-2005 09:34:35] [#ezpublish] <Katana`> elephant shaped ?
+[11-25-2005 09:39:25] [#ezpublish] <_Rappy_> no, round. Safari is the brand ;D
+[11-25-2005 09:45:37] [#ezpublish] <Katana`> :
+[11-25-2005 09:45:38] [#ezpublish] <Katana`> :)
+[11-25-2005 10:07:45] -!- st_ [n=st@popeye.ez.no] has quit ["leaving"]
+[11-25-2005 11:19:49] -!- ordnas [n=ordnas@p549DE4AC.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-25-2005 11:23:03] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[11-25-2005 11:40:16] -!- DiGiTa|_ [n=guillaum@84.4.68.179] has quit []
+[11-25-2005 12:29:40] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-25-2005 12:45:48] [#ezpublish] <buz> mhh Katana` are there plans for qooxdoo to support safari?
+[11-25-2005 12:46:21] [#ezpublish] <Katana`> it is mentioned yes
+[11-25-2005 12:46:54] [#ezpublish] <Katana`> i got a modal window to pop when you click remove on the contextual menu, and it shows removal infos for the node ;)
+[11-25-2005 12:47:09] [#ezpublish] <Katana`> Which browsers does qooxdoo support?
+[11-25-2005 12:47:10] [#ezpublish] <Katana`> qooxdoo works in most of the current browsers. This also includes recent versions of Opera and Safari.
+[11-25-2005 12:47:18] [#ezpublish] <Katana`> Safari may work, but is really untested and not optimized yet. So don't blame us, if it doesnt work.
+[11-25-2005 12:47:19] [#ezpublish] <Katana`> :)
+[11-25-2005 12:47:45] [#ezpublish] <buz> it doesnt work in safari for all i can see
+[11-25-2005 12:48:28] [#ezpublish] <Katana`> well it's really untested then :)
+[11-25-2005 12:58:28] -!- CoderForLife [n=CoderFor@nr24-66-161-205-62.fuse.net] has left #ezpublish []
+[11-25-2005 12:59:51] [#ezpublish] <buz> seems to work in opera but not konqi/safari
+[11-25-2005 13:05:07] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-25-2005 13:08:56] [#ezpublish] <buz> hi
+[11-25-2005 13:09:00] [#ezpublish] <ls[eZ]> hi
+[11-25-2005 13:09:21] [#ezpublish] <ls[eZ]> just opened beer ...
+[11-25-2005 13:09:26] [#ezpublish] <ls[eZ]> wanna join?
+[11-25-2005 13:09:35] [#ezpublish] <buz> must go to the gas station and buy some first
+[11-25-2005 13:09:42] [#ezpublish] <buz> will do so really soon  ;)
+[11-25-2005 13:09:48] [#ezpublish] <ls[eZ]> haha :)
+[11-25-2005 13:09:49] [#ezpublish] <ls[eZ]> ok
+[11-25-2005 13:09:53] [#ezpublish] <buz> trying to make sense of the zimbra ajax stuff
+[11-25-2005 13:10:01] [#ezpublish] <buz> beer will probably help there
+[11-25-2005 13:10:07] [#ezpublish] <ls[eZ]> definitly
+[11-25-2005 13:10:19] [#ezpublish] <buz> god damn bastards
+[11-25-2005 13:10:22] [#ezpublish] <ls[eZ]> I jaust back from real, hate super markets
+[11-25-2005 13:10:24] [#ezpublish] <buz> the examples are all JSPs
+[11-25-2005 13:10:39] [#ezpublish] <buz> and i hate jsp
+[11-25-2005 13:10:50] [#ezpublish] <buz> jsp is a really sorry concept
+[11-25-2005 13:11:24] [#ezpublish] <ls[eZ]> I had to use JSP with PostgreSQL as CRM in previouse company, no more
+[11-25-2005 13:11:41] [#ezpublish] <buz> java aint a bad language
+[11-25-2005 13:11:48] [#ezpublish] <buz> but JSP is a really sorry implementation of the concept
+[11-25-2005 13:12:01] [#ezpublish] <buz> postgre otoh is a nice db
+[11-25-2005 13:12:05] [#ezpublish] <buz> if only it had saner admin tools
+[11-25-2005 13:12:12] [#ezpublish] <ls[eZ]> well, you can use JAVA classes as well,
+[11-25-2005 13:12:28] [#ezpublish] <buz> if you use java, use spring framework or something like that
+[11-25-2005 13:12:32] [#ezpublish] <buz> stay away from EJB
+[11-25-2005 13:12:43] [#ezpublish] <buz> but in general, there's jsut way too much setup work with java
+[11-25-2005 13:12:47] [#ezpublish] <ls[eZ]> no, JSP with Tomcat,
+[11-25-2005 13:12:55] [#ezpublish] <buz> stuff like hibernate is killer though
+[11-25-2005 13:12:58] [#ezpublish] <ls[eZ]> you can crete java classes and use them
+[11-25-2005 13:14:23] [#ezpublish] <ls[eZ]> eZ componets will come next week
+[11-25-2005 13:14:28] [#ezpublish] <buz> nice
+[11-25-2005 13:14:33] [#ezpublish] <buz> will we get true ORM now?
+[11-25-2005 13:14:44] [#ezpublish] <buz> ez ajax is missing ;)
+[11-25-2005 13:14:49] [#ezpublish] <ls[eZ]> hehe
+[11-25-2005 13:14:59] [#ezpublish] <buz> but our resident ajax freak might change that, ey?
+[11-25-2005 13:15:15] [#ezpublish] <ls[eZ]> that depends on Mt. fh
+[11-25-2005 13:15:18] [#ezpublish] <ls[eZ]> mr
+[11-25-2005 13:15:41] [#ezpublish] <buz> WTF
+[11-25-2005 13:15:53] [#ezpublish] <buz> new sf interface is even more painful to download stuff
+[11-25-2005 13:25:45] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-25-2005 13:44:22] [#ezpublish] <buz> so got my beer
+[11-25-2005 13:44:25] [#ezpublish] <buz> cheers
+[11-25-2005 13:54:43] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-25-2005 13:55:01] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-25-2005 14:01:17] -!- _Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[11-25-2005 14:10:26] [#ezpublish] <ls[eZ]> chers
+[11-25-2005 14:10:42] [#ezpublish] <Katana`> hey lukas
+[11-25-2005 14:10:50] [#ezpublish] <ls[eZ]> hey Katana` :)
+[11-25-2005 14:13:34] [#ezpublish] <Katana`> how are you doing ?
+[11-25-2005 14:15:58] [#ezpublish] <Katana`> have you seen my ajax interface demo ls[eZ] ? :)
+[11-25-2005 14:16:10] [#ezpublish] <ls[eZ]> no?
+[11-25-2005 14:16:26] [#ezpublish] <ls[eZ]> show me :)
+[11-25-2005 14:16:56] [#ezpublish] <Katana`> http://ajax.katana-inc.com/ login irc pass freenode
+[11-25-2005 14:17:07] [#ezpublish] <Katana`> just a proof of concept but i'm working on it :)
+[11-25-2005 14:20:32] [#ezpublish] <buz> mhh those dhtml interfaces sure are neat
+[11-25-2005 14:20:34] [#ezpublish] <buz> but kinda slow...
+[11-25-2005 14:21:41] [#ezpublish] <buz> Katana`: what's the difference between widget and atom
+[11-25-2005 14:22:00] [#ezpublish] <Katana`> good question :)
+[11-25-2005 14:22:05] [#ezpublish] <Katana`> i think a widget is visual while an atom is not
+[11-25-2005 14:22:18] [#ezpublish] <buz> but atoms get displayed too in the demo?
+[11-25-2005 14:22:31] [#ezpublish] <Katana`> hum then i'm wrong :)
+[11-25-2005 14:22:49] [#ezpublish] <Katana`> http://qooxdoo.oss.schlund.de/2005/07/10/features
+[11-25-2005 14:22:52] [#ezpublish] <Katana`> it's explained
+[11-25-2005 14:29:02] [#ezpublish] <buz> mhh so it's something icon plus text
+[11-25-2005 14:30:03] [#ezpublish] <Katana`> buz, seriously, slower than plain xhtml eZ interface ? :)
+[11-25-2005 14:30:15] [#ezpublish] <Katana`> and it seems that the current dev version is much faster
+[11-25-2005 14:30:35] [#ezpublish] <buz> actually it shouldnt be that bad
+[11-25-2005 14:30:39] [#ezpublish] <buz> once the toolkit is loaded
+[11-25-2005 14:30:46] [#ezpublish] <buz> if you religiously do ajax it might work out to be ok
+[11-25-2005 14:31:14] [#ezpublish] <buz> of course firefox will likely still leak memory
+[11-25-2005 14:32:18] [#ezpublish] <Katana`> :))
+[11-25-2005 14:32:34] [#ezpublish] <Katana`> i'm okay with an interface that takes 15s to load then is ergonomic and fast
+[11-25-2005 14:32:49] [#ezpublish] <buz> 15s is too long
+[11-25-2005 14:32:55] [#ezpublish] <buz> <5s is ok i guess
+[11-25-2005 14:33:06] [#ezpublish] <Katana`> it was an extreme exemple;)
+[11-25-2005 14:33:14] [#ezpublish] <buz> mhh it sucks that i cant copy text?
+[11-25-2005 14:33:17] [#ezpublish] <Katana`> but it's not impossible imho
+[11-25-2005 14:33:42] [#ezpublish] <Katana`> maybe there's an option ;)
+[11-25-2005 14:33:59] [#ezpublish] <buz> probably
+[11-25-2005 14:34:03] [#ezpublish] <Katana`> hmm i don't think so ^^
+[11-25-2005 14:34:13] [#ezpublish] <buz> but then there's the ugly "application may not use the clipboard" security feature
+[11-25-2005 14:34:17] [#ezpublish] <Katana`> but i see it more than a user interface or advanced user than an admin one
+[11-25-2005 14:34:31] [#ezpublish] <Katana`> indeed
+[11-25-2005 14:34:47] [#ezpublish] <buz> i mean i see the point
+[11-25-2005 14:34:54] [#ezpublish] <buz> but i never actually managed to get it working with the workaround....
+[11-25-2005 14:35:27] [#ezpublish] <Katana`> ah yes...
+[11-25-2005 14:35:36] [#ezpublish] <Katana`> in that case... anyway any DHTML editor would be fucked so :)
+[11-25-2005 14:35:47] [#ezpublish] <buz> actually those for parts can circumvent it
+[11-25-2005 14:35:53] [#ezpublish] <buz> xinha and tinymce both do
+[11-25-2005 14:35:58] [#ezpublish] <buz> dunno how
+[11-25-2005 14:36:31] [#ezpublish] <Katana`> neither do I :)
+[11-25-2005 14:36:53] [#ezpublish] <Katana`> maybe it has been circumvented by the qooxdoo guys as well
+[11-25-2005 14:36:59] [#ezpublish] <Katana`> they really seem to be good:))
+[11-25-2005 14:36:59] [#ezpublish] <buz> i think as long as you dont try to hijack the browser it works
+[11-25-2005 14:37:03] [#ezpublish] <buz> JS gods
+[11-25-2005 14:40:35] [#ezpublish] <buz> http://www.sinn-frei.com/exklusiv.php?bid=2137
+[11-25-2005 14:45:14] [#ezpublish] <buz> ok so how do i get that to work (overlapping events side by side) http://img408.imageshack.us/my.php?image=picupload22gz.jpg
+[11-25-2005 14:51:13] [#ezpublish] <Katana`> lol no idea
+[11-25-2005 14:55:54] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[11-25-2005 14:56:51] [#ezpublish] <elephantMan> Hi all
+[11-25-2005 15:01:09] [#ezpublish] <ls[eZ]> hi elephantMan
+[11-25-2005 15:01:26] [#ezpublish] <elephantMan> someone is alive here
+[11-25-2005 15:02:15] [#ezpublish] <elephantMan> bye - iam gonna eat
+[11-25-2005 15:04:31] [#ezpublish] <ls[eZ]> bon appetit
+[11-25-2005 15:08:44] [#ezpublish] <buz> hmm if i steal an algorithm from a gpl program and port it to another language, am i still bound to the gpl?
+[11-25-2005 15:10:03] [#ezpublish] <Katana`> i don't think so
+[11-25-2005 15:10:22] [#ezpublish] <buz> gpl applies for verbatim or derived works
+[11-25-2005 15:10:48] [#ezpublish] <buz> but algorithms ported to other languages likely arent derived words
+[11-25-2005 15:15:28] [#ezpublish] <buz> is there an activex plugin for ie that uses gecko for rendering? that would solve a lot of problems...
+[11-25-2005 15:18:51] [#ezpublish] <buz> how NOT to do a page http://www.earshakerdays.com/
+[11-25-2005 15:19:31] [#ezpublish] <Katana`> i doubt that buz :)
+[11-25-2005 15:19:45] [#ezpublish] <buz> too bad
+[11-25-2005 15:48:29] -!- Katana` [n=katana@ankh-morpork.net] has quit []
+[11-25-2005 15:49:14] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-25-2005 16:00:20] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-25-2005 16:12:27] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[11-25-2005 16:30:27] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[11-25-2005 19:31:55] -!- _xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[11-25-2005 19:31:55] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 104 (Connection reset by peer)]
+[11-25-2005 21:09:11] [#ezpublish] <nnn0> hm i use the dbupdate-3.6.0-to-3.7.0 to upgrade from 3.6.2 ?
+[11-25-2005 21:10:03] [#ezpublish] <nnn0> upgrading the database i mean
+[11-25-2005 22:03:17] [#ezpublish] <kracker> heh
+[11-25-2005 22:03:54] [#ezpublish] <kracker> ez network (updated) signals the exit of that other hosting company ...
+[11-25-2005 23:34:04] -!- Bedlore [n=me@ppp214-16.lns1.adl2.internode.on.net] has quit []
+[11-25-2005 23:59:22] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Connection timed out]
+[11-25-2005 23:59:55] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish

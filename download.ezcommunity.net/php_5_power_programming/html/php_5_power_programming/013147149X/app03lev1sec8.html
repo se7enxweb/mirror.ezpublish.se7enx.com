@@ -1,0 +1,38 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section C.8.&nbsp; Configure Studio Server for Remote Debugger and Profiling</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app03lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app03lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app03lev1sec8"></a><h3 class="docSection1Title">C.8. Configure Studio Server for Remote Debugger and Profiling</h3>
+<p class="docText">For security reasons, in order to use the Studio Server for Remote Debugger and Profiler, the user must first be configured as an authorized user on the Zend Server Center. Only authorized IP addresses can access the Zend Server Center. All other IP addresses will be denied access.<a name="app03index69"></a><a name="app03index70"></a><a name="app03index71"></a><a name="app03index72"></a><a name="app03index73"></a></p>
+<p class="docText">To define an allowed user:</p>
+<a name="app03pr07"></a>
+
+
+
+
+
+<table border="0" class="docText"><tr><TD width="25" valign="top"><div class="docText"><b>1. </b></div></TD><td><div class="docText">Log on to Zend Server Center as Administrator from a permitted IP address.<BR><br></div></td></tr><tr><TD width="25" valign="top"><div class="docText"><B>2. </b></div></td><td><div class="docText">Open the Security Settings screen.<br><br></div></TD></tr><tr><TD width="25" valign="top"><div class="docText"><b>3. </b></div></TD><td><div class="docText">In the Manage IP Permissions tab, add the IP address that you want to allow to access the Remote Debugger to the Allowed Host List.<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>4. </b></div></td><td><div class="docText">Verify that the IP address you want to allow to access the Remote Debugger does not appear on the Denied Host List. (If it is on the Denied Host List, remove it.)<br><br></div></td></tr><tr><td width="25" valign="top"><div class="docText"><B>5. </b></div></TD><td><div class="docText">Click OK.<br><BR></div></td></tr><tr><td width="25" valign="top"><div class="docText"><b>6. </b></div></td><TD><div class="docText">Restart the web server. When the web server restarts, the Studio Client at this IP address will be able to access the Remote Debugger.<br><BR></div></td></TR></table>
+<a name="app03note05"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">Access in Zend Studio is handled by a two-stage verification process. Only when an IP address passes both stagesfor example, it is allowed and it is not deniedcan it then access debugging services.</p></div><br>
+<a name="app03note06"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">You can also configure the Debugger's access list through the <tt>zend_debugger.allow_hosts</tt> and <tt>zend_debugger.deny_hosts</tt> php.ini directives.<a name="app03index74"></a><a name="app03index75"></a><a name="app03index76"></a><a name="app03index77"></a><a name="app03index78"></a></P></div><BR>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app03lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app03lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

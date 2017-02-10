@@ -1,0 +1,28 @@
+[11-20-2005 02:47:43] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-20-2005 05:55:47] -!- CoderForLife [n=CoderFor@nr24-66-161-205-62.fuse.net] has joined #ezpublish
+[11-20-2005 07:00:54] -!- ordnas [n=ordnas@p549DC53C.dip.t-dialin.net] has joined #ezpublish
+[11-20-2005 07:38:59] -!- ordnas [n=ordnas@p549DC53C.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-20-2005 07:42:31] -!- xbit [n=stian@pppoecl83027.minlos.no] has joined #ezpublish
+[11-20-2005 08:03:35] -!- xbit [n=stian@pppoecl83027.minlos.no] has left #ezpublish []
+[11-20-2005 08:03:43] -!- xbit [n=stian@pppoecl83027.minlos.no] has joined #ezpublish
+[11-20-2005 08:32:45] -!- ordnas [n=ordnas@p549DC53C.dip.t-dialin.net] has joined #ezpublish
+[11-20-2005 09:31:15] -!- xbit [n=stian@pppoecl83027.minlos.no] has quit [Read error: 110 (Connection timed out)]
+[11-20-2005 11:21:35] -!- fh[eZ] [n=fh@popeye.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.12"]
+[11-20-2005 11:49:57] -!- ordnas [n=ordnas@p549DC53C.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-20-2005 12:28:19] -!- CoderForLife [n=CoderFor@nr24-66-161-205-62.fuse.net] has quit [Read error: 110 (Connection timed out)]
+[11-20-2005 14:29:55] -!- ordna1 [n=ordnas@p549DC53C.dip.t-dialin.net] has joined #ezpublish
+[11-20-2005 14:49:27] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[11-20-2005 14:53:58] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-20-2005 15:17:11] -!- ordna1 [n=ordnas@p549DC53C.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-20-2005 15:37:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-20-2005 19:31:39] -!- Bedlore [n=me@219-90-182-230.ip.adam.com.au] has joined #ezpublish
+[11-20-2005 19:32:38] [#ezpublish] <Bedlore> anyone have a secure .htaccess rewrite rule set that removes index.php and also handles https?
+[11-20-2005 23:34:34] -!- mode/#ezpublish [+o kh[eZ]] by ChanServ
+[11-20-2005 23:52:07] -!- Bedlore [n=me@219-90-182-230.ip.adam.com.au] has quit [calvino.freenode.net irc.freenode.net]
+[11-20-2005 23:52:07] -!- kh[eZ] [n=kh@popeye.ez.no] has quit [calvino.freenode.net irc.freenode.net]
+[11-20-2005 23:52:07] -!- nnn0 [n=therion@195.204.221.183] has quit [calvino.freenode.net irc.freenode.net]
+[11-20-2005 23:52:34] -!- kh[eZ] [n=kh@popeye.ez.no] has joined #ezpublish
+[11-20-2005 23:52:34] -!- Bedlore [n=me@219-90-182-230.ip.adam.com.au] has joined #ezpublish
+[11-20-2005 23:52:34] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[11-20-2005 23:52:34] -!- mode/#ezpublish [+o kh[eZ]] by irc.freenode.net
+[11-20-2005 23:54:31] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish

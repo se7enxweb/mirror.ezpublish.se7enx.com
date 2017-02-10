@@ -1,0 +1,17 @@
+I wanted to provide direct links to the original contributions for searching ez.no inside of a mozilla / firefox via a searchplugin.
+
+But the originally provided plugins were not quite as feature rich as I'd hoped so I rewrote a few of them for every possible situation.
+
+
+http://www.ez.no/community/contribs/3rd_party/ez_search_firefox_plugin_via_google
+ -> http://www.ez.no/content/download/82620/333331/file/ez.zip
+
+http://www.ez.no/community/contribs/3rd_party/firefox_plugin_to_advanced_search_ez_no_docs
+ -> http://ez.phpers.com/
+ -> http://www.ez.no/content/download/82769/333897/file/ezffsearch.tar.gz
+ 
+I also thought it would bee keen to also include the famous plugin that started it all!
+
+http://www.ez.no/community/contribs/applications/ez_cmf_developer
+-> http://www.visionwt.com/ezcmfdeveloper
+-> http://www.ez.no/content/download/65629/177003/file/ezcmfdeveloper-0_4_2.tgz

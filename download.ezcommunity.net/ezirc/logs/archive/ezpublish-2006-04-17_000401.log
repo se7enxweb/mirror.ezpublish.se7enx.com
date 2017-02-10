@@ -1,0 +1,31 @@
+[04-16-2006 03:30:10] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-16-2006 03:58:16] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-16-2006 05:25:05] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-16-2006 05:25:18] [#ezpublish] <zrg> ugh
+[04-16-2006 06:19:50] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-16-2006 06:33:22] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[04-16-2006 06:59:46] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-16-2006 08:51:04] -!- elephantMan [n=elephant@43.202.99-84.rev.gaoland.net] has joined #ezpublish
+[04-16-2006 13:28:32] -!- berthy [n=berthy@81.56.223.143] has joined #ezpublish
+[04-16-2006 13:28:41] [#ezpublish] <berthy> hi all
+[04-16-2006 13:29:05] [#ezpublish] <_buz> any enhancedobjectrelation users around?
+[04-16-2006 13:29:09] -!- _buz is now known as buz
+[04-16-2006 13:30:50] [#ezpublish] <berthy> i just started to use ezpublish and i don't easily find how to make a HTML link to download a File object, anyone to help ?
+[04-16-2006 13:31:31] [#ezpublish] <buz> the file object does provide that itself no?
+[04-16-2006 13:37:21] [#ezpublish] <berthy> buz: in fact $item.object.data_map is my File object but I don't know in my template how to generate a link
+[04-16-2006 13:37:42] [#ezpublish] <buz> read the doc on attribute_view_gui
+[04-16-2006 13:37:57] [#ezpublish] <berthy> buz: thks :-)
+[04-16-2006 14:07:15] -!- elephantMan [n=elephant@43.202.99-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[04-16-2006 14:09:15] -!- elephantMan [n=elephant@102.202.99-84.rev.gaoland.net] has joined #ezpublish
+[04-16-2006 15:03:21] -!- elephantMan [n=elephant@102.202.99-84.rev.gaoland.net] has quit [Read error: 104 (Connection reset by peer)]
+[04-16-2006 15:11:50] [#ezpublish] <berthy> buz: ok found how to do it. thks again
+[04-16-2006 15:12:21] -!- berthy [n=berthy@81.56.223.143] has left #ezpublish ["a+ les gens"]
+[04-16-2006 15:16:21] -!- elephantMan [n=elephant@60.202.99-84.rev.gaoland.net] has joined #ezpublish
+[04-16-2006 15:19:18] -!- ramvi [n=ramvi@adsl7-103-234.du.simnet.is] has joined #ezpublish
+[04-16-2006 15:20:59] [#ezpublish] <ramvi> How do I inline / inpage a page into my site (that's using ez) as an article or something. I'm Norwegian.
+[04-16-2006 15:21:17] [#ezpublish] <ramvi> I have a page I want to show up inside of the default design
+[04-16-2006 15:50:05] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-16-2006 16:58:28] [#ezpublish] <kracker> see ya'll on the flip side ;)
+[04-16-2006 16:59:39] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[04-16-2006 17:33:11] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[04-16-2006 19:46:27] -!- ramvi [n=ramvi@adsl7-103-234.du.simnet.is] has quit [Read error: 110 (Connection timed out)]

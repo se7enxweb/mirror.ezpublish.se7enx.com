@@ -1,0 +1,97 @@
+[05-01-2005 00:58:34] [#ezpublish] <SEAwolfx> morning
+[05-01-2005 02:37:45] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-01-2005 03:09:39] [#ezpublish] <SEAwolfx> {let var=array()}{section}{set var=...}A:{$var}{/section} B:{$var}{/let} <--- $var is only display at A but not at B
+[05-01-2005 03:10:01] [#ezpublish] <SEAwolfx> s/display/displayed/
+[05-01-2005 03:12:15] [#ezpublish] <SEAwolfx> although $var must be everywhere as long as it is in the scope of the let-function
+[05-01-2005 03:12:35] [#ezpublish] <SEAwolfx> +displayed
+[05-01-2005 04:03:50] [#ezpublish] <SEAwolfx> argh
+[05-01-2005 04:47:34] [#ezpublish] <SEAwolfx> someone here?
+[05-01-2005 06:31:12] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has joined #ezpublish
+[05-01-2005 06:46:44] [#ezpublish] <SEAwolfx> hi
+[05-01-2005 06:47:04] [#ezpublish] <SEAwolfx> Allman: you there?
+[05-01-2005 06:49:27] -!- Allman_ [~allman@ti132110a080-0888.bb.online.no] has joined #ezpublish
+[05-01-2005 06:49:29] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has quit []
+[05-01-2005 06:49:30] -!- Allman_ [~allman@ti132110a080-0888.bb.online.no] has quit [Remote closed the connection]
+[05-01-2005 08:41:24] -!- SEAwolfx [~mike@bd094742d46cfab1.node.tor] has quit [Remote closed the connection]
+[05-01-2005 09:22:30] -!- kracker [kracker@67.171.40.130] has joined #ezpublish
+[05-01-2005 09:39:22] -!- prottelotte [fantaprod@polarboing.nvg.ntnu.no] has quit [tolkien.freenode.net irc.freenode.net]
+[05-01-2005 09:39:27] -!- prottelotte [fantaprod@polarboing.nvg.ntnu.no] has joined #ezpublish
+[05-01-2005 09:55:53] -!- kracker [kracker@67.171.40.130] has quit [Read error: 110 (Connection timed out)]
+[05-01-2005 11:22:38] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-01-2005 12:52:17] -!- SEAwolfx [~mike@DSL01.212.114.205.169.NEFkom.net] has joined #ezpublish
+[05-01-2005 12:52:20] [#ezpublish] <SEAwolfx> argh
+[05-01-2005 12:52:20] [#ezpublish] <SEAwolfx> re
+[05-01-2005 12:52:40] [#ezpublish] <SEAwolfx> someone alive?
+[05-01-2005 12:54:50] [#ezpublish] <xbit> kind of
+[05-01-2005 12:54:55] [#ezpublish] <SEAwolfx> ;)
+[05-01-2005 12:55:00] [#ezpublish] <SEAwolfx> hui ...
+[05-01-2005 12:56:12] [#ezpublish] <SEAwolfx> i have commited a bug, can u test it? http://ez.no/community/bugs/fetch_content_list_no_data_fetching_with_an_array_of_node_ids_for_parent_node_id
+[05-01-2005 13:09:15] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-01-2005 13:22:48] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-01-2005 13:30:34] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has joined #ezpublish
+[05-01-2005 13:48:05] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-01-2005 13:56:37] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has quit [Read error: 60 (Operation timed out)]
+[05-01-2005 14:29:27] [#ezpublish] <SEAwolfx> xbit:
+[05-01-2005 15:22:59] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-01-2005 15:36:45] [#ezpublish] <xbit> yes, here i go again
+[05-01-2005 15:38:20] [#ezpublish] <xbit> i think i'll need to test that later...
+[05-01-2005 15:45:31] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-01-2005 15:52:53] [#ezpublish] <SEAwolfx> re
+[05-01-2005 15:53:53] [#ezpublish] <SEAwolfx> i dont bother u to test it, btw. ;)
+[05-01-2005 15:55:22] [#ezpublish] <SEAwolfx> rather to give me a tip with this template-snipet
+[05-01-2005 15:55:28] [#ezpublish] <SEAwolfx> http://nopaste.php-q.net/131099
+[05-01-2005 15:55:56] [#ezpublish] <SEAwolfx> LALA:{$folder_node_id_array|attribute(show)} <- here the variable is displayed properly
+[05-01-2005 15:56:28] [#ezpublish] <SEAwolfx> JETZT:{$folder_node_id_array|attribute(show,3)} <- no variable is outputed.
+[05-01-2005 16:14:19] [#ezpublish] <xbit> i don't know
+[05-01-2005 16:14:28] [#ezpublish] <xbit> :(
+[05-01-2005 16:15:00] [#ezpublish] <SEAwolfx> how could i write a variable and use it somewhere in the template?
+[05-01-2005 16:17:01] [#ezpublish] <xbit> you mean {let foo="bar"} ?
+[05-01-2005 16:17:06] [#ezpublish] <SEAwolfx> imagine, according to the link, that i have an array of nodeObjects. now i have to generate an array of node_ids for further processings. how would you manage this?
+[05-01-2005 16:17:19] [#ezpublish] <xbit> ah
+[05-01-2005 16:18:12] [#ezpublish] <SEAwolfx> $node.object.related_contentobject_array is the array of nodeObjects and $folder_node_id_array is the array to be generated.
+[05-01-2005 16:18:21] [#ezpublish] <xbit> i see
+[05-01-2005 16:19:02] [#ezpublish] <xbit> how to do that yes...
+[05-01-2005 16:19:14] [#ezpublish] <xbit> i think i've probably done something similiar
+[05-01-2005 16:27:36] [#ezpublish] <SEAwolfx> i dont get the trick how to realize this.
+[05-01-2005 16:49:29] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-01-2005 17:23:05] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-01-2005 17:24:48] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Client Quit]
+[05-01-2005 21:38:07] -!- Bedlore [~me@dsl-203-113-238-81.SA.netspace.net.au] has joined #ezpublish
+[05-01-2005 22:51:17] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 22:51:24] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 22:52:58] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:06:47] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:16:41] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:16:43] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:16:55] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-01-2005 23:17:03] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:17:56] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:18:28] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:18:28] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:19:26] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:19:26] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:23:36] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:23:46] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:24:33] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:24:34] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:25:39] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:25:40] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:27:10] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:27:11] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:28:08] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:28:11] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:28:33] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:28:50] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:29:28] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:29:29] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:29:42] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:29:59] [#ezpublish] <kracker> dink
+[05-01-2005 23:30:08] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:38:13] [#ezpublish] <SEAwolfx> morning kracker
+[05-01-2005 23:46:19] -!- kracker [kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-01-2005 23:48:00] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:48:48] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:50:02] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:50:03] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[05-01-2005 23:50:31] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[05-01-2005 23:50:32] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]

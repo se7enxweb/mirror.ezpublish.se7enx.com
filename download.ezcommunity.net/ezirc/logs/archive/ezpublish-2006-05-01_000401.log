@@ -1,0 +1,55 @@
+[04-30-2006 00:47:35] -!- kris10an [n=kh@193.216.116.158] has joined #ezpublish
+[04-30-2006 02:23:37] -!- awormus [n=aaron@p54B12096.dip0.t-ipconnect.de] has joined #ezpublish
+[04-30-2006 02:24:43] -!- ordnas [n=ordnas@p549D5AF3.dip.t-dialin.net] has joined #ezpublish
+[04-30-2006 02:33:08] [#ezpublish] <awormus> hi ordnas
+[04-30-2006 02:33:36] [#ezpublish] <awormus> do you know if the may 1st deadline for conference registration is flexible?
+[04-30-2006 02:34:52] [#ezpublish] <zrg> i certainly hope the _payment_ can be little later :P
+[04-30-2006 02:43:25] [#ezpublish] <ordnas> hi awormus
+[04-30-2006 02:44:05] [#ezpublish] <ordnas> awormus: I actually don't know, but I can't imagine that we won't accept your registration if it's just a few seconds late :)
+[04-30-2006 02:45:22] [#ezpublish] <ordnas> awormus: did you already register via this form? http://ez.no/survey/view/8
+[04-30-2006 02:45:49] [#ezpublish] <ordnas> the deadline is there because of the hotel booking AFAIK
+[04-30-2006 02:46:05] [#ezpublish] <zrg> far as i know ez does the conference thing thru some other company specializing in it, so there may be deadlines they cant stretch
+[04-30-2006 02:46:50] [#ezpublish] <ordnas> best, if you write to info@ez.no
+[04-30-2006 02:58:45] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-30-2006 03:01:15] [#ezpublish] <zrg> is there pictures of the actual place the conference will be in?
+[04-30-2006 03:02:13] -!- awormus [n=aaron@p54B12096.dip0.t-ipconnect.de] has quit [Connection reset by peer]
+[04-30-2006 03:02:37] -!- awormus [n=aaron@p54B12096.dip0.t-ipconnect.de] has joined #ezpublish
+[04-30-2006 03:03:41] -!- awormus_ [n=aaron@p54B12096.dip0.t-ipconnect.de] has joined #ezpublish
+[04-30-2006 03:03:46] -!- awormus [n=aaron@p54B12096.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[04-30-2006 03:16:54] [#ezpublish] <ordnas> zrg: not that I know of
+[04-30-2006 03:24:48] -!- awormus_ [n=aaron@p54B12096.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[04-30-2006 03:53:59] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-30-2006 04:01:33] -!- ordna1 [n=ordnas@p549D76B3.dip.t-dialin.net] has joined #ezpublish
+[04-30-2006 04:04:41] -!- awormus [n=aaron@p54B139AB.dip0.t-ipconnect.de] has joined #ezpublish
+[04-30-2006 04:20:03] -!- ordnas [n=ordnas@p549D5AF3.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[04-30-2006 07:36:02] -!- kore__ [n=lordhong@P72fc.p.pppool.de] has joined #ezpublish
+[04-30-2006 08:43:22] -!- tobmaster [n=tobmaste@dslb-084-061-072-083.pools.arcor-ip.net] has joined #ezpublish
+[04-30-2006 08:45:07] -!- tobiS [n=tobmaste@dslb-084-061-073-169.pools.arcor-ip.net] has joined #ezpublish
+[04-30-2006 09:00:47] -!- tobmaster [n=tobmaste@dslb-084-061-072-083.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[04-30-2006 09:11:22] -!- kris10an [n=kh@193.216.116.158] has quit [Remote closed the connection]
+[04-30-2006 09:13:34] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-30-2006 09:58:22] -!- elephantMan [n=elephant@190.205.103-84.rev.gaoland.net] has quit [Read error: 104 (Connection reset by peer)]
+[04-30-2006 09:59:31] -!- elephantMan [n=elephant@190.205.103-84.rev.gaoland.net] has joined #ezpublish
+[04-30-2006 10:56:19] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-30-2006 10:58:35] [#ezpublish] <awormus> is ezPublish actually using smarty, or is it an implementation that looks very much like it
+[04-30-2006 11:06:26] [#ezpublish] <kore__> it only looks very much like this ;)
+[04-30-2006 11:32:06] [#ezpublish] <Tidemann> mornin'
+[04-30-2006 12:02:08] [#ezpublish] <xbit> mornings :)
+[04-30-2006 12:02:11] [#ezpublish] <xbit> *yawn*
+[04-30-2006 12:22:24] [#ezpublish] <Tidemann> xbit: formen?
+[04-30-2006 12:24:39] [#ezpublish] <xbit> helt oedelagt
+[04-30-2006 12:24:46] [#ezpublish] <xbit> ute av stand til aa gjoere noe som helst
+[04-30-2006 12:24:51] [#ezpublish] <xbit> jammen glad for at det er fri imorgen! :)
+[04-30-2006 12:25:04] [#ezpublish] <xbit> du da?
+[04-30-2006 12:25:07] [#ezpublish] <xbit> stabilt?
+[04-30-2006 12:30:00] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[04-30-2006 12:46:34] -!- kore__ [n=lordhong@P72fc.p.pppool.de] has quit [Read error: 113 (No route to host)]
+[04-30-2006 13:06:33] -!- kore__ [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-30-2006 13:11:24] [#ezpublish] <ordna1> awormus: it's our own, but similar
+[04-30-2006 13:11:49] [#ezpublish] <ordna1> awormus: you will love it more :)
+[04-30-2006 14:36:41] -!- ordna1 [n=ordnas@p549D76B3.dip.t-dialin.net] has left #ezpublish []
+[04-30-2006 16:59:35] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[04-30-2006 17:16:33] -!- tobiS [n=tobmaste@dslb-084-061-073-169.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[04-30-2006 17:25:54] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-30-2006 17:36:26] -!- kore__ [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit []
+[04-30-2006 18:00:50] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]

@@ -1,0 +1,106 @@
+[05-06-2005 00:11:49] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 00:12:08] [#ezpublish] * kracker is just browsing ... ;)
+[05-06-2005 00:54:39] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-06-2005 01:03:11] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-06-2005 01:23:42] -!- jota [~jota@fanzine.igalia.com] has joined #ezpublish
+[05-06-2005 01:52:43] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-06-2005 01:57:15] -!- ordnas [~ordnas@p549DC704.dip.t-dialin.net] has joined #ezpublish
+[05-06-2005 02:12:12] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 02:12:31] [#ezpublish] <kracker> wazzup
+[05-06-2005 02:12:42] [#ezpublish] <kracker> what?
+[05-06-2005 02:12:44] [#ezpublish] <kracker> what?
+[05-06-2005 02:12:55] [#ezpublish] <kracker> yeah! --lil' jon
+[05-06-2005 02:17:41] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-06-2005 02:21:40] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-06-2005 02:34:21] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 02:43:54] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 02:44:04] [#ezpublish] <kracker> hey guys, per my recent breakdowns (both in code and time) i've gone ahead and automated the ezlog archive of each days current irc log via cron
+[05-06-2005 02:44:06] [#ezpublish] <kracker> this means even when i'm doa or mia the day's irc logs won't be lost because of a badly written phpircbot :)
+[05-06-2005 02:44:46] [#ezpublish] <kracker> dated logs are available to the public at : http://download.ezpublishhosting.com/ezirc/logs/
+[05-06-2005 02:57:37] -!- _Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-06-2005 02:57:57] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[05-06-2005 02:58:03] -!- _Katana` is now known as Katana`
+[05-06-2005 03:13:43] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 03:25:05] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-06-2005 04:30:08] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 04:30:20] -!- thekracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 04:30:21] -!- thekracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Client Quit]
+[05-06-2005 05:50:17] -!- ordnas [~ordnas@p549DC704.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 05:58:48] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-06-2005 06:07:51] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[05-06-2005 06:30:25] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 06:30:32] [#ezpublish] <kracker> .
+[05-06-2005 06:30:54] [#ezpublish] <kracker> my first eZ systems support ticket (ahh, what a day :)
+[05-06-2005 06:31:37] [#ezpublish] <kracker> just wait till they tell me how foolish I was and what I overlooked
+[05-06-2005 06:31:38] [#ezpublish] <kracker> lol
+[05-06-2005 06:33:09] [#ezpublish] <xbit> yep, that's something to look forward to i guess
+[05-06-2005 06:33:24] [#ezpublish] <kracker> <grin />
+[05-06-2005 06:35:02] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-06-2005 06:37:51] -!- ordna1 [~ordnas@p549DC704.dip.t-dialin.net] has joined #ezpublish
+[05-06-2005 06:55:47] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 07:43:37] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-06-2005 08:13:14] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 08:21:47] -!- ordna1 [~ordnas@p549DC704.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[05-06-2005 08:24:15] -!- ordna1 [~ordnas@p549DC704.dip.t-dialin.net] has joined #ezpublish
+[05-06-2005 08:27:17] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-06-2005 08:30:32] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-06-2005 08:37:51] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 09:18:48] -!- SachaS_ [~Sacha@12.44.147.178] has joined #ezpublish
+[05-06-2005 09:18:50] -!- SachaS_ [~Sacha@12.44.147.178] has quit [Read error: 104 (Connection reset by peer)]
+[05-06-2005 09:24:22] -!- SachaS [~Sacha@12.44.147.178] has left #ezpublish ["Client exiting"]
+[05-06-2005 09:36:20] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 09:40:25] [#ezpublish] <kracker> .
+[05-06-2005 09:49:33] -!- ordna1 [~ordnas@p549DC704.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 09:56:22] -!- ordna1 [~ordnas@p549DFB77.dip.t-dialin.net] has joined #ezpublish
+[05-06-2005 09:58:04] [#ezpublish] <danmiru> does anybody have any ideas about backup/restoration?
+[05-06-2005 09:58:05] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-06-2005 09:58:29] [#ezpublish] <danmiru> i use packages functionality with my own package handlers
+[05-06-2005 09:58:53] [#ezpublish] <danmiru> but i have troubles while restoring saved content objects
+[05-06-2005 09:59:27] [#ezpublish] <danmiru> they restores perfectly, but nodeID and objectID are not the same they was before backup
+[05-06-2005 10:00:01] [#ezpublish] <danmiru> this can and will cause troubles, and a lot - bookmarks, roles, etc
+[05-06-2005 10:00:41] [#ezpublish] <danmiru> i need a clue, a rather big one and pretty straightforward
+[05-06-2005 10:12:55] [#ezpublish] <danmiru> are you experienced?
+[05-06-2005 10:30:10] -!- seasonfive_ [~Yannick@AGrenoble-152-1-43-242.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[05-06-2005 10:38:17] -!- seasonfive [~Yannick@AGrenoble-152-1-50-69.w82-122.abo.wanadoo.fr] has quit [Read error: 145 (Connection timed out)]
+[05-06-2005 11:09:35] -!- fh [~fh@stalker.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[05-06-2005 11:40:30] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 11:47:42] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has joined #ezpublish
+[05-06-2005 12:03:52] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 12:11:22] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-06-2005 12:22:16] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 12:32:21] [#ezpublish] <danmiru> i guess not
+[05-06-2005 12:32:26] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-06-2005 12:42:54] -!- ordna1 [~ordnas@p549DFB77.dip.t-dialin.net] has left #ezpublish []
+[05-06-2005 13:15:48] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[05-06-2005 13:40:43] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 13:42:38] [#ezpublish] <kracker> are we there yet ?
+[05-06-2005 13:43:00] [#ezpublish] <kracker> Sole : Yet Another Rant
+[05-06-2005 13:45:48] -!- jota [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[05-06-2005 14:04:12] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 14:21:03] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-06-2005 14:44:43] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has joined #ezpublish
+[05-06-2005 14:47:39] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 14:48:05] [#ezpublish] <kracker> #ezpublish ... we don't want you here so we kick you offline in regular intervuls
+[05-06-2005 14:48:19] [#ezpublish] <kracker> grrr...give up while you still have the freedome to do so ...
+[05-06-2005 14:58:44] [#ezpublish] <xbit> you're good at slogans duuude :o
+[05-06-2005 15:07:19] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-06-2005 15:14:14] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has quit []
+[05-06-2005 15:45:44] -!- SachaS [~Sacha@12.44.147.178] has joined #ezpublish
+[05-06-2005 16:08:13] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-06-2005 16:48:25] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 17:11:05] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-06-2005 17:19:58] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-06-2005 18:40:40] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[05-06-2005 18:48:30] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 18:58:51] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-06-2005 19:16:06] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 19:17:50] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[05-06-2005 20:48:39] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 20:49:22] [#ezpublish] <kracker> hey
+[05-06-2005 20:49:44] [#ezpublish] <kracker> does anyone else think about using eZ publish under an affero gpl situation?
+[05-06-2005 20:50:06] [#ezpublish] <kracker> does anyone else see what i'm saying, main() ?
+[05-06-2005 20:50:27] [#ezpublish] <kracker> ha! right thur ..
+[05-06-2005 21:00:43] -!- SachaS [~Sacha@12.44.147.178] has left #ezpublish ["Client exiting"]
+[05-06-2005 21:17:58] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-06-2005 22:50:40] -!- kracker [~kracker@c-67-171-40-130.hsd1.wa.comcast.net] has joined #ezpublish
+[05-06-2005 22:55:57] [#ezpublish] <kracker> :)

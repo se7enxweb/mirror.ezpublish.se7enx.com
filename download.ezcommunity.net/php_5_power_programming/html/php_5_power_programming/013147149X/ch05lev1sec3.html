@@ -1,0 +1,75 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 5.3.&nbsp; User Input</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch05lev1sec3"></a><h3 class="docSection1Title" id="409768-990">5.3. User Input</h3>
+<p class="docText">Now that you know how to embed PHP code, you probably want to program some kind of user-specified action. For instance, the book webshop needs a login and registration system that requires user action, so we will implement this system as an example. This system requires an HTML form and a place to store the data collected by the form. Because this chapter does not deal with storing data in a database, only an API function is provided when data needs to be stored. After reading some of the later chapters, you will be able to fill these in yourself.<a name="ch05index21"></a><a name="ch05index22"></a><a name="ch05index23"></a></p>
+<p class="docText">We require four things from the user when he or she registers for the shop: email address, first name, last name, and requested password. The HTML code for a form to collect this information looks like this:</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Register&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Registration&lt;/h1&gt;
+    <span class="docEmphStrong">&lt;form method="get" action="register.php"&gt;</span>
+        &lt;table&gt;
+        &lt;tr&gt;&lt;td&gt;E-mail address:&lt;/td&gt;
+            &lt;td&gt;<span class="docEmphStrong">&lt;input type='text' name='email'/&gt;</span>&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;First name:&lt;/td&gt;
+            &lt;td&gt;&lt;input type='text' name='first_name'/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Last name:&lt;/td&gt;
+            &lt;td&gt;&lt;input type='text' name='last_name'/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Password:&lt;/td&gt;
+            &lt;td&gt;<span class="docEmphStrong">&lt;input type='password' name='password'/&gt;</span>&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan='2'&gt;
+            <span class="docEmphStrong">&lt;input type='submit' name='register' value='Register'/&gt;</span>
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    <span class="docEmphStrong">&lt;/form&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">The lines that handle the form data are highlighted in bold. The form tag is the first bold line: <tt>&lt;form method="get" action="register.php"&gt;</tt>. We specify <tt>get</tt> for the first attribute in the form tagthe method attribute. The HTTP <tt>GET</tt> method encodes the form data in the URL, making it visible in the browser address window and making it possible to bookmark the result of the form. Another possible method is the <tt>POST</tt> method. Because we use some sensitive data (requested password), we are better off using the <tt>POST</tt> method. The <tt>POST</tt> method encodes the form data in the body of the HTTP request so that the data is not shown in the URL and cannot be bookmarked.<a name="ch05index24"></a><a name="ch05index25"></a><a name="ch05index26"></a><a name="ch05index27"></a><a name="ch05index28"></a></P>
+<p class="docText">The script that processes the form data can use the <tt>$_GET</tt> built-in array to process data from a form that uses the <tt>GET</tt> method and the <tt>$_POST</tt> built-in array for data from a form that uses the <tt>POST</tt> method. If you want to use both <tt>$_GET</tt> and <tt>$_POST</tt> for some postings, you can use <tt>$_REQUEST</tt>, which contains all <tt>$_GET</tt>, <tt>$_POST</tt>, and <tt>$_COOKIE</tt> elements merged into one array. If the same element exists in more than one array, the <tt>variables_order</tt> setting in the <tt>php.ini</tt> file determines which element has precedence. In this configuration setting, <tt>G</tt> represents <tt>$_GET</tt>, <tt>P</tt> represents <tt>$_POST</tt>, <tt>C</tt> represents <tt>$_COOKIE</tt>, <tt>E</tt> represents <tt>$_ENV</tt>, and <tt>S</tt> represents <tt>$_SERVER</tt>. Variables are added to <tt>$_REQUEST</tt> in the order specified by the <tt>variables_order</tt> setting. Variables added later override variables with the same name that were added earlier. The default setting is <tt>EGPCS</tt>, which means that <tt>POST</tt> variables override <tt>GET</tt> variables with the same name.<a name="ch05index29"></a><a name="ch05index30"></a><a name="ch05index31"></a></p>
+<p class="docText">The elements of the form are defined by the input tags. The form highlights (via the bold lines) three different types of input tags. The first type (<tt>type='text'</tt>) is a simple text field, with the name <tt>email</tt>. The name is needed to use the posted data in your PHP script that processes the form data. The <tt>name</tt> attribute is the key in the <tt>$_POST</tt> or <tt>$_GET</tt> array (for example, <tt>$_POST['email']</tt>). The second type of input tag (<tt>type='password'</tt>) is the same type as the text type, except that, for security reasons, all data the user types is displayed on-screen as <tt>*</tt>. This does not mean, of course, that the form collects the asterisks and sends them with the form. It just means that the text is displayed as asterisks so no one can see the user's password. The third type (<tt>type='submit'</tt>) is rendered as a submit button that a user presses to actually submit the data entered into the form. The name of the submit button is the array key for the element where the value is stored (for example, <tt>$_POST['register']</tt> equals <tt>'Register'</tt>) when the browser posts the form back to the web server. The full form as shown in a web browser looks similar to <a class="docLink" href="#ch05fig01">Figure 5.1</a>.<a name="ch05index32"></a><a name="ch05index33"></a><a name="ch05index34"></a></P>
+<a name="ch05fig01"></a><p><center><H5 class="docFigureTitle">Figure 5.1. Full form as shown in a web browser.</h5>
+<p class="docText"><img border="0" alt="" id="217066145005" width="350" height="237" SRC="images/013147149X/graphics/05fig01.gif;380137"></p></center></p><br>
+<p class="docText">The <tt>action</tt> attribute of the <tt>&lt;form&gt;</tt> tag specifies the file to which the filled-in form is postedin our case, <tt>register.php</tt>. PHP makes available the data from all the various form elements in the designated script. To process data, we need to change our form a little more. We only want the registration form to be shown if it is being displayed for the first time, not if it has already been filled in and submitted by a user. That is, we want to display the form only if the processing script didn't receive any submitted data. We can tell whether the form has been submitted by a user by testing whether the submit button has been pressed. To do so, between the <tt>&lt;body&gt;</tt> tag and the <tt>&lt;h1&gt;Registration&lt;/h1&gt;</tt> line, we add the following code:<a name="ch05index35"></a></P>
+<pre>
+&lt;?php
+        if (!isset ($_POST['register']) ||($_POST['register'] != 'Register')) {
+?&gt;
+</pre><BR>
+<p class="docText">This line checks whether the <tt>'register'</tt> key exists in the <tt>$_POST</tt> array. Because the <tt>$_POST</tt> array contains all fields from the posted form, the <tt>$_POST</tt> array will contain an element with the key <tt>register</tt> if the submit button has been pressed. If we use the <tt>GET</tt> method, we would use the same test on the <tt>$_GET</tt> array. Both arrays are superglobals, available in every function, without needing to be declared <tt>'global'</tt> with the <tt>global</tt> keyword. After checking if the <tt>'register'</tt> key exists in the array, we check if the value of the array element equals <tt>'Register'</tt>, just to be sure.<a name="ch05index36"></a><a name="ch05index37"></a><a name="ch05index38"></a><a name="ch05index39"></a></p>
+<p class="docText">Between the <tt>&lt;/form&gt;</tt> and <tt>&lt;/body&gt;</tt> tag we add the following:</p>
+<pre>
+&lt;?php
+    } else {
+?&gt;
+E-mail: &lt;?php echo $_POST['email']; ?&gt;&lt;br /&gt;
+Name: &lt;?php echo $_POST['first_name']. ' '. $_POST['last_name']; ?&gt;&lt;br /&gt;
+Password: &lt;?php echo $_POST['password']; ?&gt;&lt;br /&gt;
+&lt;?php
+    }
+?&gt;
+</pre><br>
+<p class="docText">This piece of code is executed if the form was filled out. As you can see, we simply echo all the form values by echoing the elements from the <tt>$_POST</tt> array. Dealing with user input data is not much harder than this, but...<a name="ch05index40"></a><a name="ch05index41"></a><a name="ch05index42"></a></p>
+<UL></ul></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec2.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec4.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

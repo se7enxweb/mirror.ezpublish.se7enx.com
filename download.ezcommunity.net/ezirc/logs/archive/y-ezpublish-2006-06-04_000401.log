@@ -1,0 +1,151 @@
+[06-02-2006 00:27:50] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-02-2006 01:09:18] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[06-02-2006 01:17:27] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 110 (Connection timed out)]
+[06-02-2006 01:28:38] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-02-2006 01:44:27] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-02-2006 02:03:15] -!- _hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[06-02-2006 02:03:23] -!- _hovik [n=hovik@stalker.ez.no] has quit [Client Quit]
+[06-02-2006 02:05:29] -!- _hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[06-02-2006 02:15:58] -!- xiglet_ [n=xiglet@oslo-dhcp-249-247.bluecom.no] has joined #ezpublish
+[06-02-2006 02:21:17] -!- zr1 [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[06-02-2006 02:21:45] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-02-2006 02:42:56] -!- zr1 [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-02-2006 02:47:46] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-02-2006 02:52:12] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-02-2006 02:56:10] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-02-2006 02:58:11] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-02-2006 03:06:47] [#ezpublish] <kalooni> I would like to display all the session variable for debugging purpose. How could I do this?
+[06-02-2006 03:08:39] [#ezpublish] <kalooni> $http->attribute( "session" );
+[06-02-2006 03:50:30] -!- _hovik [n=hovik@stalker.ez.no] has quit [Remote closed the connection]
+[06-02-2006 03:56:17] -!- _hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[06-02-2006 04:11:10] -!- zr1 [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has joined #ezpublish
+[06-02-2006 04:53:06] -!- xiglet_ [n=xiglet@oslo-dhcp-249-247.bluecom.no] has quit [Read error: 110 (Connection timed out)]
+[06-02-2006 04:59:31] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[06-02-2006 05:01:12] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[06-02-2006 05:02:13] [#ezpublish] <_Rappy_> is ther a way to preview an article in an easy way? Or do one have to make a folder which is in a limited section, and view it from there, and then move it to i.e. the news folder?
+[06-02-2006 05:07:30] [#ezpublish] <_Rappy_> and is the $299 for the Paynet gateway a one time or once a year fee?
+[06-02-2006 05:16:11] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit [Read error: 110 (Connection timed out)]
+[06-02-2006 05:22:42] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[06-02-2006 05:49:59] [#ezpublish] <kris10an^> _Rappy_: The "view" button in the right-menu when you are editing gives you a preview
+[06-02-2006 05:52:27] -!- kris10an^ is now known as kris10an
+[06-02-2006 07:14:52] -!- awormus [n=aaron@frnk-d9b955cc.pool.mediaWays.net] has joined #ezpublish
+[06-02-2006 07:55:54] [#ezpublish] <jeremiah> hi friends
+[06-02-2006 07:55:56] -!- _hovik [n=hovik@stalker.ez.no] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-02-2006 07:56:12] [#ezpublish] <zr1> but enemies?
+[06-02-2006 07:56:30] [#ezpublish] <jeremiah> enemies also, ok, is possible to define custom TEMPLATE FUNCTIONS, a tutorial or a link about that?
+[06-02-2006 07:57:18] [#ezpublish] <zr1> redirect extension in contribs was good starting point, simple
+[06-02-2006 07:57:53] [#ezpublish] <jeremiah> zr1, my english is poor, poor, very poor, could you explain me a little more?
+[06-02-2006 07:58:15] [#ezpublish] <jeremiah> contribs is a ez.no part?
+[06-02-2006 07:58:30] [#ezpublish] <jeremiah> section
+[06-02-2006 07:59:22] [#ezpublish] <jeremiah> i see lib/eztemplate/classes/ here the template functions
+[06-02-2006 07:59:30] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[06-02-2006 07:59:39] [#ezpublish] <jeremiah> must i add there and hack?
+[06-02-2006 08:00:59] [#ezpublish] <zr1> no, get some of them and look into it
+[06-02-2006 08:01:25] [#ezpublish] <zr1> hang on
+[06-02-2006 08:01:42] [#ezpublish] <jeremiah> yes i see an array where the name of the class is relationed with the template function names
+[06-02-2006 08:01:55] [#ezpublish] <jeremiah> must i add my functions in that array?
+[06-02-2006 08:02:52] [#ezpublish] <zr1> get this one and install
+[06-02-2006 08:02:54] [#ezpublish] <zr1> http://ez.no/community/contribs/template_plugins/redirect_operators
+[06-02-2006 08:03:15] [#ezpublish] <zr1> should be small and easy to understand. then start modifying it.
+[06-02-2006 08:03:32] [#ezpublish] <jeremiah> i dont want redirect anything zr1
+[06-02-2006 08:03:54] [#ezpublish] <zr1> you use it AS STARTING POINT for your function
+[06-02-2006 08:04:10] [#ezpublish] <jeremiah> ahhhhhhhhhhhhhh, hehehe, i understund!!!
+[06-02-2006 08:04:29] [#ezpublish] <jeremiah> well i will see it, sorry zr1 is a little difficult o me speak english
+[06-02-2006 08:04:39] [#ezpublish] <zr1> where are you from?
+[06-02-2006 08:04:53] [#ezpublish] <jeremiah> spain
+[06-02-2006 08:05:27] [#ezpublish] <jeremiah> in a little city where nobosy speak english, speak other local languages
+[06-02-2006 08:05:35] [#ezpublish] <jeremiah> and spanish
+[06-02-2006 08:06:03] [#ezpublish] <jeremiah> where are you from?
+[06-02-2006 08:06:21] [#ezpublish] <zr1> ok, i dont do spanish, estonia
+[06-02-2006 08:06:48] [#ezpublish] <zr1> what will your funtion do?
+[06-02-2006 08:07:53] -!- awormus [n=aaron@frnk-d9b955cc.pool.mediaWays.net] has quit [Read error: 113 (No route to host)]
+[06-02-2006 08:07:57] [#ezpublish] <jeremiah> my function?, nothing, i am learning now ezpublish, and i want to define my own template function to facilite the things
+[06-02-2006 08:08:14] [#ezpublish] <jeremiah> but nothing in concrete, i only know how to do it
+[06-02-2006 08:08:35] [#ezpublish] <jeremiah> soon i will do a page and perhaps a tutorial of how i learned ezp
+[06-02-2006 08:11:38] [#ezpublish] <jeremiah> i am looking stonia in google earth, a cold place i think
+[06-02-2006 08:13:10] [#ezpublish] <jeremiah> i will look tallin
+[06-02-2006 08:14:09] [#ezpublish] <jeremiah> kopli bay look beautifull
+[06-02-2006 08:14:41] [#ezpublish] <zr1> hehe
+[06-02-2006 08:14:52] [#ezpublish] <zr1> shows you have not been there :P
+[06-02-2006 08:16:42] [#ezpublish] <jeremiah> the center historique look medieval, and beautiful also
+[06-02-2006 08:18:19] [#ezpublish] <jeremiah> is petroelum in the beach of kpoli bay?
+[06-02-2006 08:21:45] [#ezpublish] <zr1> it is capital city, dude..
+[06-02-2006 08:21:51] [#ezpublish] <zr1> capitals always suck :)
+[06-02-2006 08:25:02] [#ezpublish] <jeremiah> well, i will contiue learning, i want to do a page , bye and thx zr1
+[06-02-2006 08:26:23] [#ezpublish] <jeremiah> zr1 a question, if i do a page with ezp, i can delete al references to ezp or must i pay for that?
+[06-02-2006 08:29:21] [#ezpublish] <jeremiah> well it seems easy to create custom template fucntions, using the autoload in a extension i see, very usefull
+[06-02-2006 08:42:31] [#ezpublish] <zr1> read gpl licence, pal
+[06-02-2006 08:48:36] [#ezpublish] <jeremiah> well i will try to read, but a yes or no answer , could be a good init, hehe
+[06-02-2006 08:54:16] [#ezpublish] <zr1> you dont have to delete anything
+[06-02-2006 08:55:05] [#ezpublish] <jeremiah> i never delete nothing, but i delete a page i did a time ago with phpnuke because of security
+[06-02-2006 08:55:17] [#ezpublish] <jeremiah> i delete the license i mean
+[06-02-2006 08:56:14] [#ezpublish] <jeremiah> i will show you my page when i finish it, if finally learn ennoug ezp of course
+[06-02-2006 08:59:32] [#ezpublish] <zr1> ok ;)
+[06-02-2006 09:22:53] -!- awormus [n=aaron@217.185.85.14] has joined #ezpublish
+[06-02-2006 09:27:02] -!- awormus_ [n=aaron@Nc4fd.n.pppool.de] has joined #ezpublish
+[06-02-2006 09:38:18] -!- awormus_ [n=aaron@Nc4fd.n.pppool.de] has quit ["Leaving"]
+[06-02-2006 09:47:46] -!- awormus [n=aaron@217.185.85.14] has quit [Read error: 113 (No route to host)]
+[06-02-2006 09:49:03] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-02-2006 09:54:48] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit [Remote closed the connection]
+[06-02-2006 10:19:47] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Peace and Protection 4.22"]
+[06-02-2006 10:19:47] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has joined #ezpublish
+[06-02-2006 10:19:53] [#ezpublish] <Tidemann> hey
+[06-02-2006 10:21:12] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 110 (Connection timed out)]
+[06-02-2006 10:24:01] [#ezpublish] <Tidemann> xbit?
+[06-02-2006 10:35:46] -!- zr1 [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-02-2006 10:37:41] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-02-2006 10:49:59] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Remote closed the connection]
+[06-02-2006 10:54:56] [#ezpublish] <Tidemann> anyone?
+[06-02-2006 11:59:41] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 110 (Connection timed out)]
+[06-02-2006 12:34:49] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-02-2006 12:48:24] -!- xiglet_ [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[06-02-2006 12:51:22] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-02-2006 13:11:32] -!- tobmaster [n=tobmaste@dslb-084-061-103-168.pools.arcor-ip.net] has joined #ezpublish
+[06-02-2006 13:24:59] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[06-02-2006 13:29:13] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[06-02-2006 14:44:53] -!- DiGiTa|_ [n=pet2poul@84.4.42.113] has joined #ezpublish
+[06-02-2006 14:57:05] -!- DiGiTa|_ [n=pet2poul@84.4.42.113] has quit []
+[06-02-2006 15:59:34] -!- tobiS [n=tobmaste@dslb-084-061-010-116.pools.arcor-ip.net] has joined #ezpublish
+[06-02-2006 16:01:12] -!- tobmaster [n=tobmaste@dslb-084-061-103-168.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[06-02-2006 16:06:00] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-02-2006 16:48:45] -!- tobiS [n=tobmaste@dslb-084-061-010-116.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[06-02-2006 17:25:26] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[06-02-2006 18:27:38] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[06-02-2006 22:11:26] -!- cheesenarg [n=cheesena@064.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[06-02-2006 22:45:10] Disconnecting due to lack of a lag response (0.03919600 1149306250 != 0.07854800 1149306280)
+[06-02-2006 22:45:10] Diconnected. Sleeping for 2 second(s).
+[06-02-2006 22:45:12] >> Connecting to irc.freenode.net:6667
+[06-02-2006 22:45:34] >> Connected to irc.freenode.net:6667, registering...
+[06-02-2006 22:45:40] >> Attempting to join channels: #ezpublish
+[06-02-2006 22:45:55] >> Successfully registered. Nick is: ezlog
+[06-02-2006 22:45:55] -!- There are 12246 listed and 13555 unlisted users on 18 servers
+[06-02-2006 22:45:55] -!- 45 flagged staff members
+[06-02-2006 22:45:55] -!- 11972 channels formed
+[06-02-2006 22:45:55] -!- I have 3259 clients and 0 servers
+[06-02-2006 22:45:55] -!- Current local  users: 3259  Max: 4806
+[06-02-2006 22:45:55] -!- Current global users: 25801  Max: 31554
+[06-02-2006 22:45:55] -!- Highest connection count: 4808 (4806 clients) (150045 since server was (re)started)
+[06-02-2006 22:45:56] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[06-02-2006 22:45:56] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[06-02-2006 22:45:56] -!- Topic set by ls [@] [Fri, 19 May 2006 10:51:35 -0500]
+[06-02-2006 22:45:56] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[06-02-2006 22:45:56] [notice(freenode-connect)] VERSION IQ 0.9.3
+[06-02-2006 22:45:56] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] please register your nickname...don't forget to auto-identify! http://freenode.net/faq.shtml#nicksetup
+[06-02-2006 22:46:34] Disconnecting due to lack of a lag response (0.57678900 1149306334 != 0.18167300 1149306364)
+[06-02-2006 22:46:34] Diconnected. Sleeping for 2 second(s).
+[06-02-2006 22:46:36] >> Connecting to irc.freenode.net:6667
+[06-02-2006 22:46:38] >> Connected to irc.freenode.net:6667, registering...
+[06-02-2006 22:46:38] >> Successfully registered. Nick is: ezlog
+[06-02-2006 22:46:38] -!- There are 12240 listed and 13555 unlisted users on 18 servers
+[06-02-2006 22:46:38] -!- 45 flagged staff members
+[06-02-2006 22:46:38] -!- 11970 channels formed
+[06-02-2006 22:46:38] -!- I have 3258 clients and 0 servers
+[06-02-2006 22:46:38] -!- Current local  users: 3258  Max: 4806
+[06-02-2006 22:46:38] -!- Current global users: 25795  Max: 31554
+[06-02-2006 22:46:38] -!- Highest connection count: 4808 (4806 clients) (150048 since server was (re)started)
+[06-02-2006 22:46:39] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[06-02-2006 22:46:39] [notice(freenode-connect)] VERSION IQ 0.9.3
+[06-02-2006 22:47:10] >> Attempting to join channels: #ezpublish
+[06-02-2006 22:47:10] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[06-02-2006 22:47:10] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[06-02-2006 22:47:10] -!- Topic set by ls [@] [Fri, 19 May 2006 10:51:35 -0500]

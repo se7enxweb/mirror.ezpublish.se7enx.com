@@ -1,0 +1,123 @@
+[12-17-2005 04:06:24] -lilo:$*- [Global Notice] Hi all. In a few moments we're going to test a patch on one main rotation server which will hopefully result in our being able to reopen irc.freenode.net .... we'll have to reup the server...affected users about 2400.
+[12-17-2005 04:06:44] -lilo:$*- [Global Notice] If all goes well, we may reup the rest of the servers at some point over the weekend, perhaps this morning. Thanks.
+[12-17-2005 04:26:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-17-2005 04:27:38] -!- DiGiTa|_ [n=guillaum@84.4.70.100] has joined #ezpublish
+[12-17-2005 04:29:57] -lilo:$*- [Global Notice] Hi all. Our patch was not as successful as we might have hoped. We're going to be tweaking the config lines and trying again, but it doesn't look hopeful. Thanks for your patience.
+[12-17-2005 04:38:12] -lilo:$*- [Global Notice] Hi all. Okay, it's time to reup that server once more. We're going to tweak the patch, but it looks like we're getting about 20% of the bots or less. IF this tweak doesn't work, we'll go back to chat.freenode.net . For more information on why irc.freenode.net isn't working, and how to connect to freenode (please spread the word), see http://freenode.net/news.shtml .... thank you.
+[12-17-2005 04:38:36] -!- DiGiTa|_ [n=guillaum@84.4.70.100] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 04:38:36] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 04:38:43] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-17-2005 04:39:39] -!- DiGiTa|_ [n=guillaum@84.4.70.100] has joined #ezpublish
+[12-17-2005 04:43:09] -lilo:$*- [Global Notice] Okay, folks. We can use your help now. It *looks* as if we've solved our problem, at least until the bots change. But would you please message me if you get any spambots or spam that you are sure occurred *after* this global notice? Thank you!
+[12-17-2005 04:43:12] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[12-17-2005 04:45:50] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-17-2005 04:52:07] -lilo:$*- [Global Notice] Hi all. It's looking as if we should now be recompiling the rest of the servers and reupping the main rotation servers one at a time. I've had no reports of problems since the upgrade. That's not to say that the bots won't mutate sometime soon, but for now we can run irc.freenode.net.
+[12-17-2005 04:55:20] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-17-2005 05:18:41] -lilo:$*- [Global Notice] Hi all. Okay, here goes. In just a few moments, a rather large main rotation server will be restarted. It will be followed by another, and another, and then by smaller servers. Please bear with us.
+[12-17-2005 05:26:35] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:26:51] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[12-17-2005 05:30:38] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:30:38] -!- jota [n=jota@fanzine.igalia.com] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:30:38] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:30:38] -!- DiGiTa|_ [n=guillaum@84.4.70.100] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:30:38] -!- elephantMan [n=elephant@217.167.222.224] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:30:38] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:31:10] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[12-17-2005 05:31:10] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-17-2005 05:31:25] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-17-2005 05:31:25] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-17-2005 05:31:25] -!- DiGiTa|_ [n=guillaum@84.4.70.100] has joined #ezpublish
+[12-17-2005 05:31:29] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[12-17-2005 05:33:44] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-17-2005 05:40:34] -!- mode/#ezpublish [-o pire] by ChanServ
+[12-17-2005 05:44:28] Diconnected. Sleeping for 2 second(s).
+[12-17-2005 05:44:30] >> Connecting to irc.freenode.net:6667
+[12-17-2005 05:44:32] >> Connected to irc.freenode.net:6667, registering...
+[12-17-2005 05:44:42] >> Successfully registered. Nick is: ezlog
+[12-17-2005 05:44:42] -!- There are 7069 listed and 7907 unlisted users on 21 servers
+[12-17-2005 05:44:42] -!- 20 flagged staff members
+[12-17-2005 05:44:42] -!- 7395 channels formed
+[12-17-2005 05:44:42] -!- I have 168 clients and 0 servers
+[12-17-2005 05:44:42] -!- Current local  users: 168  Max: 168
+[12-17-2005 05:44:42] -!- Current global users: 14976  Max: 14976
+[12-17-2005 05:44:42] -!- Highest connection count: 168 (167 clients) (172 since server was (re)started)
+[12-17-2005 05:44:44] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[12-17-2005 05:44:44] [notice(freenode-connect)] VERSION IQ 0.9.3
+[12-17-2005 05:44:46] >> Attempting to join channels: #ezpublish
+[12-17-2005 05:44:47] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[12-17-2005 05:44:47] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/news/community_newsletter_02_12_2005 | http://ez.no/community/articles/an_introduction_to_ez_components
+[12-17-2005 05:44:47] -!- Topic set by kracker [@] [Fri, 16 Dec 2005 22:42:08 -0600]
+[12-17-2005 05:44:59] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] If you're at a conference, please contact freenode staff to make sure we've made special allowance for many users coming into our network from a single internet address ( http://freenode.net/faq.shtml#gettinghelp ). Private messages from unregistered users are currently blocked, except to network staff, services and participating registered users ( http://freenode.net/faq.shtml#privmsg )... Thanks!
+[12-17-2005 05:45:47] -!- LottoKim [n=kim@195.28.172.4] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:47:38] -!- elephantMan [n=elephant@217.167.222.224] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:47:38] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:47:51] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-17-2005 05:50:48] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[12-17-2005 05:57:04] -!- LottoKim [n=kim@195.28.172.4] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- elephantMan [n=elephant@217.167.222.224] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- jota [n=jota@fanzine.igalia.com] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- DiGiTa|_ [n=guillaum@84.4.70.100] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- pire [n=kbot@phpugdo.de] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- Proteque [n=gjorans@213.184.199.245] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- SEAwolfx [n=mike@tor/session/x-9e55d15d8dd94769] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- SEAwolfx1 [n=mike@tor/session/x-afd0ebd92f56e555] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 05:57:04] -!- SEAwolfx_ [n=mike@tor/session/x-ee2a1cc41351312f] has quit [calvino.freenode.net irc.fre]
+[12-17-2005 05:57:31] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-17-2005 05:57:31] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-17-2005 05:57:31] -!- DiGiTa|_ [n=guillaum@84.4.70.100] has joined #ezpublish
+[12-17-2005 05:57:31] -!- kracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[12-17-2005 05:57:31] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-17-2005 05:57:31] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-17-2005 05:57:38] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[12-17-2005 05:57:39] -!- SEAwolfx_ [n=mike@tor/session/x-ee2a1cc41351312f] has joined #ezpublish
+[12-17-2005 05:57:39] -!- SEAwolfx1 [n=mike@tor/session/x-afd0ebd92f56e555] has joined #ezpublish
+[12-17-2005 05:57:39] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-17-2005 05:57:42] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[12-17-2005 06:05:18] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[12-17-2005 06:05:18] [notice(freenode-connect)] VERSION IQ 0.9.3
+[12-17-2005 06:06:39] -!- Proteque [n=gjorans@213.184.199.245] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 06:06:39] -!- SEAwolfx_ [n=mike@tor/session/x-ee2a1cc41351312f] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 06:06:39] -!- SEAwolfx1 [n=mike@tor/session/x-afd0ebd92f56e555] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 06:06:41] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-17-2005 06:06:48] -!- pire [n=kbot@phpugdo.de] has quit [calvino.freenode.net irc.freenode.net]
+[12-17-2005 06:06:56] -!- SEAwolfx [n=mike@tor/session/x-e4efdb0b4b4c773e] has joined #ezpublish
+[12-17-2005 06:07:06] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[12-17-2005 06:35:08] -lilo:$*- [Global Notice] Hi all. We've completed our upgrade of the network to add a patch which should help us cope better with clonebots for the time being. Meanwhile, we can't stress enough---if you can't connect to freenode, please CHECK OUT THE WEBSITE NEWS PAGE. There's currently a summary of the events of the last 18 hours there; please take a look at http://freenode.net/news.shtml for information on what happened and how it will affect your access to the n
+[12-17-2005 06:36:05] -lilo:$*- [Global Notice] [...your access to the network.] Thanks for your patience and understanding, and thank you again for using the network!
+[12-17-2005 06:40:35] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-17-2005 06:45:46] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-17-2005 06:57:50] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[12-17-2005 07:24:15] -!- _buz is now known as buz
+[12-17-2005 08:26:53] -!- DiGiTa|_ [n=guillaum@84.4.70.100] has quit []
+[12-17-2005 09:10:22] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[12-17-2005 09:26:09] [#ezpublish] <buz> ye gods
+[12-17-2005 09:26:12] [#ezpublish] <buz> csv import is SLOOOOOOW
+[12-17-2005 09:57:14] [#ezpublish] <buz> oh, disabling the cache and search features helps a LOT
+[12-17-2005 10:49:02] -!- nnn0 is now known as God
+[12-17-2005 10:52:09] -!- God is now known as nnn0
+[12-17-2005 11:10:25] -!- SEAwolfx [n=mike@tor/session/x-e4efdb0b4b4c773e] has quit [Remote closed the connection]
+[12-17-2005 11:12:01] -!- SEAwolfx [n=mike@tor/session/x-1465e07211d0a6f3] has joined #ezpublish
+[12-17-2005 11:26:08] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[12-17-2005 11:51:44] -!- SEAwolfx_ [n=mike@tor/session/x-ddffd873d7a12697] has joined #ezpublish
+[12-17-2005 12:46:18] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-17-2005 12:56:05] -!- LottoKim_ [n=kim@195.28.172.4] has joined #ezpublish
+[12-17-2005 12:59:05] -!- LottoKim [n=kim@195.28.172.4] has quit [Read error: 113 (No route to host)]
+[12-17-2005 14:04:04] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-17-2005 14:39:47] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-17-2005 14:39:47] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-17-2005 14:40:07] -!- _Katana` is now known as Katana`
+[12-17-2005 14:47:33] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-17-2005 15:11:43] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[12-17-2005 15:11:43] -!- _Katana` is now known as Katana`
+[12-17-2005 15:19:32] -!- tobmaster [n=tobmaste@dslb-084-061-002-102.pools.arcor-ip.net] has joined #ezpublish
+[12-17-2005 16:28:08] -!- tobmaster [n=tobmaste@dslb-084-061-002-102.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[12-17-2005 16:42:45] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-17-2005 17:09:24] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-17-2005 17:26:39] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[12-17-2005 17:39:27] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[12-17-2005 18:15:25] [#ezpublish] <kracker> neat!
+[12-17-2005 18:15:25] [#ezpublish] <kracker> http://64.233.187.104/search?q=cache:POmB4DaV10IJ:www.cphp.it/wp/wp-content/ez_extension_talk.pdf+&hl=en&client=firefox
+[12-17-2005 21:41:44] [#ezpublish] <kracker> any one have a list of eZ publish community (active developers / users) blogs / rss feeds ...

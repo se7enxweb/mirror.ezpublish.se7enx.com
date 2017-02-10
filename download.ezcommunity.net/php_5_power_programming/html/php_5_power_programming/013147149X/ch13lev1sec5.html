@@ -1,0 +1,181 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 13.5.&nbsp; Other Changes</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch13lev1sec5"></a><h3 class="docSection1Title" id="409768-947">13.5. Other Changes</h3>
+<p class="docText">Although the compatibility mode covers a few changes between PHP 4 and PHP 5, it does not fix all possible changes. For example, PHP 5 does not allow assigning to <tt>$this</tt>, which is a problem for a few PEAR classes (at the time of this writing). For example, the Pager/Pager.php file has the following code in its constructor:<a name="ch13index31"></a><a name="ch13index32"></a><a name="ch13index33"></a></p>
+<pre>
+$mode = (isset($options['mode']) ? $options['mode'] : 'Jumping');
+$pager_class = 'Pager_' . ucfirst($mode);
+$pager_classfile = 'Pager' . DIRECTORY_SEPARATOR . $mode . '.php';
+require_once $pager_classfile;
+$this = new $pager_class($options);
+</pre><br>
+<p class="docText">Another PHP 5 change not reverted by compatibility mode is the behavior of <tt>get_class()</tt>.</p>
+<a name="ch13lev2sec3"></a><H4 class="docSection2Title">13.5.1. Assigning to <tt>$this</tt></h4>
+<p class="docText">When you use a line in PHP 4 that assigns a value to <tt>$this</tt> inside a class, depending on an option, a class is selected and an instance to that newly created class is returned. Simplified, the code looks like this (with the offending line in bold):<a name="ch13index34"></a><a name="ch13index35"></a><a name="ch13index36"></a></P>
+<pre>
+&lt;?php
+    class Jumping {
+    }
+
+
+    class Sliding {
+    }
+
+
+    class Pager {
+        function Pager($type)
+        {
+            <span class="docEmphStrong">$this = new $type;</span>
+        }
+    }
+
+
+    $pager = new Pager('Jumping');
+?&gt;
+</pre><br>
+<p class="docText">Assigning a new object to <tt>$this</tt> does not work in PHP 5. When the script runs, it throws the following error:</P>
+<pre><a name="PLID2"></a><div class="v1"><a href="ch13lev1sec5.html#PLID2">[View full width]</a></div>
+Fatal error: Cannot re-assign $this in /book/13-making-the-move/oo assign-to-this.php on
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif"> line 11
+</pre><br>
+<p class="docText">The only solution for this problem is to redesign the classes. In this case, an alternative that works with both PHP 4 and PHP 5 is</p>
+<pre>
+&lt;?php
+    class Pager {
+        function Pager($options)
+        {
+            var_dump($options);
+        }
+    }
+
+
+    class Jumping extends Pager {
+        function Jumping($options)
+        {
+            Pager::Pager($options);
+        }
+    }
+
+
+    class Sliding extends Pager {
+        function Jumping($options)
+        {
+            Pager::Pager($options);
+        }
+    }
+
+
+    $pager = new Jumping('foo');
+?&gt;
+</pre><br>
+<p class="docText">Assigning to <tt>$this</tt> can also be used to &quot;emulate&quot; an exception, which is necessary because you cannot return errors from a constructor. For example, the <tt>Net_Curl</tt> PEAR package has the following in its constructor:<a name="ch13index37"></a><a name="ch13index38"></a><a name="ch13index39"></a></p>
+<pre>
+function Net_Curl()
+{
+    ...
+    $ch = curl_init();
+    if (!$ch) {
+        $this = new PEAR_Error("Couldn't initialize a new curl handle");
+    }
+    ...
+}
+</pre><BR>
+<p class="docText">This is used to emulate an exception. In PHP 5, the correct way would be to use an . . . exception. For this to work, the <tt>PEAR_Error</tt> class needs to extend the internal PHP <tt>Exception</tt> class. In the examples here, we suppose a new PEAR error mechanism with <tt>PEAR_Exception</tt> is used, but the PEAR project doesn't yet know how they are solving it at the time of writing. The rewritten constructor might look like this:</P>
+<pre>
+function Net_Curl()
+{
+    ...
+    $ch = curl_init();
+    if (!$ch) {
+        throw PEAR_Exception("Couldn't initialize a new curl handle");
+    }
+}
+</pre><br>
+<p class="docText">Besides changing the constructor, code that uses this class needs to be changed to catch the exception too, as in<a name="ch13index40"></a><a name="ch13index41"></a><a name="ch13index42"></a></p>
+<pre>
+try {
+    $curl = new Net_Curl();
+} catch {
+    ...
+}
+</pre><br>
+<p class="docText">Unfortunately, this code will not work in PHP 4. You can support both PHP 4 and PHP 5 by using a new approach to the class implementationfor example, with a singleton pattern. An example might be</p>
+<pre>
+&lt;?php
+require_once "PEAR.php";
+class Net_Curl {
+
+    var $type;
+
+    function Net_Curl($type) {
+        $this-&gt;__construct($type);
+    }
+
+    function __construct($type) {
+        $this-&gt;type = $type;
+    }
+
+    function singleton($type) {
+        if ($type == "lala") {
+            return PEAR::raiseError("Unable to do foo.");
+        } else {
+            return new Net_Curl($type);
+        }
+    }
+}
+
+$instance = Net_Curl::singleton("lala");
+
+if (PEAR::isError($instance)) {
+    die("Error: " . $instance-&gt;getMessage() . "\n");
+}
+
+echo $instance-&gt;type . "\n";
+?&gt;
+</pre><BR>
+<a name="ch13note02"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">To find assignments to <tt>$this</tt> in your own code, you can use the UNIX tool <tt>grep</tt>:<a name="ch13index43"></a><a name="ch13index44"></a><a name="ch13index45"></a></p>
+<pre>
+egrep -r '\$this\s+=' *
+</pre><BR>
+<p class="docText">This command finds all instances in this directory and all subdirectories where an assignment to <tt>$this</tt> is made.</p></div><BR>
+<a name="ch13lev2sec4"></a><h4 class="docSection2Title">13.5.2. <tt>get_class</tt></h4>
+<p class="docText">Although PHP 4 always returns the class name with lowercased letters, in PHP 5, the <tt>get_class()</tt> function returns the case-preserved version of the class name:<a name="ch13index46"></a><a name="ch13index47"></a><a name="ch13index48"></a><a name="ch13index49"></a></p>
+<pre>
+&lt;?php
+     class BookPage {
+     }
+
+     $page = new BookPage;
+
+     $name =  get_class($page);
+     echo $name, "\n";
+?&gt;
+</pre><br>
+<p class="docText">The output is <tt>bookpage</tt> in PHP 4 and <tt>BookPage</tt> in PHP 5. If you need to rely on the PHP 4 behavior, use the following code instead:</p>
+<pre>
+$name = strtolower(get_class($page));
+echo $name, "\n";
+</pre><br>
+<p class="docText">This code works for both PHP 4 and PHP 5.<a name="ch13index50"></a><a name="ch13index51"></a><a name="ch13index52"></a></p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch13lev1sec4.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch13lev1sec6.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

@@ -1,0 +1,82 @@
+[07-05-2006 01:02:27] -!- DiGiTa|_ [n=pet2poul@84.4.38.239] has joined #ezpublish
+[07-05-2006 01:11:26] -!- awormus [n=aaron@p54B06BCF.dip.t-dialin.net] has quit ["Leaving"]
+[07-05-2006 01:14:12] -!- ordnas [n=ordnas@p549D6C3C.dip.t-dialin.net] has joined #ezpublish
+[07-05-2006 01:30:57] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[07-05-2006 01:56:15] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-05-2006 01:59:50] -!- SEAwolfx [n=SEAwolfx@p54939BFE.dip0.t-ipconnect.de] has joined #ezpublish
+[07-05-2006 02:07:17] -!- DiGiTa|_ [n=pet2poul@84.4.38.239] has quit []
+[07-05-2006 02:11:06] -!- awormus [n=aaron@p54B06BCF.dip.t-dialin.net] has joined #ezpublish
+[07-05-2006 02:28:39] -!- zurgut1 [n=zurgutt@194.80-202-172.nextgentel.com] has joined #ezpublish
+[07-05-2006 02:29:00] [#ezpublish] <zurgut1> it lives?
+[07-05-2006 02:29:11] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[07-05-2006 02:30:03] -!- PtiSeb [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 02:45:35] -!- zurgut1 [n=zurgutt@194.80-202-172.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 03:01:01] -!- nfrp [n=nfrp@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 03:28:29] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[07-05-2006 03:52:08] -!- fabio [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 03:56:30] -!- fabio is now known as fabio_12
+[07-05-2006 04:12:42] [#ezpublish] <PtiSeb> Hi ... I want change the siteaccess in a cli script ! the setUSeSiteAccess in the eZScript class method doesn't seem to work twice ... In a script, i create a eZCLI instance and a eZScript instance, the setUseSiteAccess method is used to select a particular siteaccess, i fetch some objects from a given siteaccess and i want to import them in another siteaccess, but the setUseSiteAccess method is i
+[07-05-2006 04:12:42] [#ezpublish] <PtiSeb> noperant.
+[07-05-2006 04:35:02] -!- fabio_12 [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 04:44:26] -!- fabio_12 [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 04:58:03] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[07-05-2006 05:05:26] -!- fabio_12 [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 05:10:21] -!- PtiSeb [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has quit ["Miranda IM! Smaller, Faster, Easier. http://miranda-im.org"]
+[07-05-2006 06:05:54] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[07-05-2006 06:13:59] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[07-05-2006 06:26:09] -!- SEAwolfx [n=SEAwolfx@p54939BFE.dip0.t-ipconnect.de] has left #ezpublish []
+[07-05-2006 06:35:03] -!- fabio_12 [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 06:35:05] -!- zurgutt [n=zurgutt@ti211310a080-4509.bb.online.no] has joined #ezpublish
+[07-05-2006 06:35:28] [#ezpublish] <zurgutt> sent mail awormus?
+[07-05-2006 06:35:29] -!- PtiSeb [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 06:35:44] [#ezpublish] <awormus> zurgutt: sorry, not yet :/
+[07-05-2006 06:36:03] [#ezpublish] <zurgutt> no prob, just checked, i dont trust email too much
+[07-05-2006 06:36:19] [#ezpublish] <awormus> yeh, neither do i
+[07-05-2006 06:43:26] -!- PtiSeb [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has quit [Read error: 104 (Connection reset by peer)]
+[07-05-2006 06:59:20] -!- PtiSeb [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 07:06:36] -!- zurgutt [n=zurgutt@ti211310a080-4509.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 07:24:41] -!- fabio_12 [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 07:27:07] [#ezpublish] <kalooni> hi
+[07-05-2006 07:27:23] [#ezpublish] <kalooni> I have 2 siteaccesses
+[07-05-2006 07:27:29] [#ezpublish] <kalooni> one for each available language
+[07-05-2006 07:27:49] [#ezpublish] <kalooni> how inside the pagelayout can I determine in which siteaccess I am in order to display the current language?
+[07-05-2006 07:33:28] [#ezpublish] <ordnas> kalooni: you saw that article? http://ez.no/community/articles/new_features_in_ez_publish_3_8
+[07-05-2006 07:33:53] [#ezpublish] <kalooni> yes I just check it ;)
+[07-05-2006 07:33:57] [#ezpublish] <ordnas> maybe it has the answer, if not, you can also ask in a comment to it
+[07-05-2006 07:33:57] [#ezpublish] <kalooni> thanks
+[07-05-2006 07:34:19] [#ezpublish] <kalooni> It is perfect but does not really fit my needs
+[07-05-2006 07:34:32] [#ezpublish] <kalooni> as I am not using URI but HOST
+[07-05-2006 07:35:10] [#ezpublish] <kalooni> I will use $site.http_equiv.Content-language in a if condition to be able to display what I want
+[07-05-2006 07:46:43] -!- fabio_12 [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 07:54:39] -!- zurgutt [n=zurgutt@213.80-202-174.nextgentel.com] has joined #ezpublish
+[07-05-2006 07:55:03] [#ezpublish] <zurgutt> terviseks!
+[07-05-2006 08:06:31] -!- awormus_ [n=aaron@p54B07414.dip.t-dialin.net] has joined #ezpublish
+[07-05-2006 08:08:40] -!- snowboarder04 [n=snow04@snowboarder04.be] has left #ezpublish []
+[07-05-2006 08:13:46] -!- awormus [n=aaron@p54B06BCF.dip.t-dialin.net] has quit [Read error: 145 (Connection timed out)]
+[07-05-2006 08:24:01] -!- fabio_12_ [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 08:24:04] -!- fabio_12 [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has quit [Read error: 104 (Connection reset by peer)]
+[07-05-2006 08:24:13] -!- fabio_12_ is now known as fabio_12
+[07-05-2006 08:47:17] -!- awormus_ [n=aaron@p54B07414.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 09:03:40] -!- fabio_12 [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 09:09:50] -!- fabio_12_ [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 09:09:51] -!- fabio_12_ is now known as fabio_12
+[07-05-2006 09:14:16] -!- awormus [n=aaron@p54B07414.dip.t-dialin.net] has joined #ezpublish
+[07-05-2006 09:50:36] -!- nfrp [n=nfrp@nat-multimedia.presidence.uhp-nancy.fr] has quit ["Leaving"]
+[07-05-2006 09:58:07] -!- PtiSeb [n=Miranda@nat-multimedia.presidence.uhp-nancy.fr] has quit ["Miranda IM! Smaller, Faster, Easier. http://miranda-im.org"]
+[07-05-2006 10:19:34] -!- fabio_12_ [n=chatzill@media15.mediatice.uhp-nancy.fr] has joined #ezpublish
+[07-05-2006 10:21:03] [#ezpublish] <fabio_12_> disconect
+[07-05-2006 10:21:08] [#ezpublish] <fabio_12_> disconnect
+[07-05-2006 10:22:58] -!- fabio_12_ [n=chatzill@media15.mediatice.uhp-nancy.fr] has quit [Client Quit]
+[07-05-2006 10:23:23] -!- fabio_12 [n=chatzill@nat-uhp-invites.presidence.uhp-nancy.fr] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 10:26:24] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[07-05-2006 10:27:58] -!- ordnas [n=ordnas@p549D6C3C.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 10:31:27] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[07-05-2006 11:07:48] -!- zurgutt [n=zurgutt@213.80-202-174.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 11:26:29] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[07-05-2006 12:48:30] -!- awormus_ [n=aaron@p54B07FF4.dip.t-dialin.net] has joined #ezpublish
+[07-05-2006 12:53:56] -!- awormus [n=aaron@p54B07414.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[07-05-2006 13:34:54] -!- aya [n=aya@fbx.internethic.net] has quit [Read error: 110 (Connection timed out)]
+[07-05-2006 14:22:18] -!- awormus_ is now known as awormus
+[07-05-2006 15:27:17] -!- awormus [n=aaron@p54B07FF4.dip.t-dialin.net] has quit ["Leaving"]
+[07-05-2006 16:42:47] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[07-05-2006 23:58:00] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish

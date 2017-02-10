@@ -1,0 +1,59 @@
+[01-06-2006 02:28:19] -!- DiGiTa|_ [n=guillaum@84.5.137.30] has joined #ezpublish
+[01-06-2006 02:28:30] [#ezpublish] <DiGiTa|_> hi
+[01-06-2006 02:28:49] [#ezpublish] <DiGiTa|_> has someone an url on how to translate static content with linguist ?
+[01-06-2006 02:29:08] [#ezpublish] <DiGiTa|_> it looks like black magic
+[01-06-2006 02:42:03] [#ezpublish] <DiGiTa|_> ok i get it :)
+[01-06-2006 02:42:06] [#ezpublish] <DiGiTa|_> very nice
+[01-06-2006 02:42:09] [#ezpublish] <DiGiTa|_> so simple
+[01-06-2006 02:49:50] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-06-2006 03:13:32] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-06-2006 03:43:30] [#ezpublish] <DiGiTa|_> hey guys i have a problem, i want to translate my text from french to english, so i edit the translation.ts eng-GB but the problem is that when i set special chars as "é" in my text, ez doesn't translate it
+[01-06-2006 03:43:56] [#ezpublish] <DiGiTa|_> should i translate from english to french ?
+[01-06-2006 03:57:01] -!- DiGiTa|_ [n=guillaum@84.5.137.30] has quit [Read error: 104 (Connection reset by peer)]
+[01-06-2006 03:59:52] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[01-06-2006 04:00:02] [#ezpublish] <kalooni> Hi there
+[01-06-2006 04:01:04] -!- DiGiTa|_ [n=guillaum@84.6.35.66] has joined #ezpublish
+[01-06-2006 04:03:46] -!- DiGiTa|_ [n=guillaum@84.6.35.66] has left #ezpublish []
+[01-06-2006 04:13:10] -!- kore_ [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-06-2006 04:15:57] [#ezpublish] <kalooni> Hi I wan't to display products which have a discount, how whould you do that ?
+[01-06-2006 04:16:05] [#ezpublish] <kalooni> with a fetch ?
+[01-06-2006 05:03:25] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-06-2006 05:03:39] -!- jota [n=jota@fanzine.igalia.com] has quit [Client Quit]
+[01-06-2006 05:27:24] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[01-06-2006 06:17:07] -!- SEAwolfx_ [n=mike@tor/session/x-b55b9dcf64ab7e48] has quit [Remote closed the connection]
+[01-06-2006 06:19:27] -!- ordnas [n=ordnas@p549D7C3D.dip.t-dialin.net] has joined #ezpublish
+[01-06-2006 06:23:44] -!- SEAwolfx [n=mike@tor/session/x-e0885697c6f6530a] has joined #ezpublish
+[01-06-2006 06:41:38] -!- ordnas [n=ordnas@p549D7C3D.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-06-2006 08:32:36] -!- hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[01-06-2006 08:50:07] -!- LottoKim [n=kim@195.28.172.4] has quit [Remote closed the connection]
+[01-06-2006 09:03:56] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[01-06-2006 09:04:18] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-06-2006 09:11:16] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[01-06-2006 09:15:18] -!- LottoKim [n=kim@195.28.172.4] has quit [Remote closed the connection]
+[01-06-2006 09:25:41] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[01-06-2006 09:28:54] [#ezpublish] <seasonfive> w3c validator say "non SGML character" when i try to validate my site. Any idea ?
+[01-06-2006 09:29:20] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[01-06-2006 09:29:32] [#ezpublish] <seasonfive> (its XHTML transitional, charset set to iso-8859-1. Its french site with accent)
+[01-06-2006 09:41:41] -!- kore_ [n=lordhong@217.194.224.41] has quit []
+[01-06-2006 11:06:10] -!- hovik [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[01-06-2006 11:06:55] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[01-06-2006 11:51:39] -!- elephantMan [n=elephant@15.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[01-06-2006 11:54:00] -!- elephantMan [n=elephant@15.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-06-2006 12:36:34] -!- SEAwolfx [n=mike@tor/session/x-e0885697c6f6530a] has quit [Remote closed the connection]
+[01-06-2006 12:37:12] -!- SEAwolfx [n=mike@tor/session/x-901108048e330e26] has joined #ezpublish
+[01-06-2006 13:03:03] -!- dis[ez] [n=dis_ez@p5090BC34.dip0.t-ipconnect.de] has joined #ezpublish
+[01-06-2006 13:03:45] -!- dis[ez] [n=dis_ez@p5090BC34.dip0.t-ipconnect.de] has quit [Client Quit]
+[01-06-2006 13:03:57] -!- dis[ez] [n=dis_ez@p5090BC34.dip0.t-ipconnect.de] has joined #ezpublish
+[01-06-2006 13:05:55] -!- dis[ez] [n=dis_ez@p5090BC34.dip0.t-ipconnect.de] has quit [Client Quit]
+[01-06-2006 13:06:07] -!- dis[ez] [n=dis_ez@p5090BC34.dip0.t-ipconnect.de] has joined #ezpublish
+[01-06-2006 13:13:21] -!- dis[ez] [n=dis_ez@p5090BC34.dip0.t-ipconnect.de] has quit ["KVIrc 3.2.0 'Realia'"]
+[01-06-2006 13:34:21] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-06-2006 15:59:38] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-06-2006 16:26:12] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-06-2006 17:07:58] -!- Foolish [n=foolish@dsl222-219.adsl.no] has joined #ezpublish
+[01-06-2006 17:09:30] [#ezpublish] <Foolish> I'm having some trouble with moving an ezpublish installatioin from one place to another (my ~/public_html/ to /var/www/html/). This is ezpublish 3.7. The problem is that even though I've moved the files over, I'm using the same database and so on, the admin interface isn't uodated and when I enter the admin interface and click something, it'll go to the previous location of the files, mysite.com/~username/ and so forth. Any ideas?
+[01-06-2006 17:10:09] [#ezpublish] <Foolish> This results in my site not being updated in the new location, while it is being updated in the old.
+[01-06-2006 17:53:42] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[01-06-2006 17:57:50] -!- SEAwolfx_ [n=mike@tor/session/x-5ddbd2ffb9bc63b4] has joined #ezpublish
+[01-06-2006 22:15:42] -!- Foolish [n=foolish@dsl222-219.adsl.no] has quit ["mbop.."]
+[01-06-2006 23:52:22] -!- SEAwolfx [n=mike@tor/session/x-901108048e330e26] has quit [SendQ exceeded]

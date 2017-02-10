@@ -1,0 +1,73 @@
+[12-04-2005 02:53:54] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-04-2005 04:56:36] -!- CoderForLife [n=CoderFor@nr28-69-61-143-242.fuse.net] has joined #ezpublish
+[12-04-2005 04:59:40] [#ezpublish] <buz> am i too stupid to find it or is there no docs for ez components?
+[12-04-2005 05:00:51] [#ezpublish] <buz> aah its on http://ez.no/content/download/103956/452269/file/ezcomponents_doc-1.0beta1.zip
+[12-04-2005 05:06:59] [#ezpublish] <buz> Some weeks ago, we mentioned in community newsletter that we started working on new ez.no design. This process is finally done, so ez.no web team will work on live implementation on Monday 5th of December 1700 local time. In this time ez.no can be unavailable for visitors.
+[12-04-2005 05:07:00] [#ezpublish] <buz> neat
+[12-04-2005 05:28:11] [#ezpublish] <buz> can anyone suggest OSS forum software? phorum?
+[12-04-2005 05:28:27] [#ezpublish] <buz> i dont think ezpublish will take thousands of forum users
+[12-04-2005 05:28:37] [#ezpublish] <buz> tho it would be a nice stresstest
+[12-04-2005 05:40:23] -!- ordna1 [n=ordnas@p549DEF8A.dip.t-dialin.net] has joined #ezpublish
+[12-04-2005 06:58:40] [#ezpublish] <buz> is there any way to recursively step through the content tree in the template language
+[12-04-2005 08:39:08] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[12-04-2005 09:16:10] [#ezpublish] <buz> WTF
+[12-04-2005 09:16:17] [#ezpublish] <buz> suddenly the admin interface is totally broken
+[12-04-2005 09:16:19] [#ezpublish] <buz> wont show up anymroe
+[12-04-2005 09:19:23] [#ezpublish] <buz> must have been some utterly weird cache issue
+[12-04-2005 09:19:26] [#ezpublish] <buz> clearcache.sh didnt help
+[12-04-2005 09:19:31] [#ezpublish] <buz> but clearing the cache on the frontend did
+[12-04-2005 09:43:03] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-04-2005 09:57:47] -!- ordna1 [n=ordnas@p549DEF8A.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-04-2005 10:09:50] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[12-04-2005 10:26:32] -!- DiGiTa|_ [n=guillaum@84.4.125.6] has joined #ezpublish
+[12-04-2005 11:01:44] -!- CoderForLife [n=CoderFor@nr28-69-61-143-242.fuse.net] has left #ezpublish []
+[12-04-2005 11:41:28] -!- zrg [n=zurgutt@roop.pri.ee] has quit [Read error: 104 (Connection reset by peer)]
+[12-04-2005 12:27:40] -!- DiGiTa|__ [n=guillaum@84.6.75.36] has joined #ezpublish
+[12-04-2005 12:31:55] -!- stainz [n=stain@adsl-ull-144-83.51-151.net24.it] has joined #ezpublish
+[12-04-2005 12:34:26] -!- stainz [n=stain@adsl-ull-144-83.51-151.net24.it] has left #ezpublish []
+[12-04-2005 12:40:35] -!- DiGiTa|_ [n=guillaum@84.4.125.6] has quit [Read error: 110 (Connection timed out)]
+[12-04-2005 12:43:27] [#ezpublish] <buz> does the template language pass variables by value or by reference?
+[12-04-2005 12:43:35] [#ezpublish] <buz> i.e. can i return stuff from an include
+[12-04-2005 12:53:32] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-04-2005 13:03:45] [#ezpublish] <zrg> banzai!!
+[12-04-2005 13:46:06] -!- DiGiTa|_ [n=guillaum@84.5.138.38] has joined #ezpublish
+[12-04-2005 14:00:07] -!- DiGiTa|__ [n=guillaum@84.6.75.36] has quit [Read error: 110 (Connection timed out)]
+[12-04-2005 14:39:38] -!- DiGiTa|_ [n=guillaum@84.5.138.38] has quit []
+[12-04-2005 14:47:19] [#ezpublish] <kracker> has anyone see the sql server 2005 'battery commercial' on the latest eppisodes of dl.tv (url/show) ep17/18 ? they use the same (or very similar) orange as ez publish shield (two boxes) on two batteries labled sqlserver2005 and advertising it for 'enterprize'
+[12-04-2005 15:17:50] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-04-2005 16:41:12] Disconnecting due to lack of a lag response (0.06555900 1133736012 != 0.15985000 1133736042)
+[12-04-2005 16:41:12] Diconnected. Sleeping for 2 second(s).
+[12-04-2005 16:41:14] >> Connecting to irc.freenode.net:6667
+[12-04-2005 16:41:18] >> Connected to irc.freenode.net:6667, registering...
+[12-04-2005 16:41:19] >> Primary nickname in use, trying alternate.
+[12-04-2005 16:41:19] >> Successfully registered. Nick is: ezpublishlog
+[12-04-2005 16:41:19] -!- There are 12547 listed and 13278 unlisted users on 23 servers
+[12-04-2005 16:41:19] -!- 38 flagged staff members
+[12-04-2005 16:41:19] -!- 9811 channels formed
+[12-04-2005 16:41:19] -!- I have 3554 clients and 0 servers
+[12-04-2005 16:41:19] -!- Current local  users: 3554  Max: 5531
+[12-04-2005 16:41:19] -!- Current global users: 25825  Max: 27753
+[12-04-2005 16:41:19] -!- Highest connection count: 5533 (5531 clients) (741171 since server was (re)started)
+[12-04-2005 16:41:19] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[12-04-2005 16:41:19] [notice(freenode-connect)] VERSION IQ 0.9.3
+[12-04-2005 16:41:21] >> Attempting to join channels: #ezpublish
+[12-04-2005 16:41:21] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[12-04-2005 16:41:21] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/news/community_newsletter_02_12_2005 |   http://ez.no/community/articles/an_introduction_to_ez_components | http://ez.no/company/news/ez_conference_2006_call_for_papers
+[12-04-2005 16:41:21] -!- Topic set by buz [@] [Sat,  3 Dec 2005 13:17:44 -0600]
+[12-04-2005 16:41:22] (unmatched::raw477) :calvino.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] Private messages from unregistered users are currently blocked, except to network staff, to services (NickServ, etc.), and to registered users who have unblocked them. Please see the freenode website for more information: http://freenode.net/faq.shtml#privmsg
+[12-04-2005 16:41:45] -!- ezlog [n=IQ@209.144.224.222] has quit [Read error: 104 (Connection reset by peer)]
+[12-04-2005 16:41:45] -!- ezpublishlog is now known as ezlog
+[12-04-2005 16:41:45] My new nick is ezlog
+[12-04-2005 16:42:00] [#ezpublish] <zrg> er..?
+[12-04-2005 16:42:45] [#ezpublish] <kracker> wierdness
+[12-04-2005 16:43:35] [#ezpublish] <kracker> heh, i start to checkout from pubsvn to commit a patch for bug #6422 and it goes out ( Fixed bug #6420: RSS 2.0 feed : issue with PubDate." trunk/kernel/classes/ezrssexport.php )
+[12-04-2005 16:47:27] [#ezpublish] <zrg> who beat you? :)
+[12-04-2005 16:48:17] [#ezpublish] <kracker> no one that i know (confused, what?)
+[12-04-2005 16:48:38] [#ezpublish] <kracker> drats, no rights :\
+[12-04-2005 16:49:14] [#ezpublish] <kracker> i'll have to email paul or perhapse i should just post this to the mailling list ?
+[12-04-2005 16:50:28] [#ezpublish] <zrg> i think he gave me rights..
+[12-04-2005 18:59:37] [#ezpublish] <kracker> oops, sry, got distracted in a storm of email+blog+cleanup post--last nights session
+[12-04-2005 19:00:32] [#ezpublish] <kracker> i emailed the list and paul, i guess i'll find out if anyone has any objections, if paul cares to give me access or if someone will commit the (what) 4+ character patch
+[12-04-2005 21:06:14] [#ezpublish] <zrg> any of you zombies awake? :)
+[12-04-2005 21:07:04] [#ezpublish] <zrg> i need to fetch a node by attribute value in code - how?
+[12-04-2005 23:47:10] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish

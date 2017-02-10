@@ -1,0 +1,312 @@
+[11-08-2005 00:10:42] -!- Proteque_ [n=gjorans@213.184.199.245] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 00:10:42] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 00:10:42] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 00:10:42] -!- kh[eZ] [n=kakemons@80.239.98.162] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 00:11:04] -!- Proteque_ [n=gjorans@213.184.199.245] has joined #ezpublish
+[11-08-2005 00:11:04] -!- kh[eZ] [n=kakemons@80.239.98.162] has joined #ezpublish
+[11-08-2005 00:11:04] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-08-2005 00:11:04] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-08-2005 00:12:17] -lilo:$*- [Global Notice] Hi all. We're experiencing some hub <-> hub routing problems, we're looking at it now
+[11-08-2005 00:21:02] -lilo:$*- [Global Notice] We're going to experiment with a bit of latency reduction, please bear with us.
+[11-08-2005 00:22:07] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 00:22:07] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 00:22:07] -!- kh[eZ] [n=kakemons@80.239.98.162] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 00:22:30] -!- kh[eZ] [n=kakemons@80.239.98.162] has joined #ezpublish
+[11-08-2005 00:22:30] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-08-2005 00:22:30] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-08-2005 00:51:57] -!- _rappy_ is now known as _Rappy_
+[11-08-2005 01:41:49] -!- DiGiTa|_ [n=guillaum@84.4.188.73] has joined #ezpublish
+[11-08-2005 01:51:05] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Remote closed the connection]
+[11-08-2005 01:52:36] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-08-2005 02:01:34] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-08-2005 02:47:01] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-08-2005 02:48:52] [#ezpublish] <_Rappy_> I wish they could update the standard templatefiles to current suntax... though that would probably make some difficulties with backward compibality maybe...
+[11-08-2005 02:57:03] [#ezpublish] <kracker> heh
+[11-08-2005 02:57:48] [#ezpublish] <_Rappy_> (I'm having trouble overriding login.tpl due to old code) :P
+[11-08-2005 02:58:13] [#ezpublish] <kracker> you know people who run eZ publish in their head can do the the merges in a blink :D
+[11-08-2005 02:58:45] [#ezpublish] <_Rappy_> ah, to be able to run software in your brain :)
+[11-08-2005 03:01:17] [#ezpublish] <Katana`> i think it's planned for a later release rappy
+[11-08-2005 03:03:31] [#ezpublish] <_Rappy_> to be able to run eZ in brain? :p
+[11-08-2005 03:03:31] [#ezpublish] <_Rappy_> or syntaxupdate?
+[11-08-2005 03:11:50] [#ezpublish] <Katana`> to have all templates updated to the new syntax :)
+[11-08-2005 03:16:48] [#ezpublish] <DiGiTa|_> does someone know if it's possible to convert an full ezp section to pdf
+[11-08-2005 03:24:47] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-08-2005 03:25:33] [#ezpublish] <Sulfur> morning gentlemen :)
+[11-08-2005 03:26:19] [#ezpublish] <_Rappy_> hello
+[11-08-2005 03:29:24] [#ezpublish] <_Rappy_> soo, {section} was an "universal" function, and is replaced by several ones like {if} and {foreach} ?
+[11-08-2005 03:30:10] [#ezpublish] <_Rappy_> hmm
+[11-08-2005 03:30:38] [#ezpublish] <Sulfur> jes
+[11-08-2005 03:31:03] -!- ordnas [n=ordnas@dslwms022.workdsl.de] has joined #ezpublish
+[11-08-2005 03:52:09] [#ezpublish] <_Rappy_> [full_user_login]
+[11-08-2005 03:52:09] [#ezpublish] <_Rappy_> Source=node/view/full.tpl
+[11-08-2005 03:52:09] [#ezpublish] <_Rappy_> MatchFile=full_user_login.tpl
+[11-08-2005 03:52:09] [#ezpublish] <_Rappy_> Subdir=templates
+[11-08-2005 03:52:09] [#ezpublish] <_Rappy_> Match[url_alias]=/user/login
+[11-08-2005 03:52:37] [#ezpublish] <_Rappy_> can anyone see anything wrong with taht override? I just shows the loginpage from the standard design
+[11-08-2005 03:52:58] [#ezpublish] <DiGiTa|_> perhaps the / before user/login
+[11-08-2005 03:53:31] [#ezpublish] <_Rappy_> think I tried that, but I'll do it again
+[11-08-2005 03:54:05] [#ezpublish] <_Rappy_> no such luck :\
+[11-08-2005 03:57:07] [#ezpublish] <DiGiTa|_> no error ?
+[11-08-2005 03:57:12] [#ezpublish] <DiGiTa|_> did you DTC ?
+[11-08-2005 03:57:15] [#ezpublish] <DiGiTa|_> CTC
+[11-08-2005 03:58:02] [#ezpublish] <_Rappy_> no error
+[11-08-2005 03:58:09] [#ezpublish] <_Rappy_> I always clear cache :)
+[11-08-2005 03:58:24] [#ezpublish] <_Rappy_> got a own terminal just for running that command :)
+[11-08-2005 04:00:07] [#ezpublish] <Sulfur> can a match be run against url_alias?
+[11-08-2005 04:00:18] [#ezpublish] <DiGiTa|_> yes
+[11-08-2005 04:00:22] [#ezpublish] <_Rappy_> it says so in the Ez book
+[11-08-2005 04:00:30] [#ezpublish] <DiGiTa|_> http://ez.no/doc/ez_publish/technical_manual/3_6/reference/template_override_conditions
+[11-08-2005 04:00:39] [#ezpublish] <Sulfur> what does "show used templates" say?
+[11-08-2005 04:01:24] [#ezpublish] <Sulfur> ah _Rappy_ .... check also the settings for login .... LoginPage = embedded|standard| custom , IIRC
+[11-08-2005 04:01:56] [#ezpublish] <Sulfur> I am more interested in overriding login logic :P
+[11-08-2005 04:02:55] [#ezpublish] <_Rappy_> it's embedded, I wrote the site.ini myself :p
+[11-08-2005 04:02:58] [#ezpublish] <_Rappy_> design/standard/templates/user/login.tpl
+[11-08-2005 04:03:09] [#ezpublish] <_Rappy_> is the template used according to used templates
+[11-08-2005 04:03:22] [#ezpublish] <_Rappy_> can't it be embedded?
+[11-08-2005 04:04:54] [#ezpublish] <DiGiTa|_> _rappy_: do something like that :
+[11-08-2005 04:04:54] [#ezpublish] <DiGiTa|_> [login_user]
+[11-08-2005 04:04:54] [#ezpublish] <DiGiTa|_> Source=user/login.tpl
+[11-08-2005 04:04:54] [#ezpublish] <DiGiTa|_> MatchFile=login_user.tpl
+[11-08-2005 04:04:54] [#ezpublish] <DiGiTa|_> Subdir=templates
+[11-08-2005 04:05:20] [#ezpublish] <_Rappy_> I've tried to use user/login.tpl as source too, but I'll try
+[11-08-2005 04:05:27] [#ezpublish] <DiGiTa|_> in siteaccess/override.ini.append.php
+[11-08-2005 04:05:30] [#ezpublish] <_Rappy_> and no MAtch?
+[11-08-2005 04:05:41] [#ezpublish] <DiGiTa|_> no
+[11-08-2005 04:05:51] [#ezpublish] <DiGiTa|_> MatchFile only
+[11-08-2005 04:05:56] [#ezpublish] <DiGiTa|_> it's enough
+[11-08-2005 04:07:13] [#ezpublish] <_Rappy_> ;D
+[11-08-2005 04:07:19] [#ezpublish] <_Rappy_> *bows for DiGiTa|_*
+[11-08-2005 04:07:29] [#ezpublish] <DiGiTa|_> ;)
+[11-08-2005 04:14:19] [#ezpublish] <DiGiTa|_> yeah, my ajaxcart works :)
+[11-08-2005 04:39:52] [#ezpublish] <Katana`> :))
+[11-08-2005 04:47:20] [#ezpublish] <_Rappy_> a shoppingcard based on ajax?
+[11-08-2005 05:47:12] -!- ordnas [n=ordnas@dslwms022.workdsl.de] has quit [Read error: 110 (Connection timed out)]
+[11-08-2005 05:55:51] [#ezpublish] <_Rappy_> <h5>{"Could not login"|i18n("design/standard/user")}</h5>
+[11-08-2005 05:56:07] [#ezpublish] <_Rappy_> is there any reason that text is formed in that way?
+[11-08-2005 06:34:36] [#ezpublish] <Katana`> why wouldn't it ?
+[11-08-2005 06:37:20] [#ezpublish] <_Rappy_> because.... I have no idea why it is like that. I'd just write <h5>Could not login</h5>
+[11-08-2005 06:39:26] [#ezpublish] <Katana`> you don't know what i18n is for ?
+[11-08-2005 06:41:04] [#ezpublish] <_Rappy_> internationalization
+[11-08-2005 06:41:31] [#ezpublish] <_Rappy_> or something
+[11-08-2005 06:41:45] [#ezpublish] <_Rappy_> do you write all output in that form?
+[11-08-2005 06:42:04] [#ezpublish] <fh[eZ]> rappy: yes, to make it possible to ouput the text in different languages
+[11-08-2005 06:42:54] [#ezpublish] <Katana`> yes, without that content in templates won't get translated
+[11-08-2005 06:43:05] [#ezpublish] <Katana`> if you don't want a multilingual site it's not useful but well
+[11-08-2005 06:44:25] [#ezpublish] <_Rappy_> so that is used for text that is autotranslated? i.e. helptext and such (not text I've written my self in articles etc)
+[11-08-2005 06:45:13] [#ezpublish] <fh[eZ]> correct
+[11-08-2005 06:45:17] [#ezpublish] <Katana`> content is translated through content objects
+[11-08-2005 06:45:21] [#ezpublish] <Katana`> this is for text in templates
+[11-08-2005 06:50:22] [#ezpublish] <DiGiTa|_> _rappy_: a shoppingcard based on ajax? <- yeah
+[11-08-2005 06:50:27] [#ezpublish] <DiGiTa|_> re
+[11-08-2005 06:50:45] [#ezpublish] <_Rappy_> nice :)
+[11-08-2005 06:56:57] [#ezpublish] <_Rappy_> but, if that is autotranslated, why did that text still show up in English when the site main lang is norwegian? Is there a setting somewhere that has to be set?
+[11-08-2005 06:58:59] [#ezpublish] <Katana`> rappy, if you don't provide the translations, ez can't do anything
+[11-08-2005 06:59:04] [#ezpublish] <Katana`> enters the translation system...
+[11-08-2005 07:00:44] [#ezpublish] <_Rappy_> ah, thought that text that was written by eZ-programmers already was translated in a file somewhere :)
+[11-08-2005 07:08:26] [#ezpublish] <fh[eZ]> _Rappy_: it is by default translated into nor_NO
+[11-08-2005 07:08:33] [#ezpublish] <fh[eZ]> other translations are provided by our users
+[11-08-2005 07:12:18] [#ezpublish] <_Rappy_> yes, that's why I though. So why didn't it translate when my site it setup as norwegian?
+[11-08-2005 07:16:46] [#ezpublish] <Katana`> are you talking about standard or custom text ?
+[11-08-2005 07:17:01] [#ezpublish] <Sulfur> guys, a question. I have an override template for a folder object. this override just shows info about the contained objects. it had a pager, which I discovered it is not displayed until I disable the cache, so it seems to be a cache issue. as this object is not modified / republished, while the number of contained objects is, how can I ensure that contents are properly displayed / paged '
+[11-08-2005 07:17:14] [#ezpublish] <Sulfur> ?
+[11-08-2005 07:17:42] -lilo:$*- [Global Notice] Hi all. Please bear with us while we rehub to complete the resolution of a routing problem we experienced earlier in the day. Thanks for your patience, and thank you for using freenode!
+[11-08-2005 07:17:50] [#ezpublish] <Sulfur> I seemed to remember that cache is cleaned at most every 2 hours ... but where is that done? cronjob, or ... ?
+[11-08-2005 07:20:12] -!- Sulfur [n=mbariola@217.221.32.143] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 07:20:12] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 07:20:12] -!- jota [n=jota@fanzine.igalia.com] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 07:20:12] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 07:20:12] -!- kh[eZ] [n=kakemons@80.239.98.162] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 07:20:12] -!- Katana` [n=katana@217.31.64.170] has quit [calvino.freenode.net irc.freenode.net]
+[11-08-2005 07:20:33] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-08-2005 07:20:33] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-08-2005 07:20:33] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-08-2005 07:20:33] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-08-2005 07:20:33] -!- kh[eZ] [n=kakemons@80.239.98.162] has joined #ezpublish
+[11-08-2005 07:20:33] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-08-2005 07:21:11] [#ezpublish] <Sulfur> hum
+[11-08-2005 07:21:11] [#ezpublish] <_Rappy_> Katana`, this was text originally written by eZ, in a template in the standard-design (login.tpl)
+[11-08-2005 07:21:18] [#ezpublish] <Sulfur> due to split, I repeat ... :)
+[11-08-2005 07:21:24] [#ezpublish] <Sulfur> guys, a question. I have an override template for a folder object. this override just shows info about the contained objects. it had a pager, which I discovered it is not displayed until I disable the cache, so it seems to be a cache issue. as this object is not modified / republished, while the number of contained objects is, how can I ensure that contents are properly displayed / paged '
+[11-08-2005 07:24:24] [#ezpublish] <_Rappy_> so, if you add am object inside the container, it won't show?
+[11-08-2005 07:27:01] [#ezpublish] <Sulfur> _Rappy_: even worse, pager will not show up :)
+[11-08-2005 07:28:11] -lilo:$*- [Global Notice] Our rehubbing should be complete, barring any other problems.... thanks again for your patience, and thank you for using freenode!
+[11-08-2005 07:35:40] [#ezpublish] <Katana`> do you have TextTranslation=enabled rappy ?
+[11-08-2005 07:35:44] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[11-08-2005 07:35:58] [#ezpublish] <Katana`> and Locale=nor-NO or whatever you're using ?
+[11-08-2005 07:35:58] [#ezpublish] <Katana`> :)
+[11-08-2005 07:36:10] [#ezpublish] <_Rappy_> Locale is nor
+[11-08-2005 07:36:19] [#ezpublish] <_Rappy_> I'll check TextTrans
+[11-08-2005 07:50:15] [#ezpublish] <DiGiTa|_> does someone know how to get the url, by node_id in php code ?
+[11-08-2005 07:50:51] [#ezpublish] <Katana`> $node =& eZContentObjectTreeNode::fetch($id); $url = $node->attribute('url..alias');
+[11-08-2005 07:50:55] [#ezpublish] <Katana`> .. being an underscore :)
+[11-08-2005 07:51:23] [#ezpublish] <DiGiTa|_> ah yes
+[11-08-2005 07:51:24] [#ezpublish] <DiGiTa|_> :)
+[11-08-2005 07:58:03] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-08-2005 08:41:16] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[11-08-2005 09:14:18] -!- _Rappy_ is now known as _rappy_
+[11-08-2005 09:14:24] [#ezpublish] <_rappy_> me off, leters
+[11-08-2005 09:14:28] [#ezpublish] <_rappy_> -e+a
+[11-08-2005 09:19:58] [#ezpublish] <zrg> leeters
+[11-08-2005 09:28:03] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-08-2005 09:35:49] [#ezpublish] <DiGiTa|_> hey he non documented pathprefix setting is very useful for siteaccess :)
+[11-08-2005 09:36:33] [#ezpublish] <Katana`> it's not that hard to use
+[11-08-2005 09:36:36] [#ezpublish] <Katana`> just place it, use it :)
+[11-08-2005 09:36:43] [#ezpublish] <DiGiTa|_> yes :)
+[11-08-2005 09:37:10] [#ezpublish] <DiGiTa|_> it's what i'm searching for, do you remeber ?
+[11-08-2005 09:37:16] [#ezpublish] <Katana`> yeah
+[11-08-2005 09:37:22] [#ezpublish] <Katana`> but you were saying it was not working
+[11-08-2005 09:37:26] [#ezpublish] <DiGiTa|_> hu ?
+[11-08-2005 09:37:27] [#ezpublish] <Katana`> i have tried it like 4 days ago
+[11-08-2005 09:37:33] [#ezpublish] <DiGiTa|_> didn't tried
+[11-08-2005 09:37:39] [#ezpublish] <Katana`> really ?
+[11-08-2005 09:37:42] [#ezpublish] <DiGiTa|_> yes
+[11-08-2005 09:37:52] [#ezpublish] <Katana`> but it doesn't fix everything
+[11-08-2005 09:37:55] [#ezpublish] <DiGiTa|_> works like a charm
+[11-08-2005 09:37:57] [#ezpublish] <Katana`> doesn't change the content node, etc
+[11-08-2005 09:38:08] [#ezpublish] <Katana`> there was a nice discussion about that at the camp
+[11-08-2005 09:38:15] [#ezpublish] <DiGiTa|_> hmm
+[11-08-2005 09:38:18] [#ezpublish] <Katana`> making it possible to use a totally different content root for a siteaccess
+[11-08-2005 09:38:56] [#ezpublish] <DiGiTa|_> :)
+[11-08-2005 09:40:17] [#ezpublish] <DiGiTa|_> did you try it on the admin ?
+[11-08-2005 09:40:23] [#ezpublish] <Katana`> nope
+[11-08-2005 09:40:29] [#ezpublish] <Katana`> don't wanna :)
+[11-08-2005 09:40:34] [#ezpublish] <DiGiTa|_> eheh
+[11-08-2005 09:46:12] [#ezpublish] <Sulfur> Katana`: does it happen to you that dyncontent menu screws up the site when caches are cleared?
+[11-08-2005 09:47:16] [#ezpublish] <zrg> pathprefix?
+[11-08-2005 09:47:23] [#ezpublish] * zrg moves ears
+[11-08-2005 09:47:35] [#ezpublish] <Sulfur> admin interface is replaced by three nice squares on a totally white screen which testify broken links
+[11-08-2005 09:48:26] [#ezpublish] <zrg> sexy!
+[11-08-2005 09:48:40] [#ezpublish] <Sulfur> very zen indeed
+[11-08-2005 09:48:43] [#ezpublish] <zrg> three sqares, wasnt this ez logo
+[11-08-2005 09:48:53] [#ezpublish] <DiGiTa|_> path_prefix can target a folder , example if your site is in "root">"sitefolder", you set path_prefix="sitefolder"
+[11-08-2005 09:48:54] [#ezpublish] <zrg> symbolizes broken page :P
+[11-08-2005 09:48:55] [#ezpublish] <Sulfur> lol
+[11-08-2005 09:51:35] [#ezpublish] <Katana`> nope Sulfur
+[11-08-2005 09:51:39] [#ezpublish] <Katana`> it doesn't
+[11-08-2005 09:52:32] [#ezpublish] * Sulfur feels like the Chosen One
+[11-08-2005 09:52:52] [#ezpublish] <Katana`> :)
+[11-08-2005 09:52:55] [#ezpublish] <Katana`> your teh neo
+[11-08-2005 09:52:57] [#ezpublish] <Katana`> err the one
+[11-08-2005 09:53:26] [#ezpublish] <zrg> hmm, useful, make mental note
+[11-08-2005 09:54:24] [#ezpublish] <Katana`> :))
+[11-08-2005 09:59:04] [#ezpublish] <zrg> now if only settings were inheritable in siteaccess..
+[11-08-2005 09:59:21] [#ezpublish] <Katana`> YES !
+[11-08-2005 10:00:37] [#ezpublish] <zrg> i have site in two languages, had to duplicate all siteaccess settings from first so i could just change the locale. stupid.
+[11-08-2005 10:01:16] [#ezpublish] <Katana`> yep...
+[11-08-2005 10:01:23] [#ezpublish] <Katana`> I always use an extension for my sites now though
+[11-08-2005 10:02:14] [#ezpublish] <zrg> elaborate?
+[11-08-2005 10:09:36] [#ezpublish] <Katana`> like extension/mysite
+[11-08-2005 10:09:39] [#ezpublish] <Katana`> with design, settings, etc etc
+[11-08-2005 10:09:54] [#ezpublish] <Katana`> that way I have a settings folder shared by every language
+[11-08-2005 10:10:02] [#ezpublish] <Katana`> and almost everything about my site is at the same place
+[11-08-2005 10:10:46] [#ezpublish] <zrg> sneaky, melikes :)
+[11-08-2005 10:10:54] [#ezpublish] <Katana`> trick given by ez ;)
+[11-08-2005 10:10:59] [#ezpublish] <Katana`> ez.no is an extension
+[11-08-2005 10:11:12] [#ezpublish] <Katana`> that way when I have custom modules & functions & operators for my site, they're at the same place
+[11-08-2005 10:11:23] [#ezpublish] <Katana`> in siteaccess/mysite/settings i only have site.ini
+[11-08-2005 10:12:06] [#ezpublish] <zrg> has anyone written about using this trick?
+[11-08-2005 10:12:11] [#ezpublish] <Katana`> no idea :)
+[11-08-2005 10:14:07] [#ezpublish] <zrg> be first :D
+[11-08-2005 10:15:11] [#ezpublish] <Katana`> i could :)
+[11-08-2005 11:11:16] [#ezpublish] <Sulfur> hum ... what would be the best way to make my own datatype which differs by very little from an eZ datatype? e.g. an integer field which doesn't have an edit tpl to make a counter??
+[11-08-2005 11:16:55] [#ezpublish] <zrg> copy and edit ez class definition?
+[11-08-2005 11:17:40] [#ezpublish] <Sulfur> I'd love to know where it is :P
+[11-08-2005 11:18:02] [#ezpublish] <Sulfur> mostly, I am rather put off by the different structure of extensions and kernel
+[11-08-2005 11:23:56] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-08-2005 11:30:00] [#ezpublish] <zrg> /kernel/classes/datatypes/
+[11-08-2005 11:30:01] [#ezpublish] <zrg> ?
+[11-08-2005 11:30:43] [#ezpublish] <zrg> also i _think_ there was some tool at setup page to create datatypes
+[11-08-2005 12:46:31] [#ezpublish] <Sulfur> yes but it does not cut the cheese
+[11-08-2005 12:46:45] [#ezpublish] <Sulfur> qnyway, time for me to leave for today. tomorrow busy day ..
+[11-08-2005 12:51:23] [#ezpublish] <Sulfur> see ya :)
+[11-08-2005 12:51:38] [#ezpublish] <Sulfur> and Zlorfik! for those who can understand it :))
+[11-08-2005 12:52:33] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-08-2005 13:22:10] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-08-2005 13:45:29] [#ezpublish] <buz> http://ez.no/community/news/ez_conference_2006_call_for_papers one week before exam session starts, just fucking brilliant
+[11-08-2005 13:49:25] [#ezpublish] <zrg> to keep those pesky developers away
+[11-08-2005 13:51:59] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-08-2005 13:55:53] [#ezpublish] <buz> to keep sulfur from poisoning me with his brew from hell likely
+[11-08-2005 13:57:10] [#ezpublish] <zrg> good brew?
+[11-08-2005 14:03:51] [#ezpublish] <buz> "coffee"
+[11-08-2005 14:04:25] [#ezpublish] <buz> is there any work at all underway on a ezpublish calendar?
+[11-08-2005 14:08:55] [#ezpublish] <zrg> not me :(
+[11-08-2005 14:16:28] [#ezpublish] <kracker> everybody keeps asking me about the eZ calendar (v3)
+[11-08-2005 14:16:53] [#ezpublish] <kracker> the eZ user group created a good spec
+[11-08-2005 14:17:15] [#ezpublish] <kracker> but i have yet to hear of anyone working to impliment it todate, only requests to start implimenting it
+[11-08-2005 14:17:48] [#ezpublish] <kracker> errum buz
+[11-08-2005 14:18:04] [#ezpublish] <buz> yeah thats what i know
+[11-08-2005 14:18:15] [#ezpublish] <buz> calendar is one of the killer features
+[11-08-2005 14:18:28] [#ezpublish] <kracker> yeah, people sure would like one
+[11-08-2005 14:19:01] [#ezpublish] <kracker> problem i see is that's a fairly time consuming extention to create :\ and everyone seems to give up when i mention time == money
+[11-08-2005 14:19:12] [#ezpublish] <buz> yeah
+[11-08-2005 14:19:17] [#ezpublish] <buz> not to mention its far from trivial
+[11-08-2005 14:19:30] [#ezpublish] <buz> it'd be a 50000USD+ project
+[11-08-2005 14:19:57] [#ezpublish] <kracker> buz, see finally someone who really gets it
+[11-08-2005 14:20:05] [#ezpublish] <buz> ehehe
+[11-08-2005 14:20:09] [#ezpublish] <buz> i tried it myself
+[11-08-2005 14:20:23] [#ezpublish] <kracker> sry, but i get bludgened so frequently on a daily basis it's a reprieve to hear someone `just get it`
+[11-08-2005 14:20:39] [#ezpublish] <buz> i was thinking maybie could abuse phpicalendar as template operator and just feed ical into it
+[11-08-2005 14:21:29] [#ezpublish] <buz> but phpical isn't entirely sane code either
+[11-08-2005 14:21:31] [#ezpublish] <kracker> it could be broken down into 2 or 4 phases to get it started slowly to try to create an avalance effect but, someone is going to have to sell this thing first
+[11-08-2005 14:21:50] [#ezpublish] <buz> i have little time to develop anything right now
+[11-08-2005 14:22:14] [#ezpublish] <kracker> yeah, i did a lot of work on eZ calendar (V2) major additions but ...
+[11-08-2005 14:22:14] [#ezpublish] <buz> and stealing a calendar from somewhere else creates all sorts of permission problems
+[11-08-2005 14:22:26] [#ezpublish] <zrg> wheres the spec?
+[11-08-2005 14:22:37] [#ezpublish] <buz> somewhere in ez edu user group
+[11-08-2005 14:22:44] [#ezpublish] <buz> spec looks pretty sane
+[11-08-2005 14:22:48] [#ezpublish] <buz> only nobody ever started
+[11-08-2005 14:23:19] [#ezpublish] <kracker> i learned calendars do not work with computers very well calendars not computer like they have all kinds of exceptions and rules in the calendar calculation to consider / be accurate (can really be trying at times)
+[11-08-2005 14:23:38] [#ezpublish] <kracker> oh wait they are exactly like computers :D
+[11-08-2005 14:24:16] [#ezpublish] <kracker> na i just mean that there are a number of rules and exceptions involved and it's not as simple as most people think it is on the outset
+[11-08-2005 14:24:21] [#ezpublish] <buz> calendars are trying
+[11-08-2005 14:24:28] [#ezpublish] <buz> but in case of the web, the display part isnt trivial either
+[11-08-2005 14:25:21] [#ezpublish] <kracker> http://ez.no/community/user_groups/ezug_edu/projects/calendar
+[11-08-2005 14:25:34] [#ezpublish] <kracker> exactly
+[11-08-2005 14:25:50] [#ezpublish] <buz> if you want to see the most impressive calendar ever, go to zimbra.com
+[11-08-2005 14:25:59] [#ezpublish] <kracker> http://ez.no/community/user_groups/ezug_edu/projects/calendar/specifications/calendar_module_for_ez_publish
+[11-08-2005 14:26:01] [#ezpublish] <buz> but that 150mb of code for you
+[11-08-2005 14:26:19] [#ezpublish] <kracker> http://ez.no/community/user_groups/ezug_edu/forum_of_ezug_edu/calendar
+[11-08-2005 14:26:25] [#ezpublish] <kracker> woah
+[11-08-2005 14:27:34] [#ezpublish] <buz> yeah but last post is from june
+[11-08-2005 14:27:51] [#ezpublish] <kracker> yeah cause they say use the spec, comments
+[11-08-2005 14:27:55] [#ezpublish] <kracker> instead
+[11-08-2005 14:28:03] [#ezpublish] <kracker> but even those are stale
+[11-08-2005 14:28:12] [#ezpublish] <kracker> cruffty
+[11-08-2005 14:31:34] [#ezpublish] <kracker> if anyone has a client who can be sold on the calendar, i'd consider putting some serious efforts from the team on it, just a thought
+[11-08-2005 14:32:04] [#ezpublish] <buz> yeah but good luck finding a client that pays even 20% of the calendar
+[11-08-2005 14:32:50] [#ezpublish] <kracker> every problem is an oportunity
+[11-08-2005 14:32:57] [#ezpublish] <buz> yeah if you good time
+[11-08-2005 14:33:37] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit [Remote closed the connection]
+[11-08-2005 14:33:37] [#ezpublish] <kracker> if a (single) client can't bear the cost, it's an oportunity to bring several client together to achive their goals
+[11-08-2005 14:33:49] [#ezpublish] <buz> yeah but the time to delivery would be high
+[11-08-2005 14:34:23] [#ezpublish] <kracker> i don't know, 3 months for phases 1 - 2 ( possibly phase 3, depending )
+[11-08-2005 14:35:24] [#ezpublish] <buz> maybe if we could get cheap development time
+[11-08-2005 14:35:41] [#ezpublish] <buz> what does a man month in eastern europe cost these days, zrg
+[11-08-2005 14:36:56] [#ezpublish] <kracker> schema, classes, backend, layout/render, intl/text, frontend, (restart whole thing for each wave of phases / features) (last) client side scripting ... (pieces in an order ...)
+[11-08-2005 14:39:21] [#ezpublish] <buz> permission structure is the most complex
+[11-08-2005 14:39:36] [#ezpublish] <buz> who can read what and even more importantly who can force whom to appear to what events
+[11-08-2005 14:39:45] [#ezpublish] <buz> take a look at egroupware for ideas ;)
+[11-08-2005 14:41:29] [#ezpublish] <kracker> yeah i always saw those as just a few of the variables which can be a problem for clean rendering if not handeled simply (the v1 calendar did this in a horrible way)
+[11-08-2005 14:42:06] [#ezpublish] <kracker> errum i said clean but i ment /fast/blinding
+[11-08-2005 14:46:41] [#ezpublish] <kracker> i don't know about `force` but you sure have the possiblity of a number of value added features to encourage particiation in avents <= force apearances
+[11-08-2005 14:47:54] [#ezpublish] <kracker> [ ] put a gun to the users head and threaten apropriataly, [ 10 ] (minute|hours|days|weeks) before event
+[11-08-2005 14:49:12] [#ezpublish] <kracker> notices via, email, im, sms, event newsleters, web page articles placed in common section, mini list on hompage, into infinity
+[11-08-2005 14:49:44] [#ezpublish] <kracker> where is the check box to harras user untill partiction is achived, confirmed and quantified
+[11-08-2005 14:49:54] [#ezpublish] <kracker> i jest
+[11-08-2005 14:50:21] [#ezpublish] <buz> ROTFL
+[11-08-2005 14:50:29] [#ezpublish] <buz> i still want slapoverip
+[11-08-2005 15:03:29] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-08-2005 15:38:20] [#ezpublish] <kracker> or as i heard on tv :D, where is the button that calls the lawyer to sue the hell out of you (aqua teen hunger force, carl, toylet eppisode)'
+[11-08-2005 15:43:27] [#ezpublish] <zrg> its the "any" key.. havent found it yet :P
+[11-08-2005 15:54:26] -!- fh[eZ] [n=fh@80.239.98.162] has quit [Read error: 113 (No route to host)]
+[11-08-2005 15:59:44] -!- DiGiTa|_ [n=guillaum@84.4.188.73] has quit []
+[11-08-2005 16:28:55] [#ezpublish] <zrg> how to make the <embed> embedded object to link to the full view of target?
+[11-08-2005 18:10:30] [#ezpublish] <kracker> Eminem (Ft Dr Dre) - What you say ... (Dirty|Album)
+[11-08-2005 18:21:23] [#ezpublish] <kracker> 311 Champagne-from chaos 7
+[11-08-2005 18:22:19] [#ezpublish] <kracker> sweet, bc +1, another client enque, block rockin beats ensue
+[11-08-2005 18:22:25] [#ezpublish] <zrg> Väikese valge helikopteri lend
+[11-08-2005 18:22:58] [#ezpublish] * kracker feels dumb he knows only english (badly)
+[11-08-2005 19:54:09] [#ezpublish] <kracker> hmm, sounds like a song title ....
+[11-08-2005 20:02:54] [#ezpublish] <zrg> it is :)
+[11-08-2005 20:50:34] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-08-2005 23:56:23] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish

@@ -1,0 +1,34 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 14.4.&nbsp; Profiling with Zend Studio's Profiler</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch14lev1sec4"></a><h3 class="docSection1Title" id="409768-944">14.4. Profiling with Zend Studio's Profiler</h3>
+<p class="docText">One method of optimization is manually finding bottlenecks in your application and tuning the relevant code. The biggest downside to this method is that there's no &quot;magical&quot; way of doing it. You simply need to audit your application and think of ways to change it so that it still does the same thingonly faster. Generally, you should only optimize those sections of your application that account for most of the overhead. Why is this so important? First, spending time optimizing a section that accounts for a fragment of the overhead is a poor investment of your time because it is unlikely to affect the overall application performance. Worse, as optimization often involves writing less-beautiful code that performs faster, optimizing the wrong sections can result in reduced code readability. Without the benefits of improved performance, this is simply a bad idea.<a name="ch14index96"></a><a name="ch14index97"></a><a name="ch14index98"></a><a name="ch14index99"></a><a name="ch14index100"></a><a name="ch14index101"></a><a name="ch14index102"></a></p>
+<p class="docText">Luckily, today you're not left completely on your own. You can get a serious head start by profiling your application using the Zend Studio (<a class="docLink" target="_blank" href="http://www.zend.com/store/products/zend-studio.php">http://www.zend.com/store/products/zend-studio.php</a>). Profiling your application gives you important information, including which parts of your application are taking the most time, what your application's call trace looks like, how many times each function is being called, and so on.</p>
+<p class="docText"><span class="docEmphStrong">Profiling</span> is an essential tool in improving the performance of PHP applications. Profiling summarizes the data that makes up the PHP application and represents it in the form of a graph. The graph sets out the important features of the application. By placing timers within the code and running them over and over, the profiling tool is able to build a &quot;profile&quot; of how fast or slow specific areas of the application will run.<a name="ch14index103"></a></p>
+<p class="docText"><span class="docEmphStrong">Zend Studio Client</span> provides a powerful profiling tool. It is designed to help discover bottlenecks and other areas that need to be optimized to improve the program's performance. An extensive library of profiling benchmarks is included with the Client product.<a name="ch14index104"></a></P>
+<p class="docText">Before optimizing your application, you should always profile it (see <a class="docLink" href="#ch14fig05">Figure 14.5</a>). Determine where the bottlenecks are, and concentrate in those sections that account for most of the overhead. Profile again after every optimization you make; you may find out that what you thought was faster is in fact slower, or that what you thought would only be 10 percent faster is actually 50 percent faster. Finally, don't optimize snippets that account only for tiny fragments of the overhead; this only reduces readability without yielding any noticeable performance gain.<a name="ch14index105"></a><a name="ch14index106"></a><a name="ch14index107"></a><a name="ch14index108"></a><a name="ch14index109"></a><a name="ch14index110"></a><a name="ch14index111"></a><a name="ch14index112"></a><a name="ch14index113"></a></p>
+<a name="ch14fig05"></a><P><center><h5 class="docFigureTitle">Figure 14.5. Profiling results in the Zend Studio.</H5>
+<p class="docText"><img border="0" alt="" id="217066145005" width="500" height="370" SRC="images/013147149X/graphics/14fig05.gif;380137"></p></center></p><br>
+<p class="docText">For example, in <a class="docLink" href="#ch14fig06">Figure 14.6</a>, you can see the profiling results of PostNuke's front page using the Zend Studio. It's clear that optimizing pnAPI.php, which accounts for more than 53 percent of the overhead, stands the best chances of actually improving overall performance. Between the first four files, almost 90 percent of the overhead is shared; even looking at any other files is likely to be sheer waste of time.<a name="ch14index114"></a><a name="ch14index115"></a><a name="ch14index116"></a><a name="ch14index117"></a></p>
+<a name="ch14fig06"></a><P><center><H5 class="docFigureTitle">Figure 14.6. <tt>Call</tt> trace from the Zend Studio profiler.</h5>
+<p class="docText"><img border="0" alt="" id="217066145005" width="500" height="331" SRC="images/013147149X/graphics/14fig06.jpg;380137"></p></center></p><BR>
+<p class="docText">For further information on how to use the Zend Studio's profiling capabilities, refer to the Profiling section in the Zend Studio Online Help, which is accessible via the Help menu by choosing Help Topics.<a name="ch14index118"></a><a name="ch14index119"></a><a name="ch14index120"></a><a name="ch14index121"></a></p>
+<ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

@@ -1,0 +1,78 @@
+[04-18-2006 00:53:33] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-18-2006 00:59:27] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[04-18-2006 01:16:30] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-18-2006 01:41:17] -!- ordnas [n=ordnas@p549D71E1.dip.t-dialin.net] has joined #ezpublish
+[04-18-2006 01:50:05] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-18-2006 01:51:44] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-18-2006 02:10:53] -!- DiGiTa|_ [n=guillaum@84.4.70.214] has joined #ezpublish
+[04-18-2006 02:28:38] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-18-2006 02:58:46] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[04-18-2006 02:58:55] [#ezpublish] <Sulfur> hiya :)
+[04-18-2006 02:59:05] [#ezpublish] <kalooni> hoo!
+[04-18-2006 03:09:09] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-18-2006 03:15:58] [#ezpublish] <kalooni> can someone here could help me with the example of shipping handler (ezsampleshipping) ?
+[04-18-2006 03:16:18] [#ezpublish] <kalooni> the README.txt doesn't look like complete enough ...
+[04-18-2006 03:30:27] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-18-2006 03:38:22] [#ezpublish] <Sulfur> unfortunately I haven't dealt with shops yet kalooni
+[04-18-2006 03:42:46] [#ezpublish] <Sulfur> my question for today is ..... how to make the cronjobs run for a specific siteaccess?? :-) I mean .... if I do php runcronjobs.php what is the siteaccess the cronjobs are running for? the default one? I ask this because I need to test a cronjob of mine on a test siteaccess on the same machine, but looking at the code I see for example that DB is selected via eZDb::instance() and before delving into the code I wanted to know if anyone had needed to resear
+[04-18-2006 04:00:41] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-18-2006 04:49:26] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[04-18-2006 05:34:44] -!- awormus [n=aaron@p54B13F5E.dip0.t-ipconnect.de] has joined #ezpublish
+[04-18-2006 05:37:42] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 113 (No route to host)]
+[04-18-2006 06:27:47] -!- adolflow [n=adolflow@62-14-101-62.inversas.jazztel.es] has joined #ezpublish
+[04-18-2006 07:15:09] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-18-2006 07:49:10] -!- badi [i=badi@196.203.32.164] has joined #ezpublish
+[04-18-2006 08:16:20] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Leaving."]
+[04-18-2006 08:27:36] -!- badi [i=badi@196.203.32.164] has quit [Read error: 110 (Connection timed out)]
+[04-18-2006 08:41:37] -!- kalooni [n=nicolas@fbx.internethic.net] has left #ezpublish ["Quitte"]
+[04-18-2006 08:49:00] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-18-2006 09:05:31] -!- awormus_ [n=aaron@p54B11E13.dip0.t-ipconnect.de] has joined #ezpublish
+[04-18-2006 09:15:56] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-18-2006 09:17:28] -!- adolflow [n=adolflow@62-14-101-62.inversas.jazztel.es] has quit [Remote closed the connection]
+[04-18-2006 09:23:21] -!- awormus [n=aaron@p54B13F5E.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[04-18-2006 09:30:07] -!- awormus_ is now known as awormus
+[04-18-2006 10:04:10] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[04-18-2006 10:10:27] -!- ordnas [n=ordnas@p549D71E1.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[04-18-2006 10:49:33] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-18-2006 11:25:39] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Peace and Protection 4.22"]
+[04-18-2006 11:52:09] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-18-2006 12:32:20] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[04-18-2006 12:40:27] Disconnecting due to lack of a lag response (0.18612600 1145381967 != 0.00474600 1145381997)
+[04-18-2006 12:40:27] Diconnected. Sleeping for 2 second(s).
+[04-18-2006 12:40:29] >> Connecting to irc.freenode.net:6667
+[04-18-2006 12:40:33] >> Connected to irc.freenode.net:6667, registering...
+[04-18-2006 12:40:34] >> Primary nickname in use, trying alternate.
+[04-18-2006 12:40:34] >> Successfully registered. Nick is: ezpublishlog
+[04-18-2006 12:40:34] -!- There are 15264 listed and 14810 unlisted users on 21 servers
+[04-18-2006 12:40:34] -!- 41 flagged staff members
+[04-18-2006 12:40:34] -!- 12055 channels formed
+[04-18-2006 12:40:34] -!- I have 5658 clients and 0 servers
+[04-18-2006 12:40:34] -!- Current local  users: 5658  Max: 5660
+[04-18-2006 12:40:34] -!- Current global users: 30074  Max: 30795
+[04-18-2006 12:40:34] -!- Highest connection count: 5662 (5660 clients) (914937 since server was (re)started)
+[04-18-2006 12:40:35] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-18-2006 12:40:35] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-18-2006 12:41:02] >> Attempting to join channels: #ezpublish
+[04-18-2006 12:41:02] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-18-2006 12:41:02] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-18-2006 12:41:02] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-18-2006 12:43:34] (ezpublishlog) Attempting to gain back primary nickname
+[04-18-2006 12:43:34] -!- ezpublishlog is now known as ezlog
+[04-18-2006 12:43:34] My new nick is ezlog
+[04-18-2006 13:42:24] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[04-18-2006 14:30:53] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-18-2006 15:11:02] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]
+[04-18-2006 15:19:37] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-18-2006 15:44:33] -!- DiGiTa|_ [n=guillaum@84.4.70.214] has quit []
+[04-18-2006 15:47:52] -!- awormus [n=aaron@p54B11E13.dip0.t-ipconnect.de] has quit ["Leaving"]
+[04-18-2006 15:48:04] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[04-18-2006 16:44:25] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[04-18-2006 16:50:27] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-18-2006 16:50:41] [#ezpublish] <zrg> so few people?
+[04-18-2006 16:52:33] [#ezpublish] <zrg> anyhow.. is there some semiautomatic way of packaging some classes with extension?  kind of stupid to handcreate and configure needed classes for all new sites.
+[04-18-2006 19:07:30] -!- Bedlore [n=me@ppp221-173.lns2.adl4.internode.on.net] has joined #ezpublish
+[04-18-2006 21:15:30] -lilo:$*- [Global Notice] Hi all. We're currently experiencing annoyancebot problems in a variety of different channels. You may want to consider temporarily using channel mode +R (only identified users can voice) for the time being.... sorry for the difficulties.
+[04-18-2006 22:37:37] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-18-2006 23:11:01] -!- Bedlore [n=me@ppp221-173.lns2.adl4.internode.on.net] has quit []
+[04-18-2006 23:34:42] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-18-2006 23:45:19] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]

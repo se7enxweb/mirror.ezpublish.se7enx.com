@@ -1,0 +1,73 @@
+[04-26-2006 00:18:22] -!- ordnas [n=ordnas@p549D68F4.dip.t-dialin.net] has joined #ezpublish
+[04-26-2006 01:24:17] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-26-2006 01:27:07] -!- _thomas [n=thomas@85.19.74.66] has joined #ezpublish
+[04-26-2006 01:34:41] -!- DiGiTa|_ [n=pet2poul@84.4.41.148] has joined #ezpublish
+[04-26-2006 01:42:40] -!- _hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-26-2006 01:48:19] -!- hovik [n=hovik@79.84-48-105.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[04-26-2006 02:09:15] -!- ns00n [n=m0ns00n@212.33.152.198] has joined #ezpublish
+[04-26-2006 02:09:18] [#ezpublish] <m0ns00n> Hey
+[04-26-2006 02:17:33] [#ezpublish] <DiGiTa|_> shit, my cache is totally fucked
+[04-26-2006 02:17:36] [#ezpublish] <DiGiTa|_> hy
+[04-26-2006 02:18:03] [#ezpublish] <DiGiTa|_> whan i set viewcaching to disabled and i modify my template, i get the modification
+[04-26-2006 02:18:39] [#ezpublish] <DiGiTa|_> but if i enabled viewcaching i get the old version of the tpl
+[04-26-2006 02:25:32] [#ezpublish] <m0ns00n> Sometimes eZ locks me from clicking any buttons
+[04-26-2006 02:25:44] [#ezpublish] <m0ns00n> What's up with that?
+[04-26-2006 02:28:41] [#ezpublish] <DiGiTa|_> in edit mode ?
+[04-26-2006 02:30:19] [#ezpublish] <m0ns00n> "Versions for <Testing vesting> [1]"
+[04-26-2006 02:30:23] [#ezpublish] <m0ns00n> "Remove selected"
+[04-26-2006 02:30:28] [#ezpublish] <m0ns00n> Can't get out of it
+[04-26-2006 02:30:50] [#ezpublish] <m0ns00n> I can click on "Copy" and "Remove selected"
+[04-26-2006 02:30:53] [#ezpublish] <m0ns00n> That's all I can click on
+[04-26-2006 02:32:24] [#ezpublish] <m0ns00n> clear cookies it is then...
+[04-26-2006 02:32:58] [#ezpublish] <m0ns00n> Hmm, helped just to type in /smart_admin/
+[04-26-2006 02:33:00] [#ezpublish] <m0ns00n> Ok..
+[04-26-2006 02:33:40] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-26-2006 02:38:34] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[04-26-2006 04:02:18] -!- ordna1 [n=ordnas@p549D72E0.dip.t-dialin.net] has joined #ezpublish
+[04-26-2006 04:15:10] -!- _hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-26-2006 04:18:34] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-26-2006 04:20:39] -!- ordnas [n=ordnas@p549D68F4.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[04-26-2006 04:24:42] [#ezpublish] <kalooni> hi there
+[04-26-2006 04:25:15] [#ezpublish] <kalooni> in the last days I read here that the enhancedobjectrelation datatypes would allow to create new object as object relation
+[04-26-2006 04:25:24] [#ezpublish] <kalooni> So i've installed the extension
+[04-26-2006 04:26:29] [#ezpublish] <kalooni> but when I set up the attribute, the type only give me the opportunity to "add" existing object only
+[04-26-2006 04:27:52] [#ezpublish] <kalooni> can anybody tell me how I can correct this ?
+[04-26-2006 04:30:45] [#ezpublish] <kalooni> ok forget my question please ... i made a mistake
+[04-26-2006 04:56:29] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[04-26-2006 05:14:21] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has joined #ezpublish
+[04-26-2006 05:14:27] [#ezpublish] <phretor> hi there
+[04-26-2006 05:18:43] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[04-26-2006 05:25:44] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-26-2006 05:26:38] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-26-2006 05:27:12] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-26-2006 07:26:23] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[04-26-2006 07:40:42] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-26-2006 08:30:36] -!- ns00n [n=m0ns00n@212.33.152.198] has quit ["Leaving"]
+[04-26-2006 08:33:12] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has quit []
+[04-26-2006 08:49:33] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-26-2006 08:52:33] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[04-26-2006 08:55:10] -!- kore__ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[04-26-2006 09:00:58] -!- ordnas [n=ordnas@p549D72E0.dip.t-dialin.net] has joined #ezpublish
+[04-26-2006 09:21:51] -!- ordna1 [n=ordnas@p549D72E0.dip.t-dialin.net] has quit [Read error: 113 (No route to host)]
+[04-26-2006 09:26:51] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[04-26-2006 10:02:18] -!- ordnas [n=ordnas@p549D72E0.dip.t-dialin.net] has left #ezpublish []
+[04-26-2006 10:04:41] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-26-2006 10:05:31] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Read error: 110 (Connection timed out)]
+[04-26-2006 10:22:15] -!- tobyS [n=dotxp@hartes-php.de] has quit ["leaving"]
+[04-26-2006 10:22:21] -!- tobyS [n=dotxp@hartes-php.de] has joined #ezpublish
+[04-26-2006 10:35:16] -!- tobyS [n=dotxp@hartes-php.de] has quit ["leaving"]
+[04-26-2006 10:35:45] -!- tobyS [n=dotxp@hartes-php.de] has joined #ezpublish
+[04-26-2006 10:40:33] -!- kracker [n=kracker@ip23.131.realtime.net] has joined #ezpublish
+[04-26-2006 10:58:19] -!- ordnas [n=ordnas@p549D72E0.dip.t-dialin.net] has joined #ezpublish
+[04-26-2006 11:30:30] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-26-2006 11:50:26] -!- _thomas [n=thomas@85.19.74.66] has quit [Remote closed the connection]
+[04-26-2006 13:45:01] -!- ns00n [n=m0ns00n@213.167.96.196] has joined #ezpublish
+[04-26-2006 14:00:00] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[04-26-2006 14:20:34] -!- ns00n [n=m0ns00n@213.167.96.196] has quit ["Leaving"]
+[04-26-2006 14:54:14] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-26-2006 15:55:08] -!- DiGiTa|_ [n=pet2poul@84.4.41.148] has quit []
+[04-26-2006 17:30:47] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[04-26-2006 17:56:45] -!- phretor [n=phretor@host53-152.pool875.interbusiness.it] has joined #ezpublish
+[04-26-2006 17:58:46] [#ezpublish] <phretor> hi there
+[04-26-2006 18:41:59] -!- phretor [n=phretor@host53-152.pool875.interbusiness.it] has quit []
+[04-26-2006 18:57:07] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit ["Later ..."]

@@ -1,0 +1,655 @@
+[05-20-2005 01:11:15] -!- Blore [~me@dsl-203-113-236-70.SA.netspace.net.au] has joined #ezpublish
+[05-20-2005 01:11:34] [#ezpublish] <Blore> not sure if those last lines came through
+[05-20-2005 01:11:40] [#ezpublish] <Blore> has anyone noticed that teh triggers drop down seems to retain a residual memory non existant workflows in 3.6?
+[05-20-2005 01:11:49] [#ezpublish] <Blore> and why is you can only select individual workflows and not work groups for the triggers?
+[05-20-2005 01:12:02] -!- fh [~fh@238.80-202-59.nextgentel.com] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[05-20-2005 01:12:41] -!- fh [~fh@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-20-2005 01:13:20] [#ezpublish] <Blore> hi fh
+[05-20-2005 01:26:37] [#ezpublish] <fh> morning
+[05-20-2005 01:26:48] [#ezpublish] <Blore> :)
+[05-20-2005 01:27:48] [#ezpublish] <SEAwolfx> good morning.
+[05-20-2005 01:29:57] [#ezpublish] <SEAwolfx> Blore | >and why is you can only select individual workflows and not work groups for the triggers? <- what are you considering as workflow in the ez-context?
+[05-20-2005 01:30:09] -!- Bedlored [~me@dsl-203-113-239-27.SA.netspace.net.au] has quit [Read error: 113 (No route to host)]
+[05-20-2005 01:31:07] -!- fh [~fh@238.80-202-59.nextgentel.com] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[05-20-2005 01:31:20] -!- Blore is now known as Bedlored
+[05-20-2005 01:47:11] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-20-2005 01:49:39] [#ezpublish] <Bedlored> fh: is it possible to publish an object to two locations upon creation, one hardcoded id, and the other current location?
+[05-20-2005 01:51:44] [#ezpublish] <fh> I think it is, but I'm not entirely sure how (I would guess hidden form parameters).. take a look at the input parameters of the edit view
+[05-20-2005 01:51:48] [#ezpublish] <fh> or ask on the forum
+[05-20-2005 01:52:06] [#ezpublish] <Bedlored> k, thanks
+[05-20-2005 01:52:20] [#ezpublish] <Bedlored> I thought it may of been something you'd tackeled previously
+[05-20-2005 01:55:59] [#ezpublish] <fh> I think it is.. I just don't know the details
+[05-20-2005 01:56:16] [#ezpublish] <Bedlored> np :)
+[05-20-2005 02:03:32] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-20-2005 02:03:42] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has left #ezpublish []
+[05-20-2005 02:07:53] -!- ordna1 [~ordnas@p549DF642.dip.t-dialin.net] has joined #ezpublish
+[05-20-2005 03:24:22] -!- danmiru [~chatzilla@80.94.225.138] has joined #ezpublish
+[05-20-2005 03:24:22] -!- fh [~fh@stalker.ez.no] has quit [Read error: 131 (Connection reset by peer)]
+[05-20-2005 03:24:38] -!- ordna1 [~ordnas@p549DF642.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-20-2005 03:50:27] -!- Bedlored [~me@dsl-203-113-236-70.SA.netspace.net.au] has quit []
+[05-20-2005 05:04:43] -!- Bedlore [~me@ppp239-78.lns2.adl2.internode.on.net] has quit []
+[05-20-2005 05:14:20] -!- Bedlore [~me@ppp239-78.lns2.adl2.internode.on.net] has joined #ezpublish
+[05-20-2005 05:25:51] -!- ordnas [~ordnas@p549DF642.dip.t-dialin.net] has joined #ezpublish
+[05-20-2005 06:13:28] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[05-20-2005 06:38:49] -!- freim [hogne@dragon.idi.ntnu.no] has joined #ezpublish
+[05-20-2005 06:43:18] [#ezpublish] <freim> hi, I got a prob with the template overrides. I made an override called folder_line.tpl, but reconsidered and deleted it. The default override had the same filename, but didn't show up again after I deleted my custom one. How can I make it reappear in the Overrides for </node/view/line.tpl> template list?
+[05-20-2005 06:43:42] [#ezpublish] <freim> this is with ezPub 3.5.2
+[05-20-2005 07:18:09] -!- seasonfive [~Yannick@AGrenoble-152-1-35-182.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[05-20-2005 07:18:13] [#ezpublish] <seasonfive> hi ppl :)
+[05-20-2005 07:18:40] [#ezpublish] <seasonfive> how can i use one template for several node ID ?
+[05-20-2005 07:20:27] -!- SEAwolfx [~mike@febe25b2cc5dae40.session.tor] has quit [Remote closed the connection]
+[05-20-2005 07:22:33] -!- SEAwolfx [~mike@0096cafe7b351bf3.session.tor] has joined #ezpublish
+[05-20-2005 07:26:07] [#ezpublish] <seasonfive> SEAwolfx: may i disturb you one minute ? :p
+[05-20-2005 07:40:33] [#ezpublish] <SEAwolfx> yea
+[05-20-2005 07:40:57] [#ezpublish] <SEAwolfx> seasonfive: whats the matter.
+[05-20-2005 07:41:22] [#ezpublish] <seasonfive> nice :)
+[05-20-2005 07:41:36] [#ezpublish] <seasonfive> SEAwolfx: how to set same overide template to several node id ?
+[05-20-2005 07:41:54] [#ezpublish] <seasonfive> SEAwolfx: must i add one override by node ? (with changing section name)
+[05-20-2005 07:42:26] [#ezpublish] <SEAwolfx> i think this is done with the node_id option, which can be also set over the admin_interface when adding some new templates to the system.
+[05-20-2005 07:43:03] [#ezpublish] <SEAwolfx> add a new override template be using the admin_interface.
+[05-20-2005 07:44:03] [#ezpublish] <SEAwolfx> actually i dont know the right syntax within the override.append.ini.
+[05-20-2005 07:44:30] [#ezpublish] <seasonfive> in the override.ini :
+[05-20-2005 07:44:31] [#ezpublish] <seasonfive> [full_view_article_boxed]
+[05-20-2005 07:44:31] [#ezpublish] <seasonfive> Source=node/view/full.tpl
+[05-20-2005 07:44:31] [#ezpublish] <seasonfive> MatchFile=full_view_article_boxed.tpl
+[05-20-2005 07:44:31] [#ezpublish] <seasonfive> Subdir=templates
+[05-20-2005 07:44:31] [#ezpublish] <seasonfive> Match[class_identifier]=article
+[05-20-2005 07:44:33] [#ezpublish] <seasonfive> Match[node]=135
+[05-20-2005 07:44:37] [#ezpublish] <SEAwolfx> ah
+[05-20-2005 07:44:38] [#ezpublish] <seasonfive> an i can't do something like
+[05-20-2005 07:44:40] [#ezpublish] <SEAwolfx> here you go
+[05-20-2005 07:44:47] [#ezpublish] <seasonfive> Match[node]=135
+[05-20-2005 07:44:49] [#ezpublish] <seasonfive> Match[node]=134
+[05-20-2005 07:45:02] [#ezpublish] <seasonfive> only the last one is taken ...
+[05-20-2005 07:45:04] [#ezpublish] <seasonfive> (134)
+[05-20-2005 07:45:05] [#ezpublish] <SEAwolfx> its not implemented as an array
+[05-20-2005 07:45:14] [#ezpublish] <seasonfive> yes ... :-
+[05-20-2005 07:45:16] [#ezpublish] <seasonfive> :(
+[05-20-2005 07:45:26] [#ezpublish] <SEAwolfx> last line overrides the privios variable.
+[05-20-2005 07:45:26] [#ezpublish] <seasonfive> ok so no alternative ...
+[05-20-2005 07:45:44] [#ezpublish] <SEAwolfx> you have to define them separately.
+[05-20-2005 07:47:40] [#ezpublish] <seasonfive> yep ... thx guy !
+[05-20-2005 08:01:04] -!- fh [~fh@stalker.ez.no] has joined #ezpublish
+[05-20-2005 08:02:57] -!- SEAwolfx [~mike@0096cafe7b351bf3.session.tor] has quit ["leaving"]
+[05-20-2005 08:29:05] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-20-2005 08:49:46] -!- beleep [~bleep@CPE001217033876-CM00e06f17a6c8.cpe.net.cable.rogers.com] has joined #ezpublish
+[05-20-2005 08:51:32] [#ezpublish] <beleep> is there a bug (or feature) that closes form tags automagically?  I have a module which reads a tpl which generates many forms in the admin interface, but it strips out the closing form tag and plops it right after the form tag...
+[05-20-2005 09:58:35] -!- fh [~fh@stalker.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[05-20-2005 09:59:45] -!- ProtoolsHD [~123@213.82.169.226] has joined #ezpublish
+[05-20-2005 10:00:11] [#ezpublish] <ProtoolsHD> hi there!
+[05-20-2005 10:01:06] -!- freim [hogne@dragon.idi.ntnu.no] has left #ezpublish []
+[05-20-2005 10:06:50] -!- beleep [~bleep@CPE001217033876-CM00e06f17a6c8.cpe.net.cable.rogers.com] has quit [Read error: 145 (Connection timed out)]
+[05-20-2005 10:14:34] -!- www-ncpink-com [noisecontr@dialup-4.156.222.196.Dial1.Boston1.Level3.net] has joined #ezpublish
+[05-20-2005 10:14:52] [#ezpublish] <www-ncpink-com> Good morning
+[05-20-2005 10:14:57] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-20-2005 10:15:06] [#ezpublish] <www-ncpink-com> ncpink stands for Noise Control Publishing INK
+[05-20-2005 10:23:12] -!- ProtoolsHD [~123@213.82.169.226] has quit [Read error: 145 (Connection timed out)]
+[05-20-2005 10:40:17] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.4/20050511]"]
+[05-20-2005 10:46:45] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit ["Fui embora"]
+[05-20-2005 10:57:46] -!- www-ncpink-com [noisecontr@dialup-4.156.222.196.Dial1.Boston1.Level3.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-20-2005 11:30:05] -!- ordnas [~ordnas@p549DF642.dip.t-dialin.net] has left #ezpublish []
+[05-20-2005 11:59:32] [#ezpublish] <agentbob> ugh
+[05-20-2005 12:01:58] [#ezpublish] <agentbob> somehow one of my folders lost all its attributes... when i goto edit it in admin mode... i don't get 'title' 'short name',etc,etc... just 'publish' 'discard' etc buttons... wtf is that
+[05-20-2005 12:15:05] -!- SEAwolfx [~mike@3d1f80fd7e5956e7.session.tor] has joined #ezpublish
+[05-20-2005 12:28:29] -lilo:$*- [Global Notice] Good evening, all. News up on the freenode website: (1) Major downtime on Sunday. (2) Status of fundraiser.  Please take a look at http://freenode.net/news.shtml ! Thank you for your support for freenode, and have a great evening!
+[05-20-2005 12:35:54] -!- Larson [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-20-2005 12:43:55] [#ezpublish] <kracker> well, i tried ... fairly hard to win in a situation like that i think ( what a loade of quitter talk ...) ugg
+[05-20-2005 12:44:27] [#ezpublish] * kracker runs off for late brunch, who says days an days of 4 hour sleeps will crush ya ..
+[05-20-2005 12:46:31] -!- freim [hogne@dragon.idi.ntnu.no] has joined #ezpublish
+[05-20-2005 13:07:59] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-20-2005 13:08:41] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-20-2005 13:33:35] [#ezpublish] <kracker> i'm going to hell when i'm born ...
+[05-20-2005 13:38:16] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit [Remote closed the connection]
+[05-20-2005 13:43:48] -!- freim [hogne@dragon.idi.ntnu.no] has left #ezpublish []
+[05-20-2005 13:44:15] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-20-2005 13:45:02] [#ezpublish] <buz> mhh mein kubuntu reinstall war doch eignetlich recht shcmerzlos
+[05-20-2005 13:45:07] [#ezpublish] <buz> alle settings waren noch da
+[05-20-2005 13:45:25] [#ezpublish] <buz> und jetzt nehme ich keine development packages mehr :9
+[05-20-2005 13:45:58] [#ezpublish] <kracker> lol, sry, i failed highschool spanish ...
+[05-20-2005 13:46:21] [#ezpublish] <buz> damn
+[05-20-2005 13:46:24] [#ezpublish] <buz> wrong window
+[05-20-2005 13:46:28] [#ezpublish] <kracker> nw
+[05-20-2005 13:46:30] [#ezpublish] <buz> but its german :)
+[05-20-2005 13:46:35] [#ezpublish] <kracker> i know b
+[05-20-2005 13:46:41] [#ezpublish] <buz> i can see why you failed spanish :9
+[05-20-2005 13:47:10] [#ezpublish] <kracker> the other side says that all to often ...
+[05-20-2005 13:47:46] [#ezpublish] <kracker>  still ... eminem : say what you say ...
+[05-20-2005 13:49:01] [#ezpublish] <kracker> i think at the time i was steady stairing at the floor or 'the object' of that perioud's obsession ...
+[05-20-2005 13:49:51] [#ezpublish] <kracker> lol, the teacher couldn't bearly speak comprehendable english and they lost me after about the first day
+[05-20-2005 13:51:15] [#ezpublish] <kracker> huh?
+[05-20-2005 13:53:42] [#ezpublish] <buz> mhh teachers who dont know your language are better in many cases
+[05-20-2005 13:53:45] [#ezpublish] <buz> they dont resort to it
+[05-20-2005 14:25:14] [#ezpublish] <kracker> that might be true for people without sevear mental handycaps
+[05-20-2005 14:25:36] [#ezpublish] <kracker>  <smirk> or learning disablities
+[05-20-2005 14:26:15] [#ezpublish] <buz> is that a measle attempt at an insult?
+[05-20-2005 14:26:32] [#ezpublish] <kracker> you know when you struggle to grasp the concept of football, you have issues ...
+[05-20-2005 14:26:46] [#ezpublish] <kracker> yes, directed at myself alone
+[05-20-2005 14:26:52] [#ezpublish] <buz> i think american football is a thoroughly weird game
+[05-20-2005 14:27:07] [#ezpublish] <buz> looks distinctly gay to me
+[05-20-2005 14:27:17] [#ezpublish] <buz> i mean hunks grabbing each other? wtf
+[05-20-2005 14:27:25] [#ezpublish] <kracker> as a kid i just didn't get the details too much going on at once to get it as a child
+[05-20-2005 14:27:40] [#ezpublish] <kracker> blinded by the blur
+[05-20-2005 14:27:53] [#ezpublish] <buz> now, jelly wrestling, that's a sport ;)
+[05-20-2005 14:29:32] [#ezpublish] <kracker> i think wat got me was the billions of funding and time the masses dump into the modernday equiv of "the arena" hell we could have done something with that time rather than jeer at a 'gay' fight , hw! watchout for that qb, he reaches around ...
+[05-20-2005 14:30:36] [#ezpublish] <kracker> heh, jelly, only if it's girls
+[05-20-2005 14:32:12] [#ezpublish] <buz> of course
+[05-20-2005 14:32:13] [#ezpublish] <buz> HOT girls
+[05-20-2005 14:32:24] [#ezpublish] <buz> otherwise, i rather watch motocross or something like that
+[05-20-2005 14:32:26] [#ezpublish] <kracker> buz: i was insulting my intelegence, really
+[05-20-2005 14:32:33] [#ezpublish] <buz> ah
+[05-20-2005 14:32:35] [#ezpublish] <buz> i'm fine with that
+[05-20-2005 14:32:45] [#ezpublish] <kracker> lol, yeah no fatties ...
+[05-20-2005 14:33:01] [#ezpublish] <buz> as to myself, i'm not entirely sure if i'm intelligent (judging by my school grades, yes, but judging by my bankaccount less so)
+[05-20-2005 14:33:31] [#ezpublish] <kracker> each of us must find our own ...
+[05-20-2005 14:33:51] [#ezpublish] <buz> our own what
+[05-20-2005 14:34:01] [#ezpublish] <kracker> SEAwolfx: you in swfx?
+[05-20-2005 14:34:05] [#ezpublish] <kracker> exactly
+[05-20-2005 14:34:24] [#ezpublish] <kracker> insert your own inspiration / dreams here ....
+[05-20-2005 14:34:25] [#ezpublish] <SEAwolfx> hey ... swfx?
+[05-20-2005 14:34:29] [#ezpublish] <SEAwolfx> whats that?
+[05-20-2005 14:34:35] [#ezpublish] <kracker> sry abreviations gone wrong
+[05-20-2005 14:34:47] [#ezpublish] <kracker> so i have a really bad 4am rant
+[05-20-2005 14:34:52] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 14:35:01] [#ezpublish] <kracker> i chopped up it into 3 chunks
+[05-20-2005 14:35:14] [#ezpublish] <kracker> it's really more alpha than a pilot
+[05-20-2005 14:35:36] [#ezpublish] <kracker> so what is the word on the destruction of the edit master material i send you ...
+[05-20-2005 14:36:15] [#ezpublish] <SEAwolfx> send me something of ur applied lyrics.
+[05-20-2005 14:36:32] [#ezpublish] <kracker> i'd kick start this with making me look bad if i thought i could limit the backlash of rogue insult track edits using my edit masters / raws
+[05-20-2005 14:37:08] [#ezpublish] <kracker> i seem to collect bitter followers just waiting to peg me ...
+[05-20-2005 14:37:33] [#ezpublish] <kracker> na i'm talking about tonight's alpha record of
+[05-20-2005 14:37:44] [#ezpublish] <kracker> eZ radio : the eZ way
+[05-20-2005 14:38:15] [#ezpublish] <kracker> it's so weak and raws weighing in just shy of 100mb (combined)
+[05-20-2005 14:38:50] [#ezpublish] <kracker> about 1.75 hours of mubles mized with retakes and dead air
+[05-20-2005 14:39:07] [#ezpublish] <SEAwolfx> gimme the link again.
+[05-20-2005 14:39:17] [#ezpublish] <kracker> yeah right
+[05-20-2005 14:39:22] [#ezpublish] <SEAwolfx> unfortunately my xmms couldnt play the stream.
+[05-20-2005 14:39:45] [#ezpublish] <kracker> after you tell me how your going to destroy the edit masters i provide
+[05-20-2005 14:40:05] [#ezpublish] <SEAwolfx> destroy the edit masters?
+[05-20-2005 14:40:24] [#ezpublish] <kracker> yeah my raw audio
+[05-20-2005 14:40:36] [#ezpublish] <SEAwolfx> your tracks.
+[05-20-2005 14:40:39] [#ezpublish] <kracker> the stuff you cut out of the show that jsut doesn't fit, my mistakes
+[05-20-2005 14:41:14] [#ezpublish] <kracker> i want you to assure me your not going to make me look bad or give these raw files to ... my enemies
+[05-20-2005 14:41:29] [#ezpublish] <SEAwolfx> doh ...
+[05-20-2005 14:41:32] [#ezpublish] <kracker> or at least the people who are currently peaved at me ..
+[05-20-2005 14:41:51] [#ezpublish] <SEAwolfx> well this is not my atittude doing such things ;)
+[05-20-2005 14:42:03] [#ezpublish] <kracker> their problem not mine to be sure, i'm not the one who sends ... links to non-funny material
+[05-20-2005 14:42:13] [#ezpublish] <SEAwolfx> i wont sample the stuff to post it on ez.no ;)
+[05-20-2005 14:42:33] [#ezpublish] <kracker> well that's marginaly reasuring ... at least a start
+[05-20-2005 14:42:46] [#ezpublish] <kracker> yeah
+[05-20-2005 14:42:58] [#ezpublish] <SEAwolfx> but i can give you a link too . then you can hear my voice too ;)
+[05-20-2005 14:43:23] [#ezpublish] <SEAwolfx> but this really got nothing to do with electronic or hip hop-
+[05-20-2005 14:43:45] [#ezpublish] <kracker> i really want to aprove your versions of the 'edit masters' before, they are released, just in case i want to make a few more personal edits, then back to you for your aproval / review
+[05-20-2005 14:44:11] [#ezpublish] <SEAwolfx> relax ... i havent heard anything till now.
+[05-20-2005 14:44:23] [#ezpublish] <kracker> after the first couple of practice runs we will get beter at this, i'll calm down a bit :)
+[05-20-2005 14:44:28] [#ezpublish] <SEAwolfx> and i wont do anything without talking to you.
+[05-20-2005 14:44:43] [#ezpublish] <SEAwolfx> hehe ... indeed.
+[05-20-2005 14:44:48] [#ezpublish] <kracker> alright email address if you will
+[05-20-2005 14:45:11] [#ezpublish] <SEAwolfx> but you can listen to my voice an laugh www.freakingdecay.de
+[05-20-2005 14:45:14] [#ezpublish] <SEAwolfx> hehe
+[05-20-2005 14:45:27] [#ezpublish] <kracker> ok so whats your email address ?
+[05-20-2005 14:45:34] [#ezpublish] <kracker> i'll email the link + acl
+[05-20-2005 14:45:40] [#ezpublish] <kracker> i'm uploading now
+[05-20-2005 14:46:27] [#ezpublish] <SEAwolfx> pm
+[05-20-2005 14:47:10] [#ezpublish] <SEAwolfx> your are also downloading the stuff on freakindecay.de?
+[05-20-2005 14:47:15] [#ezpublish] <kracker> yea
+[05-20-2005 14:47:19] [#ezpublish] <kracker> which one is yours
+[05-20-2005 14:47:36] [#ezpublish] <SEAwolfx> i sing in all of these tracks.
+[05-20-2005 14:47:57] [#ezpublish] <SEAwolfx> they were produced in november last year.
+[05-20-2005 14:48:36] [#ezpublish] <SEAwolfx> in my friends studio, the same guy i founded our label "sounders dept." with.
+[05-20-2005 14:48:55] [#ezpublish] <SEAwolfx> but this was another style of music than the freakingdecay thing.
+[05-20-2005 14:49:42] [#ezpublish] <SEAwolfx> i could imagine your currently laughing the the brain out of ur nose.
+[05-20-2005 14:52:01] [#ezpublish] <agentbob> afsdaflkjjgjwoiihiasfdlaksjdf
+[05-20-2005 14:52:05] [#ezpublish] <agentbob> er, hi.
+[05-20-2005 14:52:17] [#ezpublish] <buz> are you getting strangled?
+[05-20-2005 14:52:27] [#ezpublish] <kracker> heh
+[05-20-2005 14:52:41] [#ezpublish] <SEAwolfx> hehe ... i know i have laughed ;)
+[05-20-2005 14:52:46] [#ezpublish] <kracker> gimme a second (takes off the gloves)
+[05-20-2005 14:53:07] [#ezpublish] <SEAwolfx> wipe the tears away ;)
+[05-20-2005 14:53:42] [#ezpublish] <kracker> na, it's cool
+[05-20-2005 14:53:49] [#ezpublish] <SEAwolfx> ui
+[05-20-2005 14:54:08] [#ezpublish] <kracker> no negative conjecture out of me, seriously, beter than me ... ugg
+[05-20-2005 14:54:22] [#ezpublish] * agentbob bounces around the room
+[05-20-2005 14:54:39] [#ezpublish] <SEAwolfx> .oO(should i believe this??? or not... is this a trick? .. heheh)
+[05-20-2005 14:54:57] [#ezpublish] <kracker> quick get a straight jacket, nurse, restraints, sedative ...
+[05-20-2005 14:55:14] [#ezpublish] <SEAwolfx> lol
+[05-20-2005 14:56:51] [#ezpublish] <SEAwolfx> i better should have taken PCP. *laugh*
+[05-20-2005 14:58:06] [#ezpublish] <kracker> you could easily take a few rounds to the chest and keep comin with that ishh
+[05-20-2005 15:01:10] [#ezpublish] <kracker> so, yeah almost there
+[05-20-2005 15:01:59] -!- Frekko [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-20-2005 15:02:20] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [Connection reset by peer]
+[05-20-2005 15:02:51] [#ezpublish] <kracker> all hail the overlord ;) -sealab2021
+[05-20-2005 15:04:25] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 15:04:26] [#ezpublish] <SEAwolfx> hehe
+[05-20-2005 15:05:04] [#ezpublish] <SEAwolfx> but ... i (we) also do pure electronic music.
+[05-20-2005 15:05:35] [#ezpublish] <SEAwolfx> you know the detroit style?
+[05-20-2005 15:06:02] [#ezpublish] <kracker> no not really
+[05-20-2005 15:06:13] [#ezpublish] <kracker> what's that
+[05-20-2005 15:06:54] [#ezpublish] <SEAwolfx> you know Juan Atkins, Derick May, Carl Craig, Jeff Mills, Blake Baxter, Mad Mike, Underground Resistance?
+[05-20-2005 15:07:09] [#ezpublish] <kracker> wow, nope
+[05-20-2005 15:07:22] [#ezpublish] <SEAwolfx> doh
+[05-20-2005 15:07:36] [#ezpublish] <SEAwolfx> tears are falling on my pillow.
+[05-20-2005 15:07:51] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 15:08:11] [#ezpublish] <SEAwolfx> you know basic channel?
+[05-20-2005 15:08:18] [#ezpublish] <SEAwolfx> i ll send you s.th.
+[05-20-2005 15:08:21] [#ezpublish] <kracker> how about you? Anticon, Ryme Sayers, Atmosphere, Sole, Alias, Buck65, THem, Slug, DoesOne, Eyedea and abilities ...
+[05-20-2005 15:08:45] [#ezpublish] <kracker> kickin
+[05-20-2005 15:08:46] [#ezpublish] <SEAwolfx> Sole says something to me.
+[05-20-2005 15:08:55] [#ezpublish] <SEAwolfx> but this is hip-hop-stuff?!
+[05-20-2005 15:08:56] [#ezpublish] <kracker> so true
+[05-20-2005 15:09:13] [#ezpublish] <kracker> more poets than rappers ...
+[05-20-2005 15:09:44] [#ezpublish] <SEAwolfx> when i hear hip-hop then i am going back into time to public enemy, gangstarr,..
+[05-20-2005 15:10:00] [#ezpublish] <SEAwolfx> junge brothers,
+[05-20-2005 15:10:08] [#ezpublish] <SEAwolfx> silverbullit
+[05-20-2005 15:10:11] [#ezpublish] <kracker> but then break down r. a. p., what are you left with, poetry
+[05-20-2005 15:10:31] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 15:10:39] [#ezpublish] <SEAwolfx> this is a ryhme.
+[05-20-2005 15:10:40] [#ezpublish] <buz> i always thought crap
+[05-20-2005 15:10:48] [#ezpublish] * buz hates hiphop
+[05-20-2005 15:10:51] [#ezpublish] <SEAwolfx> hehe
+[05-20-2005 15:10:52] [#ezpublish] <kracker> word, chuckd
+[05-20-2005 15:11:12] [#ezpublish] <SEAwolfx> yea ... bass how low can you go, death row what a bother knows.
+[05-20-2005 15:11:23] [#ezpublish] <kracker> cause if you don't understand i can't explain it (7x)
+[05-20-2005 15:11:55] [#ezpublish] <kracker> sheezh, you know shoog is like comming back again.
+[05-20-2005 15:11:57] [#ezpublish] <SEAwolfx> buz: what is your favorite style?
+[05-20-2005 15:12:06] [#ezpublish] <buz> mhh that's hard
+[05-20-2005 15:12:08] [#ezpublish] <kracker> sickening
+[05-20-2005 15:12:19] [#ezpublish] <SEAwolfx> sometimes i hear terroizer ;)
+[05-20-2005 15:12:21] [#ezpublish] <buz> i like drumnbass, metal, classical stuff ;)
+[05-20-2005 15:12:28] [#ezpublish] <buz> so really, i can't pin it down
+[05-20-2005 15:12:33] [#ezpublish] <buz> ijust hate them gangsta
+[05-20-2005 15:12:38] [#ezpublish] <SEAwolfx> hehe.
+[05-20-2005 15:12:45] [#ezpublish] <kracker> ahh the clasic classicals are the best
+[05-20-2005 15:12:53] [#ezpublish] <SEAwolfx> yea, indeed.
+[05-20-2005 15:13:01] [#ezpublish] <buz> was at the asian dub foundation concert last week. that's about as close to hiphop as i get ;)
+[05-20-2005 15:13:32] [#ezpublish] <kracker> yeah, that's why i like sole's anticon crew so much more poetry than the uninteligent gangsta bounce
+[05-20-2005 15:14:00] [#ezpublish] <buz> oh and some synthie stuff i like, too ;)
+[05-20-2005 15:14:27] [#ezpublish] <buz> and of course, as i'm a child of the 90s, some of that horrible eurodance stuff ;)
+[05-20-2005 15:14:51] [#ezpublish] <kracker> <smirk />
+[05-20-2005 15:15:00] [#ezpublish] <buz> yeah i know
+[05-20-2005 15:16:09] [#ezpublish] <kracker> wow and i wished i was young (80's kid myself)
+[05-20-2005 15:16:16] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 15:17:34] [#ezpublish] <kracker> slowly comming ot the realization that i've died already it just hasent hit me with it's finality yet, but every year even older i get, gotta fight to let it go, not let it get the best of me as i fall through this particular parallell reality
+[05-20-2005 15:18:00] [#ezpublish] <buz> dude wtf are u smokin
+[05-20-2005 15:18:03] [#ezpublish] <buz> can i have some?
+[05-20-2005 15:19:03] [#ezpublish] <kracker> try a little understanding ...
+[05-20-2005 15:19:07] [#ezpublish] <kracker> http://audio.kracker.org:8088/ezradio/forum_drops_recaptured/16%20-%20Sole%20-%20Understanding.mp3
+[05-20-2005 15:19:13] [#ezpublish] <SEAwolfx> kracker: accept the dcc send
+[05-20-2005 15:19:19] [#ezpublish] <buz> mhh currently no speakers at my machine
+[05-20-2005 15:19:33] [#ezpublish] <SEAwolfx> doh ... horrible
+[05-20-2005 15:19:40] [#ezpublish] <kracker> arhcive it for later, check the log bot later
+[05-20-2005 15:19:41] [#ezpublish] <buz> temporary state
+[05-20-2005 15:19:52] [#ezpublish] <buz> i trashed my main machine during an upgrade and am now using a barebone
+[05-20-2005 15:19:55] [#ezpublish] <buz> sucker is noisy as hell
+[05-20-2005 15:20:40] [#ezpublish] <kracker> later later, constant unintelligable agrevator traped listening to their elivator muzak, their whole life's wak, and i'm a heart atack or anurism, sucks gonna get me but i can't lettm ...
+[05-20-2005 15:20:40] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 15:21:03] [#ezpublish] <kracker> s/sucks/suckas/
+[05-20-2005 15:21:26] [#ezpublish] <SEAwolfx> kracker: u accepted the dcc send request?
+[05-20-2005 15:21:47] [#ezpublish] <kracker> mad props to mattm@xalaska.net for his contribution, not that he cares or even remembers me more than the stares ...
+[05-20-2005 15:21:50] [#ezpublish] <kracker> huh?
+[05-20-2005 15:21:51] [#ezpublish] <kracker> oh
+[05-20-2005 15:21:52] [#ezpublish] <kracker> no
+[05-20-2005 15:21:57] [#ezpublish] <kracker>  don't know how
+[05-20-2005 15:22:03] [#ezpublish] <SEAwolfx> oops
+[05-20-2005 15:22:12] [#ezpublish] <SEAwolfx> /dcc accept SEAwolfx
+[05-20-2005 15:22:20] [#ezpublish] <SEAwolfx> /dcc get SEAwolfx
+[05-20-2005 15:22:22] [#ezpublish] <SEAwolfx> sorry
+[05-20-2005 15:22:45] [#ezpublish] <kracker> connection refused ...
+[05-20-2005 15:22:51] [#ezpublish] <kracker> ï¿½ï¿½ï¿½ DCC Unable to create connection: Connection refused
+[05-20-2005 15:23:06] [#ezpublish] <kracker> you can just email it to me (ugg) but you can
+[05-20-2005 15:23:16] [#ezpublish] <SEAwolfx> ftp
+[05-20-2005 15:23:20] [#ezpublish] <kracker> or i can give you a scp shell to use temp?
+[05-20-2005 15:23:44] [#ezpublish] <kracker> you get my email ?
+[05-20-2005 15:24:22] [#ezpublish] <kracker> errum lets see how to pm
+[05-20-2005 15:25:18] [#ezpublish] <kracker> SHESH, now i'm not high, i'm going on  several days of lack of sleep, client 's and their demands ...
+[05-20-2005 15:25:23] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 15:25:33] [#ezpublish] <kracker> SEAwolfx: Gotcha
+[05-20-2005 15:25:37] [#ezpublish] <SEAwolfx> k
+[05-20-2005 15:26:47] [#ezpublish] <kracker> i'm in
+[05-20-2005 15:27:10] [#ezpublish] <kracker> que'd
+[05-20-2005 15:27:27] [#ezpublish] <SEAwolfx> k
+[05-20-2005 15:28:27] [#ezpublish] <kracker> this is the 2nd time i've tried to convince this guy to give a damn and take the time and i just don't think enough people understand or are speacking up to show him what's up ...
+[05-20-2005 15:29:10] [#ezpublish] <SEAwolfx> convinced whome?
+[05-20-2005 15:29:30] [#ezpublish] <kracker> http://www.ez.no/community/forum/setup_design/building_a_community_style_website
+[05-20-2005 15:29:38] [#ezpublish] <kracker> Eivind Marienborg
+[05-20-2005 15:31:25] [#ezpublish] <buz> that reads like a crazy man's post
+[05-20-2005 15:31:29] [#ezpublish] <buz> its pathethic, really
+[05-20-2005 15:34:27] [#ezpublish] <kracker> i tried it from teh same perspective before and got blew off (i know .. go figure)
+[05-20-2005 15:34:41] [#ezpublish] <kracker> s/same/sane/
+[05-20-2005 15:35:15] -!- Frekko [~larson@238.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[05-20-2005 15:35:50] [#ezpublish] <kracker> it's just crushing when he refuses to return his changes to the community and uses excuses like time to never really help anyone else
+[05-20-2005 15:36:28] [#ezpublish] <kracker> i couldn't find the original thread where i talked to him about it ( it was an overloaded thread which is in part why it was harder to find again)
+[05-20-2005 15:37:15] [#ezpublish] <kracker> but then i guess i'm wrong to think others might like to contribute back
+[05-20-2005 15:39:08] [#ezpublish] <SEAwolfx> well ... this is for sure the only reason for his behavior, i guess.
+[05-20-2005 15:40:39] [#ezpublish] <kracker> not necicarily, i mean i have been where he was several years ago, it seemed like later would work out .... it just is usualy too late to matter
+[05-20-2005 15:41:31] [#ezpublish] <kracker> time is a crusher especialy if your going to be afraid of working with someone you don't know who could fill the gap, do what you don't care to, or have time for, or the desire ..
+[05-20-2005 15:42:24] [#ezpublish] <SEAwolfx> indeed, full ack.
+[05-20-2005 15:42:27] [#ezpublish] <kracker> i guess in the end i alwasy endup hitting myself in the face and saying if your so $(&($N#n smart do it yourself, but then ahhh i'm not the only one in this situation so perhapse it's not quite so bad for me
+[05-20-2005 15:43:44] [#ezpublish] <SEAwolfx> hehe ;)
+[05-20-2005 15:44:00] [#ezpublish] <kracker> i cna't live in fear that everything i say is going to be misinterpreted by people who don't care to try to relate or understand with my goals and ideals
+[05-20-2005 15:44:36] [#ezpublish] <kracker> i know what i ment when said it, i might have hit the edge but it's very grounded
+[05-20-2005 15:45:31] [#ezpublish] <SEAwolfx> I would say you have another way to express your self as far as I can follow what you write.
+[05-20-2005 15:45:43] [#ezpublish] <SEAwolfx> some might misunderstand this style.
+[05-20-2005 15:46:08] [#ezpublish] <kracker> i can relate to it so i know that others can too if they were to listen to what i say long enough you kinda get a feel for me, that you know me, in time, i become very predicatable but then so are you :P
+[05-20-2005 15:46:29] [#ezpublish] <SEAwolfx> you have to look out of the glasses of an none native english speaking guy.
+[05-20-2005 15:47:31] [#ezpublish] <SEAwolfx> this might be a factor i could imagine when people seems to get you wrong.
+[05-20-2005 15:47:34] [#ezpublish] <kracker> very true, it's posts like that that translate the worst, very bad
+[05-20-2005 15:47:58] [#ezpublish] <kracker> it's funny tho
+[05-20-2005 15:48:02] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 15:48:22] [#ezpublish] <kracker> i was talking about the idea for months now, and again just last night before the post hit the forums
+[05-20-2005 15:50:25] [#ezpublish] <kracker> it's just waiting to happen, the guy taunts us by offering to reciprocate but it's an empty offer
+[05-20-2005 15:51:36] -!- Frekko [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[05-20-2005 15:51:54] [#ezpublish] <kracker> i wish for the best while knowing beter and acting acordingly
+[05-20-2005 15:55:22] [#ezpublish] <SEAwolfx> after reading the whole thread i think its quite ok like you treat him.
+[05-20-2005 15:55:30] [#ezpublish] <SEAwolfx> I would say: dont mind.
+[05-20-2005 15:55:45] [#ezpublish] <kracker> wow, huh?
+[05-20-2005 15:55:58] [#ezpublish] <kracker> you think i was being a dick?
+[05-20-2005 15:56:04] [#ezpublish] <SEAwolfx> no
+[05-20-2005 15:56:28] [#ezpublish] <SEAwolfx> i thought that you were too direct.
+[05-20-2005 15:56:55] [#ezpublish] <kracker> sure, how so ?
+[05-20-2005 15:58:00] [#ezpublish] <SEAwolfx> just read a few lines like: "I don't care about anything your trying to protect, I don't want what your trying to protect,"
+[05-20-2005 15:58:21] [#ezpublish] <SEAwolfx> but i havent read the whole thread.
+[05-20-2005 15:58:28] [#ezpublish] <kracker> sure
+[05-20-2005 15:58:38] [#ezpublish] <kracker> no your right, i said that several times over
+[05-20-2005 15:59:21] [#ezpublish] <kracker> i was trying to 'fail'd attempt i think' to convince him that he was being overly protective and not very flexible with his sheltered sort-of-offer
+[05-20-2005 15:59:49] [#ezpublish] <kracker> his position being, i don't have time for you guys ...
+[05-20-2005 16:00:08] [#ezpublish] <kracker> my rebutal being, here let help us with that ...
+[05-20-2005 16:00:20] [#ezpublish] <SEAwolfx> yeah, you are right.
+[05-20-2005 16:00:23] [#ezpublish] <kracker> his rebutal, i can't trust anyone with my data
+[05-20-2005 16:00:43] [#ezpublish] <SEAwolfx> this is not the true reason, believe me.
+[05-20-2005 16:00:45] [#ezpublish] <kracker> my rebutal, your data is irrelivent to people like me (but i'd die to protect your security)
+[05-20-2005 16:00:53] [#ezpublish] <SEAwolfx> he simply just dont want to share.
+[05-20-2005 16:00:56] [#ezpublish] <SEAwolfx> thats all.
+[05-20-2005 16:01:13] [#ezpublish] <kracker> i think so (at times when i loose faith in the members of this so called ocmmunity)
+[05-20-2005 16:01:27] [#ezpublish] <kracker> fuckers are all playing like cast members in the OC
+[05-20-2005 16:01:35] [#ezpublish] <SEAwolfx> OC?
+[05-20-2005 16:01:41] [#ezpublish] <SEAwolfx> opencommunity?
+[05-20-2005 16:01:44] [#ezpublish] <kracker> fox tv show about snobby rich kids
+[05-20-2005 16:01:59] [#ezpublish] <kracker> american tv (soap oppra / trash tv for the drones)
+[05-20-2005 16:02:26] [#ezpublish] <SEAwolfx> hehe
+[05-20-2005 16:03:02] [#ezpublish] <kracker> i don't watch it but that doesn't mean i don't know what's not to like ...
+[05-20-2005 16:03:32] [#ezpublish] <SEAwolfx> hehe ... same here. but sometimes its good to have a look on this to be reminded how the world runs.
+[05-20-2005 16:03:56] [#ezpublish] <kracker> but you get this all the time in this subnet of the gnu / fsf community, theives, braggards and horders ...
+[05-20-2005 16:04:54] [#ezpublish] <kracker> see i'm not perfect and at times i simply do not give a .... but my heart is in the right place
+[05-20-2005 16:05:18] [#ezpublish] <kracker> honestly i can do what he did in time, but then it's not for me it's for all the newbs who need it more than i do
+[05-20-2005 16:05:54] [#ezpublish] <kracker> the future of eZ publish is not continueing to build a monster stock eZ publish
+[05-20-2005 16:06:00] [#ezpublish] <kracker> it's in distrobutions
+[05-20-2005 16:06:27] [#ezpublish] <SEAwolfx> well some points must be worked out like a wfms
+[05-20-2005 16:06:36] [#ezpublish] <kracker> just look around you, it's already happening by our betters (eZ systems (look at what bard is doing), xrow, paul b.)
+[05-20-2005 16:06:53] [#ezpublish] <SEAwolfx> i would be interessted to make some ebuilds for ezpublish.
+[05-20-2005 16:06:55] [#ezpublish] <kracker> wfms?
+[05-20-2005 16:07:05] [#ezpublish] <kracker> ebuilds?
+[05-20-2005 16:07:08] [#ezpublish] <SEAwolfx> workflow management systems
+[05-20-2005 16:07:28] [#ezpublish] <SEAwolfx> ebuild is part of the gentoo-portage system.
+[05-20-2005 16:07:32] [#ezpublish] <kracker> absolutly, it might be incorrectly named but it's one of the things i have personal experiance in
+[05-20-2005 16:07:33] [#ezpublish] <SEAwolfx> package-management.,
+[05-20-2005 16:07:51] [#ezpublish] <kracker> ahh i've seen some rpms of the latest eZ publish built before in my work ...
+[05-20-2005 16:08:03] [#ezpublish] <kracker> basicly a simialr concept, ebuild is better
+[05-20-2005 16:08:07] [#ezpublish] <kracker> mehh, rpms ugg
+[05-20-2005 16:08:13] [#ezpublish] <SEAwolfx> kracker | >it's in distrobutions <- in the context of package-mangement?
+[05-20-2005 16:08:26] [#ezpublish] <kracker> possibly for maximum flexablity
+[05-20-2005 16:08:33] [#ezpublish] <SEAwolfx> yeah, indeed.
+[05-20-2005 16:08:52] [#ezpublish] <SEAwolfx> ebuilds are prettycool.
+[05-20-2005 16:08:59] [#ezpublish] <kracker> but drop in prebuilt solutions to start with
+[05-20-2005 16:09:11] [#ezpublish] <kracker> starting with stock is fairly intimidating for most
+[05-20-2005 16:09:36] [#ezpublish] <SEAwolfx> stock??
+[05-20-2005 16:09:41] [#ezpublish] <kracker> it's like here .. (drop) go imitate everything you've ever seen to get the functionality you want
+[05-20-2005 16:09:43] [#ezpublish] <SEAwolfx> is it a system?
+[05-20-2005 16:09:52] [#ezpublish] <kracker> STOCK eZ publish (like svn trunk)
+[05-20-2005 16:09:56] [#ezpublish] <SEAwolfx> a
+[05-20-2005 16:09:58] [#ezpublish] <kracker> what you get right now out of the box
+[05-20-2005 16:10:04] [#ezpublish] <kracker> is simply not enough
+[05-20-2005 16:10:18] [#ezpublish] <kracker> but we are so moving in the right direction
+[05-20-2005 16:10:31] [#ezpublish] <SEAwolfx> with ebuilds you can use an svn.eclass to download the source during installation.
+[05-20-2005 16:11:14] [#ezpublish] <kracker> i think we could really use a segnificant contribution to move us from moving forward to leaping forward
+[05-20-2005 16:11:33] [#ezpublish] <kracker> sweet, it is gentoo i mean :)
+[05-20-2005 16:11:39] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 16:12:37] [#ezpublish] <SEAwolfx> should take a look on the eZ-rpms
+[05-20-2005 16:13:11] [#ezpublish] <kracker> sry, what do you mean?
+[05-20-2005 16:13:25] [#ezpublish] <kracker> google didn't really help on "eZ-rpms"
+[05-20-2005 16:13:32] [#ezpublish] <SEAwolfx> kracker | >ahh i've seen some rpms of the latest eZ publish built before in my work ... <-
+[05-20-2005 16:13:50] [#ezpublish] <SEAwolfx> these rpms i meant.
+[05-20-2005 16:14:02] [#ezpublish] <SEAwolfx> but its not so easy to maintain extensions.
+[05-20-2005 16:14:20] [#ezpublish] <SEAwolfx> cause config-files have to be changed.
+[05-20-2005 16:14:33] [#ezpublish] <kracker> i hear ya now
+[05-20-2005 16:14:58] [#ezpublish] <SEAwolfx> but hey .. this is also not really a problem, as we can path them
+[05-20-2005 16:15:08] [#ezpublish] <SEAwolfx> "merged" is better said.
+[05-20-2005 16:15:11] [#ezpublish] <kracker> some people are doing older builds, just found this : http://rpm.pbone.net/index.php3/stat/4/idpl/1897622/com/ezpublish-3.5.2-2mdk.noarch.rpm.html
+[05-20-2005 16:16:09] [#ezpublish] <kracker> ezsvn can help in maintaining current extentions after installation
+[05-20-2005 16:16:48] [#ezpublish] <SEAwolfx> i dont get the advantage of ezsvn?
+[05-20-2005 16:17:00] [#ezpublish] <SEAwolfx> its not a webclient as i have expected from it.
+[05-20-2005 16:17:35] [#ezpublish] <kracker> oh? it is a fetcher with an admin gui
+[05-20-2005 16:18:03] [#ezpublish] <SEAwolfx> ahh .. ok, know i can hear you.
+[05-20-2005 16:18:11] [#ezpublish] <kracker> setup the extentions you want, setup the cron, or kick it manually it gets the latest sources and updates your local copy of the extention(s), design(s), etc...
+[05-20-2005 16:18:19] [#ezpublish] <SEAwolfx> to maintain the extensions from the admin_interface.
+[05-20-2005 16:18:28] [#ezpublish] <kracker> it's very functional and just waiting to be expanded into what you are thinking of ...
+[05-20-2005 16:18:41] [#ezpublish] <kracker> well at least what i'm thinking :)
+[05-20-2005 16:18:46] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 16:19:01] [#ezpublish] <kracker> select packages via admin gui with no direct programing (like current ezsvn)
+[05-20-2005 16:19:09] [#ezpublish] <kracker> gotta find the time
+[05-20-2005 16:20:08] [#ezpublish] <SEAwolfx> yea .. time is the catchword.
+[05-20-2005 16:20:28] [#ezpublish] <kracker> always unfortunatly, see even i suck
+[05-20-2005 16:20:47] [#ezpublish] <kracker> but i wrote my ideas down, i didn't horde my inspiration
+[05-20-2005 16:20:48] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 16:21:14] [#ezpublish] <SEAwolfx> yeah, this is the right way. but what do you think about björn?
+[05-20-2005 16:21:32] [#ezpublish] <kracker> ehh, screw my ideas i make myself look bad really bad
+[05-20-2005 16:21:53] [#ezpublish] <kracker> he's cool, kinda screws us with his horrible documentation
+[05-20-2005 16:22:06] [#ezpublish] <SEAwolfx> lol. true, true.
+[05-20-2005 16:22:08] [#ezpublish] <kracker> but you gotta pimp support somehow i guess
+[05-20-2005 16:22:53] [#ezpublish] <kracker> that's me being fair, i've been red hot before but hey he gave us the code and if we want more we have to invest
+[05-20-2005 16:23:20] [#ezpublish] <SEAwolfx> i want to stress that he also got some ideas not shared with the community like the content server or the mssql-extension.
+[05-20-2005 16:23:46] [#ezpublish] <kracker> exactly, no he's eleete to be sure, top notch
+[05-20-2005 16:24:37] [#ezpublish] <SEAwolfx> I think you only goes the right way between sharing and makeing money out of it,
+[05-20-2005 16:24:46] [#ezpublish] <kracker> everyone deals with these situations differently, some clients could easily push me into his mind set of (time vs money)
+[05-20-2005 16:24:48] [#ezpublish] <SEAwolfx> this is the secret, i guess.
+[05-20-2005 16:25:37] [#ezpublish] <kracker> it is a mystical ballance that must be maintained or your life span is short lived
+[05-20-2005 16:27:08] [#ezpublish] <kracker> but i don't want to make money per say off the community, i just want to be paid well for the work that i do so i can continue to do it (this way / lol / better than before / improve for everyone and myself?wince/)
+[05-20-2005 16:27:51] [#ezpublish] <kracker> but i can see how getting side money from simple support contracts can really free you from having to bash your head into your day job's desk
+[05-20-2005 16:28:16] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 16:29:01] [#ezpublish] <kracker> so don't say much on the whole thing publicly (really till now), because if you think about it long enough it really does make sense from a sertain perspective and then ... there really isn't much to say
+[05-20-2005 16:29:52] [#ezpublish] <SEAwolfx> yeah, there are some ideas i keep in mind and waiting for the right time
+[05-20-2005 16:29:53] [#ezpublish] <kracker> cept, dude, these docs really are not enough! but you don't have to take my word for it, everyone else says so too!
+[05-20-2005 16:30:27] [#ezpublish] <kracker> lol, i'm far to impacient (and a bad speller on no sleep)
+[05-20-2005 16:30:56] [#ezpublish] <SEAwolfx> np ;)
+[05-20-2005 16:32:06] [#ezpublish] <SEAwolfx> well ... i currently configured vservers.
+[05-20-2005 16:32:19] [#ezpublish] <SEAwolfx> have also to set up snort ;)
+[05-20-2005 16:32:28] [#ezpublish] <kracker> interesting
+[05-20-2005 16:32:33] [#ezpublish] <kracker> who do you work for?
+[05-20-2005 16:32:59] [#ezpublish] <SEAwolfx> i was a student and now i am a freelancer.
+[05-20-2005 16:33:11] [#ezpublish] <SEAwolfx> but in the next weeks i will join a company.
+[05-20-2005 16:33:19] [#ezpublish] <SEAwolfx> work for a company.
+[05-20-2005 16:33:33] [#ezpublish] <kracker> kewl, me i'm self employed, aka hired gun
+[05-20-2005 16:34:01] [#ezpublish] <kracker> a cleaner, i come in and clean up other people mistakes
+[05-20-2005 16:34:22] [#ezpublish] <SEAwolfx> like mr. wolf
+[05-20-2005 16:34:46] [#ezpublish] <SEAwolfx> or mr. wulf
+[05-20-2005 16:34:55] [#ezpublish] <SEAwolfx> pulp fiction.
+[05-20-2005 16:35:07] [#ezpublish] <kracker> smirk
+[05-20-2005 16:36:10] [#ezpublish] <kracker> where is the sign that says dead read only nobody storage ...
+[05-20-2005 16:36:42] [#ezpublish] <kracker> that's one interpretation (reply -3lines)
+[05-20-2005 16:36:56] [#ezpublish] <SEAwolfx> hehe .. dont know.
+[05-20-2005 16:37:34] [#ezpublish] <kracker> hey i gota a joke i gotta write brb
+[05-20-2005 16:37:56] [#ezpublish] <SEAwolfx> k ;D
+[05-20-2005 16:38:12] [#ezpublish] <kracker>     BANKY
+[05-20-2005 16:38:12] [#ezpublish] <kracker>                  Bear with me here.  I just want to put
+[05-20-2005 16:38:12] [#ezpublish] <kracker>                  you through this little exercise.
+[05-20-2005 16:38:12] [#ezpublish] <kracker>                      (drawing feverishly)
+[05-20-2005 16:38:12] [#ezpublish] <kracker>                  Okay, now see this?  This is a four
+[05-20-2005 16:38:13] [#ezpublish] <kracker>                  way road, okay?
+[05-20-2005 16:38:19] [#ezpublish] <kracker> Banky draws a four-way stop.  He illustrates according to
+[05-20-2005 16:38:20] [#ezpublish] <kracker>        his voice-over.
+[05-20-2005 16:38:46] [#ezpublish] <kracker>  BANKY V.O.
+[05-20-2005 16:38:46] [#ezpublish] <kracker>                  And dead in the center, is a crisp,
+[05-20-2005 16:38:46] [#ezpublish] <kracker>                  new, hundred dollar bill.  Now at the
+[05-20-2005 16:38:46] [#ezpublish] <kracker>                  end of each of the streets, are four
+[05-20-2005 16:38:46] [#ezpublish] <kracker>                  people, okay?  You following?  Up
+[05-20-2005 16:38:50] [#ezpublish] <kracker>                  here, we got a
+[05-20-2005 16:39:44] [#ezpublish] <SEAwolfx> it seems that my english knowledge is so worse.
+[05-20-2005 16:39:59] [#ezpublish] <kracker> xxxx ? (insert self proclaimed open source advocate diss)
+[05-20-2005 16:40:13] [#ezpublish] <kracker> Okay?  Now down here, we
+[05-20-2005 16:40:50] [#ezpublish] <kracker>                  have a non-free readonly community troll
+[05-20-2005 16:40:57] [#ezpublish] <kracker>  To this
+[05-20-2005 16:40:57] [#ezpublish] <kracker>                  side, we got Santa Claus, right?  And
+[05-20-2005 16:40:57] [#ezpublish] <kracker>                  over to this side - the Easter Bunny.
+[05-20-2005 16:40:58] [#ezpublish] <kracker>        Banky finishes drawing.  Holden.s shaking his head
+[05-20-2005 16:41:01] [#ezpublish] <kracker>     BANKY
+[05-20-2005 16:41:02] [#ezpublish] <kracker>                  Which one.s going to get to the
+[05-20-2005 16:41:02] [#ezpublish] <kracker>                  hundred dollar bill first?
+[05-20-2005 16:41:16] [#ezpublish] <kracker>  HOLDEN
+[05-20-2005 16:41:16] [#ezpublish] <kracker>                  What is this supposed to prove?
+[05-20-2005 16:41:16] [#ezpublish] <kracker>                            BANKY
+[05-20-2005 16:41:16] [#ezpublish] <kracker>                  I.m serious.  This is a serious
+[05-20-2005 16:41:16] [#ezpublish] <kracker>                  exercise.  It.s like an S.A.T.
+[05-20-2005 16:41:16] [#ezpublish] <kracker>                  question.  Which one.s going to get to
+[05-20-2005 16:41:18] [#ezpublish] <kracker>                  the hundred dollar bill first
+[05-20-2005 16:41:25] [#ezpublish] <kracker>      HOLDEN
+[05-20-2005 16:41:26] [#ezpublish] <kracker>                      (beat; then pissed)
+[05-20-2005 16:41:42] [#ezpublish] <kracker> The non-free readonly community troll
+[05-20-2005 16:41:47] [#ezpublish] <kracker>           BANKY
+[05-20-2005 16:41:47] [#ezpublish] <kracker>                  Good.  Why?
+[05-20-2005 16:41:47] [#ezpublish] <kracker>                            HOLDEN
+[05-20-2005 16:41:48] [#ezpublish] <kracker>                  I don.t know.
+[05-20-2005 16:41:58] [#ezpublish] <kracker>      BANKY
+[05-20-2005 16:41:59] [#ezpublish] <kracker>                      (wildly crossing out the
+[05-20-2005 16:41:59] [#ezpublish] <kracker>                       other three)
+[05-20-2005 16:42:00] [#ezpublish] <kracker>                  BECAUSE THESE OTHER THREE ARE FIGMENTS
+[05-20-2005 16:42:15] [#ezpublish] <kracker>  OF YOUR FDD IMAGINATION!
+[05-20-2005 16:42:15] [#ezpublish] <kracker>        Holden storms away.  Banky follows.
+[05-20-2005 16:42:15] [#ezpublish] <kracker>                            HOLDEN
+[05-20-2005 16:42:19] [#ezpublish] <kracker>                  I don.t need this.  I.m going home.
+[05-20-2005 16:42:25] [#ezpublish] <kracker> .
+[05-20-2005 16:43:06] [#ezpublish] <kracker> ok so that was dumb but in my head it is funny i just couldn't come up with radio friendly replacment characters (which is in part why it's not really as funny as in my head)
+[05-20-2005 16:43:29] [#ezpublish] <kracker> to mirror the ezcommunity and the people in it
+[05-20-2005 16:43:35] [#ezpublish] <SEAwolfx> hehe
+[05-20-2005 16:44:13] [#ezpublish] <SEAwolfx> btw .. u know skype?
+[05-20-2005 16:44:17] [#ezpublish] <kracker> the horder (non-free), the faker ( advocates but never acts), and the free software zellot and ... somthing else
+[05-20-2005 16:44:28] [#ezpublish] <kracker> yeah you ready to get down?
+[05-20-2005 16:44:41] [#ezpublish] <SEAwolfx> lol .. i could start it.
+[05-20-2005 16:44:55] [#ezpublish] <kracker> diggs out the mic
+[05-20-2005 16:45:12] [#ezpublish] <SEAwolfx> oh god, my english is so fucking bad.
+[05-20-2005 16:45:45] [#ezpublish] <kracker> we have to start somewere
+[05-20-2005 16:45:55] [#ezpublish] <SEAwolfx> seawolf_711 is my username.
+[05-20-2005 16:45:59] [#ezpublish] <kracker> ok i'm online
+[05-20-2005 16:46:20] [#ezpublish] <kracker> SEAwolfx: is this a hidden message?
+[05-20-2005 16:46:41] [#ezpublish] <kracker> hrm nope
+[05-20-2005 16:46:42] [#ezpublish] <SEAwolfx> lol .. not really. just give in "seawolf_711"
+[05-20-2005 16:47:11] [#ezpublish] <kracker> and i'm still learing bitchx (non-gui irc), i'm lame, ehh bite me
+[05-20-2005 16:47:22] [#ezpublish] <SEAwolfx> ah ... take irssi.
+[05-20-2005 16:47:28] [#ezpublish] <SEAwolfx> www.irssi.org
+[05-20-2005 16:47:33] [#ezpublish] <agentbob> hey hey hey heard of http://sputnik.pl/cake/docs/tutorial ?
+[05-20-2005 16:48:06] [#ezpublish] <agentbob> i need something like that.... but i don't like his database table plurals thing
+[05-20-2005 16:48:21] [#ezpublish] <kracker> it's gotta be hard talking with me though at timecase cause it's more like being the 3rd person in the conversation, i'm alreays talking to myself
+[05-20-2005 16:48:50] [#ezpublish] <SEAwolfx> lol ... i excited.
+[05-20-2005 16:48:53] [#ezpublish] <SEAwolfx> +am
+[05-20-2005 16:49:21] [#ezpublish] <SEAwolfx> just call me.
+[05-20-2005 16:49:31] [#ezpublish] <SEAwolfx> agentbob: u use skype?
+[05-20-2005 16:49:34] [#ezpublish] <kracker> yup, just aboutt ready
+[05-20-2005 16:52:08] [#ezpublish] <agentbob> haven't used it yet
+[05-20-2005 16:54:48] [#ezpublish] <agentbob> can we communicate telepathically with it yet?
+[05-20-2005 16:54:56] [#ezpublish] <agentbob> or is that v2
+[05-20-2005 16:55:30] [#ezpublish] <SEAwolfx> http://www.skype.com/
+[05-20-2005 16:59:11] [#ezpublish] <kracker> lol
+[05-20-2005 16:59:15] [#ezpublish] <SEAwolfx> well communication works well to time.
+[05-20-2005 17:43:16] [#ezpublish] <agentbob> but she's touching his chest now--he takes off her dress now--let me go
+[05-20-2005 17:59:59] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 18:00:17] [#ezpublish] <agentbob> unfortunately need to dump ezpub :|
+[05-20-2005 18:01:12] [#ezpublish] <SEAwolfx> well .. easy ;)
+[05-20-2005 18:01:27] [#ezpublish] <SEAwolfx> the backupscript should play the trick.
+[05-20-2005 18:02:05] [#ezpublish] <agentbob> i mean cheat on it with another sexy framework and then call it up and tell it it's not working out anymore
+[05-20-2005 18:02:16] [#ezpublish] <agentbob> it's not ezpub it's me
+[05-20-2005 18:02:42] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 18:08:46] [#ezpublish] <agentbob> hmmmmmmmmmmmmmmmmmmmmm http://www.phpwact.org/
+[05-20-2005 18:09:44] [#ezpublish] <SEAwolfx> yeah .. model view controller rocks ;)
+[05-20-2005 18:10:58] [#ezpublish] <SEAwolfx> but ti be honest using only index.php vor all views is nearly the same approach. ;)
+[05-20-2005 18:12:20] [#ezpublish] <agentbob> yeah... i like ezpub framework but don't like all the extra bloat
+[05-20-2005 18:12:45] [#ezpublish] <agentbob> crating ezpub classes/objects on top of php classes/objects is just... *shudders*
+[05-20-2005 18:14:25] [#ezpublish] <SEAwolfx> so you are looking for a small MVC-solution?
+[05-20-2005 18:16:48] [#ezpublish] <agentbob> yeah.. where i can plugin stuff like DB_DataObject or Propel... use Smarty for templates, etc
+[05-20-2005 18:19:49] [#ezpublish] <SEAwolfx> agentbob: take a look on this: http://phrame.sourceforge.net/
+[05-20-2005 18:20:01] [#ezpublish] <SEAwolfx> ;)
+[05-20-2005 18:20:13] [#ezpublish] <agentbob> yeah a lot of them are old...
+[05-20-2005 18:20:29] [#ezpublish] <agentbob> lookin at Cake, Mojavi, and WACT right now...
+[05-20-2005 18:20:54] [#ezpublish] <agentbob> Phrame News
+[05-20-2005 18:20:54] [#ezpublish] <agentbob> [11-08-2002]: Phrame released as free software!
+[05-20-2005 18:20:57] [#ezpublish] <agentbob> not really news :P
+[05-20-2005 18:21:32] [#ezpublish] <SEAwolfx> its history
+[05-20-2005 18:22:15] [#ezpublish] <SEAwolfx> but the same way as struts there is no newer release necessary *duck*
+[05-20-2005 18:22:24] [#ezpublish] <agentbob> hehehe
+[05-20-2005 18:23:34] [#ezpublish] <SEAwolfx> you see this technology is proven as perfect that is completely closed.
+[05-20-2005 18:23:46] [#ezpublish] <SEAwolfx> +it
+[05-20-2005 18:24:33] [#ezpublish] <agentbob> except for lack of docs
+[05-20-2005 18:24:56] [#ezpublish] <SEAwolfx> as always its self explaining ;D
+[05-20-2005 18:25:00] [#ezpublish] <agentbob> lol
+[05-20-2005 18:25:11] [#ezpublish] <SEAwolfx> like sendmail.cf
+[05-20-2005 18:25:19] [#ezpublish] <agentbob> yeah, the universe is self explanitory too, just need to take the time out to figure it out :P
+[05-20-2005 18:25:30] [#ezpublish] <SEAwolfx> indeed.
+[05-20-2005 21:20:33] [#ezpublish] <agentbob> my god there's too much
+[05-20-2005 21:20:39] [#ezpublish] <agentbob> i'll never get to the end of the internet at this rate
+[05-20-2005 22:53:21] [#ezpublish] <kracker> lol
+[05-20-2005 22:53:35] [#ezpublish] <kracker> i used to actualy get into that mindset
+[05-20-2005 22:54:41] [#ezpublish] <kracker> it would overwelm me (reall? no! go figure...) beening a teenager traumatized by a future that i could bearly begin to comprehend let alone look away, eyes dried out before dried out had a subliminal
+[05-20-2005 22:55:32] [#ezpublish] <kracker> kickstart the appololypse inside, to whome do you confide, do what you do , don't fr33k, the dude abide(s)
+[05-20-2005 22:56:53] [#ezpublish] <kracker> eyelids sottard open, can't look away, stuck in the middle of the fray, memories of a whole lifetime left hesitating on just what or how to say what you say, the crowd turns and walks away
+[05-20-2005 22:58:52] [#ezpublish] <kracker> night becomes day, nothing changes, everything stays the same way, realizeing i ... don't always play well with others if the others are on the other side of the line, use your imagination, get out of that bind, no need to become one of them, and then is been so . . . repetative and unamuzing actuallity more frustrating when we think your really abusing the predefined expectations and bounderies, ... fkemty
+[05-20-2005 22:59:52] [#ezpublish] * kracker runs back into the brick wall of 9& 3/4
+[05-20-2005 23:00:55] [#ezpublish] <kracker> http://audio.kracker.org:8088/ezradio/forum_drops_recaptured/Marvin_The_Paranoid_Android_-_Marvin_I_Love_You.mp3
+[05-20-2005 23:07:13] [#ezpublish] <kracker> hrm, they don't hear me tho ... http://audio.kracker.org:8088/ezradio/forum_drops_recaptured/dmx%2C%20method%20man%2C%20nas%20%26%20ja%20rule%20-%20grand%20finale.mp3 (intro+nas)
+[05-20-2005 23:08:43] [#ezpublish] <kracker> snicker, didn't both of them fall off (they'd say), i mean how long can you keep all that up before ...
+[05-20-2005 23:16:31] [#ezpublish] <kracker> growl, http://audio.kracker.org:8088/ezradio/forum_drops_recaptured/07%20-%20Eminem%20-%20Soldier.MP3
+[05-20-2005 23:28:05] [#ezpublish] <kracker> http://audio.kracker.org:8088/ezradio/forum_drops_recaptured/tony%20bacala%20-%20Transformers%20Lets%20Roll%20%28Old%20Skool%20Remix%29.mp3
+[05-20-2005 23:29:55] [#ezpublish] <agentbob> just downloaded tertiary phase.. need to listen through that
+[05-20-2005 23:30:01] [#ezpublish] <agentbob> then start on quandary
+[05-20-2005 23:31:27] [#ezpublish] <kracker> yeah, those were the days
+[05-20-2005 23:31:42] [#ezpublish] <kracker> i would read pdfs of hh2g, pdfs!
+[05-20-2005 23:32:06] [#ezpublish] <kracker> then i got depressed when i ran out of material to assimil8
+[05-20-2005 23:32:11] [#ezpublish] <agentbob> hehehe
+[05-20-2005 23:32:25] [#ezpublish] <agentbob> been lost in frameworks
+[05-20-2005 23:32:36] [#ezpublish] <kracker> an you know i really liked the movie even if it was a ... movie
+[05-20-2005 23:32:53] [#ezpublish] <agentbob> haven't seen it yet.. still gotta go
+[05-20-2005 23:33:04] [#ezpublish] <kracker> it was a great visualizatoin of my imagination + theirs
+[05-20-2005 23:33:20] [#ezpublish] <agentbob> i've listened to the first 12 fits like... hundreds of times so far... hard to fall asleep for me without listenin to it now
+[05-20-2005 23:33:29] [#ezpublish] <agentbob> did you watch the bbc tv episodes?
+[05-20-2005 23:33:50] [#ezpublish] <kracker> everything , all of it <mouth closed nod>
+[05-20-2005 23:33:55] [#ezpublish] <agentbob> hehehe
+[05-20-2005 23:34:09] [#ezpublish] <kracker> the books, radio, bbc dvd, film ... umm
+[05-20-2005 23:34:27] [#ezpublish] <kracker> i'm sure there is something i've missed i am a artar
+[05-20-2005 23:35:00] [#ezpublish] <agentbob> where's this mp3 from?
+[05-20-2005 23:35:11] [#ezpublish] <kracker> ya know i forget, it's very old
+[05-20-2005 23:35:41] [#ezpublish] <kracker> one of the old iai crew hooked me up with the subliminals and i found it again after hours of hours of searching the net
+[05-20-2005 23:36:28] [#ezpublish] <kracker> it's not bad, it fits the hh2g theme fairly well, seems pro but i kinda doubt that for some reason .. *shrugs*
+[05-20-2005 23:36:30] [#ezpublish] <agentbob> i think i'm down to mojavi, prado, cake, or studs
+[05-20-2005 23:36:40] [#ezpublish] <agentbob> sounds like his voice
+[05-20-2005 23:36:52] [#ezpublish] <kracker> exactly
+[05-20-2005 23:36:53] [#ezpublish] <kracker>  a friend of mine is writeing a
+[05-20-2005 23:36:59] [#ezpublish] <kracker> php5 frame work
+[05-20-2005 23:37:33] [#ezpublish] <kracker> smarty + the other big name i think + his own custom framework implimentation
+[05-20-2005 23:37:55] [#ezpublish] <kracker> it will be intersteting if it ever 'pawns / pans out'
+[05-20-2005 23:38:24] [#ezpublish] <agentbob> http://p199.ezboard.com/f80sxchangewherecanifindthissong.showMessage?topicID=30.topic
+[05-20-2005 23:38:28] [#ezpublish] <kracker> bastard screwed me over to do it too, so i guess he's not much of a friend right now
+[05-20-2005 23:38:38] [#ezpublish] <agentbob> hahahahahahahahah "I've just joined and I can answer this as I just answered this for someone else not long ago. The song is called "Marvin" by Marvin. Hope this helped you."
+[05-20-2005 23:38:49] [#ezpublish] <agentbob> ouch sorry to hear that
+[05-20-2005 23:38:56] [#ezpublish] <kracker> i wrote it down and took a picture but i can't say i havent' forgotten before ...
+[05-20-2005 23:39:07] [#ezpublish] <agentbob> i think for the project i'm workin on now i'm just going to use DB_DataObject and Savant and that's it
+[05-20-2005 23:39:25] [#ezpublish] <kracker> ehh, i knew better ... he could be a bigger superstart than me anyway
+[05-20-2005 23:39:48] [#ezpublish] <kracker> you'd like him you guys talk alike alot in the same notions
+[05-20-2005 23:39:56] [#ezpublish] <kracker> he hates eZ too
+[05-20-2005 23:40:10] [#ezpublish] <agentbob> http://www.gameamp.com/thingsthatrock/the_ghost_that_feeds-256.mp3
+[05-20-2005 23:40:38] [#ezpublish] <kracker> errum hate is a strong word, agressive dislike
+[05-20-2005 23:40:55] [#ezpublish] <agentbob> in my framework searches i keep ending up at this guy revjim's website
+[05-20-2005 23:40:58] [#ezpublish] <kracker> classese in classes gets him all antsy
+[05-20-2005 23:40:59] [#ezpublish] <agentbob> the guy sounds totally like me
+[05-20-2005 23:41:16] [#ezpublish] <kracker> me shakes his head
+[05-20-2005 23:41:21] [#ezpublish] <agentbob> agreed.... classes in classes PLUS templates in a template language
+[05-20-2005 23:41:43] [#ezpublish] <kracker> it's hallarious being in the middle at times hearing both of you guys
+[05-20-2005 23:41:59] [#ezpublish] <kracker> point for point, same
+[05-20-2005 23:42:11] [#ezpublish] <agentbob> haha coo'
+[05-20-2005 23:42:37] [#ezpublish] <kracker> one of you guys should write a really strong deep thurough article tearing into eZ so other people are warned ahead of time (we don't have one of those really)
+[05-20-2005 23:43:30] [#ezpublish] <kracker> i mean we all have to choose, best to make informed choices with all the real life details documented a head of time (a list of things your not going to like after you get started ...)
+[05-20-2005 23:43:42] [#ezpublish] <agentbob> hehehe yeah i'm on it.. i'm sure he is too... and if he's anything like me we'll both procrastinate it til a few years from now when someone else writes it
+[05-20-2005 23:43:51] [#ezpublish] <agentbob> then we'll be like 'eh... don't need to write it anymore
+[05-20-2005 23:44:02] [#ezpublish] <kracker> basicly the contradiction that was the problem
+[05-20-2005 23:48:29] [#ezpublish] <kracker> could do anything, did very little, wanted all of the rewards, trying to bring along another fore the ride, dragging kicking and screaming away from waiting tables ... what a q1/2005
+[05-20-2005 23:53:26] [#ezpublish] <kracker> funny, he asked me not the other way around ...
+[05-20-2005 23:53:40] [#ezpublish] <kracker> http://audio.kracker.org:8088/our_way/buck_65-this_right_here_is-advance-2005-jce/04-buck_65-wicked_and_weird-jce.mp3
+[05-20-2005 23:55:22] [#ezpublish] <kracker> ahh
+[05-20-2005 23:55:36] [#ezpublish] <kracker> the DR.DEMENTO show, kickin
+[05-20-2005 23:55:51] [#ezpublish] <kracker> CECIL B DEMENTED
+[05-20-2005 23:57:39] [#ezpublish] <kracker> wierdoallyankawhateva

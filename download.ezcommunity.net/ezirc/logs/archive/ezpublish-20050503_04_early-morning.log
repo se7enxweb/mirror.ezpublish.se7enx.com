@@ -1,0 +1,199 @@
+
+Session Start: Tue May 03 00:00:00 2005
+Session Ident: #ezpublish
+[00:13] * Disconnected
+[00:13] -irc.freenode.net- *** Looking up your hostname...
+[00:13] -irc.freenode.net- *** Checking ident
+[00:13] -irc.freenode.net- *** Found your hostname
+[00:13] -irc.freenode.net- *** Got ident response
+[00:13] -zelazny.freenode.net- *** Your host is zelazny.freenode.net[zelazny.freenode.net/6667], running version dancer-ircd-1.0.35
+[00:13] * Attempting to rejoin channel #ezpublish
+[00:13] * Rejoined channel #ezpublish
+[00:13] * Topic is 'http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn'
+[00:13] * Set by fh on Sun Apr 24 23:12:38
+[00:45] <kracker> dink
+[00:45] <kracker> go team fisher-price!
+[01:53] * Retrieving #ezpublish modes...
+[01:54] * Disconnected
+[01:54] -irc.freenode.net- *** Looking up your hostname...
+[01:54] -irc.freenode.net- *** Found your hostname, welcome back
+[01:54] -irc.freenode.net- *** Checking ident
+[01:54] -irc.freenode.net- *** Got ident response
+[01:54] -zelazny.freenode.net- *** Your host is zelazny.freenode.net[zelazny.freenode.net/6667], running version dancer-ircd-1.0.35
+[01:54] * Attempting to rejoin channel #ezpublish
+[01:54] * Rejoined channel #ezpublish
+[01:54] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[01:54] * Set by fh on Tue May 03 01:29:00
+[01:54] <SEAwolfx> hmm ... i will test your code now.
+[01:56] <SEAwolfx> indeed the code is ok.
+[01:56] <SEAwolfx> so I will adapt it to my needs.
+[01:56] * Retrieving #ezpublish modes...
+[01:56] <SEAwolfx> thank you very much.
+[01:56] <kracker> hmm?
+[01:57] <kracker> ahh
+[01:57] <SEAwolfx> fh ... helped me out with my prob, posted here http://ez.no/community/forum/setup_design/template_building_an_array_of_ids_for_further_processing
+[01:57] <SEAwolfx> ;)
+[01:57] <SEAwolfx> u droped, as frequently *duck*
+[01:58] <kracker> i know, it sucks ... i gotta find a beter irc network ...
+[01:59] <kracker> congrats on the solution :)
+[01:59] <SEAwolfx> gonna test it, with my needs.. after that i can/we make jump.
+[01:59] <SEAwolfx> +a 
+[02:00] <kracker> <grin>
+[02:00] <SEAwolfx> argh .... this is amazing .. it works *jump*
+[02:01] <kracker> sick
+[02:02] <SEAwolfx> fh: u can say to Yelitza, that she is no allowd to kiss you.
+[02:02] <SEAwolfx> s/no/now/
+[02:03] <fh> aah.. she's not here :/
+[02:04] <SEAwolfx> hehe ... never mind, she comes back.
+[02:04] <fh> true, true.. I'll remind her :)
+[02:04] <SEAwolfx> wise ...
+[02:04] <SEAwolfx> ;)
+[03:19] <kracker> ha!
+[03:19] * Disconnected
+[03:23] * Not connected to server
+Session Close: Tue May 03 03:23:10 2005
+
+Session Start: Tue May 03 06:46:08 2005
+Session Ident: #ezpublish
+[06:46] * Now talking in #ezpublish
+[06:46] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[06:46] * Set by fh on Tue May 03 01:29:00
+[08:16] <kracker> <grin> funny ... the joint is hoppin now, a whole 13!
+[08:18] * Disconnected
+[08:18] -irc.freenode.net- *** Looking up your hostname...
+[08:18] -irc.freenode.net- *** Checking ident
+[08:18] -irc.freenode.net- *** Found your hostname
+[08:18] -irc.freenode.net- *** Got ident response
+[08:18] -orwell.freenode.net- *** Your host is orwell.freenode.net[orwell.freenode.net/6667], running version dancer-ircd-1.0.35
+[08:18] * Attempting to rejoin channel #ezpublish
+[08:18] * Rejoined channel #ezpublish
+[08:18] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[08:18] * Set by fh on Tue May 03 01:29:00
+[10:18] * Disconnected
+[10:18] -irc.freenode.net- *** Looking up your hostname...
+[10:18] -irc.freenode.net- *** Checking ident
+[10:18] -irc.freenode.net- *** Found your hostname
+[10:18] -irc.freenode.net- *** Got ident response
+[10:18] -zelazny.freenode.net- *** Your host is zelazny.freenode.net[zelazny.freenode.net/6667], running version dancer-ircd-1.0.35
+[10:18] * Attempting to rejoin channel #ezpublish
+[10:18] * Rejoined channel #ezpublish
+[10:18] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[10:18] * Set by fh on Tue May 03 01:29:00
+[12:18] * Disconnected
+[12:18] -irc.freenode.net- *** Looking up your hostname...
+[12:18] -irc.freenode.net- *** Checking ident
+[12:18] -irc.freenode.net- *** Found your hostname
+[12:18] -irc.freenode.net- *** Got ident response
+[12:18] -orwell.freenode.net- *** Your host is orwell.freenode.net[orwell.freenode.net/6667], running version dancer-ircd-1.0.35
+[12:18] * Attempting to rejoin channel #ezpublish
+[12:18] * Rejoined channel #ezpublish
+[12:18] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[12:18] * Set by fh on Tue May 03 01:29:00
+[14:18] * Disconnected
+[14:18] -irc.freenode.net- *** Looking up your hostname...
+[14:18] -irc.freenode.net- *** Checking ident
+[14:18] -irc.freenode.net- *** Found your hostname
+[14:18] -irc.freenode.net- *** Got ident response
+[14:18] -sterling.freenode.net- *** Your host is sterling.freenode.net[freebsd.widexs.nl/6667], running version dancer-ircd-1.0.35
+[14:18] * Attempting to rejoin channel #ezpublish
+[14:18] * Rejoined channel #ezpublish
+[14:18] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[14:18] * Set by fh on Tue May 03 01:29:00
+[16:18] * Disconnected
+[16:18] -irc.freenode.net- *** Looking up your hostname...
+[16:18] -irc.freenode.net- *** Checking ident
+[16:18] -irc.freenode.net- *** Found your hostname
+[16:18] -irc.freenode.net- *** Got ident response
+[16:18] -sterling.freenode.net- *** Your host is sterling.freenode.net[freebsd.widexs.nl/6667], running version dancer-ircd-1.0.35
+[16:18] * Attempting to rejoin channel #ezpublish
+[16:18] * Rejoined channel #ezpublish
+[16:18] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[16:18] * Set by fh on Tue May 03 01:29:00
+[18:21] * Joins: rw (marcelo@rw.user)
+[18:21] <rw> hi
+[18:21] <kracker> hey!
+[18:21] <rw> I just installed it my system, I was used to mambo! Ez Publish is great!
+[18:21] <rw> the translation feature (aka mambelfish in mambo) isn't that good.
+[18:21] <rw> in ez publish is awesome!
+[18:22] <kracker> cool. sho nuff
+[18:22] <rw> I am just having a hard time to find how to add option in the main page so the user can choose from all the translated languages, right now two. Any idea?
+[18:23] <kracker> so what are you going to do with eZ publish
+[18:23] <rw> right now it will be a website for my "brother"
+[18:24] <rw> which died almost 2 years ago. His father created an organization to help people.
+[18:24] <kracker> Weeeelll, that's a good question
+[18:24] <rw> hehehe
+[18:24] <kracker> i think you need to manually add links into your pagelayout 
+[18:25] <rw> i've just installed, I think I will test it a little bit more before doing a theme.
+[18:25] <kracker> like http://ez.no/ has 3 in the top right and side
+[18:25] <kracker> nods
+[18:25] <rw> yeah! true I see
+[18:26] <kracker> i don't think eZ publish currently has a drop down / auto gen list of per item translations.
+[18:26] <rw> not really important to me, add links it's ok...
+[18:27] <kracker> If I were you, and I was really intersted in that kind of functionality I would first (search ez.no via google for lots of possible keywords) and if you can't find a past thread that answeres your question, simply start a new thread and refernece any past relevant threads along with a very detailed description of what you would like to know how to accomplish.
+[18:27] <kracker> hehe
+[18:28] <kracker> as i throw myself out with the bathwater ..
+[18:28] <kracker> still, it's what I would do ...
+[18:28] <rw> yeah I will do it...
+[18:28] <kracker> i think that someone has even asked this question before ...
+[18:28] <kracker> but ... i don't recall a stand up solution but I could have missed the bus ...
+[20:40] * kracker smirk
+[21:06] <kracker> sweet
+[21:06] <kracker> wait a second, i'm still playing catchup arn't i ...
+[21:06] <kracker> yup, hmm 
+[21:06] * Joins: ezpublishlog ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net)
+[21:06] * Joins: ezlog1 ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net)
+[21:07] * Quits: ezlog ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net) (Remote closed the connection)
+[21:07] * Quits: ezpublishlog ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net) (Read error: 54 (Connection reset by peer))
+[21:07] * Quits: ezlog1 ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net) (Read error: 54 (Connection reset by peer))
+[21:07] <kracker> that's right ... git
+[21:07] * Joins: ezlog ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net)
+[21:08] <kracker> ieet, ALL IS WELL
+[21:10] * Quits: ezlog ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net) (Remote closed the connection)
+[21:12] * Joins: ezpublishlog ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net)
+[21:12] * Quits: ezpublishlog ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net) (Remote closed the connection)
+[21:13] * Joins: ezlog ([U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net)
+[21:14] <kracker> fyi, i just installed the latest ezbotlog (txt version) which will now output it's log into : http://download.ezpublishhosting.com/ezirc/logs/ezpublish.log
+[21:14] <kracker> and don't forget about our archive of days past in #ezpublish ... a great way on catching up on what's really going on 
+[21:14] <kracker> .
+[21:14] <kracker> now if only things were going on .... ;)
+[21:15] <kracker> errum, that's unclear
+[21:15] <kracker> now we just need to start a fire, first one on the roof is a nutter ...
+[21:15] <kracker> wait a second, don't you mean last ?
+[21:15] <kracker> no
+[21:16] <kracker> so it's a drop?
+[21:16] <kracker> yup!
+[21:16] <kracker> course you only know because it takes one to know one ...
+[21:16] <kracker> weak
+[21:16] <kracker> sadly ...
+[21:16] * kracker kracker runs off into the void
+[21:17] <kracker> it's just not been your day typing has it little guy?
+[21:17] <kracker> lol, no 
+[21:17] <kracker> no it really hassent ...
+[21:29] <kracker> dink
+[21:30] * Disconnected
+[21:30] * /whois: not connected to server
+[21:30] -irc.freenode.net- *** Looking up your hostname...
+[21:30] -irc.freenode.net- *** Checking ident
+[21:30] -irc.freenode.net- *** Got ident response
+[21:30] -irc.freenode.net- *** Found your hostname
+[21:30] -niven.freenode.net- *** Your host is niven.freenode.net[niven.freenode.osuosl.org/6667], running version dancer-ircd-1.0.35
+[21:30] * Attempting to rejoin channel #ezpublish
+[21:30] * Rejoined channel #ezpublish
+[21:30] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[21:30] * Set by fh on Tue May 03 01:29:00
+[21:30] <kracker> connect irc.kde.org
+[21:32] * Disconnected
+Session Close: Tue May 03 21:35:02 2005
+
+Session Start: Tue May 03 21:35:11 2005
+Session Ident: #ezpublish
+[21:35] * Now talking in #ezpublish
+[21:35] * Topic is 'http://ez.no | trunk status: deep freeze | http://ez.no/community/news/ez_publish_3_6_beta'
+[21:35] * Set by fh on Tue May 03 01:29:00
+[21:35] <kracker> sicky tight!
+[21:36] <kracker> hopefully, this irc server change for my client will reduce the amount of bs i spit into this channel (yeah...right) by keeping me from getting disconnected every 15min ...
+[22:47] <kracker>  sweet, so far so good
+[23:34] <kracker> woot!
+[23:35] * Quits: fh (~fh@stalker.ez.no) ("using sirc version 2.211+KSIRC/1.3.11")
+[23:35] * Joins: fh (~fh@stalker.ez.no)
+Session Close: Wed May 04 00:00:00 2005

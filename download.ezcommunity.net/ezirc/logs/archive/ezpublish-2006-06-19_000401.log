@@ -1,0 +1,89 @@
+[06-18-2006 01:32:14] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-18-2006 02:08:25] -!- src_home [i=raymond@cpe-65-28-151-10.bak.res.rr.com] has joined #ezpublish
+[06-18-2006 02:08:34] [#ezpublish] <src_home> hey
+[06-18-2006 02:08:53] [#ezpublish] <nnn0> hi
+[06-18-2006 02:09:17] [#ezpublish] <nnn0> hm my nodelist in the right toolbox only shows the title, no content as it used to
+[06-18-2006 02:09:53] [#ezpublish] <nnn0> it doesn't even put a break in between them
+[06-18-2006 02:11:18] -!- the-kracker [n=thekrack@cpe-70-120-199-146.austin.res.rr.com] has joined #ezpublish
+[06-18-2006 02:16:34] [#ezpublish] <nnn0> anyone familiar with this ehaviour ?
+[06-18-2006 02:16:37] [#ezpublish] <nnn0> b
+[06-18-2006 02:16:54] [#ezpublish] <nnn0> my nodelist in the right toolbox only shows the title, no content as it used to
+[06-18-2006 02:20:36] [#ezpublish] <src_home> nnn0: have you made any template changes or installed any patches between the behavior change?
+[06-18-2006 02:22:46] [#ezpublish] <nnn0> i havent applied any patches and i've not done any template changes for that node
+[06-18-2006 02:23:03] [#ezpublish] <nnn0> or those nodes for that matter
+[06-18-2006 02:23:27] [#ezpublish] <nnn0> but maybe i should take a closer look
+[06-18-2006 02:23:29] -!- ordnas [n=ordnas@ti132110a340-2879.bb.online.no] has joined #ezpublish
+[06-18-2006 02:33:41] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-18-2006 02:44:38] -!- ordnas [n=ordnas@ti132110a340-2879.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 03:01:03] [#ezpublish] <src_home> nnn0: any luck?
+[06-18-2006 03:21:44] -!- src_home is now known as src-away
+[06-18-2006 03:21:57] -!- src-away [i=raymond@cpe-65-28-151-10.bak.res.rr.com] has left #ezpublish []
+[06-18-2006 03:40:50] -!- ordna1 [n=ordnas@ti132110a340-2879.bb.online.no] has joined #ezpublish
+[06-18-2006 05:54:50] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 06:21:04] -!- ordnas [n=ordnas@ti132110a340-2879.bb.online.no] has joined #ezpublish
+[06-18-2006 06:38:28] -!- ordna1 [n=ordnas@ti132110a340-2879.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 06:42:17] -!- ordna1 [n=ordnas@ti132110a340-2879.bb.online.no] has joined #ezpublish
+[06-18-2006 06:59:27] -!- ordnas [n=ordnas@ti132110a340-2879.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 07:47:35] -!- ordna1 [n=ordnas@ti132110a340-2879.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 07:55:15] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 07:58:14] -!- tobmaster [n=tobmaste@dslb-084-061-021-218.pools.arcor-ip.net] has joined #ezpublish
+[06-18-2006 08:08:57] -!- ordnas [n=ordnas@ti132110a340-0862.bb.online.no] has joined #ezpublish
+[06-18-2006 08:52:47] -!- tobmaster [n=tobmaste@dslb-084-061-021-218.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[06-18-2006 09:45:34] -!- ordnas [n=ordnas@ti132110a340-0862.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 09:54:56] -!- ordnas [n=ordnas@ti132110a340-0862.bb.online.no] has joined #ezpublish
+[06-18-2006 10:10:52] -!- src-away [i=raymond@cpe-65-28-151-10.bak.res.rr.com] has joined #ezpublish
+[06-18-2006 10:14:04] -!- ordna1 [n=ordnas@ti132110a340-0862.bb.online.no] has joined #ezpublish
+[06-18-2006 10:15:12] -!- ordnas [n=ordnas@ti132110a340-0862.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 11:05:12] -!- awormus [n=aaron@p54B05020.dip.t-dialin.net] has joined #ezpublish
+[06-18-2006 11:53:54] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-18-2006 11:54:46] -!- ordna1 [n=ordnas@ti132110a340-0862.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 12:06:22] -!- awormus_ [n=aaron@84.176.84.70] has joined #ezpublish
+[06-18-2006 12:15:17] -!- aaronw [n=aaron@p54B0608D.dip.t-dialin.net] has joined #ezpublish
+[06-18-2006 12:21:55] -!- awormus_ [n=aaron@84.176.84.70] has quit [Read error: 145 (Connection timed out)]
+[06-18-2006 12:23:07] -!- awormus [n=aaron@p54B05020.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 12:38:22] -!- aaronw [n=aaron@p54B0608D.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 12:42:08] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 12:42:48] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-18-2006 13:17:13] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-18-2006 13:30:49] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-18-2006 13:30:49] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[06-18-2006 13:47:21] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-18-2006 14:01:28] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-18-2006 14:02:25] -!- ordnas [n=ordnas@ti132110a340-2879.bb.online.no] has joined #ezpublish
+[06-18-2006 14:02:47] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-18-2006 14:09:14] -!- src-away is now known as SunRay_home
+[06-18-2006 14:33:21] -!- kore_ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-18-2006 14:33:33] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 14:56:30] [#ezpublish] <nnn0> no :)
+[06-18-2006 14:56:37] -!- carroll [n=mc@CPE0080c8b7b6bf-CM014400121516.cpe.net.cable.rogers.com] has joined #ezpublish
+[06-18-2006 14:56:39] [#ezpublish] <nnn0> i'll try again tomorrow
+[06-18-2006 15:18:58] [#ezpublish] <jeremiah> do you know why the publishing of an article is terribly slow?
+[06-18-2006 15:18:59] [#ezpublish] <the-kracker> eZ publish 3.6.7 (with a fair amount of existing sql data) ... upgrade fails to 3.8.0 (release/tar.gz) ....
+[06-18-2006 15:19:32] [#ezpublish] <the-kracker> hrm ... back to 3.7.6  i guess
+[06-18-2006 15:19:59] [#ezpublish] <the-kracker> No such attribute for array(9): short_description
+[06-18-2006 15:19:59] [#ezpublish] <the-kracker> Choose one of following: name, intro_text, nav_label, description,
+[06-18-2006 15:19:59] [#ezpublish] <the-kracker>                          sidebar_news, sidebar_success, sidebar_calendar,
+[06-18-2006 15:19:59] [#ezpublish] <the-kracker>                          sidebar_press, thumbnail
+[06-18-2006 15:20:24] [#ezpublish] <the-kracker> wierd template/object database ... hrm ... right
+[06-18-2006 15:22:08] [#ezpublish] <mcarroll> hi, i wonder if anyone can help... i just upgraded an ez site on our server to 3.8 for a friend, and lots of the content was missing from the user site. it turns out it was because the site was set up incorrectly to begin with, and all the content was set as eng-GB even though it's in german. i had added SiteLanguageList[]=ger-DE and so with the new multilingual infrastructure that meant the 'english' content wasn't
+[06-18-2006 15:22:55] [#ezpublish] <the-kracker> weak, i wonder if that might be why my migration failed :\
+[06-18-2006 15:27:08] [#ezpublish] <the-kracker> after running the db migration sql and scripts ..
+[06-18-2006 15:28:38] [#ezpublish] <jeremiah> it could be interesting an import and export function
+[06-18-2006 15:28:53] [#ezpublish] <the-kracker> i get a rather scarry error: There are more then one main_node for objectID
+[06-18-2006 15:28:56] [#ezpublish] <jeremiah> for your case the-kracker
+[06-18-2006 15:46:43] [#ezpublish] <mcarroll> ok, i did some database searching, and 'eng-GB' shows up in ezcontent_language(1) ezcontentobject_attribute(1730) ezcontentobject_name(368) ezimagefile(317) and ezsession(30)... obviously ezsession doesn't matter - i can clear that. any advice on procedure for fixing the language elsewhere - i can just run some sql to change it everywhere, but i don't know enough about the multilingual internals to be confident
+[06-18-2006 16:17:55] [#ezpublish] <mcarroll> ok, well if anyone feels like replying: http://ez.no/community/forum/install_configuration/how_to_change_language_of_mis_configured_3_8_site
+[06-18-2006 16:17:56] [#ezpublish] <mcarroll> thanks :)
+[06-18-2006 16:18:21] -!- carroll [n=mc@CPE0080c8b7b6bf-CM014400121516.cpe.net.cable.rogers.com] has left #ezpublish []
+[06-18-2006 16:34:51] -!- ordnas [n=ordnas@ti132110a340-2879.bb.online.no] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[06-18-2006 17:07:10] -!- Paleo [n=Paleo@admin.pwsp.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-18-2006 17:08:08] -!- Paleo [n=Paleo@admin.pwsp.net] has joined #ezpublish
+[06-18-2006 17:42:05] -!- kore_ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-18-2006 17:47:11] -!- SunRay_home is now known as src_away
+[06-18-2006 18:21:59] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[06-18-2006 18:43:21] -!- src_away [i=raymond@cpe-65-28-151-10.bak.res.rr.com] has left #ezpublish []
+[06-18-2006 23:08:32] -!- SunRay_home [i=raymond@cpe-65-28-151-10.bak.res.rr.com] has joined #ezpublish
+[06-18-2006 23:08:41] [#ezpublish] <SunRay_home> kracker, you there?
+[06-18-2006 23:10:32] -!- SunRay_home [i=raymond@cpe-65-28-151-10.bak.res.rr.com] has left #ezpublish []
+[06-18-2006 23:23:31] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-18-2006 23:33:29] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]

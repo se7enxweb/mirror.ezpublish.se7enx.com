@@ -1,0 +1,51 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 2.2.&nbsp; HTML Embedding</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch02lev1sec2"></a><h3 class="docSection1Title">2.2. HTML Embedding</h3>
+<p class="docText">The first thing you need to learn about PHP is how it is embedded in HTML:<a name="ch02index01"></a><a name="ch02index02"></a></p>
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;Sample PHP Script&lt;/HEAD&gt;
+&lt;BODY&gt;
+The following prints "Hello, World":
+&lt;?php
+
+    print "Hello, World";
+
+?&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre><br>
+<p class="docText">In this example, you see that your PHP code sits embedded in your HTML. Every time the PHP interpreter reaches a PHP open tag <tt>&lt;?php</tt>, it runs the enclosed code up to the delimiting <tt>?&gt;</tt> marker. PHP then replaces that PHP code with its output (if there is any) while any non-PHP text (such as HTML) is passed through as-is to the web client. Thus, running the mentioned script would lead to the following output:</p>
+<pre>
+&lt;HTML&gt;
+&lt;HEAD&gt;Sample PHP Script&lt;/HEAD&gt;
+&lt;BODY&gt;
+The following prints "Hello, World":
+Hello, World
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</pre><BR>
+<a name="ch02note01"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">You may also use a shorter <tt>&lt;?</tt> as the PHP open tag if you enable the <tt>short_open_tags</tt> INI option; however, this usage is not recommended and is therefore off by default.<a name="ch02index03"></a><a name="ch02index04"></a><a name="ch02index05"></a><a name="ch02index06"></a></P>
+<p class="docText">Because the next three chapters deal with language features, the examples are usually not enclosed inside PHP open and close tags. If you want to run them successfully, you need to add them by yourself.</p></div><BR>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch02lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch02lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

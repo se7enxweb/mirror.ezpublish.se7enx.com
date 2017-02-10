@@ -1,0 +1,130 @@
+[05-30-2006 00:40:01] -!- ons0on [n=hogne@212.33.152.198] has quit [Remote closed the connection]
+[05-30-2006 01:03:35] [#ezpublish] <Tidemann> *whomp*
+[05-30-2006 01:08:40] [#ezpublish] <SEAwolfx> morning
+[05-30-2006 01:08:43] [#ezpublish] <Tidemann> hey
+[05-30-2006 01:18:03] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[05-30-2006 01:43:59] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-30-2006 01:51:14] -!- _kh is now known as kris10an
+[05-30-2006 01:55:52] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[05-30-2006 01:58:52] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-30-2006 02:06:12] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-30-2006 02:34:32] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-30-2006 02:57:21] -!- SEAwolfx [n=SEAwolfx@p54938ABB.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-30-2006 03:00:55] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[05-30-2006 03:25:13] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[05-30-2006 03:29:31] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[05-30-2006 03:54:03] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-30-2006 03:54:57] -!- kris10an [n=kh@85.19.74.66] has quit ["Konversation terminated!"]
+[05-30-2006 03:59:21] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[05-30-2006 04:00:37] -!- kris10an [n=kh@85.19.74.66] has quit [Remote closed the connection]
+[05-30-2006 04:00:46] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[05-30-2006 04:26:03] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[05-30-2006 04:30:45] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[05-30-2006 04:35:42] -!- zr1 [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has joined #ezpublish
+[05-30-2006 05:41:03] [#ezpublish] <zr1> morning folks!
+[05-30-2006 06:02:09] -!- awormus [n=aaron@p54B121E0.dip0.t-ipconnect.de] has joined #ezpublish
+[05-30-2006 06:18:33] -!- DiGiTa|_ [n=pet2poul@84.4.189.215] has joined #ezpublish
+[05-30-2006 06:18:48] [#ezpublish] <DiGiTa|_> hi
+[05-30-2006 06:33:29] [#ezpublish] <B-KiLLer`> aloha
+[05-30-2006 06:38:58] [#ezpublish] <jeremiah> hi friends, good day, b-killer do you know an advanced tutorial to do a real world web with EZP? I see SITEPOINT but they seem of older versiones
+[05-30-2006 06:44:46] -!- awormus [n=aaron@p54B121E0.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-30-2006 06:53:24] [#ezpublish] <DiGiTa|_> I searching a solution to set a field untranslatable after adding some products
+[05-30-2006 06:53:32] [#ezpublish] <DiGiTa|_> if someone has an idea
+[05-30-2006 06:54:05] [#ezpublish] <zr1> marking in class editor deletes content?
+[05-30-2006 06:54:24] [#ezpublish] <DiGiTa|_> no it just do anything
+[05-30-2006 06:54:48] [#ezpublish] <zr1> strange
+[05-30-2006 06:54:50] [#ezpublish] <DiGiTa|_> if i change the price after marking the field, the price stay the same as the old one
+[05-30-2006 06:55:04] [#ezpublish] <DiGiTa|_> in translated version
+[05-30-2006 06:56:22] [#ezpublish] <zr1> i guess you have to find translations and delete them, apparently the flag only works when creating new object, not when reading from one
+[05-30-2006 06:56:38] [#ezpublish] <zr1> and I'd say its a bug, be sure to file it
+[05-30-2006 06:57:29] [#ezpublish] <DiGiTa|_> yes it's what i'm thinking, but if i remove the translation in the db, then my class is corrupt
+[05-30-2006 06:58:14] [#ezpublish] <DiGiTa|_> i've tried to totally remove the field and create a new one
+[05-30-2006 06:58:27] [#ezpublish] <DiGiTa|_> but it doesn't work
+[05-30-2006 06:58:29] [#ezpublish] <zr1> just a idea: after you have flagged it, go change price. then look in db for unchanged prices
+[05-30-2006 06:58:56] [#ezpublish] <zr1> should work if you change field id.. ?
+[05-30-2006 06:59:10] [#ezpublish] <DiGiTa|_> no...
+[05-30-2006 06:59:17] [#ezpublish] <DiGiTa|_> i try
+[05-30-2006 06:59:57] [#ezpublish] <DiGiTa|_> it's like if  the full class have settings somewhere
+[05-30-2006 07:00:16] [#ezpublish] <DiGiTa|_> with those flags
+[05-30-2006 07:00:57] [#ezpublish] <zr1> look at the db map and figure out what branches are orphaned by disabling translation
+[05-30-2006 07:01:24] [#ezpublish] <zr1> i hope you have BIG monitor :P
+[05-30-2006 07:01:30] [#ezpublish] <DiGiTa|_> remind me the DB map url please
+[05-30-2006 07:01:31] [#ezpublish] <DiGiTa|_> :)
+[05-30-2006 07:03:12] [#ezpublish] <zr1> search for "database diagram"
+[05-30-2006 07:06:31] [#ezpublish] <DiGiTa|_> theres only the field "can_translate" in ezcontentclass_attribute
+[05-30-2006 07:06:39] [#ezpublish] <DiGiTa|_> strange :/
+[05-30-2006 07:08:38] [#ezpublish] <DiGiTa|_> shit hsit shit
+[05-30-2006 07:24:05] [#ezpublish] <zr1> From the dictionary:
+[05-30-2006 07:24:30] [#ezpublish] <zr1> shit, n.  -  We are all in it.
+[05-30-2006 07:24:53] [#ezpublish] <DiGiTa|_> :)
+[05-30-2006 07:37:56] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[05-30-2006 07:51:52] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[05-30-2006 08:10:11] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[05-30-2006 08:16:48] Disconnecting due to lack of a lag response (0.16049500 1148994948 != 0.05118100 1148994978)
+[05-30-2006 08:16:48] Diconnected. Sleeping for 2 second(s).
+[05-30-2006 08:16:50] >> Connecting to irc.freenode.net:6667
+[05-30-2006 08:16:54] >> Connected to irc.freenode.net:6667, registering...
+[05-30-2006 08:16:55] >> Primary nickname in use, trying alternate.
+[05-30-2006 08:16:55] >> Successfully registered. Nick is: ezpublishlog
+[05-30-2006 08:16:55] -!- There are 14990 listed and 14453 unlisted users on 18 servers
+[05-30-2006 08:16:55] -!- 42 flagged staff members
+[05-30-2006 08:16:55] -!- 11964 channels formed
+[05-30-2006 08:16:55] -!- I have 4114 clients and 0 servers
+[05-30-2006 08:16:55] -!- Current local  users: 4114  Max: 4115
+[05-30-2006 08:16:55] -!- Current global users: 29443  Max: 31171
+[05-30-2006 08:16:55] -!- Highest connection count: 4117 (4115 clients) (97308 since server was (re)started)
+[05-30-2006 08:16:56] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-30-2006 08:16:56] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-30-2006 08:17:15] >> Attempting to join channels: #ezpublish
+[05-30-2006 08:17:15] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-30-2006 08:17:15] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[05-30-2006 08:17:15] -!- Topic set by ls [@] [Fri, 19 May 2006 10:51:35 -0500]
+[05-30-2006 08:17:15] (unmatched::raw477) :calvino.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#privmsg
+[05-30-2006 08:17:15] -!- ezlog [n=IQ@209.144.224.222] has quit [Read error: 104 (Connection reset by peer)]
+[05-30-2006 08:17:17] -!- ezpublishlog is now known as ezlog
+[05-30-2006 08:17:17] My new nick is ezlog
+[05-30-2006 09:03:02] -!- zr1 [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-30-2006 09:05:41] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-30-2006 09:17:11] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 110 (Connection timed out)]
+[05-30-2006 09:43:07] [#ezpublish] <kalooni> I am using this line in the php scripts
+[05-30-2006 09:43:08] [#ezpublish] <kalooni> http://ez19/catalogue/jetons_de_poker/mallette_suited#
+[05-30-2006 09:43:15] [#ezpublish] <kalooni> eZContentCacheManager::clearObjectViewCache( $objectID );
+[05-30-2006 09:43:40] [#ezpublish] <kalooni> but it seems it has no effect the viewCache seems not be cleared, why ?
+[05-30-2006 09:44:00] [#ezpublish] <kalooni> (oups don't take care of the URL)
+[05-30-2006 09:52:33] -!- DiGiTa|_ [n=pet2poul@84.4.189.215] has quit []
+[05-30-2006 09:52:56] [#ezpublish] <B-KiLLer`> kalooni: you're french ? ;)
+[05-30-2006 09:54:01] [#ezpublish] <kalooni> yes
+[05-30-2006 09:54:40] [#ezpublish] <kalooni> why this question, how did u know ?
+[05-30-2006 09:54:42] [#ezpublish] <kalooni> ;)
+[05-30-2006 09:55:45] [#ezpublish] <kalooni> Normally when a product is edited (or any other objects) the views are regenerated , true ?
+[05-30-2006 09:57:20] [#ezpublish] <B-KiLLer`> huhu, les noms des répertoires sont assez french :)
+[05-30-2006 09:57:41] [#ezpublish] <B-KiLLer`> I think so, they should be
+[05-30-2006 10:08:33] [#ezpublish] <kalooni> => http://www.jetons-de-poker.com
+[05-30-2006 11:00:44] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-30-2006 11:09:17] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Leaving"]
+[05-30-2006 11:18:37] -!- B-KiLLer` [n=me@bart.interact.lu] has quit []
+[05-30-2006 11:22:10] [#ezpublish] <tobmaster> alora
+[05-30-2006 11:37:20] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-30-2006 11:47:55] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[05-30-2006 11:49:28] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-30-2006 11:56:08] -!- awormus [n=aaron@p54B121E0.dip0.t-ipconnect.de] has joined #ezpublish
+[05-30-2006 12:29:07] -!- awormus [n=aaron@p54B121E0.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-30-2006 14:06:29] -!- DMS [i=mirc616@80.82.173.48] has joined #ezpublish
+[05-30-2006 14:06:50] [#ezpublish] <DMS> hi
+[05-30-2006 14:08:46] [#ezpublish] <DMS> Somebody passed with Typo3 on Ez?
+[05-30-2006 14:08:59] [#ezpublish] <buz> uhm what?
+[05-30-2006 14:10:08] [#ezpublish] <DMS> Who was converted from typo3 to ez?
+[05-30-2006 14:10:54] [#ezpublish] <DMS> sorry! who was crossed from typo3 to ezpublish?
+[05-30-2006 14:21:19] [#ezpublish] <buz> i dont think anyone in here
+[05-30-2006 14:29:45] [#ezpublish] <DMS> in two sentences, how does ezpublish compare to typo3?
+[05-30-2006 14:34:33] -!- awormus [n=aaron@89.50.208.213] has joined #ezpublish
+[05-30-2006 14:43:06] -!- awormus_ [n=aaron@p54B1411B.dip0.t-ipconnect.de] has joined #ezpublish
+[05-30-2006 14:47:37] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-30-2006 14:48:26] -!- aaronw [n=aaron@84.177.18.69] has joined #ezpublish
+[05-30-2006 15:02:09] -!- awormus [n=aaron@89.50.208.213] has quit [Read error: 110 (Connection timed out)]
+[05-30-2006 15:04:46] -!- awormus_ [n=aaron@p54B1411B.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-30-2006 15:32:51] -!- aaronw [n=aaron@84.177.18.69] has quit ["Leaving"]
+[05-30-2006 16:11:48] -!- DMS [i=mirc616@80.82.173.48] has left #ezpublish []
+[05-30-2006 16:37:24] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[05-30-2006 17:29:49] -!- kris10an [n=kh@85.19.74.66] has quit [Read error: 110 (Connection timed out)]
+[05-30-2006 23:48:35] -!- awormus [n=aaron@p54B1213A.dip0.t-ipconnect.de] has joined #ezpublish

@@ -1,0 +1,199 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 14.2.&nbsp; Design for Performance</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch14lev1sec2"></a><h3 class="docSection1Title">14.2. Design for Performance</h3>
+<p class="docText">The right place to start planning for the required performance is in the design process. You should avoid belated code optimization, which could lead to unwanted side effects, bugs, or code that is harder to read and maintain.<a name="ch14index01"></a></p>
+<p class="docText">Although the design gives you a more abstract impression of your application, you need to align it with constraints, such as hardware capacity or operational budgets, as well as the scaling characteristics you want and the expected amount of initial traffic.</p>
+<p class="docText">Whether you are a cowboy coder or process geek, this section contains useful information because this chapter discusses designing PHP 5 applications in particular.</p>
+<a name="ch14lev2sec1"></a><H4 class="docSection2Title">14.2.1. PHP Design Tip #1: Beware of State</h4>
+<p class="docText">This is the first design rule because avoiding a server-side state between requests as far as possible is helpful to scaling your application. <span class="docEmphStrong">State</span> is information carried over from one request to the next, ranging from simple things such as a user id and password, to more complex requests such as the user's progress in a multi-page form.<a name="ch14index02"></a><a name="ch14index03"></a><a name="ch14index04"></a></P>
+<p class="docText">Of course, an application without any kind of state would be useless; this design rule is about moving state to the right place rather than eliminating it. This allows you to scale your application efficiently by simply adding servers as traffic grows.</p>
+<a name="ch14lev3sec1"></a><H5 class="docSection3Title">14.2.1.1 Session State</h5>
+<p class="docText">The most common form of a server-side state is <span class="docEmphStrong">sessions</span>, where the browser obtains a cookie that refers to information stored on the server. By default, PHP stores session information in local files, so when you deploy that second server, each session may end up having different information stored on each server, as shown in <a class="docLink" href="#ch14fig01">Figure 14.1</a>.<a name="ch14index05"></a><a name="ch14index06"></a><a name="ch14index07"></a><a name="ch14index08"></a></p>
+<a name="ch14fig01"></a><p><center><h5 class="docFigureTitle">Figure 14.1. Locally stored session data (state) causes problems after you go beyond one server.</H5>
+<p class="docText"><img border="0" alt="" width="400" height="290" SRC="images/013147149X/graphics/14fig01.gif;380137"></P></center></p><br>
+<p class="docText">This application is running on two servers that are load balanced by a simple round-robin rule in the router. Both use the default (file) storage back-end for PHP sessions. The user's browser first sends a request (Request1) that is redirected to Web Server 1, along with the session id &quot;1234abc&#8230;&quot; When Web Server 1 responds, the session variables a and b have the values 1 and 2, respectively. Then, the browser sends another request (Request2) that the load balancer sends to Web Server 2. However, this server has different values stored for the session variables a and b, so the user receives a different result. In fact, the result may vary every time the user reloads the page.<a name="ch14index09"></a><a name="ch14index10"></a><a name="ch14index11"></a><a name="ch14index12"></a></p>
+<a name="ch14lev3sec2"></a><h5 class="docSection3Title">14.2.1.2 Isolating State</H5>
+<p class="docText">So, how do you fix this problem? One possibility is to store data in the user's browser via cookies. Doing so would avoid the entire state issue on the server side, but you should not store any confidential information in cookies. Cookies are easily faked and stored in plain-text files on the user's computer.<a name="ch14index13"></a><a name="ch14index14"></a><a name="ch14index15"></a><a name="ch14index16"></a></p>
+<p class="docText">The other option is to isolate the data comprising the state on the server side. You can store the session data in a database on a dedicated server, or use a dedicated session back-end server such as <span class="docEmphStrong">msession</span>. <a class="docLink" href="#ch14fig02">Figure 14.2</a> shows how this architecture would look using a custom session handler that stores session data in a MySQL database on a different machine.</p>
+<a name="ch14fig02"></a><P><center><h5 class="docFigureTitle">Figure 14.2. Session data is moved off web server machines, which allows you to scale by adding hardware.</H5>
+<p class="docText"><img border="0" alt="" width="400" height="340" SRC="images/013147149X/graphics/14fig02.gif;380137"></p></center></p><br>
+<p class="docText">This makes the database server the single point of failure, but you can at least handle replication and failover for the database separate from scaling web servers.<a name="ch14index17"></a><a name="ch14index18"></a><a name="ch14index19"></a><a name="ch14index20"></a></p>
+<a name="ch14lev2sec2"></a><h4 class="docSection2Title">14.2.2. PHP Design Tip #2: Cache!</h4>
+<p class="docText"><span class="docEmphStrong">Caching</span> is a great way to reduce the response time of your site. By having caching in mind during the design phase, you can layer your application so that adding caching is straightforward. When you design for caching, consider issues like expiration schemes from the beginning rather than hacking it in as an afterthought.<a name="ch14index21"></a><a name="ch14index22"></a><a name="ch14index23"></a></p>
+<p class="docText"><a class="docLink" href="#ch14fig03">Figure 14.3</a> shows a high-level diagram of an application separated into a Database Server, an Application Logic layer, and a Display Logic layer.</p>
+<a name="ch14fig03"></a><p><center><h5 class="docFigureTitle">Figure 14.3. A cleanly layered web application.</h5>
+<p class="docText"><img border="0" alt="" width="350" height="234" SRC="images/013147149X/graphics/14fig03.gif;380137"></p></center></p><br>
+<p class="docText">Here, the Database Server includes the database itself (such as MySQL or Oracle). The Application Logic layer hides SQL and database details behind a PHP-based API. Finally, the Display Logic layer interfaces the user, manages forms and templates, and communicates with the database through the Application Logic layer.</p>
+<p class="docText">You may add caching between every layer of your application, as shown in <a class="docLink" href="#ch14fig04">Figure 14.4</a>.<a name="ch14index24"></a><a name="ch14index25"></a><a name="ch14index26"></a></p>
+<a name="ch14fig04"></a><P><center><H5 class="docFigureTitle">Figure 14.4. A cleanly layered application with a cache between each layer.</h5>
+<p class="docText"><img border="0" alt="" width="350" height="412" SRC="images/013147149X/graphics/14fig04.gif;380137"></p></center></P><br>
+<p class="docText">This design captures four distinct types of cache functionality:</p>
+<ul><li><p class="docList">Database query/result caching</p></li><LI><p class="docList">Call/return value caching</p></LI><li><p class="docList">Template caching/code generation<a name="ch14index27"></a><a name="ch14index28"></a><a name="ch14index29"></a></P></li><li><p class="docList">Output caching</p></li></UL>
+<a name="ch14lev3sec3"></a><H5 class="docSection3Title">14.2.2.1 Database Query/Result Caching</h5>
+<p class="docText">Caching the results of database queries can speed up your site and reduce the load on the database server. The biggest challenge is to determine the best caching strategy. Should you cache the results from every single query? Do you know in advance which queries are going to be expensive?<a name="ch14index30"></a><a name="ch14index31"></a><a name="ch14index32"></a><a name="ch14index33"></a></p>
+<p class="docText">The following example demonstrates an approach to this using the <tt>Cache_DB</tt> class, which is part of the Cache PEAR package. It wraps a DB connection object inside a proxy object that intercepts <tt>query()</tt> calls and uses a Strategy pattern to determine a caching strategy for each query:</p>
+<pre>
+&lt;?php
+
+require_once ''DB.php'';
+require_once ''Cache/DB.php'';
+
+abstract class QueryStrategy
+{
+    protected $cache;
+    abstract function query($query, $params);
+}
+
+class Cache1HourQueryStrategy extends QueryStrategy
+{
+    function __construct($dsn, $cache_options) {
+        $this-&gt;cache = new Cache_DB(''file'', $cache_options, 3600);
+        $this-&gt;cache-&gt;setConnection($dsn);
+    }
+
+    function query($query, $params = array()) {
+        $hitmiss = $this-&gt;cache-&gt;isCached(md5($query), ''db_cache'') ? " HIT" : "MISS";
+        print "Cache 1h $hitmiss: $query\n";
+        return $this-&gt;cache-&gt;query($query, $params);
+    }
+}
+
+class Cache5MinQueryStrategy extends QueryStrategy
+{
+    function __construct($dsn, $cache_options) {
+        $this-&gt;cache = new Cache_DB(''file'', $cache_options, 300);
+        $this-&gt;cache-&gt;setConnection($dsn);
+    }
+
+    function query($query, $params = array()) {
+        $hitmiss = $this-&gt;cache-&gt;isCached(md5($query), ''db_cache'') ? " HIT" : "MISS";
+        print "Cache 5m $hitmiss: $query\n";
+        return $this-&gt;cache-&gt;query($query, $params);
+    }
+}
+
+class UncachedQueryStrategy extends QueryStrategy
+{
+    function __construct($dsn) {
+        $this-&gt;cache = DB::connect($dsn);
+    }
+
+    function query($query, $params = array()) {
+        print "Uncached:      $query\n";
+        return $this-&gt;cache-&gt;query($query, $params);
+    }
+}
+
+class QueryCacheStrategyWrapper
+{
+    private $cache_1h = null;
+    private $cache_5m = null;
+    private $direct = null;
+
+    function __construct($dsn) {
+        $opts = array(
+            ''cache_dir'' =&gt; ''/tmp'',
+            ''filename_prefix'' =&gt; ''query'');
+        $this-&gt;cache_1h = new Cache1HourQueryStrategy($dsn, $opts);
+        $this-&gt;cache_5m = new Cache5MinQueryStrategy($dsn, $opts);
+        $this-&gt;direct = new UncachedQueryStrategy($dsn);
+    }
+
+    function query($query, $params = array()) {
+        $obj = $this-&gt;cache_5m;
+        $re = ''/\s+FROM\s+(\S+)\s*((AS\s+)?([A-Z0-9_]+))?(,*)/i'';
+        if (preg_match($re, $query, $m)) {
+            if ($m[1] == ''bids'') {
+                $obj = $this-&gt;direct;
+            } elseif ($m[5] == '','') { // a join
+                $obj = $this-&gt;cache_1h;
+            }
+        }
+        return $obj-&gt;query($query, $params);
+    }
+
+    function __call($method, $args) {
+        return call_user_func_array(array($this-&gt;dbh, $method), $args);
+    }
+}
+
+$dbh = new QueryCacheStrategyWrapper(getenv("DSN"));
+
+test_query($dbh, "SELECT * FROM vendors");
+test_query($dbh, "SELECT v.name, p.name FROM vendors v, products p".
+           " WHERE p.vendor = v.id");
+test_query($dbh, "SELECT * FROM bids");
+
+function test_query($dbh, $query) {
+    $u1 = utime();
+    $r = $dbh-&gt;query($query);
+    $u2 = utime();
+    printf("elapsed: %.04fs\n\n", $u2 - $u1);
+}
+
+function utime() {
+    list($usec, $sec) = explode(" ", microtime());
+    return $sec + (double)$usec;
+}
+</pre><br>
+<p class="docText"><a name="ch14index34"></a><a name="ch14index35"></a><a name="ch14index36"></a><a name="ch14index37"></a><a name="ch14index38"></a><a name="ch14index39"></a><a name="ch14index40"></a><a name="ch14index41"></a>The <tt>QueryCacheStrategyWrapper</tt> class implements the Strategy wrapper, and uses a regular expression to determine whether the query should be cached and if it should be cached for five minutes or one hour. If the query contains a join across multiple database tables, it is cached for one hour; if it is a <tt>SELECT</tt> on the bids table (for an auction), the query is not cached. The rest will be cached for five minutes.<a name="ch14index42"></a><a name="ch14index43"></a><a name="ch14index44"></a><a name="ch14index45"></a></P>
+<p class="docText">Here is the output from this example the first time the queries are run, and the results are not cached:<a name="ch14index46"></a><a name="ch14index47"></a><a name="ch14index48"></a><a name="ch14index49"></a></p>
+<pre>
+Cache 5m MISS: SELECT * FROM vendors
+elapsed: 0.0222s
+
+Cache 1h MISS: SELECT v.name, p.name FROM vendors v, products p WHERE p.vendor = v.id
+elapsed: 0.0661s
+
+Uncached:      SELECT * FROM bids WHERE product = 42
+elapsed: 0.0013s
+</pre><br>
+<p class="docText">As you can see, the join is relatively expensive compared to the other queries. Now, look at the timings on the second run:</P>
+<pre>
+Cache 5m MISS: SELECT * FROM vendors
+elapsed: 0.0098s
+
+Cache 1h MISS: SELECT v.name, p.name FROM vendors v, products p WHERE p.vendor = v.id
+elapsed: 0.0055s
+
+Uncached:      SELECT * FROM bids WHERE product = 42
+elapsed: 0.0015s
+</pre><br>
+<p class="docText">The cache gave a 125 percent speed-up for the first query, and a whopping 1,100 percent speed-up for the join.</P>
+<p class="docText">A good exercise to complete after reading the APD section, &quot;<a class="docLink" href="ch14lev1sec5.html#ch14lev1sec5">Profiling with ADP</a>,&quot; later in this chapter would be to adapt the caching strategy in your own database (just change the &quot;bids&quot; table name), and use APD to compare the performance of the wrapped caching solution with a regular non-caching approach.<a name="ch14index50"></a><a name="ch14index51"></a><a name="ch14index52"></a><a name="ch14index53"></a></p>
+<a name="ch14lev3sec4"></a><h5 class="docSection3Title">14.2.2.2 Call Caching</h5>
+<p class="docText"><span class="docEmphStrong">Call caching</span> means caching the return value of a function given a set of parameters. Both the <tt>Cache</tt> and <tt>Cache_Lite</tt> PEAR packages provide this. <a class="docLink" href="ch11.html#ch11">Chapter 11</a>, &quot;Important PEAR Packages,&quot; contains an example of call caching.<a name="ch14index54"></a><a name="ch14index55"></a><a name="ch14index56"></a><a name="ch14index57"></a></p>
+<a name="ch14lev3sec5"></a><h5 class="docSection3Title">14.2.2.3 Compiled Templates</h5>
+<p class="docText">Most template systems today compile templates to PHP code before displaying them. This not only makes the template display faster, but it also allows an opcode cache to cache them between requests so they do not need to be parsed on every request.<a name="ch14index58"></a><a name="ch14index59"></a><a name="ch14index60"></a><a name="ch14index61"></a><a name="ch14index62"></a></p>
+<p class="docText">The only template packages in PEAR that do not compile to PHP code are <tt>HTML_Template_IT</tt> and <tt>HTML_Template_PHPLIB</tt>. If you use one of the others, such as Smarty or <tt>HTML_Template_Flexy</tt>, everything will be taken care of for you.</p>
+<a name="ch14lev3sec6"></a><h5 class="docSection3Title">14.2.2.4 Output Caching</h5>
+<p class="docText">Finally, you may cache the printed output of an entire script or just parts of it using PHP's output buffering functions. Again, the PEAR caching packages have wrappers in place for output caching. See the <a class="docLink" href="ch11lev1sec6.html#ch11lev2sec13">Cache_Lite</a> example in <a class="docLink" href="ch11.html#ch11">Chapter 11</a>.<a name="ch14index63"></a><a name="ch14index64"></a><a name="ch14index65"></a><a name="ch14index66"></a></p>
+<a name="ch14lev2sec3"></a><h4 class="docSection2Title">14.2.3. PHP Design Tip #3: Do Not Over Design!</h4>
+<p class="docText">With PHP 5's new OO features, it is easier to make clean object-oriented designs. PHP has a vast amount of built-in functions and functions provided by various extensions, most of which are procedural (calling functions rather than working with objects).</p>
+<a name="ch14lev3sec7"></a><h5 class="docSection3Title">14.2.3.1 OO Wrappers for Built-In Functions</h5>
+<p class="docText">To make interfaces &quot;cleaner,&quot; it may be tempting to wrap a class layer around built-in functions. Unless these wrappers provide real value, they just add bloat and complexity. &quot;Real value&quot; could be providing a unified API to different extensions (similar to, for example, PEAR DB), or it could be adding new, higher-level functionality (similar to PEAR Net_Socket).<a name="ch14index67"></a><a name="ch14index68"></a><a name="ch14index69"></a><a name="ch14index70"></a><a name="ch14index71"></a></P>
+<a name="ch14lev3sec8"></a><H5 class="docSection3Title">14.2.3.2 Generalize Carefully</h5>
+<p class="docText">Generalization is expensive (saying it is cheap). Know why you make something more general or abstract, and think about what you expect to gain from doing it. If you add abstractions without knowing exactly why you need them, chances are you are making another abstraction that you need further down the road.<a name="ch14index72"></a><a name="ch14index73"></a><a name="ch14index74"></a></p>
+<a name="ch14lev3sec9"></a><H5 class="docSection3Title">14.2.3.3 Do Not Pretend PHP Is Java!</h5>
+<p class="docText">PHP and languages such as Java or C++ are vastly different. One thing is that PHP is compiled at runtime, but PHP has a huge amount of low-level, built-in functionality that Java provides through higher-level packages. Even though PHP 5 has a vastly improved object model, object instantiation in Java is several times faster than in PHP. Java has <tt>String</tt> objects, while PHP has a string type. Java has a <tt>Vector</tt> class, and PHP has arrays. Writing a <tt>Vector</tt> class for PHP could be interesting as an exercise, but for production use, it is just silly because PHP has built-in functionality for doing the same thing much faster.<a name="ch14index75"></a><a name="ch14index76"></a></p>
+<p class="docText">PHP applications need to be designed as PHP applications that accommodate PHP's different strengths and weaknesses.</p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

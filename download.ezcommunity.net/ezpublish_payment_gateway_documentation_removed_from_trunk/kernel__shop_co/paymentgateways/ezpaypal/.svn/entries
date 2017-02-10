@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="7012"
+   name=""
+   committed-date="2004-07-05T11:04:20.036903Z"
+   url="http://pubsvn.ez.no/nextgen/trunk/kernel/shop/paymentgateways/ezpaypal"
+   last-author="dl"
+   kind="dir"
+   uuid="a01eee8c-daba-0310-acae-fa49f3023285"
+   revision="7012"/>
+<entry
+   name="classes"
+   kind="dir"/>
+</wc-entries>

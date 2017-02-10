@@ -1,0 +1,54 @@
+[07-09-2006 00:03:37] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-09-2006 00:25:30] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[07-09-2006 00:48:46] -!- awormus [n=aaron@p54B06D8E.dip.t-dialin.net] has joined #ezpublish
+[07-09-2006 01:27:44] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-09-2006 01:52:18] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[07-09-2006 02:22:15] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[07-09-2006 02:22:17] [#ezpublish] <philG> hi all
+[07-09-2006 02:46:18] [#ezpublish] <philG> someone use file indexer on a windows installation ?
+[07-09-2006 02:55:10] -!- Tiny-Power [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has joined #ezpublish
+[07-09-2006 03:31:45] [#ezpublish] <philG> i have many error when i execute the runcronjobs script in windows plateform
+[07-09-2006 03:52:02] [#ezpublish] <Tiny-Power> your Ez run on window?
+[07-09-2006 03:52:14] [#ezpublish] <philG> yes ...
+[07-09-2006 03:52:41] [#ezpublish] <philG> i have develop it on linux but my client have a windows server 2003 :-(
+[07-09-2006 03:52:57] [#ezpublish] <Tiny-Power> ah! ok...
+[07-09-2006 03:53:32] [#ezpublish] <philG> if you are french Tiny-Power come to #ezpublish-fr
+[07-09-2006 04:35:42] -!- awormus [n=aaron@p54B06D8E.dip.t-dialin.net] has quit ["Leaving"]
+[07-09-2006 07:08:26] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-09-2006 07:20:47] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[07-09-2006 07:22:10] [#ezpublish] <philG> someone can help be about configuration for indexing file on windows ?
+[07-09-2006 07:29:28] [#ezpublish] <birger> what do you mean indexing file?
+[07-09-2006 07:35:39] [#ezpublish] <philG> i want use pdftotext and antiword to index pdf and word file
+[07-09-2006 07:41:15] [#ezpublish] <birger> oh, i see
+[07-09-2006 07:41:29] [#ezpublish] <birger> haven't used that
+[07-09-2006 07:41:34] [#ezpublish] <birger> what's the problem?
+[07-09-2006 07:44:04] [#ezpublish] <philG> i'm just not shure that my configuration is good
+[07-09-2006 07:47:56] [#ezpublish] <philG> because it's simple with linux but with windows ;..
+[07-09-2006 07:48:19] [#ezpublish] <birger> hehe
+[07-09-2006 07:48:24] [#ezpublish] <birger> it's a pain
+[07-09-2006 08:09:06] [#ezpublish] <philG> witch system do you use birger ?
+[07-09-2006 08:11:16] [#ezpublish] <birger> linux
+[07-09-2006 08:11:27] [#ezpublish] <birger> debian+ubuntu
+[07-09-2006 08:13:30] [#ezpublish] <philG> mee to but my client use .. windows 2003
+[07-09-2006 08:13:33] [#ezpublish] <philG> :-(
+[07-09-2006 08:21:17] -!- Tiny-Power [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has quit ["( www.nnscript.de :: NoNameScript 4.02 :: www.XLhost.de )"]
+[07-09-2006 09:09:05] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[07-09-2006 10:48:57] [#ezpublish] <zurgutt> morning folks
+[07-09-2006 11:03:09] -!- Tiny-Power [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has joined #ezpublish
+[07-09-2006 12:44:57] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[07-09-2006 13:42:45] [#ezpublish] <mcarroll> birger / zurgutt: dbg turned out to be just what i needed - i'd passed it over when i saw it at first because it looked like a commercial app or a cut-down version. actually the older (free) cli version integrates quite nicely with ddd on debian, so thanks for the thought - it made me look again at it. i've now managed to use dbg to track down the core of the problem. i've posted the results on the original bug report if you're interested, including a one-l
+[07-09-2006 13:47:31] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-09-2006 13:49:59] [#ezpublish] <birger> cool :)
+[07-09-2006 13:50:23] [#ezpublish] <birger> good to hear, mcarroll
+[07-09-2006 13:52:04] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[07-09-2006 13:57:33] -!- zurgutt [n=zurgutt@213.80-202-174.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[07-09-2006 14:13:53] -!- tobmaster [n=tobmaste@dslb-084-061-027-208.pools.arcor-ip.net] has joined #ezpublish
+[07-09-2006 14:30:51] -!- tobmaster [n=tobmaste@dslb-084-061-027-208.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[07-09-2006 15:07:02] -!- Tiny-Power [n=toto@smg13-2-82-232-129-33.fbx.proxad.net] has quit ["( www.nnscript.de :: NoNameScript 4.02 :: www.XLhost.de )"]
+[07-09-2006 15:17:08] -!- SunRayCafe [n=me@207.114.171.142] has quit [calvino.freenode.net irc.freenode.net]
+[07-09-2006 15:21:46] -lilo:$*- [Global Notice] Hi all. We just lost a main rotation server, so you will have noticed a big bump. It's out of rotation and we're looking at it now. Apologies for the inconvenience.
+[07-09-2006 15:36:33] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Remote closed the connection]
+[07-09-2006 16:54:23] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[07-09-2006 17:08:55] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[07-09-2006 22:53:25] -!- zurgutt [n=zurgutt@213.80-202-174.nextgentel.com] has joined #ezpublish
+[07-09-2006 23:37:17] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish

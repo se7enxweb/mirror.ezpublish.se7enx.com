@@ -1,0 +1,204 @@
+[05-12-2006 00:18:19] -!- DiGiTa|_ [n=pet2poul@84.4.42.134] has joined #ezpublish
+[05-12-2006 00:19:36] [#ezpublish] <DiGiTa|_> 'hi all
+[05-12-2006 00:31:35] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-12-2006 00:41:01] -!- nnn0 [n=nnn0@ti541110a080-1273.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[05-12-2006 00:54:39] -!- awormus [n=aaron@84.177.62.20] has joined #ezpublish
+[05-12-2006 01:26:01] -!- ordnas [n=ordnas@p549D5877.dip.t-dialin.net] has joined #ezpublish
+[05-12-2006 01:56:42] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-12-2006 01:59:40] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-12-2006 02:07:37] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-12-2006 02:20:43] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-12-2006 02:25:32] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-12-2006 02:30:12] [#ezpublish] <Tidemann> buz?
+[05-12-2006 02:30:22] [#ezpublish] <buz> yes
+[05-12-2006 02:31:14] [#ezpublish] <Tidemann> just went through the log from yesterday about xhtml strict 1.0
+[05-12-2006 02:31:25] [#ezpublish] <buz> what about it
+[05-12-2006 02:32:43] [#ezpublish] <Tidemann> well.. I'm currently making a site using XHTML 1.1 .. do you know if this will validate with ezxml?
+[05-12-2006 02:34:43] [#ezpublish] <Tidemann> i mean.. is it possible for the content editors to destroy validation with ezxml?
+[05-12-2006 02:35:04] [#ezpublish] <buz> ezxml doesnt accept xhtml
+[05-12-2006 02:35:19] [#ezpublish] <buz> but you cant destroy a site with ezxml, i believe
+[05-12-2006 02:36:03] [#ezpublish] <Tidemann> k
+[05-12-2006 02:52:12] -!- ordnas [n=ordnas@p549D5877.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2006 03:15:47] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-12-2006 03:56:50] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[05-12-2006 04:04:06] [#ezpublish] <DiGiTa|_> it's totally absurd to create a site in xhtml 1.1
+[05-12-2006 04:08:21] [#ezpublish] <kalooni> {section show=DiGiTa|_|eq("fanatics")}
+[05-12-2006 04:09:07] [#ezpublish] <kalooni> just kidding
+[05-12-2006 04:09:10] [#ezpublish] <kalooni> {/section}
+[05-12-2006 04:09:11] [#ezpublish] <DiGiTa|_> :p
+[05-12-2006 04:13:38] -!- awormus_ [n=aaron@p54B13E14.dip0.t-ipconnect.de] has joined #ezpublish
+[05-12-2006 04:18:28] -!- ordnas [n=ordnas@p549D4BEB.dip.t-dialin.net] has joined #ezpublish
+[05-12-2006 04:27:24] -!- awormus [n=aaron@84.177.62.20] has quit [Read error: 113 (No route to host)]
+[05-12-2006 04:29:58] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[05-12-2006 04:37:58] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[05-12-2006 04:45:00] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-12-2006 04:53:56] [#ezpublish] <Tidemann> DiGiTa|_: why is that?
+[05-12-2006 04:54:59] [#ezpublish] <DiGiTa|_> why do you need xhtml 1.1 ?
+[05-12-2006 04:55:39] [#ezpublish] <DiGiTa|_> isn't xhtml 1.0 efficient ?
+[05-12-2006 04:56:14] [#ezpublish] <Tidemann> DiGiTa|_: sure.. but I don't see how that would make it "absurd"
+[05-12-2006 04:59:46] [#ezpublish] <DiGiTa|_> ie doesn't like xhtml 1.1
+[05-12-2006 05:01:02] [#ezpublish] <DiGiTa|_> xhtml 1.1 is specific
+[05-12-2006 05:01:17] [#ezpublish] <DiGiTa|_> if you don't need it,  don't use it
+[05-12-2006 05:02:09] [#ezpublish] <Tidemann> DiGiTa|_: what in xhtml 1.1 doesn't ie like.. it works perfectly as far as I can see...
+[05-12-2006 05:05:05] [#ezpublish] <DiGiTa|_> ie doesn't uderstand the mime type : application/xhtml+xml
+[05-12-2006 05:05:50] [#ezpublish] <DiGiTa|_> and if you want to use xhtml 1.1 you should use this mime type
+[05-12-2006 05:06:35] [#ezpublish] <DiGiTa|_> because if you use mime type  text/html
+[05-12-2006 05:06:43] [#ezpublish] <DiGiTa|_> iwith xhtml 1.1
+[05-12-2006 05:06:47] [#ezpublish] <DiGiTa|_> it's incorrect
+[05-12-2006 05:08:48] [#ezpublish] <DiGiTa|_> informations here : http://www.webstandards.org/learn/articles/askw3c/sep2003/
+[05-12-2006 05:09:22] [#ezpublish] <Tidemann> just for clarification.. if ie gets xhtml 1.1 with mimetype text/html.. will it render this as if it was xhtml 1.0?
+[05-12-2006 05:10:00] [#ezpublish] <DiGiTa|_> no
+[05-12-2006 05:10:12] [#ezpublish] <DiGiTa|_> because you declare xhtml 1.1
+[05-12-2006 05:10:23] [#ezpublish] <DiGiTa|_> is don't know what is xhtml 1.1
+[05-12-2006 05:10:27] [#ezpublish] <DiGiTa|_> IE
+[05-12-2006 05:11:45] [#ezpublish] <Tidemann> so then IE assumes it is.. what?.. html 4.01?
+[05-12-2006 05:12:24] [#ezpublish] <DiGiTa|_> xhtml 1.0 with a nice mimetype and charcode
+[05-12-2006 05:13:58] [#ezpublish] <DiGiTa|_> Charset
+[05-12-2006 05:14:00] [#ezpublish] <DiGiTa|_> not code :)
+[05-12-2006 05:14:16] [#ezpublish] <DiGiTa|_> like :
+[05-12-2006 05:14:33] [#ezpublish] <DiGiTa|_> <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+[05-12-2006 05:14:33] [#ezpublish] <DiGiTa|_>         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+[05-12-2006 05:14:33] [#ezpublish] <DiGiTa|_> <html xmlns="http://www.w3.org/1999/xhtml">
+[05-12-2006 05:14:33] [#ezpublish] <DiGiTa|_> <head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> ....
+[05-12-2006 05:16:04] -!- awormus_ is now known as awormus
+[05-12-2006 05:19:48] [#ezpublish] <Tidemann> DiGiTa|_: that's what I said...
+[05-12-2006 05:20:02] [#ezpublish] <Tidemann> but anyway.. thanks for the clarification...
+[05-12-2006 05:20:48] [#ezpublish] <DiGiTa|_> np
+[05-12-2006 05:23:22] [#ezpublish] <Tidemann> I assumed it was OK as long as it validated on w3c .. but it looks like it doesn't care about mimetype / doctype combination
+[05-12-2006 05:36:45] [#ezpublish] <alvaro-> hi, the lateral menu tha uses ez.no in documentation, how could i use it? its a extension? or what is?
+[05-12-2006 05:47:01] [#ezpublish] <kris10an> alvaro-: as far as i know, this is made with the "treemenu" operator and stylesheets
+[05-12-2006 06:01:40] [#ezpublish] <buz> doesnt look so special to me
+[05-12-2006 06:05:18] [#ezpublish] <buz> i think that can be done with stock treemenu and css
+[05-12-2006 06:13:47] [#ezpublish] <kris10an> buz: my bad. its done with something called simplified_treemenu.tpl
+[05-12-2006 06:13:59] [#ezpublish] <buz> that IS the usual treemenu
+[05-12-2006 06:14:13] [#ezpublish] <buz> i must know, i hacked at it last week ;)
+[05-12-2006 06:14:42] [#ezpublish] <kris10an> no. its not the same as the "treemenu" operator
+[05-12-2006 06:15:04] [#ezpublish] <kris10an> http://ez.no/doc/ez_publish/technical_manual/3_7/reference/template_operators/miscellaneous/treemenu
+[05-12-2006 06:16:14] [#ezpublish] <kris10an> is not the same as: design/standard/templates/simplified_treemenu/show_simplified_menu.tpl
+[05-12-2006 06:17:03] [#ezpublish] <kris10an> its a simplification of the operator which is used in the admin interface..
+[05-12-2006 06:17:17] [#ezpublish] <kris10an> no javascript
+[05-12-2006 06:22:44] [#ezpublish] <buz> i thought the two were combined
+[05-12-2006 06:23:05] [#ezpublish] <buz> i cant remember on what it is based though
+[05-12-2006 06:23:26] [#ezpublish] <buz> i think it's done with include recursively, anyway
+[05-12-2006 06:25:11] [#ezpublish] <kris10an> yes.. recursion
+[05-12-2006 06:25:22] [#ezpublish] <kris10an> treemenu operator does not do that
+[05-12-2006 07:23:40] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-12-2006 07:27:36] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-12-2006 07:52:17] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-12-2006 07:58:04] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[05-12-2006 08:17:09] [#ezpublish] <buz> is there any template mechanism to add dropshadows to images?
+[05-12-2006 08:21:23] -!- awormus [n=aaron@p54B13E14.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[05-12-2006 08:21:26] -!- awormus [n=aaron@p54B13E14.dip0.t-ipconnect.de] has joined #ezpublish
+[05-12-2006 08:42:03] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has joined #ezpublish
+[05-12-2006 08:42:08] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[05-12-2006 09:01:12] [#ezpublish] <kris10an> buz: how exactly should that work?
+[05-12-2006 09:04:58] [#ezpublish] <B-KiLLer`> hey, anyone having troubles with search engine on ezp 3.8 ?
+[05-12-2006 09:05:15] [#ezpublish] <B-KiLLer`> I only try to open the /content/search default thing, and it's searching for ages, but doing nothing :-/
+[05-12-2006 09:05:49] [#ezpublish] <B-KiLLer`> if I just add a die() at the end of the search module .php, everything's going fine...
+[05-12-2006 09:09:37] [#ezpublish] <buz> kris10an: well add a dark to light gradient on the edge of the image ;)
+[05-12-2006 09:12:18] [#ezpublish] <buz> (at least that's from what i understand how shadows are generally added)
+[05-12-2006 09:15:10] [#ezpublish] <kalooni> did anybody here tried to override the embed-inline view ?
+[05-12-2006 09:15:28] [#ezpublish] <buz> i couldnt figure out what it should do
+[05-12-2006 09:15:34] [#ezpublish] <buz> i couldnt even figure out what it's good for
+[05-12-2006 09:16:11] [#ezpublish] <kalooni> I want to override it for files ... adding a direct link to the file instead of a link to the node as it is done for the moment
+[05-12-2006 10:20:44] [#ezpublish] <B-KiLLer`> hmmm
+[05-12-2006 10:20:59] [#ezpublish] <B-KiLLer`> in the new 3.8 version, I've added a new language for translation
+[05-12-2006 10:21:02] [#ezpublish] <B-KiLLer`> but it's not taken into account :-/
+[05-12-2006 10:21:10] [#ezpublish] <B-KiLLer`> I added it using the setup / languages
+[05-12-2006 10:22:59] -!- ordnas [n=ordnas@p549D4BEB.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-12-2006 10:53:24] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Leaving"]
+[05-12-2006 11:02:45] -!- kalooni [n=nicolas@fbx.internethic.net] has left #ezpublish ["Quitte"]
+[05-12-2006 11:11:00] -!- ordnas [n=ordnas@p549D4BEB.dip.t-dialin.net] has joined #ezpublish
+[05-12-2006 11:13:11] Disconnecting due to lack of a lag response (0.07758400 1147450331 != 0.10810200 1147450361)
+[05-12-2006 11:13:11] Diconnected. Sleeping for 2 second(s).
+[05-12-2006 11:13:13] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:13:27] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-12-2006 11:13:27] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-12-2006 11:13:37] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:13:47] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-12-2006 11:13:47] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-12-2006 11:13:57] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:14:07] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-12-2006 11:14:07] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-12-2006 11:14:17] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:14:31] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-12-2006 11:14:31] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-12-2006 11:14:41] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:14:51] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-12-2006 11:14:51] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-12-2006 11:15:01] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:15:11] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-12-2006 11:15:11] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-12-2006 11:15:21] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:15:35] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-12-2006 11:15:35] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-12-2006 11:15:45] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:15:55] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-12-2006 11:15:55] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-12-2006 11:16:05] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:16:15] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-12-2006 11:16:15] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-12-2006 11:16:25] >> Connecting to irc.freenode.net:6667
+[05-12-2006 11:16:29] >> Connected to irc.freenode.net:6667, registering...
+[05-12-2006 11:16:30] >> Attempting to join channels: #ezpublish
+[05-12-2006 11:16:30] >> Primary nickname in use, trying alternate.
+[05-12-2006 11:16:30] (unmatched::raw451) :calvino.freenode.net 451 * JOIN :Register first.
+[05-12-2006 11:16:31] >> Successfully registered. Nick is: ezpublishlog
+[05-12-2006 11:16:31] -!- There are 14879 listed and 14565 unlisted users on 19 servers
+[05-12-2006 11:16:31] -!- 45 flagged staff members
+[05-12-2006 11:16:31] -!- 11098 channels formed
+[05-12-2006 11:16:31] -!- I have 5694 clients and 0 servers
+[05-12-2006 11:16:31] -!- Current local  users: 5694  Max: 6202
+[05-12-2006 11:16:31] -!- Current global users: 29444  Max: 31264
+[05-12-2006 11:16:31] -!- Highest connection count: 6204 (6202 clients) (1176625 since server was (re)started)
+[05-12-2006 11:16:31] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-12-2006 11:16:31] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-12-2006 11:17:15] >> Attempting to join channels: #ezpublish
+[05-12-2006 11:17:15] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-12-2006 11:17:15] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_05_05_2006
+[05-12-2006 11:17:15] -!- Topic set by buz [@] [Sat,  6 May 2006 03:48:07 -0500]
+[05-12-2006 11:19:31] (ezpublishlog) Attempting to gain back primary nickname
+[05-12-2006 11:19:34] -!- ezpublishlog is now known as ezlog
+[05-12-2006 11:19:34] My new nick is ezlog
+[05-12-2006 11:39:29] -!- ordnas [n=ordnas@p549D4BEB.dip.t-dialin.net] has left #ezpublish []
+[05-12-2006 12:11:05] [#ezpublish] <buz> am i stupid or is there no contact info for ez north america? http://ez.no/company
+[05-12-2006 12:26:00] [#ezpublish] <ls> I think they are working on this :)
+[05-12-2006 12:27:17] [#ezpublish] <ls> suse 10.1 is out finally :)
+[05-12-2006 12:42:14] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-12-2006 12:45:34] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-12-2006 13:06:33] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-12-2006 14:09:26] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[05-12-2006 14:55:10] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[05-12-2006 15:03:07] -!- hovik [n=hovik@85.19.74.66] has quit [Read error: 113 (No route to host)]
+[05-12-2006 16:21:25] -!- awormus [n=aaron@p54B13E14.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-12-2006 16:33:25] -!- hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[05-12-2006 16:43:39] -!- DiGiTa|__ [n=pet2poul@84.4.36.88] has joined #ezpublish
+[05-12-2006 16:46:05] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-12-2006 16:55:52] -!- DiGiTa|_ [n=pet2poul@84.4.42.134] has quit [Read error: 110 (Connection timed out)]
+[05-12-2006 17:21:20] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[05-12-2006 17:29:53] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-12-2006 17:35:54] -!- nnn0_ [n=nnn0@ti541110a080-1273.bb.online.no] has joined #ezpublish
+[05-12-2006 17:38:59] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[05-12-2006 17:42:51] -!- nnn0_ is now known as nnn0
+[05-12-2006 19:36:33] -!- B-KiLLer` [n=me@bart.interact.lu] has quit [Read error: 104 (Connection reset by peer)]
+[05-12-2006 19:39:55] -!- DiGiTa|__ [n=pet2poul@84.4.36.88] has quit []
+[05-12-2006 23:26:59] Disconnecting due to lack of a lag response (0.00585200 1147494359 != 0.18597500 1147494389)
+[05-12-2006 23:26:59] Diconnected. Sleeping for 2 second(s).
+[05-12-2006 23:27:01] >> Connecting to irc.freenode.net:6667
+[05-12-2006 23:27:05] >> Connected to irc.freenode.net:6667, registering...
+[05-12-2006 23:27:05] >> Attempting to join channels: #ezpublish
+[05-12-2006 23:27:05] >> Successfully registered. Nick is: ezlog
+[05-12-2006 23:27:05] -!- There are 11671 listed and 13288 unlisted users on 19 servers
+[05-12-2006 23:27:05] -!- 46 flagged staff members
+[05-12-2006 23:27:05] -!- 10914 channels formed
+[05-12-2006 23:27:05] -!- I have 4760 clients and 0 servers
+[05-12-2006 23:27:05] -!- Current local  users: 4760  Max: 6202
+[05-12-2006 23:27:05] -!- Current global users: 24959  Max: 31264
+[05-12-2006 23:27:05] -!- Highest connection count: 6204 (6202 clients) (1183717 since server was (re)started)
+[05-12-2006 23:27:05] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-12-2006 23:27:05] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_05_05_2006
+[05-12-2006 23:27:05] -!- Topic set by buz [@] [Sat,  6 May 2006 03:48:07 -0500]
+[05-12-2006 23:27:06] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-12-2006 23:27:06] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-12-2006 23:27:06] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] if you need to send private messages, please register: http://freenode.net/faq.shtml#privmsg
+[05-12-2006 23:52:02] -!- awormus [n=aaron@84.177.62.20] has joined #ezpublish

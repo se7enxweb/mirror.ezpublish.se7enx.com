@@ -1,0 +1,43 @@
+[05-14-2006 00:46:53] -!- awormus [n=aaron@p54B12AAD.dip0.t-ipconnect.de] has joined #ezpublish
+[05-14-2006 02:18:20] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[05-14-2006 03:39:50] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-14-2006 04:09:16] -!- _buz [n=buz@dhcp-202-28-vpn.unizh.ch] has joined #ezpublish
+[05-14-2006 04:22:12] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-14-2006 06:19:17] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-14-2006 06:34:28] -!- _buz [n=buz@dhcp-202-28-vpn.unizh.ch] has quit [Read error: 110 (Connection timed out)]
+[05-14-2006 06:55:23] [#ezpublish] <Tidemann> xbit?
+[05-14-2006 09:01:58] -!- norbs999 [i=norbs999@Ed7eb.e.pppool.de] has joined #ezpublish
+[05-14-2006 09:04:22] [#ezpublish] <norbs999> Hello again!
+[05-14-2006 09:04:22] [#ezpublish] <norbs999> Today, I'm trying developing some extensions.
+[05-14-2006 09:04:22] [#ezpublish] <norbs999> I've coded the "Module tutorial (Part 1)" from ez-doc.
+[05-14-2006 09:04:22] [#ezpublish] <norbs999> Probably you'll know it,do you?
+[05-14-2006 09:05:34] [#ezpublish] <norbs999> now everything seems to be ready, but I get now template output on my site, but php code.
+[05-14-2006 09:06:02] [#ezpublish] <norbs999> (sorry: no template output..)
+[05-14-2006 09:06:28] [#ezpublish] <norbs999> how could that be?
+[05-14-2006 09:08:05] [#ezpublish] <norbs999> I invoked with http://localhost/mymodule/list
+[05-14-2006 09:08:58] [#ezpublish] <norbs999> looking at the source code (html) show me that the file starts like the following:
+[05-14-2006 09:09:05] [#ezpublish] <norbs999> $Module = array( 'name' => 'mymodule' );
+[05-14-2006 09:09:05] [#ezpublish] <norbs999> $ViewList =  array();
+[05-14-2006 09:09:05] [#ezpublish] <norbs999> $ViewList['list'] = array('script' =>  'list.php',"unordered_params" => array( "offset" => "Offset" ) );
+[05-14-2006 09:09:05] [#ezpublish] <norbs999> <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+[05-14-2006 09:09:05] [#ezpublish] <norbs999>     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+[05-14-2006 09:09:06] [#ezpublish] <norbs999> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="no" lang="no">
+[05-14-2006 09:09:08] [#ezpublish] <norbs999> <head>
+[05-14-2006 09:44:15] [#ezpublish] <xbit> wowow
+[05-14-2006 09:44:22] [#ezpublish] <xbit> posted this to the forum? :o
+[05-14-2006 10:25:49] -!- norbs999 [i=norbs999@Ed7eb.e.pppool.de] has quit [Read error: 110 (Connection timed out)]
+[05-14-2006 10:35:02] -!- norbs999 [i=norbs999@Ed7ef.e.pppool.de] has joined #ezpublish
+[05-14-2006 10:47:07] -!- norbs999 [i=norbs999@Ed7ef.e.pppool.de] has quit [Read error: 104 (Connection reset by peer)]
+[05-14-2006 13:35:03] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-14-2006 14:17:14] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-14-2006 14:17:51] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-14-2006 14:33:36] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-14-2006 14:34:13] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-14-2006 14:49:00] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-14-2006 15:21:14] -!- buz_ [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-14-2006 15:27:12] -!- awormus [n=aaron@p54B12AAD.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-14-2006 16:49:00] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[05-14-2006 17:49:18] -!- Tidemann [n=tidemann@ti132110a080-7303.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[05-14-2006 23:12:29] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-14-2006 23:35:49] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-14-2006 23:52:32] -!- awormus [n=aaron@84.177.15.118] has joined #ezpublish

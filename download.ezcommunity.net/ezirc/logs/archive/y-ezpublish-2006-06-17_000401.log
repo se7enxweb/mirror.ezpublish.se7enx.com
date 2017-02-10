@@ -1,0 +1,204 @@
+[06-15-2006 00:00:00] -!- ordnas [n=ordnas@p549D5016.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-15-2006 00:11:48] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-15-2006 00:26:44] -!- awormus [n=aaron@Nd0d2.n.pppool.de] has quit ["Leaving"]
+[06-15-2006 00:31:08] -!- DiGiTa|_ [n=pet2poul@84.4.41.181] has joined #ezpublish
+[06-15-2006 00:49:24] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-15-2006 01:02:53] -!- awormus [n=aaron@Nd0d2.n.pppool.de] has joined #ezpublish
+[06-15-2006 01:19:12] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has joined #ezpublish
+[06-15-2006 01:32:47] -!- awormus [n=aaron@Nd0d2.n.pppool.de] has quit [Read error: 104 (Connection reset by peer)]
+[06-15-2006 01:52:32] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-15-2006 02:07:17] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 02:12:08] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 02:14:18] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-15-2006 02:29:16] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-15-2006 03:09:37] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has joined #ezpublish
+[06-15-2006 03:30:11] -!- awormus [n=aaron@Nce6c.n.pppool.de] has joined #ezpublish
+[06-15-2006 03:42:16] -!- SEAwolfx [n=SEAwolfx@p5493A569.dip0.t-ipconnect.de] has joined #ezpublish
+[06-15-2006 03:45:17] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-15-2006 03:58:38] -!- awormus [n=aaron@Nce6c.n.pppool.de] has quit [Read error: 145 (Connection timed out)]
+[06-15-2006 03:58:58] -!- awormus [n=aaron@84.176.95.166] has joined #ezpublish
+[06-15-2006 04:43:08] -!- awormus [n=aaron@84.176.95.166] has quit ["Leaving"]
+[06-15-2006 04:46:38] [#ezpublish] <jeremiah> hi
+[06-15-2006 04:46:46] [#ezpublish] <yper> hi
+[06-15-2006 05:02:02] [#ezpublish] <nnn0> hi
+[06-15-2006 05:04:23] [#ezpublish] <jeremiah> exists an easy method to remove the ( ) from urls like /(offset)/1 ?
+[06-15-2006 05:05:10] [#ezpublish] <Tidemann> elaborate please?
+[06-15-2006 05:06:18] [#ezpublish] <jeremiah> i dont like the parentesis (i dont know the english word) , this character "(" or ")"
+[06-15-2006 05:06:26] [#ezpublish] <jeremiah> i dont like the ( in my url's
+[06-15-2006 05:06:37] [#ezpublish] <jeremiah> i think isnt SEO
+[06-15-2006 05:07:12] [#ezpublish] <Tidemann> where does it "suddenly appear"?
+[06-15-2006 05:07:30] [#ezpublish] <Tidemann> within search-result?
+[06-15-2006 05:07:53] [#ezpublish] <jeremiah> it appears when EZP nees to send extra parameters, for example in the foot of a searcho to point the next pags
+[06-15-2006 05:08:25] [#ezpublish] <jeremiah> its logic becasue EZP need somethng to know what is a parameter and what is the path of the node
+[06-15-2006 05:08:28] [#ezpublish] <jeremiah> but i dont like it
+[06-15-2006 05:10:33] [#ezpublish] <jeremiah> i think i need only to patch |ezurl , i will serach where is it
+[06-15-2006 05:11:49] [#ezpublish] <Tidemann> just remember that a hack like that will affect everything that uses view_parameters
+[06-15-2006 05:12:11] [#ezpublish] <jeremiah> no, i think not
+[06-15-2006 05:12:19] [#ezpublish] <jeremiah> if i do corecctly
+[06-15-2006 05:12:29] [#ezpublish] <Tidemann> ok.. good luck
+[06-15-2006 05:12:55] [#ezpublish] <jeremiah> because EZP will never see a difference
+[06-15-2006 05:13:24] [#ezpublish] <jeremiah> i will give it the parameters in the same site, i dont know where but you say view_parameters
+[06-15-2006 05:14:05] [#ezpublish] <jeremiah> i will use more SEO url's with this patch
+[06-15-2006 05:14:55] [#ezpublish] <jeremiah> thx Tidemann
+[06-15-2006 05:15:50] -!- kris10an [n=kh@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[06-15-2006 05:15:56] [#ezpublish] <jeremiah> one question more, i would like to learn more about packages
+[06-15-2006 05:16:01] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[06-15-2006 05:16:13] [#ezpublish] <jeremiah> i see it, but they are compressed or something
+[06-15-2006 05:16:48] [#ezpublish] <kris10an> hmm.. did my messages reach the net now?
+[06-15-2006 05:17:20] [#ezpublish] <yper> yepp
+[06-15-2006 05:18:18] [#ezpublish] <jeremiah> i see they are gz and tar
+[06-15-2006 05:18:43] [#ezpublish] <kris10an> anyways.. i dont think its so easy to change jeremiah, because it will not be possible for eZp to know if it is a view-parameter for the template or an unordered parameter to the module
+[06-15-2006 05:19:51] [#ezpublish] <jeremiah> well kriss, i dont know too much to understand you, what is an unorderer paraemter the (offset) and a template is the path of a node?
+[06-15-2006 05:22:23] [#ezpublish] <jeremiah> i will use somethin like that, the first parameter is the path of the node, when it finds a /_name/ then it knows begin to fetch an unorderer parameter with a variable length, news/title/_offset/1/_node/1/2/3.html
+[06-15-2006 05:22:56] [#ezpublish] <jeremiah> in this rl, there is a path of a node, a parameter offset=1 a parameter node=1/2/3
+[06-15-2006 05:26:07] [#ezpublish] <kris10an> where will you use these parameters?
+[06-15-2006 05:26:18] [#ezpublish] <jeremiah> where i want
+[06-15-2006 05:27:11] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-15-2006 05:27:16] [#ezpublish] <jeremiah> its only n example
+[06-15-2006 05:27:38] [#ezpublish] <jeremiah> friends, when i installa a pachage and it answer me to override a class
+[06-15-2006 05:27:50] [#ezpublish] <jeremiah> for example the folder class
+[06-15-2006 05:27:55] [#ezpublish] <jeremiah> must i override?
+[06-15-2006 05:28:20] [#ezpublish] <jeremiah> i think the package are very important but i dont see good documentation
+[06-15-2006 05:31:34] [#ezpublish] <jeremiah> aha, i see the packages are tar and zipped, and there is an xml definiton of the classes, looking at it i will know if i must overrwrite or not my class
+[06-15-2006 05:31:55] [#ezpublish] <jeremiah> and the xml describe how the objects or new class are inserted
+[06-15-2006 05:32:20] [#ezpublish] <kris10an> jeremiah: the _s are also used in the url, so its hard to know what is part of your node-path and not i think
+[06-15-2006 05:33:08] [#ezpublish] <jeremiah> only if it begins with _ i consider it a aprameter
+[06-15-2006 05:33:20] [#ezpublish] <jeremiah> so /_offset/1
+[06-15-2006 05:33:29] [#ezpublish] <jeremiah> offset is a parameter
+[06-15-2006 05:34:49] [#ezpublish] <jeremiah> he title or name of a node must not beging with _
+[06-15-2006 05:35:45] [#ezpublish] <jeremiah> do you like an url like (offset)/1 ?, its horrible
+[06-15-2006 05:38:46] [#ezpublish] <kris10an> i guess you could change it to _offset_/1, the problem with changing it, is that you need to change a lot of templates aswell
+[06-15-2006 05:38:51] [#ezpublish] <jeremiah> uf, its a dangerous thing to use Packages i see
+[06-15-2006 05:39:23] [#ezpublish] <jeremiah> i will change all the necesary kris, because i will not use (offset)
+[06-15-2006 05:44:10] [#ezpublish] <jeremiah> EZP is so overfragmented that its difficult to learn
+[06-15-2006 05:45:43] [#ezpublish] <jeremiah> remote_id="03878ea7245cae8a321931ea94b29f94"
+[06-15-2006 05:45:46] [#ezpublish] <jeremiah> what is that?
+[06-15-2006 05:46:32] [#ezpublish] <jeremiah> objects seems to be remoted idenified inside the ez.no server?
+[06-15-2006 05:50:36] -!- ordnas [n=ordnas@80.187.158.79] has joined #ezpublish
+[06-15-2006 05:53:04] [#ezpublish] <kris10an> eZ publish is indeed very big..
+[06-15-2006 05:53:27] [#ezpublish] <kris10an> i guess that the
+[06-15-2006 05:53:50] [#ezpublish] <kris10an> ( and ) are from lib/ezutils/classes/ezmodule.php
+[06-15-2006 05:54:35] [#ezpublish] <kris10an> remote id is for having unique ids for objects inside your installation
+[06-15-2006 05:54:44] [#ezpublish] <jeremiah> aha, thx
+[06-15-2006 05:55:05] [#ezpublish] <kris10an> useful for imports aswell, when you can use the remote id to refer to the "old" inde
+[06-15-2006 05:55:05] [#ezpublish] <kris10an> x
+[06-15-2006 05:56:05] [#ezpublish] <jeremiah> if i have modified templates, for example the folder tpl in my EZP and then i install for example the gallery package, it overrite my changes in folder tpl?
+[06-15-2006 06:01:36] [#ezpublish] <jeremiah> oh, i see, a package always overrwrite the "base" or "admin" desing, so it dont touch my changes, only that my changes could impide to see the new changes of the ackage
+[06-15-2006 06:01:42] [#ezpublish] <jeremiah> i understand
+[06-15-2006 06:03:25] [#ezpublish] <jeremiah> i think its an error, because a package must add a new desing, galklery for example, and put gallery over design int the priority defined in settings
+[06-15-2006 06:04:41] [#ezpublish] <kris10an> jeremiah: arent the gallery templates are already part of the base-design?
+[06-15-2006 06:05:29] [#ezpublish] <jeremiah> i dont know, but to learn i installed the corporate_site, and looking know the gallery package it modied the "base", its an error i think
+[06-15-2006 06:06:01] [#ezpublish] <jeremiah> do you think its correct? the designs seem to have a chain of prioritiees defined in a var inside settings
+[06-15-2006 06:06:14] [#ezpublish] <jeremiah> so why not to insert the package in this chain
+[06-15-2006 06:06:18] [#ezpublish] <kris10an> they have a priority yes
+[06-15-2006 06:06:37] [#ezpublish] <jeremiah> if a package tocuh the base is dangerous
+[06-15-2006 06:08:11] [#ezpublish] <kris10an> http://ez.no/doc/ez_publish/technical_manual/3_8/concepts_and_basics/designs/design_combinations
+[06-15-2006 06:08:37] [#ezpublish] <jeremiah> yes i see
+[06-15-2006 06:08:39] [#ezpublish] <kris10an> base is the functionality of the standard packages, so you should not change that yourself
+[06-15-2006 06:08:44] [#ezpublish] <jeremiah> yes
+[06-15-2006 06:08:57] [#ezpublish] <jeremiah> and why a package touch it?
+[06-15-2006 06:09:11] [#ezpublish] <jeremiah> change it
+[06-15-2006 06:10:22] [#ezpublish] <jeremiah>  <override-list>
+[06-15-2006 06:10:23] [#ezpublish] <jeremiah> - <block name="full_folder" site-access="base">
+[06-15-2006 06:10:23] [#ezpublish] <jeremiah> - <full_folder Source="node/view/full.tpl" MatchFile="full/folder.tpl" Subdir="templates">
+[06-15-2006 06:10:23] [#ezpublish] <jeremiah>   <Match class_identifier="folder" />
+[06-15-2006 06:10:23] [#ezpublish] <jeremiah>   </full_folder>
+[06-15-2006 06:10:23] [#ezpublish] <jeremiah>   </block>
+[06-15-2006 06:10:42] [#ezpublish] <jeremiah> it seems in this package that overwrite files in the base design
+[06-15-2006 06:11:27] [#ezpublish] <jeremiah> it could do it defining a new desing and inserting the templates and settings iin the chain corectly
+[06-15-2006 06:12:26] [#ezpublish] <jeremiah> if i cant modify a base, a package cant also.
+[06-15-2006 06:12:34] [#ezpublish] <jeremiah> do ypou think so?
+[06-15-2006 06:14:07] [#ezpublish] <kris10an> the overridelist is the rules that goes in /settings/siteaccess/corporate/override.ini.append.php
+[06-15-2006 06:14:31] [#ezpublish] <kris10an> http://ez.no/doc/ez_publish/technical_manual/3_8/concepts_and_basics/configuration/site_management
+[06-15-2006 06:14:41] [#ezpublish] <kris10an> http://ez.no/doc/ez_publish/technical_manual/3_8/templates/the_template_override_system
+[06-15-2006 06:14:53] [#ezpublish] <kris10an> there is a difference between 3.7 and 3.8 with the packages
+[06-15-2006 06:15:09] [#ezpublish] <jeremiah> but do you think like me?
+[06-15-2006 06:15:09] [#ezpublish] <kris10an> in 3.7 and below all the functionality was in the base dir when you installed
+[06-15-2006 06:15:24] [#ezpublish] <kris10an> it has changed in 3.8, so i am not shure how it works now...
+[06-15-2006 06:15:28] [#ezpublish] <jeremiah> aha, so this packages are old now?
+[06-15-2006 06:15:46] [#ezpublish] <kris10an> so before 3.7 the design/base was not changed at all..
+[06-15-2006 06:16:39] [#ezpublish] <jeremiah> i will install a gallery packge and see a diff of the directories, before and after
+[06-15-2006 06:16:45] [#ezpublish] <jeremiah> i will go to eat now
+[06-15-2006 06:16:51] [#ezpublish] <jeremiah> yhx kris, see you later
+[06-15-2006 06:16:55] [#ezpublish] <jeremiah> thx
+[06-15-2006 06:17:00] [#ezpublish] <kris10an> see ya
+[06-15-2006 06:23:26] -!- ordnas [n=ordnas@80.187.158.79] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 07:10:48] -!- SEAwolfx [n=SEAwolfx@p5493A569.dip0.t-ipconnect.de] has quit [Connection timed out]
+[06-15-2006 07:15:54] -!- SEAwolfx [n=SEAwolfx@p5493AC64.dip0.t-ipconnect.de] has joined #ezpublish
+[06-15-2006 07:34:12] -!- kore_ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-15-2006 07:44:11] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[06-15-2006 07:51:47] -!- awormus [n=aaron@p54B0621E.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 08:00:17] -!- awormus_ [n=aaron@p54B05BA6.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 08:03:33] [#ezpublish] <jeremiah> kris10an , is very strange the effect of installing a package
+[06-15-2006 08:05:10] [#ezpublish] <jeremiah> tha gallery package, it modified the design/standard/override directory
+[06-15-2006 08:05:15] [#ezpublish] <jeremiah> and put this
+[06-15-2006 08:06:12] -!- awormus [n=aaron@p54B0621E.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[06-15-2006 08:06:16] [#ezpublish] <jeremiah> content_class_remote_id=f6df12aa74e36230eb675f364fccd25a
+[06-15-2006 08:06:55] [#ezpublish] <jeremiah> inside siteaccess/../override.ini
+[06-15-2006 08:10:32] [#ezpublish] <jeremiah> also isent corresto becasue it install the package  only in one siteaccess and i am trying to do a multilanguage site using a siteaccess for each language
+[06-15-2006 08:10:53] [#ezpublish] <jeremiah> isnt correct, i mean
+[06-15-2006 08:15:09] [#ezpublish] <jeremiah> what is that? content_class_remote_id=f6df12aa74e36230eb675f364fccd25a
+[06-15-2006 08:15:56] [#ezpublish] <jeremiah> is a mark to know that this change in setting come from a package with this id?, used to uninstall it?
+[06-15-2006 08:15:57] -!- DiGiTa|_ [n=pet2poul@84.4.41.181] has quit []
+[06-15-2006 08:17:49] -!- SEAwolfx_ [n=SEAwolfx@p5493B2C0.dip0.t-ipconnect.de] has joined #ezpublish
+[06-15-2006 08:23:28] -!- awormus_ is now known as awormus
+[06-15-2006 08:34:49] -!- SEAwolfx [n=SEAwolfx@p5493AC64.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 08:41:08] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-15-2006 08:43:43] -!- awormus_ [n=aaron@p54B0674E.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 09:00:32] -!- awormus [n=aaron@p54B05BA6.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 09:06:28] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-15-2006 09:10:09] -!- aaronw [n=aaron@84.176.95.251] has joined #ezpublish
+[06-15-2006 09:15:10] -!- awormus_ [n=aaron@p54B0674E.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[06-15-2006 09:18:48] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-15-2006 09:30:48] -!- tobmaster [n=tobmaste@dslb-084-061-001-229.pools.arcor-ip.net] has joined #ezpublish
+[06-15-2006 10:01:41] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-15-2006 10:10:27] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 10:15:52] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[06-15-2006 10:20:22] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-15-2006 10:46:44] -!- Allman [n=allman@ti132110a340-2407.bb.online.no] has joined #ezpublish
+[06-15-2006 11:13:29] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-15-2006 12:10:28] -!- aaronw is now known as awormus
+[06-15-2006 12:35:43] -!- buz_ [n=buz@dhcp-203-24-vpn.unizh.ch] has joined #ezpublish
+[06-15-2006 12:39:13] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[06-15-2006 12:42:08] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-15-2006 12:47:41] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[06-15-2006 12:48:20] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-15-2006 12:55:11] -!- buz_ [n=buz@dhcp-203-24-vpn.unizh.ch] has quit [Read error: 113 (No route to host)]
+[06-15-2006 13:14:09] -!- awormus_ [n=aaron@p54B059F1.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 13:31:12] -!- awormus [n=aaron@84.176.95.251] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 13:50:38] -!- awormus_ is now known as awormsu
+[06-15-2006 13:50:41] -!- awormsu is now known as awormus
+[06-15-2006 13:50:46] -!- tobiS [n=tobmaste@dslb-084-061-062-040.pools.arcor-ip.net] has joined #ezpublish
+[06-15-2006 13:52:26] -!- tobmaster [n=tobmaste@dslb-084-061-001-229.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 14:05:38] -!- DiGiTa|_ [n=pet2poul@84.4.41.181] has joined #ezpublish
+[06-15-2006 14:26:50] -!- awormus_ [n=aaron@p54B06701.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 14:32:20] -!- ordnas [n=ordnas@213.160.240.34] has joined #ezpublish
+[06-15-2006 14:34:46] -!- SunRayCafe is now known as src_afk
+[06-15-2006 14:40:02] -!- aaronw [n=aaron@p54B05A47.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 14:43:47] -!- awormus [n=aaron@p54B059F1.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 14:52:32] -!- ordnas [n=ordnas@213.160.240.34] has left #ezpublish []
+[06-15-2006 14:52:49] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-15-2006 14:53:13] -!- awormus [n=aaron@p54B051E7.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 14:56:39] -!- aaronw [n=aaron@p54B05A47.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[06-15-2006 14:57:12] -!- awormus_ [n=aaron@p54B06701.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 14:58:18] -!- awormus_ [n=aaron@p54B07AF6.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 15:07:02] -!- Allman [n=allman@ti132110a340-2407.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[06-15-2006 15:14:44] -!- kore_ [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit []
+[06-15-2006 15:15:31] -!- awormus [n=aaron@p54B051E7.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 15:18:35] -!- DiGiTa|_ [n=pet2poul@84.4.41.181] has quit []
+[06-15-2006 15:20:58] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-15-2006 15:22:26] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-15-2006 15:43:00] -!- aaronw [n=aaron@p54B07082.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 15:43:38] -!- aaronw [n=aaron@p54B07082.dip.t-dialin.net] has quit [Client Quit]
+[06-15-2006 16:00:22] -!- awormus_ [n=aaron@p54B07AF6.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[06-15-2006 16:09:01] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[06-15-2006 16:32:58] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-15-2006 16:34:28] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-15-2006 16:35:03] -!- tobiS [n=tobmaste@dslb-084-061-062-040.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[06-15-2006 17:53:07] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-15-2006 17:54:27] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-15-2006 23:13:58] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has quit ["Kopete 0.11.1 : http://kopete.kde.org"]
+[06-15-2006 23:15:24] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[06-15-2006 23:24:21] -!- SEAwolfx [n=SEAwolfx@p54938AC9.dip0.t-ipconnect.de] has joined #ezpublish
+[06-15-2006 23:29:54] -!- awormus [n=aaron@p54B07359.dip.t-dialin.net] has joined #ezpublish
+[06-15-2006 23:41:50] -!- SEAwolfx_ [n=SEAwolfx@p5493B2C0.dip0.t-ipconnect.de] has quit [Connection timed out]

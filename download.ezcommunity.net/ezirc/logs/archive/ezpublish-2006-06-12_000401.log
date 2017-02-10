@@ -1,0 +1,30 @@
+[06-11-2006 00:47:24] -!- SEAwolfx [n=SEAwolfx@p5493A5D9.dip0.t-ipconnect.de] has joined #ezpublish
+[06-11-2006 00:48:58] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[06-11-2006 01:36:00] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-11-2006 02:25:20] -!- ordnas [n=ordnas@p549D7C61.dip.t-dialin.net] has joined #ezpublish
+[06-11-2006 02:36:16] [#ezpublish] <jeremiah> {def $npp=fetch('content','list', hash( parent_node_id, 129,
+[06-11-2006 02:36:16] [#ezpublish] <jeremiah> offset, 0,
+[06-11-2006 02:36:16] [#ezpublish] <jeremiah> sort_by, array( array( published, true() ) )
+[06-11-2006 02:36:16] [#ezpublish] <jeremiah> )
+[06-11-2006 02:36:16] [#ezpublish] <jeremiah> )
+[06-11-2006 02:36:17] [#ezpublish] <jeremiah> }
+[06-11-2006 02:36:19] [#ezpublish] <jeremiah> Why this code dosent works inside pagelayout, $npp its empty.
+[06-11-2006 02:36:21] [#ezpublish] <jeremiah> But it works inside my frontpage that is the node 2 with an overriden template, the $npp has values here.
+[06-11-2006 02:37:31] [#ezpublish] <jeremiah> its not logic, i dont see anything in the function that depend of pagelayout , i dont understand
+[06-11-2006 02:52:04] -!- ordnas [n=ordnas@p549D7C61.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-11-2006 03:18:52] [#ezpublish] <jeremiah> i have resolved it, i think, it was a language problem, i fetch conetnt below a node folder in different languages
+[06-11-2006 07:25:14] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-11-2006 08:40:57] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[06-11-2006 10:50:59] -!- tobmaster [n=tobmaste@dslb-084-061-035-007.pools.arcor-ip.net] has joined #ezpublish
+[06-11-2006 11:46:33] -!- zrg [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has joined #ezpublish
+[06-11-2006 11:48:06] [#ezpublish] <zrg> 'lo folks
+[06-11-2006 12:00:16] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[06-11-2006 13:31:16] -!- DiGiTa|_ [n=pet2poul@84.4.71.107] has joined #ezpublish
+[06-11-2006 14:30:29] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-11-2006 14:32:20] -!- DiGiTa|_ [n=pet2poul@84.4.71.107] has quit []
+[06-11-2006 14:37:16] -!- tobmaster [n=tobmaste@dslb-084-061-035-007.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[06-11-2006 15:40:53] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[06-11-2006 19:11:17] -!- nnn0 [n=nnn0@unaffiliated/nnn0] has joined #ezpublish
+[06-11-2006 23:10:05] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[06-11-2006 23:39:30] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[06-11-2006 23:56:00] -!- awormus [n=aaron@Nd0c6.n.pppool.de] has joined #ezpublish

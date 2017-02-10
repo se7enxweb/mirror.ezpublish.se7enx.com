@@ -1,0 +1,176 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.6.&nbsp; Accessing Methods and Properties Using the $this Variable</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec6"></a><h3 class="docSection1Title">3.6. Accessing Methods and Properties Using the <tt>$this</tt> Variable</h3>
+<p class="docText">During the execution of an object's method, a special variable called <tt>$this</tt> is automatically defined, which denotes a reference to the object itself. By using this variable and the <tt>-&gt;</tt> notation, the object's methods and properties can be further referenced. For example, you can access the <tt>$name</tt> property by using <tt>$this-&gt;name</tt> (note that you don't use a <tt>$</tt> before the name of the property). An object's methods can be accessed in the same way; for example, from inside one of person's methods, you could call <tt>getName()</tt> by writing <tt>$this-&gt;getName()</tt>.<a name="ch03index26"></a><a name="ch03index27"></a><a name="ch03index28"></a><a name="ch03index29"></a><a name="ch03index30"></a><a name="ch03index31"></a></p>
+<a name="ch03lev2sec1"></a><h4 class="docSection2Title">3.6.1. <tt>public</tt>, <tt>protected</tt>, and <tt>private</tt> Properties</h4>
+<p class="docText">A key paradigm in OOP is encapsulation and access protection of object properties (also referred to as member variables). Most common OO languages have three main access restriction keywords: <tt>public</tt>, <tt>protected</tt>, and <tt>private.</tt></P>
+<p class="docText">When defining a class member in the class definition, the developer needs to specify one of these three access modifiers before declaring the member itself. In case you are familiar with PHP 3 or 4's object model, all class members were defined with the <tt>var</tt> keyword, which is equivalent to <tt>public</tt> in PHP 5. <tt>var</tt> has been kept for backward compatibility, but it is deprecated, thus, you are encouraged to convert your scripts to the new keywords:<a name="ch03index32"></a><a name="ch03index33"></a><a name="ch03index34"></a></p>
+<pre>
+class MyClass {
+    public $publicMember = "Public member";
+    protected $protectedMember = "Protected member";
+    private $privateMember = "Private member";
+
+    function myMethod(){
+        // ...
+    }
+}
+
+$obj = new MyClass();
+</pre><BR>
+<p class="docText">This example will be built upon to demonstrate the use of these access modifiers.</p>
+<p class="docText">First, the more boring definitions of each access modifier:</P>
+<ul><li><p class="docText">
+<tt>public</tt>. 
+Public members can be accessed both from outside an object by using <tt>$obj-&gt;publicMember</tt> and by accessing it from inside the <tt>myMethod</tt> method via the special <tt>$this</tt> variable (for example, <tt>$this-&gt;publicMember</tt>). If another class inherits a public member, the same rules apply, and it can be accessed both from outside the derived class's objects and from within its methods.</p></li><LI><p class="docText">
+<tt>protected</tt>. 
+Protected members can be accessed only from within an object's methodfor example, <tt>$this-&gt;protectedMember</tt>. If another class inherits a protected member, the same rules apply, and it can be accessed from within the derived object's methods via the special <tt>$this</tt> variable.</P></li><li><p class="docText">
+<tt>private</tt>. 
+Private members are similar to protected members because they can be accessed only from within an object's method. However, they are also inaccessible from a derived object's methods. Because private properties aren't visible from inheriting classes, two related classes may declare the same private properties. Each class will see its own private copy, which are unrelated.</p></li></UL>
+<p class="docText">Usually, you would use <tt>public</tt> for members you want to be accessible from outside the object's scope (i.e., its methods), and <tt>private</tt> for members who are internal to the object's logic. Use <tt>protected</tt> for members who are internal to the object's logic, but where it might make sense for inheriting classes to override them:<a name="ch03index35"></a><a name="ch03index36"></a><a name="ch03index37"></a></p>
+<pre>
+class MyDbConnectionClass {
+    public $queryResult;
+    protected $dbHostname = "localhost";
+    private $connectionHandle;
+
+    // ...
+}
+
+class MyFooDotComDbConnectionClass extends MyDbConnectionClass {
+    protected $dbHostname = "foo.com";
+}
+</pre><br>
+<p class="docText">This incomplete example shows typical use of each of the three access modifiers. This class manages a database connection including queries made to the database:</P>
+<ul><LI><p class="docList">The connection handle to the database is held in a <tt>private</tt> member, because it is used by the class's internal logic and shouldn't be accessible to the user of this class.</p></li><li><p class="docList">In this example, the database hostname isn't exposed to the user of the class <tt>MyDbConnectionClass</tt>. To override it, the developer may inherit from the initial class and change the value.</p></li><li><p class="docList">The query result itself should be accessible to the developer and has, therefore, been declared as public.</p></li></ul>
+<p class="docText">Note that access modifiers are designed so that classes (or more specifically, their interfaces to the outer world) always keep an is-a relationship during inheritance. Therefore, if a parent declares a member as public, the inheriting child must also declare it as public. Otherwise, the child would not have an is-a relationship with the parent, which means that anything you can do with the parent can also be done with the child.<a name="ch03index38"></a><a name="ch03index39"></a><a name="ch03index40"></a></p>
+<a name="ch03lev2sec2"></a><h4 class="docSection2Title">3.6.2. <tt>public</tt>, <tt>protected</tt>, and <tt>private</tt> Methods</h4>
+<p class="docText">Access modifiers may also be used in conjunction with object methods, and the rules are the same:<a name="ch03index41"></a><a name="ch03index42"></a><a name="ch03index43"></a></p>
+<ul><li><p class="docList"><tt>public</tt> methods can be called from any scope.</p></LI><LI><p class="docList"><tt>protected</tt> methods can only be called from within one of its class methods or from within an inheriting class.</p></li><LI><p class="docList"><tt>private</tt> methods can only be called from within one of its class methods and not from an inheriting class. As with properties, <tt>private</tt> methods may be redeclared by inheriting classes. Each class will see its own version of the method:</p><pre>
+class MyDbConnectionClass {
+    public function connect()
+    {
+        $conn = $this-&gt;createDbConnection();
+        $this-&gt;setDbConnection($conn);
+        return $conn;
+    }
+
+    protected function createDbConnection()
+    {
+        return mysql_connect("localhost");
+    }
+
+    private function setDbConnection($conn)
+    {
+        $this-&gt;dbConnection = $conn;
+    }
+
+    private $dbConnection;
+}
+
+class MyFooDotComDbConnectionClass extends MyDbConnectionClass {
+    protected function createDbConnection()
+    {
+        return mysql_connect("foo.com");
+    }
+}
+</pre><br></li></ul>
+<p class="docText">This skeleton code example could be used for a database connection class. The <tt>connect()</tt> method is meant to be called by outside code. The <tt>createDbConnection()</tt> method is an internal method but enables you to inherit from the class and change it; thus, it is marked as <tt>protected</tt>. The <tt>setDbConnection()</tt> method is completely internal to the class and is therefore marked as <tt>private</tt>.<a name="ch03index44"></a><a name="ch03index45"></a><a name="ch03index46"></a><a name="ch03index47"></a><a name="ch03index48"></a><a name="ch03index49"></a><a name="ch03index50"></a><a name="ch03index51"></a><a name="ch03index52"></a></p>
+<a name="ch03note03"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">When no access modifier is given for a method, <tt>public</tt> is used as the default. In the remaining chapters, <tt>public</tt> will often not be specified for this reason.</P></div><br>
+<a name="ch03lev2sec3"></a><H4 class="docSection2Title">3.6.3. Static Properties</h4>
+<p class="docText">As you know by now, classes can declare properties. Each instance of the class (i.e., object) has its own copy of these properties. However, a class can also contain <span class="docEmphStrong">static properties</span>. Unlike regular properties, these belong to the class itself and not to any instance of it. Therefore, they are often called <span class="docEmphStrong">class properties</span> as opposed to object or instance properties. You can also think of static properties as global variables that sit inside a class but are accessible from anywhere via the class.<a name="ch03index53"></a><a name="ch03index54"></a><a name="ch03index55"></a><a name="ch03index56"></a><a name="ch03index57"></a><a name="ch03index58"></a></P>
+<p class="docText">Static properties are defined by using the <tt>static</tt> keyword<tt>:</tt></p>
+<pre>
+class MyClass {
+    static $myStaticVariable;
+    static $myInitializedStaticVariable = 0;
+}
+</pre><br>
+<p class="docText">To access static properties, you have to qualify the property name with the class it sits in</p>
+<pre>
+MyClass::$myInitializedStaticVariable++;
+print MyClass::$myInitializedStaticVariable;
+</pre><br>
+<p class="docText">This example prints the number 1<tt>.</tt></P>
+<p class="docText">If you're accessing the member from inside one of the class methods, you may also refer to the property by prefixing it with the special class name <tt>self</tt>, which is short for the class to which the method belongs:<a name="ch03index59"></a><a name="ch03index60"></a><a name="ch03index61"></a><a name="ch03index62"></a></P>
+<pre>
+class MyClass {
+    static $myInitializedStaticVariable = 0;
+
+    function myMethod()
+    {
+        print self::$myInitializedStaticVariable;
+    }
+}
+
+$obj = new MyClass();
+$obj-&gt;myMethod();
+</pre><br>
+<p class="docText">This example prints the number 0<tt>.</tt></p>
+<p class="docText">You are probably asking yourself if this whole static business is really useful.</p>
+<p class="docText">One example of using it is to assign a unique id to all instances of a class:</p>
+<pre>
+class MyUniqueIdClass {
+    static $idCounter = 0;
+
+    public $uniqueId;
+
+    function __construct()
+    {
+        self::$idCounter++;
+        $this-&gt;uniqueId = self::$idCounter;
+    }
+}
+
+$obj1 = new MyUniqueIdClass();
+print $obj1-&gt;uniqueId . "\n";
+$obj2 = new MyUniqueIdClass();
+print $obj2-&gt;uniqueId . "\n";
+</pre><BR>This prints<pre>
+1
+2
+</pre><br>
+<p class="docText">The first object's <tt>$uniqueId</tt> property variable equals <tt>1</tt> and the latter object equals <tt>2</tt>.<a name="ch03index63"></a><a name="ch03index64"></a><a name="ch03index65"></a><a name="ch03index66"></a></p>
+<p class="docText">An even better example for using static property is in a singleton pattern, which is demonstrated in the next chapter.</P>
+<a name="ch03lev2sec4"></a><h4 class="docSection2Title">3.6.4. Static Methods</H4>
+<p class="docText">Similar to static properties, PHP supports declaring methods as <span class="docEmphStrong">static</span>. What this means is that your static methods are part of the class and are not bound to any specific object instance and its properties. Therefore, <tt>$this</tt> isn't accessible in these methods, but the class itself is by using <tt>self</tt> to access it. Because static methods aren't bound to any specific object, you can call them without creating an object instance by using the <tt>class_name::method()</tt> syntax. You may also call them from an object instance using <tt>$this-&gt;method()</tt>, but <tt>$this</tt> won't be defined in the called method. For clarity, you should use <tt>self::method()</tt> instead of <tt>$this-&gt;method()</tt>.<a name="ch03index67"></a><a name="ch03index68"></a><a name="ch03index69"></a><a name="ch03index70"></a></p>
+<p class="docText">Here's an example:</p>
+<pre>
+class PrettyPrinter {
+    static function printHelloWorld()
+    {
+        print "Hello, World";
+        self::printNewline();
+    }
+
+    static function printNewline()
+    {
+        print "\n";
+    }
+}
+
+PrettyPrinter::printHelloWorld();
+</pre><br>
+<p class="docText">The example prints the string <tt>"Hello, World"</tt> followed by a newline. Although it is a useless example, you can see that <tt>printHelloWorld()</tt> can be called on the class without creating an object instance using the class name, and the static method itself can call another static method of the class <tt>printNewline()</tt> using the <tt>self::</tt> notation. You may call a parent's static method by using the <tt>parent::</tt> notationn which will be covered later in this chapter.<a name="ch03index71"></a><a name="ch03index72"></a><a name="ch03index73"></a><a name="ch03index74"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

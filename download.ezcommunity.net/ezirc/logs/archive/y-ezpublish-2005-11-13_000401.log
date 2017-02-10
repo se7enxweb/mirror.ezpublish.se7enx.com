@@ -1,0 +1,700 @@
+[11-11-2005 01:44:55] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-11-2005 01:53:50] [#ezpublish] <Katana`> hi
+[11-11-2005 01:57:13] -!- ordnas [n=ordnas@p549DFA28.dip.t-dialin.net] has joined #ezpublish
+[11-11-2005 02:16:04] -!- fh[eZ] [n=fh@80.239.98.162] has joined #ezpublish
+[11-11-2005 02:19:04] [#ezpublish] <Katana`> hi fh[eZ]
+[11-11-2005 02:19:40] [#ezpublish] <fh[eZ]> morning
+[11-11-2005 02:24:16] [#ezpublish] <Katana`> fh[eZ], i have a complex question... may I bother you for a short while ?
+[11-11-2005 02:28:23] [#ezpublish] <fh[eZ]> shoot..
+[11-11-2005 02:28:50] [#ezpublish] <Katana`> well... I have that project where the client has products (not shop, just product content objects) that are stored in a /products folder
+[11-11-2005 02:29:02] [#ezpublish] <Katana`> then locations are assigned to them at different nodes in the website
+[11-11-2005 02:29:07] [#ezpublish] <Katana`> like 2 or 3 for each of them
+[11-11-2005 02:29:23] [#ezpublish] <Katana`> so far it's ok, but now i have a problem with these products having subitems...
+[11-11-2005 02:29:37] [#ezpublish] <Katana`> like subfolders with content and stuff
+[11-11-2005 02:30:25] [#ezpublish] <Katana`> these children are used to generate a side navigation for these products, BUT if you have /product/foo/subitem1 and /other/path/to/foo, the location when browsing has to be /path/to/foo/subitem1
+[11-11-2005 02:30:30] [#ezpublish] <Katana`> do you see my issue ? :)
+[11-11-2005 02:32:08] [#ezpublish] <Katana`> i've got an event that's triggered when you create a subitem of a product. It creates additionnal locations for that subitem at each location of the product
+[11-11-2005 02:32:29] [#ezpublish] <Katana`> but then I have issues when a new location of the product is added, or when a product is deleted, and so on...
+[11-11-2005 02:33:01] [#ezpublish] <Katana`> I have been thinking about something with url aliases, but without great success so far, since non redirect widlcard matching url forwarding seems broken
+[11-11-2005 02:33:46] [#ezpublish] <Katana`> spam is finished ;)
+[11-11-2005 02:34:50] [#ezpublish] <Katana`> suggestions frederik ?
+[11-11-2005 02:39:49] [#ezpublish] <fh[eZ]> hm... so you always want the user to be directed to the main location of the object?
+[11-11-2005 02:40:40] [#ezpublish] <Katana`> on the contrary...
+[11-11-2005 02:40:51] [#ezpublish] <Katana`> i have to stay in the product location he's been browsing from
+[11-11-2005 02:41:09] [#ezpublish] <Katana`> /products is never to be displayed
+[11-11-2005 02:41:49] [#ezpublish] <Katana`> but of course, I don't want to ask the user to create the additionnal locations for the subitems of a product... only for the product itself
+[11-11-2005 02:41:52] [#ezpublish] <Katana`> it has to be transparent
+[11-11-2005 02:42:54] [#ezpublish] <Katana`> so... either I try to do that with workflows that create the locations for the subitems automatically but 1. it's not easy 2. i feel like there is a strong risk of something going wrong
+[11-11-2005 02:42:56] -!- ordnas [n=ordnas@p549DFA28.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-11-2005 02:43:49] [#ezpublish] <fh[eZ]> hmm
+[11-11-2005 02:43:59] [#ezpublish] <Katana`> or I find another way... like url aliases (not working correctly so far) , or a custom module similar to content/view ...
+[11-11-2005 02:44:19] [#ezpublish] <Katana`> i'm using the viewed product location to generate all the navigation, so I really need it
+[11-11-2005 02:44:26] [#ezpublish] <fh[eZ]> url aliases will not work properly for you I think
+[11-11-2005 02:44:34] [#ezpublish] <Katana`> yeah ?
+[11-11-2005 02:47:37] -!- ordnas [n=ordnas@p549DFA28.dip.t-dialin.net] has joined #ezpublish
+[11-11-2005 02:53:10] [#ezpublish] <Katana`> i've sent you an url in private fh[eZ]
+[11-11-2005 02:53:54] [#ezpublish] <fh[eZ]> You'll have to bug me again later Katana`. I have a meeting right now
+[11-11-2005 02:54:14] [#ezpublish] <Katana`> okay fh[eZ]
+[11-11-2005 02:54:17] [#ezpublish] <Katana`> i'll do :)
+[11-11-2005 02:54:21] [#ezpublish] <Katana`> have fun
+[11-11-2005 02:54:31] [#ezpublish] <Katana`> and thanks !
+[11-11-2005 02:56:26] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-11-2005 03:06:14] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[11-11-2005 03:06:29] [#ezpublish] <zrg> yo
+[11-11-2005 03:07:07] [#ezpublish] <Katana`> yo zrg
+[11-11-2005 03:08:14] [#ezpublish] <zrg> hail the raven and the fsm, blessed be tha noodles
+[11-11-2005 03:11:25] [#ezpublish] <Katana`> ;)
+[11-11-2005 03:25:16] -!- SEAwolfx_ is now known as SEAwolfx
+[11-11-2005 03:27:20] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-11-2005 03:54:08] [#ezpublish] <_buz> i think some of the TA's at my uni are too stupid to use their mailclient
+[11-11-2005 03:54:32] [#ezpublish] <_buz> they claim i didnt hand in all the docs for my assignment when the data was clearly attached
+[11-11-2005 03:54:51] [#ezpublish] <Katana`> lol :(
+[11-11-2005 03:54:56] [#ezpublish] <zrg> it did not have the magic .doc extension :P
+[11-11-2005 03:55:02] [#ezpublish] <_buz> actually, it did
+[11-11-2005 03:55:10] [#ezpublish] <_buz> but i can prove it was finished at the time hehe
+[11-11-2005 03:55:27] [#ezpublish] <_buz> i had uploaded it to the uni fileserver a few hours before the deadline
+[11-11-2005 03:55:29] [#ezpublish] <zrg> not that it surprises me any if they dont know how to handle it
+[11-11-2005 03:55:29] [#ezpublish] <_buz> and it shows up there
+[11-11-2005 03:55:56] [#ezpublish] <_buz> i sent it again and politely insisted it aint my fault
+[11-11-2005 03:56:24] [#ezpublish] <_buz> if he starts complaining, well, he can start to deal with his higher ups
+[11-11-2005 03:56:39] [#ezpublish] <zrg> up theirs
+[11-11-2005 03:59:50] [#ezpublish] * Katana` is beggining to really like ajax
+[11-11-2005 04:00:40] [#ezpublish] * _rappy_ doesn't know anything about AJAX
+[11-11-2005 04:00:45] -!- _rappy_ is now known as _Rappy_
+[11-11-2005 04:00:48] [#ezpublish] <_buz> ajax is a roxor
+[11-11-2005 04:00:50] [#ezpublish] <_Rappy_> and i'm back
+[11-11-2005 04:01:02] [#ezpublish] <_buz> now if i could find a truly useful use for it ;)=
+[11-11-2005 04:01:02] [#ezpublish] <Katana`> well, i have a web app used by hotline guys for a telco operator
+[11-11-2005 04:01:09] [#ezpublish] <_buz> i could make $$$$$
+[11-11-2005 04:01:15] [#ezpublish] <Katana`> they use it to run various tests provided by a partner on a phone line
+[11-11-2005 04:01:28] [#ezpublish] <Katana`> modem synchronisation, etc, 4 tests
+[11-11-2005 04:01:40] [#ezpublish] <Katana`> now they all run in parallel, with good looking results presentation, etc :)
+[11-11-2005 04:01:42] [#ezpublish] <_Rappy_> well, I know as much as it uses JS(?)
+[11-11-2005 04:01:54] [#ezpublish] <_buz> it's essentially a fancy name for DHTML
+[11-11-2005 04:02:06] [#ezpublish] <Katana`> errr
+[11-11-2005 04:02:10] [#ezpublish] <Katana`> not really :)
+[11-11-2005 04:02:16] [#ezpublish] <_buz> bundled with some HTTP requests
+[11-11-2005 04:02:26] [#ezpublish] <Katana`> well, HTTP requests are the main point of AJAX...
+[11-11-2005 04:02:41] [#ezpublish] <_buz> yeah but the main work it does is more dhtml than anything else
+[11-11-2005 04:03:02] [#ezpublish] <Katana`> but that's not new :=
+[11-11-2005 04:03:03] [#ezpublish] <_buz> of course the lazy sucker i am, i usually just use the innerhtml stuff
+[11-11-2005 04:03:11] [#ezpublish] <Katana`> ajax without http requests is just dhtml
+[11-11-2005 04:03:17] [#ezpublish] <_Rappy_> I'm an html + css guy
+[11-11-2005 04:03:23] [#ezpublish] <_buz> i can't figure out why i should go through the hassle of creating nodes in JS
+[11-11-2005 04:03:27] [#ezpublish] <_Rappy_> I know no JS, no AJAX, no php
+[11-11-2005 04:03:36] [#ezpublish] <Katana`> it really opens the door for amazing ergonomy in web apps...
+[11-11-2005 04:03:39] [#ezpublish] <_buz> HTF do you use ezpublish then?
+[11-11-2005 04:03:48] [#ezpublish] <_Rappy_> I'm a magican :p
+[11-11-2005 04:03:50] [#ezpublish] <_buz> i wonder if we should go use Nomachine or some such outright
+[11-11-2005 04:03:53] [#ezpublish] <Katana`> if you want to see a killer example _Rappy_, check the demo on http://www.zimbra.com/
+[11-11-2005 04:03:55] [#ezpublish] <zrg> ajax is fancy name for coding a browser in javascript
+[11-11-2005 04:04:10] [#ezpublish] <Katana`> if you want zrg...
+[11-11-2005 04:04:19] [#ezpublish] <_Rappy_> but I DO know JSP, J2EE, JavaServlets and most stuff taht got to do with java
+[11-11-2005 04:04:32] [#ezpublish] * _buz is waiting for the day when someone writes a browser in AJAX
+[11-11-2005 04:04:33] [#ezpublish] <Katana`> it's just a normalized way of using stuff that was already there
+[11-11-2005 04:04:35] [#ezpublish] <Katana`> but it owns
+[11-11-2005 04:04:46] [#ezpublish] <zrg> its like coding a basic interpreter in postscript
+[11-11-2005 04:05:02] [#ezpublish] <_Rappy_> we got a couple og guys getting down with Ruby on Rails, that seems rahter neat
+[11-11-2005 04:05:06] [#ezpublish] <zrg> which has been done too if i remember correctly :P
+[11-11-2005 04:05:14] [#ezpublish] <_buz> there was actually that wacko that wrote a HTTPd in postscript
+[11-11-2005 04:05:19] [#ezpublish] <zrg> i have been very interested in ruby
+[11-11-2005 04:05:27] [#ezpublish] <_buz> i like python better
+[11-11-2005 04:05:35] [#ezpublish] <_buz> php is a sucky language when you get down to it
+[11-11-2005 04:05:35] [#ezpublish] <_Rappy_> Katana`, that page is made with AJAX?
+[11-11-2005 04:05:45] [#ezpublish] <_buz> _Rappy_: the webapp is
+[11-11-2005 04:06:40] [#ezpublish] <_buz> but i really wonder if it wouldnt be easier to simply use remote desktop stuff to build something like that
+[11-11-2005 04:07:12] [#ezpublish] <_Rappy_> so what do you guys use AJAX for?
+[11-11-2005 04:07:24] [#ezpublish] <_buz> now of course, if someone wanted to do a killer app: write an xserver that renders to AJAX...
+[11-11-2005 04:07:32] [#ezpublish] * _buz runs off to patent that
+[11-11-2005 04:08:24] [#ezpublish] <_Rappy_> got a good page where I can read about AJAX? Just the overview
+[11-11-2005 04:10:11] [#ezpublish] * _buz is waiting for a good office in the browser
+[11-11-2005 04:10:22] [#ezpublish] * zrg once wrote a compiler for a turing machine :P
+[11-11-2005 04:10:54] [#ezpublish] <zrg> why ON EARTH should office be run in browser?
+[11-11-2005 04:11:54] [#ezpublish] <zrg> i understand the need for server-centeric apps but clearly a web browser is the worst client program for such?
+[11-11-2005 04:12:16] [#ezpublish] <_buz> so that we can ship machines that basically have linux plus firefox installed
+[11-11-2005 04:12:18] [#ezpublish] <Katana`> zrg: seriously, have a look at zimbra :)
+[11-11-2005 04:12:29] [#ezpublish] <_buz> forget about a distro
+[11-11-2005 04:12:29] [#ezpublish] <zrg> i just did
+[11-11-2005 04:12:31] [#ezpublish] <Katana`> you feel like you're using a standard GUI email client
+[11-11-2005 04:12:32] [#ezpublish] <_buz> the distro is on the server
+[11-11-2005 04:12:48] [#ezpublish] <Katana`> it's the lightest client ever (as opposed to heavy client)
+[11-11-2005 04:12:55] [#ezpublish] <Katana`> no software install required, no maintenance cost
+[11-11-2005 04:12:56] [#ezpublish] <Katana`> NOTHING
+[11-11-2005 04:13:03] [#ezpublish] <Katana`> just a bloody browser :)
+[11-11-2005 04:13:03] [#ezpublish] <_buz> exactly
+[11-11-2005 04:13:11] [#ezpublish] <Katana`> that's the point...
+[11-11-2005 04:13:11] [#ezpublish] <_buz> otoh, it wastes bandwidth in a way
+[11-11-2005 04:13:12] [#ezpublish] <zrg> nice eye candy, painfully slow, probably very unreliable
+[11-11-2005 04:13:32] [#ezpublish] <Katana`> zrg: yes, very unreliable, that's why google uses it for gmail
+[11-11-2005 04:13:33] [#ezpublish] <_buz> actually the lightest client would likely be telnet
+[11-11-2005 04:13:37] [#ezpublish] <Katana`> everybody knows gmail never works
+[11-11-2005 04:13:53] [#ezpublish] <Katana`> the interface crashes, errors everywhere... oh no wait, it's totally reliable ! :)
+[11-11-2005 04:13:57] [#ezpublish] <_buz> it actually breaks more often than they would wnt you to believe
+[11-11-2005 04:14:05] [#ezpublish] <_buz> but thats aproblem with their backend
+[11-11-2005 04:14:08] [#ezpublish] <_buz> not with AJAX
+[11-11-2005 04:14:28] [#ezpublish] <Katana`> i'm sure that with time, lots of JS widgets will be released that you can use with AJAX apps
+[11-11-2005 04:14:38] [#ezpublish] <_buz> yeah but a good ide is still missing
+[11-11-2005 04:14:38] [#ezpublish] <Katana`> lists, trees, etc etc... everything you need to build a real UI
+[11-11-2005 04:14:45] [#ezpublish] <_buz> that stuff is out there
+[11-11-2005 04:14:46] [#ezpublish] <Katana`> that's gonna come too...
+[11-11-2005 04:14:53] [#ezpublish] <Katana`> in a unified way i mean ;)
+[11-11-2005 04:14:54] [#ezpublish] <_buz> theres a giant widget library somewhere at SF
+[11-11-2005 04:14:59] [#ezpublish] <Katana`> really ?
+[11-11-2005 04:15:07] [#ezpublish] <_buz> cant remember its name
+[11-11-2005 04:15:14] [#ezpublish] <_buz> but has trees, registers the whole shebang
+[11-11-2005 04:15:36] [#ezpublish] <zrg> actually breaks now and then, i use it tho. gmail isnt bad
+[11-11-2005 04:16:38] [#ezpublish] <_buz> i hate webmail
+[11-11-2005 04:18:51] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 110 (Connection timed out)]
+[11-11-2005 04:19:01] [#ezpublish] <_buz> http://demo.roundcube.net opensource gmail
+[11-11-2005 04:22:40] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-11-2005 04:25:52] [#ezpublish] <zrg> now here seems to be something which makes more sense if you want graphical network apps in browser: a java applet that implements X server in browser
+[11-11-2005 04:25:52] [#ezpublish] <zrg> http://www.jcraft.com/weirdx/
+[11-11-2005 04:27:25] [#ezpublish] <zrg> darn cool if it really works and i suppose it does
+[11-11-2005 04:27:39] [#ezpublish] <Katana`> http://wiki.osafoundation.org/bin/view/Projects/AjaxLibraries
+[11-11-2005 04:29:47] [#ezpublish] <_buz> mhh firefox rc2
+[11-11-2005 04:29:50] [#ezpublish] <_buz> quite stable
+[11-11-2005 04:30:04] [#ezpublish] <_buz> and the auto update actually works this time
+[11-11-2005 04:33:33] [#ezpublish] <Katana`> :))
+[11-11-2005 06:25:22] [#ezpublish] <_Rappy_> erm, I got an nested if-sentence taht dont seem to trigger. You CAN have as many {elseif} between the {if} and the {else} right?
+[11-11-2005 06:25:40] [#ezpublish] <_Rappy_> it only trigger son the if, the first elseif and the else
+[11-11-2005 06:25:49] [#ezpublish] <_Rappy_> the rest of the elseif never happens
+[11-11-2005 06:27:12] [#ezpublish] <Katana`> maybe you can't... try a switch/case
+[11-11-2005 06:29:15] [#ezpublish] <_Rappy_> *starts to read about switch in eZ*
+[11-11-2005 06:29:29] [#ezpublish] <Katana`> :)
+[11-11-2005 06:33:21] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-11-2005 06:47:31] [#ezpublish] <_buz> switch is only syntactic sugar anyway
+[11-11-2005 06:51:36] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-11-2005 06:51:37] -!- _Katana` is now known as Katana`
+[11-11-2005 07:23:31] [#ezpublish] <Katana`> fh[eZ], are you back from your meeting ? :)
+[11-11-2005 07:25:16] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-11-2005 07:47:48] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-11-2005 07:47:55] [#ezpublish] <Sulfur> hi guyz :)
+[11-11-2005 07:48:59] [#ezpublish] <Sulfur> has anyone used the (reverse_)related_objects fetches?
+[11-11-2005 07:58:07] [#ezpublish] <_buz> a great many, likely
+[11-11-2005 07:58:20] [#ezpublish] <Sulfur> hi _buz
+[11-11-2005 07:58:56] [#ezpublish] <Sulfur> is there a way to just get the related objs of an obj of one single class type ?
+[11-11-2005 07:59:09] [#ezpublish] <Sulfur> i.e. only "opinions" related to a poll obj
+[11-11-2005 07:59:09] [#ezpublish] <_buz> yes
+[11-11-2005 07:59:21] [#ezpublish] <Sulfur> ok _buz cough it up ;)
+[11-11-2005 07:59:22] [#ezpublish] <_buz> i think 3.7 has that
+[11-11-2005 07:59:34] [#ezpublish] <Sulfur> docs are not clear on that
+[11-11-2005 07:59:36] [#ezpublish] <_buz> otherwise you can try using my filter_related operator in the contribs
+[11-11-2005 07:59:41] [#ezpublish] <_buz> google the forum
+[11-11-2005 08:01:10] [#ezpublish] <Sulfur> uh, I think I'll go for your operator if it cuts the cheese
+[11-11-2005 08:04:56] [#ezpublish] <Sulfur> seems I cannot find anything about 3.7 doing that .. ach
+[11-11-2005 08:09:23] [#ezpublish] <Sulfur> _buz: you haven't used a class filter yourself with related objs ?
+[11-11-2005 08:09:35] [#ezpublish] <_buz> not yet
+[11-11-2005 08:09:52] [#ezpublish] <Sulfur> I also wonder why can I only pass an obj id instead of a node id
+[11-11-2005 08:10:14] [#ezpublish] <_buz> cause related objects are related to objects not nodes, duuuh
+[11-11-2005 08:10:35] [#ezpublish] <Sulfur> but every object has a node
+[11-11-2005 08:10:46] [#ezpublish] <Sulfur> or many of them, indeed
+[11-11-2005 08:28:44] -!- ordnas [n=ordnas@p549DFA28.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-11-2005 08:37:07] [#ezpublish] <Sulfur> kh[eZ]: .... I can't find it anywhere .. do (reverse_)related_objects support some kind of filtering ?
+[11-11-2005 08:37:26] [#ezpublish] * Sulfur would really like to avoid cycling
+[11-11-2005 08:37:34] [#ezpublish] <Sulfur> through the resultset I mean
+[11-11-2005 08:50:41] [#ezpublish] <Katana`> wanna see my nice ajax interface dudes ? :)
+[11-11-2005 08:50:57] [#ezpublish] <zrg> bring it out ;)
+[11-11-2005 08:51:25] [#ezpublish] <Sulfur> sure Katana`
+[11-11-2005 08:51:26] [#ezpublish] * zrg shall break it in no time :D
+[11-11-2005 08:51:40] [#ezpublish] * Sulfur too especially if it refers to the default admin :P
+[11-11-2005 08:52:07] [#ezpublish] <Katana`> lemme puit it in test mode
+[11-11-2005 08:52:39] [#ezpublish] <Katana`> hum...
+[11-11-2005 08:52:49] [#ezpublish] <Katana`> we'll have to synchronize ourselves if you wanna see something decent ;)
+[11-11-2005 08:53:27] [#ezpublish] <Katana`> http://adsl.tele2.fr.interact.lu/ping/
+[11-11-2005 08:53:40] [#ezpublish] <zrg> bring out tha hardcore, who wants decent :P
+[11-11-2005 08:53:40] [#ezpublish] <Katana`> enter the phone number 0134103061 in the box and submit
+[11-11-2005 08:53:58] [#ezpublish] <Katana`> well, it's in test mode since i don't have a test number
+[11-11-2005 08:54:11] [#ezpublish] <Katana`> and the last test is in 2 steps, i have to switch steps manually in the script ;)
+[11-11-2005 08:54:21] [#ezpublish] <Katana`> so tell me once you have the counter in the right box
+[11-11-2005 08:54:31] [#ezpublish] <zrg> uh.. something is wrong with language..
+[11-11-2005 08:54:38] [#ezpublish] <Katana`> yes it's in french :)
+[11-11-2005 08:54:50] [#ezpublish] <zrg> ah :)
+[11-11-2005 08:55:01] [#ezpublish] <Katana`> it's for french tech support
+[11-11-2005 08:55:15] [#ezpublish] <Katana`> each box represents the result of a technical test of an ADSL connection
+[11-11-2005 08:55:19] [#ezpublish] <zrg> ok.. some popup and BAS OK
+[11-11-2005 08:55:21] [#ezpublish] <Katana`> modem ping, port synchronisation...
+[11-11-2005 08:55:49] [#ezpublish] <zrg> something a la selt a la 5 minutes
+[11-11-2005 08:55:51] [#ezpublish] <Katana`> you will get a confirmation box that asks "the synchronisation test fails, do you wanna start the SELT test ? beware, that test lasts 5 minutes"
+[11-11-2005 08:55:56] [#ezpublish] <Katana`> that one :p
+[11-11-2005 08:56:00] [#ezpublish] <Katana`> hit okay
+[11-11-2005 08:56:12] [#ezpublish] <Katana`> after a short while, you'll get a counter in the SELT box
+[11-11-2005 08:56:25] [#ezpublish] <zrg> ok, now it has uploaded my hd content or what? :)
+[11-11-2005 08:56:29] [#ezpublish] <Katana`> :))
+[11-11-2005 08:56:34] [#ezpublish] <Katana`> actually
+[11-11-2005 08:56:37] [#ezpublish] <Katana`> that test is ran in 2 ops
+[11-11-2005 08:56:38] [#ezpublish] <zrg> yes, counts.. what?
+[11-11-2005 08:56:42] [#ezpublish] <Katana`> the first sends the requests
+[11-11-2005 08:56:50] [#ezpublish] <Katana`> then 5 minutes later, the interface requests the result
+[11-11-2005 08:57:00] [#ezpublish] <Katana`> it's gonna count until 5:00 (roughly)
+[11-11-2005 08:57:07] [#ezpublish] <Katana`> but since i'm cheating i'm gonna enable the result now :)
+[11-11-2005 08:57:17] [#ezpublish] <Katana`> should change soon
+[11-11-2005 08:57:27] [#ezpublish] <zrg> ah, to be god, if only for minute
+[11-11-2005 08:57:55] [#ezpublish] <Katana`> hum my result is not showing :)
+[11-11-2005 08:57:58] [#ezpublish] <Katana`> it should ...
+[11-11-2005 08:58:05] [#ezpublish] <zrg> something is 210m and etat igle open
+[11-11-2005 08:58:18] [#ezpublish] <Katana`> yeha
+[11-11-2005 08:58:27] [#ezpublish] <Katana`> it tells you about the ADSL line length, diameter
+[11-11-2005 08:58:40] [#ezpublish] <Katana`> and in red what the tech guy should answer to the complaining customer ;)
+[11-11-2005 08:58:47] [#ezpublish] <zrg> my adsl??
+[11-11-2005 08:58:51] [#ezpublish] <Katana`> not yours
+[11-11-2005 08:59:05] [#ezpublish] <Katana`> just imagine you're a poor ADSL techn support guy talking on the phone with a client
+[11-11-2005 08:59:05] [#ezpublish] <zrg> ah.. for a moment i thought you were real good :D
+[11-11-2005 08:59:27] [#ezpublish] <Katana`> and the you answer "well, dude, nothing's wrong with your line, double check your modem"
+[11-11-2005 08:59:27] [#ezpublish] <Katana`> :)
+[11-11-2005 08:59:35] [#ezpublish] <zrg> the thought fills me with chills and need to chew through my veins :P
+[11-11-2005 08:59:40] [#ezpublish] <Katana`> hehehe
+[11-11-2005 09:00:41] [#ezpublish] <zrg> they usually go to braindead mode when you try to explain you cant reboot windows :P
+[11-11-2005 09:00:49] [#ezpublish] <Katana`> :))
+[11-11-2005 09:01:23] [#ezpublish] <zrg> actually not so bad, i've seen a tech who successfully set up ubuntu for adsl.. butthen it was tech of course, not phone girl
+[11-11-2005 09:01:54] [#ezpublish] <Katana`> :))
+[11-11-2005 09:02:07] [#ezpublish] <Katana`> nice ajax usage isn't it ?
+[11-11-2005 09:02:23] -!- _Rappy_ is now known as _rappy_
+[11-11-2005 09:02:28] [#ezpublish] <_rappy_> bye peeps
+[11-11-2005 09:02:31] [#ezpublish] <zrg> "Pas de dÃ©faut sur la ligne." = "Error between keyboard and chair" ?
+[11-11-2005 09:02:32] [#ezpublish] <_rappy_> going home now
+[11-11-2005 09:03:00] [#ezpublish] <Sulfur> hey guys, what are the update/common scripts used for ??? :-?
+[11-11-2005 09:04:32] [#ezpublish] <zrg> hmm, good question, looking at description could be useful stuff
+[11-11-2005 09:05:30] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[11-11-2005 09:06:49] [#ezpublish] <Sulfur> I am just wondering whether  I __need__ to run them ...
+[11-11-2005 09:07:26] [#ezpublish] <Sulfur> I am updating from 3.7 to 3.7.2 and since it's friday I don't want it to be painful
+[11-11-2005 09:08:18] [#ezpublish] <zrg> wow, good stuff, thanks sulfur :)
+[11-11-2005 09:20:11] [#ezpublish] <Katana`> hoho
+[11-11-2005 09:20:11] [#ezpublish] <Katana`> http://qooxdoo.oss.schlund.de/demo/release/public/test/user/
+[11-11-2005 09:20:56] [#ezpublish] <zrg> joke lost for me
+[11-11-2005 09:34:42] [#ezpublish] <Sulfur> what, zrg ?
+[11-11-2005 09:36:21] [#ezpublish] <zrg> didnt understand much :)
+[11-11-2005 09:38:51] [#ezpublish] <Sulfur> zrg:  about the upgrading?
+[11-11-2005 09:39:22] [#ezpublish] <zrg> no the hoho thing
+[11-11-2005 09:42:27] -!- fh[eZ] [n=fh@80.239.98.162] has quit [Remote closed the connection]
+[11-11-2005 09:49:33] [#ezpublish] <Sulfur> I think I lost you zrg
+[11-11-2005 09:51:03] [#ezpublish] <zrg> (17:19:56) Katana`: http://qooxdoo.oss.schlund.de/demo/release/public/test/user/
+[11-11-2005 10:04:37] -!- SEAwolfx_ [n=mike@DSL01.83.171.160.87.NEFkom.net] has joined #ezpublish
+[11-11-2005 10:10:23] [#ezpublish] <_buz> yeah that one i meant
+[11-11-2005 10:11:28] [#ezpublish] <_buz> of course it doesnt work in konqueror so use might be somewhat limited
+[11-11-2005 10:15:53] -!- SEAwolfx [n=mike@DSL01.212.114.233.108.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[11-11-2005 10:33:41] [#ezpublish] <Katana`> why _buz ? FF is available on every platform :)
+[11-11-2005 11:05:43] [#ezpublish] <_buz> it could imply that safari wont work
+[11-11-2005 11:05:49] [#ezpublish] <_buz> now on an intranet, it would be acceptable
+[11-11-2005 11:05:54] [#ezpublish] <_buz> for a public site, less so
+[11-11-2005 11:39:52] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-11-2005 11:50:36] -!- zrg [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-11-2005 12:56:43] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-11-2005 12:57:01] [#ezpublish] <Katana`> evening guys
+[11-11-2005 13:00:34] [#ezpublish] <Sulfur> hi Katana`
+[11-11-2005 13:01:10] [#ezpublish] <Katana`> damnit this stuff is killing me
+[11-11-2005 13:01:10] [#ezpublish] <Katana`> http://qooxdoo.oss.schlund.de/demo/dev/public/test/user/Window_1.html
+[11-11-2005 13:01:15] [#ezpublish] <Katana`> really :)
+[11-11-2005 13:07:14] [#ezpublish] <Sulfur> ow! what's that, Katana` ? did you do that ?
+[11-11-2005 13:07:45] [#ezpublish] <Katana`> me ? err no :)
+[11-11-2005 13:07:46] [#ezpublish] <Katana`> definitely not
+[11-11-2005 13:07:54] [#ezpublish] <Katana`> i'm reviewing various DHTML widgets toolkits
+[11-11-2005 13:07:57] [#ezpublish] <Katana`> and this one is AMAZING
+[11-11-2005 13:08:06] [#ezpublish] <Katana`> and very good demo too ;)
+[11-11-2005 13:08:18] [#ezpublish] <Katana`> mix that with AJAX and hmmmmmm :)
+[11-11-2005 13:08:19] [#ezpublish] <Sulfur> looks like so ... ok, you can easily adapt it for eZ within monday ;)
+[11-11-2005 13:08:26] [#ezpublish] <Katana`> lol
+[11-11-2005 13:08:36] [#ezpublish] <Katana`> it would rock though...
+[11-11-2005 13:09:03] [#ezpublish] <Katana`> it even has documentation :)
+[11-11-2005 13:09:44] [#ezpublish] <Katana`> it seems that the widgets used in Zimbra are publicly available as well
+[11-11-2005 13:09:49] [#ezpublish] <Katana`> i love the interface of that app...
+[11-11-2005 13:09:54] [#ezpublish] <Sulfur> noooo ... DOCUMENTATION???
+[11-11-2005 13:09:56] [#ezpublish] <Sulfur> lol
+[11-11-2005 13:10:29] [#ezpublish] <Katana`> :))
+[11-11-2005 13:11:12] [#ezpublish] <Sulfur> well ......
+[11-11-2005 13:11:34] [#ezpublish] <Sulfur> I could love to have the time to make an user site with eZ and that
+[11-11-2005 13:11:50] [#ezpublish] <Katana`> it would be for the admin interface imho
+[11-11-2005 13:12:20] [#ezpublish] <Sulfur> not necessarily ;)
+[11-11-2005 13:12:33] [#ezpublish] <Sulfur> but yes, k00l
+[11-11-2005 13:12:55] [#ezpublish] <Katana`> on a user site it would be less MS Windows like ;)
+[11-11-2005 13:14:50] [#ezpublish] <Sulfur> one of the designers I work with has made his site a-la-old-mac-style
+[11-11-2005 13:14:59] [#ezpublish] <Katana`> :))
+[11-11-2005 13:14:59] [#ezpublish] <Sulfur> if I could only remember the url ...
+[11-11-2005 13:15:25] [#ezpublish] <Sulfur> he used flash, but it looks like a pc , with windows and stuff. it even has a pong game ;)
+[11-11-2005 13:15:34] [#ezpublish] <Katana`> heheh :)
+[11-11-2005 13:18:03] [#ezpublish] <Sulfur> Katana`: what brings you here at this hour? I am still at work so I think I can be justified .... I suppose you're home, don't you have enough of a work-related channel? ;)
+[11-11-2005 13:18:24] [#ezpublish] <Katana`> i'm always on #ezpublish if i'm on irc ;)
+[11-11-2005 13:18:27] [#ezpublish] <Katana`> and i was working actually
+[11-11-2005 13:20:27] [#ezpublish] <Sulfur> we know no night :P
+[11-11-2005 13:21:27] [#ezpublish] <Katana`> close deadline, as far as i'm concerned :)
+[11-11-2005 13:21:32] [#ezpublish] <Katana`> but i never stop thinking about dev ;)
+[11-11-2005 13:22:12] [#ezpublish] <Sulfur> same here ...
+[11-11-2005 13:22:25] [#ezpublish] <Katana`> and I like that
+[11-11-2005 13:25:00] [#ezpublish] <Sulfur> i think i can agree, though i'd prefer to be more on analisys and less on programming
+[11-11-2005 13:25:08] [#ezpublish] <Katana`> i'm on both so...
+[11-11-2005 13:26:11] [#ezpublish] <_buz> katana is often around at such times no
+[11-11-2005 13:26:26] [#ezpublish] <Katana`> if i'm on irc i'm on the channel :)
+[11-11-2005 13:26:51] [#ezpublish] <Sulfur> ;)
+[11-11-2005 13:27:11] [#ezpublish] <Sulfur> luckily i remembred i had something in the office fridge
+[11-11-2005 13:27:18] [#ezpublish] <Katana`> lol
+[11-11-2005 13:27:22] [#ezpublish] <_buz> i just came back from the kitchen
+[11-11-2005 13:27:26] [#ezpublish] <_buz> was cooking with my gf
+[11-11-2005 13:27:30] [#ezpublish] <Katana`> :))
+[11-11-2005 13:29:09] [#ezpublish] <_buz> has anyone seen that nokia 770 linux tablet pc
+[11-11-2005 13:29:21] [#ezpublish] <Sulfur> wholemeal bread and "bresaola" here
+[11-11-2005 13:29:36] [#ezpublish] <_buz> yum
+[11-11-2005 13:29:46] [#ezpublish] <Katana`> pizza here...
+[11-11-2005 13:29:49] [#ezpublish] <_buz> proper bread is one thing i miss the soonest when away from central europe
+[11-11-2005 13:29:56] [#ezpublish] <Katana`> electrical plates are dead, only oven is left :)
+[11-11-2005 13:30:00] [#ezpublish] <Sulfur> nope, i was considering to buy the motorola v3x .... it has only 5 mbs o base memory, but what the hell.
+[11-11-2005 13:30:36] [#ezpublish] <_buz> nah i want the nokia e61 when it arrives
+[11-11-2005 13:30:46] [#ezpublish] <_buz> but as for the tablet, i wonder what handwriting recognition they use
+[11-11-2005 13:30:48] [#ezpublish] <_buz> and where to get it
+[11-11-2005 13:31:29] [#ezpublish] <_buz> there are a few nifty windows mobile 5 phones in the pipeline but there's NFW i'm gonna use a phone with win on it
+[11-11-2005 13:36:21] [#ezpublish] <Sulfur> e61 ?
+[11-11-2005 13:36:26] [#ezpublish] <Sulfur> what's that?
+[11-11-2005 13:36:34] [#ezpublish] <_buz> google for nokia e61
+[11-11-2005 13:36:40] [#ezpublish] <_buz> basically, it's nokia's blackberry clone
+[11-11-2005 13:36:48] [#ezpublish] <_buz> but it comes with wlan and SIP support!
+[11-11-2005 13:36:57] [#ezpublish] <_buz> and should be at about 400? WITHOUT contract
+[11-11-2005 13:36:59] [#ezpublish] <Sulfur> well _buz I am not fond of motorolas but they will be launching it at a discount .... so maybe I'll give it a try. personally, I am all for nokias
+[11-11-2005 13:37:31] [#ezpublish] <_buz> the motorola q looks nifty but its stinking windows mobile as well
+[11-11-2005 13:37:40] [#ezpublish] <Sulfur> the bendy one with zeiss lenses looks nifty (although still a poor attempt at cloning a real digital camera)
+[11-11-2005 13:37:44] [#ezpublish] <_buz> i also wonder when the successor to the nokia 9300 will arrive
+[11-11-2005 13:38:02] [#ezpublish] <_buz> these days, they write zeiss on every piece of shit you know
+[11-11-2005 13:38:16] [#ezpublish] <_buz> even some of those ultra crappy HP cams come with zeiss lenses
+[11-11-2005 13:40:28] [#ezpublish] <Sulfur> too bad for zeiss
+[11-11-2005 13:40:40] [#ezpublish] <_buz> yeah they've become greedy it seems
+[11-11-2005 13:40:58] [#ezpublish] * Sulfur is splatting mosquitoes with his nifty free Ubuntu 5.10 packed CDs :))
+[11-11-2005 13:41:39] [#ezpublish] <_buz> lol
+[11-11-2005 13:41:43] [#ezpublish] <_buz> i prefer kubuntu
+[11-11-2005 13:41:56] [#ezpublish] <Katana`> :))
+[11-11-2005 13:41:59] [#ezpublish] <_buz> i'm waiting for the 6.04 release and kubuntu shipit cd
+[11-11-2005 13:43:18] [#ezpublish] <Sulfur> I am rather k-agnostic at the moment ... I would try both no problem
+[11-11-2005 13:43:26] [#ezpublish] <_buz> you can
+[11-11-2005 13:43:38] [#ezpublish] <_buz> apt-get install kubuntu-desktop once ubuntu is running and you get both
+[11-11-2005 13:43:42] [#ezpublish] <Sulfur> oh, the nice sound of splatting bugs with a free , quality gift
+[11-11-2005 13:43:50] [#ezpublish] <_buz> they say ubuntu's gnome support is better but i can't stand gnome
+[11-11-2005 13:44:41] [#ezpublish] <Sulfur> I can say without fear of diminisment that I am rather a luser when it comes to desktops. gnome, kde ... as long as they run my Zend and my shell, I am fine :)
+[11-11-2005 13:45:07] [#ezpublish] <Sulfur> true, the conf utilities for gnome are a pain
+[11-11-2005 13:45:28] [#ezpublish] <_buz> kde seems much more integrated to me
+[11-11-2005 13:45:33] [#ezpublish] <_buz> all around better architecture for sure
+[11-11-2005 13:45:44] [#ezpublish] <_buz> and not as badly dumbed down (quite the opposite in many people's view)
+[11-11-2005 13:46:04] [#ezpublish] * nnn0 use SimplyMEPIS with KDE
+[11-11-2005 13:46:09] [#ezpublish] <nnn0> i love that distro
+[11-11-2005 13:46:11] [#ezpublish] <nnn0> :)
+[11-11-2005 13:46:18] [#ezpublish] <_buz> i tried it once
+[11-11-2005 13:46:25] [#ezpublish] <_buz> it quit working after the first apt-get upgrade
+[11-11-2005 13:46:42] [#ezpublish] <nnn0> actually - i'm running Enlightenment as window manager over KDE
+[11-11-2005 13:46:46] [#ezpublish] <_buz> then i came across kubuntu way back in it's first beta stage and i stuck to it
+[11-11-2005 13:46:47] [#ezpublish] <nnn0> ehehe
+[11-11-2005 13:46:53] [#ezpublish] <nnn0> k
+[11-11-2005 13:46:53] [#ezpublish] <_buz> E17?
+[11-11-2005 13:46:56] [#ezpublish] <nnn0> 16
+[11-11-2005 13:46:58] [#ezpublish] <_buz> i cant get that beast to run here
+[11-11-2005 13:47:08] [#ezpublish] <_buz> oh e16, that isn't that nice in my view
+[11-11-2005 13:47:15] [#ezpublish] * Sulfur thinks he'll be running his own ass out of the office in 5 minutes ;) 
+[11-11-2005 13:47:16] [#ezpublish] <_buz> i'm longing for kde4
+[11-11-2005 13:47:24] [#ezpublish] <_buz> what did you do?
+[11-11-2005 13:47:38] [#ezpublish] <Sulfur> ?
+[11-11-2005 13:48:29] [#ezpublish] <_buz> ah i got the pun
+[11-11-2005 13:49:06] [#ezpublish] <Sulfur> well well
+[11-11-2005 13:49:10] [#ezpublish] <Sulfur> time to leave
+[11-11-2005 13:49:15] [#ezpublish] <_buz> http://dot.kde.org/1131711558/ way to go, now with novell leaving kde in the dust
+[11-11-2005 13:49:17] [#ezpublish] <Sulfur> see ya Katana` _buz and all
+[11-11-2005 13:49:17] [#ezpublish] <_buz> novell bastards
+[11-11-2005 13:49:56] [#ezpublish] <Sulfur> klick
+[11-11-2005 13:50:37] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-11-2005 14:10:31] [#ezpublish] <nnn0> shit suddenly all my templates are gone
+[11-11-2005 14:10:41] [#ezpublish] <nnn0> my overrides i mean
+[11-11-2005 14:12:07] [#ezpublish] <nnn0> when i click on /node/view/full there is no! overrides
+[11-11-2005 14:12:09] [#ezpublish] <nnn0> hm
+[11-11-2005 14:12:54] [#ezpublish] <nnn0> lo - my fault :D
+[11-11-2005 14:12:57] [#ezpublish] <nnn0> lol
+[11-11-2005 14:13:09] [#ezpublish] <nnn0> Siteaccess admin %]
+[11-11-2005 14:14:04] [#ezpublish] <nnn0> eheh
+[11-11-2005 14:46:49] [#ezpublish] <_buz> yeah that evil bit of weirdness got me plenty times
+[11-11-2005 14:46:57] [#ezpublish] <_buz> still occasionally has me wondering just WTF my templates have gone
+[11-11-2005 14:50:46] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-11-2005 14:55:38] [#ezpublish] <nnn0> :D
+[11-11-2005 14:55:40] [#ezpublish] <nnn0> hehe
+[11-11-2005 15:02:26] [#ezpublish] <ls[eZ]> whats that fun? ;)
+[11-11-2005 15:03:04] [#ezpublish] <ls[eZ]> hi, btw
+[11-11-2005 15:03:44] [#ezpublish] <_buz> buzzword of the day: ajax
+[11-11-2005 15:05:50] [#ezpublish] <nnn0> or asynchronous javascript and xml
+[11-11-2005 15:06:10] [#ezpublish] <ls[eZ]> yeah, thats funny, I have liqud with the same name for washing the dishes
+[11-11-2005 15:06:18] [#ezpublish] <nnn0> :D
+[11-11-2005 15:06:20] [#ezpublish] <nnn0> hehe
+[11-11-2005 15:06:49] [#ezpublish] <nnn0> when i was younger i supported a footballteam with that name
+[11-11-2005 15:07:21] [#ezpublish] <ls[eZ]> that was very good football team
+[11-11-2005 15:07:30] [#ezpublish] <nnn0> actually ! the lokal team is called Ajaks :D
+[11-11-2005 15:07:34] [#ezpublish] * _buz hates football
+[11-11-2005 15:07:51] [#ezpublish] <nnn0> i can play it, but it shouldn't be on tv :D
+[11-11-2005 15:07:59] [#ezpublish] <_buz> really all sorts of sport involving the chasing of some sort of item
+[11-11-2005 15:08:07] [#ezpublish] <ls[eZ]> and they are definitly not that good like our AJAX ;)
+[11-11-2005 15:08:15] [#ezpublish] <nnn0> :)
+[11-11-2005 15:09:16] [#ezpublish] <nnn0> have any of you made a contact form with multiple recipients ?
+[11-11-2005 15:09:16] [#ezpublish] <ls[eZ]> buz do you like any sports? or you are aware because of coding in AJAX ;)
+[11-11-2005 15:09:36] [#ezpublish] <_buz> let's say i go to the gym about 3 times a week
+[11-11-2005 15:09:42] [#ezpublish] <_buz> "like" is the wrong word though
+[11-11-2005 15:09:55] [#ezpublish] <_buz> actually, i'd love to go scuba diving but it's $$$
+[11-11-2005 15:10:01] [#ezpublish] <_buz> same for riding fast motorbikes
+[11-11-2005 15:10:16] [#ezpublish] <_buz> so as far as "conventional" sports go, i probably dont like them
+[11-11-2005 15:10:32] [#ezpublish] <_buz> i imagine kite surfing to be quite a lot of fun too
+[11-11-2005 15:10:34] [#ezpublish] <ls[eZ]> ah, I see you like high adrenaline ;)
+[11-11-2005 15:10:56] [#ezpublish] <_buz> mhh motorbikes only very rarely gave me adrenaline
+[11-11-2005 15:11:04] [#ezpublish] <_buz> (usually the nr 1 factor were the cops ;
+[11-11-2005 15:11:05] [#ezpublish] <ls[eZ]> depends on bikes ;)
+[11-11-2005 15:11:14] [#ezpublish] <ls[eZ]> try without good breaks
+[11-11-2005 15:11:19] [#ezpublish] <_buz> well my licence was limited to 125ccm
+[11-11-2005 15:11:25] [#ezpublish] <_buz> oh i had LOUSY breaks on that old honda
+[11-11-2005 15:11:31] [#ezpublish] <_buz> a wonder i survived that beast, really
+[11-11-2005 15:12:11] [#ezpublish] <_buz> but a decent bike easily runs 7000EUR
+[11-11-2005 15:12:27] [#ezpublish] <_buz> (or 15000EUR if you want a new 1300CCM monster)
+[11-11-2005 15:12:29] [#ezpublish] <ls[eZ]> I prefere cars
+[11-11-2005 15:12:46] [#ezpublish] <_buz> well a car that matches a 7000EUR bike in performance is more like 100000EUR
+[11-11-2005 15:13:00] [#ezpublish] <_buz> and even then, driving a bike is muuuuch more direct
+[11-11-2005 15:13:14] [#ezpublish] <ls[eZ]> I dont want to compare, generally I prefere cars,
+[11-11-2005 15:13:30] [#ezpublish] <_buz> they are safer, that's true
+[11-11-2005 15:13:37] [#ezpublish] <_buz> but bikes are more fun to drive
+[11-11-2005 15:14:52] [#ezpublish] <ls[eZ]> maybe, but with bikes is usually related sub-cultutre, my neighbour joined outlaws
+[11-11-2005 15:15:00] [#ezpublish] <_buz> nah
+[11-11-2005 15:15:02] [#ezpublish] <ls[eZ]> thats also fun
+[11-11-2005 15:15:13] [#ezpublish] <_buz> i'd never join a bike club
+[11-11-2005 15:15:37] [#ezpublish] <_buz> bike is about freedom, not driving in groups and having to figure out where the group wants to go
+[11-11-2005 15:15:39] [#ezpublish] <ls[eZ]> crazy weird guys
+[11-11-2005 15:16:01] [#ezpublish] <ls[eZ]> he driving mostly alone, but from time to time they organize events
+[11-11-2005 15:16:22] [#ezpublish] <ls[eZ]> drinking whole night, talking about baikes, bla bl
+[11-11-2005 15:16:24] [#ezpublish] <ls[eZ]> a
+[11-11-2005 15:16:34] [#ezpublish] <_buz> its much the same like we do here
+[11-11-2005 15:16:40] [#ezpublish] <_buz> only we dont talk about bikes, in general ;)
+[11-11-2005 15:16:46] [#ezpublish] <ls[eZ]> hehe, true
+[11-11-2005 15:16:58] [#ezpublish] <_buz> and drinking the whole night is always a good thing (tm)
+[11-11-2005 15:17:28] [#ezpublish] <ls[eZ]> do you have some beers, or not, I would like to test GT tonight ;)
+[11-11-2005 15:17:37] [#ezpublish] <_buz> GT?
+[11-11-2005 15:17:41] [#ezpublish] <ls[eZ]> gin&tonic
+[11-11-2005 15:17:47] [#ezpublish] <ls[eZ]> with ice and limon
+[11-11-2005 15:17:47] [#ezpublish] <_buz> i have beers
+[11-11-2005 15:18:07] [#ezpublish] <_buz> just bought one of those plastic boxes with 10 bottles in it
+[11-11-2005 15:18:09] [#ezpublish] <ls[eZ]> but not bannana beers?
+[11-11-2005 15:18:12] [#ezpublish] <_buz> NOOOO
+[11-11-2005 15:18:15] [#ezpublish] <_buz> NEVER AGIN
+[11-11-2005 15:18:16] [#ezpublish] <ls[eZ]> hehe :)
+[11-11-2005 15:18:23] [#ezpublish] <_buz> i actually threw away the last three of those
+[11-11-2005 15:18:31] [#ezpublish] <_buz> and one is already empty in front of me
+[11-11-2005 15:18:31] [#ezpublish] <ls[eZ]> sucks
+[11-11-2005 15:18:38] [#ezpublish] <_buz> less than drinking that piss
+[11-11-2005 15:19:28] [#ezpublish] * _buz opens next bottle
+[11-11-2005 15:19:29] [#ezpublish] <_buz> cheers
+[11-11-2005 15:19:42] [#ezpublish] <_buz> tomorrow morning i'll get uni results
+[11-11-2005 15:20:05] [#ezpublish] <_buz> i'm optimistic but you never know with those weird exams
+[11-11-2005 15:21:20] [#ezpublish] <ls[eZ]> I have busy weekend, starting at 8 tomorrow
+[11-11-2005 15:21:51] [#ezpublish] <_buz> mine is busy too
+[11-11-2005 15:22:01] [#ezpublish] <_buz> busy drinking all sorts of alcoholic beverages that is
+[11-11-2005 15:22:26] [#ezpublish] <_buz> either because i passed the exams or because i didn't
+[11-11-2005 15:22:36] [#ezpublish] <_buz> both gives plenty reasons to get piss drunk
+[11-11-2005 15:24:00] [#ezpublish] <ls[eZ]> so congratz
+[11-11-2005 15:24:13] [#ezpublish] <ls[eZ]> you have to celebrate ;)
+[11-11-2005 15:24:13] [#ezpublish] <_buz> wait for that until tomorrow ;)
+[11-11-2005 15:24:23] [#ezpublish] <_buz> yeah either celebrate or forget ;)
+[11-11-2005 15:33:00] [#ezpublish] <_buz> so how's your G&T?
+[11-11-2005 15:33:26] [#ezpublish] <ls[eZ]> warm, dont have ice
+[11-11-2005 15:33:31] [#ezpublish] <_buz> iiiiew
+[11-11-2005 15:33:41] [#ezpublish] <_buz> that reminds me of asia though
+[11-11-2005 15:33:56] [#ezpublish] <_buz> usually i had to drink without ice so not have contaminated water in them
+[11-11-2005 15:34:25] [#ezpublish] <ls[eZ]> but warm gt is not trully gt
+[11-11-2005 15:34:42] [#ezpublish] <_buz> i cant stand Gin so i wouldnt care for cold one, either
+[11-11-2005 15:36:25] [#ezpublish] <ls[eZ]> this funy, every one here drinks vodka, I'm aware of this alcohole
+[11-11-2005 15:36:35] [#ezpublish] <_buz> i dont like vodka, either
+[11-11-2005 15:36:38] [#ezpublish] <ls[eZ]> me too
+[11-11-2005 15:36:49] [#ezpublish] <_buz> about the only strong drink i like is GOOD single malt  whisky
+[11-11-2005 15:36:52] [#ezpublish] <_buz> but i cant afford that one
+[11-11-2005 15:36:57] [#ezpublish] <_buz> so i stick to beer and red wine
+[11-11-2005 15:37:15] [#ezpublish] <ls[eZ]> good beer is ok, how about swiss beers?
+[11-11-2005 15:37:32] [#ezpublish] <ls[eZ]> which one is good and enough famous that I can buy it here?
+[11-11-2005 15:37:39] [#ezpublish] <_buz> these days, if you stay away from the mainstream, plenty of good ones
+[11-11-2005 15:37:53] [#ezpublish] <_buz> i doubt it, the famous ones are all just slightly better than the heineken crap
+[11-11-2005 15:38:23] [#ezpublish] <_buz> i cant ever understand why heineken is so successful
+[11-11-2005 15:38:28] [#ezpublish] <_buz> truly disgusting stuff
+[11-11-2005 15:38:33] [#ezpublish] <ls[eZ]> what is famouse other swiss beer
+[11-11-2005 15:38:43] [#ezpublish] <_buz> feldschlösschen
+[11-11-2005 15:38:48] [#ezpublish] <ls[eZ]> lol
+[11-11-2005 15:38:59] [#ezpublish] <_buz> http://www.feldschlosschen.ch/
+[11-11-2005 15:39:06] [#ezpublish] <_buz> i think it's owned by carlsberg this days
+[11-11-2005 15:39:20] [#ezpublish] <_buz> i dont particularly like it
+[11-11-2005 15:39:40] [#ezpublish] <_buz> it's drinkable, but no better than the 0.40EUR beer we get from poland ;)
+[11-11-2005 15:40:00] [#ezpublish] <ls[eZ]> Which one do you like ?
+[11-11-2005 15:40:05] [#ezpublish] <ls[eZ]> We have a lot of good beers
+[11-11-2005 15:40:29] [#ezpublish] <_buz> http://www.eichhof.ch/1/3/53/54/56/57.asp
+[11-11-2005 15:41:00] [#ezpublish] <ls[eZ]> I have never seen
+[11-11-2005 15:41:11] [#ezpublish] <_buz> mid sized brewery
+[11-11-2005 15:41:17] [#ezpublish] <_buz> i dont think they really export much
+[11-11-2005 15:41:23] [#ezpublish] <_buz> it's one of those unfiltered beers
+[11-11-2005 15:41:26] [#ezpublish] <_buz> i much prefer those
+[11-11-2005 15:41:31] [#ezpublish] <ls[eZ]> ?ywiec -> http://www.zywiec.pl
+[11-11-2005 15:41:55] [#ezpublish] <_buz> city page?
+[11-11-2005 15:42:16] [#ezpublish] <_buz> as for the big international beers, corona is one of the few ones i actually like
+[11-11-2005 15:42:36] [#ezpublish] <ls[eZ]> http://www.zywiec.com.pl/flash/index.html
+[11-11-2005 15:42:38] [#ezpublish] <_buz> and the phillipine variety of san miguel is quite decent to
+[11-11-2005 15:42:41] [#ezpublish] <ls[eZ]> that is correct
+[11-11-2005 15:43:32] [#ezpublish] <_buz> cool project
+[11-11-2005 15:43:47] [#ezpublish] <ls[eZ]> hehe yeah, and very good beer
+[11-11-2005 15:44:58] [#ezpublish] <_buz> never seen it
+[11-11-2005 15:45:20] [#ezpublish] <ls[eZ]> you can't buy polish beers in swiss?
+[11-11-2005 15:45:34] [#ezpublish] <_buz> next time i'm in that 400 brands of beer store nearby i'll look for it
+[11-11-2005 15:45:43] [#ezpublish] <_buz> they have beer from all over
+[11-11-2005 15:45:53] [#ezpublish] <_buz> well much of the cheap discount beer comes from poland i think ;)
+[11-11-2005 15:46:01] [#ezpublish] <_buz> it's actually not bad at all
+[11-11-2005 15:46:13] [#ezpublish] <_buz> not as good as really good beer but definitely drinkable and better than heineken ;)
+[11-11-2005 15:46:30] [#ezpublish] <ls[eZ]> try Zywiec, Warka, Okocim, Tyskie
+[11-11-2005 15:46:44] [#ezpublish] <ls[eZ]> from the best for me
+[11-11-2005 15:46:53] [#ezpublish] <_buz> *makesnote*
+[11-11-2005 15:47:10] [#ezpublish] <_buz> is budvar in poland? or former czechoslovakia?
+[11-11-2005 15:47:58] [#ezpublish] <ls[eZ]> hmm, rather not
+[11-11-2005 15:48:03] [#ezpublish] <_buz> czech republic
+[11-11-2005 15:48:07] [#ezpublish] <ls[eZ]> probadly
+[11-11-2005 15:48:12] [#ezpublish] <_buz> i think it's overrated
+[11-11-2005 15:48:20] [#ezpublish] <_buz> but many claim it to be one of the best beers in the world
+[11-11-2005 15:48:20] [#ezpublish] <ls[eZ]> Zloty Bazant
+[11-11-2005 15:49:31] [#ezpublish] <ls[eZ]> http://selectitaly.com/index.php
+[11-11-2005 15:49:32] [#ezpublish] <ls[eZ]> nice site
+[11-11-2005 15:51:49] [#ezpublish] <ls[eZ]> Carlsberg is probadly the best beer on the world ;)
+[11-11-2005 15:51:59] [#ezpublish] <_buz> YE FUCKING GODS
+[11-11-2005 15:52:06] [#ezpublish] <_buz> carlsberg is just slightly better than heineken
+[11-11-2005 15:52:11] [#ezpublish] <ls[eZ]> hehe
+[11-11-2005 15:52:30] [#ezpublish] <_buz> to be honest, the beer i hate the most is guiness
+[11-11-2005 15:52:38] [#ezpublish] <_buz> i cant understand why anyone would drink THAT
+[11-11-2005 15:52:46] [#ezpublish] <ls[eZ]> how fast they can make beer? ;) Very fasy, accualy making good beer needs some time
+[11-11-2005 15:52:53] [#ezpublish] <_buz> yeah
+[11-11-2005 15:53:39] [#ezpublish] <ls[eZ]> I have never been in Holland as turist but I heard about some places where you can drink really good traditional beer
+[11-11-2005 15:53:56] [#ezpublish] <_buz> yeah, places where they dont serve heineken ;)
+[11-11-2005 15:54:02] [#ezpublish] <ls[eZ]> hehe
+[11-11-2005 15:54:04] [#ezpublish] <_buz> but in holland, there's other things to do than drink beer ;)
+[11-11-2005 15:54:13] [#ezpublish] <ls[eZ]> yeah smoke
+[11-11-2005 15:54:20] [#ezpublish] <_buz> and lots of it
+[11-11-2005 15:54:30] [#ezpublish] <ls[eZ]> but this part of my life is behind me
+[11-11-2005 15:54:38] [#ezpublish] <ls[eZ]> ;)
+[11-11-2005 15:54:44] [#ezpublish] <_buz> i only rarely smoke these days
+[11-11-2005 15:54:47] [#ezpublish] <_buz> but it's still fun ;)
+[11-11-2005 15:55:26] [#ezpublish] <ls[eZ]> this is of course not allowed in CH right
+[11-11-2005 15:55:27] [#ezpublish] <ls[eZ]> ?
+[11-11-2005 15:57:43] [#ezpublish] <_buz> actually, up until 2003 the cops were quite uninterested
+[11-11-2005 15:57:52] [#ezpublish] <_buz> there were many shops selling grass very openly
+[11-11-2005 15:57:59] [#ezpublish] <_buz> ever since, there's been a lot of crack down
+[11-11-2005 15:58:15] [#ezpublish] <_buz> for consumers, far and by large, nobody cares but for shops the business has gotten though
+[11-11-2005 15:58:17] [#ezpublish] <ls[eZ]> here is highly not allwed
+[11-11-2005 15:58:25] [#ezpublish] <_buz> well there's a hole in the law
+[11-11-2005 15:58:35] [#ezpublish] <_buz> hemp can be sold but NOT if its a drug
+[11-11-2005 15:58:44] [#ezpublish] <_buz> of course that definition is highly dependent on the judge
+[11-11-2005 15:58:46] [#ezpublish] <ls[eZ]> same here, it was but they fixed it
+[11-11-2005 15:58:54] [#ezpublish] <_buz> but just for possession, they wont throw you into jail
+[11-11-2005 15:59:04] [#ezpublish] <ls[eZ]> no longer here
+[11-11-2005 15:59:06] [#ezpublish] <_buz> small fine and thats it, if you cant talk yourself out of it
+[11-11-2005 15:59:15] [#ezpublish] <ls[eZ]> if you have then you will have process
+[11-11-2005 15:59:23] [#ezpublish] <_buz> (most cops dont care enough to fill out the paper work, so they just walk past you)
+[11-11-2005 15:59:51] [#ezpublish] <ls[eZ]> and if you sell teenagers belowe 18 then you are is double troubles
+[11-11-2005 16:00:18] [#ezpublish] <_buz> there's not so much the justice can do
+[11-11-2005 16:00:44] [#ezpublish] <_buz> they can fine you or maybe even start a trial but unless you've been peddling tons of it, you usually wont go to jail
+[11-11-2005 16:01:05] [#ezpublish] <_buz> every now and then, there's even talk about legalizing it (tho this year, it's gotten further from it)
+[11-11-2005 16:02:05] [#ezpublish] <_buz> of course church and related groups are strictly against legalization
+[11-11-2005 16:02:27] [#ezpublish] <ls[eZ]> here we have poland A and poland B
+[11-11-2005 16:02:36] [#ezpublish] <_buz> ?
+[11-11-2005 16:03:04] [#ezpublish] <ls[eZ]> A is 100% catolic, old-school, conserwative and poland B liberal, with young new generation
+[11-11-2005 16:03:15] [#ezpublish] <_buz> yeah we have much of that divide
+[11-11-2005 16:03:23] [#ezpublish] <_buz> not so extreme as in many other countries though
+[11-11-2005 16:03:38] [#ezpublish] * _buz is STRONG liberal, let the market decide - economist
+[11-11-2005 16:03:56] [#ezpublish] <ls[eZ]> yeahm but we had President vote 1 month ago, and this show how poland is divided
+[11-11-2005 16:04:09] [#ezpublish] <ls[eZ]> me too
+[11-11-2005 16:04:19] [#ezpublish] <ls[eZ]> I had the same opnions
+[11-11-2005 16:04:30] [#ezpublish] <_buz> oh yeah i read about in "the economist" but i forgot what happened ;)
+[11-11-2005 16:04:39] [#ezpublish] <_buz> which one won?
+[11-11-2005 16:04:42] [#ezpublish] <ls[eZ]> and I belive that market should be independed, and live on own rules
+[11-11-2005 16:04:51] [#ezpublish] <_buz> for the most part, it would be better
+[11-11-2005 16:04:58] [#ezpublish] <ls[eZ]> Lech Kaczynski - social
+[11-11-2005 16:05:01] [#ezpublish] <_buz> there are some areas where the law should intervene though
+[11-11-2005 16:05:10] [#ezpublish] <_buz> whereas social is liberal? or more old school communist?
+[11-11-2005 16:05:28] [#ezpublish] <_buz> (social can mean a lot this days ;)
+[11-11-2005 16:05:35] [#ezpublish] <ls[eZ]> old school communist I would say poland A
+[11-11-2005 16:05:42] [#ezpublish] <_buz> usually it's left wing, but left wing is divided internally
+[11-11-2005 16:05:50] [#ezpublish] <_buz> communists are shit heads
+[11-11-2005 16:05:59] [#ezpublish] <ls[eZ]> they are post-communits
+[11-11-2005 16:06:00] [#ezpublish] <_buz> they idea is nice, but it simply cant work
+[11-11-2005 16:06:03] [#ezpublish] <ls[eZ]> we have democracy
+[11-11-2005 16:06:28] [#ezpublish] <ls[eZ]> but in goverment is a lof of post-communits
+[11-11-2005 16:10:24] [#ezpublish] <ls[eZ]> this was good week, 326 posts on forum
+[11-11-2005 16:10:27] [#ezpublish] <ls[eZ]> totaly
+[11-11-2005 16:10:45] [#ezpublish] <_buz> http://www.leiasmetalbikini.com/buy.html <- xmas present for your girlfriends ;)
+[11-11-2005 16:11:10] [#ezpublish] <_buz> but carrie fisher sure was better looking than the chick on the pic
+[11-11-2005 16:11:41] [#ezpublish] <_buz> 375$????
+[11-11-2005 16:11:50] [#ezpublish] <ls[eZ]> looks crapy
+[11-11-2005 16:12:04] [#ezpublish] <_buz> there's that friends episode ;)
+[11-11-2005 16:12:20] [#ezpublish] <_buz> with jennifer aniston  playing princess leia ;)
+[11-11-2005 16:12:35] [#ezpublish] <ls[eZ]> hehe
+[11-11-2005 16:12:50] [#ezpublish] <ls[eZ]> http://www.leiasmetalbikini.com/Profile_VanessaAussie_pic1.jpg
+[11-11-2005 16:12:55] [#ezpublish] <ls[eZ]> funny
+[11-11-2005 16:13:01] [#ezpublish] <ls[eZ]> look at her face :)
+[11-11-2005 16:13:04] [#ezpublish] <_buz> weird face
+[11-11-2005 16:13:20] [#ezpublish] <_buz> must be very comfortable
+[11-11-2005 16:13:21] [#ezpublish] <ls[eZ]> hehe she is scared
+[11-11-2005 16:13:23] [#ezpublish] <ls[eZ]> :)
+[11-11-2005 16:13:34] [#ezpublish] <_buz> the fat guy is likely near her
+[11-11-2005 16:13:46] [#ezpublish] <_buz> jaba the hut or whateve rhis name was
+[11-11-2005 16:17:24] [#ezpublish] <ls[eZ]> are going to eZ Conference next year?
+[11-11-2005 16:17:39] [#ezpublish] <_buz> it's one week before my exam session so i doubt i will
+[11-11-2005 16:17:54] [#ezpublish] <ls[eZ]> I have the same situation
+[11-11-2005 16:18:15] [#ezpublish] <ls[eZ]> not sure about exams
+[11-11-2005 16:18:30] [#ezpublish] <_buz> and tickets to norway are expensive
+[11-11-2005 16:18:43] [#ezpublish] <_buz> if i can find the time, i'll likely go
+[11-11-2005 16:18:50] [#ezpublish] <_buz> but i'm not too optimistic
+[11-11-2005 16:19:07] [#ezpublish] <ls[eZ]> You can flight with KLM to Sandefjord, thats 40 min from SKien
+[11-11-2005 16:19:44] [#ezpublish] <ls[eZ]> Do trip is nice
+[11-11-2005 16:19:45] [#ezpublish] <_buz> last year that was a 300EUR flight
+[11-11-2005 16:19:55] [#ezpublish] <ls[eZ]> two way?
+[11-11-2005 16:20:06] [#ezpublish] <_buz> yes, but that's quite expensive considering i can get to asia for maybe 600EUR
+[11-11-2005 16:20:15] [#ezpublish] <_buz> or to london for <100EUR
+[11-11-2005 16:20:31] [#ezpublish] <ls[eZ]> well booking with 2 months  agou should be cheap
+[11-11-2005 16:20:39] [#ezpublish] <ls[eZ]> 2 month before
+[11-11-2005 16:20:41] [#ezpublish] <ls[eZ]> for exampe
+[11-11-2005 16:21:07] [#ezpublish] <_buz> it's  literally ONE week before my first exam :(((
+[11-11-2005 16:21:49] [#ezpublish] <ls[eZ]> thats only 3 days, which you will remeber to the end of your life ;)
+[11-11-2005 16:22:01] [#ezpublish] <ls[eZ]> exam you can repeat ;)
+[11-11-2005 16:22:05] [#ezpublish] <ls[eZ]> or not?
+[11-11-2005 16:22:09] [#ezpublish] <_buz> depends
+[11-11-2005 16:22:25] [#ezpublish] <_buz> if i pass, i can't but i dont just want to pass, i want a good grade
+[11-11-2005 16:22:34] [#ezpublish] <ls[eZ]> I usually have 3 chances
+[11-11-2005 16:22:54] [#ezpublish] <ls[eZ]> 2 of them are payable
+[11-11-2005 16:22:58] [#ezpublish] <_buz> all exam grades are used to calculate my final grade
+[11-11-2005 16:23:10] [#ezpublish] <ls[eZ]> this last yhear?
+[11-11-2005 16:23:23] [#ezpublish] <_buz> after half, they start using the grades for finals
+[11-11-2005 16:23:27] [#ezpublish] <_buz> last two years likely
+[11-11-2005 16:23:31] [#ezpublish] <ls[eZ]> I see
+[11-11-2005 16:23:48] [#ezpublish] <_buz> i need to take a fixed amount of lectures to graduate, how long it takes to do that they dont care
+[11-11-2005 16:24:00] [#ezpublish] <_buz> (unless it's like 4times longer than normal)
+[11-11-2005 16:24:34] [#ezpublish] <ls[eZ]> I have to start writing my thesis
+[11-11-2005 16:25:15] [#ezpublish] <_buz> illdo that 2007
+[11-11-2005 16:25:35] [#ezpublish] <ls[eZ]> I have 0,5y on finding materials
+[11-11-2005 16:25:53] [#ezpublish] <_buz> 
+[11-11-2005 16:25:55] [#ezpublish] <ls[eZ]> then 1y on finishing and finall exame
+[11-11-2005 16:26:02] [#ezpublish] <_buz> i have 6 months
+[11-11-2005 16:26:16] [#ezpublish] <_buz> before that i can look for a suitable subject however long i want
+[11-11-2005 16:27:07] [#ezpublish] <ls[eZ]> I will write about CMS systems in Intranets probadly, or about Open Source Enterprises, not sure exacly depends on materials, have to check that
+[11-11-2005 16:27:15] [#ezpublish] <nnn0> have any of you made a contact form with multiple recipients ?
+[11-11-2005 16:27:44] [#ezpublish] <ls[eZ]> not possible by default
+[11-11-2005 16:28:13] [#ezpublish] <ls[eZ]> you will have to hack ;)
+[11-11-2005 16:28:28] [#ezpublish] <nnn0> no i know - i followed some instruction on using the enhancedselection datatype, but i didn't get it to work properly
+[11-11-2005 16:28:38] [#ezpublish] <nnn0> i guess i could jusr just email filtering
+[11-11-2005 16:28:39] [#ezpublish] <Katana`> really ls[eZ] ?? that sucks :(
+[11-11-2005 16:28:50] [#ezpublish] <Katana`> lukas, can I annoy you for a minute with a complex issue ? :)
+[11-11-2005 16:28:57] [#ezpublish] <Katana`> content tree related
+[11-11-2005 16:29:31] [#ezpublish] <_buz> my diploma paper will likely be some sort of economic analysis
+[11-11-2005 16:29:33] [#ezpublish] <ls[eZ]> Katana`: yes
+[11-11-2005 16:29:44] [#ezpublish] <_buz> or maybe i can coax them into letting me write an open sourcen accounting package
+[11-11-2005 16:30:22] [#ezpublish] <Katana`> okay...
+[11-11-2005 16:30:33] [#ezpublish] <Katana`> on that big project, I have a /products node
+[11-11-2005 16:30:45] [#ezpublish] <Katana`> which holds all the website products, sorted in folders
+[11-11-2005 16:31:27] [#ezpublish] <ls[eZ]> yes
+[11-11-2005 16:31:51] [#ezpublish] <Katana`> then they are dispatched around the structure using additionnal locations
+[11-11-2005 16:32:08] [#ezpublish] <ls[eZ]> mhm
+[11-11-2005 16:32:13] [#ezpublish] <Katana`> now here comes the issue : these products have subitems
+[11-11-2005 16:32:24] [#ezpublish] <Katana`> these subitems are used to generate contextuel navigation
+[11-11-2005 16:32:45] [#ezpublish] <Katana`> i can show you an example...
+[11-11-2005 16:32:53] [#ezpublish] <ls[eZ]> would be nice
+[11-11-2005 16:33:10] [#ezpublish] <Katana`> http://2005.bcee.interact.lu/particuliers/gestion_quotidienne/payer_par_carte_de_debit_credit/les_cartes_de_credit/mastercard_gold
+[11-11-2005 16:33:22] [#ezpublish] <Katana`> l/p in private :)
+[11-11-2005 16:33:37] [#ezpublish] <ls[eZ]> but I need them :)
+[11-11-2005 17:00:16] [#ezpublish] <ls[eZ]> gooh night
+[11-11-2005 17:00:19] [#ezpublish] <ls[eZ]> cu
+[11-11-2005 17:00:21] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-11-2005 17:37:47] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-11-2005 19:05:34] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-11-2005 19:14:16] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-11-2005 20:41:52] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]

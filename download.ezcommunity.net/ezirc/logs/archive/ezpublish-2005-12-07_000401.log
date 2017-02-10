@@ -1,0 +1,164 @@
+[12-06-2005 01:23:08] [#ezpublish] <kracker> ever time i get a large number of forum posts, i loose messages from my message count, what's the deal?
+[12-06-2005 01:29:35] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-06-2005 01:38:58] [#ezpublish] <_Rappy_> they clen up the forums?
+[12-06-2005 02:12:17] [#ezpublish] <buz> mhh
+[12-06-2005 02:12:28] [#ezpublish] <buz> standard font size surely is smaaaall
+[12-06-2005 02:45:09] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-06-2005 02:59:24] [#ezpublish] <buz> Katana`: you got code around to fetch only the module result html (no stuff around it, no header nothing) for ajax?
+[12-06-2005 03:07:16] [#ezpublish] <Katana`> hummmm
+[12-06-2005 03:07:30] [#ezpublish] <Katana`> for content ?
+[12-06-2005 03:08:46] [#ezpublish] <buz> yes
+[12-06-2005 03:09:01] [#ezpublish] <Katana`> i haven't done that...
+[12-06-2005 03:09:07] [#ezpublish] <buz> how does your ajax work then
+[12-06-2005 03:10:26] [#ezpublish] <Katana`> i don't return HTML using AJAX :)
+[12-06-2005 03:18:16] [#ezpublish] <kracker> buz, is thinking of the new ajax like catch phrase that is designed *to* return html (i forget the latest keyword hype they are using for that)
+[12-06-2005 03:18:43] [#ezpublish] <buz> the qooxdoo interface doesnt go fetch html?
+[12-06-2005 03:20:09] [#ezpublish] <Katana`> i don't see why it would
+[12-06-2005 03:20:20] [#ezpublish] <Katana`> it uses an object oriented API to generate components
+[12-06-2005 03:20:23] [#ezpublish] <Katana`> of course it can display HTML
+[12-06-2005 03:20:59] [#ezpublish] <Katana`> but i don't use it like that
+[12-06-2005 03:22:40] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[12-06-2005 03:26:42] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-06-2005 03:55:38] -!- ordnas [n=ordnas@p549DDDAF.dip.t-dialin.net] has joined #ezpublish
+[12-06-2005 03:55:53] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-06-2005 04:04:09] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[12-06-2005 04:07:33] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-06-2005 04:11:57] [#ezpublish] <buz> crap
+[12-06-2005 04:12:01] [#ezpublish] <buz> my machine keeps crashing today
+[12-06-2005 04:12:10] [#ezpublish] <buz> xorg freezes and only reboot helps
+[12-06-2005 04:12:16] [#ezpublish] <buz> (i can still login by ssh, weird)
+[12-06-2005 04:13:18] [#ezpublish] <Proteque_> buz: what brand is your computer.
+[12-06-2005 04:13:24] [#ezpublish] <buz> self made
+[12-06-2005 04:13:52] [#ezpublish] <Proteque_> a lot of ppl have that problem with ibm netvistas. that io gets out of hand and the computer freezes completly.
+[12-06-2005 04:14:06] [#ezpublish] <buz> well
+[12-06-2005 04:14:08] [#ezpublish] <buz> ssh still worked
+[12-06-2005 04:14:13] [#ezpublish] <buz> but killing xorg did not
+[12-06-2005 04:15:01] [#ezpublish] <buz> anyway, i'm off to uni
+[12-06-2005 04:16:07] [#ezpublish] <buz> weird enough, i can still move the mouse
+[12-06-2005 04:16:12] [#ezpublish] <buz> but input doesnt do anything
+[12-06-2005 04:34:04] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-06-2005 04:37:04] [#ezpublish] <Sulfur> :)
+[12-06-2005 04:37:35] [#ezpublish] <ordnas> anyone noticed the new http://ez.no design?
+[12-06-2005 04:38:29] [#ezpublish] <Sulfur> yes my sweet critically-damaged eyes
+[12-06-2005 04:38:38] [#ezpublish] <Sulfur> ow ow ow
+[12-06-2005 04:38:50] [#ezpublish] <Sulfur> :P
+[12-06-2005 04:39:19] [#ezpublish] <Proteque_> yes.
+[12-06-2005 04:39:29] [#ezpublish] <ordnas> haha
+[12-06-2005 04:39:41] [#ezpublish] <Sulfur> I think it still needs some work on its use of the spaces (i.e. scrollbars appearing in documentation navbar where it isn't needed and gobbles up space)
+[12-06-2005 04:39:56] [#ezpublish] <ordnas> yes
+[12-06-2005 04:40:58] [#ezpublish] <Sulfur> and maybe a little work on the colors to make it more easy on the eyes
+[12-06-2005 04:41:27] [#ezpublish] <Sulfur> it's a step towards a printable version, tho' (I think)
+[12-06-2005 05:00:20] [#ezpublish] <Sulfur> ... anyone has ever used the url translation / nice url features in admin panel?
+[12-06-2005 05:02:07] [#ezpublish] <_Rappy_> does ez have an default printsetting/css/thingie? or do one have to make one?
+[12-06-2005 05:16:18] [#ezpublish] <Sulfur> it has
+[12-06-2005 05:16:29] [#ezpublish] <Sulfur> look print_pagelayout.tpl
+[12-06-2005 05:35:59] [#ezpublish] <_Rappy_> tnx :9
+[12-06-2005 05:44:55] [#ezpublish] <Sulfur> hum
+[12-06-2005 05:47:03] [#ezpublish] <Sulfur> seems like I found something weird on ezurl
+[12-06-2005 05:59:23] [#ezpublish] <Sulfur> is there a way to access current page url from within a template? or even better, to know if I am in "print version" mode?
+[12-06-2005 06:01:29] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-06-2005 06:01:47] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 104 (Connection reset by peer)]
+[12-06-2005 06:01:49] -!- _Katana` is now known as Katana`
+[12-06-2005 06:08:56] [#ezpublish] <Sulfur> anyone can comment on this ? http://ez.no/community/bugs/ezurl_weirdness_with_layout_set_print
+[12-06-2005 06:47:01] [#ezpublish] <Proteque_> is the css on ez.no on acid today? :)
+[12-06-2005 06:47:22] [#ezpublish] <Proteque_> hmmm perhabs it is my cache that nukes it
+[12-06-2005 06:47:51] [#ezpublish] <Proteque_> hmmm no
+[12-06-2005 07:10:32] [#ezpublish] <Sulfur> Proteque_: no they changed layout
+[12-06-2005 07:41:43] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[12-06-2005 08:03:40] [#ezpublish] <buz> are there any working rss streams for ez now?
+[12-06-2005 08:07:16] [#ezpublish] <_Rappy_> I want to have a link to create articles to PDF. Do I use content_pdf_gui
+[12-06-2005 08:07:16] [#ezpublish] <_Rappy_>  for that?
+[12-06-2005 08:12:36] [#ezpublish] <Sulfur> dunno, I use my own way of doing them  :P
+[12-06-2005 08:12:56] [#ezpublish] <buz> which is?
+[12-06-2005 08:14:21] [#ezpublish] <Sulfur> buz: I was talking about pdf - anyway I use ros.co.nz lib
+[12-06-2005 08:14:30] [#ezpublish] <_Rappy_> I find the doc confusing on this subject
+[12-06-2005 08:14:42] [#ezpublish] <buz> Sulfur: i know you're referring to the pdf
+[12-06-2005 08:14:49] [#ezpublish] <Sulfur> which, incidentally, it's the same used by eZ, save that they have it all wrapped into their code and it's a pain to use that way
+[12-06-2005 08:14:59] [#ezpublish] <Sulfur> (no parameter passing possible etc)
+[12-06-2005 08:15:27] [#ezpublish] <Sulfur> basically, you can only use it to display single nodes as it is now
+[12-06-2005 08:15:34] [#ezpublish] <Sulfur> no aggregate/dummy nodes
+[12-06-2005 08:16:03] [#ezpublish] <Sulfur> and that's bad every time in which you need to present e.g. a calendar, a table, and so on
+[12-06-2005 08:16:29] [#ezpublish] <Sulfur> while now I am quite pleased with the achievements
+[12-06-2005 08:20:45] [#ezpublish] <nnn0> hm i can't seem to get the toolbar-top do display correctly in firefox - it's okey in opera and ie - anyone been thru this ? :D
+[12-06-2005 08:24:20] [#ezpublish] <Sulfur> nope..
+[12-06-2005 08:26:53] [#ezpublish] <Sulfur> I ask again ... is there a way to "know" from within a template if I am currently rendering the print version ?
+[12-06-2005 08:32:07] -!- ordnas [n=ordnas@p549DDDAF.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-06-2005 08:33:45] -!- ordna1 [n=ordnas@p549DDDAF.dip.t-dialin.net] has joined #ezpublish
+[12-06-2005 08:33:45] [#ezpublish] <Katana`> isn't it part of $module_result ?
+[12-06-2005 08:51:30] [#ezpublish] <Katana`> is kalooni nicolas @ ez ?
+[12-06-2005 08:57:07] [#ezpublish] <Sulfur> Katana`: I was unable to find it in $module_result.somestuff_info.view ; it shows "full" even if I am using the layout. it's "correct" as the view tpl is the one for full, but it is the _layout_ here that is the print one
+[12-06-2005 08:57:32] [#ezpublish] <Sulfur> anyway, I don't feel very well so I am going home now ... bye
+[12-06-2005 08:57:37] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[12-06-2005 09:01:44] [#ezpublish] <kalooni> Katana: no I'm not
+[12-06-2005 09:14:24] -!- _Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-06-2005 09:32:50] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-06-2005 09:32:53] -!- _Katana` is now known as Katana`
+[12-06-2005 10:42:48] -!- ordna1 [n=ordnas@p549DDDAF.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-06-2005 10:47:39] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit ["Quitte"]
+[12-06-2005 11:06:06] [#ezpublish] <buz> using include for recursive traversal of trees seems to have side effects on variables?
+[12-06-2005 11:12:39] [#ezpublish] <buz> it has weird effects anyhow
+[12-06-2005 11:12:41] [#ezpublish] <buz> it seems
+[12-06-2005 11:16:04] [#ezpublish] <buz> better not used
+[12-06-2005 11:23:33] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-06-2005 11:25:36] [#ezpublish] <buz> http://ez.no/community/forum/developer/recursive_descending_down_the_tree_in_template_language#msg88796
+[12-06-2005 11:32:37] -!- xiglet [n=Miranda@62.92.35.139] has joined #ezpublish
+[12-06-2005 11:32:44] [#ezpublish] <xiglet> awesome website, good work!
+[12-06-2005 11:59:17] -!- xiglet [n=Miranda@62.92.35.139] has quit ["Miranda IM! Smaller, Faster, Easier. http://miranda-im.org"]
+[12-06-2005 13:18:18] -!- zr1 [n=zurgutt@roop.pri.ee] has joined #ezpublish
+[12-06-2005 13:18:38] [#ezpublish] <zr1> blessed be his noodles
+[12-06-2005 13:54:08] [#ezpublish] <buz> nobody know about displaying trees?
+[12-06-2005 13:55:26] [#ezpublish] <zr1> for a monent there i thought this was holiday related question :P
+[12-06-2005 13:55:40] [#ezpublish] <buz> i hate xmas.*
+[12-06-2005 13:55:48] [#ezpublish] <buz> i for sure wont tolerate a bloody tree in my flat
+[12-06-2005 13:56:49] [#ezpublish] <buz> i'm referring to this http://ez.no/community/forum/developer/recursively_descending_down_the_tree_in_template_language#msg88796
+[12-06-2005 14:02:00] [#ezpublish] <buz> oh never mind
+[12-06-2005 14:02:01] [#ezpublish] <buz> stupid me
+[12-06-2005 14:08:31] [#ezpublish] <zr1> uh, using recursive includes, isnt this hellisly inefficient?
+[12-06-2005 14:09:37] [#ezpublish] <zr1> i think ordinary loops would be better?
+[12-06-2005 14:13:10] [#ezpublish] <buz> how could i achieve that with loops?
+[12-06-2005 14:13:25] [#ezpublish] <buz> keeping track of my own stack? in template language?
+[12-06-2005 14:17:32] [#ezpublish] <zr1> surely more efficient than includes
+[12-06-2005 14:18:23] [#ezpublish] <zr1> nah actually forget it, i would have gone the easy way too :D
+[12-06-2005 14:20:32] [#ezpublish] <zr1> laziness over all
+[12-06-2005 14:20:56] [#ezpublish] <zr1> damn, should put that in latin and use as family motto :P
+[12-06-2005 14:24:33] [#ezpublish] <nnn0> omnis lazinus
+[12-06-2005 14:25:25] [#ezpublish] <zr1> is that right?
+[12-06-2005 14:25:29] [#ezpublish] <nnn0> no !
+[12-06-2005 14:25:31] [#ezpublish] <nnn0> hhehe
+[12-06-2005 14:25:34] [#ezpublish] <zr1> thought so :)
+[12-06-2005 14:27:11] [#ezpublish] <zr1> rocca umnia
+[12-06-2005 14:27:51] [#ezpublish] <nnn0> torpeo super omnis
+[12-06-2005 14:27:59] [#ezpublish] <nnn0> :D
+[12-06-2005 14:28:05] [#ezpublish] <nnn0> that could be right
+[12-06-2005 14:28:22] [#ezpublish] * buz never had latin
+[12-06-2005 14:29:05] [#ezpublish] <nnn0> torpeo supernus cunctus
+[12-06-2005 14:29:53] [#ezpublish] <nnn0> no god know
+[12-06-2005 14:29:54] [#ezpublish] <nnn0> s
+[12-06-2005 14:29:56] [#ezpublish] <nnn0> :)
+[12-06-2005 14:32:09] [#ezpublish] <zr1> torpedo?
+[12-06-2005 14:34:56] [#ezpublish] <nnn0> desidiosus supernus omnis
+[12-06-2005 14:35:00] [#ezpublish] <nnn0> that could work maybe
+[12-06-2005 14:35:38] [#ezpublish] <zr1> should replace language constructs and functions with ones writen in latin, that would be cool.. makes you feel more.. godly, when coding.
+[12-06-2005 14:35:52] [#ezpublish] <buz> typedef
+[12-06-2005 14:36:42] [#ezpublish] <nnn0> <corpus>
+[12-06-2005 14:36:43] [#ezpublish] <nnn0> :DDDD
+[12-06-2005 14:37:21] [#ezpublish] <zr1> make world
+[12-06-2005 14:37:33] [#ezpublish] <nnn0> .corpus {sublimitas: 100%;}
+[12-06-2005 14:38:17] [#ezpublish] <buz> you guys could use brainfuck server pages right away
+[12-06-2005 14:38:27] [#ezpublish] <nnn0> rofl
+[12-06-2005 14:38:32] [#ezpublish] <nnn0> BSP
+[12-06-2005 14:38:42] [#ezpublish] <buz> i think it actually exists
+[12-06-2005 14:38:56] [#ezpublish] <buz> http://nanoweb.si.kz/manual/mod_bsp.html
+[12-06-2005 14:38:57] [#ezpublish] <nnn0> lmao :DDDDD
+[12-06-2005 14:39:06] [#ezpublish] <nnn0> goddamn
+[12-06-2005 14:39:36] [#ezpublish] <buz> OMFG, the interpreter it uses was written by a guy i actually know in reallife
+[12-06-2005 14:39:46] [#ezpublish] <nnn0> :D
+[12-06-2005 14:39:48] [#ezpublish] <nnn0> eheheh
+[12-06-2005 14:39:52] [#ezpublish] <buz> he works at my upstream
+[12-06-2005 14:41:17] [#ezpublish] <buz> whitespace is a nice language, too
+[12-06-2005 15:00:34] [#ezpublish] <zr1> i once wrote compiler for the actual turing machine.. well emulator at least :)
+[12-06-2005 15:03:29] [#ezpublish] <zr1> used it to cheat on logic course, which included writing simple arithmetics programs on turing emulator and then turned it in as semester work in programming.. the programming teacher laughed her ass off and promised not to tell to logics prof :)
+[12-06-2005 15:12:06] [#ezpublish] <buz> is there a way to fetch only the module_resulte of a content object ?
+[12-06-2005 15:28:09] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[12-06-2005 18:56:39] -!- zr1 [n=zurgutt@roop.pri.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-06-2005 18:57:21] -!- zrg [n=zurgutt@roop.pri.ee] has joined #ezpublish

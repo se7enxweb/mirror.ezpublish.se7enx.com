@@ -1,0 +1,220 @@
+[12-09-2005 01:37:28] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-09-2005 01:38:25] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-09-2005 02:06:51] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | http://ez.no/community/news/community_newsletter_02_12_2005 |   http://ez.no/community/articles/an_introduction_to_ez_components
+[12-09-2005 02:18:32] [#ezpublish] <kris10an> mornin!
+[12-09-2005 02:18:45] [#ezpublish] <kris10an> buz: the forum ajax thingy looks cool :-)
+[12-09-2005 02:58:30] -!- Proteque [n=gjorans@213.184.199.245] has quit [calvino.freenode.net irc.freenode.net]
+[12-09-2005 03:03:47] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[12-09-2005 03:12:47] -!- Bedlore [n=me@ppp206-231.lns1.adl2.internode.on.net] has joined #ezpublish
+[12-09-2005 03:13:51] -!- mode/#ezpublish [+o fh[eZ]] by ChanServ
+[12-09-2005 03:50:28] [#ezpublish] <LottoKim> how can i debug pdf-exporting?
+[12-09-2005 03:58:32] [#ezpublish] <buz> kris10an: thanks!
+[12-09-2005 03:58:54] [#ezpublish] <buz> now if i only could get the caching sorted
+[12-09-2005 03:59:13] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-09-2005 04:00:16] [#ezpublish] <buz> somehow the data i want to use for cache-block key is cached itself and thus pretty useless
+[12-09-2005 04:07:44] [#ezpublish] <Katana`> hi
+[12-09-2005 04:27:51] [#ezpublish] <buz> {array($uri_string,$current_user.contentobject_id, ezpreference('forumlook'))|attribute(show)}
+[12-09-2005 04:27:53] [#ezpublish] <buz> how comes that
+[12-09-2005 04:28:06] [#ezpublish] <buz> thsis only yields 0,0,$forumlook
+[12-09-2005 04:28:21] [#ezpublish] <buz> and $forumlook is cached eventhough its outside any cache-blocks
+[12-09-2005 04:31:32] [#ezpublish] <buz> {cache-block keys=array($uri_string,$current_user.contentobject_id, ezpreference('forumlook'))}
+[12-09-2005 04:31:39] [#ezpublish] <buz> that wont work either
+[12-09-2005 04:31:46] [#ezpublish] <buz> (which is kinda obvious when you think about it)
+[12-09-2005 04:57:09] [#ezpublish] <buz> is there a value in storing what posts a user has already read?
+[12-09-2005 04:57:20] [#ezpublish] <buz> or does it just generate insane amounts of data in a busy forum?
+[12-09-2005 05:02:12] [#ezpublish] <buz> btw: there's something wrong with ez.no/doc, posting a comment gives me redirection debug page
+[12-09-2005 05:02:18] [#ezpublish] <buz> i dont think that should be there?
+[12-09-2005 05:03:12] [#ezpublish] <@fh[eZ]> buz: comment propagated to the right person
+[12-09-2005 05:03:23] [#ezpublish] <buz> ok
+[12-09-2005 05:06:38] [#ezpublish] <buz> YEAH my caching works
+[12-09-2005 05:08:47] [#ezpublish] <buz> http://triligon.org/triligon/projects/advancedforum/advancedforum_meta_forum/welcome_to_the_forum
+[12-09-2005 05:09:04] [#ezpublish] <buz> switching between different forum views works wonderfully
+[12-09-2005 05:09:06] [#ezpublish] <buz> yeehaw
+[12-09-2005 05:14:41] -!- Bedlore_ [n=me@ppp209-5.lns1.adl2.internode.on.net] has joined #ezpublish
+[12-09-2005 05:14:58] [#ezpublish] <Bedlore_> buz: thought it was done with ajax initially :)
+[12-09-2005 05:15:07] [#ezpublish] <buz> it is
+[12-09-2005 05:15:11] [#ezpublish] <Bedlore_> oh!
+[12-09-2005 05:15:13] [#ezpublish] <buz> (the threaded stuff anyway)
+[12-09-2005 05:15:38] [#ezpublish] <buz> the different views themselves each use different templates though and do a full reload
+[12-09-2005 05:15:39] [#ezpublish] <Bedlore_> I thought you must of load loaded the whole thing and used js to show/hide
+[12-09-2005 05:15:48] [#ezpublish] <Bedlore_> very groovy
+[12-09-2005 05:15:48] [#ezpublish] <buz> i could do that
+[12-09-2005 05:15:55] [#ezpublish] <buz> but i dont see much point
+[12-09-2005 05:16:00] [#ezpublish] <buz> tripples server load/dl time
+[12-09-2005 05:16:44] [#ezpublish] <Bedlore_> is that using ezxml datatype?
+[12-09-2005 05:18:07] [#ezpublish] <Bedlore_> minor bug, if you click the first post its reloads the whole thread as a child
+[12-09-2005 05:18:14] [#ezpublish] <buz> yeah i know
+[12-09-2005 05:18:17] [#ezpublish] <Bedlore_> k
+[12-09-2005 05:18:23] [#ezpublish] <buz> i also know how to fix it
+[12-09-2005 05:19:36] [#ezpublish] <buz> it's using ezxml with simplycode (like ez.no) i think i'll change it to bbcode though
+[12-09-2005 05:19:47] [#ezpublish] <buz> or maybe it's using eztet, now that i think about it
+[12-09-2005 05:20:10] [#ezpublish] <Bedlore_> the post has a picture which is why I asked
+[12-09-2005 05:20:33] [#ezpublish] <buz> that's an image attribute actually
+[12-09-2005 05:20:59] [#ezpublish] <Bedlore_> k
+[12-09-2005 05:22:04] -!- Bedlore [n=me@ppp206-231.lns1.adl2.internode.on.net] has quit [Nick collision from services.]
+[12-09-2005 05:22:19] -!- Bedlore_ is now known as Bedlore
+[12-09-2005 05:23:35] [#ezpublish] <Bedlore> so were you able to achieve that within template work alone?
+[12-09-2005 05:23:42] [#ezpublish] <buz> mostly
+[12-09-2005 05:23:49] [#ezpublish] <buz> i needed some php code for the ajax stuff
+[12-09-2005 05:23:55] [#ezpublish] <Bedlore> ahuh
+[12-09-2005 06:14:54] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[12-09-2005 06:32:49] -!- elephantMan [n=elephant@217.167.222.224] has quit [Remote closed the connection]
+[12-09-2005 07:07:39] [#ezpublish] <Katana`> oh, you can refresh the view source window in Firefox 1.5. useful :))
+[12-09-2005 07:10:01] [#ezpublish] <Katana`> damnit why is {delimiter} adding carriage returns ??
+[12-09-2005 08:18:47] [#ezpublish] <buz> anybody know how to do js debugging in konqueror?
+[12-09-2005 08:26:19] [#ezpublish] <_Rappy_> mebbe it has a webdevelop tool
+[12-09-2005 08:26:47] [#ezpublish] <buz> well quanta is kde's webdev tool
+[12-09-2005 08:27:02] [#ezpublish] <buz> but i'm quite sure it uses konqi for rendering
+[12-09-2005 09:11:23] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[12-09-2005 09:12:53] [#ezpublish] <kris10an> Finally.. i have been waiting for the refresh of the source window for a while now :-)
+[12-09-2005 09:29:21] [#ezpublish] <Katana`> have any of you guys used MySQL Cluster ?
+[12-09-2005 09:29:38] [#ezpublish] <buz> only realtime replication for backups
+[12-09-2005 09:30:39] [#ezpublish] <Katana`> okay
+[12-09-2005 09:30:42] [#ezpublish] <Katana`> we need clustering ;)
+[12-09-2005 09:32:05] [#ezpublish] <buz> afaik, it currently only works for dbs that fit in ram
+[12-09-2005 09:32:29] [#ezpublish] <Katana`> yeah that's what i've heard
+[12-09-2005 09:32:39] [#ezpublish] <buz> so the use is somewhat limited i'd say
+[12-09-2005 09:32:40] [#ezpublish] <Katana`> we're proposing a hosting platform to a client
+[12-09-2005 09:32:47] [#ezpublish] <Katana`> well, ram is not that expensive ;)
+[12-09-2005 09:33:05] [#ezpublish] <buz> it's more limited by sockets than ram price
+[12-09-2005 09:33:18] [#ezpublish] <buz> and 4gb sticks ARE expensive ;)
+[12-09-2005 09:33:25] [#ezpublish] <Katana`> yehq
+[12-09-2005 09:33:26] [#ezpublish] <Katana`> :)
+[12-09-2005 09:33:59] [#ezpublish] <buz> is the cluster for speed or reliability?
+[12-09-2005 09:34:10] [#ezpublish] <Katana`> reliability
+[12-09-2005 09:34:20] [#ezpublish] <buz> i think realtime replication and fail over is more useful then
+[12-09-2005 09:34:51] [#ezpublish] <buz> and much more widely tested for sure
+[12-09-2005 09:35:31] [#ezpublish] <buz> of course some would say reliability isnt exactly mysql's strength to begin with
+[12-09-2005 09:35:46] [#ezpublish] <Katana`> we don't have the choice to discuss that ;)
+[12-09-2005 09:36:43] [#ezpublish] <buz> if you want that sort of reliability, you'll also want several dedicated upstreams
+[12-09-2005 09:38:44] [#ezpublish] <buz> or even separated data centers for the truly paranoid
+[12-09-2005 09:47:18] [#ezpublish] <Katana`> we're gonna concentrate on hardware reliability first
+[12-09-2005 09:47:33] [#ezpublish] <Katana`> i think they're gonna forgive us the day an A bomb explodes in our datacenter ;)
+[12-09-2005 09:47:33] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-09-2005 09:48:39] [#ezpublish] <@fh[eZ]> now that is promising
+[12-09-2005 09:48:44] [#ezpublish] <buz> dont buy dell servers then
+[12-09-2005 09:49:28] [#ezpublish] <buz> a bombs i'm not so worried about, datacenter screwups much more so (they can, do and will happen)
+[12-09-2005 09:52:43] [#ezpublish] <Katana`> :))
+[12-09-2005 09:52:54] [#ezpublish] <Katana`> we didn't have any problem with them
+[12-09-2005 09:53:02] [#ezpublish] <buz> those new sun niagara machines look damn neat
+[12-09-2005 09:53:04] [#ezpublish] <Katana`> actually, we're hosting lots of scripts for that big client of us
+[12-09-2005 09:53:10] [#ezpublish] <Katana`> including registration applications
+[12-09-2005 09:53:23] [#ezpublish] <Katana`> and this morning, our server went down due to a very cute system load of 650
+[12-09-2005 09:53:33] [#ezpublish] <buz> wtf?
+[12-09-2005 09:53:34] [#ezpublish] <Katana`> so now they got the money for a better platform, dedicated
+[12-09-2005 09:53:36] [#ezpublish] <Katana`> and we're working on that
+[12-09-2005 09:53:49] [#ezpublish] <Katana`> some deadlock, i think... the server is already handling MUCH more than it should
+[12-09-2005 09:53:59] [#ezpublish] <buz> highest load i ever saw was about 15
+[12-09-2005 09:54:04] [#ezpublish] <Katana`> mail + av + antispam + smtp + apache + prim dns + mysql
+[12-09-2005 09:54:07] [#ezpublish] <Katana`> lots of sites
+[12-09-2005 09:54:18] [#ezpublish] <Katana`> it's funny when you get a 3 digits load :))
+[12-09-2005 09:54:22] [#ezpublish] <buz> you should never have mail and web on the same machine ;)
+[12-09-2005 09:55:05] [#ezpublish] <Katana`> i know :)
+[12-09-2005 09:55:08] [#ezpublish] <Katana`> i'm not the sysadmin ;)
+[12-09-2005 09:55:15] [#ezpublish] <Katana`> just the jerk who shouts on others
+[12-09-2005 09:55:20] [#ezpublish] <buz> lol
+[12-09-2005 09:55:36] [#ezpublish] <buz> the one who writes scripts that bug down the machine
+[12-09-2005 09:55:53] [#ezpublish] <Katana`> lol
+[12-09-2005 09:55:56] [#ezpublish] <Katana`> maybe a tad ;)
+[12-09-2005 09:56:40] [#ezpublish] <Katana`> nice, 30K ADSL line test since yesterday morning on that interface
+[12-09-2005 09:56:45] [#ezpublish] <Katana`> and 12K registrations
+[12-09-2005 09:57:00] [#ezpublish] <buz> is that my favorite el cheapo telco?
+[12-09-2005 09:57:15] [#ezpublish] <Katana`> yep :))
+[12-09-2005 09:57:21] [#ezpublish] <Katana`> the french one this time
+[12-09-2005 09:57:23] [#ezpublish] <buz> do you think you could hack their db so they stop calling me?
+[12-09-2005 09:57:25] [#ezpublish] <Katana`> they're actually good in france
+[12-09-2005 09:57:32] [#ezpublish] <Katana`> lol no, this one is in estonia ;)
+[12-09-2005 09:57:39] [#ezpublish] <buz> i dont care if they are good
+[12-09-2005 09:57:44] [#ezpublish] <buz> i dont do business with people who call me.
+[12-09-2005 09:57:57] [#ezpublish] <Katana`> i understand :)
+[12-09-2005 09:58:02] [#ezpublish] <Katana`> but i just work with them, not for them
+[12-09-2005 09:58:04] [#ezpublish] <Katana`> they're just a client
+[12-09-2005 09:58:09] [#ezpublish] <buz> much less call me at 8pm (or 8am for that matter)
+[12-09-2005 09:58:14] [#ezpublish] <Katana`> and eZ Publish for them would be nice though ^^
+[12-09-2005 09:58:15] [#ezpublish] <Katana`> argh
+[12-09-2005 09:58:18] [#ezpublish] <buz> i was aware of that
+[12-09-2005 09:59:36] [#ezpublish] * buz is looking for more neat ajax stuff to be built ;)
+[12-09-2005 09:59:42] [#ezpublish] <Katana`> :à))
+[12-09-2005 09:59:49] [#ezpublish] <Katana`> hah you've been captured by ajax ;)
+[12-09-2005 09:59:51] [#ezpublish] <Katana`> pwned
+[12-09-2005 09:59:58] [#ezpublish] <buz> ajax pwns
+[12-09-2005 10:00:12] [#ezpublish] <Katana`> yep :)
+[12-09-2005 10:00:12] [#ezpublish] <buz> i'm slowly beginning to grasp JS even
+[12-09-2005 10:00:16] [#ezpublish] <buz> as weird as that language is
+[12-09-2005 10:00:29] [#ezpublish] <buz> it is actually rather powerful
+[12-09-2005 10:00:47] [#ezpublish] <buz> is there something like serverside JS? to replace php ehehehe
+[12-09-2005 10:08:17] [#ezpublish] <Katana`> isn't it called JSP ? :)
+[12-09-2005 10:08:23] [#ezpublish] <Katana`> it's the closest i think ;)
+[12-09-2005 10:08:31] [#ezpublish] <buz> JSP is ugly stuff
+[12-09-2005 10:08:56] [#ezpublish] <buz> i need JSSP
+[12-09-2005 11:22:21] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-09-2005 11:26:59] [#ezpublish] * buz needs help
+[12-09-2005 11:27:04] [#ezpublish] <buz> this GOTTA be a bug
+[12-09-2005 11:27:14] [#ezpublish] <buz> go to http://triligon.org/triligon/projects/advancedforum/advancedforum_meta_forum
+[12-09-2005 11:27:23] [#ezpublish] <buz> it loads the wrong fucking forum
+[12-09-2005 11:27:52] [#ezpublish] <buz> clicking on the link then loads the item from the right forum under the wrong url?!?!?
+[12-09-2005 11:28:52] [#ezpublish] <buz> i could clear the cache and it'd likely go away but i dont want to. why does this happen, at all?
+[12-09-2005 11:30:12] [#ezpublish] <buz> mhh it seems to me that there's a weird cache block thing going on
+[12-09-2005 13:16:35] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-09-2005 13:53:25] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-09-2005 13:53:25] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-09-2005 13:53:49] -!- _Katana` is now known as Katana`
+[12-09-2005 14:04:09] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-09-2005 14:04:32] [#ezpublish] <buz> http://ez.no/customers/references/modul_event_for_rica_hotels <- the links pointing to the same page seem kinda pointless
+[12-09-2005 14:05:31] [#ezpublish] <_Katana`> lol a bit
+[12-09-2005 14:05:48] [#ezpublish] <buz> and since i cant read norwegian i cant figure out rica.no myself
+[12-09-2005 14:06:38] [#ezpublish] <buz> (wtf does a hotel site without english these days???)
+[12-09-2005 14:08:40] [#ezpublish] <buz> http://slashdot.org/articles/05/12/09/1912249.shtml?tid=217&tid=99 sure took em long enough (google reader is a piece of crap, btw)
+[12-09-2005 14:32:15] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 110 (Connection timed out)]
+[12-09-2005 14:32:15] -!- _Katana` is now known as Katana`
+[12-09-2005 14:45:59] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[12-09-2005 15:24:51] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [calvino.freenode.net irc.freenode.net]
+[12-09-2005 15:25:15] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-09-2005 15:25:51] -!- mode/#ezpublish [-o fh[eZ]] by ChanServ
+[12-09-2005 15:26:04] -!- _xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[12-09-2005 15:26:25] -dmwaters:$*- {global notice} Hi all, that split was my fault. had to update the server's firewall, and it apparrently reset the connections on the server. I apologize for this, and thank you for using freenode!
+[12-09-2005 15:30:55] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[12-09-2005 15:30:55] [notice(freenode-connect)] VERSION IQ 0.9.3
+[12-09-2005 15:39:44] -!- thekracker [n=kracker@66-169-180-221.dhcp.ftwo.tx.charter.com] has joined #ezpublish
+[12-09-2005 15:40:50] -!- kh[eZ] [n=kh@popeye.ez.no] has joined #ezpublish
+[12-09-2005 15:41:47] -!- elephantMan [n=elephant@217.167.222.224] has quit [Connection timed out]
+[12-09-2005 15:41:48] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-09-2005 15:42:47] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Connection timed out]
+[12-09-2005 15:43:02] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 110 (Connection timed out)]
+[12-09-2005 15:43:13] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[12-09-2005 15:43:43] -!- kris10an [n=kh@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[12-09-2005 15:44:10] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 110 (Connection timed out)]
+[12-09-2005 15:50:06] -!- mode/#ezpublish [+o fh[eZ]] by ChanServ
+[12-09-2005 15:50:16] -!- mode/#ezpublish [+o kh[eZ]] by ChanServ
+[12-09-2005 16:20:44] -!- _xiglet is now known as xiglet
+[12-09-2005 16:52:54] Disconnecting due to lack of a lag response (0.02199600 1134168714 != 0.09245500 1134168744)
+[12-09-2005 16:52:54] Diconnected. Sleeping for 2 second(s).
+[12-09-2005 16:52:56] >> Connecting to irc.freenode.net:6667
+[12-09-2005 16:53:46] >> Connected to irc.freenode.net:6667, registering...
+[12-09-2005 16:53:46] >> Attempting to join channels: #ezpublish
+[12-09-2005 16:53:46] >> Primary nickname in use, trying alternate.
+[12-09-2005 16:53:46] (unmatched::raw451) :calvino.freenode.net 451 * JOIN :Register first.
+[12-09-2005 16:53:47] >> Successfully registered. Nick is: ezpublishlog
+[12-09-2005 16:53:47] -!- There are 12031 listed and 12864 unlisted users on 21 servers
+[12-09-2005 16:53:47] -!- 31 flagged staff members
+[12-09-2005 16:53:47] -!- 10271 channels formed
+[12-09-2005 16:53:47] -!- I have 5030 clients and 0 servers
+[12-09-2005 16:53:47] -!- Current local  users: 5030  Max: 5531
+[12-09-2005 16:53:47] -!- Current global users: 24895  Max: 30476
+[12-09-2005 16:53:47] -!- Highest connection count: 5533 (5531 clients) (786265 since server was (re)started)
+[12-09-2005 16:53:47] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[12-09-2005 16:53:47] [notice(freenode-connect)] VERSION IQ 0.9.3
+[12-09-2005 16:54:31] >> Attempting to join channels: #ezpublish
+[12-09-2005 16:54:31] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[12-09-2005 16:54:31] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/news/community_newsletter_02_12_2005 |   http://ez.no/community/articles/an_introduction_to_ez_components
+[12-09-2005 16:54:31] -!- Topic set by kracker [@] [Fri,  9 Dec 2005 02:06:51 -0600]
+[12-09-2005 16:54:32] (unmatched::raw477) :calvino.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] If you're at a conference, please contact freenode staff to make sure we've made special allowance for many users coming into our network from a single internet address ( http://freenode.net/faq.shtml#gettinghelp ). Private messages from unregistered users are currently blocked, except to network staff, services and participating registered users ( http://freenode.net/faq.shtml#privmsg )... Thanks!
+[12-09-2005 16:55:04] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-09-2005 16:56:47] (ezpublishlog) Attempting to gain back primary nickname
+[12-09-2005 16:56:47] -!- ezpublishlog is now known as ezlog
+[12-09-2005 16:56:47] My new nick is ezlog
+[12-09-2005 17:32:08] -!- _Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-09-2005 17:32:09] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-09-2005 17:32:39] -!- _Katana` is now known as Katana`
+[12-09-2005 18:15:13] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[12-09-2005 19:47:35] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 110 (Connection timed out)]

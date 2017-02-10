@@ -1,0 +1,97 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 7.4.&nbsp; Exceptions</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch07lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch07lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch07lev1sec4"></a><h3 class="docSection1Title">7.4. Exceptions</h3>
+<a name="ch07lev2sec10"></a><h4 class="docSection2Title">7.4.1. What Are Exceptions?</h4>
+<p class="docText"><span class="docEmphStrong">Exceptions</span> are a high-level built-in error mechanism that is new as of PHP 5. Just as for PEAR errors, the relative cost of generating exceptions is high, so use them only to notify about unexpected events.<a name="ch07index276"></a></p>
+<p class="docText">Exceptions are objects that you can &quot;throw&quot; to PHP. If something is ready to "catch" your exception, it is handled gracefully. If nothing catches your exception, PHP bails out with an error message like this:<a name="ch07index277"></a></P>
+<pre><a name="PLID0"></a><div class="v1"><a href="ch07lev1sec4.html#PLID0">[View full width]</a></div>
+Fatal error: Uncaught exception 'FileException' with message 'Could not open config /home
+<img border="0" width="14" height="9" alt="" align="left" src="images/ccc.gif">/ssb/foo/conf/my.conf' in .../My/Config.php:49
+Stack trace:
+#0 .../My/Config.php(31): config-&gt;parseFile('my.conf')
+#1 .../My/prepend.inc(61): config-&gt;__construct('my.conf')
+#2 {main}
+  thrown in .../My/Config.php on line 49
+</pre><br>
+<p class="docText">Although PEAR errors are loosely modeled after exceptions, they lack the execution control that exceptions provide. With PEAR errors, you always need to check if a return value is an error object, or the error does not propagate down to the original caller. With exceptions, only code that cares about a particular exception needs to check for (catch) exceptions.<a name="ch07index278"></a></P>
+<a name="ch07lev2sec11"></a><h4 class="docSection2Title">7.4.2. try, catch, and throw</H4>
+<p class="docText">Three language constructs are used by exceptions: <span class="docEmphStrong">try, catch,</span> and <span class="docEmphStrong">throw</span>.</p>
+<p class="docText">To handle an exception, you need to run some code inside a <span class="docEmphStrong">try block</span>, like this:<a name="ch07index279"></a><a name="ch07index280"></a><a name="ch07index281"></a><a name="ch07index282"></a></p>
+<pre>
+try {
+    $article-&gt;display();
+}
+</pre><br>
+<p class="docText">The try block instructs PHP to look out for exceptions generated as the code inside the block is executed. If an exception occurs, it is passed on to one or more catch blocks immediately following the try block:</p>
+<pre>
+catch (Exception $e) {
+    die($e-&gt;getMessage());
+}
+</pre><BR>
+<p class="docText">As you can see, the variable <tt>$e</tt> seems to contain an object. It doesexceptions are actually objects, the only requirement is that it must be or inherit the <tt>Exception</tt> class. The <tt>Exception</tt> class implements a few methods, such as <tt>getMessage()</tt>, that give you more details about where the origin and cause of the exception. See <a class="docLink" href="ch03.html#ch03">Chapter 3</a>, &quot;PHP 5 OO Language,&quot; the details on the <tt>Exception</tt> class.</P>
+<p class="docText">To generate an exception in your own code, use the <tt>throw</tt> statement:<a name="ch07index283"></a><a name="ch07index284"></a><a name="ch07index285"></a><a name="ch07index286"></a><a name="ch07index287"></a><a name="ch07index288"></a></p>
+<pre>
+$fp = @fopen($filename, "r");
+if (!is_resource($fp)) {
+   throw new FileException("could not read '$filename'");
+}
+while ($line = fgets($fp)) { ...
+</pre><br>
+<p class="docText">In the previous catch example, you saw that the exception was an object. This example creates that object. There is nothing magical about this syntax; throw simply uses the specified object as part of the exception.</p>
+<p class="docText">To semantically separate various types of exceptions, you can define subclasses of <tt>Exception</tt> as you see fit:</P>
+<pre>
+class IO_Exception extends Exception { }
+class XML_Parser_Exception extends Exception { }
+class File_Exception extends IO_Exception { }
+</pre><br>
+<p class="docText">No member variables or methods are required in the exception class; everything that you need is already defined in the built-in <tt>Exception</tt> class.</p>
+<p class="docText">PHP checks the class names in the <tt>catch</tt> statement against the exception object with a so-called <tt>is_a</tt> comparison. That is, if the exception object is an instance of the <tt>catch</tt> class, or an instance of a subclass, PHP executes the catch block. Here is an example:<a name="ch07index289"></a><a name="ch07index290"></a><a name="ch07index291"></a><a name="ch07index292"></a></P>
+<pre>
+try {
+    $article-&gt;display();
+}
+catch (IO_Exception $e) {
+    print "Some IO problem occurred!";
+}
+catch (XML_Parser_Exception $e) {
+    print "Bad XML input!";
+}
+</pre><br>
+<p class="docText">Here, the <tt>IO_Exception</tt> catch catches both <tt>IO_Exception</tt> and <tt>File_Exception</tt>, because <tt>File_Exception</tt> inherits <tt>IO_Exception</tt>.<a name="ch07index293"></a></P>
+<p class="docText">If every catch fails to capture the exception, the exception goes on to the calling function, giving the calling function the opportunity to catch it.</p>
+<p class="docText">If the exception is not caught anywhere, PHP offers a last chance: the exception-handling function. By default, PHP prints the error message, class name, and a backtrace. By calling <tt>set_exception_handler()</tt>, you can replace this built-in behavior:</p>
+<pre>
+&lt;?php
+
+    function my_exception_handler(Exception $e)
+{
+    print "Uncaught exception of type " . get_class($e) . "\n";
+    exit;
+}
+
+set_exception_handler("my_exception_handler");
+
+throw new Exception;
+</pre><br>
+<p class="docText">In this example, <tt>my_exception_handler</tt> is called for any exception that is not caught inside a catch block. The exception handler function receives the exception object as its single parameter. The exception handler function effectively negates the exception, execution will proceed as if the exception was not thrown.<a name="ch07index294"></a><a name="ch07index295"></a><a name="ch07index296"></a><a name="ch07index297"></a></p>
+<p class="docText">Exceptions may not be thrown from within an exception handler function.</p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch07lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch07lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

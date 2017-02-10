@@ -1,0 +1,2 @@
+
+04 0 * * * cd /home/web/download.ezpublishhosting.com/html/ezirc/; ./bin/log_rotate_cron.sh

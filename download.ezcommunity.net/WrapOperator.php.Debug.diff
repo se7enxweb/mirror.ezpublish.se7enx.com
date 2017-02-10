@@ -1,0 +1,78 @@
+Index: extension/wrap_operator/autoloads/WrapOperator.php
+===================================================================
+--- extension/wrap_operator/autoloads/WrapOperator.php	(revision 1381)
++++ extension/wrap_operator/autoloads/WrapOperator.php	(working copy)
+@@ -15,6 +15,9 @@
+ 
+ class WrapOperator
+ {
++    // Controls display of eZ publish Debug Notices and Warnings (per instance)
++    var $Debug = false;
++
+     /*!
+       Constructor, does nothing by default.
+     */
+@@ -73,8 +76,12 @@
+             {
+                 // Check from ini if we are allowed to call given function.
+                 $ini =& eZINI::instance('wrap_operator.ini');
++
+                 $permittedFunctionList = $ini->variable( 'PHPFunctions', 'PermittedFunctionList' );
++
++                if ( $this->Debug == true )
+                 eZDebug::writeDebug( "wrap_php_func: permittedFunctionList: " . print_r($permittedFunctionList, TRUE) );
++
+                 if( !in_array($callbackFunction, $permittedFunctionList) )
+                 {
+                     // Function is not in list of permitted functions, bail out.
+@@ -94,13 +101,19 @@
+                 ob_start();
+ 
+                 // Execute the function call.
++
++                if ( $this->Debug == true )
+                 eZDebug::writeDebug( "wrap_php_func: paramArray:" . print_r($paramArray, true));
++
+                 $operatorValue = call_user_func_array($callbackFunction, $paramArray);
++
++                if ( $this->Debug == true )
+                 eZDebug::writeDebug( "wrap_php_func: function returned value:" . print_r($operatorValue, true));
+ 
+                 // If return_output is set to true, return the captured output from the called function instead of its return value.
+                 if( $returnOutput )
+                 {
++                if ( $this->Debug == true )
+                     eZDebug::writeDebug( "wrap_php_func: returning function output instead of returnvalue, which is '$operatorValue'.");
+                     $operatorValue = ob_get_contents();
+                 }
+@@ -114,8 +127,12 @@
+             {
+                 // Check from ini if we are allowed to call given function.
+                 $ini =& eZINI::instance('wrap_operator.ini');
++
+                 $permittedFunctionList = $ini->variable( 'UserFunctions', 'PermittedFunctionList' );
++
++                if ( $this->Debug == true )
+                 eZDebug::writeDebug( "wrap_user_func: permittedFunctionList: " . print_r($permittedFunctionList, TRUE) );
++
+                 if( !in_array($callbackFunction, $permittedFunctionList) )
+                 {
+                     // Function is not in list of permitted functions, bail out.
+@@ -139,12 +156,17 @@
+                 ob_start();
+ 
+                 // Execute the function call.
++                if ( $this->Debug == true )
+                 eZDebug::writeDebug( "wrap_user_func: paramArray:" . print_r($paramArray, true));
++
+                 $operatorValue = call_user_func_array($callbackFunction, $paramArray);
++
++                if ( $this->Debug == true )
+                 eZDebug::writeDebug( "wrap_user_func: function returned value:" . print_r($operatorValue, true));
+                 // If return_output is set to true, return the captured output from the called function instead of its return value.
+                 if( $returnOutput )
+                 {
++                if ( $this->Debug == true )
+                     eZDebug::writeDebug( "wrap_user_func: returning function output instead of returnvalue, which is '$operatorValue'.");
+                     $operatorValue = ob_get_contents();
+                 }

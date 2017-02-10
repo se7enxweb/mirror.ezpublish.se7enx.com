@@ -1,0 +1,719 @@
+[11-16-2005 00:01:00] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-16-2005 00:01:00] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-16-2005 00:01:00] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[11-16-2005 00:02:18] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[11-16-2005 00:02:18] [notice(freenode-connect)] VERSION IQ 0.9.3
+[11-16-2005 00:02:18] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] Private messages from unregistered users are currently blocked, except to network staff, to services (NickServ, etc.), and to registered users who have unblocked them. Please see the freenode website for more information: http://freenode.net/faq.shtml#privmsg
+[11-16-2005 00:02:20] -lilo:$*- [Global Notice] Hi all. We're experiencing some routing problems between Europe and the US. We may need to reroute. Please bear with us.
+[11-16-2005 00:52:13] -!- _rappy_ is now known as _Rappy_
+[11-16-2005 00:52:18] [#ezpublish] <_Rappy_> good morning all
+[11-16-2005 01:54:22] -!- ordnas [n=ordnas@p549DFC8E.dip.t-dialin.net] has joined #ezpublish
+[11-16-2005 02:29:52] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[11-16-2005 02:33:31] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-16-2005 02:36:15] [#ezpublish] <Katana`> morning
+[11-16-2005 02:36:26] [#ezpublish] <Katana`> kracker, are you here ?
+[11-16-2005 02:39:53] [#ezpublish] <kracker> ya, bearly
+[11-16-2005 02:40:33] [#ezpublish] <Katana`> cool
+[11-16-2005 02:40:49] [#ezpublish] <Katana`> have you ever create node assignments from PHP in eZ ?
+[11-16-2005 02:41:15] [#ezpublish] <Katana`> i'm using eZNodeAssignment::create followed by $operationResult = eZOperationHandler::execute('content', 'publish')
+[11-16-2005 02:41:28] [#ezpublish] <kracker> not that i rememember off hand  :(
+[11-16-2005 02:41:36] [#ezpublish] <Katana`> and the publish method takes 18 secs ...
+[11-16-2005 02:42:31] [#ezpublish] <Katana`> which i think is too much :)
+[11-16-2005 02:42:52] [#ezpublish] <_Rappy_> ARG! IE makes rappy go craZymadINSANE!
+[11-16-2005 02:43:07] [#ezpublish] <Katana`> that's a lot of craziness
+[11-16-2005 02:44:59] [#ezpublish] <_Rappy_> yes
+[11-16-2005 03:03:48] [#ezpublish] <Katana`> okay with another method it takes 2 secs instead of 21
+[11-16-2005 03:17:08] [#ezpublish] <_Rappy_> 2 is better than 21
+[11-16-2005 03:17:13] [#ezpublish] <Katana`> a little yes ;)
+[11-16-2005 03:17:48] [#ezpublish] <Katana`> accumulators own
+[11-16-2005 03:19:12] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[11-16-2005 03:27:45] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[11-16-2005 03:35:50] [#ezpublish] <Katana`> now why do I have errors in EOR
+[11-16-2005 03:40:40] [#ezpublish] <kracker> grrr, server outages wake me up with alertra.com phone calls :/
+[11-16-2005 03:42:19] [#ezpublish] <Katana`> ouch ...
+[11-16-2005 03:43:00] [#ezpublish] <kracker> then i couldn't seem to remember the password to turn off the 5min interval calls filling up my vmail ...
+[11-16-2005 03:43:28] [#ezpublish] <kracker> now, all is well, well cept the server is down but that's schedualed hardware maintinence
+[11-16-2005 03:43:34] [#ezpublish] <Katana`> :)
+[11-16-2005 03:50:36] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-16-2005 03:51:09] [#ezpublish] <Katana`> ah, buz
+[11-16-2005 03:51:09] [#ezpublish] <Katana`> :)
+[11-16-2005 03:51:15] [#ezpublish] <Katana`> my EOR pal :)
+[11-16-2005 03:51:17] [#ezpublish] <buz> been waiting for me?
+[11-16-2005 03:51:21] [#ezpublish] <Katana`> yay, always !
+[11-16-2005 03:53:24] [#ezpublish] <buz> hehe
+[11-16-2005 03:53:38] [#ezpublish] <buz> i've just noticed there's a new swiss ezpublish company
+[11-16-2005 03:53:43] [#ezpublish] <Katana`> really ?
+[11-16-2005 03:53:44] [#ezpublish] <buz> they do some value added stuff it seems
+[11-16-2005 03:53:46] [#ezpublish] <buz> ymc.ch
+[11-16-2005 03:53:52] [#ezpublish] <buz> (or claim to do so, anyway)
+[11-16-2005 03:53:56] [#ezpublish] <buz> i want to see their system
+[11-16-2005 03:54:00] [#ezpublish] <buz> but i cant very well call them
+[11-16-2005 03:54:06] [#ezpublish] <buz> (everyone knows my name by now ;)
+[11-16-2005 03:54:09] [#ezpublish] <Katana`> ymca.ch ? :)
+[11-16-2005 03:54:15] [#ezpublish] <Katana`> LOL
+[11-16-2005 03:54:15] [#ezpublish] <buz> no
+[11-16-2005 03:54:23] [#ezpublish] <buz> that one is called cevi.ch in switzerlan
+[11-16-2005 03:54:52] [#ezpublish] <buz> http://base.google.com/base/default?gsessionid=_FSuFYzAFRg i dont like this
+[11-16-2005 03:55:00] [#ezpublish] <Katana`> their bottom navivation is nicely broken
+[11-16-2005 03:55:02] [#ezpublish] <buz> google is getting TOO big for my taste
+[11-16-2005 03:55:27] [#ezpublish] <Katana`> :)
+[11-16-2005 03:55:27] [#ezpublish] <buz> the site is TOTALLY broken in konqueror
+[11-16-2005 03:55:42] [#ezpublish] <Katana`> now EOR is throwing lots of errors at mer
+[11-16-2005 03:55:43] [#ezpublish] <Katana`> me
+[11-16-2005 03:55:53] [#ezpublish] <buz> what did you do
+[11-16-2005 03:56:02] [#ezpublish] <Katana`> hum... i've used it :)
+[11-16-2005 03:56:14] [#ezpublish] <Katana`> it doesn't like something for some reason
+[11-16-2005 03:57:13] [#ezpublish] <buz> i think it has a bug with the creation of some datatypes (i noticed it with image)
+[11-16-2005 03:57:29] [#ezpublish] <Katana`> ah
+[11-16-2005 03:57:51] [#ezpublish] <Katana`> i'm improving those writeError calls in order to trace that down a little
+[11-16-2005 03:58:00] [#ezpublish] <Katana`> i'm done with my setRelatedTopics workflow
+[11-16-2005 03:58:06] [#ezpublish] <Katana`> and i'm done optimizing it
+[11-16-2005 03:58:11] [#ezpublish] <Katana`> down from 21 secs to 2
+[11-16-2005 03:58:14] [#ezpublish] <Katana`> for 22 subitems
+[11-16-2005 03:58:45] [#ezpublish] <Katana`> but it looks like EOR adds good overhead...
+[11-16-2005 03:58:58] [#ezpublish] <Katana`> and i wanna know why :)
+[11-16-2005 04:00:03] [#ezpublish] <buz> while you're at it, you could port eor to 3.6/3.7 kernel functions instead of messing with the db directly ;)
+[11-16-2005 04:00:11] [#ezpublish] <Katana`> lol
+[11-16-2005 04:00:14] [#ezpublish] <Katana`> maybe later ;)
+[11-16-2005 04:00:17] [#ezpublish] <buz> shouldn't take much work
+[11-16-2005 04:00:20] [#ezpublish] <Katana`> i'm quite in the middle of a deadline now
+[11-16-2005 04:00:32] [#ezpublish] <buz> it could make it faster ;)
+[11-16-2005 04:00:43] [#ezpublish] <Katana`> please, please stop that :)
+[11-16-2005 04:00:56] [#ezpublish] <Katana`> you're a minion of the devil !
+[11-16-2005 04:01:09] [#ezpublish] <buz> not minion, i'm the master himself
+[11-16-2005 04:01:18] [#ezpublish] <Katana`> oh
+[11-16-2005 04:01:21] [#ezpublish] <Katana`> hi boss :)
+[11-16-2005 04:01:28] [#ezpublish] <buz> harhar
+[11-16-2005 04:01:41] [#ezpublish] <Katana`> can I get a raise ?
+[11-16-2005 04:01:56] [#ezpublish] <buz> lemme see, the pope is still alive, so no
+[11-16-2005 04:02:12] [#ezpublish] <Katana`> they keep replacing him !
+[11-16-2005 04:02:14] [#ezpublish] <Katana`> it's not fair
+[11-16-2005 04:02:18] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-16-2005 04:02:26] [#ezpublish] <Sulfur> hi guys :)
+[11-16-2005 04:02:33] [#ezpublish] <buz> you must abolish the church altogether
+[11-16-2005 04:02:38] [#ezpublish] <Katana`> damn
+[11-16-2005 04:02:43] [#ezpublish] <Katana`> when am i gonna work on that project ?
+[11-16-2005 04:02:54] [#ezpublish] <Sulfur> I discovered that putting a checkbox datatype as "mandatory" means that the user must absolutely flag it! :))
+[11-16-2005 04:03:10] [#ezpublish] <buz> could be useful for "I have read XY" stuff?
+[11-16-2005 04:03:17] [#ezpublish] <Sulfur> church?
+[11-16-2005 04:03:20] [#ezpublish] <Katana`> what else could it mean Sulfur ? :)
+[11-16-2005 04:03:26] [#ezpublish] <Katana`> lol
+[11-16-2005 04:03:41] [#ezpublish] <Katana`> it can indeed be funny if you drop in the middle of that conversation like Sulfur did :))
+[11-16-2005 04:03:54] [#ezpublish] <buz> HEHE
+[11-16-2005 04:04:07] [#ezpublish] <Sulfur> serendipitous is my middle name :))
+[11-16-2005 04:04:11] [#ezpublish] * buz hands katana a dead raven, that's your raise
+[11-16-2005 04:04:20] [#ezpublish] <Katana`> damnit another one
+[11-16-2005 04:04:24] [#ezpublish] * Katana` puts the raven in the box
+[11-16-2005 04:04:35] [#ezpublish] <buz> http://base.google.com/ i dont like that
+[11-16-2005 04:04:41] [#ezpublish] <Sulfur> Katana`: it could mean that I have to specify either on or off (ya know, 3-state checkboxes)
+[11-16-2005 04:05:01] [#ezpublish] <Katana`> bah it's just a knowledge base buz
+[11-16-2005 04:05:07] [#ezpublish] <Katana`> they wanna replace wikipedia, you'll see :))
+[11-16-2005 04:05:19] [#ezpublish] <buz> google tries to get all knowledge stored by them
+[11-16-2005 04:05:27] [#ezpublish] <Katana`> :)
+[11-16-2005 04:05:28] [#ezpublish] <buz> it's getting ms'esque you know
+[11-16-2005 04:05:44] [#ezpublish] <Katana`> nah...
+[11-16-2005 04:05:48] [#ezpublish] <Katana`> i don't feel that
+[11-16-2005 04:06:00] [#ezpublish] <Katana`> it seems to me that they're just playing around :
+[11-16-2005 04:06:07] [#ezpublish] <Katana`> keeping the employees busy :)
+[11-16-2005 04:06:12] [#ezpublish] <_Rappy_> yey! first version of web is soon going live
+[11-16-2005 04:06:12] [#ezpublish] <buz> no there must be a plan
+[11-16-2005 04:06:13] [#ezpublish] <_Rappy_> ;D
+[11-16-2005 04:06:27] [#ezpublish] <buz> _Rappy_: i thought we were busy building web 2.0 ?
+[11-16-2005 04:06:31] [#ezpublish] <Sulfur> first version of web? damn, what have I been browsing all these years?
+[11-16-2005 04:06:40] [#ezpublish] <Katana`> buz: i think they really dedicate time to new ideas
+[11-16-2005 04:06:53] [#ezpublish] <Katana`> and instead of keeping the ideas to themselves they just try them publicly, to "see what happens"
+[11-16-2005 04:06:57] [#ezpublish] <buz> so far i've seen little in the way of new ideas (google maps aside)
+[11-16-2005 04:07:01] [#ezpublish] <Sulfur> http://findchicks.google.com
+[11-16-2005 04:07:16] [#ezpublish] <Katana`> (why did I click on that ?)
+[11-16-2005 04:07:21] [#ezpublish] <buz> yeah
+[11-16-2005 04:07:23] [#ezpublish] <buz> host not found
+[11-16-2005 04:07:40] [#ezpublish] <buz> i was expecting some redirect to adultfriendfinder or something like that
+[11-16-2005 04:07:58] [#ezpublish] <buz> yeah but date.google.com would perhaps even make sense
+[11-16-2005 04:08:10] [#ezpublish] <Katana`> :)
+[11-16-2005 04:08:27] [#ezpublish] <Katana`> did you know that gogle.com was working ?
+[11-16-2005 04:08:46] [#ezpublish] <Katana`> or http://www.gooogle.com/
+[11-16-2005 04:09:20] [#ezpublish] <buz> i like justfuckinggoogleit.com better
+[11-16-2005 04:09:28] [#ezpublish] <Katana`> yep :)
+[11-16-2005 04:09:29] [#ezpublish] <Sulfur> Katana`: I got ya ;)
+[11-16-2005 04:09:33] [#ezpublish] <Katana`> we use that one a lot on #php
+[11-16-2005 04:10:03] [#ezpublish] <Sulfur> and ya too buz ;) geek psychology ;)
+[11-16-2005 04:10:16] [#ezpublish] <buz> more like cluebat psychology
+[11-16-2005 04:12:30] [#ezpublish] <Sulfur> hehe :)
+[11-16-2005 04:13:53] [#ezpublish] <buz> http://en.wikipedia.org/wiki/Canvas_%28HTML_element%29 cool
+[11-16-2005 04:13:58] [#ezpublish] <buz> supported in ff 1.5
+[11-16-2005 04:15:07] [#ezpublish] <buz> mhh why must a decent laser/scanner/copier cost 500EUR
+[11-16-2005 04:15:51] [#ezpublish] <buz> and that doesnt even include automatic document feeding
+[11-16-2005 04:20:02] [#ezpublish] <Katana`> buz, you wouldn't by any change remember when initializeObjectAttribute is called in EOR ?
+[11-16-2005 04:20:11] [#ezpublish] <buz> no
+[11-16-2005 04:20:19] [#ezpublish] <buz> i think that's an framework callback no?
+[11-16-2005 04:20:26] [#ezpublish] <Katana`> no idea
+[11-16-2005 04:20:34] [#ezpublish] <Katana`> i run into the if (!($originalContentObjectAttribute === null)) case
+[11-16-2005 04:20:37] [#ezpublish] <buz> i would think so
+[11-16-2005 04:23:36] [#ezpublish] <Katana`> hum, it looks like writeError is used as a debug call in EOR ;)
+[11-16-2005 04:24:30] [#ezpublish] <buz> it is
+[11-16-2005 04:24:38] [#ezpublish] <buz> it's easier to see  you know ;)
+[11-16-2005 04:24:44] [#ezpublish] <_Rappy_> correction: of this website
+[11-16-2005 04:24:45] [#ezpublish] <Katana`> really ?
+[11-16-2005 04:24:49] [#ezpublish] <Katana`> why ? :)
+[11-16-2005 04:24:50] [#ezpublish] <_Rappy_> *kicks some butts*
+[11-16-2005 04:24:53] [#ezpublish] <Katana`> because it's in red ? ^^
+[11-16-2005 04:25:08] [#ezpublish] <buz> yeah plus in some conditions only strong failures get reported
+[11-16-2005 04:25:10] [#ezpublish] <buz> dunno why
+[11-16-2005 04:26:09] [#ezpublish] <Katana`> but sometimes you really wanna know wether it's an error or just some debug ...
+[11-16-2005 04:26:17] [#ezpublish] <Katana`> an error makes you feel something is wrong
+[11-16-2005 04:26:18] [#ezpublish] <Katana`> usually :)
+[11-16-2005 04:26:31] [#ezpublish] <buz> at times something in fact WAS wrong
+[11-16-2005 04:26:45] [#ezpublish] <buz> the code could do with an overhaul
+[11-16-2005 04:26:57] [#ezpublish] <Katana`> lol
+[11-16-2005 04:26:57] [#ezpublish] <buz> i'm once again thinking about the calendar thing
+[11-16-2005 04:27:02] [#ezpublish] <Sulfur> Katana`: .... like using a first_set and having an error because, indeed, the variable is not set? (duh) ? ;)
+[11-16-2005 04:27:03] [#ezpublish] <buz> but i don't think i have enough time on my hands
+[11-16-2005 04:27:15] [#ezpublish] <Sulfur> ... or somesuch stuff ..
+[11-16-2005 04:30:45] [#ezpublish] <Sulfur> ... hey guys, any way to manipulate easily cookies from templates?
+[11-16-2005 04:30:54] [#ezpublish] <buz> try the ezhttp object
+[11-16-2005 04:31:11] [#ezpublish] <Sulfur> that's php
+[11-16-2005 04:34:26] [#ezpublish] <Sulfur> basically my boss wants a "remember me" feature which will allow for users who will check the checkbox, to stay logged in unless they specifically log out
+[11-16-2005 04:34:26] [#ezpublish] <Katana`> there's an ext for that i think
+[11-16-2005 04:34:26] [#ezpublish] <Katana`> or hack
+[11-16-2005 04:34:26] [#ezpublish] <Katana`> it's the same :)
+[11-16-2005 04:34:26] [#ezpublish] * Sulfur digs into the contribs
+[11-16-2005 04:34:26] [#ezpublish] <Sulfur> who the hell is leaving all those raven caracces around ?
+[11-16-2005 04:34:26] [#ezpublish] <Sulfur> carcasses
+[11-16-2005 04:34:27] [#ezpublish] <Katana`> it's kh i think
+[11-16-2005 04:34:27] [#ezpublish] <Katana`> but shhhh
+[11-16-2005 04:35:41] [#ezpublish] <Katana`> buz, adding a location to an object that has EOR attributes should not trigger EOR at all should it ?
+[11-16-2005 04:36:23] [#ezpublish] <Katana`> the contentobject itself should not change at all...
+[11-16-2005 04:40:16] [#ezpublish] <Katana`> damn... for each relation I add in that EOR field it adds 4/5 secs to publishing...
+[11-16-2005 04:40:20] [#ezpublish] <Katana`> not funny :)
+[11-16-2005 04:58:15] [#ezpublish] <Katana`> now am i gonna make it so that when they delete the main location of a product, it's deleted everywhere...
+[11-16-2005 04:58:23] [#ezpublish] <Katana`> no workflow for that i'm gonna have to hack the core ...
+[11-16-2005 04:58:31] [#ezpublish] <Katana`> or a custom action maybe ...
+[11-16-2005 04:59:23] [#ezpublish] <Sulfur> Katana`: while you're doing that, would you just take some notes about the steps you followed to add workflows and actions? I would find it useful, and many on eZ community would as well.
+[11-16-2005 05:00:40] [#ezpublish] <Katana`> I have not added a workflow yet
+[11-16-2005 05:01:24] [#ezpublish] <Katana`> and I can't really do that for my problem, since it's an action, not an operation
+[11-16-2005 05:01:48] [#ezpublish] <Katana`> and actually, adding triggers to an operation requires more than that...
+[11-16-2005 05:02:12] [#ezpublish] <Katana`> you need to call eZOperationHandler::execute on your operation (defined in module/operation_definition.php
+[11-16-2005 05:02:12] [#ezpublish] <Katana`> )
+[11-16-2005 05:02:26] [#ezpublish] <Katana`> this is the code that starts an operation...
+[11-16-2005 05:02:31] [#ezpublish] <Katana`> so... grumpf
+[11-16-2005 05:02:38] [#ezpublish] * Katana` pokes fh[eZ]
+[11-16-2005 05:12:52] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-16-2005 05:13:22] [#ezpublish] <zrg> hm, isnt there a trial licence for ez online editor
+[11-16-2005 05:13:31] [#ezpublish] <Sulfur> afaik, no
+[11-16-2005 05:13:59] [#ezpublish] <_Rappy_> oooh
+[11-16-2005 05:14:01] [#ezpublish] <_Rappy_> new abb
+[11-16-2005 05:14:06] [#ezpublish] <_Rappy_> as far as I know?
+[11-16-2005 05:15:15] [#ezpublish] <Katana`> no there isn't
+[11-16-2005 05:16:55] [#ezpublish] <zrg> dang
+[11-16-2005 05:17:12] [#ezpublish] <zrg> could have used one for demo purposes
+[11-16-2005 05:18:24] [#ezpublish] <Katana`> :(
+[11-16-2005 05:36:57] [#ezpublish] <Sulfur> hey, ezsqlinsertschema.php is used to prepare a blank database with all the tables which eZ need ??? I am trying to make sense of the install doc of the survey contrib :P
+[11-16-2005 05:53:48] [#ezpublish] <_Rappy_> hey, what was the URI to that mailthingie made in AJAX
+[11-16-2005 05:54:48] [#ezpublish] <_Rappy_> Sulfur?
+[11-16-2005 05:54:59] [#ezpublish] <_Rappy_> I think it was you who posted it
+[11-16-2005 06:00:40] [#ezpublish] <_Rappy_> found it
+[11-16-2005 06:03:05] [#ezpublish] <Sulfur> no I wasn't
+[11-16-2005 06:23:03] [#ezpublish] <Sulfur> ..... why zev.ez.no has no websvn interface .... damn
+[11-16-2005 06:28:07] [#ezpublish] <Sulfur> I am trying to get the updated version of ezsurvey but I cant :(
+[11-16-2005 06:34:34] [#ezpublish] <buz> Katana`: not sure why eor adds to that. seems weird to me.
+[11-16-2005 06:34:46] [#ezpublish] <buz> does it happen with other relation types too?
+[11-16-2005 06:40:08] [#ezpublish] <buz> Google to me seems like a new Catholicism. Everything consolidated under a monolithic central power with a mandate of "doing no evil". They send missionaries in the form of Bots and Ad Words to uncharted territory seemingly to help netizens in the wild, while gathering statistical data about what large masses of people are doing where, when and why. With this they can build their own versions of everything. Your home (page) is nothing compare
+[11-16-2005 06:40:08] [#ezpublish] <buz>  and erode their old societies under Google (capital G).
+[11-16-2005 06:40:36] [#ezpublish] <buz> there is is, your new assignment, katana
+[11-16-2005 06:40:59] [#ezpublish] <buz> i'm sure ballmer will pay you nicely if you abolish google ;)
+[11-16-2005 06:42:37] [#ezpublish] <buz> ok so how do we get ezpublish to talk to google base?
+[11-16-2005 06:43:40] [#ezpublish] <Katana`> _Rappy_: it was zimbra
+[11-16-2005 06:43:41] [#ezpublish] <Katana`> zimbra.com
+[11-16-2005 06:43:53] [#ezpublish] <_Rappy_> Katana`, yes, I found it :)
+[11-16-2005 06:45:16] [#ezpublish] <Katana`> buz: Balmer is saying that ? what a surprise
+[11-16-2005 06:45:25] [#ezpublish] <Katana`> MS doesn't like Google ? how is that possible :)
+[11-16-2005 06:46:42] [#ezpublish] <_Rappy_> hmz
+[11-16-2005 06:47:02] [#ezpublish] <_Rappy_> I am unable to give roles to a users
+[11-16-2005 06:47:12] [#ezpublish] <_Rappy_> to usergruops, yes, but not users
+[11-16-2005 06:47:48] [#ezpublish] <Sulfur> can anyone point me a svn client ?
+[11-16-2005 06:47:55] [#ezpublish] <buz> svn?
+[11-16-2005 06:47:56] [#ezpublish] <Katana`> what OS ?
+[11-16-2005 06:48:01] [#ezpublish] <Katana`> for win32, TortoiseSVN
+[11-16-2005 06:48:02] [#ezpublish] <Sulfur> linux suse
+[11-16-2005 06:48:04] [#ezpublish] <Katana`> for linux, svn
+[11-16-2005 06:48:04] [#ezpublish] <Sulfur> 9.2
+[11-16-2005 06:48:06] [#ezpublish] <buz> kdesvn
+[11-16-2005 06:48:11] [#ezpublish] <Katana`> command line one then :)
+[11-16-2005 06:48:12] [#ezpublish] <Katana`> it owns
+[11-16-2005 06:48:15] [#ezpublish] <Sulfur> seems the damn suse has no official support for svn :)
+[11-16-2005 06:48:23] [#ezpublish] <Sulfur> I'd love to, but I haven't it
+[11-16-2005 06:48:35] [#ezpublish] <Sulfur> and yast does not find anything
+[11-16-2005 06:51:49] [#ezpublish] <buz> wtf
+[11-16-2005 06:51:56] [#ezpublish] <buz> ask yast about subversion
+[11-16-2005 06:52:04] [#ezpublish] <buz> if it doesnt have svn, then suse is even crappier than i thought
+[11-16-2005 06:53:09] [#ezpublish] <_Rappy_> I have a custom contentclass person. I have created instances of this class in the content structure, and added a second location for them in the Useraccounts as children of an custom usergroup. I can give roles to the group, but not the single persons. Anyone got an idea why? (person does have the attribute "user")
+[11-16-2005 06:54:42] [#ezpublish] <Sulfur> buz tried it, nothing (svn, subversion)
+[11-16-2005 06:55:48] [#ezpublish] <Katana`> i don't think you can give roles to users ...
+[11-16-2005 06:55:52] [#ezpublish] <Katana`> can you ?
+[11-16-2005 06:56:04] [#ezpublish] <buz> i think you can
+[11-16-2005 06:58:31] [#ezpublish] <zrg> add some good repos to your list sulfur
+[11-16-2005 07:05:43] [#ezpublish] <_Rappy_> well, I CAN give a the same role to predefined users like admin and anonymous (although those are made from a diffrent class)
+[11-16-2005 07:07:27] [#ezpublish] <_Rappy_> http://ez.no/bugs/view/7072
+[11-16-2005 07:07:46] [#ezpublish] <_Rappy_> seems like one need to set somethin in ini to allow it :)
+[11-16-2005 07:08:57] -!- ordnas [n=ordnas@p549DFC8E.dip.t-dialin.net] has left #ezpublish []
+[11-16-2005 07:09:21] [#ezpublish] <Sulfur> at the end, tired with finding the damn svn client, I wget'ed it all ....
+[11-16-2005 07:09:57] -!- ordna1 [n=ordnas@p549DFC8E.dip.t-dialin.net] has joined #ezpublish
+[11-16-2005 07:11:31] -!- heathd [n=heathd@82.152.159.125] has joined #ezpublish
+[11-16-2005 07:11:56] [#ezpublish] <heathd> ordna1: hi is that sandro?
+[11-16-2005 07:16:22] [#ezpublish] <ordna1> yep
+[11-16-2005 07:16:41] [#ezpublish] <ordna1> heathd: David, is that you???
+[11-16-2005 07:20:19] [#ezpublish] <_Rappy_> [AssignRole]
+[11-16-2005 07:20:19] [#ezpublish] <_Rappy_> Class[]=person
+[11-16-2005 07:20:32] [#ezpublish] <_Rappy_> taht, in settings/override/browse.ini.append.php
+[11-16-2005 07:20:42] [#ezpublish] <_Rappy_> was all I needed to be able to do it =)
+[11-16-2005 07:22:04] [#ezpublish] <Katana`> that's sandro ?
+[11-16-2005 07:22:11] [#ezpublish] <Katana`> the ezSandro ? :)
+[11-16-2005 07:22:26] [#ezpublish] <ordna1> hehe, there's only one real Sandro :)
+[11-16-2005 07:22:36] [#ezpublish] <Katana`> :))
+[11-16-2005 07:22:38] [#ezpublish] <Katana`> how are you ?
+[11-16-2005 07:22:44] [#ezpublish] <ordna1> fine 'n you?
+[11-16-2005 07:22:48] [#ezpublish] <Katana`> fine, fine
+[11-16-2005 07:22:51] [#ezpublish] <Katana`> very busy but fine
+[11-16-2005 07:23:00] [#ezpublish] <Katana`> got lots of things to attend to before I move to Lyon ;)
+[11-16-2005 07:23:23] [#ezpublish] <ordna1> yeah, heard of that ;)
+[11-16-2005 07:23:31] [#ezpublish] <Katana`> i can't wait :)
+[11-16-2005 07:23:41] [#ezpublish] <Katana`> but I have "a few" things to complete here first...
+[11-16-2005 07:23:44] [#ezpublish] <ordna1> when do you move?
+[11-16-2005 07:24:03] [#ezpublish] <Katana`> first half of january
+[11-16-2005 07:24:13] [#ezpublish] <ordna1> ic
+[11-16-2005 07:24:14] [#ezpublish] <Katana`> i'm going there with my gf this week end to visit appartments
+[11-16-2005 07:25:37] [#ezpublish] <Katana`> http://www.dilbert.com/comics/dilbert/archive/images/dilbert2002220051116.gif
+[11-16-2005 07:26:05] [#ezpublish] <ordna1> hehe
+[11-16-2005 07:26:24] [#ezpublish] <ordna1> I'll make sure to be in Lyon ASAP
+[11-16-2005 07:26:33] [#ezpublish] <ordna1> last time I was there, i did not have time to see the center
+[11-16-2005 07:26:49] [#ezpublish] <ordna1> heathd: ping
+[11-16-2005 07:29:41] [#ezpublish] <Katana`> http://web.media.mit.edu/~kimiko/iobrush/iobrush_mpeg_medium.mpg
+[11-16-2005 07:29:53] [#ezpublish] <Katana`> i have seen pictures ordna1 ;)
+[11-16-2005 07:29:58] [#ezpublish] <Katana`> i don't know the citu at all
+[11-16-2005 07:30:23] [#ezpublish] <Katana`> city
+[11-16-2005 07:31:54] [#ezpublish] <buz> Katana`: LOL, second time i get that dilbert link today
+[11-16-2005 07:34:35] [#ezpublish] <Katana`> :))
+[11-16-2005 07:48:24] [#ezpublish] <_Rappy_> what's doc22.ez.no?
+[11-16-2005 07:48:44] [#ezpublish] <Katana`> doc for version 2.2 i guess
+[11-16-2005 07:49:08] [#ezpublish] <zrg> its the stuff that pollutes search
+[11-16-2005 07:49:36] [#ezpublish] <_Rappy_> sure does
+[11-16-2005 07:50:11] [#ezpublish] <Katana`> :))
+[11-16-2005 07:50:19] [#ezpublish] <_Rappy_> anyhow, can someone point me to the place where I can read about how to make an edit-button on the site (taht is visible when a user with the correct roles are logged in)
+[11-16-2005 07:52:30] [#ezpublish] <zrg> you have come to the master :)
+[11-16-2005 07:52:39] [#ezpublish] <zrg> hang on ill give codesnippet
+[11-16-2005 07:54:32] [#ezpublish] <kracker> heh
+[11-16-2005 07:55:35] [#ezpublish] <zrg> http://pastebin.com/431644
+[11-16-2005 07:59:05] [#ezpublish] <Sulfur> anyone of you using the survey contrib?
+[11-16-2005 07:59:23] [#ezpublish] <Katana`> i'm not
+[11-16-2005 07:59:24] [#ezpublish] <kracker> neat contrib but not yet
+[11-16-2005 07:59:30] [#ezpublish] <Katana`> not interested in what users are thinking
+[11-16-2005 07:59:31] [#ezpublish] <_Rappy_> tnx zrg :)
+[11-16-2005 08:00:48] [#ezpublish] <kracker> zrg, any chance you might post that to snippets.ezcommunity.net ?
+[11-16-2005 08:01:05] [#ezpublish] <zrg> sure
+[11-16-2005 08:01:10] [#ezpublish] <kracker> sweet
+[11-16-2005 08:04:34] [#ezpublish] <zrg> gaah.. now what was that password..
+[11-16-2005 08:05:33] -!- heathd [n=heathd@82.152.159.125] has quit [Read error: 110 (Connection timed out)]
+[11-16-2005 08:05:41] [#ezpublish] <kracker> ahh but with the new user system you can reset your password simply yourself
+[11-16-2005 08:07:46] [#ezpublish] <zrg> car arrived needtorun, remind me :P
+[11-16-2005 08:07:59] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[11-16-2005 08:09:32] [#ezpublish] <Katana`> versionview seems really useless :(
+[11-16-2005 08:21:09] [#ezpublish] <Katana`> ordna1, what do you answer when people ask if there's a preview in ezp ? :)
+[11-16-2005 08:26:55] [#ezpublish] <Katana`> buz, is your XHTML datatype in contribs already ?
+[11-16-2005 08:27:04] [#ezpublish] <buz> lives in the xeditor folder
+[11-16-2005 08:27:06] [#ezpublish] <buz> but beware
+[11-16-2005 08:27:34] [#ezpublish] <buz> it doesnt validate input
+[11-16-2005 08:29:07] [#ezpublish] <buz> you got any use for it?
+[11-16-2005 08:29:57] [#ezpublish] <Katana`> it could happen :)
+[11-16-2005 08:30:08] [#ezpublish] <buz> you're welcome to hack on it
+[11-16-2005 08:30:14] [#ezpublish] <buz> the xinha integration works quite well
+[11-16-2005 08:30:26] [#ezpublish] <ordna1> Katana`: that there is a preview since 3.6.0
+[11-16-2005 08:30:28] [#ezpublish] <buz> it's just the validation part that really needs work
+[11-16-2005 08:30:36] [#ezpublish] <buz> ordna1: only it isnt really working
+[11-16-2005 08:31:24] [#ezpublish] <ordna1> buz: the question was not whether it is working :)
+[11-16-2005 08:31:39] [#ezpublish] <buz> stuff that doesnt work is worse that stuff that's just not there
+[11-16-2005 08:32:53] [#ezpublish] <ordna1> buz: agreed
+[11-16-2005 08:33:02] [#ezpublish] <_Rappy_> I'm off. Bye peeps
+[11-16-2005 08:36:46] [#ezpublish] <Katana`> ordna1: i know, i only use 3.60+
+[11-16-2005 08:37:06] [#ezpublish] <Katana`> is there something specific I have to do to have it use the client siteaccess design setting s?
+[11-16-2005 08:37:45] -!- _Rappy_ is now known as _rappy_
+[11-16-2005 08:40:59] [#ezpublish] <buz> maybe eating a dead raven would help? you got plenty on supply, after all ;)
+[11-16-2005 08:41:12] [#ezpublish] * Katana` throws one at buz
+[11-16-2005 08:41:22] [#ezpublish] * buz munches the raven. MJUM
+[11-16-2005 08:41:35] [#ezpublish] * buz dies of avian flu, you're all infected now
+[11-16-2005 08:41:45] [#ezpublish] <kracker> bastard!
+[11-16-2005 08:42:45] [#ezpublish] <kracker> the paranoya will kill ya inside first, long before the biological pathogen strikes
+[11-16-2005 08:45:03] [#ezpublish] <buz> according to the media, as a student i'm in a high risk group
+[11-16-2005 08:45:17] [#ezpublish] <buz> (like i'd go to uni if the flu started, what are those journalists smoking)
+[11-16-2005 08:45:37] [#ezpublish] <Katana`> avians feathers
+[11-16-2005 08:45:37] [#ezpublish] <buz> i'll stock up on canned food and stay at home ;)
+[11-16-2005 08:45:47] [#ezpublish] <Katana`> canned chicken ? :)
+[11-16-2005 08:45:52] [#ezpublish] <buz> yeah why not
+[11-16-2005 08:46:00] [#ezpublish] <buz> cooking kills all viruses
+[11-16-2005 08:46:08] [#ezpublish] * Katana` cooks his computer
+[11-16-2005 08:46:39] [#ezpublish] * kracker looks up self imolation
+[11-16-2005 08:46:48] [#ezpublish] <buz> oh there's easier ways to kill computer viruses
+[11-16-2005 08:46:51] [#ezpublish] <buz> like not using win ;
+[11-16-2005 08:46:52] [#ezpublish] * Katana` saves the channel log
+[11-16-2005 08:46:57] [#ezpublish] <Katana`> ;)
+[11-16-2005 08:47:00] [#ezpublish] <Katana`> i don't have viruses
+[11-16-2005 08:47:12] [#ezpublish] <Katana`> i thought i had one at home that was trying to start gentoo on my computer though :))
+[11-16-2005 08:47:15] [#ezpublish] <Katana`> but i was mistaken
+[11-16-2005 08:48:56] [#ezpublish] <buz> gentoo is not an os
+[11-16-2005 08:49:05] [#ezpublish] <Katana`> lol here we go
+[11-16-2005 08:49:05] [#ezpublish] <buz> it's more like some sort of lego linux
+[11-16-2005 08:49:14] [#ezpublish] <Katana`> isn't that every linux ?
+[11-16-2005 08:49:37] [#ezpublish] <buz> as opposed to windows fisher price you mean?
+[11-16-2005 08:49:42] [#ezpublish] <Katana`> :))
+[11-16-2005 08:50:02] [#ezpublish] <Katana`> my windows is everything but fisher price
+[11-16-2005 08:50:04] [#ezpublish] <buz> well some linuxes come only with the standard red lego blocks. other also include some more specialised lego items
+[11-16-2005 08:50:16] [#ezpublish] <buz> i stuck the media center 2005 theme on mine
+[11-16-2005 08:50:17] [#ezpublish] <buz> looks nice
+[11-16-2005 08:50:24] [#ezpublish] <buz> much better than luna in any case
+[11-16-2005 09:01:19] -!- DiGiTa|_ [n=guillaum@84.4.71.71] has joined #ezpublish
+[11-16-2005 09:01:43] [#ezpublish] <DiGiTa|_> hi
+[11-16-2005 09:02:03] [#ezpublish] <DiGiTa|_> does someone know how to unpublish an article after 30 days (for example)
+[11-16-2005 09:02:41] [#ezpublish] <DiGiTa|_> is there a ini setting or something like that ?
+[11-16-2005 09:07:57] [#ezpublish] <kracker> DiGiTa|_, this would be a prime example of the use of an "unpublish" eZ publish cron job (best solution in my mind)
+[11-16-2005 09:08:16] [#ezpublish] <kracker> shouldn't be too hard to write either
+[11-16-2005 09:08:35] [#ezpublish] <DiGiTa|_> well theres a worflow event too
+[11-16-2005 09:08:46] [#ezpublish] <kracker> after it's written, a little testing, installing to be run by cron is very simple
+[11-16-2005 09:08:52] [#ezpublish] <Katana`> the workflow event publishes
+[11-16-2005 09:08:59] [#ezpublish] <Katana`> you need the cronjob to unpublish / hide on date
+[11-16-2005 09:09:03] [#ezpublish] <Katana`> it's easy to setup btw :)
+[11-16-2005 09:09:09] [#ezpublish] <Katana`> that's what i told you like an hour again dumbass
+[11-16-2005 09:09:27] [#ezpublish] <DiGiTa|_> one hour ?
+[11-16-2005 09:09:28] [#ezpublish] <DiGiTa|_> lol
+[11-16-2005 09:09:35] [#ezpublish] <kracker> but it always comes up to if no one is going to the website, how does the website know what date it is or basicly ... anything. answere it doesn't
+[11-16-2005 09:09:51] [#ezpublish] <Katana`> okay, 15 minutes :)
+[11-16-2005 09:09:58] [#ezpublish] <kracker> na i'd tear into the idea of using a workflow, it's weak
+[11-16-2005 09:10:04] [#ezpublish] <Katana`> err
+[11-16-2005 09:10:13] [#ezpublish] <Katana`> kracker: the workflow does not trigger when the page is seen
+[11-16-2005 09:10:24] [#ezpublish] <Katana`> it stores the item for publishing by the cronjob
+[11-16-2005 09:10:50] [#ezpublish] <DiGiTa|_> and a cronjob to move an object ?
+[11-16-2005 09:11:11] [#ezpublish] <DiGiTa|_> like move the article object into folder archive
+[11-16-2005 09:11:21] [#ezpublish] <DiGiTa|_> is it hartodo ?
+[11-16-2005 09:11:22] [#ezpublish] <Katana`> i don't think there's any default for that
+[11-16-2005 09:11:29] [#ezpublish] <Katana`> should not be hartodo :)
+[11-16-2005 09:11:31] [#ezpublish] <kracker> Katana`, not sure what you mena directing that at me but .. i was saying worlfows were not a great idea for a quote 'unpublish by date/timestamp' functionality
+[11-16-2005 09:11:46] [#ezpublish] <Katana`> oh
+[11-16-2005 09:11:56] [#ezpublish] <Katana`> well, you can't even use a workflow for that it makes no sense...
+[11-16-2005 09:12:09] [#ezpublish] <Katana`> so i guess we agree :)
+[11-16-2005 09:12:14] [#ezpublish] <DiGiTa|_> i make no sens i know
+[11-16-2005 09:12:24] [#ezpublish] <kracker> DiGiTa|_, keep it simple, learn to write a little php-cli ezpublish script (do the work)
+[11-16-2005 09:12:45] [#ezpublish] <DiGiTa|_> pff i should always learn something
+[11-16-2005 09:12:45] [#ezpublish] <kracker> DiGiTa|_, if you stick to it you will be rewarded with the functionality you desire
+[11-16-2005 09:12:57] [#ezpublish] <Katana`> lol
+[11-16-2005 09:13:09] [#ezpublish] <DiGiTa|_> that will never finish...
+[11-16-2005 09:13:22] [#ezpublish] <DiGiTa|_> so..; no archive, perhaps it's the better deal
+[11-16-2005 09:13:27] [#ezpublish] <DiGiTa|_> :p
+[11-16-2005 09:13:29] [#ezpublish] <Katana`> see ? :))
+[11-16-2005 09:13:37] [#ezpublish] <Katana`> otherwise hide is cool
+[11-16-2005 09:13:50] [#ezpublish] <kracker> DiGiTa|_,  ehh, sure give up, like i care
+[11-16-2005 09:15:11] [#ezpublish] <kracker> Boondock Saints - Two Ravens
+[11-16-2005 09:15:30] [#ezpublish] <DiGiTa|_> I care Because You Do - Aphex Twin
+[11-16-2005 09:15:31] [#ezpublish] <DiGiTa|_> :)
+[11-16-2005 09:15:59] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-16-2005 09:17:17] [#ezpublish] <DiGiTa|_> Katana`: what is the utility of Hiding an object at a date
+[11-16-2005 09:17:26] [#ezpublish] <kracker> old but possibly relevant, http://ez.no/community/forum/developer/moving_objects_via_php_cron/(offset)/20
+[11-16-2005 09:17:29] [#ezpublish] <buz> YOU wanted to ubpublish stuff no?
+[11-16-2005 09:17:30] [#ezpublish] <DiGiTa|_> because i i filter my fetch
+[11-16-2005 09:17:40] [#ezpublish] <DiGiTa|_> if i
+[11-16-2005 09:17:42] [#ezpublish] <kracker> if i had source code i'd offer it, i just dont'
+[11-16-2005 09:18:05] [#ezpublish] <DiGiTa|_> i know this one kracker
+[11-16-2005 09:18:45] [#ezpublish] <Katana`> DiGiTa|_: it's no longer shown on the site but it's not deleted
+[11-16-2005 09:18:52] [#ezpublish] <kracker> Apocolyptica - Enter Sandman ...
+[11-16-2005 09:19:19] [#ezpublish] <DiGiTa|_> yeah katana but if i filter my fetch by published data
+[11-16-2005 09:19:21] [#ezpublish] <DiGiTa|_> date
+[11-16-2005 09:19:31] [#ezpublish] <DiGiTa|_> it's probably the same, no ?
+[11-16-2005 09:20:05] [#ezpublish] <DiGiTa|_> or perhaps it's not possible :)
+[11-16-2005 09:20:57] [#ezpublish] <kracker> Hubert Farnsworth : Nothing is impossible. Not if you can imagine it!
+[11-16-2005 09:23:51] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[11-16-2005 09:24:14] [#ezpublish] <DiGiTa|_> http://ez.no/products/ez_publish_cms/documentation/development/extensions/workflow_events/unpublish
+[11-16-2005 09:24:27] [#ezpublish] <Katana`> nice, our sysadmin has installed PHP 4.4 CLI
+[11-16-2005 09:24:28] [#ezpublish] <Katana`> i'm fucked ...
+[11-16-2005 09:24:34] [#ezpublish] <DiGiTa|_> errrrr
+[11-16-2005 09:24:52] [#ezpublish] <DiGiTa|_> all sites fucked ?
+[11-16-2005 09:25:03] [#ezpublish] <Katana`> CLI scripts don't work fine at all ...
+[11-16-2005 09:25:33] [#ezpublish] <kracker> Katana`, nice they checked with you before they fckd you over, time for a very long, very bold memo on php version + ez publish
+[11-16-2005 09:25:49] [#ezpublish] <Katana`> he's the one who wanted to write a memo ...
+[11-16-2005 09:26:06] [#ezpublish] <Katana`> about the same topic but the other way around
+[11-16-2005 09:26:13] [#ezpublish] <kracker> depending on your os you can use the binary stand alone php-cli copy linked on ez.no
+[11-16-2005 09:26:16] [#ezpublish] <kracker> ummm (diggs)
+[11-16-2005 09:26:24] [#ezpublish] <Katana`> gentoo
+[11-16-2005 09:26:53] -!- ordna1 [n=ordnas@p549DFC8E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-16-2005 09:27:10] [#ezpublish] <DiGiTa|_> that's why it's better to be the sysadmin :)
+[11-16-2005 09:27:10] [#ezpublish] <kracker> hrm
+[11-16-2005 09:27:28] [#ezpublish] <kracker> not so sure now but you could try
+[11-16-2005 09:27:55] [#ezpublish] <kracker> you know php-cli is really easy to compile and install as a standalone binary separate from your existing php
+[11-16-2005 09:28:17] [#ezpublish] <Katana`> well, i'm not the sysadmin and it's a common test server... but yes i agree, it should not be hard
+[11-16-2005 09:28:19] -!- ordna1 [n=ordnas@p549DC675.dip.t-dialin.net] has joined #ezpublish
+[11-16-2005 09:28:40] [#ezpublish] <kracker> Katana`, nods
+[11-16-2005 09:29:17] [#ezpublish] <kracker> Katana`, you should still be able to use a standalone static binary of php-cli even on a common server ( i have done this for these very reasons before)
+[11-16-2005 09:29:19] [#ezpublish] <kracker> http://download.ezcommunity.net/php-cli/linux/
+[11-16-2005 09:29:42] [#ezpublish] <DiGiTa|_> i do that too
+[11-16-2005 09:29:45] [#ezpublish] <Katana`> good... thanks a LOT
+[11-16-2005 09:29:48] [#ezpublish] <DiGiTa|_> on my osx testing server
+[11-16-2005 09:30:14] [#ezpublish] <kracker> that version i have posted depends an a certain glibc version which i have only had become a problem once but it was a long time ago on a very old os version
+[11-16-2005 09:30:26] [#ezpublish] <kracker> DiGiTa|_, you working on the mit site?
+[11-16-2005 09:30:59] [#ezpublish] <DiGiTa|_> no, why ?
+[11-16-2005 09:31:16] [#ezpublish] <DiGiTa|_> because i'm on osx ?
+[11-16-2005 09:31:17] [#ezpublish] <DiGiTa|_> :)
+[11-16-2005 09:31:19] [#ezpublish] <kracker> na, i turned them down, they were using osx server,
+[11-16-2005 09:31:38] [#ezpublish] <kracker> heh turned them down .. twice actualy
+[11-16-2005 09:34:27] [#ezpublish] <DiGiTa|_> hmm perhaps it's better for the user to move himself the article into an archive folder :)
+[11-16-2005 09:35:42] [#ezpublish] * DiGiTa|_ sometimes, search a too complicated solution
+[11-16-2005 09:46:00] [#ezpublish] <Katana`> LOL
+[11-16-2005 09:58:12] [#ezpublish] <buz> how does ezpublish performance react to tens of thousands of small (mostly text line) objects?
+[11-16-2005 10:00:26] [#ezpublish] <Katana`> depends on what you do with them i guess
+[11-16-2005 10:00:42] [#ezpublish] <buz> i wonder if one could store individual calendar events that way
+[11-16-2005 10:00:49] [#ezpublish] <buz> but it would seem a very slow way of doing this
+[11-16-2005 10:02:49] [#ezpublish] <buz> also i'm looking for an icalendar implementation in php. i know phpicalendar but that's GPL not LGPL
+[11-16-2005 10:03:56] [#ezpublish] <DiGiTa|_> icalendar ?
+[11-16-2005 10:04:02] [#ezpublish] <DiGiTa|_> mac thingy ?
+[11-16-2005 10:04:09] [#ezpublish] <buz> no the file format
+[11-16-2005 10:05:38] [#ezpublish] <buz> which the mac thingy uses, btw
+[11-16-2005 10:06:31] [#ezpublish] <Katana`> ical is quite standard, apple didn't invent that :)
+[11-16-2005 10:06:36] [#ezpublish] <buz> yeah
+[11-16-2005 10:06:42] [#ezpublish] <buz> but they were the first to truly use it
+[11-16-2005 10:06:55] [#ezpublish] <buz> sunbird uses it too but sunbird is still waaaay alpha
+[11-16-2005 10:07:19] [#ezpublish] <DiGiTa|_> and windows vista ?
+[11-16-2005 10:07:19] [#ezpublish] <DiGiTa|_> :)
+[11-16-2005 10:07:25] [#ezpublish] <buz> who cares for that
+[11-16-2005 10:07:37] [#ezpublish] <DiGiTa|_> Katana` :)
+[11-16-2005 10:08:07] [#ezpublish] <buz> he might eventually see the light, too
+[11-16-2005 10:09:55] [#ezpublish] <DiGiTa|_> window vista is a fake osx tiger in some points
+[11-16-2005 10:10:02] [#ezpublish] <DiGiTa|_> like the Quick search box
+[11-16-2005 10:10:14] [#ezpublish] <DiGiTa|_> aka spotlight in tiger
+[11-16-2005 10:10:41] [#ezpublish] <DiGiTa|_> or the sidebar
+[11-16-2005 10:10:55] [#ezpublish] <DiGiTa|_> like the tiger dock
+[11-16-2005 10:11:01] [#ezpublish] <DiGiTa|_> ..
+[11-16-2005 10:11:22] [#ezpublish] <DiGiTa|_> same for virtual folders
+[11-16-2005 10:16:40] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[11-16-2005 10:25:51] -!- Proteque_ [n=gjorans@213.184.199.245] has quit [Read error: 113 (No route to host)]
+[11-16-2005 10:30:56] [#ezpublish] <kracker> omfg, firebright.com fakes a hardware failure to take my client's dedicated server offline permanently ...
+[11-16-2005 10:33:05] [#ezpublish] * kracker goes berserk 
+[11-16-2005 10:33:45] [#ezpublish] <kracker> revenge for my forum posts, `no doubt`
+[11-16-2005 10:33:53] -!- DiGiTa|_ [n=guillaum@84.4.71.71] has quit [Read error: 110 (Connection timed out)]
+[11-16-2005 10:51:28] -!- DiGiTa|_ [n=guillaum@84.4.37.232] has joined #ezpublish
+[11-16-2005 11:21:07] [#ezpublish] <buz> of course kde4 will likely beat MS to the punch
+[11-16-2005 11:21:28] [#ezpublish] <buz> (and i sure long for the day when i can run kde apps on win and mac, natively)
+[11-16-2005 11:26:32] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-16-2005 11:40:39] [#ezpublish] <kracker> kracker knows it's `Beastie Boys - Sabotage`
+[11-16-2005 12:13:44] [#ezpublish] <nnn0> hm i'm having trouble getting this sort_by thingy to work. i have made a link with view_parameters which i would like to swap for the $node.sort_array, but i can't get it to work. anyone familiar with this ?
+[11-16-2005 12:17:35] [#ezpublish] <nnn0> i'v tried showing the attributes of the $node.sort_array, and it showed three attributes (0,Array(2)),(>0,'name') and (>1,1)
+[11-16-2005 12:18:15] [#ezpublish] <nnn0> but it seems i just can't format my own parameter in the right way
+[11-16-2005 12:18:27] [#ezpublish] <nnn0> any suggestions ?
+[11-16-2005 12:22:34] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-16-2005 12:22:48] [#ezpublish] <ls[eZ]> hi
+[11-16-2005 12:22:56] [#ezpublish] <nnn0> hi :)
+[11-16-2005 12:23:19] [#ezpublish] <ls[eZ]> whats up ? :)
+[11-16-2005 12:23:34] [#ezpublish] <nnn0> are you up for some support - i just asked a question, but noone is here :)
+[11-16-2005 12:24:02] [#ezpublish] <ls[eZ]> depends :)
+[11-16-2005 12:24:09] [#ezpublish] <nnn0> k - here goes :)
+[11-16-2005 12:24:11] [#ezpublish] <nnn0> nnn0 hm i'm having trouble getting this sort_by thingy to work. i have made a link with view_parameters which i would like to swap for the $node.sort_array, but i can't get it to work. anyone familiar with this ?
+[11-16-2005 12:24:12] [#ezpublish] <nnn0> nnn0 i'v tried showing the attributes of the $node.sort_array, and it showed three attributes (0,Array(2)),(>0,'name') and (>1,1)
+[11-16-2005 12:24:12] [#ezpublish] <nnn0> nnn0 but it seems i just can't format my own parameter in the right way
+[11-16-2005 12:24:12] [#ezpublish] <nnn0> nnn0 any suggestions ?
+[11-16-2005 12:24:16] [#ezpublish] <nnn0> :)
+[11-16-2005 12:24:41] [#ezpublish] <ls[eZ]> hehe, you were ready and you waiting :)
+[11-16-2005 12:25:01] [#ezpublish] <nnn0> it's was just five minutes ago :)
+[11-16-2005 12:25:06] [#ezpublish] <nnn0> -s
+[11-16-2005 12:26:12] [#ezpublish] <nnn0> and i'v been trying to get this to work a couple of days now
+[11-16-2005 12:26:33] [#ezpublish] <ls[eZ]> whay you want to show  $node.sort_array attributes?
+[11-16-2005 12:26:49] [#ezpublish] <nnn0> nono - it was just to see what it looked like
+[11-16-2005 12:27:14] [#ezpublish] <ls[eZ]> this is array and their content depends on settings in admin intrface
+[11-16-2005 12:27:34] [#ezpublish] <nnn0> yes, but i want my own
+[11-16-2005 12:27:36] [#ezpublish] <nnn0> hehe
+[11-16-2005 12:27:43] [#ezpublish] <nnn0> just i minute
+[11-16-2005 12:27:47] [#ezpublish] <ls[eZ]> sort_by, array(published, false())
+[11-16-2005 12:27:59] [#ezpublish] <nnn0> hm k
+[11-16-2005 12:28:08] [#ezpublish] <ls[eZ]> look in to doc
+[11-16-2005 12:28:15] [#ezpublish] <ls[eZ]> list and tree functions
+[11-16-2005 12:28:17] [#ezpublish] <nnn0> because i send view_parameter in a link
+[11-16-2005 12:28:41] [#ezpublish] <nnn0> and i use sort_by,array('attribute',$view_parameter.sort,1)
+[11-16-2005 12:28:56] [#ezpublish] <nnn0> instead og sort_by,$node.sort_array
+[11-16-2005 12:29:08] [#ezpublish] <nnn0> but it shows nothing then
+[11-16-2005 12:30:22] [#ezpublish] <nnn0> the link looks like blablala/(sort)/brand
+[11-16-2005 12:30:32] [#ezpublish] <ls[eZ]> try like sort_by, array( 'attribute', ,$view_parameter.sort, 'news/publication_date' ),
+[11-16-2005 12:30:39] [#ezpublish] <nnn0> hm
+[11-16-2005 12:30:47] [#ezpublish] <ls[eZ]> replace news with your class and publication datew with name of your attribute
+[11-16-2005 12:30:54] [#ezpublish] <nnn0> k
+[11-16-2005 12:30:58] [#ezpublish] <nnn0> i'll try that
+[11-16-2005 12:31:00] [#ezpublish] <nnn0> thx man :)
+[11-16-2005 12:31:11] [#ezpublish] <ls[eZ]> 5 beers ;)
+[11-16-2005 12:31:21] [#ezpublish] <nnn0> :D
+[11-16-2005 12:32:00] [#ezpublish] <ls[eZ]> going to watch news in tv, cu later
+[11-16-2005 12:32:08] [#ezpublish] <nnn0> l8r
+[11-16-2005 12:33:20] [#ezpublish] <nnn0> if the goddamn server could respond :)
+[11-16-2005 13:15:31] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[11-16-2005 13:15:54] -!- hovik is now known as kk[eZ]
+[11-16-2005 13:16:05] [#ezpublish] <kk[eZ]> good evening.
+[11-16-2005 13:18:20] [#ezpublish] <nnn0> i did it - i did it :DDDD
+[11-16-2005 13:18:26] [#ezpublish] <nnn0> i made something work :DDDD
+[11-16-2005 13:18:30] [#ezpublish] <nnn0> ehhehehe
+[11-16-2005 13:18:38] [#ezpublish] <nnn0> evening kk
+[11-16-2005 13:18:41] [#ezpublish] <nnn0> :)
+[11-16-2005 13:19:35] [#ezpublish] <ls[eZ]> nnn0: sorting you mean ;)?
+[11-16-2005 13:19:40] [#ezpublish] <nnn0> jepp
+[11-16-2005 13:19:50] [#ezpublish] <ls[eZ]> good ;)
+[11-16-2005 13:19:58] [#ezpublish] <nnn0> thx again man :D
+[11-16-2005 13:20:11] [#ezpublish] <ls[eZ]> you are welcome ;)
+[11-16-2005 13:20:24] [#ezpublish] <nnn0> just a minute and i'll show you array
+[11-16-2005 13:21:01] [#ezpublish] <ls[eZ]> hi kk[eZ]
+[11-16-2005 13:21:32] [#ezpublish] <nnn0> array('attribute',true(),concat('product/',$view_parameter.sort)
+[11-16-2005 13:21:44] [#ezpublish] <nnn0> now i can sort on any attribute i want
+[11-16-2005 13:21:47] [#ezpublish] <nnn0> :)
+[11-16-2005 13:21:52] [#ezpublish] <ls[eZ]> perfect
+[11-16-2005 13:22:19] [#ezpublish] <kk[eZ]> hi ls, how's it going ?
+[11-16-2005 13:24:09] [#ezpublish] <ls[eZ]> I'm freezing, I was in downtown, I'm half hour ago, and it's so cold outside ;) Need some hot tea, do you want some? ;)
+[11-16-2005 13:26:58] [#ezpublish] <kk[eZ]> just made a pot of coffee myself. Need to get some things ready for tomorrow.
+[11-16-2005 13:30:01] [#ezpublish] * buz sticks to beer
+[11-16-2005 13:30:02] [#ezpublish] <buz> cheers
+[11-16-2005 13:30:09] [#ezpublish] <kk[eZ]> bye
+[11-16-2005 13:46:50] -!- ordna1 [n=ordnas@p549DC675.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-16-2005 14:20:57] [#ezpublish] <buz> switzerland just qualified for fifa 2006. do i care? hell no.
+[11-16-2005 14:30:37] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-16-2005 14:31:16] [#ezpublish] * zr1 coughs blood
+[11-16-2005 14:35:05] [#ezpublish] <zr1> installing ez on some perverse masshosting..
+[11-16-2005 14:35:34] [#ezpublish] <zr1> where is the initial sql dump of database?
+[11-16-2005 14:36:38] [#ezpublish] <buz> find . -name "*sql" ?
+[11-16-2005 14:38:00] [#ezpublish] <zr1> yes and there seems to be nothing :P
+[11-16-2005 14:40:08] [#ezpublish] <ls[eZ]> in kenrel/sql/mysql
+[11-16-2005 14:40:18] [#ezpublish] <ls[eZ]> kernel_schema.sql and clean_data
+[11-16-2005 14:41:34] [#ezpublish] <zr1> ok, it does not put in all the datatypes like demo does i think?
+[11-16-2005 14:47:39] [#ezpublish] <zr1> nah, not worth the effort, just need some sort of simple forum, know any off hand?
+[11-16-2005 14:47:50] [#ezpublish] <buz> dont use phpbb
+[11-16-2005 14:48:10] [#ezpublish] <buz> that one is riddled with security holes
+[11-16-2005 14:48:19] [#ezpublish] <buz> (otoh, using mass hosting is a bad idea anyhow)
+[11-16-2005 14:48:28] [#ezpublish] <zr1> possibly cause its most used? but anyway, alternative?
+[11-16-2005 14:48:36] [#ezpublish] <zr1> i dont know shit about forums..
+[11-16-2005 14:48:41] [#ezpublish] <buz> some of the bugs are just plain sloppy programming
+[11-16-2005 14:48:46] [#ezpublish] <buz> i dont really know about forums
+[11-16-2005 14:48:49] [#ezpublish] <buz> phorum maybe?
+[11-16-2005 14:48:54] [#ezpublish] <zr1> hostin is not my choice
+[11-16-2005 14:49:00] [#ezpublish] <zr1> ah, have used phorum
+[11-16-2005 14:49:30] [#ezpublish] <zr1> undoubtedly general page design is easy to set in there, template or somesuch
+[11-16-2005 14:49:54] [#ezpublish] <buz> vbulletin is likely best in class but $$$
+[11-16-2005 14:50:33] [#ezpublish] <zr1> not even $ in it :P
+[11-16-2005 14:51:00] [#ezpublish] <buz> for my uses ezp with some modifications is enough ;)
+[11-16-2005 14:51:07] [#ezpublish] <buz> but then again, i'm root on all sites
+[11-16-2005 14:51:16] [#ezpublish] <buz> either i get root or i don't work with you ;)
+[11-16-2005 14:51:33] [#ezpublish] <buz> (in the day of 5EUR root servers, that's not really an issue though)
+[11-16-2005 14:52:17] [#ezpublish] <buz> (you can even get somewhat usable dedicated machines for 20? now)
+[11-16-2005 14:56:26] [#ezpublish] <zr1> really?
+[11-16-2005 14:57:58] [#ezpublish] <buz> http://www.strato.de/server/power/order/index.html
+[11-16-2005 14:58:00] [#ezpublish] <buz> no raid
+[11-16-2005 14:58:04] [#ezpublish] <zr1> cheapest colocation around here is 60 a month i think and you have to bring own server
+[11-16-2005 14:58:06] [#ezpublish] <buz> but otherwise decent for smaller sites
+[11-16-2005 14:58:06] [#ezpublish] <ls[eZ]> IPB
+[11-16-2005 14:58:14] [#ezpublish] <ls[eZ]> use Invision Power Board
+[11-16-2005 14:58:19] [#ezpublish] <ls[eZ]> 1.3 is GPL
+[11-16-2005 14:58:22] [#ezpublish] <zr1> bandwidth capped too
+[11-16-2005 14:58:41] [#ezpublish] <buz> http://www.strato.de/server/highend/index.html 70? for unlimited traffic
+[11-16-2005 14:58:46] [#ezpublish] <buz> raid1, 1gb ram, athlon64
+[11-16-2005 14:59:09] -!- nnn0 [n=therion@195.204.221.183] has quit ["ehehe ;"]
+[11-16-2005 15:00:05] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[11-16-2005 15:00:25] [#ezpublish] <buz> http://www.netfabrik.de/
+[11-16-2005 15:00:31] [#ezpublish] <buz> 5euro vservers
+[11-16-2005 15:01:46] [#ezpublish] <zr1> hate vservers :P
+[11-16-2005 15:01:59] [#ezpublish] <buz> then get a 20? dedicated ;)
+[11-16-2005 15:02:09] [#ezpublish] <zr1> any experience?
+[11-16-2005 15:02:13] [#ezpublish] <buz> no
+[11-16-2005 15:02:19] [#ezpublish] <buz> but strato is one of the biggest hosting companies in the world
+[11-16-2005 15:02:43] [#ezpublish] <buz> so the risk of them going out of business is rather small
+[11-16-2005 15:02:51] [#ezpublish] <buz> too big to fail in a way
+[11-16-2005 15:03:55] [#ezpublish] <zr1> wtf is  Linux Business Edition 2.0 ?
+[11-16-2005 15:03:56] [#ezpublish] <buz> i'd probably get the 50? machine though
+[11-16-2005 15:04:08] [#ezpublish] <buz> comes with raid and backup over ftp
+[11-16-2005 15:04:19] [#ezpublish] <buz> servers without raid aren't worth much
+[11-16-2005 15:04:50] [#ezpublish] <buz> (the sad part: even with free rackspace and uplink, i can't match that 20? price myself...)
+[11-16-2005 15:05:45] [#ezpublish] <buz> zr1: you can have debian, fedora, suse with strato
+[11-16-2005 15:05:51] [#ezpublish] <zr1> sad part is i dont speak german and never have used suse
+[11-16-2005 15:05:57] [#ezpublish] <zr1> ah.. good then
+[11-16-2005 15:07:05] [#ezpublish] <buz> i think xavier mailed them in english
+[11-16-2005 15:07:09] [#ezpublish] <buz> dunno how it turned out though
+[11-16-2005 15:07:28] [#ezpublish] <zr1> grin :)
+[11-16-2005 15:08:17] [#ezpublish] <buz> i'd say they will have SOMEONE who can answer english mail
+[11-16-2005 15:10:31] [#ezpublish] <buz> the 50+ things even get serial console
+[11-16-2005 15:12:59] -!- DiGiTa|_ [n=guillaum@84.4.37.232] has quit []
+[11-16-2005 15:44:46] [#ezpublish] <zr1> aww, puppy linux is nice :)
+[11-16-2005 15:45:01] [#ezpublish] <kracker> wheew, finaly a reprieve from the onslaught
+[11-16-2005 15:45:31] [#ezpublish] <zr1> you finally gave in and killed him?
+[11-16-2005 15:46:32] [#ezpublish] <buz> puppy linux?
+[11-16-2005 15:48:18] [#ezpublish] <kracker> zr1, this is your reminder :D for that snippet contribution and a bit of a begging you to write down the password this time and put it in your shoe
+[11-16-2005 15:49:08] [#ezpublish] <kracker> and oh, he's dead alright, choke the life right out of em like homer ta bart (simpsons)
+[11-16-2005 15:49:28] [#ezpublish] <buz> oh just another live cd
+[11-16-2005 15:49:33] [#ezpublish] <buz> i'll stick to kubuntu ;)
+[11-16-2005 15:49:57] [#ezpublish] <nnn0> as one of the biggest hosting companies in the world - strato could at least have an english translation of the page
+[11-16-2005 15:51:00] [#ezpublish] <nnn0> fucking germans
+[11-16-2005 15:51:02] [#ezpublish] <kracker> heh, don't want those english speaking people as customers, they ask too many questions, :D
+[11-16-2005 15:51:11] [#ezpublish] <nnn0> i guess
+[11-16-2005 15:51:33] [#ezpublish] <kracker> anoying as all hell  (it's a joke i'm tearing into myself with shaddow as a blade)
+[11-16-2005 15:52:20] [#ezpublish] <nnn0> se if i can find something in amstedam
+[11-16-2005 15:55:38] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[11-16-2005 16:01:44] [#ezpublish] <buz> nnn0: their primary competitor 1und1 has an english site
+[11-16-2005 16:01:53] [#ezpublish] <buz> weirdly enough, the german and the english site have different deals
+[11-16-2005 16:02:43] [#ezpublish] <nnn0> hm
+[11-16-2005 16:02:53] [#ezpublish] <nnn0> *checking out*
+[11-16-2005 16:03:26] [#ezpublish] <buz> http://order.1and1.com/xml/order;jsessionid=751E9C41BF87456D78DEC36232C3F3BF.TC60b
+[11-16-2005 16:03:54] [#ezpublish] <buz> the german deals are much better than the one on 1and1.com
+[11-16-2005 16:04:59] [#ezpublish] <nnn0> heh
+[11-16-2005 16:05:30] [#ezpublish] <buz> and strato is cheaper still
+[11-16-2005 16:06:37] [#ezpublish] <nnn0> i can't find the english page even
+[11-16-2005 16:08:00] [#ezpublish] <nnn0> maybe i should just run strato thru babelfish :)
+[11-16-2005 16:11:05] [#ezpublish] <nnn0> hm men det var med plesk, jeg vil ha cpanel/whm
+[11-16-2005 16:11:18] [#ezpublish] <nnn0> sry
+[11-16-2005 16:11:36] [#ezpublish] <nnn0> they offered Plesk, but i want cpanel/whm
+[11-16-2005 16:13:16] [#ezpublish] <nnn0> and alot of restrictions
+[11-16-2005 16:16:06] [#ezpublish] <zr1> i dont have experience beyond webmin..
+[11-16-2005 16:20:37] [#ezpublish] <zr1> probably stupid question but these systems support some kind of scripting?  how easy it is to customize a ez site setup - copying certain template site, overwriting some ini settings, setting up dns and mail for domain?
+[11-16-2005 16:21:32] [#ezpublish] <kracker> zr1, yes they do especialy the Plesk (vendor) solutions virtuosoo (sp?)
+[11-16-2005 16:21:38] [#ezpublish] <kracker> really simple
+[11-16-2005 16:21:48] [#ezpublish] <zr1> i can do stuff fine by hand but its starting to grow over the head, need to put some marketing drones creating new sites :P
+[11-16-2005 16:21:50] [#ezpublish] <kracker> just a bit of writting and thought
+[11-16-2005 16:22:19] [#ezpublish] <kracker> attack of the clones!
+[11-16-2005 16:22:28] [#ezpublish] <zr1> plesk, cpanel etc are $$ ?
+[11-16-2005 16:22:36] [#ezpublish] <kracker> very
+[11-16-2005 16:23:44] [#ezpublish] <zr1> dang
+[11-16-2005 16:23:53] [#ezpublish] <zr1> experience with free ones?
+[11-16-2005 16:24:11] [#ezpublish] * kracker falls over at the keyboard, i don't play W.O.W. but i could still die in #ezpublish with the time i get caught up in here which just keeps me awake / distracted that much longer (re: news story of the girl who died playing world of warcraft, mmorpg)
+[11-16-2005 16:24:48] [#ezpublish] <buz> that's why i'm going to bed now
+[11-16-2005 16:25:10] [#ezpublish] <buz> (i love my bed you know)
+[11-16-2005 16:25:15] [#ezpublish] <ls[eZ]> me too
+[11-16-2005 16:25:19] [#ezpublish] <ls[eZ]> good night
+[11-16-2005 16:25:22] [#ezpublish] <buz> night
+[11-16-2005 16:25:30] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-16-2005 16:25:34] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-16-2005 16:32:25] [#ezpublish] <kracker> buz, eeww, did not need or want to know that one :P
+[11-16-2005 16:37:46] [#ezpublish] <nnn0> :)
+[11-16-2005 16:41:47] [#ezpublish] <zr1> buz's got a four-legged lover :)
+[11-16-2005 17:08:03] [#ezpublish] <nnn0> :D
+[11-16-2005 18:18:21] -!- nnn0 [n=therion@195.204.221.183] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 18:18:21] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 18:18:21] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 18:18:21] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 18:18:56] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[11-16-2005 18:18:56] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-16-2005 18:18:56] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-16-2005 18:18:56] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-16-2005 18:21:12] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[11-16-2005 18:21:12] [notice(freenode-connect)] VERSION IQ 0.9.3
+[11-16-2005 18:25:34] [#ezpublish] <zr1> who stepped on cable?
+[11-16-2005 19:35:00] -!- nnn0 [n=therion@195.204.221.183] has quit [Remote closed the connection]
+[11-16-2005 19:40:27] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 19:40:27] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 19:40:27] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 19:40:27] -!- kk[eZ] [n=hovik@115.80-202-49.nextgentel.com] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 19:40:27] -!- LottoKim [n=kim@195.28.172.4] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 19:40:27] -!- Proteque [n=gjorans@213.184.199.245] has quit [calvino.freenode.net irc.freenode.net]
+[11-16-2005 19:41:18] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[11-16-2005 19:41:18] -!- _rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-16-2005 19:41:18] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-16-2005 19:41:18] -!- kk[eZ] [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[11-16-2005 19:41:18] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[11-16-2005 19:41:18] -!- LottoKim [n=kim@195.28.172.4] has joined #ezpublish
+[11-16-2005 19:41:35] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[11-16-2005 19:41:35] [notice(freenode-connect)] VERSION IQ 0.9.3
+[11-16-2005 19:41:35] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] Private messages from unregistered users are currently blocked, except to network staff, to services (NickServ, etc.), and to registered users who have unblocked them. Please see the freenode website for more information: http://freenode.net/faq.shtml#privmsg
+[11-16-2005 20:53:54] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []
+[11-16-2005 21:08:41] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish

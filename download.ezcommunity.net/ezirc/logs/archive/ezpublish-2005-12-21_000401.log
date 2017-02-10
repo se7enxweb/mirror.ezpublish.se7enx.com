@@ -1,0 +1,325 @@
+[12-20-2005 01:13:23] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-20-2005 01:29:00] -!- ordnas [n=ordnas@p549D7E36.dip.t-dialin.net] has joined #ezpublish
+[12-20-2005 01:40:23] -!- tobyS [n=dotxp@dslb-084-061-153-030.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[12-20-2005 01:40:47] -!- tobyS [n=dotxp@dslb-084-061-153-248.pools.arcor-ip.net] has joined #ezpublish
+[12-20-2005 01:41:49] -!- fh[eZ] [n=fh@238.80-202-59.nextgentel.com] has quit [Remote closed the connection]
+[12-20-2005 02:14:46] -!- SEAwolfx_ is now known as SEAwolfx
+[12-20-2005 02:29:52] -!- DiGiTa|_ [n=guillaum@84.5.139.19] has joined #ezpublish
+[12-20-2005 02:43:47] [#ezpublish] <DiGiTa|_> yow
+[12-20-2005 02:45:36] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-20-2005 02:47:52] [#ezpublish] <Katana`> hi
+[12-20-2005 02:52:06] [#ezpublish] <DiGiTa|_> hi
+[12-20-2005 02:59:52] [#ezpublish] <SEAwolfx> is it possible to transmit with xml-rpc complete xml-structures as parameters for functions?
+[12-20-2005 03:00:51] [#ezpublish] <SEAwolfx> i guess not?!
+[12-20-2005 03:00:55] [#ezpublish] <SEAwolfx> btw, hello @all.
+[12-20-2005 03:15:07] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-20-2005 03:16:47] -!- kris10an [n=kh@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[12-20-2005 03:20:10] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[12-20-2005 03:21:45] [#ezpublish] <kracker> yahns *(rubs eyes)*
+[12-20-2005 03:22:44] [#ezpublish] <SEAwolfx> ;)
+[12-20-2005 03:23:46] [#ezpublish] <kracker> i think (not looking at error logs anymore tonight) ... that i made lots of progress today (in a funny voice half certain) yes.. yes.. lots of progress
+[12-20-2005 03:24:12] [#ezpublish] <kracker> almost all the fatals in eZ publish 2 php5 are gone (on admin side at least)
+[12-20-2005 03:24:23] [#ezpublish] <SEAwolfx> indeed, kracker, i believe in you.
+[12-20-2005 03:24:55] [#ezpublish] <kracker> building list of eZ publish 2 URI 's for testing documentation to be started (to be written)
+[12-20-2005 03:25:31] [#ezpublish] <kracker> a few minor commits, little bugs i've fixed a thousand times for clients now finaly make it into trunk
+[12-20-2005 03:26:04] [#ezpublish] <SEAwolfx> eZpublish version 2?
+[12-20-2005 03:26:23] [#ezpublish] <kracker> yup
+[12-20-2005 03:26:43] [#ezpublish] <SEAwolfx> as i understand you maintain a ezp version 2 svn tree?!
+[12-20-2005 03:27:04] [#ezpublish] <SEAwolfx> this is not hosted on the ez.no site, or?
+[12-20-2005 03:28:13] [#ezpublish] <kracker> working on a rather large proposal for the community to bring it back into full compatablity with the latest PHP4.4 and PHP5 stable releases (which right now it's not stable or very comptable, limping along with at best php 4.3.9 support ) old crufty code gets a face lift, and a lot of documentation to at least document the problems which are warnings only ...
+[12-20-2005 03:28:39] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[12-20-2005 03:28:53] -!- hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[12-20-2005 03:28:58] [#ezpublish] <kracker> SEAwolfx, yes svn.ezcommunity.net
+[12-20-2005 03:29:51] [#ezpublish] <SEAwolfx> hmm .. the question is why supporting and maintaining ezp v.2, better to persuade the clients to switch over to version 3?!?!
+[12-20-2005 03:30:28] [#ezpublish] <kracker> SEAwolfx, your right it is not supported or sponsored by eZ systems, tho they helped me get the svn trees
+[12-20-2005 03:30:40] [#ezpublish] <kracker> quite nice of them really :)
+[12-20-2005 03:31:28] [#ezpublish] <SEAwolfx> yeah.
+[12-20-2005 03:32:13] [#ezpublish] <kracker> SEAwolfx, many users, developers and applications written in v2 do not translate to v3 without rather large hours of rewriting (basicly from scratch) to migrate to v3, many shops can not afford to do this others simple do not wish to do so
+[12-20-2005 03:32:27] [#ezpublish] <SEAwolfx> maybe u could persuade them to configure there svn-host properly that someone behind a proxy can do a svn checkout.
+[12-20-2005 03:32:55] [#ezpublish] <kracker> I maintain things the way they used to be as much as possible for those who are still geting the most out of v2
+[12-20-2005 03:33:29] [#ezpublish] <kracker> i myself am looking forward to having enough time in components / v4 to see eZ publish 2 (large set of functionality in one package) to come again
+[12-20-2005 03:34:44] [#ezpublish] <kracker> it's often simpler to start v2 clients in v3 from scratch, often there is just no real benifit to upgrading to v3 for v3 sake, and v3 has been a very unstable branch in the past in many regards (thankfully now much beter ..)
+[12-20-2005 03:34:59] [#ezpublish] <kracker> SEAwolfx, what do you mean?
+[12-20-2005 03:35:12] [#ezpublish] <kracker> > maybe u could persuade them to configure there svn-host properly that someone behind a proxy can do a svn checkout.
+[12-20-2005 03:35:23] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-20-2005 03:35:37] [#ezpublish] <kracker> can't you checkout from pubsvn?
+[12-20-2005 03:35:47] [#ezpublish] <kracker> na, i'm totaly confused :D
+[12-20-2005 03:36:01] [#ezpublish] <kracker> i know pubsvn.ez.no is behind a proxy of some kind ?
+[12-20-2005 03:36:21] [#ezpublish] <kracker> you were not talking about svn.ezcommunity.net where you ?
+[12-20-2005 03:36:27] [#ezpublish] <SEAwolfx> no .. i mean on client side.
+[12-20-2005 03:36:39] [#ezpublish] <SEAwolfx> no, about pubsvn.ez.no ;)
+[12-20-2005 03:36:52] [#ezpublish] <kracker> i would file a very detailed bug report (on ez.no and email paulb about the problems)
+[12-20-2005 03:37:14] [#ezpublish] <kracker> only way to get the right feedback is to document and notify and stay on the matter
+[12-20-2005 03:37:52] [#ezpublish] <SEAwolfx> ;)
+[12-20-2005 03:38:30] [#ezpublish] <SEAwolfx> this failure occures when a create a package for ez, which should be possible to checkout the svn-trunk.
+[12-20-2005 03:38:43] [#ezpublish] <SEAwolfx> s/a/you/
+[12-20-2005 03:39:01] [#ezpublish] <SEAwolfx> and your sandbox is behind a proxy of course.
+[12-20-2005 03:39:40] [#ezpublish] <kracker> i deal with people all the time who insult eZ systems to my face about every freaking thing under the sun possible and i laugh at them and tell them that they have not invested the pacience and time needed to achive your gains (aka all to often in the eZ world people are too impacienciant to get what they want but that doesn't mean that it's not possible)   a brief folklore.org store on eZ publish community : what it takes to
+[12-20-2005 03:39:40] [#ezpublish] <kracker>  get what you want ....
+[12-20-2005 03:40:06] [#ezpublish] <kracker> SEAwolfx, i think i have heard you speak of this before in irc (or someone for that matter)
+[12-20-2005 03:41:02] [#ezpublish] <kracker> though you mention it failes creating a package for ez i imagine you mean the creation of the base packages files? wouldn't that be on the client size not server?
+[12-20-2005 03:41:26] [#ezpublish] <SEAwolfx> this is possible that i have talked about it in former times.
+[12-20-2005 03:42:29] [#ezpublish] <SEAwolfx> no, not these kind of packages. i mean packages for installing ez, written for package-systems like portage or rpm.
+[12-20-2005 03:43:08] [#ezpublish] <kracker> i totaly belive you, but that doesn't mean i completely understsand either :\ svn is a tricky deal at best (trunk/general), the way people most often think to get the latest stable from svn doesn't really work very simply in the eZ world (that's for sure ... or rather I don't know how it's supposed to work and i think few learn it on their own and get it working arggg)
+[12-20-2005 03:43:40] [#ezpublish] <kracker> ahh
+[12-20-2005 03:43:44] [#ezpublish] <kracker> i gotcha
+[12-20-2005 03:43:49] [#ezpublish] <kracker> that's lame
+[12-20-2005 03:43:57] [#ezpublish] <kracker> they are behind a proxy themselves
+[12-20-2005 03:44:00] [#ezpublish] <SEAwolfx> ok ;)
+[12-20-2005 03:44:12] [#ezpublish] <SEAwolfx> hehehe
+[12-20-2005 03:44:20] [#ezpublish] <kracker> it would be nice to have a more accessable svn mirror for sure
+[12-20-2005 03:45:46] [#ezpublish] <SEAwolfx> yeah.
+[12-20-2005 03:47:15] [#ezpublish] <kracker> so now i'm curious, you going to file a bug/suggestion/feature request in the reporting system
+[12-20-2005 03:52:10] [#ezpublish] <SEAwolfx> when i can spend time for it. ;) there much other work to do right now.
+[12-20-2005 03:54:44] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-20-2005 03:56:13] [#ezpublish] <Katana`> hummm... our server was for some reason upgraded to 4.4 during the night
+[12-20-2005 03:56:16] [#ezpublish] <Katana`> not funny
+[12-20-2005 03:56:19] [#ezpublish] <Katana`> not funny at all
+[12-20-2005 03:56:29] [#ezpublish] <DiGiTa|_> huhu
+[12-20-2005 03:57:16] [#ezpublish] <kracker> lamest of the lame
+[12-20-2005 03:58:46] [#ezpublish] <SEAwolfx> when remember, there are only warning when upgrading the php version to 4.4 within ez?!?!?
+[12-20-2005 03:59:02] [#ezpublish] <SEAwolfx> +s
+[12-20-2005 04:01:07] [#ezpublish] <kracker> huh?
+[12-20-2005 04:02:21] [#ezpublish] <SEAwolfx> doesent mean Katana the php upgrade to version 4.4?
+[12-20-2005 04:07:56] [#ezpublish] <Katana`> the worst thing is that we have no idea who did that
+[12-20-2005 04:10:06] [#ezpublish] <SEAwolfx> the system update, i guess.
+[12-20-2005 04:10:23] [#ezpublish] <SEAwolfx> like emerge -uD world
+[12-20-2005 04:10:42] [#ezpublish] <SEAwolfx> this was teh reason on my server.
+[12-20-2005 04:28:56] [#ezpublish] <Katana`> our system does not update itself...
+[12-20-2005 04:32:36] [#ezpublish] <kris10an> at 03:12 skynet became selfaware
+[12-20-2005 04:32:48] [#ezpublish] <kris10an> :-)
+[12-20-2005 04:39:56] [#ezpublish] <Katana`> hum could eZ Publish 3.6.X + PHP 4.4 be responsible for that error ?
+[12-20-2005 04:39:57] [#ezpublish] <Katana`> http://www.opticshop-online.com/produkte/kontaktlinsen/ciba_vision/ciba_vision_focus_dailies_toric_all_day_comfort_30er_box
+[12-20-2005 04:46:19] [#ezpublish] <SEAwolfx> convert is an imagamagic binary
+[12-20-2005 04:47:10] [#ezpublish] <SEAwolfx> s/magic7magik/
+[12-20-2005 04:48:40] [#ezpublish] <SEAwolfx> Katana`: is the imagemagick php-extension enabled?
+[12-20-2005 04:56:43] [#ezpublish] <DiGiTa|_> is it possible to change the owner of an object ?
+[12-20-2005 04:58:32] [#ezpublish] <Katana`> SEAwolfx: i know what convert is ;)
+[12-20-2005 04:58:38] [#ezpublish] <Katana`> it is installed, it is working
+[12-20-2005 04:59:51] [#ezpublish] <Katana`> i don't think the php-ext is installed
+[12-20-2005 05:00:42] [#ezpublish] <SEAwolfx> i guess this is required when you want to use the convert()-function wihtin php?!
+[12-20-2005 05:01:32] [#ezpublish] <SEAwolfx> DiGiTa|_: this should be possible to change the owner.
+[12-20-2005 05:01:50] [#ezpublish] <DiGiTa|_> yeah ok, but how :)
+[12-20-2005 05:01:57] [#ezpublish] <SEAwolfx> DiGiTa|_: php-way or backend-way?
+[12-20-2005 05:02:03] [#ezpublish] <DiGiTa|_> bleh
+[12-20-2005 05:02:03] [#ezpublish] <Katana`> nope, the imagemagick imagehandler uses the command line version of imagemagick
+[12-20-2005 05:02:11] [#ezpublish] <DiGiTa|_> i need a backend way
+[12-20-2005 05:04:21] [#ezpublish] <SEAwolfx> Katana`: then no convert()-function is used. furthermore popen, exec or similar functions are used for that task?
+[12-20-2005 05:06:00] [#ezpublish] <SEAwolfx> DiGiTa|_: why you want to change the owner of an object? use-case?
+[12-20-2005 05:06:20] [#ezpublish] <Katana`> ...
+[12-20-2005 05:06:37] [#ezpublish] <SEAwolfx> ..
+[12-20-2005 05:06:39] [#ezpublish] <Katana`> SEAwolfx: i know a bit how the conversion works
+[12-20-2005 05:06:45] [#ezpublish] <DiGiTa|_> .
+[12-20-2005 05:06:50] [#ezpublish] <Katana`> a convert function is used, it is defined
+[12-20-2005 05:07:01] [#ezpublish] <SEAwolfx> Katana`: thats not the point.
+[12-20-2005 05:07:04] [#ezpublish] <Katana`> but for some reason it is not found even though it is there
+[12-20-2005 05:07:07] [#ezpublish] <Katana`> ok so what's the point ?
+[12-20-2005 05:07:11] [#ezpublish] <SEAwolfx> but not properly included?
+[12-20-2005 05:07:19] [#ezpublish] <Katana`> convert is just the name of the function in the PHP class, that's all
+[12-20-2005 05:07:46] [#ezpublish] <SEAwolfx> either the function is not defined or its not included or the extension which provides it isnt enabled.
+[12-20-2005 05:08:10] [#ezpublish] <Katana`> /home/www/sites/optic-shop.com/www/html/lib/ezimage/classes/ezimagemanager.php
+[12-20-2005 05:08:15] [#ezpublish] <Katana`> this is the file with the error
+[12-20-2005 05:08:18] [#ezpublish] <Katana`> it's part of the core
+[12-20-2005 05:08:30] [#ezpublish] <Katana`> and the convert method IS defined in the same file
+[12-20-2005 05:08:55] [#ezpublish] <Katana`> it's not an extension, it's the built in image conversion feature
+[12-20-2005 05:09:11] [#ezpublish] <Katana`> now i need to know if the error may be caused by PHP 4.4 + eZP 3.6
+[12-20-2005 05:18:11] [#ezpublish] <SEAwolfx> it seems that this function was envoked statically?
+[12-20-2005 05:18:52] [#ezpublish] <SEAwolfx> @Katana
+[12-20-2005 05:19:05] [#ezpublish] <SEAwolfx> no the convert-function rather the createImageAlias-function
+[12-20-2005 05:19:21] [#ezpublish] <SEAwolfx> s/no/not/
+[12-20-2005 05:20:37] [#ezpublish] <SEAwolfx> but there are more references to $this before the convert-function is called.
+[12-20-2005 05:21:32] -!- ordnas [n=ordnas@p549D7E36.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-20-2005 06:02:41] -!- DiGiTa|__ [n=guillaum@84.4.38.190] has joined #ezpublish
+[12-20-2005 06:19:31] -!- DiGiTa|_ [n=guillaum@84.5.139.19] has quit [Read error: 110 (Connection timed out)]
+[12-20-2005 07:01:13] [#ezpublish] <Katana`> kris10an, fh[eZ], anyone, could eZ Publish 3.6 + PHP 4.4. be the reason for that : http://www.opticshop-online.com/produkte/kontaktlinsen/ciba_vision/ciba_vision_focus_dailies_toric_all_day_comfort_30er_box ?
+[12-20-2005 07:05:53] [#ezpublish] <fh[eZ]> possibly...
+[12-20-2005 07:06:06] [#ezpublish] <fh[eZ]> 3.6 and 4.4 does't really work..
+[12-20-2005 07:06:12] [#ezpublish] <Katana`> yes, I know
+[12-20-2005 07:06:25] [#ezpublish] <Katana`> as I said before, someone has ran emerge -ud world on our production server
+[12-20-2005 07:06:28] [#ezpublish] <Katana`> i guess it happens...
+[12-20-2005 07:06:40] [#ezpublish] <Katana`> anyway now we have PHP 4.4 and it was not planned at all ;)
+[12-20-2005 07:06:54] [#ezpublish] <Katana`> i'm working on the migration now...
+[12-20-2005 07:07:39] -!- ordnas [n=ordnas@p549D907A.dip0.t-ipconnect.de] has joined #ezpublish
+[12-20-2005 07:08:12] -!- ordnas [n=ordnas@p549D907A.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[12-20-2005 07:09:00] [#ezpublish] <buz> WTF would use gentoo on a production server????
+[12-20-2005 07:10:17] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[12-20-2005 07:12:13] [#ezpublish] <fh[eZ]> I would..
+[12-20-2005 07:19:11] [#ezpublish] <Katana`> we do :)
+[12-20-2005 07:19:25] [#ezpublish] <buz> sounds like a recipe for trouble
+[12-20-2005 07:19:26] [#ezpublish] <Katana`> anyway it would have been the same on any system...
+[12-20-2005 07:19:35] [#ezpublish] <Katana`> nah, been working fine for 2 years
+[12-20-2005 07:19:52] [#ezpublish] <Katana`> but now if someone comes and makes a major upgrade without telling anyone...
+[12-20-2005 07:20:29] [#ezpublish] <fh[eZ]> and emerge -ud world is really... REALLY evil
+[12-20-2005 07:20:40] [#ezpublish] <fh[eZ]> you just don't do that on a running server
+[12-20-2005 07:20:51] [#ezpublish] <buz> exactly
+[12-20-2005 07:21:14] [#ezpublish] <fh[eZ]> it's like updating all your packages on a running debian server
+[12-20-2005 07:21:15] [#ezpublish] <Katana`> well someone has :)
+[12-20-2005 07:21:19] [#ezpublish] <fh[eZ]> no one does that either :)
+[12-20-2005 07:21:20] [#ezpublish] <buz> (you can do much the same on freebsd if you do it regularly)
+[12-20-2005 07:21:29] [#ezpublish] <Katana`> 4 users are supposed to have the root password
+[12-20-2005 07:21:33] [#ezpublish] <buz> actually, i know plenty of people who do it on debian
+[12-20-2005 07:21:35] [#ezpublish] <Katana`> 2 are supposed to know how to do that...
+[12-20-2005 07:21:43] [#ezpublish] <Katana`> the update itself worked fine
+[12-20-2005 07:21:44] [#ezpublish] <fh[eZ]> buz: they are crazy :)
+[12-20-2005 07:21:49] [#ezpublish] <buz> maybe
+[12-20-2005 07:21:50] [#ezpublish] <Katana`> it has updated 332 packages...
+[12-20-2005 07:21:52] [#ezpublish] <Katana`> no error, nothing
+[12-20-2005 07:21:53] [#ezpublish] <buz> never crashed though
+[12-20-2005 07:21:56] [#ezpublish] <Katana`> but ezp doesn't like that :)
+[12-20-2005 07:22:00] [#ezpublish] <buz> yeah
+[12-20-2005 07:22:05] [#ezpublish] <buz> but we already knew that
+[12-20-2005 07:22:35] [#ezpublish] <Katana`> i only have to sites to migrate, but man, i should have documented my kernel patches ^^
+[12-20-2005 07:23:21] [#ezpublish] <Katana`> to = 2 :)
+[12-20-2005 07:26:34] [#ezpublish] <buz> diff is your friend
+[12-20-2005 07:32:27] [#ezpublish] <buz> are cli scripts in 3.7.2 somehow totally broken?
+[12-20-2005 07:38:25] [#ezpublish] <kris10an> buz: works for me
+[12-20-2005 07:38:33] [#ezpublish] <buz> weird
+[12-20-2005 07:38:49] [#ezpublish] <buz> php ./update/common/scripts/updatesearchindex.php
+[12-20-2005 07:38:49] [#ezpublish] <buz> Fatal error: eZ publish did not finish its request
+[12-20-2005 07:38:49] [#ezpublish] <buz> The execution of eZ publish was abruptly ended, the debug output is present below.
+[12-20-2005 07:39:06] [#ezpublish] <buz> and the copysubtree one also gives fatalerrors
+[12-20-2005 07:43:35] [#ezpublish] <kris10an> does the php-cli include mysql stuff?
+[12-20-2005 07:44:03] [#ezpublish] <kris10an> try php -i|grep mysql
+[12-20-2005 07:44:43] [#ezpublish] <buz> doesnt look like it, actually
+[12-20-2005 07:44:54] [#ezpublish] <buz> but the thing comes from the same package as the module, wtf
+[12-20-2005 07:45:12] [#ezpublish] <kris10an> i know.. i had that problem before too...
+[12-20-2005 07:45:20] [#ezpublish] <kris10an> on debian...
+[12-20-2005 07:45:26] [#ezpublish] <buz> ubuntu, yes
+[12-20-2005 07:45:31] [#ezpublish] <kris10an> those little rascals who made the packages...
+[12-20-2005 07:45:47] [#ezpublish] <kris10an> didnt think phpcli needed mysql...
+[12-20-2005 07:46:00] [#ezpublish] <buz> mhh just copying over php.ini from apache works it seems
+[12-20-2005 07:55:38] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-20-2005 07:55:45] [#ezpublish] <Katana`> 21 users ??
+[12-20-2005 07:55:55] [#ezpublish] <Sulfur> yeah
+[12-20-2005 07:55:56] [#ezpublish] <Sulfur> :))
+[12-20-2005 07:56:46] [#ezpublish] <Sulfur> the family is growing ;)
+[12-20-2005 08:01:12] -!- ordnas [n=ordnas@p549D907A.dip0.t-ipconnect.de] has joined #ezpublish
+[12-20-2005 08:02:51] [#ezpublish] <Sulfur> Hey .... anyone can tell me if OE is configurable to add tags ? and in general, where to effect those configuration? so far, I was unable e.g. to add elements for the "class" dropdowns ... or to be sure I am correctly styling <h1..6> or enabling <br> if possible ... ?
+[12-20-2005 08:06:18] [#ezpublish] <SEAwolfx> This would assume that different xml-namespaces are supported when saving content.
+[12-20-2005 08:13:43] [#ezpublish] <Sulfur> SEAwolfx: can you clarify ?
+[12-20-2005 08:17:42] [#ezpublish] <SEAwolfx> when you add some tags of which namespace they should be? You want to extend the ezxml-namespace or introduce a separate new neamspace?
+[12-20-2005 08:28:57] [#ezpublish] <Katana`> diff -R owns
+[12-20-2005 08:30:12] [#ezpublish] <Katana`> -r even ;)
+[12-20-2005 08:30:17] [#ezpublish] <SEAwolfx> recursive
+[12-20-2005 08:30:50] [#ezpublish] <SEAwolfx> if you want to create normal patch-files, use diff -Nur
+[12-20-2005 08:32:06] [#ezpublish] <Sulfur> ok, we are getting to somewhere ... I think I can extend the ezxml namespace
+[12-20-2005 08:32:14] [#ezpublish] <Sulfur> that was for SEAwolfx :)
+[12-20-2005 08:33:38] [#ezpublish] <SEAwolfx> wouldn it be cool to have support for own namespaces?
+[12-20-2005 08:35:07] [#ezpublish] <SEAwolfx> so you have to rewrite the validation of the ezxml-structure using DOM IMHO, what sucks.
+[12-20-2005 08:35:12] [#ezpublish] <Sulfur> I suppose it would. I am just delving into ezoe ... and I'd like to know where are the available tags defined and how to extend / modify that set
+[12-20-2005 08:36:25] [#ezpublish] <Katana`> SEAwolfx it was not a question
+[12-20-2005 08:36:28] [#ezpublish] <Katana`> it was a statement :)
+[12-20-2005 08:36:54] [#ezpublish] <SEAwolfx> Katana`: is this a problem?
+[12-20-2005 08:37:06] [#ezpublish] <Katana`> uh ?
+[12-20-2005 08:37:09] [#ezpublish] <Katana`> what ?
+[12-20-2005 08:38:09] [#ezpublish] <SEAwolfx> Katana`: You mean your statement on diff?! And I added some more infos to what you said?
+[12-20-2005 08:38:26] [#ezpublish] <Katana`> yeah right
+[12-20-2005 08:51:36] -!- SEAwolfx is now known as SEAwolf|py
+[12-20-2005 08:56:47] -!- seasonfive [n=seasonfi@AGrenoble-152-1-40-24.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[12-20-2005 08:56:52] [#ezpublish] <seasonfive> hi all :)
+[12-20-2005 08:57:02] [#ezpublish] <Sulfur> yo seasonfive
+[12-20-2005 08:57:25] [#ezpublish] <seasonfive> i've put "@import url({'stylesheets/core.css'});" in my pagelayout.tpl but one parssed its still @import url({'stylesheets/core.css'}); any clue ?
+[12-20-2005 08:57:43] [#ezpublish] <seasonfive> s/one/once/
+[12-20-2005 08:59:25] [#ezpublish] <seasonfive> OOoops, its normal :p
+[12-20-2005 09:04:34] -!- SEAwolf|py is now known as SEAwolfx
+[12-20-2005 09:10:27] [#ezpublish] <kracker> heh, you guys are a riot
+[12-20-2005 09:11:10] [#ezpublish] <buz> SEAwolfx: there is a new parser in oe4 i think
+[12-20-2005 09:11:23] [#ezpublish] <buz> not so much point in trying to understand the currrent mess i'd say
+[12-20-2005 09:13:20] [#ezpublish] <SEAwolfx> buz: and this OE is supporting different namespaces? this would be great!
+[12-20-2005 09:13:26] [#ezpublish] <buz> no idea
+[12-20-2005 09:14:15] [#ezpublish] <Sulfur> well ... namespaces are not a propriety of the OE , as it is only a layer upon the xmltext objects ... nay ?
+[12-20-2005 09:14:49] [#ezpublish] <Sulfur> I think I can say with confidence that ... no, as to install OE you don't need to patch the kernel ;)
+[12-20-2005 09:17:19] [#ezpublish] <SEAwolfx> .oO( I should have a view on this new OE )
+[12-20-2005 09:37:56] [#ezpublish] <ordnas> FYI: #ezpublish.de on freenode for those who feel more comfortable speaking German
+[12-20-2005 09:38:34] [#ezpublish] <kracker> neat, now if i only new german :D
+[12-20-2005 09:41:58] [#ezpublish] <Sulfur> (... I was wondering a rather base question: why is the media subtree under a different section than content? )
+[12-20-2005 09:42:07] [#ezpublish] <kracker> heh
+[12-20-2005 09:42:27] [#ezpublish] <Sulfur> I mean .. there mus t be a reason ... but I fail to see it at the moment
+[12-20-2005 09:42:48] [#ezpublish] <kracker> i've spun this thread before ..
+[12-20-2005 09:43:13] [#ezpublish] <kracker> i came up with, separation of content being (accessable) but not visable
+[12-20-2005 09:43:30] [#ezpublish] <kracker> in the (default) content structure
+[12-20-2005 09:43:42] [#ezpublish] <kracker> i never much cared for it though
+[12-20-2005 09:44:14] [#ezpublish] <Sulfur> I was wondering if there was some other reason -- at the moment I have a subfolder into "media" which belongs to the default section
+[12-20-2005 09:44:15] [#ezpublish] <kracker> i tend to think it got in my way, but then the real answere must then be i don't really know how to use eZ publish in this way properly :?
+[12-20-2005 09:44:25] [#ezpublish] <Sulfur> yes me too ...
+[12-20-2005 09:44:26] [#ezpublish] <Sulfur> well
+[12-20-2005 09:44:56] [#ezpublish] <Sulfur> at the very least, it will disallow your site being easily leeched of its media content (note the "easily")
+[12-20-2005 09:45:07] [#ezpublish] <Sulfur> apart from that ... duh ?
+[12-20-2005 09:45:19] [#ezpublish] <kracker> i ended up storing my content as sub items of a parrent node (as needed) which (depending on what YOUR doing) can hide them but keep them accessable simply
+[12-20-2005 09:45:41] [#ezpublish] <kracker> i don't think it does (protect) per say but what do i know
+[12-20-2005 09:45:53] [#ezpublish] <kracker> leachers are going to leach, no mater what
+[12-20-2005 09:46:16] [#ezpublish] <kracker> you can just inhibit / slow them down (watermarks, direct access to files, etc)
+[12-20-2005 09:46:23] [#ezpublish] <Sulfur> ah, now that is another nice thing ..... but if I - say - hide a folder, all the contents in it are not available -- at least, I tried it just a few days ago ,and it asks me to login (which is good)
+[12-20-2005 09:46:34] [#ezpublish] <kracker> exactly
+[12-20-2005 09:46:34] [#ezpublish] * Sulfur nods
+[12-20-2005 09:47:20] [#ezpublish] * Sulfur is listening to ytCracker -- view source :))
+[12-20-2005 09:47:28] [#ezpublish] <kracker> i remember when hide was touted and eventualy released, i was like well this is coool but .... what about hide from menu (content structure) but still allow permissions ...
+[12-20-2005 09:47:28] [#ezpublish] <kracker> heh
+[12-20-2005 09:47:47] [#ezpublish] <Sulfur> anyway -- embedding hidden content into another tpl still does not make it available, right ?
+[12-20-2005 09:47:51] [#ezpublish] <kracker> yeah i actually am a bit of a leacher (especialy as a kidd but not as much these days)
+[12-20-2005 09:48:18] [#ezpublish] <kracker> i belive in the power of `view source` and think it's _wrong_ to play the other side of that fight
+[12-20-2005 09:48:35] [#ezpublish] <Sulfur> "throw your stone, you  who never leeched a site"
+[12-20-2005 09:48:50] [#ezpublish] <kracker> fully
+[12-20-2005 09:48:53] [#ezpublish] <Sulfur> *ow*
+[12-20-2005 09:49:02] [#ezpublish] <Sulfur> Katana`: that was you! ;)
+[12-20-2005 09:49:31] [#ezpublish] <kracker> sweet it has been so long since i got stoned ... :D ( american dad eppisode about saudi arabia - the daughter)
+[12-20-2005 09:49:31] [#ezpublish] * Sulfur now is listening to ytc's surgerunner :))
+[12-20-2005 09:49:38] [#ezpublish] <Sulfur> hehe
+[12-20-2005 09:50:00] [#ezpublish] <Sulfur> damn buz when he passed the link to ytc ;)
+[12-20-2005 10:03:49] -!- DiGiTa|_ [n=guillaum@84.6.38.229] has joined #ezpublish
+[12-20-2005 10:20:05] [#ezpublish] <Katana`> Sulfur ? what was me ? :)
+[12-20-2005 10:20:14] -!- DiGiTa|__ [n=guillaum@84.4.38.190] has quit [Read error: 110 (Connection timed out)]
+[12-20-2005 10:22:38] [#ezpublish] <Sulfur> heh Katana` ... we were joking about site ripping and I dragged you in :)
+[12-20-2005 10:29:25] [#ezpublish] <Katana`> oh :)
+[12-20-2005 10:32:02] [#ezpublish] <Sulfur> I picked you as the one guy who would neeeeever do it! ;) (just because I needed one and it looked fun it to be you ;) )
+[12-20-2005 10:32:19] [#ezpublish] <Katana`> :))
+[12-20-2005 10:32:24] [#ezpublish] <Katana`> i don't rip stuff
+[12-20-2005 10:33:06] [#ezpublish] <Sulfur> hehe so bingo !
+[12-20-2005 10:34:46] [#ezpublish] <Katana`> usually ^^
+[12-20-2005 10:47:33] [#ezpublish] <kracker> always with the small print already :D
+[12-20-2005 10:49:05] -!- hovik [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[12-20-2005 10:52:29] [#ezpublish] <kracker> eZ publish 2.3 (Community Edition) running on php5.0.5 !! http://php5.demo.ezcommunity.net/
+[12-20-2005 10:53:09] [#ezpublish] <kracker> i'm just a little stoked to finaly get to this point, up next get rid of all the select * queries !
+[12-20-2005 10:54:02] [#ezpublish] <Katana`> lol
+[12-20-2005 10:55:35] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[12-20-2005 10:59:47] -!- ordnas [n=ordnas@p549D907A.dip0.t-ipconnect.de] has left #ezpublish []
+[12-20-2005 11:01:57] [#ezpublish] <kracker> i'm not the first to do it, just the first who will release the sources back to the community
+[12-20-2005 11:04:04] [#ezpublish] <kracker> i think i remember hearing from someone @eZ that it had been done before internaly to see if it was possible (yeah, what this is a last year or 1.7 year old memento) then a few weeks ago DBI asked me what it would take to get it done
+[12-20-2005 11:04:38] [#ezpublish] <kracker> nice way to end christmas if I do say so myself :D
+[12-20-2005 11:10:04] [#ezpublish] <kracker> the demo link is alpha2 (at best atm.) and as such has not been commited back to svn (yet), we are working on looking for other people to help test the code for fatal errors or abnormal functionality, etc, i'd say it could be a month ( time estimate ) before this is ready, tested paid in full for by the client, commited and released to the public
+[12-20-2005 11:10:30] [#ezpublish] <kracker> ref: http://svn.ezcommunity.net/
+[12-20-2005 11:20:22] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[12-20-2005 11:27:29] -!- heathd [n=heathd@82.152.159.125] has joined #ezpublish
+[12-20-2005 11:27:41] [#ezpublish] <Sulfur> ... is there a way to override the templates used by an extension?? and where would I have to put them in the dir-tree .... ?
+[12-20-2005 11:28:58] -!- heathd [n=heathd@82.152.159.125] has quit [Client Quit]
+[12-20-2005 11:38:17] [#ezpublish] <kracker> heh, another exension :D
+[12-20-2005 11:40:05] [#ezpublish] <Sulfur> sure of that kracker ?
+[12-20-2005 11:40:26] [#ezpublish] <Sulfur> I am tinkering with replicating the design dir structure and trying to override ...
+[12-20-2005 11:40:34] [#ezpublish] <Sulfur> the results in a few minutes
+[12-20-2005 11:43:48] [#ezpublish] <kracker> sry, bbl
+[12-20-2005 11:43:56] [#ezpublish] <Sulfur> sy
+[12-20-2005 11:44:46] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Read error: 104 (Connection reset by peer)]
+[12-20-2005 11:48:41] [#ezpublish] <kracker> about to bounce ?: i'm not sure of that (the extension would prolly have to be named in a way to be processed (last) is my first thought
+[12-20-2005 11:49:33] [#ezpublish] <kracker> if it is a standard file in design the extension is overriding, perhapse override.ini might help (but i don't know in this regard :\)
+[12-20-2005 11:49:43] [#ezpublish] <kracker> just a few random thoughts
+[12-20-2005 11:50:45] [#ezpublish] <Sulfur> oh no, I just want e.g. to override an online editor tpl
+[12-20-2005 11:51:00] [#ezpublish] <Sulfur> and of course I do not want to tinker with the original one -- messy for upgrading
+[12-20-2005 11:54:47] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-20-2005 12:31:55] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[12-20-2005 13:15:09] [#ezpublish] <buz> man i'd love to try ez on one of those new 32thread sun chips
+[12-20-2005 13:28:56] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[12-20-2005 13:29:13] [#ezpublish] <zr1> it lives!
+[12-20-2005 13:34:23] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[12-20-2005 13:35:49] [#ezpublish] <buz> whom
+[12-20-2005 13:40:35] [#ezpublish] <zr1> no, just seemed so..
+[12-20-2005 13:40:40] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-20-2005 13:54:19] [#ezpublish] <kracker> Sulfur, i like the idea, makes me wish i could find the older /documentation site article/entry with nice images that explained the order of presidence in eZ publish design files were sourced (order) but i could not find it.
+[12-20-2005 13:59:10] [#ezpublish] <kracker> but i wanted to say that order of operation / sourching (noted), i always thought of the design/ directory system as a collected whole from many locations which may override each other depending on name/location/placement in the actual location (extention overrides, placement inside the design override/ directory vs standard ...
+[12-20-2005 14:00:31] [#ezpublish] <kracker> Sulfur, which was why i wondered if you couldn't use the ini settings to cover you situation :\
+[12-20-2005 14:03:53] [#ezpublish] <kracker> ahh this might be the one, hmm. http://ez.no/products/ez_publish_cms/documentation/incoming/design/designs_and_siteaccesses
+[12-20-2005 14:36:01] -!- tobmaster [n=tobmaste@dslb-084-061-009-224.pools.arcor-ip.net] has joined #ezpublish
+[12-20-2005 15:24:14] -!- DiGiTa|_ [n=guillaum@84.6.38.229] has quit []
+[12-20-2005 15:38:36] -!- tobmaster [n=tobmaste@dslb-084-061-009-224.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[12-20-2005 17:21:37] kracker [n=kracker@pdpc/supporter/sustaining/kracker] requested CTCP TIME: 
+[12-20-2005 19:28:26] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Remote closed the connection]
+[12-20-2005 22:22:41] -!- SEAwolfx_ [n=mike@tor/session/x-7f3ff76a0bc9d770] has joined #ezpublish

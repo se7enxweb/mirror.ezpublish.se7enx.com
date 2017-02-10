@@ -1,0 +1,38 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 12.10.&nbsp; Including C Code</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec9.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec11.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch12lev1sec10"></a><h3 class="docSection1Title">12.10. Including C Code</h3>
+<p class="docText">A PEAR package may include C or C++ code as well as PHP code. The PEAR Installer will run the extension build process if there are one or more files with the <tt>role=src</tt>.<a name="ch12index286"></a><a name="ch12index287"></a><a name="ch12index288"></a></p>
+<a name="ch12lev2sec19"></a><h4 class="docSection2Title">12.10.1. Element: <tt>&lt;configureoptions&gt;</tt></h4>
+<P><table cellspacing="0" FRAME="void" RULES="none" cellpadding="5"><colgroup><col width="275"><col width="275"></colgroup><thead></thead><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">Element name:</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>configureoptions</tt></p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText">Attributes:</p></td><td class="docTableCell" align="left" valign="top"><p class="docText">none</p></TD></tr><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">May occur in:</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>release</tt> (optional)</p></td></tr></table></p><br>
+<p class="docText">This is a wrapper element for one or more <tt>&lt;configureoption&gt;</tt> elements.<a name="ch12index289"></a><a name="ch12index290"></a></p>
+<a name="ch12lev2sec20"></a><h4 class="docSection2Title">12.10.2. Element: <tt>&lt;configureoption&gt;</tt></h4>
+<p><table cellspacing="0" FRAME="void" RULES="none" cellpadding="5"><colgroup><col width="275"><col width="275"></colgroup><thead></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Element name:</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>configureoption</tt></p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText">Attributes:</P></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>name</tt>  (required)</p>
+<p class="docText"><tt>default</tt>  (optional)</p>
+<p class="docText"><tt>prompt</tt> (required)</p></td></TR><tr><TD class="docTableCell" align="left" valign="top"><p class="docText">May occur in:</p></TD><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>configureoptions</tt> (required)</p></td></tr></table></P><BR>
+<p class="docText">This element is for collecting build parameters on UNIX when building extension binaries. Typically, each extension has one or more configure options that may be specified here.<a name="ch12index291"></a><a name="ch12index292"></a></p>
+<a name="ch12lev3sec46"></a><h5 class="docSection3Title">12.10.2.1 <tt>name</tt> Attribute</h5>
+<p class="docText">The <tt>configureoption</tt> name attribute corresponds to the name of the configure option, without any dashes in front. For example, if the name attribute is <tt>with-foobar</tt>, it is passed on to configure as <tt>--with-fobar</tt>.<a name="ch12index293"></a><a name="ch12index294"></a></p>
+<a name="ch12lev3sec47"></a><H5 class="docSection3Title">12.10.2.2 <tt>default</tt> Attribute</h5>
+<p class="docText">This attribute is used only as a brief description of the default behavior, when the <tt>--</tt><span class="docEmphasis"><tt>name</tt></span> option is used without a parameter (with a parameter, it would be <tt>--</tt><span class="docEmphasis"><tt>name</tt></span><tt>=</tt><span class="docEmphasis"><tt>param</tt></span>).<a name="ch12index295"></a><a name="ch12index296"></a></p>
+<a name="ch12lev3sec48"></a><H5 class="docSection3Title">12.10.2.3 <tt>prompt</tt> Attribute</h5>
+<p class="docText">This attribute contains a prompt that is displayed during install.<a name="ch12index297"></a><a name="ch12index298"></a><a name="ch12index299"></a><a name="ch12index300"></a><a name="ch12index301"></a></P>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch12lev1sec9.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch12lev1sec11.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

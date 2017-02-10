@@ -1,0 +1,179 @@
+[04-26-2005 04:11:52] >> IQ standard module loaded
+[04-26-2005 04:11:52] -- Configuration loaded.
+[04-26-2005 04:11:52] >> Connecting to irc.freenode.net:6667
+[04-26-2005 04:11:52] >> Connected to irc.freenode.net:6667, registering...
+[04-26-2005 04:11:53] >> Successfully registered. Nick is: ezlog
+[04-26-2005 04:11:53] >> Attempting to join channels: #ezpublish
+[04-26-2005 04:11:53] -!- There are 10100 victims and 11367 hiding on 25 servers
+[04-26-2005 04:11:53] -!- 30 flagged staff members
+[04-26-2005 04:11:53] -!- 7632 channels formed
+[04-26-2005 04:11:53] -!- I have 3968 clients and 0 servers
+[04-26-2005 04:11:53] -!- Current local  users: 3968  Max: 4739
+[04-26-2005 04:11:53] -!- Current global users: 21467  Max: 24504
+[04-26-2005 04:11:53] -!- Highest connection count: 4740 (4739 clients) (568000 since server was (re)started)
+[04-26-2005 04:11:53] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[04-26-2005 04:11:53] -!- Topic for #ezpublish: http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn
+[04-26-2005 04:11:53] -!- Topic set by fh [@] [Sun, 24 Apr 2005 23:12:38 -0700]
+[04-26-2005 04:11:54] (unmatched::raw477) :kornbluth.freenode.net 477 ezlog #ezpublish :[freenode-info] please register your nickname...don't forget to auto-identify! http://freenode.net/faq.shtml#nicksetup
+[04-26-2005 04:12:08] [#ezpublish] <kracker> now?
+[04-26-2005 04:12:48] [#ezpublish] <kracker> yes!
+[04-26-2005 04:13:20] [#ezpublish] <kracker> hey Bedlore ...
+[04-26-2005 04:13:27] [#ezpublish] <kracker> you got a second for something cool?
+[04-26-2005 04:13:59] [#ezpublish] <kracker> it's such a hack but i'm going to clean it up and do something releasable with it i think (cause it was so much fun)
+[04-26-2005 04:14:23] [#ezpublish] <kracker> now i have to do it lest my own voice come back to haunt me ;)
+[04-26-2005 04:16:02] [#ezpublish] <kracker> and i think i can twist it around to do some really cool things with some other similar ideas and refreshes
+[04-26-2005 04:16:15] [#ezpublish] <kracker> now if i could do that with templates ...
+[04-26-2005 04:17:11] [#ezpublish] <kracker> so the human readable (redundant, text) logs start here: http://download.ezpublishhosting.com/ezirc/logs/IQ-current.log
+[04-26-2005 04:17:20] [#ezpublish] <kracker> with more logs in the dir
+[04-26-2005 04:17:34] [#ezpublish] <kracker> i ended up getting it going with IQ
+[04-26-2005 04:17:59] [#ezpublish] <kracker> so now for the really fun part ...
+[04-26-2005 04:18:12] [#ezpublish] <Bedlore> gimme a min kracker, just helping SEAwolfx
+[04-26-2005 04:18:18] [#ezpublish] <kracker> ya
+[04-26-2005 04:20:15] [#ezpublish] <kracker> so what do you think, is a log a single updated text field or a container (folder) with datetime asc children (called lines) with priority set to numeric timestamp (again asc) each container could have as many lines/messages as sent to all the clients in the channel.
+[04-26-2005 04:32:24] [#ezpublish] <Bedlore> kracker: rockin, I've often wondered what goes on in #ezpublish when I'm not here
+[04-26-2005 04:34:02] [#ezpublish] <Bedlore> dinner time, bbl
+[04-26-2005 04:49:03] -!- thekracker [~kracker@63-226-247-94.tukw.qwest.net] has joined #ezpublish
+[04-26-2005 04:49:52] [#ezpublish] <thekracker> ok
+[04-26-2005 04:50:15] [#ezpublish] <thekracker> so i need to reverse the log order (i think to asc by timestamp)
+[04-26-2005 04:52:42] >> IQ standard module loaded
+[04-26-2005 04:52:42] -- Configuration loaded.
+[04-26-2005 04:52:42] >> Connecting to irc.freenode.net:6667
+[04-26-2005 04:52:42] >> Connected to irc.freenode.net:6667, registering...
+[04-26-2005 04:52:43] >> Successfully registered. Nick is: ezlog
+[04-26-2005 04:52:43] >> Attempting to join channels: #ezpublish
+[04-26-2005 04:52:43] -!- There are 10204 victims and 11446 hiding on 25 servers
+[04-26-2005 04:52:43] -!- 30 flagged staff members
+[04-26-2005 04:52:43] -!- 7637 channels formed
+[04-26-2005 04:52:43] -!- I have 4016 clients and 0 servers
+[04-26-2005 04:52:43] -!- Current local  users: 4016  Max: 4739
+[04-26-2005 04:52:43] -!- Current global users: 21650  Max: 24504
+[04-26-2005 04:52:43] -!- Highest connection count: 4740 (4739 clients) (568564 since server was (re)started)
+[04-26-2005 04:52:43] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[04-26-2005 04:52:43] -!- Topic for #ezpublish: http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn
+[04-26-2005 04:52:43] -!- Topic set by fh [@] [Sun, 24 Apr 2005 23:12:38 -0700]
+[04-26-2005 08:10:33] >> IQ standard module loaded
+[04-26-2005 08:10:33] -- Configuration loaded.
+[04-26-2005 08:10:33] >> Connecting to irc.freenode.net:6667
+[04-26-2005 08:10:33] >> Connected to irc.freenode.net:6667, registering...
+[04-26-2005 08:10:34] >> Successfully registered. Nick is: ezlog
+[04-26-2005 08:10:34] >> Attempting to join channels: #ezpublish
+[04-26-2005 08:10:34] -!- There are 10990 victims and 11740 hiding on 25 servers
+[04-26-2005 08:10:34] -!- 30 flagged staff members
+[04-26-2005 08:10:34] -!- 7782 channels formed
+[04-26-2005 08:10:34] -!- I have 4305 clients and 0 servers
+[04-26-2005 08:10:34] -!- Current local  users: 4305  Max: 4739
+[04-26-2005 08:10:34] -!- Current global users: 22730  Max: 24504
+[04-26-2005 08:10:34] -!- Highest connection count: 4740 (4739 clients) (571703 since server was (re)started)
+[04-26-2005 08:10:34] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[04-26-2005 08:10:34] -!- Topic for #ezpublish: http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn
+[04-26-2005 08:10:34] -!- Topic set by fh [@] [Sun, 24 Apr 2005 23:12:38 -0700]
+[04-26-2005 08:10:35] (unmatched::raw477) :kornbluth.freenode.net 477 ezlog #ezpublish :[freenode-info] help freenode weed out clonebots, please register your IRC nick and auto-identify: http://freenode.net/faq.shtml#nicksetup
+[04-26-2005 08:12:26] -!- daffen [~bob@213.184.199.226] has left #ezpublish []
+[04-26-2005 08:13:03] >> IQ standard module loaded
+[04-26-2005 08:13:03] -- Configuration loaded.
+[04-26-2005 08:13:03] >> Connecting to irc.freenode.net:6667
+[04-26-2005 08:13:03] >> Connected to irc.freenode.net:6667, registering...
+[04-26-2005 08:13:04] >> Successfully registered. Nick is: ezlog
+[04-26-2005 08:13:04] >> Attempting to join channels: #ezpublish
+[04-26-2005 08:13:04] -!- There are 11009 victims and 11748 hiding on 25 servers
+[04-26-2005 08:13:04] -!- 30 flagged staff members
+[04-26-2005 08:13:04] -!- 7785 channels formed
+[04-26-2005 08:13:04] -!- I have 4314 clients and 0 servers
+[04-26-2005 08:13:04] -!- Current local  users: 4314  Max: 4739
+[04-26-2005 08:13:04] -!- Current global users: 22757  Max: 24504
+[04-26-2005 08:13:04] -!- Highest connection count: 4740 (4739 clients) (571743 since server was (re)started)
+[04-26-2005 08:13:04] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[04-26-2005 08:13:04] -!- Topic for #ezpublish: http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn
+[04-26-2005 08:13:04] -!- Topic set by fh [@] [Sun, 24 Apr 2005 23:12:38 -0700]
+[04-26-2005 08:14:13] >> IQ standard module loaded
+[04-26-2005 08:14:13] -- Configuration loaded.
+[04-26-2005 08:14:13] >> Connecting to irc.freenode.net:6667
+[04-26-2005 08:14:13] >> Connected to irc.freenode.net:6667, registering...
+[04-26-2005 08:14:14] >> Primary nickname in use, trying alternate.
+[04-26-2005 08:14:14] >> Successfully registered. Nick is: ezpublishlog
+[04-26-2005 08:14:14] >> Attempting to join channels: #ezpublish
+[04-26-2005 08:14:14] -!- There are 11021 victims and 11753 hiding on 25 servers
+[04-26-2005 08:14:14] -!- 30 flagged staff members
+[04-26-2005 08:14:14] -!- 7789 channels formed
+[04-26-2005 08:14:14] -!- I have 4319 clients and 0 servers
+[04-26-2005 08:14:14] -!- Current local  users: 4319  Max: 4739
+[04-26-2005 08:14:14] -!- Current global users: 22774  Max: 24504
+[04-26-2005 08:14:14] -!- Highest connection count: 4740 (4739 clients) (571761 since server was (re)started)
+[04-26-2005 08:14:15] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[04-26-2005 08:14:15] -!- Topic for #ezpublish: http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn
+[04-26-2005 08:14:15] -!- Topic set by fh [@] [Sun, 24 Apr 2005 23:12:38 -0700]
+[04-26-2005 08:14:15] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has quit [Remote closed the connection]
+[04-26-2005 08:14:17] -!- ezpublishlog is now known as ezlog
+[04-26-2005 08:14:17] My new nick is ezlog
+[04-26-2005 08:14:56] [#ezpublish] <kracker> ok, now we are backgrounding :) now how long will it last on it's own ...
+[04-26-2005 08:44:56] -!- fh [~fh@stalker.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[04-26-2005 08:53:21] >> IQ standard module loaded
+[04-26-2005 08:53:21] -- Configuration loaded.
+[04-26-2005 08:53:21] >> Connecting to irc.freenode.net:6667
+[04-26-2005 08:53:22] >> Connected to irc.freenode.net:6667, registering...
+[04-26-2005 08:53:22] >> Primary nickname in use, trying alternate.
+[04-26-2005 08:53:23] >> Successfully registered. Nick is: ezpublishlog
+[04-26-2005 08:53:23] >> Attempting to join channels: #ezpublish
+[04-26-2005 08:53:23] -!- There are 11177 victims and 11861 hiding on 25 servers
+[04-26-2005 08:53:23] -!- 30 flagged staff members
+[04-26-2005 08:53:23] -!- 7383 channels formed
+[04-26-2005 08:53:23] -!- I have 4390 clients and 0 servers
+[04-26-2005 08:53:23] -!- Current local  users: 4390  Max: 4739
+[04-26-2005 08:53:23] -!- Current global users: 23038  Max: 24504
+[04-26-2005 08:53:23] -!- Highest connection count: 4740 (4739 clients) (572442 since server was (re)started)
+[04-26-2005 08:53:23] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[04-26-2005 08:53:23] -!- ezpublishlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[04-26-2005 08:53:23] -!- Topic for #ezpublish: http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn
+[04-26-2005 08:53:23] -!- Topic set by fh [@] [Sun, 24 Apr 2005 23:12:38 -0700]
+[04-26-2005 08:53:28] -!- kracker [~kracker@70-58-92-24.tukw.qwest.net] has quit [Read error: 60 (Operation timed out)]
+[04-26-2005 08:53:28] -!- kracker [~kracker@70-58-92-24.tukw.qwest.net] has quit [Read error: 60 (Operation timed out)]
+[04-26-2005 08:54:13] -!- kracker [~kracker@70-58-92-24.tukw.qwest.net] has joined #ezpublish
+[04-26-2005 08:54:13] -!- kracker [~kracker@70-58-92-24.tukw.qwest.net] has joined #ezpublish
+[04-26-2005 08:54:43] [#ezpublish] <kracker> interesting ..
+[04-26-2005 08:54:43] [#ezpublish] <kracker> interesting ..
+[04-26-2005 08:55:33] >> IQ standard module loaded
+[04-26-2005 08:55:33] -- Configuration loaded.
+[04-26-2005 08:55:33] >> Connecting to irc.freenode.net:6667
+[04-26-2005 08:55:34] >> Connected to irc.freenode.net:6667, registering...
+[04-26-2005 08:55:34] >> Successfully registered. Nick is: ezlog
+[04-26-2005 08:55:34] >> Attempting to join channels: #ezpublish
+[04-26-2005 08:55:34] -!- There are 11194 victims and 11866 hiding on 25 servers
+[04-26-2005 08:55:34] -!- 30 flagged staff members
+[04-26-2005 08:55:34] -!- 7395 channels formed
+[04-26-2005 08:55:34] -!- I have 4392 clients and 0 servers
+[04-26-2005 08:55:34] -!- Current local  users: 4392  Max: 4739
+[04-26-2005 08:55:34] -!- Current global users: 23060  Max: 24504
+[04-26-2005 08:55:34] -!- Highest connection count: 4740 (4739 clients) (572483 since server was (re)started)
+[04-26-2005 08:55:34] -!- ezlog [[U2FsdGVkX@029.116-30-64.ftth.swbr.surewest.net] has joined #ezpublish
+[04-26-2005 08:55:34] -!- Topic for #ezpublish: http://ez.no | trunk status: feature freeze | q: freeze till ... [est] 11. may 2005 ? | until 3.6 release, create a branch if you want to put new stuff in svn
+[04-26-2005 08:55:34] -!- Topic set by fh [@] [Sun, 24 Apr 2005 23:12:38 -0700]
+[04-26-2005 08:58:50] [#ezpublish] <kracker> dr. katz : family car
+[04-26-2005 09:05:31] [#ezpublish] <kracker> ok so today is the first test of the #ezpublish log
+[04-26-2005 09:06:08] [#ezpublish] <kracker> i'll write up a brief introduction / link for everyone who misses this weak announcement
+[04-26-2005 09:06:27] [#ezpublish] <kracker> those who want to bookmark it now can : http://download.ezpublishhosting.com/ezirc/logs/IQ-current.log
+[04-26-2005 09:07:09] [#ezpublish] <kracker> i'll be upgrading it over the next week as i widdle it into shape and add features, suggestions welcome
+[04-26-2005 09:22:43] [#ezpublish] <kracker> well, i'm off to crash, late
+[04-26-2005 09:22:56] -!- kracker is now known as krckr
+[04-26-2005 09:46:12] [#ezpublish] <krckr> well, i didn't make it out alive
+[04-26-2005 09:46:34] [#ezpublish] <krckr> so i started a page for the links / info page : http://snippets.ezpublishhosting.com/ezpublish_extentions_ezirc
+[04-26-2005 09:47:07] [#ezpublish] <krckr> it's horrible but it has the links so that's all that matters this early in the morning
+[04-26-2005 09:50:40] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[04-26-2005 09:52:46] [#ezpublish] <krckr> morning luke
+[04-26-2005 09:53:06] [#ezpublish] <_luke> morning krckr
+[04-26-2005 10:18:43] -!- danmiru [~chatzilla@80.94.225.138] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[04-26-2005 10:45:13] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.67 [Firefox 1.0.3/20050414]"]
+[04-26-2005 10:53:45] -!- krckr [~kracker@70-58-92-24.tukw.qwest.net] has quit [Read error: 60 (Operation timed out)]
+[04-26-2005 11:08:22] -!- krckr [~kracker@70-58-92-24.tukw.qwest.net] has joined #ezpublish
+[04-26-2005 11:17:33] -!- krckr [~kracker@70-58-92-24.tukw.qwest.net] has quit []
+[04-26-2005 13:46:10] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[04-26-2005 14:23:22] -!- yangoon [~mathiasb@J2fed.j.pppool.de] has joined #ezpublish
+[04-26-2005 14:50:31] -!- Bedlore [~me@ppp46-128.lns1.adl1.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[04-26-2005 15:24:17] -!- yangoon [~mathiasb@J2fed.j.pppool.de] has left #ezpublish []
+[04-26-2005 16:11:35] -!- _luke [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[04-26-2005 16:19:05] -!- krckr [~kracker@70-58-92-24.tukw.qwest.net] has joined #ezpublish
+[04-26-2005 16:24:01] -!- yangoo1 [~mathiasb@J3132.j.pppool.de] has joined #ezpublish
+[04-26-2005 16:24:12] -!- yangoo1 [~mathiasb@J3132.j.pppool.de] has left #ezpublish []
+[04-26-2005 16:34:30] -!- Frekko [~larson@238.80-202-59.nextgentel.com] has joined #ezpublish
+[04-26-2005 16:35:21] -!- Larson [~larson@238.80-202-59.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[04-26-2005 16:39:49] -!- krckr [~kracker@70-58-92-24.tukw.qwest.net] has quit []
+[04-26-2005 22:33:41] -!- Bedlore [~me@dsl-203-113-238-81.SA.netspace.net.au] has joined #ezpublish

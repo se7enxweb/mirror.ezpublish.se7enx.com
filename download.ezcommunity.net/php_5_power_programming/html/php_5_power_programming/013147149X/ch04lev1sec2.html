@@ -1,0 +1,150 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 4.2.&nbsp; Overloading Capabilities</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch04lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch04lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch04lev1sec2"></a><h3 class="docSection1Title">4.2. Overloading Capabilities</h3>
+<p class="docText">In PHP 5, extensions written in C can overload almost every aspect of the object syntax. It also allows PHP code to overload a limited subset that is most often needed. This section covers the overloading abilities that you can control from your PHP code.<a name="ch04index01"></a></p>
+<a name="ch04lev2sec1"></a><h4 class="docSection2Title">4.2.1. Property and Method Overloading</h4>
+<p class="docText">PHP allows overloading of property access and method calls by implementing special proxy methods that are invoked if the relevant property or method doesn't exist. This gives you a lot of flexibility in intercepting these actions and defining your own functionality.<a name="ch04index02"></a><a name="ch04index03"></a><a name="ch04index04"></a><a name="ch04index05"></a></P>
+<p class="docText">You may implement the following method prototypes:</p>
+<pre>
+function __get($property)
+function __set($property, $value)
+function __call($method, $args)
+</pre><BR>
+<p class="docText"><tt>__get</tt> is passed the property's name, and you should return a value.</p>
+<p class="docText"><tt>__set</tt> is passed the property's name and its new value.</P>
+<p class="docText"><tt>__call</tt> is passed the method's name and a numerically indexed array of the passed arguments starting from 0 for the first argument.</p>
+<p class="docText">The following example shows how to use the <tt>__set</tt> and <tt>__get</tt> functions (<tt>array_key_exists()</tt> is covered later in this book; it checks whether a key exists in the specified array):</p>
+<pre>
+class StrictCoordinateClass {
+    private $arr = array('x' =&gt; NULL, 'y' =&gt; NULL);
+
+    function __get($property)
+    {
+        if (array_key_exists($property, $this-&gt;arr)) {
+            return $this-&gt;arr[$property];
+        } else {
+            print "Error: Can't read a property other than x &amp; y\n";
+        }
+    }
+
+    function __set($property, $value)
+    {
+        if (array_key_exists($property, $this-&gt;arr)) {
+            $this-&gt;arr[$property] = $value;
+        } else {
+            print "Error: Can't write a property other than x &amp; y\n";
+        }
+    }
+}<a name="ch04index06"></a><a name="ch04index07"></a><a name="ch04index08"></a><a name="ch04index09"></a>
+
+$obj = new StrictCoordinateClass();
+
+$obj-&gt;x = 1;
+print $obj-&gt;x;
+
+print "\n";
+
+$obj-&gt;n = 2;
+print $obj-&gt;n;
+</pre><br>The output is<pre>
+1
+Error: Can't write a property other than x &amp; y
+Error: Can't read a property other than x &amp; y
+</pre><br>
+<p class="docText">As x exists in the object's array, the setter and getter method handlers agrees to read/write the values. However, when accessing the property <tt>n</tt>, both for reading and writing, <tt>array_key_exists()</tt> returns <tt>false</tt> and, therefore, the error messages are reached.</P>
+<p class="docText"><tt>__call()</tt> can be used for a variety of purposes. The following example shows how to create a delegation model, in which an instance of the class <tt>HelloWorldDelegator</tt> delegates all method calls to an instance of the <tt>HelloWorld</tt> class:<a name="ch04index10"></a></P>
+<pre>
+class HelloWorld {
+    function display($count)
+    {
+        for ($i = 0; $i &lt; $count; $i++) {
+            print "Hello, World\n";
+        }
+        return $count;
+    }
+}
+
+class HelloWorldDelegator {
+    function __construct()
+    {
+        $this-&gt;obj = new HelloWorld();
+    }
+
+    function __call($method, $args)
+    {
+        return call_user_func_array(array($this-&gt;obj , $method), $args);
+    }
+
+    private $obj;
+}
+
+$obj = new HelloWorldDelegator();
+print $obj-&gt;display(3);
+</pre><br>This script's output is<pre>
+Hello, World
+Hello, World
+Hello, World
+3
+</pre><br>
+<p class="docText">The <tt>call_user_func_array()</tt> function allows <tt>__call()</tt> to relay the function call with its arguments to <tt>HelloWorld::display()</tt> which prints out <tt>"Hello, World\n"</tt> three times. It then returns <tt>$count</tt> (in this case, <tt>3</tt>) which is then printed out. Not only can you relay the method call to a different object (or handle it in whatever way you want), but you can also return a value from <tt>__call()</tt>, just like a regular method.<a name="ch04index11"></a><a name="ch04index12"></a><a name="ch04index13"></a><a name="ch04index14"></a><a name="ch04index15"></a><a name="ch04index16"></a><a name="ch04index17"></a></p>
+<a name="ch04lev2sec2"></a><H4 class="docSection2Title">4.2.2. Overloading the Array Access Syntax</h4>
+<p class="docText">It is common to have key/value mappings or, in other words, lookup dictionaries in your application framework. For this purpose, PHP supports <span class="docEmphStrong">associative arrays</span> that map either integer or string values to any other PHP value. This feature was covered in <a class="docLink" href="ch02.html#ch02">Chapter 2</a>, &quot;PHP 5 Basic Language,&quot; and in case you forgot about it, here's an example that looks up the user John's social-security number using an associative array which holds this information:<a name="ch04index18"></a><a name="ch04index19"></a><a name="ch04index20"></a><a name="ch04index21"></a><a name="ch04index22"></a></p>
+<pre>
+print "John's ID number is " . $userMap["John"];
+</pre><BR>
+<p class="docText">Associative arrays are extremely convenient when you have all the information at hand. But consider a government office that has millions of people in its database; it just wouldn't make sense to load the entire database into the <tt>$userMap</tt> associative array just to look up one user. A possible alternative is to write a method that will look up the user's id number via a database call. The previous code would look something like the following:</p>
+<pre>
+print "John's ID number is " . $db-&gt;FindIDNumber("John");
+</pre><BR>
+<p class="docText">This example would work well, but many developers prefer the associative array syntax to access key/value-like dictionaries. For this purpose, PHP 5 enables you to overload an object so that it can behave like an array. Basically, it would enable you to use the array syntax, but behind the scenes, a method written by you would be called, which would execute the relevant database call, returning the wanted value.</p>
+<p class="docText">It is really a matter of personal preference as to what method to use. Sometimes, it is nicer to use this overloading ability than the verbosity of calling a method, and it's up to you to decide which method suits you best.</p>
+<p class="docText">To allow your class to overload the array syntax, it needs to implement the ArrayAccess interface (see <a class="docLink" href="#ch04fig01">Figure 4.1</a>).<a name="ch04index23"></a><a name="ch04index24"></a></p>
+<a name="ch04fig01"></a><p><center><h5 class="docFigureTitle">Figure 4.1. ArrayAccess interface.</h5>
+<p class="docText"><img border="0" alt="" width="400" height="231" SRC="images/013147149X/graphics/04fig01.gif;380137"></p></center></p><br>
+<p class="docText">The following example shows how to use it. It is incomplete because the database methods themselves aren't implemented:<a name="ch04index25"></a><a name="ch04index26"></a><a name="ch04index27"></a></p>
+<pre>
+class UserToSocialSecurity implements ArrayAccess {
+    private $db; // An object which includes database access methods
+
+    function offsetExists($name) {
+        return $this-&gt;db-&gt;userExists($name);
+    }
+
+    function offsetGet($name) {
+        return $this-&gt;db-&gt;getUserId($name);
+    }
+
+    function offsetSet($name, $id) {
+        $this-&gt;db-&gt;setUserId($name, $id);
+    }
+
+    function offsetUnset($name) {
+        $this-&gt;db-&gt;removeUser($name);
+    }
+}
+
+$userMap = new UserToSocialSecurity();
+
+print "John's ID number is " . $userMap["John"];
+</pre><br>
+<p class="docText">You can see that the object <tt>$userMap</tt> is used just like an array, but behind the scenes, when the <tt>$userMap["John"]</tt> lookup is performed, the <tt>offsetGet()</tt> method is invoked, which in turn calls the database <tt>getUserId()</tt> method.<a name="ch04index28"></a><a name="ch04index29"></a><a name="ch04index30"></a></p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch04lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch04lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

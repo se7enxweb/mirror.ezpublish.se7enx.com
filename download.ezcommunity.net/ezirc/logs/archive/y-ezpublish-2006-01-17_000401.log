@@ -1,0 +1,137 @@
+[01-15-2006 00:31:33] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[01-15-2006 00:31:33] -!- elephantMan [n=elephant@197.205.103-84.rev.gaoland.net] has quit [calvino.freenode.net irc.freenode.net]
+[01-15-2006 00:32:32] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[01-15-2006 00:32:32] -!- elephantMan [n=elephant@197.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-15-2006 00:35:44] -lilo:$*- [Global Notice] Hi all. We just experienced routing problems with a main rotation server. We're pulling it and checking with the sponsor. Apologies for the inconvenience.
+[01-15-2006 00:37:43] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [calvino.freenode.net irc.freenode.net]
+[01-15-2006 00:37:43] -!- elephantMan [n=elephant@197.205.103-84.rev.gaoland.net] has quit [calvino.freenode.net irc.freenode.net]
+[01-15-2006 00:40:19] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[01-15-2006 00:40:19] -!- elephantMan [n=elephant@197.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-15-2006 00:53:21] -lilo:$*- [Global Notice] Hi all. We just experienced loss of bandwidth on a main rotation server. We've rearranged things accordingly. Apologies for the inconvenience, and thank you for using freenode.
+[01-15-2006 02:33:27] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-15-2006 02:41:56] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-15-2006 02:42:49] [#ezpublish] <y_sabal> plop
+[01-15-2006 02:48:59] [#ezpublish] <y_sabal> is it possible to ask eZ to answer URL with a domain name that a client request ?
+[01-15-2006 02:50:17] [#ezpublish] <y_sabal> ex: all data is on new.plop.com and my sys admin made it available on narf.info but all links are still pointing to new.plop.com
+[01-15-2006 02:51:03] [#ezpublish] <y_sabal> I would like eZ to make link point to narf.info
+[01-15-2006 02:52:01] [#ezpublish] <y_sabal> clear ?
+[01-15-2006 03:01:11] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-15-2006 03:25:14] [#ezpublish] <y_sabal> ??????
+[01-15-2006 03:33:51] -!- pire [n=kbot@phpugdo.de] has quit [Remote closed the connection]
+[01-15-2006 03:36:55] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[01-15-2006 03:43:07] [#ezpublish] <kracker> y_sabal, yes
+[01-15-2006 03:48:57] -!- SEAwolfx [n=mike@tor/session/x-040822b214148d3a] has quit [Remote closed the connection]
+[01-15-2006 03:54:42] -!- SEAwolfx [i=debian-t@tor/session/x-19ed21c8946705de] has joined #ezpublish
+[01-15-2006 03:54:55] [#ezpublish] <SEAwolfx> re
+[01-15-2006 04:03:08] -!- qms2 [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-15-2006 04:03:08] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-15-2006 04:03:18] [#ezpublish] <qms2> re
+[01-15-2006 04:03:35] -!- qms2 [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Client Quit]
+[01-15-2006 04:03:44] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-15-2006 04:03:50] [#ezpublish] <y_sabal> re
+[01-15-2006 04:30:55] [#ezpublish] <SEAwolfx> wb y_sabal
+[01-15-2006 04:39:42] -!- qms2 [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-15-2006 04:39:43] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-15-2006 04:46:45] -!- qms2 is now known as y_sabal
+[01-15-2006 05:04:51] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-15-2006 05:18:47] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-15-2006 05:49:08] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-15-2006 06:21:33] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 104 (Connection reset by peer)]
+[01-15-2006 06:53:02] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-15-2006 06:53:53] -!- pire [n=kbot@phpugdo.de] has quit [Remote closed the connection]
+[01-15-2006 06:56:55] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[01-15-2006 07:50:59] -!- DiGiTa|_ [n=guillaum@84.4.36.193] has joined #ezpublish
+[01-15-2006 09:11:04] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-15-2006 09:11:12] [#ezpublish] <y_sabal> plop
+[01-15-2006 09:18:42] [#ezpublish] <SEAwolfx> yo
+[01-15-2006 09:18:47] [#ezpublish] <xbit> yoyo
+[01-15-2006 09:20:48] [#ezpublish] <SEAwolfx> yeaaah, xbit is in da house. I`ll house you.
+[01-15-2006 09:22:34] [#ezpublish] <xbit> yah
+[01-15-2006 09:22:38] [#ezpublish] <xbit> what's up dude?
+[01-15-2006 09:22:54] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-15-2006 09:23:11] [#ezpublish] <SEAwolfx> well, python rules my head to time.
+[01-15-2006 09:23:37] [#ezpublish] <kris10an> hmm.. i think i should spend more time on what i was supposed to do, than making scripts which visualize the ezcomponents...
+[01-15-2006 09:23:47] [#ezpublish] <xbit> i've heard python is teh shit yeah :)
+[01-15-2006 09:24:10] [#ezpublish] <xbit> good idea, kris10an
+[01-15-2006 09:24:14] [#ezpublish] <SEAwolfx> currently getting into closures. this kicks ass.. heheh. real fat, man.
+[01-15-2006 09:24:44] [#ezpublish] <kris10an> but on the other hand.. they look kinda cool now :-)
+[01-15-2006 09:24:47] [#ezpublish] <SEAwolfx> kris10an: what are you supposed to do?
+[01-15-2006 09:25:02] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[01-15-2006 09:25:11] [#ezpublish] <kris10an> prepare for a trainingcourse
+[01-15-2006 09:25:40] [#ezpublish] <SEAwolfx> ah, well. your reaction is understanable ;)
+[01-15-2006 09:25:45] [#ezpublish] <SEAwolfx> üd
+[01-15-2006 09:25:48] [#ezpublish] <SEAwolfx> +d
+[01-15-2006 09:27:09] [#ezpublish] <SEAwolfx> training courses for customers or for individuals?
+[01-15-2006 09:28:46] [#ezpublish] <kris10an> for individual customers :-)
+[01-15-2006 09:29:33] [#ezpublish] <kris10an> check it out: http://redigator.com/tmp/DatabaseSchema.gif
+[01-15-2006 09:29:40] [#ezpublish] <SEAwolfx> @kris10an
+[01-15-2006 09:29:45] [#ezpublish] <kris10an> and http://redigator.com/tmp/Base.gif
+[01-15-2006 09:29:53] [#ezpublish] <kris10an> generated from the sourcecode...
+[01-15-2006 09:30:29] [#ezpublish] <kris10an> ok.. lets get back to the thing i'm supposed to do then..
+[01-15-2006 09:30:39] [#ezpublish] <SEAwolfx> nice, it resolves the aggregations from code.
+[01-15-2006 09:31:18] [#ezpublish] <SEAwolfx> this could piece of code could be used also for a bidirectional PHP-UML-Tool.
+[01-15-2006 09:33:48] [#ezpublish] <SEAwolfx> these are eZ version 4 classes?
+[01-15-2006 09:33:51] [#ezpublish] <kris10an> SEAwolfx: that sounds like a bit more work than the few hours i spent on that
+[01-15-2006 09:33:57] [#ezpublish] <kris10an> this
+[01-15-2006 09:33:59] [#ezpublish] <SEAwolfx> ;)
+[01-15-2006 09:34:02] [#ezpublish] <kris10an> i spent on this
+[01-15-2006 09:34:04] [#ezpublish] <SEAwolfx> i guess, yeah.
+[01-15-2006 09:34:20] [#ezpublish] <kris10an> yes.. its the eZcomponents
+[01-15-2006 09:34:24] [#ezpublish] <SEAwolfx> this code producing the images is written by u?
+[01-15-2006 09:34:31] [#ezpublish] <kris10an> which will be a part of eZp4
+[01-15-2006 09:34:42] [#ezpublish] <SEAwolfx> hopefully ;)
+[01-15-2006 09:34:50] [#ezpublish] <kris10an> no.. its uses "dot"
+[01-15-2006 09:35:19] [#ezpublish] <SEAwolfx> ah, i know pydot which is a front end for graphiz
+[01-15-2006 09:35:38] [#ezpublish] <kris10an> http://graphviz.org/
+[01-15-2006 09:35:46] [#ezpublish] <kris10an> exactly..
+[01-15-2006 09:35:51] [#ezpublish] <SEAwolfx> yeah, i know.
+[01-15-2006 09:36:09] [#ezpublish] <kris10an> i found it earlier today.. and it looked so cool, i had to test it...
+[01-15-2006 09:36:38] [#ezpublish] <kris10an> so then the piece of code which visualizes the components emerged..
+[01-15-2006 09:36:49] [#ezpublish] <SEAwolfx> yeah, i combined it with pygame, for interactive flow charts and workflow-modeling.
+[01-15-2006 09:37:20] [#ezpublish] <kris10an> interactive? wow,... that sounds cool..
+[01-15-2006 09:38:17] [#ezpublish] <SEAwolfx> i spend some weeks on it ... visual workflow-definition modeling ;)
+[01-15-2006 09:38:56] [#ezpublish] <SEAwolfx> but now this faded in the background, earning some money is also important.
+[01-15-2006 09:39:06] [#ezpublish] <SEAwolfx> ;)
+[01-15-2006 09:39:17] [#ezpublish] <kris10an> it would be cool to have vizualised workflows with drag-and-drop support in ez publish
+[01-15-2006 09:39:34] [#ezpublish] <SEAwolfx> ;)
+[01-15-2006 09:40:02] [#ezpublish] <SEAwolfx> i also currently code on a workflow-engine implemented in python.
+[01-15-2006 09:40:17] [#ezpublish] <SEAwolfx> my idea was to connect it with eZ.
+[01-15-2006 09:42:10] [#ezpublish] <SEAwolfx> but the workflow-concept of eZ is rule based instead of event based what makes it nearly impossible to create a usable wf-modeling tool ;D
+[01-15-2006 09:43:10] [#ezpublish] <kris10an> would be cool to see your engine.. but i don't know squat about python ;-)
+[01-15-2006 09:43:32] [#ezpublish] <kris10an> hehe.. ok.. time to do the useful stuff...
+[01-15-2006 09:43:55] [#ezpublish] <SEAwolfx> ok, stand it.
+[01-15-2006 09:44:49] [#ezpublish] <SEAwolfx> kris10an: btw, what tool uses dot with this image-rendering?
+[01-15-2006 09:46:10] [#ezpublish] <kris10an> i'm not sure what you are asking.. but i'm using the "dot" commandline utility..
+[01-15-2006 09:48:17] [#ezpublish] <SEAwolfx> kris10an: this tool should have read all the php-classes to produce the dot-script?!
+[01-15-2006 09:48:55] [#ezpublish] <kris10an> yes.. i parse the sourcecode and generate a .dot file which is visualized with "dot"
+[01-15-2006 09:49:15] [#ezpublish] <kris10an> very describing name... "dot"
+[01-15-2006 09:49:33] [#ezpublish] <SEAwolfx> parsed it with what?
+[01-15-2006 09:49:44] [#ezpublish] <kris10an> shellscript+php
+[01-15-2006 09:52:39] [#ezpublish] <SEAwolfx> must have a recursive function ;)
+[01-15-2006 09:53:14] [#ezpublish] <SEAwolfx> .. dont mind, keep on going for the customers ;)
+[01-15-2006 09:53:17] [#ezpublish] <kris10an> recusive? nope, no recursion...
+[01-15-2006 09:53:48] [#ezpublish] <kris10an> :-D
+[01-15-2006 09:54:17] -!- SEAwolfx [i=debian-t@tor/session/x-19ed21c8946705de] has quit [Remote closed the connection]
+[01-15-2006 09:54:23] -!- SEAwolfx_ [n=mike@tor/session/x-75ad5212e8b8b467] has joined #ezpublish
+[01-15-2006 10:02:00] [#ezpublish] <kris10an> basicly its just a couple of regular expressions
+[01-15-2006 10:03:22] [#ezpublish] <SEAwolfx_> ;) yeah, this also rox.
+[01-15-2006 10:39:07] [#ezpublish] <SEAwolfx_> .oO( i begin to start loving lambda and list comprehensions 'newList = filter( lambda stringX: stringX.endswith('X'), myList)')
+[01-15-2006 12:08:35] -!- SEAwolfx [n=mike@tor/session/x-da2acde0a9135014] has joined #ezpublish
+[01-15-2006 12:13:42] -!- SEAwolfx_ [n=mike@tor/session/x-75ad5212e8b8b467] has quit [Remote closed the connection]
+[01-15-2006 12:29:26] -!- kris10an [n=kh@80.239.98.162] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[01-15-2006 12:29:58] -!- pire [n=kbot@phpugdo.de] has quit [Remote closed the connection]
+[01-15-2006 12:30:31] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[01-15-2006 12:33:22] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit []
+[01-15-2006 12:49:56] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[01-15-2006 14:16:49] -!- DiGiTa|_ [n=guillaum@84.4.36.193] has quit []
+[01-15-2006 14:41:47] -!- ordnas [n=ordnas@p549D6544.dip.t-dialin.net] has joined #ezpublish
+[01-15-2006 15:00:19] -!- ordnas [n=ordnas@p549D6544.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-15-2006 15:15:48] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-15-2006 16:28:59] -!- SEAwolfx_ [n=mike@tor/session/x-ec431317c32af90d] has joined #ezpublish
+[01-15-2006 16:31:48] -!- SEAwolfx [n=mike@tor/session/x-da2acde0a9135014] has quit [Remote closed the connection]
+[01-15-2006 16:51:58] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit []
+[01-15-2006 17:48:42] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-15-2006 19:36:57] -!- seasonfive [n=seasonfi@AGrenoble-152-1-28-77.w82-122.abo.wanadoo.fr] has quit [Read error: 110 (Connection timed out)]
+[01-15-2006 20:03:33] -!- seasonfive [n=seasonfi@AGrenoble-152-1-44-83.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[01-15-2006 23:23:03] -!- SEAwolfx [n=mike@tor/session/x-516c02863a60ae47] has joined #ezpublish
+[01-15-2006 23:23:37] -!- SEAwolfx_ [n=mike@tor/session/x-ec431317c32af90d] has quit [Remote closed the connection]

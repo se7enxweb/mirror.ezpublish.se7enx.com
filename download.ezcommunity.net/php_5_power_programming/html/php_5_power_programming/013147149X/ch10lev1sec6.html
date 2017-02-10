@@ -1,0 +1,625 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 10.6.&nbsp; PEAR Commands</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch10lev1sec6"></a><h3 class="docSection1Title" id="409768-842">10.6. PEAR Commands</h3>
+<p class="docText">In this section, you learn all the PEAR Installer commands for installation and maintenance of packages on your system. For each of the commands, you will have the output of <tt>pear help</tt> <span class="docEmphasis"><tt>command</tt></span>, and a thorough explanation of every option the command offers. If you notice commands mentioned in some of the help text that you do not find covered here, those commands are used by PEAR package maintaners during development. The development commands are covered in <a class="docLink" href="ch12.html#ch12">Chapter 12</a>.<a name="ch10index182"></a><a name="ch10index183"></a></p>
+<a name="ch10lev2sec8"></a><h4 class="docSection2Title">10.6.1. <tt>pear install</tt></h4>
+<p class="docText">This command takes the content of a package file and installs files in your designated PEAR directories. You may specify the package to install as a local file, just the package name or as a full HTTP URL. Here's the help text for <tt>pear install</tt>:<a name="ch10index184"></a><a name="ch10index185"></a><a name="ch10index186"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear help install</span> pear install [options] &lt;package&gt; ...
+Installs one or more PEAR packages.  You can specify a package to
+install in four ways:
+
+"Package-1.0.tgz" : installs from a local file
+
+"http://example.com/Package-1.0.tgz" : installs from
+anywhere on the net.
+
+"package.xml" : installs the package described in
+package.xml.  Useful for testing, or for wrapping a PEAR package in
+another package manager such as RPM.
+"Package" : queries your configured server
+(pear.php.net) and downloads the newest package with
+the preferred quality/state (stable).
+More than one package may be specified at once.  It is ok to mix 
+these four ways of specifying packages.
+
+Options:
+  -f, --force
+    will overwrite newer installed packages
+</pre><br>
+<p class="docText">The <tt>-force</tt> option lets you install the package even if the same release or a newer release is already installed. This is useful for repairing broken installs, or during testing.<a name="ch10index187"></a><a name="ch10index188"></a><a name="ch10index189"></a><a name="ch10index190"></a></P>
+<pre>
+-n, --nodeps
+  ignore dependencies, install anyway
+</pre><br>
+<p class="docText">Use this option to ignore dependencies and pretend that they are already installed. Use it only if you understand the consequences, the installed package may not work at all.</P>
+<pre>
+-r, --register-only
+  do not install files, only register the package as installed
+</pre><br>
+<p class="docText"><a name="ch10index191"></a>The <tt>-register-only</tt> option makes the installer list your package as installed, but it does not actually install any files. The purpose of this is to make it possible for non-PEAR package managers to also register packages as installed in the PEAR package registry. For example, if you install DB (the PEAR database layer) with an RPM, all the files are installed and you can use it, but the <tt>pear list</tt> command does not show that it is installed because RPM does not (by default) update the PEAR package registry. But, if the RPM package has a <tt>post-install</tt> command that runs <tt>pear -register-only package.xm</tt>, the package will be registered, both from RPM's and PEAR's point of view.</p>
+<pre>
+-s, --soft
+  soft install, fail silently, or upgrade if already installed
+</pre><br>
+<p class="docText">This option is another way of saying, &quot;Please give me the latest version of this package.&quot; If the package is not installed already, it will be installed. If the package is installed but you are specifying a package tarball with a newer package, or the latest online version is newer, the package will be upgraded. The difference between <tt>pear install -s</tt> and <tt>pear upgrade</tt> is that <tt>upgrade</tt> upgrades only if the package is already installed.<a name="ch10index192"></a><a name="ch10index193"></a></p>
+<pre>
+-B, --nobuild
+  don't build C extensions
+</pre><BR>
+<p class="docText">If you are installing a package that is a mix of PHP and C code and don't want to build and install the C code, or you simply want to test-install a package with C code, use <tt>-nobuild</tt>.<a name="ch10index194"></a><a name="ch10index195"></a></P>
+<pre>
+-Z, --nocompress
+  request uncompressed files when downloading
+</pre><br>
+<p class="docText"><a name="ch10index196"></a><a name="ch10index197"></a>If your PHP build does not include the zlib extension, PHP cannot uncompress gzipped package files. The installer detects this automatically, and will download non-gzipped packages when necessary. But, if this detection doesn't work, you can override it with the <tt>-nocompres</tt> option.</p>
+<pre>
+-R DIR, --installroot=DIR
+  root directory used when installing files (ala PHP's INSTALL_ROOT)
+</pre><br>
+<p class="docText"><a name="ch10index198"></a><a name="ch10index199"></a>This option is useful when you are installing PEAR packages from a script or using another package manager. All file names created by the installer will have <tt>DIR</tt> prepended.<a name="ch10index200"></a><a name="ch10index201"></a><a name="ch10index202"></a></p>
+<pre>
+--ignore-errors
+  force install even if there were errors
+</pre><BR>
+<p class="docText"><a name="ch10index203"></a>If there are errors in a package and the installer refuses to go ahead and install it, you can use the <tt>ignore-errors</tt> option to force installation. There is a risk of an inconsistent install when using this option, so use it with care!</p>
+<pre>
+-a, --alldeps
+  install all required and optional dependencies
+</pre><br>
+<p class="docText"><a name="ch10index204"></a><a name="ch10index205"></a>Use this option to automatically download and install any dependencies.</P>
+<pre>
+-o, --onlyreqdeps
+  install all required dependencies
+</pre><br>
+<p class="docText"><a name="ch10index206"></a><a name="ch10index207"></a>Some packages have <span class="docEmphStrong">optional dependencies</span>, which means a dependency that exists to use optional features of the package. If you want to satisfy all the dependencies, but don't need the optional features, use this option.<a name="ch10index208"></a></P>
+<p class="docText">Here are some examples of typical use. First, a plain example installing a package with no dependencies:</p>
+<pre>
+<span class="docEmphStrong">$ pear install Console_Table</span>
+downloading Console_Table-1.0.1.tgz ...
+Starting to download Console_Table-1.0.1.tgz (3,319 bytes)
+....done: 3,319 bytes
+install ok: Console_Table 1.0.1
+</pre><br>
+<p class="docText">Here is an example of installing a package with many optional dependencies, but pulling only the packages that are required:<a name="ch10index209"></a><a name="ch10index210"></a><a name="ch10index211"></a><a name="ch10index212"></a><a name="ch10index213"></a><a name="ch10index214"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear install o HTML_QuickForm</span>
+downloading HTML_Progress-1.1.tgz ...
+Starting to download HTML_Progress-1.1.tgz (163,298 bytes)
+...................................done: 163,298 bytes
+skipping Package 'html_progress' optional dependency 'HTML_CSS'
+skipping Package 'html_progress' optional dependency 'HTML_Page'
+skipping Package 'html_progress' optional dependency 'HTML_QuickForm'
+skipping Package 'html_progress' optional dependency 
+'HTML_QuickForm_Controller'skipping Package 'html_progress' optional 
+dependency 'Config'
+downloading HTML_Common-1.2.1.tgz ...
+Starting to download HTML_Common-1.2.1.tgz (3,637 bytes)
+...done: 3,637 bytes
+install ok: HTML_Common 1.2.1
+Optional dependencies:
+package 'HTML_CSS' version &gt;= 0.3.1 is recommended to utilize some 
+features.
+package 'HTML_Page' version &gt;= 2.0.0RC2 is recommended to utilize 
+some features.package 'HTML_QuickForm' version &gt;= 3.1.1 is 
+recommended to utilize some features.
+package 'HTML_QuickForm_Controller' version &gt;= 0.9.3 is recommended 
+to utilize some features.
+package 'Config' version &gt;= 1.9 is recommended to utilize some 
+features.
+install ok: HTML_Progress 1.1
+</pre><br>
+<p class="docText">Finally, this example installs a package and all dependencies, looking for releases of beta or better quality:<a name="ch10index215"></a><a name="ch10index216"></a><a name="ch10index217"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear d preferred_state=beta install a Services_Weather</span>
+downloading Services_Weather-1.2.2.tgz ...
+Starting to download Services_Weather-1.2.2.tgz (29,205 bytes)
+.........done: 29,205 bytes
+downloading Cache-1.5.4.tgz ...
+Starting to download Cache-1.5.4.tgz (30,690 bytes)
+...done: 30,690 bytes
+downloading HTTP_Request-1.2.1.tgz ...
+Starting to download HTTP_Request-1.2.1.tgz (12,021 bytes)
+...done: 12,021 bytes
+downloading SOAP-0.8RC3.tgz ...
+Starting to download SOAP-0.8RC3.tgz (67,608 bytes)
+...done: 67,608 bytes
+downloading XML_Serializer-0.9.2.tgz ...
+Starting to download XML_Serializer-0.9.2.tgz (12,340 bytes)
+...done: 12,340 bytes
+downloading Net_URL-1.0.11.tgz ...
+Starting to download Net_URL-1.0.11.tgz (4,474 bytes)
+...done: 4,474 bytes
+downloading Mail_Mime-1.2.1.tgz ...
+Starting to download Mail_Mime-1.2.1.tgz (15,268 bytes)
+...done: 15,268 bytes
+downloading Net_DIME-0.3.tgz ...
+Starting to download Net_DIME-0.3.tgz (6,740 bytes)
+...done: 6,740 bytes
+downloading XML_Util-0.5.2.tgz ...
+Starting to download XML_Util-0.5.2.tgz (6,540 bytes)
+...done: 6,540 bytes
+install ok: Mail_Mime 1.2.1
+install ok: Net_DIME 0.3
+install ok: XML_Util 0.5.2
+install ok: Net_URL 1.0.11
+install ok: XML_Serializer 0.9.2
+install ok: HTTP_Request 1.2.1
+install ok: Cache 1.5.4
+install ok: SOAP 0.8RC3
+install ok: Services_Weather 1.2.2
+</pre><br>
+<a name="ch10lev2sec9"></a><h4 class="docSection2Title">10.6.2. <tt>pear list</tt></h4>
+<p class="docText">The <tt>pear list</tt> command lists the contents of either your package registry or a single package. First, let's list the currently installed packages to see how the <tt>Date</tt> package is doing:<a name="ch10index218"></a><a name="ch10index219"></a><a name="ch10index220"></a></p>
+<pre>
+INSTALLED PACKAGES:
+===================
+PACKAGE          VERSION    STATE
+Archive_Tar      1.1        stable
+Cache            1.4        stable
+Console_Getopt   1.2        stable
+Console_Table    1.0.1      stable
+DB               1.6.3      stable
+Date             1.4.2      stable
+HTTP_Request     1.2.1      stable
+Log              1.2        stable
+Mail             1.1.2      stable
+Mail_Mime        1.2.1      stable
+Net_DIME         0.3        beta
+Net_SMTP         1.2.6      stable
+Net_Socket       1.0.2      stable
+Net_URL          1.0.11     stable
+PEAR             1.3.1      stable
+PHPUnit2         2.0.0beta1 beta
+SOAP             0.8RC3     beta
+XML_Parser       1.1.0      stable
+XML_RPC          1.1.0      stable
+XML_Serializer   0.9.2      beta
+XML_Util         0.5.2      stable
+</pre><br>
+<p class="docText">To inspect the contents of the recently installed <tt>Date</tt> package, use the <tt>list</tt> command:<a name="ch10index221"></a><a name="ch10index222"></a><a name="ch10index223"></a></p>
+<pre>
+$ pear list Net_Socket
+INSTALLED FILES FOR NET_SOCKET
+==============================
+TYPE INSTALL PATH
+php  /usr/local/lib/php/Net/Socket.php
+</pre><br>
+<p class="docText">This package contains only <tt>php</tt> files. The <tt>PEAR</tt> package contains different types of files. The following example also illustrates how &quot;data&quot; files are installed with the package name as part of the file path:<a name="ch10index224"></a><a name="ch10index225"></a><a name="ch10index226"></a></p>
+<pre>
+$ pear list PEAR
+INSTALLED FILES FOR PEAR
+========================
+TYPE   INSTALL PATH
+data   /usr/local/lib/php/data/PEAR/package.dtd
+data   /usr/local/lib/php/data/PEAR/template.spec
+php    /usr/local/lib/php/PEAR.php
+php    /usr/local/lib/php/System.php
+php    /usr/local/lib/php/PEAR/Autoloader.php
+php    /usr/local/lib/php/PEAR/Command.php
+php    /usr/local/lib/php/PEAR/Command/Auth.php
+php    /usr/local/lib/php/PEAR/Command/Build.php
+php    /usr/local/lib/php/PEAR/Command/Common.php
+php    /usr/local/lib/php/PEAR/Command/Config.php
+php    /usr/local/lib/php/PEAR/Command/Install.php
+php    /usr/local/lib/php/PEAR/Command/Package.php
+php    /usr/local/lib/php/PEAR/Command/Registry.php
+php    /usr/local/lib/php/PEAR/Command/Remote.php
+php    /usr/local/lib/php/PEAR/Command/Mirror.php
+php    /usr/local/lib/php/PEAR/Common.php
+php    /usr/local/lib/php/PEAR/Config.php
+php    /usr/local/lib/php/PEAR/Dependency.php
+php    /usr/local/lib/php/PEAR/Downloader.php
+php    /usr/local/lib/php/PEAR/ErrorStack.php
+php    /usr/local/lib/php/PEAR/Frontend/CLI.php
+php    /usr/local/lib/php/PEAR/Builder.php
+php    /usr/local/lib/php/PEAR/Installer.php
+php    /usr/local/lib/php/PEAR/Packager.php
+php    /usr/local/lib/php/PEAR/Registry.php
+php    /usr/local/lib/php/PEAR/Remote.php
+php    /usr/local/lib/php/OS/Guess.php
+script /usr/local/bin/pear
+php    /usr/local/lib/php/pearcmd.php
+</pre><br>
+<a name="ch10lev2sec10"></a><h4 class="docSection2Title">10.6.3. <tt>pear info</tt></h4>
+<p class="docText">The <tt>pear info</tt> command displays information about an installed package, a package tarball, or a package definition (XML) file. This example shows the information about the XML-RPC package:<a name="ch10index227"></a><a name="ch10index228"></a><a name="ch10index229"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear info XML_RPC</span>
+About XML_RPC-1.1.0
+===================
+Provides       Classes:
+Package         XML_RPC
+Summary         PHP implementation of the XML-RPC protocol
+Description     This is a PEAR-ified version of Useful inc's
+                XML-RPC
+                for PHP. It has support for HTTP transport,
+                proxies and authentication.
+Maintainers     Stig S?ther Bakken &lt;stig@php.net&gt; (lead)
+Version         1.1.0
+Release Date    2003-03-15
+Release License PHP License
+Release State   stable
+Release Notes   - Added support for sequential arrays to
+                XML_RPC_encode() (mroch)
+                - Cleaned up new XML_RPC_encode() changes a bit
+                (mroch, pierre)
+                - Remove "require_once 'PEAR.php'", include
+                only when needed to raise an error
+                - Replace echo and error_log() with
+                raiseError() (mroch)
+                - Make all classes extend XML_RPC_Base, which
+                will handle common functions  (mroch)
+                - be tolerant of junk after methodResponse
+                (Luca Mariano, mroch)
+                - Silent notice even in the error log (pierre)
+                - fix include of shared xml extension on win32
+                (pierre)
+Last Modified   2004-05-03
+</pre><BR>
+<p class="docText">If you have downloaded a package file (.tgz file), you may also run <tt>pear info</tt> on it to display information about the contents without installing the package first; for example:</p>
+<pre>
+$ <span class="docEmphStrong">pear info XML-RPC-1.1.0.tgz</span>
+</pre><br>
+<p class="docText">You can even specify a full URL to a package you want to view:</P>
+<pre>
+$ <span class="docEmphStrong">pear info http://www.example.com/packages/Foo_Bar-4.2.tgz</span>
+</pre><br>
+<p class="docText">See also the <a class="docLink" href="#ch10lev2sec18"><tt>remote-info</tt></a> command.<a name="ch10index230"></a><a name="ch10index231"></a><a name="ch10index232"></a></p>
+<a name="ch10lev2sec11"></a><h4 class="docSection2Title">10.6.4. <tt>pear list-all</tt></h4>
+<p class="docText">While <tt>pear list</tt> displays all the packages installed on your system, <tt>pear list-all</tt> displays an alphabetically sorted list of <span class="docEmphasis">all</span> packages with the latest stable version, and which version you have installed, if any. The full output of this command is long because it lists every package that has a stable release.<a name="ch10index233"></a><a name="ch10index234"></a><a name="ch10index235"></a></p>
+<pre>
+ALL PACKAGES:
+=============
+PACKAGE                   LATEST   LOCAL
+APC                       2.0.3
+Cache                     1.5.4    1.4
+Cache_Lite                1.3
+apd                       0.4p2
+             ...truncated...
+     XML_Transformer           1.0.1
+XML_Tree                  1.1
+XML_Util                  0.5.2    0.5.2
+PHPUnit2                           2.0.0beta1
+Net_DIME                           0.3
+XML_Serializer                     0.9.2
+SOAP                               0.8RC3
+</pre><br>
+<a name="ch10lev2sec12"></a><H4 class="docSection2Title">10.6.5. <tt>pear list-upgrades</tt></h4>
+<p class="docText">The <tt>pear list-upgrades</tt> command compares the version you have installed containing the newest version with the release state you have configured (see the <tt>preferred_state configuration</tt> parameter). Here's an example:<a name="ch10index236"></a><a name="ch10index237"></a><a name="ch10index238"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear list-upgrades</span>
+AVAILABLE UPGRADES (STABLE):
+============================
+PACKAGE LOCAL          REMOTE         SIZE
+Cache   1.4 (stable)   1.5.4 (stable) 30kB
+DB      1.6.3 (stable) 1.6.4 (stable) 90kB
+Log     1.2 (stable)   1.8.4 (stable) 29kB
+Mail    1.1.2 (stable) 1.1.3 (stable) 13.2kB
+</pre><br>
+<p class="docText">The version listed here is not the one you have installed, but the one you will upgrade to if you use the <tt>upgrade</tt> command.</P>
+<a name="ch10lev2sec13"></a><h4 class="docSection2Title">10.6.6. <tt>pear upgrade</tt></h4>
+<p class="docText">The <tt>pear upgrade</tt> command replaces one or more installed packages with a newer release, if a newer release can be found. As with many other commands taking a package argument, you may refer to the package just by name, the URL or name of a tarball, or the URL or name of a package description (XML) file. This section only demonstrates specifying the package by name because that is by far the most common usage.<a name="ch10index239"></a><a name="ch10index240"></a><a name="ch10index241"></a></p>
+<p class="docText">In the <tt>list-upgrades</tt> example, you saw a few packages where newer releases were available. Upgrade the <tt>Log</tt> package:</p>
+<pre>
+$ <span class="docEmphStrong">pear upgrade Log</span>
+downloading Log-1.8.4.tgz ...
+Starting to download Log-1.8.4.tgz (29,453 bytes)
+.........done: 29,453 bytes
+Optional dependencies:
+'sqlite' PHP extension is recommended to utilize some features
+upgrade ok: Log 1.8.4
+</pre><BR>
+<p class="docText">The <tt>upgrade</tt> command has the same options as the <tt>install</tt> command, with the exception that the <tt>S / --soft</tt> option is missing. The options are listed here; refer to the <tt>install</tt> command, shown previously, for a more detailed description.<a name="ch10index242"></a><a name="ch10index243"></a><a name="ch10index244"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear help upgrade</span>
+pear upgrade [options] &lt;package&gt; ...
+Upgrades one or more PEAR packages.  See documentation for the
+"install" command for ways to specify a package.
+
+When upgrading, your package will be updated if the provided new
+package has a higher version number (use the -f option if you need to
+upgrade anyway).
+
+More than one package may be specified at once.
+
+Options:
+  -f, --force
+        overwrite newer installed packages
+  -n, --nodeps
+        ignore dependencies, upgrade anyway
+  -r, --register-only
+        do not install files, only register the package as upgraded
+  -B, --nobuild
+        don't build C extensions
+  -Z, --nocompress
+        request uncompressed files when downloading
+  -R DIR, --installroot=DIR
+        root directory used when installing files (ala PHP's INSTALL_ROOT)
+  --ignore-errors
+        force install even if there were errors
+  -a, --alldeps
+        install all required and optional dependencies
+  -o, --onlyreqdeps
+        install all required dependencies
+</pre><br>
+<a name="ch10lev2sec14"></a><h4 class="docSection2Title">10.6.7. <tt>pear upgrade-all</tt></h4>
+<p class="docText">For your convenience, the <tt>upgrade-all</tt> command provides a combination of the <tt>list-upgrades</tt> and <tt>upgrade</tt> commands, upgrading every package that has a newer release available.<a name="ch10index245"></a><a name="ch10index246"></a><a name="ch10index247"></a></p>
+<p class="docText">The command-line options available are</P>
+<pre>
+-n, --nodeps
+      ignore dependencies, upgrade anyway
+-r, --register-only
+      do not install files, only register the package as upgraded
+-B, --nobuild
+      don't build C extensions
+-Z, --nocompress
+      request uncompressed files when downloading
+-R DIR, --installroot=DIR
+      root directory used when installing files (ala PHP's INSTALL_ROOT)
+--ignore-errors
+      force install even if there were errors
+</pre><br>
+<p class="docText">See the <a class="docLink" href="#ch10lev2sec8"><tt>install</tt></a> command for a description of each of these options.</p>
+<p class="docText">If you have followed the examples in this chapter, you have still not upgraded three out of the four packages that <tt>list-upgrades</tt> reported as having newer releases. Upgrade them all at once like this:<a name="ch10index248"></a><a name="ch10index249"></a><a name="ch10index250"></a><a name="ch10index251"></a><a name="ch10index252"></a><a name="ch10index253"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear upgrade-all</span>
+Will upgrade cache
+Will upgrade db
+Will upgrade mail
+downloading Cache-1.5.4.tgz ...
+Starting to download Cache-1.5.4.tgz (30,690 bytes)
+.........done: 30,690 bytes
+downloading DB-1.6.4.tgz ...
+Starting to download DB-1.6.4.tgz (91,722 bytes)
+...done: 91,722 bytes
+downloading Mail-1.1.3.tgz ...
+Starting to download Mail-1.1.3.tgz (13,415 bytes)
+...done: 13,415 bytes
+upgrade-all ok: Mail 1.1.3
+upgrade-all ok: DB 1.6.4
+upgrade-all ok: Cache 1.5.4
+Optional dependencies:
+'sqlite' PHP extension is recommended to utilize some features
+upgrade-all ok: Log 1.8.4
+</pre><br>
+<a name="ch10lev2sec15"></a><H4 class="docSection2Title">10.6.8. <tt>pear uninstall</tt></h4>
+<p class="docText">To delete a package, you must uninstall it. Here's an example:<a name="ch10index254"></a><a name="ch10index255"></a><a name="ch10index256"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear uninstall Cache</span>
+Warning: Package 'services_weather' optionally depends on 'Cache'
+uninstall ok: Cache
+</pre><br>
+<p class="docText">The <tt>uninstall</tt> command has three options:</p>
+<pre>
+pear uninstall [options] &lt;package&gt; ...
+Uninstalls one or more PEAR packages.  More than one package may be
+specified at once.
+
+Options:
+  -n, --nodeps
+        ignore dependencies, uninstall anyway
+  -r, --register-only
+        do not remove files, only register the packages as not installed
+  -R DIR, --installroot=DIR
+        root directory used when installing files (ala PHP's INSTALL_ROOT)   
+       --ignore-errors
+        force install even if there were errors
+</pre><br>
+<p class="docText">These options all correspond to the same options to the <tt>install</tt> command.<a name="ch10index257"></a><a name="ch10index258"></a><a name="ch10index259"></a></p>
+<a name="ch10lev2sec16"></a><h4 class="docSection2Title">10.6.9. <tt>pear search</tt></h4>
+<p class="docText">If you want to install a package but don't remember what it was called, or just wonder if there is a package that does X, you can search for it with the <tt>pear search</tt> command, which does a substring search in package names. Here's an example:<a name="ch10index260"></a><a name="ch10index261"></a><a name="ch10index262"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear search xml</span>
+MATCHED PACKAGES:
+=================
+PACKAGE         LATEST LOCAL
+XML_Beautifier  1.1          Class to format XML documents.
+XML_CSSML       1.1          The PEAR::XML_CSSML package provides
+                             methods for creating cascading style 
+                             sheets (CSS) from an XML standard 
+                             called CSSML.
+XML_fo2pdf      0.98         Converts a xsl-fo file to pdf/ps/pcl 
+                             text/etc with the help of apache-fop
+XML_HTMLSax     2.1.2        A SAX based parser for HTML and other 
+                             badly formed XML documents
+XML_image2svg   0.1          Image to SVG conversion
+XML_NITF        1.0.0        Parse NITF documents.
+XML_Parser      1.1.0  1.1.0 XML parsing class based on PHP's bundled 
+                             expat
+XML_RSS         0.9.2        RSS parser
+XML_SVG         0.0.3        XML_SVG API
+XML_Transformer 1.0.1        XML Transformations in PHP
+XML_Tree        1.1          Represent XML data in a tree structure
+XML_Util        0.5.2  0.5.2 XML utility class.
+XML_RPC         1.1.0  1.1.0 PHP implementation of the XML-RPC 
+                             protocol
+</pre><br>
+<p class="docText">The output is displayed in four columns: package name, latest version available online, locally installed version (or blank if you do not have that package installed), and a short description.<a name="ch10index263"></a><a name="ch10index264"></a><a name="ch10index265"></a></p>
+<a name="ch10lev2sec17"></a><h4 class="docSection2Title">10.6.10. <tt>pear remote-list</tt></h4>
+<p class="docText">This command displays a list of all packages and stable releases that are available in the package repository:<a name="ch10index266"></a><a name="ch10index267"></a><a name="ch10index268"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear remote-list</span>
+AVAILABLE PACKAGES:
+===================
+PACKAGE                   VERSION
+APC                       2.0.3
+apd                       0.4p2
+Archive_Tar               1.1
+Auth                      1.2.3
+Auth_HTTP                 2.0
+Auth_PrefManager          1.1.2
+Auth_RADIUS               1.0.4
+Auth_SASL                 1.0.1
+Benchmark                 1.2.1
+bz2                       1.0
+Cache                     1.5.4
+...
+</pre><br>
+<p class="docText">The difference from <tt>list-all</tt> is that <tt>remote-list</tt> only shows the last available version, while <tt>list-all</tt> also shows which releases you have installed.</p>
+<p class="docText">This command obeys your <tt>preferred_state</tt> configuration setting, which defaults to <tt>stable</tt>. All the packages and releases in the output of the previous example are tagged as <tt>stable</tt>.<a name="ch10index269"></a></P>
+<p class="docText">You may temporarily set <tt>preferred_state</tt> for just one command. The following example shows all packages that are of alpha quality or better:<a name="ch10index270"></a><a name="ch10index271"></a><a name="ch10index272"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear d preferred_state=alpha remote-list</span>
+AVAILABLE PACKAGES:
+===================
+PACKAGE                    VERSION
+APC                        2.0.3
+apd                        0.4p2
+Archive_Tar                1.1
+Archive_Zip                0
+Auth                       1.2.3
+Auth_Enterprise            0
+Auth_HTTP                  2.1.0RC2
+Auth_PrefManager           1.1.2
+Auth_RADIUS                1.0.4
+Auth_SASL                  1.0.1
+bcompiler                  0.5
+Benchmark                  1.2.1
+bz2                        1.0
+...
+</pre><br>
+<p class="docText">As you can see, some new packages showed up: Archive_Zip, and Auth_Enterprise (which did not have any releases at all at this point), and bcompiler 0.5.<a name="ch10index273"></a><a name="ch10index274"></a><a name="ch10index275"></a></p>
+<a name="ch10lev2sec18"></a><H4 class="docSection2Title">10.6.11. <tt>pear remote-info</tt></h4>
+<p class="docText">To display detailed information about a package you have not installed, use the <tt>pear remote-info</tt> command.<a name="ch10index276"></a><a name="ch10index277"></a><a name="ch10index278"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear remote-info apc</span>
+PACKAGE DETAILS:
+================
+Latest      2.0
+Installed   - no -
+ackage     APC
+License     PHP
+Category    Caching
+Summary     Alternative PHP Cache
+Description APC is the Alternative PHP Cache. It was
+            conceived of to provide a free, open, and
+            robust framework for caching and optimizing PHP
+            intermediate code.
+</pre><br>
+<p class="docText">The package description shown by the <tt>remote-info</tt> command is taken from the newest release of the package.</p>
+<a name="ch10lev2sec19"></a><h4 class="docSection2Title">10.6.12. <tt>pear download</tt></h4>
+<p class="docText">The <tt>pear install</tt> command does not store the package file it downloads anywhere. If all you want is the package tarball (for installing later or something else), you can use the <tt>pear download</tt> command:<a name="ch10index279"></a><a name="ch10index280"></a><a name="ch10index281"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear download DB</span>
+File DB-1.3.tgz downloaded (59332 bytes)
+</pre><br>
+<p class="docText">By default, you will receive the latest release matching your <tt>preferred_state</tt> configuration parameter. If you want to download a specific release, give the full file name instead:</P>
+<pre>
+$ <span class="docEmphStrong">pear download DB-1.2.tgz</span>
+File DB-1.2.tgz downloaded (58090 bytes)
+</pre><br>
+<a name="ch10note02"></a><div class="docNote"><p class="docNoteTitle">Tip</P>
+
+<p class="docText">If you don't have the zlib PHP extension built in, use the <tt>-Z</tt> or <tt>--nocompress</tt> option to download .tar files.</p></div><br>
+<a name="ch10lev2sec20"></a><h4 class="docSection2Title">10.6.13. pear config-get</h4>
+<p class="docText">As you have already seen, the <tt>pear config-get</tt> command is used to display a configuration parameter:<a name="ch10index282"></a><a name="ch10index283"></a><a name="ch10index284"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear config-get php_dir</span>
+php_dir=/usr/share/pear
+</pre><BR>
+<p class="docText">If you do not specify a layer, the value is read from the first layer that defines it (in the order <tt>user</tt>, <tt>system</tt>, <tt>default</tt>). You may also specify a specific configuration layer from where you want to get the value:</p>
+<pre>
+$ <span class="docEmphStrong">pear config-get http_proxy system</span>
+system.http_proxy=proxy.example.com:3128
+</pre><br>
+<a name="ch10lev2sec21"></a><h4 class="docSection2Title">10.6.14. <tt>pear config-set</tt></h4>
+<p class="docText">The <tt>pear config-set</tt> command changes a configuration parameter:<a name="ch10index285"></a><a name="ch10index286"></a><a name="ch10index287"></a></P>
+<pre>
+$ <span class="docEmphStrong">pear config-set preferred_state beta</span>
+</pre><br>
+<p class="docText">By default, the change is performed in the <tt>user</tt> configuration layer. You may specify the configuration layer with an additional parameter:</p>
+<pre>
+$ <span class="docEmphStrong">pear config-set preferred_state beta system</span>
+</pre><BR>
+<p class="docText">(You need write access to the system configuration file for this to have any effect.)</p>
+<a name="ch10lev2sec22"></a><H4 class="docSection2Title">10.6.15. <tt>pear config-show</tt></h4>
+<p class="docText">The <tt>pear config-show</tt> command is used to display all configuration settings, treating layers just like the <tt>config-get</tt> command.<a name="ch10index288"></a><a name="ch10index289"></a><a name="ch10index290"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear config-show</span>
+CONFIGURATION:
+==============
+PEAR executables directory     bin_dir         /usr/local/bin
+PEAR documentation directory   doc_dir         /usr/local/lib/php/doc
+PHP extension directory        ext_dir         /usr/local/lib/php/
+  extensions/no-debug-non-zts-20040316
+PEAR directory                 php_dir         /usr/local/lib/php
+PEAR Installer cache directory cache_dir       /tmp/pear/cache
+PEAR data directory            data_dir        /usr/local/lib/php/data
+PHP CLI/CGI binary             php_bin         /usr/local/bin/php
+PEAR test directory            test_dir        /usr/local/lib/php/test
+Cache TimeToLive               cache_ttl       3600
+Preferred Package State        preferred_state stable
+Unix file mask                 umask           22
+Debug Log Level                verbose         1
+HTTP Proxy Server Address      http_proxy      &lt;not set&gt;
+PEAR server                    master_server   pear.php.net
+PEAR password (for             password        &lt;not set&gt;
+maintainers)
+Signature Handling Program     sig_bin         /usr/bin/gpg
+Signature Key Directory        sig_keydir      /usr/local/etc/pearkeys
+Signature Key Id               sig_keyid       &lt;not set&gt;
+Package Signature Type         sig_type        gpg
+PEAR username (for             username        &lt;not set&gt;
+maintainers)
+</pre><br>
+<a name="ch10note03"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText"><a name="ch10index291"></a><a name="ch10index292"></a><a name="ch10index293"></a>By adding an extra parameter (<tt>user</tt> or <tt>system</tt>), you can view the contents of a specific configuration layer.</p></div><br>
+<a name="ch10lev2sec23"></a><h4 class="docSection2Title">10.6.16. Shortcuts</h4>
+<p class="docText">Every command in the PEAR Installer may specify a command-line shortcut, just to save people from typing. Type <tt>pear help shortcuts</tt> to see them:<a name="ch10index294"></a><a name="ch10index295"></a><a name="ch10index296"></a><a name="ch10index297"></a></p>
+<pre>
+$ <span class="docEmphStrong">pear help shortcuts</span>
+Shortcuts:
+     li       login
+     lo       logout
+     b        build
+     csh      config-show
+     cg       config-get
+     cs       config-set
+     ch       config-help
+     i        install
+     up       upgrade
+     ua       upgrade-all
+     un       uninstall
+     bun      bundle
+     p        package
+     pv       package-validate
+     cd       cvsdiff
+     ct       cvstag
+     rt       run-tests
+     pd       package-dependencies
+     si       sign
+     rpm      makerpm
+     l        list
+     st       shell-test
+     in       info
+     ri       remote-info
+     lu       list-upgrades
+     rl       remote-list
+     sp       search
+     la       list-all
+     d        download
+     cc       clear-cache
+     da       download-all
+</pre><br>
+<p class="docText">Instead of <tt>pear config-set foo=bar</tt>, you may type <tt>pear cs foo=bar</tt>, or <tt>pear pd</tt> instead of <tt>pear package-dependencies</tt>.<a name="ch10index298"></a><a name="ch10index299"></a><a name="ch10index300"></a><a name="ch10index301"></a></p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch10lev1sec5.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch10lev1sec7.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

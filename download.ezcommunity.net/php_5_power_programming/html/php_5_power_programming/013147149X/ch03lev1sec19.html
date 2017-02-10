@@ -1,0 +1,74 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.19.&nbsp; __autoload()</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec18.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec20.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec19"></a><h3 class="docSection1Title">3.19. <tt>__autoload()</tt></h3><a name="ch03index152"></a><a name="ch03index153"></a>
+<p class="docText">When writing object-oriented code, it is often customary to put each class in its own source file. The advantage of this is that it's much easier to find where a class is placed, and it also minimizes the amount of code that needs to be included because you only include exactly the classes you need. The downside is that you often have to include tons and tons of source files, which can be a pain, often leading to including too many files and a code-maintenance headache. <tt>__autoload()</tt> solves this problem by not requiring you to include classes you are about to use. If an <tt>__autoload()</tt> function is defined (only one such function can exist per application) and you access a class that hasn't been defined, it will be called with the class name as a parameter. This gives you a chance to include the class just in time. If you successfully include the class, your source code continues executing as if the class had been defined. If you don't successfully include the class, the scripting engine raises a fatal error about the class not existing.</p>
+<p class="docText">Here's a typical example using <tt>__autoload()</tt>:</p>
+<pre>
+MyClass.php:
+
+&lt;?php
+
+class MyClass {
+    function printHelloWorld()
+    {
+        print "Hello, World\n";
+    }
+}
+
+?&gt;
+
+
+general.inc:
+
+&lt;?php
+
+function __autoload($class_name)
+{
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/classes/ $class_name.php");
+}
+
+?&gt;
+
+
+main.php:
+
+&lt;?php
+
+require_once "general.inc";
+
+$obj = new MyClass();
+$obj-&gt;printHelloWorld();
+
+?&gt;
+</pre><br>
+<a name="ch03note13"></a><div class="docNote"><p class="docNoteTitle">Note</P>
+
+<p class="docText">This example doesn't omit the PHP open and close tags (like other examples shown in <a class="docLink" href="ch02.html#ch02">Chapter 2</a>, due to it being spread across more than one file and, thus, not being a code snippet.<a name="ch03index154"></a><a name="ch03index155"></a></p></div><BR>
+<p class="docText">So long as <tt>MyClass.php</tt> exists in the <tt>classes/</tt> directory inside the document root of the web server, the script prints</p>
+<pre>
+Hello, World
+</pre><BR>
+<p class="docText">Realize that <tt>MyClass.php</tt> was not explicitly included in <tt>main.php</tt> but implicitly by the call to <tt>__autoload()</tt>. You will usually keep the definition of <tt>__autoload()</tt> in a file that is included by all of your main script files (similar to <tt>general.inc</tt> in this example), and when the amount of classes you use increases, the savings in code and maintenance will be great.</p>
+<a name="ch03note14"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">Although classes in PHP are case-insensitive, case is preserved when sending the class name to <tt>__autoload()</tt>. If you prefer your classes' file names to be case-sensitive, make sure you are consistent in your code, and always use the correct case for your classes. If you prefer not to do so, you can use the <tt>strtolower()</tt> function to lowercase the class name before trying to include it, and save the classes under lowercased file names.<a name="ch03index156"></a><a name="ch03index157"></a></p></div><br>
+<UL></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec18.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec20.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

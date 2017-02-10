@@ -1,0 +1,117 @@
+[03-16-2006 00:08:32] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: hhttp://ez.no/community/news/ez_publish_3_8_0alpha2 | http://ez.no/community/forum/ez_components/webcast#msg93640
+[03-16-2006 00:44:03] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[03-16-2006 01:19:15] -!- ordnas [n=ordnas@p549D69A6.dip.t-dialin.net] has joined #ezpublish
+[03-16-2006 01:34:15] [#ezpublish] <kris10an> mornin
+[03-16-2006 01:41:12] [#ezpublish] <kracker> *rubs eyes* ... out
+[03-16-2006 02:02:40] [#ezpublish] <kris10an> kracker: don't rub your eyes out...
+[03-16-2006 02:02:53] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[03-16-2006 02:57:28] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[03-16-2006 02:59:37] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[03-16-2006 02:59:48] [#ezpublish] <kracker> so tired
+[03-16-2006 02:59:54] [#ezpublish] <kracker> so very tierd ...
+[03-16-2006 03:00:57] [#ezpublish] <kracker> this daemon's demons inside just won't let me find peace
+[03-16-2006 03:09:40] [#ezpublish] <kris10an> drink some paint-thinner.. cleans those inner deamons faster than painting the sky!
+[03-16-2006 03:44:37] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[03-16-2006 03:57:32] [#ezpublish] <Sulfur> w00t :)
+[03-16-2006 04:08:41] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[03-16-2006 06:01:40] -!- kalooni [n=nicolas@fbx.internethic.net] has quit [Remote closed the connection]
+[03-16-2006 06:14:09] -!- tobyS [n=dotxp@dslb-084-061-133-229.pools.arcor-ip.net] has quit ["Listen Jennis, Denise, Tiffany, Whitney (*singing*) Houston!"]
+[03-16-2006 06:26:47] -!- phretor [n=phretor@host37-130.pool875.interbusiness.it] has joined #ezpublish
+[03-16-2006 06:26:51] [#ezpublish] <phretor> hi there
+[03-16-2006 07:00:54] -!- bOkO_ [i=martin@cecilias2.kansliM.lu.se] has joined #ezpublish
+[03-16-2006 07:08:22] -!- DiGiTa|_ [n=guillaum@84.4.70.72] has quit []
+[03-16-2006 07:10:25] [#ezpublish] <phretor> is there any way to limit the type of the objects that can be instantiated within a certain folder?
+[03-16-2006 07:13:18] [#ezpublish] <bOkO_> in the roles, content->crate->[clas 1, class 2, ... ]
+[03-16-2006 07:41:41] [#ezpublish] <phretor> how could I fetch nodes by mean of arbitrary attributes' value?
+[03-16-2006 07:41:58] [#ezpublish] <phretor> I mean, the node_id is not known a-priori
+[03-16-2006 07:44:35] [#ezpublish] <phretor> being more precise, I'd like to fetch all objects (of a certain type/class) whose relations are pointing to the current node
+[03-16-2006 07:48:39] [#ezpublish] <bOkO_> have not done such a fetch im afraid
+[03-16-2006 07:51:06] [#ezpublish] <phretor> bOkO_: I found that the reverse_relation attribute is what I was looking for ;-)
+[03-16-2006 07:51:45] [#ezpublish] <bOkO_> sounds right indeed, will you be fetching from your hole node-tree?
+[03-16-2006 07:52:40] [#ezpublish] <bOkO_> .. since that relation could be found from wherever
+[03-16-2006 08:00:55] [#ezpublish] <phretor> bOkO_: node_view_gui should use the line view template/override, isn't it?
+[03-16-2006 08:04:03] [#ezpublish] <bOkO_> depends. it´s up too you realy.
+[03-16-2006 08:04:03] [#ezpublish] <bOkO_> node_view_gui view=line ... uses default line view i thing
+[03-16-2006 08:04:57] [#ezpublish] <bOkO_> then you can override that line.tpl for whatever classes and such, or even write your own view...
+[03-16-2006 08:05:05] [#ezpublish] <bOkO_> node_view_gui view=line_my_line_view
+[03-16-2006 08:05:19] [#ezpublish] <phretor> bOkO_: right
+[03-16-2006 08:05:40] [#ezpublish] <phretor> bOkO_: but if line has been overridden, view=line should use the override
+[03-16-2006 08:11:12] [#ezpublish] <phretor> eZ has somethime non-deterministic behavior :-)
+[03-16-2006 08:12:40] [#ezpublish] <bOkO_> yes, if it is a general override with no limitations like override for speciffic node, class et.c.
+[03-16-2006 08:13:29] [#ezpublish] <bOkO_> if no changes apear, always clear cache
+[03-16-2006 08:13:51] [#ezpublish] <bOkO_> or even better, disable cache during development
+[03-16-2006 08:14:04] [#ezpublish] <phretor> bOkO_: how could I perform it?
+[03-16-2006 08:14:20] [#ezpublish] <bOkO_> disable cache?
+[03-16-2006 08:16:38] [#ezpublish] <bOkO_> in setup tab -> ini settings -> site.ini, disable ViewCaching under ContentSettings and TemplateCache under TemplateSettings
+[03-16-2006 08:17:37] [#ezpublish] <bOkO_> also enable DebugOutput under DebugSettings in the very same site.ini
+[03-16-2006 08:19:03] [#ezpublish] * phretor gives a beer to bOkO_ 
+[03-16-2006 08:19:38] [#ezpublish] <bOkO_> n.p. :)
+[03-16-2006 08:37:13] [#ezpublish] <phretor> bOkO_: very strange {node_view_gui view=line content_node=$mynode} is not working :-\ - my override is not used
+[03-16-2006 08:38:35] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Leaving"]
+[03-16-2006 08:39:03] [#ezpublish] <bOkO_> what does your section about that override look like in settings/siteacces/your_siteaccess/override.ini ?
+[03-16-2006 08:40:58] [#ezpublish] <phretor> bOkO_: it's strange because project_line.tpl (which overrides line.tpl) is applied well in other line views
+[03-16-2006 08:41:37] [#ezpublish] <bOkO_> you want to override for a speciffic type of class maybe?
+[03-16-2006 08:41:59] [#ezpublish] <phretor> bOkO_: it's already done - the override is not the problem
+[03-16-2006 08:42:59] [#ezpublish] <phretor> bOkO_: the problem is that the override works in normal line view but not when the node is fetched thru {foreach $node.object.reverse_related_contentobject_array as $project} and then passed to {node_view_gui content_node=$project}
+[03-16-2006 08:43:09] [#ezpublish] <phretor> maybe the $project is not a node but an object
+[03-16-2006 08:43:12] [#ezpublish] <phretor> lemme check
+[03-16-2006 08:45:10] [#ezpublish] <bOkO_> yes, its relevant what you give to node_view_gui
+[03-16-2006 08:46:02] [#ezpublish] <phretor> bOkO_: strange, $project has not a node_id => not a nod?
+[03-16-2006 08:46:03] [#ezpublish] <phretor> e?
+[03-16-2006 08:50:52] [#ezpublish] <bOkO_> what is in $project ?
+[03-16-2006 08:53:02] [#ezpublish] <phretor> I found that I should use $project.main_node instead of $project ;-)
+[03-16-2006 08:53:42] [#ezpublish] <bOkO_> my line of thaught is: loop through $node.object.reverse_related_contentobject_array, as you already do, to get hold of node_id:s, the fetch these nodes and then sent to node_view_gui
+[03-16-2006 08:54:11] [#ezpublish] <bOkO_> that last sounds good
+[03-16-2006 08:54:22] [#ezpublish] <phretor> main_node does the fetch for you: {node_view_gui view=line content_node=$project} does not work, but $project.main_node works well.
+[03-16-2006 08:54:35] [#ezpublish] <phretor> since $project is an object but $project.main_node is a node ;-)
+[03-16-2006 08:54:38] [#ezpublish] <bOkO_> aight then
+[03-16-2006 08:58:56] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Leaving."]
+[03-16-2006 09:06:25] [#ezpublish] <phretor> bOkO_: have you tried "Object relation browse" extension=
+[03-16-2006 09:06:26] [#ezpublish] <phretor> ?
+[03-16-2006 09:07:28] [#ezpublish] <bOkO_> dont think so, note sure what u mean
+[03-16-2006 09:07:55] [#ezpublish] <bOkO_> i have browsed for relations, but..
+[03-16-2006 09:08:17] [#ezpublish] <bOkO_> extension?
+[03-16-2006 09:08:39] [#ezpublish] <phretor> there is an extension that helps you adding relations in a more user friendly way
+[03-16-2006 09:08:54] [#ezpublish] <phretor> try it, it's on contributions/hacks
+[03-16-2006 09:09:05] [#ezpublish] <bOkO_> ahh, i see. nice
+[03-16-2006 09:28:37] [#ezpublish] <phretor> bOkO_: have you found something better?
+[03-16-2006 09:28:38] [#ezpublish] <phretor> :-)
+[03-16-2006 09:30:37] [#ezpublish] <bOkO_> no, havent been in need for that so far
+[03-16-2006 09:33:06] [#ezpublish] <phretor> bOkO_: I'm experiencing a bad "Fatal error: eZ publish did not finish its request". How prevent those errors?
+[03-16-2006 09:33:57] [#ezpublish] <bOkO_> oh, impossible for me to say :) you need to get your hand dirty im afraid
+[03-16-2006 09:34:12] [#ezpublish] <bOkO_> search the forums at ez.no
+[03-16-2006 09:36:05] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[03-16-2006 09:36:54] [#ezpublish] <phretor> bOkO_: as a side note, {def $arr=array()} and now I had to add elements; {def $arr=$arr|append($elem)} is not working for me. Suggestions?
+[03-16-2006 09:37:22] [#ezpublish] <phretor> bOkO_: I'd like PHP's array_push() :-)
+[03-16-2006 09:38:03] [#ezpublish] <bOkO_> i dont think "def" and "append()" belong in the same statement
+[03-16-2006 09:38:25] [#ezpublish] <phretor> ok but, where to store the result of $arr|append() ?
+[03-16-2006 09:38:27] [#ezpublish] <bOkO_> that would have to be
+[03-16-2006 09:38:36] [#ezpublish] <bOkO_> {set $arr=$arr|append($elem)}
+[03-16-2006 09:38:49] [#ezpublish] <phretor> bOkO_: oh, set - I'm too n00b :-)
+[03-16-2006 09:48:36] -!- phretor [n=phretor@host37-130.pool875.interbusiness.it] has quit []
+[03-16-2006 09:48:49] -!- bOkO_ [i=martin@cecilias2.kansliM.lu.se] has quit ["bye"]
+[03-16-2006 10:04:04] [#ezpublish] <ordnas> FYI: eZ publish 4.0 Features List, http://ez.no/community/articles/ez_publish_4_0_features_list
+[03-16-2006 10:04:26] [#ezpublish] <ordnas> ... plus: Interview: The Future of eZ Development, http://ez.no/community/articles/interview_the_future_of_ez_development
+[03-16-2006 10:04:31] [#ezpublish] <ordnas> something to read for the weekend :)
+[03-16-2006 10:11:40] -!- ordna1 [n=ordnas@p549D73C2.dip.t-dialin.net] has joined #ezpublish
+[03-16-2006 10:23:20] -!- ordnas [n=ordnas@p549D69A6.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-16-2006 11:10:32] -!- fh[eZ] [n=fh@85.19.74.66] has quit [Remote closed the connection]
+[03-16-2006 11:27:21] -!- ordna1 [n=ordnas@p549D73C2.dip.t-dialin.net] has left #ezpublish []
+[03-16-2006 12:24:46] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[03-16-2006 12:27:30] -!- elephantMan [n=elephant@228.205.103-84.rev.gaoland.net] has joined #ezpublish
+[03-16-2006 13:23:01] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[03-16-2006 13:38:48] -!- fh [n=fh@208.80-202-59.nextgentel.com] has joined #ezpublish
+[03-16-2006 13:53:07] -!- hovik [n=hovik@226.80-202-59.nextgentel.com] has joined #ezpublish
+[03-16-2006 14:16:16] -!- phretor [n=phretor@host50-141.pool875.interbusiness.it] has joined #ezpublish
+[03-16-2006 15:09:22] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/articles/interview_the_future_of_ez_development | http://ez.no/community/forum/ez_components/webcast#msg93640
+[03-16-2006 15:16:19] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/articles/interview_the_future_of_ez_development | http://ez.no/community/articles/ez_publish_4_0_features_list | http://ez.no/community/forum/ez_components/webcast#msg93640
+[03-16-2006 15:44:17] -!- phretor [n=phretor@host50-141.pool875.interbusiness.it] has quit []
+[03-16-2006 15:50:23] [#ezpublish] <kracker> that is just a great set of articles, good read
+[03-16-2006 15:52:33] -!- ordnas [n=ordnas@p549D73C2.dip.t-dialin.net] has joined #ezpublish
+[03-16-2006 16:00:33] -!- badi [n=badii07@host004.be.dedigate.com] has joined #ezpublish
+[03-16-2006 16:00:42] [#ezpublish] <badi> hello
+[03-16-2006 16:01:06] [#ezpublish] <badi> how i can fetch a menu with 1 level ?
+[03-16-2006 16:01:11] [#ezpublish] <badi> any ide
+[03-16-2006 16:06:19] -!- badi [n=badii07@host004.be.dedigate.com] has quit []
+[03-16-2006 17:07:47] -!- ordnas [n=ordnas@p549D73C2.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[03-16-2006 17:21:56] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]

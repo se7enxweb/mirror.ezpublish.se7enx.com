@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+	<head>
+		<title>eZ systems : rss : opml</title>
+		<ownerName/>
+		<ownerEmail/>
+		<dateCreated>10/26/2005; 17:53:03 AM</dateCreated>
+		<dateModified>Mon, 07 Nov 2005 02:18:01 +0100</dateModified>
+		</head>
+	<body>
+	<outline title="ez-no">
+		<outline language="english" type="rss" version="RSS" text="eZ News" htmlUrl="http://ez.no/company/news/" xmlUrl="http://ez.no/rss/feed/news" />
+		<outline language="english" type="rss" version="RSS" text="eZ Community News" htmlUrl="http://ez.no/community/news/" xmlUrl="http://ez.no/rss/feed/communitynews.xml" />
+		<outline language="english" type="rss" version="RSS" text="eZ Articles" htmlUrl="http://ez.no/community/articles/" xmlUrl="http://ez.no/rss/feed/communityarticles.xml" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Blog" htmlUrl="http://ez.no/community/blog/" xmlUrl="http://ez.no/rss/feed/blog.xml" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Future Specifications" htmlUrl="http://ez.no/community/developer/specs/" xmlUrl="http://ez.no/rss/feed/specs.xml" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Forum Install and Configuration" htmlUrl="http://ez.no/community/forum/install_configuration/" xmlUrl="http://ez.no/rss/feed/forum_install_configuration.xml" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Forum Setup and Design" htmlUrl="http://ez.no/community/forum/setup_design/" xmlUrl="http://ez.no/rss/feed/forum_setup_design.xml" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Forum General" htmlUrl="http://ez.no/community/forum/general/" xmlUrl="http://ez.no/rss/feed/forum_general.xml" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Forum Developer" htmlUrl="http://ez.no/community/forum/developer/" xmlUrl="http://ez.no/rss/feed/forum_developer.xml" />
+	 	<outline language="english" type="rss" version="RSS" text="eZ Forum Suggestions" htmlUrl="http://ez.no/community/forum/suggestions/" xmlUrl="http://ez.no/rss/feed/forum_suggestions.xml" />
+	</outline>
+	<outline title="ez-universe">
+		<outline language="english" type="rss" version="RSS" text="Technorati : Tag : eZ publish" htmlUrl="http://www.technorati.com/tag/ez%20publish/" xmlUrl="http://feeds.technorati.com/feed/posts/tag/ez%20publish" />	
+		<outline language="english" type="rss" version="RSS" text="eZ : csr | Source Code Repository" htmlUrl="http://snippets.ezcommunity.net/" xmlUrl="http://snippets.ezcommunity.net/feed.php" />	
+		<outline language="english" type="rss" version="RSS" text="VisionWT News" htmlUrl="http://www.visionwt.com/news/" xmlUrl="http://www.visionwt.com/rss/feed/news/" /	>
+		<outline language="english" type="rss" version="RSS" text="pubsvn.ez.no commit recent commits" htmlUrl="http://pubsvn.ez.no/websvn/listing.php?repname=nextgen&path=/&sc=1" xmlUrl="http://pubsvn.ez.no/websvn/rss.php?repname=nextgen&path=%2F&rev=0&sc=1&isdir=1" />	
+		<outline language="english" type="rss" version="RSS" text="x" htmlUrl="http://example.org/" xmlUrl="http://" />	
+		<outline language="english" type="rss" version="RSS" text="x" htmlUrl="http://example.org/" xmlUrl="http://" />	
+        </outline>
+	</body>
+</opml>

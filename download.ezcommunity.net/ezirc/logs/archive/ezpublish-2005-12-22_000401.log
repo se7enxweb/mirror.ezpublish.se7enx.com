@@ -1,0 +1,503 @@
+[12-21-2005 00:33:39] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [Read error: 110 (Connection timed out)]
+[12-21-2005 00:35:51] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[12-21-2005 01:31:46] -!- ordnas [n=ordnas@p549D486E.dip.t-dialin.net] has joined #ezpublish
+[12-21-2005 01:40:31] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[12-21-2005 01:41:42] [#ezpublish] <SEAwolfx_> good morning @all.
+[12-21-2005 01:41:49] -!- SEAwolfx_ is now known as SEAwolf_711
+[12-21-2005 01:42:52] -!- SEAwolfx [n=mike@tor/session/x-2f335afcdcda7e66] has quit [Nick collision from services.]
+[12-21-2005 01:43:29] -!- SEAwolf_711 is now known as SEAwolfx
+[12-21-2005 01:43:56] -!- tobyS [n=dotxp@dslb-084-061-153-248.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[12-21-2005 02:05:55] -!- DiGiTa|_ [n=guillaum@84.4.40.14] has joined #ezpublish
+[12-21-2005 02:20:27] -!- DiGiTa|_ [n=guillaum@84.4.40.14] has quit [Read error: 110 (Connection timed out)]
+[12-21-2005 02:22:01] -!- DiGiTa|_ [n=guillaum@84.4.40.14] has joined #ezpublish
+[12-21-2005 02:26:35] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-21-2005 02:32:39] -!- tobyS [n=dotxp@217.194.224.41] has joined #ezpublish
+[12-21-2005 02:39:08] [#ezpublish] <Katana`> toby ? the toby ?
+[12-21-2005 02:39:52] [#ezpublish] <tobyS> Katana`: depends on which one you mean :)
+[12-21-2005 02:42:25] [#ezpublish] <Katana`> lol
+[12-21-2005 02:42:32] [#ezpublish] <Katana`> toby as in tobias ?
+[12-21-2005 02:44:27] [#ezpublish] <tobyS> Katana`: sure, toby as in tobias :)
+[12-21-2005 02:44:37] [#ezpublish] <Katana`> the components one ? :)
+[12-21-2005 02:45:51] [#ezpublish] <tobyS> Katana`: exactly
+[12-21-2005 02:45:56] [#ezpublish] <Katana`> hey cool
+[12-21-2005 02:46:18] [#ezpublish] <Katana`> how are you doing ?
+[12-21-2005 02:49:42] [#ezpublish] <Katana`> very busy i guess ;)
+[12-21-2005 02:50:53] [#ezpublish] <tobmaster> tobyS: ey #ezpublish.de!
+[12-21-2005 02:51:19] [#ezpublish] <Katana`> nah stay with us
+[12-21-2005 02:51:22] [#ezpublish] <Katana`> there's no country :)
+[12-21-2005 02:51:33] [#ezpublish] * Katana` is gonna register ezpublish.fr
+[12-21-2005 02:52:24] [#ezpublish] <tobyS> Katana`: sure, a bit stress, but that's usual before christmas :)
+[12-21-2005 02:52:46] [#ezpublish] <Katana`> yeah :)
+[12-21-2005 02:52:59] [#ezpublish] <Katana`> same here, only 8 days left to work before i'm gone for good
+[12-21-2005 02:53:04] [#ezpublish] <tobyS> tobmaster: i have 13 open channel tabs by now, where i idle around the whole day, why should i add another? :)
+[12-21-2005 02:53:17] [#ezpublish] <Katana`> the real question is "why shouldn't you"
+[12-21-2005 02:53:39] [#ezpublish] <tobyS> Katana`: i'd prefer to close some channel tabs instead of adding new ones ;)
+[12-21-2005 02:54:10] [#ezpublish] <Katana`> :))
+[12-21-2005 02:54:23] [#ezpublish] <tobmaster> tobyS: :P
+[12-21-2005 03:08:35] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[12-21-2005 03:10:52] -!- hovik [n=hovik@popeye.ez.no] has joined #ezpublish
+[12-21-2005 03:13:06] [#ezpublish] <Katana`> hi hovik
+[12-21-2005 03:14:23] [#ezpublish] <hovik> hi
+[12-21-2005 03:14:41] [#ezpublish] <kris10an> we should get more toby people in here :-)
+[12-21-2005 03:14:58] -!- kris10an is now known as toby2
+[12-21-2005 03:15:37] [#ezpublish] <toby2> hmm.. this was mabye a bit artificial...
+[12-21-2005 03:15:40] -!- toby2 is now known as kris10an
+[12-21-2005 03:15:46] [#ezpublish] <Katana`> a tad
+[12-21-2005 03:16:44] [#ezpublish] <kris10an> its cool to see that we are getting quite a few from the crew in here :-)
+[12-21-2005 03:17:14] [#ezpublish] <Katana`> definitely :)
+[12-21-2005 03:33:54] [#ezpublish] <tobmaster> kris10an: in the phpug in dortmund we now have 3 tobis ;)
+[12-21-2005 03:34:53] [#ezpublish] <kris10an> tobmaster: in my class at the university we were like 10 people who had kristian in their name :-)
+[12-21-2005 03:35:54] [#ezpublish] <tobmaster> lol
+[12-21-2005 03:36:12] [#ezpublish] <kris10an> its like 10% or something
+[12-21-2005 03:44:31] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[12-21-2005 03:51:34] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-21-2005 03:52:54] [#ezpublish] <Sulfur> hi :)
+[12-21-2005 03:53:21] [#ezpublish] <seasonfive> hi all :)
+[12-21-2005 03:53:49] [#ezpublish] <SEAwolfx> hi ;)
+[12-21-2005 03:54:25] [#ezpublish] <seasonfive> i recently tried joomla & typo3. ezPublish is definitly the better CMS :p
+[12-21-2005 03:55:18] [#ezpublish] <Katana`> ;)
+[12-21-2005 03:56:22] [#ezpublish] <seasonfive> A lot of people like Typo3, for me this one is horrible. I found no logic into this one
+[12-21-2005 03:56:27] [#ezpublish] <fh[eZ]> and it will get sooo much better
+[12-21-2005 03:56:31] [#ezpublish] <seasonfive> anyone tried it ?
+[12-21-2005 03:56:32] [#ezpublish] <fh[eZ]> you're going to love it
+[12-21-2005 03:56:57] [#ezpublish] <Katana`> i've never managed to understand the admin interface
+[12-21-2005 03:56:57] [#ezpublish] <Katana`> worst piece of shit ever as far as i'm concerned
+[12-21-2005 03:58:14] [#ezpublish] <seasonfive> Katana`: i tried it for 2 days, i still don't understand how it works :p
+[12-21-2005 03:58:54] [#ezpublish] <seasonfive> on #typo3 guys said i need lot of times to understand. Then i don't see real advantages of Typo3 against home made PHP cms ...
+[12-21-2005 03:59:07] [#ezpublish] <seasonfive> btw, i don't want to troll :p
+[12-21-2005 03:59:12] [#ezpublish] <Katana`> :)
+[12-21-2005 04:01:05] [#ezpublish] <fh[eZ]> hm.. the same could be said about ez publish ..
+[12-21-2005 04:01:14] [#ezpublish] <fh[eZ]> large systems like this take some time to understand properly
+[12-21-2005 04:01:34] [#ezpublish] <Katana`> not the admin interface for the end user at least ;)
+[12-21-2005 04:02:03] [#ezpublish] <SEAwolfx> but typo3 got no contentObject-model. ;)
+[12-21-2005 04:02:14] [#ezpublish] <fh[eZ]> Katana`: that is very correct
+[12-21-2005 04:02:37] [#ezpublish] <seasonfive> i still don't understant "Constant" & "Setup" things.
+[12-21-2005 04:02:51] [#ezpublish] <seasonfive> More over you can override plugins template only at page basis.
+[12-21-2005 04:03:09] [#ezpublish] <seasonfive> if you need one plugin twice in a page with two different template, you simply can't
+[12-21-2005 04:09:09] [#ezpublish] <Sulfur> (booming, enfatic voice) *the best cms, proudly presented by your friendly eZ neighborhood folks!* :P
+[12-21-2005 04:11:01] [#ezpublish] <seasonfive> is there a way to clear all cache only for the "user" site ?
+[12-21-2005 04:11:27] [#ezpublish] <seasonfive> (i mean with click, without rm -rf things :p)
+[12-21-2005 04:12:48] [#ezpublish] <Katana`> not that i know of
+[12-21-2005 04:13:23] [#ezpublish] <seasonfive> sad ... Could be nice to clear cache for one siteaccess or better, for one page
+[12-21-2005 04:14:22] [#ezpublish] <Katana`> we really need a new server.. avg load 22
+[12-21-2005 04:14:39] [#ezpublish] <Katana`> this is too much :)
+[12-21-2005 04:17:42] [#ezpublish] <seasonfive> if my coworker wasn't as dumb, i could propose mirror :-/
+[12-21-2005 04:18:06] [#ezpublish] <Sulfur> seasonfive: and Katana` ...  clearcache.sh should have a siteaccess switch , IIRC
+[12-21-2005 04:21:04] [#ezpublish] <Katana`> seasonfive: we mainly need a new dedicated server...
+[12-21-2005 04:21:12] [#ezpublish] <Katana`> or a more powerful one, but at least something :)
+[12-21-2005 04:21:15] [#ezpublish] <Katana`> well, THEY need
+[12-21-2005 04:21:16] [#ezpublish] <Katana`> I don't :)
+[12-21-2005 04:22:40] [#ezpublish] <seasonfive> mirror could be good too, then you can round-robin the DNS :p
+[12-21-2005 04:23:22] [#ezpublish] <Katana`> :))
+[12-21-2005 04:26:14] [#ezpublish] <seasonfive> {$article.object.data_map.intro.data_text|shorten(40)}
+[12-21-2005 04:26:31] [#ezpublish] <seasonfive> this display nothing but when i remove shorten(40) that works. any idea ?
+[12-21-2005 04:28:44] [#ezpublish] <seasonfive> ok i found
+[12-21-2005 04:36:05] [#ezpublish] <Katana`> what was it ?
+[12-21-2005 04:42:35] [#ezpublish] <seasonfive> {$article.object.data_map.intro.data_text} begin with "<?xml ..." stuff
+[12-21-2005 04:42:50] [#ezpublish] <Sulfur> heh
+[12-21-2005 04:42:58] [#ezpublish] <seasonfive> and then shorten short these and produce invalid HTML code which hide content
+[12-21-2005 04:43:09] [#ezpublish] <Sulfur> you need to strip the tags away beforehand :)
+[12-21-2005 04:43:11] [#ezpublish] <seasonfive> exactly :)
+[12-21-2005 04:44:29] [#ezpublish] <seasonfive> ... but how ?
+[12-21-2005 04:45:16] [#ezpublish] <seasonfive> wash(text) is ok ?
+[12-21-2005 04:50:27] [#ezpublish] <seasonfive> {$object.data_map.intro.content.output.output_text}
+[12-21-2005 04:53:33] [#ezpublish] <kris10an> PHPOperatorList[striptags]=strip_tags
+[12-21-2005 04:53:37] [#ezpublish] <kris10an> in template ini
+[12-21-2005 04:53:44] [#ezpublish] <kris10an> then you can use |striptags
+[12-21-2005 04:54:24] [#ezpublish] <seasonfive> what is the best way ?
+[12-21-2005 04:54:53] [#ezpublish] <seasonfive> striptags strip stuff like <b> too i think ?
+[12-21-2005 04:55:07] [#ezpublish] <Katana`> patch owns
+[12-21-2005 04:55:47] [#ezpublish] <kris10an> seasonfive: you can not use "shorten" with <b>
+[12-21-2005 04:55:59] [#ezpublish] <seasonfive> that make sense :)
+[12-21-2005 04:55:59] [#ezpublish] <fh[eZ]> Katana`: yeah, along the same lines as grep
+[12-21-2005 04:56:07] [#ezpublish] <Katana`> yep :)
+[12-21-2005 04:56:14] [#ezpublish] <kris10an> then you can get something like "Its is <b>cool<"
+[12-21-2005 04:56:16] [#ezpublish] <Katana`> i'm not really experienced with it but i'm learning ;)
+[12-21-2005 04:56:25] [#ezpublish] <seasonfive> kris10an: you're right, thanks :)
+[12-21-2005 04:56:30] [#ezpublish] <Katana`> first site migrated from 3.6 to 3.7, one more to go
+[12-21-2005 04:56:48] [#ezpublish] <fh[eZ]> grep is main reason why I dumped windos 95 for linux
+[12-21-2005 04:56:56] [#ezpublish] <fh[eZ]> a long time ago
+[12-21-2005 04:56:58] [#ezpublish] <Katana`> huhu broken images :)
+[12-21-2005 04:57:01] [#ezpublish] <Katana`> fh[eZ] : i use cygwin for that ;)
+[12-21-2005 04:57:12] [#ezpublish] <fh[eZ]> cheater :)
+[12-21-2005 04:57:17] [#ezpublish] <Katana`> yep :)
+[12-21-2005 04:57:21] [#ezpublish] <Katana`> i even have rxvt
+[12-21-2005 04:57:58] [#ezpublish] <Katana`> but i couldn't work without it...
+[12-21-2005 05:03:58] [#ezpublish] <seasonfive> kris10an: i didn't suceed to put stritags
+[12-21-2005 05:04:17] [#ezpublish] <seasonfive> kris10an: i created siteaccess/xxx/template.ini.append.php
+[12-21-2005 05:04:22] [#ezpublish] <seasonfive> kris10an: and i put:
+[12-21-2005 05:04:36] [#ezpublish] <seasonfive> PHPOperatorList[striptags]=strip_tags
+[12-21-2005 05:04:42] [#ezpublish] <seasonfive> but |striptags do nothing
+[12-21-2005 05:06:01] [#ezpublish] <seasonfive> oh, i found docs about that
+[12-21-2005 05:06:42] [#ezpublish] <seasonfive> (for infos: http://ez.no/products/ez_publish_cms/documentation/development/kernel/custom_template_operators)
+[12-21-2005 05:07:05] [#ezpublish] <seasonfive> works well ! =]
+[12-21-2005 05:08:49] [#ezpublish] <SEAwolfx> hmmm, when i define a variable in xsl by using xsl:param or xsl:variable, does this varibale has a scope or is it gobally valid?
+[12-21-2005 05:15:54] [#ezpublish] <SEAwolfx> resolved ;)
+[12-21-2005 05:18:45] [#ezpublish] <kracker> lol, reading ezmail datasupplier (user) in v2 svn
+[12-21-2005 05:18:47] [#ezpublish] <kracker> /        $server = "{" . "zap.ez.no" . "/pop3:" . "110" ."}";
+[12-21-2005 05:18:47] [#ezpublish] <kracker> /        $mbox = imap_open( $server, "larson", "AcRXYJJA", OP_HALFOPEN)
+[12-21-2005 05:21:22] [#ezpublish] <seasonfive> heh, this user should change his password now :p
+[12-21-2005 05:21:45] [#ezpublish] <kracker> i'm sure he has many times over since then
+[12-21-2005 05:22:18] [#ezpublish] <seasonfive> send him a mail
+[12-21-2005 05:24:49] [#ezpublish] <kracker> i'm sure we all get quite enough spam as it is ..
+[12-21-2005 05:36:08] -!- Sulfur [n=mbariola@217.221.32.143] has quit [Read error: 104 (Connection reset by peer)]
+[12-21-2005 05:39:57] [#ezpublish] <kris10an> i'm guessing fh[eZ] wrote that ezmail code :-)
+[12-21-2005 05:58:26] [#ezpublish] <fh[eZ]> I wrote that.. and the user is a dummy
+[12-21-2005 05:58:34] [#ezpublish] <fh[eZ]> so you can try the password all you want
+[12-21-2005 05:59:20] [#ezpublish] <kracker> pfft, you gotta know i have plenty of beter ways to waste my time, but thanks for the thought :\
+[12-21-2005 05:59:42] [#ezpublish] <kris10an> hehe
+[12-21-2005 05:59:58] [#ezpublish] <kracker> like documenting all the URIs used by eZ publish 2 (user modules)
+[12-21-2005 06:00:56] [#ezpublish] <kracker> going to do a little work on watir automated test cases, http://wtr.rubyforge.org/
+[12-21-2005 06:17:48] [#ezpublish] <kracker> ummm, i just thougth it was funny to see still in the code, so funy i think i'm going to leave it till the next code review / cleanup :D
+[12-21-2005 06:21:40] [#ezpublish] <kris10an> kracker: are you maintaining ezp2 alone?
+[12-21-2005 06:23:48] [#ezpublish] <kracker> kris10an, *sigh* | sadly this is true. I did have more help but many have drifted away from anything eZ :\ sucks
+[12-21-2005 06:25:39] [#ezpublish] <kracker> heh, i'm prolly using and maintaining ezp2 alone :D
+[12-21-2005 06:27:27] [#ezpublish] <kris10an> hehe :-)
+[12-21-2005 06:28:02] [#ezpublish] <kris10an> you might aswell skip ezpublish 3, and go directly to ezp4 :-)
+[12-21-2005 06:28:07] [#ezpublish] <kris10an> or something
+[12-21-2005 06:28:15] [#ezpublish] <kracker> basicly my plan all along
+[12-21-2005 06:28:17] [#ezpublish] <Katana`> do we have an alpha date for ezp 4 ?
+[12-21-2005 06:28:40] [#ezpublish] <kracker> but i faltered and started doing some v3 off and on along the way (don't want to loose touch)
+[12-21-2005 06:29:18] [#ezpublish] <kracker> yeah, i too am wondering when more info on just a tidbit of what v4 might look like :)
+[12-21-2005 06:30:03] [#ezpublish] <kris10an> Katana`: i think that will come after the components are finished
+[12-21-2005 06:30:08] [#ezpublish] <Katana`> cool :)
+[12-21-2005 06:30:21] [#ezpublish] <Katana`> components 1.0 are supposed to be released in january right ?
+[12-21-2005 06:30:21] [#ezpublish] <kris10an> or.. then "the big planning" starts...
+[12-21-2005 06:30:26] [#ezpublish] <Katana`> :)
+[12-21-2005 06:30:33] [#ezpublish] <Katana`> i'll be there my then that's cool :)
+[12-21-2005 06:30:59] [#ezpublish] <Katana`> i'm really glad you're kicking zend's butt with the components
+[12-21-2005 06:31:05] [#ezpublish] <kris10an> but monsouir fh[eZ] has better insight to this than i have...
+[12-21-2005 06:31:11] [#ezpublish] <kracker> nods
+[12-21-2005 06:31:15] [#ezpublish] <Katana`> are they still at the announcement / vaporware stage are they ?
+[12-21-2005 06:31:19] [#ezpublish] <Katana`> monsieur ;)
+[12-21-2005 06:31:35] [#ezpublish] <kris10an> crap.. i allways write it wrong..
+[12-21-2005 06:31:44] [#ezpublish] <Katana`> i'll teach you ;)
+[12-21-2005 06:32:03] [#ezpublish] <kris10an> i like the obfuscation part of french.. its impossible to read and write :-)
+[12-21-2005 06:32:03] [#ezpublish] <Katana`> ok why was my patch not applied
+[12-21-2005 06:32:06] [#ezpublish] <Katana`> haha
+[12-21-2005 06:32:09] [#ezpublish] <Katana`> yeah
+[12-21-2005 06:32:15] [#ezpublish] <Katana`> lots of expections and stuff, that's cool :)
+[12-21-2005 06:32:26] [#ezpublish] <kris10an> sortof like brainfuck
+[12-21-2005 06:32:30] [#ezpublish] <kris10an> ;-)
+[12-21-2005 06:32:33] [#ezpublish] <kracker> heh
+[12-21-2005 06:32:56] [#ezpublish] <Katana`> brainfuck... no, stop picturing it
+[12-21-2005 06:34:08] [#ezpublish] <kris10an> no sorry.. the official name for it is brainf*ck
+[12-21-2005 06:34:18] [#ezpublish] <Katana`> phew
+[12-21-2005 06:34:19] [#ezpublish] <kracker> it's not a visual it's a sureal shift in the percieved reality
+[12-21-2005 06:34:19] [#ezpublish] <Katana`> better thanks
+[12-21-2005 06:34:23] [#ezpublish] <Katana`> :))
+[12-21-2005 06:34:50] [#ezpublish] <kracker> the world falls away and if your not careful you with it (dear in headlights)
+[12-21-2005 06:35:20] [#ezpublish] * Katana` has to pee
+[12-21-2005 06:35:39] [#ezpublish] <fh[eZ]> Katana`: be sure to test beta2 so we can make it as good as possible before releasing
+[12-21-2005 06:35:45] [#ezpublish] <kris10an> let me help you picture it: ++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++
+[12-21-2005 06:36:19] [#ezpublish] <seasonfive> something i don't understand
+[12-21-2005 06:36:29] [#ezpublish] <seasonfive> when i use {node_view_gui view=line content_node=$article}
+[12-21-2005 06:36:39] [#ezpublish] <seasonfive> template is ctr/override/template/line/article.tpl
+[12-21-2005 06:36:41] [#ezpublish] <seasonfive> but when i use
+[12-21-2005 06:36:45] [#ezpublish] <seasonfive> {node_view_gui view=boxed content_node=$article}
+[12-21-2005 06:36:58] [#ezpublish] <seasonfive> ctr/override/template/boxed/article.tpl isn't loaded.
+[12-21-2005 06:37:00] [#ezpublish] <seasonfive> any idea ?
+[12-21-2005 06:37:25] [#ezpublish] <kris10an> seasonfive: you need an overriderule in override.ini to make that happen
+[12-21-2005 06:37:49] [#ezpublish] <seasonfive> hmmm or perhaps should i put this in ctr/template/boxed/article.tpl ?
+[12-21-2005 06:38:29] [#ezpublish] <seasonfive> no, don't work more
+[12-21-2005 06:38:39] [#ezpublish] <kris10an> seasonfive: if you use that function it will try to load node/view/boxed.tpl
+[12-21-2005 06:39:00] [#ezpublish] <kris10an> if you have an override-rule in override.ini you can specifiy another template
+[12-21-2005 06:39:10] [#ezpublish] <seasonfive> ok i see. thanks :)
+[12-21-2005 06:39:12] [#ezpublish] <kris10an> like you have for article - line
+[12-21-2005 06:39:39] [#ezpublish] <kris10an> and remember that the order (position in file) of the overriderules in override does matter
+[12-21-2005 06:40:49] [#ezpublish] <kracker> you guys [@eZ] wouldn't happen to know of anyone who has chosen to stay with v2 and still has a need for new features would ya :\ (like php4.4/php5 compatablity or ... other)
+[12-21-2005 06:42:14] [#ezpublish] <seasonfive> that works, thanks.
+[12-21-2005 06:44:49] [#ezpublish] <kracker> nods, people who are interested (i have been commiting a lot more this month and a lot more bug fixes are comming to svn) and can keep in touch with the updates via rss      http://svn.web.ezcommunity.net/rss.php?repname=ezcommunity&path=%2F&rev=0&sc=0&isdir=1
+[12-21-2005 06:46:38] [#ezpublish] <kracker> heh, i'd start a #ezpublish.v2 irc channel but i'd just end up talking to myself (which is different from normal when graham?)
+[12-21-2005 06:47:37] [#ezpublish] <Katana`> :))
+[12-21-2005 06:47:48] [#ezpublish] <Katana`> should i create #ezpublish.fr
+[12-21-2005 06:47:48] [#ezpublish] <Katana`> ...
+[12-21-2005 06:50:52] [#ezpublish] <kris10an> kracker: i don't have the overview over who uses ezp2, so i can unfortunately not tell you anything..
+[12-21-2005 06:51:00] [#ezpublish] <kris10an> :-/
+[12-21-2005 06:54:09] [#ezpublish] <kracker> yeah, i should ask bertrand (eZ rep) anyway
+[12-21-2005 06:55:00] [#ezpublish] <Katana`> it's gonna be easy at eZ systems, with 2 french Bertrand ;)
+[12-21-2005 06:55:07] [#ezpublish] <buz> omfg two of that kind
+[12-21-2005 06:56:39] [#ezpublish] <Katana`> yay
+[12-21-2005 06:56:53] [#ezpublish] <Katana`> it's kinda funny, it's really not a common name in france
+[12-21-2005 06:58:48] [#ezpublish] <buz> ok with 112000 dummy objects, cached pages load in about 0.35s as opposed to 0.2s with nearly empty db
+[12-21-2005 07:01:03] [#ezpublish] <Katana`> that's good isn't it ?
+[12-21-2005 07:01:28] [#ezpublish] <kracker> sounds good
+[12-21-2005 07:02:18] [#ezpublish] <buz> i wish i had the hardware for a test with 1mio objects on hand
+[12-21-2005 07:02:26] [#ezpublish] <buz> takes ages to generate that many content objects, for sure
+[12-21-2005 07:02:49] [#ezpublish] <buz> maybe i'mgonna revive one of those old machines behind my desk
+[12-21-2005 07:04:15] [#ezpublish] <Katana`> what do you guys think of our documentation ? http://doc.waterproof.fr/phpedit
+[12-21-2005 07:04:34] [#ezpublish] <buz> whoa
+[12-21-2005 07:04:43] [#ezpublish] <buz> ezcontentobject_attribute  175.434  	  InnoDB   	    208,3 MB   	     -
+[12-21-2005 07:04:51] [#ezpublish] <Katana`> ouchie
+[12-21-2005 07:05:23] [#ezpublish] <buz> but wtf are aöö ezcontentobject_name, _tree and _version only half as many lines as there are objects???
+[12-21-2005 07:08:18] [#ezpublish] <seasonfive> {$node.object.data_map.intro.content.output.output_text|striptags|shorten(45)} return nothing but {$node.object.data_map.intro.content.output.output_text|striptags} does. Any idea ?
+[12-21-2005 07:09:03] [#ezpublish] <seasonfive> (i tried to add |trim between striptags & shorten. no effect)
+[12-21-2005 07:10:13] [#ezpublish] <seasonfive> oh
+[12-21-2005 07:10:14] [#ezpublish] <seasonfive> i have
+[12-21-2005 07:10:16] [#ezpublish] <seasonfive> "eZTemplate:Attribute node-object-cached of variable $resourceData was not found but variable node EZ_TEMPLATE_TYPE_OPTIMIZED_NODE is still present. This should not happen"
+[12-21-2005 07:12:21] [#ezpublish] <seasonfive> what i'm supposed to do now ? :p
+[12-21-2005 07:12:34] [#ezpublish] <Katana`> clear cache ? :)
+[12-21-2005 07:12:40] [#ezpublish] <kracker> Katana`, i think it's a nice start, though a search form on page (+ drop down for chapters) might be more helpful for finding specific answeres :)
+[12-21-2005 07:12:43] [#ezpublish] <seasonfive> i done that 5 times yet
+[12-21-2005 07:12:49] [#ezpublish] <Katana`> ah :)
+[12-21-2005 07:12:54] [#ezpublish] <Katana`> yeah kracker, search is planned as well
+[12-21-2005 07:13:01] [#ezpublish] <Katana`> what kind of dropdown would you see ?
+[12-21-2005 07:13:06] [#ezpublish] <Katana`> with level 1 navigation ? something else ?
+[12-21-2005 07:13:23] [#ezpublish] <Katana`> related pages are implemented as well but there are no relations yet ;)
+[12-21-2005 07:13:26] [#ezpublish] <kracker> i kinda recntly found i liked the one on ez.no (main header)
+[12-21-2005 07:13:37] [#ezpublish] <seasonfive> how to have the cleanest possible cache status ?
+[12-21-2005 07:13:41] [#ezpublish] <seasonfive> rm -rf var/cache ?
+[12-21-2005 07:13:55] [#ezpublish] <Katana`> rm -rf var/cache/* var/<storagedir>/cache/*
+[12-21-2005 07:14:51] [#ezpublish] <kracker> Katana`, i was thinking at the moment of (search relative to current view possition VS searching entire documentation VS searching by documentation chapter ...) the drop down might let them search the whole thing and per chapter / key section / grouping of content
+[12-21-2005 07:15:26] [#ezpublish] <seasonfive> Katana`: same problem :(
+[12-21-2005 07:18:52] [#ezpublish] <Katana`> oh, search for dropdown
+[12-21-2005 07:18:55] [#ezpublish] <Katana`> yep, makes sense
+[12-21-2005 07:20:21] [#ezpublish] <Katana`> i'm surprised by the speed of that doc site though
+[12-21-2005 07:20:32] [#ezpublish] <buz> static cache?
+[12-21-2005 07:20:48] [#ezpublish] <Katana`> nope...
+[12-21-2005 07:20:56] [#ezpublish] <Katana`> at least it was not configured so i guess it's not there ;)
+[12-21-2005 07:21:25] [#ezpublish] <Katana`> lol and viewcaching is disabled
+[12-21-2005 07:21:27] [#ezpublish] <Katana`> what the hell
+[12-21-2005 07:21:47] [#ezpublish] <buz> mhh
+[12-21-2005 07:21:53] [#ezpublish] <Katana`> now it's fast :))
+[12-21-2005 07:21:54] [#ezpublish] <buz> 144core sun ?
+[12-21-2005 07:21:59] [#ezpublish] <Katana`> nope :)
+[12-21-2005 07:22:04] [#ezpublish] <seasonfive> i unchecked "Template Compile" that works now
+[12-21-2005 07:29:04] [#ezpublish] <buz> mhh the admin interface cant deal with that many objects
+[12-21-2005 07:29:06] [#ezpublish] <buz> keeps crashing
+[12-21-2005 07:29:28] [#ezpublish] <buz> apache chews up memory until the the os kills it
+[12-21-2005 07:30:50] [#ezpublish] <buz> that sucks
+[12-21-2005 07:34:11] [#ezpublish] <kris10an> buz: http://ez.no/community/contribs/hacks/ajax_treemenu_on_demand_tree_menu
+[12-21-2005 07:34:18] [#ezpublish] <buz> doesnt seem to help anymore
+[12-21-2005 07:34:21] [#ezpublish] <buz> i have it active
+[12-21-2005 07:34:22] [#ezpublish] <buz> still crashes
+[12-21-2005 07:43:30] -!- ordnas [n=ordnas@p549D486E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[12-21-2005 08:01:23] [#ezpublish] <Katana`> with only 120 000 objects ?
+[12-21-2005 08:01:25] [#ezpublish] <Katana`> damnit
+[12-21-2005 08:02:49] -!- ordna1 [n=ordnas@p549D6A3C.dip.t-dialin.net] has joined #ezpublish
+[12-21-2005 08:12:23] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit ["Leaving"]
+[12-21-2005 08:12:44] [#ezpublish] <Katana`> humf...
+[12-21-2005 08:14:55] [#ezpublish] <Katana`> what the hell is (not) happening
+[12-21-2005 08:18:18] [#ezpublish] <Katana`> ah forgot to patch a file that's why ;)
+[12-21-2005 08:18:41] [#ezpublish] <kris10an> i am certanly not getting a backrub by 3 beautiful girls right now...
+[12-21-2005 08:18:58] [#ezpublish] <kris10an> that's what's not happening
+[12-21-2005 08:19:12] [#ezpublish] <Katana`> hmmm backrub
+[12-21-2005 08:19:28] [#ezpublish] <Katana`> maybe that's because there are not 3 girls in your office ? :)
+[12-21-2005 08:31:44] [#ezpublish] <kris10an> offcourse there is...
+[12-21-2005 08:31:54] [#ezpublish] <kris10an> :-)
+[12-21-2005 08:32:12] [#ezpublish] <kris10an> but they are anyhow not giving me a backrub :-)
+[12-21-2005 08:32:44] [#ezpublish] <Katana`> 3 ? whoa
+[12-21-2005 08:32:55] [#ezpublish] <Katana`> it will be only guys at eZ France :(
+[12-21-2005 08:33:04] [#ezpublish] <Katana`> nicolas is not a girl by any chance ? :)
+[12-21-2005 08:47:12] [#ezpublish] <kris10an> hehe.. not that i know of :-)
+[12-21-2005 08:47:37] [#ezpublish] <kris10an> and i dont know if he is good at backrubs either... ;-)
+[12-21-2005 08:53:12] [#ezpublish] <ordna1> If you got a weblog where you write about eZ publish and surrounding topics, please post your feed URL here - but take care that the feed is not too general, but focused on eZ publish: http://ez.no/community/forum/general/planetezpublish_org
+[12-21-2005 09:09:04] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[12-21-2005 09:09:06] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Client Quit]
+[12-21-2005 09:18:57] [#ezpublish] <kris10an> http://corp.efnet.net/~vx0/xmaslights.html
+[12-21-2005 09:26:00] [#ezpublish] <kris10an> nice christmas decoration for a house...
+[12-21-2005 09:26:14] [#ezpublish] <kris10an> i would love to be their neighbours...
+[12-21-2005 09:27:15] [#ezpublish] <Katana`> really amazing :)
+[12-21-2005 09:27:41] [#ezpublish] * tobyS switches home... brb
+[12-21-2005 09:27:42] -!- tobyS [n=dotxp@217.194.224.41] has quit ["Plant your channel to pearadise.net!"]
+[12-21-2005 09:52:33] [#ezpublish] <buz> mhh tobys must have been truly impressed
+[12-21-2005 09:53:42] [#ezpublish] <Katana`> impressed by ?
+[12-21-2005 09:53:47] [#ezpublish] <Katana`> the xmas lights ? :)
+[12-21-2005 09:53:56] [#ezpublish] <buz> yes
+[12-21-2005 09:54:02] [#ezpublish] <buz> [16:26] <kris10an> nice christmas decoration for a house...
+[12-21-2005 09:54:02] [#ezpublish] <buz> [16:26] <kris10an> i would love to be their neighbours...
+[12-21-2005 09:54:02] [#ezpublish] <buz> [16:27] <Katana`> really amazing :)
+[12-21-2005 09:54:03] [#ezpublish] <buz> [16:27] * tobyS switches home... brb
+[12-21-2005 09:54:11] [#ezpublish] <Katana`> :)
+[12-21-2005 09:54:14] [#ezpublish] <buz> guess he became the new neighbor
+[12-21-2005 10:00:53] [#ezpublish] <Katana`> buz, fyi the server of doc.waterproof.fr is a P4 3.0 GHz with 2 GB of RAM
+[12-21-2005 10:03:00] [#ezpublish] <buz> did you benchmark it with debug on, ever?
+[12-21-2005 10:03:07] [#ezpublish] <Katana`> nope, not yet
+[12-21-2005 10:03:09] [#ezpublish] <buz> i get down to about 0.11s on p4 with only 1gb ram
+[12-21-2005 10:03:09] [#ezpublish] <Katana`> i could ;)
+[12-21-2005 10:03:14] [#ezpublish] <buz> http://planetezpublish.org/ is half alive it seems
+[12-21-2005 10:04:00] [#ezpublish] <Katana`> nice :)
+[12-21-2005 10:04:04] [#ezpublish] <kracker> very nice
+[12-21-2005 10:04:07] [#ezpublish] <buz> but why doesnt firefox show the rss stream?
+[12-21-2005 10:04:22] [#ezpublish] <kracker> i mean last time i looked it was only a (nothing to see here move along page :D)
+[12-21-2005 10:04:24] [#ezpublish] <Katana`> indeed why
+[12-21-2005 10:04:53] [#ezpublish] <buz> or more importantly, WHERE does it show rss streams in 1.5? I cant see the icon on slashdot either
+[12-21-2005 10:04:58] [#ezpublish] <buz> and it surely displayed it there, before
+[12-21-2005 10:05:48] [#ezpublish] <buz> mhh where's your blog, katana
+[12-21-2005 10:06:04] [#ezpublish] <Katana`> not there yet, I have to organize it a little better
+[12-21-2005 10:06:07] [#ezpublish] <Katana`> but i'll do it :)
+[12-21-2005 10:06:14] [#ezpublish] <buz> oh mine isnt organized in any fashion lol
+[12-21-2005 10:06:33] [#ezpublish] <kracker> heh, sounds like what i thought after hearing them asking for feeds :)
+[12-21-2005 10:06:53] [#ezpublish] <Katana`> when I use it a little i'll add it :)
+[12-21-2005 10:08:37] -!- tobyS [n=dotxp@dslb-084-061-151-015.pools.arcor-ip.net] has joined #ezpublish
+[12-21-2005 10:09:41] [#ezpublish] <buz> http://www.channelregister.co.uk/2005/12/21/bittorrent_botnet_attack/ neat
+[12-21-2005 10:09:45] [#ezpublish] <buz> more seeds
+[12-21-2005 10:10:34] [#ezpublish] <kracker> heh, i thought that was really funny news
+[12-21-2005 10:10:52] [#ezpublish] <buz> now someone please hack the machine of a judge and do that
+[12-21-2005 10:11:04] [#ezpublish] <buz> or better even, some politician critter
+[12-21-2005 10:12:48] [#ezpublish] <buz> (even more evil: install that on your arch enemies machine and have it scour the net for kiddie pr0n)
+[12-21-2005 10:21:33] [#ezpublish] <Katana`> :)
+[12-21-2005 10:34:12] [#ezpublish] <buz> anybody know how much faster ez is on linux 2.6.X  as opposed to 2.4.X?
+[12-21-2005 10:35:46] [#ezpublish] <SEAwolfx> the difference can only be in kernel-scheduling IMHO? but how much faster ez then is, i dont know.
+[12-21-2005 10:36:01] [#ezpublish] <buz> na lot of optimization i believe
+[12-21-2005 10:36:23] [#ezpublish] <buz> i wish i had one of those neat new 32thread per core suns
+[12-21-2005 10:36:25] [#ezpublish] <Katana`> pff done upgrading 2 eZ 3.6 sites to eZ 3.7
+[12-21-2005 10:36:29] [#ezpublish] <Katana`> patches included
+[12-21-2005 10:36:44] [#ezpublish] <SEAwolfx> buz: ;)
+[12-21-2005 10:36:49] [#ezpublish] <buz> mhh and they were offline the past 24h=
+[12-21-2005 10:36:50] [#ezpublish] <buz> ?
+[12-21-2005 10:37:10] [#ezpublish] <buz> SEAwolfx: arent even that expensie. the 24thread entry level model starts at 3000USD
+[12-21-2005 10:37:56] [#ezpublish] <buz> on other notes, look at the logo in the lower two boxes on http://ch.sun.com/d/promotions/coolthreads/index.html
+[12-21-2005 10:38:07] [#ezpublish] <buz> right next to Sun Fire? T1000
+[12-21-2005 10:39:30] [#ezpublish] <SEAwolfx> indeed, thread-handling is also involved.
+[12-21-2005 10:40:23] [#ezpublish] <buz> tho i do wonder how page generation times for ez would be on that for single clients
+[12-21-2005 10:40:29] [#ezpublish] <buz> each thread can't be terribly fast
+[12-21-2005 10:40:43] [#ezpublish] <buz> but you should be able to handle a lot of concurrent clietns
+[12-21-2005 10:41:23] [#ezpublish] <buz> solaris 10 supposedly has gotten pretty fast, too
+[12-21-2005 10:42:05] -!- hovik [n=hovik@popeye.ez.no] has quit [Read error: 113 (No route to host)]
+[12-21-2005 10:46:19] [#ezpublish] <SEAwolfx> buz: hmmm .. scheduling generally refers to process-scheduling, i/o scheduling and cpu-scheduling which doesnt face the handling on threads of processes. right?
+[12-21-2005 10:46:37] [#ezpublish] <SEAwolfx> s/on/of/
+[12-21-2005 10:46:44] [#ezpublish] <buz> mhh not a computer scientist
+[12-21-2005 10:46:49] [#ezpublish] <buz> but likely, yes
+[12-21-2005 10:50:26] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has joined #ezpublish
+[12-21-2005 11:00:14] [#ezpublish] <Katana`> i'm off cya
+[12-21-2005 11:05:07] [#ezpublish] <buz> mhh one of the institutes at my uni is looking for a webguy
+[12-21-2005 11:05:36] [#ezpublish] <buz> pay is soso, but it's one of the two on my list where i could perhaps do a phd if i ever decide to do one
+[12-21-2005 11:08:10] [#ezpublish] <DiGiTa|_> hey, how can i set an indexpage with a pathprefix
+[12-21-2005 11:09:56] [#ezpublish] <DiGiTa|_> should i set an override ?
+[12-21-2005 11:10:11] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 104 (Connection reset by peer)]
+[12-21-2005 11:10:13] [#ezpublish] <DiGiTa|_> i think that indexpage didn't work with a pathprefix
+[12-21-2005 11:10:40] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-21-2005 11:14:41] [#ezpublish] <DiGiTa|_> hey buz !
+[12-21-2005 11:14:45] [#ezpublish] <buz> what
+[12-21-2005 11:14:53] [#ezpublish] <DiGiTa|_> did you see my question ?
+[12-21-2005 11:15:03] [#ezpublish] <buz> i dont get what you want?
+[12-21-2005 11:15:21] [#ezpublish] <DiGiTa|_> well i set a pathprefix on my siteacess
+[12-21-2005 11:15:32] [#ezpublish] <buz> mhh ok
+[12-21-2005 11:15:47] [#ezpublish] <DiGiTa|_> and i need to set an indexpage for this siteacess
+[12-21-2005 11:15:47] [#ezpublish] <buz> and now what's do you want to do
+[12-21-2005 11:15:49] [#ezpublish] <buz> index page like how
+[12-21-2005 11:16:13] [#ezpublish] <DiGiTa|_> well when you type : www.mysite.com, the user will get the indexpage
+[12-21-2005 11:17:11] [#ezpublish] <buz> mhh do an override based on the node of the frontpage?
+[12-21-2005 11:17:22] [#ezpublish] <buz> or patch mod_rewrite
+[12-21-2005 11:17:42] [#ezpublish] <buz> so that / is redirected to index.html or some such
+[12-21-2005 11:17:45] [#ezpublish] <DiGiTa|_> yeah i was thinking about an override
+[12-21-2005 11:18:06] [#ezpublish] <DiGiTa|_> so it's normal that indexpage didn't work ?
+[12-21-2005 11:18:15] [#ezpublish] <buz> mod_rewrite overrides it
+[12-21-2005 11:21:29] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-21-2005 11:42:45] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[12-21-2005 12:06:39] -!- ordna1 [n=ordnas@p549D6A3C.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-21-2005 12:09:03] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 110 (Connection timed out)]
+[12-21-2005 12:11:14] [#ezpublish] <buz> that looks neat: http://ez.no/community/contribs/applications/geoposition
+[12-21-2005 12:13:29] [#ezpublish] <buz> do i understand that correctly: workflow events do something (in essence, they are the ACTIOn being taken) after being triggered by a trigger?
+[12-21-2005 12:22:45] Diconnected. Sleeping for 2 second(s).
+[12-21-2005 12:22:47] >> Connecting to irc.freenode.net:6667
+[12-21-2005 12:22:51] >> Connected to irc.freenode.net:6667, registering...
+[12-21-2005 12:23:01] >> Attempting to join channels: #ezpublish
+[12-21-2005 12:23:01] >> Successfully registered. Nick is: ezlog
+[12-21-2005 12:23:01] -!- There are 11367 listed and 11002 unlisted users on 20 servers
+[12-21-2005 12:23:01] -!- 29 flagged staff members
+[12-21-2005 12:23:01] -!- 9559 channels formed
+[12-21-2005 12:23:01] -!- I have 7363 clients and 0 servers
+[12-21-2005 12:23:01] -!- Current local  users: 7363  Max: 7363
+[12-21-2005 12:23:01] -!- Current global users: 22369  Max: 26524
+[12-21-2005 12:23:01] -!- Highest connection count: 7363 (7362 clients) (80676 since server was (re)started)
+[12-21-2005 12:23:01] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[12-21-2005 12:23:01] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/news/community_newsletter_02_12_2005 | http://ez.no/community/articles/an_introduction_to_ez_components
+[12-21-2005 12:23:01] -!- Topic set by kracker [@] [Fri, 16 Dec 2005 22:42:08 -0600]
+[12-21-2005 12:24:04] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[12-21-2005 12:24:04] [notice(freenode-connect)] VERSION IQ 0.9.3
+[12-21-2005 12:24:04] (unmatched::raw477) :kornbluth.freenode.net 477 ezlog #ezpublish :[freenode-info] If you're at a conference, please contact freenode staff to make sure we've made special allowance for many users coming into our network from a single internet address ( http://freenode.net/faq.shtml#gettinghelp ). Private messages from unregistered users are currently blocked, except to network staff, services and participating registered users ( http://freenode.net/faq.shtml#privmsg )... Thanks!
+[12-21-2005 12:27:45] [#ezpublish] <kracker> very neat indeed
+[12-21-2005 12:27:59] [#ezpublish] <buz> of course using the google maps api would be neater even
+[12-21-2005 12:37:28] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-21-2005 12:39:53] [#ezpublish] <kracker> quite
+[12-21-2005 12:40:07] [#ezpublish] <_buz> http://ez.no/community/forum/general/planetezpublish_org/(offset)/20#msg90251
+[12-21-2005 12:40:14] [#ezpublish] <_buz> really, the ffse....
+[12-21-2005 12:40:26] [#ezpublish] <kracker> infact there are a number of google's api(s) which would make very interesting extensions
+[12-21-2005 12:40:34] [#ezpublish] <_buz> google base
+[12-21-2005 12:40:44] [#ezpublish] <kracker> google translator
+[12-21-2005 12:40:58] [#ezpublish] <_buz> i'd stay away from that
+[12-21-2005 12:41:12] [#ezpublish] <kracker> oh?
+[12-21-2005 12:41:38] [#ezpublish] <kracker> why is that?
+[12-21-2005 12:42:56] [#ezpublish] <_buz> like all computer translations, it's stimply lousy
+[12-21-2005 12:43:09] [#ezpublish] <_buz> anyone who wants to use that crap should do so consciously
+[12-21-2005 12:44:27] [#ezpublish] <kracker> heh
+[12-21-2005 12:44:29] [#ezpublish] <kracker> nods
+[12-21-2005 12:47:03] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[12-21-2005 12:47:10] [#ezpublish] <kracker> hey ls
+[12-21-2005 12:47:25] [#ezpublish] <kracker> saw this today and laughed
+[12-21-2005 12:47:26] [#ezpublish] <kracker> http://www.kriskrug.com/?cat=48
+[12-21-2005 12:49:22] [#ezpublish] <ls[eZ]> hi
+[12-21-2005 12:50:04] -!- ls[eZ] is now known as luke
+[12-21-2005 12:50:47] [#ezpublish] <kracker> so luke will you say (at least) one negative thing about that extension i previewed a while back (eZ authorize)
+[12-21-2005 12:51:01] [#ezpublish] <_buz> mhh we need an ez girl then
+[12-21-2005 12:51:11] [#ezpublish] <_buz> some blonde scandinavian would be fitting
+[12-21-2005 12:51:15] [#ezpublish] <luke> damn, I did not have time, so busy
+[12-21-2005 12:51:16] [#ezpublish] <kracker> heh, you said ... eZ girl
+[12-21-2005 12:51:42] [#ezpublish] <_buz> hihihi
+[12-21-2005 12:51:48] [#ezpublish] <_buz> yeah that would be aplus
+[12-21-2005 12:52:03] [#ezpublish] <_buz> maybe with a dead raven on the picture
+[12-21-2005 12:53:00] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[12-21-2005 12:53:48] [#ezpublish] <kracker> luke, alright, thanks for being honest man
+[12-21-2005 12:54:11] [#ezpublish] <_buz> anyone wanna mail the fsfe
+[12-21-2005 12:54:37] [#ezpublish] <kracker> eZ systems did the site, they should be able to ask the right people
+[12-21-2005 12:54:55] [#ezpublish] <kracker> see ya guys l8r i have to disconnect and go run errands back in the real world ..
+[12-21-2005 12:55:08] [#ezpublish] <luke> _buz: I need to find time and pack it, I will be available fro community
+[12-21-2005 12:55:32] [#ezpublish] <_buz> lol i didnt knew that
+[12-21-2005 12:56:38] [#ezpublish] <luke> so busy now, I will have vacation since 27 to the end of new year, so it will be availabe after new year
+[12-21-2005 12:57:02] [#ezpublish] <luke> end of this year*
+[12-21-2005 12:57:10] [#ezpublish] <_buz> i figured
+[12-21-2005 12:57:10] -!- tobmaster [n=tobmaste@dslb-084-061-006-069.pools.arcor-ip.net] has joined #ezpublish
+[12-21-2005 12:57:27] [#ezpublish] <_buz> tho i'd immediately sign a contract with ez with that amount of holidays ;)
+[12-21-2005 13:02:46] -lilo:$*- [Global Notice] Hi all. A few minutes ago, we experienced some server problems due to configuration issues with the current scale of spambot filtering. We've made configuration changes and we believe we should be in good shape. We'll keep you posted on anything further that may need to be done, and hopefully the issues are resolved for now.
+[12-21-2005 13:03:04] -lilo:$*- [Global Notice] Thank for your patience, and thank you for using freenode. Have a great evening!
+[12-21-2005 13:08:54] -!- luke [n=ls@unregister049205219081.c205.msk.pl] has quit [Remote closed the connection]
+[12-21-2005 13:27:16] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-21-2005 13:51:39] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[12-21-2005 14:15:54] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[12-21-2005 14:23:39] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[12-21-2005 14:54:49] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 110 (Connection timed out)]
+[12-21-2005 15:18:07] -!- ez_schroeder [n=kvirc@p50908F0B.dip0.t-ipconnect.de] has joined #ezpublish
+[12-21-2005 15:20:47] [#ezpublish] <tobmaster> wooooah
+[12-21-2005 15:20:55] [#ezpublish] <tobmaster> ez_schroeder: you here on vacation?!?!
+[12-21-2005 15:21:00] [#ezpublish] <tobmaster> are you crazy?!?!? :)
+[12-21-2005 15:21:03] [#ezpublish] <tobmaster> ;)
+[12-21-2005 15:21:05] [#ezpublish] <ez_schroeder> hehe
+[12-21-2005 15:21:43] [#ezpublish] <ez_schroeder> Just here for shopping the last chrismas gifts
+[12-21-2005 15:23:23] [#ezpublish] <tobmaster> hehe in the ez channel?
+[12-21-2005 15:23:44] [#ezpublish] <tobmaster> $channel->order('christmas gift');
+[12-21-2005 15:23:50] [#ezpublish] <tobmaster> hmm didnt work ;)
+[12-21-2005 15:25:01] [#ezpublish] <ez_schroeder> hehe
+[12-21-2005 15:25:14] [#ezpublish] <_buz> that would be too good to be true
+[12-21-2005 15:25:28] [#ezpublish] <tobmaster> hmmm let me think
+[12-21-2005 15:25:52] [#ezpublish] <tobmaster> ok i think i could take kores php bot and provide an api in ezp shop. then thats no problem
+[12-21-2005 15:26:02] [#ezpublish] <tobmaster> should be about 1h work :)
+[12-21-2005 15:27:05] [#ezpublish] <_buz> but how about the AI that knows WHAt to buy
+[12-21-2005 15:27:12] [#ezpublish] <_buz> THAT's the real issue at stake
+[12-21-2005 15:28:32] [#ezpublish] <tobmaster> not really
+[12-21-2005 15:28:43] [#ezpublish] <_buz> in my case it is
+[12-21-2005 15:28:52] [#ezpublish] <tobmaster> we could provide $channel->shop->list_items();
+[12-21-2005 15:28:54] [#ezpublish] <_buz> getting the stuff is much easier than figuring out what to get
+[12-21-2005 15:29:17] [#ezpublish] <tobmaster> ah sure
+[12-21-2005 15:29:29] [#ezpublish] <tobmaster> hmm then we must have a second parameter
+[12-21-2005 15:29:40] [#ezpublish] <_buz> $giftReceiver
+[12-21-2005 15:30:00] [#ezpublish] <tobmaster> $channel->order('christmas gift','geek'); //send outs something from thinkgeek to the user
+[12-21-2005 15:30:22] [#ezpublish] <_buz> how about christmas gift, 'mother'
+[12-21-2005 15:30:33] [#ezpublish] <tobmaster> $channel->order('christmas gift','woman'); //removes $money from $user and adds $money to $woman
+[12-21-2005 15:30:46] [#ezpublish] <tobmaster> hmm mother......
+[12-21-2005 15:31:03] [#ezpublish] <tobmaster> ok thats hard. but i think for your mother you should search for yourself ;)
+[12-21-2005 15:35:11] -!- tobmaster [n=tobmaste@dslb-084-061-006-069.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[12-21-2005 15:48:24] -!- _buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-21-2005 15:49:37] -!- ez_schroeder [n=kvirc@p50908F0B.dip0.t-ipconnect.de] has quit ["KVIrc 3.2.0 'Realia'"]
+[12-21-2005 16:01:23] [#ezpublish] <DiGiTa|_> strange thins
+[12-21-2005 16:01:31] [#ezpublish] <DiGiTa|_> thing
+[12-21-2005 16:10:24] -!- DiGiTa|_ [n=guillaum@84.4.40.14] has quit [Read error: 104 (Connection reset by peer)]
+[12-21-2005 16:14:29] -!- DiGiTa|_ [n=guillaum@84.4.42.108] has joined #ezpublish
+[12-21-2005 16:56:28] -!- DiGiTa|_ [n=guillaum@84.4.42.108] has quit []
+[12-21-2005 17:07:35] [#ezpublish] <SEAwolfx> re
+[12-21-2005 17:08:40] -!- kore_ [n=lordhong@essn-d9bd4c83.pool.mediaWays.net] has joined #ezpublish
+[12-21-2005 17:22:09] -!- kore_ [n=lordhong@essn-d9bd4c83.pool.mediaWays.net] has quit []
+[12-21-2005 19:13:14] -lilo:$*- [Global Notice] Good morning, everyone. We'll be restarting a number of servers later this morning, and the restarts will affect most of our users. For more information, please see the news page: http://freenode.net/news.shtml . Thanks for your patience, and thank you for using freenode!
+[12-21-2005 19:19:47] [#ezpublish] <kracker> Sage Francis - A Healthy Distrust - Sun vs. Moon
+[12-21-2005 22:23:38] -!- SEAwolfx_ [n=mike@tor/session/x-ac35968b83e1e0bd] has joined #ezpublish

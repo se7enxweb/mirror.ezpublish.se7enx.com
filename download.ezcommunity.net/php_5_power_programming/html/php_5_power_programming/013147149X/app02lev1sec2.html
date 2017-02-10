@@ -1,0 +1,72 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section B.2.&nbsp; Documentation Comments</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app02lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app02lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app02lev1sec2"></a><h3 class="docSection1Title">B.2. Documentation Comments</h3>
+<p class="docText">The phpDocumentor tool generates documentation of the elements in your sources. The documentation is embedded in the source as comments. Nine distinct types of sections are understood by the tool: global variable, include, constant, function, define, class, variable, method, and page.<a name="app02index04"></a><a name="app02index05"></a></p>
+<p class="docText">Every file inside your PHP project that you're going to process with phpDocumentor should start with a page level <span class="docEmphStrong">docblock</span>, which documents certain aspects (like the author, package name, and so on) of this specific file. A docblock always starts with the sequence <tt>/**</tt>, unlike &quot;normal&quot; comments that usually start with only <tt>/*:</tt><a name="app02index06"></a></p>
+<pre>
+&lt;?php
+/**
+ * Page level docblock
+ * @author Derick Rethans &lt;derick@php.net&gt;
+ * @package Examples
+ */
+</pre><br>
+<p class="docText">After this page-level docblock, which always should exist before any other docblock, you can start documenting the other elements. So, our file continues with something like</P>
+<pre>
+/**
+ * Example element-level docblock for a function
+ *
+ * @return mixed
+ */
+function foo() { }
+</pre><br>
+<p class="docText">Before every element in a docblock, a special formatted tag is placed which will be picked up by the tool. All tags in phpDocumentor comments begin with an <tt>@</tt>. The general format of a phpDocumentor comment looks like this:<a name="app02index07"></a><a name="app02index08"></a><a name="app02index09"></a><a name="app02index10"></a></P>
+<pre>
+&lt;?php
+/**
+* Short description
+*
+* Long description
+*
+* @keyword1 parameter1 parameter2 ... parameter n
+* @keyword2 parameter1 parameter2 ... parameter n
+*/
+{ element to describe }
+?&gt;
+</pre><br>
+<p class="docText">The short description should only occupy one line in the comment. A line is everything between the * and newline character sequence. With the short description, you can describe what this specific element does. For example, you can say &quot;Encrypts a file with the Rijndael cipher&quot; or &quot;Makes an MD5 sum of a string.&quot; The short description is used in the index and the contents in the generated documentation.</P>
+<p class="docText">With the long description, you can describe your element in more detail. You can discuss where the documented element originated, which properties it has, and on which things it relies; you can also include examples on how to use the element. The detailed description of the element can include HTML tags. phpDocumentor supports the following HTML tags:<a name="app02index11"></a><a name="app02index12"></a></p>
+<pre>
+&lt;b&gt;
+&lt;br&gt;
+&lt;code&gt;
+&lt;i&gt;
+&lt;kbd&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;pre&gt;
+&lt;samp&gt;
+&lt;var&gt;
+&lt;ul&gt;
+</pre><br>
+<p class="docText">After the descriptive elements in the comment, the keyword section follows. The keyword section describes pre-defined elements of your source code element. The following sections explain all available tags, and because not all keywords are available for every type of element in a source file, it also gives you information in which of the nine different elements the keyword is supported.<a name="app02index13"></a><a name="app02index14"></a></p>
+<ul></UL></TD></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app02lev1sec1.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app02lev1sec3.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

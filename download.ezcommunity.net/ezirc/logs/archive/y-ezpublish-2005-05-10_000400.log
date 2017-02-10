@@ -1,0 +1,51 @@
+[05-08-2005 01:17:33] [#ezpublish] <SEAwolfx> hmmm
+[05-08-2005 02:39:08] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has joined #ezpublish
+[05-08-2005 02:55:27] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has joined #ezpublish
+[05-08-2005 03:18:29] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has quit []
+[05-08-2005 04:09:59] -!- SEAwolfx [~mike@DSL01.212.114.238.186.NEFkom.net] has quit ["leaving"]
+[05-08-2005 04:10:06] -!- SEAwolfx [~mike@DSL01.212.114.238.186.NEFkom.net] has joined #ezpublish
+[05-08-2005 04:31:34] [#ezpublish] <SEAwolfx> hello.
+[05-08-2005 04:52:00] [#ezpublish] <buz> hi
+[05-08-2005 04:58:07] [#ezpublish] <SEAwolfx> buz: dont you have refresh problems after editing an existing article to be displayed uptodate?
+[05-08-2005 04:58:22] [#ezpublish] <buz> mhh i don't think so
+[05-08-2005 04:58:35] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has joined #ezpublish
+[05-08-2005 04:58:35] [#ezpublish] <SEAwolfx> i always have to clear the content-cache.
+[05-08-2005 04:59:21] [#ezpublish] <SEAwolfx> i thought the smart-view-cache does the work for me.
+[05-08-2005 05:00:45] [#ezpublish] <SEAwolfx> buz: did you configure the viewcache.ini?
+[05-08-2005 05:09:10] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has quit []
+[05-08-2005 05:38:03] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-08-2005 05:44:30] -!- SEAwolfx [~mike@DSL01.212.114.238.186.NEFkom.net] has quit [Read error: 54 (Connection reset by peer)]
+[05-08-2005 06:02:22] -!- ordnas [~ordnas@p549DFD7D.dip.t-dialin.net] has joined #ezpublish
+[05-08-2005 07:36:48] -!- ordnas [~ordnas@p549DFD7D.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-08-2005 08:14:17] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-08-2005 09:20:27] -!- ordna1 [~ordnas@p549DFD7D.dip.t-dialin.net] has joined #ezpublish
+[05-08-2005 09:36:25] -!- CoderForLife [~mirc@nr17-66-117-211-149.fuse.net] has joined #ezpublish
+[05-08-2005 09:49:44] -!- ordna1 [~ordnas@p549DFD7D.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-08-2005 09:58:16] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit [Read error: 60 (Operation timed out)]
+[05-08-2005 10:36:00] -!- SachaS [~Sacha@12.44.147.178] has joined #ezpublish
+[05-08-2005 10:38:13] -!- SEAwolfx [~mike@DSL01.83.171.153.132.NEFkom.net] has joined #ezpublish
+[05-08-2005 10:46:08] [#ezpublish] <SEAwolfx> re
+[05-08-2005 11:10:48] [#ezpublish] <CoderForLife> do .. mi
+[05-08-2005 11:15:10] -!- SachaS [~Sacha@12.44.147.178] has left #ezpublish ["Client exiting"]
+[05-08-2005 11:29:56] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-08-2005 11:49:01] -!- luke__ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-08-2005 11:50:00] [#ezpublish] <luke__> hehe doubled luke :)
+[05-08-2005 11:50:25] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[05-08-2005 11:50:30] -!- Katana` [~katana@ankh-morpork.net] has joined #ezpublish
+[05-08-2005 12:04:25] -!- luke__ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-08-2005 12:07:10] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit [Read error: 110 (Connection timed out)]
+[05-08-2005 13:17:23] -!- ordnas [~ordnas@p549DCC17.dip.t-dialin.net] has joined #ezpublish
+[05-08-2005 13:55:53] -!- ordnas [~ordnas@p549DCC17.dip.t-dialin.net] has quit [Read error: 145 (Connection timed out)]
+[05-08-2005 14:27:12] -!- ordnas [~ordnas@p549DCC17.dip.t-dialin.net] has joined #ezpublish
+[05-08-2005 14:27:24] -!- ordnas [~ordnas@p549DCC17.dip.t-dialin.net] has left #ezpublish []
+[05-08-2005 14:45:59] -!- pedro7918 [~chatzilla@80.203.136.63] has joined #ezpublish
+[05-08-2005 14:47:03] -!- pedro7918 [~chatzilla@80.203.136.63] has left #ezpublish []
+[05-08-2005 15:26:51] [#ezpublish] <SEAwolfx> well well well
+[05-08-2005 16:13:24] -!- buz [~buz@217-162-134-214.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-08-2005 16:14:38] -!- ordnas [~ordnas@p549DCC17.dip.t-dialin.net] has joined #ezpublish
+[05-08-2005 16:14:54] -!- ordnas [~ordnas@p549DCC17.dip.t-dialin.net] has quit [Client Quit]
+[05-08-2005 16:24:10] -!- SEAwolfx [~mike@DSL01.83.171.153.132.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[05-08-2005 17:29:31] -!- Katana` [~katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[05-08-2005 19:08:55] -!- CoderForLife [~mirc@nr17-66-117-211-149.fuse.net] has left #ezpublish []
+[05-08-2005 20:10:11] -!- SachaS [~Sacha@12.44.147.178] has joined #ezpublish
+[05-08-2005 20:10:36] -!- SachaS [~Sacha@12.44.147.178] has left #ezpublish ["Client exiting"]

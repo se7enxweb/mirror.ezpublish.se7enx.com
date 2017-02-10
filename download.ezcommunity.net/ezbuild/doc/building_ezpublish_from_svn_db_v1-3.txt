@@ -1,0 +1,639 @@
+
+rm -rf .ezp.cache ; \
+./bin/shell/makedist.sh \
+ --skip-db-schema \
+ --skip-db-check \
+ --skip-db-update \
+--use-svn-server \
+--skip-translation \
+--db-name=ezpublish3svn \
+--db-user=publish \
+--db-password=publish \
+--db-host=localhost \
+--db-type=mysql \
+--mysql-user=publish \
+--mysql-password=publish \
+--mysql-host=localhost \
+ --postgresql-user=postgres \
+--final \
+
+
+#---------------------------------------------#
+
+
+Setting up Build Script (makedist.sh) DB Dependancies
+
+Otherwise you can add these skip options to your build process 
+to avoid doing this setup / work (not all db code is built/finalized)
+
+./bin/shell/makedist.sh  --skip-db-schema --skip-db-check --skip-db-update --skip-sql-generation
+
+
+1) MySQL 
+
+2) PostgreSQL 
+
+a) Show current databases:   \l
+b) Show current users:   \du
+c) Show current tables:   \d
+d) Quit current connection to database (end program):   \q
+e) Show current users w/ permissions:   \du
+f) Access privileges for database "template1":   \dt
+g) describe table attributes:   \d (tablename)
+h) Show SQL Commands / Syntax:   \h (help like)
+i) Show psql SQL Shortcut list:   \? 
+j) psql --help ( cli text gui commands):   psql --help
+k) pg_xxx other psql commands
+
+su postgres
+
+psql template1
+
+CREATE DATABASE ezpublish3svn; 
+commit;
+
+CREATE USER publish;
+commit;
+
+exit; # postgres user, back to normal user session
+
+
+#---------------------------------------------#
+
+Suggestions / Patches
+
+
+1) correct usage of --use-svn-server=(optional)
+
+2) add clear options
+   --clear-build-settings-cache
+    rm -rf .ezp.cache
+
+   --clear-build-root
+
+3) DB options do not silently use the defaults when paramiters are not passed or used or needed, specificly.
+
+--db-port
+--mysql-socket
+
+4) DB option to build only mysql or postgresql say:   --build-db-type=mysql
+   Shouldn't this already exists like: --db-type=mysql
+
+
+5) Editor option ? The default is vi but I use emacs :)
+EDITOR='emacs'
+--editor=emacs|vim|vi (defaults to vi)
+
+
+6) Replace build script (bash) with eZ php / cli replacment
+   At least a php replacement but a true eZ php cli might be nicer?
+   Perhapse it's bash because eZ publish framework would not exist yet to use the eZ php/cli methods ...
+   Yet sub / dependancy scripts do use eZ php / cli (see: ./bin/php/checkdbfiles.php)
+
+
+#---------------------------------------------#
+
+
+Dependancies with static options (svn server / svn options)
+
+1) ./bin/shell/checkdbschema.sh
+
+SCHEMA_URL="http://zev.ez.no/svn/nextgen/versions/$VERSION"
+PREVIOUS_SCHEMA_URL="http://zev.ez.no/svn/nextgen/versions/$VERSION_PREVIOUS"
+
+
+2) ./bin/php/checkdbfiles.php
+
+a) $svn = "svn export http://zev.ez.no/svn/nextgen/stable/$version/update/database '$versionPath'";
+
+b) Always kicks this error ...
+
+ ./bin/php/checkdbfiles.php
+C update/database/mysql/3.4/dbupdate-3.4.5-to-3.4.6.sql
+
+even if the file is removed and updated ... (svn trunk error?)
+
+#---------------------------------------------#
+
+An interesting part of the makedist.sh script is that (just about) all
+paramiters are required (non-optional) and must be passed in order to
+prevent user shell prompting. (Specificly the DB / SVN Options)
+
+#---------------------------------------------#
+
+Another interesting note is that the option   --skip-version-check
+Seems to be required to avoid the dreaded error... WHY?
+
+ERROR:
+
+Checking db update version numbers                         [ Failure ]
+
+************** WARNING **************
+
+There are problems with the db update files
+Run the following command to see what must be fixed
+./bin/php/checkdbfiles.php
+
+************** WARNING **************
+
+[root@labs 3.6]# ./bin/shell/makedist.sh --skip-version-check 
+
+#---------------------------------------------#
+
+Translation up to date check always fails ...
+
+ERROR:
+
+Examining settings directory                               [ Success ]
+Exporting translations                                     [ Success ]
+Processing: [24/24] translations                           [ Success ]
+Validating                                                 [ Failure ]
+The translations are not up to date
+You must update the translations in the repository using the ezlupdate program
+
+
+
+#---------------------------------------------#
+Changelogs:                                                [ Skipped ]
+Extra directories                                          [ Success ]
+Creating and exporting addons                              [ Failure ]
+The creation of addon packages failed
+Run the following command to see what went wrong
+
+./bin/shell/makeaddonpackages.sh --export-path="/tmp/ez-root/ezpublish-3.6.1/packages/addons" --db-type=mysql --ish3svn --db-user=publish --db-password=publish     --db-type=mysql
+
+So instead i just skip ....
+
+ ./bin/shell/makedist.sh --skip-version-check --skip-db-schema  --skip-db-check  --skip-db-update --skip-sql-generation --use-working-copy --skip-translation --skip-addons
+
+
+This set of options created binaries (with cached ...)
+ ./bin/shell/makedist.sh --skip-version-check --skip-db-schema  --skip-db-check  --skip-db-update --skip-sql-generation --use-working-copy --skip-translation --skip-addons
+
+OUTPUT:
+
+
+                                                           [ Success ]
+Applying filters                                           [ Success ]
+Checking SQL files for correctness                         [ Success ]
+Looking for .svn directories                               [ Success ]
+Looking for temp files                                     [ Success ]
+Applying executable properties                             [ Success ]
+Removing non-distribution files                            [ Success ]
+Creating MD5 checksums                                     [ Success ]
+
+ Building extension packages                               [ Skipped ]
+Creating tar.gz file,  /tmp/ez-root/ezpublish-3.6.1.tar.gz
+Creating tar.bz2 file, /tmp/ez-root/ezpublish-3.6.1.tar.bz2
+Creating zip file,     /tmp/ez-root/ezpublish-3.6.1.zip
+
+The following extensions have been packaged:
+
+
+
+#---------------------------------------------#
+
+Yet another Recap 
+
+Options i have to skip to avoid errors ....
+--skip-version-check  /# avoid db / postgres connection errors (first run)
+--skip-db-schema  --skip-db-check  --skip-db-update --skip-sql-generation \ #(just in case? also required)
+--use-working-copy \ #(can't connect to pubsvn reliably?)
+--skip-translation \ #(
+--skip-addons \ # (must skip addons (cause of --skip-version-check + db connection errors )
+
+#---------------------------------------------#
+
+Distribution source files
+
+echo "Distribution source files taken from `$SETCOLOR_DIR`$DIST_SRC`$SETCOLOR_NORMAL`"
+
+if [ "$SVN_EXPORT" == "svn" ]; then
+    echo "All operations are done from SVN server, official builds are possible"
+else
+    echo "All operations are done from working copy (WC), only test builds are possible"
+fi
+
+#---------------------------------------------#
+
+Documentation:
+- Note : The order of arguments and options provided to
+the script ( ./bin/shell/makedist.sh ) are vital to avoiding 
+potential errors aka things not working as desired.
+
+(Expanded Order Paragraph Descriptions and explanations)
+
+#---------------------------------------------#
+
+
+#
+# *****   Copy the distribution files (using SVN property)   *****
+#
+
+if [ -z "$SKIP_CORE_FILES" ]; then
+    echo
+    echo "Copying directories and files"
+    echo -n "`$SETCOLOR_COMMENT`Copying`$SETCOLOR_NORMAL` "
+
+    (cd $DIST_SRC && scan_dir .)
+    echo
+    echo
+fi
+
+
+DIST_SRC
+DEST_ROOT
+
+#---------------------------------------------#
+W/DB OPTIONS? (OLD)
+
+./bin/shell/makedist.sh --db-name=ezpublish3svn --db-user=publish 
+--db-password=publish --db-host=localhost --db-type=mysql --mysql-user=publish
+--mysql-password=publish --mysql-host=localhost  
+--final --with-svn-server=http://pubsvn.ez.no   --with-release=stable/3.6
+
+W/DB OPTIONS? (OK)
+
+./bin/shell/makedist.sh 
+--with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server 
+--skip-version-check --skip-db-schema  --skip-db-check  --skip-db-update 
+--skip-sql-generation --skip-translation --skip-addons
+
+
+W/DB OPTIONS? (OK)
+
+./bin/shell/makedist.sh 
+--with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server 
+--skip-version-check
+--db-name=ezpublish3svn --db-user=publish 
+--db-password=publish --db-host=localhost --db-type=mysql --mysql-user=publish
+--mysql-password=publish --mysql-host=localhost
+
+SVN OPTIONS W/OUT DB OPTIONS?
+
+ ./bin/shell/makedist.sh 
+ --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server 
+ --skip-version-check --skip-db-schema  --skip-db-check  --skip-db-update --skip-sql-generation --skip-translation --skip-addons
+
+
+#---------------------------------------------#
+
+Script Modifications (GETTING SVN SOURCES into temp dir (static dir) + chdir) Worked (THROUGH EXTENTSIONTS + END OF LINE)
+
+./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check --skip-db-schema  --skip-db-check  --skip-db-update --skip-sql-generation --skip-translation --skip-addons
+
+
+#---------------------------------------------#
+W/OUT ADDON SKIP (W/DB SKIPS)
+
+ ./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 
+ --use-svn-server --skip-version-check --skip-db-schema  --skip-db-check  --skip-db-update --skip-sql-generation --skip-translation
+
+./bin/shell/makeaddonpackages.sh --export-path="/tmp/ez-root/ezpublish-3.6.1/packages/addons" --db-type=mysql --db-name=ezpublish3svn --db-user=publish --db-password=publish  --db-host=localhost   --db-type=mysql
+Connecting to DB using mysql://publish:***@localhost/ezpublish3svn
+./bin/shell/makeaddonpackages.sh: line 124: ./ezpm.php: No such file or directory
+
+
+
+I think it errors because it was not in the correct directory (so i edited the makedist.sh to be in the expected directorY)
+
+#---------------------------------------------#
+
+[ -d $TMPDIR ] && rm -rf "$TMPDIR"
+mkdir -p $TMPDIR || exit 1
+
+#---------------------------------------------#
+Without 3.6 dir in $CWD (pre existing)
+---> Errors with the missing dependancy fiels ... hrm?
+
+################
+
+ ./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check
+------------| 3.6
+Creating full release
+Updating ezlupdate                                         [ Failure ]
+Building ezlupdate executable
+
+./bin/shell/common.sh: line 149: cd: support/lupdate-ezpublish3: No such file or directory
+Failed to build ezlupdate automatically
+
+################
+
+ ./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check
+
+#---------------------------------------------#
+[root@labs customized]# ./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check
+------------| 3.6
+Creating full release
+Updating ezlupdate                                         [ Success ]
+Checking out from server pubsvn.ez.no
+Checking out release 3.6
+SVN_PATH=pubsvn.ez.no/nextgen/stable/3.6
+
+Fetching external item into '3.6/share/translations'
+Checked out external at revision 210.
+
+
+Fetching external item into '3.6/share/locale'
+Checked out external at revision 210.
+
+Checked out revision 12225.
+All operations are done from SVN server, official builds are possible
+Distribution source files taken from /tmp/nextgen-3.6
+stable/3.6
+
+stable/3.6
+Connecting to MySQL using mysql://publish:***@localhost
+Connecting to PostgreSQL using postgresql://localhost
+Checking code templates                                    [ Success ]
+Checking syntax of PHP files                               [ Success ]
+Running unit tests                                         [ Success ]
+Checking database schemas                                  [ Failure ]
+The database schema check failed
+Run the following command to find out what is wrong
+./bin/shell/checkdbschema.sh --mysql-user=publish --mysql-password=publish  --mysql-host=localhost    ez_tmp_makedist
+[root@labs customized]# ./bin/shell/checkdbschema.sh --mysql-user=publish --mysql-password=publish  --mysql-host=localhost    ez_tmp_makedist
+Connecting to MySQL using mysql://publish:***@localhost
+Connecting to PostgreSQL using postgresql://localhost
+MySQL: Creating
+Failed to create MySQL database ez_tmp_makedist
+[root@labs customized]# ./bin/shell/checkdbschema.sh --mysql-user=root --mysql-password=$passkey  --mysql-host=localhost    ez_tmp_makedist
+Connecting to MySQL using mysql://root:***@localhost
+Connecting to PostgreSQL using postgresql://localhost
+MySQL: Creating
+Failed to create MySQL database ez_tmp_makedist
+[root@labs customized]# ./bin/shell/checkdbschema.sh --mysql-user=root --mysql-password="$passkey"  --mysql-host=localhost    ez_tmp_makedist
+Connecting to MySQL using mysql://root:***@localhost
+Connecting to PostgreSQL using postgresql://localhost
+MySQL: Creating
+Failed to create MySQL database ez_tmp_makedist
+
+#---------------------------------------------#
+OK so from the above block we learn the the script WANTS to create it's own
+temp database (per mysql/postgres) which means it needs ROOT like db permissions (my users does not have these (jon help me fix))
+
+./bin/shell/checkdbschema.sh --mysql-user=root --mysql-password="$passkey"  --mysql-host=localhost    ez_tmp_makedist
+
+
+So instead i switch to using the root user :P hrmm ....
+
+#---------------------------------------------#
+
+./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check
+
+W/DB OPTIONS? (OK)
+
+./bin/shell/makedist.sh 
+--with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server 
+--skip-version-check
+--db-name=ezpublish3svn --db-user=root 
+--db-password='$passkey' --db-host=localhost --db-type=mysql --mysql-user=root
+--mysql-password='$passkey' --mysql-host=localhost
+
+
+
+
+
+#---------------------------------------------#
+
+./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check --db-name=ezpublish3svn --db-user=root --db-password='$passkey' --db-host=localhost --db-type=mysql --mysql-user=root --mysql-password='$passkey' --mysql-host=localhost
+
+###############
+
+Results in ....
+
+Checking database schemas                                  [ Failure ]
+The database schema check failed
+Run the following command to find out what is wrong
+
+./bin/shell/checkdbschema.sh --mysql-user=root --mysql-password=$passkey  --mysql-host=localhost    ez_tmp_makedist
+
+
+#---------------------------------------------#
+
+Report bugs to <pgsql-bugs@postgresql.org>.
+-bash-3.00$ createuser -adPEe publish
+Enter password for new user:
+Enter it again:
+CREATE USER publish ENCRYPTED PASSWORD 'publish' CREATEDB CREATEUSER;
+CREATE USER
+-bash-3.00$ createuser -adPEe publish
+-bash-3.00$ jos
+-bash: jos: command not found
+-bash-3.00$ jobs
+-bash-3.00$ psql template1
+Welcome to psql 7.4.8, the PostgreSQL interactive terminal.
+
+Type:  \copyright for distribution terms
+       \h for help with SQL commands
+       \? for help on internal slash commands
+       \g or terminate with semicolon to execute query
+       \q to quit
+
+template1=# \du
+              List of database users
+ User name | User ID |         Attributes
+-----------+---------+----------------------------
+ postgres  |       1 | superuser, create database
+ publish   |     100 | superuser, create database
+(2 rows)
+
+#---------------------------------------------#
+
+So this works really good, i think i can run the db script now?
+
+Created MYSQL / Postgres USERS WHO are ROOT LIKE (ALL PRIVS ON SYSTEM, Create / Drop / ETC)
+
+ ./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check --db-name=ezpublish3svn --db-user=root --db-password='$passkey' --db-host=localhost --db-type=mysql --mysql-user=root --mysql-password='$passkey' --mysql-host=localhost --postgresql-user=publish --postgresql-password=publish --postgresql-host=localhost
+
+#---------------------------------------------#
+
+template1=# update pg_shadow set passwd='publish' where usename='publish';
+UPDATE 1
+template1=# update pg_shadow set passwd='publish' where usename='postgres';
+UPDATE 1
+
+########################
+
+ psql template1 -U postgres -W (prompts for user password ::  publish  )
+
+  psql template1 -U publish -W
+########################
+
+./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check --db-name=ezpublish3svn --db-user=root --db-password='$passkey' --db-host=localhost --db-type=mysql --mysql-user=root --mysql-password='$passkey' --mysql-host=localhost --postgresql-user=publish --postgresql-password=publish --postgresql-host=localhost
+
+still errors?
+
+./bin/shell/checkdbschema.sh --mysql-user=root --mysql-password="\$passkey"  --mysql-host=localhost --postgresql-user=publish --postgresql-password="publish" --postgresql-host=localhost  ez_tmp_makedist
+
+
+#---------------------------------------------#
+
+[root@labs 3.6]# ./bin/shell/checkdbschema.sh --mysql-user=root --mysql-password="\$passkey"  --mysql-host=localhost --postgresql-user=publish --postgresql-password="publish" --postgresql-host=localhost  ez_tmp_makedist
+[root@labs 3.6]# pwd
+/tmp/nextgen-3.6/3.6
+[root@labs 3.6]# ./bin/shell/checkdbschema.sh --mysql-user=root --mysql-password="\$passkey"  --mysql-host=localhost --postgresql-user=publish --postgresql-host=localhost  ez_tmp_makedist
+/tmp/nextgen-3.6/3.6
+Connecting to MySQL using mysql://root:***@localhost
+Connecting to PostgreSQL using postgresql://publish@localhost
+MySQL: Creating/tmp/nextgen-3.6/3.6--password=$passkey  -h localhost  create ez_tmp_makedist
+ Initializing
+PostgreSQL: Creating
+createdb -U publish  -h localhost  ez_tmp_makedist
+
+            Creatingpsql -U publish  -h localhost  ez_tmp_makedist
+
+ Initializing
+Validating
+Database schemas did not match, this could mean that one of the database is missing an SQL update
+Check the database difference with
+./bin/php/ezsqldiff.php --source-type=mysql --source-user=root --source-password=$passkey  --source-host=localhost  --match-type=postgresql --match-user=publish   --match-host=localhost  "ez_tmp_makedist" "ez_tmp_makedist"
+[root@labs 3.6]# /bin/php/ezsqldiff.php --source-type=mysql --source-user=root --source-password=$passkey  --source-host=localhost  --match-type=postgresql --match-user=publish   --match-host=localhost  "ez_tmp_makedist" "ez_tmp_makedist"
+-bash: /bin/php/ezsqldiff.php: No such file or directory
+[root@labs 3.6]# ./bin/php/ezsqldiff.php --source-type=mysql --source-user=root --source-password=$passkey  --source-host=localhost  --match-type=postgresql --match-user=publish   --match-host=localhost  "ez_tmp_makedist" "ez_tmp_makedist"
+Could not initialize database:
+* Tried database 'ez_tmp_makedist' at host 'localhost' with user 'root' and with a password
+* Access denied for user 'root'@'localhost' (using password: YES)(1045)
+Failed to load schema from source database
+[root@labs 3.6]# jobs
+[1]+  Stopped                 emacs-nox /var/lib/pgsql/data/pg_hba.conf
+[2]   Stopped                 emacs-nox ~/.pgpass
+[3]-  Stopped                 emacs-nox /var/lib/pgsql/data/postgresql.conf
+
+#---------------------------------------------#
+
+[root@labs customized]# jobs
+[1]   Stopped                 emacs-nox bin/shell/common.sh
+[2]   Stopped                 emacs-nox ./bin/shell/makeaddonpackages.sh
+[4]   Stopped                 grep "PARAM_EZ_MYSQL_ALL" -R bin/ | less
+[5]   Stopped                 grep "MYSQL_PASSWD" -R bin/ | less
+[6]-  Stopped                 emacs-nox bin/shell/checkdbschema.sh
+[7]+  Stopped                 emacs-nox bin/shell/sqlcommon.sh
+
+
+[root@labs dev.com]# jobs
+[1]   Stopped                 emacs-nox customized/bin/shell/makedist.sh
+[2]-  Stopped                 emacs-nox customized/bin/shell/sqlcommon.sh
+[3]+  Stopped                 emacs-nox customized/bin/shell/checkdbschema.sh
+
+
+#---------------------------------------------#
+
+ ./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check --skip-db-schema --db-name=ezpublish3svn --db-user=root --db-password='$passkey' --db-host=localhost --db-type=mysql --mysql-user=root --mysql-password='$passkey' --mysql-host=localhost
+
+Last Run CMD ....
+
+./bin/shell/makedist.sh --with-svn-server=pubsvn.ez.no --with-release=3.6 --use-svn-server --skip-version-check --skip-db-schema --skip-db-update --skip-db-check --db-name=ezpublish3svn --db-user=root --db-password='$passkey' --db-host=localhost --db-type=mysql --mysql-user=root --mysql-password='$passkey' --mysql-host=localhost
+
+
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+
+
+
+
+
+
+
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+
+
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+
+
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+
+
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+
+
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#
+#---------------------------------------------#

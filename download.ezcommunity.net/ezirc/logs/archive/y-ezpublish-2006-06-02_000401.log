@@ -1,0 +1,223 @@
+[05-31-2006 00:22:42] -!- Bedlore [n=me@219-90-212-249.ip.adam.com.au] has joined #ezpublish
+[05-31-2006 01:00:21] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[05-31-2006 01:00:26] [#ezpublish] <philG> hi all
+[05-31-2006 01:30:46] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[05-31-2006 01:43:19] -!- DiGiTa|_ [n=pet2poul@84.4.42.113] has joined #ezpublish
+[05-31-2006 01:45:52] -!- Bedlore [n=me@219-90-212-249.ip.adam.com.au] has quit []
+[05-31-2006 01:47:52] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-31-2006 01:54:50] -!- SEAwolfx [n=SEAwolfx@p5493A834.dip0.t-ipconnect.de] has joined #ezpublish
+[05-31-2006 02:18:58] -!- awormus_ [n=aaron@p54B10D11.dip0.t-ipconnect.de] has joined #ezpublish
+[05-31-2006 02:19:17] -!- kris10an [n=kh@85.19.74.66] has joined #ezpublish
+[05-31-2006 02:22:08] -!- aaronw [n=aaron@p54B1138B.dip0.t-ipconnect.de] has joined #ezpublish
+[05-31-2006 02:34:45] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-31-2006 02:36:14] -!- awormus [n=aaron@p54B1213A.dip0.t-ipconnect.de] has quit [Connection timed out]
+[05-31-2006 02:37:30] -!- elephantMan [n=elephant@250.202.99-84.rev.gaoland.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-31-2006 02:38:40] -!- awormus_ [n=aaron@p54B10D11.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-31-2006 02:53:48] -!- elephantMan [n=elephant@13.205.103-84.rev.gaoland.net] has joined #ezpublish
+[05-31-2006 03:07:50] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[05-31-2006 03:46:17] [#ezpublish] <kris10an> Tidemann: the bug is fixed
+[05-31-2006 03:59:45] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-31-2006 04:09:45] -!- aaronw [n=aaron@p54B1138B.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-31-2006 04:28:57] -!- awormus [n=aaron@p54B1384F.dip0.t-ipconnect.de] has joined #ezpublish
+[05-31-2006 04:29:22] -!- zr1 [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has joined #ezpublish
+[05-31-2006 04:29:40] [#ezpublish] <zr1> morning, oh wise ones :)
+[05-31-2006 04:30:50] [#ezpublish] <zr1> can you think of any place with example how to change vat type of price datatype, in code?
+[05-31-2006 04:31:14] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-31-2006 04:46:25] -!- EsP [n=esp@213.160.232.46] has joined #ezpublish
+[05-31-2006 04:46:44] [#ezpublish] <EsP> Hi!
+[05-31-2006 04:47:07] [#ezpublish] <EsP> Quick question: How can I output just the url of an image?
+[05-31-2006 04:47:51] [#ezpublish] <EsP> I can't get this way to work: <img src="{$node.object.data_map.bilde2.content[large].full_path}" />
+[05-31-2006 04:49:31] [#ezpublish] <zr1> look in image overrides, full, embed etc
+[05-31-2006 04:54:19] [#ezpublish] <DiGiTa|_> that's not right
+[05-31-2006 04:55:23] [#ezpublish] <DiGiTa|_> $node.data_map.bilde2.content.large.full_path
+[05-31-2006 04:56:35] -!- jota_ [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-31-2006 04:56:57] [#ezpublish] <EsP> hm
+[05-31-2006 04:57:34] [#ezpublish] <EsP> Still doesn't work
+[05-31-2006 04:59:04] [#ezpublish] <zr1> you sure that node you want is in $node ?
+[05-31-2006 04:59:22] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit [Read error: 110 (Connection timed out)]
+[05-31-2006 04:59:53] [#ezpublish] <EsP> I think so.
+[05-31-2006 04:59:57] [#ezpublish] <EsP> {attribute_view_gui image_class=refbilde attribute=$node.object.data_map.bilde2.content.data_map.image}
+[05-31-2006 05:00:00] [#ezpublish] <EsP> does work
+[05-31-2006 05:00:28] [#ezpublish] <EsP> But it's not what I want
+[05-31-2006 05:00:51] [#ezpublish] <zr1> arent you missing .object. in there?
+[05-31-2006 05:02:37] [#ezpublish] <EsP> doesn't work either way
+[05-31-2006 05:02:40] [#ezpublish] <kalooni> what about this: $img=$node.object.data_map.image.content.data_map.image.content.original.url
+[05-31-2006 05:03:26] [#ezpublish] <kalooni> change original by the variation you want
+[05-31-2006 05:04:22] [#ezpublish] <EsP> I think that last one works. :)
+[05-31-2006 05:05:15] [#ezpublish] <EsP> Thank you very much!
+[05-31-2006 05:05:29] [#ezpublish] <kalooni> you are welcome
+[05-31-2006 05:05:36] [#ezpublish] <zr1> advice is beerware :)
+[05-31-2006 05:05:47] [#ezpublish] <EsP> Anytime!
+[05-31-2006 05:06:01] [#ezpublish] <zr1> june 22 is the time i think
+[05-31-2006 05:06:15] [#ezpublish] <EsP> Are you going?
+[05-31-2006 05:06:26] [#ezpublish] <zr1> yeah
+[05-31-2006 05:06:34] [#ezpublish] <kalooni> unfortunatly I won't be there ... it was planned but ... $$$ missing
+[05-31-2006 05:06:55] [#ezpublish] <zr1> dang :(
+[05-31-2006 05:06:58] [#ezpublish] <EsP> I'll try too, but I have so much work due.
+[05-31-2006 05:07:08] [#ezpublish] <zr1> it is way, way too expensive, thats for sure
+[05-31-2006 05:08:25] [#ezpublish] <EsP> I don't think it's too bad. The price for the new newsletter module is too expensive though. Blew me away. :)
+[05-31-2006 05:09:02] [#ezpublish] <zr1> what module is that?
+[05-31-2006 05:10:04] [#ezpublish] <EsP> http://ez.no/products/solutions/newsletter
+[05-31-2006 05:10:46] [#ezpublish] <EsP> $9900 is a bit pricey
+[05-31-2006 05:10:50] [#ezpublish] <zr1> FUUUUCK!
+[05-31-2006 05:10:55] [#ezpublish] <zr1> sorry
+[05-31-2006 05:11:13] [#ezpublish] <EsP> My reaction too :)
+[05-31-2006 05:11:28] [#ezpublish] <zr1> i hope it comes in gold box
+[05-31-2006 05:12:51] [#ezpublish] <zr1> delivered by nekkid girl, etc :P
+[05-31-2006 05:13:01] [#ezpublish] <EsP> Very few customers can afford such an investment. I usually recommend using campaignmonitor.com instead.
+[05-31-2006 05:14:25] [#ezpublish] <zr1> Parse error:  syntax error, unexpected $end in /home/ezno/www/var/ezno/cache/wildcard/wildcard_46f5b47f82bd7a8b1c2079014c0fa74d.php on line 266
+[05-31-2006 05:20:33] [#ezpublish] <kris10an> Included in the Newsletter solution
+[05-31-2006 05:20:33] [#ezpublish] <kris10an> 1 year Support based on eZ publish Network Silver
+[05-31-2006 05:20:33] [#ezpublish] <kris10an> Remote installation and setup
+[05-31-2006 05:20:34] [#ezpublish] <kris10an> One individual E-mail Newsletter Template based on customer HTML-Template
+[05-31-2006 05:20:34] [#ezpublish] <kris10an> Import of CSV-based address list
+[05-31-2006 05:20:34] [#ezpublish] <kris10an> User Handbook
+[05-31-2006 05:23:05] [#ezpublish] <EsP> It's not for me or any of my current customers anyway. Not even with the handbook. ;)
+[05-31-2006 05:23:17] [#ezpublish] <kris10an> http://ez.no/products/solutions/newsletter/faq
+[05-31-2006 05:24:20] [#ezpublish] <zr1> relax kris10an, nobody is doubting that it is good :)
+[05-31-2006 05:25:05] [#ezpublish] <kris10an> hehe.. i got that reaction when i saw the price aswelll....
+[05-31-2006 05:25:20] [#ezpublish] <kris10an> it took a while before i saw that it included more....
+[05-31-2006 05:25:37] [#ezpublish] <zr1> from the description lots of custom code, not your usual template/class stuff
+[05-31-2006 05:25:40] [#ezpublish] <kris10an> than just the soultion
+[05-31-2006 05:26:08] [#ezpublish] <kris10an> hmm.. strike that.. not just the code
+[05-31-2006 05:51:10] [#ezpublish] <zr1> i am using $price->setAttribute( 'selected_vat_type', $vatType->attribute( 'id' ) ) to set which vat price uses, however seems not to work, when i go editing later vat is still at first option
+[05-31-2006 05:51:21] [#ezpublish] <zr1> what gives?
+[05-31-2006 06:58:09] -!- SEAwolfx [n=SEAwolfx@p5493A834.dip0.t-ipconnect.de] has quit [Connection timed out]
+[05-31-2006 06:59:24] -!- DiGiTa|_ [n=pet2poul@84.4.42.113] has quit []
+[05-31-2006 07:17:40] -!- awormus [n=aaron@p54B1384F.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-31-2006 07:42:45] -!- kris10an^ [n=kh@85.19.74.66] has joined #ezpublish
+[05-31-2006 07:44:58] -!- kris10an [n=kh@85.19.74.66] has quit [Read error: 110 (Connection timed out)]
+[05-31-2006 07:55:59] [#ezpublish] <kalooni> hi
+[05-31-2006 07:56:12] [#ezpublish] <kalooni> context: ezpublish 3.7.2
+[05-31-2006 07:56:50] [#ezpublish] <kalooni> I want that user that login be redirected to their account page /user/edit/{$user.id}
+[05-31-2006 07:56:54] [#ezpublish] <kalooni> how should I do this?
+[05-31-2006 07:57:59] [#ezpublish] <zr1> cant use frontpage setting directly..
+[05-31-2006 07:58:46] [#ezpublish] <kalooni> for the moment each time a user login he is redirected to the page he was before login
+[05-31-2006 07:59:06] [#ezpublish] <zr1> use the redirect template function, its in contributions
+[05-31-2006 07:59:40] [#ezpublish] <kalooni> I know this contributions
+[05-31-2006 07:59:46] [#ezpublish] <kalooni> did not think about it ;)
+[05-31-2006 07:59:55] [#ezpublish] <zr1> then you can add some logic in pagelayout to redirect if just logged in
+[05-31-2006 08:04:11] [#ezpublish] <zr1> what is the status of pdf-export of utf-8 content?
+[05-31-2006 08:04:13] [#ezpublish] <zr1> impossible?
+[05-31-2006 08:09:06] [#ezpublish] <kalooni> finally I have hacked the kernel/user/login.php file
+[05-31-2006 08:09:45] [#ezpublish] <EsP> You are a hacker then?
+[05-31-2006 08:11:22] [#ezpublish] <kalooni> sometimes it is easier to modify the kernel than using extensions
+[05-31-2006 08:11:40] [#ezpublish] <kalooni> as extensions doesn't allow you to extends existing modules
+[05-31-2006 08:20:48] -!- jota_ [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-31-2006 08:29:13] [#ezpublish] <zr1> utf-8, pdf export, anyone? :(
+[05-31-2006 08:31:37] [#ezpublish] <zr1> i have put in patch like described in
+[05-31-2006 08:31:37] [#ezpublish] <zr1> http://ez.no/community/bugs/pdf_content_pdf_problem_with_utf_8_and_or_german_umlauts
+[05-31-2006 08:31:37] [#ezpublish] <zr1> but not sure what i should set for OutputCharset and anything i try either changes accented chars to question marks or totally removes
+[05-31-2006 08:37:14] -!- yotaff [n=seb@acamaya.rain.fr] has joined #ezpublish
+[05-31-2006 08:40:22] -!- EsP [n=esp@213.160.232.46] has left #ezpublish []
+[05-31-2006 09:20:26] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[05-31-2006 09:48:36] -!- Allman [n=allman@ti132110a340-2407.bb.online.no] has joined #ezpublish
+[05-31-2006 09:55:03] -!- yotaff_ [n=seb@acamaya.rain.fr] has joined #ezpublish
+[05-31-2006 09:55:15] -!- yotaff [n=seb@acamaya.rain.fr] has quit [Read error: 104 (Connection reset by peer)]
+[05-31-2006 09:55:29] -!- yotaff_ is now known as yotaff
+[05-31-2006 10:27:22] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[05-31-2006 10:28:09] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Leaving"]
+[05-31-2006 10:52:07] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit [Remote closed the connection]
+[05-31-2006 10:52:09] -!- Allman [n=allman@ti132110a340-2407.bb.online.no] has quit [Read error: 104 (Connection reset by peer)]
+[05-31-2006 10:57:02] -!- _hovik [n=hovik@173.80-203-136.nextgentel.com] has joined #ezpublish
+[05-31-2006 11:15:11] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-31-2006 11:16:27] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Remote closed the connection]
+[05-31-2006 11:43:08] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-31-2006 12:19:46] [#ezpublish] <zr1> germans, rise hands!
+[05-31-2006 12:19:56] [#ezpublish] <buz> just dont use the right one
+[05-31-2006 12:20:46] [#ezpublish] <zr1> wrong one is fine by me.. need help with pdf problem, hilfe!
+[05-31-2006 12:20:58] [#ezpublish] <buz> right as in opposite of left
+[05-31-2006 12:21:07] [#ezpublish] <zr1> oh, right
+[05-31-2006 12:21:08] [#ezpublish] <xbit> hehe
+[05-31-2006 12:21:09] [#ezpublish] <buz> that would have certain connotations there
+[05-31-2006 12:21:13] [#ezpublish] <zr1> as, right :P
+[05-31-2006 12:21:22] [#ezpublish] <buz> maybe i can help, at least i DO speak german ;)
+[05-31-2006 12:21:53] [#ezpublish] <zr1> himmeldonnerwetter: utf-8 site, pdf export
+[05-31-2006 12:22:04] [#ezpublish] <buz> cant help with that
+[05-31-2006 12:22:13] [#ezpublish] <zr1> i have put in patch like described in http://ez.no/community/bugs/pdf_content_pdf_problem_with_utf_8_and_or_german_umlauts
+[05-31-2006 12:22:33] [#ezpublish] <zr1> but not sure what i should set for OutputCharset and anything i try either changes accented chars to question marks or totally removes
+[05-31-2006 12:37:30] -!- SEAwolfx [n=SEAwolfx@p5493A6B8.dip0.t-ipconnect.de] has joined #ezpublish
+[05-31-2006 12:58:02] -!- yotaff [n=seb@acamaya.rain.fr] has quit ["Quitte"]
+[05-31-2006 12:58:40] -!- Allman [n=allman@ti132110a340-2407.bb.online.no] has joined #ezpublish
+[05-31-2006 13:09:48] -!- _buz [n=buz@dhcp-203-31-vpn.unizh.ch] has joined #ezpublish
+[05-31-2006 13:10:34] -!- _ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[05-31-2006 13:10:46] [#ezpublish] <_ls> evening
+[05-31-2006 13:11:22] [#ezpublish] <Allman> hi
+[05-31-2006 13:13:19] -!- _ls is now known as ls_
+[05-31-2006 13:25:03] -!- Enur [n=asd@249.80-203-121.nextgentel.com] has joined #ezpublish
+[05-31-2006 13:27:01] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[05-31-2006 13:27:26] -!- _buz is now known as buz
+[05-31-2006 13:28:41] [#ezpublish] <Enur> I was thinking of developing a site with ezpublish, i was shocked when i saw that you demand a license for the wysiwyg editor. Without an online editor you got nothing, so you could just charge people for downloading.
+[05-31-2006 13:29:02] [#ezpublish] <Allman> listen pal, you do not need the OE to use eZp
+[05-31-2006 13:29:18] [#ezpublish] <Allman> I personally never use it, because it is faster to just type in the markup directly..
+[05-31-2006 13:29:32] [#ezpublish] <buz> and theres free replacements for it
+[05-31-2006 13:29:36] [#ezpublish] <buz> (i must know, i wrote one)
+[05-31-2006 13:29:37] [#ezpublish] <Allman> exactly
+[05-31-2006 13:29:40] [#ezpublish] <Enur> like ?
+[05-31-2006 13:29:46] [#ezpublish] <buz> xeditor or sjsd
+[05-31-2006 13:30:28] [#ezpublish] <buz> and if you can live with xeditor's tradeoffs, it's MUCH better than OE, really
+[05-31-2006 13:31:06] [#ezpublish] <Enur> ok
+[05-31-2006 13:31:18] [#ezpublish] <buz> if you cant, sjsd is said to be quite good
+[05-31-2006 13:31:23] [#ezpublish] <buz> i havent tested it myself though
+[05-31-2006 13:31:27] [#ezpublish] <Allman> Enur: "without an online editor you've got nothing" is like saying: without cruise control you do not have a car.
+[05-31-2006 13:31:32] [#ezpublish] <Enur> what are xeditors tradeoff?
+[05-31-2006 13:31:41] [#ezpublish] <buz> ROTFL
+[05-31-2006 13:31:51] [#ezpublish] <buz> you cant use PDF export
+[05-31-2006 13:31:54] [#ezpublish] <buz> (basically)
+[05-31-2006 13:32:35] [#ezpublish] <buz> read here http://triligon.org/triligon/blog/blogcategories/node_128
+[05-31-2006 13:32:42] [#ezpublish] <Enur> ok
+[05-31-2006 13:33:03] [#ezpublish] <buz> (personally, i never quite saw the use of pdf export, really)
+[05-31-2006 13:33:21] [#ezpublish] <ls_> check also: http://ez.no/community/forum/developer/sjsd_wysiwyg_editor_based_on_fckeditor_for_ezxmltext
+[05-31-2006 13:33:44] [#ezpublish] <buz> have you tried sjsd ls_ ?
+[05-31-2006 13:34:05] [#ezpublish] <buz> (beyond me how liu came up with THAT name, really)
+[05-31-2006 13:34:55] [#ezpublish] <Enur> well, i was thinking of the people who are going to update the site, write articles. they got little knowledge with tags and stuff like that
+[05-31-2006 13:37:32] [#ezpublish] <ls_> I have not tired it yet
+[05-31-2006 13:43:19] [#ezpublish] <zr1> so let them write text.
+[05-31-2006 13:47:53] [#ezpublish] <buz> better not have lusers format text at all in my experience
+[05-31-2006 13:49:51] [#ezpublish] <buz> in general, it'd be best to give them two or three formatting options
+[05-31-2006 13:49:59] [#ezpublish] <buz> other than that they start formatting stuff like they use word
+[05-31-2006 14:29:50] -!- ls_ [n=ls@unregister049029239087.c29.msk.pl] has quit [Remote closed the connection]
+[05-31-2006 14:32:05] -!- DiGiTa|_ [n=pet2poul@84.4.42.113] has joined #ezpublish
+[05-31-2006 15:12:46] -!- DiGiTa|_ [n=pet2poul@84.4.42.113] has quit []
+[05-31-2006 15:28:28] -!- buz [n=buz@dhcp-203-31-vpn.unizh.ch] has quit ["Konversation terminated!"]
+[05-31-2006 15:32:20] -!- DiGiTa|_ [n=pet2poul@84.4.42.113] has joined #ezpublish
+[05-31-2006 15:38:08] -!- DiGiTa|_ [n=pet2poul@84.4.42.113] has quit []
+[05-31-2006 16:03:29] -!- Allman [n=allman@ti132110a340-2407.bb.online.no] has quit []
+[05-31-2006 16:52:46] -!- kris10an^ [n=kh@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[05-31-2006 16:56:01] -!- kris10an^ [n=kh@85.19.74.66] has joined #ezpublish
+[05-31-2006 17:21:31] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [Remote closed the connection]
+[05-31-2006 17:55:27] -!- zr1 [n=zurgutt@213-35-171-99-dsl.trt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[05-31-2006 18:52:27] -!- SEAwolfx [n=SEAwolfx@p5493A6B8.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[05-31-2006 19:15:16] -!- Enur [n=asd@249.80-203-121.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[05-31-2006 20:39:07] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[05-31-2006 21:04:24] Disconnecting due to lack of a lag response (0.00530800 1149127404 != 0.05617300 1149127434)
+[05-31-2006 21:04:24] Diconnected. Sleeping for 2 second(s).
+[05-31-2006 21:04:26] >> Connecting to irc.freenode.net:6667
+[05-31-2006 21:04:40] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-31-2006 21:04:40] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-31-2006 21:04:50] >> Connecting to irc.freenode.net:6667
+[05-31-2006 21:05:00] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[05-31-2006 21:05:00] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[05-31-2006 21:05:10] >> Connecting to irc.freenode.net:6667
+[05-31-2006 21:05:10] >> Connected to irc.freenode.net:6667, registering...
+[05-31-2006 21:05:10] >> Attempting to join channels: #ezpublish
+[05-31-2006 21:05:11] >> Primary nickname in use, trying alternate.
+[05-31-2006 21:05:11] (unmatched::raw451) :calvino.freenode.net 451 * JOIN :Register first.
+[05-31-2006 21:05:11] >> Successfully registered. Nick is: ezpublishlog
+[05-31-2006 21:05:11] -!- There are 13001 listed and 13806 unlisted users on 18 servers
+[05-31-2006 21:05:11] -!- 43 flagged staff members
+[05-31-2006 21:05:11] -!- 11890 channels formed
+[05-31-2006 21:05:11] -!- I have 4179 clients and 0 servers
+[05-31-2006 21:05:11] -!- Current local  users: 4179  Max: 4754
+[05-31-2006 21:05:11] -!- Current global users: 26807  Max: 31456
+[05-31-2006 21:05:11] -!- Highest connection count: 4756 (4754 clients) (123655 since server was (re)started)
+[05-31-2006 21:05:11] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[05-31-2006 21:05:11] [notice(freenode-connect)] VERSION IQ 0.9.3
+[05-31-2006 21:05:55] >> Attempting to join channels: #ezpublish
+[05-31-2006 21:05:55] -!- ezpublishlog [n=IQ@209.144.224.222] has joined #ezpublish
+[05-31-2006 21:05:55] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving (and in the meantime, try clearing the cache ;) || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/community_newsletter_19_05_2006 || New Article: http://ez.no/community/articles/building_a_custom_template_for_a_news_portal
+[05-31-2006 21:05:55] -!- Topic set by ls [@] [Fri, 19 May 2006 10:51:35 -0500]
+[05-31-2006 21:05:56] (unmatched::raw477) :calvino.freenode.net 477 ezpublishlog #ezpublish :[freenode-info] please register your nickname...don't forget to auto-identify! http://freenode.net/faq.shtml#nicksetup
+[05-31-2006 21:08:11] (ezpublishlog) Attempting to gain back primary nickname
+[05-31-2006 21:08:11] -!- ezpublishlog is now known as ezlog
+[05-31-2006 21:08:11] My new nick is ezlog

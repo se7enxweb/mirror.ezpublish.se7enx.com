@@ -1,0 +1,228 @@
+[05-10-2005 00:04:21] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-10-2005 00:07:59] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 00:13:46] -!- Bedlored [~me@ppp214-16.lns1.adl2.internode.on.net] has joined #ezpublish
+[05-10-2005 00:16:59] -!- Bedlore [~me@ppp229-63.lns3.adl2.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 00:17:21] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-10-2005 00:21:58] -!- xbit [xbit@pppoecl77187.minlos.no] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 00:22:40] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-10-2005 01:58:52] -!- ordna1 [~ordnas@p549DCDC7.dip.t-dialin.net] has joined #ezpublish
+[05-10-2005 02:08:04] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 02:10:12] [#ezpublish] <kracker> .
+[05-10-2005 02:28:50] -!- jota [~jota@fanzine.igalia.com] has joined #ezpublish
+[05-10-2005 02:46:40] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 03:05:15] -!- ordna1 [~ordnas@p549DCDC7.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 03:24:21] -!- Bedlored [~me@ppp214-16.lns1.adl2.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 03:26:22] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 03:26:25] [#ezpublish] <kracker> hey Frederik ...
+[05-10-2005 03:26:46] [#ezpublish] <kracker> I saw a copy of the Php 5 Power book online today without acl, ssl or nuthing, it just was online for anyone to read :P
+[05-10-2005 03:27:22] [#ezpublish] <kracker> You might want bump Derik and let him know, just in case cares ...
+[05-10-2005 03:27:47] [#ezpublish] <kracker> errrum sorry, s/Derik/Derick/
+[05-10-2005 03:28:08] [#ezpublish] <kracker> i'm sending an email regardless ...
+[05-10-2005 03:30:06] [#ezpublish] <@fh> send him a mail
+[05-10-2005 03:30:10] [#ezpublish] <@fh> he is on tour right now
+[05-10-2005 03:30:11] [#ezpublish] <@fh> :)
+[05-10-2005 03:30:24] [#ezpublish] <@fh> really strange though
+[05-10-2005 03:30:28] [#ezpublish] <kracker> i just sent him the mail
+[05-10-2005 03:30:32] [#ezpublish] <@fh> great.. thanks
+[05-10-2005 03:30:52] [#ezpublish] <kracker> yeah it looks from an asian country but it's hard to say ...
+[05-10-2005 03:31:05] [#ezpublish] <kracker> you know i found it off google looking for php-cli info
+[05-10-2005 03:31:20] [#ezpublish] <kracker> i didn't even realize it till i posted to the forums this morning ...
+[05-10-2005 03:31:45] [#ezpublish] <kracker> any suggestions for my recent forum activity? i've really been hitting it up hard
+[05-10-2005 03:38:21] [#ezpublish] <@fh> I haven't had time to folluw up on the forum activity lately :/
+[05-10-2005 03:39:58] [#ezpublish] <@fh> I did see you thread about php-cli though
+[05-10-2005 03:46:28] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-10-2005 03:53:11] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 03:53:12] [#ezpublish] <kracker> alrightythen...
+[05-10-2005 03:53:20] [#ezpublish] <kracker> backtracking ... grr
+[05-10-2005 03:53:56] [#ezpublish] <kracker> nods, ok
+[05-10-2005 03:54:18] [#ezpublish] * kracker pines ... one day i'll turn heads
+[05-10-2005 03:57:53] -!- xbit [xbit@pppoecl77071.minlos.no] has joined #ezpublish
+[05-10-2005 04:06:39] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit []
+[05-10-2005 04:08:06] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 04:09:19] -!- ordnas [~ordnas@p549DCDC7.dip.t-dialin.net] has joined #ezpublish
+[05-10-2005 04:09:30] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-10-2005 04:52:42] [#ezpublish] <kracker> sweet, i think that worked a little
+[05-10-2005 04:52:52] [#ezpublish] <kracker> now to see if it lasts ...
+[05-10-2005 04:52:58] [#ezpublish] <kracker> what's up hipsters?
+[05-10-2005 04:53:29] [#ezpublish] <kracker> i really need someone to tell me off this morning, seriously anything will work about now.
+[05-10-2005 04:54:13] [#ezpublish] <kracker> it's a bitch movin 2.8 gb of tar.gz between two different sides of the country (USA)
+[05-10-2005 04:54:55] [#ezpublish] <kracker> almost as bad as not having a boss to smack you around when you need it ...
+[05-10-2005 04:55:15] [#ezpublish] <@fh> not if you have a 100mbit connection :D
+[05-10-2005 04:56:03] [#ezpublish] <kracker> now that's funny
+[05-10-2005 04:57:11] [#ezpublish] <kracker> and i do, kinda on "the firm" 's internal networks but the east coast server is another punk hosting firm with a 56k idsn connection (no not really but it sure feels like it)
+[05-10-2005 04:57:52] [#ezpublish] <kracker> oh, i miss read you, i thought you said 1000mb / 1gb
+[05-10-2005 05:02:28] [#ezpublish] <kracker> so ... fh, what's it like being the only other guy who stuck it out at ez (from the original crew) (save the brothers, naturaly)?
+[05-10-2005 05:03:06] [#ezpublish] <kracker> i thought it was a little sad to hear jh was moving on ... (course that was a while ago)
+[05-10-2005 05:04:04] [#ezpublish] <kracker> *shrugs*, na your workin, it's cool, still, in the little ways that don't really matter the cool factor has got to resurface as time goes on ...
+[05-10-2005 05:05:43] [#ezpublish] <kracker> ok that's enough drivel from this lost sole this evening, ciao
+[05-10-2005 05:06:20] [#ezpublish] <@fh> hm.. we still have gl here
+[05-10-2005 05:06:25] [#ezpublish] <@fh> he started together with me
+[05-10-2005 05:06:33] [#ezpublish] <@fh> a year after all the others
+[05-10-2005 05:06:39] [#ezpublish] <@fh> so I'm not really one of the originals
+[05-10-2005 05:06:53] [#ezpublish] <@fh> and of course I was away for a few years when I studied in the netherlands
+[05-10-2005 05:06:58] [#ezpublish] <kracker> doh, hrm, i wonder where i read that miss information ..
+[05-10-2005 05:07:19] [#ezpublish] <kracker> right on, gotcha
+[05-10-2005 05:07:56] [#ezpublish] <@fh> and of course.. we have vidar langseid
+[05-10-2005 05:08:00] [#ezpublish] <@fh> who was here from the beginning
+[05-10-2005 05:08:17] [#ezpublish] <kracker> that must be what i read was based on!
+[05-10-2005 05:30:27] [#ezpublish] <kracker> wow
+[05-10-2005 05:30:30] [#ezpublish] <kracker> boy was i wrong
+[05-10-2005 05:30:48] [#ezpublish] <kracker> and you know, this must be like the 2nd time i've done this, sheesh i have to make sure this sticks this time ...
+[05-10-2005 05:36:11] [#ezpublish] <kracker> dink!
+[05-10-2005 05:36:11] [#ezpublish] <kracker> http://www.ez.no/community/forum/general/php_5_power_programming_pdf
+[05-10-2005 05:42:05] [#ezpublish] <@fh> cool
+[05-10-2005 05:48:49] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[05-10-2005 05:59:49] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 06:19:50] -!- jota [~jota@fanzine.igalia.com] has quit ["Abandonando"]
+[05-10-2005 06:32:57] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has joined #ezpublish
+[05-10-2005 06:57:40] -!- Katana` [~katana@217.31.64.170] has joined #ezpublish
+[05-10-2005 07:11:27] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 07:11:39] [#ezpublish] <kracker> wow
+[05-10-2005 07:11:41] [#ezpublish] <kracker> ok, now my head hurts
+[05-10-2005 07:11:42] [#ezpublish] <kracker> sheesh, no more posting to the forums !! when will i learn to mind my own business, and look away instead of rushing in to save the day ... foolish
+[05-10-2005 07:12:41] [#ezpublish] <kracker> i mean i'm not really that good when i'm this exausted ...
+[05-10-2005 07:13:23] [#ezpublish] <kracker> baby sitting a 2.8gb scp ... 40% left to go before I can return to being 'dead again'
+[05-10-2005 07:13:58] [#ezpublish] * kracker changes his mind and runs off to take a cat like nap ...
+[05-10-2005 07:34:35] [#ezpublish] * @fh gives kracker a cup of relaxing thee
+[05-10-2005 07:43:07] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-10-2005 07:43:22] [#ezpublish] <@fh> too relaxed to hold the connection
+[05-10-2005 07:53:31] -!- subj [~thomas@dimensional-gw.datenwelt.net] has joined #ezpublish
+[05-10-2005 07:53:36] [#ezpublish] <subj> hi
+[05-10-2005 08:23:21] [#ezpublish] <ordnas> hoi subj :)
+[05-10-2005 08:24:21] [#ezpublish] <ordnas> subj: first time here?
+[05-10-2005 08:25:41] [#ezpublish] <subj> yeah
+[05-10-2005 08:26:18] [#ezpublish] <subj> ordnas: can eZpublish different pages with different content/layout with from one admin interface?
+[05-10-2005 08:27:03] [#ezpublish] <subj> not only sharing the installation files?
+[05-10-2005 08:27:11] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 08:27:44] [#ezpublish] <ordnas> erm, can you rephrase please? or say it in german
+[05-10-2005 08:28:15] [#ezpublish] <subj> Kann euer System mehrere Seiten mit unterschiedlichen Inhalten über ein ADmin-Interface verwalten?
+[05-10-2005 08:28:38] [#ezpublish] <subj> also nicht nur die installierten Dateien für mehrere Seiten/Datenbanken nutzen...
+[05-10-2005 08:30:55] [#ezpublish] <ordnas> subj: w8, phone
+[05-10-2005 08:55:57] [#ezpublish] <ordnas> subj: see: in eZ you have different siteaccesses, which are like vhosts within the CMS
+[05-10-2005 08:56:40] [#ezpublish] <subj> das war nicht die frage
+[05-10-2005 08:57:19] [#ezpublish] <subj> kann ich in einer datebank verschiedenen seiten ablegen, welche nach außen auf verschiedenen vhosts/urls laufen - aber intern über ein admininterface editierbar sind
+[05-10-2005 08:57:53] [#ezpublish] <subj> also mandantenfähigkeit der Administrationoberfläche
+[05-10-2005 08:58:51] [#ezpublish] <subj> Das ich die Dateien der Installation für mehrere Datenbanken/Seiten nutzen kann ist klar
+[05-10-2005 08:59:13] [#ezpublish] <ordnas> 1) eZ kennt das konzept von "seiten" nicht - es gibt inhaltsobjekte, die in templates dargestellt werden
+[05-10-2005 08:59:30] [#ezpublish] <subj> Seite = Internetpräsenz
+[05-10-2005 08:59:45] [#ezpublish] <ordnas> ok, lass uns erstmal definieren :)
+[05-10-2005 09:00:55] [#ezpublish] <subj> Der kunde hat mehrere URLs/Internetpräsenzen - diese sollen über eine zentrale Adminoberfläche gepflegt werden
+[05-10-2005 09:01:19] [#ezpublish] <ordnas> genau das machst du mit siteaccesses
+[05-10-2005 09:01:46] [#ezpublish] <subj> mm aber da steht doch was von unterschiedlichen Datenbanken...
+[05-10-2005 09:01:54] [#ezpublish] <ordnas> du hast 1 eZ publish installation, darin 1 adminoberfläche und X siteaccesses (= Internetpräsenzen mit eingener domain)
+[05-10-2005 09:02:13] [#ezpublish] <ordnas> <- das läuft alles per default mit 1 DB
+[05-10-2005 09:02:49] [#ezpublish] <subj> ich kann dann in der Adminoberfläche zwischen den verschiedenen Präsenzen wechseln und sie administireren?
+[05-10-2005 09:03:22] [#ezpublish] <ordnas> das ist so per default nicht implementiert
+[05-10-2005 09:04:13] [#ezpublish] <ordnas> ließe sich aber relativ rasch umsetzen, je nachdem, was unter "mandantenfähigkeit" fällt
+[05-10-2005 09:04:15] [#ezpublish] <subj> also muss man sich auf den unterschiedlichen URLs jeweils in das Admininterface einloggen?
+[05-10-2005 09:05:12] [#ezpublish] <ordnas> du hast bei der standardinstallation 1 admininterface für alle siteaccesses, aber keine getrennten admininterfaces per siteaccess
+[05-10-2005 09:05:28] [#ezpublish] <subj> hää?
+[05-10-2005 09:05:33] [#ezpublish] <subj> was denn nun?
+[05-10-2005 09:06:02] [#ezpublish] <subj> wenn ich ein Admininterface habe muss ich doch dort irgendwo umschalten können (als Redaktuer) welche Seite ich gerade edititeren möchte
+[05-10-2005 09:06:44] [#ezpublish] <subj> Seite/Präsenz/URL
+[05-10-2005 09:07:12] [#ezpublish] <ordnas> du hast folgende möglichkeiten:
+[05-10-2005 09:07:23] [#ezpublish] <ordnas> 1 eZ publish installation = 1 Internetpräsenz
+[05-10-2005 09:07:24] [#ezpublish] <ordnas> oder
+[05-10-2005 09:08:05] [#ezpublish] <ordnas> 1 eZ publish installation, in der mehrere siteaccesses (= Internetpräsenzen) angelegt sind
+[05-10-2005 09:08:15] [#ezpublish] <subj> Wie wählt der Redaktuer aus welche Internetpräsenz er editiert?
+[05-10-2005 09:08:46] [#ezpublish] <ordnas> im ersten fall ist klar, dass du pro eZ publish Installation nur 1 Internetpräsenz und ein admin hast
+[05-10-2005 09:08:56] [#ezpublish] <subj> Können sich die "siteaccesses" die Redaktuere teilen?
+[05-10-2005 09:09:32] [#ezpublish] <ordnas> subj: spüre die macht :)
+[05-10-2005 09:09:46] [#ezpublish] <subj> ?
+[05-10-2005 09:09:54] [#ezpublish] <ordnas> bei eZ musst du vom Inhaltsbaum her denken
+[05-10-2005 09:10:12] [#ezpublish] <subj> hat papaya genauso
+[05-10-2005 09:10:21] [#ezpublish] <subj> mir geht es nicht um die technik
+[05-10-2005 09:10:39] [#ezpublish] <subj> mir geht es rein um die benutzung durch den Redakteur
+[05-10-2005 09:13:01] [#ezpublish] <subj> Wie wählt der Redakteur aus, dass er Inhalt x auf Domain b editieren will udn muss er sich für Inhalt y auf Domain a neu einloggen?
+[05-10-2005 09:13:17] [#ezpublish] <ordnas> es gibt derzeit in der standardinstallation keine eingebaute mandantenfähigkeit, das musst du implementieren oder die redakteure werden in usergruppen eingeteilt, die immer nur einen bestimten Teilbaum in der Inhaltehierarchie bearbeiten dürfen - ein bestimmter Teilbaum würde dann mit einem bestimmten siteaccess korrspondieren
+[05-10-2005 09:13:53] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 09:14:11] [#ezpublish] <subj> ahh im Admininterfac hat man also einen Baum für alle Domains die "Siteaccess" kann jedoch auch nur auf einen Teilbaum angewendet werden?
+[05-10-2005 09:14:28] [#ezpublish] <ordnas> können, müssen aber nicht
+[05-10-2005 09:14:45] [#ezpublish] <subj> siehe das wörtchen "auch"
+[05-10-2005 09:14:56] [#ezpublish] <ordnas> exakt
+[05-10-2005 09:15:12] [#ezpublish] <subj> es geht hier explizit darum das der Kunde mehrere Domains über ein Login pflegen will
+[05-10-2005 09:15:58] [#ezpublish] <ordnas> glaub, das habe ich verstanden
+[05-10-2005 09:16:43] [#ezpublish] <subj> stellt ezPublish dann auch sicher das auf Domain a keine Inhalte von dem Teilbaum für Domain b sichtbar werden können?
+[05-10-2005 09:17:41] [#ezpublish] <ordnas> das kannst du in den templates pro siteaccess steuern, wo du eben definierst "zeige nur inhalte die unterhalb dieses bestimmten knotens im inhaltsbaum sind"
+[05-10-2005 09:18:06] [#ezpublish] <subj> in den templates?
+[05-10-2005 09:18:22] [#ezpublish] <subj> nicht in der "siteaccess"?
+[05-10-2005 09:18:41] [#ezpublish] <subj> d.h. die domains müssen dafür unterschiedliche templates verwenden?
+[05-10-2005 09:18:56] [#ezpublish] <ordnas> ein siteaccess besteht aus design elementen (templates, images, css, ...) und config files
+[05-10-2005 09:20:18] [#ezpublish] <subj> mm und ich kann in den config files nicht einfach sagen rootkoten für die domain ist x?
+[05-10-2005 09:20:31] [#ezpublish] <subj> und dann nimmt er nur noch unterknoten davon
+[05-10-2005 09:21:13] -!- Bedlore [~me@ppp220-187.lns3.adl2.internode.on.net] has joined #ezpublish
+[05-10-2005 09:22:15] -!- SachaS [~Sacha@12.44.147.178] has left #ezpublish ["Client exiting"]
+[05-10-2005 09:45:12] -!- ordnas [~ordnas@p549DCDC7.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 10:06:48] -!- ordna1 [~ordnas@p549DF8DE.dip.t-dialin.net] has joined #ezpublish
+[05-10-2005 10:11:34] [#ezpublish] <ordna1> ja, kannst du in der site.ini konfigurieren
+[05-10-2005 10:11:41] [#ezpublish] <ordna1> sorry, reconnect hat lange nicht geklappt
+[05-10-2005 10:11:47] [#ezpublish] <subj> ahso
+[05-10-2005 10:11:49] [#ezpublish] <subj> :-)
+[05-10-2005 10:12:55] [#ezpublish] <ordna1> ich glaube, dass es von einer oder mehreren partnerfirmen auch schon ne fertiglösung dafür gibt
+[05-10-2005 10:26:22] -!- lucasr [~lucasr@201009085027.user.veloxzone.com.br] has quit ["Fui embora"]
+[05-10-2005 10:31:08] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 10:36:13] [#ezpublish] <SEAwolfx> re
+[05-10-2005 10:36:16] [#ezpublish] <SEAwolfx> hi
+[05-10-2005 10:37:26] [#ezpublish] <SEAwolfx> subj: die lösung nennt sich contentserver
+[05-10-2005 10:38:00] [#ezpublish] <subj> "Adobe Content Server" ? ;-)
+[05-10-2005 10:38:08] [#ezpublish] <SEAwolfx> ne, nicht doch ;)
+[05-10-2005 10:38:51] [#ezpublish] <subj> und nein so viel will ich gar nicht
+[05-10-2005 10:39:33] [#ezpublish] <SEAwolfx> subj: http://ez.no/solutions/solutions_and_software/content_server
+[05-10-2005 10:39:41] [#ezpublish] <subj> bin schon drauf
+[05-10-2005 10:39:42] [#ezpublish] <SEAwolfx> vielleicht ist es das, was du suchst?!
+[05-10-2005 10:39:44] [#ezpublish] <SEAwolfx> ah ok
+[05-10-2005 10:39:52] [#ezpublish] <SEAwolfx> mr. weberknecht ;)
+[05-10-2005 10:40:22] [#ezpublish] <subj> ich will nur mehrere domains von den gleichen redakteuren über ein admin-interface verwalten lassen
+[05-10-2005 10:40:25] [#ezpublish] <SEAwolfx> oops, english is default.
+[05-10-2005 10:40:48] [#ezpublish] <subj> the content of the domains is different
+[05-10-2005 10:45:00] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-10-2005 10:45:11] -!- SEAwolf [~SEAwolf@p54945A31.dip.t-dialin.net] has joined #ezpublish
+[05-10-2005 10:45:17] [#ezpublish] <SEAwolf> oops
+[05-10-2005 10:45:40] [#ezpublish] <SEAwolf> subj: this is done with the siteacces which can be assigned to domains.
+[05-10-2005 10:46:02] [#ezpublish] <subj> :-)
+[05-10-2005 10:46:24] [#ezpublish] <SEAwolf> sorry, i was disconnected with my homeserver.
+[05-10-2005 10:46:50] [#ezpublish] <SEAwolf> btw ..someone know another vserver channel?
+[05-10-2005 10:48:24] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish
+[05-10-2005 10:48:46] [#ezpublish] <SEAwolf> use the "host match map" for this
+[05-10-2005 10:48:58] [#ezpublish] <SEAwolf>  @subj
+[05-10-2005 10:49:30] [#ezpublish] <subj> understood :-)
+[05-10-2005 10:50:25] [#ezpublish] <SEAwolf> btw .. is absinth still aggressive? ;)
+[05-10-2005 10:57:50] -!- SEAwolfx [~mike@DSL01.83.171.155.203.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 10:59:44] -!- SEAwolfx [~mike@DSL01.83.171.144.232.NEFkom.net] has joined #ezpublish
+[05-10-2005 11:26:48] -!- Katana` [~katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[05-10-2005 11:27:04] -!- subj [~thomas@dimensional-gw.datenwelt.net] has quit ["Leaving"]
+[05-10-2005 11:36:41] -!- ordna1 [~ordnas@p549DF8DE.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 11:41:49] [#ezpublish] <SEAwolfx> ok
+[05-10-2005 11:41:54] -!- SEAwolf [~SEAwolf@p54945A31.dip.t-dialin.net] has quit []
+[05-10-2005 12:31:15] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 13:03:31] -!- syntetisk [~syntetisk@216-134-116.0502.adsl.tele2.no] has joined #ezpublish
+[05-10-2005 13:03:37] [#ezpublish] <syntetisk> hi all
+[05-10-2005 13:07:10] [#ezpublish] <syntetisk> anyone not afk?
+[05-10-2005 13:10:58] [#ezpublish] <syntetisk> hello?
+[05-10-2005 13:23:51] -!- SachaS [~Sacha@216.138.89.5] has joined #ezpublish
+[05-10-2005 13:24:08] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 13:26:38] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-10-2005 13:36:20] -!- syntetisk [~syntetisk@216-134-116.0502.adsl.tele2.no] has quit []
+[05-10-2005 13:36:34] -!- luke__ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-10-2005 13:54:53] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 14:05:32] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has joined #ezpublish
+[05-10-2005 14:09:34] -!- luke__ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-10-2005 14:27:02] -!- Allman [~allman@ti132110a080-0888.bb.online.no] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 14:31:25] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 15:06:02] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has joined #ezpublish
+[05-10-2005 15:22:31] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 15:28:41] -!- luke_ [~Luke@ntwklan-62-233-244-90.devs.futuro.pl] has quit ["Chatzilla 0.9.68a [Firefox 1.0.3/20050414]"]
+[05-10-2005 15:46:04] -!- buz [~buz@80-218-107-8.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-10-2005 16:05:58] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 18:14:36] -!- SEAwolfx [~mike@DSL01.83.171.144.232.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 18:21:34] [#ezpublish] <kracker> ieet, now then ...
+[05-10-2005 18:26:36] -!- SachaS [~Sacha@216.138.89.5] has left #ezpublish ["Client exiting"]
+[05-10-2005 18:27:40] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 60 (Operation timed out)]
+[05-10-2005 19:13:09] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has joined #ezpublish
+[05-10-2005 19:44:23] [#ezpublish] <kracker> .
+[05-10-2005 19:44:35] [#ezpublish] <kracker> eminem : just loose it ... http://www.mjfn.no/
+[05-10-2005 19:53:15] -!- lucasr [~lucasr@201.19.235.47] has joined #ezpublish
+[05-10-2005 20:02:08] -!- kracker [~kracker@c-24-0-43-159.hsd1.tx.comcast.net] has quit [Read error: 145 (Connection timed out)]
+[05-10-2005 20:16:03] -!- lucasr [~lucasr@201.19.235.47] has quit ["Leaving"]
+[05-10-2005 21:40:10] -!- Bedlore [~me@ppp220-187.lns3.adl2.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[05-10-2005 23:58:28] -!- _buz [~buz@80-218-107-8.dclient.hispeed.ch] has joined #ezpublish

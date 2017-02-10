@@ -1,0 +1,172 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 14.9.&nbsp; Optimizing Code</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec10.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch14lev1sec9"></a><h3 class="docSection1Title">14.9. Optimizing Code</h3>
+<p class="docText">This section covers techniques for finding miscellaneous optimizations, including micro-benchmarks, rewriting PHP code in C, and writing procedural versus object-oriented code.<a name="ch14index263"></a><a name="ch14index264"></a></p>
+<a name="ch14lev2sec16"></a><h4 class="docSection2Title">14.9.1. Micro-Benchmarks</h4>
+<p class="docText">Often, you may find yourself wondering which approach is the fastest. For example, which is faster<tt>str_replace()</tt> or <tt>preg_replace()</tt>for a simple replacement? You can find the answer to many of these questions by writing a little micro-benchmark that measures exactly what you are looking for.<a name="ch14index265"></a><a name="ch14index266"></a><a name="ch14index267"></a></P>
+<p class="docText">The following example is a library file (ubm.php) to run micro-benchmarks, followed by an example benchmark that tells you which is faster:</p>
+<pre>
+&lt;?php
+
+register_shutdown_function('micro_benchmark_summary');
+$ubm_timing = array();
+
+function micro_benchmark($label, $impl_func, $iterations = 1) {
+    global $ubm_timing;
+    print "benchmarking `$label'...";
+    flush();
+    $start = current_usercpu_rusage();
+    call_user_func($impl_func, $iterations);
+    $ubm_timing[$label] = current_usercpu_rusage() - $start;
+    print "&lt;br /&gt;\n";
+    return $ubm_timing[$label];
+}
+
+function micro_benchmark_summary() {
+    global $ubm_timing;
+    if (empty($ubm_timing)) {
+        return;
+    }
+    arsort($ubm_timing);
+    reset($ubm_timing);
+    $slowest = current($ubm_timing);
+    end($ubm_timing);
+    print "&lt;h2&gt;And the winner is: ";
+    print key($ubm_timing) . "&lt;/h2&gt;\n";
+    print "&lt;table border=1&gt;\n &lt;tr&gt;\n  &lt;td&gt;&amp;nbsp;&lt;/td&gt;\n";
+    foreach ($ubm_timing as $label =&gt; $usercpu) {
+        print "  &lt;th&gt;$label&lt;/th&gt;\n";
+    }
+    print " &lt;/tr&gt;\n";
+    $ubm_timing_copy = $ubm_timing;
+    foreach ($ubm_timing_copy as $label =&gt; $usercpu) {
+        print " &lt;tr&gt;\n  &lt;td&gt;&lt;b&gt;$label&lt;/b&gt;&lt;br /&gt;";
+        printf("%.3fs&lt;/td&gt;\n", $usercpu);
+        foreach ($ubm_timing as $label2 =&gt; $usercpu2) {
+            $percent = (($usercpu2 / $usercpu) - 1) * 100;
+            if ($percent &gt; 0) {
+                printf("&lt;td&gt;%.3fs&lt;br /&gt;%.1f%% slower",
+                       $usercpu2, $percent);
+            } elseif ($percent &lt; 0) {
+                printf("&lt;td&gt;%.3fs&lt;br /&gt;%.1f%% faster",
+                       $usercpu2, -$percent);
+            } else {
+                print "&lt;td&gt;&amp;nbsp;";
+            }
+            print "&lt;/td&gt;\n";
+        }
+        print " &lt;/tr&gt;\n";
+    }
+    print "&lt;/table&gt;\n";
+}
+
+function current_usercpu_rusage() {
+    $ru = getrusage();
+    return $ru['ru_utime.tv_sec']
+        + ($ru['ru_utime.tv_usec'] / 1000000.0);
+}
+</pre><BR>
+<a name="ch14note06"></a><div class="docNote"><p class="docNoteTitle">Note</p>
+
+<p class="docText">This benchmark library uses the <tt>geTRusage()</tt> function for measuring consumed CPU cycles. The resolution of the measurements from <tt>getrusage()</tt> depends on your system setup, but is usually 1/100<sup>th</sup> of a second (1/1000<sup>th</sup> of a second on FreeBSD).</p>
+<p class="docText"><a name="ch14index268"></a><a name="ch14index269"></a><a name="ch14index270"></a>This is a potential source of error, so make sure you run your micro-benchmark several times with similar results before accepting the outcome.</p></div><br>
+<p class="docText">Here is the <tt>str_replace()</tt> versus <tt>preg_replace()</tt> micro-benchmark:<a name="ch14index271"></a><a name="ch14index272"></a><a name="ch14index273"></a><a name="ch14index274"></a><a name="ch14index275"></a></P>
+<pre>
+&lt;?php
+
+require 'ubm.php';
+
+$str = "This string is not modified";
+$loops = 1000000;
+micro_benchmark('str_replace',  'bm_str_replace',  $loops);
+micro_benchmark('preg_replace', 'bm_preg_replace', $loops);
+
+function bm_str_replace($loops) {
+    global $str;
+    for ($i = 0; $i &lt; $loops; $i++) {
+        str_replace("is not", "has been", $str);
+    }
+}
+
+function bm_preg_replace($loops) {
+    global $str;
+    for ($i = 0; $i &lt; $loops; $i++) {
+        preg_replace("/is not/", "has been", $str);
+    }
+}
+</pre><BR>
+<p class="docText">The output from this example appears in <a class="docLink" href="#ch14fig15">Figure 14.15</a>.<a name="ch14index276"></a><a name="ch14index277"></a><a name="ch14index278"></a></p>
+<a name="ch14fig15"></a><p><center><h5 class="docFigureTitle">Figure 14.15. Output from <tt>replace</tt> micro-benchmark. The percentages in each cell tell you how much faster or slower the previous test was compared to the test to the left.</h5>
+<p class="docText"><img border="0" alt="" width="300" height="206" SRC="images/013147149X/graphics/14fig15.gif;380137"></P></center></p><br>
+<p class="docText">According to this micro-benchmark, <tt>str_replace()</tt> is only 20 percent faster than <tt>preg_replace()</tt> for simple string substitutions.</P>
+<p class="docText">Micro-benchmarks are best suited for operations that require little or no I/O activity. After you start performing I/O from benchmarks, your results may be skewed; other processes that involve reading or writing to disk may slow down your test, or a database query that is cached in memory could inflate the speed of your benchmark.</p>
+<p class="docText">It is a good idea to measure several times and verify that you receive similar results each time. If not, what you are doing is not well-suited for a micro-benchmark, or the machine you are running it on could be running with loads that affects the benchmark.<a name="ch14index279"></a><a name="ch14index280"></a><a name="ch14index281"></a></P>
+<a name="ch14note07"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">Don't throw away your micro-benchmarks! Keep and organize them somewhere, so you can run them all again later to see if a function was optimized (or broken!) in a new PHP release.</p></div><br>
+<a name="ch14lev2sec17"></a><h4 class="docSection2Title">14.9.2. Rewrite in C</h4>
+<p class="docText">Sometimes, it is just not possible to optimize a piece of PHP code. The code is as fast as it possibly can be in PHP, but it may still be a bottleneck. This is the time to wield your axe, chop it to bits, and rewrite it in C as a PHP extension. If you have some C skills, it's not that hard. Consult <a class="docLink" href="ch15.html#ch15">Chapter 15</a>, &quot;An Introduction to Writing PHP Extensions,&quot; for examples.<a name="ch14index282"></a><a name="ch14index283"></a><a name="ch14index284"></a></p>
+<a name="ch14lev2sec18"></a><h4 class="docSection2Title">14.9.3. OO Versus Procedural Code</h4>
+<p class="docText">PHP has the advantage of not forcing a particular coding style. You can write 100 percent procedural code, or you can go all object-oriented. Most likely, you are going to end up writing code that is somewhere in between procedural and object-oriented, because most of the functionality provided by PHP's bundled extensions is procedural, while PEAR offers OOP interfaces.<a name="ch14index285"></a><a name="ch14index286"></a><a name="ch14index287"></a></p>
+<p class="docText">From a performance point of view, procedural code is slightly faster. The following example shows another micro-benchmark that compares the performance difference between regular function calls and method calls:</p>
+<pre>
+&lt;?php
+
+require 'ubm.php';
+
+class Adder {
+    function add2($a, $b) { return $a + $b; }
+    function add3($a, $b, $c) { return $a + $b; }
+}
+
+function adder_add2($a, $b) { return $a + $b; }
+function adder_add3($a, $b) { return $a + $b; }
+
+function run_oo_bm2($count) {
+    $adder = new Adder;
+    for ($i = 0; $i &lt; $count; $i++) $adder-&gt;add2(5, 7);
+}
+function run_oo_bm3($count) {
+    $adder = new Adder;
+    for ($i = 0; $i &lt; $count; $i++) $adder-&gt;add2(5, 7, 9);
+}
+
+function run_proc_bm2($count) {
+    for ($i = 0; $i &lt; $count; $i++) adder_add2(5, 7);
+}
+function run_proc_bm3($count) {
+    for ($i = 0; $i &lt; $count; $i++) adder_add3(5, 7, 9);
+}
+
+$loops = 1000000;
+micro_benchmark("proc_2_args", "run_proc_bm2", $loops);
+micro_benchmark("proc_3_args", "run_proc_bm3", $loops);
+micro_benchmark("oo_2_args", "run_oo_bm2", $loops);
+micro_benchmark("oo_3_args", "run_oo_bm3", $loops);
+</pre><br>
+<p class="docText"><a class="docLink" href="#ch14fig16">Figure 14.16</a> shows the result.</p>
+<a name="ch14fig16"></a><p><center><h5 class="docFigureTitle">Figure 14.16. Performance comparison of method and function calls with two or three parameters.</h5>
+<p class="docText"><img border="0" alt="" width="450" height="307" SRC="images/013147149X/graphics/14fig16.gif;380137"></p></center></P><BR>
+<p class="docText">Here, function calls are 1112 percent faster than method calls with both two and three arguments.</p>
+<p class="docText">Keep in mind that this micro-benchmark only measures the overhead caused by the actual function call (looking up the function/method name, passing parameters, returning a value).</p>
+<p class="docText">This will be a performance factor if your code has many small functions, which makes the call overhead account for a larger portion of the total execution time.<a name="ch14index288"></a><a name="ch14index289"></a><a name="ch14index290"></a></P>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch14lev1sec8.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch14lev1sec10.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

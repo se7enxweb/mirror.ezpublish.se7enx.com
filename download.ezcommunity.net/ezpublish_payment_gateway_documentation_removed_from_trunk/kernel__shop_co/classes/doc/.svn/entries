@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="7012"
+   name=""
+   committed-date="2004-07-05T11:04:20.036903Z"
+   url="http://pubsvn.ez.no/nextgen/trunk/kernel/shop/classes/doc"
+   last-author="dl"
+   kind="dir"
+   uuid="a01eee8c-daba-0310-acae-fa49f3023285"
+   revision="7012"/>
+<entry
+   committed-rev="7012"
+   name="classeshierarchy.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="056d6859d2973f6e6a1a5a2873a5708e"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:25.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="ezpaymentgateway.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="53c99cbd36550eb861422de23b79d878"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:25.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="ezpaymentcallbackchecker.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="0344412d0c49b534978bfc8cc20270ff"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:25.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="ezaymentgatewaytype.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="2936d78d3157e6caf42b3340608955a9"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:25.000000Z"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   committed-rev="7012"
+   name="ezredirectgateway.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="7e218ac7f73e94ab8f58521f3e0fc7c6"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:25.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="ezpaymentobject.html"
+   text-time="2007-04-08T20:44:26.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="758d3cb7ebef996cce0954a13f4a8bac"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+<entry
+   committed-rev="7012"
+   name="index.html"
+   text-time="2007-04-08T20:44:27.000000Z"
+   committed-date="2004-07-05T11:04:20.036903Z"
+   checksum="db2a2a0e29f35a676ab999af24b643d2"
+   last-author="dl"
+   kind="file"
+   prop-time="2007-04-08T20:44:26.000000Z"/>
+<entry
+   name="examples"
+   kind="dir"/>
+</wc-entries>

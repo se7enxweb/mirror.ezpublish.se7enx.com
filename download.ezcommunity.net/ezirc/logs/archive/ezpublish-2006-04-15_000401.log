@@ -1,0 +1,586 @@
+[04-14-2006 00:34:47] -!- DiGiTa|_ [n=guillaum@84.5.136.20] has joined #ezpublish
+[04-14-2006 02:16:37] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-14-2006 02:16:46] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-14-2006 03:17:39] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-14-2006 03:28:12] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-14-2006 03:51:00] -!- niooi [n=niooi@linagora.net8.nerim.net] has joined #ezpublish
+[04-14-2006 03:51:03] [#ezpublish] <niooi> hello
+[04-14-2006 03:51:50] [#ezpublish] <niooi> Ez Publish is terribly slow. I have read as much doc obout optimizing it and about turning on all the caches but it remains too slow on our dedicated server!
+[04-14-2006 03:52:06] [#ezpublish] <niooi> I have set the memory of php to 128 MB
+[04-14-2006 03:52:21] [#ezpublish] <buz> do you use some php accelerator
+[04-14-2006 03:59:20] [#ezpublish] <niooi> yes
+[04-14-2006 03:59:27] [#ezpublish] <niooi> ez accelerator
+[04-14-2006 03:59:37] [#ezpublish] <niooi> We have installed Zend Platform
+[04-14-2006 04:00:04] [#ezpublish] <niooi> but Zend Platform caches everythin so I turned off the caching engine but we have the PHP Acceleration from Zend
+[04-14-2006 04:02:33] [#ezpublish] <buz> mhh i think you should have the cache active
+[04-14-2006 04:02:43] [#ezpublish] <buz> but i have never actually used zend
+[04-14-2006 04:05:15] -!- _Katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-14-2006 04:05:48] [#ezpublish] <niooi> Zend Paltform's cache is on top of eZ Publish caching
+[04-14-2006 04:05:56] [#ezpublish] <niooi> it's theredfore not compulsory
+[04-14-2006 04:06:09] [#ezpublish] <buz> you should use the same
+[04-14-2006 04:06:21] [#ezpublish] <buz> it's something completely different really
+[04-14-2006 04:06:51] [#ezpublish] <buz> _Katana`: anything we can do about http://ez.no/community/bugs/wrong_conversion_of_characters_on_ezxml
+[04-14-2006 04:06:55] [#ezpublish] <buz> read the comments
+[04-14-2006 04:06:58] [#ezpublish] <niooi> I know it's different. We're using Ez Publish with its caching turned on. It's very slow.
+[04-14-2006 04:07:11] [#ezpublish] <buz> so turn on zend cache as well
+[04-14-2006 04:07:27] [#ezpublish] <niooi> Let's put Zend platform aside it should not required Zend platform anyway.
+[04-14-2006 04:07:35] [#ezpublish] <buz> it's not
+[04-14-2006 04:07:38] [#ezpublish] <buz> eaccelerator helps a lot
+[04-14-2006 04:07:56] [#ezpublish] <_Katana`> yeah, suchis for lunch :)
+[04-14-2006 04:08:13] [#ezpublish] <niooi> We should have a decent speed without Zend Platform turned on and I would like to have some hints (knowing all cache is on)
+[04-14-2006 04:08:16] [#ezpublish] <_Katana`> niooi: eZ publish with cache properly used IS fast
+[04-14-2006 04:08:25] [#ezpublish] <buz> yeah
+[04-14-2006 04:08:25] [#ezpublish] <_Katana`> like < 0.1s for a standard page
+[04-14-2006 04:08:35] [#ezpublish] <niooi> Good, so how to cache properly? ;)
+[04-14-2006 04:08:41] [#ezpublish] <buz> that is an art
+[04-14-2006 04:08:44] [#ezpublish] <_Katana`> you new view caching and cache blocks
+[04-14-2006 04:08:46] [#ezpublish] <niooi> I guess we do something wrong for sure
+[04-14-2006 04:08:50] [#ezpublish] <_Katana`> buz can assist you i'm sure :)
+[04-14-2006 04:09:07] [#ezpublish] <buz> yeah my job usually involves DEACTIVATING the cache ;)
+[04-14-2006 04:09:14] [#ezpublish] <_Katana`> tsss
+[04-14-2006 04:09:25] [#ezpublish] <_Katana`> you are right, it is an art, but once you're used to it it's easy
+[04-14-2006 04:09:29] [#ezpublish] <buz> right now it's convincing kirill that the ezxml parser is totally broken
+[04-14-2006 04:09:36] [#ezpublish] <niooi> we do not used cache blocks
+[04-14-2006 04:09:41] [#ezpublish] <_Katana`> you should
+[04-14-2006 04:09:42] [#ezpublish] <niooi> or very little
+[04-14-2006 04:09:53] [#ezpublish] <_Katana`> viewcaching only caches the content part, e.g. module_result.content
+[04-14-2006 04:10:00] [#ezpublish] <niooi> I thougt the caching system was working on the page overall
+[04-14-2006 04:10:03] [#ezpublish] <_Katana`> cache-block has to be used for navigation menus and stuff
+[04-14-2006 04:10:05] [#ezpublish] <_Katana`> no it's not :)
+[04-14-2006 04:10:24] [#ezpublish] <_Katana`> an optimized page should run 1 or 2 sql queries (2 if you are fetching the current user)
+[04-14-2006 04:10:28] [#ezpublish] <_Katana`> no more
+[04-14-2006 04:10:31] [#ezpublish] <niooi> hmmmmm sound like there is room for improvement ;)
+[04-14-2006 04:10:35] [#ezpublish] <_Katana`> yep :)
+[04-14-2006 04:10:59] [#ezpublish] <_Katana`> http://ez.no/products/ez_publish/documentation/development/kernel/cache_block_optimization
+[04-14-2006 04:11:01] [#ezpublish] <niooi> What's viewcaching
+[04-14-2006 04:11:04] [#ezpublish] <_Katana`> this one you should read
+[04-14-2006 04:11:09] [#ezpublish] <niooi> ok I will
+[04-14-2006 04:11:14] [#ezpublish] <_Katana`> site.ini.append, ViewCaching=enabled
+[04-14-2006 04:11:24] [#ezpublish] <_Katana`> http://ez.no/doc/ez_publish/technical_manual/3_6/reference/configuration_files/site_ini/contentsettings/viewcaching
+[04-14-2006 04:11:27] [#ezpublish] <niooi> okay let me check this but it must be on for sure
+[04-14-2006 04:11:58] [#ezpublish] <_Katana`> is TemplateCompile enabled ? is TemplateCache enabled ? is OverrideCache enabled ?
+[04-14-2006 04:12:04] [#ezpublish] <_Katana`> is PolicyCache enabled ?
+[04-14-2006 04:12:14] [#ezpublish] <_Katana`> is apache allowed to write to var/ ?
+[04-14-2006 04:12:19] [#ezpublish] <_Katana`> do you have errors in var/log/error.log ?
+[04-14-2006 04:12:56] [#ezpublish] <niooi> yes
+[04-14-2006 04:13:07] [#ezpublish] <_Katana`> caching is not something you just turn on when the project is done developing. It's 100% part of the developement process, even if it's usually fixed when the project is finished :(
+[04-14-2006 04:13:08] [#ezpublish] <niooi> let me check
+[04-14-2006 04:13:43] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 110 (Connection timed out)]
+[04-14-2006 04:13:44] -!- _Katana` is now known as katana`
+[04-14-2006 04:14:08] [#ezpublish] <kalooni> cache blocks really helps in speeding a ez site
+[04-14-2006 04:15:07] [#ezpublish] <niooi> I'm checking what you 've told me...
+[04-14-2006 04:20:26] [#ezpublish] <katana`> there is a learning process in site optimization... once you're used to it a little you'll understand why some parts (ViewCaching for instance) are easier than others...
+[04-14-2006 04:20:37] [#ezpublish] <katana`> if caching is part of the developement process, it's much easier
+[04-14-2006 04:20:53] [#ezpublish] <niooi> I gues we have a STEEP learning curve because so fast the performance is very poor
+[04-14-2006 04:21:04] [#ezpublish] <niooi> fast=far
+[04-14-2006 04:21:17] [#ezpublish] <niooi> I cannot find OverrideCache
+[04-14-2006 04:21:32] [#ezpublish] <niooi> I'm in site.ini in the backend
+[04-14-2006 04:23:29] [#ezpublish] <katana`> it's [OverrideSettings], Cache=enabled|disabled
+[04-14-2006 04:23:44] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-14-2006 04:24:00] [#ezpublish] <zrg> morning, mortals
+[04-14-2006 04:24:13] [#ezpublish] <niooi> hi zrg
+[04-14-2006 04:24:54] [#ezpublish] <niooi> Thanks katana`. By the way I think I remember your nickname from a php group long time ago or a ftp... group ;)
+[04-14-2006 04:26:03] [#ezpublish] <niooi> phpfrance maybe
+[04-14-2006 04:26:34] [#ezpublish] <katana`> a ftp group ? that's possible, but it would have been like 7 or 8 years ago :)
+[04-14-2006 04:26:41] [#ezpublish] <niooi> yes
+[04-14-2006 04:26:43] [#ezpublish] <niooi> !!!!
+[04-14-2006 04:26:47] [#ezpublish] <katana`> that may have been it
+[04-14-2006 04:26:48] [#ezpublish] <niooi> cybercable
+[04-14-2006 04:26:53] [#ezpublish] <katana`> got a name for the ... group maybe ?
+[04-14-2006 04:26:58] [#ezpublish] <niooi> rezurection
+[04-14-2006 04:27:11] [#ezpublish] <niooi> or under the cybercable newsgroup
+[04-14-2006 04:27:23] [#ezpublish] <katana`> the names ring a bell
+[04-14-2006 04:27:39] [#ezpublish] <niooi> time is flying !!!
+[04-14-2006 04:27:41] [#ezpublish] <katana`> i was not in those though ;)
+[04-14-2006 04:27:50] [#ezpublish] <katana`> phase, rings a bell for you ?
+[04-14-2006 04:27:55] [#ezpublish] <niooi> no
+[04-14-2006 04:27:58] [#ezpublish] <katana`> damn... it goes waaay back
+[04-14-2006 04:28:10] [#ezpublish] <katana`> i'm not gonna start mentioning server names but well :)
+[04-14-2006 04:28:24] [#ezpublish] <niooi> there was also  etoile noire but I just had a temp access to them
+[04-14-2006 04:28:33] [#ezpublish] <niooi> vodka, pastis...
+[04-14-2006 04:28:39] [#ezpublish] <katana`> aaah yes etoile noire :)
+[04-14-2006 04:28:47] [#ezpublish] <niooi> :o)
+[04-14-2006 04:28:56] [#ezpublish] <katana`> or standard stuff like PB or that kind of stuff... AF1, etc
+[04-14-2006 04:29:03] [#ezpublish] <katana`> i'm no longer in that stuff anyway now :)
+[04-14-2006 04:29:09] [#ezpublish] <niooi> me too
+[04-14-2006 04:29:20] [#ezpublish] <niooi> you have to be a student and have LOTs of free time
+[04-14-2006 04:29:23] [#ezpublish] <zrg> nostalgy moment..
+[04-14-2006 04:29:29] [#ezpublish] <niooi> indeed
+[04-14-2006 04:29:46] [#ezpublish] <katana`> I was a student :)
+[04-14-2006 04:29:52] [#ezpublish] <katana`> and I had lots of free time
+[04-14-2006 04:29:58] [#ezpublish] <niooi> same here
+[04-14-2006 04:30:10] [#ezpublish] <katana`> i don't regret any of it anyway... the general knowledge of internet i have now owes a lot to all of that
+[04-14-2006 04:30:20] [#ezpublish] <niooi> yes
+[04-14-2006 04:30:20] [#ezpublish] <zrg> year?
+[04-14-2006 04:30:49] [#ezpublish] <niooi> 1995 to 2000
+[04-14-2006 04:30:54] [#ezpublish] <katana`> about the same here
+[04-14-2006 04:31:00] [#ezpublish] <katana`> 1999, 2001 maybe
+[04-14-2006 04:31:00] [#ezpublish] <niooi> but before it was under amiga
+[04-14-2006 04:31:03] [#ezpublish] <zrg> the MUD years :)
+[04-14-2006 04:31:06] [#ezpublish] <katana`> lol
+[04-14-2006 04:31:18] [#ezpublish] <katana`> now i just use P2P, it's not that bad in the end ;)
+[04-14-2006 04:31:19] [#ezpublish] <zrg> or epoch, id say
+[04-14-2006 04:31:48] [#ezpublish] <zrg> roommate got serious problems from mud
+[04-14-2006 04:31:55] [#ezpublish] <niooi> yes P2P is much better
+[04-14-2006 04:32:04] [#ezpublish] <niooi> what MUD?
+[04-14-2006 04:32:23] [#ezpublish] <zrg> liebe gott!
+[04-14-2006 04:32:48] [#ezpublish] <zrg> ah, you mean which?
+[04-14-2006 04:33:56] [#ezpublish] <niooi> MUD: what does it stand for?
+[04-14-2006 04:34:28] [#ezpublish] <buz> colossal waste of time
+[04-14-2006 04:34:34] [#ezpublish] <katana`> Multi User Dungeon ? iirc
+[04-14-2006 04:35:18] [#ezpublish] <niooi> so to go back to my troubles. If viewcaching is enabled and eveythinf is enabled and it is still slow it is because our developpers should add cache-blocks within the templates
+[04-14-2006 04:35:22] [#ezpublish] <katana`> :))
+[04-14-2006 04:35:36] [#ezpublish] <katana`> as long as permissions on var/cache and var/cache/site are okay yes
+[04-14-2006 04:35:38] [#ezpublish] <niooi> MUD, never used that!
+[04-14-2006 04:35:45] [#ezpublish] <niooi> yes there are okay
+[04-14-2006 04:35:50] [#ezpublish] <niooi> because not empty
+[04-14-2006 04:35:51] [#ezpublish] <katana`> but you should check the profiling infos at the bottom of debugoutput to see what slows down your website
+[04-14-2006 04:36:00] [#ezpublish] <niooi> Template
+[04-14-2006 04:36:06] [#ezpublish] <niooi> is what slows down the page
+[04-14-2006 04:36:14] [#ezpublish] <buz> do you have template compile etc on?
+[04-14-2006 04:36:18] [#ezpublish] <katana`> do rm -rf var/cache/* var/yoursite/cache/*, reload, and see if the folders are filled correctly
+[04-14-2006 04:36:18] [#ezpublish] <niooi> yes
+[04-14-2006 04:36:33] [#ezpublish] <buz> how long does it take to generate  a page?
+[04-14-2006 04:37:04] [#ezpublish] <buz> (not the first time after cache clear ;)
+[04-14-2006 04:37:09] [#ezpublish] <niooi> to generate if I erase the cache it can take 10s!!
+[04-14-2006 04:37:17] [#ezpublish] <buz> that's normal
+[04-14-2006 04:37:29] [#ezpublish] <niooi> oh then it takes between 1 to 3 seconds and much more in the backend
+[04-14-2006 04:37:37] [#ezpublish] <buz> then something is seriously wrong
+[04-14-2006 04:37:40] [#ezpublish] <katana`> yes, that's normal, you never clear all cache :=)
+[04-14-2006 04:37:42] [#ezpublish] <niooi> yes for sure
+[04-14-2006 04:37:43] [#ezpublish] <katana`> yep... totally
+[04-14-2006 04:38:00] [#ezpublish] <buz> what machine does it run on?
+[04-14-2006 04:38:06] [#ezpublish] <katana`> err no, 1 to 3 is okay if caching is not properly configured
+[04-14-2006 04:38:12] [#ezpublish] <katana`> you can enable viewcaching on the backend as well
+[04-14-2006 04:39:17] [#ezpublish] <niooi> on a dedicated servr
+[04-14-2006 04:39:26] [#ezpublish] <niooi> Celeron 2 GHz
+[04-14-2006 04:39:29] [#ezpublish] <katana`> ouch
+[04-14-2006 04:39:31] [#ezpublish] <niooi> 512 of RAM
+[04-14-2006 04:39:34] [#ezpublish] <katana`> hard drives ?
+[04-14-2006 04:39:35] [#ezpublish] <katana`> whoa...
+[04-14-2006 04:39:40] [#ezpublish] <niooi> 160 Go Sata
+[04-14-2006 04:39:58] [#ezpublish] <katana`> celeron / 512 is not good, honestly
+[04-14-2006 04:40:06] [#ezpublish] <niooi> the memory used is around 300 MB
+[04-14-2006 04:40:07] [#ezpublish] <katana`> but you can get much better performances than that anyway...
+[04-14-2006 04:40:14] [#ezpublish] <katana`> analyze the profiling infos on Debug Output
+[04-14-2006 04:40:25] [#ezpublish] <katana`> it should give you infos about where the bottlenecks are
+[04-14-2006 04:40:31] [#ezpublish] <niooi> yes that's my point: I know the server is not the best one ut I know it should be so slow
+[04-14-2006 04:40:37] [#ezpublish] <niooi> ok
+[04-14-2006 04:41:03] [#ezpublish] <katana`> it won't be blazing fast but it should be much faster
+[04-14-2006 04:41:04] [#ezpublish] <buz> you should see page load times of about 0.2s
+[04-14-2006 04:41:08] [#ezpublish] <katana`> caching is not an option ;)
+[04-14-2006 04:41:14] [#ezpublish] <katana`> i'd say 0.4 on that setup...
+[04-14-2006 04:41:20] [#ezpublish] <katana`> you need very fast HDs to get blazing fast pages
+[04-14-2006 04:41:30] [#ezpublish] <buz> actually, it's more cpu bound i think
+[04-14-2006 04:41:35] [#ezpublish] <katana`> both
+[04-14-2006 04:41:39] [#ezpublish] <katana`> and 512 of RAM... damn :)
+[04-14-2006 04:41:42] [#ezpublish] <buz> for any decent system, everything will be cached in ram anyway
+[04-14-2006 04:41:47] [#ezpublish] <katana`> that's the main bottleneck imho
+[04-14-2006 04:42:07] [#ezpublish] <buz> to be fair
+[04-14-2006 04:42:24] [#ezpublish] <buz> i currently have a 3.7 site on a virtual server, that still gets me sub 0.5s times
+[04-14-2006 04:43:03] [#ezpublish] <katana`> cached as hell or not ?
+[04-14-2006 04:43:08] [#ezpublish] <buz> all caches on
+[04-14-2006 04:43:14] [#ezpublish] <buz> but no specific tuning other than that
+[04-14-2006 04:43:23] [#ezpublish] <buz> ok to be fair
+[04-14-2006 04:43:27] [#ezpublish] <buz> the machine has light load
+[04-14-2006 04:43:36] [#ezpublish] <buz> so in essence one could claim it's mostly dedicated ;)
+[04-14-2006 04:43:43] [#ezpublish] <katana`> all caches on is fairly minimal...
+[04-14-2006 04:43:50] [#ezpublish] <buz> but no php cache or anything like that
+[04-14-2006 04:43:57] [#ezpublish] <katana`> cache-blocks are as important as developing templates
+[04-14-2006 04:44:12] [#ezpublish] <buz> i can live with 0,5s for that site ;)
+[04-14-2006 04:44:32] [#ezpublish] <kalooni> Don't you think the cause could be some problems in the code ?
+[04-14-2006 04:44:39] [#ezpublish] <kalooni> too ?
+[04-14-2006 04:44:42] [#ezpublish] <katana`> yeah, i understand :)
+[04-14-2006 04:44:45] [#ezpublish] <katana`> possibly
+[04-14-2006 04:44:55] [#ezpublish] <katana`> ANY error outputed by debug output should be fixed
+[04-14-2006 04:45:10] [#ezpublish] <niooi> ok
+[04-14-2006 04:45:16] [#ezpublish] <niooi> I am not a developer
+[04-14-2006 04:45:30] [#ezpublish] <niooi> I sawx there are notices but no errors
+[04-14-2006 04:45:47] [#ezpublish] <katana`> notices are not good either, but it depends on them
+[04-14-2006 04:45:55] [#ezpublish] <katana`> you do have developers do you ? :)
+[04-14-2006 04:46:01] [#ezpublish] <niooi> yes I do
+[04-14-2006 04:46:27] [#ezpublish] <katana`> notices are here for a reason, usually
+[04-14-2006 04:46:36] [#ezpublish] <katana`> and they should really look into cache blocks... :)
+[04-14-2006 04:47:25] [#ezpublish] <niooi> SO I should told my developers to add cache-blocks on all the templates because without it the caching is not working? rihgt?
+[04-14-2006 04:47:38] [#ezpublish] <kalooni> not on all templates
+[04-14-2006 04:48:14] [#ezpublish] <katana`> no, to learn how cache blocks work
+[04-14-2006 04:48:21] [#ezpublish] <katana`> the article i've sent to you is very good
+[04-14-2006 04:48:24] [#ezpublish] <katana`> they should start with that
+[04-14-2006 04:48:31] [#ezpublish] <niooi> *I'm reading it
+[04-14-2006 04:48:31] [#ezpublish] <katana`> they have to be used PROPERLY ;)
+[04-14-2006 04:48:53] [#ezpublish] <buz> one of the issues is that they aren't totally right in the default pagelayout either
+[04-14-2006 04:48:56] [#ezpublish] <kalooni> katana: cache block should be used for parts that not depends on $module_result right ?
+[04-14-2006 04:49:25] [#ezpublish] <katana`> yep
+[04-14-2006 04:49:28] [#ezpublish] <katana`> in most situations
+[04-14-2006 04:50:26] -!- tobmaster [n=tobmaste@dslb-084-061-066-159.pools.arcor-ip.net] has joined #ezpublish
+[04-14-2006 04:52:53] [#ezpublish] <niooi> Pour que le cache d'Ez Publish fonctionne correctement il faut rajouter
+[04-14-2006 04:52:53] [#ezpublish] <niooi> {cache-block} partout où le contenu ne dépend pas de $module_result
+[04-14-2006 04:52:53] [#ezpublish] <niooi> sinon le système de cache ne fonctionne pas correctement
+[04-14-2006 04:52:57] [#ezpublish] <niooi> sorry
+[04-14-2006 04:53:32] [#ezpublish] <katana`> doesn't mean it's not properly implemented, just that it's not correctly configured ;)
+[04-14-2006 04:54:03] [#ezpublish] <katana`> err "doesn't mean it's not properly running, just that it's not correctly configured ;)"
+[04-14-2006 04:54:08] [#ezpublish] <niooi> http://preprod.issy.linagora.com/
+[04-14-2006 04:54:11] [#ezpublish] <niooi> that our site
+[04-14-2006 04:54:41] [#ezpublish] <katana`> could you enable debug output ?
+[04-14-2006 04:54:50] [#ezpublish] <niooi> I wil
+[04-14-2006 04:54:50] [#ezpublish] <niooi> l
+[04-14-2006 04:54:52] [#ezpublish] <katana`> the celeron is your preproduction server ?
+[04-14-2006 04:55:10] [#ezpublish] <niooi> yes
+[04-14-2006 04:55:17] [#ezpublish] <niooi> and also the production :(
+[04-14-2006 04:55:20] [#ezpublish] <katana`> ah...
+[04-14-2006 04:55:43] [#ezpublish] <katana`> seriously, the hard drive is okay, but a celeron is definitely not a decent production CPU for a webserver :(
+[04-14-2006 04:55:55] [#ezpublish] <katana`> you can't have too high expectations with such hardware...
+[04-14-2006 04:56:05] [#ezpublish] <katana`> and 512 MB of RAM is really, really not enough :(
+[04-14-2006 05:00:30] -!- niooi_2 [n=niooi@linagora.net8.nerim.net] has joined #ezpublish
+[04-14-2006 05:00:46] [#ezpublish] <niooi_2> damned cheap switch
+[04-14-2006 05:02:11] [#ezpublish] <niooi_2> okay debugging is on
+[04-14-2006 05:02:18] [#ezpublish] <niooi_2> http://preprod.issy.linagora.com/
+[04-14-2006 05:02:34] [#ezpublish] <niooi_2> want to have lunch and we'll chat about it afterward
+[04-14-2006 05:03:21] [#ezpublish] <katana`> 147 SQL queries... clear sign that this is too much :(
+[04-14-2006 05:03:33] [#ezpublish] <katana`> 2.8 secs of template processing, related to the SQL queries count
+[04-14-2006 05:03:44] [#ezpublish] <niooi_2> why do we have that? (MySQL is replicated on a 2nd server)
+[04-14-2006 05:04:09] [#ezpublish] <katana`> well, even if it is replicated, queries are still executed ;)
+[04-14-2006 05:04:15] [#ezpublish] <niooi_2> sure
+[04-14-2006 05:04:23] [#ezpublish] <katana`> because you have lots of fetches and usage of content from the templates, and these are not cached
+[04-14-2006 05:04:26] [#ezpublish] <katana`> cache-blocks will fix that
+[04-14-2006 05:04:43] [#ezpublish] <buz> i would say mysql and template are at fault ;)
+[04-14-2006 05:05:02] [#ezpublish] <niooi_2> where do you see the number of queries?
+[04-14-2006 05:05:03] [#ezpublish] <katana`> you should end up with 2 queries per page once caching is properly implemented. The output from these blocks will be cached, and the templates won't have to be processed
+[04-14-2006 05:05:04] [#ezpublish] <niooi_2> duh!
+[04-14-2006 05:05:08] [#ezpublish] <katana`> at the bottom
+[04-14-2006 05:05:17] [#ezpublish] <katana`> Mysql_queries	0.6629 sec	21.1806%	147	0.0045 sec
+[04-14-2006 05:05:38] [#ezpublish] <katana`> 0.0045 avg per query, 147 queries, total 0.6629 secs
+[04-14-2006 05:05:56] [#ezpublish] <katana`> it's not much in itself, but the data from these queries is being processed, and this is visible in the templates part
+[04-14-2006 05:06:01] [#ezpublish] <katana`> Template load	0.0274 sec	0.8768%	3	0.0091 sec
+[04-14-2006 05:06:04] [#ezpublish] <katana`> err no
+[04-14-2006 05:06:24] [#ezpublish] <katana`> Template processing: 2.8321 sec (90.4927%) 3 (0.9440 sec)
+[04-14-2006 05:06:40] [#ezpublish] <buz> just for reference: on a virtual server, without eaccelerator: http://www.jfdph.ch/index.php
+[04-14-2006 05:06:41] [#ezpublish] <niooi_2> yes that's the bottleneck
+[04-14-2006 05:06:47] [#ezpublish] <buz> no custom cache blocks
+[04-14-2006 05:06:52] [#ezpublish] <katana`> so you JUST need cache blocks, that's it
+[04-14-2006 05:07:00] [#ezpublish] <niooi_2> good
+[04-14-2006 05:07:04] [#ezpublish] <niooi_2> thanks for your help
+[04-14-2006 05:07:11] [#ezpublish] <katana`> buz, it depends a lot on what is implemented outside of content/view
+[04-14-2006 05:07:13] [#ezpublish] <buz> 0.4s
+[04-14-2006 05:07:17] [#ezpublish] <buz> not much
+[04-14-2006 05:07:21] [#ezpublish] <buz> very much default
+[04-14-2006 05:07:24] [#ezpublish] <katana`> not much is done outside of it as far as i can see :)
+[04-14-2006 05:07:45] [#ezpublish] <katana`> there is a lot of contextual items on niooi's website, e.g. outside of content/view
+[04-14-2006 05:07:50] [#ezpublish] <buz> yes
+[04-14-2006 05:07:57] [#ezpublish] <katana`> that's where the problem lies
+[04-14-2006 05:08:08] [#ezpublish] <buz> only contextual thing i have is http://triligon.org/triligon/blog/two_toolbox_patches_to_sdk_public_sort_order_for_node_list_and_editor_s_little_helper
+[04-14-2006 05:08:13] [#ezpublish] <buz> and thats not shown for anon
+[04-14-2006 05:08:18] [#ezpublish] <katana`> that's not much indeed :))
+[04-14-2006 05:08:33] [#ezpublish] <buz> but veeery useful
+[04-14-2006 05:09:01] [#ezpublish] <katana`> indeed
+[04-14-2006 05:09:27] [#ezpublish] <buz> i cant understand why that doesnt ship with ez
+[04-14-2006 05:10:31] [#ezpublish] <zrg> it would make it usable out of box
+[04-14-2006 05:12:02] [#ezpublish] <niooi_2> Thanks
+[04-14-2006 05:12:30] [#ezpublish] <niooi_2> I told my dev that we should not have more than 2 MySQL queries if the page is cached properly
+[04-14-2006 05:12:47] [#ezpublish] <katana`> good
+[04-14-2006 05:12:50] [#ezpublish] <niooi_2> down from 147 to 2 should make an improvement
+[04-14-2006 05:13:05] [#ezpublish] <katana`> a tad ;)
+[04-14-2006 05:13:06] [#ezpublish] <zrg> mysql4 query cache helps too
+[04-14-2006 05:13:36] [#ezpublish] <niooi_2> zrg: that's in the my.conf file?
+[04-14-2006 05:14:45] [#ezpublish] <niooi_2> Bon appétit everyone I'll be back in 1 hour
+[04-14-2006 05:14:47] [#ezpublish] <katana`> your patches indeed look good, buz. I have done something similar for creating objects
+[04-14-2006 05:14:53] [#ezpublish] <niooi_2> thanks for everybody's help
+[04-14-2006 05:14:54] [#ezpublish] <katana`> bon app niooi :)
+[04-14-2006 05:15:09] [#ezpublish] <buz> can you convince $whomever to include it into 3.8
+[04-14-2006 05:15:29] [#ezpublish] <buz> stuff sent to sdk-public rarely gets much echo
+[04-14-2006 05:15:31] [#ezpublish] <katana`> i think it's too late, the list of patches for 3.8 has been processed already...
+[04-14-2006 05:15:35] [#ezpublish] <katana`> i'll try
+[04-14-2006 05:15:52] [#ezpublish] <buz> its just template work :)
+[04-14-2006 05:15:56] -!- niooi [n=niooi@linagora.net8.nerim.net] has quit [Read error: 110 (Connection timed out)]
+[04-14-2006 05:16:13] [#ezpublish] <katana`> yep
+[04-14-2006 05:17:42] [#ezpublish] <katana`> i've sent an email, i'll keep you informed
+[04-14-2006 05:22:15] [#ezpublish] <buz> thx
+[04-14-2006 05:22:20] [#ezpublish] <DiGiTa|_> hi
+[04-14-2006 05:22:36] [#ezpublish] <buz> anybody knows about a way to feed a whole SITE to a xhtml validator
+[04-14-2006 05:22:54] [#ezpublish] <DiGiTa|_> lol
+[04-14-2006 05:22:55] [#ezpublish] <DiGiTa|_> no
+[04-14-2006 05:23:07] [#ezpublish] <DiGiTa|_> i am trying the cache block
+[04-14-2006 05:23:13] [#ezpublish] <DiGiTa|_> but i don't get it
+[04-14-2006 05:23:23] [#ezpublish] <DiGiTa|_> i set
+[04-14-2006 05:23:24] [#ezpublish] <DiGiTa|_> 			{cache-block}
+[04-14-2006 05:23:24] [#ezpublish] <DiGiTa|_> 				{include uri='design:parts/sidebar.tpl'}
+[04-14-2006 05:23:24] [#ezpublish] <DiGiTa|_> 			{/cache-block}
+[04-14-2006 05:23:30] [#ezpublish] <DiGiTa|_> inb paelayout
+[04-14-2006 05:23:46] [#ezpublish] <DiGiTa|_> but content between cache-block tags is not cached
+[04-14-2006 05:24:23] [#ezpublish] <DiGiTa|_> in sidebar.tpl i include two other files
+[04-14-2006 05:24:33] [#ezpublish] <DiGiTa|_> can that be the problem ?
+[04-14-2006 05:25:02] [#ezpublish] <katana`> is TemplateCache enabled ?
+[04-14-2006 05:25:10] [#ezpublish] <DiGiTa|_> of course
+[04-14-2006 05:25:11] [#ezpublish] <katana`> it enables cache blocks ;)
+[04-14-2006 05:25:14] [#ezpublish] <katana`> weird
+[04-14-2006 05:25:26] [#ezpublish] <katana`> i have to go out for lunch now i'll check that later
+[04-14-2006 05:25:27] [#ezpublish] <DiGiTa|_> [TemplateSettings]
+[04-14-2006 05:25:27] [#ezpublish] <DiGiTa|_> TemplateCache=enabled;
+[04-14-2006 05:25:27] [#ezpublish] <DiGiTa|_> TemplateCompile=enabled;
+[04-14-2006 05:25:31] [#ezpublish] <katana`> in the meanwhile, kill your cache...
+[04-14-2006 05:25:40] [#ezpublish] <DiGiTa|_> omfg
+[04-14-2006 05:25:40] [#ezpublish] <katana`> rm -rf var/cache/* var/site/cache/*
+[04-14-2006 05:25:49] [#ezpublish] <DiGiTa|_> i set a ;
+[04-14-2006 05:25:53] [#ezpublish] <DiGiTa|_> at the end
+[04-14-2006 05:26:13] [#ezpublish] <DiGiTa|_> enabled;
+[04-14-2006 05:26:19] [#ezpublish] <DiGiTa|_> was the problem
+[04-14-2006 05:59:17] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Peace and Protection 4.22"]
+[04-14-2006 06:01:17] -!- hovik [n=hovik@79.84-48-105.nextgentel.com] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[04-14-2006 06:26:35] -!- niooi_2 is now known as niooi
+[04-14-2006 06:30:58] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-14-2006 06:36:11] -!- phretor [n=phretor@host44-152.pool875.interbusiness.it] has joined #ezpublish
+[04-14-2006 06:36:15] [#ezpublish] <phretor> hi there
+[04-14-2006 06:36:20] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-14-2006 06:37:15] [#ezpublish] <phretor> I'm using EnhancedObjectRelation for a long time. Now, suddenlty, reverse_related_contentobject_array is empty while direct relation are showing up. Any suggestion?
+[04-14-2006 06:39:09] [#ezpublish] <katana`> buz may know
+[04-14-2006 06:39:20] [#ezpublish] <phretor> buz: are you there?
+[04-14-2006 06:39:24] [#ezpublish] <buz> that is likely a bug in 3.6 biting you
+[04-14-2006 06:39:38] [#ezpublish] <buz> search in the forums
+[04-14-2006 06:39:42] [#ezpublish] <buz> there's been some solution
+[04-14-2006 06:39:50] [#ezpublish] <buz> some new template operator i think
+[04-14-2006 06:40:54] [#ezpublish] <phretor> buz: I'm on 3.7.3
+[04-14-2006 06:41:04] [#ezpublish] <buz> probably still needs the new template operator
+[04-14-2006 06:41:22] [#ezpublish] <phretor> buz: the extension has worked well untill yesterday
+[04-14-2006 06:41:28] [#ezpublish] <buz> oh THAT is weird
+[04-14-2006 06:41:32] [#ezpublish] <buz> dunno what's going on then
+[04-14-2006 06:42:13] [#ezpublish] <buz> and you didnt update anything?
+[04-14-2006 06:44:51] [#ezpublish] <phretor> buz: there's another strange behavior - a required EOR field is not validated
+[04-14-2006 06:45:04] [#ezpublish] <phretor> buz: I make no input and it is left empty
+[04-14-2006 06:45:09] [#ezpublish] <buz> mhh
+[04-14-2006 06:45:11] [#ezpublish] <phretor> buz: I hope this helps
+[04-14-2006 06:45:15] [#ezpublish] <buz> i think input is validated by ez itself
+[04-14-2006 06:45:29] -!- Bedlore [n=me@ppp221-173.lns2.adl4.internode.on.net] has quit []
+[04-14-2006 06:46:00] [#ezpublish] <DiGiTa|_> firefox update
+[04-14-2006 06:46:01] [#ezpublish] <DiGiTa|_> :)
+[04-14-2006 06:46:11] [#ezpublish] <phretor> buz: it was validated untill yesterday :-)
+[04-14-2006 06:46:20] [#ezpublish] <buz> cleared the cache?
+[04-14-2006 06:46:28] [#ezpublish] <phretor> buz: I don't cache at all
+[04-14-2006 06:46:38] [#ezpublish] <buz> i think some stuff gets always cached
+[04-14-2006 06:46:40] [#ezpublish] <buz> ini etc
+[04-14-2006 06:47:11] [#ezpublish] <phretor> buz: I rm -rf /var/cache/* and /var/plain/cache/* too
+[04-14-2006 06:47:21] [#ezpublish] <buz> and still happens?
+[04-14-2006 06:47:24] [#ezpublish] <phretor> yes
+[04-14-2006 06:47:30] [#ezpublish] <buz> that's weird
+[04-14-2006 06:47:33] [#ezpublish] <phretor> buz: I can give you access if you've time
+[04-14-2006 06:47:40] [#ezpublish] <buz> not right now
+[04-14-2006 06:47:44] [#ezpublish] <buz> later maybe
+[04-14-2006 06:47:52] [#ezpublish] <buz> will go for lunch soon
+[04-14-2006 06:47:57] [#ezpublish] <phretor> buz: is there any other info I can provide?
+[04-14-2006 06:48:14] [#ezpublish] <buz> it could be some db problem...
+[04-14-2006 06:48:29] [#ezpublish] <buz> maybe the db somehow got damaged?
+[04-14-2006 06:48:37] [#ezpublish] <phretor>  buz mh, the db still the same...
+[04-14-2006 06:48:47] [#ezpublish] <phretor> buz: I'm on MySQL, btw. But let me reboot it
+[04-14-2006 06:51:47] [#ezpublish] <phretor> buz: the strangest thing is the ignored validation :-\
+[04-14-2006 06:52:52] [#ezpublish] <kalooni> anybody here tried the ezsampleshipping extension?
+[04-14-2006 06:59:50] [#ezpublish] <katana`> yeah
+[04-14-2006 07:00:44] [#ezpublish] <kalooni> is there a doc somewhere ?
+[04-14-2006 07:00:59] [#ezpublish] <kalooni> should I move some files of the extension in the kernel ?
+[04-14-2006 07:10:13] [#ezpublish] <niooi> I'm back
+[04-14-2006 07:10:28] [#ezpublish] <niooi> The developpers have addes cache-blocks
+[04-14-2006 07:11:00] [#ezpublish] <niooi> or there is a mistake in the way it has been added ot the settings of ez publish
+[04-14-2006 07:14:19] [#ezpublish] <phretor> strange: I got "Unknown get variable 'x'" error on a is_set(ezhttp('x', 'get')))
+[04-14-2006 07:15:19] [#ezpublish] <katana`> ezhttp doesn't do a is_set...
+[04-14-2006 07:15:33] [#ezpublish] <katana`> you just use is_set on a null return... there's no clean workaround at the moment
+[04-14-2006 07:15:52] [#ezpublish] <phretor> katana`: I hope it's not a real error
+[04-14-2006 07:16:06] [#ezpublish] <phretor> katana`: anyway, it does not affect the template
+[04-14-2006 07:16:36] [#ezpublish] <phretor> katana`: going back to the reverse relation problem..it remains :-\
+[04-14-2006 07:18:25] [#ezpublish] <buz> phretor: could you write a detailed description and post it to the forum
+[04-14-2006 07:20:01] [#ezpublish] <phretor> buz: the problem has no details for me too, just because it worked well. Now I cleaned up the dummy content and trashed it because I had to start with the real content: It does not resolver reverse related relations.
+[04-14-2006 07:20:28] [#ezpublish] <buz> mhh
+[04-14-2006 07:21:14] [#ezpublish] <phretor> buz: it apparently doesn't work with new content
+[04-14-2006 07:21:42] [#ezpublish] <phretor> buz: and this ususally happends when one uses to hardcode something - I think this is not my case
+[04-14-2006 07:21:49] [#ezpublish] <niooi> Why do you think we still have so many queries knowing that there are cache-blocks in our templates?
+[04-14-2006 07:23:02] [#ezpublish] <katana`> the cache blocks are probably not in use
+[04-14-2006 07:25:14] [#ezpublish] <niooi> what could be the reasons?
+[04-14-2006 07:25:33] [#ezpublish] <niooi> everything seems to be activated in the site.ini
+[04-14-2006 07:27:01] [#ezpublish] <kalooni> have you clear the caches after cache-block addition ?
+[04-14-2006 07:28:20] [#ezpublish] <niooi> yes
+[04-14-2006 07:28:23] [#ezpublish] <phretor> buz: I also tried to make create an object full of empty required fields - other required fields are recognized as required - this does not happen with the EOR field
+[04-14-2006 07:28:26] [#ezpublish] <niooi> even recomplie the template
+[04-14-2006 07:29:17] [#ezpublish] <niooi> still 153 MySQL queries on the home page
+[04-14-2006 07:29:46] [#ezpublish] <niooi> and template processing takes 90% of the time
+[04-14-2006 07:29:51] [#ezpublish] <phretor> buz: here is an error: extension/enhancedobjectrelation/datatypes/ezenhancedobjectrelation/ezenhancedobjectrelationtype.php on line 818 - Undefined index:  1878
+[04-14-2006 07:42:21] -!- tobmaster [n=tobmaste@dslb-084-061-066-159.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[04-14-2006 07:44:19] [#ezpublish] <phretor> is there a way for an ultimate cleaning of all content? drafts/uncommitted objects/whatever
+[04-14-2006 07:58:01] [#ezpublish] <buz> uhm did you turn on debug redirection
+[04-14-2006 07:58:59] [#ezpublish] <niooi> me?
+[04-14-2006 07:59:17] [#ezpublish] <buz> no phretor
+[04-14-2006 07:59:30] [#ezpublish] <phretor> buz: I'll give you a couple of screenshot
+[04-14-2006 07:59:34] [#ezpublish] <buz> ok
+[04-14-2006 07:59:44] [#ezpublish] <buz> also, always use the version from svn
+[04-14-2006 07:59:56] [#ezpublish] <phretor> buz: Yes, just checked out this morn
+[04-14-2006 08:00:06] [#ezpublish] <buz> before or after you got into your issues?
+[04-14-2006 08:00:17] [#ezpublish] <phretor> buz: after
+[04-14-2006 08:00:22] [#ezpublish] <buz> hmm
+[04-14-2006 08:00:42] [#ezpublish] <phretor> buz: I got these issue yesterday
+[04-14-2006 08:00:52] [#ezpublish] <phretor> buz: I updated this morning, and the issue remained
+[04-14-2006 08:01:12] [#ezpublish] <DiGiTa|_> www.bartelme.at has someone seen this search module somewere ?
+[04-14-2006 08:01:33] [#ezpublish] <phretor> buz: but I stress the fact that issues apperead after I cleaned up
+[04-14-2006 08:01:45] [#ezpublish] <phretor> buz: i.e., removed all dummy content
+[04-14-2006 08:02:01] [#ezpublish] <buz> then it's likely some class definition that doesnt fit?
+[04-14-2006 08:03:03] [#ezpublish] <DiGiTa|_> oh i found it : http://orderedlist.com/articles/howto-animated-live-search/
+[04-14-2006 08:03:43] [#ezpublish] <phretor> buz: http://img137.imageshack.us/my.php?image=required0rm.png
+[04-14-2006 08:04:15] [#ezpublish] <buz> that is weird indeed
+[04-14-2006 08:04:55] [#ezpublish] <phretor> buz: can I give you a dump of my db or something like that?
+[04-14-2006 08:05:07] [#ezpublish] <buz> i doubt it's gonna help much
+[04-14-2006 08:05:45] [#ezpublish] <phretor> buz: it seems that the value is not sent or something like that
+[04-14-2006 08:06:03] [#ezpublish] <DiGiTa|_> buz buz buz buz
+[04-14-2006 08:06:03] [#ezpublish] <phretor> buz: I don't know where to hit my head on
+[04-14-2006 08:06:04] [#ezpublish] <DiGiTa|_> :)
+[04-14-2006 08:06:17] [#ezpublish] <katana`> on the desk ?
+[04-14-2006 08:06:21] [#ezpublish] <buz> have you got the site online?
+[04-14-2006 08:06:31] [#ezpublish] <phretor> buz: I could give you access
+[04-14-2006 08:06:51] [#ezpublish] <phretor> buz: got a GPG key?
+[04-14-2006 08:07:00] [#ezpublish] <buz> somewhere
+[04-14-2006 08:08:21] [#ezpublish] <phretor> buz: do I have to search for it or you are already looking?
+[04-14-2006 08:08:45] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[04-14-2006 08:14:01] [#ezpublish] <niooi> I realised that the navigator is not using its cache. It seems by default eZ Publish desactivate the browsers' cache
+[04-14-2006 08:14:26] [#ezpublish] <DiGiTa|_> hey buz : http://demo.script.aculo.us/ajax/sortable_elements
+[04-14-2006 08:14:46] [#ezpublish] <buz> what about it
+[04-14-2006 08:15:43] [#ezpublish] <DiGiTa|_> it update the sort list automatically
+[04-14-2006 08:16:04] [#ezpublish] <buz> well it would have to
+[04-14-2006 08:16:20] [#ezpublish] <buz> i explicitely didnt add that
+[04-14-2006 08:16:27] [#ezpublish] <buz> it would cause a lot of server load for little gain
+[04-14-2006 08:17:01] [#ezpublish] <DiGiTa|_> that can be an option
+[04-14-2006 08:17:19] [#ezpublish] <DiGiTa|_> many funny effects : http://wiki.script.aculo.us/scriptaculous/show/CombinationEffectsDemo
+[04-14-2006 08:51:35] [#ezpublish] <buz> http://ez.no/community/forum/developer/attributeedit_policy NEAT
+[04-14-2006 08:55:08] [#ezpublish] <buz> has anyone ever tried to put special chars in an image alt field?
+[04-14-2006 08:55:13] [#ezpublish] <buz> looks like it does strange thigns
+[04-14-2006 08:58:04] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[04-14-2006 08:59:07] [#ezpublish] <phretor> why an Author field always display the current logged user as default?
+[04-14-2006 08:59:14] [#ezpublish] <phretor> I mean, while editing
+[04-14-2006 09:03:16] [#ezpublish] <DiGiTa|_> buz, works for me
+[04-14-2006 09:03:42] [#ezpublish] <buz> for me, weird stuff comes out of the field
+[04-14-2006 09:04:17] [#ezpublish] <DiGiTa|_> wrong regionalsettings ?
+[04-14-2006 09:04:23] [#ezpublish] <buz> possible
+[04-14-2006 09:04:28] [#ezpublish] <buz> other things seem to work though
+[04-14-2006 09:08:37] [#ezpublish] <kalooni> buz: I had the same pb with image alt
+[04-14-2006 09:09:20] [#ezpublish] <buz> what did you do to solve it
+[04-14-2006 09:09:22] [#ezpublish] <DiGiTa|_> it remind me i have this prob on some site
+[04-14-2006 09:09:27] [#ezpublish] <DiGiTa|_> but not on others
+[04-14-2006 09:09:37] [#ezpublish] <DiGiTa|_> actually i haven't this problem
+[04-14-2006 09:10:00] [#ezpublish] <kalooni> what i did: i have stop using alt field ;)
+[04-14-2006 09:10:15] [#ezpublish] <buz> not an option
+[04-14-2006 09:10:18] [#ezpublish] <DiGiTa|_> alt is important for referencing
+[04-14-2006 09:10:22] [#ezpublish] <DiGiTa|_> :)
+[04-14-2006 09:11:44] [#ezpublish] <DiGiTa|_> what are your regionalsettings buz .
+[04-14-2006 09:11:58] [#ezpublish] <buz> mhh
+[04-14-2006 09:12:02] [#ezpublish] <buz> de-DE
+[04-14-2006 09:12:07] [#ezpublish] <buz> no
+[04-14-2006 09:12:09] [#ezpublish] <buz> ger-DE
+[04-14-2006 09:14:08] [#ezpublish] <DiGiTa|_> well that"s ok
+[04-14-2006 09:14:16] [#ezpublish] <DiGiTa|_> whould accept special chars
+[04-14-2006 09:14:45] [#ezpublish] <DiGiTa|_> how does the data look in DB?
+[04-14-2006 09:15:25] [#ezpublish] <buz> phpmyadmin doesnt work on that bloody server
+[04-14-2006 09:15:27] [#ezpublish] <buz> idiot admn
+[04-14-2006 09:15:54] [#ezpublish] <DiGiTa|_> :/
+[04-14-2006 09:24:28] [#ezpublish] <buz> does anyone have a patch for per user debug output?
+[04-14-2006 09:25:01] [#ezpublish] <phretor> does anyone have tried to use eZ 3.7 with php 4.3.10?
+[04-14-2006 09:25:03] [#ezpublish] <buz> so that for example admin gets to see it
+[04-14-2006 09:25:06] [#ezpublish] <buz> phretor: doesnt work
+[04-14-2006 09:25:11] [#ezpublish] <phretor> (I know it should not work)
+[04-14-2006 09:25:16] [#ezpublish] <DiGiTa|_> nt good idea phretor
+[04-14-2006 09:25:17] [#ezpublish] <DiGiTa|_> :)
+[04-14-2006 09:25:24] [#ezpublish] <phretor> just for testing purposes
+[04-14-2006 09:25:28] [#ezpublish] <DiGiTa|_> yes
+[04-14-2006 09:25:29] [#ezpublish] <phretor> major features are available
+[04-14-2006 09:25:32] [#ezpublish] <buz> it should not and does not
+[04-14-2006 09:25:42] [#ezpublish] <DiGiTa|_> you get many references problems
+[04-14-2006 09:25:43] [#ezpublish] <DiGiTa|_> :)
+[04-14-2006 09:25:51] [#ezpublish] <phretor> DiGiTa|_: that's my major problem :-)
+[04-14-2006 09:33:45] [#ezpublish] <phretor> btw, I hope that all default templates of ez3.8 have been reviewed to make 'em w3c valid
+[04-14-2006 09:34:13] [#ezpublish] <phretor> and I hope all <div class="footer"><div class="footer-design"> have been removed
+[04-14-2006 09:34:27] [#ezpublish] <phretor> the markup of previous releases was a mess
+[04-14-2006 09:34:33] [#ezpublish] <buz> theres actually a lot of point in that markup
+[04-14-2006 09:34:38] [#ezpublish] <buz> nested divs give great flexibility
+[04-14-2006 09:35:00] [#ezpublish] <phretor> buz: it's actually a piss over the markup semantic
+[04-14-2006 09:35:11] [#ezpublish] <buz> its not supposed to be semantic for the most part
+[04-14-2006 09:35:31] [#ezpublish] <buz> besides the markup is quite good
+[04-14-2006 09:35:31] [#ezpublish] <phretor> buz: I'm not claiming that ez should support it
+[04-14-2006 09:36:07] [#ezpublish] <phretor> buz: I hope ;-) since I noticed a lot of <div class="break"></div> and things like that :-D
+[04-14-2006 09:36:28] [#ezpublish] <phretor> buz: if you need a markup reviewer, I'm here
+[04-14-2006 09:41:57] [#ezpublish] <buz> personally i would rather need a designer
+[04-14-2006 09:42:40] [#ezpublish] <Sulfur> hey, what's $nodeAssignment->ID good for? it0s not the object ID nor the node ID.
+[04-14-2006 09:42:46] [#ezpublish] <DiGiTa|_> i prefer create my own templates
+[04-14-2006 09:42:47] [#ezpublish] <DiGiTa|_> :)
+[04-14-2006 09:43:01] [#ezpublish] <niooi> one on the problem we had CachedViewModes = pdf; only...
+[04-14-2006 09:43:09] [#ezpublish] <niooi> on=of
+[04-14-2006 09:43:22] [#ezpublish] <niooi> therefore the pages were not cached
+[04-14-2006 09:49:15] [#ezpublish] <kalooni> seems better
+[04-14-2006 09:49:54] [#ezpublish] <kalooni> niooi: so what did you put instead CachedViewModes= full; sitemap; pdf;
+[04-14-2006 09:50:33] [#ezpublish] <buz> so how fast are you're page loads now?
+[04-14-2006 09:51:07] [#ezpublish] <niooi> much faster
+[04-14-2006 09:51:20] [#ezpublish] <niooi> we still have some templates not cached
+[04-14-2006 09:51:37] [#ezpublish] <niooi> we went from 150 sql queries to 33
+[04-14-2006 09:51:40] [#ezpublish] <buz> mhh 0.77s aint that bad
+[04-14-2006 09:51:48] [#ezpublish] <niooi> hopefully to 3 soon
+[04-14-2006 10:01:07] [#ezpublish] <katana`> ah that's better :)
+[04-14-2006 10:01:37] [#ezpublish] <kalooni> katana : does it make sense to add the line view in CachedViewModes ?
+[04-14-2006 10:02:03] [#ezpublish] <katana`> nope
+[04-14-2006 10:02:11] [#ezpublish] <katana`> the line view is not per say the execution of a module
+[04-14-2006 10:02:37] [#ezpublish] <katana`> e.g. it does not depend on a call of the kernel/content/view.php script, it's just a class that is being executed
+[04-14-2006 10:02:49] [#ezpublish] <kalooni> ok ;) just to be sure ;)
+[04-14-2006 10:02:54] [#ezpublish] <katana`> the full view cache will take care of listings in the main area, while cache blocks will take care of the rest
+[04-14-2006 10:02:56] [#ezpublish] <katana`> no problem :)
+[04-14-2006 10:07:11] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-14-2006 10:08:52] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Client Quit]
+[04-14-2006 10:10:34] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-14-2006 10:12:31] -!- niooi [n=niooi@linagora.net8.nerim.net] has quit [Read error: 110 (Connection timed out)]
+[04-14-2006 10:13:06] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Peace and Protection 4.22"]
+[04-14-2006 10:13:48] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-14-2006 10:14:12] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Client Quit]
+[04-14-2006 10:14:33] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-14-2006 10:16:03] [#ezpublish] * Sulfur is trying to understand how to get the node id of a just-created node
+[04-14-2006 10:24:14] -!- phretor [n=phretor@host44-152.pool875.interbusiness.it] has quit []
+[04-14-2006 10:25:22] [#ezpublish] <Sulfur> yay!
+[04-14-2006 10:25:24] [#ezpublish] <Sulfur> did it
+[04-14-2006 10:25:33] [#ezpublish] <katana`> congrats !
+[04-14-2006 10:25:44] [#ezpublish] <katana`> Sulfur, you'll be at the summer conference will you ?
+[04-14-2006 10:25:58] [#ezpublish] <Sulfur> yup katana` ! :) I want to be near the bonfire :)
+[04-14-2006 10:26:04] [#ezpublish] <katana`> lol
+[04-14-2006 10:26:05] [#ezpublish] <Sulfur> I'll try and bring the coffee too
+[04-14-2006 10:26:10] [#ezpublish] <katana`> yay !
+[04-14-2006 10:26:18] [#ezpublish] <katana`> beware, maybe your atomic stuff is not allowed in norway
+[04-14-2006 10:26:26] [#ezpublish] <katana`> the dogs are gonna rip your bags open :)
+[04-14-2006 10:26:37] [#ezpublish] <Sulfur> yeah, and then they'll explode
+[04-14-2006 10:26:42] [#ezpublish] <katana`> haha
+[04-14-2006 10:26:50] [#ezpublish] <katana`> "norwegian custom dogs killed by coffee"
+[04-14-2006 10:27:12] [#ezpublish] <Sulfur> huhu
+[04-14-2006 10:27:18] [#ezpublish] <Sulfur> and you too katana` ?
+[04-14-2006 10:27:37] [#ezpublish] <katana`> of couuurse
+[04-14-2006 10:27:54] [#ezpublish] <Sulfur> I'll try to attend the performance workshops, we spent quite a few nights improving the keyword performance, and I think that some of the improvs have made thair way into 3.8
+[04-14-2006 10:28:12] [#ezpublish] <katana`> that's great !
+[04-14-2006 10:28:22] [#ezpublish] <katana`> i have no idea what i'll try to attend to :)
+[04-14-2006 10:28:30] [#ezpublish] <Sulfur> maybe the cutest gals ? ;)
+[04-14-2006 10:31:57] [#ezpublish] <katana`> huhu
+[04-14-2006 10:36:43] [#ezpublish] <DiGiTa|_> when will we have a conference @ marseille ?
+[04-14-2006 10:37:18] [#ezpublish] <katana`> it would have been great if you could be in norway this summer DiGiTa|_ (
+[04-14-2006 10:37:20] [#ezpublish] <katana`> :(
+[04-14-2006 10:37:28] [#ezpublish] <katana`> it's gonna be an orgy
+[04-14-2006 10:37:35] [#ezpublish] <DiGiTa|_> lol
+[04-14-2006 10:37:39] [#ezpublish] <katana`> err
+[04-14-2006 10:37:43] [#ezpublish] <katana`> forget that, please /clear ;)
+[04-14-2006 10:37:52] [#ezpublish] <DiGiTa|_> i don't speak norwayan
+[04-14-2006 10:43:59] -!- kalooni [n=nicolas@fbx.internethic.net] has left #ezpublish ["Quitte"]
+[04-14-2006 10:44:08] [#ezpublish] <katana`> do I ?
+[04-14-2006 10:44:14] [#ezpublish] <katana`> norwegian :)=
+[04-14-2006 10:45:12] [#ezpublish] <DiGiTa|_> and i don't speak english too
+[04-14-2006 10:45:12] [#ezpublish] <DiGiTa|_> :)
+[04-14-2006 10:47:38] -!- niooi [n=niooi@linagora.net8.nerim.net] has joined #ezpublish
+[04-14-2006 10:47:51] [#ezpublish] <niooi> I was disconnected with noticing it
+[04-14-2006 10:48:04] [#ezpublish] <niooi> Thanks everybody for your help
+[04-14-2006 10:53:40] -!- niooi [n=niooi@linagora.net8.nerim.net] has quit []
+[04-14-2006 11:21:02] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 113 (No route to host)]
+[04-14-2006 11:33:55] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[04-14-2006 11:53:08] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Leaving."]
+[04-14-2006 13:08:42] [#ezpublish] <buz> yeah a conference in some part of europe closer to switzerland would rock
+[04-14-2006 13:08:53] [#ezpublish] <buz> and maybe for a change not just right in the middle of my exams ;)
+[04-14-2006 13:12:46] -!- DiGiTa|_ [n=guillaum@84.5.136.20] has quit []
+[04-14-2006 13:29:24] -!- nfrp [n=nfrp@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit ["Leaving"]
+[04-14-2006 13:32:16] -!- phretor [n=phretor@host19-160.pool874.interbusiness.it] has joined #ezpublish
+[04-14-2006 14:12:17] [#ezpublish] <phretor> is there any ez3.8 demo out there?
+[04-14-2006 14:13:14] [#ezpublish] <nnn0> i think
+[04-14-2006 14:13:51] [#ezpublish] <nnn0> http://ez.no/download/ez_publish/ez_publish_3_unstable_releases/3_8/3_8_0beta1
+[04-14-2006 14:13:54] [#ezpublish] <nnn0> beta
+[04-14-2006 14:24:29] -!- phretor [n=phretor@host19-160.pool874.interbusiness.it] has quit []
+[04-14-2006 16:38:24] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]

@@ -1,0 +1,175 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 5.8.&nbsp; File Uploads</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch05lev1sec8"></a><h3 class="docSection1Title" id="409768-906">5.8. File Uploads</h3>
+<p class="docText">We haven't yet covered one type of input-uploading files. You can use the file upload feature of PHP to upload images or related materials, for example. Because the browser needs to do a little bit more than just send a <tt>POST</tt> with the relevant data, you need to use a specially crafted form for file uploads. Here is an example of such a special form:<a name="ch05index188"></a><a name="ch05index189"></a><a name="ch05index190"></a></p>
+<pre>
+&lt;form <span class="docEmphStrong">enctype="multipart/form-data"</span> action="handle_img.php" method="post"&gt;
+     <span class="docEmphStrong">&lt;input type="hidden" name="MAX_FILE_SIZE" value="16000" /&gt;</span>
+     Send this file: &lt;input name="book_image" <span class="docEmphStrong">type="file"</span> /&gt;&lt;br /&gt;
+     &lt;input type="submit" value="Upload" /&gt;
+&lt;/form&gt;
+</pre><br>
+<p class="docText">The differences between file upload forms and normal forms are bold in the code listing. First, an <tt>enctype</tt> attribute, included in the <tt>form</tt> tag, instructs the browser to send a different type of <tt>POST</tt> request. Actually, it's a normal <tt>POST</tt> request, except the body containing the encoded files (and other form fields) is completely different. Instead of the simple <tt>field=var&amp;field2=var2</tt> syntax, something resembling a &quot;text and HTML&quot; email is sent in the body, with each part being a <tt>form</tt> field.</p>
+<p class="docText">The file upload field itself is the type <tt>file</tt>, which displays an input field and a browse button that allows a user to browse through the file system to find a file. The text on the browse button can't be changed, so it is usually localized. (Mozilla in English uses &quot;Browse,&quot; IE in Dutch uses &quot;Bladeren,&quot; and so on.) The hidden input field sends a <tt>MAX_FILE_SIZE</tt> to the browser, setting the maximum allowable size of the file being uploaded. However, most browsers ignore this extra field, so it's up to you in the handler script to accept or deny the file.<a name="ch05index191"></a><a name="ch05index192"></a></P>
+<a name="ch05lev2sec8"></a><h4 class="docSection2Title">5.8.1. Handling the Incoming Uploaded File</H4>
+<p class="docText">The <tt>$_FILES</tt> array contains an array of information about each file that is uploaded. The handler script can access the information using the name of the uploaded file as the key. The <tt>$_FILES['book_image']</tt> variable contains the following information for the uploaded file.<a name="ch05index193"></a><a name="ch05index194"></a></p>
+<P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><colgroup><col width="92.57425742574259"><col width="196.03960396039605"><col width="261.3861386138614"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Key</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Value</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></TR></thead><TR><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>name</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>string(8) "p5pp.jpg"</tt></P></td><td class="docTableCell" align="left" valign="top"><p class="docText">The original name of the file on the file system of the user who uploaded it.</P></td></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>type</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>string(10) "image/jpeg"</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The MIME type of the file. For a JPG image, this can be either <tt>image/jpeg</tt> or <tt>image/pjpeg</tt> and all other types have their dedicated MIME type.</p></td></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>tmp_name</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>string(14) "/tmp/phpyEXxWp"</tt></P></TD><td class="docTableCell" align="left" valign="top"><p class="docText">The temporary file name on the server's file system. PHP will clean up after the request has finished, so you are required to do something with it inside the script that handles the request (either delete or move it).</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>error</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>int(0)</tt></P></td><TD class="docTableCell" align="left" valign="top"><p class="docText">The error code. See the next paragraph for an explanation.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>size</tt></p></TD><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>int(2045)</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The size in bytes of the uploaded file.</p></TD></tr></table></p><BR>
+<p class="docText">A few possible errors can occur during a file upload. Most errors relate to the size of the uploaded file. Each error code has an associated constant. The following table shows the error conditions.</p>
+<P><table cellspacing="0" class="allBorders" border="1" RULES="all" cellpadding="4"><colgroup><col width="33"><col width="165"><col width="352"></colgroup><thead><tr><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">#</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Constant</span></p></th><th class="thead" scope="col" align="left" valign="top"><p class="docText"><span class="docEmphStrong">Description</span></p></th></tr></thead><tr><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>0</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>UPLOAD_ERR_OK</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The file was uploaded successfully and no errors occurred.</p></td></tr><TR><TD class="docTableCell" align="left" valign="top"><p class="docText">1</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>UPLOAD_ERR_INI_SIZE</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The size of the uploaded files exceeded the value of the <tt>upload_max_file</tt> setting from <tt>php.ini</tt>.</p></td></tr><TR><td class="docTableCell" align="left" valign="top"><p class="docText">2</P></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>UPLOAD_ERR_FORM_SIZE</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">The size of the uploaded files exceeded the value of the special form field <tt>MAX_FILE_SIZE</tt>. Because users can easily fake the size, you <span class="docEmphasis">cannot</span> rely on this one, and you always have to check the sizes yourself in the script by using <tt>$_FILES ['book_image']['size'];</tt>.</p></TD></TR><tr><td class="docTableCell" align="left" valign="top"><p class="docText">3</p></td><TD class="docTableCell" align="left" valign="top"><p class="docText"><tt>UPLOAD_ERR_PARTIAL</tt></p></td><TD class="docTableCell" align="left" valign="top"><p class="docText">There was a problem uploading the file because only a partial file was received.</p></TD></tr><tr><td class="docTableCell" align="left" valign="top"><p class="docText">4</p></td><td class="docTableCell" align="left" valign="top"><p class="docText"><tt>UPLOAD_ERR_NO_FILE</tt></p></td><td class="docTableCell" align="left" valign="top"><p class="docText">There was no file uploaded at all because the user did not select any in the upload form. This is not always an error; this field might not be required.</p></td></tr></table></p><br>
+<p class="docText">After learning all this theory, we now examine the script that uploads a file. In this script, we check if the size is acceptable (we don't want more than 50KB for the uploaded images) and if the uploaded file is of the correct type (we only want JPEG and PNG files). Of course, we also check the error codes shown in the previous table and use the correct way of moving it to our uploaded images directory:<a name="ch05index195"></a><a name="ch05index196"></a></p>
+<pre>
+&lt;?php
+     /* configuration settings */
+     $max_photo_size = 50000;
+     $upload_required = true;
+</pre><br>
+<p class="docText">We require a file not greater than 50KB to be uploaded:</P>
+<pre>
+$upload_page = 'index.php';
+$upload_dir = '/home/httpd/html/fileupl/';
+</pre><BR>
+<p class="docText">The <tt>upload</tt> directory is the name of the directory that is the final destination for the uploaded file. This directory needs to be writeable to the server's user (or group). For example, you can issue the following commands to make the directory writeable (as root):<a name="ch05index197"></a><a name="ch05index198"></a></p>
+<pre>
+# chgrp nogroup /home/httpd/html/fileupl
+# chmod g+wrx /home/httpd/html/fileupl
+</pre><br>
+<p class="docText">In our situation, the web server runs as user <tt>nouser</tt> and with group <tt>nogroup</tt>. If you want to know under which user and group your web server runs, you can find out with the following command</P>
+<pre>
+# ps axo user,fsgroup,command | grep httpd
+
+
+     $err_msg = false;
+     do {
+</pre><br>
+<a name="ch05note05"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">We &quot;misuse&quot; a <tt>do...while</tt> block here as a poor man's <tt>goto</tt>. By using <tt>while(0)</tt> at the end, the code block always runs only once, and you can jump to the end of it by using <tt>break</tt>.<a name="ch05index199"></a><a name="ch05index200"></a></p></div><br>
+<pre>
+/* Does the file field even exist? */
+if (!isset ($_FILES['book_image'])) {
+    $err_msg = 'The form was not sent in completely.';
+    break;
+</pre><br>
+<p class="docText">Perhaps somebody played tricks and didn't use the form we provided. Thus, we need to check whether the posted form actually contains our <tt>book_image</tt> field. The previous code sets the error message to a <tt>not-false</tt> value. We check for this in later logic:</p>
+<pre>
+} else {
+    $book_image = $_FILES['book_image'];
+}
+
+/* We check for all possible error codes wemight get */
+switch ($book_image['error']) {
+    case UPLOAD_ERR_INI_SIZE:
+        $err_msg = 'The size of the image is too large, '.
+            "it can not be more than $max_photo_size bytes.";
+        break 2;
+</pre><BR>
+<p class="docText">This error occurs when the uploaded file(s) exceed the configured <tt>php.ini</tt> setting <tt>upload_max_filesize</tt> and defaults to 2MB for the collected size of all uploaded files. Three other <tt>php.ini</tt> settings are important. One is <tt>post_max_size</tt>, which controls the maximum allowed size of a <tt>POST</tt> request (it defaults to 8MB). The second is <tt>file_uploads</tt>, which determines whether scripts may use remote file names or not at all (it defaults to <tt>on</tt>). The last setting affecting file uploads is <tt>upload_tmp_dir</tt>, which specifies the temporary directory where files are uploaded (it defaults to <tt>/tmp</tt> on UNIX-like operating systems or the configured temporary directory on Windows).<a name="ch05index201"></a><a name="ch05index202"></a></p>
+<pre>
+case UPLOAD_ERR_PARTIAL:
+   $err_msg = 'An error ocurred while uploading the file, '.
+      "please &lt;a href='{$upload_page}'&gt;try again&lt;/a&gt;.";
+    break 2;
+</pre><BR>
+<p class="docText">If the size of the uploaded file did not match the header's advertised size, the problem can be caused by a network connection that suddenly broke. For example:</p>
+<pre>
+case UPLOAD_ERR_NO_FILE:
+   if ($upload_required) {
+      $err_msg = 'You did not select a file to be uploaded, '.
+          "please do so &lt;a href='{$upload_page}'&gt;here&lt;/a&gt;.";
+      break 2;
+   }
+   break 2;
+</pre><BR>
+<p class="docText">We only issue an error if we require a file to be uploaded. Remember that we set the Boolean variable <tt>$upload_required</tt> at the top of our script to <tt>true</tt>:<a name="ch05index203"></a><a name="ch05index204"></a></p>
+<pre>
+case UPLOAD_ERR_FORM_SIZE:
+   $err_msg = 'The size was too large according to '.
+       'the MAX_FILE_SIZE hidden field in the upload form.';
+case UPLOAD_ERR_OK:
+   if ($book_image['size'] &gt; $max_photo_size) {
+      $err_msg = 'The size of the image is too large, '.
+      "it can not be more than $max_photo_size bytes.";
+   }
+   break 2;
+</pre><br>
+<p class="docText">Because we cannot rely on the user-supplied <tt>MAX_FILE_SIZE</tt>, we always need to check for the size ourselves. <tt>UPLOAD_ERR_OK</tt> is similar, except that the image will <span class="docEmphasis">not</span> be available in the temporary directory if it was larger than the <tt>MAX_FILE_SIZE</tt>:</p>
+<pre>
+default:
+   $err_msg = "An unknown error occurred, ".
+       "please try again &lt;a href='{$upload_page}'&gt;here&lt;/a&gt;.";
+}
+</pre><BR>
+<p class="docText">We should never receive an unknown error, but it is good practice to build in a case for this. Also, if another error type is added in newer PHP versions, your script won't break:<a name="ch05index205"></a><a name="ch05index206"></a></P>
+<pre>
+/* Know we check for the mime type to be correct, we allow
+ * JPEG and PNG images */
+if (!in_array(
+    $book_image['type'],
+    array ('image/jpeg', 'image/pjpeg', 'image/png')
+)) {
+    $err_msg = "You need to upload a PNG or JPEG image, ".
+       "please do so &lt;a href='{$upload_page}'&gt;here&lt;/a&gt;.";
+    break;
+}
+</pre><br>
+<p class="docText">With this code, we check whether to accept the file by looking at its MIME type. Note that some browsers might do things differently than others, so it's good to test all browsers and see what MIME type they use for specific files.</p>
+<a name="ch05note06"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">On <a class="docLink" target="_blank" href="http://www.webmaster-toolkit.com/mime-types.shtml">http://www.webmaster-toolkit.com/mime-types.shtml</a>, you can find an extensive list of MIME types.</p></div><BR>
+<pre>
+} while (0);
+
+/* If no error occurred we move the file to our upload directory */
+if (!$err_msg) {
+    if (!@move_uploaded_file(
+        $book_image['tmp_name'],
+        $upload_dir . $book_image['name']
+    )) {
+        $err_msg = "Error moving the file to its destination, ".
+            "please try again &lt;a href='{$upload_page}'&gt;here&lt;/a&gt;.";
+    }
+}
+?&gt;
+</pre><br>
+<p class="docText">We use the &quot;special&quot; function <tt>move_uploaded_file()</tt> to move the file to its final destination. This function checks whether the file is really an uploaded file and whether the form was tricked into thinking the temporary file is something other than the file we specified, such as <tt>/etc/passwd</tt>. The function <tt>is_uploaded_file()</tt> returns <tt>true</tt> if the file is an uploaded file or <tt>false</tt> if it is not.<a name="ch05index207"></a><a name="ch05index208"></a><a name="ch05index209"></a><a name="ch05index210"></a></P>
+<pre>
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Upload handler&lt;/title&gt;
+&lt;body&gt;
+&lt;?php
+        if ($err_msg) {
+        echo $err_msg;
+        } else {
+?&gt;
+&lt;img src='&lt;?php echo $book_image['name']; ?&gt;'/&gt;
+&lt;?php
+    }
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+<p class="docText">We echo the error message in the body of the script in case there was an error uploading the file. (Remember that we initialized it to <tt>false</tt> at the top of the script.) In case the file upload succeeded, we construct an <tt>&lt;img /&gt;</tt> tag to display the uploaded image on our resulting page.</P>
+<a name="ch05note07"></a><div class="docNote"><p class="docNoteTitle">Tip</p>
+
+<p class="docText">If you want to add the width and height attributes to the <tt>&lt;img /&gt;</tt> tag, you can use the <tt>imagesize()</tt> function to do so.<a name="ch05index211"></a><a name="ch05index212"></a><a name="ch05index213"></a><a name="ch05index214"></a></p></div><br>
+<p class="docText">For more information about file uploading, see &quot;The PHP Manual&quot; at <a class="docLink" target="_blank" href="http://www.php.net/manual/en/features.file-upload.php">http://www.php.net/manual/en/features.file-upload.php</a>.</p>
+<ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch05lev1sec7.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch05lev1sec9.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

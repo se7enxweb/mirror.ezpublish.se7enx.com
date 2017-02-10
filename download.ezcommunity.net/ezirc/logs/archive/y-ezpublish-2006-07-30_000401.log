@@ -1,0 +1,182 @@
+[07-28-2006 01:16:48] [privmsg] <lilo> Hi....just a reminder. As of 11am GMT on Sunday, freenode will allow Tor access only via the hidden service. Please take a look at http://freenode.net/irc_servers.shtml and switch as soon as possible. It's easier than it sounds. Sorry for any repetition of this message. Thanks!
+[07-28-2006 01:23:02] -!- awormus [n=aaron@p54B073C6.dip.t-dialin.net] has joined #ezpublish
+[07-28-2006 01:30:32] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[07-28-2006 01:30:42] -!- ordnas [n=ordnas@p549D7A2C.dip.t-dialin.net] has joined #ezpublish
+[07-28-2006 01:34:28] -!- _kore [n=lordhong@port-83-236-10-110.dynamic.qsc.de] has joined #ezpublish
+[07-28-2006 01:39:14] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-28-2006 02:17:12] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[07-28-2006 02:54:35] -!- ordnas [n=ordnas@p549D7A2C.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[07-28-2006 02:54:45] -!- ordnas [n=ordnas@p549D7A2C.dip.t-dialin.net] has joined #ezpublish
+[07-28-2006 03:23:35] -!- bs [n=benjamin@foo.eu] has joined #ezpublish
+[07-28-2006 04:55:57] -!- ordna1 [n=ordnas@p549D610B.dip.t-dialin.net] has joined #ezpublish
+[07-28-2006 05:12:50] -!- ordnas [n=ordnas@p549D7A2C.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-28-2006 07:15:59] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-28-2006 07:32:28] [privmsg] <lilo> Hi....just a reminder. As of 11am GMT on Sunday, freenode will allow Tor access only via the hidden service. Please take a look at http://freenode.net/irc_servers.shtml and switch as soon as possible. It's easier than it sounds. Sorry for any repetition of this message. Thanks!
+[07-28-2006 07:46:24] -!- ordna1 [n=ordnas@p549D610B.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[07-28-2006 07:46:37] -!- ordnas [n=ordnas@p549D610B.dip.t-dialin.net] has joined #ezpublish
+[07-28-2006 08:29:26] -!- ordna1 [n=ordnas@p549D610B.dip.t-dialin.net] has joined #ezpublish
+[07-28-2006 08:34:25] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[07-28-2006 08:44:51] -!- ordnas [n=ordnas@p549D610B.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-28-2006 08:47:29] -!- jeremiah [i=ppluis@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[07-28-2006 08:47:36] [#ezpublish] <jeremiah> hi
+[07-28-2006 08:48:07] [#ezpublish] <jeremiah> i would like to know how to translate an extension.
+[07-28-2006 09:07:53] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-28-2006 09:16:01] [#ezpublish] <jeremiah> buz
+[07-28-2006 09:16:46] [#ezpublish] <jeremiah> how could i translate an extension. Is there a tutorial? OR a extension with an example?
+[07-28-2006 09:17:17] [#ezpublish] <jeremiah> i have read answers in forum, but i dont understand yet
+[07-28-2006 09:21:17] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[07-28-2006 09:21:22] [#ezpublish] <B-KiLLer`> hi all
+[07-28-2006 09:21:53] [#ezpublish] <B-KiLLer`> i'm still using 3.6 for a website, and i'm looking for a datatype which could do the same as Object Relation, but for a NODE
+[07-28-2006 09:22:25] [#ezpublish] <B-KiLLer`> in fact, I have nodes in my content structure with multiple locations, and unfortunately, if I choose one of those alternate locations with OR
+[07-28-2006 09:22:36] [#ezpublish] <B-KiLLer`> I'm of course always lead to the main location...
+[07-28-2006 09:24:17] -!- ordna1 [n=ordnas@p549D610B.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[07-28-2006 09:31:34] [#ezpublish] <jeremiah> B-Killer, sorry because i cant help you, you know something about translate an extension?
+[07-28-2006 09:35:05] [#ezpublish] <B-KiLLer`> translate ?
+[07-28-2006 09:35:12] [#ezpublish] <B-KiLLer`> what ? templates ?
+[07-28-2006 09:46:11] [#ezpublish] <jeremiah> $warning = ezi18n( 'ezxnewsletter', 'You must enter a name.' );
+[07-28-2006 09:46:15] [#ezpublish] <jeremiah> things like that
+[07-28-2006 09:47:58] -!- awormus_ [n=aaron@p54B048AD.dip.t-dialin.net] has joined #ezpublish
+[07-28-2006 09:48:14] [#ezpublish] <jeremiah> i think i must create extension/ezxnewsletter/translations/eng-GL/translation.ts
+[07-28-2006 09:48:20] [#ezpublish] <jeremiah> or something similar
+[07-28-2006 09:49:32] -!- tobmaster [n=tobmaste@dslb-084-061-001-153.pools.arcor-ip.net] has joined #ezpublish
+[07-28-2006 09:52:10] -!- awormus [n=aaron@p54B073C6.dip.t-dialin.net] has quit [Read error: 60 (Operation timed out)]
+[07-28-2006 09:54:10] [#ezpublish] <jeremiah> OEE!!!!, i know how to do it, thx
+[07-28-2006 10:04:36] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[07-28-2006 10:09:21] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-28-2006 10:19:01] -!- awormus_ is now known as awormus
+[07-28-2006 10:31:00] -!- DodgerM1976 [n=notme@HSE-Toronto-ppp307058.sympatico.ca] has joined #ezpublish
+[07-28-2006 10:31:06] [#ezpublish] <DodgerM1976> hi all
+[07-28-2006 10:34:02] [#ezpublish] <tobmaster> hi Dodger
+[07-28-2006 10:35:14] [#ezpublish] <DodgerM1976> how's it going tobmaster?
+[07-28-2006 10:35:35] [#ezpublish] <tobmaster> good and you?
+[07-28-2006 10:36:21] [#ezpublish] <DodgerM1976> good, thanks!  I found a bug in 3.8.2 (which I'm using) and I tried applying the patch that was listed with the bug, and that didn't work...  what would be the best way to move my "kernel" to another version (3.8.1 or a dev version of 3.8.2) without messing too much with my db or site configuration?
+[07-28-2006 10:36:50] [#ezpublish] <B-KiLLer`> which bug was it ?
+[07-28-2006 10:37:07] [#ezpublish] <DodgerM1976> the html not displaying properly...  one sec, I'll find the exact bug number...
+[07-28-2006 10:37:24] [#ezpublish] <DodgerM1976> http://ez.no/bugs/view/8702
+[07-28-2006 10:37:39] [#ezpublish] <B-KiLLer`> ah yes I got that one too :)
+[07-28-2006 10:37:50] [#ezpublish] <DodgerM1976> have you worked around it?
+[07-28-2006 10:37:53] [#ezpublish] <B-KiLLer`> though, I didn't used the "patch" mentioned below
+[07-28-2006 10:38:04] [#ezpublish] <DodgerM1976> I tried applying the patch at the bottom, and it didn't work for me...
+[07-28-2006 10:38:05] [#ezpublish] <B-KiLLer`> i got back a directory from the latest svn
+[07-28-2006 10:38:25] [#ezpublish] <B-KiLLer`> this directory in fact: kernel/classes/datatypes/ezxmltext/
+[07-28-2006 10:38:37] [#ezpublish] <B-KiLLer`> i replaced the 3.8.2 one with the one from svn, and everything went fine
+[07-28-2006 10:38:51] [#ezpublish] <DodgerM1976> and if I just update that one directory out of svn that should work ok?  No chance there'll be dependencies on other update code or anything?
+[07-28-2006 10:39:21] [#ezpublish] <B-KiLLer`> i had no further problems, on my side
+[07-28-2006 10:39:34] [#ezpublish] <DodgerM1976> could I take it out of the newly released 3.8.3 or would that be playing with fire?
+[07-28-2006 10:39:35] [#ezpublish] <B-KiLLer`> maybe you could just get the file where the "patch" given in the bug report was applied
+[07-28-2006 10:39:54] [#ezpublish] <B-KiLLer`> already released the 3.8.3 ?
+[07-28-2006 10:40:07] [#ezpublish] <DodgerM1976> http://ez.no/download/ez_publish
+[07-28-2006 10:40:20] [#ezpublish] <DodgerM1976> July 26th it was released...
+[07-28-2006 10:40:22] [#ezpublish] <DodgerM1976> apparently
+[07-28-2006 10:40:23] [#ezpublish] <B-KiLLer`> I wouldn't do it... :)
+[07-28-2006 10:40:32] [#ezpublish] <DodgerM1976> :-) ok, fair enough
+[07-28-2006 10:40:53] [#ezpublish] <B-KiLLer`> i urged on installing the 3.8 when it was released but I whish I hadn't :)
+[07-28-2006 10:41:13] [#ezpublish] <tobmaster> B-KiLLer`: first test - then install :)
+[07-28-2006 10:41:20] [#ezpublish] <DodgerM1976> <grin>
+[07-28-2006 10:41:24] [#ezpublish] <tobmaster> B-KiLLer`: have you installed it on productive?
+[07-28-2006 10:41:33] [#ezpublish] <B-KiLLer`> nope
+[07-28-2006 10:41:40] [#ezpublish] <B-KiLLer`> still on test, but for a new site we had to develop
+[07-28-2006 10:41:43] [#ezpublish] <DodgerM1976> 3.8.3 came out so soon after 3.8.2, were there a lot of other problems with 3.8.2?
+[07-28-2006 10:41:54] [#ezpublish] <B-KiLLer`> hopefully they releasead 3.8.1 quite quickly to correct a lot of bugs
+[07-28-2006 10:42:13] [#ezpublish] <B-KiLLer`> and hopefully they released 3.8.2 quite quickly to correct really annoying bugs
+[07-28-2006 10:42:18] [#ezpublish] <DodgerM1976> I'm working on my first ez publish site, the production is 3.8.1, and I'm developing/testing with 3.8.2...
+[07-28-2006 10:42:22] [#ezpublish] <B-KiLLer`> (like for images which were deleted from content, but still displaying)
+[07-28-2006 10:42:37] [#ezpublish] <tobmaster> DodgerM1976: you are the one from canada right?
+[07-28-2006 10:42:41] [#ezpublish] <B-KiLLer`> 3.8.2 with the patch for ezxml seems to do the job right now ...
+[07-28-2006 10:42:43] [#ezpublish] <DodgerM1976> hmmm, I wonder if I should encourage the client to claw it back to 3.7
+[07-28-2006 10:42:44] [#ezpublish] <tobmaster> DodgerM1976: did you get good help?
+[07-28-2006 10:42:49] [#ezpublish] <DodgerM1976> tobmaster: that's me :-)
+[07-28-2006 10:43:05] [#ezpublish] <tobmaster> DodgerM1976: why do you want to change to 3.7?
+[07-28-2006 10:43:16] [#ezpublish] <tobmaster> there are no downgrade scripts
+[07-28-2006 10:44:14] [#ezpublish] <DodgerM1976> tobmaster: not really...  I contact the ez office in vancouver and they haven't gotten back to me yet, and I contacted a web dev firm here in toronto that supposedly specializes in ez publish, and they haven't gotten back to me yet either...
+[07-28-2006 10:44:29] [#ezpublish] <DodgerM1976> I feel a little bit more on track with the work though, making progress (albeit slowly) on my own
+[07-28-2006 10:44:52] [#ezpublish] <DodgerM1976> tobmaster: I'd just want to downgrade if the 3.8 series is flacky...
+[07-28-2006 10:45:23] [#ezpublish] <DodgerM1976> its a fresh install, so I wouldn't really need to downgrade, just remove what's there and start again with 3.7 (using the templates and what I've learned in 3.8)
+[07-28-2006 10:45:39] [#ezpublish] <DodgerM1976> I'll probably stick with 3.8 though, I'm sure 3.7 has its own issue...
+[07-28-2006 10:45:42] [#ezpublish] <DodgerM1976> er issues
+[07-28-2006 10:45:47] [#ezpublish] <B-KiLLer`> of course
+[07-28-2006 10:45:56] [#ezpublish] <B-KiLLer`> but as I say, 3.8.2 seems good now
+[07-28-2006 10:46:12] [#ezpublish] <B-KiLLer`> got a question too :)
+[07-28-2006 10:46:31] [#ezpublish] <B-KiLLer`> I have an url like /agencies/ on my site
+[07-28-2006 10:46:37] [#ezpublish] <DodgerM1976> if I wanted to switch over to the new 3.8.3, how would I go about it?  the upgrade scripts seem to assume you're coming from 3.7...  can I just drop in the 3.8.3 code somehow?
+[07-28-2006 10:46:46] [#ezpublish] <B-KiLLer`> this url is pointing to a node in the content structure, of course
+[07-28-2006 10:46:52] [#ezpublish] <B-KiLLer`> (not a module, or whatever)
+[07-28-2006 10:47:20] [#ezpublish] <DodgerM1976> ok
+[07-28-2006 10:47:23] [#ezpublish] <B-KiLLer`> now, i'd like the template of that page to be able to post information to the same url, and do a search based on those info
+[07-28-2006 10:47:28] [#ezpublish] <B-KiLLer`> those posted info
+[07-28-2006 10:47:39] [#ezpublish] <B-KiLLer`> what's the best way to proceed ?
+[07-28-2006 10:47:41] [#ezpublish] <DodgerM1976> sorry, way beyond me :-(
+[07-28-2006 10:47:59] [#ezpublish] <B-KiLLer`> tobmaster, if you could help me on this :)
+[07-28-2006 10:48:28] [#ezpublish] <B-KiLLer`> i could maybe create a module, but then I can't keep my /agencies/ url, right ? the module has to have its own url ?
+[07-28-2006 10:49:02] [#ezpublish] <DodgerM1976> the other issue I had yesterday was I "switched" the root node in my content structure with one of its children.  After doing this, nothing is showing up in the content manager panel on the upper left had side - I've cleared the cache and rebooted the computer...  is there any way I can get the content structure display back in the admin?
+[07-28-2006 10:51:15] [#ezpublish] <DodgerM1976> I have a bunch of sections, each with different content (links, jokes, etc, etc, etc).  Is it reasonable to have a "folder" for each of the sections that would then hold the specific content, or would I be better to create a custom container for each?
+[07-28-2006 10:58:40] [#ezpublish] <tobmaster> re
+[07-28-2006 10:59:49] [#ezpublish] <tobmaster> DodgerM1976: when you update from 3.8.2 to 3.8.3 and there are no sql scripts then there had been no changes on database layout
+[07-28-2006 11:01:07] [#ezpublish] <tobmaster> DodgerM1976:  the last i didnt get :)
+[07-28-2006 11:01:18] [#ezpublish] <tobmaster> B-KiLLer`: help with what?
+[07-28-2006 11:01:41] [#ezpublish] <tobmaster> B-KiLLer`: maybe you can use the url translator
+[07-28-2006 11:01:42] [#ezpublish] <B-KiLLer`> with the /agencies/ stuff
+[07-28-2006 11:01:57] [#ezpublish] <tobmaster> mom one second please
+[07-28-2006 11:02:14] [#ezpublish] <tobmaster> i have to get something from the store around the corner before it is closing :)
+[07-28-2006 11:02:25] [#ezpublish] <B-KiLLer`> :)
+[07-28-2006 11:02:27] [#ezpublish] <DodgerM1976> <grin>
+[07-28-2006 11:02:32] [#ezpublish] <DodgerM1976> darn moms!
+[07-28-2006 11:02:37] [#ezpublish] <B-KiLLer`> so, you you do the external module
+[07-28-2006 11:02:40] [#ezpublish] <B-KiLLer`> with url translator
+[07-28-2006 11:02:46] [#ezpublish] <B-KiLLer`> (to summarize, and let you go to the hsop ;) )
+[07-28-2006 11:02:48] [#ezpublish] <B-KiLLer`> shop
+[07-28-2006 11:06:30] [#ezpublish] <DodgerM1976> B-KiLLer`: thanks, I dropped the new directory in from SVN, and that did the trick (at least I'm getting bold and italics now)
+[07-28-2006 11:06:46] [#ezpublish] <B-KiLLer`> good
+[07-28-2006 11:06:49] [#ezpublish] <B-KiLLer`> leaving now !
+[07-28-2006 11:06:52] [#ezpublish] <B-KiLLer`> see ya
+[07-28-2006 11:07:09] -!- B-KiLLer` [n=me@bart.interact.lu] has quit []
+[07-28-2006 11:09:18] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[07-28-2006 11:17:53] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-28-2006 11:19:31] [#ezpublish] <DodgerM1976> tobmaster: what I was asking with the second question was, for a simple website with a few different pages displaying different information (say a page that's a collection of jokes, and another page that is recent news, and another page which is trivia), what is the best way to structure the site?  Would using the "folder" content class for each of the three sections (then creating custom content classes for jokes, and trivia and
+[07-28-2006 11:21:26] [#ezpublish] <DodgerM1976> what did you get from the store?  Were you in time before they closed? :-)
+[07-28-2006 11:33:46] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[07-28-2006 11:34:52] [#ezpublish] <DodgerM1976> when I try to display an object, I'm getting the error message:  "You do not have sufficient permissions to view this object." spit back in the location where the object should be displayed on the resulting page
+[07-28-2006 11:35:26] [#ezpublish] <DodgerM1976> I created the object class myself (sponsor), and created and added the object to a section that anonymous users have access to...  Is there something else I need to do to let this object be displayed?
+[07-28-2006 11:35:26] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-28-2006 11:35:31] [#ezpublish] <tobmaster> re
+[07-28-2006 11:35:40] [#ezpublish] <DodgerM1976> welcome back tobmaster :-)
+[07-28-2006 11:35:45] [#ezpublish] <tobmaster> B-KiLLer`: was just an idea :)
+[07-28-2006 11:36:22] [#ezpublish] <DodgerM1976> tobmaster: I think he's left...  maybe he'll check the ezlog though...
+[07-28-2006 11:36:59] [#ezpublish] <tobmaster> :)
+[07-28-2006 11:37:12] [#ezpublish] <DodgerM1976> did you manage to make it to the store?
+[07-28-2006 11:37:39] [#ezpublish] <tobmaster> Ok you have some different sites likes jokes.somewhere.com trivia.somewhere.com  and so on or just different areas/sections
+[07-28-2006 11:37:42] [#ezpublish] <tobmaster> yep
+[07-28-2006 11:38:59] [#ezpublish] <tobmaster> but its correct when you make folders for those areas
+[07-28-2006 11:39:28] [#ezpublish] <DodgerM1976> tobmaster: I sent you a direct message, did it get through?
+[07-28-2006 11:39:43] [#ezpublish] <tobmaster> nope :)
+[07-28-2006 11:40:05] [#ezpublish] <DodgerM1976> hmmm, weird...
+[07-28-2006 11:40:08] [#ezpublish] <tobmaster> freenode needs a registered name or so for that
+[07-28-2006 11:40:10] [#ezpublish] <tobmaster> afaik
+[07-28-2006 11:40:20] [#ezpublish] <DodgerM1976> ahh, gotcha...  let me go quickly register then...
+[07-28-2006 11:40:29] [#ezpublish] <tobmaster> but i am not registered :)
+[07-28-2006 11:40:35] [#ezpublish] <tobmaster> hope i recieve it then :)
+[07-28-2006 11:40:50] [#ezpublish] <tobmaster> did you get that?
+[07-28-2006 11:40:51] [#ezpublish] <DodgerM1976> I don't want to send client specific info in the main channel...
+[07-28-2006 11:40:58] [#ezpublish] <DodgerM1976> no :-(
+[07-28-2006 11:41:56] [#ezpublish] <tobmaster> that i recieved
+[07-28-2006 11:42:15] [#ezpublish] <DodgerM1976> cool, I'm registered now
+[07-28-2006 11:42:19] [#ezpublish] <DodgerM1976> and in your private channel
+[07-28-2006 11:42:28] [#ezpublish] <tobmaster> :)
+[07-28-2006 12:41:26] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[07-28-2006 13:02:20] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-28-2006 14:00:36] [privmsg] <lilo> Hi....just a reminder. As of 11am GMT on Sunday, freenode will allow Tor access only via the hidden service. Please take a look at http://freenode.net/irc_servers.shtml and switch as soon as possible. It's easier than it sounds. Sorry for any repetition of this message. Thanks!
+[07-28-2006 14:26:15] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[07-28-2006 14:31:38] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[07-28-2006 15:05:47] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Read error: 110 (Connection timed out)]
+[07-28-2006 15:46:36] -lilo:$*- [Global Notice] Hi all. If you've been experiencing problems with resetting nicknames, please message me. We've located the issue and should be able to resolve it for you pretty quickly. Thanks.
+[07-28-2006 15:48:19] -lilo:$*- [Global Notice] Sorry, let me rephrase that....if you've had problems with your cloak 'spontaneously' changing, please message me. Thanks.
+[07-28-2006 15:51:53] -!- DodgerM1976 [n=notme@HSE-Toronto-ppp307058.sympatico.ca] has quit []
+[07-28-2006 16:54:56] -!- tobiS [n=tobmaste@dslb-084-061-026-168.pools.arcor-ip.net] has joined #ezpublish
+[07-28-2006 16:56:31] -!- tobmaster [n=tobmaste@dslb-084-061-001-153.pools.arcor-ip.net] has quit [Read error: 110 (Connection timed out)]
+[07-28-2006 17:08:03] -!- tobiS [n=tobmaste@dslb-084-061-026-168.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[07-28-2006 18:00:26] -!- awormus [n=aaron@p54B048AD.dip.t-dialin.net] has quit ["Leaving"]
+[07-28-2006 18:07:25] -!- _kore [n=lordhong@port-83-236-10-110.dynamic.qsc.de] has quit [Remote closed the connection]
+[07-28-2006 20:34:52] -!- HDen [i=HDen@201.226.164.128] has joined #ezpublish
+[07-28-2006 20:35:02] [#ezpublish] <HDen> hello is anyone here?
+[07-28-2006 20:36:45] [#ezpublish] <HDen> ??
+[07-28-2006 20:39:48] -!- HDen [i=HDen@201.226.164.128] has quit []

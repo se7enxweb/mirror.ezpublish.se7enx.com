@@ -1,0 +1,153 @@
+[01-30-2006 00:01:08] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-30-2006 00:46:42] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[01-30-2006 01:15:04] -!- ordnas [n=ordnas@p549D7A27.dip.t-dialin.net] has joined #ezpublish
+[01-30-2006 01:40:29] -!- _kore [n=lordhong@217.194.224.41] has joined #ezpublish
+[01-30-2006 01:54:14] -!- SEAwolfx_ [n=mike@tor/session/x-3bd5add9e49cd61d] has joined #ezpublish
+[01-30-2006 01:54:23] [#ezpublish] <SEAwolfx_> morning
+[01-30-2006 01:54:50] -!- SEAwolfx [n=mike@tor/session/x-d30e5c1ca67c1cd9] has quit [Nick collision from services.]
+[01-30-2006 01:54:58] -!- SEAwolfx_ is now known as SEAwolfx
+[01-30-2006 02:00:53] -!- fh [n=fh@popeye.ez.no] has joined #ezpublish
+[01-30-2006 02:26:17] -!- Bruce_Morrison [n=bruce_de@DES139423-1.gw.connect.com.au] has joined #ezpublish
+[01-30-2006 02:26:34] -!- Bruce_Morrison [n=bruce_de@DES139423-1.gw.connect.com.au] has left #ezpublish []
+[01-30-2006 02:31:29] -!- tobyS [n=dotxp@dslb-084-060-024-071.pools.arcor-ip.net] has joined #ezpublish
+[01-30-2006 02:41:31] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[01-30-2006 02:52:16] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-30-2006 02:59:51] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-30-2006 03:28:51] -!- _kore [n=lordhong@217.194.224.41] has quit []
+[01-30-2006 03:45:54] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-30-2006 03:49:33] -!- season|away is now known as seasonfive
+[01-30-2006 03:49:56] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[01-30-2006 03:50:05] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-30-2006 03:50:41] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-30-2006 04:02:44] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-30-2006 04:06:08] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-30-2006 04:18:31] [#ezpublish] <y_sabal> someone knows what cronjobs/libcheck.php is doing
+[01-30-2006 04:38:00] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[01-30-2006 04:59:06] [#ezpublish] <SEAwolfx> y_sabal: i would say 'lib' is the wrong name of the filename. it should rather be called 'linkcheck.php' checking urls.
+[01-30-2006 05:31:04] [#ezpublish] * y_sabal is putting is glasses back...
+[01-30-2006 05:31:09] [#ezpublish] <y_sabal> oh, right...
+[01-30-2006 05:31:15] [#ezpublish] <y_sabal> sorry :)
+[01-30-2006 05:33:37] [#ezpublish] <zrg> noodles
+[01-30-2006 06:07:22] [#ezpublish] * zrg is not worthy..
+[01-30-2006 07:21:06] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-30-2006 07:31:26] [#ezpublish] <SEAwolfx> hey
+[01-30-2006 07:32:23] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-30-2006 07:35:39] -!- DiGiTa|_ [n=guillaum@84.5.139.162] has joined #ezpublish
+[01-30-2006 07:36:07] [#ezpublish] <DiGiTa|_> hi
+[01-30-2006 07:43:21] [#ezpublish] <SEAwolfx> hi DiGiTa|_
+[01-30-2006 08:08:24] [#ezpublish] <y_sabal> plop
+[01-30-2006 08:31:51] -!- B-KiLLer` [n=me@217.31.64.170] has joined #ezpublish
+[01-30-2006 08:31:59] [#ezpublish] <B-KiLLer`> hi all
+[01-30-2006 08:33:15] [#ezpublish] <B-KiLLer`> did anyone notice any bug using the dataype "object relation browse" ? I'm using it right now (ezp 3.7.2), and I'm having some troubles with it now
+[01-30-2006 08:34:04] [#ezpublish] <B-KiLLer`> I had 1 relation, everyhing's ok, 2 relations, still ok, 3 relations -> the first one is gone, and I have 2 times the second one :-/
+[01-30-2006 08:34:10] [#ezpublish] <B-KiLLer`> s/had/add
+[01-30-2006 08:42:42] [#ezpublish] <B-KiLLer`> hmm maybe that datatype is not compatible with ez 3.7.2
+[01-30-2006 08:56:34] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-30-2006 09:00:44] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-30-2006 09:00:48] [#ezpublish] <Sulfur> w00t :)
+[01-30-2006 09:01:24] [#ezpublish] <B-KiLLer`> hey !
+[01-30-2006 09:02:03] [#ezpublish] <Sulfur> guys, a quick help ... I seem to recall there was a setting to disallow user registration for a siteaccess but I can't find where in the ini files it is
+[01-30-2006 09:02:03] -!- tobyS [n=dotxp@dslb-084-060-024-071.pools.arcor-ip.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-30-2006 09:02:14] [#ezpublish] <zrg> site.ini
+[01-30-2006 09:02:32] [#ezpublish] <Sulfur> can't find it in the doc ..
+[01-30-2006 09:02:41] [#ezpublish] <zrg> see omitpolicy line for user/register
+[01-30-2006 09:02:44] [#ezpublish] <Sulfur> it was the first place where I looked
+[01-30-2006 09:02:54] [#ezpublish] <Sulfur> omitpolicy .. ? hum
+[01-30-2006 09:03:09] [#ezpublish] <zrg> search for "user/register"
+[01-30-2006 09:03:51] [#ezpublish] <Sulfur> hum ...
+[01-30-2006 09:04:22] [#ezpublish] <Sulfur> but this means maybe I'll have to pop a setting from site.ini to all the site.ini.appends
+[01-30-2006 09:04:32] [#ezpublish] <Sulfur> I seem to remember there was a specific setting ... ?
+[01-30-2006 09:05:20] [#ezpublish] <zrg> dont know
+[01-30-2006 09:05:57] [#ezpublish] <zrg> pop the setting only to one that you need to disable it in
+[01-30-2006 09:06:09] [#ezpublish] <Sulfur> mm
+[01-30-2006 09:06:16] [#ezpublish] <Sulfur> well ok, I'll try it ..
+[01-30-2006 09:06:19] [#ezpublish] <zrg> cleaner + whole array, but why not
+[01-30-2006 09:06:23] [#ezpublish] <Sulfur> yes yes
+[01-30-2006 09:06:42] [#ezpublish] <Sulfur> I can kill the array in .ini.append, true ...
+[01-30-2006 09:06:48] [#ezpublish] <Sulfur> ok I'll try it like that
+[01-30-2006 09:06:55] [#ezpublish] <Sulfur> thanks zrg
+[01-30-2006 09:07:14] [#ezpublish] <zrg> :)
+[01-30-2006 09:10:01] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []
+[01-30-2006 09:19:57] -!- tobyS [n=dotxp@dslb-084-060-030-109.pools.arcor-ip.net] has joined #ezpublish
+[01-30-2006 09:52:44] [#ezpublish] <fh> http://ez.no/community/news/ez_components_1_0_release
+[01-30-2006 09:55:01] [#ezpublish] <Sulfur> :)
+[01-30-2006 09:58:17] [#ezpublish] <fh> hope you like it
+[01-30-2006 10:00:14] [#ezpublish] <Sulfur> unfortunately cannot try them, since we don't have a php5 machine
+[01-30-2006 10:00:32] [#ezpublish] <Sulfur> actually, maybe I am wrong, but php5 seems a tad slow in picking up ...
+[01-30-2006 10:09:49] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-30-2006 10:37:06] [#ezpublish] <kalooni> hi there
+[01-30-2006 10:37:13] [#ezpublish] <Sulfur> hey kalooni
+[01-30-2006 10:37:36] [#ezpublish] <kalooni> how are you today ?
+[01-30-2006 10:37:53] [#ezpublish] <Sulfur> *belches*
+[01-30-2006 10:37:56] [#ezpublish] <Sulfur> well....
+[01-30-2006 10:37:57] [#ezpublish] <Sulfur> :)
+[01-30-2006 10:38:01] [#ezpublish] <Sulfur> lol
+[01-30-2006 10:38:12] [#ezpublish] <kalooni> great
+[01-30-2006 10:38:22] [#ezpublish] <kalooni> Sulfur: are you an ez crew member ?
+[01-30-2006 10:38:31] [#ezpublish] <Sulfur> nope, kalooni :)
+[01-30-2006 10:38:34] -!- seasonfive is now known as season|away
+[01-30-2006 10:38:44] [#ezpublish] <kalooni> ok
+[01-30-2006 10:38:52] [#ezpublish] <kalooni> have you ever develop an extension ?
+[01-30-2006 10:38:53] [#ezpublish] <Sulfur> I wouldn't allow myself to make funny noises on the ez chan if I were ;)
+[01-30-2006 10:38:58] [#ezpublish] <Sulfur> ja
+[01-30-2006 10:39:38] [#ezpublish] <kalooni> may be you could help me then ;)
+[01-30-2006 10:39:49] [#ezpublish] <Sulfur> maybe
+[01-30-2006 10:39:58] [#ezpublish] <kalooni> I am planning to develop several extensions for the shop
+[01-30-2006 10:40:05] [#ezpublish] <kalooni> but I have no idea how i could do
+[01-30-2006 10:40:20] [#ezpublish] <Sulfur> ok, I never used the shop extension
+[01-30-2006 10:40:35] [#ezpublish] <kalooni> I understood the eurofxref extension example, but it is a new module
+[01-30-2006 10:40:44] [#ezpublish] <kalooni> my wish is to extend an existing module
+[01-30-2006 10:40:48] [#ezpublish] <kalooni> How could I do this ?
+[01-30-2006 10:40:56] [#ezpublish] <Sulfur> I think the best place to start is reading the extension tutorial on ez site -- the one about exchange rates. it helped me a lot, kalooni
+[01-30-2006 10:41:04] [#ezpublish] <Sulfur> ah ok
+[01-30-2006 10:41:17] [#ezpublish] <kalooni> For instance I want to add a tracking number to order
+[01-30-2006 10:41:32] [#ezpublish] <kalooni> for the moment I have modified the ezorder table, which is not really cool
+[01-30-2006 10:41:53] [#ezpublish] <kalooni> and I have modified the orderview template and the ezorder class in the kernel
+[01-30-2006 10:41:55] [#ezpublish] <kalooni> to do so
+[01-30-2006 10:41:55] [#ezpublish] <Sulfur> well. if you have to add new functionalities to existing views, you have to modify tpls and / or php files of the concerned views. if you have to add new views, you have to declare them in module.php
+[01-30-2006 10:42:14] [#ezpublish] <kalooni> yes, but If i do this i will have to do so in the kernel
+[01-30-2006 10:42:46] [#ezpublish] <kalooni> There is no way to write an extension to "override" a specific module/view/object ?
+[01-30-2006 10:43:10] [#ezpublish] <Sulfur> ah, is it from kernel ? then I think your best bet is to COPY the kernel code and use it into your ext.
+[01-30-2006 10:43:30] [#ezpublish] <Sulfur> nope. kernel modules are , as of now, not overridable. only their tpls are.
+[01-30-2006 10:43:41] [#ezpublish] <kalooni> so you see my problem
+[01-30-2006 10:45:03] [#ezpublish] <Sulfur> yes. had it myself, decided to do the copy/modify solution
+[01-30-2006 10:45:09] [#ezpublish] <kalooni> ok
+[01-30-2006 10:45:32] [#ezpublish] <kalooni> Did you add any field in a table or create a new table ?
+[01-30-2006 10:45:46] [#ezpublish] <Sulfur> I left ez's structure alone, and made my own
+[01-30-2006 10:45:57] [#ezpublish] <Sulfur> this way it's upgrade-safe
+[01-30-2006 10:46:50] [#ezpublish] <kalooni> for my tracking number management I am planning to create a new table ezorder_track ... Is this upgrade-safe ?
+[01-30-2006 10:47:40] [#ezpublish] <Sulfur> until eZ decides to create a new table called like that, it should. I think you should not use ez* prefixes, for maximum peace of mind.
+[01-30-2006 10:48:00] [#ezpublish] <kalooni> I think you're right
+[01-30-2006 10:49:57] [#ezpublish] <kalooni> it is clearer now
+[01-30-2006 10:50:44] [#ezpublish] <kalooni> I think I can create an extension eztrack or something like that. No need then to copy the ezorder class and tpl in my extension. Just have to modify the orderview template to integrate the new feature
+[01-30-2006 10:51:19] [#ezpublish] <Sulfur> yes, and that you can override
+[01-30-2006 10:51:39] [#ezpublish] <kalooni> yes ;)
+[01-30-2006 10:51:46] [#ezpublish] <kalooni> thanks for your help
+[01-30-2006 10:52:27] [#ezpublish] <Sulfur> no problem :)
+[01-30-2006 11:04:28] -!- ordna1 [n=ordnas@p549D6C06.dip.t-dialin.net] has joined #ezpublish
+[01-30-2006 11:22:14] -!- ordnas [n=ordnas@p549D7A27.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[01-30-2006 11:35:07] -!- tobyS changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_components_1_0_release
+[01-30-2006 11:36:19] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[01-30-2006 11:37:26] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-30-2006 11:59:15] -!- ordna1 [n=ordnas@p549D6C06.dip.t-dialin.net] has left #ezpublish []
+[01-30-2006 12:08:36] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-30-2006 12:11:44] -!- Sulfur [n=mbariola@85.20.2.139] has quit ["Isn't Gaim a cool program ? :-)"]
+[01-30-2006 12:11:56] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-30-2006 12:16:25] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Client Quit]
+[01-30-2006 13:06:58] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit ["sleep mode on"]
+[01-30-2006 13:43:35] -!- DiGiTa|_ [n=guillaum@84.5.139.162] has quit []
+[01-30-2006 13:46:51] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-30-2006 15:15:03] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-30-2006 16:03:00] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[01-30-2006 16:45:12] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[01-30-2006 17:00:20] [#ezpublish] <SEAwolfx> re
+[01-30-2006 18:13:40] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Read error: 113 (No route to host)]
+[01-30-2006 18:59:01] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-30-2006 18:59:44] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-30-2006 20:21:25] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 110 (Connection timed out)]
+[01-30-2006 20:22:22] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-30-2006 21:18:08] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[01-30-2006 21:18:59] -!- nnn0 [n=therion@195.204.221.183] has joined #ezpublish
+[01-30-2006 22:33:43] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-30-2006 22:33:53] [#ezpublish] <y_sabal> d'morning
+[01-30-2006 22:34:49] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit [Client Quit]

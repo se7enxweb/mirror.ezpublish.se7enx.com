@@ -1,0 +1,8 @@
+/home/web/download.ezpublishhosting.com/html/ezirc/logs/*log {
+    missingok
+    notifempty
+    sharedscripts
+    postrotate
+#	/bin/kill -HUP `cat /var/run/ezirc.pid 2>/dev/null` 2> /dev/null || true
+    endscript
+}

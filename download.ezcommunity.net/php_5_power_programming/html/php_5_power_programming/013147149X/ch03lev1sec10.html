@@ -1,0 +1,51 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 3.10.&nbsp; parent:: and self::</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec9.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec11.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch03lev1sec10"></a><h3 class="docSection1Title" id="409768-944">3.10. <tt>parent</tt>:: and <tt>self</tt>::</h3>
+<p class="docText">PHP supports two reserved class names that make it easier when writing OO applications. <tt>self::</tt> refers to the current class and it is usually used to access static members, methods, and constants. <tt>parent::</tt> refers to the parent class and it is most often used when wanting to call the parent constructor or methods. It may also be used to access members and constants. You should use <tt>parent::</tt> as opposed to the parent's class name because it makes it easier to change your class hierarchy because you are not hard-coding the parent's class name.<a name="ch03index93"></a><a name="ch03index94"></a><a name="ch03index95"></a><a name="ch03index96"></a><a name="ch03index97"></a><a name="ch03index98"></a></p>
+<p class="docText">The following example makes use of both <tt>parent::</tt> and <tt>self::</tt> for accessing the <tt>Child</tt> and <tt>Ancestor</tt> classes:</p>
+<pre>
+class Ancestor {
+    const NAME = "Ancestor";
+    function __construct()
+    {
+        print "In " . self::NAME . " constructor\n";
+    }
+}
+
+class Child extends Ancestor {
+    const NAME = "Child";
+    function __construct()
+    {
+        parent::__construct();
+        print "In " . self::NAME . " constructor\n";
+    }
+}
+
+$obj = new Child();
+</pre><br>
+<p class="docText">The previous example outputs</P>
+<pre>
+In Ancestor constructor
+In Child constructor
+</pre><br>
+<p class="docText">Make sure you use these two class names whenever possible.<a name="ch03index99"></a><a name="ch03index100"></a><a name="ch03index101"></a><a name="ch03index102"></a></P>
+<ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch03lev1sec9.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch03lev1sec11.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

@@ -1,0 +1,236 @@
+[04-12-2006 00:58:29] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-12-2006 01:03:29] -!- DiGiTa|_ [n=guillaum@84.5.136.20] has joined #ezpublish
+[04-12-2006 01:28:53] -!- ordnas [n=ordnas@p549D66FC.dip.t-dialin.net] has joined #ezpublish
+[04-12-2006 01:36:10] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[04-12-2006 01:38:06] -!- kris10an [n=kh@85.19.74.66] has quit [Remote closed the connection]
+[04-12-2006 01:49:06] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[04-12-2006 01:52:42] -!- jota [n=jota@83.165.216.16] has joined #ezpublish
+[04-12-2006 02:07:50] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-12-2006 02:26:00] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-12-2006 02:26:43] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has joined #ezpublish
+[04-12-2006 02:35:53] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-12-2006 02:42:14] -!- hovik [n=hovik@79.84-48-105.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[04-12-2006 02:55:33] [#ezpublish] <tobmaster> moin
+[04-12-2006 03:10:08] [#ezpublish] <DiGiTa|_> moïen
+[04-12-2006 03:10:10] [#ezpublish] <DiGiTa|_> :)
+[04-12-2006 03:10:29] [#ezpublish] <tobmaster> :)
+[04-12-2006 03:14:21] [#ezpublish] <katana`> moin
+[04-12-2006 03:17:31] [#ezpublish] <DiGiTa|_> moin is morning ?
+[04-12-2006 03:24:25] [#ezpublish] <kalooni> mo'ning
+[04-12-2006 03:36:45] [#ezpublish] <buz> moin is bavarian i think
+[04-12-2006 03:42:51] [#ezpublish] <ordnas> buz: no, it's from northern germany
+[04-12-2006 03:43:10] [#ezpublish] <ordnas> we, in southern Germany, call them "fisheheads" :)
+[04-12-2006 03:43:21] [#ezpublish] <ordnas> because they are closer to the sea
+[04-12-2006 03:43:22] [#ezpublish] <buz> LOL
+[04-12-2006 03:51:01] [#ezpublish] <tobmaster> btw. you can also use "moin moin" in the morning ;)
+[04-12-2006 03:51:12] [#ezpublish] <tobmaster> thats then perfectly fischy ;)
+[04-12-2006 03:51:16] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [Read error: 145 (Connection timed out)]
+[04-12-2006 03:58:24] -!- nnn0 [n=therion@80.213.15.153] has joined #ezpublish
+[04-12-2006 04:09:01] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[04-12-2006 04:09:09] [#ezpublish] <Sulfur> morning :D
+[04-12-2006 04:13:46] [#ezpublish] <tobmaster> Sulfur: moin!
+[04-12-2006 04:15:45] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[04-12-2006 04:18:16] [#ezpublish] <ordnas> FYI: eZ systems Opposes Software Patents, http://ez.no/community/articles/ez_systems_opposes_software_patents
+[04-12-2006 04:52:04] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Remote closed the connection]
+[04-12-2006 04:58:42] [#ezpublish] * katana` is reading
+[04-12-2006 05:06:54] [#ezpublish] <Sulfur> damn ...... I created an object in the root content dir named mappa, I can access it via /content/view/full/23150 but not through /mappa ... it says that cannot find a module named mappa ....
+[04-12-2006 05:07:16] [#ezpublish] <Sulfur> what could be wrong? never happened anything like this
+[04-12-2006 05:09:01] [#ezpublish] <Sulfur> not even an urltranslator seems to fix it ..
+[04-12-2006 05:15:03] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-12-2006 05:27:04] [#ezpublish] <katana`> maybe it's a reserved word :)
+[04-12-2006 05:38:34] [#ezpublish] <Sulfur> katana`: no, I found the reason .... the admin and front siteaccesses were using different databases .... how clumsy! :))
+[04-12-2006 05:38:44] [#ezpublish] * Sulfur bangs his head
+[04-12-2006 05:38:55] [#ezpublish] * Sulfur smacks his forefront .. D'OH!
+[04-12-2006 05:40:08] [#ezpublish] <Sulfur> hey , who'll attend eZ camp?
+[04-12-2006 05:42:03] [#ezpublish] <katana`> will you ?
+[04-12-2006 05:43:37] [#ezpublish] <Sulfur> I will
+[04-12-2006 05:43:47] [#ezpublish] <Sulfur> I'm up for the performance workshops
+[04-12-2006 05:43:57] [#ezpublish] * Sulfur whips his eZ installation
+[04-12-2006 05:47:30] [#ezpublish] <Sulfur> anyone else?
+[04-12-2006 06:02:00] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 110 (Connection timed out)]
+[04-12-2006 06:51:54] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has joined #ezpublish
+[04-12-2006 07:36:06] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[04-12-2006 07:40:54] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-12-2006 07:41:58] -!- _buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit [Remote closed the connection]
+[04-12-2006 07:57:01] [#ezpublish] <tobmaster> kracker: ping!
+[04-12-2006 07:57:33] [#ezpublish] <tobmaster> kracker: i assume you are the kracker in the ez forums?
+[04-12-2006 08:03:28] [#ezpublish] <kracker> the one ... the only
+[04-12-2006 08:03:37] [#ezpublish] <kracker> the kracker
+[04-12-2006 08:04:59] [#ezpublish] <kracker> tobmaster, ping back!
+[04-12-2006 08:09:21] [#ezpublish] <tobmaster> kracker: do you in the meanwhile have a vim syntax for ez templates?
+[04-12-2006 08:09:58] [#ezpublish] <kracker> umm, we are emacs :P
+[04-12-2006 08:10:13] [#ezpublish] <kracker> resistance is :wq!
+[04-12-2006 08:10:17] [#ezpublish] <kracker> tobmaster, had to go out for the day. have a good one ...
+[04-12-2006 08:10:39] [#ezpublish] <kracker> but isn't there an article on ez.no on this for vim?
+[04-12-2006 08:11:13] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-12-2006 08:11:37] [#ezpublish] <kracker> tobmaster, http://ez.no/community/articles/development_tools_for_ez_publish
+[04-12-2006 08:12:38] [#ezpublish] <kracker> sounds like a reason to spam the forum :D
+[04-12-2006 08:12:42] [#ezpublish] <kracker> late
+[04-12-2006 08:13:04] [#ezpublish] * kracker is outa heya!
+[04-12-2006 08:19:21] -!- niooi [n=niooi@linagora.net8.nerim.net] has joined #ezpublish
+[04-12-2006 08:19:24] [#ezpublish] <niooi> hello
+[04-12-2006 08:19:54] [#ezpublish] <niooi> is it possible to have versioning on uploaded Word files ? (or any binary files)
+[04-12-2006 08:36:59] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit [Remote closed the connection]
+[04-12-2006 08:37:27] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[04-12-2006 08:38:02] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[04-12-2006 08:40:48] [#ezpublish] <tobmaster> sorry did i miss something kracker
+[04-12-2006 08:46:50] [#ezpublish] <niooi> yes
+[04-12-2006 08:46:53] [#ezpublish] <niooi> ;)
+[04-12-2006 08:47:03] [#ezpublish] <niooi> oh no you did
+[04-12-2006 08:47:10] [#ezpublish] <niooi> niooi: is it possible to have versioning on uploaded Word files ? (or any binary files)
+[04-12-2006 09:19:12] Disconnecting due to lack of a lag response (0.07965100 1144851492 != 0.15828500 1144851522)
+[04-12-2006 09:19:12] Diconnected. Sleeping for 2 second(s).
+[04-12-2006 09:19:14] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:19:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:19:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:19:46] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:20:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:20:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:20:16] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:20:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:20:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:20:46] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:21:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:21:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:21:16] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:21:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:21:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:21:46] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:22:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:22:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:22:16] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:22:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:22:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:22:46] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:23:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:23:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:23:16] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:23:36] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:23:36] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:23:46] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:24:06] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:24:06] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:24:16] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:24:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:24:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:24:47] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:25:07] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:25:07] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:25:17] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:25:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:25:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:25:47] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:26:07] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:26:07] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:26:17] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:26:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:26:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:26:47] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:27:07] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:27:07] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:27:17] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:27:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:27:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:27:47] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:28:07] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:28:07] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:28:17] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:28:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:28:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:28:47] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:29:07] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:29:07] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:29:17] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:29:37] >> Warning: fsockopen(): unable to connect to irc.freenode.net:6667 in /home/web/ezcommunity/ezcommunity/ezirc.ezcommunity.net/ezirc_v001_IQ-0.9.3/include/class.IQBot.php (line 313)
+[04-12-2006 09:29:37] >> *** Could not connect to irc.freenode.net:6667, trying again in 10 seconds.
+[04-12-2006 09:29:47] >> Connecting to irc.freenode.net:6667
+[04-12-2006 09:29:52] >> Connected to irc.freenode.net:6667, registering...
+[04-12-2006 09:29:52] >> Attempting to join channels: #ezpublish
+[04-12-2006 09:29:53] >> Successfully registered. Nick is: ezlog
+[04-12-2006 09:29:53] -!- There are 14538 listed and 14513 unlisted users on 22 servers
+[04-12-2006 09:29:53] -!- 42 flagged staff members
+[04-12-2006 09:29:53] -!- 11754 channels formed
+[04-12-2006 09:29:53] -!- I have 4832 clients and 0 servers
+[04-12-2006 09:29:53] -!- Current local  users: 4832  Max: 5573
+[04-12-2006 09:29:53] -!- Current global users: 29051  Max: 30795
+[04-12-2006 09:29:53] -!- Highest connection count: 5575 (5573 clients) (843424 since server was (re)started)
+[04-12-2006 09:29:53] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[04-12-2006 09:29:53] -!- Topic for #ezpublish: eZ publish | cms | Welcome to #ezpublish ... Please be patient, wait and ask again before leaving || eZ publish community: http://ez.no/community | http://www.planetezpublish.org/ || News: http://ez.no/community/news/ez_publish_3_8_0beta1 | http://ez.no/community/news/community_newsletter_07_04_2006 | http://ez.no/community/articles/ez_systems_opposes_software_patents | http://ez.no/community/forum/ez_components/webcast#msg93640 |
+[04-12-2006 09:29:53] -!- Topic set by kracker [@] [Wed, 12 Apr 2006 08:34:10 -0500]
+[04-12-2006 09:29:54] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[04-12-2006 09:29:54] [notice(freenode-connect)] VERSION IQ 0.9.3
+[04-12-2006 09:29:57] [#ezpublish] <phretor> katana`: what's your limit?
+[04-12-2006 09:30:08] [#ezpublish] <katana`> 60 or 90
+[04-12-2006 09:30:20] [#ezpublish] <katana`> or none but this is risky you never know what may happen
+[04-12-2006 09:30:31] [#ezpublish] <phretor> katana`: make it 70 ;-)
+[04-12-2006 09:30:58] [#ezpublish] <phretor> katana`: I'll also ask root for an optimizer
+[04-12-2006 09:31:07] [#ezpublish] <katana`> yeah that would be nice
+[04-12-2006 09:36:35] [#ezpublish] <phretor> katana`: do you use any optimizer?
+[04-12-2006 09:38:01] [#ezpublish] <katana`> yeah
+[04-12-2006 09:38:02] [#ezpublish] <katana`> always
+[04-12-2006 09:38:09] [#ezpublish] <phretor> katana`: which one?
+[04-12-2006 09:44:03] [#ezpublish] <buz> eaccelerator is good
+[04-12-2006 09:44:24] [#ezpublish] <buz> actually, 30s was enough for most of my installs
+[04-12-2006 09:44:29] [#ezpublish] <buz> but all of them are on fast servers
+[04-12-2006 10:06:07] [#ezpublish] <Sulfur> on my 3.7.2 install, I need a memory limit of 256 mb on admin siteaccess for it to work ... with eAccelerator, while with zend platform, even more :)
+[04-12-2006 10:06:18] [#ezpublish] <Sulfur> 30k object content tree
+[04-12-2006 10:11:50] -!- niooi [n=niooi@linagora.net8.nerim.net] has quit [Read error: 113 (No route to host)]
+[04-12-2006 10:14:54] [#ezpublish] <phretor> Sulfur: :-|
+[04-12-2006 10:19:39] [#ezpublish] <phretor> which dirs should be writable from webserver? var/, design/, settings/, whatever?
+[04-12-2006 10:26:23] [#ezpublish] <phretor> Sulfur: my server is a dual Xeon with 2G of RAM :-\
+[04-12-2006 10:28:42] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-12-2006 10:29:16] [#ezpublish] <katana`> var/ should be enough
+[04-12-2006 10:29:31] [#ezpublish] <katana`> settings/override/ too if you wanna use the developer toolbar
+[04-12-2006 10:30:00] [#ezpublish] <katana`> all of settings/ and design/ if you want to use more features of the admin interface (create templates, etc). Otherwise it is not required, just var/ is
+[04-12-2006 10:32:16] [#ezpublish] <phretor> katana`: the server admin is bothering me about script quality :-\ how could I explain him that eZpublish is actually well written and that these problems are machine issues?
+[04-12-2006 10:38:54] [#ezpublish] <katana`> errr
+[04-12-2006 10:39:25] [#ezpublish] <katana`> you should not say that exactly, but instead that eZ publish has more requirements on the hardware and software setup than the average script
+[04-12-2006 10:39:57] [#ezpublish] <katana`> once everything is setup correctly, eZ publish DOES work fine and doesn't kill the server more than it should
+[04-12-2006 10:40:22] [#ezpublish] <katana`> now don't expect him to believe that eZ publish uses the same resources as an average script... it has more features, and definitely uses much more resources, but it is worth it :)
+[04-12-2006 10:41:04] [#ezpublish] <phretor> katana`: I know, you know...now I got to make him eZ publish aware :-D
+[04-12-2006 11:11:36] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[04-12-2006 11:11:41] [#ezpublish] <phretor> katana`: that fuc**ing admin set memory limit to 42M!! And that server only does web stuff, what about other 2000M-42M of RAM? are they out for a sigarette break!?
+[04-12-2006 11:12:09] [#ezpublish] <kalooni> a question concerning the search: what happen if I do search for 2 words ?
+[04-12-2006 11:12:53] [#ezpublish] <phretor> kalooni: it should do an AND
+[04-12-2006 11:13:19] -!- katana` [n=Katana@gai69-1-87-91-102-67.dsl.club-internet.fr] has quit [Read error: 110 (Connection timed out)]
+[04-12-2006 11:14:33] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[04-12-2006 11:19:41] [#ezpublish] <phretor> bye
+[04-12-2006 11:19:42] -!- phretor [n=phretor@fwvplab.elet.polimi.it] has quit []
+[04-12-2006 11:33:15] -!- Sulfur [n=mbariola@85.20.2.139] has left #ezpublish []
+[04-12-2006 11:58:22] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[04-12-2006 12:07:13] -!- akugila [i=Satpam_Y@61.94.9.111] has joined #ezpublish
+[04-12-2006 12:08:38] [#ezpublish] <akugila> i have problem like this: http://pastebin.com/656035  when installing ez publish :(
+[04-12-2006 12:08:43] [#ezpublish] <akugila> please help me
+[04-12-2006 12:09:24] [#ezpublish] <akugila> i found the same problem too at http://ez.no/doc/ez_publish/technical_manual/3_6/installation/normal_installation/installing_ez_publish_on_windows  but no one help it :( (at the last of page)
+[04-12-2006 12:12:29] [#ezpublish] <akugila> any help? i'm using dial-up.. so can't wait so long
+[04-12-2006 12:15:38] [#ezpublish] <akugila> please.. i gtg in 5 mins.
+[04-12-2006 12:19:52] [#ezpublish] <akugila> sorry gtg, please drop me an email at yudi@mygadget.net
+[04-12-2006 12:19:54] [#ezpublish] <akugila> thanks
+[04-12-2006 12:19:56] -!- akugila [i=Satpam_Y@61.94.9.111] has quit []
+[04-12-2006 13:01:59] -!- akugila [i=Satpam_Y@61.94.9.148] has joined #ezpublish
+[04-12-2006 13:02:14] [#ezpublish] <akugila> is there any help for my last problem?
+[04-12-2006 13:02:20] [#ezpublish] <akugila> i still stuck on it :(
+[04-12-2006 13:02:28] [#ezpublish] <akugila> i have problem like this: http://pastebin.com/656035  when installing ez publish :(
+[04-12-2006 13:08:06] [#ezpublish] <akugila> looks like.. because i use apache 2 and php 5
+[04-12-2006 13:38:34] [#ezpublish] <buz> ezpublish wont run on php5
+[04-12-2006 13:38:59] [#ezpublish] <buz> for ezp 3.7 you MUST use php 4.4.X
+[04-12-2006 13:42:38] -!- akugila [i=Satpam_Y@61.94.9.148] has quit [Read error: 110 (Connection timed out)]
+[04-12-2006 13:50:55] -!- akugila [i=Satpam_Y@61.94.17.53] has joined #ezpublish
+[04-12-2006 13:51:49] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has joined #ezpublish
+[04-12-2006 14:25:53] -!- ls [n=ls@unregister049029239087.c29.msk.pl] has quit ["Leaving"]
+[04-12-2006 14:28:33] -!- akugila [i=Satpam_Y@61.94.17.53] has quit [Connection timed out]
+[04-12-2006 14:39:38] -!- DiGiTa|_ [n=guillaum@84.5.136.20] has quit []
+[04-12-2006 14:43:08] -!- akugila [i=Satpam_Y@61.94.18.47] has joined #ezpublish
+[04-12-2006 14:47:21] -!- Bedlore [n=me@ppp136-38.lns2.adl2.internode.on.net] has quit [Read error: 110 (Connection timed out)]
+[04-12-2006 15:04:12] -!- jota [n=jota@83.165.216.16] has quit ["Abandonando"]
+[04-12-2006 15:18:09] -!- akugila [i=Satpam_Y@61.94.18.47] has quit [Success]
+[04-12-2006 15:42:21] -!- ordnas [n=ordnas@p549D66FC.dip.t-dialin.net] has left #ezpublish []
+[04-12-2006 15:45:00] -!- phretor [n=phretor@host24-148.pool872.interbusiness.it] has joined #ezpublish
+[04-12-2006 15:45:02] [#ezpublish] <phretor> hi there
+[04-12-2006 16:32:17] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[04-12-2006 17:33:22] -!- _kore [n=lordhong@port-83-236-9-237.dynamic.qsc.de] has quit [Remote closed the connection]
+[04-12-2006 17:45:25] -!- phretor [n=phretor@host24-148.pool872.interbusiness.it] has quit []
+[04-12-2006 22:41:02] -!- nnn0 [n=therion@80.213.15.153] has quit [Read error: 145 (Connection timed out)]
+[04-12-2006 22:50:18] -!- nnn0 [n=therion@80.213.15.153] has joined #ezpublish
+[04-12-2006 23:07:04] -!- nnn0 [n=therion@80.213.15.153] has quit [Read error: 145 (Connection timed out)]
+[04-12-2006 23:15:42] -!- nnn0 [n=therion@ti541110a080-12181.bb.online.no] has joined #ezpublish

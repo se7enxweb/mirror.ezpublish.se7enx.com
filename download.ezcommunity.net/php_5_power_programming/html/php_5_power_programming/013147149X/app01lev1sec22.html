@@ -1,0 +1,54 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section A.22.&nbsp; PEAR</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec21.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec23.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app01lev1sec22"></a><h3 class="docSection1Title">A.22. PEAR</h3>
+<p class="docText">PEAR infrastructure</p>
+<a name="app01lev2sec207"></a><h4 class="docSection2Title">A.22.1. PEAR</h4><a name="app01index424"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stig S&aelig;ther Bakken (lead)</span></P>
+<p class="docText">PEAR Base System</p>
+<a name="app01lev3sec202"></a><H5 class="docSection3Title">A.22.1.1 Description</h5>
+<p class="docText">The PEAR package contains:</P>
+<ul><li><p class="docList">the PEAR base class</p></li><LI><p class="docList">the PEAR_Error error handling mechanism</P></li><li><p class="docList">the alpha-quality PEAR_ErrorStack advanced error handling mechanism</p></li><LI><p class="docList">the PEAR installer, for creating, distributing and installing packages</p></li><LI><p class="docList">the OS_Guess class for retrieving info about the OS where PHP is running on</p></LI><li><p class="docList">the System class for quick handling common operations with files and directories</p></li></ul>
+<a name="app01lev2sec208"></a><h4 class="docSection2Title">A.22.2. PEAR_Frontend_Gtk</h4><a name="app01index425"></a><a name="app01index426"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Alan Knowles (lead) - Stig S&aelig;ther Bakken (helper)</span></p>
+<p class="docText">Gtk (Desktop) PEAR Package Manager</p>
+<a name="app01lev3sec203"></a><h5 class="docSection3Title">A.22.2.1 Description</h5>
+<p class="docText">Desktop Interface to the PEAR Package Manager, Requires PHP-GTK</p>
+<a name="app01lev2sec209"></a><h4 class="docSection2Title">A.22.3. PEAR_Frontend_Web</h4><a name="app01index427"></a><a name="app01index428"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Christian Dickmann (lead) - Pierre-Alain Joye (lead) - Stig S&aelig;ther Bakken (helper)</span></p>
+<p class="docText">HTML (Web) PEAR Package Manager</p>
+<a name="app01lev3sec204"></a><h5 class="docSection3Title">A.22.3.1 Description</H5>
+<p class="docText">Web Interface to the PEAR Package Manager</P>
+<a name="app01lev2sec210"></a><h4 class="docSection2Title">A.22.4. PEAR_Info</h4><a name="app01index429"></a><a name="app01index430"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Davey Shafik (lead)</span></P>
+<p class="docText">Show Information about your PEAR install and its packages</p>
+<a name="app01lev3sec205"></a><h5 class="docSection3Title">A.22.4.1 Description</h5>
+<p class="docText">This package generates a comprehensive information page for your current PEAR install.</p>
+<ul><li><p class="docList">The format for the page is similar to that for phpinfo() except using PEAR colors.</P></li><LI><p class="docList">Has complete PEAR Credits (based on the packages you have installed).</p></LI><li><p class="docList">Will show if there is a newer version than the one presently installed (and what its state is)</p></li><li><p class="docList">Each package has an anchor in the form pkg_PackageName - where PackageName is a case-sensitive PEAR package name</P></LI></ul>
+<a name="app01lev2sec211"></a><h4 class="docSection2Title">A.22.5. PEAR_PackageFileManager</h4><a name="app01index431"></a><a name="app01index432"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Greg Beaver (lead)</span></p>
+<p class="docText">PEAR_PackageFileManager takes an existing package.xml file and updates it with a new filelist and changelog</P>
+<a name="app01lev3sec206"></a><h5 class="docSection3Title">A.22.5.1 Description</h5>
+<p class="docText">This package revolutionizes the maintenance of PEAR packages. With a few parameters, the entire package.xml is automatically updated with a listing of all files in a package.</P>
+<p class="docText">Features include</p>
+<UL><li><p class="docList">reads in an existing package.xml file, and only changes the release/changelog</p></li><li><p class="docList">a plugin system for retrieving files in a directory. Currently two plugins exist, one for standard recursive directory content listing, and one that reads the CVS/Entries files and generates a file listing based on the contents of a checked out CVS repository</p></li><li><p class="docList">incredibly flexible options for assigning install roles to files/directories</p></li><li><p class="docList">ability to ignore any file based on a * ? wildcard-enabled string(s)</p></li><li><p class="docList">ability to include only files that match a * ? wildcard-enabled string(s)</p></li><li><p class="docList">ability to manage dependencies</P></LI><li><p class="docList">can output the package.xml in any directory, and read in the package.xml file from any directory.</p></LI><li><p class="docList">can specify a different name for the package.xml file</p></li></ul>
+<p class="docText">As of version 1.2.0, PEAR_PackageFileManager is fully unit tested.</p>
+<ul></UL></td></TR></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec21.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec23.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

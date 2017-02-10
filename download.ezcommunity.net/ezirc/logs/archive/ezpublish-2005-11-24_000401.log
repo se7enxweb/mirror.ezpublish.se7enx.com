@@ -1,0 +1,338 @@
+[11-23-2005 00:00:10] [#ezpublish] * kracker <grin />
+[11-23-2005 00:47:54] [#ezpublish] <_Rappy_> they're not sleeping, just in suspended animation
+[11-23-2005 02:02:51] -!- ordnas [n=ordnas@p549DFD4F.dip.t-dialin.net] has joined #ezpublish
+[11-23-2005 02:18:03] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-23-2005 02:31:11] [#ezpublish] <kracker> lol
+[11-23-2005 02:31:27] [#ezpublish] <kracker> i time travel in my sleep
+[11-23-2005 02:32:41] [#ezpublish] <Katana`> morning
+[11-23-2005 02:32:49] [#ezpublish] <kracker> night
+[11-23-2005 02:33:06] [#ezpublish] <Katana`> :)
+[11-23-2005 02:40:10] [#ezpublish] <kracker> full court press face down through the daylight, it' an't right hiding out without putting back up a fight tearing apart the lightbright on bit ata time, bought now i'm outta civility outa my mind, not the first not the last, the next one blind sighted will find the same horrible truth, kinda reason parrents never want you to leave the booth, but it never lasts like the promises they make disapate just as fast, blinding reality how
+[11-23-2005 02:40:10] [#ezpublish] <kracker>  could you miss, it right in front of you, whole world around ya shattering like glass
+[11-23-2005 02:42:35] -!- DiGiTa|_ [n=guillaum@84.4.70.137] has joined #ezpublish
+[11-23-2005 02:50:54] [#ezpublish] <_Rappy_> die requirementdoc, die
+[11-23-2005 03:10:39] [#ezpublish] <DiGiTa|_> wtf with my connection
+[11-23-2005 03:11:31] [#ezpublish] <_Rappy_> connection bad daniel san. must think. power lies here, not here!
+[11-23-2005 03:12:02] [#ezpublish] <DiGiTa|_> well i think i have a power problem
+[11-23-2005 03:12:02] [#ezpublish] <DiGiTa|_> :)
+[11-23-2005 03:12:19] [#ezpublish] <_Rappy_> HAI!
+[11-23-2005 03:13:44] [#ezpublish] <Katana`> aaah, this is nice
+[11-23-2005 03:14:05] [#ezpublish] <Katana`> how do I set permissions on a module if that module is part of an extension only loaded for the user siteaccess...
+[11-23-2005 03:14:25] [#ezpublish] <Katana`> it's not known by the admin so it's not listed in the roles & policies modules list...
+[11-23-2005 03:14:35] [#ezpublish] * Katana` pokes eZ people
+[11-23-2005 03:19:10] [#ezpublish] <_Rappy_> add to admin interface. set permission, remove?
+[11-23-2005 03:19:14] [#ezpublish] <_Rappy_> if that's possible :p
+[11-23-2005 03:19:28] [#ezpublish] <Katana`> hmmm not a good idea
+[11-23-2005 03:19:35] [#ezpublish] <Katana`> easy :))
+[11-23-2005 03:19:57] [#ezpublish] <Katana`> added [ModuleSettings] ExtensionRepositories[]=myuserext to module.ini.append for admin siteaccess ;)
+[11-23-2005 03:21:17] [#ezpublish] <_Rappy_> but why not a good idea?
+[11-23-2005 03:21:56] [#ezpublish] <Katana`> it feels kinda dirty
+[11-23-2005 03:22:07] [#ezpublish] <Katana`> later on "but how was that module permissions set... it's not in the list" ...
+[11-23-2005 03:22:13] [#ezpublish] <Katana`> "wait, I think i remember something !"
+[11-23-2005 03:22:27] [#ezpublish] <Katana`> and totally impossible since my extension has a big settings folder with override.ini and so on ;)
+[11-23-2005 03:22:35] [#ezpublish] <Katana`> I doubt the admin would work with that extension loaded
+[11-23-2005 03:24:09] [#ezpublish] <DiGiTa|_> if someone has an idea : http://pastebin.com/436649
+[11-23-2005 03:28:44] [#ezpublish] <DiGiTa|_> :(((
+[11-23-2005 03:28:51] [#ezpublish] <DiGiTa|_> i'm lost in my veiwcache
+[11-23-2005 03:29:26] [#ezpublish] <Katana`> ah ?
+[11-23-2005 03:29:34] [#ezpublish] <Katana`> have you checked under the bed ?
+[11-23-2005 03:30:50] [#ezpublish] <DiGiTa|_> oh my god i was using the false class identifier
+[11-23-2005 03:31:04] [#ezpublish] <DiGiTa|_> instead of [lien] it was [link]
+[11-23-2005 03:31:17] [#ezpublish] <DiGiTa|_> fuck
+[11-23-2005 03:31:24] [#ezpublish] <DiGiTa|_> loosing time on this
+[11-23-2005 03:32:23] [#ezpublish] <Katana`> tsss
+[11-23-2005 03:32:36] [#ezpublish] <DiGiTa|_> :/
+[11-23-2005 03:32:37] [#ezpublish] <Katana`> blame Kristian
+[11-23-2005 03:32:47] [#ezpublish] <DiGiTa|_> :|
+[11-23-2005 03:35:26] [#ezpublish] <kracker> no! blame canada! (south park the movie)
+[11-23-2005 03:36:38] [#ezpublish] <DiGiTa|_> who kill kenny ?
+[11-23-2005 03:37:35] [#ezpublish] <Katana`> :))
+[11-23-2005 03:38:01] [#ezpublish] <_Rappy_> anyone know of a good DB-tool (designing ER-diagrams) on linux?
+[11-23-2005 03:38:18] [#ezpublish] <Katana`> without the last part i would have answered :)
+[11-23-2005 03:38:22] [#ezpublish] <Katana`> but on linux no i don't
+[11-23-2005 03:38:45] [#ezpublish] <Katana`> you don't need tools if you're a linux warrior ;)
+[11-23-2005 03:38:50] [#ezpublish] <DiGiTa|_> lol
+[11-23-2005 03:38:57] [#ezpublish] <DiGiTa|_> only command line
+[11-23-2005 03:39:13] [#ezpublish] <_Rappy_> you want me to create an ER diagram in the terminal?
+[11-23-2005 03:39:23] [#ezpublish] <Katana`> :))
+[11-23-2005 03:39:32] [#ezpublish] <_Rappy_> don't get me wrong, I'm getting pretty skilled in use of termina, but I'm not a magician!
+[11-23-2005 03:39:44] [#ezpublish] <DiGiTa|_> then you are not an artist
+[11-23-2005 03:39:45] [#ezpublish] <DiGiTa|_> :)
+[11-23-2005 03:39:46] [#ezpublish] <Katana`> hehehe
+[11-23-2005 03:41:05] [#ezpublish] <_Rappy_> I got a phonesearch on my terminal :p
+[11-23-2005 03:41:12] [#ezpublish] <_Rappy_> gimme a name
+[11-23-2005 03:41:37] [#ezpublish] <_Rappy_> hmm
+[11-23-2005 03:41:43] [#ezpublish] <_Rappy_> let's try eZ systems
+[11-23-2005 03:41:59] [#ezpublish] <_Rappy_> dang, only perosnsearch
+[11-23-2005 03:46:21] [#ezpublish] <DiGiTa|_> lol
+[11-23-2005 03:48:41] [#ezpublish] <DiGiTa|_> my first completely working ezp site is finished : http://www.coba-immobilier.com/ :)
+[11-23-2005 03:48:52] [#ezpublish] <DiGiTa|_> with cache and all working
+[11-23-2005 03:49:00] [#ezpublish] * DiGiTa|_ happy
+[11-23-2005 03:49:16] [#ezpublish] <buz> speeds good now
+[11-23-2005 03:49:51] [#ezpublish] <DiGiTa|_> yeah, the xml part is faster
+[11-23-2005 03:50:53] [#ezpublish] <DiGiTa|_> thanks to Katana` for the custom view explanation :)
+[11-23-2005 03:51:00] [#ezpublish] <DiGiTa|_> module view
+[11-23-2005 03:51:44] [#ezpublish] <Katana`> np DiGiTa|_ /[
+[11-23-2005 03:52:11] [#ezpublish] <Katana`> ;)
+[11-23-2005 03:53:27] [#ezpublish] <Katana`> do not forget to send the link to eZ Systems so that it goes to references, DiGiTa|_ :)
+[11-23-2005 03:53:32] [#ezpublish] <Katana`> and maybe site of the month who knows !
+[11-23-2005 03:54:13] [#ezpublish] <DiGiTa|_> i will wait my client for inserting some content
+[11-23-2005 03:56:23] [#ezpublish] <Katana`> indeed
+[11-23-2005 03:57:00] [#ezpublish] <_Rappy_> so, you get discounts on these house DiGiTa|_? ;d
+[11-23-2005 03:57:03] [#ezpublish] <_Rappy_> nice site
+[11-23-2005 03:57:22] [#ezpublish] <DiGiTa|_> lol
+[11-23-2005 03:57:35] [#ezpublish] <buz> these are bargains compared to what you pay for a house around here
+[11-23-2005 03:57:44] [#ezpublish] <DiGiTa|_> well i put only my houses on this one
+[11-23-2005 03:57:56] [#ezpublish] <DiGiTa|_> this is example buz
+[11-23-2005 03:58:19] [#ezpublish] <buz> then again, who wants to live in france
+[11-23-2005 03:58:32] [#ezpublish] <DiGiTa|_> this one : http://www.coba-immobilier.com/proprietes/mas/ancienne_batisse_du_18eme_siecle
+[11-23-2005 03:58:42] [#ezpublish] <DiGiTa|_> costs like 700 000 euros
+[11-23-2005 03:58:47] [#ezpublish] <_Rappy_> I want to live in the top of the eiffeltower
+[11-23-2005 03:58:54] [#ezpublish] <buz> says 150000
+[11-23-2005 03:59:20] [#ezpublish] <DiGiTa|_> it's false
+[11-23-2005 03:59:31] [#ezpublish] <DiGiTa|_> i enter myself this one
+[11-23-2005 03:59:32] [#ezpublish] <DiGiTa|_> :)
+[11-23-2005 04:01:19] [#ezpublish] * DiGiTa|_ is preparing the invoice
+[11-23-2005 04:01:39] [#ezpublish] <_Rappy_> that's always fun DiGiTa|_ ;)
+[11-23-2005 04:01:45] [#ezpublish] <buz> no
+[11-23-2005 04:02:00] [#ezpublish] <buz> even though i have a lot of accounting courses i still find the day to day accounting stuff boring a
+[11-23-2005 04:02:13] [#ezpublish] <DiGiTa|_> ehehe
+[11-23-2005 04:02:28] [#ezpublish] <DiGiTa|_> accounting arent cool
+[11-23-2005 04:02:58] [#ezpublish] <buz> it's a very safe business
+[11-23-2005 04:03:03] [#ezpublish] <buz> it only gets more important ;)
+[11-23-2005 04:09:14] -!- DiGiTa|__ [n=guillaum@80.125.104.25] has joined #ezpublish
+[11-23-2005 04:20:54] -!- DiGiTa|_ [n=guillaum@84.4.70.137] has quit [Read error: 110 (Connection timed out)]
+[11-23-2005 05:51:37] -!- ordnas [n=ordnas@p549DFD4F.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-23-2005 06:40:58] -!- Bedlore [n=me@ppp214-16.lns1.adl2.internode.on.net] has quit []
+[11-23-2005 08:21:23] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-23-2005 08:21:30] [#ezpublish] <Sulfur> hi guys! :)
+[11-23-2005 08:22:01] [#ezpublish] <Sulfur> missed me ? I was assigned to non-ezpublish project for a few days ;)
+[11-23-2005 08:22:54] [#ezpublish] <DiGiTa|__> i refuse non ezpublish projects
+[11-23-2005 08:22:56] [#ezpublish] <DiGiTa|__> :)
+[11-23-2005 08:23:31] [#ezpublish] <Sulfur> heh :)
+[11-23-2005 08:23:48] [#ezpublish] <Sulfur> I have to bow to my dilbertianesque bosses
+[11-23-2005 08:24:08] [#ezpublish] <DiGiTa|__> i'm my own boss
+[11-23-2005 08:25:06] [#ezpublish] <_Rappy_> they try to push those on me too sometimes. I just igone them. Now I got a stack of things I've not finished
+[11-23-2005 08:25:18] [#ezpublish] <DiGiTa|__> lol
+[11-23-2005 08:25:38] [#ezpublish] <DiGiTa|__> with some unmaintanable code
+[11-23-2005 08:31:09] [#ezpublish] <Sulfur>  :)
+[11-23-2005 08:31:58] [#ezpublish] <Sulfur> any of ya guys has any idea if there is a way to set a cookie through eZPublish's APIs ? So far, I can see that there is a setSessionVariable , but I want to put a cookie.
+[11-23-2005 08:32:31] [#ezpublish] <Sulfur> of course I can setcookie() ..... but I wanted to know if there is an API-esque way.
+[11-23-2005 08:34:59] -!- _Rappy_ is now known as _rappy_
+[11-23-2005 08:35:09] [#ezpublish] <_rappy_> adio, leaving for job no. 2 =)
+[11-23-2005 08:39:05] -!- ordna1 [n=ordnas@p549DEACD.dip.t-dialin.net] has joined #ezpublish
+[11-23-2005 09:18:16] [#ezpublish] <Katana`> i don't think so Sulfur, but I may of course be wrong ;)
+[11-23-2005 09:23:31] -!- DiGiTa|_ [n=guillaum@84.4.189.181] has joined #ezpublish
+[11-23-2005 09:31:42] [#ezpublish] <Sulfur> well , I will setcookie it all to hell ;)
+[11-23-2005 09:32:06] [#ezpublish] <Sulfur> setcookie('ez', 'deadraven')
+[11-23-2005 09:32:57] [#ezpublish] <Sulfur> there is an important life lesson to learn here by using eZp. never to be 100% sure of anything and be ready to change your beliefs! ;)
+[11-23-2005 09:33:27] [#ezpublish] <Katana`> :)
+[11-23-2005 09:34:19] [#ezpublish] <Sulfur> submitted for your perusal : http://www.ibuzz.co.uk/
+[11-23-2005 09:34:28] [#ezpublish] <Sulfur> that's for ya iPodders
+[11-23-2005 09:35:57] -!- DiGiTa|__ [n=guillaum@80.125.104.25] has quit [Read error: 110 (Connection timed out)]
+[11-23-2005 09:54:00] [#ezpublish] <Sulfur> arh ... I am at a loss on how to fetch the latest-published/modified node in a certain folder (via PHP, not in a template)
+[11-23-2005 09:54:31] [#ezpublish] <Sulfur> seems that eZPersistentObject::fetchObjectList is no good ....
+[11-23-2005 09:54:51] [#ezpublish] <Katana`> sort reversed by pub date, limit to 1 result
+[11-23-2005 09:57:32] [#ezpublish] <Sulfur> but can it take the 'published' attribute as a sort ? I get an error
+[11-23-2005 09:58:00] [#ezpublish] <Sulfur> I first take up the definition by loading the class , so I nhave a $class->definition()
+[11-23-2005 09:59:14] [#ezpublish] <Sulfur> and I still don't know how to specify "child of this node" . maybe I should try eZContentObjectTreeNode methods
+[11-23-2005 10:00:03] -!- DiGiTa|__ [n=guillaum@84.5.138.203] has joined #ezpublish
+[11-23-2005 10:01:04] [#ezpublish] <Sulfur> arh
+[11-23-2005 10:02:02] [#ezpublish] <Katana`> eZContentObjectTreeNode::subTree
+[11-23-2005 10:02:13] [#ezpublish] <Katana`> it's the one used by fetch('content', 'list')
+[11-23-2005 10:02:31] [#ezpublish] <Katana`> you could also use eZFunctionHandler::execute like kh[eZ] said
+[11-23-2005 10:05:39] [#ezpublish] <Sulfur> yes ... I was looking into that ..
+[11-23-2005 10:08:05] -!- DiGiTa|_ [n=guillaum@84.4.189.181] has quit [Read error: 110 (Connection timed out)]
+[11-23-2005 10:11:10] [#ezpublish] <DiGiTa|__> lol the ibuzz
+[11-23-2005 10:11:18] [#ezpublish] <DiGiTa|__> buz make taht ?
+[11-23-2005 10:11:35] [#ezpublish] <buz> make what
+[11-23-2005 10:11:42] [#ezpublish] <DiGiTa|__> the ibuzz
+[11-23-2005 10:11:47] [#ezpublish] <buz> url
+[11-23-2005 10:11:49] [#ezpublish] <DiGiTa|__> http://www.ibuzz.co.uk/
+[11-23-2005 10:12:02] [#ezpublish] <buz> is that the stupid ipod vibrator?
+[11-23-2005 10:12:08] [#ezpublish] <DiGiTa|__> yeah :)
+[11-23-2005 10:12:24] [#ezpublish] <buz> no worse than the sms driven bluetooth vibra i guess
+[11-23-2005 10:19:32] [#ezpublish] <buz> http://www.engadget.com/entry/1234000980069365/
+[11-23-2005 10:20:29] [#ezpublish] <Sulfur> and what to say of the sms - activated teapot ?
+[11-23-2005 10:20:48] [#ezpublish] <Sulfur> well buz, but HERE you can FEEL the music ...... ;)
+[11-23-2005 10:21:24] [#ezpublish] <Sulfur> I think the progenitor of it all can be claimed to be the coffee-making HOWTO
+[11-23-2005 10:21:44] [#ezpublish] <Sulfur> echo "cappuccino" >COM1 or something like that
+[11-23-2005 10:21:48] [#ezpublish] <Sulfur> so c00l
+[11-23-2005 10:22:09] [#ezpublish] <buz> *I" can feel it? sticking it up my ass or what?
+[11-23-2005 10:22:17] [#ezpublish] <Katana`> lol
+[11-23-2005 10:23:14] [#ezpublish] <Sulfur> oh well that's your choice, I was talking of the sleeve ;)
+[11-23-2005 10:23:15] [#ezpublish] <Sulfur> bah
+[11-23-2005 10:23:23] [#ezpublish] * Katana` feels like adding advanced form features to eZ ...
+[11-23-2005 10:23:33] [#ezpublish] <buz> feel free to do so
+[11-23-2005 10:24:02] [#ezpublish] <Katana`> it's a topic i'm kinda fond of ;)
+[11-23-2005 10:24:20] [#ezpublish] * Sulfur wants an extendable kernel 
+[11-23-2005 10:24:59] [#ezpublish] <Sulfur> coffee-time
+[11-23-2005 10:25:01] [#ezpublish] <DiGiTa|__> well module view are a big extension
+[11-23-2005 10:25:05] [#ezpublish] <Sulfur> see ya in 5 minutes
+[11-23-2005 10:39:36] [#ezpublish] <Sulfur> mm good coffee
+[11-23-2005 10:46:26] [#ezpublish] * Sulfur belches a slab of asphalt
+[11-23-2005 11:11:43] -!- ordna1 [n=ordnas@p549DEACD.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-23-2005 11:14:39] [#ezpublish] <buz> i knew it was brew from hell
+[11-23-2005 11:15:22] [#ezpublish] <Sulfur> g00d
+[11-23-2005 11:15:30] [#ezpublish] <Sulfur> more, more
+[11-23-2005 11:15:49] [#ezpublish] <buz> thats the problem with those miniscule coffee portions
+[11-23-2005 11:15:54] [#ezpublish] <buz> i always need more
+[11-23-2005 11:16:09] [#ezpublish] <buz> this days i think i use more coffee than i produce liquid
+[11-23-2005 11:25:02] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-23-2005 12:25:40] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-23-2005 12:26:12] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-23-2005 12:26:22] [#ezpublish] <buz> mhh new variety of beer
+[11-23-2005 12:26:29] [#ezpublish] <buz> but not very convincing
+[11-23-2005 12:41:53] [#ezpublish] <Sulfur> see ya guys
+[11-23-2005 12:43:27] -!- SEAwolfx [n=mike@DSL01.83.171.151.221.NEFkom.net] has joined #ezpublish
+[11-23-2005 12:44:51] -!- Sulfur [n=mbariola@217.221.32.143] has left #ezpublish []
+[11-23-2005 12:46:55] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-23-2005 12:47:02] -!- _Katana` is now known as Katana`
+[11-23-2005 13:15:25] [#ezpublish] <DiGiTa|__> Katana`da mastah
+[11-23-2005 13:22:59] [#ezpublish] <SEAwolfx> hallo to all.
+[11-23-2005 13:38:58] [#ezpublish] <Katana`> me ?
+[11-23-2005 13:45:41] [#ezpublish] <SEAwolfx> u2
+[11-23-2005 13:46:04] [#ezpublish] <SEAwolfx> ;)
+[11-23-2005 13:49:06] -!- SEAwolfx [n=mike@DSL01.83.171.151.221.NEFkom.net] has quit ["Lost terminal"]
+[11-23-2005 13:49:51] -!- SEAwolfx [n=mike@DSL01.83.171.151.221.NEFkom.net] has joined #ezpublish
+[11-23-2005 13:59:51] -!- _xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[11-23-2005 14:03:27] -!- SEAwolfx [n=mike@DSL01.83.171.151.221.NEFkom.net] has quit ["Lost terminal"]
+[11-23-2005 14:24:52] -!- _xiglet is now known as xiglet
+[11-23-2005 14:44:43] [#ezpublish] <buz> anybody ever did research about online radio?
+[11-23-2005 14:47:09] [#ezpublish] <_rappy_> sssssshhhhh! I AM -NOT- HERE!
+[11-23-2005 14:47:30] [#ezpublish] <buz> ?
+[11-23-2005 14:58:37] -!- nnn0 is now known as nnnO
+[11-23-2005 15:07:03] -!- nnnO is now known as nnn0
+[11-23-2005 15:22:00] -!- nnn0 is now known as nnnO
+[11-23-2005 15:24:31] -!- nnnO is now known as nnn0
+[11-23-2005 16:25:38] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-23-2005 16:25:39] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-23-2005 16:25:59] -!- _Katana` is now known as Katana`
+[11-23-2005 16:46:38] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish ["Konversation terminated!"]
+[11-23-2005 17:18:36] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[11-23-2005 17:19:12] [#ezpublish] <zr1> hail satan!
+[11-23-2005 17:19:26] [#ezpublish] <zr1> oops wrong channel :)
+[11-23-2005 17:19:54] [#ezpublish] <zr1> anyhow, how to reset admin password which does not work anymore mysteriously..?
+[11-23-2005 17:37:33] [#ezpublish] <nnn0> :D
+[11-23-2005 17:40:28] [#ezpublish] <nnn0> have you searched the forum ?
+[11-23-2005 17:40:35] [#ezpublish] <nnn0> http://ez.no/community/forum/install_configuration/admin_password_reset
+[11-23-2005 17:40:38] [#ezpublish] <zr1> have and found it too
+[11-23-2005 17:40:43] [#ezpublish] <nnn0> :)
+[11-23-2005 17:40:54] [#ezpublish] <zr1> seemed not to work but i left out detail, ok now :)
+[11-23-2005 17:41:02] [#ezpublish] <nnn0> :)
+[11-23-2005 17:41:12] [#ezpublish] <nnn0> glittering
+[11-23-2005 17:42:57] [#ezpublish] <zr1> snow?
+[11-23-2005 17:43:21] [#ezpublish] <zr1> gold?
+[11-23-2005 17:43:26] [#ezpublish] <zr1> razorblade?
+[11-23-2005 17:43:42] [#ezpublish] <nnn0> even satan must have some fun
+[11-23-2005 17:44:18] [#ezpublish] <zr1> satan is all for fun :)
+[11-23-2005 17:44:32] [#ezpublish] <nnn0> it's just hm a sparkling kind of feeling
+[11-23-2005 17:44:43] [#ezpublish] <nnn0> when something work :D
+[11-23-2005 17:46:12] [#ezpublish] <zr1> heh, guess so, maybe there is program to get me high constantly
+[11-23-2005 17:47:19] [#ezpublish] <nnn0> an application which works you mean ? :)
+[11-23-2005 17:47:46] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-23-2005 17:49:40] [#ezpublish] <nnn0> i did get severly sunburnt one time and i applicated some heavy dute aloe vera - that _did_ work, but maybe i'm biased :D
+[11-23-2005 17:49:48] [#ezpublish] <nnn0> duty even
+[11-23-2005 17:55:43] [#ezpublish] <zr1> ez wont work with php 4.2 ?
+[11-23-2005 17:56:14] [#ezpublish] <nnn0> not > 3.7.x
+[11-23-2005 17:56:50] [#ezpublish] <nnn0> you gotto at least have 3.6.2
+[11-23-2005 17:56:54] [#ezpublish] <zr1> i have got tanned once - while hitchiking upnorth during polar day :P
+[11-23-2005 17:57:10] [#ezpublish] <nnn0> :D
+[11-23-2005 17:57:21] [#ezpublish] <zr1> http://ez.no/download/all_releases
+[11-23-2005 17:57:21] [#ezpublish] <zr1> all say > 4.3 , is it so?
+[11-23-2005 17:57:33] [#ezpublish] <nnn0> no 4.4 i think
+[11-23-2005 17:57:47] [#ezpublish] <zr1> yes but i have 4.2
+[11-23-2005 17:57:55] [#ezpublish] <nnn0> then you need 3.6.2
+[11-23-2005 17:58:05] [#ezpublish] <nnn0> it's not so much different
+[11-23-2005 17:58:20] [#ezpublish] <zr1> above link says 3.6 needs php > 4.3
+[11-23-2005 17:58:30] [#ezpublish] <nnn0> k
+[11-23-2005 17:58:31] [#ezpublish] <nnn0> ups
+[11-23-2005 17:58:38] [#ezpublish] <nnn0> sry
+[11-23-2005 17:58:41] [#ezpublish] <zr1> true or not?
+[11-23-2005 17:58:42] [#ezpublish] <nnn0> hm
+[11-23-2005 18:00:00] Disconnecting due to lack of a lag response (0.17220700 1132790340 != 0.00015300 1132790370)
+[11-23-2005 18:00:00] Diconnected. Sleeping for 2 second(s).
+[11-23-2005 18:00:02] >> Connecting to irc.freenode.net:6667
+[11-23-2005 18:00:06] >> Connected to irc.freenode.net:6667, registering...
+[11-23-2005 18:00:06] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:00:51] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:01:06] Disconnecting due to lack of a lag response (0.43213600 1132790406 != 0.08126200 1132790436)
+[11-23-2005 18:01:06] Diconnected. Sleeping for 2 second(s).
+[11-23-2005 18:01:08] >> Connecting to irc.freenode.net:6667
+[11-23-2005 18:01:10] >> Connected to irc.freenode.net:6667, registering...
+[11-23-2005 18:01:36] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:02:06] Disconnecting due to lack of a lag response (0.30999900 1132790470 != 0.14951000 1132790496)
+[11-23-2005 18:02:06] Diconnected. Sleeping for 2 second(s).
+[11-23-2005 18:02:08] >> Connecting to irc.freenode.net:6667
+[11-23-2005 18:02:08] >> Connected to irc.freenode.net:6667, registering...
+[11-23-2005 18:02:21] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:03:06] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:03:06] Disconnecting due to lack of a lag response (0.13554100 1132790528 != 0.18239600 1132790556)
+[11-23-2005 18:03:06] Diconnected. Sleeping for 2 second(s).
+[11-23-2005 18:03:08] >> Connecting to irc.freenode.net:6667
+[11-23-2005 18:03:10] >> Connected to irc.freenode.net:6667, registering...
+[11-23-2005 18:03:51] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:04:06] Disconnecting due to lack of a lag response (0.21265000 1132790590 != 0.05139700 1132790616)
+[11-23-2005 18:04:06] Diconnected. Sleeping for 2 second(s).
+[11-23-2005 18:04:08] >> Connecting to irc.freenode.net:6667
+[11-23-2005 18:04:08] >> Connected to irc.freenode.net:6667, registering...
+[11-23-2005 18:04:36] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:04:39] >> Successfully registered. Nick is: ezlog
+[11-23-2005 18:04:39] -!- There are 11319 listed and 12528 unlisted users on 20 servers
+[11-23-2005 18:04:39] -!- 42 flagged staff members
+[11-23-2005 18:04:39] -!- 9703 channels formed
+[11-23-2005 18:04:39] -!- I have 3851 clients and 0 servers
+[11-23-2005 18:04:39] -!- Current local  users: 3851  Max: 5531
+[11-23-2005 18:04:39] -!- Current global users: 23847  Max: 27662
+[11-23-2005 18:04:39] -!- Highest connection count: 5533 (5531 clients) (667032 since server was (re)started)
+[11-23-2005 18:04:39] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[11-23-2005 18:04:39] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/blog/components_from_svn_tutorial | http://ez.no/company/news/ez_conference_2006_call_for_papers
+[11-23-2005 18:04:39] -!- Topic set by fh[eZ] [@] [Mon,  7 Nov 2005 08:44:47 -0600]
+[11-23-2005 18:05:36] Disconnecting due to lack of a lag response (0.08578700 1132790676 != 0.18375600 1132790706)
+[11-23-2005 18:05:36] Diconnected. Sleeping for 2 second(s).
+[11-23-2005 18:05:38] >> Connecting to irc.freenode.net:6667
+[11-23-2005 18:05:40] >> Connected to irc.freenode.net:6667, registering...
+[11-23-2005 18:06:06] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:06:36] Disconnecting due to lack of a lag response (0.24111200 1132790740 != 0.08930600 1132790766)
+[11-23-2005 18:06:36] Diconnected. Sleeping for 2 second(s).
+[11-23-2005 18:06:38] >> Connecting to irc.freenode.net:6667
+[11-23-2005 18:06:38] >> Connected to irc.freenode.net:6667, registering...
+[11-23-2005 18:06:51] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:07:36] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:07:36] Disconnecting due to lack of a lag response (0.27498900 1132790798 != 0.11834100 1132790826)
+[11-23-2005 18:07:36] Diconnected. Sleeping for 2 second(s).
+[11-23-2005 18:07:38] >> Connecting to irc.freenode.net:6667
+[11-23-2005 18:07:40] >> Connected to irc.freenode.net:6667, registering...
+[11-23-2005 18:08:21] >> Attempting to join channels: #ezpublish
+[11-23-2005 18:08:31] >> Successfully registered. Nick is: ezlog
+[11-23-2005 18:08:31] -!- There are 11191 listed and 12532 unlisted users on 21 servers
+[11-23-2005 18:08:31] -!- 42 flagged staff members
+[11-23-2005 18:08:31] -!- 9712 channels formed
+[11-23-2005 18:08:31] -!- I have 3844 clients and 0 servers
+[11-23-2005 18:08:31] -!- Current local  users: 3844  Max: 5531
+[11-23-2005 18:08:31] -!- Current global users: 23723  Max: 27662
+[11-23-2005 18:08:31] -!- Highest connection count: 5533 (5531 clients) (667134 since server was (re)started)
+[11-23-2005 18:08:31] -!- ezlog [n=IQ@209.144.224.222] has joined #ezpublish
+[11-23-2005 18:08:31] -!- Topic for #ezpublish: eZ publish | cms | http://ez.no/community/blog/components_from_svn_tutorial | http://ez.no/company/news/ez_conference_2006_call_for_papers
+[11-23-2005 18:08:31] -!- Topic set by fh[eZ] [@] [Mon,  7 Nov 2005 08:44:47 -0600]
+[11-23-2005 18:08:32] freenode-connect [freenode@freenode/bot/connect] requested CTCP VERSION: 
+[11-23-2005 18:08:32] [notice(freenode-connect)] VERSION IQ 0.9.3
+[11-23-2005 18:08:32] (unmatched::raw477) :calvino.freenode.net 477 ezlog #ezpublish :[freenode-info] Private messages from unregistered users are currently blocked, except to network staff, to services (NickServ, etc.), and to registered users who have unblocked them. Please see the freenode website for more information: http://freenode.net/faq.shtml#privmsg
+[11-23-2005 18:08:34] [#ezpublish] <nnn0> hm maybe you can have both actually
+[11-23-2005 18:08:42] [#ezpublish] <nnn0> hm i'm not an expert at all
+[11-23-2005 18:09:22] [#ezpublish] <nnn0> but it may be possible to have both 4.2 and 4.4
+[11-23-2005 18:09:22] [#ezpublish] <nnn0> you have to check the site
+[11-23-2005 18:10:05] [#ezpublish] <nnn0> but i kind of remember they had different filenames
+[11-23-2005 18:11:43] [#ezpublish] <nnn0> hm not sure though
+[11-23-2005 18:14:50] [#ezpublish] <nnn0> i'm wrong
+[11-23-2005 18:15:05] [#ezpublish] <nnn0> you can hav e php 4 and 5 at the same time of course
+[11-23-2005 18:15:14] [#ezpublish] <zr1> japan?
+[11-23-2005 18:15:15] [#ezpublish] <nnn0> :)
+[11-23-2005 18:15:33] [#ezpublish] <nnn0> you i read like jap 4.2 wont do
+[11-23-2005 18:15:36] [#ezpublish] <nnn0> ups
+[11-23-2005 18:15:39] [#ezpublish] <nnn0> i read...
+[11-23-2005 18:15:46] [#ezpublish] <nnn0> before
+[11-23-2005 18:16:12] [#ezpublish] <nnn0> when you pasted the error
+[11-23-2005 18:19:30] [#ezpublish] <zr1> ah :)
+[11-23-2005 20:52:04] [#ezpublish] <zr1> bzz
+[11-23-2005 21:25:20] -!- zr1 [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has left #ezpublish []

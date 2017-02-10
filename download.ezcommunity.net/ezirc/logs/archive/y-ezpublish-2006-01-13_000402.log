@@ -1,0 +1,342 @@
+[01-11-2006 00:02:45] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-11-2006 00:10:47] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-11-2006 00:41:37] -!- ordnas [n=ordnas@p549D6572.dip.t-dialin.net] has joined #ezpublish
+[01-11-2006 01:19:22] -!- tobyS_ [n=dotxp@217.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-11-2006 01:26:52] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[01-11-2006 01:27:34] -!- DiGiTa|_ [n=guillaum@84.4.191.143] has joined #ezpublish
+[01-11-2006 01:29:33] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[01-11-2006 02:08:58] -!- tobyS [n=dotxp@popeye.ez.no] has joined #ezpublish
+[01-11-2006 02:17:54] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has joined #ezpublish
+[01-11-2006 02:54:04] -lilo:$*- [Global Notice] Hi all. We've had another main rotation server scheduled for restart for a couple of days, and will be doing that in the next few minutes. Affected users, just under 2000, so you'll notice it. Apologies for the inconvenience, and thank you for using freenode!
+[01-11-2006 02:58:26] -!- seasonfive [n=seasonfi@AGrenoble-152-1-28-77.w82-122.abo.wanadoo.fr] has quit [herbert.freenode.net irc.freenode.net]
+[01-11-2006 02:58:26] -!- pire [n=kbot@phpugdo.de] has quit [herbert.freenode.net irc.freenode.net]
+[01-11-2006 02:59:28] -!- seasonfive [n=seasonfi@AGrenoble-152-1-28-77.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[01-11-2006 03:02:03] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[01-11-2006 03:12:03] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-11-2006 03:53:28] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-11-2006 03:53:59] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has joined #ezpublish
+[01-11-2006 03:54:02] -!- kore_ [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 104 (Connection reset by peer)]
+[01-11-2006 03:55:46] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-11-2006 03:58:38] [#ezpublish] <Sulfur> w00t :P
+[01-11-2006 03:59:17] -!- Sulfur [n=mbariola@85.20.2.139] has quit [Client Quit]
+[01-11-2006 04:09:22] -!- Sulfur [n=mbariola@85.20.2.139] has joined #ezpublish
+[01-11-2006 04:16:20] [#ezpublish] <Sulfur> w00t again
+[01-11-2006 04:17:05] [#ezpublish] <Sulfur> is there any specific setting I should set to have my Online Editor use the italian translation I made ? :)
+[01-11-2006 04:17:28] [#ezpublish] <Sulfur> as all the admin and frontend is in italian, I am wondering why it doesn't ....
+[01-11-2006 04:18:04] [#ezpublish] <kris10an> Sulfur: The OE is currently not translated to italian. Please feel free to do so...
+[01-11-2006 04:18:52] [#ezpublish] <Sulfur> kris10an: I did translate it and uploaded a complete alpha version yesterday night
+[01-11-2006 04:19:11] [#ezpublish] <kris10an> Uploaded where?
+[01-11-2006 04:19:36] [#ezpublish] <Sulfur> but I moved the translation to another setup which seems equal to me and I cannot have it use the it language, kris10an
+[01-11-2006 04:19:43] [#ezpublish] <Sulfur> contributions
+[01-11-2006 04:20:00] [#ezpublish] <kris10an> maybe i should read everything you say before responding :-/
+[01-11-2006 04:20:18] [#ezpublish] <Sulfur> lol
+[01-11-2006 04:20:37] [#ezpublish] <Sulfur> well you can help me in troubleshooting why in my new setup it appears not to work
+[01-11-2006 04:20:55] [#ezpublish] <kris10an> 1. did you install it in the correct dir?
+[01-11-2006 04:21:10] [#ezpublish] <kris10an> 2. did you clear the cache properly?
+[01-11-2006 04:21:17] [#ezpublish] <Sulfur> extensions/ezdthml/translations/ita-IT/translation.ts
+[01-11-2006 04:21:33] [#ezpublish] <Sulfur> extension without s
+[01-11-2006 04:22:08] [#ezpublish] <kris10an> 3. does the other parts of the page translage to italian?
+[01-11-2006 04:22:11] [#ezpublish] <Sulfur> yes I thought it was that and rm -rf'ed var/cache
+[01-11-2006 04:22:18] [#ezpublish] <Sulfur> yes yes
+[01-11-2006 04:22:27] [#ezpublish] <Sulfur> 2- see above 3 - yes
+[01-11-2006 04:24:04] [#ezpublish] <Sulfur> no clue.
+[01-11-2006 04:24:48] [#ezpublish] <Sulfur> btw do you have a schema or something against which I can validate it ?
+[01-11-2006 04:25:23] [#ezpublish] <kris10an> 4. do you get the textStrings in in the source of the page when you are editing some content with the editor?
+[01-11-2006 04:25:47] [#ezpublish] <Sulfur> I think 4 needs some more explanation for me :)
+[01-11-2006 04:26:01] [#ezpublish] <kris10an> edit some content
+[01-11-2006 04:26:04] [#ezpublish] <kris10an> -> view source
+[01-11-2006 04:26:11] [#ezpublish] <Sulfur> ah, you ask if it is not displayed ....
+[01-11-2006 04:26:14] [#ezpublish] <kris10an> look for txtString
+[01-11-2006 04:26:16] [#ezpublish] <Sulfur> no , it uses the eng one
+[01-11-2006 04:26:43] [#ezpublish] <Sulfur> the txtString string is not present in the page source
+[01-11-2006 04:27:20] [#ezpublish] <kris10an> for the norwegian i have:  textStrings["InsertObject"]="Legg til objekt";
+[01-11-2006 04:27:47] [#ezpublish] <Sulfur> ahh textStrings
+[01-11-2006 04:27:54] [#ezpublish] <Sulfur> yes, I have them, they are in english
+[01-11-2006 04:28:33] [#ezpublish] <kris10an> do you have the debugoutput on, does it say anyting about not finding translations?
+[01-11-2006 04:28:47] [#ezpublish] <Sulfur> the oe should use the RegionalSettings from the settings/myadminsiteaccess/site.ini.append.php right ?
+[01-11-2006 04:28:58] [#ezpublish] <Sulfur> point. checking.
+[01-11-2006 04:30:44] [#ezpublish] <seasonfive> hi all :)
+[01-11-2006 04:30:57] [#ezpublish] <seasonfive> is it possible to sort by a class attribute ?
+[01-11-2006 04:31:54] [#ezpublish] <Sulfur> ( it should .... )
+[01-11-2006 04:31:55] [#ezpublish] <DiGiTa|_> hu ?
+[01-11-2006 04:32:15] [#ezpublish] <seasonfive> sorry, my question isn't very accurate :p
+[01-11-2006 04:32:24] [#ezpublish] <seasonfive> i created an "event" class which contain date of the event
+[01-11-2006 04:32:32] [#ezpublish] <seasonfive> i would sort these items using this attribute
+[01-11-2006 04:32:52] [#ezpublish] <seasonfive> but only choice is "published, class identifier, class name, ..."
+[01-11-2006 04:33:20] [#ezpublish] <Sulfur> have you checked the docs ?
+[01-11-2006 04:33:22] [#ezpublish] <DiGiTa|_> you want to sort from a fetch ?
+[01-11-2006 04:33:28] [#ezpublish] <seasonfive> not from the template
+[01-11-2006 04:33:37] [#ezpublish] <DiGiTa|_> fetch list
+[01-11-2006 04:33:38] [#ezpublish] <seasonfive> i whish to select that from the admin
+[01-11-2006 04:33:52] [#ezpublish] <seasonfive> the sorting select at bottom of "sub items"
+[01-11-2006 04:33:53] [#ezpublish] <DiGiTa|_> sort_by .node.sort_array
+[01-11-2006 04:34:09] [#ezpublish] <DiGiTa|_> $node.sort_array
+[01-11-2006 04:34:28] [#ezpublish] <seasonfive> DiGiTa|_: its what i have yet. But sort array is defined in admin isn't it ?
+[01-11-2006 04:35:00] [#ezpublish] <DiGiTa|_> is the sorting method defined in the admin
+[01-11-2006 04:35:22] [#ezpublish] <seasonfive> no, there is not "sorting by class attribute" in the select box :-/
+[01-11-2006 04:35:42] [#ezpublish] <DiGiTa|_> i don't get it
+[01-11-2006 04:35:55] [#ezpublish] <DiGiTa|_> you should set, sort by event date
+[01-11-2006 04:36:04] [#ezpublish] <seasonfive> exactly ! its what i want :)
+[01-11-2006 04:36:12] [#ezpublish] <seasonfive> but only choice is published date
+[01-11-2006 04:36:49] [#ezpublish] <seasonfive> (or class identifer, class name, level, modification date, name, priority and section)
+[01-11-2006 04:37:09] [#ezpublish] <Sulfur> kris10an: ... bummer. I cannot access my admin install after clearing caches. I am experiencing the white screen of doom.
+[01-11-2006 04:37:34] [#ezpublish] <DiGiTa|_> lol
+[01-11-2006 04:38:48] [#ezpublish] <DiGiTa|_> seasonfive if you set the evvent date as name in your class you will be able to sort by name
+[01-11-2006 04:38:49] [#ezpublish] <Sulfur> really annoying especially because I haven't found a surefire way to get my install working again when it hapens
+[01-11-2006 04:39:14] [#ezpublish] <seasonfive> DiGiTa|_: hmm, seems good :)
+[01-11-2006 04:39:30] [#ezpublish] <Sulfur> ohhh seems that TRUNCATING ezsession worked
+[01-11-2006 04:39:30] [#ezpublish] <seasonfive> DiGiTa|_: could i do <event_date> + <event_title> ?
+[01-11-2006 04:39:45] [#ezpublish] <DiGiTa|_> yes
+[01-11-2006 04:39:47] [#ezpublish] <DiGiTa|_> you can
+[01-11-2006 04:40:47] [#ezpublish] <Sulfur> kris10an:  ... I get a slew of "No translation for file(translation.ts) in context(design/standard/ezdhtml): 'Insert object' with comment()"
+[01-11-2006 04:41:40] [#ezpublish] <seasonfive> argh, i have to re-create object with the new version of the class i think ?
+[01-11-2006 04:42:30] [#ezpublish] <DiGiTa|_> yes
+[01-11-2006 04:42:51] [#ezpublish] <seasonfive> ok, thanks for help :)
+[01-11-2006 04:42:57] [#ezpublish] <DiGiTa|_> or just edit
+[01-11-2006 04:43:01] [#ezpublish] <DiGiTa|_> and publish
+[01-11-2006 04:43:07] [#ezpublish] <DiGiTa|_> it will be enough
+[01-11-2006 04:44:38] [#ezpublish] <kris10an> Sulfur: then something is wrong with your setup :-)
+[01-11-2006 04:44:54] [#ezpublish] <seasonfive> date is "Monday xx Month 200x", that's not good for sorting. Can i use <date|datetime(mine)> ?
+[01-11-2006 04:45:43] [#ezpublish] <Sulfur> kris10an: that's what I am trying to glean ... but what else do I need to do aside from dropping the file in the right dir? it has the same name as the ita-IT directory in shate/translations
+[01-11-2006 04:46:01] [#ezpublish] <Sulfur> shaRe
+[01-11-2006 04:47:06] [#ezpublish] <kris10an> i think that should be sufficient... and offcourse you need to clear all the cache (template, translation..)
+[01-11-2006 04:48:02] [#ezpublish] <kris10an> and ensure that you have the correct Locale=nor_NO in site.ini
+[01-11-2006 04:48:09] [#ezpublish] <kris10an> for the siteaccess...
+[01-11-2006 04:48:18] [#ezpublish] <Sulfur> I did that kris10an , the only difference I find is that fr ex, french translation has an utf-8 encoding while my trasnlation is us-ascii
+[01-11-2006 04:48:36] [#ezpublish] <Sulfur> Locale=ita-IT
+[01-11-2006 04:48:37] [#ezpublish] <Sulfur> ContentObjectLocale=ita-IT
+[01-11-2006 04:48:37] [#ezpublish] <Sulfur> TextTranslation=enabled
+[01-11-2006 04:49:08] [#ezpublish] <Sulfur> I seem to recall a bug due to a different encoding blocking loading by javascript ... hmm , that would be weird
+[01-11-2006 05:05:22] [#ezpublish] <kris10an> it works on another installation, when you did the same, right?
+[01-11-2006 05:06:42] [#ezpublish] <kris10an> check the settings of locale with this:  grep "Locale=" `find . |grep "site.ini"`
+[01-11-2006 05:06:47] [#ezpublish] <kris10an> lunch
+[01-11-2006 05:08:19] [#ezpublish] <Sulfur> I cannot access the othe machine now -- we are switching hardware in the server farm :S
+[01-11-2006 05:16:05] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has joined #ezpublish
+[01-11-2006 05:26:35] [#ezpublish] <DiGiTa|_> is it possible to set a default view for a class in admin - sub items part
+[01-11-2006 05:27:18] [#ezpublish] <DiGiTa|_> example i'm on a class id gallery and i need to set the default view as thumbnails
+[01-11-2006 05:39:47] -!- SEAwolfx [n=SEAwolfx@p54938DBD.dip0.t-ipconnect.de] has joined #ezpublish
+[01-11-2006 05:58:07] -!- DiGiTa|__ [n=guillaum@84.5.143.22] has joined #ezpublish
+[01-11-2006 06:12:08] -!- DiGiTa|_ [n=guillaum@84.4.191.143] has quit [Read error: 110 (Connection timed out)]
+[01-11-2006 06:33:24] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-11-2006 06:41:34] -!- enzo [n=enzo@extranet.source-rh.com] has joined #ezpublish
+[01-11-2006 06:41:43] [#ezpublish] <enzo> hi
+[01-11-2006 06:43:41] [#ezpublish] <enzo> imagine, i configure 2 virtual hosts on the same ez install, is it possible to give a role to somebody but only to one virtual host ?
+[01-11-2006 06:44:05] [#ezpublish] <enzo> and another role (or the same) to another user for the other virtual host ?
+[01-11-2006 06:47:38] [#ezpublish] <DiGiTa|__> i don't get it
+[01-11-2006 06:47:59] [#ezpublish] <enzo> you don't see what i mean DiGiTa|__ ?
+[01-11-2006 06:48:07] [#ezpublish] <DiGiTa|__> not really
+[01-11-2006 06:48:21] [#ezpublish] <DiGiTa|__> what do you want to do
+[01-11-2006 06:48:47] [#ezpublish] <enzo> i want to have 2 websites sharing the same database foo1.example.org and foo2.example.org
+[01-11-2006 06:48:59] [#ezpublish] <enzo> news are on foo1 and on foo2
+[01-11-2006 06:49:21] [#ezpublish] <DiGiTa|__> ah yes
+[01-11-2006 06:49:30] [#ezpublish] <DiGiTa|__> i do that already
+[01-11-2006 06:49:33] [#ezpublish] <enzo> and i'd like some user to edit news from foo1, and other user to edit news from foo1 AND foo2 (much access)
+[01-11-2006 06:49:40] [#ezpublish] <enzo> it's possible ?
+[01-11-2006 06:49:47] [#ezpublish] <DiGiTa|__> yes
+[01-11-2006 06:49:51] [#ezpublish] <DiGiTa|__> create 2 siteaccess
+[01-11-2006 06:50:04] [#ezpublish] <enzo> yes i will, but then ?
+[01-11-2006 06:50:31] [#ezpublish] <DiGiTa|__> than for example
+[01-11-2006 06:50:54] [#ezpublish] <DiGiTa|__> to editor role, add the read/news ans create/news
+[01-11-2006 06:50:58] [#ezpublish] <DiGiTa|__> policy
+[01-11-2006 06:51:13] [#ezpublish] <enzo> yes
+[01-11-2006 06:51:20] [#ezpublish] <DiGiTa|__> than create 2 users
+[01-11-2006 06:51:24] [#ezpublish] <enzo> but where do i define the siteaccess?
+[01-11-2006 06:51:28] [#ezpublish] <DiGiTa|__> with the same editor role
+[01-11-2006 06:51:35] [#ezpublish] <enzo> i understand
+[01-11-2006 06:51:51] [#ezpublish] <DiGiTa|__> and constrain the user role to the siteaccess
+[01-11-2006 06:53:12] [#ezpublish] <enzo> well i don't see the siteaccess
+[01-11-2006 06:53:39] [#ezpublish] <enzo> but i've only one siteaccess for now, maybe if i have many, the backoffice will give another choice to choose the siteaccess?
+[01-11-2006 06:53:40] [#ezpublish] <DiGiTa|__> well in your user settings
+[01-11-2006 06:53:59] [#ezpublish] <DiGiTa|__> you can assign the role to a subtree
+[01-11-2006 06:54:07] [#ezpublish] <enzo> yes
+[01-11-2006 06:54:17] [#ezpublish] <enzo> ahh a site is an element of the subtree?
+[01-11-2006 06:54:59] [#ezpublish] <DiGiTa|__> well now it depends, do you use the same subtree for the 2 sites ?
+[01-11-2006 06:56:00] [#ezpublish] <enzo> if i use the same subtree, the content structure will be the same for the 2 sites right ?
+[01-11-2006 06:56:10] [#ezpublish] <DiGiTa|__> yes
+[01-11-2006 06:56:17] [#ezpublish] <DiGiTa|__> but it will be problematic
+[01-11-2006 06:56:18] [#ezpublish] <enzo> so i won't use the same subtree
+[01-11-2006 06:56:22] [#ezpublish] <DiGiTa|__> ok
+[01-11-2006 06:56:34] [#ezpublish] <DiGiTa|__> so you can do as i say to you
+[01-11-2006 06:56:42] [#ezpublish] <enzo> ok
+[01-11-2006 06:56:51] [#ezpublish] <DiGiTa|__> 2 folders, one for each site
+[01-11-2006 06:57:04] [#ezpublish] <enzo> i can assign a role to a subtree, or to many subtrees right ?
+[01-11-2006 06:57:11] [#ezpublish] <DiGiTa|__> yes
+[01-11-2006 06:57:17] [#ezpublish] <enzo> cool
+[01-11-2006 06:57:27] [#ezpublish] <enzo> in fact i hesitate between typo3 and ezpublish
+[01-11-2006 06:57:50] [#ezpublish] <enzo> typo3 do all what i want, but quite complex for a normal user ...
+[01-11-2006 06:58:16] [#ezpublish] <DiGiTa|__> i don't really know typo3
+[01-11-2006 06:58:21] [#ezpublish] <enzo> ok
+[01-11-2006 06:58:28] [#ezpublish] <enzo> impressive tool
+[01-11-2006 06:58:36] [#ezpublish] <enzo> very impressive
+[01-11-2006 06:58:50] [#ezpublish] <DiGiTa|__> well ezp is impressive too :)
+[01-11-2006 06:58:58] [#ezpublish] <enzo> yes i see it
+[01-11-2006 06:59:13] [#ezpublish] <enzo> but i'im looing the ease of use
+[01-11-2006 06:59:47] [#ezpublish] <enzo> i don't see extensions i can install in ez, where can i find that ?
+[01-11-2006 06:59:55] [#ezpublish] <seasonfive> enzo: for me it still really obscur. Tried typo3 for 3 days and i begined to be crazy :)
+[01-11-2006 06:59:59] [#ezpublish] <enzo> for example, i would need a newsletter extension, a gant/pertt extension
+[01-11-2006 07:00:09] [#ezpublish] <DiGiTa|__> here : http://ez.no/community/contribs
+[01-11-2006 07:00:37] [#ezpublish] <enzo> i understand seasonfive, i've spent all yesterday to understand typo3, but you need at least one week
+[01-11-2006 07:01:02] [#ezpublish] <DiGiTa|__> well one week is not enough to understand all the possibilities of a cms
+[01-11-2006 07:01:12] [#ezpublish] <DiGiTa|__> you should use it in real situation
+[01-11-2006 07:02:03] [#ezpublish] <enzo> with the agenda extension, is it possible to download it as vcard ?
+[01-11-2006 07:03:16] [#ezpublish] <DiGiTa|__> i don't think so
+[01-11-2006 07:03:21] [#ezpublish] <DiGiTa|__> what is a vcard ?
+[01-11-2006 07:03:33] [#ezpublish] <seasonfive> DiGiTa|__: in 3 days i understand absolutly nothing in Typo3 :-p. Moreover i stoped when i saw it wasn't possible to user two different templates for a same plugin inside the same page.
+[01-11-2006 07:03:37] [#ezpublish] <seasonfive> s/user/user
+[01-11-2006 07:03:44] [#ezpublish] <seasonfive> s/user/use (argh ... need top sleep a bit :p)
+[01-11-2006 07:03:50] [#ezpublish] <DiGiTa|__> :p
+[01-11-2006 07:04:39] [#ezpublish] <enzo> there's an indexed search in ez ? i mean i add a .doc, .zip file, .pdf file, the search will be able to search into these files?
+[01-11-2006 07:04:48] [#ezpublish] <DiGiTa|__> i think ezp is THE CMS
+[01-11-2006 07:04:48] [#ezpublish] <DiGiTa|__> :)
+[01-11-2006 07:05:10] [#ezpublish] <enzo> you have to try all to say that DiGiTa|__ :)
+[01-11-2006 07:05:25] [#ezpublish] <DiGiTa|__> well i heard about others CMS
+[01-11-2006 07:05:46] [#ezpublish] <DiGiTa|__> perhaps they have more features, but there are much more complex
+[01-11-2006 07:06:00] [#ezpublish] <enzo> yes i confirm :(
+[01-11-2006 07:06:13] [#ezpublish] <DiGiTa|__> so i prefer less features and something simple
+[01-11-2006 07:06:14] [#ezpublish] <seasonfive> i don't see any common logic inside Typo3
+[01-11-2006 07:06:29] [#ezpublish] <enzo> you're wrong there seasonfive
+[01-11-2006 07:06:38] [#ezpublish] <enzo> the tree view is simple to understand
+[01-11-2006 07:07:15] [#ezpublish] <seasonfive> tree view ?
+[01-11-2006 07:07:26] [#ezpublish] <enzo> yes
+[01-11-2006 07:07:31] [#ezpublish] <DiGiTa|__> one two tree
+[01-11-2006 07:07:32] [#ezpublish] <DiGiTa|__> :)
+[01-11-2006 07:07:39] [#ezpublish] <Sulfur> hey anyone of you knows how to change a file charset from shell ?
+[01-11-2006 07:07:40] [#ezpublish] <enzo> ave maria :)
+[01-11-2006 07:08:05] [#ezpublish] <DiGiTa|__> like from ut8 to iso ?
+[01-11-2006 07:08:06] [#ezpublish] <DiGiTa|__> :)
+[01-11-2006 07:08:10] [#ezpublish] <Sulfur> gratia plena, ora pronobis etc.
+[01-11-2006 07:08:14] [#ezpublish] <Sulfur> yes DiGiTa|__
+[01-11-2006 07:08:47] [#ezpublish] <DiGiTa|__> iconv --from-code=ISO-8859-1 --to-code=UTF-8 ./oldfile.htm > ./newfile.html
+[01-11-2006 07:08:56] [#ezpublish] <Sulfur> I love ya DiGiTa|__
+[01-11-2006 07:09:54] [#ezpublish] <DiGiTa|__> :D
+[01-11-2006 07:11:11] [#ezpublish] <seasonfive> i'm using "sort_by, array('event/date', false())" in fetch, but that return nothing, any clue ?
+[01-11-2006 07:12:34] [#ezpublish] <DiGiTa|__> cannot work like that
+[01-11-2006 07:12:58] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-11-2006 07:13:05] [#ezpublish] <DiGiTa|__>  'sort_by',        array( 'attribute',
+[01-11-2006 07:13:05] [#ezpublish] <DiGiTa|__>                                        false(),
+[01-11-2006 07:13:05] [#ezpublish] <DiGiTa|__>                                        'event/date' ) ) )}
+[01-11-2006 07:13:26] [#ezpublish] <seasonfive> oh !
+[01-11-2006 07:13:38] [#ezpublish] <seasonfive> this syntax isn't explained in the doc
+[01-11-2006 07:13:41] [#ezpublish] <seasonfive> thanks
+[01-11-2006 07:13:43] [#ezpublish] <DiGiTa|__> sure it is
+[01-11-2006 07:13:51] [#ezpublish] <DiGiTa|__> http://ez.no/doc/ez_publish/technical_manual/3_6/reference/modules/content/fetch_functions/list
+[01-11-2006 07:13:55] [#ezpublish] <DiGiTa|__> Example 5
+[01-11-2006 07:14:12] [#ezpublish] <Sulfur> illegal input sequence at position 38536 ..... DiGiTa|__ .. hmm .... how can I get to that character ?
+[01-11-2006 07:14:15] [#ezpublish] <seasonfive> you're right :p
+[01-11-2006 07:14:19] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[01-11-2006 07:14:31] [#ezpublish] <seasonfive> i didn't look example, just the sort_by array ...
+[01-11-2006 07:14:39] [#ezpublish] <DiGiTa|__> lol
+[01-11-2006 07:15:00] [#ezpublish] <DiGiTa|__> hmmm i don't know that sulfur
+[01-11-2006 07:15:04] [#ezpublish] <DiGiTa|__> with vim :)
+[01-11-2006 07:15:26] [#ezpublish] <Sulfur> does it indicate the char ?
+[01-11-2006 07:16:07] [#ezpublish] <enzo> if user sign in ez, can i make this possible: this user fill in information about him, choose whether or not to publish these data, and other user can look for user that have specific information on them ?
+[01-11-2006 07:16:37] [#ezpublish] <DiGiTa|__> many question this afternoon
+[01-11-2006 07:16:56] [#ezpublish] * DiGiTa|__ set mode off
+[01-11-2006 07:16:58] [#ezpublish] <enzo> for ex, a user sets the skills he has, the skills he's looking for etc... and so on for other users
+[01-11-2006 07:17:16] [#ezpublish] <enzo> i have to know to choose the cms i want to use
+[01-11-2006 07:17:19] [#ezpublish] * DiGiTa|__ set mode working -on
+[01-11-2006 07:17:23] [#ezpublish] <DiGiTa|__> =-
+[01-11-2006 07:17:25] [#ezpublish] <DiGiTa|__> :)
+[01-11-2006 07:17:51] [#ezpublish] <DiGiTa|__> enzo create a thread on the ezp forum
+[01-11-2006 07:18:09] [#ezpublish] <enzo> i thought you would know DiGiTa|__
+[01-11-2006 07:18:09] [#ezpublish] <DiGiTa|__> then you can paste all your questions
+[01-11-2006 07:18:31] [#ezpublish] <enzo> i don't want to know how to do it, just know if it's possible to do it
+[01-11-2006 07:18:39] [#ezpublish] <DiGiTa|__> yes you can do
+[01-11-2006 07:18:43] [#ezpublish] <enzo> ok
+[01-11-2006 07:18:59] [#ezpublish] <DiGiTa|__> you can do what ever you want
+[01-11-2006 07:19:02] [#ezpublish] <DiGiTa|__> :)
+[01-11-2006 07:19:08] [#ezpublish] <enzo> i like that :)
+[01-11-2006 07:21:30] [#ezpublish] <DiGiTa|__> Sulfur: i'm sure you are tryig to convert a translation file :)
+[01-11-2006 07:54:58] -!- elephantMan [n=elephant@15.205.103-84.rev.gaoland.net] has quit [Read error: 110 (Connection timed out)]
+[01-11-2006 07:55:25] -!- elephantMan [n=elephant@197.205.103-84.rev.gaoland.net] has joined #ezpublish
+[01-11-2006 08:00:20] [#ezpublish] <Sulfur> yes DiGiTa|__
+[01-11-2006 08:00:29] [#ezpublish] <DiGiTa|__> hey tey're out : http://store.apple.com/1-800-MY-APPLE/WebObjects/AppleStore?family=iMac&cid=AOSA10000023592
+[01-11-2006 08:06:22] [#ezpublish] <Sulfur> DiGiTa|__: I am trying to add italian translation to online editor, I have it working on an instal which I cannot access now (we are switching servers) and cannot on this .. I fear it's a charset problem.
+[01-11-2006 08:37:32] [#ezpublish] <kalooni> Hi there
+[01-11-2006 08:38:19] [#ezpublish] <kalooni> I have a problem: when settign to enable the TemplateCompile option some "content" is not displayed on a given page
+[01-11-2006 09:08:06] [#ezpublish] <enzo> i've installed ezpublish, configured settings/override/site.ini.append.php to add another website, then created a directory in siteaccess with ini files from another website
+[01-11-2006 09:08:34] [#ezpublish] <enzo> but the second websites doesn't work when i go on it, i get an error message, access denied
+[01-11-2006 09:09:27] [#ezpublish] <enzo> ahhh surely i have to configure the policy either
+[01-11-2006 09:12:16] [#ezpublish] <enzo> well that's it
+[01-11-2006 09:15:06] [#ezpublish] <seasonfive> kalooni: same problem here :)
+[01-11-2006 09:28:08] [#ezpublish] <DiGiTa|__> have someone any clue why some content in admin preview, doesn't display with the correct charset ?
+[01-11-2006 10:22:33] -!- tobmaster [n=tobmaste@217.194.224.41] has quit [Read error: 110 (Connection timed out)]
+[01-11-2006 10:25:49] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[01-11-2006 10:29:21] -!- tobyS [n=dotxp@popeye.ez.no] has quit ["Plant your channel to pearadise.net!"]
+[01-11-2006 10:29:25] [#ezpublish] <Sulfur> hey guys how can I escape the brackets in a tempklate? cannot find it in the doc
+[01-11-2006 10:38:48] [#ezpublish] <seasonfive> {literal}...{/literal}
+[01-11-2006 10:41:36] [#ezpublish] <seasonfive> Sulfur: {literal}...{/literal}
+[01-11-2006 10:44:23] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-11-2006 10:48:30] [#ezpublish] <Sulfur> mmm seasonfive , thanks, no, there is another way, it's {rdelim} {ldelim}
+[01-11-2006 10:48:34] [#ezpublish] <Sulfur> found it
+[01-11-2006 11:03:32] [#ezpublish] <enzo> i've created 2 websites in ez, but i see the same content
+[01-11-2006 11:04:06] [#ezpublish] <enzo> when can i do to have one content structure per site access ?
+[01-11-2006 11:04:12] [#ezpublish] <enzo> s/when/how
+[01-11-2006 11:04:17] [#ezpublish] <enzo> s/when/what
+[01-11-2006 11:10:02] [#ezpublish] <enzo> well in fact, i can create 2 folders and each contains data i want to show on each websites, but i don't know how to tell: "for this website, take the node X as the root level"
+[01-11-2006 11:10:50] [#ezpublish] <seasonfive> enzo: in site.ini ?
+[01-11-2006 11:11:11] [#ezpublish] <enzo> can't do that with the backoffice ?
+[01-11-2006 11:15:28] [#ezpublish] <enzo> i've changed parent_node in settings/siteaccess/new_site/toolbar.ini.append.php then cleared cache, but doesn't work
+[01-11-2006 11:16:05] [#ezpublish] <enzo> i don't find any match to node in the site.ini seasonfive, where can i configure that?
+[01-11-2006 11:18:10] -!- kalooni [n=nicolas@cav13-3-82-234-224-217.fbx.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[01-11-2006 11:32:02] [#ezpublish] <enzo> no one can help me ?
+[01-11-2006 11:47:47] [#ezpublish] <Sulfur> enzo : for frontend, there is a setting in site.ini - chechk docs. I don't know if there is a possibility for the backend, though.
+[01-11-2006 11:51:24] [#ezpublish] <enzo> http://ez.no/doc/ez_publish/technical_manual/3_6/reference/configuration_files/site_ini
+[01-11-2006 11:53:16] [#ezpublish] <enzo> i don't see any reference to a node in this page Sulfur but maybe i'm looking to the bad page in the doc ?
+[01-11-2006 11:57:17] [#ezpublish] <Sulfur> http://ez.no/doc/ez_publish/technical_manual/3_6/reference/configuration_files/site_ini/sitesettings/indexpage enzo
+[01-11-2006 11:58:16] [#ezpublish] <Sulfur> if that does not work, make an override tpl for node 2 which will redirect to what the homepageshould be
+[01-11-2006 11:58:18] [#ezpublish] <enzo> ok i try
+[01-11-2006 12:03:35] [#ezpublish] <enzo> i have to change in settings/siteaccess/THE_SITE/site.ini.append.php Sulfur right ?
+[01-11-2006 12:18:53] -!- ordnas [n=ordnas@p549D6572.dip.t-dialin.net] has left #ezpublish []
+[01-11-2006 12:31:42] -!- SEAwolfx_ [n=mike@tor/session/x-a51297e1207e6d88] has joined #ezpublish
+[01-11-2006 12:31:49] [#ezpublish] <SEAwolfx_> re
+[01-11-2006 12:33:17] -!- SEAwolfx [n=SEAwolfx@p54938DBD.dip0.t-ipconnect.de] has quit [Nick collision from services.]
+[01-11-2006 12:33:25] -!- SEAwolfx [n=SEAwolfx@p54938DBD.dip0.t-ipconnect.de] has joined #ezpublish
+[01-11-2006 12:33:55] -!- SEAwolfx [n=SEAwolfx@p54938DBD.dip0.t-ipconnect.de] has quit [Nick collision from services.]
+[01-11-2006 12:34:00] -!- SEAwolfx [n=SEAwolfx@p54938DBD.dip0.t-ipconnect.de] has joined #ezpublish
+[01-11-2006 12:34:10] -!- SEAwolfx [n=SEAwolfx@p54938DBD.dip0.t-ipconnect.de] has quit [Nick collision from services.]
+[01-11-2006 12:34:13] -!- SEAwolfx_ is now known as SEAwolfx
+[01-11-2006 12:53:57] [#ezpublish] <y_sabal> 'nite
+[01-11-2006 12:54:08] -!- y_sabal [i=y_sabal@bzq-80-69-146.dsl.bezeqint.net] has quit ["snooze mode"]
+[01-11-2006 12:58:19] -!- SEAwolfx_ [n=mike@tor/session/x-ebe1fb1336957d69] has joined #ezpublish
+[01-11-2006 12:58:40] -!- enzo [n=enzo@extranet.source-rh.com] has quit [Remote closed the connection]
+[01-11-2006 13:33:08] -!- enzo [n=enzo@extranet.source-rh.com] has joined #ezpublish
+[01-11-2006 13:37:45] [#ezpublish] <enzo> i've created 2 websites in ez (in same database), you know how i can restrist one website to a folder and subfolders ?
+[01-11-2006 13:38:24] [#ezpublish] <enzo> i've tested IndexPage=, it redirect the index to the folder where i want to go, but i can see in the menu the other folders
+[01-11-2006 13:41:53] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[01-11-2006 13:43:46] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Read error: 110 (Connection timed out)]
+[01-11-2006 13:44:48] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has quit ["Plant your channel to pearadise.net!"]
+[01-11-2006 14:01:46] -!- Sulfur [n=mbariola@85.20.2.139] has left #ezpublish []
+[01-11-2006 14:03:29] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[01-11-2006 14:05:24] -!- tobyS [n=dotxp@217.80-202-59.nextgentel.com] has joined #ezpublish
+[01-11-2006 14:48:26] -!- DiGiTa|__ [n=guillaum@84.5.143.22] has quit []
+[01-11-2006 15:45:25] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[01-11-2006 17:31:32] -!- enzo [n=enzo@extranet.source-rh.com] has quit [Read error: 104 (Connection reset by peer)]
+[01-11-2006 17:50:52] -!- SEA-711 [n=SEA-711@DSL01.83.171.159.97.NEFkom.net] has joined #ezpublish
+[01-11-2006 17:51:22] [#ezpublish] <SEAwolfx_> ok, test
+[01-11-2006 17:51:26] [#ezpublish] <SEAwolfx_> !info template_function attribute_view_gui
+[01-11-2006 17:51:26] [#ezpublish] <SEA-711> Template-Function: attribute_view_gui
+[01-11-2006 17:51:26] [#ezpublish] <SEA-711> Usage: '{attribute_view_gui attribute=attribute [ parameter=value [...] ]}'
+[01-11-2006 17:51:26] [#ezpublish] <SEA-711> Info: 'Outputs the view template for a content object attribute.'
+[01-11-2006 17:51:44] [#ezpublish] <SEAwolfx_> ;D
+[01-11-2006 18:20:10] -!- SEA-711 [n=SEA-711@DSL01.83.171.159.97.NEFkom.net] has quit [Remote closed the connection]
+[01-11-2006 18:55:18] -!- _kore [n=lordhong@port-83-236-10-208.dynamic.qsc.de] has quit [Read error: 113 (No route to host)]
+[01-11-2006 19:25:30] -!- hovik [n=hovik@197.80-203-136.nextgentel.com] has joined #ezpublish
+[01-11-2006 20:13:04] -!- SEA-711 [n=SEA-711@DSL01.83.171.159.97.NEFkom.net] has joined #ezpublish
+[01-11-2006 20:13:23] [#ezpublish] <SEAwolfx_> !info template_function attribute_view_gui
+[01-11-2006 20:13:23] [#ezpublish] <SEA-711> Template-Function: attribute_view_gui
+[01-11-2006 20:13:23] [#ezpublish] <SEA-711> Usage: '{attribute_view_gui attribute=attribute [ parameter=value [...] ]}'
+[01-11-2006 20:13:23] [#ezpublish] <SEA-711> Info: 'Outputs the view template for a content object attribute.'
+[01-11-2006 20:13:51] [#ezpublish] <SEAwolfx_> !info tf attribute_view_gui
+[01-11-2006 20:13:51] [#ezpublish] <SEA-711> Template-Function: attribute_view_gui
+[01-11-2006 20:13:51] [#ezpublish] <SEA-711> Usage: '{attribute_view_gui attribute=attribute [ parameter=value [...] ]}'
+[01-11-2006 20:13:51] [#ezpublish] <SEA-711> Info: 'Outputs the view template for a content object attribute.'
+[01-11-2006 20:16:30] [#ezpublish] <SEAwolfx_> !info tpf create_index
+[01-11-2006 20:16:30] -!- SEA-711 [n=SEA-711@DSL01.83.171.159.97.NEFkom.net] has quit [Remote closed the connection]
+[01-11-2006 20:20:46] -!- SEA-711 [n=SEA-711@DSL01.83.171.159.97.NEFkom.net] has joined #ezpublish
+[01-11-2006 20:23:29] -!- SEA-711 [n=SEA-711@DSL01.83.171.159.97.NEFkom.net] has quit [Remote closed the connection]
+[01-11-2006 20:23:34] -!- SEA-711 [n=SEA-711@DSL01.83.171.159.97.NEFkom.net] has joined #ezpublish
+[01-11-2006 20:24:58] [#ezpublish] <SEAwolfx_> !info tpf create_index
+[01-11-2006 20:24:59] [#ezpublish] <SEA-711> Template-Function: create_index
+[01-11-2006 20:24:59] [#ezpublish] <SEA-711> Usage: ''
+[01-11-2006 20:24:59] [#ezpublish] <SEA-711> Info: ''

@@ -1,0 +1,469 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section 6.4.&nbsp; PEAR DB</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch06lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch06lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="ch06lev1sec4"></a><h3 class="docSection1Title">6.4. PEAR DB</h3>
+<p class="docText">The most commonly used PEAR package for database access is PEAR DB. <span class="docEmphStrong">DB</span> is a database abstraction layer that provides a single API for querying most of the databases supported by PHP, as well as some more database-specific things in a portable way, such as sequences and error handling. PEAR DB itself is written in PHP, and has drivers for most of PHP's database extensions.<a name="ch06index225"></a><a name="ch06index226"></a><a name="ch06index227"></a></p>
+<p class="docText">In this section, you learn how to use PEAR DB, and when it makes sense to use PEAR DB instead of using one of PHP's database extensions natively.</p>
+<a name="ch06lev2sec14"></a><h4 class="docSection2Title">6.4.1. Obtaining PEAR DB</H4>
+<p class="docText">To install PEAR DB, you need the PEAR Installer that is installed along with PHP. Use the following command:<a name="ch06index228"></a><a name="ch06index229"></a></p>
+<pre>
+$ pear install DB
+</pre><BR>
+<p class="docText">If you have problems, see <a class="docLink" href="ch10.html#ch10">Chapter 10</a>, &quot;Using PEAR.&quot;</p>
+<a name="ch06lev2sec15"></a><H4 class="docSection2Title">6.4.2. Pros and Cons of Database Abstraction</h4>
+<p class="docText">The two main advantages of using a database abstraction layer such as PEAR DB are<a name="ch06index230"></a></p>
+<ul><li><p class="docList">A single API is easy to remember. You are more productive when you spend less time looking up the documentation.</P></LI><li><p class="docList">A single API allows other components to use the DB API for generic DBMS access, without worrying about back-end specifics.</p></li></ul>
+<p class="docText">Because DB is implemented in PHP, these advantages come at a cost:</P>
+<ul><li><p class="docList">A layer written in PHP is slower than using built-in PHP functions, especially if running without an opcode cache.</P></li><LI><p class="docList">The extra layer of code adds complexity and potential error sources.</p></li></ul>
+<p class="docText">Deciding the right choice for you depends on your needs. Requirements that speak for using PEAR DB or another form of abstracted DBMS access are portability, reusability, rapid development, or that you already use other PEAR packages.</p>
+<p class="docText">Some requirements that speak against using PEAR DB are high performance requirements where the database itself would not be the bottleneck, a significant buy-in with some specific DBMS product, or a policy of avoiding external dependencies.<a name="ch06index231"></a></p>
+<a name="ch06lev2sec16"></a><h4 class="docSection2Title">6.4.3. Which Features Are Abstracted?</h4>
+<p class="docText">DB does not abstract everything, such as SQL or database schema grammar. The features it does abstract are<a name="ch06index232"></a><a name="ch06index233"></a></p>
+<ul><li><p class="docList">Database connections</p></li><li><p class="docList">Fetching results</p></li><li><p class="docList">Binding input variables (prepare/execute)</P></LI><li><p class="docList">Error reporting</p></LI><li><p class="docList">Sequences</p></li><li><p class="docList">Simple database and table descriptions</p></li><LI><p class="docList">Minor quirks and differences</p></LI></ul>
+<p class="docText">The following are not abstracted, either because they are outside the scope of DB, too expensive, or simply not yet implemented:</P>
+<ul><li><p class="docList">SQL syntax</p></li><LI><p class="docList">Database schemas (<tt>CREATE TABLE</tt>, for example)</P></li><li><p class="docList">Field types</p></li><LI><p class="docList">Character encodings</p></li><LI><p class="docList">Privilege management (<tt>GRANT</tt>, and so on)</p></LI></ul>
+<p class="docText">Database schemas and field types are abstracted by the MDB package, which is another database abstraction layer found in PEAR. MDB is a merge of Metabase and DB, two of the most popular database abstraction layers for PHP. The intent behind MDB has been to merge with the next major DB release.<a name="ch06index234"></a></p>
+<a name="ch06lev2sec17"></a><h4 class="docSection2Title">6.4.4. Database Connections</h4>
+<p class="docText">PEAR DB borrows the term <span class="docEmphasis">data source name</span> (DSN) from ODBC to describe how a database is addressed.<a name="ch06index235"></a><a name="ch06index236"></a></p>
+<a name="ch06lev3sec34"></a><h5 class="docSection3Title">6.4.4.1 Data Source Names</h5>
+<p class="docText">DSNs use the uniform resource identificator (URI) format. This is an example DSN that refers to a <tt>mysql</tt> database on localhost called <tt>"world"</tt>:<a name="ch06index237"></a><a name="ch06index238"></a><a name="ch06index239"></a><a name="ch06index240"></a><a name="ch06index241"></a></p>
+<pre>
+mysql://user:password@host/world
+</pre><br>
+<p class="docText">The full DSN format is a lot more verbose than this, and most fields are optional. In fact, only the database extension name is mandatory for all drivers. The database extension determines which DB driver is used, and which other DSN fields are required depends on the driver.</p>
+<p class="docText">These are some example DSNs:</p>
+<pre>
+dbext
+dbext://host
+dbext://host/database
+dbext://user:pw@host/database
+dbext://user:pw@host
+dbext(dbtype)://user:pw@protocol+host:port//db/file.db?mode=x
+</pre><br>
+<p class="docText"><tt>dbext</tt> is the database back-end driver. The drivers bundled with DB are <tt>dbase</tt>, <tt>fbsql</tt>, <tt>ibase</tt>, <tt>ifx</tt>, <tt>msql</tt>, <tt>mssql</tt>, <tt>mysql</tt>, <tt>mysqli</tt>, <tt>oci8</tt>, <tt>odbc</tt>, <tt>pgsql</tt>, <tt>sqlite</tt>, and <tt>sybase</tt>. It is possible to install additional drivers as separate packages.</p>
+<p class="docText">The syntax of the DSN URI is the same for all drivers, but which fields are required varies depending on the back-end database's features. This section uses <tt>mysql</tt> for examples. Consult the PEAR DB online manual for DSN details.<a name="ch06index242"></a><a name="ch06index243"></a><a name="ch06index244"></a></p>
+<a name="ch06lev3sec35"></a><h5 class="docSection3Title">6.4.4.2 Establishing Connections</h5>
+<p class="docText">Here is an example of how to establish a database connection using PEAR DB:<a name="ch06index245"></a><a name="ch06index246"></a><a name="ch06index247"></a></P>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+
+$dbh = DB::connect("mysql://test@localhost/test");
+
+if (DB::isError($dbh)) {
+    print "Connect failed!\n";
+    print "Error message: " . $dbh-&gt;getMessage() . "\n";
+    print "Error details: " . $dbh-&gt;getUserInfo() . "\n";
+    exit(1);
+}
+
+print "Connect ok!\n";
+</pre><BR>
+<p class="docText">This script connects to the <tt>"test"</tt> database using the <tt>mysql</tt> extension. The database server runs on localhost, and the connection will be opened as user <tt>"test"</tt> with no password.</p>
+<p class="docText">DB.php is the only file you need to include to use PEAR DB. <tt>DB::connect()</tt> is a factory method that includes the right file for your driver. It creates a driver object, initializes it, and calls the native function for creating the actual connection. <tt>DB::connect()</tt> will raise a PEAR error on failure.</p>
+<p class="docText">For SQLite databases, all you need to specify is the PHP extension and the database file, like this:</P>
+<pre>
+sqlite:///test.db
+</pre><br>
+<p class="docText">Here, <tt>"test.db"</tt> will be opened from the current directory. To specify the full path, the database file name must be prefixed with yet another slash, like this:<a name="ch06index248"></a><a name="ch06index249"></a><a name="ch06index250"></a></p>
+<pre>
+sqlite:////var/lib/sqlite/test.db
+</pre><br>
+<a name="ch06lev3sec36"></a><h5 class="docSection3Title">6.4.4.3 Configuration Options</h5>
+<p class="docText">You can configure some of the DB behavior per connection with the <tt>setOption()</tt> method. Options are parameters that are less frequently used than the ones used in the <tt>DB::connect()</tt> factory method:<a name="ch06index251"></a><a name="ch06index252"></a><a name="ch06index253"></a></p>
+<pre>
+$dbh-&gt;setOption("autofree", true);
+</pre><BR>
+<p class="docText">Each option has a name and a value. The value may be of any type, but the currently implemented options exclusively use string and integer values.</p>
+<p class="docText">Most configuration options may be changed at any time, except for the ones that affect the database connection (<tt>persistent</tt> and <tt>ssl</tt>).</P>
+<p class="docText">The options supported by DB are the following:</p>
+<UL><li><p class="docText">
+<tt>persistent</tt>. 
+(Boolean) Whether DB uses a persistent connection to the backend DBMS.</p></li><li><p class="docText">
+<tt>ssl</tt>. 
+(Boolean) Whether to use SSL (secure sockets layer) connections to the database (may not be available).</P></LI><li><p class="docText">
+<tt>debug</tt>. 
+(integer) For adjusting debug information. 0 means no debug info, and 1 means some debug info.</p></li><li><p class="docText">
+<tt>seqname_format</tt>. 
+(string) Table or sequence name format used by emulated DB sequences. <tt>*printf-style</tt> format string, where <tt>%s</tt> is substituted by the DB sequence name. Defaults to <tt>%s_seq</tt>. Changing this option after populating your database may completely break your application, so be careful!</P></li><li><p class="docText">
+<tt>autofree</tt>. 
+(Boolean) Whether to automatically free result sets after queries are finished (instead of PHP doing it at the end of the request if you forget to do it yourself).</P></li><LI><p class="docText">
+<tt>portability</tt>. 
+(integer) Bitmap telling what features DB should emulate for inter-DBMS portability; see the &quot;<a class="docLink" href="#ch06lev2sec21">Portability Features</a>&quot; section later in this chapter for more details.<a name="ch06index254"></a><a name="ch06index255"></a><a name="ch06index256"></a></p></li></ul>
+<a name="ch06lev2sec18"></a><h4 class="docSection2Title">6.4.5. Executing Queries</h4>
+<p class="docText">There are four ways of running queries with PEAR DB. All are performed by calling different methods in the connection object: <tt>query()</tt>, <tt>limitQuery()</tt>, <tt>prepare()/execute()</tt>, or <tt>simpleQuery()</tt>. An explanation of each follows.<a name="ch06index257"></a><a name="ch06index258"></a><a name="ch06index259"></a></p>
+<a name="ch06lev3sec37"></a><h5 class="docSection3Title">6.4.5.1 <tt>query($query, $params = array())</tt></h5>
+<p class="docText">This is the default way of calling queries if you don't need to limit the number of results. If the result contains one or more rows, <tt>query()</tt> returns a result object; otherwise, it returns a Boolean indicating success.</p>
+<p class="docText">Here is an example that returns results:</p>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "%s&lt;br /&gt;\n");
+$dbh = DB::connect("mysql://test@localhost/world");
+$result = $dbh-&gt;query("SELECT Name FROM City WHERE " .
+                      "CountryCode = 'NOR'");
+while ($result-&gt;fetchInto($row)) {
+    print "$row[0]&lt;br /&gt;\n";
+}
+</pre><br>
+<p class="docText">This example uses the <tt>"world"</tt> database referenced in the previous MySQL section.</p>
+<p class="docText">Here, the <tt>query()</tt> method returns a <tt>DB_result</tt> object. <tt>DB_result</tt>'s f<tt>etchInto()</tt> method retrieves a row of results and stores it in the <tt>$row</tt> array. When the last row has been read, <tt>fetchInto()</tt> returns <tt>null</tt>. Continue reading for more details about f<tt>etchInto()</tt> and the other <tt>fetch</tt> methods. The <tt>query()</tt> method also accepts an additional parameter for passing input parameters to the query:<a name="ch06index260"></a><a name="ch06index261"></a><a name="ch06index262"></a><a name="ch06index263"></a><a name="ch06index264"></a></p>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "%s&lt;br /&gt;\n");
+$dbh = DB::connect("mysql://test@localhost/world");
+$code = 'NOR';
+$result = $dbh-&gt;query("SELECT Name FROM City WHERE CountryCode = ?", $code);
+while ($result-&gt;fetchInto($row)) {
+    print "$row[0]&lt;br /&gt;\n";
+}
+</pre><br>
+<p class="docText">This example does exactly the same thing as the previous one, except it uses <tt>prepare</tt>/<tt>execute</tt> or <tt>bind</tt> if the database supports it. The other advantage of passing input parameters like this is that you need not worry about quoting. DB automatically quotes your parameters for you as necessary.<a name="ch06index265"></a><a name="ch06index266"></a><a name="ch06index267"></a></p>
+<a name="ch06lev3sec38"></a><h5 class="docSection3Title">6.4.5.2 <tt>limitQuery($query, $from, $count, $params = array())</tt></H5>
+<p class="docText">This method is almost identical to <tt>query()</tt>, except that it takes a <tt>"from"</tt> and <tt>"count"</tt> parameter that limits the result set to a specific offset range. Here's an example:<a name="ch06index268"></a><a name="ch06index269"></a><a name="ch06index270"></a></P>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+
+$from = isset($_GET['from']) ? (int)$_GET['from'] : 0;
+$show = isset($_GET['show']) ? (int)$_GET['show'] : 0;
+$from = $from ? $from : 0;
+$show = $show ? $show : 10;
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "%s&lt;br /&gt;\n");
+$dbh = DB::connect("mysql://test@localhost/world");
+$result = $dbh-&gt;limitQuery("SELECT Name, Population FROM City ".
+                           "ORDER BY Population", $from, $show);
+while ($result-&gt;fetchInto($row)) {
+    print "$row[0] ($row[1])&lt;br /&gt;\n";
+}
+</pre><br>
+<p class="docText">The <tt>limitQuery()</tt> method ensures that the first result is at offset <tt>$from</tt> (starting at 0), and no more than <tt>$show</tt> results are returned.<a name="ch06index271"></a><a name="ch06index272"></a><a name="ch06index273"></a></p>
+<a name="ch06lev3sec39"></a><H5 class="docSection3Title">6.4.5.3 <tt>prepare($query)</tt> and <tt>execute($sth, $data = array())</tt></h5>
+<p class="docText">The last way of running queries is to use the <tt>prepare()</tt> and <tt>execute()</tt> methods.<a name="ch06index274"></a><a name="ch06index275"></a><a name="ch06index276"></a><a name="ch06index277"></a><a name="ch06index278"></a><a name="ch06index279"></a></p>
+<p class="docText">The <tt>prepare()</tt> method will parse the query and extract input parameter placeholders. If the back-end database supports either input parameter binding or the <tt>prepare</tt>/<tt>execute</tt> paradigm, the appropriate native calls are done to prepare the query for execution.</p>
+<p class="docText">Next, the <tt>execute()</tt> takes a prepared query along with input parameters, sends the parameters to the database, executes the query, and returns either a Boolean or a <tt>DB_result</tt> object, just like the other querying methods.</p>
+<p class="docText">You may call <tt>execute()</tt> many times for each prepared query. By using <tt>prepare</tt>/<tt>execute</tt> (for example) in a loop with many <tt>INSERT</tt> queries, you may save yourself from a lot of query parsing overhead, because the database has already parsed the query and just needs to execute it with new data.</p>
+<p class="docText">You can use <tt>prepare()</tt> and <tt>execute()</tt> regardless of whether the back-end database supports this feature. DB emulates as necessary by building and executing a new query for each <tt>execute()</tt> call.</p>
+<p class="docText">Here is an example that updates the world database numbers with official numbers for Norway as of January 1, 2004:</P>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+
+$changes = array(
+    array(154351, "Trondheim", "NOR"),
+    array(521886, "Oslo", "NOR"),
+    array(112405, "Stavanger", "NOR"),
+    array(237430, "Bergen", "NOR"),
+    array(103313, "B&Ecirc;rum", "NOR"),
+);
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "%s&lt;br /&gt;\n");
+$dbh = DB::connect("mysql://test@localhost/world");
+$sth = $dbh-&gt;prepare("UPDATE City SET Population = ? " .
+                     "WHERE Name = ? AND CountryCode = ?");
+foreach ($changes as $data) {
+    $dbh-&gt;execute($sth, $data);
+    printf("%s: %d row(s) changed&lt;br /&gt;\n", $data[1],
+           $dbh-&gt;affectedRows());
+}
+</pre><br>
+<p class="docText">Here, the query is prepared once, and <tt>$sth</tt> contains a reference (integer or resource, depending on the driver) to the prepared query. Then the prepared query is executed once for each <tt>UPDATE</tt> statement.<a name="ch06index280"></a><a name="ch06index281"></a><a name="ch06index282"></a><a name="ch06index283"></a><a name="ch06index284"></a><a name="ch06index285"></a></P>
+<p class="docText">This example also demonstrates the <tt>affectedRows()</tt> call, which returns the number of rows with different content after the <tt>execute()</tt> call.</p>
+<a name="ch06lev3sec40"></a><H5 class="docSection3Title">6.4.5.4 <tt>simpleQuery($query)</tt></h5>
+<p class="docText">This method is meant for data-manipulation queries that do not return any results beyond success or failure. Its only purpose is that is has slightly less overhead. It returns a Boolean that indicates success or a PEAR error on failure. Here's an example:<a name="ch06index286"></a><a name="ch06index287"></a><a name="ch06index288"></a></p>
+<pre>
+$dbh-&gt;simpleQuery("CREATE TABLE foobar (foo INT, bar INT)");
+</pre><br>
+<p class="docText">Nothing stops you from running <tt>SELECT</tt>s and other queries returning data with <tt>simpleQuery()</tt>, but the return value will be a database extension-specific resource handle. Do not use <tt>simpleQuery()</tt> for <tt>SELECT</tt>s.</p>
+<a name="ch06lev2sec19"></a><H4 class="docSection2Title">6.4.6. Fetching Results</H4>
+<p class="docText">The <tt>DB_result</tt> class has two methods for fetching results and three ways of representing a row of data.<a name="ch06index289"></a><a name="ch06index290"></a></p>
+<a name="ch06lev3sec41"></a><h5 class="docSection3Title">6.4.6.1 Fetch Modes</h5>
+<p class="docText">As with most native database extensions, DB offers different ways of representing a row of data:<a name="ch06index291"></a><a name="ch06index292"></a><a name="ch06index293"></a></p>
+<UL><li><p class="docList"><tt>DB_FETCHMODE_ORDERED</tt>, returning a numerically indexed array, like this:</p><pre>
+array( 0 =&gt; first column,
+       1 =&gt; second column,
+       2 =&gt; third column, ... )
+</pre><BR></li><LI><p class="docList"><tt>DB_FETCHMODE_ASSOC</tt>, returning an associative array with column names as keys:</p><pre>
+array( "ID"          =&gt; first column,
+       "Name"        =&gt; second column,
+       "CountryCode" =&gt; third column, ... )
+</pre><br></li><li><p class="docList"><tt>DB_FETCHMODE_OBJECT,</tt> returning an object with public member variables named after column names.</p><p class="docList">The default fetch mode is <tt>DB_FETCHMODE_ORDERED</tt>.<a name="ch06index294"></a><a name="ch06index295"></a><a name="ch06index296"></a></p></li></ul>
+<a name="ch06lev3sec42"></a><h5 class="docSection3Title">6.4.6.2 Configuring Fetch Modes</h5>
+<p class="docText">You may change the default fetch mode by calling the <tt>setFetchMode()</tt> method in the connection object, like this:<a name="ch06index297"></a><a name="ch06index298"></a><a name="ch06index299"></a><a name="ch06index300"></a></p>
+<pre>
+$dbh-&gt;setFetchMode(DB_FETCHMODE_ASSOC);
+</pre><br>
+<p class="docText">This fetch mode then applies to any queries executed by this connection object.</p>
+<p class="docText">You may also override the default fetch mode per query with an extra parameter to the fetch methods, like this:</p>
+<pre>
+$row = $result-&gt;fetchRow(DB_FETCHMODE_OBJECT);
+
+// or like this:
+
+$result-&gt;fetchInto($row, DB_FETCHMODE_ASSOC);
+</pre><br>
+<a name="ch06lev3sec43"></a><h5 class="docSection3Title">6.4.6.3 <tt>fetchRow($fetchmode = DB_FETCHMODE_ORDERED, $row = 0)</tt></H5>
+<p class="docText">This method returns an array with row data.</P>
+<p class="docText"><tt>fetchRow()</tt> returns the array or object with row data on success, <tt>NULL</tt> when reaching the end of the result set, or a DB error object.<a name="ch06index301"></a><a name="ch06index302"></a><a name="ch06index303"></a></p>
+<a name="ch06lev3sec44"></a><h5 class="docSection3Title">6.4.6.4 <tt>fetchInto(&amp;$arrr, $fetchmode = DB_FETCHMODE_ORDERED, $row = 0)</tt></H5>
+<p class="docText"><tt>fetchInto()</tt> returns <tt>DB_OK</tt> and stores the row data in <tt>$arr</tt> when a row was successfully retrieved, returns <tt>NULL</tt> when reaching the end of the result set, or returns a DB error object. As it happens, <tt>DB_OK</tt> evaluates to true and <tt>NULL</tt> evaluates to false. Provided you have an error handler set up, you can then write a loop, like this:<a name="ch06index304"></a><a name="ch06index305"></a><a name="ch06index306"></a></p>
+<pre>
+while ($result-&gt;fetchInto($row)) {
+    // ... do something
+}
+</pre><br>
+<p class="docText">In general, it is always better to use <tt>fetchInto()</tt>. It makes looping over results easier and slightly faster because <tt>fetchRow()</tt> is really just a wrapper around <tt>fetchInto()</tt>.</p>
+<a name="ch06lev3sec45"></a><h5 class="docSection3Title">6.4.6.5 Using Your Own Result Class</h5>
+<p class="docText">By default, the object fetch mode (<tt>DB_FETCHMODE_OB JECT</tt>) returns a <tt>stdClass</tt> object.</p>
+<p class="docText">If you configure the fetch mode using the <tt>DB::setFetchMode()</tt> method rather than specifying the fetch mode in the fetch call, you can add an extra parameter to specify the class to use for the returned object.<a name="ch06index307"></a><a name="ch06index308"></a></P>
+<p class="docText">The only interface requirement is that the constructor must accept a single array parameter. The array passed to the constructor will have the row data indexed by column name.</p>
+<p class="docText">You can configure your own class only when controlling the fetch mode with <tt>DB::setFetchMode()</tt>. Here is an example that uses a class implementing a getter method to access row data:</P>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+class MyResultClass {
+    public $row_data;
+    function __construct($data) {
+        $this-&gt;row_data = $data;
+    }
+    function __get($variable) {
+        return $this-&gt;row_data[$variable];
+    }
+}
+
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "%s&lt;br /&gt;\n");
+$dbh = DB::connect("mysql://test@localhost/world");
+$dbh-&gt;setFetchMode(DB_FETCHMODE_OBJECT, "MyResultClass");
+$code = 'NOR';
+$result = $dbh-&gt;query("SELECT Name FROM City WHERE CountryCode = ?", $code);
+while ($row = $result-&gt;fetchRow()) {
+    print $row-&gt;Name . "&lt;br /&gt;\n";
+}<a name="ch06index309"></a><a name="ch06index310"></a>
+</pre><br>
+<a name="ch06lev2sec20"></a><H4 class="docSection2Title">6.4.7. Sequences</h4>
+<p class="docText">Database sequences are tricky portabilitywise because they are part of the SQL grammar in some databases, such as Oracle, or implemented as <tt>INSERT</tt> side effects, such as MySQL's <tt>AUTO_INCREMENT</tt> feature. The different ways of handling sequences cannot be mixed easily. To provide a single API, DB offers a third way to deal with sequences, which is different from both of these, but at least works for any database supported by DB:<a name="ch06index311"></a><a name="ch06index312"></a></p>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+
+PEAR::setErrorHandling(PEAR_ERROR_DIE, "%s&lt;br /&gt;\n");
+$dbh = DB::connect("mysql://test@localhost/world");
+$dbh-&gt;query("CREATE TABLE foo (myid INTEGER)");
+$next = $dbh-&gt;nextId("foo");
+$dbh-&gt;query("INSERT INTO foo VALUES(?)", $next);
+$next = $dbh-&gt;nextId("foo");
+$dbh-&gt;query("INSERT INTO foo VALUES(?)", $next);
+$next = $dbh-&gt;nextId("foo");
+$dbh-&gt;query("INSERT INTO foo VALUES(?)", $next);
+$result = $dbh-&gt;query("SELECT * FROM foo");
+while ($result-&gt;fetchInto($row)) {
+    print "$row[0]&lt;br /&gt;\n";
+}
+$dbh-&gt;query("DROP TABLE foo");
+#$dbh-&gt;dropSequence("foo");
+</pre><br>
+<p class="docText">The paradigm is not to use auto-increments, <tt>last-insert-id</tt> calls, or even <tt>"sequencename.nextid"</tt> as part of the query. Instead, you must call a driver function to generate a new sequence number for the specific sequence that you then use in your query. The sequence number generation is still atomic.</p>
+<p class="docText">The only disadvantage with this approach is that you depend on PHP code (DB) to make the right sequences for you. This means that if you need to obtain sequence numbers from non-PHP code, this code must mimic PHP's behavior.</P>
+<p class="docText">This example displays three lines with <tt>"1"</tt>, <tt>"2"</tt>, and <tt>"3"</tt>. Running this script repeatedly will not restart the output at <tt>1</tt>, but continue with <tt>"4"</tt> and so on. (If you uncomment the last line with the <tt>dropSequence()</tt> line call, the sequence will be reset and the output will start with <tt>"1"</tt>.)<a name="ch06index313"></a><a name="ch06index314"></a></P>
+<p class="docText">The methods for dealing with sequences are the following:</p>
+<a name="ch06lev3sec46"></a><h5 class="docSection3Title"><tt>nextId($seqname, $create = true)</tt></h5>
+<p class="docText"><tt>nextId()</tt> returns the next sequence number for <tt>$seqname</tt>. If the sequence does not exist, it will be created if <tt>$create</tt> is true (the default value).<a name="ch06index315"></a><a name="ch06index316"></a><a name="ch06index317"></a></p>
+<a name="ch06lev3sec47"></a><H5 class="docSection3Title"><tt>createSequence($seqname)</tt></h5>
+<p class="docText">Creates a sequence or a sequence table for databases that do not support real sequences. The table name is the result of <tt>sprintf($dbh-&gt;getOption("seqname_format"), $seqname)</tt>.<a name="ch06index318"></a><a name="ch06index319"></a><a name="ch06index320"></a></p>
+<a name="ch06lev3sec48"></a><H5 class="docSection3Title"><tt>dropSequence($seqname)</tt></h5>
+<p class="docText">Removes the sequence or sequence table. Subsequent calls to <tt>nextId()</tt> for the same <tt>$seqname</tt> will re-create and reset the sequence.<a name="ch06index321"></a><a name="ch06index322"></a><a name="ch06index323"></a></P>
+<a name="ch06lev2sec21"></a><h4 class="docSection2Title">6.4.8. Portability Features</h4>
+<p class="docText">Portability in PEAR DB is a balance between performance and portability. Different users have different needs, so from DB 1.6, you have the option of enabling or disabling specific portability features. Older versions of DB had a catch-all &quot;optimize for speed&quot; or &quot;optimize for portability&quot; setting that is deprecated and not covered here.<a name="ch06index324"></a><a name="ch06index325"></a></p>
+<p class="docText">Portability features are controlled with the <tt>portability</tt> configuration option (see &quot;<a class="docLink" href="#ch06lev3sec36">Configuration Options</a>&quot; earlier in this chapter). To combine more than one feature, use a bitwise OR, such as this:</p>
+<pre>
+$dbh-&gt;setOption("portability",
+                DB_PORTABILITY_RTRIM |
+                DB_PORTABILITY_LOWERCASE);
+</pre><br>
+<a name="ch06lev3sec49"></a><h5 class="docSection3Title">6.4.8.1 Count Deleted Rows</h5>
+<p class="docText">Option: <tt>DB_PORTABILITY_DELETE_COUNT</tt><a name="ch06index326"></a></p>
+<p class="docText">Some DBMSs, such as MySQL and SQLite, store tables in a single file, and deleting all the rows in the table is simply a matter of truncating the file. This is fast, but you will not know how many rows were deleted. This option fixes that, but makes such deletes slower. In MySQL 4, this has been fixed so you do not need this option if you use MySQL 4.0 or newer.<a name="ch06index327"></a><a name="ch06index328"></a><a name="ch06index329"></a></p>
+<a name="ch06lev3sec50"></a><h5 class="docSection3Title">6.4.8.2 Count Number of Rows</h5>
+<p class="docText">Option: <tt>DB_PORTABILITY_NUMROWS</tt><a name="ch06index330"></a></p>
+<p class="docText">When working with Oracle, you will not know how many rows a <tt>SELECT</tt> returns without either doing a <tt>COUNT</tt> query or fetching all the rows. This option ensures that the <tt>$result-&gt;numRows()</tt> method always returns the number of rows in the result set. This is not needed for other drivers than Oracle (<tt>oci8</tt>).<a name="ch06index331"></a><a name="ch06index332"></a><a name="ch06index333"></a></p>
+<a name="ch06lev3sec51"></a><h5 class="docSection3Title">6.4.8.3 Lowercasing</h5>
+<p class="docText">Option: <tt>DB_PORTABILITY_LOWERCASE</tt><a name="ch06index334"></a></p>
+<p class="docText">Field name case (upper- or lowercasing letters) varies between DBMSs. Some leave the case exactly the way it was in the <tt>CREATE TABLE</tt> statement, some uppercase everything, and some are case-insensitive and others not. This option always lowercases column names when fetching results.<a name="ch06index335"></a><a name="ch06index336"></a><a name="ch06index337"></a></P>
+<a name="ch06lev3sec52"></a><H5 class="docSection3Title">6.4.8.4 Trimming Data</h5>
+<p class="docText">Option: <tt>DB_PORTABILITY_RTRIM</tt><a name="ch06index338"></a></p>
+<p class="docText">Some DBMSs keep whitespace padding from <tt>CHAR</tt> fields, while others strip it off. This option makes sure there is no trailing whitespace in the result data.<a name="ch06index339"></a><a name="ch06index340"></a><a name="ch06index341"></a></P>
+<a name="ch06lev3sec53"></a><h5 class="docSection3Title">6.4.8.5 Empty String Handling</h5>
+<p class="docText">Option: <tt>DB_PORTABILITY_NULL_TO_EMPTY</tt><a name="ch06index342"></a></p>
+<p class="docText">Oracle does not distinguish between <tt>NULL</tt> and '' (the empty string) when inserting text fields. If you fetch a row into which you just inserted an empty string, that field will end up as <tt>NULL</tt>. This option helps making this consistent by always converting <tt>NULL</tt> results to empty strings.<a name="ch06index343"></a><a name="ch06index344"></a><a name="ch06index345"></a></p>
+<a name="ch06lev3sec54"></a><h5 class="docSection3Title">6.4.8.6 Really Portable Errors!</h5>
+<p class="docText">Option: <tt>DB_PORTABILITY_ERRORS</tt><a name="ch06index346"></a></P>
+<p class="docText">This option should not have been necessary, but some error codes have been incorrectly mapped in older versions and changing the mapping would break compatibility. This option breaks backward compatibility, but fixes the error mappings so they are consistent across all drivers. If you truly want portable errors (why wouldn't you?), use this option.<a name="ch06index347"></a><a name="ch06index348"></a><a name="ch06index349"></a></p>
+<p class="docText">To enable all the portability features, use <tt>DB_PORTABILITY_ALL</tt>.</P>
+<a name="ch06lev2sec22"></a><h4 class="docSection2Title">6.4.9. Abstracted Errors</H4>
+<p class="docText">Knowing how to deal with or recover from an error is an important part of any application. When dealing with different DBMS servers, you will discover that report different errors for the same issue, even if you are using ODBC.<a name="ch06index350"></a><a name="ch06index351"></a><a name="ch06index352"></a></p>
+<p class="docText">To compensate for this and make it possible to write portable PHP scripts that can handle errors gracefully, DB uses its own set of error codes to represent errors in an abstracted yet simple way.</p>
+<a name="ch06lev3sec55"></a><h5 class="docSection3Title">6.4.9.1 DB Error Codes</h5>
+<p class="docText">Each database driver converts the error codes or error messages from the DBMS to a DB error code. These codes are represented as PHP constants. The following list contains the supported error codes and examples of situations that causes them:<a name="ch06index353"></a><a name="ch06index354"></a><a name="ch06index355"></a></P>
+<UL><li><p class="docText">
+<tt>DB_ERROR_ACCESS_VIOLATION</tt>. 
+Missing privileges for a table, no read access to file referenced by opaque parameters, or bad username or password.<a name="ch06index356"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_ALREADY_EXISTS</tt>. 
+Table, sequence, procedure, view, trigger, or some other condition already exists.<a name="ch06index357"></a></P></li><li><p class="docText">
+<tt>DB_ERROR_CANNOT_CREATE</tt>. 
+Cannot create table or file; the cause of problem is outside the DBMS.<a name="ch06index358"></a></P></li><LI><p class="docText">
+<tt>DB_ERROR_CANNOT_DROP</tt>. 
+Cannot drop table or delete file; the cause of problem is outside the DBMS.<a name="ch06index359"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_CONNECT_FAILED</tt>. 
+Could not establish database connection.<a name="ch06index360"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_CONSTRAINT</tt>. 
+Foreign key does not exist, row contains foreign key referenced by another table, and field constraints violated.<a name="ch06index361"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_CONSTRAINT_NOT_NULL</tt>. 
+Field may not be <tt>NULL</tt>.<a name="ch06index362"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_DIVZERO</tt>. 
+Division by zero error.<a name="ch06index363"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_INVALID</tt>. 
+Catch-all <tt>"invalid input"</tt> error.<a name="ch06index364"></a></p></LI><LI><p class="docText">
+<tt>DB_ERROR_INVALID_DATE</tt>. 
+Bad date format or nonsensical date.<a name="ch06index365"></a></p></li><LI><p class="docText">
+<tt>DB_ERROR_INVALID_NUMBER</tt>. 
+trying to use a non-number in a number field.<a name="ch06index366"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_MISMATCH</tt>. 
+Number of parameters do not match up (also <tt>prepare</tt>/<tt>execute</tt>).<a name="ch06index367"></a></p></li><LI><p class="docText">
+<tt>DB_ERROR_NODBSELECTED</tt>. 
+Database connection has no database selected.<a name="ch06index368"></a></p></LI><li><p class="docText">
+<tt>DB_ERROR_NOSUCHDB</tt>. 
+TRying to access a non-existing database.<a name="ch06index369"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_NOSUCHFIELD</tt>. 
+trying to query a non-existing column.<a name="ch06index370"></a></P></LI><li><p class="docText">
+<tt>DB_ERROR_NOSUCHTABLE</tt>. 
+trying to query a non-existing table.<a name="ch06index371"></a></p></li><LI><p class="docText">
+<tt>DB_ERROR_NOT_CAPABLE</tt>. 
+Database back-end cannot do that.<a name="ch06index372"></a></p></li><LI><p class="docText">
+<tt>DB_ERROR_NOT_FOUND</tt>. 
+trying to drop a non-existing index.<a name="ch06index373"></a></P></li><li><p class="docText">
+<tt>DB_ERROR_NOT_LOCKED</tt>. 
+trying to unlock something that is not locked.<a name="ch06index374"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_SYNTAX</tt>. 
+SQL syntax error.<a name="ch06index375"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_TRUNCATED</tt>. 
+Returned data was truncated.<a name="ch06index376"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_UNSUPPORTED</tt>. 
+Performing an operation not supported by DB or the DBMS client.<a name="ch06index377"></a></p></li><li><p class="docText">
+<tt>DB_ERROR_VALUE_COUNT_ON_ROW</tt>. 
+See <tt>DB_ERROR_MISMATCH</tt>.<a name="ch06index378"></a><a name="ch06index379"></a><a name="ch06index380"></a><a name="ch06index381"></a></p></LI></UL>
+<a name="ch06lev3sec56"></a><h5 class="docSection3Title">6.4.9.2 Graceful Error Handling</h5>
+<p class="docText">DB uses the PEAR errors to report errors. Here is an example that alerts the user if he tries to add a unique combination of keys twice:<a name="ch06index382"></a><a name="ch06index383"></a><a name="ch06index384"></a></P>
+<pre>
+&lt;?php
+
+require_once 'DB.php';
+
+$dbh = DB::connect("mysql://test@localhost/world");
+$dbh-&gt;setOption('portability', DB_PORTABILITY_ERRORS);
+$dbh-&gt;query("CREATE TABLE mypets (name CHAR(15), species CHAR(15))");
+$dbh-&gt;query("CREATE UNIQUE INDEX mypets_idx ON mypets (name, species)");
+
+$data = array('Bill', 'Mule');
+
+for ($i = 0; $i &lt; 2; $i++) {
+    $result = $dbh-&gt;query("INSERT INTO mypets VALUES(?, ?)", $data);
+    if (DB::isError($result) &amp;&amp; $result-&gt;getCode() == DB_ERROR_CONSTRAINT) {
+        print "Already have a $data[1] called $data[0]!&lt;br /&gt;\n";
+    }
+}
+
+$dbh-&gt;query("DROP TABLE mypets");
+</pre><br>
+<p class="docText">See <a class="docLink" href="ch07.html#ch07">Chapter 7</a>, &quot;<a class="docLink" href="ch07.html#ch07">Error Handling</a>,&quot; for details on how to catch PEAR errors.</p>
+<a name="ch06lev2sec23"></a><h4 class="docSection2Title">6.4.10. Convenience Methods</h4>
+<p class="docText">Although PEAR DB is mostly a common API, it also contains some convenience features for retrieving all the data from a query easily. All these methods support <tt>prepare</tt>/<tt>execute</tt> style queries, and all of them return PEAR errors on failure.<a name="ch06index385"></a><a name="ch06index386"></a></p>
+<a name="ch06lev3sec57"></a><h5 class="docSection3Title">6.4.10.1 <tt>$dbh-&gt;getOne($query, $params = array())</tt></H5>
+<p class="docText">The <tt>getOne()</tt> method returns the first column from the first row of data. Use the <tt>$params</tt> parameter if <tt>$query</tt> contains placeholders (this applies to the rest of the convenience functions, too). Here's an example:<a name="ch06index387"></a><a name="ch06index388"></a><a name="ch06index389"></a><a name="ch06index390"></a></p>
+<pre>
+$name = $dbh-&gt;getOne('SELECT name FROM users WHERE id = ?',
+                     array($_GET['userid']));
+</pre><BR>
+<a name="ch06lev3sec58"></a><h5 class="docSection3Title">6.4.10.2 <tt>$dbh-&gt;getRow($query, $params = array(), $fetchmode = DB_FETCHMODE_DEFAULT)</tt></H5>
+<p class="docText">The <tt>getrow()</tt> method returns an array with the first row of data. It will use the default fetch mode, defaulting to ordered. Ordered data will start at index 0. Here's an example:<a name="ch06index391"></a><a name="ch06index392"></a><a name="ch06index393"></a><a name="ch06index394"></a></p>
+<pre>
+$data = $dbh-&gt;getRow('SELECT * FROM users WHERE id = ?',
+                     array($_GET['userid']));
+</pre><br>
+<a name="ch06lev3sec59"></a><h5 class="docSection3Title">6.4.10.3 <tt>$dbh-&gt;getCol($query, $col = 0, $params = array())</tt></H5>
+<p class="docText">The <tt>getCol()</tt> method returns an array with the <tt>$col</tt>'th element of each row. <tt>$col</tt> defaults to 0. Here's an example:<a name="ch06index395"></a><a name="ch06index396"></a><a name="ch06index397"></a><a name="ch06index398"></a></P>
+<pre>
+$userids = $dbh-&gt;getCol('SELECT id FROM users');
+</pre><br>
+<a name="ch06lev3sec60"></a><h5 class="docSection3Title">6.4.10.4 <tt>$dbh-&gt;getAssoc($query, $force_array = false, $params = array(), $fetchmode = DB_FETCHMODE_DEFAULT, $group = false)</tt></h5>
+<p class="docText">This method returns an associative array with the contents of the first column as key and the remaining column as value, like this (one line per row):<a name="ch06index399"></a><a name="ch06index400"></a><a name="ch06index401"></a><a name="ch06index402"></a></p>
+<pre>
+array(col1row1 =&gt; col2row1,
+      col1row2 =&gt; col2row2,
+      ...)
+</pre><BR>
+<p class="docText">If the query returns more than two columns, the value will be an array of these values, indexed according to <tt>$fetchmode</tt>, like this:</p>
+<pre>
+array(col1row1 =&gt; array(col2row1, col3row1...),
+      col1row2 =&gt; array(col2row2, col3row2...),
+      ...)
+</pre><br>
+<p class="docText">or with <tt>DB_FETCHMODE_ASSOC</tt>:</P>
+<pre>
+array(field1 =&gt; array(name1 =&gt; field2, name3 =&gt; field3...),
+      field2 =&gt; array(name2 =&gt; field2, name3 =&gt; field3...),
+      ...)
+</pre><br>
+<p class="docText">The <tt>$force_array</tt> parameter makes the value an array even if the query returns only two columns.</P>
+<p class="docText">If the first column contains the same key more than once, a later occurrence will overwrite the first.</p>
+<p class="docText">Finally, you set the <tt>$group</tt> parameter to <tt>trUE</tt>, and <tt>getAssoc()</tt> will keep all the rows with the same key in another level of arrays:<a name="ch06index403"></a><a name="ch06index404"></a><a name="ch06index405"></a><a name="ch06index406"></a></p>
+<pre>
+$data = $dbh-&gt;getAssoc("SELECT firstname, lastname FROM ppl",
+                    false, null, DB_FETCHMODE_ORDERED, true);
+</pre><br>
+<p class="docText">This example would return something like this:</p>
+<pre>
+array("Bob" =&gt;  array("Jones", "the Builder", "Hope"),
+      "John" =&gt; array("Doe", "Kerry", "Lennon"),
+      ...)<a name="ch06index407"></a><a name="ch06index408"></a><a name="ch06index409"></a><a name="ch06index410"></a>
+</pre><br>
+<a name="ch06lev3sec61"></a><h5 class="docSection3Title">6.4.10.5 <tt>$dbh-&gt;getAll($query, $params = array(), $fetchmode = DB_FETCHMODE_DEFAULT)</tt></h5>
+<p class="docText">This method returns all the data from all the rows as an array of arrays. The inner arrays are indexed according to <tt>$fetchmode</tt>:<a name="ch06index411"></a><a name="ch06index412"></a><a name="ch06index413"></a><a name="ch06index414"></a></p>
+<pre>
+array(array(name1 =&gt; col1row1, name2 =&gt; col2row2...),
+      array(name1 =&gt; col1row2, name2 =&gt; col2row2...),
+      ...)
+</pre><br>
+<p class="docText">You can flip around the dimensions in this array by <tt>OR</tt>'ing <tt>DB_FETCHMODE_FLIPPED</tt> into fetch mode. With a fetch mode of <tt>DB_FETCHMODE_FLIPPED | DB_FETCHMODE_ASSOC</tt>, the result will look like this:</p>
+<pre>
+array(name1 =&gt; array(col1row1, col1row2, ...),
+      name2 =&gt; array(col2row1, col2row2, ...),
+      ...)<a name="ch06index415"></a><a name="ch06index416"></a><a name="ch06index417"></a><a name="ch06index418"></a>
+</pre><br>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></ul></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=ch06lev1sec3.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=ch06lev1sec5.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

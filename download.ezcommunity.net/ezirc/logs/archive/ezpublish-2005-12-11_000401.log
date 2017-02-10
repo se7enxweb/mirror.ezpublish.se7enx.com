@@ -1,0 +1,93 @@
+[12-10-2005 02:10:57] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-10-2005 03:02:18] -!- ordna1 [n=ordnas@p509096FB.dip0.t-ipconnect.de] has joined #ezpublish
+[12-10-2005 03:24:57] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[12-10-2005 03:31:20] -!- ordna1 [n=ordnas@p509096FB.dip0.t-ipconnect.de] has quit [Read error: 110 (Connection timed out)]
+[12-10-2005 04:13:48] -!- ordna1 [n=ordnas@p5090892B.dip0.t-ipconnect.de] has joined #ezpublish
+[12-10-2005 04:51:52] [#ezpublish] <buz> http://ez.no/customers/user_quotes wtf did the infoworld guy find staging
+[12-10-2005 04:53:17] -!- SEAwolfx [n=mike@DSL01.83.171.147.63.NEFkom.net] has joined #ezpublish
+[12-10-2005 04:58:56] -!- ordna1 [n=ordnas@p5090892B.dip0.t-ipconnect.de] has quit [Read error: 104 (Connection reset by peer)]
+[12-10-2005 07:15:42] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-10-2005 07:18:40] -!- SEAwolfx [n=mike@DSL01.83.171.147.63.NEFkom.net] has quit [Read error: 110 (Connection timed out)]
+[12-10-2005 08:02:54] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 110 (Connection timed out)]
+[12-10-2005 09:04:03] [#ezpublish] <buz> muahaha sun ist stealing the ez logo (only mirrored) look at the bottom titles http://ch.sun.com/d/promotions/coolthreads/index.html
+[12-10-2005 09:48:11] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has joined #ezpublish
+[12-10-2005 09:48:45] [#ezpublish] <zrg> the pain, the pain!
+[12-10-2005 10:16:44] [#ezpublish] <buz> ?
+[12-10-2005 10:16:52] [#ezpublish] <buz> is a dead raven stuck in your ass?
+[12-10-2005 10:18:50] [#ezpublish] <zrg> no i had to pass town sqare
+[12-10-2005 10:19:03] [#ezpublish] <buz> which is painful why?
+[12-10-2005 10:19:06] [#ezpublish] <buz> too many dumb people?
+[12-10-2005 10:19:30] [#ezpublish] <buz> have you seen http://triligon.org/triligon/projects/advancedforum/advancedforum_meta_forum/welcome_to_the_forum btw?
+[12-10-2005 10:19:30] [#ezpublish] <zrg> silent night blaring from megaphones, well i dont know for sure but the raven cant be more painful :P
+[12-10-2005 10:21:22] [#ezpublish] <zrg> mm, nice
+[12-10-2005 10:21:49] [#ezpublish] <buz> i'm trying to figure out how to do ajax reply/edit
+[12-10-2005 10:21:54] [#ezpublish] <buz> but thats hard because of the redirect
+[12-10-2005 10:26:20] [#ezpublish] <buz> unless i do hack something myself...
+[12-10-2005 10:26:38] [#ezpublish] <buz> which just might do ;)
+[12-10-2005 10:43:47] [#ezpublish] <buz> is there a way to define permissions for individual rss feeds not just all or nothing?
+[12-10-2005 10:44:27] [#ezpublish] <buz> or does it inherit the perms of content module?
+[12-10-2005 10:48:53] [#ezpublish] <buz> seems like it does
+[12-10-2005 10:54:34] [#ezpublish] <zrg> that seems not to work, buz.. post it in forum :P
+[12-10-2005 10:55:00] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has joined #ezpublish
+[12-10-2005 10:56:35] [#ezpublish] <buz> posted it there, yes
+[12-10-2005 10:56:43] [#ezpublish] <buz> be quick it's gonna be deleted in a few minutes
+[12-10-2005 11:05:23] [#ezpublish] <zrg> had to look up lyrics :P
+[12-10-2005 11:12:59] [#ezpublish] <zrg> all i wanna do is to have different node as indexpage for each of several sitenames that points to site, why must i define siteaccesses :(
+[12-10-2005 11:13:24] [#ezpublish] <buz> you could do it template code you know
+[12-10-2005 11:13:36] [#ezpublish] <zrg> hmm
+[12-10-2005 11:13:43] [#ezpublish] <zrg> redirect?
+[12-10-2005 11:13:54] [#ezpublish] <buz> na just fetch the proper node
+[12-10-2005 11:13:56] [#ezpublish] <zrg> no actually
+[12-10-2005 11:14:00] [#ezpublish] <zrg> yes
+[12-10-2005 11:14:01] [#ezpublish] <zrg> yes
+[12-10-2005 11:14:03] [#ezpublish] <buz> then call node_view_gui
+[12-10-2005 11:14:28] [#ezpublish] <zrg> mhmh, i get it, kind of obvious :)
+[12-10-2005 11:14:43] [#ezpublish] <buz> still a hack but easier
+[12-10-2005 11:16:05] [#ezpublish] <zrg> or then not, menus and such use module result node id, they wont be fooled
+[12-10-2005 11:16:33] [#ezpublish] <buz> you said first object
+[12-10-2005 11:16:37] [#ezpublish] <buz> not whole site ;)
+[12-10-2005 11:16:48] [#ezpublish] <zrg> could overwrite that id maybe..
+[12-10-2005 11:17:41] [#ezpublish] <zrg> or then maybe doing the stupid siteaccess and linking all files except one with indexpage def is nicer :P
+[12-10-2005 11:18:17] [#ezpublish] <buz> mhh i'm back to kernel hacking it seems
+[12-10-2005 11:18:29] [#ezpublish] <buz> i dont like that at all
+[12-10-2005 11:18:33] [#ezpublish] <zrg> afraid of several siteaccesses tho, twice ive tried it it fcked up site
+[12-10-2005 12:21:29] [#ezpublish] <zrg> fh, kh, any of you guys alive?  Does ANYONE know what the NodeSettings/RootNode setting does?
+[12-10-2005 12:42:06] [#ezpublish] <buz> i think it defines the rootnode for the siteaccess
+[12-10-2005 12:53:05] [#ezpublish] <zrg> as far as i have tried and some others on forums it has no visible effect
+[12-10-2005 12:53:33] [#ezpublish] <buz> you need another one for defining the first node being shown
+[12-10-2005 12:53:36] [#ezpublish] <buz> cant remember which one though
+[12-10-2005 12:55:50] [#ezpublish] <zrg> you mean IndexPage and DefaultPage
+[12-10-2005 12:56:30] [#ezpublish] <zrg> they work
+[12-10-2005 12:57:13] [#ezpublish] <buz> then whats the issue
+[12-10-2005 12:58:30] [#ezpublish] <zrg> issue is even if i set them all, nodes above what i have set as root are still visible everywhere
+[12-10-2005 12:58:37] [#ezpublish] <buz> i'm wondering if there's a way to have a user decide who can read the stuff he writes?
+[12-10-2005 12:59:10] [#ezpublish] <zrg> one person or group?
+[12-10-2005 12:59:19] [#ezpublish] <zrg> internal messaging?
+[12-10-2005 12:59:40] [#ezpublish] <buz> no more like this gallery i'll show to x,y,z but this one only to q and r
+[12-10-2005 12:59:51] [#ezpublish] <buz> think access control lists
+[12-10-2005 13:00:32] [#ezpublish] <zrg> not hard to do in template of course
+[12-10-2005 13:00:49] [#ezpublish] <buz> template "security" is evil (tm)
+[12-10-2005 13:01:16] [#ezpublish] <zrg> yes, alternative is kernel hacking ;)
+[12-10-2005 13:01:23] [#ezpublish] <buz> i've been there
+[12-10-2005 13:01:25] [#ezpublish] <buz> it's ugly
+[12-10-2005 13:01:45] [#ezpublish] <buz> and doing it right means rewriting most of the stuff from scratch i fear
+[12-10-2005 13:02:23] [#ezpublish] <buz> maybe i could write an ACL data type and hack the kernel to use that one
+[12-10-2005 13:02:59] [#ezpublish] <buz> attribute level permissions is another thing i'd love to see
+[12-10-2005 13:18:01] [#ezpublish] <zrg> remove all attributes from classes and replace them with one-field classes under the original class, then define access to each of them the ordinary way :)
+[12-10-2005 13:18:07] [#ezpublish] <zrg> *ducks*
+[12-10-2005 13:18:17] [#ezpublish] <buz> that's gonna be very efficient
+[12-10-2005 13:18:41] [#ezpublish] <zrg> it IS possible tho :)
+[12-10-2005 14:43:34] -!- zrg [n=zurgutt@217-159-153-69-dsl.kt.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-10-2005 16:31:15] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-10-2005 16:31:15] -!- Katana` [n=katana@lns-bzn-49f-81-56-163-176.adsl.proxad.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-10-2005 16:31:30] -!- _Katana` is now known as Katana`
+[12-10-2005 16:43:30] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[12-10-2005 18:26:24] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-10-2005 18:26:25] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-10-2005 18:27:00] -!- _Katana` is now known as Katana`
+[12-10-2005 18:54:19] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-10-2005 18:54:20] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-10-2005 18:54:38] -!- _Katana` is now known as Katana`
+[12-10-2005 19:40:37] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-10-2005 19:40:37] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-10-2005 19:40:58] -!- _Katana` is now known as Katana`

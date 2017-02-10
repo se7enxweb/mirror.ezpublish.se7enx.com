@@ -1,0 +1,469 @@
+[11-28-2005 00:10:15] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[11-28-2005 00:38:04] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]
+[11-28-2005 01:46:16] -!- Bedlore [n=me@219-90-189-43.ip.adam.com.au] has quit []
+[11-28-2005 02:19:52] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[11-28-2005 02:20:37] [#ezpublish] <Katana`> hi
+[11-28-2005 02:27:26] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit ["Leaving"]
+[11-28-2005 02:59:00] -!- kh[eZ] [n=kh@popeye.ez.no] has quit ["using sirc version 2.211+KSIRC/1.3.11"]
+[11-28-2005 03:06:28] -!- kris10an [n=kh@popeye.ez.no] has joined #ezpublish
+[11-28-2005 03:18:17] [#ezpublish] <kris10an> http://ez.no/community/articles/an_introduction_to_ez_components
+[11-28-2005 03:34:58] [#ezpublish] <kracker> kool
+[11-28-2005 03:36:29] [#ezpublish] <Katana`> hmm wasn't there an issue with multilingual sites & translations to eng-GB ?
+[11-28-2005 03:37:34] [#ezpublish] <kracker> uhhh
+[11-28-2005 03:38:00] [#ezpublish] <kracker> kris10an, is this line correct ? BSD i was told it was LGPL ... ("#
+[11-28-2005 03:38:00] [#ezpublish] <kracker> #
+[11-28-2005 03:38:00] [#ezpublish] <kracker> Open source and licensed under the New BSD license
+[11-28-2005 03:38:00] [#ezpublish] <kracker> ")
+[11-28-2005 03:39:43] [#ezpublish] <Katana`> i had noticed that change too but i think BSD is even less restrictive than LGPL
+[11-28-2005 03:40:10] [#ezpublish] <kracker> kris10an, i think it's a error, cause it has a link using the file:// protocol
+[11-28-2005 03:40:28] [#ezpublish] <kracker> well the link might be wrong
+[11-28-2005 03:40:46] [#ezpublish] <kracker> i wouldn't know about what's being licened as what (cept what they have told us before)
+[11-28-2005 03:40:47] [#ezpublish] <kracker> http://ez.no/products/licenses
+[11-28-2005 03:40:59] [#ezpublish] <kracker> http://ez.no/products/licenses/new_bsd
+[11-28-2005 03:44:11] [#ezpublish] * Katana` has subscribed to the mailing list
+[11-28-2005 03:44:14] [#ezpublish] <kris10an> Katana`: there was no need for the LGPL licence, so we changed it to the less restrictive BSD licence... enjoy :-)
+[11-28-2005 03:44:24] [#ezpublish] <kracker> lol
+[11-28-2005 03:44:28] [#ezpublish] <Katana`> yep i know that's what i was saying ;)
+[11-28-2005 03:50:04] [#ezpublish] <kracker> confused, what needs are those?
+[11-28-2005 03:50:58] [#ezpublish] <ordna1> i fixed the link
+[11-28-2005 03:52:34] [#ezpublish] <kris10an> well.. using the LGPL didn't give us (eZ systems) any anything compared to the NewBSD, and also we think it is easier for people to use the components under the BSD license..
+[11-28-2005 03:53:06] [#ezpublish] <kris10an> did that make sence?
+[11-28-2005 03:54:10] [#ezpublish] <kris10an> i was not part of this discussion internally, so what im saying might be bullshit :-)
+[11-28-2005 03:55:09] [#ezpublish] <ordna1> NewBSD is compatible with GPL, so no problem in combining it with eZ publish 3/4 code
+[11-28-2005 03:55:29] [#ezpublish] <ordna1> ... and it gives you "more" freedom then LGPL
+[11-28-2005 04:04:28] [#ezpublish] * Katana` has printed his resignation letter
+[11-28-2005 04:07:04] [#ezpublish] <kris10an> hehe.. thanks for the suplement ordna1
+[11-28-2005 04:08:10] [#ezpublish] <ordna1> kris10an: :)
+[11-28-2005 04:24:11] [#ezpublish] <kracker> nods, many thanks for more of an explanation (ordna1 / kris10an)
+[11-28-2005 04:24:33] [#ezpublish] <kracker> i'm not a (license) biggot, just curious
+[11-28-2005 04:49:36] [#ezpublish] <kris10an> but be careful kids, curiousity killed the cat ;-)
+[11-28-2005 04:56:50] [#ezpublish] <kracker> the dead raven (zombie raven) wins again~!
+[11-28-2005 05:03:01] [#ezpublish] <kracker> wow, so much money to fly from texas to germany for the eZ partner meeting!  $2,618
+[11-28-2005 05:04:28] [#ezpublish] <kracker> hmm, leaving 1/24th -> 1/31st
+[11-28-2005 05:06:30] [#ezpublish] * Katana` doesn't know if he'll be there
+[11-28-2005 05:07:02] [#ezpublish] <kracker> price seems to go down if you stay longer ...
+[11-28-2005 05:33:06] [#ezpublish] <kracker> hmm, around 1500 USD for 7 day round trip
+[11-28-2005 05:51:36] -!- ordna1 [n=ordnas@p549DFD82.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-28-2005 05:51:45] -!- ordna1 [n=ordnas@p549DDB4E.dip.t-dialin.net] has joined #ezpublish
+[11-28-2005 05:58:27] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-28-2005 06:00:29] [#ezpublish] <Proteque> heisann xbit
+[11-28-2005 06:06:39] [#ezpublish] <xbit> hej protekk
+[11-28-2005 06:06:43] [#ezpublish] <xbit> skjera?
+[11-28-2005 06:07:44] [#ezpublish] <xbit> peiling paa j2ee? :o
+[11-28-2005 06:16:30] -!- ordna1 [n=ordnas@p549DDB4E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-28-2005 06:43:51] [#ezpublish] <kris10an> 2600 dollars.. wow.. that sounds like they are ripping you of ;-)
+[11-28-2005 06:46:38] -!- ordnas [n=ordnas@p549DDB4E.dip.t-dialin.net] has joined #ezpublish
+[11-28-2005 06:50:16] [#ezpublish] <xbit> for what?
+[11-28-2005 06:51:00] [#ezpublish] <kris10an> [12:03:01] <kracker> wow, so much money to fly from texas to germany for the eZ partner meeting!  $2,618
+[11-28-2005 07:05:59] [#ezpublish] <xbit> omg
+[11-28-2005 07:06:20] [#ezpublish] <xbit> :o
+[11-28-2005 07:44:45] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[11-28-2005 07:46:17] [#ezpublish] <Proteque> xbit: nei
+[11-28-2005 07:46:22] [#ezpublish] <Proteque> xbit: jeg peiler ingenting :D
+[11-28-2005 07:47:24] [#ezpublish] <xbit> fubar
+[11-28-2005 07:48:36] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-28-2005 07:50:13] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has quit [Client Quit]
+[11-28-2005 07:50:27] [#ezpublish] <xbit> frustefruste
+[11-28-2005 07:51:29] [#ezpublish] <Proteque> xbit: sliter med da?
+[11-28-2005 07:54:26] [#ezpublish] <xbit> http://rafb.net/paste/results/jclMaC60.html
+[11-28-2005 07:54:28] [#ezpublish] <xbit> :o
+[11-28-2005 07:56:13] -!- _Rappy_ [n=hunt-pre@dsl-253-122.monet.no] has joined #ezpublish
+[11-28-2005 08:11:44] [#ezpublish] <_Rappy_> hi all
+[11-28-2005 08:12:03] [#ezpublish] <_Rappy_> what communitymodules are under development atm?
+[11-28-2005 08:13:19] [#ezpublish] <buz> what do you mean
+[11-28-2005 08:13:23] [#ezpublish] <kracker> kris10an, sry yeah, seems they charge more for short trip than longer trip
+[11-28-2005 08:14:04] [#ezpublish] <kracker> _Rappy_, yeah do you mean in general who's working on what _or_ who's working on component modules (ez components)
+[11-28-2005 08:14:07] [#ezpublish] * Katana` doesn't feel like working today :(
+[11-28-2005 08:15:07] [#ezpublish] * buz doesnt feel like doing anything, really
+[11-28-2005 08:15:36] [#ezpublish] * kracker well, if back porting my old blogs into one mecha blog before i pass out doesn't count as work then ...
+[11-28-2005 08:15:47] [#ezpublish] <buz> mecha blog?
+[11-28-2005 08:15:50] [#ezpublish] <_Rappy_> I got a mate who's intrested in eZ, but wants to see some communtimodules. So I just want some links to examples :)
+[11-28-2005 08:15:54] [#ezpublish] <_Rappy_> if you got any
+[11-28-2005 08:16:06] [#ezpublish] <buz> the wiki one works well
+[11-28-2005 08:16:35] [#ezpublish] <buz> phplist data type is impressive in its own right
+[11-28-2005 08:16:40] [#ezpublish] <kracker> buz, mega (large) cept i used the word mecha (as in mechanical) in it's place ... word spins | duality in all meaning
+[11-28-2005 08:16:51] [#ezpublish] <buz> (but probably not for the uninitiated)
+[11-28-2005 08:22:23] [#ezpublish] <kracker> yeah, probably, :D   &init.all.at.once();
+[11-28-2005 08:23:25] [#ezpublish] <kracker> ok i lie, from 6 blogs + 1 pic blog down to 3 blogs + 1 pic (kracker, the kid, the business) ...
+[11-28-2005 08:24:30] [#ezpublish] <buz> stupid hd prices still dont drop
+[11-28-2005 08:24:55] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has left #ezpublish []
+[11-28-2005 08:26:44] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-28-2005 08:35:46] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | http://ez.no/community/articles/an_introduction_to_ez_components | http://ez.no/company/news/ez_conference_2006_call_for_papers
+[11-28-2005 08:57:16] [#ezpublish] <Katana`> http://thc.org/root/phun/unmaintain.html
+[11-28-2005 08:57:19] [#ezpublish] <Katana`> very useful
+[11-28-2005 08:57:30] [#ezpublish] <Katana`> you don't respect any of these standards, eZ guys !!
+[11-28-2005 09:04:20] [#ezpublish] <xbit> nice guide ;)
+[11-28-2005 09:04:25] [#ezpublish] <Katana`> yep :)
+[11-28-2005 09:21:02] [#ezpublish] <kris10an> add the document to codingstandards for 4.0
+[11-28-2005 09:21:11] [#ezpublish] <kris10an> ;-)
+[11-28-2005 09:23:46] [#ezpublish] <Katana`> kewl :)
+[11-28-2005 09:27:00] [#ezpublish] <kris10an> hehe.. people doing something like this, should be shot on sight: *++b ? (*++b + *(b-1)) 0
+[11-28-2005 09:33:12] [#ezpublish] <Katana`> a tad ;)
+[11-28-2005 09:41:52] -!- Sulfur [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-28-2005 09:42:02] [#ezpublish] <Sulfur> hi guys :)
+[11-28-2005 09:42:33] [#ezpublish] <Sulfur> omg we have fh 's twin . which one is the evil one ? ;)
+[11-28-2005 09:45:02] [#ezpublish] <Katana`> where ?
+[11-28-2005 09:45:11] [#ezpublish] <Katana`> ah, fh2
+[11-28-2005 09:51:44] -!- ordnas [n=ordnas@p549DDB4E.dip.t-dialin.net] has quit [Read error: 110 (Connection timed out)]
+[11-28-2005 09:55:44] [#ezpublish] <Sulfur> yes :)
+[11-28-2005 09:56:02] [#ezpublish] <Sulfur> anyone of you ever tinkered with vbulletin's plugin system?
+[11-28-2005 09:56:58] [#ezpublish] <Sulfur> I am trying to make vbulletin users authenticate through eZpublish
+[11-28-2005 10:30:45] -!- Sulfur [n=mbariola@217.221.32.143] has quit [Read error: 104 (Connection reset by peer)]
+[11-28-2005 10:40:34] -!- Sulfu1 [n=mbariola@217.221.32.143] has joined #ezpublish
+[11-28-2005 10:40:39] [#ezpublish] <Sulfu1> ping
+[11-28-2005 10:40:53] -!- Sulfu1 is now known as Sulfur
+[11-28-2005 10:47:42] [#ezpublish] <Katana`> pong
+[11-28-2005 10:47:45] [#ezpublish] <Katana`> damn you're lagged
+[11-28-2005 10:51:18] [#ezpublish] <Sulfur> :)
+[11-28-2005 10:51:24] [#ezpublish] <Sulfur> lagged, fell , etc
+[11-28-2005 10:51:33] [#ezpublish] <Katana`> fucking cache
+[11-28-2005 10:51:52] [#ezpublish] <Sulfur> we have such a nice ISP that when we had problems earlier, their tech support just powercycled the apparata
+[11-28-2005 10:52:05] [#ezpublish] <Sulfur> .... effectively cutting us out not only from inet but also from phone
+[11-28-2005 10:52:16] [#ezpublish] <Sulfur> and their IVR does not work with most cell phones
+[11-28-2005 10:52:18] [#ezpublish] <Sulfur> :)
+[11-28-2005 10:52:33] [#ezpublish] <Sulfur> yeah fucking cache
+[11-28-2005 10:52:48] [#ezpublish] * Sulfur does not know what is happening to Katana` but it is always safe to blame cache
+[11-28-2005 10:52:55] [#ezpublish] <Katana`> it is, it is
+[11-28-2005 10:53:06] [#ezpublish] <Katana`> clear cache was not clearing cache :)
+[11-28-2005 10:53:33] [#ezpublish] * Sulfur would like to know when can he tackle a simple eZ project which will not require him to delve into strange integrations, extension, etc
+[11-28-2005 10:53:41] [#ezpublish] <Sulfur> uh
+[11-28-2005 10:53:51] [#ezpublish] <Sulfur> I go the rm -rf way
+[11-28-2005 10:53:57] [#ezpublish] <Sulfur> only way to be sure
+[11-28-2005 10:54:00] [#ezpublish] <Katana`> guess what i ended up doing ;)
+[11-28-2005 10:54:16] [#ezpublish] <Sulfur> um, lemme think .... rm -rf ........ maybe .....? ;)
+[11-28-2005 10:54:44] [#ezpublish] <Katana`> a bit :)
+[11-28-2005 10:54:53] [#ezpublish] <Sulfur> ... now, which would be the correct way to propagate an user authentication .... grumble
+[11-28-2005 10:55:08] [#ezpublish] <Katana`> okay now why don't i get that email
+[11-28-2005 10:55:15] [#ezpublish] <Sulfur> I think I'll add a vbulletin hook which calls my login extension
+[11-28-2005 10:55:29] [#ezpublish] * Sulfur got a mail from katana-inc.com
+[11-28-2005 10:55:33] [#ezpublish] <Sulfur> lol
+[11-28-2005 10:55:42] [#ezpublish] <Katana`> serious ?
+[11-28-2005 10:56:04] [#ezpublish] <Sulfur> no
+[11-28-2005 10:56:14] [#ezpublish] <Katana`> could have happened :)
+[11-28-2005 10:56:31] [#ezpublish] <Sulfur> seems you are at the cooking point in which you can consider every possibility
+[11-28-2005 10:56:46] [#ezpublish] <Sulfur> yes and it sold me viagra, fyi
+[11-28-2005 10:56:47] [#ezpublish] <Sulfur> ;)
+[11-28-2005 10:57:33] [#ezpublish] <xbit> hehe
+[11-28-2005 10:57:59] [#ezpublish] <Katana`> good price ?
+[11-28-2005 10:58:15] [#ezpublish] <Sulfur> like 39.99 US$
+[11-28-2005 10:58:29] [#ezpublish] <Katana`> is that a good price ? you seem to know about that :)
+[11-28-2005 10:58:43] [#ezpublish] <Sulfur> but I didn't buy it becasue it didn't came with an inflatable sheep
+[11-28-2005 10:58:52] [#ezpublish] <Sulfur> nor an inflatable dead raven
+[11-28-2005 10:58:52] [#ezpublish] <Katana`> :))
+[11-28-2005 10:59:15] [#ezpublish] <Sulfur> now *that* would be a terrific gadget for next eZ meeting
+[11-28-2005 10:59:39] [#ezpublish] <Katana`> lol
+[11-28-2005 10:59:47] [#ezpublish] <Katana`> i don't even wanna know what it would look like :)
+[11-28-2005 11:00:03] [#ezpublish] <Sulfur> like an inflatable raven of course
+[11-28-2005 11:00:05] [#ezpublish] <Sulfur> ;)
+[11-28-2005 11:00:25] [#ezpublish] <Katana`> and that would look like ? :)
+[11-28-2005 11:01:01] [#ezpublish] <Sulfur> when uninflated, like a lump of plastic and feathers
+[11-28-2005 11:01:25] [#ezpublish] <Katana`> no guts, blood, pierced eyes ?
+[11-28-2005 11:01:26] [#ezpublish] <Sulfur> when inflated, like a dead raven
+[11-28-2005 11:01:37] [#ezpublish] <Sulfur> no, eyes in the "X" fashion
+[11-28-2005 11:02:50] [#ezpublish] <Sulfur> open beak and lolling tongue
+[11-28-2005 11:02:57] [#ezpublish] <Katana`> lol
+[11-28-2005 11:03:15] [#ezpublish] <Sulfur> frozen in its last squawk! ;)
+[11-28-2005 11:04:24] [#ezpublish] <Katana`> :)
+[11-28-2005 11:26:06] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 110 (Connection timed out)]
+[11-28-2005 11:34:13] [#ezpublish] <buz> http://www.nookawatch.com/noo_models.html yeah neat
+[11-28-2005 11:36:20] [#ezpublish] <fh2> I think we should make secret t-shirt patches with ravens on them
+[11-28-2005 11:36:25] [#ezpublish] <fh2> like a secret society
+[11-28-2005 11:54:55] -!- fh2 is now known as fh[eZ]
+[11-28-2005 12:24:45] [#ezpublish] <kris10an> you are all raven mad!
+[11-28-2005 12:24:52] [#ezpublish] <_Rappy_> yes
+[11-28-2005 12:25:32] [#ezpublish] <Sulfur> well .... I thnk that secret societies should not have permanent symbols or markers ... then again, a dead raven lasts maybe a year??? ;)
+[11-28-2005 12:25:46] [#ezpublish] <buz> fh[eZ]: cafepress.com makes that tshirts for ya
+[11-28-2005 12:25:50] [#ezpublish] <Sulfur> or we sew the patches on the INSIDE of the t-shirt ?
+[11-28-2005 12:26:04] [#ezpublish] <fh[eZ]> hahaha
+[11-28-2005 12:26:20] [#ezpublish] <buz> actually, that's more appropriate for a secret society
+[11-28-2005 12:26:27] [#ezpublish] <fh[eZ]> that sounds like a plan.. and then under heavy light you might just notice it... barely
+[11-28-2005 12:27:29] [#ezpublish] <kris10an> i say we make it with some kind of phosphoric stuff, so only when you have a blacklight you will see the dead raven...
+[11-28-2005 12:27:57] [#ezpublish] <buz> mhh sounds good
+[11-28-2005 12:28:06] [#ezpublish] <buz> dead raven would be good in goth clubs with blacklight
+[11-28-2005 12:29:39] [#ezpublish] <Sulfur> mumble mumble mumble
+[11-28-2005 12:29:53] [#ezpublish] <Sulfur> how much would you pay for a t-shirt made like that? :)
+[11-28-2005 12:31:14] [#ezpublish] <kris10an> i would definity give away my dead raven for that tshirt...
+[11-28-2005 12:31:17] [#ezpublish] <Sulfur> maybe I might ask some designers here if they come up with a nice dead raven logo
+[11-28-2005 12:31:29] [#ezpublish] <kris10an> that would be cool :-)
+[11-28-2005 12:31:48] [#ezpublish] <Sulfur> after all, we are all t-shirt fans here, I eprsonally have a time bokan one, a php5 one and a PurePwnage.com one
+[11-28-2005 12:35:33] [#ezpublish] <fh[eZ]> sounds like a plan
+[11-28-2005 12:37:41] [#ezpublish] <kris10an> i have the "WTF?" tshirt
+[11-28-2005 12:38:26] [#ezpublish] <fh[eZ]> I want the: I don't need to test my code. I have an error correcting modem. t-shirt
+[11-28-2005 12:38:41] [#ezpublish] <kris10an> i also really want the tshirt with <body> on the front and </body> on the back.. but they seem to have stopped selling them..
+[11-28-2005 12:40:08] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has left #ezpublish []
+[11-28-2005 12:41:15] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-28-2005 12:41:21] [#ezpublish] <Sulfur> fh[eZ]: lol
+[11-28-2005 12:41:51] [#ezpublish] <Sulfur> I have also seen a really nifty totally black one with a <GRUE> .... </GRUE> text
+[11-28-2005 12:43:31] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-28-2005 12:45:54] [#ezpublish] <Sulfur> (of course not many know what that is without googling for it ;) )
+[11-28-2005 12:49:18] [#ezpublish] <kris10an> Grue Kommune?
+[11-28-2005 12:49:20] [#ezpublish] <kris10an> ;-)
+[11-28-2005 12:55:14] [#ezpublish] <kris10an> (that was my first hit anyways)
+[11-28-2005 12:59:01] [#ezpublish] <Sulfur> nope
+[11-28-2005 12:59:08] [#ezpublish] <Sulfur> try grue zork
+[11-28-2005 12:59:20] [#ezpublish] <Sulfur> youngsters these days .....
+[11-28-2005 12:59:27] [#ezpublish] <Sulfur> *sigh*
+[11-28-2005 13:00:26] [#ezpublish] <kris10an> hehhehe
+[11-28-2005 13:00:42] [#ezpublish] <kris10an> yes.. we are all ignorant brats :-)
+[11-28-2005 13:00:53] [#ezpublish] <kris10an> "It is pitch black. You are likely to be eaten by a grue."
+[11-28-2005 13:02:34] [#ezpublish] <Sulfur> RIGHT.
+[11-28-2005 13:04:49] [#ezpublish] <Sulfur> these were the days ....
+[11-28-2005 13:05:04] [#ezpublish] * Sulfur starts rambling and ranting in pure COOF style
+[11-28-2005 13:05:44] [#ezpublish] * buz entered the scene when the graphical adventures came
+[11-28-2005 13:05:53] [#ezpublish] <buz> maniac mansion rocked
+[11-28-2005 13:06:07] [#ezpublish] <Sulfur> I lerant english with text adventures ya PUNKS
+[11-28-2005 13:06:19] [#ezpublish] <Sulfur> I much preferred Zak Mc Kracken
+[11-28-2005 13:06:35] [#ezpublish] <Sulfur> in fact, I replayed it 2 weeks ago
+[11-28-2005 13:06:39] [#ezpublish] <Sulfur> sooooo c00l
+[11-28-2005 13:06:50] [#ezpublish] <Sulfur> *sniff*
+[11-28-2005 13:07:14] [#ezpublish] * Sulfur bores everyone to death with tales on how old games were so much more entertaining
+[11-28-2005 13:09:10] [#ezpublish] <Sulfur> time to go , old people go to bed soon ;) bye
+[11-28-2005 13:09:21] -!- Sulfur [n=mbariola@217.221.32.143] has quit ["Isn't Gaim a cool program ? :-)"]
+[11-28-2005 13:28:14] [#ezpublish] <fh[eZ]> http://ez.no/community/news/ez_components_1_0_beta1
+[11-28-2005 13:32:30] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-28-2005 13:32:30] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-28-2005 13:38:54] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has quit [Read error: 104 (Connection reset by peer)]
+[11-28-2005 13:40:50] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-28-2005 13:42:51] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has left #ezpublish []
+[11-28-2005 13:43:41] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-28-2005 13:58:14] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-28-2005 13:59:57] -!- _Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-28-2005 14:06:36] [#ezpublish] <kris10an> all hail the new components!
+[11-28-2005 14:06:46] [#ezpublish] <buz> HAIL
+[11-28-2005 14:06:51] [#ezpublish] <buz> HAIL
+[11-28-2005 14:06:52] [#ezpublish] <buz> HAIL
+[11-28-2005 14:06:58] [#ezpublish] <kris10an> heheheh
+[11-28-2005 14:07:08] [#ezpublish] <kris10an> the components will make you happy
+[11-28-2005 14:07:25] -!- _Rappy_ is now known as _rappy_
+[11-28-2005 14:07:29] [#ezpublish] <_rappy_> adio peeps :)
+[11-28-2005 14:07:48] [#ezpublish] <kris10an> the components will cure you of your decieses
+[11-28-2005 14:08:22] [#ezpublish] <kris10an> the components will make the world  a happier place
+[11-28-2005 14:08:48] [#ezpublish] <kris10an> ok.. im going to go back to the black hole which i came from now :-)
+[11-28-2005 14:11:19] [#ezpublish] <Katana`> yeah
+[11-28-2005 14:11:24] [#ezpublish] <Katana`> you should kris10an :)
+[11-28-2005 14:14:01] [#ezpublish] <kris10an> hail to the king baby!
+[11-28-2005 14:14:07] [#ezpublish] <kris10an> give me some sugar
+[11-28-2005 14:14:11] [#ezpublish] <kris10an> :-)
+[11-28-2005 14:16:48] -!- lBjornl [n=br@85.80-203-136.nextgentel.com] has joined #ezpublish
+[11-28-2005 14:17:01] -!- lBjornl [n=br@85.80-203-136.nextgentel.com] has quit [Remote closed the connection]
+[11-28-2005 14:21:05] [#ezpublish] <buz> uh were does the license for the components live?
+[11-28-2005 14:21:12] [#ezpublish] <buz> 2 part bsdl?
+[11-28-2005 14:21:20] [#ezpublish] <fh[eZ]> ah, wait.. I'll make a link in the article
+[11-28-2005 14:21:36] [#ezpublish] <fh[eZ]> http://ez.no/products/licenses
+[11-28-2005 14:21:57] [#ezpublish] <buz> ok that is very liberal, nice touch!
+[11-28-2005 14:21:57] [#ezpublish] * Katana` hands kris10an a sugar
+[11-28-2005 14:21:57] [#ezpublish] <Katana`> evening frederik
+[11-28-2005 14:23:18] [#ezpublish] <fh[eZ]> evening
+[11-28-2005 14:24:06] [#ezpublish] <fh[eZ]> liberal is good isn't it?
+[11-28-2005 14:24:10] [#ezpublish] <fh[eZ]> :)
+[11-28-2005 14:24:19] [#ezpublish] <buz> in my view, yes
+[11-28-2005 14:24:22] [#ezpublish] <buz> others may vary
+[11-28-2005 14:24:33] [#ezpublish] <fh[eZ]> I think most people would say yes
+[11-28-2005 14:24:44] [#ezpublish] <buz> bsdl is anything goes
+[11-28-2005 14:24:49] [#ezpublish] <buz> anything goes is always good ;)
+[11-28-2005 14:25:10] [#ezpublish] <fh[eZ]> at least, I think the number of people who will choose not to use components because of the license is limited
+[11-28-2005 14:25:19] [#ezpublish] <buz> likely so
+[11-28-2005 14:25:30] [#ezpublish] <buz> now the components need PR PR PR
+[11-28-2005 14:25:38] [#ezpublish] <fh[eZ]> yep
+[11-28-2005 14:25:49] [#ezpublish] <fh[eZ]> we'll start invading slashdot pretty soon
+[11-28-2005 14:26:01] [#ezpublish] <buz> i never post on slashdot :=
+[11-28-2005 14:26:08] [#ezpublish] <buz> waste way too much time there as it is
+[11-28-2005 14:26:18] [#ezpublish] <fh[eZ]> heh, true..
+[11-28-2005 14:26:23] [#ezpublish] <fh[eZ]> actually I mean freshmeat
+[11-28-2005 14:26:28] [#ezpublish] <fh[eZ]> but slashdot would be cool as well
+[11-28-2005 14:26:31] [#ezpublish] <buz> that one i dont follow
+[11-28-2005 14:26:33] [#ezpublish] <fh[eZ]> however, someone needs to write about us
+[11-28-2005 14:26:41] [#ezpublish] <buz> but slashdot would be good for initial pushes
+[11-28-2005 14:26:46] [#ezpublish] <fh[eZ]> we can't submit our own stuff (that would be bad)
+[11-28-2005 14:27:10] [#ezpublish] <fh[eZ]> I think slashdot should wait
+[11-28-2005 14:27:13] [#ezpublish] <fh[eZ]> 'til 1.0
+[11-28-2005 14:28:01] [#ezpublish] <buz> yeah
+[11-28-2005 14:28:04] [#ezpublish] <buz> i can write something
+[11-28-2005 14:28:09] [#ezpublish] <buz> but i don tthink i even have an account
+[11-28-2005 14:28:14] [#ezpublish] <buz> and creating one to spam slashdot?
+[11-28-2005 14:28:25] [#ezpublish] <buz> you should get that robert cringely to write about it
+[11-28-2005 14:28:28] [#ezpublish] <buz> he always gets on slashdot ;)
+[11-28-2005 14:28:34] [#ezpublish] <buz> no wait
+[11-28-2005 14:28:39] [#ezpublish] <buz> roland piquepaille is the one ;)
+[11-28-2005 14:28:51] [#ezpublish] <fh[eZ]> heh
+[11-28-2005 14:29:00] [#ezpublish] <fh[eZ]> I wonder how poor ez.no would deel with it
+[11-28-2005 14:29:07] [#ezpublish] <buz> yeah
+[11-28-2005 14:29:13] [#ezpublish] <buz> it wouldnt take a slashdotting
+[11-28-2005 14:29:22] [#ezpublish] <buz> and that would be HIGHLY embarassing
+[11-28-2005 14:29:33] [#ezpublish] <fh[eZ]> I think we would need to put up a little static cache fast
+[11-28-2005 14:29:44] [#ezpublish] <buz> or a whole rack of servers
+[11-28-2005 14:30:07] [#ezpublish] <fh[eZ]> not really I think... how many CMS's out there can handle slashdot? (not counting enourmous server farms)
+[11-28-2005 14:30:23] [#ezpublish] <Katana`> there are already articles comparing Zend's and yours
+[11-28-2005 14:30:23] [#ezpublish] <Katana`> it looks like you're not competitors ;)
+[11-28-2005 14:30:23] [#ezpublish] <Katana`> i don't think so
+[11-28-2005 14:30:23] [#ezpublish] <Katana`> Zend is not gonna wait :)
+[11-28-2005 14:30:24] [#ezpublish] <buz> well most cms arent built by a commercial entity
+[11-28-2005 14:30:26] [#ezpublish] <Katana`> LOL
+[11-28-2005 14:30:28] [#ezpublish] <Katana`> :))
+[11-28-2005 14:30:30] [#ezpublish] <Katana`> that's good advertising
+[11-28-2005 14:30:32] [#ezpublish] <Katana`> yup :)
+[11-28-2005 14:30:34] [#ezpublish] <Katana`> both
+[11-28-2005 14:30:36] [#ezpublish] <Katana`> that was a good point of working in luxembourg
+[11-28-2005 14:30:38] [#ezpublish] <Katana`> 400 000 inhabitants ;)
+[11-28-2005 14:30:40] [#ezpublish] <Katana`> eZ is commercial ???
+[11-28-2005 14:30:42] [#ezpublish] <Katana`> !!!
+[11-28-2005 14:30:43] [#ezpublish] <buz> sure
+[11-28-2005 14:30:50] [#ezpublish] <buz> dont tell anyone but it is ;)
+[11-28-2005 14:30:54] [#ezpublish] <Katana`> was I lied to ? !!
+[11-28-2005 14:30:59] [#ezpublish] <fh[eZ]> well, of course they are comparing zend and ours
+[11-28-2005 14:31:05] [#ezpublish] <buz> can you beat zend?
+[11-28-2005 14:31:07] [#ezpublish] <fh[eZ]> still.. the zend stuff doesn't even exist yet
+[11-28-2005 14:31:11] [#ezpublish] <buz> true
+[11-28-2005 14:31:20] [#ezpublish] <buz> ez needs an ajax toolkit with the bunch
+[11-28-2005 14:31:45] [#ezpublish] <buz> but qooxdoo isnt bsdl
+[11-28-2005 14:31:49] [#ezpublish] <fh[eZ]> actually we approached zend about cooperating
+[11-28-2005 14:32:04] [#ezpublish] <buz> zend is about the last company in php land i'd want to deal with
+[11-28-2005 14:32:10] [#ezpublish] <fh[eZ]> but they were not interested (we could donate if we wanted)
+[11-28-2005 14:32:14] [#ezpublish] <Katana`> really fh ?
+[11-28-2005 14:32:18] [#ezpublish] <Katana`> and how did it end ?
+[11-28-2005 14:32:48] [#ezpublish] <buz> well as long as you somehow beat the typo3 i code for jesus suckers all is well
+[11-28-2005 14:33:06] [#ezpublish] <fh[eZ]> Katana`: we do what we do.. they do what they do
+[11-28-2005 14:33:20] [#ezpublish] <buz> yeah, ez suffers of NIH quite badly
+[11-28-2005 14:33:45] [#ezpublish] <buz> not necessarily a bad thing
+[11-28-2005 14:33:57] [#ezpublish] <buz> but at times it's begs questions
+[11-28-2005 14:34:01] [#ezpublish] <fh[eZ]> NIH?
+[11-28-2005 14:34:10] [#ezpublish] <buz> not invented here (syndrome)
+[11-28-2005 14:34:25] [#ezpublish] <fh[eZ]> and by that you mean?
+[11-28-2005 14:34:44] [#ezpublish] <buz> we rather write our own stuff instead of using tried and true parts
+[11-28-2005 14:34:52] [#ezpublish] <Katana`> fh[eZ]: people say that zend would be a complete framework while eZ would be pear like
+[11-28-2005 14:35:06] [#ezpublish] <Katana`> and that both would even cohabit nicely
+[11-28-2005 14:35:07] [#ezpublish] <buz> what license is zend under
+[11-28-2005 14:35:19] [#ezpublish] <buz> or will be
+[11-28-2005 14:35:24] [#ezpublish] <Katana`> hum don't remember
+[11-28-2005 14:35:30] [#ezpublish] <fh[eZ]> buz: well, I can see what you mean. However, the number of tried and true parts in the PHP world is limited.. and then you have the license / support issue
+[11-28-2005 14:35:31] [#ezpublish] <Katana`> ZFL ?
+[11-28-2005 14:35:40] [#ezpublish] <fh[eZ]> we could never do that....
+[11-28-2005 14:35:47] [#ezpublish] <buz> point
+[11-28-2005 14:35:51] [#ezpublish] <Katana`> do what ?
+[11-28-2005 14:36:06] [#ezpublish] <buz> but doing your own template language does really beg for questions
+[11-28-2005 14:36:09] [#ezpublish] <fh[eZ]> Katana`: now that depends on what components we are going to make.. there will be framework components as well
+[11-28-2005 14:36:21] [#ezpublish] <buz> zend: This framework is designed to bring extreme simplicity, an open standard, a friendly license and a structured development process all leading to a uniform code base for next-generation Web application
+[11-28-2005 14:36:31] [#ezpublish] <buz> whatever a friendly license means, really
+[11-28-2005 14:37:03] [#ezpublish] <buz> if you can bring ez components into the league of rails, zend will lose
+[11-28-2005 14:37:11] [#ezpublish] <fh[eZ]> buz: the language is not that important actually.. the new parser is plugable so you can pretty easiliy make it parse a completely different syntax
+[11-28-2005 14:37:16] [#ezpublish] <Katana`> yay
+[11-28-2005 14:37:22] [#ezpublish] <Katana`> that's a good thing
+[11-28-2005 14:37:41] [#ezpublish] <buz> neeeeat
+[11-28-2005 14:37:46] [#ezpublish] <Katana`> is eZ 5 gonna add funky syntax like {if ($var == $othervar) or (...))} ? :)
+[11-28-2005 14:37:48] [#ezpublish] <fh[eZ]> the main reason why the default syntax is similar to what we have today is backwards compatibility
+[11-28-2005 14:37:48] [#ezpublish] <buz> the template language isnt as bad as it used to be
+[11-28-2005 14:38:07] [#ezpublish] <buz> at least it can do if and sane loops now
+[11-28-2005 14:38:07] [#ezpublish] <Katana`> i agree, totally
+[11-28-2005 14:38:12] [#ezpublish] <fh[eZ]> I quite like actually, when I compare it to others I think it is both powerful and readable
+[11-28-2005 14:38:23] [#ezpublish] <buz> velocity is one of the best IMHO
+[11-28-2005 14:38:34] [#ezpublish] <Katana`> well, it mainly is, but conditionnals and booleans could really be improved
+[11-28-2005 14:38:49] [#ezpublish] <buz> yeah
+[11-28-2005 14:38:51] [#ezpublish] <fh[eZ]> and I have to admit that I was highly critical of our template language when I started here
+[11-28-2005 14:38:53] [#ezpublish] <kris10an> foreach ( .... sequence array('left','right') ) is quite cool...
+[11-28-2005 14:39:01] [#ezpublish] <buz> i mean i know it's easier to parse the way it currently is
+[11-28-2005 14:39:06] [#ezpublish] <buz> but it's far from human friendly
+[11-28-2005 14:39:17] [#ezpublish] <Katana`> but waaaaay better than our old friend section:)
+[11-28-2005 14:39:22] [#ezpublish] <fh[eZ]> there will be more normal syntax like something( otherthing() )
+[11-28-2005 14:39:23] [#ezpublish] <Katana`> who came up with that ? :)
+[11-28-2005 14:39:28] [#ezpublish] <buz> i still use section ;
+[11-28-2005 14:39:28] [#ezpublish] <Katana`> great fh[eZ]
+[11-28-2005 14:39:33] [#ezpublish] <Katana`> i don't...
+[11-28-2005 14:39:34] [#ezpublish] <Katana`> i'm a smarty user :)
+[11-28-2005 14:40:05] [#ezpublish] <buz> i havent looked at persisentobject yet
+[11-28-2005 14:40:07] [#ezpublish] <fh[eZ]> section was a leftover from the good old static templates used in previous generation template engines
+[11-28-2005 14:40:08] [#ezpublish] <buz> is it like proper ORM now?
+[11-28-2005 14:40:16] [#ezpublish] <fh[eZ]> we're still working on PO
+[11-28-2005 14:40:32] [#ezpublish] <fh[eZ]> but we are looking into ORM yes...
+[11-28-2005 14:40:38] [#ezpublish] <buz> the, by FAR,  best implementation of it is hibernate.org
+[11-28-2005 14:40:46] [#ezpublish] <buz> (IMHO, java's killer app)
+[11-28-2005 14:41:46] [#ezpublish] * buz might go back to java for a while in a few months
+[11-28-2005 14:41:54] [#ezpublish] <buz> a new project up for discussion will need it
+[11-28-2005 14:41:58] [#ezpublish] <fh[eZ]> the main problem we seem to hit when making components is the amount of objects we can create...
+[11-28-2005 14:42:09] [#ezpublish] <fh[eZ]> php is really sensitive to that so we have to keep it down
+[11-28-2005 14:42:16] [#ezpublish] <fh[eZ]> performance wise
+[11-28-2005 14:42:26] [#ezpublish] <Katana`> :(
+[11-28-2005 14:42:26] [#ezpublish] <buz> does PO still shoehorn everything into one giant table?
+[11-28-2005 14:42:30] [#ezpublish] <Katana`> isn't it better with 5.1 ?
+[11-28-2005 14:42:44] [#ezpublish] <buz> oh my bad, PO never did that
+[11-28-2005 14:42:50] [#ezpublish] <buz> contentobject does that
+[11-28-2005 14:43:11] [#ezpublish] <fh[eZ]> buz: that is something I want to get rid of over time
+[11-28-2005 14:43:23] [#ezpublish] <fh[eZ]> buz: probably some sort of content2 will appear in the future
+[11-28-2005 14:43:28] [#ezpublish] <buz> you'll be my personal hero if i can map it to custom sql schema
+[11-28-2005 14:43:29] [#ezpublish] <fh[eZ]> not yet though
+[11-28-2005 14:44:06] [#ezpublish] <kris10an> yes.. i also really want to map the contentstructure to a databasetable...
+[11-28-2005 14:44:11] [#ezpublish] <buz>  "As a committed leader and supporter of innovation of all kinds, Intel welcomes the PHP Collaboration Project as a new paradigm for PHP application development and deployment,
+[11-28-2005 14:44:14] [#ezpublish] <fh[eZ]> the problem is (again) BC... if you go for a custom sql schema way you will have problems with fetches that span over several content classes
+[11-28-2005 14:44:16] [#ezpublish] <buz> of course intel does, as slow as php is
+[11-28-2005 14:44:29] [#ezpublish] <kris10an> but it brings some problems with translations and versions and so on..
+[11-28-2005 14:44:31] [#ezpublish] <buz> i know
+[11-28-2005 14:44:39] [#ezpublish] <kris10an> or challenges as we like to call them...
+[11-28-2005 14:44:47] [#ezpublish] <buz> but otoh, for a truly enterprise component, it's a must have
+[11-28-2005 14:45:11] [#ezpublish] <fh[eZ]> I think I would like to see a combo at first
+[11-28-2005 14:45:23] [#ezpublish] <buz> mhh maybe TWO toolkits
+[11-28-2005 14:45:25] [#ezpublish] <buz> with a migration path
+[11-28-2005 14:45:33] [#ezpublish] <fh[eZ]> where you only use the custom stuff for high volume classes
+[11-28-2005 14:45:35] [#ezpublish] <buz> i dont think its wise to mix i it
+[11-28-2005 14:46:09] [#ezpublish] <fh[eZ]> I think there is no way around it....how to support all the features of the current model with the new model (BC again..)
+[11-28-2005 14:46:15] [#ezpublish] <buz> if contentobject would do proper ORM, we'd be nearly up to par with rails
+[11-28-2005 14:46:17] [#ezpublish] <Katana`> hehe :)
+[11-28-2005 14:46:33] [#ezpublish] <buz> not sure if you need ALL of them
+[11-28-2005 14:46:34] [#ezpublish] <fh[eZ]> buz: and your definition of proper ORM is?
+[11-28-2005 14:46:45] [#ezpublish] <buz> at the very least, custom db schema
+[11-28-2005 14:46:56] [#ezpublish] <buz> proper support for foreign keys and auto joinning thereof
+[11-28-2005 14:47:06] [#ezpublish] <fh[eZ]> buz: yes you need all of them. People expect to be able to upgrade.... and have it work
+[11-28-2005 14:47:13] [#ezpublish] <buz> as i say, hibernate is top
+[11-28-2005 14:47:21] [#ezpublish] <buz> yes and no
+[11-28-2005 14:47:35] [#ezpublish] <buz> if you can provide an auto upgrade path for content object that's likely enough
+[11-28-2005 14:47:41] [#ezpublish] <fh[eZ]> custom db schema is already supported, support for foreign key joining is going to be implemented
+[11-28-2005 14:47:51] [#ezpublish] <buz> somet imes its GOOD to break BC compatibility
+[11-28-2005 14:47:55] [#ezpublish] <fh[eZ]> but I don't think we will go the xml schema way
+[11-28-2005 14:48:09] [#ezpublish] <buz> xml schema sucks
+[11-28-2005 14:48:13] [#ezpublish] <buz> way too much typing
+[11-28-2005 14:48:31] [#ezpublish] <buz> best to simply pull the structure from the db
+[11-28-2005 14:48:51] [#ezpublish] <fh[eZ]> foreign keys can be hard to tell..
+[11-28-2005 14:49:12] [#ezpublish] <buz> well if theres a sane way to tell the system that something is a key that might be good enough
+[11-28-2005 14:49:18] [#ezpublish] <buz> i dont like pseudo intelligent systems very much
+[11-28-2005 14:50:29] [#ezpublish] <buz> smart systems are nice, those with a life of their own arent
+[11-28-2005 14:50:50] [#ezpublish] <fh[eZ]> fine line between those :)
+[11-28-2005 14:51:03] [#ezpublish] <buz> its much like genius vs madman
+[11-28-2005 14:51:14] [#ezpublish] <fh[eZ]> please try our PO in the next beta and tell us what you think
+[11-28-2005 14:51:19] [#ezpublish] <fh[eZ]> it is a crucial component
+[11-28-2005 14:51:25] [#ezpublish] <fh[eZ]> so it needs to be done well
+[11-28-2005 14:51:31] [#ezpublish] <buz> when is the beta due?
+[11-28-2005 14:51:44] [#ezpublish] <buz> i dont think i can play with it before xmas
+[11-28-2005 14:51:53] [#ezpublish] <fh[eZ]> I think it will be in a couple of weeks
+[11-28-2005 14:52:29] [#ezpublish] * buz has his very own views about db design
+[11-28-2005 14:52:37] [#ezpublish] <fh[eZ]> you're not alone :)
+[11-28-2005 14:53:52] [#ezpublish] <buz> i consider normalization to be evil in many cases
+[11-28-2005 14:54:12] [#ezpublish] <buz> it's nice for db integrity
+[11-28-2005 14:54:17] [#ezpublish] <buz> but it sucks for performance
+[11-28-2005 15:00:37] -!- Bjorn [n=Bjorn@85.80-203-136.nextgentel.com] has joined #ezpublish
+[11-28-2005 15:15:24] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[11-28-2005 15:15:55] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-28-2005 15:15:55] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-28-2005 15:16:22] -!- _Katana` is now known as Katana`
+[11-28-2005 15:24:34] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has left #ezpublish []
+[11-28-2005 15:28:34] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-28-2005 15:33:49] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has joined #ezpublish
+[11-28-2005 15:50:42] [#ezpublish] <Katana`> http://members.roadfly.org/fosters.3/World'sMostPainfulTattoo.jpg
+[11-28-2005 16:18:31] [#ezpublish] <xbit> mm, cute
+[11-28-2005 16:25:43] -!- ls[eZ] [n=ls@unregister049205219081.c205.msk.pl] has quit ["Leaving"]
+[11-28-2005 16:29:11] -!- nnn0 [n=therion@unaffiliated/nnn0] has left #ezpublish ["ehehe ;"]
+[11-28-2005 16:29:32] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-28-2005 16:45:49] -!- _Katana` [n=katana@ankh-morpork.net] has quit [Read error: 104 (Connection reset by peer)]
+[11-28-2005 16:46:43] -!- _Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[11-28-2005 16:59:27] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 110 (Connection timed out)]
+[11-28-2005 16:59:28] -!- _Katana` is now known as Katana`
+[11-28-2005 17:00:15] [#ezpublish] <Katana`> he's on EFNet ! *** Joins: The-Raven (~mongo@ti100710a080-5577.bb.online.no) - Clones: 2 from The-Raven (The_Raven) CtrlF1 whois; ShiftF8 ping
+[11-28-2005 17:24:01] [#ezpublish] <xbit> O M G !
+[11-28-2005 17:24:25] [#ezpublish] <xbit> he's even in norway!
+[11-28-2005 17:28:56] [#ezpublish] <Katana`> :)
+[11-28-2005 17:56:59] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has quit [Read error: 104 (Connection reset by peer)]
+[11-28-2005 18:01:51] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has joined #ezpublish
+[11-28-2005 18:05:47] -!- Katana` [n=katana@ankh-morpork.net] has quit [Read error: 113 (No route to host)]
+[11-28-2005 18:49:11] -!- Proteque_ [n=gjorans@213.184.199.245] has joined #ezpublish
+[11-28-2005 18:49:37] -!- Proteque [n=gjorans@213.184.199.245] has quit [Read error: 104 (Connection reset by peer)]
+[11-28-2005 19:01:34] -!- Proteque [n=gjorans@213.184.199.245] has joined #ezpublish
+[11-28-2005 19:02:07] -!- Proteque_ [n=gjorans@213.184.199.245] has quit [Read error: 113 (No route to host)]
+[11-28-2005 19:18:07] -!- xbit [n=stian@216-102-66.0504.adsl.tele2.no] has quit [Read error: 110 (Connection timed out)]
+[11-28-2005 20:08:25] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish

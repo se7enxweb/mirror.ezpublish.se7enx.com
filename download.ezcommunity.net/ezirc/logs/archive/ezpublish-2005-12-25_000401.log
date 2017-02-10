@@ -1,0 +1,66 @@
+[12-24-2005 02:09:43] -!- kore_ [n=lordhong@essn-d9bd4bde.pool.mediaWays.net] has joined #ezpublish
+[12-24-2005 03:26:23] -!- tobyS [n=dotxp@dslb-084-060-005-121.pools.arcor-ip.net] has joined #ezpublish
+[12-24-2005 03:28:53] -!- xbit [i=xbit@pppoecl86167.minlos.no] has quit [""Beer is living proof that God loves us and wants us to be happy.""]
+[12-24-2005 03:47:34] [#ezpublish] <xiglet> will the development stall a bit now when ez systems put so much work into e components?
+[12-24-2005 04:32:39] [#ezpublish] <tobyS> xiglet: no, i don't think so. the components shall also be the basis for ezp 4, so development on ezp itself will start soo, i expect
+[12-24-2005 05:14:41] -!- xbit [i=xbit@pppoecl86167.minlos.no] has joined #ezpublish
+[12-24-2005 05:15:58] -!- xbit [i=xbit@pppoecl86167.minlos.no] has quit [Client Quit]
+[12-24-2005 05:22:51] -!- xbit [i=xbit@pppoecl86167.minlos.no] has joined #ezpublish
+[12-24-2005 05:25:44] -!- DiGiTa|_ [n=guillaum@84.4.125.132] has joined #ezpublish
+[12-24-2005 05:31:00] [#ezpublish] <xiglet> tobyS: ok, sounds great. I don't knowmuch about compontents yet
+[12-24-2005 05:31:15] [#ezpublish] <xiglet> I guess now isn't the time to start reading :)
+[12-24-2005 05:34:29] -!- xbit [i=xbit@pppoecl86167.minlos.no] has quit [""Beer is living proof that God loves us and wants us to be happy.""]
+[12-24-2005 05:40:22] -!- SEAwolfx [n=mike@tor/session/x-27e7916fa64e43b2] has joined #ezpublish
+[12-24-2005 05:40:49] [#ezpublish] <SEAwolfx> re
+[12-24-2005 05:43:38] -!- tobyS [n=dotxp@dslb-084-060-005-121.pools.arcor-ip.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-24-2005 05:44:11] -!- SEAwolfx_ [n=mike@DSL01.83.171.152.229.NEFkom.net] has joined #ezpublish
+[12-24-2005 05:44:13] -!- SEAwolfx_ [n=mike@DSL01.83.171.152.229.NEFkom.net] has quit [Client Quit]
+[12-24-2005 08:01:29] -!- SEAwolfx_ [n=mike@tor/session/x-e327f0eeebc93b0c] has joined #ezpublish
+[12-24-2005 08:05:05] -!- SEAwolfx [n=mike@tor/session/x-27e7916fa64e43b2] has quit [Remote closed the connection]
+[12-24-2005 08:06:32] -!- SEAwolfx_ is now known as SEAwolfx
+[12-24-2005 08:22:40] [#ezpublish] <SEAwolfx> mery christmas mood here.
+[12-24-2005 08:39:11] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-24-2005 08:39:26] -!- DiGiTa|_ [n=guillaum@84.4.125.132] has quit [Read error: 110 (Connection timed out)]
+[12-24-2005 09:13:30] -!- zr1 [n=zurgutt@80-235-49-168-dsl.kjj.estpak.ee] has joined #ezpublish
+[12-24-2005 09:21:23] [#ezpublish] <zr1> god, so boring
+[12-24-2005 09:23:14] -!- zr1 is now known as zrg_bored
+[12-24-2005 09:49:17] [#ezpublish] <SEAwolfx> indeed.
+[12-24-2005 10:51:40] [#ezpublish] <SEAwolfx> doh ... how can i check if a POST-var is set before i retrieve it with the template operator 'ezhttp'?
+[12-24-2005 10:58:02] -lilo:$*- [Global Notice] Hi all. On behalf of the staff and volunteers of Peer-Directed Projects Center, I wanted to take this opportunity to wish you all, "Happy holidays!"
+[12-24-2005 10:58:04] -lilo:$*- [Global Notice] Our first level support ( http://freenode.net/faq.shtml#gettinghelp ) may be a bit light through the beginning of the year
+[12-24-2005 10:58:07] -lilo:$*- [Global Notice] Have a great holiday season, and thank you for using freenode!
+[12-24-2005 13:56:42] -!- zrg_bored [n=zurgutt@80-235-49-168-dsl.kjj.estpak.ee] has quit ["Download Gaim: http://gaim.sourceforge.net/"]
+[12-24-2005 15:40:52] -!- SEAwolfx [n=mike@tor/session/x-e327f0eeebc93b0c] has quit [Remote closed the connection]
+[12-24-2005 15:41:54] -!- SEAwolfx [n=mike@tor/session/x-57a276119add6ecf] has joined #ezpublish
+[12-24-2005 17:53:09] -!- kore_ [n=lordhong@essn-d9bd4bde.pool.mediaWays.net] has quit []
+[12-24-2005 18:10:19] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-24-2005 18:23:29] [#ezpublish] <buz> merry xmas everyone
+[12-24-2005 18:32:03] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-24-2005 18:32:03] -!- elephantMan [n=elephant@217.167.222.224] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-24-2005 18:32:03] -!- pire [n=kbot@217.160.130.142] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-24-2005 18:32:03] -!- seasonfive [n=seasonfi@AGrenoble-152-1-40-24.w82-122.abo.wanadoo.fr] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-24-2005 18:32:03] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-24-2005 18:36:41] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[12-24-2005 18:36:41] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-24-2005 18:36:41] -!- pire [n=kbot@217.160.130.142] has joined #ezpublish
+[12-24-2005 18:36:41] -!- seasonfive [n=seasonfi@AGrenoble-152-1-40-24.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[12-24-2005 18:36:41] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[12-24-2005 18:38:19] -lilo:$*- [Global Notice] Hi all. We're experiencing server issues....there may be some server recycles needed. Please bear with us.
+[12-24-2005 18:45:17] -!- elephantMan [n=elephant@217.167.222.224] has quit [Connection timed out]
+[12-24-2005 18:46:50] -!- seasonfive_ [n=seasonfi@AGrenoble-152-1-40-24.w82-122.abo.wanadoo.fr] has joined #ezpublish
+[12-24-2005 18:46:57] -!- seasonfive [n=seasonfi@AGrenoble-152-1-40-24.w82-122.abo.wanadoo.fr] has quit [Connection timed out]
+[12-24-2005 18:46:59] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has quit [Read error: 110 (Connection timed out)]
+[12-24-2005 18:48:25] -!- kracker [n=kracker@pdpc/supporter/sustaining/kracker] has joined #ezpublish
+[12-24-2005 18:48:41] -!- elephantMan [n=elephant@217.167.222.224] has joined #ezpublish
+[12-24-2005 18:52:02] -!- pire [n=kbot@217.160.130.142] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-24-2005 18:52:02] -!- nnn0 [n=therion@unaffiliated/nnn0] has quit [kornbluth.freenode.net irc.freenode.net]
+[12-24-2005 18:52:44] -lilo:$*- [Global Notice] Hi all. Our problems are a little less broad than we've thought.... affected users, about 7,000, and we should be stable. We're removing one server from the main rotation and we've shut it down. Apologies for any inconvenience. If there are no more high-impact problems, any further messages will be on wallops.
+[12-24-2005 18:55:09] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[12-24-2005 18:55:18] -!- pire [n=kbot@phpugdo.de] has joined #ezpublish
+[12-24-2005 21:50:00] -!- Bedlore [n=me@ppp233-150.lns2.adl4.internode.on.net] has joined #ezpublish
+[12-24-2005 21:51:00] [#ezpublish] <Bedlore> ok who's around
+[12-24-2005 22:21:15] [#ezpublish] <SEAwolfx> me
+[12-24-2005 22:48:56] -!- laleger [n=laleger@adsl-33-201-156.lft.bellsouth.net] has joined #ezpublish
+[12-24-2005 22:49:07] [#ezpublish] <laleger> hello
+[12-24-2005 22:49:31] [#ezpublish] <laleger> any eZ 3.x pro's here?
+[12-24-2005 23:31:10] -!- laleger [n=laleger@adsl-33-201-156.lft.bellsouth.net] has quit []

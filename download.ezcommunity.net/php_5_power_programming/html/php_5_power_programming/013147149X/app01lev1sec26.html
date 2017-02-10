@@ -1,0 +1,54 @@
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<head>
+<title>Section A.26.&nbsp; Streams</title>
+<link rel="STYLESHEET" type="text/css" href="images/style.css">
+<link rel="STYLESHEET" type="text/css" href="images/docsafari.css">
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec25.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec27.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0"><TR><td valign="top"><a name="app01lev1sec26"></a><h3 class="docSection1Title">A.26. Streams</h3>
+<p class="docText">PHP streams implementations and utilities</p>
+<a name="app01lev2sec232"></a><h4 class="docSection2Title">A.26.1. bz2_filter</h4><a name="app01index473"></a><a name="app01index474"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP - By Sara Golemon (lead)</span></P>
+<p class="docText">bz2 filter implementation backport for PHP 5.0</p>
+<a name="app01lev3sec227"></a><H5 class="docSection3Title">A.26.1.1 Description</h5>
+<p class="docText">bzip2 compress/decompress stream filter implementation. Performs inline compression/decompression using the bzip2 algorythm on any PHP I/O stream. The data produced by this filter, while compatable with the payload portion of a bz2 file, does not include headers or tailers for full bz2 file compatability. To achieve this format, use the compress.bzip2:// fopen wrapper built directly into PHP.</P>
+<a name="app01lev2sec233"></a><h4 class="docSection2Title">A.26.2. oggvorbis</h4><a name="app01index475"></a><a name="app01index476"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP - By Sara Golemon (lead)</span></p>
+<p class="docText">OGG wrapper for OGG/Vorbis files</p>
+<a name="app01lev3sec228"></a><H5 class="docSection3Title">A.26.2.1 Description</H5>
+<p class="docText">fopen wrapper for OGG/Vorbis files. Decompress OGG data to PCM audio and vice-versa.</p>
+<a name="app01lev2sec234"></a><h4 class="docSection2Title">A.26.3. openal</h4><a name="app01index477"></a><a name="app01index478"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP - By Sara Golemon (lead)</span></p>
+<p class="docText">OpenAL Bindings</P>
+<a name="app01lev3sec229"></a><h5 class="docSection3Title">A.26.3.1 Description</h5>
+<p class="docText">OpenAL - Platform independent sound bindings</P>
+<a name="app01lev2sec235"></a><h4 class="docSection2Title">A.26.4. Stream_SHM</H4><a name="app01index479"></a><a name="app01index480"></a>
+<p class="docText"><span class="docEmphasis">Repository: - License: PHP -</span></p>
+<p class="docText">Shared Memory Stream</p>
+<a name="app01lev3sec230"></a><h5 class="docSection3Title">A.26.4.1 Description</h5>
+<p class="docText">The Stream_SHM package provides a class that can be registered with stream_register_wrapper() in order to have stream-based shared-memory access.</p>
+<a name="app01lev2sec236"></a><h4 class="docSection2Title">A.26.5. Stream_Var</h4><a name="app01index481"></a><a name="app01index482"></a>
+<p class="docText"><span class="docEmphasis">Repository: PEAR - License: PHP License - By Stephan Schmidt (lead)</span></p>
+<p class="docText">Allows stream based access to any variable.</p>
+<a name="app01lev3sec231"></a><h5 class="docSection3Title">A.26.5.1 Description</h5>
+<p class="docText">Stream_Var can be registered as a stream with stream_register_wrapper() and allows stream based acces to variables in any scope. Arrays are treated as directories, so it's possible to replace temporary directories and files in your application with variables.</p>
+<a name="app01lev2sec237"></a><h4 class="docSection2Title">A.26.6. zlib_filter</h4><a name="app01index483"></a><a name="app01index484"></a>
+<p class="docText"><span class="docEmphasis">Repository:</span> <span class="docEmphasis">PECL</span> <span class="docEmphasis">- License: PHP - By Sara Golemon (lead)</span></p>
+<p class="docText">zlib filter implementation backport for PHP 5.0</p>
+<a name="app01lev3sec232"></a><H5 class="docSection3Title">A.26.6.1 Description</H5>
+<p class="docText">RFC 1951 inflate/deflate stream filter implementation. Performs inline compression/decompression using the deflate method on any PHP I/O stream. The data produced by this filter, while compatable with the payload portion of an RFC 1952 gzip file, does not include headers or tailers for full RFC 1952 gzip compatability. To achieve this format, use the compress.zlib:// fopen wrapper built directly into PHP.</p>
+<a href="28981535.html"><img src="images/pixel.gif" alt="" width="1" height="1" border="0"></a><ul></UL></td></tr></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td><div STYLE="MARGIN-LEFT: 0.15in;"><a href="toc.html"><img src="images/teamlib.gif" width="62" height="15" border="0" align="absmiddle"  alt="Team LiB"></a></div></td>
+<td align="right"><div STYLE="MARGIN-LEFT: 0.15in;">
+<a href=app01lev1sec25.html><img src="images/previous.gif" width="62" height="15" border="0" align="absmiddle" alt="Previous Section"></a>
+<a href=app01lev1sec27.html><img src="images/next.gif" width="41" height="15" border="0" align="absmiddle" alt="Next Section"></a>
+</div></td></tr></table>
+</body></html>

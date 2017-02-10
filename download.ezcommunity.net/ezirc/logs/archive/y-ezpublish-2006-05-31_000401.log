@@ -1,0 +1,254 @@
+[05-29-2006 00:46:38] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has joined #ezpublish
+[05-29-2006 00:47:44] -!- Tidemann [n=tidemann@ti132110a340-2652.bb.online.no] has joined #ezpublish
+[05-29-2006 00:55:06] -!- hovik [n=hovik@stalker.ez.no] has joined #ezpublish
+[05-29-2006 00:59:07] -!- hovik [n=hovik@stalker.ez.no] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-29-2006 01:03:27] -!- hovik [n=hovik@85.19.74.66] has joined #ezpublish
+[05-29-2006 01:22:44] -!- ns00n [n=hogne@212.33.152.198] has joined #ezpublish
+[05-29-2006 01:22:51] [#ezpublish] <m0ns00n> I'm trying to install an extension
+[05-29-2006 01:23:09] [#ezpublish] <m0ns00n> I tick it off in the extensions panel, and it remains ticked
+[05-29-2006 01:23:20] [#ezpublish] <m0ns00n> Then I go away from the extension list and when I come back it's unticked again
+[05-29-2006 01:23:39] [#ezpublish] <m0ns00n> eZ 3.6.1
+[05-29-2006 01:24:42] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has joined #ezpublish
+[05-29-2006 01:26:47] [#ezpublish] <m0ns00n> Just clicking the extensions link removes the checkboxz
+[05-29-2006 01:26:56] [#ezpublish] <m0ns00n> I cannot seem to enable the extension
+[05-29-2006 01:31:00] [#ezpublish] <m0ns00n> Is there something special I need to do to add extensions?=
+[05-29-2006 01:34:53] [#ezpublish] <philG> do you have the extension in your extension list ?
+[05-29-2006 01:36:48] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has joined #ezpublish
+[05-29-2006 01:37:11] [#ezpublish] <m0ns00n> Yes
+[05-29-2006 01:37:19] [#ezpublish] <m0ns00n> And I can ckeck it
+[05-29-2006 01:37:40] [#ezpublish] <m0ns00n> But when clicking on the Setup->Extensions link to refresh, it is unchecked again
+[05-29-2006 01:37:48] [#ezpublish] <m0ns00n> Also happens to ezpaypal
+[05-29-2006 01:38:09] [#ezpublish] <m0ns00n> ezdhtml, owner and randomnum is checked from beforehand
+[05-29-2006 01:38:15] [#ezpublish] <m0ns00n> They seem ok
+[05-29-2006 01:38:26] [#ezpublish] <m0ns00n> Can I perhaps do something about it directly in the database?
+[05-29-2006 01:41:50] [#ezpublish] <Tidemann> try checking the ini-file
+[05-29-2006 01:44:42] [#ezpublish] <m0ns00n> Which one?
+[05-29-2006 01:44:57] [#ezpublish] <m0ns00n> I looked for an extension ini file
+[05-29-2006 01:45:07] [#ezpublish] <m0ns00n> Could you be a bit more presice?
+[05-29-2006 01:45:11] [#ezpublish] <Tidemann> site.ini
+[05-29-2006 01:45:49] [#ezpublish] <m0ns00n> and what shall I look for, I looked inside it
+[05-29-2006 01:46:06] [#ezpublish] <Tidemann> [ExtensionSettings]
+[05-29-2006 01:46:15] [#ezpublish] <m0ns00n> ExtensionDirectory=extension
+[05-29-2006 01:46:19] [#ezpublish] <m0ns00n> ActiveExtensions[]
+[05-29-2006 01:46:26] [#ezpublish] <m0ns00n> ActiveAccessExtensions[]
+[05-29-2006 01:46:32] [#ezpublish] <m0ns00n> That's all
+[05-29-2006 01:47:08] [#ezpublish] <Tidemann> uhm.. which site.ini override is that?
+[05-29-2006 01:47:13] [#ezpublish] <m0ns00n> settings/
+[05-29-2006 01:47:15] [#ezpublish] <m0ns00n> override?
+[05-29-2006 01:47:30] [#ezpublish] <Tidemann> is that for all siteaccesses or is it a global override?
+[05-29-2006 01:47:34] [#ezpublish] <m0ns00n> site.ini.append.php you mean?
+[05-29-2006 01:48:09] [#ezpublish] <m0ns00n> or settings/override/siteaccess/admin/site.ini.append.php
+[05-29-2006 01:49:05] [#ezpublish] <m0ns00n> I only have one site.ini
+[05-29-2006 01:49:10] [#ezpublish] <m0ns00n> And that's in settings/
+[05-29-2006 01:49:14] [#ezpublish] <m0ns00n> the rest is site.ini.append.php
+[05-29-2006 01:49:28] [#ezpublish] <Tidemann> m0ns00n: you don't want to edit site.ini... only site.ini.append.php-files
+[05-29-2006 01:49:41] [#ezpublish] <Tidemann> I would remove the [ExtensionSettings] in settings/override/site.ini.append.php
+[05-29-2006 01:50:03] [#ezpublish] <Tidemann> at least if it's empty as you wrote
+[05-29-2006 01:51:06] [#ezpublish] <Tidemann> do you only need these extensions in admin.. or do you need them on the site itself?
+[05-29-2006 01:51:16] [#ezpublish] <m0ns00n> There's no extensionsettings in ther append file
+[05-29-2006 01:51:28] [#ezpublish] <m0ns00n> the
+[05-29-2006 01:52:05] [#ezpublish] <m0ns00n> I thought it was just to check off the extension in admin
+[05-29-2006 01:52:42] [#ezpublish] <Tidemann> let's take it from the top.. shall we? .. the site.ini.append.php located in /settings/override affects all the site accesses....
+[05-29-2006 01:53:25] [#ezpublish] <m0ns00n> ok
+[05-29-2006 01:53:35] [#ezpublish] <Tidemann> the site.ini.append.php located in /settings/plain_admin (or whatever your admin siteaccess is called) affects only admin
+[05-29-2006 01:54:09] [#ezpublish] <m0ns00n> AH!
+[05-29-2006 01:54:14] [#ezpublish] <Tidemann> get it?
+[05-29-2006 01:54:24] [#ezpublish] <m0ns00n> and /settings/override/site.ini.append.php has the three modules listed
+[05-29-2006 01:54:33] [#ezpublish] <m0ns00n> Then I just add mine there..
+[05-29-2006 01:54:35] [#ezpublish] <m0ns00n> for the time being
+[05-29-2006 01:54:59] [#ezpublish] <m0ns00n> I might have to clear the cache now
+[05-29-2006 01:55:23] [#ezpublish] <Tidemann> maybe... :)
+[05-29-2006 01:55:29] [#ezpublish] <m0ns00n> hmm
+[05-29-2006 01:55:30] [#ezpublish] <m0ns00n> didn't work
+[05-29-2006 01:55:35] [#ezpublish] <m0ns00n> still csvexport isn't checked
+[05-29-2006 01:56:37] [#ezpublish] <m0ns00n> argh =)
+[05-29-2006 01:56:44] [#ezpublish] <m0ns00n> Now I added it and it still doesn't wanna check off
+[05-29-2006 01:56:48] [#ezpublish] <m0ns00n> might there be yet another place=
+[05-29-2006 01:56:50] [#ezpublish] <m0ns00n> ?
+[05-29-2006 01:57:28] [#ezpublish] <m0ns00n> argh
+[05-29-2006 01:57:35] [#ezpublish] <m0ns00n> prooit, did a mistake
+[05-29-2006 01:57:50] [#ezpublish] <m0ns00n> ok
+[05-29-2006 01:57:51] [#ezpublish] <m0ns00n> now it works
+[05-29-2006 01:58:03] [#ezpublish] <m0ns00n> thanks, I hereby show you my gratitude
+[05-29-2006 01:58:06] [#ezpublish] * m0ns00n shows gratitude
+[05-29-2006 01:58:09] [#ezpublish] <m0ns00n> ;)
+[05-29-2006 01:58:47] [#ezpublish] <Tidemann> :)
+[05-29-2006 01:58:57] [#ezpublish] <Tidemann> np
+[05-29-2006 02:02:32] [#ezpublish] <m0ns00n> How do I get to an extension?
+[05-29-2006 02:02:44] [#ezpublish] <m0ns00n> It said on the download page it had an easy to understand GUI
+[05-29-2006 02:02:53] [#ezpublish] <m0ns00n> :-) Where would it show up?
+[05-29-2006 02:02:59] [#ezpublish] <m0ns00n> Do I need to configure this as well?
+[05-29-2006 02:06:50] [#ezpublish] <m0ns00n> Found it =)
+[05-29-2006 02:13:48] [#ezpublish] <m0ns00n> Any of you gotten csvexport to work?
+[05-29-2006 02:13:53] [#ezpublish] <m0ns00n> Date [ezdate] can't be exported.
+[05-29-2006 02:13:54] [#ezpublish] <m0ns00n> etc
+[05-29-2006 02:14:00] [#ezpublish] <m0ns00n> None of the fields can be exported...
+[05-29-2006 02:18:51] -!- kalooni [n=nicolas@fbx.internethic.net] has joined #ezpublish
+[05-29-2006 02:21:42] [#ezpublish] <m0ns00n> Is it impossible to export data from ez?
+[05-29-2006 02:21:56] [#ezpublish] <m0ns00n> Through the system
+[05-29-2006 02:22:05] [#ezpublish] <m0ns00n> Without writing a custom exporter in eZtemplates
+[05-29-2006 02:22:24] [#ezpublish] <m0ns00n> Or would it be possible in PHP with eZ objects
+[05-29-2006 02:22:31] [#ezpublish] <m0ns00n> And which dependencies are ther
+[05-29-2006 02:22:33] [#ezpublish] <m0ns00n> e
+[05-29-2006 02:25:15] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-29-2006 02:30:43] [#ezpublish] <m0ns00n> The point is, I need to get some data exported from an ez site
+[05-29-2006 02:30:55] [#ezpublish] <m0ns00n> But it seems impossible without writing a custom exporter
+[05-29-2006 02:31:10] [#ezpublish] <m0ns00n> Possibly in PHP
+[05-29-2006 02:31:15] [#ezpublish] <m0ns00n> I dunno what's the most feasible
+[05-29-2006 02:31:29] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has joined #ezpublish
+[05-29-2006 02:46:32] [#ezpublish] <kalooni> m0ns00n: given the way data are stored in the db I don't see how you could do a different way (or may be a specific template, that would export data into xml as it is done for the rss feeds)
+[05-29-2006 02:47:37] [#ezpublish] <m0ns00n> Bad design? Ah well
+[05-29-2006 02:47:47] [#ezpublish] <m0ns00n> I'm making my own ezObject class in php
+[05-29-2006 02:48:00] [#ezpublish] <m0ns00n> The way it's done in ezPublish is just backwards
+[05-29-2006 02:48:04] [#ezpublish] <m0ns00n> extend upon extend
+[05-29-2006 02:48:28] [#ezpublish] <m0ns00n> Doesn't seem the eZ programmers know PHP very well, even if they indeed do
+[05-29-2006 02:48:35] [#ezpublish] <m0ns00n> using references everywhere is very bad
+[05-29-2006 02:48:38] [#ezpublish] <m0ns00n> And all those classes
+[05-29-2006 02:48:45] [#ezpublish] <m0ns00n> Typical OO over design
+[05-29-2006 02:58:36] -!- awormus [n=aaron@p54B127AD.dip0.t-ipconnect.de] has quit ["Leaving"]
+[05-29-2006 03:17:28] [#ezpublish] <m0ns00n> If any of you would be interested in the code for my ezObject afterwards I'd gladly share it
+[05-29-2006 03:17:50] [#ezpublish] <m0ns00n> Although some parts would have to be rewritten (using an in office object for fetching mysql data)
+[05-29-2006 03:17:56] [#ezpublish] <m0ns00n> but that's just a couple of lines of code at best
+[05-29-2006 03:18:21] [#ezpublish] <m0ns00n> I nor my company won't have further use of it after I've written it
+[05-29-2006 03:24:58] [#ezpublish] <jeremiah> hi, how is organized the data, to get like ez.no, a TWO content pages into one, one at the right and one in the left
+[05-29-2006 03:25:22] [#ezpublish] <jeremiah> sorry my english is bad, do you understund my question?
+[05-29-2006 03:51:58] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has quit [Read error: 104 (Connection reset by peer)]
+[05-29-2006 03:54:54] -!- _kh is now known as kris10an
+[05-29-2006 04:07:25] -!- ns00n [n=hogne@212.33.152.198] has quit [Remote closed the connection]
+[05-29-2006 04:14:04] -!- B-KiLLer` [n=me@bart.interact.lu] has joined #ezpublish
+[05-29-2006 04:14:07] [#ezpublish] <B-KiLLer`> hi all
+[05-29-2006 04:17:06] [#ezpublish] <kalooni> hi
+[05-29-2006 04:19:21] [#ezpublish] <B-KiLLer`> hey, kalooni, do you master the SiteAccessSettings ? :)
+[05-29-2006 04:19:44] [#ezpublish] <B-KiLLer`> I need some help about the MatchOrder, HostMatch, HostMatchMapItems & URIMatchElement
+[05-29-2006 04:19:45] [#ezpublish] <kalooni> ask your question
+[05-29-2006 04:19:58] [#ezpublish] <kalooni> I'm not sure I will be able to help, but who knows
+[05-29-2006 04:20:03] [#ezpublish] <B-KiLLer`> :)
+[05-29-2006 04:20:10] [#ezpublish] <B-KiLLer`> ok, here comes the current situation
+[05-29-2006 04:20:23] [#ezpublish] <B-KiLLer`> I have two different vhosts pointing to the same documentroot
+[05-29-2006 04:20:30] [#ezpublish] <kalooni> ok
+[05-29-2006 04:20:37] [#ezpublish] <B-KiLLer`> let's say that I have one for the cms, and one for the site itself.
+[05-29-2006 04:20:54] [#ezpublish] <kalooni> by cms you mean the admin interface, correct ?
+[05-29-2006 04:21:37] [#ezpublish] <B-KiLLer`> yep
+[05-29-2006 04:21:42] [#ezpublish] <B-KiLLer`> wait a sec
+[05-29-2006 04:21:45] [#ezpublish] <B-KiLLer`> urgency here :-x
+[05-29-2006 04:23:07] [#ezpublish] <B-KiLLer`> ok, back
+[05-29-2006 04:23:13] [#ezpublish] <B-KiLLer`> I love that kind of urgencies :)
+[05-29-2006 04:23:24] [#ezpublish] <B-KiLLer`> sooo, my first vhost is cms.mysite.com
+[05-29-2006 04:23:29] [#ezpublish] <B-KiLLer`> my second is www.mysite.com
+[05-29-2006 04:23:50] [#ezpublish] <B-KiLLer`> I want to have a first match which will associate cms.mysite.com to a given siteaccess
+[05-29-2006 04:24:13] [#ezpublish] <B-KiLLer`> then, the second match should be on the first URI element, because i can have www.mysite.com/<lang>
+[05-29-2006 04:24:24] [#ezpublish] <B-KiLLer`> but I can't have this to work :-/
+[05-29-2006 04:32:25] [#ezpublish] <kalooni> and what about configuring lang.mysite.com ?
+[05-29-2006 04:32:32] [#ezpublish] <kalooni> which version of ezp?
+[05-29-2006 04:33:02] [#ezpublish] <kalooni> AFAIK you have to set up a siteaccess per language
+[05-29-2006 04:34:15] [#ezpublish] <B-KiLLer`> they don't want to have lang.mysite.com
+[05-29-2006 04:34:27] [#ezpublish] <B-KiLLer`> and i'm running 3.6.4
+[05-29-2006 04:36:25] [#ezpublish] <kalooni> argh: in that case i fear I don't have your answer
+[05-29-2006 04:39:40] [#ezpublish] <xbit> xyou could setup url-based siteaccesses, like domain.com/cms and then domain.com/yourlang
+[05-29-2006 04:39:51] [#ezpublish] <xbit> and just forward cms.domain.com to domain.com/cms
+[05-29-2006 04:39:59] [#ezpublish] <xbit> not a perfect solution but...
+[05-29-2006 04:44:51] [#ezpublish] <kalooni> I have a problem on my side concerning user registration
+[05-29-2006 04:45:14] [#ezpublish] <kalooni> i have created a new class Client. When user registered they are registered as client
+[05-29-2006 04:46:09] [#ezpublish] <kalooni> normally many fields are mandatories, like the user account (which include login, pass and email)
+[05-29-2006 04:46:39] [#ezpublish] <kalooni> but for some reason it seems that some people can register without filling all the mandatory fields
+[05-29-2006 04:46:46] [#ezpublish] <kalooni> any body has an idea why ?
+[05-29-2006 04:47:13] [#ezpublish] <kalooni> I have done some test by desactivating cookies and js and I can't reproduce the bug
+[05-29-2006 04:47:23] [#ezpublish] <kalooni> could it be a problem with the db?
+[05-29-2006 05:18:37] -!- ns00n [n=hogne@212.33.152.198] has joined #ezpublish
+[05-29-2006 05:19:16] [#ezpublish] <m0ns00n> Ok
+[05-29-2006 05:19:27] [#ezpublish] <m0ns00n> my ezClass() object is done for now
+[05-29-2006 05:19:30] [#ezpublish] <m0ns00n> it can do this:
+[05-29-2006 05:19:43] [#ezpublish] <m0ns00n> $class = new ezClass ( 'your_class_identifier' );
+[05-29-2006 05:19:52] [#ezpublish] <m0ns00n> $objects = $class->getObjects ( );
+[05-29-2006 05:20:21] [#ezpublish] <m0ns00n> foreach ( $objects as $object ) print ( $object->name . "\n" . $object->other_attribute->data_text );
+[05-29-2006 05:20:23] [#ezpublish] <m0ns00n> :-)
+[05-29-2006 05:20:34] [#ezpublish] <m0ns00n> 144 lines of code
+[05-29-2006 05:20:46] [#ezpublish] <m0ns00n> (a bit more if you don't have a db abscration object)
+[05-29-2006 05:35:02] -!- hovik [n=hovik@85.19.74.66] has left #ezpublish ["Kopete 0.11.1 : http://kopete.kde.org"]
+[05-29-2006 05:41:38] -!- jeremiah [i=jeremiah@31.Red-213-98-123.staticIP.rima-tde.net] has joined #ezpublish
+[05-29-2006 05:41:55] [#ezpublish] <jeremiah> hi
+[05-29-2006 06:19:06] -!- _kh [n=kh@85.19.74.66] has joined #ezpublish
+[05-29-2006 06:19:08] -!- kris10an [n=kh@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[05-29-2006 06:39:27] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has joined #ezpublish
+[05-29-2006 07:00:22] -!- _Rappy_ [n=hunt-pre@80-89-35-2.network.itconnect.no] has quit ["Ex-Chat"]
+[05-29-2006 07:21:02] [#ezpublish] <kalooni> how to clean the caches for a subtree when publishing a new object in it ?
+[05-29-2006 07:22:43] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has joined #ezpublish
+[05-29-2006 07:31:33] [#ezpublish] <B-KiLLer`> kalooni: this is the setting in the viewcache.ini I think
+[05-29-2006 07:31:45] [#ezpublish] <B-KiLLer`> [ViewCacheSettings] / SmartCacheClear=enabled
+[05-29-2006 07:32:13] [#ezpublish] <B-KiLLer`> (btw, my settings are now working for my thing of this morning, 2 vhosts ;) )
+[05-29-2006 07:37:28] [#ezpublish] <kalooni> thx
+[05-29-2006 07:38:33] [#ezpublish] <kalooni> but it seems it is not the right one ... SmartCacheClear already enabled here ... and no effects
+[05-29-2006 07:47:26] [#ezpublish] <B-KiLLer`> :-/
+[05-29-2006 07:49:27] [#ezpublish] <B-KiLLer`> in viewcache.ini, there is also another setting
+[05-29-2006 07:49:27] [#ezpublish] <B-KiLLer`> The method to use when finding caches to clear,
+[05-29-2006 07:49:27] [#ezpublish] <B-KiLLer`> # possible values are:
+[05-29-2006 07:49:48] [#ezpublish] <B-KiLLer`> # clear_object_and_parent_nodes_caches
+[05-29-2006 07:49:58] [#ezpublish] <B-KiLLer`> and other values, for :
+[05-29-2006 07:50:06] [#ezpublish] <B-KiLLer`> #ClearCacheMethod=<method_string>
+[05-29-2006 07:51:22] [#ezpublish] <kalooni> ok I will have a deeper look at this ;)
+[05-29-2006 07:51:22] [#ezpublish] <kalooni> thx
+[05-29-2006 08:08:12] [#ezpublish] <kalooni> it works now ... thanks for the tip
+[05-29-2006 08:12:23] [#ezpublish] <B-KiLLer`> good to know that it works
+[05-29-2006 08:33:33] [#ezpublish] <jeremiah> hi, how could i organize my site for a multilingual content? in ezp 3.8
+[05-29-2006 08:34:24] [#ezpublish] <jeremiah> must i set nodes below the principal node, setting a branch to my site content for each language?
+[05-29-2006 08:34:47] [#ezpublish] <buz> i dont think so no
+[05-29-2006 08:34:49] [#ezpublish] <B-KiLLer`> the translation system is built-in in ezp
+[05-29-2006 08:35:04] [#ezpublish] <B-KiLLer`> the translations are associated to the object itself, not to the node
+[05-29-2006 08:35:05] [#ezpublish] <kalooni> create a site access per language
+[05-29-2006 08:35:28] [#ezpublish] <kalooni> and play with the Locale and ContentLanguage in site.ini [RegionalSettings] I think
+[05-29-2006 08:35:30] [#ezpublish] <jeremiah> a siteacces language?
+[05-29-2006 08:35:54] [#ezpublish] <jeremiah> exist a tutorial about that?
+[05-29-2006 08:36:40] [#ezpublish] <jeremiah> and i see EP uses /(language)/en-ENG in the url to change language, could i do it in other way?
+[05-29-2006 08:36:41] [#ezpublish] <kalooni> as I have understood one article should be available soon, but not yet unfortunatly
+[05-29-2006 08:37:23] [#ezpublish] <jeremiah> i think BW is thought to be multilanguage easy and when i try to do a real example,  i cant
+[05-29-2006 08:37:29] [#ezpublish] <jeremiah> EP, sorry
+[05-29-2006 08:39:05] [#ezpublish] <jeremiah> http://ez.no/products/ez_publish/documentation/configuration/configuration/language_and_charset/how_to_setup_a_multilingual_site
+[05-29-2006 08:39:15] [#ezpublish] <jeremiah> is this obsolete or is for 3.8 ?
+[05-29-2006 08:40:53] [#ezpublish] <kalooni> do you know how to replace the "_" in URLs by "-"
+[05-29-2006 08:45:37] [#ezpublish] <jeremiah> A typical, simple configuration (though not the only) for a multilingual site is to have each language have a distinct directory after the main address to access a certain language (ie, site.com/index.php/en, site.com/index.php/es, etc). To configure this setup, we start by editing settings/override/site.ini.append with (some of this may have been done for you during the installation, adjust as necessary):
+[05-29-2006 08:45:48] [#ezpublish] <jeremiah> B--Killer, is this obsolete?
+[05-29-2006 08:48:05] [#ezpublish] <jeremiah> i see the forums and the irc are a litle dead, all the support is by pay? or i am wrong and isnt a good day?
+[05-29-2006 08:49:00] [#ezpublish] <jeremiah> i would like to learn a little of EP and collaborate writing artciles
+[05-29-2006 08:49:09] [#ezpublish] <B-KiLLer`> at that point this is not obsolete no
+[05-29-2006 08:49:31] [#ezpublish] <B-KiLLer`> this idea is to have different siteaccesses, and associate to each of them a different configuration
+[05-29-2006 08:49:55] [#ezpublish] <B-KiLLer`> telling that the siteaccess /en will have its content display in english.
+[05-29-2006 08:50:18] [#ezpublish] <B-KiLLer`> the difference with 3.8 is that there are some new variables to manage the languages, and they are not yet documented if i'm not wrong
+[05-29-2006 08:50:36] [#ezpublish] <jeremiah> B-KiLLer` but you say the translate is builtin in objects, and the text i posted talk about to create directories for each language
+[05-29-2006 08:50:47] [#ezpublish] <B-KiLLer`> the point is that I'll stay with 3.7.6 or the latest in the 3.7 branch, as I encountered some bugs which I can't afford on production :-/
+[05-29-2006 08:51:30] [#ezpublish] <B-KiLLer`> the /fr, /en, and so on are not real directories.  In your configuration, you can say that an element of the URI is the corresponding to a site access
+[05-29-2006 08:51:47] [#ezpublish] <B-KiLLer`> so, if you have www.mysite.com/en/about, it's as if you were entering www.mysite.com/about
+[05-29-2006 08:51:59] [#ezpublish] <B-KiLLer`> but with the EN content of the object 'about'
+[05-29-2006 08:52:06] [#ezpublish] <jeremiah> oh, thx
+[05-29-2006 08:52:48] [#ezpublish] <jeremiah> i understund, i will try then, thx B-KiLLer`
+[05-29-2006 09:09:16] [#ezpublish] <kalooni> does anybody here knows a script that do screen shots of websites ?
+[05-29-2006 09:26:59] -!- kore_ [n=lordhong@F0-EZSYSTEMS.customer.getit.de] has quit []
+[05-29-2006 09:40:30] -!- kalooni [n=nicolas@fbx.internethic.net] has quit ["Quitte"]
+[05-29-2006 09:45:42] -!- jota [n=jota@cm216016.red83-165.mundo-r.com] has quit ["Abandonando"]
+[05-29-2006 09:56:13] [#ezpublish] <xbit> browsercam.com can do it, not free though :/
+[05-29-2006 10:27:29] [#ezpublish] <B-KiLLer`> the question would be: what the hell are they using ? :)
+[05-29-2006 10:41:25] -!- philG [n=philG@dra38-1-82-230-120-110.fbx.proxad.net] has left #ezpublish []
+[05-29-2006 12:00:56] -!- tobmaster [n=tobmaste@F0-EZSYSTEMS.customer.getit.de] has quit ["Thx 4 all the fisch"]
+[05-29-2006 12:21:16] -!- SEAwolfx_ [n=SEAwolfx@p549387B8.dip0.t-ipconnect.de] has joined #ezpublish
+[05-29-2006 12:38:46] -!- SEAwolfx [n=SEAwolfx@p549387B8.dip0.t-ipconnect.de] has quit [Connection timed out]
+[05-29-2006 12:55:40] -!- ns00n [n=hogne@212.33.152.198] has quit [Nick collision from services.]
+[05-29-2006 12:55:47] -!- ons0on [n=hogne@212.33.152.198] has joined #ezpublish
+[05-29-2006 14:13:03] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has joined #ezpublish
+[05-29-2006 14:26:06] [#ezpublish] <xiglet> I want to make a template that doesn't have to belong anywhere.. Is it possible to make a "virtual" page? If not, how is this done.. a hidden object with an override?
+[05-29-2006 14:28:50] [#ezpublish] <buz> you can make virtual pages with extensions
+[05-29-2006 14:28:55] [#ezpublish] <buz> other than that i dont know of any way
+[05-29-2006 14:41:57] [#ezpublish] <xiglet> ok
+[05-29-2006 15:01:50] -!- buz [n=buz@217-162-135-182.dclient.hispeed.ch] has quit ["Konversation terminated!"]
+[05-29-2006 15:25:18] -!- xigleth [n=xiglet@cD9088F2C.sdsl.catch.no] has left #ezpublish []
+[05-29-2006 15:44:41] -!- kh_ [n=kh@85.19.74.66] has joined #ezpublish
+[05-29-2006 15:46:24] -!- _kh [n=kh@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[05-29-2006 15:54:21] -!- _kh [n=kh@85.19.74.66] has joined #ezpublish
+[05-29-2006 15:54:22] -!- kh_ [n=kh@85.19.74.66] has quit [Read error: 104 (Connection reset by peer)]
+[05-29-2006 16:05:51] -!- _kore [n=lordhong@port-83-236-8-180.dynamic.qsc.de] has quit [""The Flag is a symbol of the fact that man is still a herd animal.""]
+[05-29-2006 16:14:06] -!- tobmaster [n=tobmaste@dslb-084-061-006-198.pools.arcor-ip.net] has joined #ezpublish
+[05-29-2006 17:11:20] [#ezpublish] <tobmaster> anyone up?
+[05-29-2006 17:33:27] [#ezpublish] <SEAwolfx_> yeah, but how long?!
+[05-29-2006 17:33:35] [#ezpublish] <SEAwolfx_> +yet
+[05-29-2006 17:53:03] -!- SEAwolfx_ [n=SEAwolfx@p549387B8.dip0.t-ipconnect.de] has left #ezpublish []
+[05-29-2006 19:23:24] -!- tobmaster [n=tobmaste@dslb-084-061-006-198.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[05-29-2006 23:17:04] -!- SEAwolfx [n=SEAwolfx@p54938ABB.dip0.t-ipconnect.de] has joined #ezpublish
+[05-29-2006 23:45:07] -!- xiglet [n=xiglet@cD9088F2C.sdsl.catch.no] has quit [Remote closed the connection]

@@ -1,0 +1,174 @@
+[12-23-2005 01:22:43] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-23-2005 01:27:05] -!- kore_ [n=lordhong@essn-d9bd4cbf.pool.mediaWays.net] has joined #ezpublish
+[12-23-2005 01:50:45] -!- ordnas [n=ordnas@p549D5949.dip.t-dialin.net] has joined #ezpublish
+[12-23-2005 01:53:32] -!- fh[eZ] [n=fh@238.80-202-59.nextgentel.com] has quit [Read error: 104 (Connection reset by peer)]
+[12-23-2005 01:57:33] -!- ordnas [n=ordnas@p549D5949.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-23-2005 01:58:49] -!- tobmaster [n=tobmaste@217.194.224.41] has joined #ezpublish
+[12-23-2005 02:06:38] -!- fh[eZ] [n=fh@popeye.ez.no] has joined #ezpublish
+[12-23-2005 02:37:32] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-23-2005 02:45:44] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has quit [Remote closed the connection]
+[12-23-2005 02:55:37] -!- hovik_ [n=hovik@popeye.ez.no] has joined #ezpublish
+[12-23-2005 02:57:18] -!- DiGiTa|_ [n=guillaum@84.4.125.132] has joined #ezpublish
+[12-23-2005 02:57:31] -!- hovik [n=hovik@115.80-202-49.nextgentel.com] has quit [Read error: 110 (Connection timed out)]
+[12-23-2005 03:07:09] -!- DiGiTa|__ [n=guillaum@84.4.125.132] has joined #ezpublish
+[12-23-2005 03:21:18] -!- buz [i=buz@dhcp-203-54-vpn.unizh.ch] has joined #ezpublish
+[12-23-2005 03:29:21] -!- DiGiTa|_ [n=guillaum@84.4.125.132] has quit [Read error: 110 (Connection timed out)]
+[12-23-2005 03:59:29] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-23-2005 03:59:43] [#ezpublish] <Katana`> morning
+[12-23-2005 03:59:47] [#ezpublish] <Katana`> eZ guys, important question...
+[12-23-2005 04:00:05] [#ezpublish] <Katana`> any reason why I would end up with a white page when I ad several objects to an object relations field ?
+[12-23-2005 04:00:15] [#ezpublish] <Katana`> it loads, loads, then white page. No idea what happens :(
+[12-23-2005 04:00:29] [#ezpublish] <tobmaster> Katana`: no debug output? no log?
+[12-23-2005 04:00:35] [#ezpublish] <Katana`> nothing :(
+[12-23-2005 04:00:43] [#ezpublish] <Katana`> debug output is enabled of course
+[12-23-2005 04:00:58] [#ezpublish] <tobmaster> log?
+[12-23-2005 04:00:59] [#ezpublish] <Katana`> nothing in apache's log either
+[12-23-2005 04:01:09] [#ezpublish] <tobmaster> ez log?
+[12-23-2005 04:01:15] [#ezpublish] <Katana`> checking again
+[12-23-2005 04:01:16] [#ezpublish] <tobmaster> max execution time?
+[12-23-2005 04:01:24] [#ezpublish] <Katana`> it should show anyway right ?
+[12-23-2005 04:01:33] [#ezpublish] <Katana`> eZExecution should handle that
+[12-23-2005 04:01:45] [#ezpublish] <tobmaster> after the max execution time it should i guess :)
+[12-23-2005 04:01:55] [#ezpublish] <Katana`> max exec time should be 300 but i'm not sure it's considered...
+[12-23-2005 04:02:10] [#ezpublish] <Katana`> anyway even 30 secs is too much ;)
+[12-23-2005 04:02:30] [#ezpublish] <Katana`> only happens with a relations field (or enhanced object relations), not with the related objects property
+[12-23-2005 04:03:30] [#ezpublish] <Katana`> hmm maybe memory limit
+[12-23-2005 04:06:23] -!- ez_dis [n=dis@p5090A91E.dip0.t-ipconnect.de] has joined #ezpublish
+[12-23-2005 04:07:24] -!- ez_dis [n=dis@p5090A91E.dip0.t-ipconnect.de] has quit [Client Quit]
+[12-23-2005 04:07:32] [#ezpublish] <Katana`> ok, i have no idea :)
+[12-23-2005 04:09:17] -!- ez_dis [n=dis_ez@p5090A91E.dip0.t-ipconnect.de] has joined #ezpublish
+[12-23-2005 04:09:29] [#ezpublish] <Katana`> what would be the main difference between the built-in object relation property of an object and a specific object relations field ?
+[12-23-2005 04:09:49] -!- ez_dis [n=dis_ez@p5090A91E.dip0.t-ipconnect.de] has quit [Client Quit]
+[12-23-2005 04:09:55] [#ezpublish] <Katana`> if you ignore the fact that the attribute is easier to tweak
+[12-23-2005 04:14:10] [#ezpublish] <Katana`> okay max exec time is 300
+[12-23-2005 04:16:01] [#ezpublish] <tobmaster> hm
+[12-23-2005 04:18:31] [#ezpublish] <Katana`> maybe it's a memory issue... but my php_value memory_limit 128M setting doesn't seem to be considered...
+[12-23-2005 04:18:38] [#ezpublish] <Katana`> but that's weird anyway
+[12-23-2005 04:20:02] [#ezpublish] <Katana`> if php is configured with --disable-memory-limit there's no memory limit at all right ?
+[12-23-2005 04:21:52] -!- buz [i=buz@dhcp-203-54-vpn.unizh.ch] has quit [Read error: 110 (Connection timed out)]
+[12-23-2005 04:26:16] [#ezpublish] <Katana`> i really wish i knew what it's doing :(
+[12-23-2005 04:26:23] [#ezpublish] <Katana`> fh[eZ], suggestions ? I'm really stuck here
+[12-23-2005 04:29:07] [#ezpublish] <DiGiTa|__> hey Katana`
+[12-23-2005 04:29:08] [#ezpublish] <DiGiTa|__> :)
+[12-23-2005 04:29:10] [#ezpublish] <Katana`> hey DiGiTa|__
+[12-23-2005 04:29:27] [#ezpublish] <DiGiTa|__> is it possible to get the full url with a template operator ?
+[12-23-2005 04:29:41] [#ezpublish] <Katana`> full url to M
+[12-23-2005 04:29:43] [#ezpublish] <Katana`> ?
+[12-23-2005 04:29:52] [#ezpublish] <DiGiTa|__> or an other solution; is it possible to check the currentlangage
+[12-23-2005 04:30:28] [#ezpublish] <DiGiTa|__> to M?
+[12-23-2005 04:31:24] [#ezpublish] <Katana`> to ?
+[12-23-2005 04:31:27] [#ezpublish] <Katana`> keyboard issue ;)
+[12-23-2005 04:31:30] [#ezpublish] <Katana`> yes it is
+[12-23-2005 04:32:14] [#ezpublish] <DiGiTa|__> who to ?
+[12-23-2005 04:32:17] [#ezpublish] <DiGiTa|__> how
+[12-23-2005 04:33:11] [#ezpublish] <DiGiTa|__> in module_params ?
+[12-23-2005 04:33:29] [#ezpublish] <DiGiTa|__> no :/
+[12-23-2005 04:34:07] [#ezpublish] <Katana`> i don't understand the question DiGiTa|__
+[12-23-2005 04:34:12] [#ezpublish] <Katana`> the full url of what ?
+[12-23-2005 04:34:25] [#ezpublish] <DiGiTa|__> well i prefer detect the current lang
+[12-23-2005 04:34:32] [#ezpublish] <DiGiTa|__> of the actual node diplayed
+[12-23-2005 04:36:18] [#ezpublish] <DiGiTa|__> or preferably, for the current siteaccess
+[12-23-2005 04:37:56] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-23-2005 04:40:16] [#ezpublish] <Katana`> DiGiTa|__: to detect the current language : ezini('RegionalSettings', 'Locale', 'site.ini')
+[12-23-2005 04:41:10] [#ezpublish] <DiGiTa|__> ah yes
+[12-23-2005 04:41:11] [#ezpublish] <DiGiTa|__> thanks
+[12-23-2005 04:41:18] [#ezpublish] <Katana`> so, no one has a suggestion for me ?
+[12-23-2005 04:41:18] [#ezpublish] <DiGiTa|__> i never used the ezini
+[12-23-2005 04:41:24] [#ezpublish] <Katana`> very useful ;)
+[12-23-2005 04:43:22] [#ezpublish] <kris10an> Soon time to leave... i would just like to say: Merry Christmas to everyone!
+[12-23-2005 04:43:31] [#ezpublish] <DiGiTa|__> you to
+[12-23-2005 04:43:32] [#ezpublish] <DiGiTa|__> too
+[12-23-2005 04:43:34] [#ezpublish] <DiGiTa|__> :)
+[12-23-2005 04:43:58] [#ezpublish] <DiGiTa|__> i hope you will get some nice presents
+[12-23-2005 04:46:14] [#ezpublish] <Katana`> kris10an: no time for a suggestion ? i'm really really annoyed
+[12-23-2005 04:46:55] [#ezpublish] <kris10an> not really...
+[12-23-2005 04:46:58] [#ezpublish] <Katana`> :(
+[12-23-2005 04:47:29] [#ezpublish] <kris10an> sorry Katana`
+[12-23-2005 04:47:38] [#ezpublish] <DiGiTa|__> Katana` ..; time to be an eZ consultant
+[12-23-2005 04:47:42] [#ezpublish] <DiGiTa|__> :)
+[12-23-2005 04:47:59] [#ezpublish] <kris10an> im really looking forward to the trafficjams now...
+[12-23-2005 04:48:26] [#ezpublish] <kris10an> i'll probably be where im supposed to be at like 9
+[12-23-2005 04:48:28] [#ezpublish] <Katana`> what the hell am i gonna do, i'm supposed to finish that project and relations are probably the most critical part... great :)
+[12-23-2005 04:48:36] [#ezpublish] <Katana`> lol not bad :)
+[12-23-2005 04:48:38] [#ezpublish] <kris10an> anyways...
+[12-23-2005 04:48:41] [#ezpublish] <Katana`> leaving by train, no traffic jams
+[12-23-2005 04:48:54] -!- kris10an [n=kh@80.239.98.162] has quit ["Merry Christmas!"]
+[12-23-2005 04:53:45] [#ezpublish] <Katana`> fh[eZ] ? no idea either ? :)
+[12-23-2005 04:55:19] [#ezpublish] <DiGiTa|__> an other one finished : http://www.grande-bastide-provence.com/
+[12-23-2005 04:55:20] [#ezpublish] <DiGiTa|__> :)
+[12-23-2005 05:01:15] [#ezpublish] <Katana`> it's slow :)
+[12-23-2005 05:01:39] [#ezpublish] <DiGiTa|__> really ?
+[12-23-2005 05:02:17] [#ezpublish] <DiGiTa|__> [TemplateSettings]
+[12-23-2005 05:02:17] [#ezpublish] <DiGiTa|__> TemplateCache=enabled
+[12-23-2005 05:02:17] [#ezpublish] <DiGiTa|__> TemplateCompile=enabled
+[12-23-2005 05:02:17] [#ezpublish] <DiGiTa|__> TemplateOptimization=enabled
+[12-23-2005 05:02:24] [#ezpublish] <DiGiTa|__> [ContentSettings]
+[12-23-2005 05:02:24] [#ezpublish] <DiGiTa|__> TranslationList=eng-GB
+[12-23-2005 05:02:24] [#ezpublish] <DiGiTa|__> ViewCaching=enabled
+[12-23-2005 05:02:43] [#ezpublish] <Katana`> maybe it just needs some time to get cached :)
+[12-23-2005 05:06:52] [#ezpublish] <Katana`> indeed much better now
+[12-23-2005 05:07:27] [#ezpublish] <Katana`> you should be careful with email addresses in pages...
+[12-23-2005 05:07:29] [#ezpublish] <Katana`> he's gonna get spammed :)
+[12-23-2005 05:08:01] [#ezpublish] <DiGiTa|__> well
+[12-23-2005 05:08:25] [#ezpublish] <DiGiTa|__> i think it's better to set a form
+[12-23-2005 05:10:05] [#ezpublish] <DiGiTa|__> i ask my collègue
+[12-23-2005 05:10:06] [#ezpublish] <DiGiTa|__> :)
+[12-23-2005 05:15:39] [#ezpublish] <Katana`> there are simple methods to prevent email collection by robots
+[12-23-2005 05:15:48] [#ezpublish] <Katana`> {"me@address.com"|wash('email')}
+[12-23-2005 05:15:52] [#ezpublish] <Katana`> for instance
+[12-23-2005 05:16:05] [#ezpublish] <DiGiTa|__> ah
+[12-23-2005 05:16:16] [#ezpublish] <DiGiTa|__> yeah ok but it's a dynamique content
+[12-23-2005 05:16:22] [#ezpublish] <Katana`> it's different then ;)
+[12-23-2005 05:16:33] [#ezpublish] <DiGiTa|__> dunamic
+[12-23-2005 05:16:36] [#ezpublish] <DiGiTa|__> y
+[12-23-2005 05:16:42] [#ezpublish] <Katana`> yeah :)
+[12-23-2005 05:23:26] [#ezpublish] <DiGiTa|__> Phil say : le prochain
+[12-23-2005 05:23:26] [#ezpublish] <DiGiTa|__> Phil say : lui il se ferra spamé
+[12-23-2005 05:23:26] [#ezpublish] <DiGiTa|__> Phil say : et voili
+[12-23-2005 05:23:30] [#ezpublish] <DiGiTa|__> lol
+[12-23-2005 05:41:06] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-23-2005 06:00:31] [#ezpublish] <fh[eZ]> http://ez.no/community/news/ez_components_beta2
+[12-23-2005 06:00:38] [#ezpublish] <fh[eZ]> time for christmas
+[12-23-2005 06:21:02] [#ezpublish] <kracker> kewl
+[12-23-2005 06:29:27] [#ezpublish] <kracker> heh, that article is funny
+[12-23-2005 06:30:00] [#ezpublish] <kracker> http://ez.no/community/articles/a_joyride_to_ez_components_beta2
+[12-23-2005 06:30:11] [#ezpublish] <kracker> > So, come on, try out our work and give us feedback by commenting this article or posting a message to the eZ components forum! I'm so curious, what you geeks think :) And thanks for joining the joyride!
+[12-23-2005 07:01:11] -!- tobyS [n=dotxp@dslb-084-061-135-101.pools.arcor-ip.net] has quit ["Plant your channel to pearadise.net!"]
+[12-23-2005 07:15:09] -!- fh[eZ] [n=fh@popeye.ez.no] has quit [Remote closed the connection]
+[12-23-2005 07:15:41] [#ezpublish] <DiGiTa|__> why isn't possible to do that : {"Rates <br/> weekly"|i18n("design/lgb")}
+[12-23-2005 07:16:09] [#ezpublish] <DiGiTa|__> it doesn't wnat the <br/>
+[12-23-2005 07:23:23] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | http://ez.no/community/news/ez_components_beta2 | http://ez.no/community/articles/an_introduction_to_ez_components
+[12-23-2005 07:28:28] -!- ordnas [n=ordnas@p549D5949.dip.t-dialin.net] has joined #ezpublish
+[12-23-2005 08:02:30] -!- Katana` [n=katana@217.31.64.170] has joined #ezpublish
+[12-23-2005 08:17:36] -!- SEAwolfx [n=mike@tor/session/x-b712fd2762e117c7] has quit [SendQ exceeded]
+[12-23-2005 08:47:13] [#ezpublish] <Katana`> i have just discovered the relation groups feature, but it's a little too bad you still have to override the admin templates to reflect those settings :)
+[12-23-2005 09:12:43] -!- ordnas [n=ordnas@p549D5949.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-23-2005 09:23:03] -!- ordnas [n=ordnas@p549D5949.dip.t-dialin.net] has joined #ezpublish
+[12-23-2005 09:39:34] -!- xbit [i=xbit@87.252.66.62] has quit [Read error: 110 (Connection timed out)]
+[12-23-2005 09:49:58] -!- jota [n=jota@fanzine.igalia.com] has joined #ezpublish
+[12-23-2005 09:55:27] [#ezpublish] <tobmaster> ciao
+[12-23-2005 09:55:31] [#ezpublish] <tobmaster> merry xmas
+[12-23-2005 09:56:10] -!- tobmaster [n=tobmaste@217.194.224.41] has quit ["Thx 4 all the fisch"]
+[12-23-2005 10:11:21] -!- ordnas [n=ordnas@p549D5949.dip.t-dialin.net] has quit [Read error: 104 (Connection reset by peer)]
+[12-23-2005 10:15:43] -!- buz [n=buz@80-218-105-74.dclient.hispeed.ch] has joined #ezpublish
+[12-23-2005 10:38:37] -!- Katana` [n=katana@217.31.64.170] has quit [Read error: 113 (No route to host)]
+[12-23-2005 11:10:05] [#ezpublish] <buz> i did it
+[12-23-2005 11:10:10] [#ezpublish] <buz> got all xmas crap together
+[12-23-2005 11:29:04] -!- xbit [i=xbit@pppoecl86167.minlos.no] has joined #ezpublish
+[12-23-2005 11:29:09] -!- xbit [i=xbit@pppoecl86167.minlos.no] has quit [Client Quit]
+[12-23-2005 11:29:32] -!- xbit [i=xbit@pppoecl86167.minlos.no] has joined #ezpublish
+[12-23-2005 13:30:19] -!- nnn0 [n=therion@195.204.221.183] has quit [Read error: 110 (Connection timed out)]
+[12-23-2005 13:35:34] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | http://ez.no/community/news/ez_components_beta2 | http://ez.no/community/articles/a_joyride_to_ez_components_beta2
+[12-23-2005 13:48:38] -!- jota [n=jota@fanzine.igalia.com] has quit ["Abandonando"]
+[12-23-2005 13:49:52] -!- tobmaster [n=tobmaste@dslb-084-061-008-250.pools.arcor-ip.net] has joined #ezpublish
+[12-23-2005 14:01:48] -!- Katana` [n=katana@ankh-morpork.net] has joined #ezpublish
+[12-23-2005 14:42:07] -!- Katana` [n=katana@ankh-morpork.net] has quit []
+[12-23-2005 14:53:49] -!- tobmaster [n=tobmaste@dslb-084-061-008-250.pools.arcor-ip.net] has quit ["Thx 4 all the fisch"]
+[12-23-2005 15:08:57] -!- DiGiTa|__ [n=guillaum@84.4.125.132] has quit [Remote closed the connection]
+[12-23-2005 15:09:33] -!- DiGiTa|_ [n=guillaum@84.4.125.132] has joined #ezpublish
+[12-23-2005 15:45:27] -!- DiGiTa|_ [n=guillaum@84.4.125.132] has quit [Read error: 110 (Connection timed out)]
+[12-23-2005 18:10:24] -!- kore_ [n=lordhong@essn-d9bd4cbf.pool.mediaWays.net] has quit []
+[12-23-2005 19:12:55] -!- kracker changed the topic of #ezpublish to: eZ publish | cms | http://ez.no/community/news/community_newsletter_23_12_2005 | http://ez.no/community/news/ez_components_beta2 | http://ez.no/community/articles/a_joyride_to_ez_components_beta2
+[12-23-2005 19:13:37] -!- nnn0 [n=therion@unaffiliated/nnn0] has joined #ezpublish
+[12-23-2005 19:14:11] [#ezpublish] <kracker> the line in the sand is publicly drawn ...
+[12-23-2005 19:14:14] [#ezpublish] <kracker> >> We are planning to release new eZ publish sub-releases at the beginning of a new year. The new versions will be service releases of the 3.x branches and they will not contain new features.
