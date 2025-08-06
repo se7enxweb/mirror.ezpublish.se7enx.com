@@ -4,7 +4,7 @@
 
 # Books
 
-## why we continue to mirror these valuable training materials from eZ?
+## Why we continue to mirror these valuable training materials from eZ?
 
 These pdf books were originally sold for minimal cost by eZ Systems to the developer community to speed up developer training and geberal adoption of the software stack for web application publishing.
 
@@ -18,9 +18,9 @@ Feel free to now sing a little of the "Sharing song" by Jack Johnson that was a 
 
 ## Book PDFs
 
- - "eZ Publish Basics" [books/ez_publish_basics_english.pdf](Book)
- - "eZ Publish Advanced Content Management" [https://github.com/se7enxweb/mirror.ezpublish.se7enx.com/blob/d1c9393d30e8f7de2cbbe25f701960a4ff90d2d6/books/ez_publish_advanced_content_management.pdf](Book)
- - "eZ Publish Content Management Basics" [https://github.com/se7enxweb/mirror.ezpublish.se7enx.com/blob/d1c9393d30e8f7de2cbbe25f701960a4ff90d2d6/books/ez_publish_content_management_basics.pdf](Book)
+ - "eZ Publish Basics"  [PDF](books/ez_publish_basics_english.pdf)
+ - "eZ Publish Advanced Content Management" [PDF](https://github.com/se7enxweb/mirror.ezpublish.se7enx.com/blob/d1c9393d30e8f7de2cbbe25f701960a4ff90d2d6/books/ez_publish_advanced_content_management.pdf)
+ - "eZ Publish Content Management Basics" [PDF](https://github.com/se7enxweb/mirror.ezpublish.se7enx.com/blob/master/books/ez_publish_content_management_basics.pdf)
 
 A Friendly Mirror of eZ Publish related downloads hosted at: https://mirror.ezpublish.se7enx.com/
 
