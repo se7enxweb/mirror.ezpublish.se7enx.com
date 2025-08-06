@@ -4,6 +4,8 @@
 
 # Books
 
+## why we continue to mirror these valuable training materials from eZ?
+
 These pdf books were originally sold for minimal cost by eZ Systems to the developer community to speed up developer training and geberal adoption of the software stack for web application publishing.
 
 Not long after the completion of the third book release all of these books were provided for free (the price of a fake email address for future advertizing mails only) to all anonymouse users of the company website ez.no to further grow the market and drive educational efforts to adopt the system.
@@ -13,6 +15,14 @@ because these book pdfs were distributed for no charge and freely available we h
 Please remember that originally eZ Publish core values centered around the simple principles of sharing information.
 
 Feel free to now sing a little of the "Sharing song" by Jack Johnson that was a community theme aong we called the "eZ Sharing Song" that teaches the fundementals of our community sharing values and how it works if you join in the sharing!
+
+## Book PDFs
+
+ - "eZ Publish Basics" [books/ez_publish_basics_english.pdf](Book)
+ - "eZ Publish Advanced Content Management" [https://github.com/se7enxweb/mirror.ezpublish.se7enx.com/blob/d1c9393d30e8f7de2cbbe25f701960a4ff90d2d6/books/ez_publish_advanced_content_management.pdf](Book)
+ - "eZ Publish Content Management Basics" [https://github.com/se7enxweb/mirror.ezpublish.se7enx.com/blob/d1c9393d30e8f7de2cbbe25f701960a4ff90d2d6/books/ez_publish_content_management_basics.pdf](Book)
+
+A Friendly Mirror of eZ Publish related downloads hosted at: https://mirror.ezpublish.se7enx.com/
 
 # BuildSVN
 
